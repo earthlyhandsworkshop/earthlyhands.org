@@ -15,10 +15,10 @@
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23171713'/%3E%3Cpath d='M19 16v32M19 21h26M19 32h20M19 43h26' stroke='%23efe9dc' stroke-width='5' stroke-linecap='square'/%3E%3C/svg%3E"
     />
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=threshold-v4-2" />
+    <link rel="stylesheet" href="style.css?v=threshold-v5" />
   </head>
   <body data-lamp="unlit">
-    <a class="skip-link" href="#threshold">Skip to the threshold</a>
+    <a class="skip-link" href="#threshold" data-home>Skip to the threshold</a>
 
     <header class="site-header">
       <p class="identity">
@@ -32,7 +32,7 @@
     </header>
 
     <main>
-      <section class="threshold passage is-revealed" id="threshold" data-place="Front edge" tabindex="-1">
+      <section class="threshold passage is-current" id="threshold" data-scene data-place="Front edge" tabindex="-1">
         <p class="eyebrow">Earthly Hands Workshop</p>
         <h1>You are standing at the front edge of the workshop.</h1>
         <p class="threshold-line">A lantern hangs nearby.</p>
@@ -42,7 +42,7 @@
         </button>
       </section>
 
-      <section class="passage" id="report" data-step data-place="By lantern light" tabindex="-1">
+      <section class="passage" id="report" data-scene data-step data-place="By lantern light" tabindex="-1">
         <p class="eyebrow">By lantern light</p>
         <h2>The light catches a report.</h2>
         <div class="plain-copy">
@@ -66,7 +66,7 @@
         </div>
       </section>
 
-      <section class="passage trail-passage" id="night" data-step data-place="Night camp" tabindex="-1">
+      <section class="passage trail-passage" id="night" data-scene data-step data-place="Night camp" tabindex="-1">
         <p class="eyebrow">Dawson trail · during the night</p>
         <h2>A small guard is posted around the camp.</h2>
         <div class="first-person-view" aria-label="First-person view">
@@ -93,7 +93,7 @@
         </div>
       </section>
 
-      <section class="passage trail-passage" id="morning" data-step data-place="Morning camp" tabindex="-1">
+      <section class="passage trail-passage" id="morning" data-scene data-step data-place="Morning camp" tabindex="-1">
         <p class="eyebrow">Morning</p>
         <h2>Morning finds the party unattacked.</h2>
         <div class="first-person-view" aria-label="First-person view">
@@ -120,7 +120,7 @@
         </div>
       </section>
 
-      <section class="passage trail-passage" id="southeast" data-step data-place="Southeast reach" tabindex="-1">
+      <section class="passage trail-passage" id="southeast" data-scene data-step data-place="Southeast reach" tabindex="-1">
         <p class="eyebrow">The next travel leg</p>
         <h2>The party continues southeast about fifteen miles.</h2>
         <div class="first-person-view" aria-label="First-person view">
@@ -148,7 +148,7 @@
         </div>
       </section>
 
-      <section class="passage trail-passage" id="blue-water" data-step data-place="Blue Water" tabindex="-1">
+      <section class="passage trail-passage" id="blue-water" data-scene data-step data-place="Blue Water" tabindex="-1">
         <p class="eyebrow">A new camp</p>
         <h2>A small branch of Blue Water.</h2>
         <div class="first-person-view" aria-label="First-person view">
@@ -176,7 +176,7 @@
         </div>
       </section>
 
-      <section class="passage trail-passage" id="dozen" data-step data-place="Blue Water" tabindex="-1">
+      <section class="passage trail-passage" id="dozen" data-scene data-step data-place="Blue Water" tabindex="-1">
         <p class="eyebrow">The catch</p>
         <h2>They had caught but a dozen.</h2>
         <div class="first-person-view" aria-label="First-person view">
@@ -209,7 +209,7 @@
         </p>
       </section>
 
-      <section class="practice" id="practice" aria-labelledby="practice-title" tabindex="-1">
+      <section class="practice" id="practice" data-scene data-place="The workshop" aria-labelledby="practice-title" tabindex="-1">
         <p class="eyebrow">The workshop</p>
         <h2 id="practice-title">Things worth looking at closely.</h2>
         <p class="practice-lede">
@@ -227,6 +227,9 @@
             <strong>r/EarthlyHandsWorkshop</strong>
           </a>
         </div>
+        <button class="door door-quiet practice-back" type="button" data-back>
+          Back to the trail
+        </button>
       </section>
     </main>
 
@@ -255,13 +258,13 @@
 
     <footer>
       <p>Earthly Hands</p>
-      <a href="#threshold">Return to the threshold</a>
+      <a href="#threshold" data-home>Return to the threshold</a>
     </footer>
 
     <noscript>
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
-    <script src="config.js?v=threshold-v4"></script>
-    <script src="script.js?v=threshold-v4-2"></script>
+    <script src="config.js?v=threshold-v5"></script>
+    <script src="script.js?v=threshold-v5"></script>
   </body>
 </html>

@@ -10,6 +10,7 @@
   --ember-soft: #e0ad78;
   --glow: rgba(211, 145, 81, 0.14);
   --measure: 42rem;
+  --rail-x: max(1.35rem, calc(6vw - 1.5rem), calc((100vw - 72rem) / 2 - 1.5rem));
 }
 
 * {
@@ -24,7 +25,7 @@ body {
   margin: 0;
   min-width: 18rem;
   background:
-    linear-gradient(90deg, transparent 0, transparent 7vw, var(--rule) 7vw, var(--rule) calc(7vw + 1px), transparent calc(7vw + 1px)),
+    linear-gradient(90deg, transparent 0, transparent var(--rail-x), var(--rule) var(--rail-x), var(--rule) calc(var(--rail-x) + 1px), transparent calc(var(--rail-x) + 1px)),
     var(--night);
   color: var(--paper);
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
@@ -45,9 +46,25 @@ body::before {
 body[data-lamp="lit"] {
   background:
     radial-gradient(circle at 30% 16rem, var(--glow), transparent 31rem),
-    linear-gradient(90deg, transparent 0, transparent 7vw, var(--rule-lit) 7vw, var(--rule-lit) calc(7vw + 1px), transparent calc(7vw + 1px)),
+    linear-gradient(90deg, transparent 0, transparent var(--rail-x), var(--rule-lit) var(--rail-x), var(--rule-lit) calc(var(--rail-x) + 1px), transparent calc(var(--rail-x) + 1px)),
   var(--night-raised);
-  padding-bottom: 5.8rem;
+}
+
+html.js,
+html.js body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html.js body {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+html.js main {
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 }
 
 a {
@@ -165,12 +182,17 @@ footer {
   min-height: calc(100svh - 7rem);
 }
 
-.js [data-step]:not(.is-revealed) {
+.js [data-scene]:not(.is-current) {
   display: none;
 }
 
-.js [data-step].is-revealed {
-  animation: arrive 520ms ease both;
+.js [data-scene].is-current {
+  animation: settle 180ms ease-out both;
+}
+
+.js .passage,
+.js .practice {
+  min-height: 100%;
 }
 
 .eyebrow {
@@ -337,6 +359,16 @@ h1,
   border-top: 1px solid var(--rule);
 }
 
+.js .practice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.practice-back {
+  margin-top: 1.5rem;
+}
+
 .practice > h2 {
   max-width: 22ch;
   margin-bottom: 1.35rem;
@@ -399,6 +431,10 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+.js footer {
+  padding: 0.9rem 0 1rem;
 }
 
 .ground-talk {
@@ -587,21 +623,20 @@ footer p {
   font-size: 0.75rem;
 }
 
-@keyframes arrive {
+@keyframes settle {
   from {
-    opacity: 0;
-    transform: translateY(1.1rem);
+    opacity: 0.58;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
 @media (max-width: 46rem) {
   body {
+    --rail-x: 1.35rem;
     background:
-      linear-gradient(90deg, transparent 0, transparent 1.35rem, var(--rule) 1.35rem, var(--rule) calc(1.35rem + 1px), transparent calc(1.35rem + 1px)),
+      linear-gradient(90deg, transparent 0, transparent var(--rail-x), var(--rule) var(--rail-x), var(--rule) calc(var(--rail-x) + 1px), transparent calc(var(--rail-x) + 1px)),
       var(--night);
     font-size: 1rem;
   }
@@ -609,7 +644,7 @@ footer p {
   body[data-lamp="lit"] {
     background:
       radial-gradient(circle at 45% 12rem, var(--glow), transparent 24rem),
-      linear-gradient(90deg, transparent 0, transparent 1.35rem, var(--rule-lit) 1.35rem, var(--rule-lit) calc(1.35rem + 1px), transparent calc(1.35rem + 1px)),
+      linear-gradient(90deg, transparent 0, transparent var(--rail-x), var(--rule-lit) var(--rail-x), var(--rule-lit) calc(var(--rail-x) + 1px), transparent calc(var(--rail-x) + 1px)),
       var(--night-raised);
   }
 
@@ -708,7 +743,7 @@ footer p {
     transition: none;
   }
 
-  .js [data-step].is-revealed {
+  .js [data-scene].is-current {
     animation: none;
   }
 }

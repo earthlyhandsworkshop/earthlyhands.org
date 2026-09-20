@@ -10,10 +10,11 @@
   const talkInput = document.querySelector("#talk-input");
   const talkLog = document.querySelector("#talk-log");
   const talkSend = talkForm.querySelector("button[type='submit']");
+  const main = document.querySelector("main");
+  const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const steps = Array.from(document.querySelectorAll("[data-step]"));
   const sequence = ["report", "night", "morning", "southeast", "blue-water", "dozen"];
-  const fullSequence = ["threshold", ...sequence];
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fullSequence = ["threshold", ...sequence, "practice"];
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
   let currentId = "threshold";
@@ -32,10 +33,11 @@
     talkPlace.textContent = place;
   }
 
-  function moveTo(target) {
+  function showScene(target) {
+    scenes.forEach((scene) => scene.classList.toggle("is-current", scene === target));
     updatePlace(target);
     target.focus({ preventScroll: true });
-    target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    main.scrollTop = 0;
   }
 
   function remember(id) {
@@ -54,28 +56,17 @@
     }
   }
 
-  function revealThrough(id) {
-    const index = sequence.indexOf(id);
-    if (index < 0) return false;
-    sequence.slice(0, index + 1).forEach((stepId) => {
-      document.getElementById(stepId)?.classList.add("is-revealed");
-    });
-    setLamp(true);
-    return true;
-  }
-
-  function landAt(id, { push = true, move = true } = {}) {
+  function landAt(id, { push = true } = {}) {
     const target = document.getElementById(id);
-    if (!target) return;
+    if (!target || !fullSequence.includes(id)) return;
 
     closeTalk();
-    if (id !== "threshold") revealThrough(id);
+    if (id !== "threshold") setLamp(true);
     currentId = id;
     remember(id);
 
     if (push) history.pushState({ place: id }, "", `#${id}`);
-    if (move) requestAnimationFrame(() => moveTo(target));
-    else updatePlace(target);
+    requestAnimationFrame(() => showScene(target));
   }
 
   function stepBack() {
@@ -167,23 +158,21 @@
 
   lamp.addEventListener("click", () => {
     const isLit = document.body.dataset.lamp !== "lit";
-    setLamp(isLit);
 
     if (isLit) {
-      if (!document.querySelector("#report").classList.contains("is-revealed")) {
-        landAt("report");
-      }
+      setLamp(true);
+      landAt("report");
       return;
     }
 
-    steps.forEach((step) => step.classList.remove("is-revealed"));
+    setLamp(false);
     closeTalk();
     talkLog.replaceChildren();
     conversation.length = 0;
     currentId = "threshold";
     forget();
     history.pushState({ place: "threshold" }, "", "#threshold");
-    moveTo(document.querySelector("#threshold"));
+    showScene(document.querySelector("#threshold"));
   });
 
   document.querySelectorAll("[data-reveal]").forEach((control) => {
@@ -199,11 +188,13 @@
   });
 
   document.querySelectorAll("[data-scroll]").forEach((control) => {
-    control.addEventListener("click", () => {
-      const target = document.getElementById(control.dataset.scroll);
-      if (!target) return;
-      history.pushState({ place: target.id }, "", `#${target.id}`);
-      moveTo(target);
+    control.addEventListener("click", () => landAt(control.dataset.scroll));
+  });
+
+  document.querySelectorAll("[data-home]").forEach((control) => {
+    control.addEventListener("click", (event) => {
+      event.preventDefault();
+      landAt("threshold");
     });
   });
 
@@ -231,14 +222,16 @@
   window.addEventListener("popstate", () => {
     const id = window.location.hash.slice(1);
     const target = document.getElementById(id);
-    if (!target) return;
-    if (sequence.includes(id)) revealThrough(id);
-    currentId = fullSequence.includes(id) ? id : currentId;
-    moveTo(target);
+    if (!target || !fullSequence.includes(id)) return;
+    closeTalk();
+    setLamp(id !== "threshold");
+    currentId = id;
+    remember(id);
+    showScene(target);
   });
 
   let initialId = window.location.hash.slice(1);
-  if (!fullSequence.includes(initialId) && initialId !== "practice") {
+  if (!fullSequence.includes(initialId)) {
     try {
       initialId = window.localStorage.getItem("earthly-hands-footing") || "threshold";
     } catch (_) {
@@ -246,16 +239,11 @@
     }
   }
 
-  if (sequence.includes(initialId)) {
-    revealThrough(initialId);
-    currentId = initialId;
-    updatePlace(document.getElementById(initialId));
-  } else if (initialId === "practice") {
-    setLamp(true);
-    updatePlace(document.querySelector("#practice"));
-  } else {
-    updatePlace(document.querySelector("#threshold"));
-  }
+  if (!fullSequence.includes(initialId)) initialId = "threshold";
+  currentId = initialId;
+  setLamp(initialId !== "threshold");
+  history.replaceState({ place: initialId }, "", `#${initialId}`);
+  showScene(document.getElementById(initialId));
 
   steps.forEach((step) => step.setAttribute("aria-live", "polite"));
 })();
