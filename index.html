@@ -1,94 +1,153 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Earthly Hands Workshop cares for scattered historical records and the people, relationships, places, and administrative worlds they belong to."
+      content="Earthly Hands cares for scattered historical records and the people, relationships, places, and administrative worlds they belong to."
     />
-    <meta name="theme-color" content="#f1eee6" />
-    <title>Earthly Hands</title>
+    <meta name="theme-color" content="#171713" />
+    <title>Earthly Hands — The Threshold</title>
     <link
       rel="icon"
       type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23201f1b'/%3E%3Cpath d='M19 16v32M19 21h26M19 32h20M19 43h26' stroke='%23f1eee6' stroke-width='5' stroke-linecap='square'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23171713'/%3E%3Cpath d='M19 16v32M19 21h26M19 32h20M19 43h26' stroke='%23efe9dc' stroke-width='5' stroke-linecap='square'/%3E%3C/svg%3E"
     />
+    <script>document.documentElement.className = "js";</script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to the work</a>
+  <body data-lamp="unlit">
+    <a class="skip-link" href="#threshold">Skip to the threshold</a>
 
-    <header class="site-header" aria-label="Site header">
-      <a class="identity" href="/" aria-label="Earthly Hands home">
+    <header class="site-header">
+      <a class="identity" href="#threshold" data-room-link="threshold">
         <span>Earthly Hands</span>
         <span class="identity-note">Workshop</span>
       </a>
+      <p class="where" aria-live="polite">
+        <span aria-hidden="true">/</span>
+        <span id="where-label">Front edge</span>
+      </p>
     </header>
 
-    <main id="main">
-      <section class="opening" aria-labelledby="opening-title">
-        <p class="eyebrow">Earthly Hands Workshop</p>
-        <h1 id="opening-title">Things worth looking at closely.</h1>
-        <div class="opening-copy">
-          <p>
-            Earthly Hands Workshop cares for scattered historical records and
-            reconstructs the people, relationships, places, and administrative
-            worlds they belong to.
-          </p>
-          <p>
-            The work is collaborative, source-facing, and designed to remain
-            inspectable, correctable, and capable of being carried forward.
-          </p>
-        </div>
-      </section>
-
-      <div class="grounds">
-        <section aria-labelledby="work-title">
-          <p class="section-mark" aria-hidden="true">01</p>
-          <h2 id="work-title">What we do</h2>
-          <p>
-            We receive letters, ledgers, maps, testimony, claims, and other
-            pieces of the historical record. We read them closely, keep their
-            relationships visible, and make working bodies that others can
-            inspect and continue.
-          </p>
+    <main>
+      <div class="threshold-frame" aria-live="polite">
+        <section class="scene is-active" id="threshold" data-room="threshold" data-room-name="Front edge" tabindex="-1">
+          <p class="eyebrow">Earthly Hands Workshop</p>
+          <h1>You are standing at the front edge of the workshop.</h1>
+          <div class="scene-copy">
+            <p>A lantern hangs nearby.</p>
+            <p>The archive is open.</p>
+            <p>Dawson is still out on the trail.</p>
+          </div>
+          <nav class="commands" aria-label="At the front edge">
+            <a href="#lantern" data-room-link="lantern"><span aria-hidden="true">&gt;</span> Light the lantern</a>
+            <a href="#archive" data-room-link="archive"><span aria-hidden="true">&gt;</span> Enter the archive</a>
+            <a href="#dawson" data-room-link="dawson"><span aria-hidden="true">&gt;</span> Follow Dawson</a>
+            <a href="mailto:workshop@earthlyhands.org"><span aria-hidden="true">&gt;</span> Write to the workshop</a>
+          </nav>
         </section>
 
-        <section aria-labelledby="practice-title">
-          <p class="section-mark" aria-hidden="true">02</p>
-          <h2 id="practice-title">How we work</h2>
-          <p>
-            Source before conclusion. Evidence, inference, and open questions
-            stay distinct. Corrections remain visible. Custody is not
-            ownership: the work passes through many hands.
-          </p>
+        <section class="scene" id="lantern" data-room="lantern" data-room-name="Lantern light" tabindex="-1">
+          <p class="eyebrow">The lantern is lit</p>
+          <h2>The room does not become less uncertain. It becomes visible.</h2>
+          <div class="scene-copy">
+            <p>Look at what the light presently catches.</p>
+            <p>A margin. A name. A door left open in the record.</p>
+          </div>
+          <nav class="commands" aria-label="By lantern light">
+            <a href="#archive" data-room-link="archive"><span aria-hidden="true">&gt;</span> Carry the light into the archive</a>
+            <a href="#dawson" data-room-link="dawson"><span aria-hidden="true">&gt;</span> Turn it toward the trail</a>
+            <a href="#threshold" data-room-link="threshold"><span aria-hidden="true">&lt;</span> Return to the front edge</a>
+          </nav>
+        </section>
+
+        <section class="scene" id="archive" data-room="archive" data-room-name="Archive" tabindex="-1">
+          <p class="eyebrow">One flight down</p>
+          <h2>The archive does not begin with an answer.</h2>
+          <div class="scene-copy">
+            <p>On the nearest table: a letter, a ledger, a map, and a name written more than one way.</p>
+            <p>Some relations are established. Others are still open.</p>
+            <p>Nothing here has been asked to become a conclusion before it is ready.</p>
+          </div>
+          <nav class="commands" aria-label="In the archive">
+            <a href="#practice"><span aria-hidden="true">&gt;</span> See how the work is carried</a>
+            <a href="#lantern" data-room-link="lantern"><span aria-hidden="true">&gt;</span> Lift the lantern</a>
+            <a href="#threshold" data-room-link="threshold"><span aria-hidden="true">&lt;</span> Return to the front edge</a>
+          </nav>
+        </section>
+
+        <section class="scene" id="dawson" data-room="dawson" data-room-name="Dawson trail" tabindex="-1">
+          <p class="eyebrow">Higher ground</p>
+          <h2>The trail rises beyond the workshop.</h2>
+          <div class="scene-copy">
+            <p>The creek is still audible behind you.</p>
+            <p>There is smoke higher up. Dawson is somewhere ahead.</p>
+            <p>The workshop lamp remains visible below.</p>
+          </div>
+          <nav class="commands" aria-label="On the Dawson trail">
+            <a href="#fire" data-room-link="fire"><span aria-hidden="true">&gt;</span> Follow the smoke</a>
+            <a href="#lantern" data-room-link="lantern"><span aria-hidden="true">&gt;</span> Raise the lantern</a>
+            <a href="#threshold" data-room-link="threshold"><span aria-hidden="true">&lt;</span> Return to the front edge</a>
+          </nav>
+        </section>
+
+        <section class="scene" id="fire" data-room="fire" data-room-name="Small fire" tabindex="-1">
+          <p class="eyebrow">Near the fire</p>
+          <h2>Coffee. Beans. A place to sit.</h2>
+          <div class="scene-copy">
+            <p>The coffee has been boiled past any reasonable point.</p>
+            <p>No one asks why you came. Nothing insists that you stay.</p>
+          </div>
+          <nav class="commands" aria-label="Near the fire">
+            <a href="mailto:workshop@earthlyhands.org"><span aria-hidden="true">&gt;</span> Send word to the workshop</a>
+            <a href="#dawson" data-room-link="dawson"><span aria-hidden="true">&lt;</span> Return to the trail</a>
+            <a href="#threshold" data-room-link="threshold"><span aria-hidden="true">&lt;</span> Return to the front edge</a>
+          </nav>
         </section>
       </div>
 
-      <section class="contact" aria-labelledby="contact-title">
-        <p class="section-mark" aria-hidden="true">03</p>
-        <h2 id="contact-title">Come through</h2>
-        <p class="contact-intro">Bring a record, a question, or a correction.</p>
-        <ul class="doors" aria-label="Ways into the workshop">
-          <li>
-            <a href="mailto:workshop@earthlyhands.org">
-              <span class="door-label">Write</span>
-              <span class="door-address">workshop@earthlyhands.org</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.reddit.com/r/EarthlyHandsWorkshop/">
-              <span class="door-label">Visit the room</span>
-              <span class="door-address">r/EarthlyHandsWorkshop</span>
-            </a>
-          </li>
-        </ul>
+      <section class="practice" id="practice" aria-labelledby="practice-title">
+        <p class="eyebrow">Below the threshold</p>
+        <h2 id="practice-title">Things worth looking at closely.</h2>
+        <div class="practice-grid">
+          <p class="practice-lede">
+            Earthly Hands cares for scattered historical records and reconstructs the people,
+            relationships, places, and administrative worlds they belong to.
+          </p>
+          <div>
+            <p>
+              The work is collaborative, source-facing, and designed to remain inspectable,
+              correctable, and capable of being carried forward.
+            </p>
+            <p>
+              Source before conclusion. Evidence, inference, and open questions stay distinct.
+              Custody is not ownership: the work passes through many hands.
+            </p>
+          </div>
+        </div>
+        <div class="doors">
+          <a href="mailto:workshop@earthlyhands.org">
+            <span>Write</span>
+            <strong>workshop@earthlyhands.org</strong>
+          </a>
+          <a href="https://www.reddit.com/r/EarthlyHandsWorkshop/">
+            <span>Visit the room</span>
+            <strong>r/EarthlyHandsWorkshop</strong>
+          </a>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>Earthly Hands Workshop</p>
+      <p>Earthly Hands</p>
+      <a href="#threshold" data-room-link="threshold">Return to the threshold</a>
     </footer>
+
+    <noscript>
+      <div class="noscript-note">The rooms are laid open below because JavaScript is unavailable.</div>
+    </noscript>
+    <script src="script.js"></script>
   </body>
 </html>
