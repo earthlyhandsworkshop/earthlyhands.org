@@ -451,7 +451,7 @@ footer p {
 
 .ground-talk[data-open="false"] {
   right: clamp(1rem, 4vw, 3rem);
-  bottom: 1rem;
+  bottom: 4rem;
   left: auto;
   border: 1px solid var(--rule-lit);
   background: rgba(28, 27, 22, 0.97);
