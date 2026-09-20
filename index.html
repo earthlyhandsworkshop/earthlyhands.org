@@ -21,10 +21,10 @@
     <a class="skip-link" href="#threshold">Skip to the threshold</a>
 
     <header class="site-header">
-      <a class="identity" href="#threshold" data-room-link="threshold">
+      <p class="identity">
         <span>Earthly Hands</span>
         <span class="identity-note">Workshop</span>
-      </a>
+      </p>
       <p class="where" aria-live="polite">
         <span aria-hidden="true">/</span>
         <span id="where-label">Front edge</span>
@@ -32,83 +32,150 @@
     </header>
 
     <main>
-      <div class="threshold-frame" aria-live="polite">
-        <section class="scene is-active" id="threshold" data-room="threshold" data-room-name="Front edge" tabindex="-1">
-          <p class="eyebrow">Earthly Hands Workshop</p>
-          <h1>You are standing at the front edge of the workshop.</h1>
-          <div class="scene-copy">
-            <p>A lantern hangs nearby.</p>
-            <p>The archive is open.</p>
-            <p>Dawson is still out on the trail.</p>
-          </div>
-          <nav class="commands" aria-label="At the front edge">
-            <a href="#lantern" data-room-link="lantern"><span aria-hidden="true">&gt;</span> Light the lantern</a>
-            <a href="#archive" data-room-link="archive"><span aria-hidden="true">&gt;</span> Enter the archive</a>
-            <a href="#dawson" data-room-link="dawson"><span aria-hidden="true">&gt;</span> Follow Dawson</a>
-            <a href="mailto:workshop@earthlyhands.org"><span aria-hidden="true">&gt;</span> Write to the workshop</a>
-          </nav>
-        </section>
+      <section class="threshold passage is-revealed" id="threshold" data-place="Front edge" tabindex="-1">
+        <p class="eyebrow">Earthly Hands Workshop</p>
+        <h1>You are standing at the front edge of the workshop.</h1>
+        <p class="threshold-line">A lantern hangs nearby.</p>
+        <button class="door lamp-control" id="lamp-control" type="button" aria-pressed="false">
+          <span class="door-mark" aria-hidden="true">&gt;</span>
+          <span class="lamp-label">Light the lantern</span>
+        </button>
+      </section>
 
-        <section class="scene" id="lantern" data-room="lantern" data-room-name="Lantern light" tabindex="-1">
-          <p class="eyebrow">The lantern is lit</p>
-          <h2>The room does not become less uncertain. It becomes visible.</h2>
-          <div class="scene-copy">
-            <p>Look at what the light presently catches.</p>
-            <p>A margin. A name. A door left open in the record.</p>
-          </div>
-          <nav class="commands" aria-label="By lantern light">
-            <a href="#archive" data-room-link="archive"><span aria-hidden="true">&gt;</span> Carry the light into the archive</a>
-            <a href="#dawson" data-room-link="dawson"><span aria-hidden="true">&gt;</span> Turn it toward the trail</a>
-            <a href="#threshold" data-room-link="threshold"><span aria-hidden="true">&lt;</span> Return to the front edge</a>
-          </nav>
-        </section>
+      <section class="passage" id="report" data-step data-place="By lantern light" tabindex="-1">
+        <p class="eyebrow">By lantern light</p>
+        <h2>The light catches a report.</h2>
+        <div class="plain-copy">
+          <p>
+            J. L. Dawson wrote from Cantonment Gibson on 29 January 1831. His report carries
+            travel with the Choctaw and Chickasaw western exploring delegations.
+          </p>
+          <p>
+            The original manuscript has not yet been recovered. The Workshop presently reaches
+            the report through its newspaper and later printed representations.
+          </p>
+        </div>
+        <button class="door" type="button" data-reveal="night">
+          <span class="door-mark" aria-hidden="true">&gt;</span>
+          Follow the report into night
+        </button>
+      </section>
 
-        <section class="scene" id="archive" data-room="archive" data-room-name="Archive" tabindex="-1">
-          <p class="eyebrow">One flight down</p>
-          <h2>The archive does not begin with an answer.</h2>
-          <div class="scene-copy">
-            <p>On the nearest table: a letter, a ledger, a map, and a name written more than one way.</p>
-            <p>Some relations are established. Others are still open.</p>
-            <p>Nothing here has been asked to become a conclusion before it is ready.</p>
+      <section class="passage trail-passage" id="night" data-step data-place="Night camp" tabindex="-1">
+        <p class="eyebrow">Dawson trail · during the night</p>
+        <h2>A small guard is posted around the camp.</h2>
+        <div class="first-person-view" aria-label="First-person view">
+          <span class="bracket" aria-hidden="true">[</span>
+          <div>
+            <p>Two unnamed men have been sent to watch the ford of the river on the back trail.</p>
+            <p>The report does not say that they arrived.</p>
           </div>
-          <nav class="commands" aria-label="In the archive">
-            <a href="#practice"><span aria-hidden="true">&gt;</span> See how the work is carried</a>
-            <a href="#lantern" data-room-link="lantern"><span aria-hidden="true">&gt;</span> Lift the lantern</a>
-            <a href="#threshold" data-room-link="threshold"><span aria-hidden="true">&lt;</span> Return to the front edge</a>
-          </nav>
-        </section>
+          <span class="bracket bracket-close" aria-hidden="true">]</span>
+        </div>
+        <ol class="footing" aria-label="Viewpoint footing">
+          <li>You, following the carried report.</li>
+          <li>Dawson’s camp-side body, during the night.</li>
+        </ol>
+        <button class="door" type="button" data-reveal="morning">
+          <span class="door-mark" aria-hidden="true">&gt;</span>
+          Wait for morning
+        </button>
+      </section>
 
-        <section class="scene" id="dawson" data-room="dawson" data-room-name="Dawson trail" tabindex="-1">
-          <p class="eyebrow">Higher ground</p>
-          <h2>The trail rises beyond the workshop.</h2>
-          <div class="scene-copy">
-            <p>The creek is still audible behind you.</p>
-            <p>There is smoke higher up. Dawson is somewhere ahead.</p>
-            <p>The workshop lamp remains visible below.</p>
+      <section class="passage trail-passage" id="morning" data-step data-place="Morning camp" tabindex="-1">
+        <p class="eyebrow">Morning</p>
+        <h2>Morning finds the party unattacked.</h2>
+        <div class="first-person-view" aria-label="First-person view">
+          <span class="bracket" aria-hidden="true">[</span>
+          <div>
+            <p>The camp remains where the report left it.</p>
+            <p>The two men, the ford, and the back trail remain out of view.</p>
+            <p>The source continues southeast.</p>
           </div>
-          <nav class="commands" aria-label="On the Dawson trail">
-            <a href="#fire" data-room-link="fire"><span aria-hidden="true">&gt;</span> Follow the smoke</a>
-            <a href="#lantern" data-room-link="lantern"><span aria-hidden="true">&gt;</span> Raise the lantern</a>
-            <a href="#threshold" data-room-link="threshold"><span aria-hidden="true">&lt;</span> Return to the front edge</a>
-          </nav>
-        </section>
+          <span class="bracket bracket-close" aria-hidden="true">]</span>
+        </div>
+        <ol class="footing" aria-label="Viewpoint footing">
+          <li>You, at the morning edge of the report.</li>
+          <li>Dawson’s party, unattacked in the source account.</li>
+        </ol>
+        <button class="door" type="button" data-reveal="southeast">
+          <span class="door-mark" aria-hidden="true">&gt;</span>
+          Continue southeast
+        </button>
+      </section>
 
-        <section class="scene" id="fire" data-room="fire" data-room-name="Small fire" tabindex="-1">
-          <p class="eyebrow">Near the fire</p>
-          <h2>Coffee. Beans. A place to sit.</h2>
-          <div class="scene-copy">
-            <p>The coffee has been boiled past any reasonable point.</p>
-            <p>No one asks why you came. Nothing insists that you stay.</p>
+      <section class="passage trail-passage" id="southeast" data-step data-place="Southeast reach" tabindex="-1">
+        <p class="eyebrow">The next travel leg</p>
+        <h2>The party continues southeast about fifteen miles.</h2>
+        <div class="first-person-view" aria-label="First-person view">
+          <span class="bracket" aria-hidden="true">[</span>
+          <div>
+            <p>The report carries about fifteen miles of travel.</p>
+            <p>It does not preserve the line of the route.</p>
+            <p>A new camp lies ahead on a small branch of Blue Water.</p>
           </div>
-          <nav class="commands" aria-label="Near the fire">
-            <a href="mailto:workshop@earthlyhands.org"><span aria-hidden="true">&gt;</span> Send word to the workshop</a>
-            <a href="#dawson" data-room-link="dawson"><span aria-hidden="true">&lt;</span> Return to the trail</a>
-            <a href="#threshold" data-room-link="threshold"><span aria-hidden="true">&lt;</span> Return to the front edge</a>
-          </nav>
-        </section>
-      </div>
+          <span class="bracket bracket-close" aria-hidden="true">]</span>
+        </div>
+        <ol class="footing" aria-label="Viewpoint footing">
+          <li>You, following the source-stated direction.</li>
+          <li>Dawson’s party, traveling an approximate distance.</li>
+        </ol>
+        <button class="door" type="button" data-reveal="blue-water">
+          <span class="door-mark" aria-hidden="true">&gt;</span>
+          Reach the next camp
+        </button>
+      </section>
 
-      <section class="practice" id="practice" aria-labelledby="practice-title">
+      <section class="passage trail-passage" id="blue-water" data-step data-place="Blue Water" tabindex="-1">
+        <p class="eyebrow">A new camp</p>
+        <h2>A small branch of Blue Water.</h2>
+        <div class="first-person-view" aria-label="First-person view">
+          <span class="bracket" aria-hidden="true">[</span>
+          <div>
+            <p>On this creek, Dawson reports finding Mr. Mayes and Mr. Criner.</p>
+            <p>They reside on James’ Fork of Poteau.</p>
+            <p>They are trapping for beaver here. The report supplies no route between the creek and their residence.</p>
+          </div>
+          <span class="bracket bracket-close" aria-hidden="true">]</span>
+        </div>
+        <ol class="footing" aria-label="Viewpoint footing">
+          <li>You, at the source-carried creek relation.</li>
+          <li>Mayes and Criner, found on this creek in Dawson’s report.</li>
+        </ol>
+        <button class="door" type="button" data-reveal="dozen">
+          <span class="door-mark" aria-hidden="true">&gt;</span>
+          See what the report says next
+        </button>
+      </section>
+
+      <section class="passage trail-passage" id="dozen" data-step data-place="Blue Water" tabindex="-1">
+        <p class="eyebrow">The catch</p>
+        <h2>They had caught but a dozen.</h2>
+        <div class="first-person-view" aria-label="First-person view">
+          <span class="bracket" aria-hidden="true">[</span>
+          <div>
+            <p>The dozen is one collective result for Mayes and Criner.</p>
+            <p>The report does not divide the catch between them or place it on a map.</p>
+            <p>Dawson says the weather was too cold to promise much further success.</p>
+          </div>
+          <span class="bracket bracket-close" aria-hidden="true">]</span>
+        </div>
+        <ol class="footing" aria-label="Viewpoint footing">
+          <li>You, still following the report.</li>
+          <li>Mayes and Criner, carried together in the stated result.</li>
+        </ol>
+        <p class="stop-line">The trail continues. This first public passage stops here.</p>
+        <button class="door" type="button" data-scroll="practice">
+          <span class="door-mark" aria-hidden="true">&gt;</span>
+          Return to the workshop
+        </button>
+        <p class="source-return">
+          Source return:
+          <a href="https://gateway.okhistory.org/ark:/67531/metadc2192269/">J. L. Dawson report representation</a>
+        </p>
+      </section>
+
+      <section class="practice" id="practice" aria-labelledby="practice-title" tabindex="-1">
         <p class="eyebrow">Below the threshold</p>
         <h2 id="practice-title">Things worth looking at closely.</h2>
         <div class="practice-grid">
@@ -142,11 +209,11 @@
 
     <footer>
       <p>Earthly Hands</p>
-      <a href="#threshold" data-room-link="threshold">Return to the threshold</a>
+      <a href="#threshold">Return to the threshold</a>
     </footer>
 
     <noscript>
-      <div class="noscript-note">The rooms are laid open below because JavaScript is unavailable.</div>
+      <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="script.js"></script>
   </body>

@@ -1,40 +1,78 @@
 (() => {
-  const scenes = Array.from(document.querySelectorAll("[data-room]"));
-  const roomLinks = Array.from(document.querySelectorAll("[data-room-link]"));
+  const lamp = document.querySelector("#lamp-control");
+  const lampLabel = lamp.querySelector(".lamp-label");
   const where = document.querySelector("#where-label");
-  const knownRooms = new Set(scenes.map((scene) => scene.dataset.room));
+  const steps = Array.from(document.querySelectorAll("[data-step]"));
+  const sequence = ["report", "night", "morning", "southeast", "blue-water", "dozen"];
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function roomFromHash() {
-    const room = window.location.hash.slice(1);
-    return knownRooms.has(room) ? room : null;
+  function setLamp(isLit) {
+    document.body.dataset.lamp = isLit ? "lit" : "unlit";
+    lamp.setAttribute("aria-pressed", String(isLit));
+    lampLabel.textContent = isLit ? "Extinguish the lantern" : "Light the lantern";
   }
 
-  function showRoom(room, moveFocus = true) {
-    const next = scenes.find((scene) => scene.dataset.room === room) || scenes[0];
+  function moveTo(target) {
+    where.textContent = target.dataset.place || "Workshop";
+    target.focus({ preventScroll: true });
+    target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+  }
 
-    scenes.forEach((scene) => {
-      scene.classList.toggle("is-active", scene === next);
-    });
+  function reveal(id, move = true) {
+    const target = document.getElementById(id);
+    if (!target) return;
 
-    where.textContent = next.dataset.roomName;
-    document.body.dataset.lamp = room === "threshold" ? "unlit" : "lit";
-
-    if (moveFocus) {
-      next.focus({ preventScroll: true });
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    target.classList.add("is-revealed");
+    if (move) {
+      history.pushState(null, "", `#${id}`);
+      requestAnimationFrame(() => moveTo(target));
     }
   }
 
-  roomLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      const room = link.dataset.roomLink;
-      if (knownRooms.has(room)) showRoom(room);
+  function revealThrough(id) {
+    const index = sequence.indexOf(id);
+    if (index < 0) return false;
+    sequence.slice(0, index + 1).forEach((stepId) => reveal(stepId, false));
+    setLamp(true);
+    return true;
+  }
+
+  lamp.addEventListener("click", () => {
+    const isLit = document.body.dataset.lamp !== "lit";
+    setLamp(isLit);
+
+    if (isLit && !document.querySelector("#report").classList.contains("is-revealed")) {
+      reveal("report");
+    }
+  });
+
+  document.querySelectorAll("[data-reveal]").forEach((control) => {
+    control.addEventListener("click", () => reveal(control.dataset.reveal));
+  });
+
+  document.querySelectorAll("[data-scroll]").forEach((control) => {
+    control.addEventListener("click", () => {
+      const target = document.getElementById(control.dataset.scroll);
+      if (!target) return;
+      history.pushState(null, "", `#${target.id}`);
+      moveTo(target);
     });
   });
 
-  window.addEventListener("hashchange", () => {
-    const room = roomFromHash();
-    if (room) showRoom(room);
+  window.addEventListener("popstate", () => {
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (target) moveTo(target);
   });
-  showRoom(roomFromHash() || "threshold", false);
+
+  const initialId = window.location.hash.slice(1);
+  if (revealThrough(initialId)) {
+    const initialTarget = document.getElementById(initialId);
+    if (initialTarget) where.textContent = initialTarget.dataset.place || "Workshop";
+  } else if (initialId === "practice") {
+    where.textContent = "Below the threshold";
+  }
+
+  steps.forEach((step) => {
+    step.setAttribute("aria-live", "polite");
+  });
 })();

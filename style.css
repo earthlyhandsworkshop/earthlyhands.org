@@ -1,13 +1,15 @@
 :root {
   color-scheme: dark;
   --night: #171713;
-  --night-raised: #1d1d18;
-  --paper: #efe9dc;
-  --paper-muted: #b9b1a1;
-  --rule: #4b483f;
-  --ember: #d08a52;
-  --glow: rgba(213, 153, 85, 0.18);
-  --measure: 44rem;
+  --night-raised: #1c1b16;
+  --paper: #eee8dc;
+  --paper-muted: #aaa394;
+  --rule: #454239;
+  --rule-lit: #695746;
+  --ember: #cf8953;
+  --ember-soft: #e0ad78;
+  --glow: rgba(211, 145, 81, 0.14);
+  --measure: 42rem;
 }
 
 * {
@@ -26,25 +28,25 @@ body {
     var(--night);
   color: var(--paper);
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  font-size: 1.125rem;
-  line-height: 1.65;
-  transition: background-color 900ms ease;
+  font-size: 1.0625rem;
+  line-height: 1.68;
+  transition: background 700ms ease, color 350ms ease;
 }
 
 body::before {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(circle at 34% 31%, transparent 0, transparent 12rem, rgba(0, 0, 0, 0.32) 48rem);
+  background: radial-gradient(circle at 30% 16rem, transparent 0, transparent 8rem, rgba(0, 0, 0, 0.28) 42rem);
   content: "";
   pointer-events: none;
 }
 
 body[data-lamp="lit"] {
   background:
-    radial-gradient(circle at 34% 31%, var(--glow), transparent 34rem),
-    linear-gradient(90deg, transparent 0, transparent 7vw, #655645 7vw, #655645 calc(7vw + 1px), transparent calc(7vw + 1px)),
-    #1b1a15;
+    radial-gradient(circle at 30% 16rem, var(--glow), transparent 31rem),
+    linear-gradient(90deg, transparent 0, transparent 7vw, var(--rule-lit) 7vw, var(--rule-lit) calc(7vw + 1px), transparent calc(7vw + 1px)),
+    var(--night-raised);
 }
 
 a {
@@ -54,16 +56,17 @@ a {
 }
 
 a:hover {
-  color: #f0b276;
+  color: var(--ember-soft);
 }
 
 a:focus-visible,
-.scene:focus-visible {
+button:focus-visible,
+[tabindex="-1"]:focus-visible {
   outline: 2px solid var(--ember);
   outline-offset: 5px;
 }
 
-.scene:focus-visible {
+[tabindex="-1"]:focus-visible {
   outline-color: transparent;
 }
 
@@ -87,12 +90,12 @@ a:focus-visible,
 .site-header,
 main,
 footer {
-  width: min(78rem, calc(100% - 12vw));
+  width: min(72rem, calc(100% - 12vw));
   margin-inline: auto;
 }
 
 .site-header {
-  min-height: 7.5rem;
+  min-height: 7rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -104,16 +107,18 @@ footer {
   display: inline-flex;
   align-items: baseline;
   gap: 0.65rem;
+  margin: 0;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.025em;
-  text-decoration: none;
 }
 
 .identity-note,
 .where,
 .eyebrow,
-.commands,
+.door,
+.footing,
+.source-return,
 .doors span,
 footer,
 .noscript-note {
@@ -145,26 +150,32 @@ footer {
   color: var(--ember);
 }
 
-.threshold-frame {
-  min-height: calc(100svh - 7.5rem);
-  display: grid;
-  align-items: center;
-  padding: clamp(4rem, 10vw, 8rem) 0;
+.passage {
+  max-width: 51rem;
+  min-height: 78svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(5rem, 11vw, 9rem) 0;
+  border-bottom: 1px solid var(--rule);
 }
 
-.scene {
-  grid-area: 1 / 1;
-  max-width: 58rem;
+.threshold {
+  min-height: calc(100svh - 7rem);
 }
 
-.js .scene:not(.is-active) {
+.js [data-step]:not(.is-revealed) {
   display: none;
 }
 
+.js [data-step].is-revealed {
+  animation: arrive 520ms ease both;
+}
+
 .eyebrow {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.25rem;
   color: var(--ember);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
 }
 
@@ -175,85 +186,157 @@ p {
 }
 
 h1,
-.scene h2 {
-  max-width: 14ch;
-  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
-  font-size: clamp(3rem, 7.5vw, 7rem);
+.passage h2,
+.practice > h2 {
+  max-width: 18ch;
+  margin-bottom: 2.25rem;
+  font-size: clamp(2.3rem, 4.2vw, 3.75rem);
   font-weight: 400;
-  letter-spacing: -0.052em;
-  line-height: 0.95;
+  letter-spacing: -0.036em;
+  line-height: 1.04;
 }
 
-.scene h2 {
-  max-width: 16ch;
-  font-size: clamp(2.75rem, 6.5vw, 6rem);
+.passage h2,
+.practice > h2 {
+  font-size: clamp(1.95rem, 3.6vw, 3.15rem);
 }
 
-.scene-copy {
+.threshold-line,
+.plain-copy,
+.first-person-view,
+.stop-line {
   max-width: var(--measure);
-  margin-left: clamp(0rem, 7vw, 6rem);
-  padding-left: clamp(1.25rem, 3vw, 2.5rem);
-  border-left: 1px solid var(--rule);
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  line-height: 1.55;
 }
 
-.scene-copy p {
-  margin-bottom: 0.35rem;
+.threshold-line {
+  margin-bottom: 1.8rem;
+  color: var(--paper-muted);
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
 }
 
-.commands {
-  display: grid;
-  gap: 0.62rem;
-  max-width: var(--measure);
-  margin: 3.5rem 0 0 clamp(0rem, 7vw, 6rem);
-  font-size: 0.9375rem;
+.plain-copy {
+  margin-bottom: 2rem;
 }
 
-.commands a {
+.plain-copy p {
+  margin-bottom: 0.8rem;
+}
+
+.door {
   width: fit-content;
-  text-decoration: none;
+  display: inline-flex;
+  gap: 0.72rem;
+  align-items: baseline;
+  padding: 0.35rem 0;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: var(--paper);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
 }
 
-.commands a span {
-  display: inline-block;
-  width: 1.35rem;
+.door:hover {
+  border-bottom-color: var(--ember);
+  color: var(--ember-soft);
+}
+
+.door-mark {
   color: var(--ember);
   transition: transform 180ms ease;
 }
 
-.commands a:hover span {
-  transform: translateX(0.22rem);
+.door:hover .door-mark {
+  transform: translateX(0.2rem);
+}
+
+.lamp-control[aria-pressed="true"] .door-mark {
+  color: #f0b678;
+  text-shadow: 0 0 1.2rem rgba(240, 182, 120, 0.72);
+}
+
+.first-person-view {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 1rem;
+  margin: 0 0 1.1rem;
+  padding: 1.45rem 0;
+  color: #e3ddcf;
+  font-size: clamp(1.08rem, 1.7vw, 1.24rem);
+}
+
+.first-person-view p {
+  margin-bottom: 0.5rem;
+}
+
+.first-person-view p:last-child {
+  margin-bottom: 0;
+}
+
+.bracket {
+  color: var(--ember);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.bracket-close {
+  align-self: end;
+}
+
+.footing {
+  margin: 0 0 2.25rem;
+  padding: 0;
+  color: var(--paper-muted);
+  font-size: 0.72rem;
+  line-height: 1.7;
+  list-style: none;
+}
+
+.footing li {
+  counter-increment: footing;
+}
+
+.footing li::before {
+  content: "[" counter(footing) "] ";
+  color: var(--ember);
+}
+
+.footing {
+  counter-reset: footing;
+}
+
+.stop-line {
+  margin: 0 0 1.8rem;
+  color: var(--paper-muted);
+}
+
+.source-return {
+  margin: 2rem 0 0;
+  color: var(--paper-muted);
+  font-size: 0.7rem;
 }
 
 .practice {
-  padding: clamp(6rem, 13vw, 12rem) 0;
+  padding: clamp(7rem, 14vw, 12rem) 0;
   border-top: 1px solid var(--rule);
-}
-
-.practice > h2 {
-  max-width: 12ch;
-  margin-bottom: clamp(3rem, 7vw, 6rem);
-  font-size: clamp(3rem, 7vw, 6.5rem);
-  font-weight: 400;
-  letter-spacing: -0.052em;
-  line-height: 0.96;
 }
 
 .practice-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: clamp(3rem, 9vw, 9rem);
-  margin-bottom: clamp(5rem, 10vw, 9rem);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(3rem, 8vw, 7rem);
+  margin-bottom: clamp(4rem, 9vw, 7rem);
 }
 
 .practice-grid p {
-  max-width: 38rem;
+  max-width: 37rem;
 }
 
 .practice-lede {
-  font-size: clamp(1.35rem, 2.5vw, 2rem);
-  line-height: 1.45;
+  font-size: clamp(1.25rem, 2.1vw, 1.7rem);
+  line-height: 1.48;
 }
 
 .doors {
@@ -266,7 +349,7 @@ h1,
   grid-template-columns: minmax(8rem, 0.45fr) 1fr auto;
   gap: 1.5rem;
   align-items: baseline;
-  padding: 1.4rem 0;
+  padding: 1.35rem 0;
   border-bottom: 1px solid var(--rule);
   text-decoration: none;
 }
@@ -288,7 +371,7 @@ h1,
 
 .doors strong {
   overflow-wrap: anywhere;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 400;
 }
 
@@ -317,56 +400,69 @@ footer p {
   font-size: 0.75rem;
 }
 
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(1.1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 46rem) {
   body {
     background:
-      linear-gradient(90deg, transparent 0, transparent 1.4rem, var(--rule) 1.4rem, var(--rule) calc(1.4rem + 1px), transparent calc(1.4rem + 1px)),
+      linear-gradient(90deg, transparent 0, transparent 1.35rem, var(--rule) 1.35rem, var(--rule) calc(1.35rem + 1px), transparent calc(1.35rem + 1px)),
       var(--night);
     font-size: 1rem;
   }
 
   body[data-lamp="lit"] {
     background:
-      radial-gradient(circle at 50% 23%, var(--glow), transparent 25rem),
-      linear-gradient(90deg, transparent 0, transparent 1.4rem, #655645 1.4rem, #655645 calc(1.4rem + 1px), transparent calc(1.4rem + 1px)),
-      #1b1a15;
+      radial-gradient(circle at 45% 12rem, var(--glow), transparent 24rem),
+      linear-gradient(90deg, transparent 0, transparent 1.35rem, var(--rule-lit) 1.35rem, var(--rule-lit) calc(1.35rem + 1px), transparent calc(1.35rem + 1px)),
+      var(--night-raised);
   }
 
   .site-header,
   main,
   footer {
-    width: calc(100% - 4.25rem);
-    margin-left: 3rem;
-    margin-right: 1.25rem;
+    width: calc(100% - 4rem);
+    margin-left: 2.8rem;
+    margin-right: 1.2rem;
   }
 
   .site-header {
-    min-height: 6rem;
+    min-height: 5.5rem;
   }
 
   .identity-note {
     display: none;
   }
 
-  .threshold-frame {
-    min-height: calc(100svh - 6rem);
-    padding: 4rem 0 5rem;
+  .passage {
+    min-height: 72svh;
+    padding: 4.75rem 0;
   }
 
-  h1,
-  .scene h2 {
-    margin-bottom: 2.5rem;
-    font-size: clamp(2.9rem, 14vw, 4.7rem);
+  .threshold {
+    min-height: calc(100svh - 5.5rem);
   }
 
-  .scene-copy,
-  .commands {
-    margin-left: 0;
+  h1 {
+    font-size: clamp(2.2rem, 10.5vw, 2.8rem);
   }
 
-  .commands {
-    margin-top: 2.75rem;
-    font-size: 0.875rem;
+  .passage h2,
+  .practice > h2 {
+    font-size: clamp(1.85rem, 8.5vw, 2.5rem);
+  }
+
+  .first-person-view {
+    gap: 0.65rem;
+    font-size: 1.02rem;
   }
 
   .practice-grid {
@@ -400,7 +496,11 @@ footer p {
   }
 
   body,
-  .commands a span {
+  .door-mark {
     transition: none;
+  }
+
+  .js [data-step].is-revealed {
+    animation: none;
   }
 }
