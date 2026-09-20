@@ -15,7 +15,7 @@
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23171713'/%3E%3Cpath d='M19 16v32M19 21h26M19 32h20M19 43h26' stroke='%23efe9dc' stroke-width='5' stroke-linecap='square'/%3E%3C/svg%3E"
     />
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=threshold-v3" />
+    <link rel="stylesheet" href="style.css?v=threshold-v4" />
   </head>
   <body data-lamp="unlit">
     <a class="skip-link" href="#threshold">Skip to the threshold</a>
@@ -55,10 +55,15 @@
             the report through its newspaper and later printed representations.
           </p>
         </div>
-        <button class="door" type="button" data-reveal="night">
-          <span class="door-mark" aria-hidden="true">&gt;</span>
-          Follow the report into night
-        </button>
+        <div class="passage-actions" aria-label="Available actions">
+          <button class="door" type="button" data-reveal="night">
+            <span class="door-mark" aria-hidden="true">&gt;</span>
+            Follow the report into night
+          </button>
+          <button class="door door-quiet" type="button" data-prompt="Where am I?">
+            Ask where you are
+          </button>
+        </div>
       </section>
 
       <section class="passage trail-passage" id="night" data-step data-place="Night camp" tabindex="-1">
@@ -76,10 +81,16 @@
           <li>You, following the carried report.</li>
           <li>Dawson’s camp-side body, during the night.</li>
         </ol>
-        <button class="door" type="button" data-reveal="morning">
-          <span class="door-mark" aria-hidden="true">&gt;</span>
-          Wait for morning
-        </button>
+        <div class="passage-actions" aria-label="Available actions">
+          <button class="door" type="button" data-reveal="morning">
+            <span class="door-mark" aria-hidden="true">&gt;</span>
+            Wait for morning
+          </button>
+          <button class="door door-quiet" type="button" data-prompt="What can the report actually tell me about the ford and the two guards?">
+            Look toward the ford
+          </button>
+          <button class="door door-quiet" type="button" data-back>Back</button>
+        </div>
       </section>
 
       <section class="passage trail-passage" id="morning" data-step data-place="Morning camp" tabindex="-1">
@@ -96,12 +107,17 @@
         </div>
         <ol class="footing" aria-label="Viewpoint footing">
           <li>You, at the morning edge of the report.</li>
-          <li>Dawson’s party, unattacked in the source account.</li>
         </ol>
-        <button class="door" type="button" data-reveal="southeast">
-          <span class="door-mark" aria-hidden="true">&gt;</span>
-          Continue southeast
-        </button>
+        <div class="passage-actions" aria-label="Available actions">
+          <button class="door" type="button" data-reveal="southeast">
+            <span class="door-mark" aria-hidden="true">&gt;</span>
+            Continue southeast
+          </button>
+          <button class="door door-quiet" type="button" data-prompt="What changed during the night, and what did not?">
+            Ask what changed
+          </button>
+          <button class="door door-quiet" type="button" data-back>Back</button>
+        </div>
       </section>
 
       <section class="passage trail-passage" id="southeast" data-step data-place="Southeast reach" tabindex="-1">
@@ -120,10 +136,16 @@
           <li>You, following the source-stated direction.</li>
           <li>Dawson’s party, traveling an approximate distance.</li>
         </ol>
-        <button class="door" type="button" data-reveal="blue-water">
-          <span class="door-mark" aria-hidden="true">&gt;</span>
-          Reach the next camp
-        </button>
+        <div class="passage-actions" aria-label="Available actions">
+          <button class="door" type="button" data-reveal="blue-water">
+            <span class="door-mark" aria-hidden="true">&gt;</span>
+            Reach the next camp
+          </button>
+          <button class="door door-quiet" type="button" data-prompt="What does the report establish by saying southeast about fifteen miles?">
+            Ask about the fifteen miles
+          </button>
+          <button class="door door-quiet" type="button" data-back>Back</button>
+        </div>
       </section>
 
       <section class="passage trail-passage" id="blue-water" data-step data-place="Blue Water" tabindex="-1">
@@ -142,10 +164,16 @@
           <li>You, at the source-carried creek relation.</li>
           <li>Mayes and Criner, found on this creek in Dawson’s report.</li>
         </ol>
-        <button class="door" type="button" data-reveal="dozen">
-          <span class="door-mark" aria-hidden="true">&gt;</span>
-          See what the report says next
-        </button>
+        <div class="passage-actions" aria-label="Available actions">
+          <button class="door" type="button" data-reveal="dozen">
+            <span class="door-mark" aria-hidden="true">&gt;</span>
+            See what the report says next
+          </button>
+          <button class="door door-quiet" type="button" data-prompt="Who are Mayes and Criner here, and what does the report not tell us?">
+            Ask about Mayes and Criner
+          </button>
+          <button class="door door-quiet" type="button" data-back>Back</button>
+        </div>
       </section>
 
       <section class="passage trail-passage" id="dozen" data-step data-place="Blue Water" tabindex="-1">
@@ -165,10 +193,16 @@
           <li>Mayes and Criner, carried together in the stated result.</li>
         </ol>
         <p class="stop-line">The trail continues. This first public passage stops here.</p>
-        <button class="door" type="button" data-scroll="practice">
-          <span class="door-mark" aria-hidden="true">&gt;</span>
-          Return to the workshop
-        </button>
+        <div class="passage-actions" aria-label="Available actions">
+          <button class="door" type="button" data-prompt="What remains open at this stopping place?">
+            <span class="door-mark" aria-hidden="true">&gt;</span>
+            Ask what remains open
+          </button>
+          <button class="door door-quiet" type="button" data-scroll="practice">
+            Return to the workshop
+          </button>
+          <button class="door door-quiet" type="button" data-back>Back</button>
+        </div>
         <p class="source-return">
           Source return:
           <a href="https://gateway.okhistory.org/ark:/67531/metadc2192269/">J. L. Dawson report representation</a>
@@ -176,24 +210,13 @@
       </section>
 
       <section class="practice" id="practice" aria-labelledby="practice-title" tabindex="-1">
-        <p class="eyebrow">Below the threshold</p>
+        <p class="eyebrow">The workshop</p>
         <h2 id="practice-title">Things worth looking at closely.</h2>
-        <div class="practice-grid">
-          <p class="practice-lede">
-            Earthly Hands cares for scattered historical records and reconstructs the people,
-            relationships, places, and administrative worlds they belong to.
-          </p>
-          <div>
-            <p>
-              The work is collaborative, source-facing, and designed to remain inspectable,
-              correctable, and capable of being carried forward.
-            </p>
-            <p>
-              Source before conclusion. Evidence, inference, and open questions stay distinct.
-              Custody is not ownership: the work passes through many hands.
-            </p>
-          </div>
-        </div>
+        <p class="practice-lede">
+          Earthly Hands cares for scattered historical records and reconstructs the people,
+          relationships, places, and administrative worlds they belong to. The work is
+          collaborative, source-facing, inspectable, and capable of being carried forward.
+        </p>
         <div class="doors">
           <a href="mailto:workshop@earthlyhands.org">
             <span>Write</span>
@@ -207,6 +230,29 @@
       </section>
     </main>
 
+    <section class="ground-talk" id="ground-talk" aria-label="Talk with the ground" hidden>
+      <div class="ground-talk-inner">
+        <div class="ground-talk-head">
+          <div>
+            <p class="ground-talk-kicker">Listening ground</p>
+            <p class="ground-talk-place" id="ground-talk-place">Front edge</p>
+          </div>
+          <button class="talk-toggle" id="talk-toggle" type="button" aria-expanded="false" aria-controls="talk-body">
+            Ask the ground
+          </button>
+        </div>
+        <div class="talk-body" id="talk-body" hidden>
+          <div class="talk-log" id="talk-log" aria-live="polite"></div>
+          <form class="talk-form" id="talk-form">
+            <label class="sr-only" for="talk-input">Ask about where you are or what the source carries</label>
+            <textarea id="talk-input" name="message" rows="2" maxlength="600" placeholder="Ask about where you are or what the source carries…"></textarea>
+            <button type="submit">Send</button>
+          </form>
+          <p class="talk-note">The ground answers from this public Dawson footing. It does not enter the private workshop.</p>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <p>Earthly Hands</p>
       <a href="#threshold">Return to the threshold</a>
@@ -215,6 +261,7 @@
     <noscript>
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
-    <script src="script.js?v=threshold-v3"></script>
+    <script src="config.js?v=threshold-v4"></script>
+    <script src="script.js?v=threshold-v4"></script>
   </body>
 </html>
