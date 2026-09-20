@@ -68,6 +68,7 @@
     const target = document.getElementById(id);
     if (!target) return;
 
+    closeTalk();
     if (id !== "threshold") revealThrough(id);
     currentId = id;
     remember(id);
