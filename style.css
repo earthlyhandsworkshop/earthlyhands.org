@@ -413,6 +413,28 @@ footer p {
   backdrop-filter: blur(12px);
 }
 
+.ground-talk[data-open="false"] {
+  right: clamp(1rem, 4vw, 3rem);
+  bottom: 1rem;
+  left: auto;
+  border: 1px solid var(--rule-lit);
+  background: rgba(28, 27, 22, 0.97);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.28);
+}
+
+.ground-talk[data-open="false"] .ground-talk-inner {
+  width: auto;
+}
+
+.ground-talk[data-open="false"] .ground-talk-head {
+  min-height: 0;
+  padding: 0.65rem 0.85rem;
+}
+
+.ground-talk[data-open="false"] .ground-talk-head > div {
+  display: none;
+}
+
 .ground-talk-inner {
   width: min(72rem, calc(100% - 12vw));
   margin-inline: auto;

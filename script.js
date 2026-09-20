@@ -85,12 +85,14 @@
   }
 
   function openTalk() {
+    talk.dataset.open = "true";
     talkBody.hidden = false;
     talkToggle.setAttribute("aria-expanded", "true");
     talkToggle.textContent = "Close";
   }
 
   function closeTalk() {
+    talk.dataset.open = "false";
     talkBody.hidden = true;
     talkToggle.setAttribute("aria-expanded", "false");
     talkToggle.textContent = "Ask the ground";
