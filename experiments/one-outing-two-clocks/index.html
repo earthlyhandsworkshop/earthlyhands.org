@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#171713" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>One outing, two clocks — Earthly Hands experiment</title>
+  <style>
+    :root{
+      color-scheme:dark;
+      --night:#171713;
+      --raised:#1d1c17;
+      --paper:#eee8dc;
+      --muted:#aaa394;
+      --rule:#454239;
+      --ember:#cf8953;
+      --soft:#e0ad78;
+      --measure:42rem;
+    }
+    *{box-sizing:border-box}
+    html{background:var(--night);-webkit-text-size-adjust:100%}
+    body{
+      margin:0;
+      min-width:18rem;
+      color:var(--paper);
+      background:
+        linear-gradient(90deg,transparent 0,transparent max(1.35rem,6vw),var(--rule) max(1.35rem,6vw),var(--rule) calc(max(1.35rem,6vw) + 1px),transparent calc(max(1.35rem,6vw) + 1px)),
+        var(--night);
+      font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+      font-size:1.19rem;
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration-color:var(--ember);text-underline-offset:.24em}
+    a:hover{color:var(--soft)}
+    button{font:inherit}
+    button:focus-visible,a:focus-visible{outline:2px solid var(--ember);outline-offset:5px}
+    .shell{width:min(70rem,calc(100% - 12vw));margin:auto}
+    header{
+      min-height:5.75rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:2rem;
+      border-bottom:1px solid var(--rule);
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    }
+    .brand{font-weight:700;letter-spacing:.025em}
+    .place,.kicker,.label,.meta,.actions,.question-nav,.source-line,footer{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    }
+    .place,.kicker,.label,.meta,footer{
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:var(--muted);
+      font-size:.78rem;
+    }
+    .place b{color:var(--ember);font-weight:400;margin-right:.55rem}
+    main{padding:clamp(3rem,8vh,6rem) 0 5rem}
+    .intro{max-width:52rem;margin-bottom:clamp(4rem,9vh,7rem)}
+    .kicker{margin:0 0 1rem}
+    h1,h2{font-weight:500;line-height:1.05;letter-spacing:-.025em}
+    h1{font-size:clamp(2.5rem,6vw,5.8rem);margin:.1em 0 .35em}
+    .lede{max-width:40rem;color:#d7d0c3;font-size:1.17em}
+    .experiment-note{
+      margin-top:2rem;
+      padding:1rem 0 0 1.2rem;
+      border-left:1px solid var(--ember);
+      max-width:38rem;
+      color:var(--muted);
+    }
+    .room{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      gap:clamp(2.5rem,7vw,6rem);
+      padding:clamp(3rem,7vh,5rem) 0;
+      border-top:1px solid var(--rule);
+    }
+    .voice{min-width:0}
+    .voice h2{font-size:clamp(2rem,4vw,3.8rem);margin:.25em 0 .35em}
+    .meta{margin:.3rem 0 2rem}
+    .source-summary{max-width:32rem;color:#cfc8bb}
+    .clock{
+      margin:2.3rem 0;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:start;
+      gap:1rem;
+    }
+    .bracket{color:var(--ember);font-size:2.2rem;line-height:1}
+    blockquote{
+      margin:0;
+      font-size:clamp(1.45rem,3vw,2.35rem);
+      line-height:1.3;
+      font-style:normal;
+    }
+    .hear{
+      border:1px solid var(--rule);
+      background:transparent;
+      color:var(--paper);
+      padding:.65rem .8rem;
+      cursor:pointer;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .hear:hover{border-color:var(--ember);color:var(--soft)}
+    .speech-note{font-size:.78rem;color:var(--muted);max-width:27rem}
+    .seam{
+      border-top:1px solid var(--rule);
+      padding:clamp(3rem,8vh,6rem) 0;
+      display:grid;
+      grid-template-columns:minmax(14rem,.7fr) minmax(0,1.3fr);
+      gap:clamp(2.5rem,7vw,7rem);
+    }
+    .seam h2{font-size:clamp(2.1rem,4vw,4rem);margin:.1em 0}
+    .seam-copy{max-width:40rem}
+    .hard-brake{
+      margin:2.5rem 0;
+      padding:1.1rem 0 1.1rem 1.2rem;
+      border-left:1px solid var(--ember);
+    }
+    .hard-brake p{margin:.35rem 0}
+    .question-room{
+      padding:clamp(3rem,8vh,6rem) 0;
+      border-top:1px solid var(--rule);
+    }
+    .question-room h2{font-size:clamp(2rem,4vw,3.7rem);margin:.2em 0 .6em}
+    .question-nav{display:flex;flex-wrap:wrap;gap:.75rem;margin:2rem 0}
+    .question-nav button{
+      border:1px solid var(--rule);
+      background:transparent;
+      color:var(--paper);
+      padding:.7rem .85rem;
+      cursor:pointer;
+      font-size:.78rem;
+      text-align:left;
+    }
+    .question-nav button:hover{border-color:var(--ember)}
+    .answer{
+      max-width:42rem;
+      min-height:6.5rem;
+      padding:1.2rem 0 1.2rem 1.2rem;
+      border-left:1px solid var(--rule);
+      color:#d7d0c3;
+    }
+    .answer[data-active="true"]{border-color:var(--ember)}
+    .source-block{
+      padding:clamp(3rem,8vh,6rem) 0;
+      border-top:1px solid var(--rule);
+    }
+    .source-block h2{font-size:clamp(2rem,4vw,3.7rem);margin:.2em 0 .6em}
+    .source-line{font-size:.82rem;line-height:1.65;max-width:48rem;color:var(--muted)}
+    footer{
+      border-top:1px solid var(--rule);
+      padding:1.6rem 0 2.5rem;
+      display:flex;
+      justify-content:space-between;
+      gap:2rem;
+    }
+    @media(max-width:760px){
+      body{font-size:1.08rem;background:var(--night)}
+      .shell{width:min(100% - 2.5rem,44rem)}
+      header{min-height:4.7rem}
+      .place{display:none}
+      main{padding-top:2.4rem}
+      h1{font-size:clamp(2.6rem,15vw,4.5rem)}
+      .room,.seam{grid-template-columns:1fr;gap:2rem}
+      .voice + .voice{padding-top:3rem;border-top:1px solid var(--rule)}
+      .clock{grid-template-columns:auto 1fr}
+      .hear{grid-column:2;justify-self:start}
+      footer{display:block}
+      footer a{display:inline-block;margin-top:1rem}
+    }
+  </style>
+  <script>document.documentElement.className="js";</script>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand">Earthly Hands <span style="color:var(--muted);font-weight:400">Workshop</span></div>
+      <div class="place"><b>/</b> experiment · one listening room</div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p class="kicker">May 1838 · Louisville, Mississippi</p>
+        <h1>One outing.<br />Two clocks.</h1>
+        <p class="lede">
+          Two historical objects describe a related residence-location outing. This room does not repair the time seam or decide which later Robert Bell anyone should become.
+        </p>
+        <p class="experiment-note">
+          Experimental public room. Source, transcription, browser read-aloud, later administrative use, and Workshop interpretation remain different things.
+        </p>
+      </section>
+
+      <section class="room" aria-label="Two source-local accounts">
+        <article class="voice">
+          <p class="label">Account one</p>
+          <h2>Robert Bell</h2>
+          <p class="meta">General Deposition No. 25 · sworn 9 May 1838</p>
+          <p class="source-summary">
+            Bell describes Blackwell coming to his house and asking him to point out treaty-time residence places. In Bell’s account, the outing leaves from “Bell’s house.” He presents himself as a place-knower; that claim is source-local and is not film or Workshop validation of the places.
+          </p>
+          <div class="clock">
+            <span class="bracket" aria-hidden="true">[</span>
+            <blockquote id="bell-clock">“late in the evening three sleeps ago.”</blockquote>
+            <button class="hear" type="button" data-speak="late in the evening three sleeps ago." data-voice="Robert Bell account">Hear</button>
+          </div>
+          <p class="speech-note">
+            “Hear” uses your browser’s synthetic voice. It is not an historical voice, performance, or source object. No API call is made.
+          </p>
+        </article>
+
+        <article class="voice">
+          <p class="label">Account two</p>
+          <h2>Blackwell</h2>
+          <p class="meta">General Deposition No. 30 · sworn 8 May 1838</p>
+          <p class="source-summary">
+            Blackwell says David Bell had been recommended as guide but could not be found, and Robert Bell was taken instead. He describes looking for section corners and half-mile marks, determining land numbers, writing them on the spot, and later reaching a limit of recollection without the memorandum made during the work.
+          </p>
+          <div class="clock">
+            <span class="bracket" aria-hidden="true">[</span>
+            <blockquote id="blackwell-clock">“Sunday last about 12 o'clock.”</blockquote>
+            <button class="hear" type="button" data-speak="Sunday last about 12 o'clock." data-voice="Blackwell account">Hear</button>
+          </div>
+          <p class="speech-note">
+            The source-carried clock phrases remain separate. This room does not convert them into an editorial exact date.
+          </p>
+        </article>
+      </section>
+
+      <section class="seam" aria-labelledby="seam-title">
+        <div>
+          <p class="kicker">The seam</p>
+          <h2 id="seam-title">Do not repair it.</h2>
+        </div>
+        <div class="seam-copy">
+          <p>
+            These accounts are useful near one another because they expose different source roles inside related work. Bell supplies remembered place and guide knowledge. Blackwell supplies later field and survey translation, then marks where his own land-number recollection stops and documentary dependence begins.
+          </p>
+          <p>
+            The clock language does not line up neatly. The experiment leaves that pressure intact.
+          </p>
+          <div class="hard-brake" aria-label="Boundaries">
+            <p><strong>Related accounts ≠ one account.</strong></p>
+            <p><strong>Time difference ≠ error until a source earns that verb.</strong></p>
+            <p><strong>Older Robert body ≠ Bell–McKinney family Robert.</strong></p>
+          </div>
+          <p>
+            Years later, material from these older records was used inside the MCR 879 administrative record. That later use gives the 1838 objects another documentary life. It does not retroactively settle identity.
+          </p>
+        </div>
+      </section>
+
+      <section class="question-room" aria-labelledby="ask-title">
+        <p class="kicker">Ask this room</p>
+        <h2 id="ask-title">Only what this room can answer.</h2>
+        <p>
+          This question surface is deliberately local and deterministic. It does not call a model and it does not enter the private Workshop.
+        </p>
+        <div class="question-nav" role="group" aria-label="Questions this room can answer">
+          <button type="button" data-answer="clocks">What do the two clocks prove?</button>
+          <button type="button" data-answer="identity">Is this the Bell–McKinney family Robert?</button>
+          <button type="button" data-answer="blackwell">What changes in Blackwell’s account?</button>
+          <button type="button" data-answer="later">Why mention MCR 879?</button>
+        </div>
+        <div class="answer" id="answer" data-active="false" aria-live="polite">
+          Choose a question. The room will answer only from its bounded footing.
+        </div>
+      </section>
+
+      <section class="source-block" aria-labelledby="source-title">
+        <p class="kicker">Source return</p>
+        <h2 id="source-title">Go downward.</h2>
+        <p>
+          The 1838 depositions survive in the later printed Court of Claims evidence volume. This experiment uses the Workshop’s source-controlled reading of General Deposition No. 25 and General Deposition No. 30.
+        </p>
+        <p class="source-line">
+          Historical carrier: <em>The Choctaw Nation of Indians v. the United States</em>, No. 12,742, Evidence for Claimant, Volume I (1881), especially printed pp. 203–208.
+          <br />
+          <a href="https://archive.org/details/choctaw-nation-v-united-states-v1">Open the public carrier at Internet Archive</a>
+        </p>
+        <p class="source-line">
+          Public experiment boundary: this page does not reproduce the entire depositions, does not recreate the unrecovered field memorandum, and does not make a Robert identity join.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>Earthly Hands · experimental room</span>
+      <a href="/">Return to the threshold</a>
+    </footer>
+  </div>
+
+  <script>
+    const answers = {
+      clocks: "They prove that two source-local accounts carry different time expressions for related residence-location work: Bell says “late in the evening three sleeps ago”; Blackwell says “Sunday last about 12 o'clock.” This room does not repair, harmonize, or rank them.",
+      identity: "No identity join is made here. This is an older Robert Bell documentary body. The later MCR 879 machinery used older Robert Bell evidence, but later administrative use does not prove that this historical occurrence is the Bell–McKinney family ancestor.",
+      blackwell: "Blackwell changes the kind of record being made. Remembered place becomes field and survey work: section corners and half-mile marks are sought, land numbers are determined and written, and then Blackwell states a limit on what he can recall without the memorandum made during the work.",
+      later: "Because the 1838 material did not stay in 1838. Later administrative bodies reused older Robert Bell evidence inside identity and Article XIV adjudication. Showing that carrier history is different from using the older record to settle identity."
+    };
+
+    document.querySelectorAll("[data-answer]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const answer = document.getElementById("answer");
+        answer.textContent = answers[button.dataset.answer] || "";
+        answer.dataset.active = "true";
+      });
+    });
+
+    document.querySelectorAll("[data-speak]").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (!("speechSynthesis" in window)) {
+          button.textContent = "Unavailable";
+          return;
+        }
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(button.dataset.speak);
+        utterance.rate = 0.88;
+        utterance.pitch = 0.9;
+        button.setAttribute("aria-label", "Browser read-aloud: " + button.dataset.voice);
+        window.speechSynthesis.speak(utterance);
+      });
+    });
+  </script>
+</body>
+</html>
