@@ -19,6 +19,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -29,8 +31,8 @@ body {
     var(--night);
   color: var(--paper);
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  font-size: 1.0625rem;
-  line-height: 1.68;
+  font-size: 1.25rem;
+  line-height: 1.48;
   transition: background 700ms ease, color 350ms ease;
 }
 
@@ -126,7 +128,7 @@ footer {
   align-items: baseline;
   gap: 0.65rem;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   letter-spacing: 0.025em;
 }
@@ -155,7 +157,7 @@ footer {
 .identity-note,
 .where {
   color: var(--paper-muted);
-  font-size: 0.6875rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
@@ -268,7 +270,7 @@ footer {
 .eyebrow {
   margin: 0 0 1.25rem;
   color: var(--ember);
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
@@ -312,7 +314,7 @@ h1,
 }
 
 .plain-copy p {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.65em;
 }
 
 .door {
@@ -325,7 +327,7 @@ h1,
   border-bottom: 1px solid transparent;
   background: transparent;
   color: var(--paper);
-  font-size: 0.9rem;
+  font-size: 1.0625rem;
   line-height: 1.5;
   text-align: left;
   cursor: pointer;
@@ -374,7 +376,7 @@ h1,
 
 .door-quiet {
   color: var(--paper-muted);
-  font-size: 0.78rem;
+  font-size: 1rem;
 }
 
 .lamp-control[aria-pressed="true"] .door-mark {
@@ -390,11 +392,11 @@ h1,
   margin: 0 0 1.1rem;
   padding: 1.45rem 0;
   color: #e3ddcf;
-  font-size: clamp(1.08rem, 1.7vw, 1.24rem);
+  font-size: clamp(1.18rem, 1.7vw, 1.34rem);
 }
 
 .first-person-view p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55em;
 }
 
 .first-person-view p:last-child {
@@ -414,7 +416,7 @@ h1,
   margin: 0 0 2.25rem;
   padding: 0;
   color: var(--paper-muted);
-  font-size: 0.72rem;
+  font-size: 0.9375rem;
   line-height: 1.7;
   list-style: none;
 }
@@ -440,7 +442,7 @@ h1,
 .source-return {
   margin: 2rem 0 0;
   color: var(--paper-muted);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
 }
 
 .practice {
@@ -500,7 +502,7 @@ h1,
 
 .doors span {
   color: var(--paper-muted);
-  font-size: 0.6875rem;
+  font-size: 0.875rem;
 }
 
 .doors strong {
@@ -517,7 +519,7 @@ footer {
   padding: 1.6rem 0 3rem;
   border-top: 1px solid var(--rule);
   color: var(--paper-muted);
-  font-size: 0.6875rem;
+  font-size: 0.875rem;
 }
 
 footer p {
@@ -579,7 +581,7 @@ footer > a {
   padding: 0;
   border-bottom-color: transparent;
   color: var(--paper-muted);
-  font-size: 0.6875rem;
+  font-size: 0.875rem;
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
@@ -611,14 +613,14 @@ footer > a {
 
 .ground-talk-kicker {
   color: var(--ember);
-  font-size: 0.65rem;
+  font-size: 0.875rem;
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
 .ground-talk-place {
   color: var(--paper-muted);
-  font-size: 0.75rem;
+  font-size: 0.9375rem;
 }
 
 .talk-toggle,
@@ -629,7 +631,7 @@ footer > a {
   background: transparent;
   color: var(--paper);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.78rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -663,14 +665,14 @@ footer > a {
   margin: 0;
   color: var(--paper-muted);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.65rem;
+  font-size: 0.875rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .talk-entry-text {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.52;
   white-space: pre-wrap;
 }
@@ -714,7 +716,7 @@ footer > a {
 .talk-note {
   margin-top: 0.65rem;
   color: var(--paper-muted);
-  font-size: 0.62rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -769,7 +771,7 @@ footer > a {
     background:
       linear-gradient(90deg, transparent 0, transparent var(--rail-x), var(--rule) var(--rail-x), var(--rule) calc(var(--rail-x) + 1px), transparent calc(var(--rail-x) + 1px)),
       var(--night);
-    font-size: 1rem;
+    font-size: 1.1875rem;
   }
 
   body[data-lamp="lit"] {
@@ -815,7 +817,7 @@ footer > a {
 
   .first-person-view {
     gap: 0.65rem;
-    font-size: 1.02rem;
+    font-size: 1.125rem;
   }
 
   .doors a {
@@ -865,12 +867,30 @@ footer > a {
   }
 
   footer {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
     gap: 0.5rem;
-    font-size: 0.6rem;
+    font-size: 0.8125rem;
+  }
+
+  footer p {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  footer > .ground-talk {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  footer > a {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: end;
   }
 
   .ground-talk[data-open="false"] .talk-toggle {
-    font-size: 0.6rem;
+    font-size: 0.8125rem;
   }
 
   .talk-body {
