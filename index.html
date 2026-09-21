@@ -15,7 +15,7 @@
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23171713'/%3E%3Cpath d='M19 16v32M19 21h26M19 32h20M19 43h26' stroke='%23efe9dc' stroke-width='5' stroke-linecap='square'/%3E%3C/svg%3E"
     />
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=threshold-v5-1" />
+    <link rel="stylesheet" href="style.css?v=threshold-v6" />
   </head>
   <body data-lamp="unlit">
     <a class="skip-link" href="#threshold" data-home>Skip to the threshold</a>
@@ -42,7 +42,7 @@
         </button>
       </section>
 
-      <section class="passage" id="report" data-scene data-step data-place="By lantern light" tabindex="-1">
+      <section class="passage report-passage" id="report" data-scene data-step data-place="By lantern light" tabindex="-1">
         <p class="eyebrow">By lantern light</p>
         <h2>The light catches a report.</h2>
         <div class="plain-copy">
@@ -56,12 +56,12 @@
           </p>
         </div>
         <div class="passage-actions" aria-label="Available actions">
-          <button class="door" type="button" data-reveal="night">
-            <span class="door-mark" aria-hidden="true">&gt;</span>
-            Follow the report into night
-          </button>
-          <button class="door door-quiet" type="button" data-prompt="Where am I?">
+          <button class="door door-quiet door-prompt" type="button" data-prompt="Where am I?">
             Ask where you are
+          </button>
+          <button class="door door-forward" type="button" data-reveal="night">
+            Follow the report into night
+            <span class="door-mark" aria-hidden="true">&gt;</span>
           </button>
         </div>
       </section>
@@ -74,6 +74,7 @@
           <div>
             <p>Two unnamed men have been sent to watch the ford of the river on the back trail.</p>
             <p>The report does not say that they arrived.</p>
+            <p>It supplies no names for them and no account of their return.</p>
           </div>
           <span class="bracket bracket-close" aria-hidden="true">]</span>
         </div>
@@ -82,14 +83,17 @@
           <li>Dawson’s camp-side body, during the night.</li>
         </ol>
         <div class="passage-actions" aria-label="Available actions">
-          <button class="door" type="button" data-reveal="morning">
-            <span class="door-mark" aria-hidden="true">&gt;</span>
-            Wait for morning
+          <button class="door door-quiet door-back" type="button" data-back>
+            <span class="door-mark" aria-hidden="true">&lt;</span>
+            Back
           </button>
-          <button class="door door-quiet" type="button" data-prompt="What can the report actually tell me about the ford and the two guards?">
+          <button class="door door-quiet door-prompt" type="button" data-prompt="What can the report actually tell me about the ford and the two guards?">
             Look toward the ford
           </button>
-          <button class="door door-quiet" type="button" data-back>Back</button>
+          <button class="door door-forward" type="button" data-reveal="morning">
+            Wait for morning
+            <span class="door-mark" aria-hidden="true">&gt;</span>
+          </button>
         </div>
       </section>
 
@@ -102,6 +106,7 @@
             <p>The camp remains where the report left it.</p>
             <p>The two men, the ford, and the back trail remain out of view.</p>
             <p>The source continues southeast.</p>
+            <p>Nothing in the account brings the two men back before it moves on.</p>
           </div>
           <span class="bracket bracket-close" aria-hidden="true">]</span>
         </div>
@@ -109,14 +114,17 @@
           <li>You, at the morning edge of the report.</li>
         </ol>
         <div class="passage-actions" aria-label="Available actions">
-          <button class="door" type="button" data-reveal="southeast">
-            <span class="door-mark" aria-hidden="true">&gt;</span>
-            Continue southeast
+          <button class="door door-quiet door-back" type="button" data-back>
+            <span class="door-mark" aria-hidden="true">&lt;</span>
+            Back
           </button>
-          <button class="door door-quiet" type="button" data-prompt="What changed during the night, and what did not?">
+          <button class="door door-quiet door-prompt" type="button" data-prompt="What changed during the night, and what did not?">
             Ask what changed
           </button>
-          <button class="door door-quiet" type="button" data-back>Back</button>
+          <button class="door door-forward" type="button" data-reveal="southeast">
+            Continue southeast
+            <span class="door-mark" aria-hidden="true">&gt;</span>
+          </button>
         </div>
       </section>
 
@@ -129,6 +137,7 @@
             <p>The report carries about fifteen miles of travel.</p>
             <p>It does not preserve the line of the route.</p>
             <p>A new camp lies ahead on a small branch of Blue Water.</p>
+            <p>The direction and mileage belong to Dawson’s account; they are not a route reconstructed by the Workshop.</p>
           </div>
           <span class="bracket bracket-close" aria-hidden="true">]</span>
         </div>
@@ -137,14 +146,17 @@
           <li>Dawson’s party, traveling an approximate distance.</li>
         </ol>
         <div class="passage-actions" aria-label="Available actions">
-          <button class="door" type="button" data-reveal="blue-water">
-            <span class="door-mark" aria-hidden="true">&gt;</span>
-            Reach the next camp
+          <button class="door door-quiet door-back" type="button" data-back>
+            <span class="door-mark" aria-hidden="true">&lt;</span>
+            Back
           </button>
-          <button class="door door-quiet" type="button" data-prompt="What does the report establish by saying southeast about fifteen miles?">
+          <button class="door door-quiet door-prompt" type="button" data-prompt="What does the report establish by saying southeast about fifteen miles?">
             Ask about the fifteen miles
           </button>
-          <button class="door door-quiet" type="button" data-back>Back</button>
+          <button class="door door-forward" type="button" data-reveal="blue-water">
+            Reach the next camp
+            <span class="door-mark" aria-hidden="true">&gt;</span>
+          </button>
         </div>
       </section>
 
@@ -157,6 +169,7 @@
             <p>On this creek, Dawson reports finding Mr. Mayes and Mr. Criner.</p>
             <p>They reside on James’ Fork of Poteau.</p>
             <p>They are trapping for beaver here. The report supplies no route between the creek and their residence.</p>
+            <p>The residence and the trapping place are related in the report, but they are not made into one location.</p>
           </div>
           <span class="bracket bracket-close" aria-hidden="true">]</span>
         </div>
@@ -165,14 +178,17 @@
           <li>Mayes and Criner, found on this creek in Dawson’s report.</li>
         </ol>
         <div class="passage-actions" aria-label="Available actions">
-          <button class="door" type="button" data-reveal="dozen">
-            <span class="door-mark" aria-hidden="true">&gt;</span>
-            See what the report says next
+          <button class="door door-quiet door-back" type="button" data-back>
+            <span class="door-mark" aria-hidden="true">&lt;</span>
+            Back
           </button>
-          <button class="door door-quiet" type="button" data-prompt="Who are Mayes and Criner here, and what does the report not tell us?">
+          <button class="door door-quiet door-prompt" type="button" data-prompt="Who are Mayes and Criner here, and what does the report not tell us?">
             Ask about Mayes and Criner
           </button>
-          <button class="door door-quiet" type="button" data-back>Back</button>
+          <button class="door door-forward" type="button" data-reveal="dozen">
+            See what the report says next
+            <span class="door-mark" aria-hidden="true">&gt;</span>
+          </button>
         </div>
       </section>
 
@@ -185,6 +201,7 @@
             <p>The dozen is one collective result for Mayes and Criner.</p>
             <p>The report does not divide the catch between them or place it on a map.</p>
             <p>Dawson says the weather was too cold to promise much further success.</p>
+            <p>The count closes this small encounter; the larger trail continues beyond it.</p>
           </div>
           <span class="bracket bracket-close" aria-hidden="true">]</span>
         </div>
@@ -193,20 +210,23 @@
           <li>Mayes and Criner, carried together in the stated result.</li>
         </ol>
         <p class="stop-line">The trail continues. This first public passage stops here.</p>
-        <div class="passage-actions" aria-label="Available actions">
-          <button class="door" type="button" data-prompt="What remains open at this stopping place?">
-            <span class="door-mark" aria-hidden="true">&gt;</span>
-            Ask what remains open
-          </button>
-          <button class="door door-quiet" type="button" data-scroll="practice">
-            Return to the workshop
-          </button>
-          <button class="door door-quiet" type="button" data-back>Back</button>
-        </div>
         <p class="source-return">
           Source return:
           <a href="https://gateway.okhistory.org/ark:/67531/metadc2192269/">J. L. Dawson report representation</a>
         </p>
+        <div class="passage-actions" aria-label="Available actions">
+          <button class="door door-quiet door-back" type="button" data-back>
+            <span class="door-mark" aria-hidden="true">&lt;</span>
+            Back
+          </button>
+          <button class="door door-quiet door-prompt" type="button" data-prompt="What remains open at this stopping place?">
+            Ask what remains open
+          </button>
+          <button class="door door-forward" type="button" data-scroll="practice">
+            Return to the workshop
+            <span class="door-mark" aria-hidden="true">&gt;</span>
+          </button>
+        </div>
       </section>
 
       <section class="practice" id="practice" data-scene data-place="The workshop" aria-labelledby="practice-title" tabindex="-1">
@@ -227,37 +247,37 @@
             <strong>r/EarthlyHandsWorkshop</strong>
           </a>
         </div>
-        <button class="door door-quiet practice-back" type="button" data-back>
+        <button class="door door-quiet door-back practice-back" type="button" data-back>
+          <span class="door-mark" aria-hidden="true">&lt;</span>
           Back to the trail
         </button>
       </section>
     </main>
 
-    <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Talk with the ground" hidden>
-      <div class="ground-talk-inner">
-        <div class="ground-talk-head">
-          <div>
-            <p class="ground-talk-kicker">Listening ground</p>
-            <p class="ground-talk-place" id="ground-talk-place">Front edge</p>
-          </div>
-          <button class="talk-toggle" id="talk-toggle" type="button" aria-expanded="false" aria-controls="talk-body">
-            Ask the ground
-          </button>
-        </div>
-        <div class="talk-body" id="talk-body" hidden>
-          <div class="talk-log" id="talk-log" aria-live="polite"></div>
-          <form class="talk-form" id="talk-form">
-            <label class="sr-only" for="talk-input">Ask about where you are or what the source carries</label>
-            <textarea id="talk-input" name="message" rows="2" maxlength="600" placeholder="Ask about where you are or what the source carries…"></textarea>
-            <button type="submit">Send</button>
-          </form>
-          <p class="talk-note">The ground answers from this public Dawson footing. It does not enter the private workshop.</p>
-        </div>
-      </div>
-    </section>
-
     <footer>
       <p>Earthly Hands</p>
+      <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Talk with the ground" hidden>
+        <div class="ground-talk-inner">
+          <div class="ground-talk-head">
+            <div>
+              <p class="ground-talk-kicker">Listening ground</p>
+              <p class="ground-talk-place" id="ground-talk-place">Front edge</p>
+            </div>
+            <button class="talk-toggle" id="talk-toggle" type="button" aria-expanded="false" aria-controls="talk-body">
+              Ask the ground
+            </button>
+          </div>
+          <div class="talk-body" id="talk-body" hidden>
+            <div class="talk-log" id="talk-log" aria-live="polite"></div>
+            <form class="talk-form" id="talk-form">
+              <label class="sr-only" for="talk-input">Ask about where you are or what the source carries</label>
+              <textarea id="talk-input" name="message" rows="2" maxlength="600" placeholder="Ask about where you are or what the source carries…"></textarea>
+              <button type="submit">Send</button>
+            </form>
+            <p class="talk-note">The ground answers from this public Dawson footing. It does not enter the private workshop.</p>
+          </div>
+        </div>
+      </section>
       <a href="#threshold" data-home>Return to the threshold</a>
     </footer>
 
@@ -265,6 +285,6 @@
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="config.js?v=threshold-v5"></script>
-    <script src="script.js?v=threshold-v5"></script>
+    <script src="script.js?v=threshold-v6"></script>
   </body>
 </html>
