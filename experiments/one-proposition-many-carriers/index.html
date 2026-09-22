@@ -207,7 +207,7 @@
         <button class="needle" id="needle" type="button" aria-pressed="false" aria-describedby="needle-help">Hold<br>needle</button>
         <div class="needle-copy" id="needle-help">
           <strong>Press and hold for source depth</strong>
-          Interpretation recedes. Carrier-local wording and provenance remain. Tap once to pin or release the source view.
+          Interpretation recedes. Carrier-local wording and provenance remain until you release the control.
         </div>
       </div>
 
@@ -370,7 +370,6 @@
   <script>
     const body=document.body;
     const needle=document.getElementById("needle");
-    let pinned=false;
     let holding=false;
     const paint=(on)=>{
       body.dataset.sourceView=String(on);
@@ -382,17 +381,14 @@
       needle.setPointerCapture?.(e.pointerId);
       paint(true);
     });
-    needle.addEventListener("pointerup",(e)=>{
+    const release=(e)=>{
       if(!holding)return;
       holding=false;
-      if(needle.hasPointerCapture?.(e.pointerId))needle.releasePointerCapture(e.pointerId);
-      paint(pinned);
-    });
-    needle.addEventListener("pointercancel",()=>{holding=false;paint(pinned)});
-    needle.addEventListener("click",()=>{
-      pinned=!pinned;
-      paint(pinned);
-    });
+      if(e && needle.hasPointerCapture?.(e.pointerId))needle.releasePointerCapture(e.pointerId);
+      paint(false);
+    };
+    needle.addEventListener("pointerup",release);
+    needle.addEventListener("pointercancel",release);
     needle.addEventListener("keydown",(e)=>{
       if((e.key===" "||e.key==="Enter")&&!e.repeat){
         e.preventDefault();
@@ -404,11 +400,10 @@
       if(e.key===" "||e.key==="Enter"){
         e.preventDefault();
         holding=false;
-        pinned=!pinned;
-        paint(pinned);
+        paint(false);
       }
     });
-    window.addEventListener("blur",()=>{holding=false;paint(pinned)});
+    window.addEventListener("blur",()=>{holding=false;paint(false)});
   </script>
 </body>
 </html>
