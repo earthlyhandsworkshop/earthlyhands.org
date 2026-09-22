@@ -43,7 +43,7 @@ jobs:
           npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="1280,900" https://earthlyhands.org/mcr879.html public-observation/mcr879-desktop.png
           npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="390,844" https://earthlyhands.org/mcr879.html public-observation/mcr879-mobile.png
 
-          for page in dancing-rabbit-statehood-line dawson-inline-depth ward-room one-outing-two-clocks register-threshold-v2 listening-threshold; do
+          for page in dancing-rabbit-statehood-line register-line-front-edge four-way-room-nav dawson-inline-depth ward-room one-outing-two-clocks register-threshold-v2 listening-threshold; do
             npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="1280,900" "https://earthlyhands.org/experiments/$page/" "public-observation/$page-desktop.png"
             npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="390,844" "https://earthlyhands.org/experiments/$page/" "public-observation/$page-mobile.png"
           done
