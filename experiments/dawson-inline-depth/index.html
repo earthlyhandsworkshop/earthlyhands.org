@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#ded5c4">
+<meta name="theme-color" content="#e8e3d8">
 <meta name="robots" content="noindex,follow">
 <meta name="description" content="A Small Door / Earthly Hands experiment in opening source-earned relation depth without moving the reader from the current ground.">
 <title>Dawson inline depth — Small Door experiment</title>
 <style>
 :root{
-  --field:#ded5c4;--field2:#e9e1d2;--paper:#f1eadc;--ink:#211f1a;--muted:#686255;
+  --field:#e8e3d8;--field2:#f0ece4;--paper:#f7f3eb;--ink:#211f1a;--muted:#69645b;
   --faint:#9b927f;--rule:#ada38f;--rule2:#756d5d;--rust:#8d583e;--moss:#515746;
   --shadow:rgba(47,40,29,.10);--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
@@ -20,7 +20,7 @@ body{
   margin:0;min-width:18rem;min-height:100svh;color:var(--ink);font:1.16rem/1.6 var(--serif);
   background:
     linear-gradient(90deg,transparent 0,transparent 4.4rem,rgba(33,31,26,.08) 4.4rem,rgba(33,31,26,.08) calc(4.4rem + 1px),transparent calc(4.4rem + 1px)),
-    radial-gradient(circle at 28% 14%,rgba(255,255,255,.22),transparent 31rem),
+    radial-gradient(circle at 28% 14%,rgba(255,255,255,.38),transparent 31rem),
     var(--field);
 }
 a,button{color:inherit}
@@ -101,7 +101,7 @@ details p{color:var(--muted);font-size:.9rem!important}
 details a{font-size:.9rem}
 .actions{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-top:.9rem}
 .actions button{padding:.25rem 0;border:0;border-bottom:1px solid var(--rust);background:none;color:var(--ink);font:.78rem/1.4 var(--mono);cursor:pointer}
-.boundary{max-width:52rem;margin:clamp(4rem,8vw,7rem) auto 0;padding-top:1.2rem;border-top:1px solid var(--rule2);color:var(--muted)}
+.mobile-gesture-note{display:none;margin:1rem 0 0;color:var(--muted);font:.7rem/1.45 var(--mono);letter-spacing:.04em}.boundary{max-width:52rem;margin:clamp(4rem,8vw,7rem) auto 0;padding-top:1.2rem;border-top:1px solid var(--rule2);color:var(--muted)}
 .nav-note{margin:0 0 .65rem;color:var(--rust);font-size:.65rem}
 .boundary p{margin:.45rem 0}
 .signature{margin-top:1.5rem!important;font-size:.68rem}
@@ -122,22 +122,28 @@ footer{min-height:4.5rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;
 footer p{margin:0}
 footer a{text-decoration:none}
 @media(max-width:58rem){
-  body{background:linear-gradient(90deg,transparent 0,transparent 1.35rem,rgba(33,31,26,.08) 1.35rem,rgba(33,31,26,.08) calc(1.35rem + 1px),transparent calc(1.35rem + 1px)),var(--field)}
-  .shell,.ask-inner{width:calc(100% - 3rem);margin-left:2.15rem;margin-right:.85rem}
-  .topline{grid-template-columns:1fr auto}
-  .bearing{grid-column:1/-1;grid-row:2;justify-self:start;padding-bottom:.8rem}
+  body{background:var(--field)}
+  .shell,.ask-inner{width:calc(100% - 2rem);margin:0 1rem}
+  .topline{grid-template-columns:minmax(0,1fr) auto;gap:.75rem;min-height:4.6rem}
+  .bearing{grid-column:1/-1;grid-row:2;justify-self:start;padding:0 0 .65rem;color:var(--rust)}
   .brand{grid-column:1;grid-row:1}.top-actions{grid-column:2;grid-row:1}
-  .stage{grid-template-columns:1fr;gap:2.5rem}.intro{position:static}
-  h1{max-width:12ch;font-size:clamp(3.4rem,16vw,5.5rem)}
-  .field{grid-template-columns:3.2rem minmax(0,1fr) 3.2rem;gap:.2rem}
-  .dir{padding:.35rem .05rem}.dir strong{font-size:.78rem}.dir small{display:none}
-  .reading{padding:1.4rem}.window{margin:1.4rem 0 1.6rem .55rem}
+  main{padding-top:2.4rem}
+  .stage{grid-template-columns:1fr;gap:2.2rem}.intro{position:static}
+  h1{max-width:12ch;font-size:clamp(3.15rem,15vw,5.2rem)}
+  .orientation{max-width:34rem}
+  .sequence{margin-top:2rem}
+  .field{display:block}
+  .dir{display:none}
+  .reading{width:100%;padding:1.3rem 1.05rem;background:rgba(247,243,235,.82);box-shadow:none}
+  .reading-head{margin-bottom:1.5rem}
+  .reading p{font-size:clamp(1.2rem,5.2vw,1.42rem)}
+  .window{margin:1.4rem 0 1.6rem;padding:1.2rem 1.05rem;transform:none;box-shadow:none}
   .ask-body{grid-template-columns:1fr}
+  .mobile-gesture-note{display:block}
 }
 @media(max-width:38rem){
   body{font-size:1.07rem}.top-actions{gap:.65rem}.top-actions .ask-words{display:none}
-  .field{grid-template-columns:2.4rem minmax(0,1fr) 2.4rem}
-  .dir strong{font-size:.68rem}.reading{padding:1.1rem .95rem}
+  .reading{padding:1.05rem .9rem}
   footer{grid-template-columns:1fr;gap:.25rem;padding:1rem 0 2rem}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -161,6 +167,7 @@ footer a{text-decoration:none}
       <p class="kicker">Dawson ground · next travel leg</p>
       <h1>The account carries southeast.</h1>
       <p class="orientation">You arrived from Morning Camp. Opening nearby depth does not move you. The page keeps one standing point while the relations around it become more inspectable.</p>
+      <p class="mobile-gesture-note">On a phone: scroll down for depth · swipe left for Blue Water</p>
       <div class="sequence" aria-label="Source-sequence orientation">
         <p class="seq-label">Source sequence</p>
         <div class="seq-line" aria-hidden="true">
@@ -201,6 +208,7 @@ footer a{text-decoration:none}
       <p class="kicker">Dawson ground · a new camp</p>
       <h1>A small branch of Blue Water.</h1>
       <p class="orientation">Encounter, residence, and activity remain separate relations even when the prose places them together. Relation depth can open locally without turning every name into a biography page.</p>
+      <p class="mobile-gesture-note">On a phone: scroll down for depth · swipe right for Southeast Reach</p>
       <div class="sequence" aria-label="Source-sequence orientation">
         <p class="seq-label">Source sequence</p>
         <div class="seq-line" aria-hidden="true">
@@ -291,7 +299,7 @@ earned:"The source earns encounter, residence, and trapping relations. It does n
 open:"Exact encounter geometry, residence parcel, route between residence and trapping ground, and broader same-name identities remain open."
 }
 };
-let active=null,currentId="southeast";
+let active=null,currentId="southeast",touchStartX=0,touchStartY=0;
 const where=document.getElementById("where"),panel=document.getElementById("ask-panel"),place=document.getElementById("ask-place"),answer=document.getElementById("ask-answer");
 function closeSlip(){if(!active)return;active.p.remove();active.b.setAttribute("aria-expanded","false");active=null}
 function go(id){
@@ -320,6 +328,16 @@ document.querySelectorAll("[data-source]").forEach(b=>b.onclick=()=>window.open(
 document.getElementById("ask-toggle").onclick=openAsk;document.getElementById("ask-close").onclick=closeAsk;
 document.querySelectorAll("[data-question]").forEach(b=>b.onclick=()=>answer.textContent=ask[currentId][b.dataset.question]);
 window.addEventListener("keydown",e=>{if(e.key==="Escape"){closeSlip();closeAsk()}});
+window.addEventListener("touchstart",e=>{
+  const t=e.changedTouches[0];touchStartX=t.clientX;touchStartY=t.clientY;
+},{passive:true});
+window.addEventListener("touchend",e=>{
+  if(!panel.hidden||active)return;
+  const t=e.changedTouches[0],dx=t.clientX-touchStartX,dy=t.clientY-touchStartY;
+  if(Math.abs(dx)<70||Math.abs(dx)<Math.abs(dy)*1.25)return;
+  if(dx<0&&currentId==="southeast")go("blue-water");
+  if(dx>0&&currentId==="blue-water")go("southeast");
+},{passive:true});
 const start=location.hash.slice(1);if(start==="blue-water"||start==="southeast")go(start);
 })();
 </script>
