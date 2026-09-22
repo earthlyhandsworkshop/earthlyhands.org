@@ -7,55 +7,66 @@
 <meta name="theme-color" content="#171713">
 <title>MCR 879 — Robert Bell evidence field — Earthly Hands</title>
 <style>
-:root{color-scheme:dark;--night:#171713;--raised:#1c1b16;--paper:#eee8dc;--muted:#aaa394;--rule:#454239;--ember:#cf8953;--soft:#e0ad78;--measure:43rem}
+:root{color-scheme:dark;--night:#171713;--paper:#eee8dc;--muted:#aaa394;--rule:#454239;--ember:#cf8953;--soft:#e0ad78;--wide:76rem;--text:46rem}
 *{box-sizing:border-box}
-html{background:var(--night);-webkit-text-size-adjust:100%}
-body{margin:0;min-width:18rem;background:radial-gradient(circle at 48% 34%,rgba(207,137,83,.07),transparent 28rem),var(--night);color:var(--paper);font:1.08rem/1.58 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+html{scroll-behavior:smooth;background:var(--night);-webkit-text-size-adjust:100%}
+body{margin:0;min-width:18rem;background:radial-gradient(circle at 50% 18rem,rgba(207,137,83,.055),transparent 34rem),var(--night);color:var(--paper);font:1.08rem/1.62 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
 a{color:inherit;text-decoration-color:var(--ember);text-underline-offset:.22em}
 a:hover{color:var(--soft)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--ember);outline-offset:4px}
-.shell{width:min(72rem,calc(100% - 6vw));margin:auto}
-header,footer{display:flex;justify-content:space-between;gap:1.5rem;align-items:baseline;padding:1.15rem 0;color:var(--muted);font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.09em;text-transform:uppercase}
-header{border-bottom:1px solid var(--rule)}
-footer{border-top:1px solid var(--rule);padding-bottom:2.4rem}
+.shell{width:min(var(--wide),calc(100% - 6vw));margin:auto}
+header{position:relative;z-index:10;display:flex;justify-content:space-between;gap:1.5rem;align-items:baseline;padding:1rem 0;color:var(--muted);font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.09em;text-transform:uppercase}
 .brand{color:var(--paper);text-decoration:none;font-weight:600}
-main{padding:clamp(2.5rem,6vw,5.5rem) 0 clamp(3rem,7vw,6rem)}
-.intro{max-width:var(--measure);margin:0 auto clamp(2.7rem,6vw,5rem);text-align:center}
-.kicker,.status,.object,.direction small,.source-state{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-.kicker{margin:0 0 .8rem;color:var(--ember);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}
-h1{max-width:16ch;margin:0 auto 1.25rem;font-size:clamp(2.55rem,5.5vw,5rem);font-weight:400;line-height:.98;letter-spacing:-.035em}
-.intro p:last-child{margin:0 auto;color:#d8d1c4}
-.field{position:relative;display:grid;grid-template-columns:minmax(7rem,.28fr) minmax(18rem,1fr) minmax(7rem,.28fr);grid-template-rows:auto minmax(27rem,auto) auto;gap:clamp(.75rem,2vw,1.5rem);align-items:stretch;max-width:64rem;margin:auto}
-.direction{border:0;background:transparent;color:var(--muted);font:inherit;cursor:pointer;padding:.7rem;text-align:center;transition:color 150ms ease}
-.direction:hover,.direction[aria-current="true"]{color:var(--soft)}
-.direction strong{display:block;color:inherit;font:400 1rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
-.direction small{display:block;margin-top:.35rem;font-size:.67rem;letter-spacing:.07em;text-transform:uppercase}
-.up{grid-column:2;grid-row:1;align-self:end}
-.left{grid-column:1;grid-row:2;align-self:center;text-align:right}
-.right{grid-column:3;grid-row:2;align-self:center;text-align:left}
-.down{grid-column:2;grid-row:3;align-self:start}
-.room{grid-column:2;grid-row:2;display:flex;flex-direction:column;justify-content:center;min-height:27rem;padding:clamp(2.2rem,5vw,4.5rem);border:1px solid var(--rule);background:rgba(28,27,22,.56)}
-.object{margin:0 0 .8rem;color:var(--ember);font-size:.75rem;letter-spacing:.09em;text-transform:uppercase}
-.where{margin:0 0 .45rem;color:var(--muted);font-size:.9rem}
-.room h2{max-width:14ch;margin:0 0 1.3rem;font-size:clamp(2.15rem,4.6vw,3.9rem);font-weight:400;line-height:1;letter-spacing:-.03em}
-.room-copy{max-width:34rem;margin:0;color:#ddd6c9}
-.room-copy + .room-copy{margin-top:.85rem}
-.source-state{max-width:35rem;margin:1.7rem 0 0;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.76rem;line-height:1.55}
-.legend{max-width:var(--measure);margin:clamp(3rem,6vw,5rem) auto 0;padding-top:1.2rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem}
-.legend strong{color:var(--paper);font-weight:400}
-@media(max-width:700px){
+main{padding:clamp(1.8rem,4vw,3.4rem) 0 7rem}
+.intro{max-width:64rem;margin:0 0 clamp(2.7rem,5vw,4.5rem)}
+.kicker,.state-label,.source-state,.nav button{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.kicker{margin:0 0 .65rem;color:var(--ember);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+h1{max-width:18ch;margin:0 0 1rem;font-size:clamp(2.7rem,5.5vw,5.35rem);font-weight:400;line-height:.95;letter-spacing:-.04em}
+.intro-copy{max-width:52rem;margin:0;color:#d7d0c3;font-size:1.12rem}
+.research{max-width:68rem}
+.state{scroll-margin-top:5rem;padding:clamp(3rem,7vw,6.5rem) 0}
+.state:first-child{padding-top:1.5rem}
+.state-grid{display:grid;grid-template-columns:minmax(12rem,.42fr) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:start}
+.state-meta{position:sticky;top:2rem}
+.state-label{margin:0 0 .55rem;color:var(--ember);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase}
+.state-date{margin:0;color:var(--muted);font-size:.95rem}
+.state-body{max-width:var(--text)}
+.state h2{max-width:17ch;margin:0 0 1.4rem;font-size:clamp(2.05rem,4vw,3.6rem);font-weight:400;line-height:1.02;letter-spacing:-.03em}
+.state-body p{margin:0 0 1rem}
+.state-body .lead{font-size:1.18rem;color:#ddd6c9}
+.source-state{margin:1.7rem 0 0;color:var(--muted);font-size:.76rem;line-height:1.58}
+.trace{margin:2rem 0 0;padding:0;list-style:none;color:#d7d0c3}
+.trace li{margin:.55rem 0;padding-left:1.3rem;position:relative}
+.trace li:before{position:absolute;left:0;color:var(--ember);content:"—"}
+.intersection{margin:clamp(1rem,3vw,2rem) 0;padding:clamp(1.4rem,3vw,2.2rem) 0;color:#d7d0c3}
+.intersection p{max-width:58rem;margin:.5rem 0}
+.nav{position:fixed;z-index:20;inset:auto 1.1rem 1.1rem auto;width:8.9rem;height:8.9rem;opacity:.72;transition:opacity 150ms ease}
+.nav:hover,.nav:focus-within{opacity:1}
+.nav button{position:absolute;border:0;background:rgba(23,23,19,.83);color:var(--muted);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(5px)}
+.nav button:hover,.nav button[aria-current="true"]{color:var(--soft)}
+.nav .up{top:0;left:50%;transform:translateX(-50%);width:4.2rem;height:2.2rem}
+.nav .down{bottom:0;left:50%;transform:translateX(-50%);width:4.2rem;height:2.2rem}
+.nav .left{left:0;top:50%;transform:translateY(-50%);width:3rem;height:4rem}
+.nav .right{right:0;top:50%;transform:translateY(-50%);width:3rem;height:4rem}
+.nav .center{left:50%;top:50%;transform:translate(-50%,-50%);width:2.7rem;height:2.7rem;border:1px solid var(--rule);border-radius:50%;color:var(--paper);font-size:.52rem}
+footer{padding:1.6rem 0 2.5rem;color:var(--muted);font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+footer a{margin-left:1rem}
+@media(max-width:760px){
 .shell{width:calc(100% - 2rem)}
-header,footer{display:block}header>* ,footer>*{display:block;margin:.2rem 0}
-main{padding-top:2.4rem}
-.field{grid-template-columns:3rem minmax(0,1fr) 3rem;grid-template-rows:auto minmax(28rem,auto) auto;gap:.25rem}
-.direction{padding:.4rem .08rem}
-.direction strong{font-size:.74rem;line-height:1.1}
-.direction small{display:none}
-.left{text-align:right}.right{text-align:left}
-.room{padding:1.35rem;min-height:28rem}
-.room h2{font-size:clamp(2.05rem,10.5vw,3.25rem)}
-h1{font-size:clamp(2.55rem,13vw,4rem)}
+header{display:block}header>*{display:block;margin:.18rem 0}
+main{padding-top:1.4rem}
+h1{font-size:clamp(2.65rem,13vw,4rem)}
+.intro{margin-bottom:2rem}
+.state{padding:3.5rem 0}
+.state-grid{display:block}
+.state-meta{position:static;margin-bottom:1rem}
+.state h2{font-size:clamp(2rem,10vw,3rem)}
+.nav{width:7.5rem;height:7.5rem;right:.55rem;bottom:.55rem;opacity:.62}
+.nav .left,.nav .right{width:2.5rem;height:3.4rem}
+.nav .up,.nav .down{width:3.8rem;height:2rem}
+.nav .center{width:2.4rem;height:2.4rem}
 }
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -66,111 +77,158 @@ h1{font-size:clamp(2.55rem,13vw,4rem)}
 </header>
 
 <main>
-<section class="intro">
+<section class="intro" id="top">
   <p class="kicker">MCR 879 · Robert Bell evidence field</p>
   <h1>One proceeding. Several documentary directions.</h1>
-  <p>Stand in the 1902 case body and move toward the evidence or administrative act you want to inspect. The directions are interface positions, not geography.</p>
+  <p class="intro-copy">This is one continuous research body. The small navigation control moves between real documentary states; it does not divide them into separate rooms or claim that their screen position is geography, chronology, causation, or evidentiary rank.</p>
 </section>
 
-<div class="field" aria-label="MCR 879 evidence navigation">
-  <button class="direction up" data-state="older" type="button">
-    <strong>Older record</strong><small>1837 commissioner context</small>
-  </button>
+<nav class="nav" aria-label="Move through the MCR 879 evidence field">
+  <button class="up" type="button" data-target="older" title="Older Article XIV record">Older</button>
+  <button class="left" type="button" data-target="family" title="Family testimony">Family</button>
+  <button class="center" type="button" data-target="center" title="Return to MCR 879 standing point">MCR<br>879</button>
+  <button class="right" type="button" data-target="patent" title="Patent record">Patent</button>
+  <button class="down" type="button" data-target="rehearing" title="Rehearing sequence">Rehear.</button>
+</nav>
 
-  <button class="direction left" data-state="family" type="button">
-    <strong>Family testimony</strong><small>1901 examinations</small>
-  </button>
+<div class="research">
+<section class="state" id="center" data-state>
+  <div class="state-grid">
+    <aside class="state-meta">
+      <p class="state-label">Standing point</p>
+      <p class="state-date">MCR 879 · April–May 1902</p>
+    </aside>
+    <div class="state-body">
+      <h2>The case turns on which Robert Bell the record is describing.</h2>
+      <p class="lead">The Bell–McKinney family applications reach the Commission carrying living family testimony, while federal actors reach backward into older Article XIV material and a patent record.</p>
+      <p>The older Robert Bell is not treated as nonexistent. The administrative machinery instead compares the family’s Robert Bell against the older record body and makes identity judgments about whether those documentary bodies describe the same man.</p>
+      <p>Those judgments remain attributed to the agencies that made them. The Workshop does not collapse the family Robert and the older Article XIV Robert merely because the government placed them in the same decisional field.</p>
+      <ul class="trace">
+        <li>Family testimony supplies Hugh Bell, Margaret McKinney, Catherine McKinney, and Robert Bell family memory inside the proceeding.</li>
+        <li>The examiner redirects Emma J. Pickens from a broader McKinney answer toward Robert Bell and the older Murray–Vroom material.</li>
+        <li>The Office later uses an 1846 Robert Bell patent record as part of its two-Robert analysis.</li>
+        <li>The 1907 rehearing sequence later changes the active administrative gate from evidentiary identity comparison to filing time.</li>
+      </ul>
+      <p class="source-state">Standing: MCR 879 family body ≠ automatic identity with the older Article XIV Robert body.</p>
+    </div>
+  </div>
+</section>
 
-  <section class="room" id="room" aria-live="polite">
-    <p class="object" id="object">MCR 879 · Commission decision</p>
-    <p class="where" id="where">Standing point · April–May 1902</p>
-    <h2 id="title">The case turns on which Robert Bell the record is describing.</h2>
-    <p class="room-copy" id="copy1">The Commission and the Office of Indian Affairs look backward into Article XIV material while handling the Bell–McKinney family applications. The older Robert record is not denied to exist; federal actors use it to distinguish one Robert Bell from another.</p>
-    <p class="room-copy" id="copy2">This room does not adopt that identity conclusion. It keeps the government’s comparison visible as a government act.</p>
-    <p class="source-state" id="source-state">Standing: MCR 879 family body ≠ automatic identity with the older Article XIV Robert body.</p>
-  </section>
-
-  <button class="direction right" data-state="patent" type="button">
-    <strong>Patent record</strong><small>1846 / Office use 1902</small>
-  </button>
-
-  <button class="direction down" data-state="rehearing" type="button">
-    <strong>Rehearing</strong><small>28 Feb–4 Mar 1907</small>
-  </button>
+<div class="intersection">
+  <p>The same proceeding can be entered from different documentary directions. None of the sections below is a subordinate “detail panel”; each is a separately controlled state the 1902–1907 machinery brought into relation.</p>
 </div>
 
-<section class="legend">
-  <strong>Navigation note.</strong> Left, right, up, and down are only room positions in this specimen. They do not assert compass bearing, chronology, causation, or evidentiary rank. A visitor is moving among controlled documentary states.
+<section class="state" id="family" data-state>
+  <div class="state-grid">
+    <aside class="state-meta">
+      <p class="state-label">Family testimony</p>
+      <p class="state-date">Commission examinations · 1901</p>
+    </aside>
+    <div class="state-body">
+      <h2>The family record reaches the case through people still speaking.</h2>
+      <p class="lead">MCR 879 is not only a backward-looking archive exercise. It contains living witnesses describing family relationships and what they understood about Robert Bell.</p>
+      <p>Emma J. Pickens’s March 1901 examination provides one especially visible turn. After she answers a broader treaty-and-law question by saying her father’s ancestors were McKinneys, the examiner says he is less interested in the McKinneys than in Robert Bell and turns to whether her father was the Robert Bell appearing in the older Murray–Vroom material.</p>
+      <p>That shift is source-visible. Its motive is not. The useful verb is therefore <em>redirects</em>, not “discovers,” “proves,” or “the family attaches itself.” The identity comparison is being performed by the administrative examination.</p>
+      <p>Across the consolidated case body, family witnesses and affidavit summaries also carry competing details about Robert Bell, including unresolved differences in reported death timing. Repetition inside Commission summaries is not automatically an independent second witness.</p>
+      <p class="source-state">Boundary: family testimony, Commission summaries, and examiner redirection are distinct evidentiary acts. The reason for the redirection remains open.</p>
+    </div>
+  </div>
 </section>
+
+<section class="state" id="older" data-state>
+  <div class="state-grid">
+    <aside class="state-meta">
+      <p class="state-label">Older record body</p>
+      <p class="state-date">Article XIV · 1837 commissioner context / later carriers</p>
+    </aside>
+    <div class="state-body">
+      <h2>An older Robert Bell survives in an administrative record stream.</h2>
+      <p class="lead">The older body later brought into MCR 879 includes Robert Bell material associated with Article XIV adjudication and the March 3, 1837 commissioner context.</p>
+      <p>A later printed representation directly inspected by the Workshop carries Robert Bell with Office No. 37 and a tract description in Section 4, Township 12, Range 12 East. The printed page is a later carrier of an earlier administrative state; it is not the original treaty-time paper.</p>
+      <p>Other Robert Bell occurrences survive in earlier claimant and Public Lands bodies as well, but continuity among every Robert Bell occurrence is not assumed merely because the name repeats.</p>
+      <p>That is precisely why this older record matters inside MCR 879: it is not just background. Federal actors use the older record universe as an identity instrument.</p>
+      <p class="source-state">Boundary: occurrence, carrier, administrative context, and person identity travel separately. Older Robert occurrence ≠ family Robert identity.</p>
+    </div>
+  </div>
+</section>
+
+<section class="state" id="patent" data-state>
+  <div class="state-grid">
+    <aside class="state-meta">
+      <p class="state-label">Patent record</p>
+      <p class="state-date">14 Dec 1846 · Office review 13 May 1902</p>
+    </aside>
+    <div class="state-body">
+      <h2>A land record becomes an identity-separating instrument.</h2>
+      <p class="lead">The Office of Indian Affairs says its own records show a patent issued to Robert Bell on December 14, 1846.</p>
+      <p>In the May 1902 review of MCR 879, the Office does not use that patent merely to establish that some Robert Bell once received land. It combines the patent fact with other historical record material and an Office map reference in its two-Robert analysis.</p>
+      <p>The Office’s attributed conclusion is that the patented Article XIV Robert Bell was a different man from the Robert Bell claimed by the family applicants. The Workshop can state that administrative act strongly without adopting it as an independently proved historical identity conclusion.</p>
+      <p>The documentary state also matters. The Office-held patent fact used in May 1902 is not the same physical evidentiary object as the later 20 February 1904 General Land Office certification and certified patent exemplification preserved in another Bell case packet.</p>
+      <ul class="trace">
+        <li>1846 underlying patent / patent-record lineage.</li>
+        <li>May 1902 Office-held patent fact used in MCR 879 identity separation.</li>
+        <li>1904 certified exemplification: a later derivative documentary state, not back-projected into 1902.</li>
+      </ul>
+      <p class="source-state">Documentary state ≠ timeless object. Administrative identity verb stays attached to the actor and date that used the record.</p>
+    </div>
+  </div>
+</section>
+
+<section class="state" id="rehearing" data-state>
+  <div class="state-grid">
+    <aside class="state-meta">
+      <p class="state-label">Rehearing sequence</p>
+      <p class="state-date">28 Feb–4 Mar 1907</p>
+    </aside>
+    <div class="state-body">
+      <h2>The active gate changes from evidence to time.</h2>
+      <p class="lead">A motion asking for rehearing of MCR 879 was filed in the Commission office on February 28, 1907 and transmitted for Interior consideration.</p>
+      <p>On March 4, the Office of Indian Affairs says the motion was not filed within the time limited by the Act of April 26, 1906. It recommends that the motion be denied <em>pro forma</em>.</p>
+      <p>The same Office letter makes a separate record-handling statement: the underlying MCR 879 record is not transmitted because the Office does not consider it necessary for deciding this motion in this instance.</p>
+      <p>The Department then denies the motion as recommended. On these recovered faces, the visible administrative gate is timeliness rather than a renewed weighing of the full 1902 evidentiary record.</p>
+      <p>The actual February 28 rehearing motion remains unrecovered. Its own arguments about timeliness, exceptions, the merits, or another target order therefore remain open.</p>
+      <ul class="trace">
+        <li>26 Apr 1906: Congress supplies the reopening / reconsideration timing rule.</li>
+        <li>28 Feb 1907: rehearing motion filed and transmitted.</li>
+        <li>4 Mar 1907: Indian Office says untimely, recommends denial pro forma, and does not transmit the merits record.</li>
+        <li>4 Mar 1907: Interior denies the motion as recommended.</li>
+      </ul>
+      <p class="source-state">1906 = statute. 1907 = motion, recommendation, and denial. Reopening clock ≠ merits determination; rehearing motion text remains missing.</p>
+    </div>
+  </div>
+</section>
+</div>
 </main>
 
 <footer>
-  <span>Earthly Hands · MCR 879</span>
+  <span>Earthly Hands · MCR 879 evidence field</span>
   <a href="../../#threshold">Return to the threshold</a>
 </footer>
 </div>
 
 <script>
-const states={
-  center:{
-    object:"MCR 879 · Commission decision",
-    where:"Standing point · April–May 1902",
-    title:"The case turns on which Robert Bell the record is describing.",
-    copy1:"The Commission and the Office of Indian Affairs look backward into Article XIV material while handling the Bell–McKinney family applications. The older Robert record is not denied to exist; federal actors use it to distinguish one Robert Bell from another.",
-    copy2:"This room does not adopt that identity conclusion. It keeps the government’s comparison visible as a government act.",
-    source:"Standing: MCR 879 family body ≠ automatic identity with the older Article XIV Robert body."
-  },
-  older:{
-    object:"Older Article XIV record body",
-    where:"Commissioner context · Act of 3 March 1837 / later carried record",
-    title:"Robert Bell appears inside an older administrative record stream.",
-    copy1:"The Workshop holds an older Robert Bell record body that later federal decision-makers brought into MCR 879. A later printed representation places Robert Bell within the March 3, 1837 commissioner context and carries an Office No. 37 tract description.",
-    copy2:"That older occurrence is not, by itself, the Bell–McKinney family Robert. The identity bridge is exactly what the later government proceedings tried to decide.",
-    source:"Boundary: occurrence and administrative context are source-carried; cross-body person identity remains open."
-  },
-  family:{
-    object:"Family testimony",
-    where:"Commission examinations · 1901",
-    title:"The family record carries Robert Bell through living witnesses.",
-    copy1:"In Emma J. Pickens’s March 1901 examination, a broader answer about McKinney ancestry is followed by the examiner redirecting toward Robert Bell and asking whether her father was the Robert Bell carried in the older Murray–Vroom material.",
-    copy2:"The redirection is visible. Its motive is not. The testimony should not be rewritten as the family attaching itself to the older Robert; the administrative comparison is being made by the examining machinery.",
-    source:"Boundary: questioning-path redirection is source-visible; why the examiner redirected remains open."
-  },
-  patent:{
-    object:"Patent record",
-    where:"14 Dec 1846 patent · Office of Indian Affairs review, 13 May 1902",
-    title:"A patent record becomes an identity-separating instrument.",
-    copy1:"The Office of Indian Affairs says its records show a patent issued to Robert Bell on December 14, 1846. In its review of MCR 879, the Office combines that patent fact with other historical record material and uses the resulting body in its two-Robert analysis.",
-    copy2:"The Office’s conclusion is that the patented Article XIV Robert was a different man from the family Robert claimed by the applicants. That conclusion remains attributed to the Office rather than adopted as Workshop-level historical identity.",
-    source:"Documentary state matters: Office-held patent fact in 1902 ≠ later certified 1904 patent exemplification."
-  },
-  rehearing:{
-    object:"MCR 879 · rehearing sequence",
-    where:"28 February–4 March 1907",
-    title:"The active gate changes from evidence to time.",
-    copy1:"A rehearing motion was filed on February 28, 1907. On March 4, the Office of Indian Affairs says the motion was not filed within the time allowed by the Act of April 26, 1906, recommends denial pro forma, and says the underlying case record is not transmitted because it is not considered necessary for deciding this motion.",
-    copy2:"The Department denies the motion as recommended. The missing rehearing motion remains unrecovered, so what it argued about timeliness, exceptions, or the merits is still open.",
-    source:"1906 = statute. 1907 = motion, recommendation, and denial. Reopening clock ≠ merits determination."
-  }
-};
+const buttons=[...document.querySelectorAll("[data-target]")];
+const sections=[...document.querySelectorAll("[data-state]")];
 
-const els={
- object:document.getElementById("object"),
- where:document.getElementById("where"),
- title:document.getElementById("title"),
- copy1:document.getElementById("copy1"),
- copy2:document.getElementById("copy2"),
- source:document.getElementById("source-state")
-};
-function show(key){
- const s=states[key]||states.center;
- Object.keys(els).forEach(k=>els[k].textContent=s[k]);
- document.querySelectorAll("[data-state]").forEach(b=>b.setAttribute("aria-current",b.dataset.state===key?"true":"false"));
- history.replaceState({},"",key==="center"?"#standing":"#"+key);
- document.getElementById("room").animate([{opacity:.56},{opacity:1}],{duration:170});
+function go(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
+  history.replaceState({},"","#"+id);
 }
-document.querySelectorAll("[data-state]").forEach(b=>b.addEventListener("click",()=>show(b.dataset.state)));
-const start=location.hash.slice(1);show(states[start]?start:"center");
+buttons.forEach(b=>b.addEventListener("click",()=>go(b.dataset.target)));
+
+const observer=new IntersectionObserver(entries=>{
+  const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+  if(!visible)return;
+  buttons.forEach(b=>b.setAttribute("aria-current",b.dataset.target===visible.target.id?"true":"false"));
+},{rootMargin:"-28% 0px -52% 0px",threshold:[0,.2,.5,.8]});
+sections.forEach(s=>observer.observe(s));
+
+const start=location.hash.slice(1);
+if(start && document.getElementById(start)){
+  requestAnimationFrame(()=>document.getElementById(start).scrollIntoView({block:"start"}));
+}
 </script>
 </body>
 </html>
