@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#171713">
+<title>Four-way room navigation — Earthly Hands experiment</title>
+<style>
+:root{color-scheme:dark;--n:#171713;--p:#eee8dc;--m:#aaa394;--r:#454239;--e:#cf8953}
+*{box-sizing:border-box}html,body{min-height:100%;background:var(--n)}body{margin:0;color:var(--p);font:18px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}.shell{width:min(72rem,calc(100% - 2rem));margin:auto}header,footer{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;color:var(--m);font:12px/1.4 ui-monospace,monospace;letter-spacing:.09em;text-transform:uppercase}header{border-bottom:1px solid var(--r)}footer{border-top:1px solid var(--r)}main{min-height:78vh;display:grid;place-items:center;padding:2.5rem 0 4rem}.room-nav{width:min(54rem,100%);display:grid;grid-template-columns:8rem minmax(0,1fr) 8rem;grid-template-rows:5rem minmax(24rem,auto) 5rem;gap:1rem;align-items:stretch}.direction{border:1px solid var(--r);background:transparent;color:var(--p);font:13px/1.35 ui-monospace,monospace;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}.direction:hover,.direction:focus-visible{border-color:var(--e);outline:none;color:#e0ad78}.up{grid-column:2;grid-row:1}.left{grid-column:1;grid-row:2}.right{grid-column:3;grid-row:2}.down{grid-column:2;grid-row:3}.room{grid-column:2;grid-row:2;border:1px solid var(--r);padding:clamp(2rem,5vw,4rem);display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 40% 25%,rgba(207,137,83,.08),transparent 19rem)}.eyebrow,.where,.brake{font-family:ui-monospace,monospace}.eyebrow{margin:0 0 .8rem;color:var(--e);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}.where{margin:0 0 .8rem;color:var(--m);font-size:.78rem}.room h1{max-width:12ch;margin:0 0 1.5rem;font-size:clamp(2.6rem,6vw,5rem);font-weight:400;line-height:.96}.room p{max-width:35rem}.brake{margin-top:2rem;color:var(--m);font-size:.8rem}.home{color:inherit;text-underline-offset:.2em;text-decoration-color:var(--e)}
+@media(max-width:650px){.room-nav{grid-template-columns:4.6rem minmax(0,1fr) 4.6rem;grid-template-rows:4rem minmax(25rem,auto) 4rem;gap:.5rem}.direction{font-size:10px}.room{padding:1.5rem}.room h1{font-size:clamp(2.4rem,13vw,3.7rem)}header,footer{display:block}header span,footer span{display:block;margin:.25rem 0}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header><span>Earthly Hands · navigation experiment</span><span id="state-label">Standing here</span></header>
+<main>
+<div class="room-nav" aria-label="Four-way room navigation">
+  <button class="direction up" data-dir="up">↑ Up</button>
+  <button class="direction left" data-dir="left">← Left</button>
+  <section class="room" id="room" aria-live="polite">
+    <p class="eyebrow">Prose Map interaction grammar</p>
+    <p class="where" id="where">Standing point</p>
+    <h1 id="title">Stand somewhere. Look four ways.</h1>
+    <p id="copy">The controls remain in the room around you. A move changes the present body instead of opening a menu.</p>
+    <p class="brake">Button position is interface direction in this experiment. It does not assert compass bearing, historical route, or source geometry.</p>
+  </section>
+  <button class="direction right" data-dir="right">Right →</button>
+  <button class="direction down" data-dir="down">↓ Down</button>
+</div>
+</main>
+<footer><span>Literal movement control · bounded specimen</span><a class="home" href="../../">Return to the current public front edge</a></footer>
+</div>
+<script>
+const states={
+ center:{where:"Standing point",title:"Stand somewhere. Look four ways.",copy:"The controls remain in the room around you. A move changes the present body instead of opening a menu."},
+ up:{where:"Upward room",title:"You moved up.",copy:"The page changed because you moved. The control you used stayed spatially where you expected it."},
+ down:{where:"Downward room",title:"You moved down.",copy:"A future Prose Map body could attach an earned neighboring state here without turning every relation into a line on a map."},
+ left:{where:"Left-hand room",title:"You moved left.",copy:"Literal direction can be simple interface grammar first. Historical or geographic meaning would have to be earned separately."},
+ right:{where:"Right-hand room",title:"You moved right.",copy:"The useful test is whether a person can move instinctively without losing the source and state distinctions underneath the room."}
+};
+const room=document.getElementById("room"),where=document.getElementById("where"),title=document.getElementById("title"),copy=document.getElementById("copy"),label=document.getElementById("state-label");
+document.querySelectorAll("[data-dir]").forEach(b=>b.addEventListener("click",()=>{const s=states[b.dataset.dir];where.textContent=s.where;title.textContent=s.title;copy.textContent=s.copy;label.textContent=s.where;room.animate([{opacity:.5},{opacity:1}],{duration:150});history.replaceState({}, "", "#"+b.dataset.dir)}));
+const start=location.hash.slice(1);if(states[start]&&start!=="center")document.querySelector('[data-dir="'+start+'"]').click();
+</script>
+</body>
+</html>
