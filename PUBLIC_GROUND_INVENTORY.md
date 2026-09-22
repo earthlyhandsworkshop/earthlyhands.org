@@ -28,6 +28,7 @@ The current specimens are teaching a useful distinction. Keep these states separ
 Useful brakes:
 
 - Reach is not movement; movement is not landing; landing is not certainty; fading is not deletion.
+- Visitor/interface movement may be real while historical movement remains unearned. Scrolling through a deliberately open interval does not turn that interval into a source-carried route, scale, or geometry.
 - Development history and epistemic history can overlap, but they are not the same thing. A prior interface may survive because it teaches architecture. A prior claim-state may survive because it explains how the Workshop's footing changed. Neither should impersonate current footing.
 - Prefer additive status marks, local brakes, and dated or source-facing notes over destructive rewrites while a seam is still live.
 - Preserve stable deep links or an explicit earlier-specimen route when practical, so development can recede without being erased.
@@ -42,6 +43,7 @@ Useful brakes:
 | `/experiments/four-way-room-nav/` | MCR 879 — Robert Bell evidence field; navigation experiment | Grainline carrying source-facing Bell–McKinney work | Yes | Continuous research body with a center return and floating directional navigation among 1901 testimony, older Article XIV record body, 1846 patent / 1902 Office use, and 1907 rehearing sequence | Generic room toy retired in place; navigation no longer consumes document layout or turns directions into separate screens |
 | `/mcr879.html` | Working MCR 879 comparison specimen | Register | Yes | Method / source-state distinctions are visible; outward source request remains open | Trust mark now carried on face |
 | `/experiments/dawson-inline-depth/` | Interaction specimen; depth can open without visitor movement | Small Door | Yes | Inline depth windows carry source family, brake, and public Dawson representation | Trust mark now carried on face |
+| `/experiments/dawson-missing-line/` | Bounded Dawson visual experiment; two source-earned states held apart without reconstructing the traveled line | True North | Yes | `about fifteen miles southeast` remains reach; Blue Water is a landed source state; the long interval is visitor/interface movement only, not historical route or scale | Additive continuation only; earlier inline-depth specimen remains intact for development comparison; intentionally `noindex` |
 | `/experiments/ward-room/` | Disposable source-room specimen | Ravel | Yes | Holderness / Hancock source routes and explicit do-not-join brake | Trust mark now carried on face |
 | `/experiments/one-outing-two-clocks/` | Listening experiment; paired source clocks | Register + Lamplight | Yes | Public carrier route; explicit identity and time-expression brakes | Trust marks now carried on face; intentionally `noindex` |
 | `/experiments/register-threshold-v2/` | Earlier threshold specimen preserved for comparison | Register | Yes | Internal archive / Dawson experiment rather than a governing source descent | Deep-link status clarified; original visual grammar otherwise preserved |
