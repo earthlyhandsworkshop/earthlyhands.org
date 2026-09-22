@@ -37,7 +37,7 @@ jobs:
         if: always()
         run: |
           mkdir -p public-observation
-          npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page https://earthlyhands.org public-observation/front-edge.png
+          npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="1280,2200" https://earthlyhands.org public-observation/front-edge.png
           npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page https://earthlyhands.org/mcr879.html public-observation/mcr879.png
 
       - name: Upload public observation
