@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#171713">
+<title>Dawson — the missing line · Earthly Hands</title>
+<meta name="description" content="A bounded Earthly Hands visual experiment: Dawson's source-earned states held apart without inventing the traveled line between them.">
+<style>
+:root{
+  --night:#171713;
+  --night2:#1e1d18;
+  --paper:#e8dfcd;
+  --paper2:#f3ecdf;
+  --ink:#191814;
+  --fog:#aca48f;
+  --rule:rgba(232,223,205,.22);
+  --rule-dark:rgba(25,24,20,.23);
+  --rust:#b37855;
+  --moss:#8e957a;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--night);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;min-width:18rem;color:var(--paper);background:var(--night);font:1rem/1.55 var(--serif)}
+a,button{color:inherit}
+button{font:inherit}
+a{text-decoration-color:var(--rust);text-underline-offset:.22em}
+:focus-visible{outline:2px solid var(--rust);outline-offset:5px}
+.utility{
+  position:fixed;inset:0 0 auto 0;z-index:20;display:grid;grid-template-columns:1fr auto 1fr;
+  align-items:center;gap:1rem;padding:.8rem clamp(1rem,2.5vw,2rem);
+  color:rgba(232,223,205,.72);background:linear-gradient(var(--night),rgba(23,23,19,.88),transparent);
+  font:.65rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase;pointer-events:none
+}
+.utility a,.utility button{pointer-events:auto}
+.utility a{text-decoration:none}.utility a:hover{color:var(--paper)}
+.utility .mid{justify-self:center;color:var(--rust)}
+.utility .right{justify-self:end;border:0;background:none;padding:0;cursor:pointer;color:inherit}
+.scene{min-height:100svh;position:relative}
+.arrival{
+  display:grid;grid-template-columns:minmax(0,1.2fr) minmax(18rem,.8fr);
+  gap:clamp(2rem,6vw,7rem);align-items:end;
+  min-height:100svh;padding:clamp(7rem,12vh,10rem) clamp(1.25rem,6vw,7rem) clamp(3rem,8vh,6rem)
+}
+.eyebrow,.folio,.slip-kind,.gap-label,.source-label,.bearing,.footmark{
+  font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase
+}
+.eyebrow{margin:0 0 1rem;color:var(--rust);font-size:.68rem}
+h1{margin:0;max-width:10ch;font-size:clamp(4rem,10vw,9rem);font-weight:400;line-height:.82;letter-spacing:-.058em}
+.arrival-copy{max-width:29rem;padding-bottom:.7rem;color:var(--fog)}
+.arrival-copy p{margin:0;font-size:clamp(1rem,1.35vw,1.18rem)}
+.arrival-copy p+p{margin-top:1rem}
+.arrival-copy .quiet{color:var(--paper);font-size:clamp(1.35rem,2.2vw,2rem);line-height:1.25}
+.down{display:inline-block;margin-top:2rem;color:var(--rust);font:.66rem/1.3 var(--mono);text-decoration:none;letter-spacing:.08em;text-transform:uppercase}
+.down::after{content:" ↓"}
+.passage{
+  position:relative;min-height:140svh;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  background:
+    linear-gradient(90deg,transparent calc(50% - .5px),rgba(232,223,205,.13) calc(50% - .5px),rgba(232,223,205,.13) calc(50% + .5px),transparent calc(50% + .5px)),
+    radial-gradient(circle at 50% 50%,rgba(232,223,205,.05),transparent 32rem),
+    var(--night2)
+}
+.gap-label{
+  position:sticky;top:48vh;width:max-content;margin:0 auto;padding:.25rem .6rem;
+  background:var(--night2);color:rgba(232,223,205,.55);font-size:.58rem
+}
+.passage-word{
+  position:absolute;left:50%;transform:translateX(-50%);width:min(90vw,80rem);text-align:center;
+  color:rgba(232,223,205,.07);font-size:clamp(4rem,14vw,14rem);line-height:.78;letter-spacing:-.06em;user-select:none
+}
+.passage-word.one{top:13vh}.passage-word.two{bottom:11vh}
+.passage-note{
+  position:absolute;left:clamp(1.25rem,5vw,5rem);bottom:clamp(1.5rem,5vw,4rem);max-width:26rem;
+  color:var(--fog);font-size:.88rem
+}
+.passage-note strong{color:var(--paper);font-weight:400}
+.state{
+  min-height:100svh;display:grid;grid-template-columns:minmax(13rem,.42fr) minmax(0,1.58fr);
+  background:var(--paper);color:var(--ink)
+}
+.rail{
+  position:relative;padding:clamp(6rem,12vh,9rem) clamp(1.25rem,3vw,3rem) 3rem;
+  border-right:1px solid var(--rule-dark)
+}
+.rail-stick{position:sticky;top:7rem}
+.folio{margin:0 0 1rem;color:#765640;font-size:.64rem}
+.rail h2{margin:0;max-width:8ch;font-size:clamp(2.5rem,5vw,5.5rem);font-weight:400;line-height:.9;letter-spacing:-.045em}
+.bearing{margin:2rem 0 0;color:#6d675b;font-size:.62rem}
+.sequence{margin-top:2.8rem}
+.sequence-line{height:7rem;position:relative;border-left:1px solid #837d70;margin-left:.2rem}
+.sequence-line::before,.sequence-line::after{content:"";position:absolute;left:-.28rem;width:.5rem;height:.5rem;border:1px solid #837d70;border-radius:50%;background:var(--paper)}
+.sequence-line::before{top:0}.sequence-line::after{bottom:0}
+.sequence-line.active-end::after,.sequence-line.active-start::before{background:#875b3d;border-color:#875b3d}
+.sequence span{display:block;color:#6d675b;font:.59rem/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.sequence .top{margin:-7rem 0 5.2rem 1rem}.sequence .bottom{margin-left:1rem}
+.read{
+  min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:clamp(6rem,12vh,9rem) clamp(1.5rem,8vw,9rem)
+}
+.source-label{margin:0 0 2rem;color:#765640;font-size:.64rem}
+.prose{max-width:47rem}
+.prose p{margin:0;font-size:clamp(1.75rem,3.4vw,3.6rem);line-height:1.14;letter-spacing:-.028em}
+.prose p+p{margin-top:1.1rem}
+.relation{
+  padding:0 .04em;border:0;border-bottom:1px solid #95694f;background:none;color:inherit;cursor:pointer;
+  text-align:left;line-height:inherit
+}
+.relation:hover,.relation[aria-expanded=true]{color:#86593f}
+.relation::after{content:"";display:inline-block;width:.22em;height:.22em;margin-left:.12em;border:1px solid currentColor;border-left:0;border-bottom:0;transform:translateY(-.35em) rotate(45deg)}
+.margin-note{
+  max-width:39rem;margin:3rem 0 0 auto;padding-top:.85rem;border-top:1px solid var(--rule-dark);color:#6d675b;font-size:.9rem
+}
+.slip{
+  margin:2rem 0 1rem;max-width:42rem;padding:1.2rem 1.35rem 1.3rem;
+  border-left:3px solid #95694f;background:rgba(255,255,255,.22)
+}
+.slip-head{display:flex;justify-content:space-between;gap:1rem;align-items:start}
+.slip-kind{margin:0 0 .25rem;color:#765640;font-size:.59rem}
+.slip h3{margin:0;font-size:1.4rem;font-weight:400;line-height:1.15}
+.slip-close{border:0;background:none;padding:0;color:#6d675b;font-size:1.4rem;cursor:pointer}
+.slip p{margin:.8rem 0 0;font-size:.96rem;line-height:1.5}
+.slip .brake{color:#6d675b}
+.slip details{margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--rule-dark)}
+.slip summary{width:max-content;color:#765640;font:.68rem/1.35 var(--mono);cursor:pointer}
+.slip a{font-size:.9rem}
+.end{
+  min-height:88svh;display:grid;grid-template-columns:minmax(0,1fr) minmax(18rem,.72fr);
+  gap:clamp(3rem,8vw,9rem);align-items:center;padding:clamp(5rem,10vh,9rem) clamp(1.25rem,6vw,7rem)
+}
+.end h2{margin:0;max-width:10ch;font-size:clamp(3.5rem,8vw,8rem);font-weight:400;line-height:.86;letter-spacing:-.055em}
+.end-copy{max-width:30rem;color:var(--fog)}
+.end-copy p{margin:0}.end-copy p+p{margin-top:1rem}
+.end-copy a{color:var(--paper)}
+.footmark{margin-top:2.3rem!important;color:rgba(232,223,205,.5);font-size:.62rem}
+.drawer{
+  position:fixed;z-index:40;inset:auto 0 0 0;max-height:86svh;overflow:auto;
+  border-top:1px solid rgba(25,24,20,.35);background:rgba(243,236,223,.98);color:var(--ink);
+  box-shadow:0 -2rem 5rem rgba(0,0,0,.28)
+}
+.drawer[hidden]{display:none}
+.drawer-inner{width:min(78rem,calc(100% - 2.5rem));margin:auto;padding:1.4rem 0 calc(1.5rem + env(safe-area-inset-bottom))}
+.drawer-top{display:flex;justify-content:space-between;gap:2rem;align-items:start}
+.drawer-top p{margin:0}.drawer-kicker{color:#765640;font:.62rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.drawer-title{margin-top:.2rem!important;font-size:1.4rem}
+.drawer-close{border:0;background:none;border-bottom:1px solid #8c8578;padding:.1rem 0;cursor:pointer;font:.66rem/1.4 var(--mono)}
+.drawer-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(2rem,6vw,6rem);margin-top:1rem;padding-top:1rem;border-top:1px solid var(--rule-dark)}
+.drawer-answer{margin:0;max-width:48rem;font-size:1.06rem}
+.drawer-options{display:flex;flex-direction:column;align-items:flex-start;gap:.5rem}
+.drawer-options button{border:0;background:none;padding:.15rem 0;color:#6d675b;border-bottom:1px solid transparent;cursor:pointer;font:.7rem/1.4 var(--mono);text-align:left}
+.drawer-options button:hover{color:var(--ink);border-bottom-color:#95694f}
+.mobile-nav{display:none}
+@media(max-width:58rem){
+  .utility{grid-template-columns:1fr auto}.utility .mid{display:none}
+  .arrival,.end{grid-template-columns:1fr;align-items:end}
+  .arrival{padding-top:8rem}.arrival-copy{justify-self:end}
+  .passage{min-height:160svh}
+  .state{display:block}
+  .rail{border-right:0;border-bottom:1px solid var(--rule-dark);padding:5.5rem 1.25rem 2rem}
+  .rail-stick{position:static}
+  .rail h2{max-width:12ch}
+  .sequence{display:none}
+  .read{min-height:auto;padding:4rem 1.25rem 6rem}
+  .prose p{font-size:clamp(1.8rem,8vw,3rem)}
+  .margin-note{margin-top:2rem}
+  .drawer-grid{grid-template-columns:1fr}
+}
+@media(max-width:38rem){
+  .utility{padding:.75rem .9rem}
+  .arrival{min-height:94svh;padding:7rem 1rem 2rem}
+  h1{font-size:clamp(4rem,23vw,6.5rem)}
+  .arrival-copy{padding-bottom:0}
+  .passage{min-height:185svh;background:
+    linear-gradient(90deg,transparent calc(1rem - .5px),rgba(232,223,205,.13) calc(1rem - .5px),rgba(232,223,205,.13) calc(1rem + .5px),transparent calc(1rem + .5px)),
+    var(--night2)}
+  .gap-label{position:sticky;top:47vh;margin-left:1rem;transform:translateX(-50%) rotate(-90deg);transform-origin:center;background:var(--night2)}
+  .passage-word{left:1.2rem;transform:none;text-align:left;font-size:clamp(4rem,25vw,7rem);width:calc(100% - 2rem);overflow:hidden}
+  .passage-note{left:2rem;right:1rem;bottom:2rem}
+  .rail{padding-left:1rem;padding-right:1rem}
+  .read{padding-left:1rem;padding-right:1rem}
+  .slip{margin-left:.6rem;padding:1rem 1rem 1.1rem}
+  .end{min-height:92svh;padding:5rem 1rem 6rem}
+  .end h2{font-size:clamp(3.8rem,20vw,6rem)}
+  .drawer-inner{width:calc(100% - 2rem)}
+  .mobile-nav{
+    display:flex;position:fixed;z-index:25;left:50%;bottom:calc(.8rem + env(safe-area-inset-bottom));transform:translateX(-50%);
+    border:1px solid rgba(232,223,205,.24);background:rgba(23,23,19,.9);backdrop-filter:blur(8px);
+    font:.6rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase
+  }
+  .mobile-nav a,.mobile-nav button{padding:.7rem .8rem;border:0;background:none;text-decoration:none;color:rgba(232,223,205,.76)}
+  .mobile-nav button{border-left:1px solid rgba(232,223,205,.18)}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="utility">
+  <a href="../../">Earthly Hands</a>
+  <span class="mid">Dawson · missing-line experiment</span>
+  <button class="right" id="ask-top" type="button">Ask the ground</button>
+</header>
+
+<main>
+<section class="scene arrival" id="threshold">
+  <div>
+    <p class="eyebrow">Dawson report · 29 January 1831</p>
+    <h1>The account carries southeast.</h1>
+  </div>
+  <div class="arrival-copy">
+    <p class="quiet">The source gives a direction and an approximate distance. It does not give us the traveled line.</p>
+    <p>This experiment makes that absence visible instead of repairing it.</p>
+    <a class="down" href="#missing">Enter the interval</a>
+  </div>
+</section>
+
+<section class="passage" id="missing" aria-label="The route interval the source does not preserve">
+  <div class="passage-word one" aria-hidden="true">SOUTHEAST</div>
+  <p class="gap-label">line not recovered</p>
+  <div class="passage-word two" aria-hidden="true">BLUE WATER</div>
+  <p class="passage-note"><strong>About fifteen miles southeast</strong> is source language. This long field is not scale. It is the page refusing to invent what happened between the two source states.</p>
+</section>
+
+<section class="state" id="southeast">
+  <aside class="rail">
+    <div class="rail-stick">
+      <p class="folio">Source state 01</p>
+      <h2>Southeast reach</h2>
+      <p class="bearing">After Morning Camp · before Blue Water</p>
+      <div class="sequence" aria-label="Source sequence, not measured distance">
+        <div class="sequence-line active-start"></div>
+        <span class="top">Southeast reach</span>
+        <span class="bottom">Blue Water</span>
+      </div>
+    </div>
+  </aside>
+  <article class="read">
+    <p class="source-label">Carried report</p>
+    <div class="prose">
+      <p>The report carries <button class="relation" data-key="distance" aria-expanded="false">about fifteen miles southeast</button> and encamps on a small branch of Blue Water.</p>
+    </div>
+    <p class="margin-note">Direction and mileage belong to Dawson's account. The missing traveled line does not.</p>
+  </article>
+</section>
+
+<section class="state" id="blue-water">
+  <aside class="rail">
+    <div class="rail-stick">
+      <p class="folio">Source state 02</p>
+      <h2>Blue Water</h2>
+      <p class="bearing">A new camp · encounter state</p>
+      <div class="sequence" aria-label="Source sequence, not measured distance">
+        <div class="sequence-line active-end"></div>
+        <span class="top">Southeast reach</span>
+        <span class="bottom">Blue Water</span>
+      </div>
+    </div>
+  </aside>
+  <article class="read">
+    <p class="source-label">Carried report</p>
+    <div class="prose">
+      <p>On <button class="relation" data-key="creek" aria-expanded="false">this creek</button>, Dawson reports finding <button class="relation" data-key="mayes" aria-expanded="false">Mr. Mayes</button> and <button class="relation" data-key="criner" aria-expanded="false">Mr. Criner</button>.</p>
+      <p>They <button class="relation" data-key="residence" aria-expanded="false">reside on James' Fork of Poteau</button>.</p>
+      <p>They are <button class="relation" data-key="trapping" aria-expanded="false">trapping for beaver here</button>.</p>
+    </div>
+    <p class="margin-note">Encounter, residence, and activity remain separate relations even when the prose places them close together.</p>
+  </article>
+</section>
+
+<section class="end" id="edge">
+  <h2>Stay with what the source gives.</h2>
+  <div class="end-copy">
+    <p>Window is not movement. A relation can open where you are without carrying you somewhere else.</p>
+    <p>The next crossing is earned by the account, not by the interface.</p>
+    <p><a href="../../#dozen">Rejoin the current Dawson trail</a> · <a href="../dawson-inline-depth/">See the earlier specimen</a></p>
+    <p class="footmark">Passed through True North's hands · trust/custody mark, not ownership</p>
+  </div>
+</section>
+</main>
+
+<nav class="mobile-nav" aria-label="Mobile experiment controls">
+  <a href="#threshold">Top</a>
+  <button type="button" id="ask-mobile">Ask</button>
+</nav>
+
+<section class="drawer" id="drawer" hidden aria-label="Ask the Ground">
+  <div class="drawer-inner">
+    <div class="drawer-top">
+      <div>
+        <p class="drawer-kicker">Ask the Ground</p>
+        <p class="drawer-title">Dawson · bounded footing</p>
+      </div>
+      <button class="drawer-close" id="drawer-close" type="button">Close</button>
+    </div>
+    <div class="drawer-grid">
+      <p class="drawer-answer" id="drawer-answer">Choose a question. The answer stays inside this bounded Dawson source footing.</p>
+      <div class="drawer-options">
+        <button type="button" data-q="earned">What is actually earned?</button>
+        <button type="button" data-q="missing">What is deliberately missing?</button>
+        <button type="button" data-q="separate">What must remain separate?</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(()=>{
+const source="https://gateway.okhistory.org/ark:/67531/metadc2192269/";
+const family="Dawson report, 29 Jan. 1831 → Arkansas Advocate publication, Mar. 1831 → later printed representations. The original manuscript has not yet been recovered.";
+const data={
+ distance:["Prose Map relation","about fifteen miles southeast","The report gives an approximate distance and direction before the next encampment.","It does not preserve the traveled line, an exact starting point, modern road correspondence, or a measured map segment."],
+ creek:["Source-local place relation","this creek","Inside the report, “this creek” points back to the immediately preceding small branch of Blue Water.","That earns source-local continuity, not an exact encounter point, bank, creek course, campsite merge, or modern creek identity."],
+ mayes:["Name Web occurrence","Mr. Mayes","A source-named person occurrence. Dawson reports finding Mayes here with Mr. Criner.","This does not silently join another Mayes or turn the occurrence into a biography."],
+ criner:["Name Web occurrence","Mr. Criner","A source-named person occurrence. Dawson reports finding Criner here with Mr. Mayes.","This does not silently join another Criner or turn the occurrence into a biography."],
+ residence:["Name Web + Prose Map relation","reside on James' Fork of Poteau","The report carries a residence relation from Mayes and Criner to a source-named James' Fork of Poteau reach.","Residence does not relocate the Blue Water encounter or earn a house point, parcel, ownership claim, exact bank, travel route, or modern hydrographic identity."],
+ trapping:["Source relation","trapping for beaver here","The report attaches this activity to the Blue Water encounter state.","It does not turn the trapping place into the residence place. A later collective catch should not be divided between Mayes and Criner without a source doing that work."]
+};
+const ask={
+ earned:"The report earns an approximate direction and distance — about fifteen miles southeast — followed by an encampment on a small branch of Blue Water. At Blue Water it earns encounter, residence, and trapping relations at the strengths stated in the prose.",
+ missing:"The source does not preserve the traveled line between the source states. This page makes that absence physically noticeable but does not convert screen distance into historical distance.",
+ separate:"The Blue Water encounter, the James' Fork residence statement, and the trapping activity remain separate relations. Mayes and Criner remain source-local person occurrences unless another source earns a stronger identity join."
+};
+let active=null;
+function closeSlip(){
+ if(!active)return;
+ active.p.remove();active.b.setAttribute("aria-expanded","false");active=null;
+}
+function openSlip(b){
+ if(active?.b===b){closeSlip();return}
+ closeSlip();
+ const d=data[b.dataset.key],p=document.createElement("section");
+ p.className="slip";
+ p.innerHTML='<div class="slip-head"><div><p class="slip-kind"></p><h3></h3></div><button class="slip-close" type="button" aria-label="Close relation slip">×</button></div><p class="near"></p><p class="brake"></p><details><summary>Source descent</summary><p></p><a target="_blank" rel="noopener noreferrer">Open the public Dawson representation ↗</a></details>';
+ p.querySelector(".slip-kind").textContent=d[0];
+ p.querySelector("h3").textContent=d[1];
+ p.querySelector(".near").textContent=d[2];
+ p.querySelector(".brake").textContent=d[3];
+ p.querySelector("details p").textContent=family;
+ p.querySelector("details a").href=source;
+ p.querySelector(".slip-close").onclick=closeSlip;
+ b.closest("p").insertAdjacentElement("afterend",p);
+ b.setAttribute("aria-expanded","true");
+ active={b,p};
+ p.querySelector(".slip-close").focus();
+}
+const drawer=document.getElementById("drawer"),answer=document.getElementById("drawer-answer");
+function openAsk(){drawer.hidden=false;answer.textContent="Choose a question. The answer stays inside this bounded Dawson source footing."}
+function closeAsk(){drawer.hidden=true}
+document.querySelectorAll("[data-key]").forEach(b=>b.onclick=()=>openSlip(b));
+document.querySelectorAll("[data-q]").forEach(b=>b.onclick=()=>answer.textContent=ask[b.dataset.q]);
+document.getElementById("ask-top").onclick=openAsk;
+document.getElementById("ask-mobile").onclick=openAsk;
+document.getElementById("drawer-close").onclick=closeAsk;
+window.addEventListener("keydown",e=>{if(e.key==="Escape"){closeSlip();closeAsk()}});
+})();
+</script>
+</body>
+</html>
