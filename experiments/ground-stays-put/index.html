@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f2eee4">
+<title>The ground stays put — Fieldglass specimen</title>
+<style>
+:root{
+  --paper:#f2eee4;
+  --ink:#24231f;
+  --soft:#6f6a60;
+  --rule:#b9b1a3;
+  --mark:#8b4f2f;
+  --panel:#e8e1d4;
+}
+*{box-sizing:border-box}
+html{background:var(--paper);color:var(--ink)}
+body{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.5;
+  background:
+    linear-gradient(to right, transparent 0, transparent calc(50% - .5px), rgba(36,35,31,.05) calc(50% - .5px), rgba(36,35,31,.05) calc(50% + .5px), transparent calc(50% + .5px));
+}
+a{color:inherit}
+.wrap{width:min(78rem,calc(100% - 2rem));margin:auto}
+header{
+  display:flex;justify-content:space-between;gap:1rem;
+  padding:1.25rem 0;border-bottom:1px solid var(--rule);
+  font: .72rem/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--soft)
+}
+header strong{color:var(--ink);font-weight:600}
+main{padding:clamp(2rem,6vw,5rem) 0 4rem}
+.intro{max-width:47rem;margin:0 auto 2.5rem}
+.kicker{
+  margin:0 0 .8rem;color:var(--mark);
+  font:.72rem/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.08em;text-transform:uppercase
+}
+h1{margin:0 0 1rem;font-size:clamp(2rem,6vw,4.6rem);font-weight:400;line-height:.95;letter-spacing:-.035em}
+.intro p{font-size:clamp(1.05rem,2vw,1.28rem);margin:.7rem 0}
+.brake{
+  margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--rule);
+  color:var(--soft);font-size:.95rem
+}
+.instrument{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(18rem,28rem);
+  gap:clamp(2rem,6vw,6rem);align-items:start
+}
+.ground{
+  position:sticky;top:1.25rem;min-height:62vh;
+  display:grid;place-items:center;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.ground-mark{width:min(25rem,72vw);aspect-ratio:1;position:relative}
+.ground-mark:before,.ground-mark:after{
+  content:"";position:absolute;background:var(--rule);opacity:.8
+}
+.ground-mark:before{width:1px;height:100%;left:50%;top:0}
+.ground-mark:after{height:1px;width:100%;top:50%;left:0}
+.node{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:1.05rem;height:1.05rem;border:2px solid var(--mark);border-radius:50%;background:var(--paper)
+}
+.ring{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:38%;aspect-ratio:1;border:1px solid var(--rule);border-radius:50%
+}
+.ground-label{
+  position:absolute;left:50%;top:calc(50% + 2.4rem);transform:translateX(-50%);
+  width:100%;text-align:center;
+  font:.72rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--soft)
+}
+.ground-note{
+  position:absolute;left:0;bottom:1rem;width:100%;text-align:center;
+  font-size:.95rem;color:var(--soft)
+}
+.states{border-top:1px solid var(--rule)}
+.state-button{
+  width:100%;display:grid;grid-template-columns:4.5rem 1fr auto;gap:1rem;align-items:baseline;
+  padding:1rem 0;border:0;border-bottom:1px solid var(--rule);background:none;color:inherit;text-align:left;cursor:pointer
+}
+.state-button .year{
+  font:.78rem/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--mark)
+}
+.state-button strong{font:400 1.06rem/1.35 Georgia,serif}
+.state-button .sign{font:1rem/1 ui-monospace,monospace;color:var(--soft)}
+.state-button[aria-expanded="true"] .sign{color:var(--mark)}
+.state-panel{display:none;padding:1.3rem 0 1.7rem;border-bottom:1px solid var(--rule)}
+.state-panel.open{display:block}
+.state-panel h2{font-size:1.8rem;font-weight:400;line-height:1.05;margin:0 0 1rem}
+.state-panel p{margin:.7rem 0}
+.source-box{margin-top:1.3rem;padding:1rem;background:var(--panel);font-size:.92rem}
+.source-box p{margin:.35rem 0}
+.source-box strong{font-family:ui-monospace,monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+.not-join{color:var(--soft)}
+.footer-note{
+  max-width:47rem;margin:3rem auto 0;padding-top:1rem;border-top:1px solid var(--rule);
+  color:var(--soft);font-size:.9rem
+}
+.leave{display:inline-block;margin-top:1rem}
+@media(max-width:48rem){
+  .wrap{width:calc(100% - 1.5rem)}
+  header span{display:none}
+  main{padding-top:2rem}
+  .instrument{grid-template-columns:1fr;gap:1.5rem}
+  .ground{position:relative;top:auto;min-height:48vh}
+  .ground-mark{width:min(19rem,78vw)}
+  .state-button{grid-template-columns:3.8rem 1fr auto}
+  .intro{margin-bottom:1.5rem}
+}
+@media(prefers-reduced-motion:no-preference){
+  .state-panel.open{animation:arrive .18s ease-out}
+  @keyframes arrive{from{opacity:.25;transform:translateY(-.2rem)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div><strong>Earthly Hands</strong> <span>· disposable Fieldglass specimen</span></div>
+  <div>The ground stays put</div>
+</header>
+
+<main>
+<section class="intro">
+  <p class="kicker">A source-state experiment</p>
+  <h1>The ground stays put.</h1>
+  <p>Nothing on the left moves. Open the documentary states on the right.</p>
+  <p>The experiment asks whether a visitor can feel a change in <em>what a record is doing</em> without being carried to another place.</p>
+  <p class="brake"><strong>Brake:</strong> the states below are neighboring older-Robert / Section 4 source bodies. Their adjacency here is an experiment in documentary state, not a new person-identity join and not a claim that every earlier place description has been geometrically located onto the later survey tract.</p>
+</section>
+
+<section class="instrument" aria-label="Fixed ground with changing documentary states">
+  <div class="ground" aria-label="Fixed abstract ground mark">
+    <div class="ground-mark">
+      <div class="ring"></div>
+      <div class="node"></div>
+      <div class="ground-label" id="ground-label">ground relation held still</div>
+      <div class="ground-note" id="ground-note">Open a state. The mark does not travel.</div>
+    </div>
+  </div>
+
+  <div class="states">
+    <button class="state-button" type="button" aria-expanded="false" aria-controls="state-1838" data-state="1838">
+      <span class="year">1838</span>
+      <strong>A witness carries residence and possession.</strong>
+      <span class="sign">+</span>
+    </button>
+    <section class="state-panel" id="state-1838">
+      <h2>Place arrives as testimony.</h2>
+      <p>In General Deposition No. 28, Oon-ta-chea gives testimony about Robert Bell’s treaty-time residence and possession.</p>
+      <p>The source job here is human recollection under examination. It is not yet a surveyed title instrument.</p>
+      <div class="source-box">
+        <p><strong>Carrier</strong> General Deposition No. 28 · 11 May 1838</p>
+        <p><strong>State</strong> testimony about historical residence / possession</p>
+        <p class="not-join"><strong>Do not promote</strong> witness-carried place into a modern point, patent tract, or continuous person identity merely because later Section 4 bodies exist.</p>
+      </div>
+    </section>
+
+    <button class="state-button" type="button" aria-expanded="false" aria-controls="state-1843" data-state="1843">
+      <span class="year">1843</span>
+      <strong>The administration gives the surveyed field a job.</strong>
+      <span class="sign">+</span>
+    </button>
+    <section class="state-panel" id="state-1843">
+      <h2>Place becomes an administrative field.</h2>
+      <p>The Crawford / Office No. 37 approved-list representation carries Robert Bell with <strong>NW ¼, Section 4, Township 12, Range 12 East</strong> under the heading <strong>PLACE OF RESIDENCE</strong>.</p>
+      <p>The phrase is important because it types what the table is doing. The quarter-section is not presented here merely as later patent land.</p>
+      <div class="source-box">
+        <p><strong>Carrier</strong> T. Hartley Crawford submission · 8 March 1843 · later printed representation</p>
+        <p><strong>State</strong> surveyed unit carried as a place-of-residence field</p>
+        <p class="not-join"><strong>Do not promote</strong> residence field into proof of exact house location, continuous occupation, or identity with every earlier Robert Bell place occurrence.</p>
+      </div>
+    </section>
+
+    <button class="state-button" type="button" aria-expanded="false" aria-controls="state-1846" data-state="1846">
+      <span class="year">1846</span>
+      <strong>The same survey address enters a title instrument.</strong>
+      <span class="sign">+</span>
+    </button>
+    <section class="state-panel" id="state-1846">
+      <h2>Place becomes patent land.</h2>
+      <p>The later patent body names Robert Bell and carries the Section 4, Township 12, Range 12 East land into a title state, with the patent dated 14 December 1846.</p>
+      <p>That later legal state does not travel backward and rewrite the earlier evidence. Patent is a new documentary act.</p>
+      <div class="source-box">
+        <p><strong>Carrier</strong> Robert Bell Article XIV patent · 14 December 1846</p>
+        <p><strong>State</strong> federal title instrument</p>
+        <p class="not-join"><strong>Do not promote</strong> title into proof that every earlier residence / field / memory body describes the same spatial extent or the same person occurrence.</p>
+      </div>
+    </section>
+  </div>
+</section>
+
+<div class="footer-note">
+  <p><strong>What this specimen is testing:</strong> visitor position stays fixed; only documentary depth changes. If the page makes the three states feel like one continuous certainty, the experiment fails.</p>
+  <p><strong>What it is not testing:</strong> a finished map, a route, a complete Robert Bell biography, or a reusable component system.</p>
+  <a class="leave" href="../../">Leave the specimen →</a>
+</div>
+</main>
+</div>
+
+<script>
+(function(){
+  var buttons=[].slice.call(document.querySelectorAll('.state-button'));
+  var panels=[].slice.call(document.querySelectorAll('.state-panel'));
+  var label=document.getElementById('ground-label');
+  var note=document.getElementById('ground-note');
+  var stateText={
+    "1838":["witness-carried place","The ground mark stays still; the source job is testimony."],
+    "1843":["administrative residence field","The ground mark stays still; the source job is classification / location."],
+    "1846":["title instrument","The ground mark stays still; the source job is legal title."]
+  };
+  buttons.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var target=btn.getAttribute('aria-controls');
+      var wasOpen=btn.getAttribute('aria-expanded')==='true';
+      buttons.forEach(function(b){b.setAttribute('aria-expanded','false');b.querySelector('.sign').textContent='+';});
+      panels.forEach(function(p){p.classList.remove('open');});
+      if(!wasOpen){
+        btn.setAttribute('aria-expanded','true');
+        btn.querySelector('.sign').textContent='−';
+        document.getElementById(target).classList.add('open');
+        var key=btn.getAttribute('data-state');
+        label.textContent=stateText[key][0];
+        note.textContent=stateText[key][1];
+      }else{
+        label.textContent='ground relation held still';
+        note.textContent='Open a state. The mark does not travel.';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
