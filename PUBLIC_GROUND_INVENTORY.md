@@ -15,6 +15,23 @@ This is not a style ranking and not a replacement for the Public Ground build ro
 - Source descent, Workshop interpretation, visitor movement, and open uncertainty should not silently collapse.
 - Do not invent a maker, source relation, or publication state to make the inventory look complete.
 
+## Prose Map temporal / depth seam
+
+The current specimens are teaching a useful distinction. Keep these states separate:
+
+- **Reach** — source-carried direction, distance, relation, or visible next possibility. A reach may show what lies beyond the current ground without claiming that the route is known, traversed, or landed.
+- **Movement** — an actual transition in source sequence, visitor state, or administrative sequence. Opening local depth, asking a question, or exposing a relation is not movement by itself.
+- **Landed work** — a ground the source or visitor has actually reached strongly enough to support a current scene or object. Landing does not promote uncertainty into fact.
+- **Faded prior edge** — an earlier scene or public experiment that is no longer current but remains reachable and plainly marked as prior. Fade before deletion when the old edge still teaches something.
+- **Epistemic history** — the Workshop's changing knowledge state: what source was available, what inference was live, what brake was added, what join was refused, or what later became earned.
+
+Useful brakes:
+
+- Reach is not movement; movement is not landing; landing is not certainty; fading is not deletion.
+- Development history and epistemic history can overlap, but they are not the same thing. A prior interface may survive because it teaches architecture. A prior claim-state may survive because it explains how the Workshop's footing changed. Neither should impersonate current footing.
+- Prefer additive status marks, local brakes, and dated or source-facing notes over destructive rewrites while a seam is still live.
+- Preserve stable deep links or an explicit earlier-specimen route when practical, so development can recede without being erased.
+
 ## Current bodies
 
 | Public body | Present status | Hands / trust mark | Way home | Source / depth route | Cleanup state |
