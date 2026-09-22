@@ -37,6 +37,7 @@ Useful brakes:
 | Public body | Present status | Hands / trust mark | Way home | Source / depth route | Cleanup state |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Current public front edge and specimen index; live Dawson passage | Shared Workshop assembly; specimen rows name known hands | Home object | Dawson source return at trail stop; contextual listening ground | Mechanically coherent; internally scrollable layout requires observer-aware capture |
+| `/experiments/dancing-rabbit-statehood-line/` | Live visual-historical specimen; drawing-senior bounded public body | Mullion | Yes | Boundary note names orientation vs source-controlled route geometry; no deeper source route yet | First Line Commons public specimen; preserve substantially as-is |
 | `/mcr879.html` | Working MCR 879 comparison specimen | Register | Yes | Method / source-state distinctions are visible; outward source request remains open | Trust mark now carried on face |
 | `/experiments/dawson-inline-depth/` | Interaction specimen; depth can open without visitor movement | Small Door | Yes | Inline depth windows carry source family, brake, and public Dawson representation | Trust mark now carried on face |
 | `/experiments/ward-room/` | Disposable source-room specimen | Ravel | Yes | Holderness / Hancock source routes and explicit do-not-join brake | Trust mark now carried on face |
