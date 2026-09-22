@@ -1,329 +1,245 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#171713" />
-  <meta name="robots" content="noindex, nofollow" />
-  <title>One outing, two clocks — Earthly Hands experiment</title>
-  <style>
-    :root{
-      color-scheme:dark;
-      --night:#171713;
-      --raised:#1d1c17;
-      --paper:#eee8dc;
-      --muted:#aaa394;
-      --rule:#454239;
-      --ember:#cf8953;
-      --soft:#e0ad78;
-      --measure:42rem;
-    }
-    *{box-sizing:border-box}
-    html{background:var(--night);-webkit-text-size-adjust:100%}
-    body{
-      margin:0;
-      min-width:18rem;
-      color:var(--paper);
-      background:
-        linear-gradient(90deg,transparent 0,transparent max(1.35rem,6vw),var(--rule) max(1.35rem,6vw),var(--rule) calc(max(1.35rem,6vw) + 1px),transparent calc(max(1.35rem,6vw) + 1px)),
-        var(--night);
-      font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
-      font-size:1.19rem;
-      line-height:1.55;
-    }
-    a{color:inherit;text-decoration-color:var(--ember);text-underline-offset:.24em}
-    a:hover{color:var(--soft)}
-    button{font:inherit}
-    button:focus-visible,a:focus-visible{outline:2px solid var(--ember);outline-offset:5px}
-    .shell{width:min(70rem,calc(100% - 12vw));margin:auto}
-    header{
-      min-height:5.75rem;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:2rem;
-      border-bottom:1px solid var(--rule);
-      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    }
-    .brand{font-weight:700;letter-spacing:.025em}
-    .place,.kicker,.label,.meta,.actions,.question-nav,.source-line,footer{
-      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    }
-    .place,.kicker,.label,.meta,footer{
-      text-transform:uppercase;
-      letter-spacing:.12em;
-      color:var(--muted);
-      font-size:.78rem;
-    }
-    .place b{color:var(--ember);font-weight:400;margin-right:.55rem}
-    main{padding:clamp(3rem,8vh,6rem) 0 5rem}
-    .intro{max-width:52rem;margin-bottom:clamp(4rem,9vh,7rem)}
-    .kicker{margin:0 0 1rem}
-    h1,h2{font-weight:500;line-height:1.05;letter-spacing:-.025em}
-    h1{font-size:clamp(2.5rem,6vw,5.8rem);margin:.1em 0 .35em}
-    .lede{max-width:40rem;color:#d7d0c3;font-size:1.17em}
-    .experiment-note{
-      margin-top:2rem;
-      padding:1rem 0 0 1.2rem;
-      border-left:1px solid var(--ember);
-      max-width:38rem;
-      color:var(--muted);
-    }
-    .room{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-      gap:clamp(2.5rem,7vw,6rem);
-      padding:clamp(3rem,7vh,5rem) 0;
-      border-top:1px solid var(--rule);
-    }
-    .voice{min-width:0}
-    .voice h2{font-size:clamp(2rem,4vw,3.8rem);margin:.25em 0 .35em}
-    .meta{margin:.3rem 0 2rem}
-    .source-summary{max-width:32rem;color:#cfc8bb}
-    .clock{
-      margin:2.3rem 0;
-      display:grid;
-      grid-template-columns:auto 1fr auto;
-      align-items:start;
-      gap:1rem;
-    }
-    .bracket{color:var(--ember);font-size:2.2rem;line-height:1}
-    blockquote{
-      margin:0;
-      font-size:clamp(1.45rem,3vw,2.35rem);
-      line-height:1.3;
-      font-style:normal;
-    }
-    .hear{
-      border:1px solid var(--rule);
-      background:transparent;
-      color:var(--paper);
-      padding:.65rem .8rem;
-      cursor:pointer;
-      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-      font-size:.78rem;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-    }
-    .hear:hover{border-color:var(--ember);color:var(--soft)}
-    .speech-note{font-size:.78rem;color:var(--muted);max-width:27rem}
-    .seam{
-      border-top:1px solid var(--rule);
-      padding:clamp(3rem,8vh,6rem) 0;
-      display:grid;
-      grid-template-columns:minmax(14rem,.7fr) minmax(0,1.3fr);
-      gap:clamp(2.5rem,7vw,7rem);
-    }
-    .seam h2{font-size:clamp(2.1rem,4vw,4rem);margin:.1em 0}
-    .seam-copy{max-width:40rem}
-    .hard-brake{
-      margin:2.5rem 0;
-      padding:1.1rem 0 1.1rem 1.2rem;
-      border-left:1px solid var(--ember);
-    }
-    .hard-brake p{margin:.35rem 0}
-    .question-room{
-      padding:clamp(3rem,8vh,6rem) 0;
-      border-top:1px solid var(--rule);
-    }
-    .question-room h2{font-size:clamp(2rem,4vw,3.7rem);margin:.2em 0 .6em}
-    .question-nav{display:flex;flex-wrap:wrap;gap:.75rem;margin:2rem 0}
-    .question-nav button{
-      border:1px solid var(--rule);
-      background:transparent;
-      color:var(--paper);
-      padding:.7rem .85rem;
-      cursor:pointer;
-      font-size:.78rem;
-      text-align:left;
-    }
-    .question-nav button:hover{border-color:var(--ember)}
-    .answer{
-      max-width:42rem;
-      min-height:6.5rem;
-      padding:1.2rem 0 1.2rem 1.2rem;
-      border-left:1px solid var(--rule);
-      color:#d7d0c3;
-    }
-    .answer[data-active="true"]{border-color:var(--ember)}
-    .source-block{
-      padding:clamp(3rem,8vh,6rem) 0;
-      border-top:1px solid var(--rule);
-    }
-    .source-block h2{font-size:clamp(2rem,4vw,3.7rem);margin:.2em 0 .6em}
-    .source-line{font-size:.82rem;line-height:1.65;max-width:48rem;color:var(--muted)}
-    footer{
-      border-top:1px solid var(--rule);
-      padding:1.6rem 0 2.5rem;
-      display:flex;
-      justify-content:space-between;
-      gap:2rem;
-    }
-    @media(max-width:760px){
-      body{font-size:1.08rem;background:var(--night)}
-      .shell{width:min(100% - 2.5rem,44rem)}
-      header{min-height:4.7rem}
-      .place{display:none}
-      main{padding-top:2.4rem}
-      h1{font-size:clamp(2.6rem,15vw,4.5rem)}
-      .room,.seam{grid-template-columns:1fr;gap:2rem}
-      .voice + .voice{padding-top:3rem;border-top:1px solid var(--rule)}
-      .clock{grid-template-columns:auto 1fr}
-      .hear{grid-column:2;justify-self:start}
-      footer{display:block}
-      footer a{display:inline-block;margin-top:1rem}
-    }
-  </style>
-  <script>document.documentElement.className="js";</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ddd6c7">
+<meta name="robots" content="noindex,nofollow">
+<title>Two clocks, no join — Earthly Hands · Register experiment</title>
+<style>
+:root{
+  --paper:#ddd6c7;--paper-lit:#e9e1cf;--ink:#171714;--muted:#625e55;
+  --faint:#8a8478;--rule:rgba(23,23,20,.28);--rule-soft:rgba(23,23,20,.13);
+  --rust:#875b3d;--night:#171713;--night-paper:#eee8dc;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--paper);color:var(--ink);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--serif);font-size:1.12rem;line-height:1.55;background:
+linear-gradient(90deg,transparent 0,transparent calc(50% - .5px),var(--rule-soft) calc(50% - .5px),var(--rule-soft) calc(50% + .5px),transparent calc(50% + .5px)),var(--paper)}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.24em}
+button{font:inherit}
+button:focus-visible,a:focus-visible{outline:1px solid var(--ink);outline-offset:5px}
+.shell{width:min(84rem,calc(100% - 8vw));margin:auto}
+.mono,.eyebrow,.meta,.custody,.door,.gutter-note,.source-id,footer{font-family:var(--mono)}
+.site-header{min-height:5.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:.84rem}
+.identity{text-decoration:none;font-weight:700;letter-spacing:.025em}.identity span{font-weight:400;color:var(--muted)}
+.place{color:var(--muted)}.place b{color:var(--rust);font-weight:400;margin-right:.45rem}
+.hero{min-height:68vh;display:grid;align-content:center;padding:9vh 0 10vh}
+.eyebrow,.meta,.custody,.source-id{margin:0 0 1rem;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);font-size:.72rem}
+.hero h1{max-width:12ch;margin:.08em 0 .28em;font-size:clamp(3.8rem,9.5vw,9.5rem);font-weight:400;line-height:.82;letter-spacing:-.055em}
+.hero .lede{max-width:42rem;font-size:clamp(1.15rem,2vw,1.5rem);color:#35332d}
+.hero .threshold-note{max-width:38rem;margin-top:2.2rem;padding-left:1.2rem;border-left:1px solid var(--rust);color:var(--muted)}
+.field{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) 5.5rem minmax(0,1fr);min-height:88vh}
+.leaf{padding:clamp(3rem,7vw,7rem) clamp(1.5rem,4vw,4.5rem);display:flex;flex-direction:column}
+.leaf.left{padding-left:0}.leaf.right{padding-right:0}
+.leaf-label{display:flex;justify-content:space-between;gap:1rem;align-items:start;border-bottom:1px solid var(--rule-soft);padding-bottom:1rem}
+.leaf h2{margin:2rem 0 .25rem;font-size:clamp(2rem,4.5vw,4.7rem);font-weight:400;line-height:.95;letter-spacing:-.035em}
+.leaf .summary{max-width:30rem;color:#47443d}
+.clock{margin:auto 0;padding:7vh 0 5vh}
+.clock blockquote{margin:0;max-width:12ch;font-size:clamp(2.5rem,6vw,6.8rem);font-weight:400;line-height:.94;letter-spacing:-.045em}
+.clock .source-id{margin-top:1.35rem}
+.leaf.right .clock blockquote{margin-left:auto;text-align:right}
+.leaf.right .source-id{text-align:right}
+.gutter{position:relative;border-left:1px solid var(--rule);border-right:1px solid var(--rule);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08)}
+.gutter-line{position:absolute;inset:0 50% auto;height:100%;width:1px;background:var(--rule-soft)}
+.gutter-note{position:sticky;top:45vh;writing-mode:vertical-rl;transform:rotate(180deg);padding:.8rem 0;background:var(--paper);font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);z-index:1}
+.controls{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem}
+.leaf.right .controls{justify-content:flex-end}
+.door{border:0;border-bottom:1px solid var(--rule);background:transparent;color:var(--ink);padding:.45rem .1rem;cursor:pointer;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase}
+.door:hover{border-bottom-color:var(--ink)}
+.depth{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s ease;border-top:1px solid transparent}
+.depth[data-open="true"]{grid-template-rows:1fr;border-top-color:var(--rule-soft)}
+.depth>div{overflow:hidden}
+.depth-inner{padding:1.5rem 0 0;max-width:31rem;color:#3f3c35}
+.leaf.right .depth-inner{margin-left:auto}
+.depth p{margin:.5rem 0}
+.seam{padding:14vh 0;display:grid;grid-template-columns:minmax(14rem,.7fr) minmax(0,1.3fr);gap:clamp(3rem,8vw,9rem)}
+.seam h2{max-width:9ch;margin:.12em 0;font-size:clamp(2.6rem,6vw,6.4rem);font-weight:400;line-height:.9;letter-spacing:-.045em}
+.seam-copy{max-width:43rem}
+.seam-copy p{margin:0 0 1.25rem}
+.brakes{margin:2.3rem 0;padding:1.2rem 0 1.2rem 1.25rem;border-left:1px solid var(--rust)}
+.brakes p{margin:.35rem 0}
+.later-life{background:var(--night);color:var(--night-paper);padding:12vh 0}
+.later-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(3rem,8vw,8rem)}
+.later-life .eyebrow,.later-life .custody{color:#aaa394}
+.later-life h2{max-width:11ch;margin:.12em 0;font-size:clamp(2.5rem,5.5vw,5.8rem);font-weight:400;line-height:.95;letter-spacing:-.04em}
+.later-copy{max-width:42rem}
+.later-copy p{margin:0 0 1.25rem}
+.question-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.question-row button{border:1px solid #454239;background:transparent;color:var(--night-paper);padding:.7rem .8rem;font-family:var(--mono);font-size:.72rem;cursor:pointer}
+.answer{margin-top:1.5rem;min-height:4.5rem;padding-left:1rem;border-left:1px solid #454239;color:#d7d0c3}
+.answer[data-active="true"]{border-left-color:#cf8953}
+.source-return{padding:12vh 0}
+.source-return h2{max-width:12ch;margin:.1em 0 .7em;font-size:clamp(2.3rem,5vw,5rem);font-weight:400;line-height:.95;letter-spacing:-.04em}
+.source-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,7vw,7rem);border-top:1px solid var(--rule);padding-top:2rem}
+.source-grid p{max-width:37rem}
+.source-grid .source-id{margin-top:1.6rem}
+footer{display:flex;justify-content:space-between;gap:2rem;border-top:1px solid var(--rule);padding:1.7rem 0 2.7rem;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:800px){
+  body{background:var(--paper);font-size:1.05rem}
+  .shell{width:min(100% - 2.4rem,44rem)}
+  .place{display:none}
+  .hero{min-height:62vh}
+  .hero h1{font-size:clamp(3.7rem,18vw,6.5rem)}
+  .field{grid-template-columns:1fr;min-height:0}
+  .leaf{padding:4rem 0}.leaf.left,.leaf.right{padding-left:0;padding-right:0}
+  .gutter{min-height:8rem;border:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .gutter-line{inset:0 auto auto 50%;height:100%;width:1px}
+  .gutter-note{position:static;writing-mode:horizontal-tb;transform:none;background:var(--paper)}
+  .leaf.right .clock blockquote,.leaf.right .source-id{text-align:left;margin-left:0}
+  .leaf.right .controls{justify-content:flex-start}
+  .leaf.right .depth-inner{margin-left:0}
+  .seam,.later-grid,.source-grid{grid-template-columns:1fr}
+  footer{display:block}footer a{display:inline-block;margin-top:.7rem}
+}
+@media(prefers-reduced-motion:reduce){.depth{transition:none}}
+</style>
+<script>document.documentElement.className="js"</script>
 </head>
 <body>
-  <div class="shell">
-    <header>
-      <div class="brand">Earthly Hands <span style="color:var(--muted);font-weight:400">Workshop</span></div>
-      <div class="place"><b>/</b> experiment · one listening room</div>
-    </header>
+<div class="shell">
+<header class="site-header">
+  <a class="identity" href="/">Earthly Hands <span>Workshop</span></a>
+  <div class="place"><b>/</b> listening specimen · Register + Lamplight</div>
+</header>
 
-    <main>
-      <section class="intro">
-        <p class="kicker">May 1838 · Louisville, Mississippi</p>
-        <h1>One outing.<br />Two clocks.</h1>
-        <p class="lede">
-          Two historical objects describe a related residence-location outing. This room does not repair the time seam or decide which later Robert Bell anyone should become.
-        </p>
-        <p class="experiment-note">
-          Experimental public room. Source, transcription, browser read-aloud, later administrative use, and Workshop interpretation remain different things.
-        </p>
-      </section>
+<main>
+<section class="hero">
+  <p class="eyebrow">Louisville, Mississippi · May 1838</p>
+  <h1>Two clocks.<br>No join.</h1>
+  <p class="lede">Robert Bell and Blackwell carry two remembered times beside what appears to be related residence-location work. The page can place those clocks together without repairing them.</p>
+  <p class="threshold-note">This is a comparison instrument, not a reenactment. Source, present-day reading, later administrative use, and Workshop inference remain different things.</p>
+</section>
 
-      <section class="room" aria-label="Two source-local accounts">
-        <article class="voice">
-          <p class="label">Account one</p>
-          <h2>Robert Bell</h2>
-          <p class="meta">General Deposition No. 25 · sworn 9 May 1838</p>
-          <p class="source-summary">
-            Bell describes Blackwell coming to his house and asking him to point out treaty-time residence places. In Bell’s account, the outing leaves from “Bell’s house.” He presents himself as a place-knower; that claim is source-local and is not film or Workshop validation of the places.
-          </p>
-          <div class="clock">
-            <span class="bracket" aria-hidden="true">[</span>
-            <blockquote id="bell-clock">“late in the evening three sleeps ago.”</blockquote>
-            <button class="hear" type="button" data-speak="late in the evening three sleeps ago." data-voice="Robert Bell account">Hear</button>
-          </div>
-          <p class="speech-note">
-            “Hear” uses your browser’s synthetic voice. It is not an historical voice, performance, or source object. No API call is made.
-          </p>
-        </article>
+<section class="field" aria-label="Two source leaves separated by an unresolved gutter">
+  <article class="leaf left">
+    <div class="leaf-label">
+      <p class="meta">Account 01</p>
+      <p class="meta">9 May 1838</p>
+    </div>
+    <h2>Robert Bell</h2>
+    <p class="summary">Bell says Blackwell came to his house and asked him to point out treaty-time residence places. In this object, Bell is carrying remembered place and guide knowledge.</p>
+    <div class="clock">
+      <blockquote>“late in the evening<br>three sleeps ago.”</blockquote>
+      <p class="source-id">General Deposition No. 25</p>
+    </div>
+    <div class="controls">
+      <button class="door" type="button" data-speak="late in the evening three sleeps ago.">Read this phrase aloud</button>
+      <button class="door" type="button" data-depth="bell-depth" aria-expanded="false">Open source depth</button>
+    </div>
+    <div class="depth" id="bell-depth" data-open="false"><div><div class="depth-inner">
+      <p><strong>What this leaf carries:</strong> Bell’s own sworn time language and his account of the outing beginning from Bell’s house.</p>
+      <p><strong>What it does not carry:</strong> a verified exact date for the outing, proof that every place he identified was correct, or an identity bridge to the Bell–McKinney family Robert.</p>
+    </div></div></div>
+  </article>
 
-        <article class="voice">
-          <p class="label">Account two</p>
-          <h2>Blackwell</h2>
-          <p class="meta">General Deposition No. 30 · sworn 8 May 1838</p>
-          <p class="source-summary">
-            Blackwell says David Bell had been recommended as guide but could not be found, and Robert Bell was taken instead. He describes looking for section corners and half-mile marks, determining land numbers, writing them on the spot, and later reaching a limit of recollection without the memorandum made during the work.
-          </p>
-          <div class="clock">
-            <span class="bracket" aria-hidden="true">[</span>
-            <blockquote id="blackwell-clock">“Sunday last about 12 o'clock.”</blockquote>
-            <button class="hear" type="button" data-speak="Sunday last about 12 o'clock." data-voice="Blackwell account">Hear</button>
-          </div>
-          <p class="speech-note">
-            The source-carried clock phrases remain separate. This room does not convert them into an editorial exact date.
-          </p>
-        </article>
-      </section>
-
-      <section class="seam" aria-labelledby="seam-title">
-        <div>
-          <p class="kicker">The seam</p>
-          <h2 id="seam-title">Do not repair it.</h2>
-        </div>
-        <div class="seam-copy">
-          <p>
-            These accounts are useful near one another because they expose different source roles inside related work. Bell supplies remembered place and guide knowledge. Blackwell supplies later field and survey translation, then marks where his own land-number recollection stops and documentary dependence begins.
-          </p>
-          <p>
-            The clock language does not line up neatly. The experiment leaves that pressure intact.
-          </p>
-          <div class="hard-brake" aria-label="Boundaries">
-            <p><strong>Related accounts ≠ one account.</strong></p>
-            <p><strong>Time difference ≠ error until a source earns that verb.</strong></p>
-            <p><strong>Older Robert body ≠ Bell–McKinney family Robert.</strong></p>
-          </div>
-          <p>
-            Years later, material from these older records was used inside the MCR 879 administrative record. That later use gives the 1838 objects another documentary life. It does not retroactively settle identity.
-          </p>
-        </div>
-      </section>
-
-      <section class="question-room" aria-labelledby="ask-title">
-        <p class="kicker">Ask this room</p>
-        <h2 id="ask-title">Only what this room can answer.</h2>
-        <p>
-          This question surface is deliberately local and deterministic. It does not call a model and it does not enter the private Workshop.
-        </p>
-        <div class="question-nav" role="group" aria-label="Questions this room can answer">
-          <button type="button" data-answer="clocks">What do the two clocks prove?</button>
-          <button type="button" data-answer="identity">Is this the Bell–McKinney family Robert?</button>
-          <button type="button" data-answer="blackwell">What changes in Blackwell’s account?</button>
-          <button type="button" data-answer="later">Why mention MCR 879?</button>
-        </div>
-        <div class="answer" id="answer" data-active="false" aria-live="polite">
-          Choose a question. The room will answer only from its bounded footing.
-        </div>
-      </section>
-
-      <section class="source-block" aria-labelledby="source-title">
-        <p class="kicker">Source return</p>
-        <h2 id="source-title">Go downward.</h2>
-        <p>
-          The 1838 depositions survive in the later printed Court of Claims evidence volume. This experiment uses the Workshop’s source-controlled reading of General Deposition No. 25 and General Deposition No. 30.
-        </p>
-        <p class="source-line">
-          Historical carrier: <em>The Choctaw Nation of Indians v. the United States</em>, No. 12,742, Evidence for Claimant, Volume I (1881), especially printed pp. 203–208.
-          <br />
-          <a href="https://archive.org/details/choctaw-nation-v-united-states-v1">Open the public carrier at Internet Archive</a>
-        </p>
-        <p class="source-line">
-          Public experiment boundary: this page does not reproduce the entire depositions, does not recreate the unrecovered field memorandum, and does not make a Robert identity join.
-        </p>
-      </section>
-    </main>
-
-    <footer>
-      <span>Earthly Hands · experimental room · passed through Register and Lamplight's hands</span>
-      <a href="/">Return to the threshold</a>
-    </footer>
+  <div class="gutter" aria-label="Unresolved seam between the two accounts">
+    <span class="gutter-line" aria-hidden="true"></span>
+    <span class="gutter-note">same documentary neighborhood · no forced clock</span>
   </div>
 
-  <script>
-    const answers = {
-      clocks: "They prove that two source-local accounts carry different time expressions for related residence-location work: Bell says “late in the evening three sleeps ago”; Blackwell says “Sunday last about 12 o'clock.” This room does not repair, harmonize, or rank them.",
-      identity: "No identity join is made here. This is an older Robert Bell documentary body. The later MCR 879 machinery used older Robert Bell evidence, but later administrative use does not prove that this historical occurrence is the Bell–McKinney family ancestor.",
-      blackwell: "Blackwell changes the kind of record being made. Remembered place becomes field and survey work: section corners and half-mile marks are sought, land numbers are determined and written, and then Blackwell states a limit on what he can recall without the memorandum made during the work.",
-      later: "Because the 1838 material did not stay in 1838. Later administrative bodies reused older Robert Bell evidence inside identity and Article XIV adjudication. Showing that carrier history is different from using the older record to settle identity."
-    };
+  <article class="leaf right">
+    <div class="leaf-label">
+      <p class="meta">Account 02</p>
+      <p class="meta">8 May 1838</p>
+    </div>
+    <h2>Blackwell</h2>
+    <p class="summary">Blackwell says David Bell had been recommended as guide but could not be found, and Robert Bell was taken instead. His account turns remembered place toward survey description.</p>
+    <div class="clock">
+      <blockquote>“Sunday last<br>about 12 o'clock.”</blockquote>
+      <p class="source-id">General Deposition No. 30</p>
+    </div>
+    <div class="controls">
+      <button class="door" type="button" data-speak="Sunday last about 12 o'clock.">Read this phrase aloud</button>
+      <button class="door" type="button" data-depth="blackwell-depth" aria-expanded="false">Open source depth</button>
+    </div>
+    <div class="depth" id="blackwell-depth" data-open="false"><div><div class="depth-inner">
+      <p><strong>What this leaf carries:</strong> the guide substitution, the search for section corners and half-mile marks, land numbers written during the work, and Blackwell’s later limit of recollection without the memorandum.</p>
+      <p><strong>What it does not carry:</strong> the lost memorandum itself or permission to harmonize Blackwell’s clock with Bell’s.</p>
+    </div></div></div>
+  </article>
+</section>
 
-    document.querySelectorAll("[data-answer]").forEach((button) => {
-      button.addEventListener("click", () => {
-        const answer = document.getElementById("answer");
-        answer.textContent = answers[button.dataset.answer] || "";
-        answer.dataset.active = "true";
-      });
-    });
+<section class="seam">
+  <div>
+    <p class="eyebrow">The gutter is evidence too</p>
+    <h2>Do not repair it.</h2>
+  </div>
+  <div class="seam-copy">
+    <p>The visual comparison is deliberately simple: two leaves, one gutter. The leaves may be inspected together. The gutter is not a missing answer to be filled by design.</p>
+    <p>Bell carries remembered place. Blackwell carries field and survey translation. Their clock language does not line up neatly. The useful thing is not to make it line up.</p>
+    <div class="brakes">
+      <p><strong>Related accounts ≠ one account.</strong></p>
+      <p><strong>Time difference ≠ error until a source earns that verb.</strong></p>
+      <p><strong>Older Robert body ≠ Bell–McKinney family Robert.</strong></p>
+    </div>
+    <p class="custody">Register posture · compare / distinguish / preserve the unjoined edge</p>
+  </div>
+</section>
+</main>
+</div>
 
-    document.querySelectorAll("[data-speak]").forEach((button) => {
-      button.addEventListener("click", () => {
-        if (!("speechSynthesis" in window)) {
-          button.textContent = "Unavailable";
-          return;
-        }
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(button.dataset.speak);
-        utterance.rate = 0.88;
-        utterance.pitch = 0.9;
-        button.setAttribute("aria-label", "Browser read-aloud: " + button.dataset.voice);
-        window.speechSynthesis.speak(utterance);
-      });
-    });
-  </script>
+<section class="later-life">
+  <div class="shell later-grid">
+    <div>
+      <p class="eyebrow">A later documentary life</p>
+      <h2>1838 does not stay in 1838.</h2>
+    </div>
+    <div class="later-copy">
+      <p>Older Robert Bell material was later used inside the administrative world surrounding MCR 879. That later use gives the 1838 objects another life. It does not retroactively settle identity.</p>
+      <p>This darker room is intentionally downstream. The page does not make the later proceeding the explanation for the earlier testimony.</p>
+      <div class="question-row" role="group" aria-label="Questions this bounded room can answer">
+        <button type="button" data-answer="clocks">What do the clocks establish?</button>
+        <button type="button" data-answer="identity">Is this the family Robert?</button>
+        <button type="button" data-answer="blackwell">What changes with Blackwell?</button>
+      </div>
+      <div class="answer" id="answer" data-active="false" aria-live="polite">Choose a question. The answer stays inside this bounded source footing.</div>
+    </div>
+  </div>
+</section>
+
+<div class="shell">
+<section class="source-return">
+  <p class="eyebrow">Source return</p>
+  <h2>Go downward, not sideways.</h2>
+  <div class="source-grid">
+    <div>
+      <p>The 1838 depositions survive in the later printed Court of Claims evidence volume. This experiment uses the Workshop’s source-controlled reading of General Deposition No. 25 and General Deposition No. 30.</p>
+      <p class="source-id">Historical carrier · The Choctaw Nation of Indians v. the United States · No. 12,742 · Evidence for Claimant, vol. I · especially printed pp. 203–208</p>
+    </div>
+    <div>
+      <p>The page reproduces only bounded phrases and source-local summaries. It does not recreate the unrecovered field memorandum, invent travel geometry, or make a Robert identity join.</p>
+      <p><a href="https://archive.org/details/choctaw-nation-v-united-states-v1">Open the public carrier at Internet Archive →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Passed through Register + Lamplight’s hands · trust/custody mark, not ownership</span>
+  <a href="/">Return to the current public front edge</a>
+</footer>
+</div>
+
+<script>
+const answers={
+  clocks:"They establish that two source-local accounts carry different time expressions near related residence-location work. This room does not harmonize, rank, or convert them into one editorial date.",
+  identity:"No identity join is made here. This is an older Robert Bell documentary body. Later administrative reuse does not prove that this historical occurrence is the Bell–McKinney family ancestor.",
+  blackwell:"Blackwell changes the kind of record being made: remembered place becomes field and survey work, land numbers are written, and his later recollection stops where the missing memorandum becomes necessary."
+};
+document.querySelectorAll("[data-depth]").forEach(b=>b.addEventListener("click",()=>{
+  const el=document.getElementById(b.dataset.depth);const open=el.dataset.open==="true";
+  el.dataset.open=String(!open);b.setAttribute("aria-expanded",String(!open));
+  b.textContent=open?"Open source depth":"Close source depth";
+}));
+document.querySelectorAll("[data-answer]").forEach(b=>b.addEventListener("click",()=>{
+  const a=document.getElementById("answer");a.textContent=answers[b.dataset.answer]||"";a.dataset.active="true";
+}));
+document.querySelectorAll("[data-speak]").forEach(b=>b.addEventListener("click",()=>{
+  if(!("speechSynthesis" in window)){b.textContent="Read-aloud unavailable";return}
+  speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(b.dataset.speak);u.rate=.86;u.pitch=.92;speechSynthesis.speak(u);
+}));
+</script>
 </body>
 </html>
