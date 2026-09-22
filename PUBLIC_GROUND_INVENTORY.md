@@ -1,0 +1,68 @@
+# Earthly Hands public-ground inventory
+
+Status: live cleanup / comparison register  
+Scope: current public front edge and the public specimens presently held in this repository.
+
+This is not a style ranking and not a replacement for the Public Ground build room. Its job is to make the public bodies answerable before another substantial build crosses.
+
+## Standing cleanup rules
+
+- Preserve materially different experiments as development history.
+- Fix broken mechanics before judging visual language.
+- Every public specimen should have a trustworthy way home.
+- A visitor arriving by a deep link should be able to tell whether they are at the current front edge or inside an experiment.
+- Carry companion signatures as trust / custody marks, not proprietary authorship.
+- Source descent, Workshop interpretation, visitor movement, and open uncertainty should not silently collapse.
+- Do not invent a maker, source relation, or publication state to make the inventory look complete.
+
+## Current bodies
+
+| Public body | Present status | Hands / trust mark | Way home | Source / depth route | Cleanup state |
+| --- | --- | --- | --- | --- | --- |
+| `/` | Current public front edge and specimen index; live Dawson passage | Shared Workshop assembly; specimen rows name known hands | Home object | Dawson source return at trail stop; contextual listening ground | Mechanically coherent; internally scrollable layout requires observer-aware capture |
+| `/mcr879.html` | Working MCR 879 comparison specimen | Register | Yes | Method / source-state distinctions are visible; outward source request remains open | Trust mark now carried on face |
+| `/experiments/dawson-inline-depth/` | Interaction specimen; depth can open without visitor movement | Small Door | Yes | Inline depth windows carry source family, brake, and public Dawson representation | Trust mark now carried on face |
+| `/experiments/ward-room/` | Disposable source-room specimen | Ravel | Yes | Holderness / Hancock source routes and explicit do-not-join brake | Trust mark now carried on face |
+| `/experiments/one-outing-two-clocks/` | Listening experiment; paired source clocks | Register + Lamplight | Yes | Public carrier route; explicit identity and time-expression brakes | Trust marks now carried on face; intentionally `noindex` |
+| `/experiments/register-threshold-v2/` | Earlier threshold specimen preserved for comparison | Register | Yes | Internal archive / Dawson experiment rather than a governing source descent | Deep-link status clarified; original visual grammar otherwise preserved |
+| `/experiments/listening-threshold/` | Earlier footing doorway into the paired listening room | OPEN on this face | Yes | Leads into One Outing, Two Clocks | Public but unindexed from current front; intentionally `noindex`; maker not yet earned from repository evidence |
+
+## Mechanical audit
+
+- Local links and asset references across the current HTML bodies were checked against the repository tree. No broken local references were found.
+- All currently indexed specimens have a route back to the current public front edge.
+- The older listening-threshold doorway also has a route home now.
+- Register threshold v2 now says plainly that it is an earlier preserved specimen rather than the current front edge.
+- The public observer now returns desktop and phone-width browser witnesses for the front edge, MCR 879, and every experiment listed above.
+
+## Open cleanup edges
+
+### Listening threshold provenance
+The repository history establishes the doorway as a distinct public experiment, but the current accessible evidence does not responsibly identify a companion maker. Leave the hand open until a trustworthy workshop return names it.
+
+### Indexed vs reachable
+The listening-threshold doorway is publicly reachable but is not presently listed in the current front-edge specimen index. That is not treated as an error. Decide later whether it should become discoverable from the front edge after comparing its job with the direct One Outing, Two Clocks entry.
+
+### Search-engine state
+Some experiment pages are explicitly `noindex`; other working specimens are not. Do not normalize this automatically. Search visibility is a publication decision, not a CSS cleanup.
+
+### Style convergence
+No style convergence is authorized by this cleanup. Threshold v2, inline depth, source room, listening room, MCR 879, and the current front edge remain materially different experiments from which the Workshop can inherit selectively.
+
+## Next comparison question
+
+For each body, ask:
+
+- What does it teach about arrival?
+- How does a visitor know where they are?
+- What changes when they move?
+- What changes when they only look deeper?
+- How do they reach source?
+- How do they get home?
+- How does uncertainty remain visible?
+- What does mobile change?
+- What would we miss if this experiment disappeared?
+
+Only after that comparison should another substantial public build inherit, combine, or replace these grammars.
+
+— Earthly Hands Workshop
