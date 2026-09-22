@@ -5,44 +5,172 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#171713">
-<title>Four-way room navigation — Earthly Hands experiment</title>
+<title>MCR 879 — Robert Bell evidence field — Earthly Hands</title>
 <style>
-:root{color-scheme:dark;--n:#171713;--p:#eee8dc;--m:#aaa394;--r:#454239;--e:#cf8953}
-*{box-sizing:border-box}html,body{min-height:100%;background:var(--n)}body{margin:0;color:var(--p);font:18px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}.shell{width:min(72rem,calc(100% - 2rem));margin:auto}header,footer{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;color:var(--m);font:12px/1.4 ui-monospace,monospace;letter-spacing:.09em;text-transform:uppercase}header{border-bottom:1px solid var(--r)}footer{border-top:1px solid var(--r)}main{min-height:78vh;display:grid;place-items:center;padding:2.5rem 0 4rem}.room-nav{width:min(54rem,100%);display:grid;grid-template-columns:8rem minmax(0,1fr) 8rem;grid-template-rows:5rem minmax(24rem,auto) 5rem;gap:1rem;align-items:stretch}.direction{border:1px solid var(--r);background:transparent;color:var(--p);font:13px/1.35 ui-monospace,monospace;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}.direction:hover,.direction:focus-visible{border-color:var(--e);outline:none;color:#e0ad78}.up{grid-column:2;grid-row:1}.left{grid-column:1;grid-row:2}.right{grid-column:3;grid-row:2}.down{grid-column:2;grid-row:3}.room{grid-column:2;grid-row:2;border:1px solid var(--r);padding:clamp(2rem,5vw,4rem);display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 40% 25%,rgba(207,137,83,.08),transparent 19rem)}.eyebrow,.where,.brake{font-family:ui-monospace,monospace}.eyebrow{margin:0 0 .8rem;color:var(--e);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}.where{margin:0 0 .8rem;color:var(--m);font-size:.78rem}.room h1{max-width:12ch;margin:0 0 1.5rem;font-size:clamp(2.6rem,6vw,5rem);font-weight:400;line-height:.96}.room p{max-width:35rem}.brake{margin-top:2rem;color:var(--m);font-size:.8rem}.home{color:inherit;text-underline-offset:.2em;text-decoration-color:var(--e)}
-@media(max-width:650px){.room-nav{grid-template-columns:4.6rem minmax(0,1fr) 4.6rem;grid-template-rows:4rem minmax(25rem,auto) 4rem;gap:.5rem}.direction{font-size:10px}.room{padding:1.5rem}.room h1{font-size:clamp(2.4rem,13vw,3.7rem)}header,footer{display:block}header span,footer span{display:block;margin:.25rem 0}}
+:root{color-scheme:dark;--night:#171713;--raised:#1c1b16;--paper:#eee8dc;--muted:#aaa394;--rule:#454239;--ember:#cf8953;--soft:#e0ad78;--measure:43rem}
+*{box-sizing:border-box}
+html{background:var(--night);-webkit-text-size-adjust:100%}
+body{margin:0;min-width:18rem;background:radial-gradient(circle at 48% 34%,rgba(207,137,83,.07),transparent 28rem),var(--night);color:var(--paper);font:1.08rem/1.58 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+a{color:inherit;text-decoration-color:var(--ember);text-underline-offset:.22em}
+a:hover{color:var(--soft)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ember);outline-offset:4px}
+.shell{width:min(72rem,calc(100% - 6vw));margin:auto}
+header,footer{display:flex;justify-content:space-between;gap:1.5rem;align-items:baseline;padding:1.15rem 0;color:var(--muted);font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.09em;text-transform:uppercase}
+header{border-bottom:1px solid var(--rule)}
+footer{border-top:1px solid var(--rule);padding-bottom:2.4rem}
+.brand{color:var(--paper);text-decoration:none;font-weight:600}
+main{padding:clamp(2.5rem,6vw,5.5rem) 0 clamp(3rem,7vw,6rem)}
+.intro{max-width:var(--measure);margin:0 auto clamp(2.7rem,6vw,5rem);text-align:center}
+.kicker,.status,.object,.direction small,.source-state{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.kicker{margin:0 0 .8rem;color:var(--ember);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}
+h1{max-width:16ch;margin:0 auto 1.25rem;font-size:clamp(2.55rem,5.5vw,5rem);font-weight:400;line-height:.98;letter-spacing:-.035em}
+.intro p:last-child{margin:0 auto;color:#d8d1c4}
+.field{position:relative;display:grid;grid-template-columns:minmax(7rem,.28fr) minmax(18rem,1fr) minmax(7rem,.28fr);grid-template-rows:auto minmax(27rem,auto) auto;gap:clamp(.75rem,2vw,1.5rem);align-items:stretch;max-width:64rem;margin:auto}
+.direction{border:0;background:transparent;color:var(--muted);font:inherit;cursor:pointer;padding:.7rem;text-align:center;transition:color 150ms ease}
+.direction:hover,.direction[aria-current="true"]{color:var(--soft)}
+.direction strong{display:block;color:inherit;font:400 1rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+.direction small{display:block;margin-top:.35rem;font-size:.67rem;letter-spacing:.07em;text-transform:uppercase}
+.up{grid-column:2;grid-row:1;align-self:end}
+.left{grid-column:1;grid-row:2;align-self:center;text-align:right}
+.right{grid-column:3;grid-row:2;align-self:center;text-align:left}
+.down{grid-column:2;grid-row:3;align-self:start}
+.room{grid-column:2;grid-row:2;display:flex;flex-direction:column;justify-content:center;min-height:27rem;padding:clamp(2.2rem,5vw,4.5rem);border:1px solid var(--rule);background:rgba(28,27,22,.56)}
+.object{margin:0 0 .8rem;color:var(--ember);font-size:.75rem;letter-spacing:.09em;text-transform:uppercase}
+.where{margin:0 0 .45rem;color:var(--muted);font-size:.9rem}
+.room h2{max-width:14ch;margin:0 0 1.3rem;font-size:clamp(2.15rem,4.6vw,3.9rem);font-weight:400;line-height:1;letter-spacing:-.03em}
+.room-copy{max-width:34rem;margin:0;color:#ddd6c9}
+.room-copy + .room-copy{margin-top:.85rem}
+.source-state{max-width:35rem;margin:1.7rem 0 0;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.76rem;line-height:1.55}
+.legend{max-width:var(--measure);margin:clamp(3rem,6vw,5rem) auto 0;padding-top:1.2rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem}
+.legend strong{color:var(--paper);font-weight:400}
+@media(max-width:700px){
+.shell{width:calc(100% - 2rem)}
+header,footer{display:block}header>* ,footer>*{display:block;margin:.2rem 0}
+main{padding-top:2.4rem}
+.field{grid-template-columns:4.5rem minmax(0,1fr) 4.5rem;grid-template-rows:auto minmax(28rem,auto) auto;gap:.35rem}
+.direction{padding:.45rem .2rem}
+.direction strong{font-size:.88rem}
+.direction small{font-size:.58rem}
+.left{text-align:right}.right{text-align:left}
+.room{padding:1.5rem;min-height:28rem}
+.room h2{font-size:clamp(2.05rem,10.5vw,3.25rem)}
+h1{font-size:clamp(2.55rem,13vw,4rem)}
+}
 </style>
 </head>
 <body>
 <div class="shell">
-<header><span>Earthly Hands · navigation experiment</span><span id="state-label">Standing here</span></header>
+<header>
+  <a class="brand" href="../../#threshold">Earthly Hands Workshop</a>
+  <span>Navigation experiment</span>
+</header>
+
 <main>
-<div class="room-nav" aria-label="Four-way room navigation">
-  <button class="direction up" data-dir="up">↑ Up</button>
-  <button class="direction left" data-dir="left">← Left</button>
+<section class="intro">
+  <p class="kicker">MCR 879 · Robert Bell evidence field</p>
+  <h1>One proceeding. Several documentary directions.</h1>
+  <p>Stand in the 1902 case body and move toward the evidence or administrative act you want to inspect. The directions are interface positions, not geography.</p>
+</section>
+
+<div class="field" aria-label="MCR 879 evidence navigation">
+  <button class="direction up" data-state="older" type="button">
+    <strong>Older record</strong><small>1837 commissioner context</small>
+  </button>
+
+  <button class="direction left" data-state="family" type="button">
+    <strong>Family testimony</strong><small>1901 examinations</small>
+  </button>
+
   <section class="room" id="room" aria-live="polite">
-    <p class="eyebrow">Prose Map interaction grammar</p>
-    <p class="where" id="where">Standing point</p>
-    <h1 id="title">Stand somewhere. Look four ways.</h1>
-    <p id="copy">The controls remain in the room around you. A move changes the present body instead of opening a menu.</p>
-    <p class="brake">Button position is interface direction in this experiment. It does not assert compass bearing, historical route, or source geometry.</p>
+    <p class="object" id="object">MCR 879 · Commission decision</p>
+    <p class="where" id="where">Standing point · April–May 1902</p>
+    <h2 id="title">The case turns on which Robert Bell the record is describing.</h2>
+    <p class="room-copy" id="copy1">The Commission and the Office of Indian Affairs look backward into Article XIV material while handling the Bell–McKinney family applications. The older Robert record is not denied to exist; federal actors use it to distinguish one Robert Bell from another.</p>
+    <p class="room-copy" id="copy2">This room does not adopt that identity conclusion. It keeps the government’s comparison visible as a government act.</p>
+    <p class="source-state" id="source-state">Standing: MCR 879 family body ≠ automatic identity with the older Article XIV Robert body.</p>
   </section>
-  <button class="direction right" data-dir="right">Right →</button>
-  <button class="direction down" data-dir="down">↓ Down</button>
+
+  <button class="direction right" data-state="patent" type="button">
+    <strong>Patent record</strong><small>1846 / Office use 1902</small>
+  </button>
+
+  <button class="direction down" data-state="rehearing" type="button">
+    <strong>Rehearing</strong><small>28 Feb–4 Mar 1907</small>
+  </button>
 </div>
+
+<section class="legend">
+  <strong>Navigation note.</strong> Left, right, up, and down are only room positions in this specimen. They do not assert compass bearing, chronology, causation, or evidentiary rank. A visitor is moving among controlled documentary states.
+</section>
 </main>
-<footer><span>Literal movement control · bounded specimen</span><a class="home" href="../../">Return to the current public front edge</a></footer>
+
+<footer>
+  <span>Earthly Hands · MCR 879</span>
+  <a href="../../#threshold">Return to the threshold</a>
+</footer>
 </div>
+
 <script>
 const states={
- center:{where:"Standing point",title:"Stand somewhere. Look four ways.",copy:"The controls remain in the room around you. A move changes the present body instead of opening a menu."},
- up:{where:"Upward room",title:"You moved up.",copy:"The page changed because you moved. The control you used stayed spatially where you expected it."},
- down:{where:"Downward room",title:"You moved down.",copy:"A future Prose Map body could attach an earned neighboring state here without turning every relation into a line on a map."},
- left:{where:"Left-hand room",title:"You moved left.",copy:"Literal direction can be simple interface grammar first. Historical or geographic meaning would have to be earned separately."},
- right:{where:"Right-hand room",title:"You moved right.",copy:"The useful test is whether a person can move instinctively without losing the source and state distinctions underneath the room."}
+  center:{
+    object:"MCR 879 · Commission decision",
+    where:"Standing point · April–May 1902",
+    title:"The case turns on which Robert Bell the record is describing.",
+    copy1:"The Commission and the Office of Indian Affairs look backward into Article XIV material while handling the Bell–McKinney family applications. The older Robert record is not denied to exist; federal actors use it to distinguish one Robert Bell from another.",
+    copy2:"This room does not adopt that identity conclusion. It keeps the government’s comparison visible as a government act.",
+    source:"Standing: MCR 879 family body ≠ automatic identity with the older Article XIV Robert body."
+  },
+  older:{
+    object:"Older Article XIV record body",
+    where:"Commissioner context · Act of 3 March 1837 / later carried record",
+    title:"Robert Bell appears inside an older administrative record stream.",
+    copy1:"The Workshop holds an older Robert Bell record body that later federal decision-makers brought into MCR 879. A later printed representation places Robert Bell within the March 3, 1837 commissioner context and carries an Office No. 37 tract description.",
+    copy2:"That older occurrence is not, by itself, the Bell–McKinney family Robert. The identity bridge is exactly what the later government proceedings tried to decide.",
+    source:"Boundary: occurrence and administrative context are source-carried; cross-body person identity remains open."
+  },
+  family:{
+    object:"Family testimony",
+    where:"Commission examinations · 1901",
+    title:"The family record carries Robert Bell through living witnesses.",
+    copy1:"In Emma J. Pickens’s March 1901 examination, a broader answer about McKinney ancestry is followed by the examiner redirecting toward Robert Bell and asking whether her father was the Robert Bell carried in the older Murray–Vroom material.",
+    copy2:"The redirection is visible. Its motive is not. The testimony should not be rewritten as the family attaching itself to the older Robert; the administrative comparison is being made by the examining machinery.",
+    source:"Boundary: questioning-path redirection is source-visible; why the examiner redirected remains open."
+  },
+  patent:{
+    object:"Patent record",
+    where:"14 Dec 1846 patent · Office of Indian Affairs review, 13 May 1902",
+    title:"A patent record becomes an identity-separating instrument.",
+    copy1:"The Office of Indian Affairs says its records show a patent issued to Robert Bell on December 14, 1846. In its review of MCR 879, the Office combines that patent fact with other historical record material and uses the resulting body in its two-Robert analysis.",
+    copy2:"The Office’s conclusion is that the patented Article XIV Robert was a different man from the family Robert claimed by the applicants. That conclusion remains attributed to the Office rather than adopted as Workshop-level historical identity.",
+    source:"Documentary state matters: Office-held patent fact in 1902 ≠ later certified 1904 patent exemplification."
+  },
+  rehearing:{
+    object:"MCR 879 · rehearing sequence",
+    where:"28 February–4 March 1907",
+    title:"The active gate changes from evidence to time.",
+    copy1:"A rehearing motion was filed on February 28, 1907. On March 4, the Office of Indian Affairs says the motion was not filed within the time allowed by the Act of April 26, 1906, recommends denial pro forma, and says the underlying case record is not transmitted because it is not considered necessary for deciding this motion.",
+    copy2:"The Department denies the motion as recommended. The missing rehearing motion remains unrecovered, so what it argued about timeliness, exceptions, or the merits is still open.",
+    source:"1906 = statute. 1907 = motion, recommendation, and denial. Reopening clock ≠ merits determination."
+  }
 };
-const room=document.getElementById("room"),where=document.getElementById("where"),title=document.getElementById("title"),copy=document.getElementById("copy"),label=document.getElementById("state-label");
-document.querySelectorAll("[data-dir]").forEach(b=>b.addEventListener("click",()=>{const s=states[b.dataset.dir];where.textContent=s.where;title.textContent=s.title;copy.textContent=s.copy;label.textContent=s.where;room.animate([{opacity:.5},{opacity:1}],{duration:150});history.replaceState({}, "", "#"+b.dataset.dir)}));
-const start=location.hash.slice(1);if(states[start]&&start!=="center")document.querySelector('[data-dir="'+start+'"]').click();
+
+const els={
+ object:document.getElementById("object"),
+ where:document.getElementById("where"),
+ title:document.getElementById("title"),
+ copy1:document.getElementById("copy1"),
+ copy2:document.getElementById("copy2"),
+ source:document.getElementById("source-state")
+};
+function show(key){
+ const s=states[key]||states.center;
+ Object.keys(els).forEach(k=>els[k].textContent=s[k]);
+ document.querySelectorAll("[data-state]").forEach(b=>b.setAttribute("aria-current",b.dataset.state===key?"true":"false"));
+ history.replaceState({},"",key==="center"?"#standing":"#"+key);
+ document.getElementById("room").animate([{opacity:.56},{opacity:1}],{duration:170});
+}
+document.querySelectorAll("[data-state]").forEach(b=>b.addEventListener("click",()=>show(b.dataset.state)));
+const start=location.hash.slice(1);show(states[start]?start:"center");
 </script>
 </body>
 </html>
