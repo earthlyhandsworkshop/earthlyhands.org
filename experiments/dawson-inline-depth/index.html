@@ -101,7 +101,9 @@ details p{color:var(--muted);font-size:.9rem!important}
 details a{font-size:.9rem}
 .actions{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-top:.9rem}
 .actions button{padding:.25rem 0;border:0;border-bottom:1px solid var(--rust);background:none;color:var(--ink);font:.78rem/1.4 var(--mono);cursor:pointer}
-.mobile-gesture-note{display:none;margin:1rem 0 0;color:var(--muted);font:.7rem/1.45 var(--mono);letter-spacing:.04em}.boundary{max-width:52rem;margin:clamp(4rem,8vw,7rem) auto 0;padding-top:1.2rem;border-top:1px solid var(--rule2);color:var(--muted)}
+.mobile-gesture-note{display:none;margin:1rem 0 0;color:var(--muted);font:.7rem/1.45 var(--mono);letter-spacing:.04em}
+.mobile-nav{display:none}
+.boundary{max-width:52rem;margin:clamp(4rem,8vw,7rem) auto 0;padding-top:1.2rem;border-top:1px solid var(--rule2);color:var(--muted)}
 .nav-note{margin:0 0 .65rem;color:var(--rust);font-size:.65rem}
 .boundary p{margin:.45rem 0}
 .signature{margin-top:1.5rem!important;font-size:.68rem}
@@ -140,6 +142,8 @@ footer a{text-decoration:none}
   .window{margin:1.4rem 0 1.6rem;padding:1.2rem 1.05rem;transform:none;box-shadow:none}
   .ask-body{grid-template-columns:1fr}
   .mobile-gesture-note{display:block}
+  .mobile-nav{display:flex;flex-direction:column;align-items:flex-start;gap:.55rem;margin-top:1.8rem;padding-top:1rem;border-top:1px solid var(--rule)}
+  .mobile-nav a,.mobile-nav button{padding:.2rem 0;border:0;border-bottom:1px solid var(--rust);background:none;color:var(--ink);font:.76rem/1.4 var(--mono);text-decoration:none;cursor:pointer}
 }
 @media(max-width:38rem){
   body{font-size:1.07rem}.top-actions{gap:.65rem}.top-actions .ask-words{display:none}
@@ -167,7 +171,7 @@ footer a{text-decoration:none}
       <p class="kicker">Dawson ground · next travel leg</p>
       <h1>The account carries southeast.</h1>
       <p class="orientation">You arrived from Morning Camp. Opening nearby depth does not move you. The page keeps one standing point while the relations around it become more inspectable.</p>
-      <p class="mobile-gesture-note">On a phone: scroll down for depth · swipe left for Blue Water</p>
+      <p class="mobile-gesture-note">On a phone: scroll normally. Use the next-ground link below when you want to move on.</p>
       <div class="sequence" aria-label="Source-sequence orientation">
         <p class="seq-label">Source sequence</p>
         <div class="seq-line" aria-hidden="true">
@@ -190,6 +194,10 @@ footer a{text-decoration:none}
         <div class="reading-head"><p class="small-label">Carried report</p><p class="small-label">29 Jan. 1831</p></div>
         <p>The report carries <button class="inline" data-key="distance" aria-expanded="false">about fifteen miles southeast</button> and encamps on a small branch of Blue Water.</p>
         <p>The direction and mileage belong to Dawson’s account. Earthly Hands does not draw the missing traveled line.</p>
+        <div class="mobile-nav">
+          <a href="../../">Workshop home</a>
+          <button type="button" data-go="blue-water">Next: Blue Water →</button>
+        </div>
       </article>
 
       <button class="dir dir-right" type="button" data-go="blue-water">
@@ -208,7 +216,7 @@ footer a{text-decoration:none}
       <p class="kicker">Dawson ground · a new camp</p>
       <h1>A small branch of Blue Water.</h1>
       <p class="orientation">Encounter, residence, and activity remain separate relations even when the prose places them together. Relation depth can open locally without turning every name into a biography page.</p>
-      <p class="mobile-gesture-note">On a phone: scroll down for depth · swipe right for Southeast Reach</p>
+      <p class="mobile-gesture-note">On a phone: scroll normally. Use the previous-ground link below when you want to move back.</p>
       <div class="sequence" aria-label="Source-sequence orientation">
         <p class="seq-label">Source sequence</p>
         <div class="seq-line" aria-hidden="true">
@@ -232,6 +240,10 @@ footer a{text-decoration:none}
         <p>On <button class="inline" data-key="creek" aria-expanded="false">this creek</button>, Dawson reports finding <button class="inline" data-key="mayes" aria-expanded="false">Mr. Mayes</button> and <button class="inline" data-key="criner" aria-expanded="false">Mr. Criner</button>.</p>
         <p>They <button class="inline" data-key="residence" aria-expanded="false">reside on James’ Fork of Poteau</button>.</p>
         <p>They are <button class="inline" data-key="trapping" aria-expanded="false">trapping for beaver here</button>.</p>
+        <div class="mobile-nav">
+          <button type="button" data-go="southeast">← Previous: Southeast Reach</button>
+          <a href="../../#dozen">Continue to the catch →</a>
+        </div>
       </article>
 
       <a class="dir dir-right" href="../../#dozen">
@@ -299,14 +311,14 @@ earned:"The source earns encounter, residence, and trapping relations. It does n
 open:"Exact encounter geometry, residence parcel, route between residence and trapping ground, and broader same-name identities remain open."
 }
 };
-let active=null,currentId="southeast",touchStartX=0,touchStartY=0;
+let active=null,currentId="southeast";
 const where=document.getElementById("where"),panel=document.getElementById("ask-panel"),place=document.getElementById("ask-place"),answer=document.getElementById("ask-answer");
 function closeSlip(){if(!active)return;active.p.remove();active.b.setAttribute("aria-expanded","false");active=null}
 function go(id){
   closeSlip();currentId=id;
   document.querySelectorAll(".ground").forEach(g=>g.classList.toggle("current",g.id===id));
   const ground=document.getElementById(id);where.textContent=ground.dataset.place;place.textContent=ground.dataset.place;
-  history.replaceState({},"","#"+id);window.scrollTo({top:0,behavior:"smooth"});
+  history.replaceState({},"","#"+id);
 }
 function openSlip(b){
   if(active?.b===b){closeSlip();return}
@@ -328,16 +340,6 @@ document.querySelectorAll("[data-source]").forEach(b=>b.onclick=()=>window.open(
 document.getElementById("ask-toggle").onclick=openAsk;document.getElementById("ask-close").onclick=closeAsk;
 document.querySelectorAll("[data-question]").forEach(b=>b.onclick=()=>answer.textContent=ask[currentId][b.dataset.question]);
 window.addEventListener("keydown",e=>{if(e.key==="Escape"){closeSlip();closeAsk()}});
-window.addEventListener("touchstart",e=>{
-  const t=e.changedTouches[0];touchStartX=t.clientX;touchStartY=t.clientY;
-},{passive:true});
-window.addEventListener("touchend",e=>{
-  if(!panel.hidden||active)return;
-  const t=e.changedTouches[0],dx=t.clientX-touchStartX,dy=t.clientY-touchStartY;
-  if(Math.abs(dx)<70||Math.abs(dx)<Math.abs(dy)*1.25)return;
-  if(dx<0&&currentId==="southeast")go("blue-water");
-  if(dx>0&&currentId==="blue-water")go("southeast");
-},{passive:true});
 const start=location.hash.slice(1);if(start==="blue-water"||start==="southeast")go(start);
 })();
 </script>
