@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, follow" />
-  <meta name="theme-color" content="#e7dfd0" />
+  <meta name="theme-color" content="#f1ede3" />
   <title>Dancing Rabbit to Oklahoma — Earthly Hands</title>
   <meta
     name="description"
@@ -12,14 +12,12 @@
   />
   <style>
     :root {
-      --paper: #e7dfd0;
-      --paper-light: #f2ecdf;
+      --paper: #f1ede3;
       --ink: #171713;
-      --graphite: #5d584f;
-      --faint: rgba(23, 23, 19, .20);
-      --fainter: rgba(23, 23, 19, .09);
+      --graphite: #645f55;
+      --rule: rgba(23,23,19,.18);
       --rust: #875b3d;
-      --measure: 38rem;
+      --measure: 42rem;
     }
 
     * { box-sizing: border-box; }
@@ -34,9 +32,7 @@
     body {
       margin: 0;
       min-width: 18rem;
-      background:
-        linear-gradient(90deg, transparent 0, transparent 4.6rem, var(--fainter) 4.6rem, var(--fainter) calc(4.6rem + 1px), transparent calc(4.6rem + 1px)),
-        var(--paper);
+      background: var(--paper);
       color: var(--ink);
       font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
       font-size: clamp(1.05rem, 1.2vw, 1.2rem);
@@ -56,49 +52,38 @@
       outline-offset: 5px;
     }
 
-    .topline {
-      width: min(94rem, calc(100% - 8vw));
-      min-height: 4.4rem;
+    .site-header {
+      position: relative;
+      z-index: 2;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       gap: 2rem;
-      align-items: center;
-      margin-inline: auto;
-      border-bottom: 1px solid var(--faint);
+      align-items: baseline;
+      padding: 1.15rem clamp(1.25rem, 3vw, 3rem);
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
       color: var(--graphite);
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: .72rem;
+      font-size: .74rem;
       letter-spacing: .1em;
       text-transform: uppercase;
     }
 
-    .topline p { margin: 0; }
+    .site-header p { margin: 0; }
 
-    .topline strong {
+    .site-header strong {
       color: var(--ink);
       font-weight: 600;
     }
 
     main {
-      width: min(94rem, calc(100% - 8vw));
-      margin-inline: auto;
+      width: 100%;
+      margin: 0;
     }
 
     .threshold {
-      min-height: 86svh;
-      display: grid;
-      grid-template-columns: minmax(15rem, .7fr) minmax(24rem, 1.3fr);
-      gap: clamp(3rem, 8vw, 9rem);
-      align-items: end;
-      padding: clamp(4rem, 10vh, 8rem) 0 clamp(4rem, 8vh, 7rem);
-      border-bottom: 1px solid var(--faint);
-    }
-
-    .threshold-copy {
-      align-self: start;
-      position: sticky;
-      top: 2rem;
-      padding-top: 1rem;
+      padding: clamp(2.25rem, 6vw, 5.5rem) clamp(1.25rem, 3vw, 3rem) clamp(2rem, 4vw, 4rem);
     }
 
     .kicker,
@@ -109,8 +94,13 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     }
 
+    .threshold-copy {
+      max-width: 72rem;
+      margin: 0 auto clamp(2rem, 4vw, 3.5rem);
+    }
+
     .kicker {
-      margin: 0 0 1rem;
+      margin: 0 0 .8rem;
       color: var(--rust);
       font-size: .74rem;
       letter-spacing: .11em;
@@ -118,81 +108,69 @@
     }
 
     h1 {
-      max-width: 9ch;
+      max-width: 14ch;
       margin: 0;
-      font-size: clamp(3.4rem, 8vw, 8.5rem);
+      font-size: clamp(3rem, 7vw, 7.25rem);
       font-weight: 400;
-      line-height: .84;
-      letter-spacing: -.055em;
+      line-height: .9;
+      letter-spacing: -.05em;
     }
 
     .quiet-title {
       display: block;
-      margin-top: .18em;
+      margin-top: .2em;
       color: var(--graphite);
       font-size: .42em;
+      line-height: 1.05;
       letter-spacing: -.025em;
-      line-height: 1.03;
     }
 
     .threshold-note {
-      max-width: 26rem;
-      margin: 2.6rem 0 0;
+      max-width: 34rem;
+      margin: 2rem 0 0;
       color: var(--graphite);
       font-size: 1rem;
     }
 
-    .drawing-stage {
-      min-width: 0;
-      align-self: center;
-      padding-top: 2rem;
-    }
-
-    figure { margin: 0; }
-
-    .paper {
-      position: relative;
+    figure {
       margin: 0;
-      padding: clamp(.5rem, 1vw, .9rem);
-      background: var(--paper-light);
-      box-shadow:
-        0 1px 0 rgba(255,255,255,.55) inset,
-        0 1.2rem 4rem rgba(34, 29, 21, .08);
-      transform: rotate(-.28deg);
+      width: 100%;
     }
 
-    .paper::before {
-      position: absolute;
-      inset: .65rem;
-      border: 1px solid rgba(23, 23, 19, .08);
-      content: "";
-      pointer-events: none;
+    .drawing {
+      width: 100%;
+      overflow: hidden;
+      background: var(--paper);
     }
 
     img {
       display: block;
       width: 100%;
       height: auto;
+      max-width: none;
+      margin: 0;
     }
 
     figcaption {
       display: flex;
       justify-content: space-between;
       gap: 2rem;
-      margin-top: .9rem;
+      padding: .8rem clamp(1.25rem, 3vw, 3rem) 0;
       color: var(--graphite);
       font-size: .7rem;
       letter-spacing: .06em;
       text-transform: uppercase;
     }
 
-    .long-register {
-      position: relative;
+    .long-register,
+    .boundary {
+      max-width: 94rem;
       display: grid;
-      grid-template-columns: minmax(13rem, .55fr) minmax(22rem, 1.45fr);
-      gap: clamp(3rem, 8vw, 9rem);
-      padding: clamp(5rem, 11vw, 10rem) 0;
-      border-bottom: 1px solid var(--faint);
+      grid-template-columns: minmax(11rem, .5fr) minmax(22rem, 1.5fr);
+      gap: clamp(2.5rem, 7vw, 8rem);
+      margin: 0 auto;
+      padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 3vw, 3rem);
+      border-top: 1px solid var(--rule);
     }
 
     .register-label {
@@ -204,13 +182,13 @@
     }
 
     .register-copy {
-      max-width: 49rem;
+      max-width: 52rem;
     }
 
     .register-copy p {
       margin: 0;
-      font-size: clamp(1.55rem, 3vw, 3rem);
-      line-height: 1.14;
+      font-size: clamp(1.6rem, 3vw, 3.1rem);
+      line-height: 1.13;
       letter-spacing: -.025em;
     }
 
@@ -223,27 +201,25 @@
     }
 
     .field {
+      max-width: 94rem;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      border-bottom: 1px solid var(--faint);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 3vw, 3rem) clamp(3rem, 6vw, 6rem);
     }
 
     .field section {
-      min-height: 18rem;
-      padding: 2rem 1.8rem 3rem 0;
-      border-right: 1px solid var(--faint);
+      min-height: 16rem;
+      padding: 2rem 1.8rem 2rem 0;
+      border-top: 1px solid var(--rule);
     }
 
     .field section + section {
       padding-left: 1.8rem;
     }
 
-    .field section:last-child {
-      border-right: 0;
-    }
-
     .note-label {
-      margin: 0 0 4rem;
+      margin: 0 0 3rem;
       color: var(--rust);
       font-size: .68rem;
       letter-spacing: .1em;
@@ -254,13 +230,6 @@
       max-width: 18rem;
       margin: 0;
       color: var(--graphite);
-    }
-
-    .boundary {
-      display: grid;
-      grid-template-columns: minmax(13rem, .55fr) minmax(22rem, 1.45fr);
-      gap: clamp(3rem, 8vw, 9rem);
-      padding: clamp(5rem, 10vw, 9rem) 0;
     }
 
     .boundary-copy {
@@ -280,13 +249,11 @@
     }
 
     footer {
-      width: min(94rem, calc(100% - 8vw));
       display: flex;
       justify-content: space-between;
       gap: 2rem;
-      margin-inline: auto;
-      padding: 1.6rem 0 3rem;
-      border-top: 1px solid var(--faint);
+      padding: 1.4rem clamp(1.25rem, 3vw, 3rem) 3rem;
+      border-top: 1px solid var(--rule);
       color: var(--graphite);
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: .72rem;
@@ -296,55 +263,32 @@
 
     footer p { margin: 0; }
 
-    @media (max-width: 62rem) {
-      body {
-        background:
-          linear-gradient(90deg, transparent 0, transparent 1.35rem, var(--fainter) 1.35rem, var(--fainter) calc(1.35rem + 1px), transparent calc(1.35rem + 1px)),
-          var(--paper);
-      }
-
-      .topline,
-      main,
-      footer {
-        width: calc(100% - 3rem);
-        margin-left: 2.15rem;
-        margin-right: .85rem;
-      }
-
-      .threshold,
+    @media (max-width: 64rem) {
       .long-register,
       .boundary {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.25rem;
+      }
+
+      .field {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 40rem) {
+      .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .25rem;
       }
 
       .threshold {
-        min-height: auto;
-        padding-top: 4rem;
-      }
-
-      .threshold-copy {
-        position: static;
+        padding-top: 2.7rem;
       }
 
       h1 {
-        max-width: 10ch;
-        font-size: clamp(3.6rem, 17vw, 6rem);
+        font-size: clamp(3rem, 16vw, 5rem);
       }
-
-      .drawing-stage {
-        padding-top: 0;
-      }
-
-      .paper {
-        margin-left: -2.15rem;
-        margin-right: -.85rem;
-        padding: .35rem;
-        box-shadow: none;
-        transform: none;
-      }
-
-      .paper::before { inset: .35rem; }
 
       figcaption {
         display: block;
@@ -356,32 +300,6 @@
       }
 
       .field {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .field section:nth-child(2) {
-        border-right: 0;
-      }
-
-      .field section:nth-child(n+3) {
-        border-top: 1px solid var(--faint);
-      }
-
-      .field section:nth-child(3) {
-        padding-left: 0;
-      }
-    }
-
-    @media (max-width: 38rem) {
-      .topline {
-        min-height: 5rem;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: .25rem;
-        justify-content: center;
-      }
-
-      .field {
         display: block;
       }
 
@@ -389,13 +307,9 @@
       .field section + section {
         min-height: 0;
         padding: 2.5rem 0;
-        border-right: 0;
-        border-top: 1px solid var(--faint);
       }
 
-      .field section:first-child { border-top: 0; }
-
-      .note-label { margin-bottom: 2rem; }
+      .note-label { margin-bottom: 1.5rem; }
 
       footer {
         flex-direction: column;
@@ -409,7 +323,7 @@
   </style>
 </head>
 <body>
-  <header class="topline">
+  <header class="site-header">
     <p><strong>Earthly Hands Workshop</strong> · Line Commons</p>
     <p>Web-presentation experiment · Mullion</p>
   </header>
@@ -422,25 +336,20 @@
           A longer road.
           <span class="quiet-title">The same people. Still here.</span>
         </h1>
-        <p class="threshold-note">
-          The drawing is not being asked to become the site. This page is an experiment in giving one visual object enough room to have its own presence.
-        </p>
       </div>
 
-      <div class="drawing-stage">
-        <figure>
-          <div class="paper">
-            <img
-              src="mullion-specimen.png"
-              alt="Mullion line drawing carrying a historical passage from Dancing Rabbit Creek through homelands, removal, Indian Territory, court proceedings, and Oklahoma statehood, with a lower time register and unresolved framing lines."
-            />
-          </div>
-          <figcaption>
-            <span>Visual specimen · kept substantially as first received</span>
-            <span>1830 → 1907</span>
-          </figcaption>
-        </figure>
-      </div>
+      <figure>
+        <div class="drawing">
+          <img
+            src="mullion-specimen.png"
+            alt="Mullion line drawing carrying a historical passage from Dancing Rabbit Creek through homelands, removal, Indian Territory, court proceedings, and Oklahoma statehood, with a lower time register and unresolved framing lines."
+          />
+        </div>
+        <figcaption>
+          <span>Visual specimen · kept substantially as first received</span>
+          <span>1830 → 1907</span>
+        </figcaption>
+      </figure>
     </section>
 
     <section class="long-register" aria-labelledby="register-title">
