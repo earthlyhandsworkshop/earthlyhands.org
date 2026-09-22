@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#171713">
+<title>Porchlight — source boundary experiment · Earthly Hands</title>
+<style>
+:root{
+  --night:#171713;
+  --night2:#201e19;
+  --paper:#e9dfcc;
+  --paper2:#f4ecdd;
+  --ink:#1b1915;
+  --fog:#aaa18d;
+  --rust:#b07855;
+  --rule:rgba(232,223,205,.22);
+  --rule-dark:rgba(27,25,21,.22);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--night);-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--paper);font:1rem/1.55 var(--serif)}
+a,button{color:inherit}
+a{text-decoration-color:var(--rust);text-underline-offset:.2em}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--rust);outline-offset:5px}
+
+.utility{
+  position:fixed;z-index:20;inset:0 0 auto 0;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  padding:.78rem 1rem;
+  background:linear-gradient(var(--night),rgba(23,23,19,.9),transparent);
+  color:rgba(233,223,204,.72);
+  font:.64rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase;
+  pointer-events:none;
+}
+.utility a,.utility button{pointer-events:auto}
+.utility a{text-decoration:none}
+.utility button{border:0;background:none;padding:0;cursor:pointer;color:inherit}
+.utility button:hover,.utility a:hover{color:var(--paper)}
+
+.scene{min-height:100svh}
+.arrival{
+  display:grid;grid-template-columns:minmax(0,1.2fr) minmax(18rem,.8fr);
+  gap:clamp(2rem,7vw,8rem);align-items:end;
+  padding:clamp(7rem,12vh,10rem) clamp(1.2rem,6vw,7rem) clamp(3rem,8vh,6rem);
+}
+.eyebrow,.folio,.seam-label,.tiny,.return{
+  font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase
+}
+.eyebrow{margin:0 0 1rem;color:var(--rust);font-size:.66rem}
+h1{margin:0;max-width:10ch;font-size:clamp(4rem,10vw,9rem);font-weight:400;line-height:.84;letter-spacing:-.055em}
+.arrival-copy{max-width:31rem;color:var(--fog)}
+.arrival-copy p{margin:0;font-size:clamp(1.05rem,1.45vw,1.25rem)}
+.arrival-copy p+p{margin-top:1rem}
+.arrival-copy .quiet{color:var(--paper);font-size:clamp(1.35rem,2.2vw,2rem);line-height:1.25}
+.enter{display:inline-block;margin-top:2rem;color:var(--rust);font:.66rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+
+.face{
+  min-height:100svh;background:var(--paper);color:var(--ink);
+  display:grid;grid-template-columns:minmax(13rem,.4fr) minmax(0,1.6fr);
+}
+.rail{
+  padding:clamp(6rem,12vh,9rem) clamp(1.2rem,3vw,3rem) 3rem;
+  border-right:1px solid var(--rule-dark)
+}
+.rail-inner{position:sticky;top:7rem}
+.folio{margin:0 0 1rem;color:#76553e;font-size:.63rem}
+.rail h2{margin:0;max-width:8ch;font-size:clamp(2.5rem,5vw,5.5rem);font-weight:400;line-height:.9;letter-spacing:-.045em}
+.rail p{max-width:16rem;color:#6d675c}
+.read{
+  min-height:100svh;display:flex;align-items:center;
+  padding:clamp(6rem,12vh,9rem) clamp(1.4rem,8vw,9rem)
+}
+.paper{width:min(47rem,100%)}
+.source-line{margin:0 0 1.4rem;color:#76553e;font:.63rem/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.copy{
+  margin:0;font-size:clamp(1.6rem,3.2vw,3.45rem);line-height:1.18;letter-spacing:-.025em
+}
+.copy + .copy{margin-top:.7rem}
+.meta{
+  margin:2.3rem 0 0;padding-top:1rem;border-top:1px solid var(--rule-dark);
+  color:#6d675c;font-size:.9rem;max-width:38rem
+}
+
+.same-object{
+  min-height:60svh;background:var(--paper2);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;padding:5rem 1.2rem;
+  border-top:1px solid var(--rule-dark);border-bottom:1px solid var(--rule-dark)
+}
+.same-inner{width:min(42rem,100%);text-align:center}
+.same-inner p{margin:0}
+.same-inner .line{
+  width:1px;height:8rem;margin:0 auto 2rem;background:#8d8576
+}
+.same-inner .small{font-size:.95rem;color:#6d675c}
+.same-inner .mark{margin-top:1rem;font-size:clamp(1.7rem,4vw,3.4rem);line-height:1.1}
+
+.missing{
+  min-height:130svh;position:relative;display:flex;align-items:center;justify-content:center;
+  background:
+    linear-gradient(90deg,transparent calc(50% - .5px),rgba(233,223,204,.13) calc(50% - .5px),rgba(233,223,204,.13) calc(50% + .5px),transparent calc(50% + .5px)),
+    radial-gradient(circle at center,rgba(233,223,204,.04),transparent 28rem),
+    var(--night2);
+  color:var(--paper);padding:5rem 1.2rem
+}
+.missing-inner{width:min(38rem,100%);text-align:center}
+.missing .void{
+  width:1px;height:13rem;background:rgba(233,223,204,.22);margin:0 auto 2.2rem
+}
+.missing h2{margin:0;font-size:clamp(2.8rem,6vw,6.6rem);font-weight:400;line-height:.92;letter-spacing:-.05em}
+.missing p{margin:1.3rem auto 0;max-width:31rem;color:var(--fog)}
+.missing .object{
+  margin-top:2rem;color:var(--paper);font-size:1rem
+}
+.seam-label{
+  display:none;margin:1.5rem auto 0;width:max-content;
+  color:var(--rust);font-size:.62rem
+}
+body.show-seams .seam-label{display:block}
+
+.reset{
+  min-height:36svh;background:var(--night);color:var(--paper);
+  display:flex;align-items:center;justify-content:center;padding:4rem 1.2rem
+}
+.reset-inner{width:min(60rem,100%);display:grid;grid-template-columns:1fr auto 1fr;gap:2rem;align-items:center}
+.reset-line{height:1px;background:rgba(233,223,204,.22)}
+.reset-word{color:var(--rust);font:.63rem/1.3 var(--mono);letter-spacing:.11em;text-transform:uppercase;white-space:nowrap}
+
+.chart{
+  min-height:100svh;background:#d9d0bd;color:#211f1a;
+  padding:clamp(6rem,11vh,9rem) clamp(1rem,5vw,6rem)
+}
+.chart-wrap{width:min(70rem,100%);margin:auto}
+.chart-head{display:flex;justify-content:space-between;gap:2rem;align-items:end;border-bottom:1px solid rgba(33,31,26,.2);padding-bottom:1.2rem}
+.chart-head h2{margin:0;font-size:clamp(2.5rem,5vw,5.4rem);font-weight:400;line-height:.92;letter-spacing:-.045em}
+.chart-head p{margin:0;color:#6d6659;font:.64rem/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.chart-body{position:relative;min-height:34rem;margin-top:3rem}
+.person{
+  position:absolute;padding:.45rem .6rem;background:rgba(244,236,221,.5);
+  border-bottom:1px solid rgba(33,31,26,.35);
+}
+.person strong{font-weight:400;font-size:clamp(1.35rem,2.5vw,2.35rem)}
+.person span{display:block;margin-top:.15rem;color:#6d6659;font:.72rem/1.3 var(--mono)}
+.robert{left:8%;top:2rem}.susie{right:8%;top:2rem}.wash{left:43%;top:15rem}
+.branch-h,.branch-v{position:absolute;background:rgba(33,31,26,.32)}
+.branch-h{left:24%;right:24%;top:9rem;height:1px}
+.branch-v.one{left:24%;top:9rem;width:1px;height:3rem}
+.branch-v.two{right:24%;top:9rem;width:1px;height:3rem}
+.branch-v.three{left:50%;top:9rem;width:1px;height:6rem}
+.chart-note{margin:0 auto;max-width:39rem;padding-top:1rem;border-top:1px solid rgba(33,31,26,.2);color:#6d6659;font-size:.9rem;text-align:center}
+
+.end{
+  min-height:82svh;display:grid;grid-template-columns:minmax(0,1fr) minmax(18rem,.72fr);
+  gap:clamp(3rem,8vw,9rem);align-items:center;
+  padding:clamp(5rem,10vh,9rem) clamp(1.2rem,6vw,7rem)
+}
+.end h2{margin:0;max-width:10ch;font-size:clamp(3.6rem,8vw,8rem);font-weight:400;line-height:.86;letter-spacing:-.055em}
+.end-copy{max-width:31rem;color:var(--fog)}
+.end-copy p{margin:0}.end-copy p+p{margin-top:1rem}
+.return{margin-top:2rem!important;font-size:.62rem}
+.return a{color:var(--paper)}
+
+@media(max-width:58rem){
+  .arrival,.end{grid-template-columns:1fr}
+  .face{display:block}
+  .rail{border-right:0;border-bottom:1px solid var(--rule-dark);padding:5.5rem 1rem 2rem}
+  .rail-inner{position:static}
+  .read{min-height:auto;padding:4rem 1rem 6rem}
+}
+@media(max-width:38rem){
+  .utility{padding:.7rem .8rem}
+  .arrival{padding:7rem 1rem 2rem}
+  h1{font-size:clamp(4rem,22vw,6.5rem)}
+  .copy{font-size:clamp(1.7rem,8vw,2.7rem)}
+  .missing{min-height:160svh}
+  .reset-inner{grid-template-columns:1fr;gap:1rem;text-align:center}
+  .reset-line{width:1px;height:3rem;margin:auto}
+  .chart{padding-left:1rem;padding-right:1rem}
+  .chart-head{display:block}
+  .chart-head p{margin-top:1rem}
+  .chart-body{min-height:39rem}
+  .robert{left:0}.susie{right:0}.wash{left:34%;top:18rem}
+  .branch-h{left:18%;right:18%;top:11rem}
+  .branch-v.one{left:18%;top:11rem}.branch-v.two{right:18%;top:11rem}.branch-v.three{left:50%;top:11rem;height:7rem}
+  .end{padding:5rem 1rem 6rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="utility">
+  <a href="../../">Earthly Hands</a>
+  <span>Porchlight · source-boundary experiment</span>
+  <button id="toggle-seams" type="button" aria-pressed="false">Show seam labels</button>
+</header>
+
+<main>
+<section class="scene arrival" id="threshold">
+  <div>
+    <p class="eyebrow">One provider turn · Bell Wash.pdf · p.57 → p.58</p>
+    <h1>Can the page know when the source has changed?</h1>
+  </div>
+  <div class="arrival-copy">
+    <p class="quiet">This is not a story experiment. It is a boundary experiment.</p>
+    <p>The source continues, points to an enclosure, then breaks into a different handwritten object. The question is whether the visitor can feel those states before explanatory labels arrive.</p>
+    <a class="enter" href="#notice">Enter the source turn ↓</a>
+  </div>
+</section>
+
+<section class="face" id="notice">
+  <aside class="rail">
+    <div class="rail-inner">
+      <p class="folio">provider p.57</p>
+      <h2>Same notice.</h2>
+      <p>The page is still inside the Commission notice to Callie Bell. The visual ground stays continuous.</p>
+      <p class="seam-label">same documentary object</p>
+    </div>
+  </aside>
+  <div class="read">
+    <div class="paper">
+      <p class="source-line">M. C. R. 5168. · COPY. · Callie Bell, · Ardmore, Indian Territory.</p>
+      <p class="copy">Respectfully,</p>
+      <p class="copy">(SIGNED)<br>Tams Bixby<br>Chairman.</p>
+      <p class="meta">The closing does not create a new speaker or new object. The representation remains a COPY. notice.</p>
+    </div>
+  </div>
+</section>
+
+<section class="same-object" aria-label="Continuation on the same source object">
+  <div class="same-inner">
+    <div class="line" aria-hidden="true"></div>
+    <p class="small">The object does not reset because the function changes.</p>
+    <p class="mark">Registered.</p>
+    <p class="seam-label">same notice · new notation</p>
+  </div>
+</section>
+
+<section class="missing" id="missing">
+  <div class="missing-inner">
+    <div class="void" aria-hidden="true"></div>
+    <h2>A pointer is not the thing it points to.</h2>
+    <p class="object"><code>Encl. M.C.R. 5156.</code></p>
+    <p>The notice names an enclosure. This experiment leaves a real interval instead of silently turning the notation into a recovered object, delivered object, or proved relation.</p>
+    <p class="seam-label">named object · physical endpoint open</p>
+  </div>
+</section>
+
+<section class="reset" aria-label="Hard source reset between provider pages">
+  <div class="reset-inner">
+    <div class="reset-line"></div>
+    <div class="reset-word">provider p.57 closes · p.58 begins</div>
+    <div class="reset-line"></div>
+  </div>
+</section>
+
+<section class="chart" id="chart">
+  <div class="chart-wrap">
+    <div class="chart-head">
+      <h2>Different object.</h2>
+      <p>provider p.58 · handwritten chart face</p>
+    </div>
+
+    <div class="chart-body" aria-label="Simplified rendering of the source-visible chart relation">
+      <div class="branch-h" aria-hidden="true"></div>
+      <div class="branch-v one" aria-hidden="true"></div>
+      <div class="branch-v two" aria-hidden="true"></div>
+      <div class="branch-v three" aria-hidden="true"></div>
+
+      <div class="person robert">
+        <strong>Robert Bell</strong>
+        <span>1/2 · dead.</span>
+      </div>
+      <div class="person susie">
+        <strong>Susie Bell</strong>
+        <span>full blood · dead.</span>
+      </div>
+      <div class="person wash">
+        <strong>Wash Bell</strong>
+        <span>chart-drawn descendant relation</span>
+      </div>
+    </div>
+
+    <p class="chart-note">The chart face is rendered as a new documentary ground. Its maker, compilation date, source basis, and outward identity joins remain open. The diagram is only a source-face specimen for this interaction test.</p>
+    <p class="seam-label">hard reset · no notice state crosses</p>
+  </div>
+</section>
+
+<section class="end">
+  <h2>Did the turn arrive before the explanation?</h2>
+  <div class="end-copy">
+    <p>Use the control at the top to reveal or hide the seam labels. If the page only makes sense after the labels appear, the experiment has failed at the thing Porchlight wanted to test.</p>
+    <p>If continuation feels continuous, the missing endpoint remains genuinely open, and the chart arrives as a new object without theatrical explanation, then there may be something here worth carrying into another historical body.</p>
+    <p class="return"><a href="#threshold">Return to the threshold</a> · <a href="../../">Return to Earthly Hands</a></p>
+  </div>
+</section>
+</main>
+
+<script>
+const button = document.getElementById('toggle-seams');
+button.addEventListener('click', () => {
+  const showing = document.body.classList.toggle('show-seams');
+  button.setAttribute('aria-pressed', String(showing));
+  button.textContent = showing ? 'Hide seam labels' : 'Show seam labels';
+});
+</script>
+</body>
+</html>
