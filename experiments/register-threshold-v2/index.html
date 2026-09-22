@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Earthly Hands Workshop</title>
+  <meta name="description" content="A research and documentation workshop for historical records, people, places, maps, archives, and strange paths between them.">
+  <meta name="theme-color" content="#ddd6c7">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main>
+    <section class="threshold" aria-labelledby="site-title">
+      <p class="place">Front edge</p>
+      <h1 id="site-title">Earthly Hands Workshop</h1>
+
+      <div class="scene" aria-live="polite">
+        <p>You are standing at the front edge of the workshop.</p>
+        <p>A lantern hangs by the door.</p>
+        <p>The archive is open.</p>
+        <p>Someone is still out on the Dawson trail.</p>
+      </div>
+
+      <div class="doors" aria-label="Ways into the workshop">
+        <button class="text-door" id="lanternButton" type="button">Light the lantern</button>
+        <a class="text-door" href="#archive">Enter the archive</a>
+        <a class="text-door" href="#dawson">Follow Dawson</a>
+        <a class="text-door" href="mailto:workshop@earthlyhands.org">Write to the workshop</a>
+      </div>
+
+      <p class="status" id="lanternStatus">The lantern is unlit.</p>
+    </section>
+
+    <section class="room" id="archive" aria-labelledby="archive-title">
+      <p class="place">Archive</p>
+      <h2 id="archive-title">A few things are within reach.</h2>
+
+      <article class="object">
+        <p class="object-label">Source face</p>
+        <h3>Public Lands</h3>
+        <p>A name sits inside a row. A remark sits beside it. The row boundary matters.</p>
+        <p class="quiet">The rest is still being read.</p>
+      </article>
+
+      <article class="object">
+        <p class="object-label">Open question</p>
+        <h3>Two Roberts</h3>
+        <p>Two documentary bodies carry the same name. The Workshop is keeping them separate until the record earns more.</p>
+      </article>
+
+      <a class="return" href="#site-title">Return to the front edge</a>
+    </section>
+
+    <section class="room" id="dawson" aria-labelledby="dawson-title">
+      <p class="place">Dawson trail</p>
+      <h2 id="dawson-title">The trail does not know what it will become yet.</h2>
+
+      <div class="trail">
+        <p>You leave the fire behind.</p>
+        <p>The ground rises slowly.</p>
+        <p>A creek appears where the earlier name no longer quite fits.</p>
+        <p>Dawson changes his mind about where he is.</p>
+        <p>The map changes later.</p>
+      </div>
+
+      <p class="quiet">This is not a route reconstruction. It is a small door into a source still being worked.</p>
+
+      <a class="return" href="#site-title">Return to the front edge</a>
+    </section>
+
+    <section class="room about" id="about" aria-labelledby="about-title">
+      <p class="place">Workshop</p>
+      <h2 id="about-title">Things worth looking at closely.</h2>
+      <p>Earthly Hands is a research and documentation workshop for historical records, people, places, maps, archives, and strange paths between them.</p>
+      <p>We begin with what the record carries. Evidence, inference, and open questions stay distinguishable. Contradictions remain visible. A source may correct us.</p>
+
+      <div class="small-doors">
+        <a href="mailto:workshop@earthlyhands.org">workshop@earthlyhands.org</a>
+        <a href="https://www.reddit.com/r/EarthlyHandsWorkshop/">Reddit room</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Earthly Hands Workshop</p>
+    <p><a href="#about">What is this place?</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
