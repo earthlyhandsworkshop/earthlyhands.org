@@ -72,9 +72,22 @@
 
     .site-header p { margin: 0; }
 
-    .site-header strong {
+    .site-header .brand {
       color: var(--ink);
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: clamp(1.05rem, 1.55vw, 1.35rem);
       font-weight: 600;
+      letter-spacing: .015em;
+      text-decoration: none;
+      text-transform: none;
+    }
+
+    .site-header .brand:hover {
+      color: var(--rust);
+    }
+
+    .site-header .presentation {
+      color: var(--graphite);
     }
 
     main {
@@ -95,8 +108,8 @@
     }
 
     .threshold-copy {
-      max-width: 72rem;
-      margin: 0 auto clamp(2rem, 4vw, 3.5rem);
+      max-width: 52rem;
+      margin: 0 0 clamp(2rem, 4vw, 3.5rem);
     }
 
     .kicker {
@@ -108,9 +121,9 @@
     }
 
     h1 {
-      max-width: 14ch;
+      max-width: 10.5ch;
       margin: 0;
-      font-size: clamp(3rem, 7vw, 7.25rem);
+      font-size: clamp(3rem, 6.2vw, 6.6rem);
       font-weight: 400;
       line-height: .9;
       letter-spacing: -.05em;
@@ -324,8 +337,8 @@
 </head>
 <body>
   <header class="site-header">
-    <p><strong>Earthly Hands Workshop</strong> · Line Commons</p>
-    <p>Web-presentation experiment · Mullion</p>
+    <a class="brand" href="/" aria-label="Earthly Hands Workshop — return to the threshold">Earthly Hands Workshop</a>
+    <p class="presentation">Line Commons · web-presentation experiment · Mullion</p>
   </header>
 
   <main>
