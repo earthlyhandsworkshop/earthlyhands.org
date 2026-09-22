@@ -33,12 +33,20 @@ jobs:
         if: always()
         run: npx --yes playwright@1.55.0 install --with-deps chromium
 
-      - name: Capture public front edge
+      - name: Capture public ground
         if: always()
         run: |
           mkdir -p public-observation
-          npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="1280,2200" https://earthlyhands.org public-observation/front-edge.png
-          npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page https://earthlyhands.org/mcr879.html public-observation/mcr879.png
+          npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="1280,2200" https://earthlyhands.org public-observation/front-edge-desktop.png
+          npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="390,1800" https://earthlyhands.org public-observation/front-edge-mobile.png
+
+          npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="1280,900" https://earthlyhands.org/mcr879.html public-observation/mcr879-desktop.png
+          npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="390,844" https://earthlyhands.org/mcr879.html public-observation/mcr879-mobile.png
+
+          for page in dawson-inline-depth ward-room one-outing-two-clocks register-threshold-v2 listening-threshold; do
+            npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="1280,900" "https://earthlyhands.org/experiments/$page/" "public-observation/$page-desktop.png"
+            npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="390,844" "https://earthlyhands.org/experiments/$page/" "public-observation/$page-mobile.png"
+          done
 
       - name: Upload public observation
         if: always()
