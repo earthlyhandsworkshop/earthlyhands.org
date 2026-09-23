@@ -920,3 +920,70 @@ body[data-lamp="lit"] .experience-tools .threshold-lantern {
     justify-content: flex-start;
   }
 }
+
+
+/* Keep the live Dawson experience self-contained inside the first viewport. */
+.experience-shell {
+  position: relative;
+}
+
+body[data-lamp="lit"] .experience-shell {
+  min-height: 0;
+}
+
+/* Source belongs with the scene's footing, not below the stopping notice. */
+.source-return {
+  margin: .75rem 0 .35rem;
+  color: var(--paper-muted);
+  font-family: var(--mono);
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
+.source-return a {
+  color: var(--paper);
+  text-underline-offset: .2em;
+}
+
+/* Ask the ground opens as an in-pane drawer rather than growing the page. */
+.experience-tools .ground-talk[data-open="true"] {
+  position: absolute;
+  z-index: 12;
+  right: 0;
+  bottom: 0;
+  width: min(34rem, 100%);
+  max-height: min(70dvh, 32rem);
+  padding: .8rem 1rem 1rem;
+  overflow: auto;
+  background: var(--night);
+  border: 1px solid var(--rule-lit);
+  box-shadow: 0 -1.2rem 3rem rgba(0,0,0,.28);
+}
+
+.experience-tools .ground-talk[data-open="true"] .ground-talk-head {
+  position: sticky;
+  top: -.8rem;
+  z-index: 2;
+  margin: -.8rem -1rem 0;
+  padding: .8rem 1rem .55rem;
+  background: var(--night);
+}
+
+.experience-tools .ground-talk[data-open="true"] .talk-body {
+  margin-top: 0;
+}
+
+@media (max-width: 46rem) {
+  .experience-tools .ground-talk[data-open="true"] {
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: min(62dvh, 28rem);
+  }
+
+  .passage-actions .door-forward {
+    max-width: 48%;
+    white-space: normal;
+    text-align: right;
+  }
+}
