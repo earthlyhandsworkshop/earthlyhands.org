@@ -987,3 +987,98 @@ body[data-lamp="lit"] .experience-shell {
     text-align: right;
   }
 }
+
+
+/* Working bench pass — keep the live experience and its tools in one pane. */
+@media (min-width: 68.01rem) {
+  body[data-lamp="lit"] .experience-shell {
+    height: calc(100dvh - 6.75rem);
+    min-height: 38rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  body[data-lamp="lit"] .experience-stage {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  body[data-lamp="lit"] .experience-mount {
+    width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    scrollbar-width: thin;
+  }
+
+  body[data-lamp="lit"] .experience-tools {
+    flex: 0 0 auto;
+  }
+}
+
+/* Ask the ground is part of the bench, not a popup. */
+.experience-tools .ground-talk[data-open="true"] {
+  position: static;
+  z-index: auto;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  max-height: none;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.experience-tools .ground-talk[data-open="true"] .ground-talk-head {
+  position: static;
+  top: auto;
+  z-index: auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.experience-tools .ground-talk[data-open="true"] .talk-body {
+  margin-top: .55rem;
+  padding-top: .55rem;
+  border-top: 1px solid var(--rule);
+}
+
+.experience-tools .ground-talk[data-open="true"] .talk-log {
+  max-height: 7.5rem;
+  overflow: auto;
+}
+
+@media (min-width: 68.01rem) {
+  .experience-tools {
+    min-height: 3.2rem;
+    align-items: start;
+  }
+
+  .experience-tools .ground-talk {
+    width: min(38rem, 52vw);
+  }
+
+  .experience-tools .talk-form textarea {
+    min-height: 2.6rem;
+    max-height: 5.5rem;
+  }
+}
+
+@media (max-width: 68rem) {
+  body[data-lamp="lit"] .experience-shell {
+    min-height: 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  .experience-tools .ground-talk[data-open="true"] {
+    max-height: none;
+  }
+}
