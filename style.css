@@ -395,7 +395,7 @@ h1,
 }
 
 .specimen-index {
-  max-width: 62rem;
+  max-width: none;
   border-top: 1px solid var(--rule);
 }
 
@@ -605,7 +605,7 @@ h1,
 }
 
 .practice {
-  max-width: 62rem;
+  max-width: none;
   padding: clamp(4rem, 7vw, 6rem) 0 clamp(3rem, 6vw, 5rem);
   border-top: 1px solid var(--rule);
 }
@@ -635,7 +635,7 @@ h1,
 }
 
 .doors {
-  max-width: 62rem;
+  max-width: none;
   border-top: 1px solid var(--rule);
 }
 
@@ -1307,5 +1307,44 @@ footer > .footer-threshold {
     width: calc(100% - 4rem);
     margin-left: 2.8rem;
     margin-right: 1.2rem;
+  }
+}
+
+
+/* Full-rail experience/navigation width */
+.experience-shell,
+.experience-stage,
+.experience-mount,
+.specimen-index,
+.practice,
+.doors,
+.report-passage,
+.trail-passage,
+.passage-actions,
+.ground-talk,
+.ground-talk-inner,
+.talk-body {
+  width: 100%;
+  max-width: none;
+}
+
+.report-passage,
+.trail-passage {
+  grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1.22fr);
+}
+
+.report-passage > .passage-actions,
+.trail-passage > .passage-actions {
+  width: 100%;
+}
+
+.specimen-row {
+  grid-template-columns: minmax(9rem, 0.4fr) minmax(14rem, 0.72fr) minmax(0, 1.45fr) auto;
+}
+
+@media (max-width: 68rem) {
+  .report-passage,
+  .trail-passage {
+    max-width: none;
   }
 }
