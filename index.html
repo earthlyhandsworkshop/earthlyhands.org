@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=threshold-v23" />
+    <link rel="stylesheet" href="style.css?v=threshold-v24" />
   </head>
   <body data-lamp="unlit">
     <a class="skip-link" href="#threshold" data-home>Skip to the threshold</a>
@@ -74,6 +74,12 @@
                 <span class="lamp-label">Light the lantern</span>
               </button>
               <span class="lantern-note">for the live Dawson passage</span>
+            </div>
+
+            <div class="visitor-footing" aria-label="Visitor footing">
+              <span><b>Where</b> <span id="footing-place">By lantern light</span></span>
+              <span><b>You</b> Guest</span>
+              <button type="button" class="sign-in-ghost" aria-disabled="true" title="Sign-in is not connected yet">Sign in</button>
             </div>
 
             <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Ask the ground" hidden>
@@ -232,19 +238,28 @@
       <section class="passage report-passage" id="report" data-scene data-step data-place="By lantern light" tabindex="-1">
         <p class="eyebrow">By lantern light</p>
         <h2>The light catches a report.</h2>
-        <div class="plain-copy">
-          <p>
-            J. L. Dawson wrote from Cantonment Gibson on 29 January 1831. His report carries
+        <div class="plain-copy report-story">
+          <p class="story-lead">
+            On 29 January 1831, J. L. Dawson wrote from Cantonment Gibson. His report carries
             travel with the Choctaw and Chickasaw western exploring delegations.
           </p>
           <p>
-            The original manuscript has not yet been recovered. The Workshop presently reaches
-            the report through its newspaper and later printed representations.
+            What survives for us is already a carried thing. The original manuscript has not yet
+            been recovered; the Workshop presently reaches the report through its newspaper and
+            later printed representations.
+          </p>
+          <p>
+            So this trail begins with two kinds of distance at once: the party moving across the
+            ground, and the record moving forward through later carriers before it reaches us.
+          </p>
+          <p class="story-quiet">
+            We will follow only what the carried report lets us follow. A direction can remain a
+            direction. An unnamed person can remain unnamed. When the source stops, the trail stops.
           </p>
         </div>
         <div class="passage-actions" aria-label="Available actions">
-          <button class="door door-forward" type="button" data-reveal="night">
-            Follow the report into night
+          <button class="door door-forward trail-call" type="button" data-reveal="night">
+            Follow the trail
             <span class="door-mark" aria-hidden="true">&gt;</span>
           </button>
         </div>
