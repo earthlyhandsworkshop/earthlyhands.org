@@ -11,6 +11,8 @@
   const talkLog = document.querySelector("#talk-log");
   const talkSend = talkForm.querySelector("button[type='submit']");
   const main = document.querySelector("main");
+  const experienceStage = document.querySelector("#experience-stage");
+  const thresholdIntro = document.querySelector("#threshold-intro");
   const experienceMount = document.querySelector("#experience-mount");
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const steps = Array.from(document.querySelectorAll("[data-step]"));
@@ -34,19 +36,24 @@
     talkPlace.textContent = place;
   }
 
-  function showScene(target) {
+  function showScene(target, direction = "forward") {
     const isThreshold = target.id === "threshold";
 
     if (!isThreshold && experienceMount && !experienceMount.contains(target)) {
       experienceMount.append(target);
     }
 
+    if (experienceStage) experienceStage.dataset.direction = direction;
     scenes.forEach((scene) => scene.classList.toggle("is-current", scene === target));
-    if (experienceMount) experienceMount.hidden = isThreshold;
+
+    if (experienceMount) {
+      experienceMount.hidden = false;
+      experienceMount.setAttribute("aria-hidden", String(isThreshold));
+    }
+    if (thresholdIntro) thresholdIntro.setAttribute("aria-hidden", String(!isThreshold));
 
     updatePlace(target);
-    target.focus({ preventScroll: true });
-    main.scrollTop = 0;
+    if (!isThreshold) target.focus({ preventScroll: true });
   }
 
   function remember(id) {
@@ -69,13 +76,17 @@
     const target = document.getElementById(id);
     if (!target || !fullSequence.includes(id)) return;
 
+    const fromIndex = fullSequence.indexOf(currentId);
+    const toIndex = fullSequence.indexOf(id);
+    const direction = toIndex < fromIndex ? "back" : "forward";
+
     closeTalk();
-    if (id !== "threshold") setLamp(true);
+    setLamp(id !== "threshold");
     currentId = id;
     remember(id);
 
     if (push) history.pushState({ place: id }, "", `#${id}`);
-    requestAnimationFrame(() => showScene(target));
+    requestAnimationFrame(() => showScene(target, direction));
   }
 
   function stepBack() {
@@ -181,7 +192,7 @@
     currentId = "threshold";
     forget();
     history.pushState({ place: "threshold" }, "", "#threshold");
-    showScene(document.querySelector("#threshold"));
+    showScene(document.querySelector("#threshold"), "back");
   });
 
   document.querySelectorAll("[data-reveal]").forEach((control) => {
@@ -236,7 +247,10 @@
     setLamp(id !== "threshold");
     currentId = id;
     remember(id);
-    showScene(target);
+    const fromIndex = fullSequence.indexOf(currentId);
+    const toIndex = fullSequence.indexOf(id);
+    const direction = toIndex < fromIndex ? "back" : "forward";
+    showScene(target, direction);
   });
 
   let initialId = window.location.hash.slice(1);
@@ -252,7 +266,7 @@
   currentId = initialId;
   setLamp(initialId !== "threshold");
   history.replaceState({ place: initialId }, "", `#${initialId}`);
-  showScene(document.getElementById(initialId));
+  showScene(document.getElementById(initialId), "forward");
 
   steps.forEach((step) => step.setAttribute("aria-live", "polite"));
 })();
