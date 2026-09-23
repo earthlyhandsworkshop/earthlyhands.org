@@ -12,6 +12,45 @@
   const talkInput = document.querySelector("#talk-input");
   const talkLog = document.querySelector("#talk-log");
   const talkSend = talkForm.querySelector("button[type='submit']");
+  const depthData = {
+    distance: {
+      kind: "Prose Map relation",
+      title: "about fifteen miles southeast",
+      near: "The report gives an approximate distance and direction between source states.",
+      brake: "It does not preserve the traveled line or earn an exact starting point, modern road, or reconstructed route."
+    },
+    creek: {
+      kind: "Prose Map relation",
+      title: "small branch of Blue Water",
+      near: "The carried report places the next encampment on a small branch of Blue Water.",
+      brake: "That does not earn an exact modern creek identity, bank, campsite point, or reconstructed route."
+    },
+    mayes: {
+      kind: "Name Web occurrence",
+      title: "Mr. Mayes",
+      near: "Dawson reports finding Mayes here with Mr. Criner.",
+      brake: "This occurrence does not silently join another Mayes or turn into a biography."
+    },
+    criner: {
+      kind: "Name Web occurrence",
+      title: "Mr. Criner",
+      near: "Dawson reports finding Criner here with Mr. Mayes.",
+      brake: "This occurrence does not silently join another Criner or turn into a biography."
+    },
+    residence: {
+      kind: "Prose Map relation",
+      title: "reside on James’ Fork of Poteau",
+      near: "The report carries a residence relation from Mayes and Criner to James’ Fork of Poteau.",
+      brake: "Residence does not relocate the Blue Water encounter or earn a house point, parcel, or route between the two."
+    },
+    trapping: {
+      kind: "Source relation",
+      title: "trapping for beaver here",
+      near: "The report attaches this activity to the Blue Water encounter state.",
+      brake: "It does not make the trapping place and the residence place one location."
+    }
+  };
+  let openDepth = null;
   const main = document.querySelector("main");
   const experienceShell = document.querySelector("#experience-shell");
   const experienceStage = document.querySelector("#experience-stage");
@@ -41,8 +80,44 @@
     if (footingPlace) footingPlace.textContent = place;
   }
 
+  function closeDepth() {
+    if (!openDepth) return;
+    openDepth.button.setAttribute("aria-expanded", "false");
+    openDepth.panel.remove();
+    openDepth = null;
+  }
+
+  function openDepthPanel(button) {
+    const data = depthData[button.dataset.depth];
+    if (!data) return;
+    if (openDepth && openDepth.button === button) {
+      closeDepth();
+      return;
+    }
+    closeDepth();
+    const panel = document.createElement("aside");
+    panel.className = "depth-slip";
+    panel.innerHTML = `
+      <div class="depth-slip-head">
+        <div><p class="depth-kind"></p><h3></h3></div>
+        <button class="depth-close" type="button" aria-label="Close relation depth">×</button>
+      </div>
+      <p class="depth-near"></p>
+      <p class="depth-brake"></p>
+    `;
+    panel.querySelector(".depth-kind").textContent = data.kind;
+    panel.querySelector("h3").textContent = data.title;
+    panel.querySelector(".depth-near").textContent = data.near;
+    panel.querySelector(".depth-brake").textContent = data.brake;
+    panel.querySelector(".depth-close").addEventListener("click", closeDepth);
+    button.closest("p").insertAdjacentElement("afterend", panel);
+    button.setAttribute("aria-expanded", "true");
+    openDepth = { button, panel };
+  }
+
   function showScene(target, direction = "forward") {
     const isThreshold = target.id === "threshold";
+    closeDepth();
 
     if (!isThreshold && experienceMount && !experienceMount.contains(target)) {
       experienceMount.append(target);
@@ -204,6 +279,10 @@
 
     setLamp(false);
     closeTalk();
+  });
+
+  document.querySelectorAll("[data-depth]").forEach((control) => {
+    control.addEventListener("click", () => openDepthPanel(control));
   });
 
   document.querySelectorAll("[data-reveal]").forEach((control) => {
