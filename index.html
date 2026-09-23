@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=threshold-v9" />
+    <link rel="stylesheet" href="style.css?v=threshold-v10" />
   </head>
   <body data-lamp="unlit">
     <a class="skip-link" href="#threshold" data-home>Skip to the threshold</a>
@@ -60,23 +60,27 @@
 
     <main>
       <section class="threshold passage is-current" id="threshold" data-scene data-place="Front edge" tabindex="-1">
-        <p class="eyebrow">Earthly Hands Workshop</p>
-        <h1>Things worth looking at closely.</h1>
-        <p class="threshold-line">
-          You are standing at the front edge of a working historical workshop. The trail and the
-          specimens below are different attempts to make source, relation, uncertainty, and
-          administrative machinery inspectable without pretending the work is finished.
-        </p>
+        <div class="experience-stage" id="experience-stage" data-direction="forward">
+          <div class="threshold-intro" id="threshold-intro">
+          <p class="eyebrow">Earthly Hands Workshop</p>
+          <h1>Things worth looking at closely.</h1>
+          <p class="threshold-line">
+            You are standing at the front edge of a working historical workshop. The trail and the
+            specimens below are different attempts to make source, relation, uncertainty, and
+            administrative machinery inspectable without pretending the work is finished.
+          </p>
+  
+          <div class="threshold-lantern">
+            <button class="door lamp-control" id="lamp-control" type="button" aria-pressed="false">
+              <span class="door-mark" aria-hidden="true">&gt;</span>
+              <span class="lamp-label">Light the lantern</span>
+            </button>
+            <span>for the live Dawson passage</span>
+          </div>
+          </div>
 
-        <div class="threshold-lantern">
-          <button class="door lamp-control" id="lamp-control" type="button" aria-pressed="false">
-            <span class="door-mark" aria-hidden="true">&gt;</span>
-            <span class="lamp-label">Light the lantern</span>
-          </button>
-          <span>for the live Dawson passage</span>
+          <div class="experience-mount" id="experience-mount" aria-live="polite" hidden></div>
         </div>
-
-        <div class="experience-mount" id="experience-mount" aria-live="polite" hidden></div>
 
         <nav class="specimen-index" aria-label="Working specimens">
           <button class="specimen-row specimen-row-button" type="button" data-reveal="report">
@@ -452,6 +456,6 @@
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="config.js?v=threshold-v5"></script>
-    <script src="script.js?v=threshold-v7"></script>
+    <script src="script.js?v=threshold-v8"></script>
   </body>
 </html>
