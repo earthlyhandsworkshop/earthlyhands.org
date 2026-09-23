@@ -39,12 +39,19 @@ The two Six Letters implementations sharpen the temporal distinction rather than
 
 Preserve both implementations as **development history** because they show two independent carries of one originating plan. But do not mistake their differences for mere styling: the current builds also differ in dates, recipients, and wording. Until those claim-state differences are checked against the governing source body, they remain an open **epistemic / source-verification edge**, not two equally current historical statements.
 
+### Current seam finding — Article XIV rooms
+
+Article XIV rooms adds a different clock problem. Moving down the page is **visitor/interface movement** through a comparison architecture. The treaty chamber, later administrative machinery, and Bell comparison bodies may be placed in reading order without that screen order becoming a historical route or a claim of causal succession. A later room may be historically later without the visitor's scroll standing in for elapsed historical time.
+
+Its recent revisions also give a clean development / epistemic split. The pass-two layout, mobile, gutter, and composition refinements are **development history**. The correction that stopped recasting the family's own testimony as an Article XIV land claim is **epistemic history**, because it changed what the public body responsibly says. The earlier pass has faded from the live face but remains recoverable in repository history. Keep both histories recoverable; do not promote every later visual pass into an epistemic event.
+
 ## Current bodies
 
 | Public body | Present status | Hands / trust mark | Way home | Source / depth route | Cleanup state |
 | --- | --- | --- | --- | --- | --- |
 | `/` | Current public front edge and specimen index; live Dawson passage | Shared Workshop assembly; specimen rows name known hands | Home object | Dawson source return at trail stop; contextual listening ground | Mechanically coherent; internally scrollable layout requires observer-aware capture |
 | `/experiments/dancing-rabbit-statehood-line/` | Live visual-historical specimen; drawing-senior bounded public body | Mullion | Yes | Boundary note names orientation vs source-controlled route geometry; no deeper source route yet | First Line Commons public specimen; preserve substantially as-is |
+| `/experiments/article-xiv-rooms/` | Live architectural experiment; treaty chamber, later federal machinery, and paired Robert Bell bodies held in one bounded reading sequence | True North | Yes | Visitor scroll/walk crosses designed rooms; source, administrative time, and identity brakes remain locally visible | Intentionally `noindex`; current pass is landed work; earlier visual passes remain development history, while the family-claim framing correction is an epistemic change |
 | `/experiments/register-line-front-edge/` | Alternate overall front-edge rendering using Register-v2 pale grammar + Mullion line orientation | Grainline carrying Register + Mullion inheritance | Yes | Links outward to existing public instruments; no new historical claims | Comparator only; does not replace current front edge |
 | `/experiments/four-way-room-nav/` | MCR 879 — Robert Bell evidence field; navigation experiment | Grainline carrying source-facing Bell–McKinney work | Yes | Continuous research body with a center return and floating directional navigation among 1901 testimony, older Article XIV record body, 1846 patent / 1902 Office use, and 1907 rehearing sequence | Generic room toy retired in place; navigation no longer consumes document layout or turns directions into separate screens |
 | `/mcr879.html` | Working MCR 879 comparison specimen | Register | Yes | Method / source-state distinctions are visible; outward source request remains open | Trust mark now carried on face |
