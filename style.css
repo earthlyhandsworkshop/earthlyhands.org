@@ -197,34 +197,79 @@ footer {
   animation: settle 180ms ease-out both;
 }
 
-/* The threshold is standing ground: lighting a scene opens depth above the
-   specimen index instead of replacing the workshop around it. */
+/* One stable experience field above the standing specimen index.
+   The threshold introduction is simply the first panel in that field. */
 .js #threshold {
   display: flex;
 }
 
+.experience-stage {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: clamp(31rem, 68svh, 47rem);
+  overflow: hidden;
+  margin-bottom: clamp(2.6rem, 5vw, 4rem);
+}
+
+.threshold-intro,
+.experience-mount {
+  grid-area: 1 / 1;
+  width: 100%;
+  min-width: 0;
+  transition:
+    transform 320ms cubic-bezier(0.22, 0.72, 0.2, 1),
+    opacity 220ms ease;
+}
+
+.threshold-intro {
+  align-self: start;
+}
+
+body[data-lamp="unlit"] .threshold-intro {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body[data-lamp="lit"] .threshold-intro {
+  transform: translateX(-104%);
+  opacity: 0;
+  pointer-events: none;
+}
+
 .experience-mount[hidden] {
-  display: none;
+  display: block;
 }
 
 .experience-mount {
-  width: 100%;
-  margin: 0 0 clamp(2.6rem, 5vw, 4rem);
-  border-top: 1px solid var(--rule-lit);
+  align-self: start;
+  transform: translateX(104%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+body[data-lamp="lit"] .experience-mount {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .js .experience-mount .passage,
 .js .experience-mount .practice {
-  min-height: auto;
+  min-height: clamp(31rem, 68svh, 47rem);
   width: 100%;
+  padding-top: clamp(3rem, 7vh, 5rem);
 }
 
-.js .experience-mount .passage {
-  padding-top: clamp(2.4rem, 5vw, 4rem);
+.experience-mount[data-direction="forward"] [data-scene].is-current,
+.experience-stage[data-direction="forward"] .experience-mount [data-scene].is-current {
+  animation: panel-in-right 280ms cubic-bezier(0.22, 0.72, 0.2, 1) both;
 }
 
-.js .experience-mount .practice {
-  padding-top: clamp(2.4rem, 5vw, 4rem);
+.experience-mount[data-direction="back"] [data-scene].is-current,
+.experience-stage[data-direction="back"] .experience-mount [data-scene].is-current {
+  animation: panel-in-left 280ms cubic-bezier(0.22, 0.72, 0.2, 1) both;
 }
 
 .js .passage,
@@ -1076,5 +1121,28 @@ footer > a {
 
   .js [data-scene].is-current {
     animation: none;
+  }
+}
+
+
+@keyframes panel-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(3.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes panel-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-3.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
