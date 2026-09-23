@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f2efe8">
+<meta name="robots" content="noindex,follow">
+<title>Small Door — full field mobile experiment</title>
+<style>
+:root{
+  --bg:#f2efe8;--ink:#1f1e1a;--muted:#6e6a61;--rule:#b8b2a8;--accent:#8a5d45;--panel:#faf8f3;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;min-width:18rem;background:var(--bg);color:var(--ink);font:1.12rem/1.55 var(--serif)}
+a,button{color:inherit}button{font:inherit}
+a{text-underline-offset:.2em;text-decoration-color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.top{
+  position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto;gap:.75rem;align-items:center;
+  min-height:3.6rem;padding:.65rem max(.85rem,env(safe-area-inset-right)) .65rem max(.85rem,env(safe-area-inset-left));
+  border-bottom:1px solid var(--rule);background:rgba(242,239,232,.96);backdrop-filter:blur(10px);
+  font:.67rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase
+}
+.home{text-decoration:none;font-weight:700}.home span{color:var(--muted);font-weight:400}
+.top button{padding:.15rem 0;border:0;border-bottom:1px solid transparent;background:none;color:var(--muted);font:inherit;letter-spacing:inherit;text-transform:inherit}
+.top button:hover{border-bottom-color:var(--accent);color:var(--ink)}
+main{padding-bottom:calc(2.5rem + env(safe-area-inset-bottom))}
+.scene{display:none}.scene.current{display:block}
+.scene-head{padding:1rem .9rem .8rem;border-bottom:1px solid var(--rule)}
+.place{margin:0 0 .28rem;color:var(--accent);font:.66rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase}
+h1{margin:0;font-size:clamp(2.45rem,12vw,4.6rem);font-weight:400;line-height:.9;letter-spacing:-.045em}
+.status{margin:.65rem 0 0;color:var(--muted);font:.79rem/1.45 var(--mono)}
+.body{padding:1.2rem .9rem 0}
+.body p{margin:0 0 1rem;font-size:clamp(1.22rem,5.1vw,1.48rem)}
+.rel{
+  padding:0;border:0;border-bottom:1px solid var(--accent);background:none;color:inherit;line-height:inherit;text-align:left;cursor:pointer
+}
+.rel[aria-expanded=true]{color:var(--accent)}
+.depth{margin:1.1rem -.1rem 1.3rem;padding:1rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--panel)}
+.depth-label{margin:0 0 .45rem;color:var(--accent);font:.64rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase}
+.depth h2{margin:0 0 .7rem;font-size:1.28rem;font-weight:400}
+.depth p{font-size:1rem;margin:0 0 .65rem}.depth .brake{color:var(--muted)}
+.depth-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.8rem}
+.depth-actions a,.depth-actions button{padding:.1rem 0;border:0;border-bottom:1px solid var(--accent);background:none;font:.72rem/1.35 var(--mono);text-decoration:none}
+.move{margin:1.7rem .9rem 0;padding-top:1rem;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:1rem}
+.move a,.move button{padding:.15rem 0;border:0;border-bottom:1px solid var(--accent);background:none;font:.75rem/1.35 var(--mono);text-decoration:none;cursor:pointer}
+.footer-note{margin:1.5rem .9rem 0;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font:.67rem/1.5 var(--mono)}
+.ask{
+  position:fixed;inset:auto 0 0 0;z-index:30;max-height:72svh;overflow:auto;
+  padding:1rem .9rem calc(1rem + env(safe-area-inset-bottom));border-top:1px solid var(--rule);background:rgba(250,248,243,.985)
+}
+.ask[hidden]{display:none}
+.ask-head{display:flex;justify-content:space-between;gap:1rem}
+.ask h2{margin:0;font-size:1.25rem;font-weight:400}
+.ask-close{padding:0;border:0;background:none;color:var(--muted);font:.7rem var(--mono)}
+.ask p{margin:.8rem 0 0}
+.ask-options{display:flex;flex-direction:column;align-items:flex-start;gap:.45rem;margin-top:1rem}
+.ask-options button{padding:.15rem 0;border:0;border-bottom:1px solid var(--accent);background:none;font:.72rem/1.35 var(--mono)}
+@media(min-width:48rem){
+  body{font-size:1.16rem}.top,.scene-head,.body,.move,.footer-note{max-width:52rem;margin-left:auto;margin-right:auto}
+  .scene-head{padding-top:2rem}.body{padding-top:1.8rem}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="home" href="../../">Earthly Hands <span>/ Small Door mobile field</span></a>
+  <button id="ask-open" type="button">Ask</button>
+</header>
+
+<main>
+<section class="scene current" id="southeast" data-place="Southeast Reach">
+  <div class="scene-head">
+    <p class="place">Dawson report · Southeast Reach</p>
+    <h1>The account carries southeast.</h1>
+    <p class="status">One standing point. Open only what you need.</p>
+  </div>
+  <div class="body">
+    <p>The report carries <button class="rel" data-key="distance" aria-expanded="false">about fifteen miles southeast</button> and encamps on a small branch of Blue Water.</p>
+    <p>The direction and mileage belong to Dawson’s account. The traveled line is not preserved.</p>
+  </div>
+  <div class="move">
+    <a href="../../">Workshop</a>
+    <button type="button" data-go="blue-water">Blue Water →</button>
+  </div>
+</section>
+
+<section class="scene" id="blue-water" data-place="Blue Water">
+  <div class="scene-head">
+    <p class="place">Dawson report · Blue Water</p>
+    <h1>A small branch of Blue Water.</h1>
+    <p class="status">Encounter, residence, and activity stay separate.</p>
+  </div>
+  <div class="body">
+    <p>On <button class="rel" data-key="creek" aria-expanded="false">this creek</button>, Dawson reports finding <button class="rel" data-key="mayes" aria-expanded="false">Mr. Mayes</button> and <button class="rel" data-key="criner" aria-expanded="false">Mr. Criner</button>.</p>
+    <p>They <button class="rel" data-key="residence" aria-expanded="false">reside on James’ Fork of Poteau</button>.</p>
+    <p>They are <button class="rel" data-key="trapping" aria-expanded="false">trapping for beaver here</button>.</p>
+  </div>
+  <div class="move">
+    <button type="button" data-go="southeast">← Southeast</button>
+    <a href="../../#dozen">The catch →</a>
+  </div>
+</section>
+
+<p class="footer-note">Mobile-first test: no sidebar, no hidden gestures, no decorative rail. Full width belongs to the source-facing body. Passed through Small Door’s hands; trust/custody mark, not ownership.</p>
+</main>
+
+<section class="ask" id="ask" hidden>
+  <div class="ask-head"><h2 id="ask-title">Ask from Southeast Reach</h2><button class="ask-close" id="ask-close" type="button">Close</button></div>
+  <p id="ask-answer">Choose one bounded question.</p>
+  <div class="ask-options">
+    <button data-q="where" type="button">Where am I?</button>
+    <button data-q="earned" type="button">What is earned here?</button>
+    <button data-q="open" type="button">What remains open?</button>
+  </div>
+</section>
+
+<script>
+(()=>{
+const source="https://gateway.okhistory.org/ark:/67531/metadc2192269/";
+const family="Dawson report, 29 Jan. 1831 → Arkansas Advocate publication, Mar. 1831 → later printed representations. The original manuscript has not yet been recovered.";
+const data={
+distance:["about fifteen miles southeast","The report gives an approximate distance and direction between source states.","It does not preserve the traveled line or earn an exact modern route."],
+creek:["this creek","Inside the report, “this creek” points back to the immediately preceding small branch of Blue Water.","That earns source-local continuity, not an exact modern creek identity or encounter point."],
+mayes:["Mr. Mayes","A source-named person occurrence found here with Mr. Criner.","This does not silently join another Mayes occurrence."],
+criner:["Mr. Criner","A source-named person occurrence found here with Mr. Mayes.","This does not silently join another Criner occurrence."],
+residence:["reside on James’ Fork of Poteau","The report carries a separate residence relation for Mayes and Criner.","Residence does not relocate the Blue Water encounter or establish a parcel or route."],
+trapping:["trapping for beaver here","The report attaches trapping activity to the Blue Water encounter state.","It does not turn the trapping place into the residence place."]
+};
+const ask={
+southeast:{where:"You are at the Southeast Reach in Dawson’s carried report, after Morning Camp and before Blue Water.",earned:"The report earns an approximate direction and distance and the next encampment on a small branch of Blue Water.",open:"The traveled line, exact modern route, and exact modern identity of the branch remain open."},
+"blue-water":{where:"You are at the Blue Water encounter state in Dawson’s report.",earned:"The source earns encounter, residence, and trapping relations without making them one place.",open:"Exact encounter geometry, residence parcel, route between residence and trapping ground, and broader same-name identities remain open."}
+};
+let current="southeast",active=null;
+const askBox=document.getElementById("ask"),askTitle=document.getElementById("ask-title"),askAnswer=document.getElementById("ask-answer");
+function closeDepth(){if(!active)return;active.p.remove();active.b.setAttribute("aria-expanded","false");active=null}
+function go(id){closeDepth();current=id;document.querySelectorAll(".scene").forEach(s=>s.classList.toggle("current",s.id===id));history.replaceState({},"","#"+id);document.querySelector(".top").scrollIntoView({block:"start"})}
+function openDepth(b){
+  if(active?.b===b){closeDepth();return}
+  closeDepth();const d=data[b.dataset.key],p=document.createElement("section");p.className="depth";
+  p.innerHTML='<p class="depth-label">Relation depth</p><h2></h2><p class="near"></p><p class="brake"></p><div class="depth-actions"><a target="_blank" rel="noopener noreferrer">Source</a><button type="button">Close</button></div>';
+  p.querySelector("h2").textContent=d[0];p.querySelector(".near").textContent=d[1];p.querySelector(".brake").textContent=d[2];p.querySelector("a").href=source;p.querySelector("button").onclick=closeDepth;
+  b.closest("p").insertAdjacentElement("afterend",p);b.setAttribute("aria-expanded","true");active={b,p};
+}
+function openAsk(){askTitle.textContent="Ask from "+document.getElementById(current).dataset.place;askAnswer.textContent="Choose one bounded question.";askBox.hidden=false}
+document.querySelectorAll("[data-key]").forEach(b=>b.onclick=()=>openDepth(b));
+document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));
+document.getElementById("ask-open").onclick=openAsk;document.getElementById("ask-close").onclick=()=>askBox.hidden=true;
+document.querySelectorAll("[data-q]").forEach(b=>b.onclick=()=>askAnswer.textContent=ask[current][b.dataset.q]);
+const start=location.hash.slice(1);if(start==="blue-water")current="blue-water",document.querySelectorAll(".scene").forEach(s=>s.classList.toggle("current",s.id===current));
+})();
+</script>
+</body>
+</html>
