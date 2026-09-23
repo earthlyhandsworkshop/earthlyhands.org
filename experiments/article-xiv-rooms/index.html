@@ -32,7 +32,7 @@ a,button{color:inherit}button{font:inherit}
 .utility a{text-decoration:none}.utility button{border:0;background:none;padding:0;cursor:pointer;color:inherit}
 .hero{
  position:relative;min-height:100svh;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(18rem,.9fr);
- gap:clamp(3rem,8vw,9rem);align-items:end;padding:clamp(7rem,12vh,10rem) clamp(1.25rem,6vw,7rem) clamp(3rem,8vh,6rem);
+ gap:clamp(2rem,5vw,6rem);align-items:end;padding:clamp(7rem,12vh,10rem) clamp(1.25rem,6vw,7rem) clamp(3rem,8vh,6rem);
  background:
    linear-gradient(0deg,transparent 0,transparent 24.9%,rgba(233,224,207,.055) 25%,transparent 25.1%),
    var(--night)
@@ -56,7 +56,7 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  position:absolute;z-index:4;left:var(--treaty-x);top:var(--treaty-start,22vh);
  transform:translate(-50%,.85rem) rotate(180deg);writing-mode:vertical-rl;
  padding:.4rem .2rem;background:var(--night2);color:rgba(233,224,207,.72);
- font:.58rem/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap
+ font:.56rem/1.15 var(--mono);letter-spacing:.11em;text-transform:uppercase;white-space:nowrap
 }
 .treaty-origin::before{
  content:"";display:block;width:.38rem;height:.38rem;margin:0 auto .55rem;border-radius:50%;
@@ -188,27 +188,27 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  .case-grid{grid-template-columns:1fr}
 }
 @media(max-width:40rem){
- :root{--treaty-x:.72rem}
+ :root{--treaty-x:.62rem}
  .hero{padding:7rem 1rem 2.5rem}h1{font-size:clamp(4.3rem,22vw,6.6rem)}
- .walk{width:calc(100% - 3.2rem);margin-left:2.35rem;margin-right:.85rem;padding-top:8vh}
+ .walk{width:calc(100% - 2.25rem);margin-left:1.55rem;margin-right:.70rem;padding-top:8vh}
  .chamber{min-height:auto;padding:8vh 0}.chamber+.chamber{margin-top:14vh}
  .room{min-height:68svh;padding:1.2rem}.statement{font-size:clamp(1.9rem,9vw,3rem)}
  .ghost-room{min-height:76svh;padding:1.5rem 1rem}
  .ghost-door{margin-top:7rem;margin-bottom:8rem}
  .room::before{left:9%;right:4%}.room::after{right:10%}
  .bridge{min-height:100svh}
- .cases{padding:5rem 1rem}.case{min-height:30rem;padding:1.2rem}
+ .cases{padding:5rem .85rem 5rem 1.45rem}.case{min-height:30rem;padding:1.2rem}
  .end{padding:5rem 1rem 7rem}.end h2{font-size:clamp(3.4rem,17vw,5.3rem)}
 }
 
 @media (max-height:34rem) and (orientation:landscape){
   :root{--treaty-x:1.2rem}
   .utility{font-size:.72rem;padding:.65rem 1rem}
-  .hero{min-height:100svh;grid-template-columns:1fr 1fr;padding:5.5rem 2.5rem 2rem;gap:3rem}
+  .hero{min-height:100svh;grid-template-columns:1.08fr .92fr;padding:5.5rem 2rem 2rem;gap:1.6rem}
   h1{font-size:clamp(4rem,10vw,6.4rem)}
-  .hero-copy{align-self:end;justify-self:end;max-width:28rem}
-  .walk{width:calc(100% - 5rem)}
-  .chamber{grid-template-columns:minmax(13rem,.48fr) minmax(0,1.52fr);gap:3rem;min-height:100svh;padding:10vh 0}
+  .hero-copy{align-self:end;justify-self:end;max-width:31rem}
+  .walk{width:calc(100% - 3.5rem);margin-left:2.25rem;margin-right:1.25rem}
+  .chamber{grid-template-columns:minmax(13rem,.5fr) minmax(0,1.5fr);gap:2rem;min-height:100svh;padding:10vh 0}
   .room-index{position:static}
   .room-index h2{font-size:clamp(2.5rem,6vw,4.4rem)}
   .room{min-height:80vh;padding:2rem}
