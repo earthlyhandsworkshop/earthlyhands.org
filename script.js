@@ -1,6 +1,8 @@
 (() => {
   const lamp = document.querySelector("#lamp-control");
   const lampLabel = lamp.querySelector(".lamp-label");
+  const lanternHome = document.querySelector("#lantern-home");
+  const lanternNote = document.querySelector(".lantern-note");
   const where = document.querySelector("#where-label");
   const talk = document.querySelector("#ground-talk");
   const talkToggle = document.querySelector("#talk-toggle");
@@ -28,7 +30,20 @@
     document.body.dataset.lamp = isLit ? "lit" : "unlit";
     lamp.setAttribute("aria-pressed", String(isLit));
     lampLabel.textContent = isLit ? "Extinguish the lantern" : "Light the lantern";
+    if (lanternNote) lanternNote.hidden = isLit;
     talk.hidden = !isLit;
+
+    if (!isLit && lanternHome && !lanternHome.contains(lamp)) {
+      lanternHome.prepend(lamp);
+    }
+  }
+
+  function placeLanternWithActions(target) {
+    if (document.body.dataset.lamp !== "lit") return;
+    const actions = target?.querySelector(".passage-actions");
+    if (actions && !actions.contains(lamp)) {
+      actions.prepend(lamp);
+    }
   }
 
 
@@ -55,7 +70,10 @@
     if (thresholdIntro) thresholdIntro.setAttribute("aria-hidden", String(!isThreshold));
 
     updatePlace(target);
-    if (!isThreshold) target.focus({ preventScroll: true });
+    if (!isThreshold) {
+      placeLanternWithActions(target);
+      target.focus({ preventScroll: true });
+    }
   }
 
   function remember(id) {
