@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#11110f">
+<title>Article XIV rooms — Earthly Hands</title>
+<meta name="description" content="A bounded visual experiment in treaty language, later administrative machinery, and the paired Robert Bell bodies.">
+<style>
+:root{
+  --night:#11110f;--night2:#171713;--paper:#e9e0cf;--paper2:#f4edde;--ink:#1d1b16;
+  --faint:#9a927f;--line:rgba(233,224,207,.25);--line2:rgba(29,27,22,.22);
+  --rust:#aa6d4b;--moss:#7c846c;--ghost:#6d6d67;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--night);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;min-width:18rem;background:var(--night);color:var(--paper);font:1rem/1.55 var(--serif)}
+a,button{color:inherit}button{font:inherit}
+:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
+.utility{
+ position:fixed;z-index:30;inset:0 0 auto 0;display:grid;grid-template-columns:1fr auto 1fr;
+ gap:1rem;align-items:center;padding:.85rem clamp(1rem,2.5vw,2rem);
+ background:linear-gradient(var(--night),rgba(17,17,15,.9),transparent);
+ color:rgba(233,224,207,.72);font:.62rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase;
+ pointer-events:none
+}
+.utility>*{pointer-events:auto}.utility .middle{justify-self:center;color:var(--rust)}.utility .right{justify-self:end}
+.utility a{text-decoration:none}.utility button{border:0;background:none;padding:0;cursor:pointer;color:inherit}
+.hero{
+ min-height:100svh;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(18rem,.9fr);
+ gap:clamp(3rem,8vw,9rem);align-items:end;padding:clamp(7rem,12vh,10rem) clamp(1.25rem,6vw,7rem) clamp(3rem,8vh,6rem);
+ background:
+   linear-gradient(90deg,transparent 0,transparent 9.9%,rgba(233,224,207,.08) 10%,transparent 10.1%),
+   linear-gradient(0deg,transparent 0,transparent 24.9%,rgba(233,224,207,.08) 25%,transparent 25.1%),
+   var(--night)
+}
+.kicker,.label,.room-tag,.small,.ghost-label,.case-label,.footmark{font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.kicker{margin:0 0 1rem;color:var(--rust);font-size:.68rem}
+h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;line-height:.82;letter-spacing:-.06em}
+.hero-copy{max-width:30rem;color:var(--faint)}.hero-copy p{margin:0}.hero-copy p+p{margin-top:1rem}
+.hero-copy .lead{color:var(--paper);font-size:clamp(1.35rem,2.3vw,2.1rem);line-height:1.24}
+.enter{display:inline-block;margin-top:2rem;color:var(--rust);text-decoration:none;font:.64rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.enter::after{content:" ↓"}
+
+.plan{
+ position:relative;min-height:310svh;background:var(--night2);overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+}
+.plan-lines{position:absolute;inset:0;pointer-events:none}
+.plan-lines svg{width:100%;height:100%;display:block}
+.walk{position:relative;z-index:2;width:min(90rem,calc(100% - 8vw));margin:0 auto;padding:12vh 0 18vh}
+.chamber{
+ position:relative;min-height:88svh;display:grid;grid-template-columns:minmax(14rem,.5fr) minmax(0,1.5fr);
+ gap:clamp(2.5rem,7vw,8rem);align-items:center;padding:7vh 0
+}
+.chamber+.chamber{margin-top:26vh}
+.room-index{align-self:start;position:sticky;top:18vh}
+.room-tag{margin:0 0 .9rem;color:var(--rust);font-size:.62rem}
+.room-index h2{margin:0;max-width:9ch;font-size:clamp(2.7rem,5.5vw,5.8rem);font-weight:400;line-height:.88;letter-spacing:-.048em}
+.room-index p{max-width:20rem;margin:1.5rem 0 0;color:var(--faint);font-size:.9rem}
+.room{
+ position:relative;min-height:68svh;padding:clamp(1.5rem,4vw,3.5rem);
+ border:1px solid rgba(233,224,207,.26);background:rgba(233,224,207,.035);
+ box-shadow:0 2.5rem 6rem rgba(0,0,0,.18)
+}
+.room::before,.room::after{content:"";position:absolute;background:var(--line)}
+.room::before{left:14%;right:8%;top:21%;height:1px}
+.room::after{top:10%;bottom:11%;right:18%;width:1px}
+.room-content{position:relative;z-index:2;max-width:46rem}
+.label{margin:0 0 1.5rem;color:var(--moss);font-size:.62rem}
+.statement{margin:0;font-size:clamp(1.8rem,3.5vw,3.7rem);line-height:1.08;letter-spacing:-.03em}
+.statement em{font-style:normal;color:var(--rust)}
+.note{max-width:35rem;margin:2rem 0 0;color:var(--faint)}
+.note strong{color:var(--paper);font-weight:400}
+.token{
+ display:inline-block;margin-top:2.8rem;padding:.55rem .7rem;border:1px solid rgba(233,224,207,.28);
+ background:rgba(17,17,15,.35);font:.62rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--paper)
+}
+.addition .room{border-style:dashed}
+.addition .statement{max-width:15ch}
+.ghost-room{
+ min-height:72svh;border:1px dashed rgba(233,224,207,.22);background:
+ repeating-linear-gradient(45deg,transparent 0,transparent 24px,rgba(233,224,207,.035) 25px,transparent 26px);
+ display:grid;place-items:center;text-align:center;padding:2rem
+}
+.ghost-room div{max-width:36rem}
+.ghost-label{margin:0 0 1rem;color:#8a8174;font-size:.62rem}
+.ghost-room h3{margin:0;font-size:clamp(2.4rem,5vw,5rem);font-weight:400;line-height:.9;letter-spacing:-.045em}
+.ghost-room p{margin:1.4rem auto 0;color:var(--faint);max-width:31rem}
+.ghost-door{width:7rem;height:11rem;border:1px dashed rgba(233,224,207,.28);margin:3rem auto 0;border-bottom:0;position:relative}
+.ghost-door::after{content:"";position:absolute;width:.35rem;height:.35rem;border:1px solid rgba(233,224,207,.4);border-radius:50%;right:.7rem;top:5.1rem}
+
+.bridge{
+ min-height:88svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:8vh 1rem
+}
+.bridge-inner{max-width:52rem}
+.bridge .small{margin:0 0 1rem;color:var(--rust);font-size:.62rem}
+.bridge h2{margin:0;font-size:clamp(3.3rem,7vw,7rem);font-weight:400;line-height:.88;letter-spacing:-.055em}
+.bridge p{max-width:35rem;margin:1.5rem auto 0;color:var(--faint)}
+.unrecovered{display:inline-block;margin-top:2.5rem;padding:.5rem .75rem;border:1px solid rgba(233,224,207,.22);font:.62rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#8f8779}
+
+.cases{
+ background:var(--paper);color:var(--ink);padding:clamp(6rem,12vh,10rem) clamp(1.25rem,6vw,7rem)
+}
+.cases-head{max-width:75rem;margin:0 auto 4rem}
+.cases-head .kicker{color:#7e563e}.cases-head h2{margin:0;max-width:12ch;font-size:clamp(3.3rem,7vw,7rem);font-weight:400;line-height:.88;letter-spacing:-.055em}
+.case-grid{max-width:88rem;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem)}
+.case{
+ min-height:34rem;position:relative;padding:clamp(1.4rem,3vw,2.7rem);border:1px solid var(--line2);background:rgba(255,255,255,.14)
+}
+.case-label{margin:0 0 1rem;color:#7e563e;font-size:.62rem}
+.case h3{margin:0;font-size:clamp(2.3rem,4vw,4.6rem);font-weight:400;line-height:.9;letter-spacing:-.045em}
+.case .date{margin:.7rem 0 0;color:#6c665b;font:.7rem/1.4 var(--mono)}
+.case-copy{max-width:32rem;margin:4rem 0 0}.case-copy p{margin:0}.case-copy p+p{margin-top:1rem}
+.gov-layer{
+ margin-top:2rem;padding:1rem 1.1rem;border-left:3px solid #8d6249;background:rgba(141,98,73,.06)
+}
+.gov-layer .small{margin:0 0 .4rem;color:#7e563e;font-size:.58rem}
+.gov-layer p{margin:0;color:#5f594f}
+.case.unjoined::after{
+ content:"no workshop identity join";position:absolute;right:1rem;bottom:1rem;color:#857e70;
+ font:.56rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase
+}
+.case-link{margin-top:2rem}
+.case-link button{
+ border:0;border-bottom:1px solid #8d6249;background:none;padding:.2rem 0;cursor:pointer;
+ color:#4f4a42;font:.67rem/1.3 var(--mono)
+}
+.overlay{
+ position:fixed;z-index:50;inset:0;background:rgba(17,17,15,.84);backdrop-filter:blur(6px);
+ display:grid;place-items:center;padding:1rem
+}
+.overlay[hidden]{display:none}
+.overlay-card{
+ width:min(48rem,100%);max-height:88svh;overflow:auto;background:var(--paper2);color:var(--ink);
+ border:1px solid rgba(29,27,22,.25);padding:clamp(1.4rem,4vw,3rem);box-shadow:0 3rem 8rem rgba(0,0,0,.35)
+}
+.overlay-top{display:flex;justify-content:space-between;gap:2rem;align-items:start}
+.overlay-top p{margin:0}.overlay-top .small{color:#7e563e;font-size:.58rem}
+.overlay-card h3{margin:.25rem 0 0;font-size:2rem;font-weight:400}
+.overlay-close{border:0;background:none;border-bottom:1px solid #857e70;padding:.15rem 0;cursor:pointer;font:.64rem/1.3 var(--mono)}
+.overlay-body{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--line2)}
+.overlay-body p{margin:0}.overlay-body p+p{margin-top:1rem}
+.end{
+ min-height:85svh;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(18rem,.9fr);
+ gap:clamp(3rem,8vw,9rem);align-items:center;padding:clamp(5rem,10vh,9rem) clamp(1.25rem,6vw,7rem)
+}
+.end h2{margin:0;max-width:11ch;font-size:clamp(3.6rem,8vw,8rem);font-weight:400;line-height:.86;letter-spacing:-.055em}
+.end-copy{max-width:30rem;color:var(--faint)}.end-copy p{margin:0}.end-copy p+p{margin-top:1rem}
+.footmark{margin-top:2.4rem!important;color:rgba(233,224,207,.5);font-size:.6rem}
+@media(max-width:62rem){
+ .utility{grid-template-columns:1fr auto}.utility .middle{display:none}
+ .hero,.end{grid-template-columns:1fr}.hero-copy{justify-self:end}
+ .chamber{grid-template-columns:1fr;gap:2rem}.room-index{position:static}
+ .room{min-height:58svh}
+ .case-grid{grid-template-columns:1fr}
+}
+@media(max-width:40rem){
+ .hero{padding:7rem 1rem 2.5rem}h1{font-size:clamp(4.3rem,22vw,6.6rem)}
+ .walk{width:calc(100% - 2rem);padding-top:8vh}
+ .chamber{min-height:auto;padding:8vh 0}.chamber+.chamber{margin-top:14vh}
+ .room{min-height:68svh;padding:1.2rem}.statement{font-size:clamp(1.9rem,9vw,3rem)}
+ .room::before{left:9%;right:4%}.room::after{right:10%}
+ .bridge{min-height:100svh}
+ .cases{padding:5rem 1rem}.case{min-height:30rem;padding:1.2rem}
+ .end{padding:5rem 1rem 7rem}.end h2{font-size:clamp(3.8rem,20vw,6rem)}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="utility">
+  <a href="../../">Earthly Hands</a>
+  <span class="middle">Article XIV · architectural study</span>
+  <button class="right" type="button" data-open="orientation">Orientation</button>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <p class="kicker">Visual experiment · unfinished architecture</p>
+    <h1>The old room remains.</h1>
+  </div>
+  <div class="hero-copy">
+    <p class="lead">A treaty promise stands. Later governments build machinery around determining who may pass through it.</p>
+    <p>This is not a complete legal history. It is a sectional study in how the ground changes without erasing the original room.</p>
+    <a class="enter" href="#rooms">Enter the section</a>
+  </div>
+</section>
+
+<section class="plan" id="rooms" aria-label="Architectural section through Article XIV implementation">
+  <div class="plan-lines" aria-hidden="true">
+    <svg viewBox="0 0 1200 3600" preserveAspectRatio="none">
+      <g fill="none" stroke="rgba(233,224,207,.11)" stroke-width="1">
+        <path d="M75 140 H1125 V770 H920 V1160 H1080 V1550 H800 V1950 H1090 V2360 H885 V2780 H1110 V3380 H90"/>
+        <path d="M250 140 V690 H470 V1160 H315 V1680 H600 V2050 H430 V2500 H690 V3040 H530 V3380"/>
+        <path d="M75 770 H600 M315 1680 H1080 M430 2500 H1090"/>
+        <path stroke-dasharray="12 12" d="M800 1950 H1115 V2260 H965 V2360"/>
+      </g>
+      <g fill="none" stroke="rgba(170,109,75,.24)" stroke-width="2">
+        <path d="M250 420 H470"/>
+        <path d="M600 1840 H800"/>
+        <path d="M690 2860 H885"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="walk">
+    <section class="chamber">
+      <div class="room-index">
+        <p class="room-tag">1830 · treaty chamber</p>
+        <h2>Promise before credential.</h2>
+        <p>The original text establishes a path for remaining in Mississippi, land, residence, grant, and retained Choctaw privilege. It does not contain the later descendant-identity tribunal.</p>
+      </div>
+      <div class="room">
+        <div class="room-content">
+          <p class="label">Treaty of Dancing Rabbit Creek · Article XIV</p>
+          <p class="statement">Remain. Signify. Reside. Receive the grant. <em>Do not lose the privilege of a Choctaw citizen.</em></p>
+          <p class="note">The later machine will ask different questions. This room stays visible so those later questions do not become the treaty itself.</p>
+          <span class="token">origin node · treaty promise</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="chamber addition">
+      <div class="room-index">
+        <p class="room-tag">1898 · administrative addition</p>
+        <h2>Identity becomes a jurisdiction.</h2>
+        <p>The Commission first articulates a descendant-proof theory; Congress then authorizes it to determine the identity of Choctaw Indians claiming Article XIV rights.</p>
+      </div>
+      <div class="room">
+        <div class="room-content">
+          <p class="label">Commission interpretation → Curtis Act §21</p>
+          <p class="statement">The question shifts from <em>what the treaty promises</em> to <em>who this applicant is in relation to it.</em></p>
+          <p class="note"><strong>Interpretation and statute stay separate.</strong> The January 1898 Commission theory is not silently rewritten as treaty text.</p>
+          <span class="token">new room · identity determination</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="chamber addition">
+      <div class="room-index">
+        <p class="room-tag">1900 · gate added</p>
+        <h2>Identification is no longer the end state.</h2>
+        <p>A duly identified Mississippi Choctaw may settle in the Choctaw-Chickasaw country and, upon proof of bona fide settlement, move toward enrollment and allotment.</p>
+      </div>
+      <div class="room">
+        <div class="room-content">
+          <p class="label">Identification → settlement → proof → enrollment</p>
+          <p class="statement">A legal identity determination becomes a <em>door into another sequence.</em></p>
+          <p class="note">This is one of the moments when an older treaty relation becomes operationalized as a later administrative credential.</p>
+          <span class="token">gate state · not final state</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="chamber">
+      <div class="room-index">
+        <p class="room-tag">1901 · proposed wing</p>
+        <h2>Designed. Not opened.</h2>
+        <p>The negotiated agreement developed a more elaborate Mississippi-Choctaw architecture, but the source-controlled implementation path stops at the congressional ratification gate.</p>
+      </div>
+      <div class="ghost-room">
+        <div>
+          <p class="ghost-label">unbuilt legal architecture</p>
+          <h3>A doorway drawn into a wall that never became governing law.</h3>
+          <p>The proposed structure matters because it shows what federal and tribal negotiators were trying to build. It does not govern MCR 879 merely because it existed on paper.</p>
+          <div class="ghost-door" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chamber addition">
+      <div class="room-index">
+        <p class="room-tag">1902 · evidentiary architecture</p>
+        <h2>Credential does not become origin.</h2>
+        <p>Final §41 makes full-blood status and descent from an Article XIV patentee express evidentiary lanes while keeping identification, settlement, proof, enrollment, and approval distinct.</p>
+      </div>
+      <div class="room">
+        <div class="room-content">
+          <p class="label">Rule of evidence · later machinery</p>
+          <p class="statement"><em>Patent / scrip</em> can carry evidence of an earlier treaty state. They are not the source of the treaty right.</p>
+          <p class="note">Later Interior construction is especially important here: documentary residue may function as proof without becoming the origin node.</p>
+          <span class="token">evidence carrier · not origin node</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="bridge">
+      <div class="bridge-inner">
+        <p class="small">One bridge still missing</p>
+        <h2>MCR 879 was reviewed. The authority bridge remains unrecovered.</h2>
+        <p>The case-local path is source-controlled: Commission transmittal, Indian Affairs recommendation, Interior review and affirmance. What remains open is the contemporaneous authority or administrative construction that made that merits-review lane proper.</p>
+        <span class="unrecovered">authority not yet recovered</span>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="cases" aria-labelledby="cases-title">
+  <div class="cases-head">
+    <p class="kicker">Two later chambers · keep apart</p>
+    <h2 id="cases-title">The same older record can be made to do different administrative work.</h2>
+  </div>
+
+  <div class="case-grid">
+    <article class="case unjoined">
+      <p class="case-label">MCR 879</p>
+      <h3>Family Robert body</h3>
+      <p class="date">Commission decision · 15 Apr. 1902 · pre-final-§41</p>
+      <div class="case-copy">
+        <p>At the Office-review layer, an Article XIV patent record and older Murray–Vroom / Court of Claims material are used inside an administrative <strong>separation</strong>.</p>
+        <div class="gov-layer">
+          <p class="small">government characterization</p>
+          <p>The patented older Robert is treated as a different man from the family Robert claimed by the applicants.</p>
+        </div>
+      </div>
+      <p class="case-link"><button type="button" data-open="mcr">Open the source-control brake</button></p>
+    </article>
+
+    <article class="case unjoined">
+      <p class="case-label">Wash / Jane / Sallie body</p>
+      <h3>Other-Robert chamber</h3>
+      <p class="date">Commission decision · 27 Sep. 1904 · post-final-§41</p>
+      <div class="case-copy">
+        <p>The Commission reaches back into the older Article XIV record universe and uses it inside an administrative <strong>attachment</strong>.</p>
+        <div class="gov-layer">
+          <p class="small">government characterization</p>
+          <p>The Commission makes an affirmative identity join between the later family-line Robert and the older favorably adjudicated Robert.</p>
+        </div>
+      </div>
+      <p class="case-link"><button type="button" data-open="wash">Open the source-control brake</button></p>
+    </article>
+  </div>
+</section>
+
+<section class="end">
+  <h2>The machine changes. The source distinctions remain.</h2>
+  <div class="end-copy">
+    <p>Treaty promise. Commission theory. Statutory jurisdiction. Evidentiary rule. Case decision. Family testimony. Government characterization. Workshop inference.</p>
+    <p>They may touch. They do not become one thing because the interface places them near one another.</p>
+    <p class="footmark">Passed through True North's hands · bounded architectural experiment · trust/custody mark, not ownership</p>
+  </div>
+</section>
+</main>
+
+<section class="overlay" id="overlay" hidden>
+  <div class="overlay-card" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+    <div class="overlay-top">
+      <div>
+        <p class="small">Source-control brake</p>
+        <h3 id="overlay-title">Orientation</h3>
+      </div>
+      <button class="overlay-close" id="overlay-close" type="button">Close</button>
+    </div>
+    <div class="overlay-body" id="overlay-body"></div>
+  </div>
+</section>
+
+<script>
+(()=>{
+const copy={
+ orientation:{
+  title:"How to read this experiment",
+  body:[
+   "This is a visual-historical installation, not a substitute for the source jackets or a final legal synthesis.",
+   "Architectural nearness does not establish legal causation. A room may represent a later rule, an administrative practice, or a proposed but unratified design. Those states remain different.",
+   "The two Bell chambers preserve the government's identity operations as attributed government acts. The workshop does not adopt either identity conclusion."
+  ]
+ },
+ mcr:{
+  title:"MCR 879 · brake",
+  body:[
+   "The April 1902 Commission decision predates final §41. Do not back-project the July 1902 evidentiary rule into this case.",
+   "The May 1902 Indian Affairs review used an Office-held Robert Bell patent record and older Article XIV / Court of Claims material inside a two-Robert analysis.",
+   "That is evidence of administrative use, not proof that the Office's identity conclusion was historically correct."
+  ]
+ },
+ wash:{
+  title:"Wash / Jane / Sallie · brake",
+  body:[
+   "The September 1904 body is post-final-§41, but the Commission itself treated different applicants through different lanes.",
+   "Its affirmative Robert Bell identity join remains the Commission's conclusion. It is not a workshop person-merge.",
+   "The exact interpretive bridge explaining why the remaining mixed-blood applicants were treated outside §41 remains open and should not be supplied by inference."
+  ]
+ }
+};
+const overlay=document.getElementById("overlay"),title=document.getElementById("overlay-title"),body=document.getElementById("overlay-body");
+function openPanel(key){
+ const d=copy[key];title.textContent=d.title;body.innerHTML="";
+ d.body.forEach(t=>{const p=document.createElement("p");p.textContent=t;body.appendChild(p)});
+ overlay.hidden=false;document.getElementById("overlay-close").focus();
+}
+function closePanel(){overlay.hidden=true}
+document.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>openPanel(b.dataset.open)));
+document.getElementById("overlay-close").addEventListener("click",closePanel);
+overlay.addEventListener("click",e=>{if(e.target===overlay)closePanel()});
+window.addEventListener("keydown",e=>{if(e.key==="Escape")closePanel()});
+})();
+</script>
+</body>
+</html>
