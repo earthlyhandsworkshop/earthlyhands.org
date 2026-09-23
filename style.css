@@ -1121,3 +1121,116 @@ body[data-lamp="lit"] .experience-shell {
     grid-column: 2;
   }
 }
+
+
+/* Dawson opening — let the first screen feel composed rather than merely fitted. */
+.report-passage h2 {
+  font-size: clamp(3.1rem, 6.2vw, 6rem);
+  line-height: .9;
+  letter-spacing: -.055em;
+  max-width: 8.5ch;
+  text-wrap: balance;
+}
+
+.report-story {
+  max-width: 47rem;
+  font-size: clamp(1.08rem, 1.5vw, 1.28rem);
+  line-height: 1.58;
+}
+
+.report-story .story-lead {
+  color: var(--paper);
+  font-size: clamp(1.38rem, 2.2vw, 2rem);
+  line-height: 1.3;
+  letter-spacing: -.018em;
+  max-width: 30ch;
+}
+
+.report-story .story-quiet {
+  max-width: 36rem;
+  margin-top: 1.15rem;
+  color: var(--paper-muted);
+}
+
+.trail-call {
+  white-space: nowrap;
+  font-size: 1rem;
+  letter-spacing: .015em;
+}
+
+/* Stable visitor footing: where am I, who am I, what can I ask? */
+.experience-tools {
+  grid-template-columns: minmax(11rem, 1fr) auto minmax(11rem, 1fr);
+  align-items: baseline;
+}
+
+.visitor-footing {
+  justify-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: .35rem 1rem;
+  color: var(--paper-muted);
+  font-family: var(--mono);
+  font-size: .76rem;
+  line-height: 1.45;
+}
+
+.visitor-footing b {
+  color: var(--ember);
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.sign-in-ghost {
+  border: 0;
+  border-bottom: 1px solid var(--rule-lit);
+  padding: .1rem 0;
+  background: transparent;
+  color: var(--paper-muted);
+  font: inherit;
+  cursor: default;
+  opacity: .62;
+  pointer-events: none;
+}
+
+.experience-tools .ground-talk {
+  justify-self: end;
+}
+
+@media (min-width: 68.01rem) {
+  body[data-lamp="lit"] .report-passage {
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+
+  body[data-lamp="lit"] .report-passage > h2,
+  body[data-lamp="lit"] .report-passage > .plain-copy {
+    align-self: center;
+  }
+
+  body[data-lamp="lit"] .report-passage > .passage-actions {
+    align-self: end;
+    padding-bottom: .1rem;
+  }
+}
+
+@media (max-width: 68rem) {
+  .experience-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .visitor-footing {
+    justify-self: start;
+    justify-content: flex-start;
+  }
+
+  .experience-tools .ground-talk {
+    justify-self: stretch;
+  }
+
+  .report-passage h2 {
+    font-size: clamp(2.7rem, 10vw, 4.8rem);
+  }
+}
