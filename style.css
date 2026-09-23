@@ -54,19 +54,15 @@ body[data-lamp="lit"] {
 
 html.js,
 html.js body {
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
 }
 
 html.js body {
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
+  display: block;
 }
 
 html.js main {
-  min-height: 0;
-  overflow-y: auto;
-  scrollbar-gutter: stable;
+  overflow: visible;
 }
 
 a {
@@ -183,7 +179,7 @@ footer {
 }
 
 .threshold {
-  max-width: 62rem;
+  max-width: none;
   min-height: calc(100svh - 5.75rem);
   justify-content: flex-start;
   padding-top: clamp(3rem, 7vh, 5rem);
@@ -1148,152 +1144,168 @@ footer > a {
 }
 
 
-/* Shared experience shell + listening ground refinement */
+
+
+/* Lantern-owned experience: one page, one browser scroll, no separate collapse. */
 .experience-shell {
   width: 100%;
   margin-bottom: clamp(2.2rem, 4vw, 3.5rem);
 }
 
-.experience-collapse {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  margin: 0 0 0.9rem;
-  padding: 0.25rem 0;
-  border: 0;
-  border-bottom: 1px solid transparent;
-  background: transparent;
-  color: var(--paper-muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.86rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.experience-collapse:hover {
-  color: var(--ember-soft);
-  border-bottom-color: var(--ember);
-}
-
-.experience-shell[data-collapsed="true"] .experience-stage {
-  display: none;
-}
-
-.experience-shell[data-collapsed="true"] {
+.threshold-lantern {
   margin-bottom: 1.2rem;
 }
 
-footer {
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0.65rem;
-  align-items: stretch;
+body[data-lamp="unlit"] .experience-stage,
+body[data-lamp="unlit"] .ground-talk {
+  display: none;
 }
 
-footer .trust-mark,
-footer > .footer-threshold,
-.ground-talk {
-  grid-column: 1;
+body[data-lamp="lit"] .experience-stage,
+body[data-lamp="lit"] .ground-talk {
+  display: block;
 }
 
-footer .trust-mark {
-  justify-self: start;
+.experience-stage {
+  min-height: 0;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
 }
 
-footer > .footer-threshold {
-  justify-self: start;
-  text-align: left;
+.js .experience-mount .passage,
+.js .experience-mount .practice {
+  min-height: auto;
+  width: 100%;
+  padding-top: clamp(2.5rem, 5vh, 3.5rem);
 }
 
 .ground-talk {
   width: 100%;
-  justify-self: stretch;
+  margin-top: 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--rule-lit);
+  text-transform: none;
+  letter-spacing: normal;
 }
 
+.ground-talk,
+.ground-talk[data-open="true"],
+.ground-talk[data-open="false"] {
+  position: static;
+  inset: auto;
+  max-height: none;
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.ground-talk-inner,
 .ground-talk[data-open="false"] .ground-talk-inner {
   width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
+.ground-talk-head,
 .ground-talk[data-open="false"] .ground-talk-head {
   width: 100%;
+  min-height: 0;
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0.35rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: start;
+  margin: 0;
+  padding: 0 0 0.8rem;
 }
 
 .ground-talk[data-open="false"] .ground-talk-head > div {
   display: block;
 }
 
-.ground-talk[data-open="false"] .talk-toggle {
+.ground-talk[data-open="false"] .talk-toggle,
+.ground-talk .talk-toggle {
   width: fit-content;
-  justify-self: start;
-  margin-top: 0.1rem;
-}
-
-.ground-talk-inner {
-  width: 100%;
-  max-width: none;
-}
-
-.ground-talk-head {
-  width: min(72rem, calc(100% - 12vw));
-  margin-inline: auto;
-}
-
-.ground-talk[data-open="false"] .ground-talk-head {
-  width: 100%;
-  margin-inline: 0;
+  justify-self: end;
+  margin: 0;
 }
 
 .talk-body {
-  width: min(72rem, calc(100% - 12vw));
-  margin-inline: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 0 1.25rem;
+}
+
+.talk-log:not(:empty) {
+  max-height: none;
+  overflow: visible;
+  margin-bottom: 1rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--rule);
 }
 
 .talk-entry {
+  width: 100%;
+  display: grid;
   grid-template-columns: minmax(4.5rem, 7rem) minmax(0, 1fr);
+  gap: 1.25rem;
+  justify-content: stretch;
+}
+
+.talk-entry-text {
+  width: 100%;
+  max-width: none;
+  overflow-wrap: anywhere;
 }
 
 .talk-form {
   width: 100%;
+  grid-template-columns: minmax(0, 1fr) auto;
 }
 
 .talk-form textarea {
+  width: 100%;
   min-width: 0;
+  max-width: none;
 }
 
-@media (min-width: 58rem) {
-  footer {
-    grid-template-columns: minmax(12rem, 0.5fr) minmax(0, 1.6fr) auto;
-    column-gap: 2rem;
-    align-items: start;
-  }
+footer {
+  width: min(72rem, calc(100% - 12vw));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
 
-  footer .trust-mark {
-    grid-column: 1;
-    grid-row: 1;
-  }
+footer .trust-mark,
+footer > .footer-threshold {
+  margin: 0;
+}
 
-  .ground-talk {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-  }
-
-  footer > .footer-threshold {
-    grid-column: 3;
-    grid-row: 1;
-    justify-self: end;
-    text-align: right;
-  }
-
+@media (max-width: 46rem) {
+  .ground-talk-head,
   .ground-talk[data-open="false"] .ground-talk-head {
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: start;
+    grid-template-columns: 1fr;
   }
 
-  .ground-talk[data-open="false"] .talk-toggle {
-    justify-self: end;
-    margin-top: 0;
+  .ground-talk[data-open="false"] .talk-toggle,
+  .ground-talk .talk-toggle {
+    justify-self: start;
+  }
+
+  .talk-entry {
+    display: block;
+  }
+
+  .talk-entry-who {
+    margin-bottom: 0.35rem;
+  }
+
+  footer {
+    width: calc(100% - 4rem);
+    margin-left: 2.8rem;
+    margin-right: 1.2rem;
   }
 }
