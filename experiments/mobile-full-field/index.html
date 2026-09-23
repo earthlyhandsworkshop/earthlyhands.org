@@ -56,8 +56,16 @@ h1{margin:0;font-size:clamp(2.45rem,12vw,4.6rem);font-weight:400;line-height:.9;
 .ask h2{margin:0;font-size:1.25rem;font-weight:400}
 .ask-close{padding:0;border:0;background:none;color:var(--muted);font:.7rem var(--mono)}
 .ask p{margin:.8rem 0 0}
-.ask-options{display:flex;flex-direction:column;align-items:flex-start;gap:.45rem;margin-top:1rem}
-.ask-options button{padding:.15rem 0;border:0;border-bottom:1px solid var(--accent);background:none;font:.72rem/1.35 var(--mono)}
+.ask-form{margin-top:1rem}
+.ask-label{display:block;margin:0 0 .45rem;color:var(--muted);font:.68rem/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.ask-input-wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.65rem;align-items:end;padding:.7rem .75rem;border:1px solid var(--rule);background:#fffdf8}
+.ask-input-wrap:focus-within{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.ask textarea{width:100%;min-height:4.25rem;max-height:9rem;padding:0;border:0;outline:0;resize:vertical;background:transparent;color:var(--ink);font:1.05rem/1.45 var(--serif)}
+.ask textarea::placeholder{color:#8a857c;opacity:1}
+.ask-send{padding:.2rem 0;border:0;border-bottom:1px solid var(--accent);background:none;color:var(--ink);font:.7rem/1.35 var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.ask-help{margin:.45rem 0 0!important;color:var(--muted);font:.66rem/1.4 var(--mono)}
+.ask-options{display:flex;flex-wrap:wrap;gap:.45rem .9rem;margin-top:1rem}
+.ask-options button{padding:.15rem 0;border:0;border-bottom:1px solid var(--accent);background:none;font:.7rem/1.35 var(--mono)}
 @media(min-width:48rem){
   body{font-size:1.16rem}.top,.scene-head,.body,.move,.footer-note{max-width:52rem;margin-left:auto;margin-right:auto}
   .scene-head{padding-top:2rem}.body{padding-top:1.8rem}
@@ -109,8 +117,16 @@ h1{margin:0;font-size:clamp(2.45rem,12vw,4.6rem);font-weight:400;line-height:.9;
 
 <section class="ask" id="ask" hidden>
   <div class="ask-head"><h2 id="ask-title">Ask from Southeast Reach</h2><button class="ask-close" id="ask-close" type="button">Close</button></div>
-  <p id="ask-answer">Choose one bounded question.</p>
-  <div class="ask-options">
+  <p id="ask-answer">Ask about the ground you are standing on.</p>
+  <form class="ask-form" id="ask-form">
+    <label class="ask-label" for="ask-input">Your question</label>
+    <div class="ask-input-wrap">
+      <textarea id="ask-input" rows="2" maxlength="280" placeholder="Ask from this ground…"></textarea>
+      <button class="ask-send" type="submit">Send</button>
+    </div>
+    <p class="ask-help">This specimen answers only from the current Dawson footing.</p>
+  </form>
+  <div class="ask-options" aria-label="Suggested questions">
     <button data-q="where" type="button">Where am I?</button>
     <button data-q="earned" type="button">What is earned here?</button>
     <button data-q="open" type="button">What remains open?</button>
@@ -134,7 +150,7 @@ southeast:{where:"You are at the Southeast Reach in Dawson’s carried report, a
 "blue-water":{where:"You are at the Blue Water encounter state in Dawson’s report.",earned:"The source earns encounter, residence, and trapping relations without making them one place.",open:"Exact encounter geometry, residence parcel, route between residence and trapping ground, and broader same-name identities remain open."}
 };
 let current="southeast",active=null;
-const askBox=document.getElementById("ask"),askTitle=document.getElementById("ask-title"),askAnswer=document.getElementById("ask-answer");
+const askBox=document.getElementById("ask"),askTitle=document.getElementById("ask-title"),askAnswer=document.getElementById("ask-answer"),askForm=document.getElementById("ask-form"),askInput=document.getElementById("ask-input");
 function closeDepth(){if(!active)return;active.p.remove();active.b.setAttribute("aria-expanded","false");active=null}
 function go(id){closeDepth();current=id;document.querySelectorAll(".scene").forEach(s=>s.classList.toggle("current",s.id===id));history.replaceState({},"","#"+id);document.querySelector(".top").scrollIntoView({block:"start"})}
 function openDepth(b){
@@ -144,11 +160,27 @@ function openDepth(b){
   p.querySelector("h2").textContent=d[0];p.querySelector(".near").textContent=d[1];p.querySelector(".brake").textContent=d[2];p.querySelector("a").href=source;p.querySelector("button").onclick=closeDepth;
   b.closest("p").insertAdjacentElement("afterend",p);b.setAttribute("aria-expanded","true");active={b,p};
 }
-function openAsk(){askTitle.textContent="Ask from "+document.getElementById(current).dataset.place;askAnswer.textContent="Choose one bounded question.";askBox.hidden=false}
+function answerQuestion(text){
+  const q=String(text||"").trim().toLowerCase();
+  if(!q)return "Ask about the ground you are standing on.";
+  if(/where|place|am i|location/.test(q))return ask[current].where;
+  if(/earn|know|establish|tell|source|prove/.test(q))return ask[current].earned;
+  if(/open|unknown|uncertain|remain|don't know|do not know/.test(q))return ask[current].open;
+  return "This bounded room can answer where you are, what the source earns here, and what remains open. Try asking one of those from the current ground.";
+}
+function openAsk(){
+  askTitle.textContent="Ask from "+document.getElementById(current).dataset.place;
+  askAnswer.textContent="Ask about the ground you are standing on.";
+  askInput.value="";
+  askBox.hidden=false;
+  requestAnimationFrame(()=>askInput.focus({preventScroll:true}));
+}
 document.querySelectorAll("[data-key]").forEach(b=>b.onclick=()=>openDepth(b));
 document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));
-document.getElementById("ask-open").onclick=openAsk;document.getElementById("ask-close").onclick=()=>askBox.hidden=true;
-document.querySelectorAll("[data-q]").forEach(b=>b.onclick=()=>askAnswer.textContent=ask[current][b.dataset.q]);
+document.getElementById("ask-open").onclick=openAsk;
+document.getElementById("ask-close").onclick=()=>{askBox.hidden=true;askInput.blur()};
+askForm.addEventListener("submit",e=>{e.preventDefault();askAnswer.textContent=answerQuestion(askInput.value)});
+document.querySelectorAll("[data-q]").forEach(b=>b.onclick=()=>{askInput.value=b.textContent;askAnswer.textContent=ask[current][b.dataset.q];askInput.focus({preventScroll:true})});
 const start=location.hash.slice(1);if(start==="blue-water")current="blue-water",document.querySelectorAll(".scene").forEach(s=>s.classList.toggle("current",s.id===current));
 })();
 </script>
