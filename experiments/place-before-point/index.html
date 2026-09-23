@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e9e2d5">
+<meta name="description" content="An Earthly Hands / Sedge experiment in mapping source-earned chronology without inventing a route.">
+<title>A place before a point — Sedge experiment</title>
+<style>
+:root{
+  --field:#e9e2d5;--paper:#f4efe6;--ink:#25221c;--muted:#6f685c;
+  --rule:#aaa08f;--accent:#7c5038;--green:#53604c;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+}
+*{box-sizing:border-box}
+html{background:var(--field);color:var(--ink);-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100svh;font:1.12rem/1.58 var(--serif)}
+a,button{color:inherit}
+a{text-underline-offset:.22em;text-decoration-color:var(--accent)}
+button{font:inherit}
+button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.wrap{width:min(72rem,calc(100% - 2rem));margin:auto}
+header{
+  min-height:5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  border-bottom:1px solid var(--rule);font:.7rem/1.4 var(--mono);
+  letter-spacing:.09em;text-transform:uppercase;color:var(--muted)
+}
+header strong{color:var(--ink);font-weight:600}
+main{padding:clamp(2.5rem,7vw,6rem) 0 4rem}
+.intro{max-width:48rem;margin:0 auto 3rem}
+.kicker,.label,.verb,.state,.signature{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.kicker{margin:0 0 .8rem;color:var(--accent);font-size:.7rem}
+h1{max-width:11ch;margin:0 0 1.25rem;font-size:clamp(2.8rem,7vw,6rem);font-weight:400;line-height:.9;letter-spacing:-.05em}
+.intro p{font-size:clamp(1.08rem,2vw,1.3rem);margin:.7rem 0}
+.brake{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.96rem!important}
+
+.instrument{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(18rem,.85fr);gap:clamp(2rem,6vw,5rem);align-items:start}
+.places{border-top:1px solid var(--rule)}
+.place{
+  display:grid;grid-template-columns:8rem minmax(0,1fr);gap:1.2rem;
+  padding:1.25rem 0;border-bottom:1px solid var(--rule)
+}
+.place-name{font-size:clamp(1.35rem,2vw,1.75rem);line-height:1.1}
+.place-body p{margin:.2rem 0}
+.verb{display:inline-block;margin:0 .35rem .25rem 0;padding:.18rem .42rem;border:1px solid var(--rule);font-size:.64rem;color:var(--green)}
+.open{color:var(--muted);font-size:.94rem}
+
+.relation{
+  margin:1rem 0;padding:1rem 1.1rem;border-left:2px solid var(--accent);
+  background:rgba(244,239,230,.55)
+}
+.relation p{margin:.25rem 0}
+.relation .state{color:var(--accent);font-size:.64rem}
+
+aside{position:sticky;top:1rem}
+.mapbox{
+  min-height:26rem;display:flex;flex-direction:column;justify-content:center;
+  padding:1.4rem;border:1px solid var(--rule);background:rgba(244,239,230,.45)
+}
+.map-title{margin:0 0 1rem;font:400 1.65rem/1.05 var(--serif)}
+.node{display:flex;align-items:center;gap:.8rem;padding:.75rem 0}
+.dot{width:.72rem;height:.72rem;border:2px solid var(--accent);border-radius:50%;flex:0 0 auto;background:var(--field)}
+.node strong{font-weight:400}
+.edge{margin-left:.34rem;padding:.5rem 0 .5rem 1.35rem;border-left:1px dashed var(--rule);color:var(--muted);font:.72rem/1.45 var(--mono)}
+.edge em{font-family:var(--serif);font-size:.98rem;color:var(--ink)}
+.controls{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--rule)}
+.controls button{
+  width:100%;padding:.75rem 0;border:0;border-bottom:1px solid var(--accent);
+  background:none;text-align:left;cursor:pointer
+}
+.controls button:hover{color:var(--accent)}
+.answer{margin-top:1rem;padding:1rem;background:var(--paper);border:1px solid var(--rule)}
+.answer[hidden]{display:none}
+.answer p{margin:.35rem 0}
+.answer strong{font-weight:500}
+.answer .state{color:var(--accent);font-size:.64rem}
+
+.talkback{max-width:48rem;margin:4rem auto 0;padding-top:1.2rem;border-top:1px solid var(--rule)}
+.talkback h2{margin:0 0 .7rem;font-size:1.55rem;font-weight:400}
+.talkback p{margin:.5rem 0}
+.talkback a{display:inline-block;margin-top:.7rem}
+
+footer{padding:1.2rem 0 2rem;border-top:1px solid var(--rule);color:var(--muted);font:.7rem/1.5 var(--mono)}
+.signature{font-size:.66rem}
+
+@media(max-width:48rem){
+  .wrap{width:calc(100% - 1.4rem)}
+  header span{display:none}
+  main{padding-top:2rem}
+  .instrument{grid-template-columns:1fr}
+  aside{position:static}
+  .place{grid-template-columns:1fr;gap:.45rem}
+  .mapbox{min-height:auto}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div><strong>Earthly Hands</strong> <span>· Sedge experiment</span></div>
+  <div>A place before a point</div>
+</header>
+
+<main>
+<section class="intro">
+  <p class="kicker">Prose Map experiment · chronology without route</p>
+  <h1>A place before a point.</h1>
+  <p>A witness can give us enough geography to know that one residence came before another without giving us a road between them.</p>
+  <p>This specimen asks whether a public map can make that useful without quietly drawing more than the source earns.</p>
+  <p class="brake"><strong>Source footing:</strong> Jettie Pearle Glenn’s No. 881 sworn examination, 23 October 1900. This page works from the Workshop’s controlled source representation and governing jacket. The historical source image itself is not published here.</p>
+</section>
+
+<section class="instrument" aria-label="Three source-carried places and their chronology">
+  <div>
+    <div class="places">
+      <section class="place">
+        <div class="place-name">Mississippi</div>
+        <div class="place-body">
+          <span class="verb">born</span><span class="verb">lived</span>
+          <p>Glenn says she was born in Mississippi and lived there before Texas.</p>
+          <p class="open">County, town, house, parcel, and departure point: not supplied here.</p>
+        </div>
+      </section>
+
+      <div class="relation">
+        <p class="state">Earned relation</p>
+        <p><strong>Mississippi comes before Texas</strong> in the affirmed residence / movement chronology.</p>
+        <p>No traveled line is preserved.</p>
+      </div>
+
+      <section class="place">
+        <div class="place-name">Fannin County, Texas</div>
+        <div class="place-body">
+          <span class="verb">lived</span><span class="verb">before Durant</span>
+          <p>Glenn names Fannin County as the place she lived before she lived at Durant.</p>
+          <p class="open">No town, dwelling, parcel, road, station, or departure point is supplied.</p>
+        </div>
+      </section>
+
+      <div class="relation">
+        <p class="state">Earned relation</p>
+        <p><strong>Fannin County comes before Durant</strong> as a source-stated prior-residence relation.</p>
+        <p>The source also broadly affirms Texas → Indian Territory. It does not preserve the route.</p>
+      </div>
+
+      <section class="place">
+        <div class="place-name">Durant, Indian Territory</div>
+        <div class="place-body">
+          <span class="verb">lived</span><span class="verb">post-office address</span>
+          <p>Glenn says she lives at Durant and has lived there between four and five years.</p>
+          <p class="open">Street, house, parcel, exact arrival date, and internal city position: not supplied.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <aside>
+    <div class="mapbox">
+      <p class="label">What the map may know</p>
+      <h2 class="map-title">Chronology can exist before route geometry.</h2>
+
+      <div class="node"><span class="dot" aria-hidden="true"></span><strong>Mississippi</strong></div>
+      <div class="edge"><em>before</em><br>route unresolved</div>
+      <div class="node"><span class="dot" aria-hidden="true"></span><strong>Fannin County, Texas</strong></div>
+      <div class="edge"><em>before</em><br>route unresolved</div>
+      <div class="node"><span class="dot" aria-hidden="true"></span><strong>Durant, Indian Territory</strong></div>
+
+      <div class="controls">
+        <button id="draw" type="button">Draw the journey anyway →</button>
+        <button id="know" type="button">Show what is actually earned →</button>
+      </div>
+
+      <div class="answer" id="answer" hidden aria-live="polite"></div>
+    </div>
+  </aside>
+</section>
+
+<section class="talkback">
+  <p class="label">The world can talk back</p>
+  <h2>Does the refusal help you see the record, or just get in your way?</h2>
+  <p>This is a disposable experiment. If the distinction between chronology and route feels clear, confusing, overly cautious, or unexpectedly useful, tell the Workshop.</p>
+  <a href="mailto:workshop@earthlyhands.org?subject=Sedge%20experiment%20%E2%80%94%20A%20place%20before%20a%20point">Write back to the Workshop →</a>
+  <p><a href="../../">Leave the experiment →</a></p>
+</section>
+</main>
+
+<footer>
+  <p class="signature">Passed through Sedge’s hands. Trust / custody mark, not ownership. Occurrences before identities; relations before geometry.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var answer=document.getElementById('answer');
+  function show(label,html){
+    answer.hidden=false;
+    answer.innerHTML='<p class="state">'+label+'</p>'+html;
+    answer.scrollIntoView({block:'nearest',behavior:'smooth'});
+  }
+  document.getElementById('draw').addEventListener('click',function(){
+    show('Refusal','<p><strong>No traveled line is earned here.</strong></p><p>The examination gives an order of residence and broad movement between named states / territory. It does not give the road, rail line, river crossing, intermediate stop, departure point, arrival point, or exact dates needed to turn that chronology into a journey line.</p>');
+  });
+  document.getElementById('know').addEventListener('click',function(){
+    show('Map state','<p><strong>Three place occurrences. Two before-relations. Zero route geometry.</strong></p><p>That is not an incomplete map. It is the full map this source can presently support.</p>');
+  });
+})();
+</script>
+</body>
+</html>
