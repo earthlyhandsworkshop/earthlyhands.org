@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=threshold-v10" />
+    <link rel="stylesheet" href="style.css?v=threshold-v11" />
   </head>
   <body data-lamp="unlit">
     <a class="skip-link" href="#threshold" data-home>Skip to the threshold</a>
@@ -60,7 +60,12 @@
 
     <main>
       <section class="threshold passage is-current" id="threshold" data-scene data-place="Front edge" tabindex="-1">
-        <div class="experience-stage" id="experience-stage" data-direction="forward">
+        <div class="experience-shell" id="experience-shell">
+          <button class="experience-collapse" id="experience-collapse" type="button" aria-expanded="true" aria-controls="experience-stage">
+            <span class="door-mark" aria-hidden="true">⌃</span>
+            <span class="experience-collapse-label">Collapse experience</span>
+          </button>
+          <div class="experience-stage" id="experience-stage" data-direction="forward">
           <div class="threshold-intro" id="threshold-intro">
           <p class="eyebrow">Earthly Hands Workshop</p>
           <h1>Things worth looking at closely.</h1>
@@ -80,6 +85,7 @@
           </div>
 
           <div class="experience-mount" id="experience-mount" aria-live="polite" hidden></div>
+          </div>
         </div>
 
         <nav class="specimen-index" aria-label="Working specimens">
@@ -426,7 +432,7 @@
     </main>
 
     <footer>
-      <p>Earthly Hands</p>
+      <p class="trust-mark">Earthly Hands Workshop · carried in common</p>
       <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Talk with the ground" hidden>
         <div class="ground-talk-inner">
           <div class="ground-talk-head">
@@ -449,13 +455,13 @@
           </div>
         </div>
       </section>
-      <a href="#threshold" data-home>Return to the threshold</a>
+      <a class="footer-threshold" href="#threshold" data-home>Return to threshold</a>
     </footer>
 
     <noscript>
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="config.js?v=threshold-v5"></script>
-    <script src="script.js?v=threshold-v8"></script>
+    <script src="script.js?v=threshold-v9"></script>
   </body>
 </html>
