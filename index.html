@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=threshold-v11" />
+    <link rel="stylesheet" href="style.css?v=threshold-v12" />
   </head>
   <body data-lamp="unlit">
     <a class="skip-link" href="#threshold" data-home>Skip to the threshold</a>
@@ -61,10 +61,6 @@
     <main>
       <section class="threshold passage is-current" id="threshold" data-scene data-place="Front edge" tabindex="-1">
         <div class="experience-shell" id="experience-shell">
-          <button class="experience-collapse" id="experience-collapse" type="button" aria-expanded="true" aria-controls="experience-stage">
-            <span class="door-mark" aria-hidden="true">⌃</span>
-            <span class="experience-collapse-label">Collapse experience</span>
-          </button>
           <div class="experience-stage" id="experience-stage" data-direction="forward">
           <div class="threshold-intro" id="threshold-intro">
           <p class="eyebrow">Earthly Hands Workshop</p>
@@ -73,8 +69,8 @@
             You are standing at the front edge of a working historical workshop. The trail and the
             specimens below are different attempts to make source, relation, uncertainty, and
             administrative machinery inspectable without pretending the work is finished.
-          </p>
-  
+          </p>          </div>
+
           <div class="threshold-lantern">
             <button class="door lamp-control" id="lamp-control" type="button" aria-pressed="false">
               <span class="door-mark" aria-hidden="true">&gt;</span>
@@ -82,10 +78,31 @@
             </button>
             <span>for the live Dawson passage</span>
           </div>
-          </div>
 
           <div class="experience-mount" id="experience-mount" aria-live="polite" hidden></div>
           </div>
+          <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Talk with the ground" hidden>
+            <div class="ground-talk-inner">
+              <div class="ground-talk-head">
+                <div>
+                  <p class="ground-talk-kicker">Listening ground</p>
+                  <p class="ground-talk-place" id="ground-talk-place">Front edge</p>
+                </div>
+                <button class="talk-toggle" id="talk-toggle" type="button" aria-expanded="false" aria-controls="talk-body">
+                  Ask the ground
+                </button>
+              </div>
+              <div class="talk-body" id="talk-body" hidden>
+                <div class="talk-log" id="talk-log" aria-live="polite"></div>
+                <form class="talk-form" id="talk-form">
+                  <label class="sr-only" for="talk-input">Ask about where you are or what the source carries</label>
+                  <textarea id="talk-input" name="message" rows="2" maxlength="600" placeholder="Ask about where you are or what the source carries…"></textarea>
+                  <button type="submit">Send</button>
+                </form>
+                <p class="talk-note">The ground answers from this public Dawson footing. It does not enter the private workshop.</p>
+              </div>
+            </div>
+          </section>
         </div>
 
         <nav class="specimen-index" aria-label="Working specimens">
@@ -433,28 +450,6 @@
 
     <footer>
       <p class="trust-mark">Earthly Hands Workshop · carried in common</p>
-      <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Talk with the ground" hidden>
-        <div class="ground-talk-inner">
-          <div class="ground-talk-head">
-            <div>
-              <p class="ground-talk-kicker">Listening ground</p>
-              <p class="ground-talk-place" id="ground-talk-place">Front edge</p>
-            </div>
-            <button class="talk-toggle" id="talk-toggle" type="button" aria-expanded="false" aria-controls="talk-body">
-              Ask the ground
-            </button>
-          </div>
-          <div class="talk-body" id="talk-body" hidden>
-            <div class="talk-log" id="talk-log" aria-live="polite"></div>
-            <form class="talk-form" id="talk-form">
-              <label class="sr-only" for="talk-input">Ask about where you are or what the source carries</label>
-              <textarea id="talk-input" name="message" rows="2" maxlength="600" placeholder="Ask about where you are or what the source carries…"></textarea>
-              <button type="submit">Send</button>
-            </form>
-            <p class="talk-note">The ground answers from this public Dawson footing. It does not enter the private workshop.</p>
-          </div>
-        </div>
-      </section>
       <a class="footer-threshold" href="#threshold" data-home>Return to threshold</a>
     </footer>
 
@@ -462,6 +457,6 @@
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="config.js?v=threshold-v5"></script>
-    <script src="script.js?v=threshold-v9"></script>
+    <script src="script.js?v=threshold-v10"></script>
   </body>
 </html>
