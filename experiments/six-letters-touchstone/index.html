@@ -16,32 +16,20 @@
   html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     background: var(--paper);
     color: var(--ink);
-    overflow: hidden;
   }
   body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: 'Special Elite', monospace;
   }
-  @media (prefers-reduced-motion: no-preference) {
-    .letter { transition: opacity 0.15s ease; }
-  }
-  .stage {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6vh 6vw;
-  }
-  .letter {
+  .doc {
     max-width: 30em;
     width: 100%;
+    margin: 0 auto;
+    padding: 8vh 6vw 4vh 6vw;
+    border-bottom: 1px solid var(--stamp);
   }
+  .doc:last-of-type { border-bottom: none; }
   .letterhead {
     font-family: 'Inter', sans-serif;
     font-size: 0.7rem;
@@ -50,33 +38,87 @@
     margin-bottom: 1.5em;
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
-  .date-stamp {
-    color: var(--red);
-  }
+  .date-stamp { color: var(--red); }
   .letter-body {
     font-size: 1.05rem;
     line-height: 1.75;
     max-width: 38ch;
     margin: 0 auto;
   }
-  .letter-body p {
-    margin: 0 0 1.2em 0;
-  }
-  .recipient {
-    font-style: normal;
-    margin-bottom: 1.5em;
-  }
-  .sig {
-    margin-top: 2em;
-  }
+  .letter-body p { margin: 0 0 1.2em 0; }
+  .recipient { margin-bottom: 1.5em; }
+  .sig { margin-top: 2em; }
   .cold-rule {
     border: none;
     border-top: 1px solid var(--ink);
     width: 100%;
     margin: 2em 0;
   }
+  .closing {
+    max-width: 32ch;
+    margin: 8vh auto 4vh auto;
+    padding: 0 6vw;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .return-link {
+    display: inline-block;
+    margin-top: 1.5em;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--stamp);
+    text-decoration: none;
+    border-bottom: 1px solid var(--stamp);
+  }
+  .return-link:hover, .return-link:focus-visible {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .attribution {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: var(--stamp);
+    text-align: center;
+    padding: 3vh 6vw 6vh 6vw;
+  }
+
+  /* Progressive-enhancement layer: once JS confirms it can run,
+     the page switches from "all documents visible, scroll through"
+     to "one at a time, click through." No-JS visitors keep the
+     full static version above. */
+  body.js-sequenced .doc {
+    display: none;
+    border-bottom: none;
+    min-height: 100vh;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  body.js-sequenced .doc.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body.js-sequenced .closing,
+  body.js-sequenced .attribution {
+    display: none;
+  }
+  body.js-sequenced .closing.active,
+  body.js-sequenced .attribution.active {
+    display: block;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    body.js-sequenced .doc.active { transition: opacity 0.15s ease; }
+  }
   .next {
+    display: none;
+  }
+  body.js-sequenced .next {
+    display: block;
     position: fixed;
     bottom: 6vh;
     left: 50%;
@@ -89,159 +131,189 @@
     cursor: pointer;
     padding: 1em 2em;
   }
-  .next:focus-visible {
-    outline: 2px solid var(--ink);
-    outline-offset: 2px;
-  }
-  .next.quiet {
-    opacity: 0.5;
-    font-size: 0.75rem;
-  }
-  .closing-line {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    max-width: 32ch;
-    text-align: center;
-    color: var(--ink);
-  }
-  .return-link {
-    display: inline-block;
-    margin-top: 2em;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.85rem;
-    color: var(--stamp);
-    text-decoration: none;
-    border-bottom: 1px solid var(--stamp);
-  }
-  .return-link:hover, .return-link:focus-visible {
-    color: var(--ink);
-    border-color: var(--ink);
-  }
-  .tap-zone {
-    position: absolute;
+  .next.quiet { opacity: 0.5; font-size: 0.75rem; }
+  .next:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .tap-zone { display: none; }
+  body.js-sequenced .tap-zone {
+    display: block;
+    position: fixed;
     inset: 0;
     cursor: pointer;
+    z-index: 0;
+  }
+  body.js-sequenced .doc, body.js-sequenced .closing { position: relative; z-index: 1; }
+  .pause-screen { display: none; }
+  body.js-sequenced .pause-screen.active {
+    display: block;
+    min-height: 100vh;
   }
   @media (max-width: 600px) {
     .letter-body { font-size: 1rem; }
-    .stage { padding: 4vh 8vw; }
   }
 </style>
 </head>
 <body>
 
-<div class="stage" id="stage"></div>
+<article class="doc" data-index="0">
+  <div class="letterhead">
+    <span>COMMISSION TO THE FIVE CIVILIZED TRIBES</span>
+    <span class="date-stamp">APR. 15, 1902</span>
+  </div>
+  <div class="letter-body">
+    <p class="recipient">William D. Bell, Durant, I.T.</p>
+    <p>You are hereby advised that the Commission to the Five Civilized Tribes, after due consideration, has this day rendered its decision refusing the applications of William D. Bell, et al., for identification as Mississippi Choctaws.</p>
+    <p>Very respectfully,</p>
+    <p class="sig">T. B. Needles<br>Commissioner in Charge</p>
+  </div>
+</article>
+
+<article class="doc" data-index="1">
+  <div class="letterhead">
+    <span>COMMISSION TO THE FIVE CIVILIZED TRIBES</span>
+    <span class="date-stamp">APR. 15, 1902</span>
+  </div>
+  <div class="letter-body">
+    <p class="recipient">Elizabeth D. Bell, Durant, I.T.</p>
+    <p>You are hereby advised that the Commission to the Five Civilized Tribes, after due consideration, has this day rendered its decision refusing the applications of William D. Bell, et al., for identification as Mississippi Choctaws.</p>
+    <p>Very respectfully,</p>
+    <p class="sig">T. B. Needles<br>Commissioner in Charge</p>
+  </div>
+</article>
+
+<article class="doc" data-index="2">
+  <div class="letterhead">
+    <span>COMMISSION TO THE FIVE CIVILIZED TRIBES</span>
+    <span class="date-stamp">APR. 15, 1902</span>
+  </div>
+  <div class="letter-body">
+    <p class="recipient">Horton &amp; Johnson, Attorneys, Muskogee, I.T.</p>
+    <p>You are hereby advised that the Commission to the Five Civilized Tribes, after due consideration, has this day rendered its decision refusing the applications of William D. Bell, et al., for identification as Mississippi Choctaws.</p>
+    <p>Very respectfully,</p>
+    <p class="sig">T. B. Needles<br>Commissioner in Charge</p>
+  </div>
+</article>
+
+<article class="doc" data-index="3">
+  <div class="letterhead">
+    <span>COMMISSION TO THE FIVE CIVILIZED TRIBES</span>
+    <span class="date-stamp">APR. 15, 1902</span>
+  </div>
+  <div class="letter-body">
+    <p class="recipient">B. S. Johnson, Attorney, Tocopola, Miss.</p>
+    <p>You are hereby advised that the Commission to the Five Civilized Tribes, after due consideration, has this day rendered its decision refusing the applications of William D. Bell, et al., for identification as Mississippi Choctaws.</p>
+    <p>Very respectfully,</p>
+    <p class="sig">T. B. Needles<br>Commissioner in Charge</p>
+  </div>
+</article>
+
+<article class="doc" data-index="4">
+  <div class="letterhead">
+    <span>COMMISSION TO THE FIVE CIVILIZED TRIBES</span>
+    <span class="date-stamp">APR. 15, 1902</span>
+  </div>
+  <div class="letter-body">
+    <p class="recipient">Office of Indian Affairs, Washington, D.C.</p>
+    <p>You are hereby advised that the Commission to the Five Civilized Tribes, after due consideration, has this day rendered its decision refusing the applications of William D. Bell, et al., for identification as Mississippi Choctaws.</p>
+    <p>Very respectfully,</p>
+    <p class="sig">T. B. Needles<br>Commissioner in Charge</p>
+  </div>
+</article>
+
+<article class="doc" data-index="5">
+  <div class="letterhead">
+    <span>COMMISSION TO THE FIVE CIVILIZED TRIBES</span>
+    <span class="date-stamp">APR. 15, 1902</span>
+  </div>
+  <div class="letter-body">
+    <p class="recipient">Attorneys for the Choctaw and Chickasaw Nations</p>
+    <p>You are hereby advised that the Commission to the Five Civilized Tribes, after due consideration, has this day rendered its decision refusing the applications of William D. Bell, et al., for identification as Mississippi Choctaws.</p>
+    <p>Very respectfully,</p>
+    <p class="sig">T. B. Needles<br>Commissioner in Charge</p>
+  </div>
+</article>
+
+<div class="pause-screen" data-index="6"></div>
+
+<article class="doc" data-index="7">
+  <div class="letterhead">
+    <span>OFFICE OF INDIAN AFFAIRS</span>
+    <span class="date-stamp">MAR. 4, 1907</span>
+  </div>
+  <hr class="cold-rule">
+  <div class="letter-body">
+    <p>In reply to the motion filed by you February 28, 1907, for a rehearing in the Mississippi Choctaw case of William D. Bell, et al., you are advised that the same is hereby denied.</p>
+    <p>The record in this case is not transmitted to the Department, for the reason that it is not considered that it will be needed in passing on the motion.</p>
+    <p class="sig">Very respectfully,<br>Commissioner</p>
+  </div>
+  <hr class="cold-rule">
+</article>
+
+<div class="closing" data-index="8">
+  <p>&ldquo;The record is not transmitted&mdash;for the reason that it is not considered that it will be needed.&rdquo;</p>
+  <a class="return-link" href="https://earthlyhands.org/">Return to the workshop</a>
+</div>
+
+<div class="attribution" data-index="8">
+  Source: MCR 879, Commission to the Five Civilized Tribes, 1902&ndash;1907. Every word above is quoted or closely paraphrased from the actual case record. &mdash; Touchstone, Earthly Hands Workshop
+</div>
 
 <script>
-const letters = [
-  {
-    recipient: "William D. Bell, Durant, I.T.",
-    date: "APR. 15, 1902"
-  },
-  {
-    recipient: "Elizabeth D. Bell, Durant, I.T.",
-    date: "APR. 15, 1902"
-  },
-  {
-    recipient: "Horton &amp; Johnson, Attorneys, Muskogee, I.T.",
-    date: "APR. 15, 1902"
-  },
-  {
-    recipient: "B. S. Johnson, Attorney, Tocopola, Miss.",
-    date: "APR. 15, 1902"
-  },
-  {
-    recipient: "Office of Indian Affairs, Washington, D.C.",
-    date: "APR. 15, 1902"
-  },
-  {
-    recipient: "Attorneys for the Choctaw and Chickasaw Nations",
-    date: "APR. 15, 1902"
-  }
-];
+// If JavaScript can run, switch to the sequenced, one-at-a-time
+// presentation. If it can't, everything above remains fully
+// visible and readable as ordinary static HTML.
+document.body.classList.add('js-sequenced');
 
-const rejectionBody = `<p>You are hereby advised that the Commission to the Five Civilized Tribes, after due consideration, has this day rendered its decision refusing the applications of William D. Bell, et al., for identification as Mississippi Choctaws.</p>
-<p>Very respectfully,</p>`;
+const docs = Array.from(document.querySelectorAll('.doc, .pause-screen'));
+const closing = document.querySelector('.closing');
+const attribution = document.querySelector('.attribution');
+let index = 0;
 
-let index = 0; // 0-5 = the six letters, 6 = the pause, 7 = the 1907 letter, 8 = closing
+function showIndex(i) {
+  docs.forEach(d => d.classList.remove('active'));
+  closing.classList.remove('active');
+  attribution.classList.remove('active');
 
-function render() {
-  const stage = document.getElementById('stage');
-  stage.innerHTML = '';
+  removeControls();
 
-  if (index < 6) {
-    const l = letters[index];
-    const wrap = document.createElement('div');
-    wrap.className = 'letter';
-    wrap.innerHTML = `
-      <div class="letterhead">
-        <span>COMMISSION TO THE FIVE CIVILIZED TRIBES</span>
-        <span class="date-stamp">${l.date}</span>
-      </div>
-      <div class="letter-body">
-        <p class="recipient">${l.recipient}</p>
-        ${rejectionBody}
-        <p class="sig">T. B. Needles<br>Commissioner in Charge</p>
-      </div>
-    `;
-    stage.appendChild(wrap);
-    addAdvance(stage, 150);
-
-  } else if (index === 6) {
-    stage.style.background = 'var(--paper)';
-    addAdvance(stage, 3000);
-
-  } else if (index === 7) {
-    const wrap = document.createElement('div');
-    wrap.className = 'letter';
-    wrap.innerHTML = `
-      <div class="letterhead">
-        <span>OFFICE OF INDIAN AFFAIRS</span>
-        <span class="date-stamp">MAR. 4, 1907</span>
-      </div>
-      <hr class="cold-rule">
-      <div class="letter-body">
-        <p>In reply to the motion filed by you February 28, 1907, for a rehearing in the Mississippi Choctaw case of William D. Bell, et al., you are advised that the same is hereby denied.</p>
-        <p>The record in this case is not transmitted to the Department, for the reason that it is not considered that it will be needed in passing on the motion.</p>
-        <p class="sig">Very respectfully,<br>Commissioner</p>
-      </div>
-      <hr class="cold-rule">
-    `;
-    stage.appendChild(wrap);
-    addAdvance(stage, 300, true);
-
+  if (i < 7 && i !== 6) {
+    docs[i].classList.add('active');
+    addControls(i === 6 ? 3000 : 150, false);
+  } else if (i === 6) {
+    docs[6].classList.add('active');
+    addControls(3000, false);
+  } else if (i === 7) {
+    docs[7].classList.add('active');
+    addControls(300, true);
   } else {
-    const wrap = document.createElement('div');
-    wrap.className = 'closing-line';
-    wrap.innerHTML = `
-      <p>&ldquo;The record is not transmitted&mdash;for the reason that it is not considered that it will be needed.&rdquo;</p>
-      <a class="return-link" href="https://earthlyhands.org/">Return to the workshop</a>
-    `;
-    stage.appendChild(wrap);
+    closing.classList.add('active');
+    attribution.classList.add('active');
   }
 }
 
-function addAdvance(stage, delay, quiet) {
+function removeControls() {
+  document.querySelectorAll('.tap-zone, .next').forEach(el => el.remove());
+}
+
+function addControls(delay, quiet) {
   setTimeout(() => {
-    if (index < 8) {
-      const tap = document.createElement('div');
-      tap.className = 'tap-zone';
-      tap.addEventListener('click', advance);
-      stage.appendChild(tap);
-      const btn = document.createElement('button');
-      btn.className = quiet ? 'next quiet' : 'next';
-      btn.textContent = quiet ? 'continue' : 'next \u2192';
-      btn.addEventListener('click', (e) => { e.stopPropagation(); advance(); });
-      stage.appendChild(btn);
-    }
+    if (index >= 8) return;
+    const tap = document.createElement('div');
+    tap.className = 'tap-zone';
+    tap.addEventListener('click', advance);
+    document.body.appendChild(tap);
+
+    const btn = document.createElement('button');
+    btn.className = quiet ? 'next quiet' : 'next';
+    btn.textContent = quiet ? 'continue' : 'next \u2192';
+    btn.addEventListener('click', (e) => { e.stopPropagation(); advance(); });
+    document.body.appendChild(btn);
   }, delay);
 }
 
 function advance() {
   if (index < 8) {
     index++;
-    render();
+    showIndex(index);
   }
 }
 
@@ -249,7 +321,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Enter' || e.key === ' ') advance();
 });
 
-render();
+showIndex(0);
 </script>
 
 </body>
