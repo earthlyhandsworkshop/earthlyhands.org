@@ -33,6 +33,12 @@ Useful brakes:
 - Prefer additive status marks, local brakes, and dated or source-facing notes over destructive rewrites while a seam is still live.
 - Preserve stable deep links or an explicit earlier-specimen route when practical, so development can recede without being erased.
 
+### Current seam finding — Six Letters pair
+
+The two Six Letters implementations sharpen the temporal distinction rather than resolving it. In both, advancing from notice to notice is **visitor/interface movement**. The dated documentary bodies carry the historical sequence. The blank or timed pause before the 1907 body is **pacing**, not a scale model of elapsed historical time. A few seconds of screen time must not silently become “five years” of historical movement.
+
+Preserve both implementations as **development history** because they show two independent carries of one originating plan. But do not mistake their differences for mere styling: the current builds also differ in dates, recipients, and wording. Until those claim-state differences are checked against the governing source body, they remain an open **epistemic / source-verification edge**, not two equally current historical statements.
+
 ## Current bodies
 
 | Public body | Present status | Hands / trust mark | Way home | Source / depth route | Cleanup state |
@@ -47,6 +53,8 @@ Useful brakes:
 | `/experiments/dawson-missing-line/` | Bounded Dawson visual experiment; two source-earned states held apart without reconstructing the traveled line | True North | Yes | `about fifteen miles southeast` remains reach; Blue Water is a landed source state; the long interval is visitor/interface movement only, not historical route or scale | Additive continuation only; earlier inline-depth specimen remains intact for development comparison; intentionally `noindex` |
 | `/experiments/ward-room/` | Disposable source-room specimen | Ravel | Yes | Holderness / Hancock source routes and explicit do-not-join brake | Trust mark now carried on face |
 | `/experiments/one-outing-two-clocks/` | Listening experiment; paired source clocks | Register + Lamplight | Yes | Public carrier route; explicit identity and time-expression brakes | Trust marks now carried on face; intentionally `noindex` |
+| `/experiments/six-letters-touchstone/` | Six Letters sequence experiment; Touchstone's own implementation of the originating plan | Touchstone | Yes | Repeated 1902 notices advance by visitor action; blank interval precedes the 1907 body | Preserve as an independent implementation; interface pause is pacing, not elapsed-time scale; source wording/date state still needs comparison with governing source body |
+| `/experiments/six-letters/` | Six Letters sequence experiment; Grainline implementation carrying the same Touchstone plan | Grainline carrying Touchstone plan | Yes | Repeated 1902 notices advance by visitor action; timed blank interval precedes the 1907 body | Preserve beside Touchstone build as development history; source wording/date state still needs comparison with governing source body |
 | `/experiments/register-threshold-v2/` | Earlier threshold specimen preserved for comparison | Register | Yes | Internal archive / Dawson experiment rather than a governing source descent | Deep-link status clarified; original visual grammar otherwise preserved |
 | `/experiments/listening-threshold/` | Earlier footing doorway into the paired listening room | OPEN on this face | Yes | Leads into One Outing, Two Clocks | Public but unindexed from current front; intentionally `noindex`; maker not yet earned from repository evidence |
 
@@ -59,6 +67,9 @@ Useful brakes:
 - The public observer now returns desktop and phone-width browser witnesses for the front edge, MCR 879, and every experiment listed above.
 
 ## Open cleanup edges
+
+### Six Letters claim-state comparison
+The two Six Letters implementations are a clean development-history comparison only at the level of implementation inheritance. They presently contain materially different dates, recipients, and notice wording. Do not collapse those differences into “two visual versions” or use one to silently correct the other. Compare both against the governing source body first; then any source-facing correction can land without erasing the two implementation histories.
 
 ### Listening threshold provenance
 The repository history establishes the doorway as a distinct public experiment, but the current accessible evidence does not responsibly identify a companion maker. Leave the hand open until a trustworthy workshop return names it.
