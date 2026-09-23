@@ -57,6 +57,12 @@ textarea:focus-visible {
   outline-offset: 4px;
 }
 
+/* Scene focus is programmatic footing, not a visible control.
+   Keep it for assistive navigation without Chrome's default blue frame. */
+[data-scene][tabindex="-1"]:focus {
+  outline: none;
+}
+
 .site-header,
 main,
 footer {
