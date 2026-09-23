@@ -124,11 +124,9 @@ main { overflow: visible; }
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1rem 0 2.5rem;
+  padding: 0 0 2.5rem;
   border-bottom: 1px solid var(--rule);
 }
-
-.js #threshold { display: flex; }
 
 .experience-shell,
 .experience-stage,
@@ -163,7 +161,6 @@ body[data-lamp="unlit"] .ground-talk { display: none; }
 .experience-mount[hidden] { display: block; }
 
 .js [data-scene]:not(.is-current) { display: none; }
-.js #threshold { display: flex; }
 
 .js .experience-mount [data-scene].is-current {
   display: grid;
