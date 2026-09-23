@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Six Letters — Earthly Hands</title>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f3f1ea;
+    --ink: #2b2620;
+    --stamp: #8a8272;
+    --red: #c94f3d;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: var(--paper);
+    color: var(--ink);
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Special Elite', monospace;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .letter { transition: opacity 0.15s ease; }
+  }
+  .stage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6vh 6vw;
+  }
+  .letter {
+    max-width: 30em;
+    width: 100%;
+  }
+  .letterhead {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    color: var(--stamp);
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .date-stamp {
+    color: var(--red);
+  }
+  .letter-body {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    max-width: 38ch;
+    margin: 0 auto;
+  }
+  .letter-body p {
+    margin: 0 0 1.2em 0;
+  }
+  .recipient {
+    font-style: normal;
+    margin-bottom: 1.5em;
+  }
+  .sig {
+    margin-top: 2em;
+  }
+  .cold-rule {
+    border: none;
+    border-top: 1px solid var(--ink);
+    width: 100%;
+    margin: 2em 0;
+  }
+  .next {
+    position: fixed;
+    bottom: 6vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--stamp);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1em 2em;
+  }
+  .next:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+  }
+  .next.quiet {
+    opacity: 0.5;
+    font-size: 0.75rem;
+  }
+  .closing-line {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 32ch;
+    text-align: center;
+    color: var(--ink);
+  }
+  .return-link {
+    display: inline-block;
+    margin-top: 2em;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--stamp);
+    text-decoration: none;
+    border-bottom: 1px solid var(--stamp);
+  }
+  .return-link:hover, .return-link:focus-visible {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .tap-zone {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+  }
+  @media (max-width: 600px) {
+    .letter-body { font-size: 1rem; }
+    .stage { padding: 4vh 8vw; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage" id="stage"></div>
+
+<script>
+const letters = [
+  {
+    recipient: "William D. Bell, Durant, I.T.",
+    date: "APR. 15, 1902"
+  },
+  {
+    recipient: "Elizabeth D. Bell, Durant, I.T.",
+    date: "APR. 15, 1902"
+  },
+  {
+    recipient: "Horton &amp; Johnson, Attorneys, Muskogee, I.T.",
+    date: "APR. 15, 1902"
+  },
+  {
+    recipient: "B. S. Johnson, Attorney, Tocopola, Miss.",
+    date: "APR. 15, 1902"
+  },
+  {
+    recipient: "Office of Indian Affairs, Washington, D.C.",
+    date: "APR. 15, 1902"
+  },
+  {
+    recipient: "Attorneys for the Choctaw and Chickasaw Nations",
+    date: "APR. 15, 1902"
+  }
+];
+
+const rejectionBody = `<p>You are hereby advised that the Commission to the Five Civilized Tribes, after due consideration, has this day rendered its decision refusing the applications of William D. Bell, et al., for identification as Mississippi Choctaws.</p>
+<p>Very respectfully,</p>`;
+
+let index = 0; // 0-5 = the six letters, 6 = the pause, 7 = the 1907 letter, 8 = closing
+
+function render() {
+  const stage = document.getElementById('stage');
+  stage.innerHTML = '';
+
+  if (index < 6) {
+    const l = letters[index];
+    const wrap = document.createElement('div');
+    wrap.className = 'letter';
+    wrap.innerHTML = `
+      <div class="letterhead">
+        <span>COMMISSION TO THE FIVE CIVILIZED TRIBES</span>
+        <span class="date-stamp">${l.date}</span>
+      </div>
+      <div class="letter-body">
+        <p class="recipient">${l.recipient}</p>
+        ${rejectionBody}
+        <p class="sig">T. B. Needles<br>Commissioner in Charge</p>
+      </div>
+    `;
+    stage.appendChild(wrap);
+    addAdvance(stage, 150);
+
+  } else if (index === 6) {
+    stage.style.background = 'var(--paper)';
+    addAdvance(stage, 3000);
+
+  } else if (index === 7) {
+    const wrap = document.createElement('div');
+    wrap.className = 'letter';
+    wrap.innerHTML = `
+      <div class="letterhead">
+        <span>OFFICE OF INDIAN AFFAIRS</span>
+        <span class="date-stamp">MAR. 4, 1907</span>
+      </div>
+      <hr class="cold-rule">
+      <div class="letter-body">
+        <p>In reply to the motion filed by you February 28, 1907, for a rehearing in the Mississippi Choctaw case of William D. Bell, et al., you are advised that the same is hereby denied.</p>
+        <p>The record in this case is not transmitted to the Department, for the reason that it is not considered that it will be needed in passing on the motion.</p>
+        <p class="sig">Very respectfully,<br>Commissioner</p>
+      </div>
+      <hr class="cold-rule">
+    `;
+    stage.appendChild(wrap);
+    addAdvance(stage, 300, true);
+
+  } else {
+    const wrap = document.createElement('div');
+    wrap.className = 'closing-line';
+    wrap.innerHTML = `
+      <p>&ldquo;The record is not transmitted&mdash;for the reason that it is not considered that it will be needed.&rdquo;</p>
+      <a class="return-link" href="https://earthlyhands.org/">Return to the workshop</a>
+    `;
+    stage.appendChild(wrap);
+  }
+}
+
+function addAdvance(stage, delay, quiet) {
+  setTimeout(() => {
+    if (index < 8) {
+      const tap = document.createElement('div');
+      tap.className = 'tap-zone';
+      tap.addEventListener('click', advance);
+      stage.appendChild(tap);
+      const btn = document.createElement('button');
+      btn.className = quiet ? 'next quiet' : 'next';
+      btn.textContent = quiet ? 'continue' : 'next \u2192';
+      btn.addEventListener('click', (e) => { e.stopPropagation(); advance(); });
+      stage.appendChild(btn);
+    }
+  }, delay);
+}
+
+function advance() {
+  if (index < 8) {
+    index++;
+    render();
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') advance();
+});
+
+render();
+</script>
+
+</body>
+</html>
