@@ -12,8 +12,6 @@
   const talkSend = talkForm.querySelector("button[type='submit']");
   const main = document.querySelector("main");
   const experienceShell = document.querySelector("#experience-shell");
-  const experienceCollapse = document.querySelector("#experience-collapse");
-  const experienceCollapseLabel = document.querySelector(".experience-collapse-label");
   const experienceStage = document.querySelector("#experience-stage");
   const thresholdIntro = document.querySelector("#threshold-intro");
   const experienceMount = document.querySelector("#experience-mount");
@@ -25,7 +23,6 @@
   const conversation = [];
   let currentId = "threshold";
   let asking = false;
-  let experienceCollapsed = false;
 
   function setLamp(isLit) {
     document.body.dataset.lamp = isLit ? "lit" : "unlit";
@@ -34,15 +31,6 @@
     talk.hidden = !isLit;
   }
 
-  function setExperienceCollapsed(collapsed) {
-    experienceCollapsed = collapsed;
-    if (!experienceShell || !experienceCollapse) return;
-    experienceShell.dataset.collapsed = String(collapsed);
-    experienceCollapse.setAttribute("aria-expanded", String(!collapsed));
-    experienceCollapseLabel.textContent = collapsed ? "Open experience" : "Collapse experience";
-    const mark = experienceCollapse.querySelector(".door-mark");
-    if (mark) mark.textContent = collapsed ? "⌄" : "⌃";
-  }
 
   function updatePlace(target) {
     const place = target.dataset.place || "Workshop";
@@ -194,25 +182,18 @@
     const isLit = document.body.dataset.lamp !== "lit";
 
     if (isLit) {
-      setExperienceCollapsed(false);
       setLamp(true);
-      landAt("report");
+      if (currentId === "threshold") {
+        landAt("report");
+      } else {
+        const target = document.getElementById(currentId);
+        if (target) showScene(target, "forward");
+      }
       return;
     }
 
     setLamp(false);
     closeTalk();
-    talkLog.replaceChildren();
-    conversation.length = 0;
-    currentId = "threshold";
-    forget();
-    history.pushState({ place: "threshold" }, "", "#threshold");
-    showScene(document.querySelector("#threshold"), "back");
-    setExperienceCollapsed(true);
-  });
-
-  experienceCollapse?.addEventListener("click", () => {
-    setExperienceCollapsed(!experienceCollapsed);
   });
 
   document.querySelectorAll("[data-reveal]").forEach((control) => {
@@ -287,7 +268,6 @@
   if (!fullSequence.includes(initialId)) initialId = "threshold";
   currentId = initialId;
   setLamp(initialId !== "threshold");
-  setExperienceCollapsed(false);
   history.replaceState({ place: initialId }, "", `#${initialId}`);
   showScene(document.getElementById(initialId), "forward");
 
