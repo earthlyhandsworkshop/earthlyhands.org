@@ -1146,3 +1146,154 @@ footer > a {
     transform: translateX(0);
   }
 }
+
+
+/* Shared experience shell + listening ground refinement */
+.experience-shell {
+  width: 100%;
+  margin-bottom: clamp(2.2rem, 4vw, 3.5rem);
+}
+
+.experience-collapse {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0 0 0.9rem;
+  padding: 0.25rem 0;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: var(--paper-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.experience-collapse:hover {
+  color: var(--ember-soft);
+  border-bottom-color: var(--ember);
+}
+
+.experience-shell[data-collapsed="true"] .experience-stage {
+  display: none;
+}
+
+.experience-shell[data-collapsed="true"] {
+  margin-bottom: 1.2rem;
+}
+
+footer {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: stretch;
+}
+
+footer .trust-mark,
+footer > .footer-threshold,
+.ground-talk {
+  grid-column: 1;
+}
+
+footer .trust-mark {
+  justify-self: start;
+}
+
+footer > .footer-threshold {
+  justify-self: start;
+  text-align: left;
+}
+
+.ground-talk {
+  width: 100%;
+  justify-self: stretch;
+}
+
+.ground-talk[data-open="false"] .ground-talk-inner {
+  width: 100%;
+}
+
+.ground-talk[data-open="false"] .ground-talk-head {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.35rem;
+}
+
+.ground-talk[data-open="false"] .ground-talk-head > div {
+  display: block;
+}
+
+.ground-talk[data-open="false"] .talk-toggle {
+  width: fit-content;
+  justify-self: start;
+  margin-top: 0.1rem;
+}
+
+.ground-talk-inner {
+  width: 100%;
+  max-width: none;
+}
+
+.ground-talk-head {
+  width: min(72rem, calc(100% - 12vw));
+  margin-inline: auto;
+}
+
+.ground-talk[data-open="false"] .ground-talk-head {
+  width: 100%;
+  margin-inline: 0;
+}
+
+.talk-body {
+  width: min(72rem, calc(100% - 12vw));
+  margin-inline: auto;
+}
+
+.talk-entry {
+  grid-template-columns: minmax(4.5rem, 7rem) minmax(0, 1fr);
+}
+
+.talk-form {
+  width: 100%;
+}
+
+.talk-form textarea {
+  min-width: 0;
+}
+
+@media (min-width: 58rem) {
+  footer {
+    grid-template-columns: minmax(12rem, 0.5fr) minmax(0, 1.6fr) auto;
+    column-gap: 2rem;
+    align-items: start;
+  }
+
+  footer .trust-mark {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .ground-talk {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  footer > .footer-threshold {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    text-align: right;
+  }
+
+  .ground-talk[data-open="false"] .ground-talk-head {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+
+  .ground-talk[data-open="false"] .talk-toggle {
+    justify-self: end;
+    margin-top: 0;
+  }
+}
