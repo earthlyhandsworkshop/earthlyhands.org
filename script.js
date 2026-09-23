@@ -19,7 +19,7 @@
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const steps = Array.from(document.querySelectorAll("[data-step]"));
   const sequence = ["report", "night", "morning", "southeast", "blue-water", "dozen"];
-  const fullSequence = ["threshold", ...sequence, "practice"];
+  const fullSequence = ["threshold", ...sequence];
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
   let currentId = "threshold";
