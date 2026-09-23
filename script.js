@@ -105,7 +105,12 @@
     currentId = id;
     remember(id);
 
-    if (push) history.pushState({ place: id }, "", `#${id}`);
+    if (push) {
+      const url = id === "threshold"
+        ? window.location.pathname + window.location.search
+        : `#${id}`;
+      history.pushState({ place: id }, "", url);
+    }
     requestAnimationFrame(() => showScene(target, direction));
   }
 
@@ -286,7 +291,10 @@
   if (!fullSequence.includes(initialId)) initialId = "threshold";
   currentId = initialId;
   setLamp(initialId !== "threshold");
-  history.replaceState({ place: initialId }, "", `#${initialId}`);
+  const initialUrl = initialId === "threshold"
+    ? window.location.pathname + window.location.search
+    : `#${initialId}`;
+  history.replaceState({ place: initialId }, "", initialUrl);
   showScene(document.getElementById(initialId), "forward");
 
   steps.forEach((step) => step.setAttribute("aria-live", "polite"));
