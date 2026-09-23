@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=threshold-v19" />
+    <link rel="stylesheet" href="style.css?v=threshold-v20" />
   </head>
   <body data-lamp="unlit">
     <a class="skip-link" href="#threshold" data-home>Skip to the threshold</a>
@@ -67,36 +67,34 @@
           <div class="experience-mount" id="experience-mount" aria-live="polite" hidden></div>
           </div>
 
-          <div class="threshold-lantern" id="lantern-home">
-            <button class="door lamp-control" id="lamp-control" type="button" aria-pressed="false">
-              <span class="door-mark" aria-hidden="true">&gt;</span>
-              <span class="lamp-label">Light the lantern</span>
-            </button>
-            <span class="lantern-note">for the live Dawson passage</span>
-          </div>
-
-          <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Talk with the ground" hidden>
-            <div class="ground-talk-inner">
-              <div class="ground-talk-head">
-                <div>
-                  <p class="ground-talk-kicker">Listening ground</p>
-                  <p class="ground-talk-place" id="ground-talk-place">Front edge</p>
-                </div>
-                <button class="talk-toggle" id="talk-toggle" type="button" aria-expanded="false" aria-controls="talk-body">
-                  Ask the ground
-                </button>
-              </div>
-              <div class="talk-body" id="talk-body" hidden>
-                <div class="talk-log" id="talk-log" aria-live="polite"></div>
-                <form class="talk-form" id="talk-form">
-                  <label class="sr-only" for="talk-input">Ask about where you are or what the source carries</label>
-                  <textarea id="talk-input" name="message" rows="2" maxlength="600" placeholder="Ask about where you are or what the source carries…"></textarea>
-                  <button type="submit">Send</button>
-                </form>
-                <p class="talk-note">The ground answers from this public Dawson footing. It does not enter the private workshop.</p>
-              </div>
+          <div class="experience-tools" aria-label="Experience tools">
+            <div class="threshold-lantern" id="lantern-home">
+              <button class="door lamp-control" id="lamp-control" type="button" aria-pressed="false">
+                <span class="door-mark" aria-hidden="true">&gt;</span>
+                <span class="lamp-label">Light the lantern</span>
+              </button>
+              <span class="lantern-note">for the live Dawson passage</span>
             </div>
-          </section>
+
+            <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Ask the ground" hidden>
+              <div class="ground-talk-inner">
+                <div class="ground-talk-head">
+                  <button class="talk-toggle" id="talk-toggle" type="button" aria-expanded="false" aria-controls="talk-body">
+                    Ask the ground
+                  </button>
+                </div>
+                <div class="talk-body" id="talk-body" hidden>
+                  <div class="talk-log" id="talk-log" aria-live="polite"></div>
+                  <form class="talk-form" id="talk-form">
+                    <label class="sr-only" for="talk-input">Ask about where you are or what the source carries</label>
+                    <textarea id="talk-input" name="message" rows="2" maxlength="600" placeholder="Ask about where you are or what the source carries…"></textarea>
+                    <button type="submit">Send</button>
+                  </form>
+                  <p class="talk-note">Answers stay bounded to the public Dawson footing. Asking does not move you.</p>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
 
         <div class="experiences-head">
