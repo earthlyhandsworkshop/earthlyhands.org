@@ -53,6 +53,14 @@ The later clocks also need separate depth. The 1904 affirmative-identification n
 
 This is also an **epistemic-history correction**. The prior footing that treated earlier MCR 879 Nation-counsel notice as wholly absent has faded. Preserve that earlier absence framing in revision history because it records what the Workshop then knew, but do not leave it standing as current ground. The present open edge is narrower: the 19 Apr retrospective reference and the 21 Apr returned notice are both source-visible, while their exact relation remains unresolved.
 
+### Current seam finding — shared documentary residue, different identity operators
+
+The paired-Robert comparison has narrowed from a broad shared-record reach into a landed page-level intersection. MCR 879's 1902 Commission decision and the 27 September 1904 Wash Bell consolidated decision both reach into the same printed Court of Claims carrier, and **printed pp. 207 and 223 are now the minimum source-controlled overlap**. That overlap is landed documentary work; the surrounding cited page sets remain case-local.
+
+Do not turn shared pages into movement between the cases. **Shared documentary residue is not a shared case record, and shared page occurrence is not a shared identity result.** In MCR 879 the Commission uses the older Article XIV Robert body with a **not-same** identity operator; in the 1904 Wash Bell body the Commission uses overlapping historical material with a **same** identity operator. Those are attributed administrative acts, not a Workshop person-merge or historical identity conclusion.
+
+This also sharpens the epistemic history without erasing the older work. Earlier language about a shared Murray–Vroom / Court of Claims record universe remains recoverable as the broader reach that led here, but it should fade behind the more precise current footing when the map needs an actual intersection. The development history of the paired-Robert experiments does not need to be rewritten merely because the documentary overlap is now more exact.
+
 ## Current bodies
 
 | Public body | Present status | Hands / trust mark | Way home | Source / depth route | Cleanup state |
