@@ -57,7 +57,7 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  content:"";position:absolute;z-index:1;left:var(--treaty-x);top:0;bottom:0;width:1px;
  background:rgba(233,224,207,.18)
 }
-.plan-lines{position:absolute;inset:0;pointer-events:none;opacity:.72}
+.plan-lines{position:absolute;inset:0;pointer-events:none;opacity:.58}
 .plan-lines svg{width:100%;height:100%;display:block}
 .walk{position:relative;z-index:2;width:min(90rem,calc(100% - 8vw));margin:0 auto;padding:12vh 0 18vh}
 .chamber{
@@ -97,10 +97,10 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
 }
 .ghost-room div{max-width:36rem;margin:auto}
 .ghost-label{margin:0 0 1rem;color:#8a8174;font-size:.62rem}
-.ghost-room h3{margin:0;font-size:clamp(2.4rem,5vw,5rem);font-weight:400;line-height:.9;letter-spacing:-.045em}
-.ghost-room p{margin:1.4rem auto 0;color:var(--faint);max-width:31rem}
+.ghost-room h3{margin:0;font-size:clamp(2.4rem,5vw,5rem);font-weight:400;line-height:.9;letter-spacing:-.045em;text-wrap:balance}
+.ghost-room p{margin:1.6rem auto 0;color:var(--faint);max-width:29rem;text-wrap:pretty}
 .ghost-door{
- width:7rem;height:11rem;margin:3.4rem auto 4.5rem;position:relative;
+ width:7rem;height:11rem;margin:5.6rem auto 6.8rem;position:relative;
  border-left:1px dashed rgba(233,224,207,.38);
  border-top:1px dashed rgba(233,224,207,.38);
  border-right:1px dashed rgba(233,224,207,.38);
@@ -163,7 +163,7 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
 }
 .overlay-top{display:flex;justify-content:space-between;gap:2rem;align-items:start}
 .overlay-top p{margin:0}.overlay-top .small{color:#7e563e;font-size:.58rem}
-.overlay-card h3{margin:.25rem 0 0;font-size:2rem;font-weight:400}
+.overlay-card h3{margin:.25rem 0 0;font-size:2rem;font-weight:400;text-wrap:balance}
 .overlay-close{border:0;background:none;border-bottom:1px solid #857e70;padding:.15rem 0;cursor:pointer;font:.64rem/1.3 var(--mono)}
 .overlay-body{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--line2)}
 .overlay-body p{margin:0}.overlay-body p+p{margin-top:1rem}
@@ -176,7 +176,7 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  background:rgba(233,224,207,.14)
 }
 .end>*{position:relative;z-index:1}
-.end h2{margin:0;max-width:11ch;font-size:clamp(3.6rem,8vw,8rem);font-weight:400;line-height:.86;letter-spacing:-.055em}
+.end h2{margin:0;max-width:12ch;font-size:clamp(3.2rem,6.8vw,6.8rem);font-weight:400;line-height:.9;letter-spacing:-.05em;text-wrap:balance}
 .end-copy{max-width:30rem;color:var(--faint)}.end-copy p{margin:0}.end-copy p+p{margin-top:1rem}
 .footmark{margin-top:2.4rem!important;color:rgba(233,224,207,.5);font-size:.6rem}
 @media(max-width:62rem){
@@ -193,11 +193,11 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  .chamber{min-height:auto;padding:8vh 0}.chamber+.chamber{margin-top:14vh}
  .room{min-height:68svh;padding:1.2rem}.statement{font-size:clamp(1.9rem,9vw,3rem)}
  .ghost-room{min-height:76svh;padding:1.5rem 1rem}
- .ghost-door{margin-top:3rem;margin-bottom:5.5rem}
+ .ghost-door{margin-top:5rem;margin-bottom:6.5rem}
  .room::before{left:9%;right:4%}.room::after{right:10%}
  .bridge{min-height:100svh}
  .cases{padding:5rem 1rem}.case{min-height:30rem;padding:1.2rem}
- .end{padding:5rem 1rem 7rem}.end h2{font-size:clamp(3.8rem,20vw,6rem)}
+ .end{padding:5rem 1rem 7rem}.end h2{font-size:clamp(3.4rem,17vw,5.3rem)}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
@@ -390,10 +390,10 @@ body{font-size:1.08rem}
 
     <section class="bridge">
       <div class="bridge-inner">
-        <p class="small">One bridge still missing</p>
-        <h2>MCR 879 was reviewed. The authority bridge remains unrecovered.</h2>
-        <p>The case-local path is source-controlled: Commission transmittal, Indian Affairs recommendation, Interior review and affirmance. What remains open is the contemporaneous authority or administrative construction that made that merits-review lane proper.</p>
-        <span class="unrecovered">authority not yet recovered</span>
+        <p class="small">A claimed treaty right reaches federal review</p>
+        <h2>We know the review happened. We have not yet recovered what authorized that merits review.</h2>
+        <p>MCR 879 sought recognition through Article XIV. The file shows Commission transmittal, Indian Affairs review and recommendation, and Interior review and affirmance. What remains open is the contemporaneous rule, instruction, or administrative authority that made that merits review proper.</p>
+        <span class="unrecovered">review occurred · authority not yet recovered</span>
       </div>
     </section>
   </div>
@@ -401,8 +401,8 @@ body{font-size:1.08rem}
 
 <section class="cases" aria-labelledby="cases-title">
   <div class="cases-head">
-    <p class="kicker">Two later chambers · keep apart</p>
-    <h2 id="cases-title">The same older record can be made to do different administrative work.</h2>
+    <p class="kicker">Two case chambers · keep apart</p>
+    <h2 id="cases-title">The Article XIV Robert Bell body can be made to do different administrative work.</h2>
   </div>
 
   <div class="case-grid">
@@ -411,10 +411,10 @@ body{font-size:1.08rem}
       <h3>Family Robert body</h3>
       <p class="date">Commission decision · 15 Apr. 1902 · pre-final-§41</p>
       <div class="case-copy">
-        <p>At the Office-review layer, an Article XIV patent record and older Murray–Vroom / Court of Claims material are used inside an administrative <strong>separation</strong>.</p>
+        <p>Federal reviewers compared the family Robert Bell body against the Article XIV Robert Bell body carried through government records and adjudicative material. In MCR 879, that comparison was used in an administrative <strong>separation</strong> bearing on the family's claimed Article XIV right.</p>
         <div class="gov-layer">
           <p class="small">government characterization</p>
-          <p>The patented older Robert is treated as a different man from the family Robert claimed by the applicants.</p>
+          <p>The patented Article XIV Robert is treated as a different man from the family Robert Bell described by the applicants.</p>
         </div>
       </div>
       <p class="case-link"><button type="button" data-open="mcr">Open the source-control brake</button></p>
@@ -425,10 +425,10 @@ body{font-size:1.08rem}
       <h3>Other-Robert chamber</h3>
       <p class="date">Commission decision · 27 Sep. 1904 · post-final-§41</p>
       <div class="case-copy">
-        <p>The Commission reaches back into the older Article XIV record universe and uses it inside an administrative <strong>attachment</strong>.</p>
+        <p>The Commission carries the Article XIV Robert Bell body into the Wash / Jane / Sallie proceeding and uses it in the opposite administrative direction: an identity <strong>attachment</strong>.</p>
         <div class="gov-layer">
           <p class="small">government characterization</p>
-          <p>The Commission makes an affirmative identity join between the later family-line Robert and the older favorably adjudicated Robert.</p>
+          <p>The Commission makes an affirmative identity join between the family line before it and the Article XIV Robert Bell body.</p>
         </div>
       </div>
       <p class="case-link"><button type="button" data-open="wash">Open the source-control brake</button></p>
@@ -467,7 +467,7 @@ const copy={
   body:[
    "This is a visual-historical installation, not a substitute for the source jackets or a final legal synthesis.",
    "Architectural nearness does not establish legal causation. A room may represent a later rule, an administrative practice, or a proposed but unratified design. Those states remain different.",
-   "One continuous structural member begins in the treaty chamber and survives through later rooms. It means only that the older treaty structure remains present; it is not a timeline, descent line, route, or identity join.",
+   "One continuous structural member begins in the treaty chamber and survives through later rooms. It means only that the treaty structure remains present; it is not a timeline, descent line, route, or identity join.",
    "The two Bell chambers preserve the government's identity operations as attributed government acts. The workshop does not adopt either identity conclusion."
   ]
  },
@@ -475,7 +475,7 @@ const copy={
   title:"MCR 879 · brake",
   body:[
    "The April 1902 Commission decision predates final §41. Do not back-project the July 1902 evidentiary rule into this case.",
-   "The May 1902 Indian Affairs review used an Office-held Robert Bell patent record and older Article XIV / Court of Claims material inside a two-Robert analysis.",
+   "The May 1902 Indian Affairs review used an Office-held Robert Bell patent record and Article XIV / Court of Claims material inside a two-Robert analysis.",
    "That is evidence of administrative use, not proof that the Office's identity conclusion was historically correct."
   ]
  },
