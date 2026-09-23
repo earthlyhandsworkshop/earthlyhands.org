@@ -7,7 +7,6 @@
   const talk = document.querySelector("#ground-talk");
   const talkToggle = document.querySelector("#talk-toggle");
   const talkBody = document.querySelector("#talk-body");
-  const talkPlace = document.querySelector("#ground-talk-place");
   const talkForm = document.querySelector("#talk-form");
   const talkInput = document.querySelector("#talk-input");
   const talkLog = document.querySelector("#talk-log");
@@ -33,24 +32,11 @@
     if (lanternNote) lanternNote.hidden = isLit;
     talk.hidden = !isLit;
 
-    if (!isLit && lanternHome && !lanternHome.contains(lamp)) {
-      lanternHome.prepend(lamp);
-    }
   }
-
-  function placeLanternWithActions(target) {
-    if (document.body.dataset.lamp !== "lit") return;
-    const actions = target?.querySelector(".passage-actions");
-    if (actions && !actions.contains(lamp)) {
-      actions.prepend(lamp);
-    }
-  }
-
 
   function updatePlace(target) {
     const place = target.dataset.place || "Workshop";
     where.textContent = place;
-    talkPlace.textContent = place;
   }
 
   function showScene(target, direction = "forward") {
@@ -71,7 +57,6 @@
 
     updatePlace(target);
     if (!isThreshold) {
-      placeLanternWithActions(target);
       target.focus({ preventScroll: true });
     }
   }
