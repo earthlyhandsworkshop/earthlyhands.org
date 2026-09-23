@@ -243,13 +243,15 @@
     const id = window.location.hash.slice(1);
     const target = document.getElementById(id);
     if (!target || !fullSequence.includes(id)) return;
+
+    const fromIndex = fullSequence.indexOf(currentId);
+    const toIndex = fullSequence.indexOf(id);
+    const direction = toIndex < fromIndex ? "back" : "forward";
+
     closeTalk();
     setLamp(id !== "threshold");
     currentId = id;
     remember(id);
-    const fromIndex = fullSequence.indexOf(currentId);
-    const toIndex = fullSequence.indexOf(id);
-    const direction = toIndex < fromIndex ? "back" : "forward";
     showScene(target, direction);
   });
 
