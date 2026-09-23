@@ -11,6 +11,7 @@
   const talkLog = document.querySelector("#talk-log");
   const talkSend = talkForm.querySelector("button[type='submit']");
   const main = document.querySelector("main");
+  const experienceMount = document.querySelector("#experience-mount");
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const steps = Array.from(document.querySelectorAll("[data-step]"));
   const sequence = ["report", "night", "morning", "southeast", "blue-water", "dozen"];
@@ -34,7 +35,15 @@
   }
 
   function showScene(target) {
+    const isThreshold = target.id === "threshold";
+
+    if (!isThreshold && experienceMount && !experienceMount.contains(target)) {
+      experienceMount.append(target);
+    }
+
     scenes.forEach((scene) => scene.classList.toggle("is-current", scene === target));
+    if (experienceMount) experienceMount.hidden = isThreshold;
+
     updatePlace(target);
     target.focus({ preventScroll: true });
     main.scrollTop = 0;
