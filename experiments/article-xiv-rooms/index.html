@@ -168,6 +168,69 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  .end{padding:5rem 1rem 7rem}.end h2{font-size:clamp(3.8rem,20vw,6rem)}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Legibility pass — phone reading must work without zoom or glasses.
+   Monumental display type stays monumental; informational type gets a real floor. */
+body{font-size:1.08rem}
+.utility{font-size:.76rem;line-height:1.4}
+.kicker{font-size:.82rem;line-height:1.45}
+.enter{font-size:.78rem;line-height:1.4}
+.room-tag{font-size:.78rem;line-height:1.4}
+.room-index p{font-size:1.05rem;line-height:1.55}
+.label{font-size:.78rem;line-height:1.45}
+.note{font-size:1.05rem;line-height:1.58}
+.token{font-size:.76rem;line-height:1.35}
+.ghost-label{font-size:.78rem;line-height:1.4}
+.ghost-room p{font-size:1.05rem;line-height:1.58}
+.bridge .small{font-size:.78rem;line-height:1.4}
+.bridge p{font-size:1.05rem;line-height:1.58}
+.unrecovered{font-size:.76rem;line-height:1.35}
+.case-label{font-size:.78rem;line-height:1.4}
+.case .date{font-size:.8rem;line-height:1.5}
+.case-copy{font-size:1.05rem;line-height:1.58}
+.gov-layer .small{font-size:.74rem;line-height:1.4}
+.gov-layer p{font-size:1.02rem;line-height:1.55}
+.case.unjoined::after{font-size:.68rem;line-height:1.35}
+.case-link button{font-size:.8rem;line-height:1.45;padding:.35rem 0}
+.overlay-top .small{font-size:.74rem;line-height:1.4}
+.overlay-close{font-size:.78rem;line-height:1.4;padding:.3rem 0}
+.overlay-body{font-size:1.06rem;line-height:1.6}
+.end-copy{font-size:1.05rem;line-height:1.58}
+.footmark{font-size:.72rem;line-height:1.45}
+
+@media(max-width:40rem){
+  body{font-size:1.18rem;line-height:1.62}
+  .utility{font-size:.8rem;line-height:1.4}
+  .utility{padding:.95rem 1rem}
+  .kicker{font-size:.84rem}
+  .hero-copy{font-size:1.15rem;line-height:1.62}
+  .hero-copy .lead{font-size:clamp(1.55rem,7vw,2.05rem);line-height:1.28}
+  .enter{font-size:.84rem;padding:.35rem 0}
+  .room-tag{font-size:.82rem}
+  .room-index p{font-size:1.15rem;line-height:1.62}
+  .label{font-size:.82rem}
+  .note{font-size:1.14rem;line-height:1.65}
+  .token{font-size:.8rem;line-height:1.4}
+  .ghost-label{font-size:.82rem}
+  .ghost-room p{font-size:1.14rem;line-height:1.65}
+  .bridge .small{font-size:.82rem}
+  .bridge p{font-size:1.14rem;line-height:1.65}
+  .unrecovered{font-size:.8rem;line-height:1.4}
+  .case-label{font-size:.82rem}
+  .case .date{font-size:.86rem;line-height:1.5}
+  .case-copy{font-size:1.15rem;line-height:1.62}
+  .gov-layer .small{font-size:.78rem}
+  .gov-layer p{font-size:1.1rem;line-height:1.6}
+  .case.unjoined::after{font-size:.72rem}
+  .case-link button{font-size:.86rem;line-height:1.45;padding:.45rem 0}
+  .overlay-card{padding:1.35rem}
+  .overlay-top .small{font-size:.78rem}
+  .overlay-close{font-size:.84rem}
+  .overlay-body{font-size:1.15rem;line-height:1.65}
+  .end-copy{font-size:1.15rem;line-height:1.62}
+  .footmark{font-size:.76rem;line-height:1.5}
+}
+
 </style>
 </head>
 <body>
