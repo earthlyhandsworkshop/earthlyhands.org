@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171713">
+<meta name="description" content="An Earthly Hands / Sedge experiment in making documentary proposition-testing playable without letting the interface know for the visitor.">
+<title>The machine does not know for you — Sedge experiment</title>
+<style>
+:root{
+  --night:#171713;--night2:#202019;--paper:#eee7d9;--paper2:#f5f0e7;--ink:#211f1b;
+  --ash:#a9a294;--line:#3b3932;--paperline:#b9af9e;--copper:#b4774f;--green:#73806b;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--night);color:var(--paper);-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100svh;font:1.12rem/1.55 var(--serif)}
+a,button,input,select{font:inherit}
+a{color:inherit;text-underline-offset:.2em}
+button{color:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+.site-header{
+  display:flex;justify-content:space-between;gap:1rem;padding:1rem clamp(1rem,4vw,3rem);
+  border-bottom:1px solid var(--line);font:.72rem/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ash)
+}
+.site-header a{text-decoration:none;color:var(--paper)}
+main{width:min(94rem,100%);margin:auto}
+.opening{
+  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(19rem,.9fr);gap:clamp(2rem,7vw,8rem);
+  padding:clamp(4rem,10vw,9rem) clamp(1rem,4vw,4rem) clamp(3rem,7vw,7rem);
+}
+.eyebrow,.label,.state,.source-tag,.counter,.slot label,.machine-kicker{
+  font-family:var(--mono);letter-spacing:.075em;text-transform:uppercase
+}
+.eyebrow{margin:0 0 .8rem;color:var(--copper);font-size:.72rem}
+h1{max-width:10ch;margin:0;font-size:clamp(3.5rem,8vw,8rem);font-weight:400;line-height:.86;letter-spacing:-.055em}
+.opening-copy{align-self:end;max-width:38rem}
+.opening-copy p{margin:.7rem 0;font-size:clamp(1.1rem,2vw,1.35rem)}
+.opening-copy .small{margin-top:1.3rem;color:var(--ash);font-size:.96rem}
+.game{
+  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(20rem,.9fr);
+  min-height:78svh;border-top:1px solid var(--line)
+}
+.archive{padding:clamp(2rem,5vw,4rem);border-right:1px solid var(--line)}
+.workbench{position:sticky;top:0;min-height:100svh;padding:clamp(2rem,5vw,4rem);background:var(--paper);color:var(--ink)}
+.archive-head,.bench-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:2rem}
+.archive-head h2,.bench-head h2{margin:0;font-size:clamp(2rem,4vw,4rem);font-weight:400;line-height:.95;letter-spacing:-.04em}
+.counter{color:var(--ash);font-size:.68rem;white-space:nowrap}
+.search{margin-bottom:2rem}
+.search label{display:block;margin-bottom:.45rem;color:var(--ash);font:.68rem/1.4 var(--mono);letter-spacing:.075em;text-transform:uppercase}
+.search input{
+  width:100%;padding:.85rem 0;border:0;border-bottom:1px solid var(--ash);border-radius:0;
+  background:transparent;color:var(--paper);font-size:1.25rem
+}
+.search input::placeholder{color:#777164}
+.cards{display:grid;gap:1rem}
+.card{padding:1.25rem;border:1px solid var(--line);background:var(--night2)}
+.card[hidden]{display:none}
+.source-tag{margin:0 0 .8rem;color:var(--copper);font-size:.68rem}
+.card h3{margin:0 0 .75rem;font-size:1.55rem;font-weight:400;line-height:1.05}
+.card p{margin:.45rem 0;color:#d0c9bc}
+.exact{margin-top:1rem!important;padding-top:1rem;border-top:1px solid var(--line);color:var(--paper)!important}
+.pieces{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.15rem}
+.piece{
+  padding:.55rem .7rem;border:1px solid #5f5a50;background:transparent;color:var(--paper);
+  cursor:pointer;font:.72rem/1.25 var(--mono);letter-spacing:.03em
+}
+.piece:hover{border-color:var(--copper)}
+.piece[aria-pressed="true"]{background:var(--paper);border-color:var(--paper);color:var(--ink)}
+.piece[disabled]{opacity:.55;cursor:default}
+.bench-head .counter{color:#6f685d}
+.inventory{margin-bottom:2rem;padding-bottom:1.6rem;border-bottom:1px solid var(--paperline)}
+.inventory h3,.proposition h3{margin:0 0 .65rem;font-size:1.25rem;font-weight:400}
+.inventory-empty{margin:.3rem 0;color:#746d61;font-size:.96rem}
+.inventory-pieces{display:flex;flex-wrap:wrap;gap:.45rem}
+.inventory-chip{
+  padding:.5rem .6rem;border:1px solid var(--paperline);background:var(--paper2);
+  font:.69rem/1.25 var(--mono)
+}
+.proposition{margin-top:1rem}
+.proposition-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin:1rem 0}
+.slot label{display:block;margin-bottom:.35rem;color:#6d665b;font-size:.64rem}
+.slot select{
+  width:100%;padding:.8rem;border:1px solid var(--paperline);border-radius:0;background:var(--paper2);color:var(--ink)
+}
+.test{
+  width:100%;margin-top:.35rem;padding:.95rem 1rem;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer
+}
+.test:hover{background:#38352f}
+.test:disabled{opacity:.45;cursor:not-allowed}
+.machine{
+  margin-top:1.2rem;min-height:9rem;padding:1rem;border:1px solid var(--paperline);background:#e4dccd
+}
+.machine[data-state="quiet"]{color:#756e62}
+.machine[data-state="support"]{border-left:5px solid var(--green)}
+.machine[data-state="open"]{border-left:5px solid var(--copper)}
+.machine[data-state="brake"]{border-left:5px solid #4b4841}
+.machine-kicker{margin:0 0 .45rem;font-size:.64rem}
+.machine h4{margin:0 0 .55rem;font-size:1.45rem;font-weight:400;line-height:1.05}
+.machine p{margin:.4rem 0}
+.success{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--paperline);font-size:.92rem}
+.progress{
+  margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--paperline)
+}
+.progress-row{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;margin:.45rem 0}
+.progress b{font-weight:400}
+.progress span{font:700 .78rem/1 var(--mono)}
+.reset{
+  margin-top:1rem;padding:.45rem 0;border:0;border-bottom:1px solid #796f61;background:none;color:#5c554b;cursor:pointer;font-size:.9rem
+}
+.return{
+  display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,7vw,8rem);
+  padding:clamp(4rem,8vw,8rem) clamp(1rem,4vw,4rem);border-top:1px solid var(--line)
+}
+.return h2{margin:0;font-size:clamp(2.5rem,5vw,5rem);font-weight:400;line-height:.92;letter-spacing:-.045em}
+.return-copy{max-width:42rem;color:#ccc5b8}
+.return-copy p{margin:0 0 1rem}
+.return a{display:inline-block;margin-top:.5rem}
+footer{
+  display:flex;justify-content:space-between;gap:2rem;padding:1.2rem clamp(1rem,4vw,4rem) 3rem;
+  border-top:1px solid var(--line);color:var(--ash);font:.72rem/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase
+}
+@media(max-width:58rem){
+  body{font-size:1.18rem}
+  .opening,.game,.return{grid-template-columns:1fr}
+  .opening{padding-top:4rem}
+  .archive{border-right:0}
+  .workbench{position:static;min-height:0}
+  .card p{font-size:1.08rem}
+}
+@media(max-width:36rem){
+  .site-header{flex-direction:column;gap:.25rem}
+  .archive,.workbench{padding-left:.85rem;padding-right:.85rem}
+  .piece{min-height:2.7rem}
+  footer{flex-direction:column;gap:.6rem}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a href="/">Earthly Hands Workshop</a>
+  <p>Sedge · playable research-loop experiment</p>
+</header>
+
+<main>
+<section class="opening">
+  <div>
+    <p class="eyebrow">MCR 879 · proposition machine</p>
+    <h1>The machine does not know for you.</h1>
+  </div>
+  <div class="opening-copy">
+    <p>Open source-carried bodies. Keep only the pieces you want to carry. Then make a proposition.</p>
+    <p>The machine can test whether the pieces you opened support the relation you proposed. It cannot decide the historical person for you.</p>
+    <p class="small">This first specimen uses controlled public MCR 879 relation states already carried elsewhere by the Workshop. It is deliberately narrow: three source bodies, one workbench, no hidden verdict.</p>
+  </div>
+</section>
+
+<section class="game" aria-label="Playable documentary proposition workbench">
+  <div class="archive">
+    <div class="archive-head">
+      <div>
+        <p class="eyebrow">Source bodies</p>
+        <h2>Look first.</h2>
+      </div>
+      <p class="counter" id="opened-count">0 / 3 opened</p>
+    </div>
+
+    <div class="search">
+      <label for="search">Search this tiny archive</label>
+      <input id="search" type="search" autocomplete="off" placeholder="Robert, comply, patent…">
+    </div>
+
+    <div class="cards" id="cards">
+      <article class="card" data-search="commission applicants claimed robert appears comply 15 april 1902 mcr 879">
+        <p class="source-tag">Carrier 01 · Commission decision · 15 Apr 1902</p>
+        <h3>The applicants’ claimed Robert</h3>
+        <p>The Commission first distinguishes one Elizabeth Bell affidavit from other historical material carried for the applicants.</p>
+        <p class="exact">Controlled state: the Commission says the applicants’ historical material would make it <strong>appear</strong> that the Robert through whom they claim complied with Article XIV.</p>
+        <div class="pieces" aria-label="Collect source-carried pieces from carrier 1">
+          <button class="piece" data-piece="Applicants’ claimed Robert" data-role="subject" data-source="c1" type="button">Applicants’ claimed Robert</button>
+          <button class="piece" data-piece="appears to comply" data-role="relation" data-source="c1" type="button">appears to comply</button>
+          <button class="piece" data-piece="Commission decision · 15 Apr 1902" data-role="object" data-source="c1" type="button">Commission decision · 15 Apr 1902</button>
+        </div>
+      </article>
+
+      <article class="card" data-search="commission comparator recorded robert did comply identity exclusion records possession mcr 879">
+        <p class="source-tag">Carrier 02 · Commission comparator · 15 Apr 1902</p>
+        <h3>The recorded comparator Robert</h3>
+        <p>The decision changes record body and carries a Robert Bell appearing in Commission-held records as compliant.</p>
+        <p class="exact">Controlled state: the positive comparator record enters an <strong>identity exclusion</strong>. The Workshop does not convert that government identity act into historical truth.</p>
+        <div class="pieces" aria-label="Collect source-carried pieces from carrier 2">
+          <button class="piece" data-piece="Recorded comparator Robert" data-role="subject" data-source="c2" type="button">Recorded comparator Robert</button>
+          <button class="piece" data-piece="did comply" data-role="relation" data-source="c2" type="button">did comply</button>
+          <button class="piece" data-piece="is the same person as" data-role="relation" data-source="c2" type="button">is the same person as</button>
+          <button class="piece" data-piece="Applicants’ claimed Robert" data-role="object" data-source="c2" type="button">Applicants’ claimed Robert</button>
+        </div>
+      </article>
+
+      <article class="card" data-search="later certified patent 1846 carrier commission evidence provenance before commission">
+        <p class="source-tag">Carrier 03 · later patent exemplification</p>
+        <h3>A later-controlled patent carrier</h3>
+        <p>A later certified patent carrier can strengthen present confidence in a patent fact without becoming the physical object proved to have been before an earlier decisionmaker.</p>
+        <p class="exact">Controlled state: historical proposition and evidentiary carrier remain separate across time.</p>
+        <div class="pieces" aria-label="Collect source-carried pieces from carrier 3">
+          <button class="piece" data-piece="Later certified patent carrier" data-role="subject" data-source="c3" type="button">Later certified patent carrier</button>
+          <button class="piece" data-piece="supports a patent fact" data-role="relation" data-source="c3" type="button">supports a patent fact</button>
+          <button class="piece" data-piece="was before the Commission in April 1902" data-role="relation" data-source="c3" type="button">was before the Commission in April 1902</button>
+          <button class="piece" data-piece="1846 patent" data-role="object" data-source="c3" type="button">1846 patent</button>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <aside class="workbench">
+    <div class="bench-head">
+      <div>
+        <p class="eyebrow">Your working tray</p>
+        <h2>Propose carefully.</h2>
+      </div>
+      <p class="counter" id="inventory-count">0 pieces</p>
+    </div>
+
+    <section class="inventory" aria-labelledby="inventory-title">
+      <h3 id="inventory-title">Collected</h3>
+      <p class="inventory-empty" id="inventory-empty">Tap source-carried pieces on the left. Your tray persists on this device.</p>
+      <div class="inventory-pieces" id="inventory-pieces"></div>
+    </section>
+
+    <section class="proposition" aria-labelledby="prop-title">
+      <h3 id="prop-title">Build a proposition</h3>
+      <div class="proposition-grid">
+        <div class="slot">
+          <label for="subject">Subject</label>
+          <select id="subject"><option value="">Choose from collected pieces</option></select>
+        </div>
+        <div class="slot">
+          <label for="relation">Relation / verb</label>
+          <select id="relation"><option value="">Choose from collected pieces</option></select>
+        </div>
+        <div class="slot">
+          <label for="object">Object / carrier</label>
+          <select id="object"><option value="">Choose from collected pieces</option></select>
+        </div>
+      </div>
+      <button class="test" id="test" type="button" disabled>Test the proposition</button>
+
+      <div class="machine" id="machine" data-state="quiet" aria-live="polite">
+        <p class="machine-kicker">Machine state</p>
+        <h4>Nothing proposed yet.</h4>
+        <p>The machine can compare your proposition with the relation states encoded in this specimen. It cannot tell you who Robert Bell “really was.”</p>
+      </div>
+    </section>
+
+    <section class="progress" aria-label="Persistent research state">
+      <p class="eyebrow">This device remembers</p>
+      <div class="progress-row"><b>Source bodies opened</b><span id="stat-opened">0</span></div>
+      <div class="progress-row"><b>Propositions tested</b><span id="stat-tested">0</span></div>
+      <div class="progress-row"><b>Unresolved joins preserved</b><span id="stat-restraint">0</span></div>
+      <button class="reset" id="reset" type="button">Clear my trail on this device</button>
+    </section>
+  </aside>
+</section>
+
+<section class="return">
+  <div>
+    <p class="eyebrow">The outward door</p>
+    <h2>If the machine missed something, tell the workshop.</h2>
+  </div>
+  <div class="return-copy">
+    <p>This experiment is not a claims adjudicator and not a historical answer engine. Its job is narrower: make the difference between source support, identity joining, provenance, and unresolved relation playable.</p>
+    <p>If you found a bad rule, a missing source relation, a confusing interaction, or a proposition the machine handled poorly, that is useful workshop evidence.</p>
+    <a href="mailto:workshop@earthlyhands.org?subject=Sedge%20experiment%20%E2%80%94%20The%20machine%20does%20not%20know%20for%20you">Write back to the Workshop →</a>
+    <p><a href="/">Return to the current public front edge →</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>Playable research loop · working experiment</p>
+  <p>Passed through Sedge’s hands · trust / custody mark, not ownership</p>
+</footer>
+
+<script>
+(function(){
+  const STORE='eh-sedge-proposition-machine-v1';
+  const defaultState={pieces:[],opened:[],tested:0,restraint:0};
+  let state;
+  try{state=Object.assign({},defaultState,JSON.parse(localStorage.getItem(STORE)||'{}'))}catch(e){state={...defaultState}}
+  state.pieces=Array.isArray(state.pieces)?state.pieces:[];
+  state.opened=Array.isArray(state.opened)?state.opened:[];
+
+  const allPieces=[...document.querySelectorAll('.piece')];
+  const subject=document.getElementById('subject');
+  const relation=document.getElementById('relation');
+  const object=document.getElementById('object');
+  const test=document.getElementById('test');
+  const machine=document.getElementById('machine');
+
+  function save(){localStorage.setItem(STORE,JSON.stringify(state))}
+  function unique(arr){return [...new Set(arr)]}
+  function sourceOfPiece(label,role){
+    return allPieces.filter(b=>b.dataset.piece===label && b.dataset.role===role).map(b=>b.dataset.source)
+  }
+  function render(){
+    allPieces.forEach(b=>{
+      const on=state.pieces.some(p=>p.label===b.dataset.piece && p.role===b.dataset.role);
+      b.setAttribute('aria-pressed',String(on));
+    });
+    const inv=document.getElementById('inventory-pieces');
+    inv.innerHTML='';
+    state.pieces.forEach(p=>{
+      const s=document.createElement('span');s.className='inventory-chip';s.textContent=p.label;inv.appendChild(s);
+    });
+    document.getElementById('inventory-empty').hidden=state.pieces.length>0;
+    document.getElementById('inventory-count').textContent=state.pieces.length+' piece'+(state.pieces.length===1?'':'s');
+    document.getElementById('opened-count').textContent=state.opened.length+' / 3 opened';
+    document.getElementById('stat-opened').textContent=state.opened.length;
+    document.getElementById('stat-tested').textContent=state.tested||0;
+    document.getElementById('stat-restraint').textContent=state.restraint||0;
+    fill(subject,'subject');fill(relation,'relation');fill(object,'object');
+    test.disabled=!(subject.value&&relation.value&&object.value);
+  }
+  function fill(select,role){
+    const keep=select.value;
+    const labels=unique(state.pieces.filter(p=>p.role===role).map(p=>p.label));
+    select.innerHTML='<option value="">Choose from collected pieces</option>';
+    labels.forEach(label=>{
+      const o=document.createElement('option');o.value=label;o.textContent=label;select.appendChild(o);
+    });
+    if(labels.includes(keep))select.value=keep;
+  }
+  allPieces.forEach(b=>{
+    b.addEventListener('click',()=>{
+      const p={label:b.dataset.piece,role:b.dataset.role};
+      const i=state.pieces.findIndex(x=>x.label===p.label&&x.role===p.role);
+      if(i>=0) state.pieces.splice(i,1); else state.pieces.push(p);
+      if(!state.opened.includes(b.dataset.source))state.opened.push(b.dataset.source);
+      save();render();
+    });
+  });
+  [subject,relation,object].forEach(s=>s.addEventListener('change',()=>{test.disabled=!(subject.value&&relation.value&&object.value)}));
+
+  function answer(kind,title,body,restraint){
+    machine.dataset.state=kind;
+    machine.innerHTML='<p class="machine-kicker">Machine state</p><h4>'+title+'</h4><p>'+body+'</p>'+
+      (restraint?'<p class="success"><strong>Successful action:</strong> you preserved an unresolved relation instead of forcing a join.</p>':'');
+    if(restraint){state.restraint=(state.restraint||0)+1}
+  }
+
+  test.addEventListener('click',()=>{
+    const s=subject.value,r=relation.value,o=object.value;
+    state.tested=(state.tested||0)+1;
+
+    if(s==='Applicants’ claimed Robert' && r==='appears to comply' && o==='Commission decision · 15 Apr 1902'){
+      answer('support','Supported at the carrier level.','The 15 April 1902 Commission decision carries this as a characterization of the applicants’ historical material. “Appears” matters: the machine will not silently strengthen it to “did comply.”',false);
+    } else if(s==='Recorded comparator Robert' && r==='did comply' && o==='Commission decision · 15 Apr 1902'){
+      answer('support','Supported inside the Commission’s comparator record.','The positive Robert body is carried by the Commission decision. That support does not make the comparator Robert identical to the applicants’ claimed Robert.',false);
+    } else if(s==='Recorded comparator Robert' && r==='is the same person as' && o==='Applicants’ claimed Robert'){
+      answer('open','Identity join not earned.','You have two source-carried Robert bodies and a government identity act between them. This specimen does not contain a source bridge that lets the Workshop promote them into one historical person.',true);
+    } else if(s==='Later certified patent carrier' && r==='supports a patent fact' && o==='1846 patent'){
+      answer('support','Supported as a later evidentiary carrier.','The later certified carrier can support the patent fact in the Workshop’s present evidence state. Carrier date and historical occurrence remain separate.',false);
+    } else if(s==='Later certified patent carrier' && r==='was before the Commission in April 1902' && o==='Commission decision · 15 Apr 1902'){
+      answer('brake','Carrier provenance not established.','A later-controlled patent carrier cannot be moved backward into the Commission’s April 1902 physical record merely because it supports a related historical fact now.',true);
+    } else if(r==='is the same person as'){
+      answer('open','The machine refuses an identity promotion.','Nothing in this tiny specimen authorizes an identity join merely because names, Article XIV relations, or administrative carriers sit near one another.',true);
+    } else {
+      const sSources=sourceOfPiece(s,'subject'),rSources=sourceOfPiece(r,'relation'),oSources=sourceOfPiece(o,'object');
+      const overlap=sSources.some(x=>rSources.includes(x)&&oSources.includes(x));
+      if(overlap){
+        answer('support','This combination shares a source carrier.','All three pieces occur in at least one source body you opened. That is only carrier-level support; it does not automatically prove every historical implication of the sentence.',false);
+      }else{
+        answer('open','The pieces exist. The join is not carried here.','You collected real pieces from this specimen, but the machine cannot find one encoded carrier that supports this exact three-part relation. Keep it open or go looking for another source.',true);
+      }
+    }
+    save();render();
+  });
+
+  const search=document.getElementById('search');
+  search.addEventListener('input',()=>{
+    const q=search.value.trim().toLowerCase();
+    document.querySelectorAll('.card').forEach(c=>{c.hidden=!!q&&!c.dataset.search.includes(q)});
+  });
+
+  document.getElementById('reset').addEventListener('click',()=>{
+    localStorage.removeItem(STORE);state={...defaultState,pieces:[],opened:[]};
+    subject.value=relation.value=object.value='';
+    machine.dataset.state='quiet';
+    machine.innerHTML='<p class="machine-kicker">Machine state</p><h4>Trail cleared.</h4><p>The historical record did not change. Only this device’s local working state was cleared.</p>';
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
