@@ -731,65 +731,6 @@ footer p { margin: 0; }
 }
 
 
-/* Field kit: compact, source-near controls that can accumulate without becoming app chrome. */
-.passage-actions,
-.ground-talk-head {
-  font-family: var(--mono);
-}
-
-.passage-actions {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.012), rgba(255,255,255,0));
-}
-
-.passage-actions .door,
-.ground-talk .talk-toggle {
-  font-size: .88rem;
-  letter-spacing: .015em;
-}
-
-.passage-actions .door::before,
-.ground-talk .talk-toggle::before {
-  color: var(--paper-muted);
-  font-size: .72rem;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.passage-actions .lamp-control::before { content: "lantern  "; }
-.passage-actions .door-prompt::before { content: "ask  "; }
-.passage-actions .door-forward::before { content: "follow  "; }
-.passage-actions .door-back::before { content: "back  "; }
-.ground-talk .talk-toggle::before { content: "ground  "; }
-
-.ground-talk {
-  margin-top: .55rem;
-  padding-top: .6rem;
-}
-
-.ground-talk-kicker {
-  color: var(--paper-muted);
-}
-
-@media (min-width: 69rem) {
-  .experience-shell {
-    min-height: calc(100dvh - 5.25rem - 1px);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .experience-stage {
-    flex: 0 0 auto;
-  }
-
-  .ground-talk {
-    flex: 0 0 auto;
-  }
-
-  .specimen-index {
-    margin-top: .75rem;
-  }
-}
 
 
 /* Human-scale front door. Individual experiments can opt wider later if earned. */
@@ -916,4 +857,10 @@ footer {
     align-items: baseline;
     gap: .25rem 1rem;
   }
+}
+
+
+/* A live experience may occupy the first screen, but content determines its height. */
+body[data-lamp="lit"] .experience-shell {
+  min-height: min(34rem, calc(100dvh - 6.5rem));
 }
