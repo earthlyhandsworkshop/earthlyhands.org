@@ -1082,3 +1082,42 @@ body[data-lamp="lit"] .experience-shell {
     max-height: none;
   }
 }
+
+
+/* Dawson bench pass — one conversational surface, no internal scene scroll. */
+@media (min-width: 68.01rem) {
+  body[data-lamp="lit"] .experience-stage {
+    align-items: stretch;
+  }
+
+  body[data-lamp="lit"] .experience-mount {
+    height: 100%;
+    max-height: none;
+    overflow: hidden;
+  }
+
+  body[data-lamp="lit"] .experience-mount [data-scene].is-current {
+    min-height: 100%;
+  }
+
+  body[data-lamp="lit"] .report-passage {
+    grid-template-rows: auto auto minmax(3rem, 1fr);
+  }
+
+  body[data-lamp="lit"] .trail-passage {
+    grid-template-rows: auto auto auto auto auto minmax(3rem, 1fr);
+  }
+
+  body[data-lamp="lit"] .passage-actions {
+    align-self: end;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  body[data-lamp="lit"] .passage-actions .door-back {
+    grid-column: 1;
+  }
+
+  body[data-lamp="lit"] .passage-actions .door-forward {
+    grid-column: 2;
+  }
+}
