@@ -120,6 +120,7 @@
   body.js-sequenced .next {
     display: block;
     position: fixed;
+    z-index: 3;
     bottom: 6vh;
     left: 50%;
     transform: translateX(-50%);
@@ -139,7 +140,7 @@
     position: fixed;
     inset: 0;
     cursor: pointer;
-    z-index: 0;
+    z-index: 2;
   }
   body.js-sequenced .doc, body.js-sequenced .closing { position: relative; z-index: 1; }
   .pause-screen { display: none; }
