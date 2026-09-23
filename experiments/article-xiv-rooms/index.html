@@ -14,7 +14,7 @@
   --rust:#aa6d4b;--moss:#7c846c;--ghost:#6d6d67;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --treaty-x:clamp(1.9rem,10vw,7.5rem);
+  --treaty-x:clamp(.8rem,2vw,2rem);
 }
 *{box-sizing:border-box}
 html{background:var(--night);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -37,11 +37,6 @@ a,button{color:inherit}button{font:inherit}
    linear-gradient(0deg,transparent 0,transparent 24.9%,rgba(233,224,207,.055) 25%,transparent 25.1%),
    var(--night)
 }
-.hero::before{
- content:"";position:absolute;z-index:0;left:var(--treaty-x);top:0;bottom:0;width:1px;
- background:rgba(233,224,207,.16)
-}
-.hero>*{position:relative;z-index:1}
 .kicker,.label,.room-tag,.small,.ghost-label,.case-label,.footmark{font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase}
 .kicker{margin:0 0 1rem;color:var(--rust);font-size:.68rem}
 h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;line-height:.82;letter-spacing:-.06em}
@@ -54,8 +49,18 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  position:relative;min-height:310svh;background:var(--night2);overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line)
 }
 .plan::before{
- content:"";position:absolute;z-index:1;left:var(--treaty-x);top:0;bottom:0;width:1px;
- background:rgba(233,224,207,.18)
+ content:"";position:absolute;z-index:1;left:var(--treaty-x);top:var(--treaty-start,22vh);bottom:0;width:1px;
+ background:rgba(233,224,207,.22)
+}
+.treaty-origin{
+ position:absolute;z-index:4;left:var(--treaty-x);top:var(--treaty-start,22vh);
+ transform:translate(-50%,.85rem) rotate(180deg);writing-mode:vertical-rl;
+ padding:.4rem .2rem;background:var(--night2);color:rgba(233,224,207,.72);
+ font:.58rem/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap
+}
+.treaty-origin::before{
+ content:"";display:block;width:.38rem;height:.38rem;margin:0 auto .55rem;border-radius:50%;
+ background:var(--rust);box-shadow:0 0 0 3px var(--night2)
 }
 .plan-lines{position:absolute;inset:0;pointer-events:none;opacity:.58}
 .plan-lines svg{width:100%;height:100%;display:block}
@@ -183,9 +188,9 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  .case-grid{grid-template-columns:1fr}
 }
 @media(max-width:40rem){
- :root{--treaty-x:1.05rem}
+ :root{--treaty-x:.72rem}
  .hero{padding:7rem 1rem 2.5rem}h1{font-size:clamp(4.3rem,22vw,6.6rem)}
- .walk{width:calc(100% - 2rem);padding-top:8vh}
+ .walk{width:calc(100% - 3.2rem);margin-left:2.35rem;margin-right:.85rem;padding-top:8vh}
  .chamber{min-height:auto;padding:8vh 0}.chamber+.chamber{margin-top:14vh}
  .room{min-height:68svh;padding:1.2rem}.statement{font-size:clamp(1.9rem,9vw,3rem)}
  .ghost-room{min-height:76svh;padding:1.5rem 1rem}
@@ -197,7 +202,7 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
 }
 
 @media (max-height:34rem) and (orientation:landscape){
-  :root{--treaty-x:2.2rem}
+  :root{--treaty-x:1.2rem}
   .utility{font-size:.72rem;padding:.65rem 1rem}
   .hero{min-height:100svh;grid-template-columns:1fr 1fr;padding:5.5rem 2.5rem 2rem;gap:3rem}
   h1{font-size:clamp(4rem,10vw,6.4rem)}
@@ -328,8 +333,10 @@ body{font-size:1.08rem}
     </svg>
   </div>
 
+  <div class="treaty-origin" aria-label="Article XIV treaty structure">Article XIV · treaty structure</div>
+
   <div class="walk">
-    <section class="chamber">
+    <section class="chamber treaty-chamber">
       <div class="room-index">
         <p class="room-tag">1830 · treaty chamber</p>
         <h2>Promise before credential.</h2>
@@ -488,7 +495,7 @@ const copy={
   body:[
    "This is a visual-historical installation, not a substitute for the source jackets or a final legal synthesis.",
    "Architectural nearness does not establish legal causation. A room may represent a later rule, an administrative practice, or a proposed but unratified design. Those states remain different.",
-   "One continuous structural member begins in the treaty chamber and survives through later rooms. It means only that the treaty structure remains present; it is not a timeline, descent line, route, or identity join.",
+   "The line labeled ARTICLE XIV · TREATY STRUCTURE begins only at the 1830 treaty chamber and survives through later rooms. It means only that the treaty structure remains present; it is not a timeline, descent line, route, family line, or identity join.",
    "The two Bell chambers preserve the government's identity operations as attributed government acts. The workshop does not adopt either identity conclusion."
   ]
  },
@@ -509,6 +516,17 @@ const copy={
   ]
  }
 };
+const plan=document.querySelector(".plan");
+const treatyRoom=document.querySelector(".treaty-chamber .room");
+function placeTreatyMember(){
+ if(!plan||!treatyRoom)return;
+ const p=plan.getBoundingClientRect(),r=treatyRoom.getBoundingClientRect();
+ plan.style.setProperty("--treaty-start",Math.max(0,r.top-p.top)+"px");
+}
+placeTreatyMember();
+window.addEventListener("resize",placeTreatyMember);
+window.addEventListener("orientationchange",()=>setTimeout(placeTreatyMember,120));
+
 const overlay=document.getElementById("overlay"),title=document.getElementById("overlay-title"),body=document.getElementById("overlay-body");
 function openPanel(key){
  const d=copy[key];title.textContent=d.title;body.innerHTML="";
