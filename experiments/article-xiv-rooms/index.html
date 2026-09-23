@@ -98,26 +98,22 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
 .ghost-room div{max-width:36rem;margin:auto}
 .ghost-label{margin:0 0 1rem;color:#8a8174;font-size:.62rem}
 .ghost-room h3{margin:0;font-size:clamp(2.4rem,5vw,5rem);font-weight:400;line-height:.9;letter-spacing:-.045em;text-wrap:balance}
-.ghost-room p{margin:1.6rem auto 0;color:var(--faint);max-width:29rem;text-wrap:pretty}
+.ghost-room p{margin:1.6rem auto 0;color:var(--faint);max-width:27rem;text-wrap:pretty}
 .ghost-door{
- width:7rem;height:11rem;margin:5.6rem auto 6.8rem;position:relative;
+ width:7rem;height:11rem;margin:7rem auto 8rem;position:relative;
  border-left:1px dashed rgba(233,224,207,.38);
  border-top:1px dashed rgba(233,224,207,.38);
  border-right:1px dashed rgba(233,224,207,.38);
  border-bottom:0
 }
 .ghost-door::after{content:"";position:absolute;width:.35rem;height:.35rem;border:1px solid rgba(233,224,207,.45);border-radius:50%;right:.7rem;top:5.1rem}
-.ghost-door::before{
- content:"";position:absolute;left:50%;top:100%;height:7.5rem;width:1px;
- background:linear-gradient(rgba(233,224,207,.11),rgba(233,224,207,0))
-}
 
 .bridge{
  min-height:88svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:8vh 1rem
 }
 .bridge-inner{max-width:52rem}
 .bridge .small{margin:0 0 1rem;color:var(--rust);font-size:.62rem}
-.bridge h2{margin:0;font-size:clamp(3.3rem,7vw,7rem);font-weight:400;line-height:.88;letter-spacing:-.055em}
+.bridge h2{margin:0;font-size:clamp(3rem,6.2vw,6rem);font-weight:400;line-height:.92;letter-spacing:-.045em;text-wrap:balance}
 .bridge p{max-width:35rem;margin:1.5rem auto 0;color:var(--faint)}
 .unrecovered{display:inline-block;margin-top:2.5rem;padding:.5rem .75rem;border:1px solid rgba(233,224,207,.22);font:.62rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#8f8779}
 
@@ -137,17 +133,17 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
 .case-label{margin:0 0 1rem;color:#7e563e;font-size:.62rem}
 .case h3{margin:0;font-size:clamp(2.3rem,4vw,4.6rem);font-weight:400;line-height:.9;letter-spacing:-.045em}
 .case .date{margin:.7rem 0 0;color:#6c665b;font:.7rem/1.4 var(--mono)}
-.case-copy{max-width:32rem;margin:4rem 0 0}.case-copy p{margin:0}.case-copy p+p{margin-top:1rem}
+.case-copy{max-width:32rem;margin:3.2rem 0 0}.case-copy p{margin:0}.case-copy p+p{margin-top:1rem}
 .gov-layer{
  margin-top:2rem;padding:1rem 1.1rem;border-left:3px solid #8d6249;background:rgba(141,98,73,.06)
 }
 .gov-layer .small{margin:0 0 .4rem;color:#7e563e;font-size:.58rem}
 .gov-layer p{margin:0;color:#5f594f}
 .case.unjoined::after{
- content:"no workshop identity join";position:absolute;right:1rem;bottom:1rem;color:#857e70;
- font:.56rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase
+ content:"no workshop identity join";display:block;position:static;margin-top:3rem;padding-top:.85rem;border-top:1px solid var(--line2);
+ color:#857e70;font:.68rem/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase
 }
-.case-link{margin-top:2rem}
+.case-link{margin-top:2rem;margin-bottom:0}
 .case-link button{
  border:0;border-bottom:1px solid #8d6249;background:none;padding:.2rem 0;cursor:pointer;
  color:#4f4a42;font:.67rem/1.3 var(--mono)
@@ -193,12 +189,37 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  .chamber{min-height:auto;padding:8vh 0}.chamber+.chamber{margin-top:14vh}
  .room{min-height:68svh;padding:1.2rem}.statement{font-size:clamp(1.9rem,9vw,3rem)}
  .ghost-room{min-height:76svh;padding:1.5rem 1rem}
- .ghost-door{margin-top:5rem;margin-bottom:6.5rem}
+ .ghost-door{margin-top:7rem;margin-bottom:8rem}
  .room::before{left:9%;right:4%}.room::after{right:10%}
  .bridge{min-height:100svh}
  .cases{padding:5rem 1rem}.case{min-height:30rem;padding:1.2rem}
  .end{padding:5rem 1rem 7rem}.end h2{font-size:clamp(3.4rem,17vw,5.3rem)}
 }
+
+@media (max-height:34rem) and (orientation:landscape){
+  :root{--treaty-x:2.2rem}
+  .utility{font-size:.72rem;padding:.65rem 1rem}
+  .hero{min-height:100svh;grid-template-columns:1fr 1fr;padding:5.5rem 2.5rem 2rem;gap:3rem}
+  h1{font-size:clamp(4rem,10vw,6.4rem)}
+  .hero-copy{align-self:end;justify-self:end;max-width:28rem}
+  .walk{width:calc(100% - 5rem)}
+  .chamber{grid-template-columns:minmax(13rem,.48fr) minmax(0,1.52fr);gap:3rem;min-height:100svh;padding:10vh 0}
+  .room-index{position:static}
+  .room-index h2{font-size:clamp(2.5rem,6vw,4.4rem)}
+  .room{min-height:80vh;padding:2rem}
+  .statement{font-size:clamp(2rem,4.8vw,3.2rem)}
+  .ghost-room{min-height:88vh;padding:2rem 2.5rem}
+  .ghost-room h3{font-size:clamp(2.2rem,5vw,3.8rem)}
+  .ghost-door{margin-top:4.5rem;margin-bottom:5.5rem}
+  .bridge{min-height:100svh;padding:10vh 3rem}
+  .bridge h2{font-size:clamp(2.8rem,6vw,4.8rem)}
+  .cases{padding:5rem 2.5rem}
+  .case-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .case h3{font-size:clamp(2.3rem,4.2vw,3.7rem)}
+  .end{min-height:100svh;grid-template-columns:1fr 1fr;padding:5rem 2.5rem}
+  .end h2{font-size:clamp(3rem,6vw,5.2rem)}
+}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* Legibility pass — phone reading must work without zoom or glasses.
@@ -246,6 +267,7 @@ body{font-size:1.08rem}
   .ghost-label{font-size:.82rem}
   .ghost-room p{font-size:1.14rem;line-height:1.65}
   .bridge .small{font-size:.82rem}
+  .bridge h2{font-size:clamp(2.9rem,14vw,4.6rem)}
   .bridge p{font-size:1.14rem;line-height:1.65}
   .unrecovered{font-size:.8rem;line-height:1.4}
   .case-label{font-size:.82rem}
@@ -281,7 +303,6 @@ body{font-size:1.08rem}
   <div class="hero-copy">
     <p class="lead">A treaty promise stands. Later governments build machinery around determining who may pass through it.</p>
     <p>This is not a complete legal history. It is a sectional study in how the ground changes without erasing the original room.</p>
-    <a class="enter" href="#rooms">Enter the section</a>
   </div>
 </section>
 
@@ -390,9 +411,9 @@ body{font-size:1.08rem}
 
     <section class="bridge">
       <div class="bridge-inner">
-        <p class="small">A claimed treaty right reaches federal review</p>
-        <h2>We know the review happened. We have not yet recovered what authorized that merits review.</h2>
-        <p>MCR 879 sought recognition through Article XIV. The file shows Commission transmittal, Indian Affairs review and recommendation, and Interior review and affirmance. What remains open is the contemporaneous rule, instruction, or administrative authority that made that merits review proper.</p>
+        <p class="small">A family claim enters federal machinery</p>
+        <h2>The family claimed Choctaw identity through its own people. Federal actors later tested that claim through Mississippi-Choctaw and Article XIV machinery.</h2>
+        <p>The file then shows Commission transmittal, Indian Affairs review and recommendation, and Interior review and affirmance. We know that review happened. What remains open is the contemporaneous rule, instruction, or administrative authority that made that merits review proper.</p>
         <span class="unrecovered">review occurred · authority not yet recovered</span>
       </div>
     </section>
