@@ -1377,3 +1377,108 @@ body[data-lamp="lit"] .threshold-lantern {
 body[data-lamp="unlit"] .threshold-lantern {
   border-top-color: transparent;
 }
+
+
+/* Viewport-tight live field: no dead band between header and active scene. */
+.threshold {
+  min-height: 0;
+  padding-top: 0;
+}
+
+.passage {
+  min-height: 0;
+}
+
+.experience-shell {
+  margin-bottom: 1.25rem;
+}
+
+body[data-lamp="lit"] .experience-shell {
+  min-height: calc(100dvh - 5.75rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-stage {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0;
+}
+
+.js .experience-mount .passage,
+.js .experience-mount .practice {
+  min-height: 0;
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+
+.report-passage,
+.trail-passage {
+  min-height: 0;
+  align-content: start;
+}
+
+.report-passage > .passage-actions,
+.trail-passage > .passage-actions {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+}
+
+.threshold-lantern {
+  margin: 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid transparent;
+}
+
+body[data-lamp="lit"] .threshold-lantern {
+  display: none;
+}
+
+body[data-lamp="unlit"] .threshold-lantern {
+  display: flex;
+}
+
+.passage-actions .lamp-control {
+  grid-column: 1;
+  justify-self: start;
+  color: var(--paper-muted);
+}
+
+.report-passage > .passage-actions {
+  grid-template-columns: auto 1fr auto;
+}
+
+.report-passage > .passage-actions .door-prompt {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.report-passage > .passage-actions .door-forward {
+  grid-column: 3;
+}
+
+.ground-talk {
+  flex: 0 0 auto;
+  padding-top: 0.8rem;
+}
+
+.ground-talk-head,
+.ground-talk[data-open="false"] .ground-talk-head {
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 46rem) {
+  body[data-lamp="lit"] .experience-shell {
+    min-height: calc(100dvh - 5.5rem);
+  }
+
+  .report-passage > .passage-actions,
+  .trail-passage > .passage-actions,
+  .passage-actions {
+    gap: 0.2rem;
+  }
+
+  .passage-actions .lamp-control {
+    order: 3;
+  }
+}
