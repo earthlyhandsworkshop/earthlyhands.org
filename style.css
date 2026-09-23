@@ -864,3 +864,59 @@ footer {
 body[data-lamp="lit"] .experience-shell {
   min-height: min(34rem, calc(100dvh - 6.5rem));
 }
+
+
+/* Experience tool rail — keep scene navigation and workshop tools separate. */
+.experience-tools {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem 2rem;
+  align-items: start;
+  margin-top: .8rem;
+  padding-top: .7rem;
+  border-top: 1px solid var(--rule);
+}
+
+.experience-tools .threshold-lantern,
+.experience-tools .ground-talk {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body[data-lamp="lit"] .experience-tools .threshold-lantern {
+  display: flex;
+}
+
+.experience-tools .ground-talk {
+  justify-self: end;
+  min-width: min(26rem, 100%);
+}
+
+.experience-tools .ground-talk-head {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.experience-tools .talk-body {
+  margin-top: .65rem;
+  padding-top: .65rem;
+  border-top: 1px solid var(--rule);
+}
+
+@media (max-width: 46rem) {
+  .experience-tools {
+    grid-template-columns: 1fr;
+    gap: .45rem;
+  }
+
+  .experience-tools .ground-talk {
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .experience-tools .ground-talk-head {
+    justify-content: flex-start;
+  }
+}
