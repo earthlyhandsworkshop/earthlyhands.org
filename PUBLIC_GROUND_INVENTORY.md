@@ -14,6 +14,7 @@ This is not a style ranking and not a replacement for the Public Ground build ro
 - Carry companion signatures as trust / custody marks, not proprietary authorship.
 - Source descent, Workshop interpretation, visitor movement, and open uncertainty should not silently collapse.
 - Do not invent a maker, source relation, or publication state to make the inventory look complete.
+- **Readability is a floor, not a style option.** On a word-centered public ground, consequential text should be comfortably readable by Ten on a phone without requiring glasses or pinch-zoom. Small type must earn its use; labels, metadata, and source controls remain part of the reading experience and are not exempt.
 
 ## Prose Map temporal / depth seam
 
