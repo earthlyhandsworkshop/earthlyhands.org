@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f3f1ea">
+<title>Six Letters — Earthly Hands experiment</title>
+<style>
+:root{--paper:#f3f1ea;--ink:#2b2620;--faded:#8a8272;--stamp:#c94f3d;--line:#c9c3b5}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink)}
+body{font-family:"Courier Prime","Courier New",Courier,monospace}
+button,a{font:inherit;color:inherit}
+.shell{min-height:100svh;display:grid;grid-template-rows:auto 1fr auto}
+.site{padding:1rem 1.1rem;font:500 .72rem/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--faded)}
+.site a{text-decoration:none}
+.stage{display:grid;place-items:center;padding:clamp(1.2rem,4vw,3rem)}
+.paper{width:min(100%,42rem);min-height:min(72svh,48rem);display:flex;flex-direction:column;justify-content:flex-start;padding:clamp(1.5rem,5vw,3.75rem);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.letterhead{text-align:center;margin-bottom:2.4rem;line-height:1.45}
+.dateline{margin:0 0 2.2rem;text-align:right;color:var(--stamp)}
+.recipient{white-space:pre-line;margin-bottom:2rem}
+.body{font-size:clamp(.96rem,2.6vw,1.08rem);line-height:1.68;white-space:pre-line}
+.closing{white-space:pre-line;margin-top:2rem}
+.nextrow{margin-top:auto;padding-top:2.6rem;display:flex;justify-content:flex-end}
+.next{border:0;background:none;padding:.8rem 0 .2rem;cursor:pointer;font:500 .82rem/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-decoration:underline;text-underline-offset:.25rem}
+.next:focus-visible,.return:focus-visible{outline:2px solid var(--ink);outline-offset:5px}
+.blank{width:min(100%,42rem);min-height:min(72svh,48rem);border-top:1px solid transparent;border-bottom:1px solid transparent}
+.seventh .paper{min-height:min(82svh,54rem);padding-top:clamp(3rem,10vh,7rem);padding-bottom:clamp(3rem,10vh,7rem)}
+.after{width:min(100%,42rem);padding:0 clamp(1.5rem,5vw,3.75rem) 4rem;margin:0 auto;font:500 .86rem/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.after blockquote{margin:0 0 2.2rem;padding:0;font-family:"Courier Prime","Courier New",Courier,monospace;font-size:1rem;line-height:1.7}
+.return{display:inline-block;color:var(--ink);text-underline-offset:.25rem}
+.footer{padding:1rem 1.1rem;font:500 .68rem/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--faded)}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:40rem){
+ .site{padding:.75rem .9rem}
+ .stage{padding:.4rem .75rem 1rem}
+ .paper{min-height:calc(100svh - 6rem);padding:1.3rem .95rem 1.8rem}
+ .letterhead{margin-bottom:1.6rem}.dateline{margin-bottom:1.7rem}.recipient{margin-bottom:1.5rem}
+ .body{font-size:.91rem;line-height:1.6}
+ .seventh .paper{min-height:calc(100svh - 6rem);padding-top:2.5rem;padding-bottom:2.5rem}
+ .after{padding:0 1.7rem 3rem}
+}
+@media(max-height:34rem) and (orientation:landscape){
+ .stage{padding:.5rem 1rem}
+ .paper{width:min(100%,50rem);min-height:auto;padding:1rem 2rem}
+ .letterhead,.dateline,.recipient{margin-bottom:1rem}.body{font-size:.84rem;line-height:1.45}
+ .nextrow{padding-top:1.2rem}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="site"><a href="/">Earthly Hands</a></div>
+  <main class="stage" id="stage" aria-live="polite"></main>
+  <div class="footer">Six Letters · sequence experiment · Touchstone plan carried into HTML for review</div>
+</div>
+<script>
+const common = `You are hereby advised that on the 4th day of June, 1902—
+the Secretary of the Interior affirmed the decision of this Commission—
+refusing the applications for identification as Mississippi Choctaws—
+of the several persons included in the consolidated case of William D. Bell, et al.—
+of which decision you were advised by registered mail on the 19th day of April, 1902.`;
+
+const letters = [
+{date:"June 13, 1902.",to:"William D. Bell,\nDurant, Indian Territory.\nDear Sir:",body:common,close:"Yours truly,\nT. B. Needles,\nCommissioner in Charge."},
+{date:"June 13, 1902.",to:"L. D. Horton,\nAtty at Law, Durant, Indian Territory.\nDear Sir:",body:common,close:"Yours truly,\n(SIGNED.) T. B. Needles.\nCommissioner in Charge."},
+{date:"June 13, 1902.",to:"J. O. Poole,\nAtty at Law, Nocona, Texas.\nDear Sir:",body:common,close:"Yours truly,\n(SIGNED.) T. B. Needles.\nCommissioner in Charge."},
+{date:"June 13, 1902.",to:"B. S. Johnson,\nAtty at Law, Durant, Indian Territory.\nDear Sir:",body:common,close:"Yours truly,\n(SIGNED.) T. B. Needles.\nCommissioner in Charge."},
+{date:"June 13, 1902.",to:"Chester Howe,\nAtty at Law, #623 F St., N.W.,\nWashington, D.C.\nDear Sir:",body:common,close:"Yours truly,\n(SIGNED.) T. B. Needles.\nCommissioner in Charge."},
+{date:"June 13, 1902.",to:"Messrs. Mansfield, McMurray & Cornish,\nAttorneys for the Choctaw and Chickasaw Nations,\nSouth McAlester, Indian Territory.\nGentlemen:",body:common.replace("registered mail","mail"),close:"Yours truly,\n(SIGNED.) T. B. Needles.\nCommissioner in Charge."}
+];
+
+const seventh = {
+date:"March 4, 1907.",
+to:"The Honorable,\nThe Secretary of the Interior.\nSir:",
+body:`I have the honor to transmit herewith a communication from Commissioner Bixby, dated February 28, 1907—
+enclosing a motion filed in his office on that date—
+asking for a rehearing in the Mississippi Choctaw case of William D. Bell et al.
+
+The motion was not filed within the time limited by the Act of April 26, 1906—
+34 Stats. L., 137—
+and is transmitted with the recommendation that it be denied pro forma.
+
+The record is not transmitted—
+for the reason that it is not considered that it will be needed in passing on the motion in this particular instance.`,
+close:"Very respectfully,\nActing Commissioner."
+};
+
+let index=0;
+const stage=document.getElementById("stage");
+
+function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+
+function paper(letter, last=false){
+  return `<section class="${last?'seventh':''}" aria-label="${last?'1907 rehearing denial':'1902 notice'}">
+    <article class="paper">
+      <div class="letterhead">${last?'OFFICE OF INDIAN AFFAIRS<br>Department of the Interior.<br>Washington.':'COMMISSION TO THE FIVE CIVILIZED TRIBES<br>Muskogee, Indian Territory.'}</div>
+      <p class="dateline">${esc(letter.date)}</p>
+      <div class="recipient">${esc(letter.to)}</div>
+      <div class="body">${esc(letter.body)}</div>
+      <div class="closing">${esc(letter.close)}</div>
+      ${last?'':`<div class="nextrow"><button class="next" type="button">next →</button></div>`}
+    </article>
+    ${last?`<div class="after"><blockquote>“The record is not transmitted—for the reason that it is not considered that it will be needed.”</blockquote><a class="return" href="/">Return to the workshop</a></div>`:''}
+  </section>`;
+}
+
+function render(){
+  if(index < letters.length){
+    stage.innerHTML=paper(letters[index],false);
+    const btn=stage.querySelector(".next");
+    btn.addEventListener("click",()=>{
+      index++;
+      if(index===letters.length){pauseThenSeventh()} else {render()}
+    });
+    btn.focus({preventScroll:true});
+    return;
+  }
+  stage.innerHTML=paper(seventh,true);
+}
+
+function pauseThenSeventh(){
+  stage.innerHTML='<div class="blank" aria-label="Five years later"></div><span class="sr">Five years later.</span>';
+  const delay=window.matchMedia("(prefers-reduced-motion: reduce)").matches?0:2800;
+  setTimeout(()=>{index=letters.length;render()},delay);
+}
+
+render();
+</script>
+</body>
+</html>
