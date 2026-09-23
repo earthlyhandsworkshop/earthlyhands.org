@@ -43,7 +43,7 @@
     }
     .site-header a{color:var(--paper);text-decoration:none;font-size:.9rem;font-weight:700;letter-spacing:.08em}
     .site-header p{margin:0}
-    main{overflow:hidden}
+    main{overflow-x:clip}
     .opening{
       min-height:72vh;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(18rem,.65fr);
       gap:clamp(2.5rem,8vw,9rem);align-items:end;
@@ -145,6 +145,30 @@
     footer p{margin:0}
     @media(max-width:54rem){
       .opening,.table-intro,.nonjoin-grid,.source-return{grid-template-columns:1fr}
+      .needle-station{
+        position:fixed;
+        top:auto;
+        right:.75rem;
+        bottom:calc(.75rem + env(safe-area-inset-bottom,0px));
+        left:.75rem;
+        z-index:40;
+        width:auto;
+        margin:0;
+        box-shadow:0 .8rem 2.5rem rgba(0,0,0,.35);
+        opacity:0;
+        visibility:hidden;
+        transform:translateY(.75rem);
+        pointer-events:none;
+        transition:opacity .16s ease,transform .16s ease,visibility .16s linear;
+      }
+      body[data-table-active="true"] .needle-station{
+        opacity:1;
+        visibility:visible;
+        transform:none;
+        pointer-events:auto;
+      }
+      .table-shell{padding-bottom:calc(clamp(4rem,8vw,8rem) + 6rem)}
+
       .opening{min-height:auto}
       h1{font-size:clamp(4rem,18vw,7rem)}
       .carrier,.carrier:nth-child(even){grid-template-columns:1fr}
@@ -171,7 +195,7 @@
   </style>
   <script>document.documentElement.className="js"</script>
 </head>
-<body data-source-view="false">
+<body data-source-view="false" data-table-active="false">
   <header class="site-header">
     <a href="/" aria-label="Earthly Hands Workshop — return to the threshold">Earthly Hands Workshop</a>
     <p>Needle Up · interaction experiment</p>
@@ -207,7 +231,7 @@
         <button class="needle" id="needle" type="button" aria-pressed="false" aria-describedby="needle-help">Hold<br>needle</button>
         <div class="needle-copy" id="needle-help">
           <strong>Press and hold for source depth</strong>
-          Interpretation recedes. Carrier-local wording and provenance remain until you release the control.
+          Interpretation recedes. Carrier-local wording and provenance remain until you release the control. On a phone, this control stays within reach while you move through the carriers.
         </div>
       </div>
 
@@ -370,6 +394,7 @@
   <script>
     const body=document.body;
     const needle=document.getElementById("needle");
+    const table=document.querySelector(".table-shell");
     let holding=false;
     const paint=(on)=>{
       body.dataset.sourceView=String(on);
@@ -404,6 +429,16 @@
       }
     });
     window.addEventListener("blur",()=>{holding=false;paint(false)});
+
+    const tableObserver=new IntersectionObserver((entries)=>{
+      const entry=entries[0];
+      body.dataset.tableActive=String(entry.isIntersecting);
+      if(!entry.isIntersecting){
+        holding=false;
+        paint(false);
+      }
+    },{threshold:0,rootMargin:"-1px 0px -1px 0px"});
+    tableObserver.observe(table);
   </script>
 </body>
 </html>
