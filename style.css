@@ -197,6 +197,36 @@ footer {
   animation: settle 180ms ease-out both;
 }
 
+/* The threshold is standing ground: lighting a scene opens depth above the
+   specimen index instead of replacing the workshop around it. */
+.js #threshold {
+  display: flex;
+}
+
+.experience-mount[hidden] {
+  display: none;
+}
+
+.experience-mount {
+  width: 100%;
+  margin: 0 0 clamp(2.6rem, 5vw, 4rem);
+  border-top: 1px solid var(--rule-lit);
+}
+
+.js .experience-mount .passage,
+.js .experience-mount .practice {
+  min-height: auto;
+  width: 100%;
+}
+
+.js .experience-mount .passage {
+  padding-top: clamp(2.4rem, 5vw, 4rem);
+}
+
+.js .experience-mount .practice {
+  padding-top: clamp(2.4rem, 5vw, 4rem);
+}
+
 .js .passage,
 .js .practice {
   min-height: 100%;
