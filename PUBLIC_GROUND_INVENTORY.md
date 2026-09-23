@@ -45,6 +45,14 @@ Article XIV rooms adds a different clock problem. Moving down the page is **visi
 
 Its recent revisions also give a clean development / epistemic split. The pass-two layout, mobile, gutter, and composition refinements are **development history**. The correction that stopped recasting the family's own testimony as an Article XIV land claim is **epistemic history**, because it changed what the public body responsibly says. The earlier pass has faded from the live face but remains recoverable in repository history. Keep both histories recoverable; do not promote every later visual pass into an epistemic event.
 
+### Current seam finding — notice states and procedural clocks
+
+The MCR 879 Nation-counsel notice edge has moved. A direct **21 Apr 1902** refusal notice is now landed documentary work: it reports the refusal, quotes the section 21 identity authority, and says the record was forwarded to Interior for review, without an express fifteen-day protest interval on that returned face. The **19 Apr 1902** date survives as a later retrospective advisement reference. Treat 19 Apr as **reach toward an earlier notice state**, not as the same landed object as the 21 Apr notice unless the source earns that join.
+
+The later clocks also need separate depth. The 1904 affirmative-identification notices carry a **fifteen-day Nation-counsel protest interval**; the 1906 reopening/reconsideration statute carries a **sixty-day clock**. They are different procedural objects in different administrative states. Mapping them in chronological order is not permission to import one clock backward into another case state, and visitor movement across those states is not historical proof of a single continuous procedure.
+
+This is also an **epistemic-history correction**. The prior footing that treated earlier MCR 879 Nation-counsel notice as wholly absent has faded. Preserve that earlier absence framing in revision history because it records what the Workshop then knew, but do not leave it standing as current ground. The present open edge is narrower: the 19 Apr retrospective reference and the 21 Apr returned notice are both source-visible, while their exact relation remains unresolved.
+
 ## Current bodies
 
 | Public body | Present status | Hands / trust mark | Way home | Source / depth route | Cleanup state |
