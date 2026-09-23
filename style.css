@@ -196,7 +196,7 @@ body[data-lamp="unlit"] .ground-talk { display: none; }
 .report-passage > .plain-copy,
 .trail-passage > .first-person-view {
   grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-row: 2;
   align-self: start;
 }
 
@@ -205,10 +205,17 @@ body[data-lamp="unlit"] .ground-talk { display: none; }
 .trail-passage > .source-return { grid-column: 2; grid-row: 5; }
 
 .eyebrow {
-  margin: 0 0 .8rem;
-  color: var(--ember);
-  font-size: .82rem;
-  font-weight: 700;
+  grid-column: 1 / -1 !important;
+  grid-row: 1 !important;
+  width: 100%;
+  margin: 0 0 1rem;
+  padding: .45rem 0 .55rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--paper-muted);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
 
 h1,
@@ -715,4 +722,65 @@ footer p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .experience-mount [data-scene].is-current { animation: none; }
+}
+
+
+/* Field kit: compact, source-near controls that can accumulate without becoming app chrome. */
+.passage-actions,
+.ground-talk-head {
+  font-family: var(--mono);
+}
+
+.passage-actions {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.012), rgba(255,255,255,0));
+}
+
+.passage-actions .door,
+.ground-talk .talk-toggle {
+  font-size: .88rem;
+  letter-spacing: .015em;
+}
+
+.passage-actions .door::before,
+.ground-talk .talk-toggle::before {
+  color: var(--paper-muted);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.passage-actions .lamp-control::before { content: "lantern  "; }
+.passage-actions .door-prompt::before { content: "ask  "; }
+.passage-actions .door-forward::before { content: "follow  "; }
+.passage-actions .door-back::before { content: "back  "; }
+.ground-talk .talk-toggle::before { content: "ground  "; }
+
+.ground-talk {
+  margin-top: .55rem;
+  padding-top: .6rem;
+}
+
+.ground-talk-kicker {
+  color: var(--paper-muted);
+}
+
+@media (min-width: 69rem) {
+  .experience-shell {
+    min-height: calc(100dvh - 5.25rem - 1px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experience-stage {
+    flex: 0 0 auto;
+  }
+
+  .ground-talk {
+    flex: 0 0 auto;
+  }
+
+  .specimen-index {
+    margin-top: .75rem;
+  }
 }
