@@ -113,13 +113,36 @@
     }
     .relation span{min-height:5rem;padding:1rem;background:var(--paper-2);font-size:1rem;line-height:1.5}
     .relation b{display:block;margin-bottom:.35rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.76rem;letter-spacing:.07em;text-transform:uppercase;color:#655e53}
-    .interpretation{transition:opacity .14s ease,filter .14s ease}
-    .source-only{display:none}
-    body[data-source-view="true"] .interpretation{opacity:.09;filter:blur(.6px);pointer-events:none}
-    body[data-source-view="true"] .source-only{display:block}
-    body[data-source-view="true"] .slip{box-shadow:none}
-    body[data-source-view="true"] .thread-line{opacity:.15}
-    body[data-source-view="true"] .proposition{font-size:clamp(1.5rem,3vw,2.65rem)}
+    .interpretation{transition:opacity .14s ease,color .14s ease}
+    .source-only{
+      display:block;
+      max-height:0;
+      margin:0;
+      padding:0 .8rem;
+      overflow:hidden;
+      border-top:0 solid var(--paper-line);
+      color:#423e37;
+      font-size:1.08rem;
+      line-height:1.58;
+      opacity:0;
+      transform:translateY(-.2rem);
+      transition:max-height .18s ease,margin .18s ease,padding .18s ease,border-width .18s ease,opacity .16s ease,transform .16s ease;
+    }
+    body[data-source-view="true"] .interpretation{opacity:.62;color:#5b554d}
+    body[data-source-view="true"] .source-only{
+      max-height:16rem;
+      margin:1.35rem 0 0;
+      padding:1rem .8rem;
+      border-top-width:1px;
+      opacity:1;
+      transform:none;
+    }
+    body[data-source-view="true"] .slip{
+      box-shadow:0 0 0 2px rgba(180,119,79,.36),0 1.2rem 3rem rgba(0,0,0,.16);
+    }
+    body[data-source-view="true"] .thread-line{opacity:.3}
+    body[data-source-view="true"] .source-tag{color:#3e3a34}
+    body[data-source-view="true"] .proposition{font-size:clamp(2rem,4.3vw,4.2rem)}
     .nonjoin{
       position:relative;z-index:2;max-width:94rem;margin:0 auto;padding:clamp(3rem,7vw,7rem) clamp(1.15rem,4vw,4rem);
       border-top:1px solid var(--line);
@@ -187,11 +210,14 @@
 
       .opening{min-height:auto}
       body{font-size:1.18rem}
-      .table-intro-copy,.carrier-body,.source-copy{font-size:1.18rem}
+      .table-intro-copy,.carrier-body,.source-copy,.source-only{font-size:1.18rem}
       .carrier-meta p{font-size:1.05rem}
       .source-tag{font-size:.9rem}
       .relation span{font-size:1.05rem}
       .brace p{font-size:1.12rem}
+      body[data-source-view="true"] .interpretation{opacity:.72}
+      body[data-source-view="true"] .source-only{max-height:22rem}
+      body[data-source-view="true"] .slip{box-shadow:0 0 0 2px rgba(180,119,79,.42),0 .7rem 2rem rgba(0,0,0,.14)}
       h1{font-size:clamp(4rem,18vw,7rem)}
       .carrier,.carrier:nth-child(even){grid-template-columns:1fr}
       .carrier:nth-child(even) .carrier-meta,.carrier:nth-child(even) .slip{order:initial}
@@ -252,7 +278,7 @@
         <button class="needle" id="needle" type="button" aria-pressed="false" aria-describedby="needle-help">Hold<br>needle</button>
         <div class="needle-copy" id="needle-help">
           <strong>Press and hold for source depth</strong>
-          Interpretation recedes. Carrier-local wording and provenance remain until you release the control. On a phone, this control stays within reach while you move through the carriers.
+          The carrier stays in place. Its source-local footing comes forward while the Workshop reading remains visible behind it.
         </div>
       </div>
 
