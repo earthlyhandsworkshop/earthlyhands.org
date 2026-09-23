@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=threshold-v24" />
+    <link rel="stylesheet" href="style.css?v=threshold-v25" />
   </head>
   <body data-lamp="unlit">
     <a class="skip-link" href="#threshold" data-home>Skip to the threshold</a>
@@ -54,6 +54,8 @@
       </a>
       <p class="where" aria-live="polite">
         <span aria-hidden="true">/</span>
+        <span class="who-label">Guest</span>
+        <span aria-hidden="true">·</span>
         <span id="where-label">Front edge</span>
       </p>
     </header>
@@ -75,11 +77,10 @@
               </button>
               <span class="lantern-note">for the live Dawson passage</span>
             </div>
-
-            <div class="visitor-footing" aria-label="Visitor footing">
-              <span><b>Where</b> <span id="footing-place">By lantern light</span></span>
-              <span><b>You</b> Guest</span>
-              <button type="button" class="sign-in-ghost" aria-disabled="true" title="Sign-in is not connected yet">Sign in</button>
+            <div class="footing-rail" aria-label="Current footing">
+              <span>[1] <b>Guest</b></span>
+              <span>[2] <b id="footing-place">By lantern light</b></span>
+              <span>[3] <b>Carried report</b></span>
             </div>
 
             <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Ask the ground" hidden>
@@ -144,12 +145,12 @@
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/dawson-inline-depth/">
-            <span class="specimen-kind">Interaction specimen · Small Door</span>
-            <strong>Dawson inline depth</strong>
-            <span class="specimen-note">Open relation-level depth inside the prose without moving the visitor or inventing a route.</span>
+          <button class="specimen-row specimen-row-button" type="button" data-reveal="southeast">
+            <span class="specimen-kind">Live trail · Small Door depth joined in</span>
+            <strong>Dawson trail — relation depth</strong>
+            <span class="specimen-note">Open nearby source relations inside the same live trail without leaving your footing.</span>
             <b aria-hidden="true">→</b>
-          </a>
+          </button>
 
           <a class="specimen-row" href="/experiments/mobile-full-field/">
             <span class="specimen-kind">Mobile-first experiment · Small Door</span>
@@ -243,18 +244,9 @@
             On 29 January 1831, J. L. Dawson wrote from Cantonment Gibson. His report carries
             travel with the Choctaw and Chickasaw western exploring delegations.
           </p>
-          <p>
-            What survives for us is already a carried thing. The original manuscript has not yet
-            been recovered; the Workshop presently reaches the report through its newspaper and
-            later printed representations.
-          </p>
-          <p>
-            So this trail begins with two kinds of distance at once: the party moving across the
-            ground, and the record moving forward through later carriers before it reaches us.
-          </p>
           <p class="story-quiet">
-            We will follow only what the carried report lets us follow. A direction can remain a
-            direction. An unnamed person can remain unnamed. When the source stops, the trail stops.
+            The original manuscript has not yet been recovered. We are following the report
+            through its newspaper and later printed representations.
           </p>
         </div>
         <div class="passage-actions" aria-label="Available actions">
@@ -327,9 +319,9 @@
         <div class="first-person-view" aria-label="First-person view">
           <span class="bracket" aria-hidden="true">[</span>
           <div>
-            <p>The report carries about fifteen miles of travel.</p>
+            <p>The report carries <button class="inline-depth" type="button" data-depth="distance" aria-expanded="false">about fifteen miles southeast</button>.</p>
             <p>It does not preserve the line of the route.</p>
-            <p>A new camp lies ahead on a small branch of Blue Water.</p>
+            <p>A new camp lies ahead on <button class="inline-depth" type="button" data-depth="creek" aria-expanded="false">a small branch of Blue Water</button>.</p>
             <p>The direction and mileage belong to Dawson’s account; they are not a route reconstructed by the Workshop.</p>
           </div>
           <span class="bracket bracket-close" aria-hidden="true">]</span>
@@ -356,9 +348,9 @@
         <div class="first-person-view" aria-label="First-person view">
           <span class="bracket" aria-hidden="true">[</span>
           <div>
-            <p>On this creek, Dawson reports finding Mr. Mayes and Mr. Criner.</p>
-            <p>They reside on James’ Fork of Poteau.</p>
-            <p>They are trapping for beaver here. The report supplies no route between the creek and their residence.</p>
+            <p>On <button class="inline-depth" type="button" data-depth="creek" aria-expanded="false">this creek</button>, Dawson reports finding <button class="inline-depth" type="button" data-depth="mayes" aria-expanded="false">Mr. Mayes</button> and <button class="inline-depth" type="button" data-depth="criner" aria-expanded="false">Mr. Criner</button>.</p>
+            <p>They <button class="inline-depth" type="button" data-depth="residence" aria-expanded="false">reside on James’ Fork of Poteau</button>.</p>
+            <p>They are <button class="inline-depth" type="button" data-depth="trapping" aria-expanded="false">trapping for beaver here</button>. The report supplies no route between the creek and their residence.</p>
             <p>The residence and the trapping place are related in the report, but they are not made into one location.</p>
           </div>
           <span class="bracket bracket-close" aria-hidden="true">]</span>
@@ -418,6 +410,6 @@
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="config.js?v=threshold-v5"></script>
-    <script src="script.js?v=threshold-v12"></script>
+    <script src="script.js?v=threshold-v13"></script>
   </body>
 </html>
