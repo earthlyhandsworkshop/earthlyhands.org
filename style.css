@@ -1348,3 +1348,32 @@ footer > .footer-threshold {
     max-width: none;
   }
 }
+
+
+/* Active panel should occupy the top field immediately; lantern belongs after it. */
+.experience-stage {
+  margin-bottom: 0.75rem;
+}
+
+.js .experience-mount .passage,
+.js .experience-mount .practice {
+  padding-top: 0;
+}
+
+.threshold-intro {
+  padding-top: 0;
+}
+
+.threshold-lantern {
+  margin: 0 0 1.1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--rule);
+}
+
+body[data-lamp="lit"] .threshold-lantern {
+  border-top-color: var(--rule-lit);
+}
+
+body[data-lamp="unlit"] .threshold-lantern {
+  border-top-color: transparent;
+}
