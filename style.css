@@ -10,7 +10,7 @@
   --ember-soft: #e0ad78;
   --glow: rgba(211, 145, 81, 0.14);
   --measure: 42rem;
-  --page: min(72rem, calc(100% - 12vw));
+  --page: min(62rem, calc(100% - 10vw));
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
 }
@@ -788,5 +788,132 @@ footer p { margin: 0; }
 
   .specimen-index {
     margin-top: .75rem;
+  }
+}
+
+
+/* Human-scale front door. Individual experiments can opt wider later if earned. */
+main,
+.site-header,
+footer {
+  width: var(--page);
+}
+
+.experience-shell,
+.specimen-index,
+.experiences-head {
+  width: 100%;
+}
+
+.experiences-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 1.25rem 0 .45rem;
+  padding-top: .8rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+}
+
+.experiences-head p {
+  margin: 0;
+  color: var(--paper);
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.experiences-head span {
+  color: var(--paper-muted);
+  font-size: .76rem;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.threshold-intro:empty {
+  display: none;
+}
+
+/* Live scene has its own quiet edge navigation. */
+.report-passage,
+.trail-passage,
+.practice {
+  position: relative;
+}
+
+.passage-actions {
+  position: relative;
+  min-height: 2.2rem;
+  border-top: 0;
+  margin-top: .6rem;
+  padding-top: .35rem;
+}
+
+.passage-actions .door-back,
+.passage-actions .door-forward {
+  position: absolute;
+  top: .15rem;
+  z-index: 2;
+  padding: .15rem 0;
+  color: var(--paper-muted);
+  font-size: .82rem;
+}
+
+.passage-actions .door-back {
+  left: 0;
+}
+
+.passage-actions .door-forward {
+  right: 0;
+}
+
+.passage-actions .door-prompt {
+  justify-self: center;
+  font-size: .84rem;
+}
+
+.passage-actions .lamp-control {
+  position: static;
+  justify-self: start;
+  font-size: .82rem;
+}
+
+.passage-actions .door::before,
+.ground-talk .talk-toggle::before {
+  content: none;
+}
+
+.ground-talk {
+  margin-top: .35rem;
+  padding-top: .5rem;
+  border-top: 1px solid var(--rule);
+}
+
+@media (max-width: 68rem) {
+  :root {
+    --page: calc(100% - 3rem);
+  }
+
+  .experiences-head {
+    display: block;
+  }
+
+  .experiences-head span {
+    display: block;
+    margin-top: .2rem;
+    text-align: left;
+  }
+
+  .passage-actions .door-back,
+  .passage-actions .door-forward {
+    position: static;
+  }
+
+  .passage-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .25rem 1rem;
   }
 }
