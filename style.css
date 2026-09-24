@@ -1935,3 +1935,140 @@ body[data-lamp="lit"] .experience-tools .threshold-lantern {
     transition: none;
   }
 }
+
+
+/* Dawson fixed-stage correction — already on the trail; actions replace one viewport. */
+.experience-shell {
+  height: calc(100dvh - 4.45rem);
+  min-height: 34rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.experience-stage {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.experience-mount {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.experience-mount > [data-scene].is-current {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: grid !important;
+  align-content: center;
+  overflow: auto;
+  scrollbar-width: thin;
+  padding-block: clamp(1.25rem, 4vh, 3.25rem);
+}
+
+.experience-tools {
+  flex: 0 0 auto;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.trail-console {
+  min-height: 4.2rem;
+}
+
+.trail-control-back:disabled {
+  visibility: hidden;
+}
+
+.trail-control-next:disabled {
+  opacity: .52;
+  cursor: default;
+}
+
+.experience-utility {
+  min-height: 3rem;
+}
+
+.experiences-head {
+  margin-top: 2.6rem;
+}
+
+/* Keep project navigation clearly below the Dawson viewport. */
+.threshold > .experiences-head {
+  scroll-margin-top: 1rem;
+}
+
+@media (max-width: 68rem) {
+  .experience-shell {
+    height: calc(100svh - 4.1rem);
+    min-height: 32rem;
+  }
+
+  body[data-lamp="lit"] .experience-shell {
+    min-height: 32rem;
+    height: calc(100svh - 4.1rem);
+  }
+
+  .experience-stage {
+    width: min(100% - 2rem, 44rem);
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .experience-mount {
+    height: 100%;
+  }
+
+  .experience-mount > [data-scene].is-current {
+    align-content: center;
+    padding-block: 1rem;
+  }
+
+  .experience-tools {
+    width: min(100% - 2rem, 44rem);
+  }
+}
+
+@media (max-width: 40rem) {
+  .experience-shell {
+    min-height: 36rem;
+  }
+
+  body[data-lamp="lit"] .experience-shell {
+    min-height: 36rem;
+  }
+
+  .experience-mount > [data-scene].is-current {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .experience-mount > [data-scene].is-current h2 {
+    margin-bottom: .85rem;
+    font-size: clamp(2.2rem, 11vw, 3.5rem);
+  }
+
+  .experience-mount > [data-scene].is-current .first-person-view {
+    font-size: 1rem;
+    line-height: 1.48;
+  }
+
+  .experience-mount > [data-scene].is-current .footing {
+    margin-top: .6rem;
+    font-size: .72rem;
+  }
+
+  .trail-console {
+    min-height: 3.9rem;
+  }
+
+  .experience-utility {
+    min-height: 2.7rem;
+  }
+}
