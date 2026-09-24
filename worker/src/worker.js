@@ -1,3 +1,5 @@
+const WORKER_VERSION = "shared-country-v2-luna";
+const MODEL = "gpt-5.6-luna";
 const MAX_MESSAGE_LENGTH = 20000;
 const MAX_HISTORY_ITEMS = 6;
 const MAX_HISTORY_ITEM_LENGTH = 2500;
@@ -106,7 +108,7 @@ export default {
     const url = new URL(request.url);
 
     if (request.method === "GET" && url.pathname === "/health") {
-      return json({ ok: true });
+      return json({ ok: true, version: WORKER_VERSION, model: MODEL });
     }
 
     const origin = allowedOrigin(request, env);
@@ -158,7 +160,7 @@ export default {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "gpt-5.6-luna",
+          model: MODEL,
           instructions: INSTRUCTIONS,
           input,
           tools: [{ type: "web_search" }],
@@ -172,6 +174,8 @@ export default {
     }
 
     if (!upstream.ok) {
+      const detail = await upstream.text().catch(() => "");
+      console.error("OpenAI upstream error", upstream.status, detail.slice(0, 2000));
       return json({ error: "The listening ground could not answer." }, 502, corsHeaders(origin));
     }
 
