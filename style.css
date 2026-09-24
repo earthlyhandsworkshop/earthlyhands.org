@@ -183,10 +183,31 @@ body[data-ground="dozen"] .experience-shell{
 
 .experience-stage{
   min-height:clamp(31rem,64svh,40rem);
-  display:flex;
-  align-items:center;
-  padding:clamp(2.25rem,6vh,4.5rem) 0 1.5rem;
+  display:grid;
+  grid-template-rows:auto 1fr;
+  align-items:start;
+  gap:1.4rem;
+  padding:clamp(1.8rem,5vh,3.6rem) 0 1.5rem;
   overflow:hidden;
+}
+
+.presence-layer{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.4rem .7rem;
+  min-height:1.7rem;
+  color:var(--scene-muted);
+  font-family:var(--mono);
+  font-size:.72rem;
+  line-height:1.35;
+}
+
+.presence-mark{
+  white-space:nowrap;
+}
+
+.presence-ground{
+  color:var(--scene-ink);
 }
 
 .experience-mount{
@@ -361,57 +382,43 @@ body[data-ground="dozen"] .experience-shell{
 }
 
 .talk-body{
-  width:min(42rem,100%);
-  margin:.7rem 0 0 auto;
-  padding:.8rem 0 0;
-  border-top:1px solid var(--scene-rule);
-}
-
-.talk-log{
-  margin-bottom:.7rem;
-}
-.talk-entry{
-  margin-bottom:.65rem;
-}
-.talk-entry-who{
-  margin:0 0 .15rem;
-  color:var(--scene-muted);
-  font-size:.65rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.talk-entry-text{
-  margin:0;
-  color:var(--scene-ink);
-  font-family:var(--serif);
-  font-size:1rem;
+  width:min(44rem,100%);
+  margin:.55rem 0 0 auto;
+  padding:0;
 }
 
 .talk-form{
   display:grid;
   grid-template-columns:1fr auto;
-  gap:.5rem;
+  gap:.65rem;
+  align-items:end;
 }
-.talk-form textarea{
+.talk-form input{
   width:100%;
-  min-height:3rem;
-  resize:vertical;
-  padding:.55rem .65rem;
-  border:1px solid var(--scene-rule);
+  padding:.45rem 0 .4rem;
+  border:0;
+  border-bottom:1px solid var(--scene-rule);
+  border-radius:0;
+  outline:0;
   background:transparent;
   color:var(--scene-ink);
+  font-family:var(--serif);
+  font-size:1rem;
+}
+.talk-form input::placeholder{
+  color:var(--scene-muted);
+  opacity:.8;
+}
+.talk-form input:focus{
+  border-bottom-color:var(--scene-accent);
 }
 .talk-form button{
-  align-self:end;
-  padding:.55rem .7rem;
-  border:1px solid var(--scene-rule);
+  padding:.4rem 0;
+  border:0;
+  border-bottom:1px solid var(--scene-rule);
   background:transparent;
   color:var(--scene-ink);
-}
-.talk-note{
-  margin:.5rem 0 0;
-  color:var(--scene-muted);
-  font-size:.68rem;
+  cursor:pointer;
 }
 
 /* Workshop/public work below the historical field. */
@@ -511,8 +518,9 @@ footer{
 
   .experience-stage{
     min-height:31rem;
-    padding:2.2rem 0 1.4rem;
-    align-items:flex-start;
+    padding:1.7rem 0 1.4rem;
+    align-items:start;
+    gap:1.1rem;
   }
 
   [data-scene].is-current{
@@ -571,6 +579,16 @@ footer{
 
   .talk-body{
     margin-left:0;
+    width:100%;
+  }
+
+  .presence-layer{
+    gap:.25rem .55rem;
+    font-size:.68rem;
+  }
+
+  .talk-form{
+    grid-template-columns:1fr auto;
   }
 
   .experiences-head{
@@ -603,4 +621,16 @@ footer{
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .experience-shell{transition:none}
+}
+
+
+.experience-shell[data-presence="fire"]{
+  background:
+    radial-gradient(circle at 18% 88%,rgba(179,106,55,.10),transparent 18rem),
+    var(--scene-bg);
+}
+body[data-ground="night"] .experience-shell[data-presence="fire"]{
+  background:
+    radial-gradient(circle at 20% 82%,rgba(220,139,73,.18),transparent 20rem),
+    #15191d;
 }
