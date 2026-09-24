@@ -230,6 +230,14 @@ body[data-ground="dozen"] .experience-shell{
 
 .plain-copy,
 .first-person-view{
+  grid-column:2;
+  grid-row:2;
+  max-width:var(--measure);
+  color:var(--scene-ink);
+  font-size:clamp(1.08rem,1.5vw,1.24rem);
+}
+
+.first-person-view{
   display:block;
   min-height:10rem;
   padding:0;
