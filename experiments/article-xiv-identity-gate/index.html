@@ -287,7 +287,7 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 .divider::before,.divider::after{content:"";height:1px;background:var(--rule)}
 .lower{
   display:grid;
-  grid-template-columns:minmax(0,1fr) clamp(13.5rem,16vw,15.5rem);
+  grid-template-columns:minmax(0,1fr) clamp(18rem,20vw,19rem);
   gap:.8rem;
   align-items:stretch;
 }
@@ -339,7 +339,20 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 }
 .pressure-row:last-child{border-bottom:0}
 .pressure-row:hover,.pressure-row.is-active{background:rgba(109,117,95,.07)}
-.pressure-row .left,.pressure-row .right{font:1rem/1.2 var(--mono);font-weight:600}
+.pressure-row .left,.pressure-row .right{
+  min-width:0;
+  font:.98rem/1.12 var(--mono);
+  font-weight:600;
+}
+.pressure-row .left small,.pressure-row .right small{
+  display:block;
+  margin-top:.18rem;
+  font:.52rem/1.2 var(--mono);
+  font-weight:400;
+  letter-spacing:.035em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
 .dashes{height:1px;border-top:1px dashed var(--muted)}
 .q{font:1rem/1 var(--mono);white-space:nowrap}
 .pressure-state{display:none}
@@ -406,10 +419,10 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 .action-choice.wide{grid-column:1 / -1;min-height:1.75rem}
 .bridge-invite{margin:.5rem 0 .12rem!important;font:.64rem/1.3 var(--mono)!important;text-transform:uppercase;letter-spacing:.05em}
 .properties{
-  height:6.1rem;
+  height:5.35rem;
   margin:.8rem 0 0;
   display:grid;
-  grid-template-columns:minmax(9.5rem,.20fr) minmax(0,1fr) minmax(9.5rem,.20fr);
+  grid-template-columns:minmax(8.5rem,.18fr) minmax(0,1fr) minmax(10.5rem,.22fr);
   gap:0;
   overflow:hidden;
   border:1px solid var(--rule);
@@ -417,7 +430,7 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 }
 .properties-label{
   min-width:0;
-  padding:.62rem .72rem;
+  padding:.48rem .62rem;
   border-right:1px solid var(--rule);
 }
 .properties-label span{display:block;font:.55rem/1.15 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
@@ -431,22 +444,22 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 .properties-copy{
   min-width:0;
   overflow:hidden;
-  padding:.52rem .72rem;
+  padding:.42rem .62rem;
   color:var(--muted);
   font:.66rem/1.28 var(--mono);
 }
 .properties-copy .property-long{
   display:block;
-  max-height:4.55rem;
+  max-height:4.2rem;
   overflow:hidden;
 }
 .property-stamp{
   display:flex;
-  gap:.55rem 1rem;
+  gap:.35rem .8rem;
   flex-wrap:wrap;
-  margin-bottom:.3rem;
-  font:.5rem/1.15 var(--mono);
-  letter-spacing:.07em;
+  margin-bottom:.18rem;
+  font:.47rem/1.1 var(--mono);
+  letter-spacing:.065em;
   text-transform:uppercase;
   color:var(--muted);
 }
@@ -469,22 +482,22 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   color:var(--ink);
 }
 .property-provenance{
-  margin-top:.24rem;
-  font:.52rem/1.22 var(--mono);
-  letter-spacing:.04em;
+  margin-top:.16rem;
+  font:.48rem/1.15 var(--mono);
+  letter-spacing:.035em;
   text-transform:uppercase;
   color:var(--muted);
 }
 .property-source-note{
-  margin-top:.2rem;
-  font:.5rem/1.18 var(--mono);
-  letter-spacing:.045em;
+  margin-top:.12rem;
+  font:.46rem/1.12 var(--mono);
+  letter-spacing:.04em;
   text-transform:uppercase;
   color:var(--accent);
 }
 .properties-state{
   min-width:0;
-  padding:.58rem .72rem;
+  padding:.48rem .62rem;
   border-left:1px solid var(--rule);
   font:.54rem/1.3 var(--mono);
   text-transform:uppercase;
@@ -689,19 +702,19 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
       <section class="pressure" aria-label="Unresolved proposition lines">
         <div class="pressure-head"><h2>Unresolved proposition lines</h2></div>
         <button class="pressure-row" type="button" data-bridge="yimma-susie">
-          <span class="left">YIMMA</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">SUSIE</span>
+          <span class="left">YIMMA<small>older record · wife</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">SUSIE<small>Jane · mother</small></span>
         </button>
         <button class="pressure-row" type="button" data-bridge="land">
-          <span class="left">694.96 ACRES</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ABOUT 160 ACRES</span>
+          <span class="left">694.96 ACRES<small>1846 patent · Section 4</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ABOUT 160 ACRES<small>Jane · government land estimate</small></span>
         </button>
         <button class="pressure-row" type="button" data-bridge="name">
-          <span class="left">ROBERT</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ROBIN</span>
+          <span class="left">ROBERT<small>older record / Marris translated record</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ROBIN<small>Jane · stated twice</small></span>
         </button>
         <button class="pressure-row" type="button" data-bridge="place">
-          <span class="left">SECTION 4</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">NOXAPATER</span>
+          <span class="left">SECTION 4<small>patent tract address</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">NOXAPATER<small>Jane · remembered land place</small></span>
         </button>
         <button class="pressure-row" type="button" data-bridge="language">
-          <span class="left">1838: CANNOT SPEAK ENGLISH</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">FAMILY-SIDE CLAIMS</span>
+          <span class="left">1838: CANNOT SPEAK ENGLISH<small>older Robert · General Deposition 25</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">FAMILY-SIDE LANGUAGE<small>separate speakers / later records</small></span>
         </button>
       </section>
 
@@ -713,8 +726,8 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
         </div>
         <div class="key-body">
           <div class="panel-view unresolved-view" id="unresolved-view">
-            <h3 id="unresolved-title">Choose an unresolved line.</h3>
-            <p id="unresolved-copy">Select one of the question-mark lines. This panel will tell you exactly what remains unresolved.</p>
+            <h3 id="unresolved-title">Choose a question mark.</h3>
+            <p id="unresolved-copy">This rail holds the exact missing bridge. Action occupies the same space when you have something to bring.</p>
           </div>
 
           <div class="panel-view action-body" id="action-body" hidden>
@@ -789,7 +802,7 @@ const source={
  susie:{title:"Susie Bell",copy:"In that same 1903 examination Jane names her mother Susie Bell. This is Jane's witness-given family proposition. It is not converted into Yimma by the later Commission identity act.",state:"source descent · Jane witness voice"},
  "160":{title:"about 160 acres",copy:"Jane says her father got government land at Noxapater in Neshoba County, estimates about 160 acres, says she does not know whether it was Article XIV land, and says Wash Bell owns that land and lives on it. Approximate present-land testimony is not an original patent acreage.",state:"source descent · Jane land testimony"},
  "jane-wash":{title:"Jane / Wash",copy:"Jane identifies Wash Bell as her full brother. She says Wash owns and lives on the government land she associates with their father. Elsewhere the consolidated body represents Wash as owning part of Robert Bell's government land; the later decision places Wash on Section 4. Those later administrative propositions create pressure, not a recovered conveyance chain.",state:"source descent · family / administrative layers"},
- marris:{title:"Dibbin Marris",html:'<div class="property-stamp"><b>Seale, Mississippi</b><span>4 April 1902</span><span>Dibbin Marris — sworn witness</span></div><div class="property-qa"><b>Commission</b><span>What was her name?</span><b>Dibbin Marris</b><strong>Robert Bell.</strong></div><div class="property-provenance">Oscar Billey — Official Interpreter · R. S. Streit — reporter / certifier · surviving English Q/A certified as translation</div><div class="property-source-note">Original spoken language not recovered · “her” is exact source wording, not a Workshop correction or typo</div>',copy:"",state:"WITNESS → INTERPRETER-MARKED RECORD → CERTIFIED TRANSLATION"},
+ marris:{title:"Dibbin Marris",html:'<div class="property-stamp"><b>Seale, Mississippi · 4 Apr 1902</b><span>sworn witness</span></div><div class="property-qa"><b>Commission</b><span>What was her name?</span><b>Dibbin Marris</b><strong>Robert Bell.</strong></div><div class="property-provenance">Oscar Billey — Official Interpreter · R. S. Streit — reporter / certifier · surviving English Q/A: certified translation</div>',copy:"",state:"“HER” = EXACT SOURCE WORDING\nORIGINAL SPOKEN FORM NOT RECOVERED"},
  robert:{title:"Robert Bell",copy:"The older Article XIV record body contains a source-local Robert Bell occurrence used by later federal decision-makers. The Workshop keeps this occurrence distinct from Jane's Robin Bell unless an independent person bridge is earned.",state:"source descent · older Article XIV record body"},
  yimma:{title:"Yimma",copy:"The 13 May 1902 Office of Indian Affairs report represents an older evidence carrier, record book No. 102 p.520, as saying Robert Bell had a wife named Yimma and had been married about six months before the treaty. The direct record-book face remains unrecovered.",state:"source descent · 1902 Office representation of older testimony"},
  "694":{title:"694.96 acres",copy:"The 14 December 1846 Article XIV patent grants Robert Bell the surveyed Section 4 tract containing 694.96 acres. The patent proves that tract and patent occurrence. It does not by itself identify Jane Bell's father or explain Jane's later estimate of about 160 acres.",state:"source descent · 1846 patent"},
