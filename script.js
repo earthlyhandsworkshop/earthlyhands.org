@@ -79,7 +79,7 @@
   const sceneState = JSON.parse(JSON.stringify(defaultSceneState));
 
   try {
-    const rememberedState = JSON.parse(window.localStorage.getItem("earthly-hands-dawson-state-v2") || "null");
+    const rememberedState = JSON.parse(window.localStorage.getItem("earthly-hands-dawson-state-v3") || "null");
     if (rememberedState && typeof rememberedState === "object") {
       for (const id of Object.keys(sceneState)) {
         if (rememberedState[id] && typeof rememberedState[id] === "object") {
@@ -121,7 +121,7 @@
 
   function saveSceneState() {
     try {
-      window.localStorage.setItem("earthly-hands-dawson-state-v2", JSON.stringify(sceneState));
+      window.localStorage.setItem("earthly-hands-dawson-state-v3", JSON.stringify(sceneState));
     } catch (_) {
       // The lived layer still works without storage.
     }
@@ -298,8 +298,6 @@
     const fromIndex = fullSequence.indexOf(currentId);
     const toIndex = fullSequence.indexOf(id);
     const direction = toIndex < fromIndex ? "back" : "forward";
-
-    closeTalk();
     setLamp(id !== "threshold");
     currentId = id;
     remember(id);
@@ -459,8 +457,6 @@
     const fromIndex = fullSequence.indexOf(currentId);
     const toIndex = fullSequence.indexOf(id);
     const direction = toIndex < fromIndex ? "back" : "forward";
-
-    closeTalk();
     setLamp(id !== "threshold");
     currentId = id;
     remember(id);
