@@ -151,6 +151,91 @@
         "OUTCOME ≠ TRAP SITE",
         "COLD-WEATHER JUDGMENT ≠ ROUTE CHANGE"
       ]
+    },
+    {
+      "id": "DAW-RET-GUIDE-001",
+      "scenes": [
+        "guide"
+      ],
+      "keywords": [
+        "mayes",
+        "criner",
+        "guide",
+        "gaines",
+        "reynolds",
+        "kiamiche",
+        "accompany"
+      ],
+      "summary": [
+        "Dawson reports that Cols. Gaines and Reynolds induced Mayes and Criner to accompany the delegation as far as Kiamiche.",
+        "He reports that Mr. Mayes was employed as a guide.",
+        "The held source does not make Criner a guide, give the employment terms, or prove arrival at Kiamiche in this sentence."
+      ],
+      "source_object_ids": [
+        "DAW-SRC-GOV-001"
+      ],
+      "brakes": [
+        "MAYES GUIDE ROLE ≠ CRINER GUIDE ROLE",
+        "INDUCED TO ACCOMPANY ≠ PROVED ARRIVAL",
+        "EMPLOYED ≠ TERMS OR WAGE RECOVERED"
+      ]
+    },
+    {
+      "id": "DAW-RET-MOUTH-001",
+      "scenes": [
+        "blue-water-mouth"
+      ],
+      "keywords": [
+        "mouth",
+        "blue water",
+        "washita",
+        "garrison",
+        "inspect",
+        "inspection",
+        "post"
+      ],
+      "summary": [
+        "Dawson places the traveling body within a short distance of the mouth of Blue Water.",
+        "He says he wanted to see the mouths of Blue Water and the Washita to report their local advantages for a possible garrison.",
+        "The sentence does not prove arrival at either mouth, site selection, executive approval, survey, or construction."
+      ],
+      "source_object_ids": [
+        "DAW-SRC-GOV-001"
+      ],
+      "brakes": [
+        "PROXIMITY ≠ ARRIVAL",
+        "INSPECTION INTENT ≠ COMPLETED INSPECTION",
+        "POSSIBLE GARRISON ≠ AUTHORIZED OR BUILT POST"
+      ]
+    },
+    {
+      "id": "DAW-RET-EAST-001",
+      "scenes": [
+        "east-blue-water"
+      ],
+      "keywords": [
+        "east",
+        "blue water",
+        "settlement",
+        "settlements",
+        "whole nation",
+        "winter range",
+        "depredation",
+        "room"
+      ],
+      "summary": [
+        "Dawson says there is ample room for the whole nation in the portion east of Blue Water.",
+        "He predicts that this portion will fill with settlements first.",
+        "He supports the forecast with his judgments about winter range, accessibility, and comparative exposure."
+      ],
+      "source_object_ids": [
+        "DAW-SRC-GOV-001"
+      ],
+      "brakes": [
+        "CAPACITY JUDGMENT ≠ OCCUPANCY",
+        "FORECAST ≠ EXISTING SETTLEMENT",
+        "EAST OF BLUE WATER ≠ SURVEYED POLYGON"
+      ]
     }
   ]
 }
