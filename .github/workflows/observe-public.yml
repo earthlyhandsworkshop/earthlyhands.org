@@ -37,8 +37,18 @@ jobs:
         if: always()
         run: |
           mkdir -p public-observation
-          npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="1280,2200" https://earthlyhands.org public-observation/front-edge-desktop.png
-          npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="390,1800" https://earthlyhands.org public-observation/front-edge-mobile.png
+          npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="1280,1000" https://earthlyhands.org public-observation/front-edge-desktop.png
+          npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="390,844" https://earthlyhands.org public-observation/front-edge-mobile.png
+
+          # Dawson visual witness: capture the actual viewport at each state, not only the default front edge.
+          for state in report night morning southeast blue-water dozen; do
+            npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="1280,900" "https://earthlyhands.org/#$state" "public-observation/dawson-$state-desktop.png"
+          done
+          for state in night morning southeast blue-water; do
+            npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="390,844" "https://earthlyhands.org/#$state" "public-observation/dawson-$state-mobile.png"
+          done
+
+          npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="1280,900" https://earthlyhands.org public-observation/front-edge-full-page.png
 
           npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="1280,900" https://earthlyhands.org/mcr879.html public-observation/mcr879-desktop.png
           npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="390,844" https://earthlyhands.org/mcr879.html public-observation/mcr879-mobile.png
