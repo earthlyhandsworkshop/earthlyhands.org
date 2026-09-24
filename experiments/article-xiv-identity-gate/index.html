@@ -509,6 +509,39 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   text-transform:uppercase;
   color:var(--muted);
 }
+.carrier-chain{
+  display:grid;
+  grid-template-columns:auto auto auto auto auto;
+  align-items:center;
+  gap:.2rem .34rem;
+  margin-top:.14rem;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.carrier-node{
+  min-width:0;
+  font:.46rem/1.12 var(--mono);
+  letter-spacing:.035em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.carrier-node b{
+  display:block;
+  font-size:.49rem;
+  color:var(--ink);
+  font-weight:600;
+}
+.carrier-node strong{
+  display:block;
+  font:600 .7rem/1.05 var(--serif);
+  color:var(--ink);
+  letter-spacing:0;
+  text-transform:none;
+}
+.carrier-arrow{
+  font:.58rem/1 var(--mono);
+  color:var(--accent);
+}
 .property-source-note{
   margin-top:.12rem;
   font:.46rem/1.12 var(--mono);
@@ -834,7 +867,7 @@ const source={
  susie:{title:"Susie Bell",copy:"In that same 1903 examination Jane names her mother Susie Bell. This is Jane's witness-given family proposition. It is not converted into Yimma by the later Commission identity act.",state:"source descent · Jane witness voice"},
  "160":{title:"about 160 acres",copy:"Jane says her father got government land at Noxapater in Neshoba County, estimates about 160 acres, says she does not know whether it was Article XIV land, and says Wash Bell owns that land and lives on it. Approximate present-land testimony is not an original patent acreage.",state:"source descent · Jane land testimony"},
  "jane-wash":{title:"Jane / Wash",copy:"Jane identifies Wash Bell as her full brother. She says Wash owns and lives on the government land she associates with their father. Elsewhere the consolidated body represents Wash as owning part of Robert Bell's government land; the later decision places Wash on Section 4. Those later administrative propositions create pressure, not a recovered conveyance chain.",state:"source descent · family / administrative layers"},
- marris:{title:"Dibbin Marris",html:'<div class="property-stamp"><b>Seale, Mississippi · 4 Apr 1902</b><span>sworn witness</span></div><div class="property-qa"><b>Commission</b><span>What was her name?</span><b>Dibbin Marris</b><strong>Robert Bell.</strong></div><div class="property-provenance">Oscar Billey — Official Interpreter · R. S. Streit — reporter / certifier · surviving English Q/A: certified translation</div>',copy:"",state:"“HER” = EXACT SOURCE WORDING\nORIGINAL SPOKEN FORM NOT RECOVERED"},
+ marris:{title:"Dibbin Marris",html:'<div class="property-stamp"><b>Seale, Mississippi · 4 Apr 1902</b><span>sworn witness</span></div><div class="property-qa"><b>Commission</b><span>What was her name?</span><b>Represented answer</b><strong>Robert Bell.</strong></div><div class="carrier-chain"><span class="carrier-node"><b>Commission</b><strong>“her”</strong></span><span class="carrier-arrow">→</span><span class="carrier-node"><b>Dibbin Marris</b><span>witness utterance</span></span><span class="carrier-arrow">→</span><span class="carrier-node"><b>Oscar Billey</b><span>Official Interpreter</span></span><span class="carrier-arrow">→</span><span class="carrier-node"><b>R. S. Streit</b><span>reporter / certifier</span></span><span class="carrier-arrow">→</span><span class="carrier-node"><b>Surviving English Q/A</b><strong>Robert Bell</strong></span></div>',copy:"",state:"“HER” = EXACT SOURCE WORDING · CERTIFIED TRANSLATION\nORIGINAL SPOKEN FORM / INTERPRETER WORDING NOT RECOVERED"},
  robert:{title:"Robert Bell",copy:"The older Article XIV record body contains a source-local Robert Bell occurrence used by later federal decision-makers. The Workshop keeps this occurrence distinct from Jane's Robin Bell unless an independent person bridge is earned.",state:"source descent · older Article XIV record body"},
  yimma:{title:"Yimma",copy:"The 13 May 1902 Office of Indian Affairs report represents an older evidence carrier, record book No. 102 p.520, as saying Robert Bell had a wife named Yimma and had been married about six months before the treaty. The direct record-book face remains unrecovered.",state:"source descent · 1902 Office representation of older testimony"},
  "694":{title:"694.96 acres",copy:"The 14 December 1846 Article XIV patent grants Robert Bell the surveyed Section 4 tract containing 694.96 acres. The patent proves that tract and patent occurrence. It does not by itself identify Jane Bell's father or explain Jane's later estimate of about 160 acres.",state:"source descent · 1846 patent"},
