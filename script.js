@@ -548,23 +548,94 @@
 
   function buildCampPeople() {
     if (!campPeopleList) return;
-    const people = peopleByGround[currentId] || [];
+
+    const currentIndex = Math.max(0, fullSequence.indexOf(currentId));
+    const encountered = new Map();
+
+    fullSequence.slice(0, currentIndex + 1).forEach((sceneId) => {
+      (peopleByGround[sceneId] || []).forEach((person) => {
+        const key = person.name;
+        if (!encountered.has(key)) {
+          encountered.set(key, {
+            ...person,
+            firstSeen: sceneId,
+            lastSeen: sceneId,
+            relations: [person.relation],
+            notes: [person.note]
+          });
+          return;
+        }
+
+        const held = encountered.get(key);
+        held.lastSeen = sceneId;
+        if (person.relation && !held.relations.includes(person.relation)) held.relations.push(person.relation);
+        if (person.note && !held.notes.includes(person.note)) held.notes.push(person.note);
+      });
+    });
+
+    const people = Array.from(encountered.values());
+    const compact = people.length > 8;
+    const richNames = new Set(compact ? people.slice(-5).map((person) => person.name) : people.map((person) => person.name));
     const fragment = document.createDocumentFragment();
 
-    people.forEach((person) => {
-      const row = document.createElement("article");
-      row.className = "camp-person";
-      const name = document.createElement("h3");
-      name.textContent = person.name;
-      const relation = document.createElement("p");
-      relation.className = "camp-person-relation";
-      relation.textContent = person.relation;
-      const note = document.createElement("p");
-      note.className = "camp-person-note";
-      note.textContent = person.note;
-      row.append(name, relation, note);
-      fragment.append(row);
-    });
+    if (compact) {
+      const roster = document.createElement("nav");
+      roster.className = "camp-people-roster";
+      roster.setAttribute("aria-label", "People encountered so far");
+
+      people
+        .filter((person) => !richNames.has(person.name))
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .forEach((person) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "camp-person-link";
+          button.textContent = person.name;
+          button.title = "Return to " + (trailUi[person.firstSeen]?.name || person.firstSeen);
+          button.addEventListener("click", () => {
+            landAt(person.firstSeen);
+            setDawsonView("ground");
+          });
+          roster.append(button);
+        });
+
+      if (roster.childElementCount) fragment.append(roster);
+    }
+
+    people
+      .filter((person) => richNames.has(person.name))
+      .forEach((person) => {
+        const row = document.createElement("article");
+        row.className = "camp-person";
+
+        const head = document.createElement("div");
+        head.className = "camp-person-head";
+
+        const name = document.createElement("h3");
+        name.textContent = person.name;
+
+        const returnButton = document.createElement("button");
+        returnButton.type = "button";
+        returnButton.className = "camp-person-return";
+        returnButton.textContent = "first seen · " + (trailUi[person.firstSeen]?.name || person.firstSeen);
+        returnButton.addEventListener("click", () => {
+          landAt(person.firstSeen);
+          setDawsonView("ground");
+        });
+
+        head.append(name, returnButton);
+
+        const relation = document.createElement("p");
+        relation.className = "camp-person-relation";
+        relation.textContent = person.relations[person.relations.length - 1] || "";
+
+        const note = document.createElement("p");
+        note.className = "camp-person-note";
+        note.textContent = person.notes[person.notes.length - 1] || "";
+
+        row.append(head, relation, note);
+        fragment.append(row);
+      });
 
     campPeopleList.replaceChildren(fragment);
   }
