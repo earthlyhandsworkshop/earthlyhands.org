@@ -238,29 +238,54 @@ body[data-ground="dozen"] .experience-shell{
 }
 
 .first-person-view{
-  display:grid;
-  grid-template-columns:auto minmax(0,1fr) auto;
-  gap:.75rem;
+  position:relative;
+  display:block;
+  min-height:10rem;
+  padding:1.9rem 2.4rem 2rem;
+}
+
+.view-body{
+  max-width:34rem;
 }
 
 .first-person-view p{margin:0 0 .55em}
 .first-person-view p:last-child{margin-bottom:0}
 
 .bracket{
+  position:absolute;
   color:var(--scene-accent);
   font-family:var(--mono);
+  font-size:1.25rem;
+  line-height:1;
+}
+
+.bracket-open{
+  top:.15rem;
+  left:0;
+}
+
+.bracket-close{
+  right:0;
+  bottom:.15rem;
 }
 
 .footing{
   grid-column:2;
-  margin:1rem 0 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.2rem .65rem;
+  margin:.85rem 0 0;
   padding:0;
-  list-style:none;
   color:var(--scene-muted);
-  font-size:.76rem;
+  font-size:.72rem;
   line-height:1.45;
 }
-.footing li+li{margin-top:.2rem}
+
+.footing span+span::before{
+  content:"·";
+  margin-right:.65rem;
+  color:var(--scene-rule);
+}
 
 .passage-actions{display:none!important}
 
@@ -556,11 +581,21 @@ footer{
   }
 
   .first-person-view{
-    display:grid;
+    display:block;
+    padding:1.65rem 1.35rem 1.75rem;
+  }
+
+  .bracket{
+    font-size:1.15rem;
   }
 
   .footing{
-    margin-top:.9rem;
+    margin-top:.75rem;
+    gap:.15rem .5rem;
+  }
+
+  .footing span+span::before{
+    margin-right:.5rem;
   }
 
   .trail-console{
