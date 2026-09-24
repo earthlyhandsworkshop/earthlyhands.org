@@ -261,11 +261,6 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   align-items:stretch;
 }
 .pressure{
-  height:23rem;
-  min-height:0;
-  overflow:hidden;
-  display:grid;
-  grid-template-rows:auto repeat(5,minmax(0,1fr));
   border:1px solid var(--rule);
   background:rgba(247,243,233,.35);
 }
@@ -304,51 +299,68 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 .q{font:1rem/1 var(--mono);white-space:nowrap}
 .pressure-state{font-size:.58rem;color:var(--muted)}
 .key{
-  height:23rem;
-  min-height:0;
-  overflow:hidden;
-  display:grid;
-  grid-template-rows:auto minmax(0,1fr);
   border:1px solid var(--rule);
   background:rgba(247,243,233,.55);
 }
-.key-body{
-  min-height:0;
-  padding:.55rem .7rem;
-  display:grid;
-  grid-template-rows:auto minmax(0,1fr);
-  gap:.45rem;
-}
-#key-default{min-height:0}
-#key-default .key-summary{margin:.4rem 0 0;color:var(--muted);font:.67rem/1.35 var(--mono)}
-.key-inspector{
-  min-height:0;
-  overflow:auto;
-  scrollbar-width:none;
-  -ms-overflow-style:none;
-  padding-top:.45rem;
-  border-top:1px solid var(--rule);
-}
-.key-inspector::-webkit-scrollbar{width:0;height:0}
-.key-inspector h3{
-  margin:0 0 .35rem;
-  font-size:1rem;
-  font-weight:600;
-  line-height:1.15;
-}
-.key-inspector p{margin:0;color:var(--ink);font:.7rem/1.38 var(--mono)}
-.key-inspector p+p{margin-top:.42rem}
-.key-inspector .bridge-label{
-  display:inline-block;
-  margin-top:.45rem;
-  padding-top:.35rem;
-  border-top:1px solid var(--soft);
-  font:.54rem/1.2 var(--mono);
+.key-body{padding:.65rem .75rem}
+#key-default .key-summary{margin:.55rem 0 0;color:var(--muted);font:.72rem/1.42 var(--mono)}
+.action-body h3{margin:0 0 .4rem;font-size:1.08rem;line-height:1.15}
+.action-body p{margin:.35rem 0 0;color:var(--muted);font:.72rem/1.4 var(--mono)}
+.action-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.35rem;margin-top:.7rem}
+.action-choice{
+  border:1px solid var(--rule);
+  background:transparent;
+  padding:.45rem .5rem;
+  text-align:left;
+  font:.62rem/1.2 var(--mono);
   letter-spacing:.05em;
   text-transform:uppercase;
-  color:var(--muted)
 }
+.action-choice:hover{background:rgba(119,85,64,.07)}
+.action-choice.wide{grid-column:1 / -1}
 .bridge-invite{margin:.5rem 0 .12rem!important;font:.64rem/1.3 var(--mono)!important;text-transform:uppercase;letter-spacing:.05em}
+.properties{
+  margin:.8rem 0 0;
+  display:grid;
+  grid-template-columns:minmax(10rem,.24fr) minmax(0,1fr) auto;
+  gap:.8rem;
+  align-items:start;
+  border:1px solid var(--rule);
+  background:var(--paper2);
+}
+.properties-label{
+  min-height:100%;
+  padding:.65rem .75rem;
+  border-right:1px solid var(--rule);
+}
+.properties-label span{display:block;font:.58rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.properties-label strong{display:block;margin-top:.18rem;font-size:1.2rem;font-weight:400;line-height:1.05}
+.properties-copy{padding:.6rem 0;color:var(--muted);font:.74rem/1.42 var(--mono)}
+.properties-state{padding:.65rem .75rem;font:.58rem/1.25 var(--mono);text-transform:uppercase;color:var(--muted)}
+.pass-card{
+  margin:.55rem auto 0;
+  width:min(14rem,88%);
+  border:1px solid var(--rule);
+  background:var(--paper2);
+  padding:.42rem .55rem;
+  font:.62rem/1.25 var(--mono);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  opacity:.42;
+}
+body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
+.card::after{
+  content:"PRESS";
+  position:absolute;
+  right:.45rem;
+  bottom:.35rem;
+  background:var(--paper2);
+  padding:.1rem .22rem;
+  font:.52rem/1 var(--mono);
+  letter-spacing:.08em;
+}
+body.gate-open .card::after{content:"PASSED";background:var(--ink)}
+
 
 .key-row{
   display:grid;
@@ -424,10 +436,10 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   .record-body.commission{order:3}
   .connectors{display:none}
   .lower{grid-template-columns:1fr}
-  .pressure,.key{height:auto;min-height:0}
-  .detail{grid-template-columns:1fr}
-  .detail-id{border-right:0;border-bottom:1px solid var(--rule)}
   .machine-state{width:min(28rem,100%);margin-inline:auto}
+  .properties{grid-template-columns:1fr}
+  .properties-label{border-right:0;border-bottom:1px solid var(--rule)}
+  .properties-state{padding-top:0}
 }
 @media(max-width:40rem){
   .page{width:calc(100% - .5rem);margin:.25rem auto}
@@ -498,6 +510,7 @@ body.gate-open .gate::after{transform:scaleX(.12)}
             <div class="status">administrative join<br><b id="join-state">available</b></div>
             <div class="status">source bridge<br><b>not recovered</b></div>
           </div>
+          <div class="pass-card" id="pass-card">Commission pass · not yet issued</div>
         </div>
       </section>
 
@@ -511,6 +524,15 @@ body.gate-open .gate::after{transform:scaleX(.12)}
       </article>
 
       <svg class="connectors" id="connectors" aria-hidden="true"></svg>
+    </section>
+
+    <section class="properties" id="properties" aria-live="polite">
+      <div class="properties-label">
+        <span>Properties</span>
+        <strong id="property-title">Touch a record object.</strong>
+      </div>
+      <div class="properties-copy" id="property-copy">Robin, Yimma, land, Marris, the patent — this panel changes immediately when you choose one.</div>
+      <div class="properties-state" id="property-state">attention · threshold</div>
     </section>
 
     <div class="divider">The Commission can issue an identity relation. The questions remain.</div>
@@ -540,10 +562,10 @@ body.gate-open .gate::after{transform:scaleX(.12)}
         </button>
       </div>
 
-      <aside class="key" id="inspector" aria-live="polite">
+      <aside class="key" id="action-panel" aria-live="polite">
         <div class="key-head">
-          <h2>Key points</h2>
-          <button class="key-close" id="inspector-close" type="button" hidden>Clear</button>
+          <h2 id="action-title">Key points</h2>
+          <button class="key-close" id="action-reset" type="button" hidden>Clear</button>
           <span class="body-tag">[D]</span>
         </div>
         <div class="key-body">
@@ -552,26 +574,29 @@ body.gate-open .gate::after{transform:scaleX(.12)}
             <div class="key-row"><span>source bridge not recovered</span><strong>?</strong></div>
             <div class="key-row"><span>comparison ≠ identity</span><strong>≠</strong></div>
             <div class="key-row"><span>leave identity open</span><strong>○</strong></div>
-            <p class="key-summary">The agency can join a person while the source bridges remain open.</p>
+            <p class="key-summary">Choose one unresolved line to work on it.</p>
           </div>
-          <div class="key-inspector" id="inspector-body" hidden>
-            <h3 id="detail-title"></h3>
-            <p id="detail-copy"></p>
-            <p class="bridge-label" id="detail-state"></p>
-            <div class="bridge-upload" id="bridge-upload" hidden>
-              <p class="bridge-invite">Have a piece? A leg? A brace? A full bridge? Anything useful?</p>
-              <button class="bridge-upload-toggle" id="bridge-upload-toggle" type="button">Bring it</button>
-              <form class="bridge-upload-form" id="bridge-upload-form" hidden>
-                <label>Bridge file
-                  <input id="bridge-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required>
-                </label>
-                <label>What does this show? <span aria-hidden="true">—</span> optional
-                  <textarea id="bridge-note" maxlength="1200" placeholder="One sentence is enough."></textarea>
-                </label>
-                <button type="submit">Send to Receiving</button>
-                <p class="bridge-receive-status" id="bridge-receive-status">Original preserved privately. It does not become public evidence automatically.</p>
-              </form>
+          <div class="action-body" id="action-body" hidden>
+            <h3 id="bridge-title"></h3>
+            <p id="bridge-copy"></p>
+            <p class="bridge-invite">What have you got?</p>
+            <div class="action-choices" id="action-choices">
+              <button class="action-choice" type="button" data-kind="piece">Piece</button>
+              <button class="action-choice" type="button" data-kind="leg">Leg</button>
+              <button class="action-choice" type="button" data-kind="brace">Brace</button>
+              <button class="action-choice" type="button" data-kind="full bridge">Full bridge</button>
+              <button class="action-choice wide" type="button" data-kind="anything useful">Anything useful</button>
             </div>
+            <form class="bridge-upload-form" id="bridge-upload-form" hidden>
+              <label>File
+                <input id="bridge-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required>
+              </label>
+              <label>One sentence — optional
+                <textarea id="bridge-note" maxlength="1200" placeholder="What does this show?"></textarea>
+              </label>
+              <button type="submit">Send to Receiving</button>
+              <p class="bridge-receive-status" id="bridge-receive-status">Original preserved privately. It does not become public evidence automatically.</p>
+            </form>
           </div>
         </div>
       </aside>
@@ -589,12 +614,16 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 <script>
 (()=>{
 const body=document.body;
-const detailTitle=document.getElementById("detail-title");
-const detailCopy=document.getElementById("detail-copy");
-const detailState=document.getElementById("detail-state");
+const propertyTitle=document.getElementById("property-title");
+const propertyCopy=document.getElementById("property-copy");
+const propertyState=document.getElementById("property-state");
 const keyDefault=document.getElementById("key-default");
-const inspectorBody=document.getElementById("inspector-body");
-const inspectorClose=document.getElementById("inspector-close");
+const actionTitle=document.getElementById("action-title");
+const actionBody=document.getElementById("action-body");
+const actionReset=document.getElementById("action-reset");
+const bridgeTitle=document.getElementById("bridge-title");
+const bridgeCopy=document.getElementById("bridge-copy");
+const actionChoices=document.getElementById("action-choices");
 const card=document.getElementById("identical-card");
 const joinState=document.getElementById("join-state");
 const gateResult=document.getElementById("gate-result");
@@ -603,14 +632,13 @@ const bridges=[...document.querySelectorAll(".pressure-row")];
 const svg=document.getElementById("connectors");
 const upper=document.getElementById("upper");
 const receivingUrl=String(window.EARTHLY_HANDS_RECEIVING_URL||"").trim();
-const bridgeUpload=document.getElementById("bridge-upload");
-const bridgeUploadToggle=document.getElementById("bridge-upload-toggle");
 const bridgeUploadForm=document.getElementById("bridge-upload-form");
 const bridgeFile=document.getElementById("bridge-file");
 const bridgeNote=document.getElementById("bridge-note");
 const bridgeReceiveStatus=document.getElementById("bridge-receive-status");
 let activeBridgeId="";
 let activeBridgeTitle="";
+let activeBridgeKind="";
 
 const source={
  robin:{title:"Robin Bell",copy:"Jane Bell, testifying on 23 March 1903, answers that her father's name was Robin Bell. When asked specifically whether his name was Robin or Robert Bell, she again answers Robin Bell. Later examiner and administrative language on the same examination uses Robert Bell. Preserve the speaker split.",state:"source descent · Jane witness voice"},
@@ -638,85 +666,60 @@ function clearActive(){
  bridges.forEach(x=>x.classList.remove("is-active"));
  draw();
 }
-function show(title,copy,state,{bridgeId="",bridgeTitle=""}={}){
- detailTitle.textContent=title;
- detailCopy.textContent=copy;
- detailState.textContent=state;
- activeBridgeId=bridgeId;
- activeBridgeTitle=bridgeTitle;
- bridgeUpload.hidden=!bridgeId;
+function showProperty(title,copy,state){
+ propertyTitle.textContent=title;
+ propertyCopy.textContent=copy;
+ propertyState.textContent=state;
+}
+function showBridge(id,d){
+ activeBridgeId=id;
+ activeBridgeTitle=d.title;
+ activeBridgeKind="";
+ actionTitle.textContent="Action";
+ keyDefault.hidden=true;
+ actionBody.hidden=false;
+ actionReset.hidden=false;
+ bridgeTitle.textContent=d.title;
+ bridgeCopy.textContent=d.copy;
+ actionChoices.hidden=false;
  bridgeUploadForm.hidden=true;
- bridgeUploadToggle.textContent="Bring it";
  bridgeFile.value="";
  bridgeNote.value="";
  bridgeReceiveStatus.textContent="Original preserved privately. It does not become public evidence automatically.";
- inspectorBody.hidden=false;
- inspectorClose.hidden=false;
 }
 entries.forEach(btn=>btn.addEventListener("click",()=>{
  clearActive();
  btn.classList.add("is-active");
  const d=source[btn.dataset.entry];
- show(d.title,d.copy,d.state);
+ showProperty(d.title,d.copy,d.state);
  draw(btn.dataset.entry);
 }));
 bridges.forEach(btn=>btn.addEventListener("click",()=>{
  clearActive();
  btn.classList.add("is-active");
  const d=bridge[btn.dataset.bridge];
- show(d.title,d.copy,d.state,{bridgeId:btn.dataset.bridge,bridgeTitle:d.title});
+ showBridge(btn.dataset.bridge,d);
 }));
-inspectorClose.addEventListener("click",()=>{
+actionReset.addEventListener("click",()=>{
  clearActive();
- detailTitle.textContent="";
- inspectorBody.hidden=true;
- inspectorClose.hidden=true;
+ actionTitle.textContent="Key points";
+ keyDefault.hidden=false;
+ actionBody.hidden=true;
+ actionReset.hidden=true;
  activeBridgeId="";
  activeBridgeTitle="";
+ activeBridgeKind="";
  bridgeUploadForm.hidden=true;
- bridgeUpload.hidden=true;
 });
 
-bridgeUploadToggle.addEventListener("click",()=>{
+actionChoices.querySelectorAll("[data-kind]").forEach(btn=>btn.addEventListener("click",()=>{
  if(!activeBridgeId)return;
- bridgeUploadForm.hidden=!bridgeUploadForm.hidden;
- bridgeUploadToggle.textContent=bridgeUploadForm.hidden?"Bring it":"Close";
- if(!bridgeUploadForm.hidden)bridgeFile.focus();
-});
-
-bridgeUploadForm.addEventListener("submit",async e=>{
- e.preventDefault();
- if(!activeBridgeId||!receivingUrl){
-   bridgeReceiveStatus.textContent=receivingUrl?"Choose a bridge first.":"Receiving endpoint is not configured.";
-   return;
- }
- const file=bridgeFile.files?.[0];
- if(!file){bridgeReceiveStatus.textContent="Choose one file.";return}
- const button=bridgeUploadForm.querySelector('button[type="submit"]');
- button.disabled=true;
- bridgeReceiveStatus.textContent="Receiving…";
- const data=new FormData();
- data.append("file",file);
- const note=bridgeNote.value.trim();
- data.append("description",[
-   "ARTICLE XIV IDENTITY GATE — BRIDGE RETURN",
-   "Bridge: "+activeBridgeTitle,
-   "Bridge ID: "+activeBridgeId,
-   note?"Contributor note: "+note:""
- ].filter(Boolean).join("\n"));
- data.append("provenance","Submitted from /experiments/article-xiv-identity-gate/ at unresolved bridge "+activeBridgeId+".");
- try{
-   const res=await fetch(receivingUrl,{method:"POST",body:data});
-   const out=await res.json().catch(()=>({}));
-   if(!res.ok)throw new Error(out.error||("HTTP "+res.status));
-   bridgeReceiveStatus.textContent="RECEIVED · "+out.receipt+" · This bridge is now in Receiving for review.";
-   bridgeUploadForm.reset();
- }catch(err){
-   bridgeReceiveStatus.textContent="Not received · "+err.message;
- }finally{
-   button.disabled=false;
- }
-});
+ activeBridgeKind=btn.dataset.kind;
+ actionChoices.hidden=true;
+ bridgeUploadForm.hidden=false;
+ bridgeFile.focus();
+ bridgeReceiveStatus.textContent="You called this a "+activeBridgeKind+". Original preserved privately; review decides what it becomes.";
+}));
 
 card.addEventListener("click",()=>{
  const open=!body.classList.contains("gate-open");
@@ -725,9 +728,11 @@ card.addEventListener("click",()=>{
  joinState.textContent=open?"present":"available";
  gateResult.textContent=open?"identification proceeds":"identity relation not yet performed";
  if(open){
-   show("IDENTICAL — administrative act performed","The instrument now shows the agency-level identity relation as active. Notice what does not happen: Yimma does not become Susie, 694.96 does not become 160, Robert does not become Robin, and the unresolved proposition lines remain unresolved. Administrative state and source state move independently.","administrative state · SAME / source bridges · OPEN");
+   document.getElementById("pass-card").textContent="Commission pass · IDENTICAL · issued";
+   showProperty("IDENTICAL — Commission pass","The agency-level identity relation is now active. The unresolved proposition lines below do not change with it.","administrative state · SAME / source bridges · OPEN");
  }else{
-   show("Administrative card returned","The gate is closed again. The record bodies remain available for comparison without performing the agency identity relation.","administrative state · available");
+   document.getElementById("pass-card").textContent="Commission pass · not yet issued";
+   showProperty("Administrative card returned","The gate is closed again. The two record bodies remain available for comparison.","administrative state · available");
  }
 });
 
