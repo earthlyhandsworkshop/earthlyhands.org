@@ -14,8 +14,6 @@
   const talkForm = document.querySelector("#talk-form");
   const talkInput = document.querySelector("#talk-input");
   const talkSend = talkForm.querySelector("button[type='submit']");
-  const tenState = document.querySelector("#ten-state");
-  const groundState = document.querySelector("#ground-state");
   const depthData = {
     distance: {
       kind: "Prose Map relation",
@@ -75,16 +73,16 @@
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
   const defaultSceneState = {
-    night: { ten: "Ten · listening in the dark", ground: "Night camp · guard posted", presence: "" },
-    morning: { ten: "Ten · looking around", ground: "Morning camp · unattacked", presence: "" },
-    southeast: { ten: "Ten · following the account", ground: "Southeast · about fifteen miles", presence: "" },
-    "blue-water": { ten: "Ten · at the creek", ground: "Blue Water · Mayes and Criner here", presence: "" },
-    dozen: { ten: "Ten · still at Blue Water", ground: "A dozen beaver reported", presence: "" }
+    night: { ten: "listening in the dark", ground: "You are awake inside the guarded camp.", presence: "" },
+    morning: { ten: "looking around", ground: "You are standing in the camp at first light.", presence: "" },
+    southeast: { ten: "following the account", ground: "You are moving with the account toward the next camp.", presence: "" },
+    "blue-water": { ten: "at the creek", ground: "You are at the creek with Mayes and Criner in view.", presence: "" },
+    dozen: { ten: "still at Blue Water", ground: "You are still beside the same creek.", presence: "" }
   };
   const sceneState = JSON.parse(JSON.stringify(defaultSceneState));
 
   try {
-    const rememberedState = JSON.parse(window.localStorage.getItem("earthly-hands-dawson-state") || "null");
+    const rememberedState = JSON.parse(window.localStorage.getItem("earthly-hands-dawson-state-v2") || "null");
     if (rememberedState && typeof rememberedState === "object") {
       for (const id of Object.keys(sceneState)) {
         if (rememberedState[id] && typeof rememberedState[id] === "object") {
@@ -127,7 +125,7 @@
 
   function saveSceneState() {
     try {
-      window.localStorage.setItem("earthly-hands-dawson-state", JSON.stringify(sceneState));
+      window.localStorage.setItem("earthly-hands-dawson-state-v2", JSON.stringify(sceneState));
     } catch (_) {
       // The lived layer still works without storage.
     }
@@ -135,9 +133,18 @@
 
   function renderSceneState(id) {
     const state = sceneState[id] || defaultSceneState[id];
-    if (!state) return;
-    if (tenState) tenState.textContent = `[ ${state.ten} ]`;
-    if (groundState) groundState.textContent = `[ ${state.ground} ]`;
+    const scene = sceneById.get(id);
+    if (!state || !scene) return;
+
+    const livedLine = scene.querySelector(".lived-line");
+    if (livedLine) livedLine.textContent = state.ground;
+
+    const tenFooting = scene.querySelector(".ten-footing");
+    if (tenFooting) {
+      const place = scene.dataset.place || "Dawson trail";
+      tenFooting.textContent = `Ten · ${place} · ${state.ten}`;
+    }
+
     if (experienceShell) experienceShell.dataset.presence = state.presence || "";
   }
 
@@ -156,28 +163,28 @@
 
     state.presence = "";
     if (/\b(fire|campfire|kindling|wood)\b/.test(lower)) {
-      state.ten = "Ten · tending a small fire";
-      state.ground = currentId === "night" ? "Firelight at the night camp" : "A small fire at this ground";
+      state.ten = "tending a small fire";
+      state.ground = currentId === "night" ? "A small fire burns inside the guarded camp." : "A small fire burns beside you.";
       state.presence = "fire";
     } else if (/\b(coffee|cup|mug)\b/.test(lower)) {
-      state.ten = "Ten · coffee in hand";
-      state.ground = "The ground has not moved";
+      state.ten = "coffee in hand";
+      state.ground = "You have a cup of coffee in hand. The ground has not moved.";
     } else if (/\b(beaver|trap|trapping|trapper)\b/.test(lower)) {
       if (currentId === "blue-water" || currentId === "dozen") {
-        state.ten = "Ten · asking Mayes and Criner about beaver";
-        state.ground = "Blue Water · conversation opened";
+        state.ten = "asking Mayes and Criner about beaver";
+        state.ground = "You have turned the conversation toward beaver and trapping.";
       } else {
-        state.ten = "Ten · asking about beaver trapping";
-        state.ground = "The ground has not moved";
+        state.ten = "asking about beaver trapping";
+        state.ground = "You are asking about beaver trapping from here.";
       }
     } else if (/\b(wait|sit|stay|rest)\b/.test(lower)) {
-      state.ten = "Ten · staying put";
+      state.ten = "staying put";
       state.ground = defaultSceneState[currentId].ground;
     } else if (/\b(look|watch|listen|notice)\b/.test(lower)) {
-      state.ten = "Ten · looking around";
+      state.ten = "looking around";
       state.ground = defaultSceneState[currentId].ground;
     } else {
-      state.ten = "Ten · asking the ground";
+      state.ten = "asking the ground";
       state.ground = defaultSceneState[currentId].ground;
     }
     saveSceneState();
