@@ -237,6 +237,7 @@ body[data-ground="dozen"] .experience-shell{
 }
 
 .first-person-view{
+  grid-row:1;
   display:block;
   min-height:11.5rem;
   padding:0;
