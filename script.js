@@ -112,7 +112,7 @@
     return {
       setting: scene.querySelector(".scene-setting")?.textContent?.trim() || "",
       title: scene.querySelector("h2")?.textContent?.trim() || "",
-      view_lines: Array.from(scene.querySelectorAll(".view-body > p")).map((p) => p.textContent.trim()),
+      view: Array.from(scene.querySelectorAll(".view-body > p")).map((p) => p.textContent.trim()).join("\n\n"),
       footing: scene.querySelector(".ten-footing")?.textContent?.trim() || "",
       appearance: experienceShell?.dataset.presence || ""
     };
@@ -136,23 +136,25 @@
     const scene = sceneById.get(id);
     if (!scene || !patch) return false;
 
-    const setting = typeof patch.setting === "string" ? patch.setting.trim().slice(0, 100) : "";
-    const title = typeof patch.title === "string" ? patch.title.trim().slice(0, 120) : "";
-    const lines = Array.isArray(patch.view_lines)
-      ? patch.view_lines.filter((x) => typeof x === "string").map((x) => x.trim()).filter(Boolean).slice(0, 4)
-      : [];
-    const footing = typeof patch.footing === "string" ? patch.footing.trim().slice(0, 120) : "";
+    const setting = typeof patch.setting === "string" ? patch.setting.trim() : "";
+    const title = typeof patch.title === "string" ? patch.title.trim() : "";
+    const view = typeof patch.view === "string" ? patch.view.trim() : "";
+    const footing = typeof patch.footing === "string" ? patch.footing.trim() : "";
+    const companion = typeof patch.companion === "string" ? patch.companion.trim() : "";
     const allowedAppearance = new Set(["", "fire"]);
     const appearance = allowedAppearance.has(patch.appearance) ? patch.appearance : "";
 
     if (setting) scene.querySelector(".scene-setting").textContent = setting;
     if (title) scene.querySelector("h2").textContent = title;
 
-    if (lines.length) {
-      const targets = Array.from(scene.querySelectorAll(".view-body > p"));
-      for (let i = 0; i < targets.length; i += 1) {
-        if (lines[i]) targets[i].textContent = lines[i];
-      }
+    if (view) {
+      const body = scene.querySelector(".view-body");
+      const paragraphs = view.split(/\n\s*\n/).map((x) => x.trim()).filter(Boolean);
+      body.replaceChildren(...paragraphs.map((text) => {
+        const p = document.createElement("p");
+        p.textContent = text;
+        return p;
+      }));
     }
 
     if (footing) {
@@ -160,8 +162,13 @@
       if (target) target.textContent = footing;
     }
 
+    if (companion) {
+      const target = scene.querySelector(".companion-footing");
+      if (target) target.textContent = companion;
+    }
+
     if (experienceShell) experienceShell.dataset.presence = appearance;
-    return Boolean(setting || title || lines.length || footing || appearance);
+    return Boolean(setting || title || view || footing || companion || appearance);
   }
 
   try {
@@ -427,14 +434,14 @@
     const sceneRequest = [
       "You are Small Door present remotely with Ten inside the Earthly Hands Dawson Trail experiment.",
       "VOICE: plain, testimonial, unresolved. Prefer exact nouns and earned verbs. Do not perform significance.",
-      "FIRST PERSON VIEW: the four view lines are the flat actionable view from Ten's landed eyes. No interface explanation.",
+      "FIRST PERSON VIEW: the bracketed view is ordinary prose from Ten's landed eyes. Write the amount that is useful. It may be one paragraph or several. No interface explanation.",
       "Historical source facts are a floor. Do not contradict them, turn an open question into a fact, or claim Dawson recorded Ten's invented actions.",
       "Ten may alter the present experiential layer: make a small fire, drink coffee, sit, ask questions, talk, notice things, or imagine a reversible present action. Keep that distinct from the 1831 source.",
       "Remain at the current ground unless Ten explicitly asks to move.",
       "Return ONLY valid JSON, no markdown, with exactly these keys:",
-      '{"setting":"short ground/carrier line","title":"one plain headline","view_lines":["line 1","line 2","line 3","line 4"],"footing":"Ten · place · present state","appearance":""}',
+      '{"setting":"ground/carrier line","title":"plain headline","view":"natural prose; use blank lines between paragraphs when helpful","footing":"Ten footing in whatever length is useful","companion":"Small Door footing if useful","appearance":""}',
       'appearance may be only "" or "fire".',
-      "Make the whole screen coherent after Ten's action. Be intelligent and specific, not cute.",
+      "There is no paragraph count, line count, or word-count requirement. Let the prose breathe. Keep the page coherent and useful after Ten's action.",
       `CURRENT GROUND: ${currentId}`,
       `SOURCE FLOOR: ${JSON.stringify(facts)}`,
       `CURRENT SCREEN: ${JSON.stringify(visible)}`,
@@ -484,6 +491,13 @@
       if (target) landAt(target);
     });
   }
+
+  trailConsole?.addEventListener("click", (event) => {
+    const button = event.target.closest(".trail-control");
+    if (!button || button.disabled) return;
+    const target = button.dataset.go;
+    if (target && target !== currentId) landAt(target);
+  });
 
   if (trailNextControl) {
     trailNextControl.addEventListener("click", () => {
