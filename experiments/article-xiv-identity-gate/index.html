@@ -1827,6 +1827,24 @@ body.gate-open .connectors path{
   }
 }
 </style>
+
+<style id="press-passed-motion">
+.press-mark{
+  left:-1.55rem!important;
+  right:auto!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  transition:left .36s ease,right .36s ease,transform .36s ease,background .2s ease,color .2s ease!important;
+}
+body.gate-open .press-mark{
+  left:auto!important;
+  right:-1.55rem!important;
+  transform:translateY(-50%)!important;
+}
+@media(prefers-reduced-motion:reduce){
+  .press-mark{transition:none!important}
+}
+</style>
 </head>
 <body>
 <div class="page">
