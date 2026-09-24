@@ -1254,6 +1254,164 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
 }
 
 </style>
+
+<style id="recovered-lower-grammar">
+/* Recovered from v1/v2: the gate opens a middle movement; Properties stays the single footer instrument. */
+.stage-two{
+  display:none!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+}
+body.gate-open .stage-two{display:block!important}
+.stage-two .divider{
+  display:grid!important;
+  grid-template-columns:1fr auto 1fr!important;
+  gap:1rem!important;
+  align-items:center!important;
+  margin:1.1rem 0 .8rem!important;
+  padding:0!important;
+  border:0!important;
+  font:.7rem/1.3 var(--mono)!important;
+  letter-spacing:.18em!important;
+  text-transform:uppercase!important;
+  background:transparent!important;
+}
+.stage-two .divider::before,.stage-two .divider::after{
+  content:""!important;
+  display:block!important;
+  height:1px!important;
+  background:var(--rule)!important;
+}
+.stage-two .lower{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(14rem,.27fr)!important;
+  gap:.8rem!important;
+  align-items:stretch!important;
+}
+.stage-two .pressure{
+  border:1px solid var(--rule)!important;
+  background:rgba(247,243,233,.35)!important;
+}
+.stage-two .pressure-head,.stage-two .key-head{
+  display:flex!important;
+  align-items:baseline!important;
+  padding:.6rem .75rem!important;
+  border-bottom:1px solid var(--rule)!important;
+}
+.stage-two .pressure-head h2,.stage-two .key-head h2{
+  margin:0!important;
+  font:600 1.15rem/1.2 var(--serif)!important;
+  letter-spacing:.04em!important;
+}
+.stage-two .pressure-row{
+  width:100%!important;
+  display:grid!important;
+  grid-template-columns:minmax(8rem,.8fr) minmax(5rem,1fr) auto minmax(5rem,1fr) minmax(8rem,.8fr)!important;
+  gap:.55rem!important;
+  align-items:center!important;
+  min-height:3.8rem!important;
+  padding:.45rem .75rem!important;
+  border:0!important;
+  border-bottom:1px solid var(--soft)!important;
+  background:transparent!important;
+}
+.stage-two .pressure-row:last-child{border-bottom:0!important}
+.stage-two .pressure-row:hover,.stage-two .pressure-row.is-active{background:rgba(109,117,95,.07)!important}
+.stage-two .pressure-row .left,.stage-two .pressure-row .right{
+  font:600 1rem/1.2 var(--mono)!important;
+  letter-spacing:0!important;
+}
+.stage-two .pressure-row .dashes{
+  display:block!important;
+  height:1px!important;
+  border-top:1px dashed var(--muted)!important;
+}
+.stage-two .pressure-row .q{
+  font:1rem/1 var(--mono)!important;
+  color:var(--ink)!important;
+  transform:none!important;
+}
+.stage-two .pressure-state{
+  grid-column:1/-1!important;
+  margin-top:-.18rem!important;
+  font:.52rem/1.2 var(--mono)!important;
+  letter-spacing:.035em!important;
+  color:var(--muted)!important;
+}
+.stage-two .key{
+  height:22.5rem!important;
+  min-height:0!important;
+  overflow:hidden!important;
+  display:grid!important;
+  grid-template-rows:auto minmax(0,1fr)!important;
+  border:1px solid var(--rule)!important;
+  background:rgba(247,243,233,.55)!important;
+}
+.stage-two .key-body{
+  min-height:0!important;
+  overflow:auto!important;
+  padding:.65rem .75rem!important;
+}
+.stage-two .key-row{
+  display:grid!important;
+  grid-template-columns:1fr auto!important;
+  gap:.5rem!important;
+  padding:.18rem 0!important;
+  font:.67rem/1.35 var(--mono)!important;
+}
+.stage-two .key-row strong{font-size:1rem!important}
+.stage-two .key-summary,.stage-two .key-body p{
+  margin:.55rem 0 0!important;
+  color:var(--muted)!important;
+  font:.72rem/1.42 var(--mono)!important;
+}
+.stage-two #key-active h3{
+  margin:0 0 .45rem!important;
+  font:400 1.08rem/1.15 var(--serif)!important;
+}
+.stage-two .bridge-facts{
+  display:block!important;
+  margin-top:.75rem!important;
+  padding-top:.65rem!important;
+  border-top:1px solid var(--soft)!important;
+}
+.stage-two .bridge-fact{margin:.55rem 0 0!important}
+.stage-two .bridge-fact b{
+  display:block!important;
+  margin-bottom:.12rem!important;
+  font:.54rem/1.2 var(--mono)!important;
+  letter-spacing:.07em!important;
+  text-transform:uppercase!important;
+}
+.stage-two .bridge-fact span{font:.8rem/1.38 var(--serif)!important}
+.stage-two .bridge-state{
+  margin-top:.9rem!important;
+  padding-top:.6rem!important;
+  border-top:1px solid var(--rule)!important;
+  font:.56rem/1.3 var(--mono)!important;
+  letter-spacing:.05em!important;
+  text-transform:uppercase!important;
+  color:var(--accent)!important;
+}
+/* There is exactly one Properties instrument, and it remains below the expandable middle. */
+.properties-second{display:none!important}
+@media(max-width:64rem){
+  .stage-two .lower{grid-template-columns:1fr!important}
+  .stage-two .key{height:auto!important;max-height:none!important}
+}
+@media(max-width:40rem){
+  .stage-two .pressure-row{
+    grid-template-columns:1fr auto 1fr!important;
+    gap:.4rem!important;
+    min-height:4.6rem!important;
+  }
+  .stage-two .pressure-row .dashes{display:none!important}
+  .stage-two .pressure-row .q{grid-column:2!important}
+  .stage-two .pressure-row .right{grid-column:3!important}
+  .stage-two .pressure-state{grid-column:1/4!important}
+}
+</style>
 </head>
 <body>
 <div class="page">
@@ -1314,6 +1472,59 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
       <svg class="connectors" id="connectors" aria-hidden="true"></svg>
     </section>
 
+    <section class="stage-two" id="stage-two" aria-label="Unresolved proposition page">
+      <div class="divider">The Commission can issue an identity relation. The questions remain.</div>
+
+      <section class="lower">
+        <div class="pressure">
+          <div class="pressure-head"><h2>Unresolved proposition lines</h2></div>
+          <button class="pressure-row" type="button" data-bridge="yimma-susie">
+            <span class="left">YIMMA</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">SUSIE</span>
+            <span class="pressure-state">two source-local spouse / mother propositions · person relation not earned</span>
+          </button>
+          <button class="pressure-row" type="button" data-bridge="land">
+            <span class="left">694.96 ACRES</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ABOUT 160 ACRES</span>
+            <span class="pressure-state">original patent tract ≠ proved later parcel chain</span>
+          </button>
+          <button class="pressure-row" type="button" data-bridge="name">
+            <span class="left">ROBERT</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ROBIN</span>
+            <span class="pressure-state">older / translated Robert forms ≠ Jane's witness-given Robin</span>
+          </button>
+          <button class="pressure-row" type="button" data-bridge="place">
+            <span class="left">SECTION 4</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">NOXAPATER</span>
+            <span class="pressure-state">later decision pressure exists · exact parcel continuity still needs carriers</span>
+          </button>
+          <button class="pressure-row" type="button" data-bridge="language">
+            <span class="left">1838: CANNOT SPEAK ENGLISH</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">FAMILY-SIDE CLAIMS</span>
+            <span class="pressure-state">older Robert source-local language proposition cannot travel without identity continuity</span>
+          </button>
+        </div>
+
+        <aside class="key" id="key-points" aria-live="polite">
+          <div class="key-head"><h2>Key points</h2></div>
+          <div class="key-body">
+            <div id="key-default">
+              <div class="key-row"><span>administrative join present</span><strong>✓</strong></div>
+              <div class="key-row"><span>source bridge not recovered</span><strong>?</strong></div>
+              <div class="key-row"><span>comparison ≠ identity</span><strong>≠</strong></div>
+              <div class="key-row"><span>leave identity open</span><strong>○</strong></div>
+              <p class="key-summary">Choose one unresolved line to inspect it.</p>
+            </div>
+            <div id="key-active" hidden>
+              <h3 id="key-title"></h3>
+              <p id="key-copy"></p>
+              <div class="bridge-facts">
+                <div class="bridge-fact"><b>One side</b><span id="key-left"></span></div>
+                <div class="bridge-fact"><b>Other side</b><span id="key-right"></span></div>
+                <div class="bridge-fact"><b>What would change this</b><span id="key-need"></span></div>
+              </div>
+              <div class="bridge-state" id="key-state"></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </section>
+
     <section class="properties" id="properties" aria-live="polite">
       <div class="properties-label">
         <span>Properties</span>
@@ -1321,62 +1532,6 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
       </div>
       <div class="properties-copy"><span class="property-long" id="property-copy">Robin, Yimma, land, Dibbin, the patent — this panel changes immediately when you choose one.</span></div>
       <div class="properties-state" id="property-state">attention · threshold</div>
-    </section>
-    <section class="stage-two" id="stage-two" aria-label="Unresolved proposition page">
-      <div class="stage-two-head">
-        <span>Page II</span>
-        <strong>The Commission can issue an identity relation. The questions remain.</strong>
-      </div>
-
-    <section class="lower">
-      <div class="pressure">
-        <div class="pressure-head"><h2>Unresolved proposition lines</h2></div>
-        <button class="pressure-row" type="button" data-bridge="yimma-susie">
-          <span class="left">YIMMA</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">SUSIE</span>
-          <span class="pressure-state">two source-local spouse / mother propositions · person relation not earned</span>
-        </button>
-        <button class="pressure-row" type="button" data-bridge="land">
-          <span class="left">694.96 ACRES</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ABOUT 160 ACRES</span>
-          <span class="pressure-state">original patent tract ≠ proved later parcel chain</span>
-        </button>
-        <button class="pressure-row" type="button" data-bridge="name">
-          <span class="left">ROBERT</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ROBIN</span>
-          <span class="pressure-state">older / translated Robert forms ≠ Jane's witness-given Robin</span>
-        </button>
-        <button class="pressure-row" type="button" data-bridge="place">
-          <span class="left">SECTION 4</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">NOXAPATER</span>
-          <span class="pressure-state">later decision pressure exists · exact parcel continuity still needs carriers</span>
-        </button>
-        <button class="pressure-row" type="button" data-bridge="language">
-          <span class="left">1838: CANNOT SPEAK ENGLISH</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">FAMILY-SIDE CLAIMS</span>
-          <span class="pressure-state">older Robert source-local language proposition cannot travel without identity continuity</span>
-        </button>
-      </div>
-
-      <aside class="key" id="key-points" aria-live="polite">
-        <div class="key-head"><h2>Key points</h2></div>
-        <div class="key-body">
-          <div class="key-seal" id="key-seal">IDENTICAL</div>
-          <h3 id="key-title">Commission identity proposition</h3>
-          <p id="key-copy">The Commission can issue an identity relation. That administrative act does not itself close the source bridges below.</p>
-          <div class="bridge-facts" id="key-facts">
-            <div class="bridge-fact"><b>One side</b><span id="key-left">Administrative relation: IDENTICAL.</span></div>
-            <div class="bridge-fact"><b>Other side</b><span id="key-right">The source carriers remain distinct.</span></div>
-            <div class="bridge-fact"><b>What would change this</b><span id="key-need">Test each proposition separately against a source-controlled bridge.</span></div>
-          </div>
-          <div class="bridge-state" id="key-state">administrative relation ≠ recovered historical bridge</div>
-        </div>
-      </aside>
-    </section>
-
-    <section class="properties properties-second" id="properties-second" aria-live="polite">
-      <div class="properties-label">
-        <span>Properties</span>
-        <strong id="property-title-second">IDENTICAL</strong>
-      </div>
-      <div class="properties-copy"><span class="property-long" id="property-copy-second">Administrative identity relation active. Touch an unresolved proposition line to inspect its source-local properties.</span></div>
-      <div class="properties-state" id="property-state-second">administrative state · active</div>
-    </section>
     </section>
   </main>
 
@@ -1404,11 +1559,9 @@ const upper=document.getElementById("upper");
 const propertyTitle=document.getElementById("property-title");
 const propertyCopy=document.getElementById("property-copy");
 const propertyState=document.getElementById("property-state");
-const propertyTitleSecond=document.getElementById("property-title-second");
-const propertyCopySecond=document.getElementById("property-copy-second");
-const propertyStateSecond=document.getElementById("property-state-second");
 
-const keySeal=document.getElementById("key-seal");
+const keyDefault=document.getElementById("key-default");
+const keyActive=document.getElementById("key-active");
 const keyTitle=document.getElementById("key-title");
 const keyCopy=document.getElementById("key-copy");
 const keyLeft=document.getElementById("key-left");
@@ -1481,12 +1634,11 @@ function setProperties(title,copy,state,html=""){
  propertyTitle.textContent=title;
  propertyCopy.innerHTML=html||copy;
  propertyState.textContent=state;
- propertyTitleSecond.textContent=title;
- propertyCopySecond.innerHTML=html||copy;
- propertyStateSecond.textContent=state;
+
 }
 function setKey(d){
- keySeal.textContent="?";
+ keyDefault.hidden=true;
+ keyActive.hidden=false;
  keyTitle.textContent=d.title;
  keyCopy.textContent=d.copy;
  keyLeft.textContent=d.left;
@@ -1495,13 +1647,8 @@ function setKey(d){
  keyState.textContent="still unresolved · "+d.state;
 }
 function setIdenticalKey(){
- keySeal.textContent="IDENTICAL";
- keyTitle.textContent="Commission identity proposition";
- keyCopy.textContent="The Commission can issue an identity relation. That administrative act does not itself close the source bridges below.";
- keyLeft.textContent="Administrative relation: IDENTICAL.";
- keyRight.textContent="The source carriers remain distinct.";
- keyNeed.textContent="Test each proposition separately against a source-controlled bridge.";
- keyState.textContent="administrative relation ≠ recovered historical bridge";
+ keyActive.hidden=true;
+ keyDefault.hidden=false;
 }
 
 entries.forEach(btn=>btn.addEventListener("click",()=>{
@@ -1533,6 +1680,8 @@ card.addEventListener("click",()=>{
    setProperties("IDENTICAL — Commission pass","The agency-level identity relation is active. The unresolved proposition lines remain open.","administrative state · SAME / source bridges · OPEN");
    requestAnimationFrame(()=>stageTwo.scrollIntoView({behavior:"smooth",block:"start"}));
  }else{
+   keyActive.hidden=true;
+   keyDefault.hidden=false;
    setProperties("Touch a record object.","Robin, Yimma, land, Dibbin, the patent — this panel changes immediately when you choose one.","attention · threshold");
  }
 });
