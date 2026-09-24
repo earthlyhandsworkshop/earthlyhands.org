@@ -790,6 +790,269 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
 @media(prefers-reduced-motion:reduce){
   .card,.gate::before,.gate::after{transition:none}
 }
+
+/* vNext — return to the original two-panel drawing.
+   First panel = record properties. Second panel = unresolved question/control.
+   Content determines height; neither panel is a sidebar. */
+.properties{
+  height:auto!important;
+  min-height:6.1rem;
+  margin:1.05rem auto 1.25rem;
+  display:grid!important;
+  grid-template-columns:minmax(10rem,.24fr) minmax(0,1fr) minmax(10rem,.24fr)!important;
+  overflow:visible!important;
+  background:var(--paper2);
+}
+.properties-label,
+.properties-copy,
+.properties-state{
+  min-height:6.1rem;
+}
+.properties-label{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:.72rem .8rem!important;
+}
+.properties-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  overflow:visible!important;
+  padding:.72rem .9rem!important;
+}
+.properties-copy .property-long{
+  max-height:none!important;
+  overflow:visible!important;
+  display:block!important;
+}
+.properties-state{
+  display:flex!important;
+  align-items:center;
+  padding:.72rem .8rem!important;
+  white-space:pre-line!important;
+}
+.property-stamp{
+  margin:0 0 .45rem;
+  font-size:.53rem;
+}
+.property-qa{
+  grid-template-columns:minmax(5.6rem,.24fr) minmax(0,1fr);
+  gap:.16rem .65rem;
+  padding:.15rem 0 .42rem;
+  border-bottom:1px solid var(--soft);
+}
+.property-qa b{font-size:.58rem}
+.property-qa span{font-size:.9rem}
+.property-qa strong{font-size:1.22rem}
+.carrier-chain{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:.5rem!important;
+  margin-top:.5rem!important;
+  white-space:normal!important;
+  overflow:visible!important;
+}
+.carrier-node{
+  position:relative;
+  min-width:0;
+  padding:.48rem .55rem .42rem;
+  border:1px solid var(--soft);
+  font-size:.5rem!important;
+  line-height:1.18!important;
+}
+.carrier-node + .carrier-node::before{
+  content:"→";
+  position:absolute;
+  left:-.44rem;
+  top:50%;
+  transform:translate(-50%,-50%);
+  padding:0 .08rem;
+  background:var(--paper2);
+  color:var(--accent);
+  font:.65rem/1 var(--mono);
+}
+.carrier-node b{font-size:.52rem!important}
+.carrier-node strong{font-size:.92rem!important;margin-top:.08rem}
+.carrier-node span{display:block;margin-top:.08rem}
+.carrier-arrow{display:none!important}
+
+.lower{
+  display:block!important;
+}
+.pressure{
+  width:100%;
+}
+.pressure-head{
+  padding:.85rem .9rem;
+}
+.pressure-head h2{
+  font-size:clamp(1.35rem,2.3vw,2.15rem)!important;
+  font-weight:400;
+}
+.pressure-row{
+  min-height:5.3rem!important;
+  grid-template-columns:minmax(10rem,.7fr) minmax(4rem,.9fr) auto minmax(4rem,.9fr) minmax(10rem,.7fr)!important;
+  gap:.8rem!important;
+  padding:.7rem .9rem!important;
+}
+.pressure-row .left,
+.pressure-row .right{
+  font:500 clamp(1.08rem,1.75vw,1.6rem)/1.05 var(--serif)!important;
+  letter-spacing:-.01em;
+}
+.pressure-row .left small,
+.pressure-row .right small{
+  margin-top:.32rem!important;
+  font:.55rem/1.25 var(--mono)!important;
+  letter-spacing:.045em!important;
+}
+.pressure-row .q{
+  font:400 clamp(1.55rem,2.7vw,2.6rem)/1 var(--serif)!important;
+  color:var(--accent);
+}
+.pressure-row .dashes{
+  border-top:1px solid var(--rule);
+}
+
+.bridge-panel{
+  margin:1.05rem 0 0;
+  display:grid;
+  grid-template-columns:minmax(10rem,.24fr) minmax(0,1fr) minmax(10rem,.24fr);
+  border:1px solid var(--rule);
+  background:var(--paper2);
+}
+.bridge-panel-label,
+.bridge-panel-body,
+.bridge-panel-state{
+  min-height:7rem;
+  padding:.78rem .85rem;
+}
+.bridge-panel-label{
+  border-right:1px solid var(--rule);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.bridge-panel-label span{
+  font:.55rem/1.2 var(--mono);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.bridge-panel-label h2{
+  margin:.25rem 0 0;
+  font:400 clamp(1.25rem,2vw,1.85rem)/1 var(--serif);
+}
+.bridge-panel-body{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.bridge-panel-body > p{
+  margin:0;
+  font-size:.96rem;
+  line-height:1.42;
+}
+.bridge-facts{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.55rem 1rem;
+  margin-top:.7rem!important;
+  padding-top:.65rem!important;
+}
+.bridge-fact{margin:0!important}
+.bridge-fact:last-child{grid-column:1 / -1}
+.bridge-panel-state{
+  border-left:1px solid var(--rule);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.bridge-panel-state .bridge-state{
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+}
+.bridge-action-toggle{
+  margin-top:.7rem;
+  align-self:flex-start;
+  border:0;
+  border-bottom:1px solid var(--accent);
+  background:transparent;
+  padding:.18rem 0;
+  color:var(--accent);
+  font:.6rem/1.2 var(--mono);
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.bridge-action-area{
+  margin-top:.65rem;
+  padding-top:.6rem;
+  border-top:1px solid var(--soft);
+}
+.action-choices{
+  border:0!important;
+  padding:0!important;
+  margin:.35rem 0 0!important;
+}
+.bridge-upload-form{margin-top:.6rem}
+
+@media(max-width:64rem){
+  .properties,
+  .bridge-panel{
+    grid-template-columns:minmax(8rem,.3fr) minmax(0,1fr)!important;
+  }
+  .properties-state,
+  .bridge-panel-state{
+    grid-column:1 / -1;
+    min-height:auto;
+    border-left:0!important;
+    border-top:1px solid var(--rule);
+  }
+  .carrier-chain{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .carrier-node:nth-child(3)::before{display:none}
+  .pressure-row{
+    grid-template-columns:1fr auto 1fr!important;
+  }
+  .pressure-row .dashes{display:none}
+}
+@media(max-width:40rem){
+  .properties,
+  .bridge-panel{
+    grid-template-columns:1fr!important;
+  }
+  .properties-label,
+  .bridge-panel-label{
+    min-height:auto;
+    border-right:0!important;
+    border-bottom:1px solid var(--rule);
+  }
+  .properties-state,
+  .bridge-panel-state{
+    grid-column:auto;
+  }
+  .carrier-chain{grid-template-columns:1fr!important}
+  .carrier-node + .carrier-node::before{
+    content:"↓";
+    left:50%;
+    top:-.28rem;
+    transform:translate(-50%,-50%);
+  }
+  .pressure-row{
+    min-height:5rem!important;
+    padding:.65rem .55rem!important;
+  }
+  .pressure-row .left,
+  .pressure-row .right{
+    font-size:1rem!important;
+  }
+  .bridge-facts{grid-template-columns:1fr}
+  .bridge-fact:last-child{grid-column:auto}
+}
+
 </style>
 </head>
 <body>
@@ -878,46 +1141,40 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
 
     <section class="lower">
       <section class="pressure" aria-label="Unresolved proposition lines">
-        <div class="pressure-head"><h2>Unresolved proposition lines</h2></div>
+        <div class="pressure-head"><h2>The questions remain.</h2></div>
         <button class="pressure-row" type="button" data-bridge="yimma-susie">
-          <span class="left">YIMMA<small>older record · wife</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">SUSIE<small>Jane · mother</small></span>
+          <span class="left">YIMMA<small>older record · wife</small></span><span class="dashes"></span><span class="q">?</span><span class="dashes"></span><span class="right">SUSIE<small>Jane · mother</small></span>
         </button>
         <button class="pressure-row" type="button" data-bridge="land">
-          <span class="left">694.96 ACRES<small>1846 patent · Section 4</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ABOUT 160 ACRES<small>Jane · government land estimate</small></span>
+          <span class="left">694.96 ACRES<small>1846 patent · Section 4</small></span><span class="dashes"></span><span class="q">?</span><span class="dashes"></span><span class="right">ABOUT 160 ACRES<small>Jane · government land estimate</small></span>
         </button>
         <button class="pressure-row" type="button" data-bridge="name">
-          <span class="left">ROBERT<small>older record · Dibbin translated record</small></span><span class="dashes"></span><span class="q">?</span><span class="dashes"></span><span class="right">ROBIN<small>Jane · stated twice · including Robin or Robert?</small></span>
+          <span class="left">ROBERT<small>older record / Marris translated record</small></span><span class="dashes"></span><span class="q">?</span><span class="dashes"></span><span class="right">ROBIN<small>Jane · stated twice · including Robin or Robert?</small></span>
         </button>
         <button class="pressure-row" type="button" data-bridge="place">
-          <span class="left">SECTION 4<small>patent tract address</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">NOXAPATER<small>Jane · remembered land place</small></span>
+          <span class="left">SECTION 4<small>patent tract address</small></span><span class="dashes"></span><span class="q">?</span><span class="dashes"></span><span class="right">NOXAPATER<small>Jane · remembered land place</small></span>
         </button>
         <button class="pressure-row" type="button" data-bridge="language">
-          <span class="left">1838: CANNOT SPEAK ENGLISH<small>older Robert · General Deposition 25</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">FAMILY-SIDE LANGUAGE<small>separate speakers / later records</small></span>
+          <span class="left">1838: CANNOT SPEAK ENGLISH<small>older Robert · General Deposition 25</small></span><span class="dashes"></span><span class="q">?</span><span class="dashes"></span><span class="right">FAMILY-SIDE LANGUAGE<small>separate speakers / later records</small></span>
         </button>
       </section>
 
-      <aside class="key" id="action-panel" aria-live="polite">
-        <div class="key-head"><h2 id="panel-heading">Bridge panel</h2></div>
-        <div class="panel-toggle" role="tablist" aria-label="Bridge panel mode">
-          <button id="mode-unresolved" type="button" aria-pressed="true">Unresolved</button>
-          <button id="mode-action" type="button" aria-pressed="false">Action</button>
+      <section class="bridge-panel" id="action-panel" aria-live="polite">
+        <div class="bridge-panel-label">
+          <span>Question</span>
+          <h2 id="unresolved-title">Choose a question mark.</h2>
         </div>
-        <div class="key-body">
-          <div class="panel-view unresolved-view" id="unresolved-view">
-            <h3 id="unresolved-title">Still unresolved.</h3>
-            <p id="unresolved-copy">Choose a question mark. This rail will hold both source-side claims and the exact bridge still missing.</p>
-            <div class="bridge-facts" id="bridge-facts" hidden>
-              <div class="bridge-fact"><b>One side</b><span id="bridge-left"></span></div>
-              <div class="bridge-fact"><b>Other side</b><span id="bridge-right"></span></div>
-              <div class="bridge-fact"><b>What would change this</b><span id="bridge-need"></span></div>
-            </div>
-            <div class="bridge-state" id="bridge-state">Still unresolved.</div>
+        <div class="bridge-panel-body">
+          <p id="unresolved-copy">The two propositions can stand together without pretending the bridge between them has been recovered.</p>
+          <div class="bridge-facts" id="bridge-facts" hidden>
+            <div class="bridge-fact"><b>One side</b><span id="bridge-left"></span></div>
+            <div class="bridge-fact"><b>Other side</b><span id="bridge-right"></span></div>
+            <div class="bridge-fact"><b>What would change this</b><span id="bridge-need"></span></div>
           </div>
-
-          <div class="panel-view action-body" id="action-body" hidden>
+          <button class="bridge-action-toggle" id="mode-action" type="button">I have something for this</button>
+          <div class="bridge-action-area action-body" id="action-body" hidden>
             <h3 id="bridge-title">Choose an unresolved line first.</h3>
             <p id="bridge-copy">Then tell us what kind of thing you have and send it to Receiving.</p>
-            <p class="bridge-invite">Call it what you think it is:</p>
             <div class="action-choices" id="action-choices">
               <button class="action-choice" type="button" data-kind="piece">piece</button>
               <button class="action-choice" type="button" data-kind="leg">leg</button>
@@ -937,8 +1194,10 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
             </form>
           </div>
         </div>
-      </aside>
-    </section>
+        <div class="bridge-panel-state">
+          <div class="bridge-state" id="bridge-state">Still unresolved.</div>
+        </div>
+      </section>
 
   </main>
 
@@ -956,8 +1215,6 @@ const propertyTitle=document.getElementById("property-title");
 const propertyCopy=document.getElementById("property-copy");
 const propertyState=document.getElementById("property-state");
 const actionBody=document.getElementById("action-body");
-const unresolvedView=document.getElementById("unresolved-view");
-const modeUnresolved=document.getElementById("mode-unresolved");
 const modeAction=document.getElementById("mode-action");
 const bridgeTitle=document.getElementById("bridge-title");
 const bridgeCopy=document.getElementById("bridge-copy");
@@ -991,7 +1248,7 @@ const source={
  susie:{title:"Susie Bell",copy:"In that same 1903 examination Jane names her mother Susie Bell. This is Jane's witness-given family proposition. It is not converted into Yimma by the later Commission identity act.",state:"source descent · Jane witness voice"},
  "160":{title:"about 160 acres",copy:"Jane says her father got government land at Noxapater in Neshoba County, estimates about 160 acres, says she does not know whether it was Article XIV land, and says Wash Bell owns that land and lives on it. Approximate present-land testimony is not an original patent acreage.",state:"source descent · Jane land testimony"},
  "jane-wash":{title:"Jane / Wash",copy:"Jane identifies Wash Bell as her full brother. She says Wash owns and lives on the government land she associates with their father. Elsewhere the consolidated body represents Wash as owning part of Robert Bell's government land; the later decision places Wash on Section 4. Those later administrative propositions create pressure, not a recovered conveyance chain.",state:"source descent · family / administrative layers"},
- marris:{title:"Dibbin Marris",html:'<div class="property-stamp"><b>Seale, Mississippi · 4 Apr 1902</b><span>sworn witness</span></div><div class="property-qa"><b>Commission</b><span>What was her name?</span><b>Represented answer</b><strong>Robert Bell.</strong></div><div class="carrier-chain"><span class="carrier-node"><b>Commission</b><strong>“her”</strong></span><span class="carrier-arrow">→</span><span class="carrier-node"><b>Dibbin Marris</b><span>witness utterance</span></span><span class="carrier-arrow">→</span><span class="carrier-node"><b>Oscar Billey</b><span>Official Interpreter</span></span><span class="carrier-arrow">→</span><span class="carrier-node"><b>R. S. Streit</b><span>reporter / certifier</span></span><span class="carrier-arrow">→</span><span class="carrier-node"><b>Surviving English Q/A</b><strong>Robert Bell</strong></span></div>',copy:"",state:"“HER” = EXACT SOURCE WORDING · CERTIFIED TRANSLATION\nORIGINAL SPOKEN FORM / INTERPRETER WORDING NOT RECOVERED"},
+ marris:{title:"Dibbin Marris",html:'<div class="property-stamp"><b>4 Apr 1902 · Seale, Mississippi</b><span>sworn examination · certified translation</span></div><div class="property-qa"><b>Commission</b><span>“What was her name?”</span><b>Surviving represented answer</b><strong>Robert Bell.</strong></div><div class="carrier-chain"><span class="carrier-node"><b>Dibbin Marris</b><span>witness occurrence</span><strong>Robert Bell</strong></span><span class="carrier-node"><b>Oscar Billey</b><span>Official Interpreter</span><strong>Robert Bell</strong></span><span class="carrier-node"><b>R. S. Streit</b><span>reporter / certifier</span><strong>Robert Bell</strong></span><span class="carrier-node"><b>Surviving official English record</b><span>certified translated Q/A</span><strong>Robert Bell</strong></span></div>',copy:"",state:"ORIGINAL MARRIS UTTERANCE / INTERPRETER WORDING NOT RECOVERED\nSURVIVING CERTIFIED ENGLISH RECORD: ROBERT BELL"},
  robert:{title:"Robert Bell",copy:"The older Article XIV record body contains a source-local Robert Bell occurrence used by later federal decision-makers. The Workshop keeps this occurrence distinct from Jane's Robin Bell unless an independent person bridge is earned.",state:"source descent · older Article XIV record body"},
  yimma:{title:"Yimma",copy:"The 13 May 1902 Office of Indian Affairs report represents an older evidence carrier, record book No. 102 p.520, as saying Robert Bell had a wife named Yimma and had been married about six months before the treaty. The direct record-book face remains unrecovered.",state:"source descent · 1902 Office representation of older testimony"},
  "694":{title:"694.96 acres",copy:"The 14 December 1846 Article XIV patent grants Robert Bell the surveyed Section 4 tract containing 694.96 acres. The patent proves that tract and patent occurrence. It does not by itself identify Jane Bell's father or explain Jane's later estimate of about 160 acres.",state:"source descent · 1846 patent"},
@@ -1052,13 +1309,6 @@ function showProperty(title,copy,state,html=""){
  if(html){propertyCopy.innerHTML=html}else{propertyCopy.textContent=copy}
  propertyState.textContent=state;
 }
-function setPanelMode(mode){
- const isAction=mode==="action";
- unresolvedView.hidden=isAction;
- actionBody.hidden=!isAction;
- modeUnresolved.setAttribute("aria-pressed",isAction?"false":"true");
- modeAction.setAttribute("aria-pressed",isAction?"true":"false");
-}
 function showBridge(id,d){
  unresolvedTitle.textContent=d.title;
  unresolvedCopy.textContent=d.copy;
@@ -1077,7 +1327,8 @@ function showBridge(id,d){
  bridgeFile.value="";
  bridgeNote.value="";
  bridgeReceiveStatus.textContent="Original preserved privately. It does not become public evidence automatically.";
- setPanelMode("unresolved");
+ actionBody.hidden=true;
+ modeAction.textContent="I have something for this";
 }
 entries.forEach(btn=>btn.addEventListener("click",()=>{
  clearActive();
@@ -1092,10 +1343,11 @@ bridges.forEach(btn=>btn.addEventListener("click",()=>{
  const d=bridge[btn.dataset.bridge];
  showBridge(btn.dataset.bridge,d);
 }));
-modeUnresolved.addEventListener("click",()=>setPanelMode("unresolved"));
 modeAction.addEventListener("click",()=>{
  if(!activeBridgeId)return;
- setPanelMode("action");
+ const opening=actionBody.hidden;
+ actionBody.hidden=!opening;
+ modeAction.textContent=opening?"Close Receiving":"I have something for this";
 });
 
 actionChoices.querySelectorAll("[data-kind]").forEach(btn=>btn.addEventListener("click",()=>{
