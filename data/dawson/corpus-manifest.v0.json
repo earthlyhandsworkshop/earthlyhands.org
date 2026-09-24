@@ -1,0 +1,73 @@
+{
+  "corpus_id": "dawson-1831",
+  "label": "J. L. Dawson western exploring delegation corpus",
+  "status": "WORKSHOP_INDEX_V0",
+  "principles": {
+    "source_representation_derivative_distinct": true,
+    "visitor_question_is_not_jacket_finding": true,
+    "public_availability_requires_review": true,
+    "retrieval_is_relation_bounded": true
+  },
+  "objects": [
+    {
+      "id": "DAW-SRC-GOV-001",
+      "type": "source-genealogy-jacket",
+      "title": "J. L. Dawson reports Choctaw–Chickasaw western exploration, route choices, and guide use — 29 Jan 1831 — source-genealogy jacket",
+      "drive_id": "1qkd6nNQeFDHvgUBZlXtT25G-whDbnuXuWRWLVJx5gRQ",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "role": "governing-source-jacket"
+    },
+    {
+      "id": "DAW-PM-FORD-001",
+      "type": "prose-map-crossing",
+      "title": "Two unnamed men sent to watch the ford of the river on the back trail — dispatch / watch purpose only — Prose Map crossing",
+      "drive_id": "1MuHhIlCeJHYf7IBQDC--iZNi301MiiDuuzkFFQ-erx4",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": ["DAW-SRC-GOV-001"]
+    },
+    {
+      "id": "DAW-PM-BW-CAMP-001",
+      "type": "prose-map-crossing",
+      "title": "Dawson party encamped on a small branch of Blue Water — new camp / unresolved hydrologic relation — Prose Map crossing",
+      "drive_id": "1Onp2KzecvoziTG7dU3hcZzHffFiww7YB7R-ZsgpMgJA",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": ["DAW-SRC-GOV-001"]
+    },
+    {
+      "id": "DAW-PM-BEAVER-001",
+      "type": "prose-map-crossing",
+      "title": "Mayes and Criner had caught but a dozen — trapping outcome / quantity state — Prose Map crossing",
+      "drive_id": "18_X6uYProaycCyf5fQsG2gocw0cvWjUO0QzI8IsVHHU",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": ["DAW-SRC-GOV-001","DAW-PM-BW-CAMP-001"]
+    },
+    {
+      "id": "DAW-PM-BW-ARR-001",
+      "type": "prose-map-crossing",
+      "title": "Pitman Calvert / See-ly arrive at Dawson’s Forks-of-Blue-Water camp — afternoon — Prose Map crossing",
+      "drive_id": "1aZyQGr06Vdla3I8ZV8BRbPT7qRUUXjtn3rZJL9CHazo",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": ["DAW-SRC-GOV-001"]
+    },
+    {
+      "id": "DAW-PM-COLD-001",
+      "type": "prose-map-crossing",
+      "title": "Cold weather promised little further trapping success — source-local environmental condition / no new geography — Prose Map crossing",
+      "drive_id": "156l_M4H_lUHG15mygCF3nMDuX_gItoPsU7NRo_ir4zI",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": ["DAW-SRC-GOV-001","DAW-PM-BEAVER-001"]
+    }
+  ],
+  "retrieval_contract": {
+    "answer_states": ["HELD_HERE","HELD_ELSEWHERE_IN_DAWSON","NOT_HELD"],
+    "question_log_state": "UNRESOLVED_EDGE_CANDIDATE_ONLY",
+    "automatic_archive_mutation": false
+  },
+  "next": [
+    "inventory remaining Dawson-related jackets and Prose Map crossings",
+    "assign stable ids without changing source identity",
+    "review each object for PUBLIC / PUBLIC-DERIVATIVE / INSTRUMENT-ONLY / WORKSHOP / WITHHELD",
+    "build retrieval over approved object fragments",
+    "connect Blue Water front end to object ids rather than whole-document context"
+  ]
+}
