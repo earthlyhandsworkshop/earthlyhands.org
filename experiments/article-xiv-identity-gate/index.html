@@ -1560,6 +1560,229 @@ body.gate-open .connectors path{
   .property-any{padding-left:0;border-left:0}
 }
 </style>
+
+<style id="adobe-fireworks-properties">
+/* Adobe Fireworks-inspired Property inspector: fixed dock, context-sensitive, compact fields. */
+.properties{
+  position:relative!important;
+  height:5.6rem!important;
+  min-height:5.6rem!important;
+  max-height:5.6rem!important;
+  margin:.8rem 0 0!important;
+  padding-top:1.15rem!important;
+  display:block!important;
+  overflow:hidden!important;
+  border:1px solid var(--rule)!important;
+  background:#e7e1d5!important;
+}
+.properties-tab{
+  position:absolute;
+  top:0;left:0;right:0;
+  height:1.15rem;
+  display:flex;
+  align-items:center;
+  padding:0 .55rem;
+  border-bottom:1px solid rgba(24,23,18,.26);
+  background:#d9d2c5;
+  font:600 .52rem/1 var(--mono);
+  letter-spacing:.08em;
+}
+.properties-default,
+.properties-receive{
+  height:4.45rem;
+  display:grid;
+  grid-template-columns:minmax(9rem,.19fr) minmax(0,1fr) minmax(10rem,.22fr);
+}
+.properties-receive{
+  grid-template-columns:minmax(8.5rem,.18fr) minmax(12rem,.28fr) minmax(0,1fr) minmax(8rem,.16fr) minmax(8rem,.16fr);
+}
+.properties-default[hidden],
+.properties-receive[hidden]{display:none!important}
+.pi-group{
+  min-width:0;
+  padding:.38rem .5rem;
+  border-right:1px solid rgba(24,23,18,.18);
+  overflow:hidden;
+}
+.pi-group:last-child{border-right:0}
+.pi-label{
+  display:block;
+  margin-bottom:.18rem;
+  color:var(--muted);
+  font:500 .45rem/1.05 var(--mono);
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+.pi-context strong{
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font:400 1.05rem/1.05 var(--serif);
+}
+.pi-readout .property-long{
+  display:-webkit-box!important;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  max-height:3rem!important;
+  overflow:hidden!important;
+  color:var(--ink);
+  font:.62rem/1.25 var(--mono);
+}
+.pi-state span:last-child{
+  display:block;
+  font:.52rem/1.2 var(--mono);
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.property-targets{
+  display:flex;
+  gap:.25rem;
+  min-width:0;
+  overflow:hidden;
+}
+.property-target,
+.property-any{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  min-width:0;
+  margin:0;
+  cursor:pointer;
+}
+.property-target input,
+.property-any input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+.property-target span,
+.property-any span{
+  display:block;
+  max-width:8rem;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  padding:.24rem .38rem;
+  border:1px solid rgba(24,23,18,.25);
+  background:#f2ede3;
+  font:.5rem/1 var(--mono);
+}
+.property-target input:checked + span,
+.property-any input:checked + span{
+  background:#cfc5b5;
+  border-color:var(--rule);
+  box-shadow:inset 0 0 0 1px rgba(24,23,18,.08);
+}
+.property-any{margin-top:.28rem}
+.pi-note input{
+  width:100%;
+  height:1.55rem;
+  border:1px solid rgba(24,23,18,.28);
+  background:#f7f2e8;
+  padding:.2rem .35rem;
+  color:var(--ink);
+  font:.57rem/1.1 var(--mono);
+  outline:none;
+}
+.pi-note input:focus{border-color:var(--rule)}
+.pi-file button,
+.pi-send button{
+  width:100%;
+  min-height:1.55rem;
+  border:1px solid rgba(24,23,18,.28);
+  background:#f2ede3;
+  color:var(--ink);
+  padding:.22rem .35rem;
+  text-align:left;
+}
+.pi-file button strong,
+.pi-send button strong{
+  display:block;
+  font:600 .58rem/1 var(--mono);
+}
+.pi-file button span{
+  display:block;
+  margin-top:.12rem;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:var(--muted);
+  font:.43rem/1 var(--mono);
+}
+.pi-send button{text-align:center}
+.property-upload-status{
+  display:block;
+  margin-top:.18rem;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:var(--muted);
+  font:.41rem/1 var(--mono);
+}
+
+/* Lower movement: same exact height; key points gets a little more width, still subordinate. */
+.stage-two .lower{
+  grid-template-columns:minmax(0,1fr) minmax(17rem,28%)!important;
+  align-items:stretch!important;
+  height:22.5rem!important;
+}
+.stage-two .pressure,
+.stage-two .key{
+  height:22.5rem!important;
+  min-height:22.5rem!important;
+  max-height:22.5rem!important;
+  overflow:hidden!important;
+}
+.stage-two .pressure{
+  display:grid!important;
+  grid-template-rows:auto repeat(5,minmax(0,1fr))!important;
+}
+.stage-two .pressure-row{
+  min-height:0!important;
+  height:auto!important;
+}
+.stage-two .key-body{
+  overflow:auto!important;
+}
+@media(max-width:64rem){
+  .stage-two .lower{height:auto!important;grid-template-columns:1fr!important}
+  .stage-two .pressure,.stage-two .key{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+  .properties{height:6.8rem!important;min-height:6.8rem!important;max-height:6.8rem!important}
+  .properties-default{height:5.65rem;grid-template-columns:minmax(7.5rem,.28fr) minmax(0,1fr)}
+  .properties-default .pi-state{display:none}
+  .properties-receive{
+    height:5.65rem;
+    grid-template-columns:minmax(7rem,.24fr) minmax(10rem,.34fr) minmax(0,1fr) minmax(7rem,.2fr);
+  }
+  .properties-receive .pi-send{
+    position:absolute;right:0;top:1.15rem;bottom:0;width:7rem;background:#e7e1d5;
+  }
+}
+@media(max-width:40rem){
+  .properties{height:8.2rem!important;min-height:8.2rem!important;max-height:8.2rem!important}
+  .properties-default{height:7.05rem;grid-template-columns:minmax(6.5rem,.32fr) minmax(0,1fr)}
+  .properties-receive{
+    height:7.05rem;
+    grid-template-columns:minmax(6rem,.28fr) minmax(0,1fr) minmax(6.5rem,.3fr);
+    grid-template-rows:3.35rem 3.7rem;
+  }
+  .properties-receive .pi-context{grid-column:1}
+  .properties-receive .pi-target{grid-column:2/4}
+  .properties-receive .pi-note{grid-column:1/3;grid-row:2}
+  .properties-receive .pi-file{grid-column:3;grid-row:2}
+  .properties-receive .pi-send{
+    position:static;
+    width:auto;
+    grid-column:3;grid-row:2;
+    display:none;
+  }
+}
+</style>
 </head>
 <body>
 <div class="page">
@@ -1674,26 +1897,52 @@ body.gate-open .connectors path{
     </section>
 
     <section class="properties" id="properties" aria-live="polite">
-      <div class="properties-label">
-        <span>Properties</span>
-        <strong id="property-title">Touch a record object.</strong>
-      </div>
-      <div class="properties-copy">
-        <span class="property-long" id="property-copy">Robin, Yimma, land, Dibbin, the patent — this panel changes immediately when you choose one.</span>
-        <div class="property-receive" id="property-receive" hidden>
-          <div class="property-targets" id="property-targets"></div>
-          <label class="property-any"><input type="radio" name="property-target" value="anything related"> anything related</label>
+      <div class="properties-tab">PROPERTIES</div>
+
+      <div class="properties-default" id="properties-default">
+        <div class="pi-group pi-context">
+          <span class="pi-label">Selection</span>
+          <strong id="property-title">Touch a record object.</strong>
+        </div>
+        <div class="pi-group pi-readout">
+          <span class="pi-label">Record properties</span>
+          <span class="property-long" id="property-copy">Robin, Yimma, land, Dibbin, the patent — this panel changes immediately when you choose one.</span>
+        </div>
+        <div class="pi-group pi-state">
+          <span class="pi-label">State</span>
+          <span id="property-state">attention · threshold</span>
         </div>
       </div>
-      <div class="properties-state" id="property-state">attention · threshold</div>
-      <form class="property-upload" id="property-upload" hidden>
+
+      <form class="properties-receive" id="property-upload" hidden>
         <input id="property-file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required hidden>
-        <input id="property-note" type="text" maxlength="220" placeholder="one sentence — optional">
-        <div class="property-upload-actions">
-          <button type="button" id="property-file-button">Choose record</button>
-          <button type="submit" id="property-send">Send</button>
+
+        <div class="pi-group pi-context">
+          <span class="pi-label">Selection</span>
+          <strong id="property-receive-title">Selected proposition</strong>
         </div>
-        <div class="property-upload-status" id="property-upload-status">Original preserved privately.</div>
+
+        <div class="pi-group pi-target">
+          <span class="pi-label">Attach record to</span>
+          <div class="property-targets" id="property-targets"></div>
+          <label class="property-any"><input type="radio" name="property-target" value="anything related"><span>Anything related</span></label>
+        </div>
+
+        <label class="pi-group pi-note">
+          <span class="pi-label">One sentence · optional</span>
+          <input id="property-note" type="text" maxlength="220" placeholder="What does this record show?">
+        </label>
+
+        <div class="pi-group pi-file">
+          <span class="pi-label">Record</span>
+          <button type="button" id="property-file-button"><strong>Choose</strong><span id="property-file-name">no file</span></button>
+        </div>
+
+        <div class="pi-group pi-send">
+          <span class="pi-label">Receiving</span>
+          <button type="submit" id="property-send"><strong>Send</strong></button>
+          <span class="property-upload-status" id="property-upload-status">Original preserved privately.</span>
+        </div>
       </form>
     </section>
   </main>
@@ -1723,11 +1972,13 @@ const propertyTitle=document.getElementById("property-title");
 const propertyCopy=document.getElementById("property-copy");
 const propertyState=document.getElementById("property-state");
 const properties=document.getElementById("properties");
-const propertyReceive=document.getElementById("property-receive");
+const propertiesDefault=document.getElementById("properties-default");
 const propertyTargets=document.getElementById("property-targets");
 const propertyUpload=document.getElementById("property-upload");
+const propertyReceiveTitle=document.getElementById("property-receive-title");
 const propertyFile=document.getElementById("property-file");
 const propertyFileButton=document.getElementById("property-file-button");
+const propertyFileName=document.getElementById("property-file-name");
 const propertyNote=document.getElementById("property-note");
 const propertyUploadStatus=document.getElementById("property-upload-status");
 const receivingUrl=String(window.EARTHLY_HANDS_RECEIVING_URL||"").trim();
@@ -1805,6 +2056,9 @@ function clearActive(){
  draw();
 }
 function setProperties(title,copy,state,html=""){
+ propertiesDefault.hidden=false;
+ propertyUpload.hidden=true;
+ properties.classList.remove("is-receiving");
  propertyTitle.textContent=title;
  propertyCopy.innerHTML=html||copy;
  propertyState.textContent=state;
@@ -1835,10 +2089,8 @@ const bridgeTargets={
 
 function leaveReceiveMode(){
  properties.classList.remove("is-receiving");
- propertyReceive.hidden=true;
  propertyUpload.hidden=true;
- propertyCopy.hidden=false;
- propertyState.hidden=false;
+ propertiesDefault.hidden=false;
  activeReceiveBridge="";
  activeReceiveTitle="";
  propertyTargets.innerHTML="";
@@ -1851,22 +2103,20 @@ function enterReceiveMode(id,d){
  activeReceiveBridge=id;
  activeReceiveTitle=d.title;
  properties.classList.add("is-receiving");
- propertyCopy.hidden=true;
- propertyState.hidden=true;
- propertyReceive.hidden=false;
+ propertiesDefault.hidden=true;
  propertyUpload.hidden=false;
- propertyTitle.textContent=d.title;
+ propertyReceiveTitle.textContent=d.title;
  propertyTargets.innerHTML=(bridgeTargets[id]||[]).map((label,i)=>
-   '<label class="property-target"><input type="radio" name="property-target" value="'+label.replace(/"/g,'&quot;')+'" '+(i===0?'checked':'')+'> '+label+'</label>'
+   '<label class="property-target"><input type="radio" name="property-target" value="'+label.replace(/"/g,'&quot;')+'" '+(i===0?'checked':'')+'><span>'+label+'</span></label>'
  ).join("");
- const any=propertyReceive.querySelector('.property-any input');
+ const any=propertyUpload.querySelector('.property-any input');
  if(any) any.checked=false;
  propertyUploadStatus.textContent="Original preserved privately.";
 }
 
 propertyFileButton.addEventListener("click",()=>propertyFile.click());
 propertyFile.addEventListener("change",()=>{
- propertyFileButton.textContent=propertyFile.files?.[0]?.name||"Choose record";
+ propertyFileName.textContent=propertyFile.files?.[0]?.name||"no file";
 });
 
 propertyUpload.addEventListener("submit",async e=>{
@@ -1896,7 +2146,7 @@ propertyUpload.addEventListener("submit",async e=>{
    if(!res.ok)throw new Error(out.error||("HTTP "+res.status));
    propertyUploadStatus.textContent="RECEIVED · "+(out.receipt||"record");
    propertyFile.value="";
-   propertyFileButton.textContent="Choose record";
+   propertyFileName.textContent="no file";
    propertyNote.value="";
  }catch(err){
    propertyUploadStatus.textContent="Not received · "+err.message;
