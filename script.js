@@ -411,12 +411,14 @@
     const clean = String(message || "").trim().slice(0, 240);
     if (!clean || asking) return;
 
+    const origin = currentId;
     receiveTenAction(clean);
     const localMove = localMoveFromWords(clean);
+    const movementResolved = Boolean(localMove && canMove(origin, localMove));
     talkInput.value = "";
     setAsking(true);
 
-    if (localMove && canMove(currentId, localMove)) {
+    if (movementResolved) {
       landAt(localMove);
     }
 
@@ -434,12 +436,14 @@
       "FIRST PERSON VIEW: the bracketed view is ordinary prose from Ten's landed eyes. Write the amount that is useful. It may be one paragraph or several. No interface explanation.",
       "Historical source facts are a floor. Do not contradict them, turn an open question into a fact, or claim Dawson recorded Ten's invented actions.",
       "Ten may alter the present experiential layer: make a small fire, drink coffee, sit, ask questions, talk, notice things, or imagine a reversible present action. Keep that distinct from the 1831 source.",
-      "Remain at the current ground unless Ten explicitly asks to move.",
+      movementResolved
+        ? "Ten has already moved once because this utterance clearly earned that crossing. Do not move again."
+        : "Remain at the current ground unless Ten explicitly asks to move.",
       "Return ONLY valid JSON, no markdown, with exactly these keys:",
       '{"setting":"ground/carrier line","title":"plain headline","view":"natural prose; use blank lines between paragraphs when helpful","footing":"Ten footing in whatever length is useful","companion":"Small Door footing if useful","appearance":"","move_to":""}',
       'appearance may be only "" or "fire". move_to must be "" unless Ten is actually moving; if moving, use only an adjacent ground id allowed by the trail.',
       "There is no paragraph count, line count, or word-count requirement. Let the prose breathe. Keep the page coherent and useful after Ten's action.",
-      `ALLOWED MOVES FROM HERE: ${JSON.stringify(allowedMoves[currentId] || [])}`,
+      `ALLOWED MOVES FROM HERE: ${JSON.stringify(movementResolved ? [] : (allowedMoves[currentId] || []))}`,
       `CURRENT GROUND: ${currentId}`,
       `SOURCE FLOOR: ${JSON.stringify(facts)}`,
       `CURRENT SCREEN: ${JSON.stringify(visible)}`,
@@ -464,9 +468,9 @@
 
       const patch = parseSceneReply(data.reply);
       if (patch) {
-        const origin = currentId;
-        const result = applyScenePatch(origin, patch);
-        if (result.moveTo && canMove(origin, result.moveTo)) {
+        const patchOrigin = currentId;
+        const result = applyScenePatch(patchOrigin, patch);
+        if (!movementResolved && result.moveTo && canMove(patchOrigin, result.moveTo)) {
           landAt(result.moveTo);
         }
       } else {
