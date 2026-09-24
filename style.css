@@ -182,10 +182,11 @@ body[data-ground="dozen"] .experience-shell{
 }
 
 .experience-stage{
-  min-height:clamp(25rem,62vh,39rem);
+  min-height:clamp(31rem,64svh,40rem);
   display:flex;
   align-items:center;
-  padding:clamp(2.25rem,6vh,5rem) 0 1.5rem;
+  padding:clamp(2.25rem,6vh,4.5rem) 0 1.5rem;
+  overflow:hidden;
 }
 
 .experience-mount{
@@ -202,37 +203,27 @@ body[data-ground="dozen"] .experience-shell{
   grid-template-columns:minmax(17rem,.72fr) minmax(0,1.38fr);
   gap:1rem clamp(2.5rem,6vw,7rem);
   width:100%;
+  min-height:22rem;
   align-items:start;
 }
 
 [data-scene][tabindex="-1"]:focus{outline:none}
 
-.eyebrow{
-  grid-column:1;
-  margin:0 0 .7rem;
-  color:var(--scene-muted);
-  font-size:.72rem;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-}
-
 .passage h2{
   grid-column:1;
+  grid-row:1;
   margin:0;
-  max-width:10ch;
+  max-width:11ch;
+  min-height:2.05em;
   color:var(--scene-ink);
-  font-size:clamp(2.5rem,5.3vw,5.2rem);
+  font-size:clamp(2.5rem,5.1vw,5rem);
   font-weight:400;
-  line-height:.92;
-  letter-spacing:-.045em;
+  line-height:.96;
+  letter-spacing:-.04em;
   text-wrap:balance;
 }
 
-.scene-without-eyebrow h2{
-  grid-row:1;
-}
-
-.scene-without-eyebrow .first-person-view{
+.first-person-view{
   grid-row:1;
 }
 
@@ -247,32 +238,22 @@ body[data-ground="dozen"] .experience-shell{
 
 .first-person-view{
   display:block;
-  min-height:10rem;
+  min-height:11.5rem;
   padding:0;
 }
 
-.view-heading{
-  margin:0 0 .85rem;
-  padding:0 0 .55rem;
-  border-bottom:1px solid var(--scene-rule);
-  font-family:var(--mono);
-  font-size:.68rem;
-  line-height:1.4;
-}
-
-.view-you{
-  color:var(--scene-muted);
-  font-weight:600;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-}
-
 .view-body{
+  display:grid;
+  grid-template-rows:repeat(3,minmax(2.2em,auto));
+  gap:.45em;
   max-width:40rem;
+  min-height:9.2em;
 }
 
-.first-person-view p{margin:0 0 .55em}
-.first-person-view p:last-child{margin-bottom:0}
+.first-person-view p{
+  margin:0;
+  align-self:start;
+}
 
 .passage-actions{display:none!important}
 
@@ -528,38 +509,45 @@ footer{
   }
 
   .experience-stage{
-    min-height:0;
-    padding:2.4rem 0 1.5rem;
+    min-height:31rem;
+    padding:2.2rem 0 1.4rem;
+    align-items:flex-start;
   }
 
   [data-scene].is-current{
-    display:block;
-  }
-
-  .eyebrow{
-    margin-bottom:.55rem;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto;
+    gap:1.35rem;
+    min-height:25rem;
   }
 
   .passage h2{
-    max-width:12ch;
-    margin-bottom:1.2rem;
+    grid-column:1;
+    grid-row:1;
+    max-width:13ch;
+    min-height:2.05em;
+    margin:0;
     font-size:clamp(2.25rem,10vw,3.5rem);
   }
 
   .plain-copy,.first-person-view{
+    grid-column:1;
+    grid-row:2;
     max-width:none;
     font-size:1.04rem;
   }
 
   .first-person-view{
     display:block;
+    min-height:10.5rem;
     padding:0;
   }
 
-  .view-heading{
-    margin-bottom:.75rem;
-    padding-bottom:.5rem;
-    font-size:.66rem;
+  .view-body{
+    grid-template-rows:repeat(3,minmax(2.6em,auto));
+    gap:.4em;
+    min-height:9.8em;
   }
 
   .trail-console{
