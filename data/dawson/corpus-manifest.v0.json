@@ -1,7 +1,7 @@
 {
   "corpus_id": "dawson-1831",
   "label": "J. L. Dawson western exploring delegation corpus",
-  "status": "WORKSHOP_INDEX_V0",
+  "status": "WORKSHOP_INDEX_V0_1",
   "principles": {
     "source_representation_derivative_distinct": true,
     "visitor_question_is_not_jacket_finding": true,
@@ -23,7 +23,9 @@
       "title": "Two unnamed men sent to watch the ford of the river on the back trail — dispatch / watch purpose only — Prose Map crossing",
       "drive_id": "1MuHhIlCeJHYf7IBQDC--iZNi301MiiDuuzkFFQ-erx4",
       "publication_state": "REVIEW_FOR_PUBLIC",
-      "relations": ["DAW-SRC-GOV-001"]
+      "relations": [
+        "DAW-SRC-GOV-001"
+      ]
     },
     {
       "id": "DAW-PM-BW-CAMP-001",
@@ -31,7 +33,9 @@
       "title": "Dawson party encamped on a small branch of Blue Water — new camp / unresolved hydrologic relation — Prose Map crossing",
       "drive_id": "1Onp2KzecvoziTG7dU3hcZzHffFiww7YB7R-ZsgpMgJA",
       "publication_state": "REVIEW_FOR_PUBLIC",
-      "relations": ["DAW-SRC-GOV-001"]
+      "relations": [
+        "DAW-SRC-GOV-001"
+      ]
     },
     {
       "id": "DAW-PM-BEAVER-001",
@@ -39,7 +43,10 @@
       "title": "Mayes and Criner had caught but a dozen — trapping outcome / quantity state — Prose Map crossing",
       "drive_id": "18_X6uYProaycCyf5fQsG2gocw0cvWjUO0QzI8IsVHHU",
       "publication_state": "REVIEW_FOR_PUBLIC",
-      "relations": ["DAW-SRC-GOV-001","DAW-PM-BW-CAMP-001"]
+      "relations": [
+        "DAW-SRC-GOV-001",
+        "DAW-PM-BW-CAMP-001"
+      ]
     },
     {
       "id": "DAW-PM-BW-ARR-001",
@@ -47,7 +54,9 @@
       "title": "Pitman Calvert / See-ly arrive at Dawson’s Forks-of-Blue-Water camp — afternoon — Prose Map crossing",
       "drive_id": "1aZyQGr06Vdla3I8ZV8BRbPT7qRUUXjtn3rZJL9CHazo",
       "publication_state": "REVIEW_FOR_PUBLIC",
-      "relations": ["DAW-SRC-GOV-001"]
+      "relations": [
+        "DAW-SRC-GOV-001"
+      ]
     },
     {
       "id": "DAW-PM-COLD-001",
@@ -55,19 +64,128 @@
       "title": "Cold weather promised little further trapping success — source-local environmental condition / no new geography — Prose Map crossing",
       "drive_id": "156l_M4H_lUHG15mygCF3nMDuX_gItoPsU7NRo_ir4zI",
       "publication_state": "REVIEW_FOR_PUBLIC",
-      "relations": ["DAW-SRC-GOV-001","DAW-PM-BEAVER-001"]
+      "relations": [
+        "DAW-SRC-GOV-001",
+        "DAW-PM-BEAVER-001"
+      ]
+    },
+    {
+      "id": "DAW-PM-GUARD-001",
+      "type": "prose-map-crossing",
+      "title": "Small guard posted round Dawson camp during night — defensive perimeter relation / no measured geometry — Prose Map crossing",
+      "drive_id": "1UqzZzFJXVIJUOQZcy3AiMcgVLsQtUTTzpOjdG7N4pXw",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": [
+        "DAW-SRC-GOV-001",
+        "DAW-PM-FORD-001"
+      ]
+    },
+    {
+      "id": "DAW-PM-MORNING-001",
+      "type": "prose-map-crossing",
+      "title": "Morning finds Dawson party unattacked — camp-state / negative-event seam — Prose Map crossing",
+      "drive_id": "175Egn7b2ApOAoliQ_kH-EWIjJuNVeqk8g5IhGf9PLXA",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": [
+        "DAW-SRC-GOV-001",
+        "DAW-PM-GUARD-001",
+        "DAW-PM-FORD-001"
+      ]
+    },
+    {
+      "id": "DAW-PM-SE15-001",
+      "type": "prose-map-crossing",
+      "title": "Dawson party continues route S.E. about 15 miles — source-stated travel leg / no straight-line geometry — Prose Map crossing",
+      "drive_id": "1UPKLtxGytJ5v03m-x3Rkxv8efy49R0z--xPakFBWETg",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": [
+        "DAW-SRC-GOV-001",
+        "DAW-PM-MORNING-001",
+        "DAW-PM-BW-CAMP-001"
+      ]
+    },
+    {
+      "id": "DAW-PM-PAWNEE-TRAIL-001",
+      "type": "prose-map-crossing",
+      "title": "Chickasaws follow Dawson trail / fifty-or-sixty Pawnees crossed / turned same direction — unresolved trail intersection — Prose Map crossing",
+      "drive_id": "1OYhSqOHkyCS0KxrHAFgqb5oQWnEhj8FhiBjGr5SlTJY",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": [
+        "DAW-SRC-GOV-001"
+      ]
+    },
+    {
+      "id": "DAW-PM-CALVERT-NOTIFY-001",
+      "type": "prose-map-crossing",
+      "title": "Calvert / See-ly report Chickasaws detached them to notify Dawson’s party / put it on guard — Prose Map crossing",
+      "drive_id": "1ZpY4YiAfviByGfTLnyMUPbf9UykF_-CVvOqezRznM0",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": [
+        "DAW-SRC-GOV-001",
+        "DAW-PM-BW-ARR-001"
+      ]
+    },
+    {
+      "id": "DAW-PM-DETACHMENT-REQ-001",
+      "type": "prose-map-crossing",
+      "title": "Chickasaws request small detachment to meet them on route toward Dawson party / aid if necessary — unresolved meeting-plan relation — Prose Map crossing",
+      "drive_id": "18U9KxAqRBlrJss4jYVjfNliKRXTnrioeqQxg6BCg0-E",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": [
+        "DAW-SRC-GOV-001"
+      ]
+    },
+    {
+      "id": "DAW-PM-MOUNT-001",
+      "type": "prose-map-crossing",
+      "title": "Five or six Choctaws and Dawson’s detachment are about to mount at Forks camp — imminent action / no movement — Prose Map crossing",
+      "drive_id": "1g0wx4SlC89mbCKrCCfBeLatB-eR9pTb9l2G2KT_t-As",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": [
+        "DAW-SRC-GOV-001"
+      ]
+    },
+    {
+      "id": "DAW-PM-SADDLE-001",
+      "type": "prose-map-crossing",
+      "title": "Five or six Choctaws and Dawson’s detachment saddle horses at Forks camp — preparation / no departure — Prose Map crossing",
+      "drive_id": "1JiaM5ThP7PE0-XouLmuvK_mAbVr_mKbbJBn_oALmtQU",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": [
+        "DAW-SRC-GOV-001"
+      ]
+    },
+    {
+      "id": "DAW-PM-BW-REGION-001",
+      "type": "prose-map-crossing",
+      "title": "Dawson / Blue Water–Washita country — regional description stays relational; OCR adjective unresolved — 1830 — Prose Map crossing",
+      "drive_id": "1icliDfWkh7s2JjiN7oFd69vKspgNDgaLMqrRBv81loM",
+      "publication_state": "REVIEW_FOR_PUBLIC",
+      "relations": [
+        "DAW-SRC-GOV-001"
+      ]
     }
   ],
   "retrieval_contract": {
-    "answer_states": ["HELD_HERE","HELD_ELSEWHERE_IN_DAWSON","NOT_HELD"],
+    "answer_states": [
+      "HELD_HERE",
+      "HELD_ELSEWHERE_IN_DAWSON",
+      "NOT_HELD"
+    ],
     "question_log_state": "UNRESOLVED_EDGE_CANDIDATE_ONLY",
     "automatic_archive_mutation": false
   },
   "next": [
-    "inventory remaining Dawson-related jackets and Prose Map crossings",
-    "assign stable ids without changing source identity",
+    "continue inventory beyond the current Blue Water and alarm sequence",
+    "assign stable ids without changing source or derivative identity",
     "review each object for PUBLIC / PUBLIC-DERIVATIVE / INSTRUMENT-ONLY / WORKSHOP / WITHHELD",
-    "build retrieval over approved object fragments",
-    "connect Blue Water front end to object ids rather than whole-document context"
-  ]
+    "publish only curated retrieval fragments, never raw workshop notes by default",
+    "connect Blue Water to approved fragments and corpus relations",
+    "log visitor questions as unresolved-edge candidates outside source and jacket state"
+  ],
+  "inventory": {
+    "note": "This manifest is an index of controlled Dawson-related workshop objects, not a flattened evidence body. Inclusion does not publish an object or promote its derivative claims.",
+    "discovered_dawson_documents_minimum": "20+",
+    "inventory_state": "PARTIAL"
+  }
 }
