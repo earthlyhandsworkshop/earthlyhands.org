@@ -541,8 +541,17 @@
 
       conversation.push({ role: "user", content: clean }, { role: "assistant", content: data.reply.trim() });
       if (conversation.length > 12) conversation.splice(0, conversation.length - 12);
-    } catch (_) {
-      // The local action already landed. The historical ground remains in place.
+    } catch (error) {
+      console.error("Shared Country listening error:", error);
+      const scene = sceneById.get(currentId);
+      const companion = scene?.querySelector(".companion-footing");
+      if (companion) companion.textContent = "Small Door · listening ground did not answer";
+      if (groundThread && !groundThread.querySelector(".listening-error")) {
+        const note = document.createElement("p");
+        note.className = "listening-error";
+        note.textContent = "The listening ground did not answer this turn.";
+        groundThread.append(note);
+      }
     } finally {
       setAsking(false);
     }
