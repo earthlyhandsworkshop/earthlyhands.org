@@ -1053,6 +1053,178 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
   .bridge-fact:last-child{grid-column:auto}
 }
 
+
+/* v1 recovery — compact properties + original lower composition */
+.properties{
+  height:5.6rem!important;
+  min-height:0!important;
+  margin:.8rem 0 0!important;
+  grid-template-columns:minmax(8.5rem,.18fr) minmax(0,1fr) minmax(10.5rem,.22fr)!important;
+  overflow:hidden!important;
+}
+.properties-label,.properties-copy,.properties-state{
+  min-height:0!important;
+}
+.properties-label{padding:.48rem .62rem!important}
+.properties-copy{
+  padding:.36rem .5rem!important;
+  overflow:hidden!important;
+  display:block!important;
+}
+.properties-copy .property-long{
+  max-height:4.8rem!important;
+  overflow:hidden!important;
+}
+.properties-state{
+  padding:.45rem .55rem!important;
+  display:block!important;
+  white-space:normal!important;
+  overflow:hidden;
+  font-size:.48rem!important;
+  line-height:1.2!important;
+}
+.property-stamp{
+  display:grid!important;
+  grid-template-columns:auto 1fr;
+  gap:.15rem .42rem!important;
+  margin:0 0 .2rem!important;
+  font-size:.43rem!important;
+}
+.property-stamp b,
+.property-stamp span{
+  border:1px solid var(--soft);
+  padding:.16rem .25rem;
+  min-width:0;
+}
+.property-qa{
+  display:grid!important;
+  grid-template-columns:auto 1fr auto 1fr!important;
+  gap:.16rem .3rem!important;
+  padding:0!important;
+  border:0!important;
+  align-items:center!important;
+}
+.property-qa b{
+  font-size:.45rem!important;
+  white-space:nowrap;
+}
+.property-qa span{
+  font-size:.68rem!important;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.property-qa strong{
+  font-size:.8rem!important;
+  white-space:nowrap;
+}
+.carrier-chain{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:.26rem!important;
+  margin-top:.25rem!important;
+  white-space:normal!important;
+  overflow:hidden!important;
+}
+.carrier-node{
+  position:relative;
+  border:1px solid var(--soft);
+  padding:.22rem .28rem!important;
+  min-height:2rem;
+  font-size:.39rem!important;
+  line-height:1.05!important;
+}
+.carrier-node + .carrier-node::before{
+  content:"→";
+  position:absolute;
+  left:-.18rem;
+  top:50%;
+  transform:translate(-50%,-50%);
+  background:var(--paper2);
+  color:var(--accent);
+  padding:0 .03rem;
+  font:.45rem/1 var(--mono);
+}
+.carrier-node b{font-size:.4rem!important}
+.carrier-node span{margin-top:.05rem!important}
+.carrier-node strong{
+  margin-top:.06rem!important;
+  font-size:.68rem!important;
+  line-height:1!important;
+}
+.carrier-arrow{display:none!important}
+
+.lower{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(14rem,.27fr)!important;
+  gap:.8rem!important;
+}
+.pressure-head h2{font-size:1.15rem!important;font-weight:600!important}
+.pressure-row{
+  grid-template-columns:minmax(8rem,.8fr) minmax(5rem,1fr) auto minmax(5rem,1fr) minmax(8rem,.8fr) auto!important;
+  min-height:3.8rem!important;
+  gap:.55rem!important;
+  padding:.45rem .75rem!important;
+}
+.pressure-row .left,.pressure-row .right{
+  font:600 1rem/1.2 var(--mono)!important;
+  letter-spacing:0!important;
+}
+.pressure-row .q{
+  font:1rem/1 var(--mono)!important;
+  color:var(--ink)!important;
+}
+.pressure-row .dashes{border-top:1px dashed var(--muted)!important}
+.detail{
+  margin-top:.8rem!important;
+  display:grid!important;
+  grid-template-columns:minmax(12rem,.34fr) minmax(0,1fr)!important;
+}
+.detail-id{padding:.85rem!important}
+.detail-body{padding:.85rem!important}
+.detail-receive-toggle{
+  margin-top:.65rem;
+  border:0;
+  border-bottom:1px solid var(--accent);
+  background:transparent;
+  padding:.18rem 0;
+  color:var(--accent);
+  font:.58rem/1.2 var(--mono);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.detail-kind-row{
+  display:flex;
+  gap:.3rem .7rem;
+  flex-wrap:wrap;
+  margin:.45rem 0;
+}
+.detail-receive{
+  max-width:42rem;
+}
+@media(max-width:64rem){
+  .properties{height:auto!important;max-height:8.5rem}
+  .properties-state{display:none!important}
+  .carrier-chain{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .carrier-node:nth-child(3)::before{display:none}
+  .lower{grid-template-columns:1fr!important}
+  .detail{grid-template-columns:1fr!important}
+}
+@media(max-width:40rem){
+  .properties{
+    max-height:none!important;
+    grid-template-columns:minmax(7.5rem,.32fr) minmax(0,1fr)!important;
+  }
+  .carrier-chain{grid-template-columns:1fr 1fr!important}
+  .property-qa{grid-template-columns:auto 1fr!important}
+  .property-qa strong{grid-column:2}
+  .pressure-row{
+    grid-template-columns:1fr auto 1fr auto!important;
+    min-height:4.6rem!important;
+  }
+  .pressure-row .dashes{display:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -1140,65 +1312,70 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
     <div class="divider">The Commission can issue an identity relation. The questions remain.</div>
 
     <section class="lower">
-      <section class="pressure" aria-label="Unresolved proposition lines">
-        <div class="pressure-head"><h2>The questions remain.</h2></div>
+      <div class="pressure">
+        <div class="pressure-head"><h2>Unresolved proposition lines</h2><span class="body-tag">[C]</span></div>
         <button class="pressure-row" type="button" data-bridge="yimma-susie">
-          <span class="left">YIMMA<small>older record · wife</small></span><span class="dashes"></span><span class="q">?</span><span class="dashes"></span><span class="right">SUSIE<small>Jane · mother</small></span>
+          <span class="left">YIMMA</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">SUSIE</span><span class="index">[C.1]</span>
+          <span class="pressure-state">two source-local spouse / mother propositions · person relation not earned</span>
         </button>
         <button class="pressure-row" type="button" data-bridge="land">
-          <span class="left">694.96 ACRES<small>1846 patent · Section 4</small></span><span class="dashes"></span><span class="q">?</span><span class="dashes"></span><span class="right">ABOUT 160 ACRES<small>Jane · government land estimate</small></span>
+          <span class="left">694.96 ACRES</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ABOUT 160 ACRES</span><span class="index">[C.2]</span>
+          <span class="pressure-state">original patent tract ≠ proved later parcel chain</span>
         </button>
         <button class="pressure-row" type="button" data-bridge="name">
-          <span class="left">ROBERT<small>older record / Marris translated record</small></span><span class="dashes"></span><span class="q">?</span><span class="dashes"></span><span class="right">ROBIN<small>Jane · stated twice · including Robin or Robert?</small></span>
+          <span class="left">ROBERT</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ROBIN</span><span class="index">[C.3]</span>
+          <span class="pressure-state">older / translated Robert forms ≠ Jane's witness-given Robin</span>
         </button>
         <button class="pressure-row" type="button" data-bridge="place">
-          <span class="left">SECTION 4<small>patent tract address</small></span><span class="dashes"></span><span class="q">?</span><span class="dashes"></span><span class="right">NOXAPATER<small>Jane · remembered land place</small></span>
+          <span class="left">SECTION 4</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">NOXAPATER</span><span class="index">[C.4]</span>
+          <span class="pressure-state">later decision pressure exists · exact parcel continuity still needs carriers</span>
         </button>
         <button class="pressure-row" type="button" data-bridge="language">
-          <span class="left">1838: CANNOT SPEAK ENGLISH<small>older Robert · General Deposition 25</small></span><span class="dashes"></span><span class="q">?</span><span class="dashes"></span><span class="right">FAMILY-SIDE LANGUAGE<small>separate speakers / later records</small></span>
+          <span class="left">1838: CANNOT SPEAK ENGLISH</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">FAMILY-SIDE CLAIMS</span><span class="index">[C.5]</span>
+          <span class="pressure-state">older Robert source-local language proposition cannot travel without identity continuity</span>
         </button>
-      </section>
+      </div>
 
-      <section class="bridge-panel" id="action-panel" aria-live="polite">
-        <div class="bridge-panel-label">
-          <span>Question</span>
-          <h2 id="unresolved-title">Choose a question mark.</h2>
+      <aside class="key">
+        <div class="key-head"><h2>Key points</h2><span class="body-tag">[D]</span></div>
+        <div class="key-body">
+          <div class="key-row"><span>administrative join present</span><strong>✓</strong></div>
+          <div class="key-row"><span>source bridge not recovered</span><strong>?</strong></div>
+          <div class="key-row"><span>comparison ≠ identity</span><strong>≠</strong></div>
+          <div class="key-row"><span>leave identity open</span><strong>○</strong></div>
+          <hr>
+          <p>An administrative identity act may permit propositions to travel inside the government record. The Workshop does not inherit those transfers automatically.</p>
         </div>
-        <div class="bridge-panel-body">
-          <p id="unresolved-copy">The two propositions can stand together without pretending the bridge between them has been recovered.</p>
-          <div class="bridge-facts" id="bridge-facts" hidden>
-            <div class="bridge-fact"><b>One side</b><span id="bridge-left"></span></div>
-            <div class="bridge-fact"><b>Other side</b><span id="bridge-right"></span></div>
-            <div class="bridge-fact"><b>What would change this</b><span id="bridge-need"></span></div>
-          </div>
-          <button class="bridge-action-toggle" id="mode-action" type="button">I have something for this</button>
-          <div class="bridge-action-area action-body" id="action-body" hidden>
-            <h3 id="bridge-title">Choose an unresolved line first.</h3>
-            <p id="bridge-copy">Then tell us what kind of thing you have and send it to Receiving.</p>
-            <div class="action-choices" id="action-choices">
-              <button class="action-choice" type="button" data-kind="piece">piece</button>
-              <button class="action-choice" type="button" data-kind="leg">leg</button>
-              <button class="action-choice" type="button" data-kind="brace">brace</button>
-              <button class="action-choice" type="button" data-kind="full bridge">full bridge</button>
-              <button class="action-choice wide" type="button" data-kind="anything useful">anything useful</button>
-            </div>
-            <form class="bridge-upload-form" id="bridge-upload-form" hidden>
-              <label>File
-                <input id="bridge-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required>
-              </label>
-              <label>One sentence — optional
-                <textarea id="bridge-note" maxlength="1200" placeholder="What does this show?"></textarea>
-              </label>
-              <button type="submit">Send to Receiving</button>
-              <p class="bridge-receive-status" id="bridge-receive-status">Original preserved privately. It does not become public evidence automatically.</p>
-            </form>
-          </div>
-        </div>
-        <div class="bridge-panel-state">
-          <div class="bridge-state" id="bridge-state">Still unresolved.</div>
-        </div>
-      </section>
+      </aside>
+    </section>
 
+    <section class="detail" id="detail" aria-live="polite">
+      <div class="detail-id">
+        <p class="source-label">Second control</p>
+        <h2 id="detail-title">Nothing joined yet.</h2>
+      </div>
+      <div class="detail-body">
+        <p id="detail-copy">Choose a proposition to descend toward its source, press IDENTICAL to perform the administrative gate, or press a [ ? ] line to inspect the missing bridge.</p>
+        <p class="bridge-label" id="detail-state">attention state · threshold</p>
+        <button class="detail-receive-toggle" id="detail-receive-toggle" type="button" hidden>I have something for this</button>
+        <form class="bridge-upload-form detail-receive" id="bridge-upload-form" hidden>
+          <label>File
+            <input id="bridge-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required>
+          </label>
+          <label>One sentence — optional
+            <textarea id="bridge-note" maxlength="1200" placeholder="What does this show?"></textarea>
+          </label>
+          <div class="detail-kind-row" id="action-choices">
+            <button class="action-choice" type="button" data-kind="piece">piece</button>
+            <button class="action-choice" type="button" data-kind="leg">leg</button>
+            <button class="action-choice" type="button" data-kind="brace">brace</button>
+            <button class="action-choice" type="button" data-kind="full bridge">full bridge</button>
+          </div>
+          <button type="submit">Send to Receiving</button>
+          <p class="bridge-receive-status" id="bridge-receive-status">Original preserved privately. It does not become public evidence automatically.</p>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -1211,21 +1388,11 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
 <script>
 (()=>{
 const body=document.body;
-const propertyTitle=document.getElementById("property-title");
-const propertyCopy=document.getElementById("property-copy");
-const propertyState=document.getElementById("property-state");
-const actionBody=document.getElementById("action-body");
-const modeAction=document.getElementById("mode-action");
-const bridgeTitle=document.getElementById("bridge-title");
-const bridgeCopy=document.getElementById("bridge-copy");
+const detailTitle=document.getElementById("detail-title");
+const detailCopy=document.getElementById("detail-copy");
+const detailState=document.getElementById("detail-state");
+const detailReceiveToggle=document.getElementById("detail-receive-toggle");
 const actionChoices=document.getElementById("action-choices");
-const unresolvedTitle=document.getElementById("unresolved-title");
-const unresolvedCopy=document.getElementById("unresolved-copy");
-const bridgeFacts=document.getElementById("bridge-facts");
-const bridgeLeft=document.getElementById("bridge-left");
-const bridgeRight=document.getElementById("bridge-right");
-const bridgeNeed=document.getElementById("bridge-need");
-const bridgeState=document.getElementById("bridge-state");
 const card=document.getElementById("identical-card");
 const pressMark=document.getElementById("press-mark");
 const joinState=document.getElementById("join-state");
@@ -1248,7 +1415,7 @@ const source={
  susie:{title:"Susie Bell",copy:"In that same 1903 examination Jane names her mother Susie Bell. This is Jane's witness-given family proposition. It is not converted into Yimma by the later Commission identity act.",state:"source descent · Jane witness voice"},
  "160":{title:"about 160 acres",copy:"Jane says her father got government land at Noxapater in Neshoba County, estimates about 160 acres, says she does not know whether it was Article XIV land, and says Wash Bell owns that land and lives on it. Approximate present-land testimony is not an original patent acreage.",state:"source descent · Jane land testimony"},
  "jane-wash":{title:"Jane / Wash",copy:"Jane identifies Wash Bell as her full brother. She says Wash owns and lives on the government land she associates with their father. Elsewhere the consolidated body represents Wash as owning part of Robert Bell's government land; the later decision places Wash on Section 4. Those later administrative propositions create pressure, not a recovered conveyance chain.",state:"source descent · family / administrative layers"},
- marris:{title:"Dibbin Marris",html:'<div class="property-stamp"><b>4 Apr 1902 · Seale, Mississippi</b><span>sworn examination · certified translation</span></div><div class="property-qa"><b>Commission</b><span>“What was her name?”</span><b>Surviving represented answer</b><strong>Robert Bell.</strong></div><div class="carrier-chain"><span class="carrier-node"><b>Dibbin Marris</b><span>witness occurrence</span><strong>Robert Bell</strong></span><span class="carrier-node"><b>Oscar Billey</b><span>Official Interpreter</span><strong>Robert Bell</strong></span><span class="carrier-node"><b>R. S. Streit</b><span>reporter / certifier</span><strong>Robert Bell</strong></span><span class="carrier-node"><b>Surviving official English record</b><span>certified translated Q/A</span><strong>Robert Bell</strong></span></div>',copy:"",state:"ORIGINAL MARRIS UTTERANCE / INTERPRETER WORDING NOT RECOVERED\nSURVIVING CERTIFIED ENGLISH RECORD: ROBERT BELL"},
+ marris:{title:"Dibbin Marris",html:'<div class="property-stamp"><b>4 Apr 1902</b><span>Seale, Mississippi</span></div><div class="property-qa"><b>Commission</b><span>“What was her name?”</span><b>Record</b><strong>Robert Bell.</strong></div><div class="carrier-chain"><span class="carrier-node"><b>Dibbin Marris</b><span>Choctaw witness · interpreted utterance</span><strong>“Robert Bell”</strong></span><span class="carrier-node"><b>Oscar Billey</b><span>Official Interpreter</span><strong>Robert Bell</strong></span><span class="carrier-node"><b>R. S. Streit</b><span>reporter / certifier</span><strong>Robert Bell</strong></span><span class="carrier-node"><b>Surviving official record</b><span>certified English Q/A</span><strong>Robert Bell</strong></span></div>',copy:"",state:"ORIGINAL SPOKEN FORM NOT RECOVERED · SURVIVING CERTIFIED ENGLISH: ROBERT BELL"},
  robert:{title:"Robert Bell",copy:"The older Article XIV record body contains a source-local Robert Bell occurrence used by later federal decision-makers. The Workshop keeps this occurrence distinct from Jane's Robin Bell unless an independent person bridge is earned.",state:"source descent · older Article XIV record body"},
  yimma:{title:"Yimma",copy:"The 13 May 1902 Office of Indian Affairs report represents an older evidence carrier, record book No. 102 p.520, as saying Robert Bell had a wife named Yimma and had been married about six months before the treaty. The direct record-book face remains unrecovered.",state:"source descent · 1902 Office representation of older testimony"},
  "694":{title:"694.96 acres",copy:"The 14 December 1846 Article XIV patent grants Robert Bell the surveyed Section 4 tract containing 694.96 acres. The patent proves that tract and patent occurrence. It does not by itself identify Jane Bell's father or explain Jane's later estimate of about 160 acres.",state:"source descent · 1846 patent"},
@@ -1304,31 +1471,18 @@ function clearActive(){
  bridges.forEach(x=>x.classList.remove("is-active"));
  draw();
 }
+function showDetail(title,copy,state){
+ detailTitle.textContent=title;
+ detailCopy.textContent=copy;
+ detailState.textContent=state;
+}
 function showProperty(title,copy,state,html=""){
+ const propertyTitle=document.getElementById("property-title");
+ const propertyCopy=document.getElementById("property-copy");
+ const propertyState=document.getElementById("property-state");
  propertyTitle.textContent=title;
  if(html){propertyCopy.innerHTML=html}else{propertyCopy.textContent=copy}
  propertyState.textContent=state;
-}
-function showBridge(id,d){
- unresolvedTitle.textContent=d.title;
- unresolvedCopy.textContent=d.copy;
- bridgeLeft.textContent=d.left;
- bridgeRight.textContent=d.right;
- bridgeNeed.textContent=d.need;
- bridgeState.textContent="Still unresolved · "+d.state;
- bridgeFacts.hidden=false;
- activeBridgeId=id;
- activeBridgeTitle=d.title;
- activeBridgeKind="";
- bridgeTitle.textContent=d.title;
- bridgeCopy.textContent=d.copy;
- actionChoices.hidden=false;
- bridgeUploadForm.hidden=true;
- bridgeFile.value="";
- bridgeNote.value="";
- bridgeReceiveStatus.textContent="Original preserved privately. It does not become public evidence automatically.";
- actionBody.hidden=true;
- modeAction.textContent="I have something for this";
 }
 entries.forEach(btn=>btn.addEventListener("click",()=>{
  clearActive();
@@ -1341,24 +1495,23 @@ bridges.forEach(btn=>btn.addEventListener("click",()=>{
  clearActive();
  btn.classList.add("is-active");
  const d=bridge[btn.dataset.bridge];
- showBridge(btn.dataset.bridge,d);
+ activeBridgeId=btn.dataset.bridge;
+ activeBridgeTitle=d.title;
+ activeBridgeKind="";
+ showDetail(d.title,d.need||d.copy,"still unresolved · "+d.state);
+ detailReceiveToggle.hidden=false;
+ bridgeUploadForm.hidden=true;
 }));
-modeAction.addEventListener("click",()=>{
+detailReceiveToggle.addEventListener("click",()=>{
  if(!activeBridgeId)return;
- const opening=actionBody.hidden;
- actionBody.hidden=!opening;
- modeAction.textContent=opening?"Close Receiving":"I have something for this";
+ const opening=bridgeUploadForm.hidden;
+ bridgeUploadForm.hidden=!opening;
+ detailReceiveToggle.textContent=opening?"Close Receiving":"I have something for this";
 });
-
 actionChoices.querySelectorAll("[data-kind]").forEach(btn=>btn.addEventListener("click",()=>{
- if(!activeBridgeId)return;
  activeBridgeKind=btn.dataset.kind;
- actionChoices.hidden=true;
- bridgeUploadForm.hidden=false;
- bridgeFile.focus();
  bridgeReceiveStatus.textContent="You called this a "+activeBridgeKind+". Original preserved privately; review decides what it becomes.";
 }));
-
 bridgeUploadForm.addEventListener("submit",async e=>{
  e.preventDefault();
  if(!activeBridgeId||!receivingUrl){
@@ -1385,7 +1538,7 @@ bridgeUploadForm.addEventListener("submit",async e=>{
    const res=await fetch(receivingUrl,{method:"POST",body:data});
    const out=await res.json().catch(()=>({}));
    if(!res.ok)throw new Error(out.error||("HTTP "+res.status));
-   bridgeReceiveStatus.textContent="RECEIVED · "+out.receipt+" · "+activeBridgeKind+" received for review.";
+   bridgeReceiveStatus.textContent="RECEIVED · "+out.receipt+" · received for review.";
    bridgeUploadForm.reset();
  }catch(err){
    bridgeReceiveStatus.textContent="Not received · "+err.message;
@@ -1404,9 +1557,11 @@ card.addEventListener("click",()=>{
  if(open){
    document.getElementById("pass-card").textContent="Commission pass · IDENTICAL · issued";
    showProperty("IDENTICAL — Commission pass","The agency-level identity relation is now active. The unresolved proposition lines below do not change with it.","administrative state · SAME / source bridges · OPEN");
+   showDetail("IDENTICAL — administrative act performed","The agency relation is active. The unresolved proposition lines remain unresolved.","administrative state · SAME / source bridges · OPEN");
  }else{
    document.getElementById("pass-card").textContent="Commission pass · not yet issued";
    showProperty("Administrative card returned","The gate is closed again. The two record bodies remain available for comparison.","administrative state · available");
+   showDetail("Administrative card returned","The gate is closed again. The record bodies remain available for comparison.","administrative state · available");
  }
 });
 
