@@ -106,7 +106,7 @@
 
   function updateTrailConsole(id) {
     if (!trailConsole || id === "threshold") return;
-    const target = document.getElementById(id);
+    const target = sceneById.get(id);
     const ui = trailUi[id];
     if (!target || !ui) return;
     const index = sequence.indexOf(id);
