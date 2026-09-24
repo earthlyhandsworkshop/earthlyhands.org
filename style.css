@@ -179,14 +179,14 @@ body[data-ground="dozen"] .experience-shell{
 
 .experience-stage,
 .experience-tools{
-  width:min(64rem,calc(100% - 3rem));
+  width:min(44rem,calc(100% - 2rem));
   margin-inline:auto;
 }
 
 .experience-stage{
   min-height:clamp(28rem,64svh,40rem);
   display:block;
-  padding:clamp(1.2rem,3vh,2.2rem) 0 .55rem;
+  padding:clamp(3rem,7vh,4.2rem) 0 .55rem;
   overflow:visible;
 }
 
@@ -201,9 +201,9 @@ body[data-ground="dozen"] .experience-shell{
 
 [data-scene].is-current{
   display:grid;
-  grid-template-columns:minmax(14rem,.9fr) minmax(0,1.1fr);
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
   grid-template-rows:auto auto;
-  column-gap:clamp(1.1rem,2.4vw,2.2rem);
+  column-gap:1rem;
   row-gap:.7rem;
   width:100%;
   align-items:start;
@@ -224,6 +224,7 @@ body[data-ground="dozen"] .experience-shell{
   grid-row:1;
   align-self:end;
   color:var(--scene-muted);
+  text-align:right;
 }
 .scene-place{
   grid-column:2;
@@ -236,14 +237,15 @@ body[data-ground="dozen"] .experience-shell{
 .passage h2{
   grid-column:1;
   grid-row:2;
+  justify-self:end;
   margin:0;
-  max-width:11ch;
+  max-width:9ch;
   color:var(--scene-ink);
-  font-size:clamp(2.45rem,5vw,4.6rem);
+  font-size:clamp(2.35rem,4.6vw,4.2rem);
   font-weight:400;
   line-height:.98;
   letter-spacing:-.04em;
-  text-align:left;
+  text-align:right;
   text-wrap:balance;
 }
 
@@ -255,7 +257,7 @@ body[data-ground="dozen"] .experience-shell{
 .first-person-view{
   grid-column:2;
   grid-row:2;
-  max-width:49rem;
+  max-width:22rem;
   margin:0;
   color:var(--scene-ink);
   font-size:clamp(1.08rem,1.45vw,1.22rem);
@@ -389,12 +391,13 @@ body[data-ground="dozen"] .experience-shell{
 
 .experience-utility{
   display:grid;
-  grid-template-columns:minmax(14rem,.9fr) minmax(0,1.1fr);
-  column-gap:clamp(1.1rem,2.4vw,2.2rem);
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  column-gap:1rem;
   margin:.12rem 0 0;
 }
 .experience-utility .ground-talk{
   grid-column:2;
+  max-width:22rem;
   margin-top:0;
 }
 
