@@ -364,14 +364,21 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
 .card::after{
   content:"PRESS";
   position:absolute;
-  right:.45rem;
-  bottom:.35rem;
-  background:var(--paper2);
-  padding:.1rem .22rem;
+  left:50%;
+  bottom:-1.05rem;
+  transform:translateX(-50%);
+  background:var(--paper);
+  padding:.08rem .32rem;
+  border-top:1px solid var(--rule);
   font:.52rem/1 var(--mono);
   letter-spacing:.08em;
+  white-space:nowrap;
 }
-body.gate-open .card::after{content:"PASSED";background:var(--ink)}
+body.gate-open .card::after{
+  content:"PASSED";
+  background:var(--paper);
+  color:var(--ink);
+}
 
 
 .key-row{
