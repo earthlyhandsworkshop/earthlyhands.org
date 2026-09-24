@@ -7,6 +7,8 @@
     "ALLOWED_ORIGINS": "https://earthlyhands.org,https://www.earthlyhands.org",
     "OPENAI_MODEL": "gpt-5.6-luna"
   },
+  "r2_buckets": [{ "binding": "RECEIVING_FILES", "bucket_name": "earthly-hands-receiving" }],
+  "d1_databases": [{ "binding": "RECEIVING_DB", "database_name": "earthly-hands-receiving", "database_id": "6ff9b646-3d36-43af-89b1-1d5773e0abd7" }],
   "secrets": {
     "required": ["OPENAI_API_KEY"]
   }
