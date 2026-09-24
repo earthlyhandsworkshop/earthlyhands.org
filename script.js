@@ -241,6 +241,36 @@
     return sentence.length <= limit ? sentence : sentence.slice(0, limit - 1).trimEnd() + "…";
   }
 
+  function proseReplyToPatch(raw, question) {
+    const text = String(raw || "").trim();
+    if (!text) return null;
+
+    const paragraphs = text
+      .replace(/^```(?:text|markdown)?\s*/i, "")
+      .replace(/\s*```$/, "")
+      .split(/\n\s*\n/)
+      .map((x) => x.replace(/^#+\s*/, "").trim())
+      .filter(Boolean);
+
+    if (!paragraphs.length) return null;
+
+    const q = String(question || "").toLowerCase();
+    let title = "";
+    if (/\bbeaver\b/.test(q)) title = "What the beaver were for.";
+    else if (/\btrap|trapping|trapper\b/.test(q)) title = "What trapping meant here.";
+    else if (/\bwater|creek|river\b/.test(q)) title = "The water around this ground.";
+    else title = shortState(question, 64).replace(/[?.!]+$/, "");
+
+    return {
+      title,
+      view: paragraphs.join("\n\n"),
+      footing: `Ten · ${sceneById.get(currentId)?.dataset.place || "Shared Country"} · asking the ground`,
+      companion: "Small Door · Mapping Grounds · remote",
+      appearance: experienceShell?.dataset.presence || "",
+      move_to: ""
+    };
+  }
+
   function receiveTenAction(message) {
     const clean = String(message || "").trim();
     const lower = clean.toLowerCase();
@@ -503,11 +533,9 @@
           landAt(result.moveTo);
         }
       } else {
-        const reply = shortState(data.reply);
-        if (reply && sceneState[currentId]) {
-          sceneState[currentId].ground = reply;
-          saveSceneState();
-          renderSceneState(currentId);
+        const prosePatch = proseReplyToPatch(data.reply, clean);
+        if (prosePatch) {
+          applyScenePatch(currentId, prosePatch);
         }
       }
 
