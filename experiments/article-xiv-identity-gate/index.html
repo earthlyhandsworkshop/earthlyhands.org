@@ -169,17 +169,48 @@ a{text-underline-offset:.2em}
   cursor:pointer;
   transition:transform .32s ease,background .32s ease,color .32s ease;
 }
-.card::before,.card::after{
+.card::before{
   content:"+";
   position:absolute;
   top:-.43rem;
+  left:.35rem;
   padding:0 .15rem;
   background:var(--paper2);
   font:1rem/1 var(--mono);
 }
-.card::before{left:.35rem}.card::after{right:.35rem}
 .card .big{display:block;font-size:clamp(2.3rem,4.2vw,4rem);line-height:.92}
 .card .small{display:block;margin-top:.4rem;font:.68rem/1.3 var(--mono);letter-spacing:.16em;text-transform:uppercase}
+.press-mark{
+  position:absolute;
+  right:-1.55rem;
+  top:50%;
+  transform:translateY(-50%);
+  padding:.18rem .18rem;
+  background:var(--paper);
+  font:.52rem/1 var(--mono);
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.press-mark::before,.press-mark::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  width:1px;
+  height:.8rem;
+  background:var(--rule);
+  transform:translateX(-50%);
+}
+.press-mark::before{bottom:100%}
+.press-mark::after{top:100%}
+.card:hover,.card:focus-visible{
+  box-shadow:inset 0 0 0 5px var(--paper2),inset 0 0 0 7px #b96738;
+}
+body.gate-open .card:hover,body.gate-open .card:focus-visible{
+  box-shadow:inset 0 0 0 5px var(--ink),inset 0 0 0 7px #b96738;
+}
+body.gate-open .press-mark{background:var(--paper);color:var(--ink)}
+
 .gate{
   width:min(16.5rem,90%);
   height:8.1rem;
@@ -211,7 +242,7 @@ a{text-underline-offset:.2em}
   font:.72rem/1.25 var(--mono);
 }
 body.gate-open .card{transform:translateY(1.4rem);background:var(--ink);color:var(--paper2)}
-body.gate-open .card::before,body.gate-open .card::after{background:var(--ink)}
+body.gate-open .card::before{background:var(--ink)}
 body.gate-open .gate::before{transform:scaleX(.12)}
 body.gate-open .gate::after{transform:scaleX(.12)}
 .machine-state{
@@ -332,23 +363,50 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 .action-choice.wide{grid-column:1 / -1}
 .bridge-invite{margin:.5rem 0 .12rem!important;font:.64rem/1.3 var(--mono)!important;text-transform:uppercase;letter-spacing:.05em}
 .properties{
+  height:6.1rem;
   margin:.8rem 0 0;
   display:grid;
-  grid-template-columns:minmax(10rem,.24fr) minmax(0,1fr) auto;
-  gap:.8rem;
-  align-items:start;
+  grid-template-columns:minmax(9.5rem,.20fr) minmax(0,1fr) minmax(9.5rem,.20fr);
+  gap:0;
+  overflow:hidden;
   border:1px solid var(--rule);
   background:var(--paper2);
 }
 .properties-label{
-  min-height:100%;
-  padding:.65rem .75rem;
+  min-width:0;
+  padding:.62rem .72rem;
   border-right:1px solid var(--rule);
 }
-.properties-label span{display:block;font:.58rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
-.properties-label strong{display:block;margin-top:.18rem;font-size:1.2rem;font-weight:400;line-height:1.05}
-.properties-copy{padding:.6rem 0;color:var(--muted);font:.74rem/1.42 var(--mono)}
-.properties-state{padding:.65rem .75rem;font:.58rem/1.25 var(--mono);text-transform:uppercase;color:var(--muted)}
+.properties-label span{display:block;font:.55rem/1.15 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.properties-label strong{
+  display:block;
+  margin-top:.22rem;
+  font-size:clamp(.95rem,1.45vw,1.2rem);
+  font-weight:400;
+  line-height:1.05;
+}
+.properties-copy{
+  min-width:0;
+  overflow:hidden;
+  padding:.58rem .75rem;
+  color:var(--muted);
+  font:.68rem/1.34 var(--mono);
+}
+.properties-copy .property-long{
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.properties-state{
+  min-width:0;
+  padding:.58rem .72rem;
+  border-left:1px solid var(--rule);
+  font:.54rem/1.3 var(--mono);
+  text-transform:uppercase;
+  color:var(--muted);
+  white-space:normal;
+}
 .pass-card{
   margin:.55rem auto 0;
   width:min(14rem,88%);
@@ -361,24 +419,6 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   opacity:.42;
 }
 body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
-.card::after{
-  content:"PRESS";
-  position:absolute;
-  left:50%;
-  bottom:-1.05rem;
-  transform:translateX(-50%);
-  background:var(--paper);
-  padding:.08rem .32rem;
-  border-top:1px solid var(--rule);
-  font:.52rem/1 var(--mono);
-  letter-spacing:.08em;
-  white-space:nowrap;
-}
-body.gate-open .card::after{
-  content:"PASSED";
-  background:var(--paper);
-  color:var(--ink);
-}
 
 
 .key-row{
@@ -457,9 +497,11 @@ body.gate-open .card::after{
   .lower{grid-template-columns:1fr}
   .key{height:auto;max-height:none}
   .machine-state{width:min(28rem,100%);margin-inline:auto}
-  .properties{grid-template-columns:1fr}
-  .properties-label{border-right:0;border-bottom:1px solid var(--rule)}
-  .properties-state{padding-top:0}
+  .properties{height:8.5rem;grid-template-columns:minmax(7.8rem,.32fr) minmax(0,1fr)}
+  .properties-label{border-right:1px solid var(--rule);border-bottom:0}
+  .properties-copy{padding:.55rem .62rem}
+  .properties-copy .property-long{-webkit-line-clamp:5}
+  .properties-state{display:none}
 }
 @media(max-width:40rem){
   .page{width:calc(100% - .5rem);margin:.25rem auto}
@@ -520,6 +562,7 @@ body.gate-open .card::after{
         <button class="card" id="identical-card" type="button" aria-pressed="false">
           <span class="big">IDENTICAL</span>
           <span class="small">administrative card</span>
+          <span class="press-mark" id="press-mark">press</span>
         </button>
         <div>
           <div class="gate" aria-hidden="true">
@@ -551,7 +594,7 @@ body.gate-open .card::after{
         <span>Properties</span>
         <strong id="property-title">Touch a record object.</strong>
       </div>
-      <div class="properties-copy" id="property-copy">Robin, Yimma, land, Marris, the patent — this panel changes immediately when you choose one.</div>
+      <div class="properties-copy"><span class="property-long" id="property-copy">Robin, Yimma, land, Marris, the patent — this panel changes immediately when you choose one.</span></div>
       <div class="properties-state" id="property-state">attention · threshold</div>
     </section>
 
@@ -645,6 +688,7 @@ const bridgeTitle=document.getElementById("bridge-title");
 const bridgeCopy=document.getElementById("bridge-copy");
 const actionChoices=document.getElementById("action-choices");
 const card=document.getElementById("identical-card");
+const pressMark=document.getElementById("press-mark");
 const joinState=document.getElementById("join-state");
 const gateResult=document.getElementById("gate-result");
 const entries=[...document.querySelectorAll(".entry")];
@@ -665,7 +709,7 @@ const source={
  susie:{title:"Susie Bell",copy:"In that same 1903 examination Jane names her mother Susie Bell. This is Jane's witness-given family proposition. It is not converted into Yimma by the later Commission identity act.",state:"source descent · Jane witness voice"},
  "160":{title:"about 160 acres",copy:"Jane says her father got government land at Noxapater in Neshoba County, estimates about 160 acres, says she does not know whether it was Article XIV land, and says Wash Bell owns that land and lives on it. Approximate present-land testimony is not an original patent acreage.",state:"source descent · Jane land testimony"},
  "jane-wash":{title:"Jane / Wash",copy:"Jane identifies Wash Bell as her full brother. She says Wash owns and lives on the government land she associates with their father. Elsewhere the consolidated body represents Wash as owning part of Robert Bell's government land; the later decision places Wash on Section 4. Those later administrative propositions create pressure, not a recovered conveyance chain.",state:"source descent · family / administrative layers"},
- marris:{title:"Dibbin Marris",copy:"Dibbin Marris is the sworn witness in the 4 April 1902 Bell examinations. The source face names Oscar Billey as Official Interpreter, and R. S. Streit later certifies the surviving English Q/A as a full, true and correct translation of his stenographic notes. In that interpreter-marked translated record, Marris's represented answer names Jane's father Robert Bell. The original spoken-language form and exact pronunciation are not recovered, so the English name form is preserved as the translated record's wording rather than claimed as Marris's verbatim original-language pronunciation.",state:"source descent · witness → interpreter-marked record → certified translation"},
+ marris:{title:"Dibbin Marris",copy:"4 Apr 1902 · sworn witness. The source face names Oscar Billey, Official Interpreter; Streit certifies the surviving English Q/A as a full, true and correct translation. That translated record carries Marris's represented answer: Robert Bell. Original spoken-language form remains unrecovered.",state:"WITNESS → INTERPRETER-MARKED RECORD\n→ CERTIFIED TRANSLATION"},
  robert:{title:"Robert Bell",copy:"The older Article XIV record body contains a source-local Robert Bell occurrence used by later federal decision-makers. The Workshop keeps this occurrence distinct from Jane's Robin Bell unless an independent person bridge is earned.",state:"source descent · older Article XIV record body"},
  yimma:{title:"Yimma",copy:"The 13 May 1902 Office of Indian Affairs report represents an older evidence carrier, record book No. 102 p.520, as saying Robert Bell had a wife named Yimma and had been married about six months before the treaty. The direct record-book face remains unrecovered.",state:"source descent · 1902 Office representation of older testimony"},
  "694":{title:"694.96 acres",copy:"The 14 December 1846 Article XIV patent grants Robert Bell the surveyed Section 4 tract containing 694.96 acres. The patent proves that tract and patent occurrence. It does not by itself identify Jane Bell's father or explain Jane's later estimate of about 160 acres.",state:"source descent · 1846 patent"},
@@ -782,6 +826,7 @@ card.addEventListener("click",()=>{
  card.setAttribute("aria-pressed",open?"true":"false");
  joinState.textContent=open?"present":"available";
  gateResult.textContent=open?"identification proceeds":"identity relation not yet performed";
+ pressMark.textContent=open?"passed":"press";
  if(open){
    document.getElementById("pass-card").textContent="Commission pass · IDENTICAL · issued";
    showProperty("IDENTICAL — Commission pass","The agency-level identity relation is now active. The unresolved proposition lines below do not change with it.","administrative state · SAME / source bridges · OPEN");
