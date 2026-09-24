@@ -6,6 +6,8 @@ const MAX_PLACE_LENGTH = 120;
 const MAX_HISTORY_ITEMS = 4;
 const MAX_HISTORY_ITEM_LENGTH = 1200;
 const MAX_OUTPUT_TOKENS = 1400;
+const MAX_RECEIVE_BYTES = 20 * 1024 * 1024;
+const ALLOWED_UPLOAD_TYPES = new Set(["image/jpeg","image/png","image/webp","image/heic","image/heif","application/pdf","text/plain"]);
 
 const INSTRUCTIONS = `You are the bounded public-ground intelligence service for Earthly Hands Workshop.
 
@@ -189,6 +191,52 @@ export default {
     }
 
     const origin = allowedOrigin(request, env);
+
+    if (request.method === "OPTIONS" && url.pathname === "/receive") {
+      if (!origin) return new Response(null, { status: 403, headers: workerHeaders() });
+      return new Response(null, { status: 204, headers: { ...corsHeaders(origin), ...workerHeaders() } });
+    }
+
+    if (request.method === "POST" && url.pathname === "/receive") {
+      if (!origin) return json({ error: "This receiving door is not open from that origin.", code: "origin_not_allowed", request_id: requestId }, 403);
+      if (!env.RECEIVING_FILES || !env.RECEIVING_DB) return json({ error: "Receiving is not configured.", code: "receiving_not_configured", request_id: requestId }, 503, corsHeaders(origin));
+
+      const contentType = request.headers.get("Content-Type") || "";
+      if (!contentType.toLowerCase().includes("multipart/form-data")) return json({ error: "Send a multipart form.", code: "multipart_required", request_id: requestId }, 415, corsHeaders(origin));
+
+      let form;
+      try { form = await request.formData(); }
+      catch { return json({ error: "The submission could not be read.", code: "invalid_form", request_id: requestId }, 400, corsHeaders(origin)); }
+
+      const file = form.get("file");
+      if (!(file instanceof File) || !file.name || file.size < 1) return json({ error: "Bring one file.", code: "file_required", request_id: requestId }, 400, corsHeaders(origin));
+      if (file.size > MAX_RECEIVE_BYTES) return json({ error: "This file is larger than 20 MB.", code: "file_too_large", request_id: requestId }, 413, corsHeaders(origin));
+      const mime = String(file.type || "application/octet-stream").toLowerCase();
+      if (!ALLOWED_UPLOAD_TYPES.has(mime)) return json({ error: "Bring a JPG, PNG, WebP, HEIC, PDF, or plain-text file.", code: "file_type_not_allowed", request_id: requestId }, 415, corsHeaders(origin));
+
+      const clean = (key, max) => String(form.get(key) || "").trim().slice(0, max);
+      const description = clean("description", 2000);
+      const provenance = clean("provenance", 2000);
+      const contributorName = clean("contributor_name", 200);
+      const contributorEmail = clean("contributor_email", 320);
+      const id = "EH-RCV-" + new Date().toISOString().slice(0,10).replaceAll("-","") + "-" + crypto.randomUUID().slice(0,8).toUpperCase();
+      const safeName = file.name.replace(/[^a-zA-Z0-9._-]+/g, "_").slice(-180) || "object";
+      const objectKey = "incoming/" + id + "/" + safeName;
+      const receivedAt = new Date().toISOString();
+
+      try {
+        await env.RECEIVING_FILES.put(objectKey, file.stream(), { httpMetadata: { contentType: mime }, customMetadata: { receipt: id, originalName: file.name.slice(0, 180) } });
+        await env.RECEIVING_DB.prepare(
+          "INSERT INTO submissions (id,received_at,object_key,original_name,content_type,size_bytes,description,provenance,contributor_name,contributor_email,status) VALUES (?,?,?,?,?,?,?,?,?,?,?)"
+        ).bind(id, receivedAt, objectKey, file.name.slice(0, 500), mime, file.size, description, provenance, contributorName, contributorEmail, "received").run();
+      } catch (error) {
+        console.error("Receiving failed", requestId, error);
+        try { await env.RECEIVING_FILES.delete(objectKey); } catch {}
+        return json({ error: "Receiving could not preserve this submission.", code: "receiving_failed", request_id: requestId }, 500, corsHeaders(origin));
+      }
+
+      return json({ ok: true, receipt: id, received_at: receivedAt, status: "received" }, 201, corsHeaders(origin));
+    }
 
     if (request.method === "OPTIONS" && url.pathname === "/speak") {
       if (!origin) {
