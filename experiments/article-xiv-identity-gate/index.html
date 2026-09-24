@@ -267,8 +267,14 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   display:flex;
   justify-content:space-between;
   align-items:baseline;
+  gap:.6rem;
   padding:.6rem .75rem;
   border-bottom:1px solid var(--rule);
+}
+.key-head .key-close{
+  margin-left:auto;border:0;background:transparent;padding:.12rem 0;
+  border-bottom:1px solid var(--rule);font:.56rem/1.2 var(--mono);
+  letter-spacing:.06em;text-transform:uppercase
 }
 .pressure-head h2,.key-head h2{margin:0;font-size:1.15rem;letter-spacing:.04em}
 .pressure-row{
@@ -295,7 +301,12 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   border:1px solid var(--rule);
   background:rgba(247,243,233,.55);
 }
-.key-body{padding:.65rem .75rem}
+.key-body{padding:.65rem .75rem;min-height:14.5rem}
+.key-inspector p{margin:0;color:var(--ink);font:.8rem/1.48 var(--mono)}
+.key-inspector p+p{margin-top:.55rem}
+.key-inspector .bridge-label{display:inline-block;margin-top:.65rem;padding-top:.4rem;border-top:1px solid var(--rule);font:.58rem/1.25 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.bridge-invite{margin:.7rem 0 .15rem!important;font:.72rem/1.35 var(--mono)!important;text-transform:uppercase;letter-spacing:.06em}
+
 .key-row{
   display:grid;
   grid-template-columns:1fr auto;
@@ -485,42 +496,43 @@ body.gate-open .gate::after{transform:scaleX(.12)}
         </button>
       </div>
 
-      <aside class="key">
-        <div class="key-head"><h2>Key points</h2><span class="body-tag">[D]</span></div>
+      <aside class="key" id="inspector" aria-live="polite">
+        <div class="key-head">
+          <h2 id="detail-title">Key points</h2>
+          <button class="key-close" id="inspector-close" type="button" hidden>Back to key</button>
+          <span class="body-tag">[D]</span>
+        </div>
         <div class="key-body">
-          <div class="key-row"><span>administrative join present</span><strong>✓</strong></div>
-          <div class="key-row"><span>source bridge not recovered</span><strong>?</strong></div>
-          <div class="key-row"><span>comparison ≠ identity</span><strong>≠</strong></div>
-          <div class="key-row"><span>leave identity open</span><strong>○</strong></div>
-          <hr>
-          <p>An administrative identity act may permit propositions to travel inside the government record. The Workshop does not inherit those transfers automatically.</p>
+          <div id="key-default">
+            <div class="key-row"><span>administrative join present</span><strong>✓</strong></div>
+            <div class="key-row"><span>source bridge not recovered</span><strong>?</strong></div>
+            <div class="key-row"><span>comparison ≠ identity</span><strong>≠</strong></div>
+            <div class="key-row"><span>leave identity open</span><strong>○</strong></div>
+            <hr>
+            <p>An administrative identity act may permit propositions to travel inside the government record. The Workshop does not inherit those transfers automatically.</p>
+          </div>
+          <div class="key-inspector" id="inspector-body" hidden>
+            <p id="detail-copy"></p>
+            <p class="bridge-label" id="detail-state"></p>
+            <div class="bridge-upload" id="bridge-upload" hidden>
+              <p class="bridge-invite">Have a piece? A leg? A brace? A full bridge?</p>
+              <button class="bridge-upload-toggle" id="bridge-upload-toggle" type="button">Bring it</button>
+              <form class="bridge-upload-form" id="bridge-upload-form" hidden>
+                <label>Bridge file
+                  <input id="bridge-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required>
+                </label>
+                <label>What does this show? <span aria-hidden="true">—</span> optional
+                  <textarea id="bridge-note" maxlength="1200" placeholder="One sentence is enough."></textarea>
+                </label>
+                <button type="submit">Send to Receiving</button>
+                <p class="bridge-receive-status" id="bridge-receive-status">Original preserved privately. It does not become public evidence automatically.</p>
+              </form>
+            </div>
+          </div>
         </div>
       </aside>
     </section>
 
-    <section class="detail" id="detail" aria-live="polite">
-      <div class="detail-id">
-        <p class="source-label">Touch the instrument</p>
-        <h2 id="detail-title">Nothing joined yet.</h2>
-      </div>
-      <div class="detail-body">
-        <p id="detail-copy">Choose a proposition to descend toward its source, press IDENTICAL to perform the administrative gate, or press a [ ? ] line to inspect the missing bridge.</p>
-        <p class="bridge-label" id="detail-state">attention state · threshold</p>
-        <div class="bridge-upload" id="bridge-upload" hidden>
-          <button class="bridge-upload-toggle" id="bridge-upload-toggle" type="button">Upload a bridge</button>
-          <form class="bridge-upload-form" id="bridge-upload-form" hidden>
-            <label>Bridge file
-              <input id="bridge-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required>
-            </label>
-            <label>What does this show? <span aria-hidden="true">—</span> optional
-              <textarea id="bridge-note" maxlength="1200" placeholder="One sentence is enough."></textarea>
-            </label>
-            <button type="submit">Send to Receiving</button>
-            <p class="bridge-receive-status" id="bridge-receive-status">Original preserved privately. It does not become public evidence automatically.</p>
-          </form>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
@@ -536,6 +548,9 @@ const body=document.body;
 const detailTitle=document.getElementById("detail-title");
 const detailCopy=document.getElementById("detail-copy");
 const detailState=document.getElementById("detail-state");
+const keyDefault=document.getElementById("key-default");
+const inspectorBody=document.getElementById("inspector-body");
+const inspectorClose=document.getElementById("inspector-close");
 const card=document.getElementById("identical-card");
 const joinState=document.getElementById("join-state");
 const gateResult=document.getElementById("gate-result");
@@ -587,11 +602,13 @@ function show(title,copy,state,{bridgeId="",bridgeTitle=""}={}){
  activeBridgeTitle=bridgeTitle;
  bridgeUpload.hidden=!bridgeId;
  bridgeUploadForm.hidden=true;
- bridgeUploadToggle.textContent="Upload a bridge";
+ bridgeUploadToggle.textContent="Bring it";
  bridgeFile.value="";
  bridgeNote.value="";
  bridgeReceiveStatus.textContent="Original preserved privately. It does not become public evidence automatically.";
- document.getElementById("detail").scrollIntoView({behavior:"smooth",block:"nearest"});
+ keyDefault.hidden=true;
+ inspectorBody.hidden=false;
+ inspectorClose.hidden=false;
 }
 entries.forEach(btn=>btn.addEventListener("click",()=>{
  clearActive();
@@ -606,10 +623,22 @@ bridges.forEach(btn=>btn.addEventListener("click",()=>{
  const d=bridge[btn.dataset.bridge];
  show(d.title,d.copy,d.state,{bridgeId:btn.dataset.bridge,bridgeTitle:d.title});
 }));
+inspectorClose.addEventListener("click",()=>{
+ clearActive();
+ detailTitle.textContent="Key points";
+ keyDefault.hidden=false;
+ inspectorBody.hidden=true;
+ inspectorClose.hidden=true;
+ activeBridgeId="";
+ activeBridgeTitle="";
+ bridgeUploadForm.hidden=true;
+ bridgeUpload.hidden=true;
+});
+
 bridgeUploadToggle.addEventListener("click",()=>{
  if(!activeBridgeId)return;
  bridgeUploadForm.hidden=!bridgeUploadForm.hidden;
- bridgeUploadToggle.textContent=bridgeUploadForm.hidden?"Upload a bridge":"Close upload";
+ bridgeUploadToggle.textContent=bridgeUploadForm.hidden?"Bring it":"Close";
  if(!bridgeUploadForm.hidden)bridgeFile.focus();
 });
 
