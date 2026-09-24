@@ -758,3 +758,179 @@ body[data-ground="night"] .experience-shell[data-presence="fire"]{
     width:min(100% - 1.5rem,46rem);
   }
 }
+
+
+/* Dawson local view modes: same ground, different aperture. */
+.experience-viewbar{
+  width:min(74rem,calc(100% - 2rem));
+  margin:0 auto;
+  min-height:2.5rem;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  border-bottom:1px solid var(--scene-rule);
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.view-mode{
+  padding:.55rem 0 .45rem;
+  border:0;
+  border-bottom:1px solid transparent;
+  background:transparent;
+  color:var(--scene-muted);
+  cursor:pointer;
+}
+.view-mode.is-current{
+  color:var(--scene-ink);
+  border-bottom-color:var(--scene-accent);
+}
+
+.experience-shell[data-view="talk"] .experience-stage,
+.experience-shell[data-view="talk"] .experience-tools{
+  width:min(74rem,calc(100% - 2rem));
+}
+.experience-shell[data-view="talk"] [data-scene].is-current{
+  display:block;
+}
+.experience-shell[data-view="talk"] .scene-setting{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  margin:0 0 .85rem;
+  font-size:.66rem;
+}
+.experience-shell[data-view="talk"] .scene-source,
+.experience-shell[data-view="talk"] .scene-place{
+  display:inline;
+  text-align:left;
+}
+.experience-shell[data-view="talk"] .passage h2{
+  max-width:none;
+  margin:0 0 1.15rem;
+  font-size:clamp(1.35rem,2.4vw,2.1rem);
+  line-height:1.08;
+  text-align:left;
+}
+.experience-shell[data-view="talk"] .plain-copy,
+.experience-shell[data-view="talk"] .first-person-view,
+.experience-shell[data-view="talk"] .view-body{
+  max-width:none;
+  width:100%;
+}
+.experience-shell[data-view="talk"] .first-person-view{
+  font-size:clamp(1.08rem,1.55vw,1.28rem);
+}
+.experience-shell[data-view="talk"] .fpv-open,
+.experience-shell[data-view="talk"] .fpv-close{
+  display:none;
+}
+.experience-shell[data-view="talk"] .fpv-footing{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  margin:.4rem 0 1.15rem;
+  padding-bottom:.7rem;
+  border-bottom:1px solid var(--scene-rule);
+}
+.experience-shell[data-view="talk"] .experience-utility{
+  display:block;
+}
+.experience-shell[data-view="talk"] .experience-utility .ground-thread,
+.experience-shell[data-view="talk"] .experience-utility .ground-talk{
+  max-width:none;
+  width:100%;
+}
+.experience-shell[data-view="talk"] .ten-utterance{
+  max-width:70rem;
+  font-size:clamp(1.15rem,1.8vw,1.5rem);
+}
+
+.dawson-index{
+  width:100%;
+  padding:.5rem 0 2rem;
+}
+.dawson-index-head{
+  max-width:52rem;
+  margin:0 0 1.5rem;
+}
+.dawson-index-head p{
+  margin:0 0 .3rem;
+  color:var(--scene-accent);
+  font-family:var(--mono);
+  font-size:.68rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.dawson-index-head h2{
+  max-width:none;
+  margin:0 0 .6rem;
+  font-size:clamp(2rem,4vw,3.4rem);
+  line-height:1;
+  text-align:left;
+}
+.dawson-index-head span{
+  color:var(--scene-muted);
+  font-family:var(--mono);
+  font-size:.76rem;
+}
+.dawson-stop-list{
+  display:block;
+  border-top:1px solid var(--scene-rule);
+}
+.dawson-stop{
+  width:100%;
+  display:grid;
+  grid-template-columns:3rem minmax(8rem,.7fr) minmax(0,1.4fr) auto;
+  gap:.8rem 1.1rem;
+  align-items:baseline;
+  padding:.9rem 0;
+  border:0;
+  border-bottom:1px solid var(--scene-rule);
+  background:transparent;
+  color:var(--scene-ink);
+  text-align:left;
+  cursor:pointer;
+}
+.dawson-stop:hover strong,
+.dawson-stop:hover b{color:var(--scene-accent)}
+.dawson-stop .stop-number,
+.dawson-stop span{
+  color:var(--scene-muted);
+  font-family:var(--mono);
+  font-size:.72rem;
+}
+.dawson-stop strong{
+  font-weight:500;
+}
+.dawson-stop b{
+  font-family:var(--mono);
+  font-weight:400;
+}
+
+@media(max-width:52rem){
+  .experience-viewbar{
+    width:min(100% - 1.5rem,46rem);
+    gap:.8rem;
+  }
+  .experience-shell[data-view="talk"] .experience-stage,
+  .experience-shell[data-view="talk"] .experience-tools{
+    width:min(100% - 1.5rem,46rem);
+  }
+  .experience-shell[data-view="talk"] .fpv-footing{
+    display:block;
+  }
+  .dawson-stop{
+    grid-template-columns:2.2rem 1fr auto;
+    gap:.2rem .7rem;
+  }
+  .dawson-stop > span:not(.stop-number){
+    grid-column:2;
+  }
+  .dawson-stop b{
+    grid-column:3;
+    grid-row:1 / 3;
+    align-self:center;
+  }
+}
