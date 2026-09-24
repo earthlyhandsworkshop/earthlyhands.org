@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=ground-v1" />
+    <link rel="stylesheet" href="style.css?v=dawson-plain-nav-v1" />
   </head>
   <body data-lamp="lit" data-ground="night">
     <a class="skip-link" href="#threshold">Skip to the Dawson trail</a>
@@ -56,7 +56,7 @@
         <span aria-hidden="true">/</span>
         <span class="who-label">Guest</span>
         <span aria-hidden="true">·</span>
-        <span id="where-label">Night camp</span>
+        <span id="where-label">Morning camp</span>
       </p>
     </header>
 
@@ -70,21 +70,17 @@
           <div class="experience-tools" aria-label="Dawson passage controls">
             <nav class="trail-console" id="trail-console" aria-label="Dawson passage navigation">
               <button class="trail-control trail-control-back" id="trail-back-control" type="button">
-                <span aria-hidden="true">←</span><span>Back</span>
+                <span aria-hidden="true">←</span><span id="trail-back-label">Night camp</span>
               </button>
-              <div class="trail-bearing">
-                <span class="trail-progress" id="trail-progress">1 / 5</span>
-                <strong id="trail-place-control">Night camp</strong>
-              </div>
               <button class="trail-control trail-control-next" id="trail-next-control" type="button">
-                <span id="trail-next-label">Wait for morning</span><span aria-hidden="true">→</span>
+                <span id="trail-next-label">Southeast reach</span><span aria-hidden="true">→</span>
               </button>
             </nav>
 
             <div class="experience-utility">
               <div class="footing-rail" aria-label="Current footing">
                 <span><b>Guest</b></span>
-                <span><b id="footing-place">Night camp</b></span>
+                <span><b id="footing-place">Morning camp</b></span>
                 <span><b>Carried report</b></span>
               </div>
 
@@ -395,6 +391,6 @@
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="config.js?v=dawson-fixed-stage-v1"></script>
-    <script src="script.js?v=dawson-fixed-stage-v1"></script>
+    <script src="script.js?v=dawson-plain-nav-v1"></script>
   </body>
 </html>
