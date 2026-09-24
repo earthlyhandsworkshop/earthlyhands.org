@@ -137,7 +137,7 @@
     const footing = typeof patch.footing === "string" ? patch.footing.trim() : "";
     const companion = typeof patch.companion === "string" ? patch.companion.trim() : "";
     const moveTo = typeof patch.move_to === "string" ? patch.move_to.trim() : "";
-    const allowedAppearance = new Set(["", "fire"]);
+    const allowedAppearance = new Set(["", "fire", "night", "fire-night"]);
     const appearance = allowedAppearance.has(patch.appearance) ? patch.appearance : "";
 
     if (setting) scene.querySelector(".scene-setting").textContent = setting;
@@ -244,7 +244,18 @@
     if (!state) return;
 
     state.presence = "";
-    if (/\b(fire|campfire|kindling|wood)\b/.test(lower)) {
+    const asksForNight = /\b(dark|night|nightfall|sunset|dusk|stay until dark|wait until dark)\b/.test(lower);
+    const asksForFire = /\b(fire|campfire|kindling|wood)\b/.test(lower);
+
+    if (asksForNight && asksForFire) {
+      state.ten = "staying until dark beside a small fire";
+      state.ground = "Dark has settled over the ground. A small fire burns beside you.";
+      state.presence = "fire-night";
+    } else if (asksForNight) {
+      state.ten = "staying until dark";
+      state.ground = "Dark has settled over the ground.";
+      state.presence = "night";
+    } else if (asksForFire) {
       state.ten = "tending a small fire";
       state.ground = currentId === "night" ? "A small fire burns inside the guarded camp." : "A small fire burns beside you.";
       state.presence = "fire";
@@ -441,7 +452,7 @@
         : "Remain at the current ground unless Ten explicitly asks to move.",
       "Return ONLY valid JSON, no markdown, with exactly these keys:",
       '{"setting":"ground/carrier line","title":"plain headline","view":"natural prose; use blank lines between paragraphs when helpful","footing":"Ten footing in whatever length is useful","companion":"Small Door footing if useful","appearance":"","move_to":""}',
-      'appearance may be only "" or "fire". move_to must be "" unless Ten is actually moving; if moving, use only an adjacent ground id allowed by the trail.',
+      'appearance may be only "", "fire", "night", or "fire-night". Use night when the present experiential layer has become dark; use fire-night when darkness and a small fire are both present. move_to must be "" unless Ten is actually moving; if moving, use only an adjacent ground id allowed by the trail.',
       "There is no paragraph count, line count, or word-count requirement. Let the prose breathe. Keep the page coherent and useful after Ten's action.",
       `ALLOWED MOVES FROM HERE: ${JSON.stringify(movementResolved ? [] : (allowedMoves[currentId] || []))}`,
       `CURRENT GROUND: ${currentId}`,
