@@ -172,7 +172,7 @@
   }
 
   try {
-    const rememberedState = JSON.parse(window.localStorage.getItem("earthly-hands-dawson-state-v3") || "null");
+    const rememberedState = JSON.parse(window.localStorage.getItem("earthly-hands-dawson-state-v4") || "null");
     if (rememberedState && typeof rememberedState === "object") {
       for (const id of Object.keys(sceneState)) {
         if (rememberedState[id] && typeof rememberedState[id] === "object") {
@@ -211,7 +211,7 @@
 
   function saveSceneState() {
     try {
-      window.localStorage.setItem("earthly-hands-dawson-state-v3", JSON.stringify(sceneState));
+      window.localStorage.setItem("earthly-hands-dawson-state-v4", JSON.stringify(sceneState));
     } catch (_) {
       // The lived layer still works without storage.
     }
@@ -267,7 +267,8 @@
       state.ten = "coffee in hand";
       state.ground = "You have a cup of coffee in hand. The ground has not moved.";
     } else if (/\b(beaver|trap|trapping|trapper)\b/.test(lower)) {
-      state.ten = "asking about beaver and trapping";
+      state.ten = "asking the ground";
+      state.ground = defaultSceneState[currentId].ground;
     } else if (/\b(wait|sit|stay|rest)\b/.test(lower)) {
       state.ten = "staying put";
       state.ground = defaultSceneState[currentId].ground;
@@ -461,7 +462,7 @@
     const sceneRequest = [
       "You are Small Door present remotely with Ten inside the Earthly Hands Dawson Trail experiment.",
       "VOICE: plain, testimonial, unresolved. Prefer exact nouns and earned verbs. Do not perform significance.",
-      "FIRST PERSON VIEW: the bracketed view is ordinary prose from Ten's landed eyes. When Ten asks a factual question that the SOURCE FLOOR does not answer, use the available web search and answer the question with useful researched substance. Do not merely restate Dawson. Distinguish Dawson from later or general historical knowledge. Let the new research materially change the visible prose.",
+      "FIRST PERSON VIEW: the bracketed view is ordinary prose from Ten's landed eyes. When Ten asks a factual question that the SOURCE FLOOR does not answer, use the available web search and genuinely answer it. For a question with several parts, several substantial paragraphs are welcome. Bring back concrete researched context, not a paraphrase of Dawson. Distinguish what Dawson says from later historical knowledge, modern ecological knowledge, and inference. Let the research materially change the visible prose and, when useful, the title.",
       "Historical source facts are a floor. Do not contradict them, turn an open question into a fact, or claim Dawson recorded Ten's invented actions.",
       "Ten may alter the present experiential layer: make a small fire, drink coffee, sit, ask questions, talk, notice things, or imagine a reversible present action. Keep that distinct from the 1831 source.",
       movementResolved
@@ -470,7 +471,7 @@
       "Return ONLY valid JSON, no markdown, with exactly these keys:",
       '{"setting":"ground/carrier line","title":"plain headline","view":"natural prose; use blank lines between paragraphs when helpful","footing":"Ten footing in whatever length is useful","companion":"Small Door footing if useful","appearance":"","move_to":""}',
       'appearance may be only "", "fire", "night", or "fire-night". Use night when the present experiential layer has become dark; use fire-night when darkness and a small fire are both present. move_to must be "" unless Ten is actually moving; if moving, use only an adjacent ground id allowed by the trail.',
-      "There is no paragraph count, line count, or word-count requirement. Let the prose breathe. When Ten changes the subject or asks a real question, reconsider the title too; the title should describe what the page is now doing rather than mechanically preserving the previous Dawson headline. Keep the page coherent after Ten's action.",
+      "There is no paragraph count, line count, or word-count requirement. Let the prose breathe. A substantive factual question will often need roughly three to five paragraphs, though use what the material earns. When Ten changes the subject or asks a real question, reconsider the title too; the title should describe what the page is now doing rather than mechanically preserving the previous Dawson headline. Keep the page coherent after Ten's action.",
       `ALLOWED MOVES FROM HERE: ${JSON.stringify(movementResolved ? [] : (allowedMoves[currentId] || []))}`,
       `CURRENT GROUND: ${currentId}`,
       `SOURCE FLOOR: ${JSON.stringify(facts)}`,
