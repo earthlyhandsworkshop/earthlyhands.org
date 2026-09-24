@@ -8,7 +8,7 @@
       content="Earthly Hands cares for scattered historical records and the people, relationships, places, and administrative worlds they belong to."
     />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#171713" />
+    <meta name="theme-color" content="#e7dfd0" />
     <link rel="canonical" href="https://earthlyhands.org/" />
 
     <meta property="og:type" content="website" />
@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=threshold-v25" />
+    <link rel="stylesheet" href="style.css?v=ground-v1" />
   </head>
   <body data-lamp="unlit">
     <a class="skip-link" href="#threshold" data-home>Skip to the threshold</a>
@@ -64,165 +64,164 @@
       <section class="threshold" id="threshold" data-place="Front edge">
         <div class="experience-shell" id="experience-shell">
           <div class="experience-stage" id="experience-stage" data-direction="forward">
-          <div class="threshold-intro" id="threshold-intro"></div>
+          <div class="threshold-intro" id="threshold-intro">
+            <p class="eyebrow">Dawson passage · 1831</p>
+            <h1>The trail begins in the dark.</h1>
+            <p class="threshold-line">One carried report. Night camp, morning, a southeast reach, and Blue Water. The interface changes with the ground; the source brakes do not.</p>
+          </div>
 
           <div class="experience-mount" id="experience-mount" aria-live="polite" hidden></div>
           </div>
 
-          <div class="experience-tools" aria-label="Experience tools">
+          <div class="experience-tools" aria-label="Dawson passage controls">
             <div class="threshold-lantern" id="lantern-home">
               <button class="door lamp-control" id="lamp-control" type="button" aria-pressed="false">
                 <span class="door-mark" aria-hidden="true">&gt;</span>
-                <span class="lamp-label">Light the lantern</span>
+                <span class="lamp-label">Enter the Dawson passage</span>
               </button>
-              <span class="lantern-note">for the live Dawson passage</span>
-            </div>
-            <div class="footing-rail" aria-label="Current footing">
-              <span>[1] <b>Guest</b></span>
-              <span>[2] <b id="footing-place">By lantern light</b></span>
-              <span>[3] <b>Carried report</b></span>
+              <span class="lantern-note">night first · the field changes as the report moves</span>
             </div>
 
-            <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Ask the ground" hidden>
-              <div class="ground-talk-inner">
-                <div class="ground-talk-head">
-                  <button class="talk-toggle" id="talk-toggle" type="button" aria-expanded="false" aria-controls="talk-body">
-                    Ask the ground
-                  </button>
-                </div>
-                <div class="talk-body" id="talk-body" hidden>
-                  <div class="talk-log" id="talk-log" aria-live="polite"></div>
-                  <form class="talk-form" id="talk-form">
-                    <label class="sr-only" for="talk-input">Ask about where you are or what the source carries</label>
-                    <textarea id="talk-input" name="message" rows="2" maxlength="600" placeholder="Ask about where you are or what the source carries…"></textarea>
-                    <button type="submit">Send</button>
-                  </form>
-                  <p class="talk-note">Answers stay bounded to the public Dawson footing. Asking does not move you.</p>
-                </div>
+            <nav class="trail-console" id="trail-console" aria-label="Dawson passage navigation" hidden>
+              <button class="trail-control trail-control-back" id="trail-back-control" type="button">
+                <span aria-hidden="true">←</span><span>Back</span>
+              </button>
+              <div class="trail-bearing">
+                <span class="trail-progress" id="trail-progress">1 / 6</span>
+                <strong id="trail-place-control">By lantern light</strong>
               </div>
-            </section>
+              <button class="trail-control trail-control-next" id="trail-next-control" type="button">
+                <span id="trail-next-label">Follow the trail</span><span aria-hidden="true">→</span>
+              </button>
+            </nav>
+
+            <div class="experience-utility">
+              <div class="footing-rail" aria-label="Current footing">
+                <span><b>Guest</b></span>
+                <span><b id="footing-place">Front edge</b></span>
+                <span><b>Carried report</b></span>
+              </div>
+
+              <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Ask the ground" hidden>
+                <div class="ground-talk-inner">
+                  <div class="ground-talk-head">
+                    <button class="talk-toggle" id="talk-toggle" type="button" aria-expanded="false" aria-controls="talk-body">
+                      Ask the ground
+                    </button>
+                  </div>
+                  <div class="talk-body" id="talk-body" hidden>
+                    <div class="talk-log" id="talk-log" aria-live="polite"></div>
+                    <form class="talk-form" id="talk-form">
+                      <label class="sr-only" for="talk-input">Ask about where you are or what the source carries</label>
+                      <textarea id="talk-input" name="message" rows="2" maxlength="600" placeholder="Ask about where you are or what the source carries…"></textarea>
+                      <button type="submit">Send</button>
+                    </form>
+                    <p class="talk-note">Answers stay bounded to the public Dawson footing. Asking does not move you.</p>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
 
         <div class="experiences-head">
-          <p>Experiences</p>
-          <span>Working experiments. Different forms as the work requires.</span>
+          <p>Recent public work</p>
+          <span>Latest touch first. Dawson-related interface experiments are folded into the live passage above.</span>
         </div>
 
         <nav class="specimen-index" aria-label="Working experiences">
-          <button class="specimen-row specimen-row-button" type="button" data-reveal="report">
-            <span class="specimen-kind">Live trail · workshop</span>
-            <strong>Dawson trail</strong>
-            <span class="specimen-note">Walk the present public passage from the report into night, morning, and Blue Water.</span>
-            <b aria-hidden="true">→</b>
-          </button>
-
-          <a class="specimen-row" href="/experiments/dancing-rabbit-statehood-line/">
+          <a class="specimen-row" href="/experiments/dancing-rabbit-statehood-line/" data-touched="2026-09-22T22:12:03Z">
             <span class="specimen-kind">Visual specimen · Mullion</span>
             <strong>Dancing Rabbit → Oklahoma statehood</strong>
             <span class="specimen-note">Let a line drawing orient a historical field without turning spacing, framing marks, or named places into verified travel geometry.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/article-xiv-rooms/">
+          <a class="specimen-row" href="/experiments/article-xiv-rooms/" data-touched="2026-09-24T00:00:03Z">
             <span class="specimen-kind">Architectural experiment · True North</span>
             <strong>Article XIV rooms</strong>
             <span class="specimen-note">Walk through the treaty chamber and the later identity, settlement, evidentiary, and review machinery without letting the later administrative structure erase the older promise.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/mcr879.html">
+          <a class="specimen-row" href="/mcr879.html" data-touched="2026-09-22T20:01:03Z">
             <span class="specimen-kind">Working specimen · Register</span>
             <strong>Two Bell proceedings. Not one administrative road.</strong>
             <span class="specimen-note">Place the 1902 MCR 879 proceeding beside a later Bell proceeding without collapsing their identities.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/one-proposition-many-carriers/">
+          <a class="specimen-row" href="/experiments/one-proposition-many-carriers/" data-touched="2026-09-23T15:06:29Z">
             <span class="specimen-kind">Interaction experiment · Needle Up</span>
             <strong>One proposition. Many carriers.</strong>
             <span class="specimen-note">Hold source depth under your finger while one Robert Bell / Article XIV proposition changes carrier, referent, and administrative function.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <button class="specimen-row specimen-row-button" type="button" data-reveal="southeast">
-            <span class="specimen-kind">Live trail · Small Door depth joined in</span>
-            <strong>Dawson trail — relation depth</strong>
-            <span class="specimen-note">Open nearby source relations inside the same live trail without leaving your footing.</span>
-            <b aria-hidden="true">→</b>
-          </button>
-
-          <a class="specimen-row" href="/experiments/mobile-full-field/">
-            <span class="specimen-kind">Mobile-first experiment · Small Door</span>
-            <strong>Full field</strong>
-            <span class="specimen-note">Give the phone screen back to the source-facing body: no sidebar, no hidden gesture, no persistent furniture that has not earned its pixels.</span>
-            <b aria-hidden="true">→</b>
-          </a>
-
-          <a class="specimen-row" href="/experiments/ground-stays-put/">
+          <a class="specimen-row" href="/experiments/ground-stays-put/" data-touched="2026-09-23T00:01:12Z">
             <span class="specimen-kind">Source-state experiment · Fieldglass</span>
             <strong>The ground stays put.</strong>
             <span class="specimen-note">Hold one ground relation still while testimony, administrative residence, and title change the documentary job around it.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/place-before-point/">
+          <a class="specimen-row" href="/experiments/place-before-point/" data-touched="2026-09-23T00:54:56Z">
             <span class="specimen-kind">Prose Map experiment · Sedge</span>
             <strong>A place before a point.</strong>
             <span class="specimen-note">Keep Mississippi, Fannin County, and Durant in source-stated chronology while refusing to invent the traveled line between them.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/the-machine-does-not-know-for-you/">
+          <a class="specimen-row" href="/experiments/the-machine-does-not-know-for-you/" data-touched="2026-09-23T17:32:53Z">
             <span class="specimen-kind">Playable research-loop experiment · Sedge</span>
             <strong>The machine does not know for you.</strong>
             <span class="specimen-note">Collect source-carried pieces, build a proposition, and let the interface test support without deciding the historical person on your behalf.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/ward-room/">
+          <a class="specimen-row" href="/experiments/ward-room/" data-touched="2026-09-22T20:01:19Z">
             <span class="specimen-kind">Source-room specimen · Ravel</span>
             <strong>Ward's registration book</strong>
             <span class="specimen-note">Move through witness testimony about a physical record while keeping source, interest, and inference apart.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/one-outing-two-clocks/">
+          <a class="specimen-row" href="/experiments/one-outing-two-clocks/" data-touched="2026-09-22T21:57:42Z">
             <span class="specimen-kind">Listening specimen · Register + Lamplight</span>
             <strong>One outing, two clocks</strong>
             <span class="specimen-note">Hear Robert Bell and Blackwell describe the same field outing without forcing their time language into one clock.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/register-line-front-edge/">
+          <a class="specimen-row" href="/experiments/register-line-front-edge/" data-touched="2026-09-22T21:35:55Z">
             <span class="specimen-kind">Front-edge style experiment · Grainline</span>
             <strong>Register + Line front edge</strong>
             <span class="specimen-note">Try the pale Register-v2 grammar with Mullion's line language as orientation, without replacing the current front edge.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/four-way-room-nav/">
+          <a class="specimen-row" href="/experiments/four-way-room-nav/" data-touched="2026-09-22T21:49:19Z">
             <span class="specimen-kind">Navigation experiment · Grainline</span>
             <strong>MCR 879 — Robert Bell evidence field</strong>
             <span class="specimen-note">Move among family testimony, the older Article XIV record body, the patent record, and the 1907 rehearing sequence from one standing point.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/six-letters-touchstone/">
+          <a class="specimen-row" href="/experiments/six-letters-touchstone/" data-touched="2026-09-23T07:29:42Z">
             <span class="specimen-kind">Paired implementation A · Touchstone</span>
             <strong>Six Letters — Touchstone implementation</strong>
             <span class="specimen-note">Touchstone’s own implementation of the Six Letters plan. Compare it beside the Grainline carry; the pair shares a design premise, not an assumed identical historical body.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/six-letters/">
+          <a class="specimen-row" href="/experiments/six-letters/" data-touched="2026-09-23T06:49:54Z">
             <span class="specimen-kind">Paired implementation B · Grainline carrying Touchstone plan</span>
             <strong>Six Letters — Grainline implementation</strong>
             <span class="specimen-note">The same originating plan independently carried by Grainline. Compare what different implementations preserve, sharpen, flatten, or source differently.</span>
             <b aria-hidden="true">→</b>
           </a>
 
-          <a class="specimen-row" href="/experiments/register-threshold-v2/">
+          <a class="specimen-row" href="/experiments/register-threshold-v2/" data-touched="2026-09-22T19:59:18Z">
             <span class="specimen-kind">Earlier threshold specimen · Register</span>
             <strong>Register threshold v2</strong>
             <span class="specimen-note">An earlier front-door experiment kept intact so the workshop can compare what it still wants to inherit.</span>
@@ -231,8 +230,8 @@
         </nav>
 
         <p class="specimen-status">
-          These are working specimens, not a ranked set or a finished architecture. They remain
-          available so the workshop can compare them in public and keep what proves useful.
+          These remain working specimens, not a ranked set or a finished architecture. Recency only
+          controls where they sit in this index; it does not control their importance.
         </p>
       </section>
 
