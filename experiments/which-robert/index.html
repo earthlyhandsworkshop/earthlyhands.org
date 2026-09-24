@@ -84,7 +84,7 @@ body[data-density="quiet"] .compare{grid-template-rows:auto repeat(3,minmax(0,1f
 <script src="../../config.js"></script>
 <script>
 (()=>{
-const apiUrl=String(window.EARTHLY_HANDS_API_URL||"").trim();\nconst near=document.getElementById("near"), nt=document.getElementById("near-title"), nk=document.getElementById("near-kicker"), nc=document.getElementById("near-copy"), st=document.getElementById("near-side-title"), sc=document.getElementById("near-side-copy"), input=document.getElementById("ask");
+const apiUrl=String(window.EARTHLY_HANDS_API_URL||"").trim();\nconst receivingUrl=String(window.EARTHLY_HANDS_RECEIVING_URL||"").trim();\nconst near=document.getElementById("near"), nt=document.getElementById("near-title"), nk=document.getElementById("near-kicker"), nc=document.getElementById("near-copy"), st=document.getElementById("near-side-title"), sc=document.getElementById("near-side-copy"), input=document.getElementById("ask");
 const content={
  source:["Source distinction","Three bodies, three carriers.","The short labels in the comparison are only pointers. A source view should show exactly which document carries each name or attribute, without merging the people."],
  bring:["Receiving","Bring another Robert.","Family Bible. Letter. Photograph with writing on the back. Deed. Court paper. A story with a source. Something we have not imagined."],
@@ -103,7 +103,7 @@ document.getElementById("identity-question").addEventListener("click",()=>{docum
 document.getElementById("ask-form").addEventListener("submit",e=>{e.preventDefault();const q=input.value.trim();if(!q)return;openNear("ask");nt.textContent=q;nc.textContent="This new room does not have its source-grounded conversational layer connected yet. I would rather say that plainly than manufacture an answer.";input.value=""});
 document.getElementById("receive-form").addEventListener("submit",async e=>{
  e.preventDefault();const form=e.currentTarget,status=document.getElementById("receive-status"),button=form.querySelector('button[type="submit"]');
- const endpoint=apiUrl.replace(/\/speak\/?$/,"/receive");if(!endpoint){status.textContent="Receiving endpoint is not configured.";return}
+ const endpoint=receivingUrl;if(!endpoint){status.textContent="Receiving endpoint is not configured.";return}
  button.disabled=true;status.textContent="Receiving…";
  try{const res=await fetch(endpoint,{method:"POST",body:new FormData(form)});const data=await res.json().catch(()=>({}));if(!res.ok)throw new Error(data.error||("HTTP "+res.status));status.textContent="RECEIVED · "+data.receipt+" · Not yet part of the public historical record.";form.reset()}catch(err){status.textContent="Not received · "+err.message}finally{button.disabled=false}
 });
