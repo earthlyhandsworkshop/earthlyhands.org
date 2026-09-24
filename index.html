@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=shared-country-mobile-left-v1" />
+    <link rel="stylesheet" href="style.css?v=camp-ground-views-v2" />
   </head>
   <body data-lamp="lit" data-ground="night">
     <a class="skip-link" href="#threshold">Skip to the Dawson trail</a>
@@ -58,25 +58,34 @@
     <main>
       <section class="threshold" id="threshold" data-place="Front edge">
         <div class="experience-shell" id="experience-shell">
-          <div class="experience-viewbar" aria-label="Dawson view">
+          <div class="experience-viewbar" aria-label="Ground view">
             <button type="button" class="view-mode is-current" data-dawson-view="ground" aria-pressed="true">Ground</button>
             <button type="button" class="view-mode" data-dawson-view="talk" aria-pressed="false">Talk wide</button>
             <button type="button" class="view-mode" data-dawson-view="index" aria-pressed="false">Stops</button>
+            <button type="button" class="view-mode" data-dawson-view="people" aria-pressed="false">People</button>
           </div>
 
           <div class="experience-stage" id="experience-stage" data-direction="forward">
             <div class="experience-mount" id="experience-mount" aria-live="polite"></div>
             <section class="dawson-index" id="dawson-index" hidden aria-labelledby="dawson-index-title">
               <header class="dawson-index-head">
-                <p>Dawson passage</p>
+                <p>Exploring party</p>
                 <h2 id="dawson-index-title">Stops currently open</h2>
                 <span>These are public stops in the present trail. The deeper Dawson corpus is larger and is still being indexed underneath.</span>
               </header>
-              <nav class="dawson-stop-list" aria-label="Dawson public stops"></nav>
+              <nav class="dawson-stop-list" aria-label="Public stops"></nav>
+            </section>
+            <section class="camp-people" id="camp-people" hidden aria-labelledby="camp-people-title">
+              <header class="dawson-index-head">
+                <p>People / bodies in the held source</p>
+                <h2 id="camp-people-title">Who is here?</h2>
+                <span>This is not a complete roster. Named people stay named; unnamed groups stay unnamed; arrival, presence, approach, and departure remain different relations.</span>
+              </header>
+              <div class="camp-people-list"></div>
             </section>
           </div>
 
-          <div class="experience-tools" aria-label="Dawson passage controls">
+          <div class="experience-tools" aria-label="Exploring party controls">
             <div class="experience-utility">
               <form class="ground-talk" id="talk-form" aria-label="Ask the ground">
                 <label class="sr-only" for="talk-input">Ask the ground</label>
@@ -332,7 +341,7 @@
     <noscript>
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
-    <script src="config.js?v=dawson-fixed-stage-v1"></script>
-    <script src="script.js?v=shared-country-diagnostic-v1"></script>
+    <script src="config.js?v=camp-ground-v1"></script>
+    <script src="script.js?v=camp-ground-views-v2"></script>
   </body>
 </html>
