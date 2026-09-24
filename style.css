@@ -433,6 +433,37 @@ body[data-ground="dozen"] .experience-shell{
   border-bottom-color:var(--scene-accent);
 }
 
+/* The experiment catalogue now lives on its own ground. */
+.experiments-door{
+  margin:2.7rem 0 3.2rem;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.experiments-door a{
+  display:grid;
+  grid-template-columns:minmax(8rem,.35fr) minmax(0,1fr) auto;
+  gap:1rem;
+  align-items:baseline;
+  padding:1rem 0;
+  text-decoration:none;
+}
+.experiments-door span{
+  color:var(--muted);
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.experiments-door strong{
+  font-size:1rem;
+  font-weight:500;
+}
+.experiments-door b{
+  color:var(--accent);
+  font-family:var(--mono);
+  font-weight:400;
+}
+
 /* Workshop/public work below the historical field. */
 .experiences-head{
   display:flex;
