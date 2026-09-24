@@ -8,12 +8,9 @@
   const trailNextControl = document.querySelector("#trail-next-control");
   const trailBackLabel = document.querySelector("#trail-back-label");
   const trailNextLabel = document.querySelector("#trail-next-label");
-  const talk = document.querySelector("#ground-talk");
-  const talkToggle = document.querySelector("#talk-toggle");
-  const talkBody = document.querySelector("#talk-body");
   const talkForm = document.querySelector("#talk-form");
   const talkInput = document.querySelector("#talk-input");
-  const talkSend = talkForm.querySelector("button[type='submit']");
+  const talkSend = document.querySelector("#talk-send");
   const depthData = {
     distance: {
       kind: "Prose Map relation",
@@ -104,7 +101,6 @@
     if (lampLabel) lampLabel.textContent = "Dawson passage";
     if (lanternNote) lanternNote.hidden = true;
     if (trailConsole) trailConsole.hidden = false;
-    talk.hidden = false;
   }
 
   function setGround(id) {
@@ -321,25 +317,11 @@
     landAt(fullSequence[index - 1]);
   }
 
-  function openTalk() {
-    talk.dataset.open = "true";
-    talkBody.hidden = false;
-    talkToggle.setAttribute("aria-expanded", "true");
-    talkToggle.textContent = "Close";
-  }
-
-  function closeTalk() {
-    talk.dataset.open = "false";
-    talkBody.hidden = true;
-    talkToggle.setAttribute("aria-expanded", "false");
-    talkToggle.textContent = "Ask the ground";
-  }
-
   function setAsking(value) {
     asking = value;
     talkInput.disabled = value;
-    talkSend.disabled = value;
-    talkSend.textContent = value ? "Listening…" : "Go";
+    if (talkSend) talkSend.disabled = value;
+    talkInput.placeholder = value ? "Listening…" : "Ask the ground";
   }
 
   async function askGround(message) {
@@ -349,7 +331,7 @@
     receiveTenAction(clean);
     talkInput.value = "";
     setAsking(true);
-    closeTalk();
+
 
     if (!apiUrl) {
       setAsking(false);
@@ -426,15 +408,6 @@
       event.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  });
-
-  talkToggle.addEventListener("click", () => {
-    if (talkBody.hidden) {
-      openTalk();
-      talkInput.focus({ preventScroll: true });
-    } else {
-      closeTalk();
-    }
   });
 
   talkForm.addEventListener("submit", (event) => {
