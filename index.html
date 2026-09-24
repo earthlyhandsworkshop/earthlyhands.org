@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=dawson-equal-frames-v1" />
+    <link rel="stylesheet" href="style.css?v=dawson-lived-ground-v1" />
   </head>
   <body data-lamp="lit" data-ground="night">
     <a class="skip-link" href="#threshold">Skip to the Dawson trail</a>
@@ -59,6 +59,10 @@
       <section class="threshold" id="threshold" data-place="Front edge">
         <div class="experience-shell" id="experience-shell">
           <div class="experience-stage" id="experience-stage" data-direction="forward">
+            <div class="presence-layer" id="presence-layer" aria-live="polite">
+              <span class="presence-mark" id="ten-state">[ Ten · looking around ]</span>
+              <span class="presence-mark presence-ground" id="ground-state">[ Morning camp · unattacked ]</span>
+            </div>
             <div class="experience-mount" id="experience-mount" aria-live="polite"></div>
           </div>
 
@@ -81,13 +85,11 @@
                     </button>
                   </div>
                   <div class="talk-body" id="talk-body" hidden>
-                    <div class="talk-log" id="talk-log" aria-live="polite"></div>
                     <form class="talk-form" id="talk-form">
-                      <label class="sr-only" for="talk-input">Ask about where you are or what the source carries</label>
-                      <textarea id="talk-input" name="message" rows="2" maxlength="600" placeholder="Ask about where you are or what the source carries…"></textarea>
-                      <button type="submit">Send</button>
+                      <label class="sr-only" for="talk-input">Say what you want to do or ask from here</label>
+                      <input id="talk-input" name="message" type="text" maxlength="240" autocomplete="off" placeholder="Make a fire. Get coffee. Ask about the beaver." />
+                      <button type="submit">Go</button>
                     </form>
-                    <p class="talk-note">Answers stay bounded to the public Dawson footing. Asking does not move you.</p>
                   </div>
                 </div>
               </section>
@@ -342,6 +344,6 @@
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="config.js?v=dawson-fixed-stage-v1"></script>
-    <script src="script.js?v=dawson-swipe-v1"></script>
+    <script src="script.js?v=dawson-lived-ground-v1"></script>
   </body>
 </html>
