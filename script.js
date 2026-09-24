@@ -6,6 +6,7 @@
   const talkForm = document.querySelector("#talk-form");
   const talkInput = document.querySelector("#talk-input");
   const talkSend = document.querySelector("#talk-send");
+  const groundThread = document.querySelector("#ground-thread");
   const depthData = {
     distance: {
       kind: "Prose Map relation",
@@ -302,15 +303,18 @@
   function localMoveFromWords(message) {
     const lower = String(message || "").toLowerCase();
 
-    if (currentId === "night" && /\b(morning|wait|daylight|first light|sleep)\b/.test(lower)) return "morning";
-    if (currentId === "morning" && /\b(southeast|continue|follow|move on|trail)\b/.test(lower)) return "southeast";
-    if (currentId === "southeast" && /\b(blue water|creek|camp|continue|follow)\b/.test(lower)) return "blue-water";
-    if (currentId === "blue-water" && /\b(dozen|catch|caught|beaver|what happened next|next)\b/.test(lower)) return "dozen";
+    const forward = /\b(go|walk|head|move|continue|follow|travel|leave|carry on|move on)\b/.test(lower);
+    const backward = /\b(go back|walk back|head back|move back|return|backtrack)\b/.test(lower);
 
-    if (currentId === "morning" && /\b(back|night)\b/.test(lower)) return "night";
-    if (currentId === "southeast" && /\b(back|morning)\b/.test(lower)) return "morning";
-    if (currentId === "blue-water" && /\b(back|southeast)\b/.test(lower)) return "southeast";
-    if (currentId === "dozen" && /\b(back|blue water|creek)\b/.test(lower)) return "blue-water";
+    if (currentId === "night" && /\b(wait until morning|stay until morning|sleep until morning|first light|daylight)\b/.test(lower)) return "morning";
+    if (currentId === "morning" && forward && /\b(southeast|trail|onward|ahead)\b/.test(lower)) return "southeast";
+    if (currentId === "southeast" && forward && /\b(blue water|creek|camp|onward|ahead)\b/.test(lower)) return "blue-water";
+    if (currentId === "blue-water" && forward && /\b(next|onward|ahead|what happened next)\b/.test(lower)) return "dozen";
+
+    if (currentId === "morning" && backward) return "night";
+    if (currentId === "southeast" && backward) return "morning";
+    if (currentId === "blue-water" && backward) return "southeast";
+    if (currentId === "dozen" && backward) return "blue-water";
 
     return null;
   }
@@ -421,15 +425,31 @@
     talkInput.placeholder = value ? "Listening…" : "Ask the ground";
   }
 
+  function sizeTalkInput() {
+    if (!talkInput) return;
+    talkInput.style.height = "auto";
+    talkInput.style.height = Math.min(talkInput.scrollHeight, 180) + "px";
+  }
+
+  function keepTenWords(message) {
+    if (!groundThread) return;
+    const p = document.createElement("p");
+    p.className = "ten-utterance";
+    p.textContent = message;
+    groundThread.append(p);
+  }
+
   async function askGround(message) {
-    const clean = String(message || "").trim().slice(0, 240);
+    const clean = String(message || "").trim().slice(0, 1000);
     if (!clean || asking) return;
 
     const origin = currentId;
     receiveTenAction(clean);
     const localMove = localMoveFromWords(clean);
     const movementResolved = Boolean(localMove && canMove(origin, localMove));
+    keepTenWords(clean);
     talkInput.value = "";
+    sizeTalkInput();
     setAsking(true);
 
     if (movementResolved) {
@@ -447,12 +467,12 @@
     const sceneRequest = [
       "You are Small Door present remotely with Ten inside the Earthly Hands Dawson Trail experiment.",
       "VOICE: plain, testimonial, unresolved. Prefer exact nouns and earned verbs. Do not perform significance.",
-      "FIRST PERSON VIEW: the bracketed view is ordinary prose from Ten's landed eyes. Give the right-hand side enough substance to feel inhabited: usually several useful paragraphs when the ground supports them, not a clipped caption. No interface explanation.",
+      "FIRST PERSON VIEW: the bracketed view is ordinary prose from Ten's landed eyes. When Ten asks a factual question, actually answer it using the available web search when the supplied source floor is insufficient. Give the right-hand side enough substance to feel inhabited: usually several useful paragraphs when the ground supports them, not a clipped caption. No interface explanation.",
       "Historical source facts are a floor. Do not contradict them, turn an open question into a fact, or claim Dawson recorded Ten's invented actions.",
       "Ten may alter the present experiential layer: make a small fire, drink coffee, sit, ask questions, talk, notice things, or imagine a reversible present action. Keep that distinct from the 1831 source.",
       movementResolved
         ? "Ten has already moved once because this utterance clearly earned that crossing. Do not move again."
-        : "Remain at the current ground unless Ten explicitly asks to move.",
+        : "Remain at the current ground unless Ten explicitly asks to move. A subject word such as beaver, creek, trapping, Mayes, Criner, water, or weather is a topic to investigate, not a movement command.",
       "Return ONLY valid JSON, no markdown, with exactly these keys:",
       '{"setting":"ground/carrier line","title":"plain headline","view":"natural prose; use blank lines between paragraphs when helpful","footing":"Ten footing in whatever length is useful","companion":"Small Door footing if useful","appearance":"","move_to":""}',
       'appearance may be only "", "fire", "night", or "fire-night". Use night when the present experiential layer has become dark; use fire-night when darkness and a small fire are both present. move_to must be "" unless Ten is actually moving; if moving, use only an adjacent ground id allowed by the trail.',
@@ -536,6 +556,8 @@
     event.preventDefault();
     askGround(talkInput.value);
   });
+
+  talkInput.addEventListener("input", sizeTalkInput);
 
   talkInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter" && !event.shiftKey) {
