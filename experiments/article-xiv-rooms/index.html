@@ -41,9 +41,16 @@ button:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid va
   overflow:hidden
 }
 .room-head{
-  display:grid;grid-template-columns:minmax(0,1fr) minmax(14rem,.65fr);gap:clamp(1rem,4vw,4rem);
-  align-items:end;min-height:5.2rem;padding-bottom:.7rem;border-bottom:1px solid var(--rule)
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(7.2rem,.28fr) minmax(0,1fr);
+  gap:clamp(.6rem,1.8vw,1.25rem);align-items:end;min-height:5.2rem;
+  padding-bottom:.7rem;border-bottom:1px solid var(--rule)
 }
+.room-title-block{grid-column:1}
+.room-note{grid-column:3}
+body[data-focus="records"] .room-title-block{grid-column:3}
+body[data-focus="records"] .room-note{grid-column:1;grid-row:1}
+body[data-focus="records"] .room-title-block,
+body[data-focus="records"] .room-note{text-align:left}
 .eyebrow,.state-label,.body-label,.fact-source,.relation-label,.question-label,.source-address{
   font-family:var(--mono);letter-spacing:.065em;text-transform:uppercase
 }
@@ -147,6 +154,9 @@ body[data-relation="unresolved"] .seam{background:rgba(105,112,94,.06)}
   .topbar{grid-template-columns:1fr auto}.topbar .case-mark{display:none}
   .room{padding:.45rem .55rem .3rem}
   .room-head{grid-template-columns:1fr;gap:.25rem;min-height:4.8rem;padding-bottom:.45rem}
+  .room-title-block,.room-note,
+  body[data-focus="records"] .room-title-block,
+  body[data-focus="records"] .room-note{grid-column:1;grid-row:auto;text-align:left}
   h1{font-size:clamp(1.75rem,8.5vw,2.65rem);max-width:none}
   .room-note{font-size:.78rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .stage{grid-template-columns:1fr;grid-template-rows:1fr auto;gap:.38rem;padding-top:.4rem}
@@ -201,7 +211,7 @@ body[data-relation="unresolved"] .seam{background:rgba(105,112,94,.06)}
 
   <main class="room" aria-live="polite">
     <div class="room-head">
-      <div>
+      <div class="room-title-block">
         <p class="eyebrow" id="eyebrow">Article XIV room · identity operation</p>
         <h1 id="headline">The record changes.</h1>
       </div>
