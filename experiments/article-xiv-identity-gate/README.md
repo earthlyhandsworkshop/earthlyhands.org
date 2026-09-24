@@ -242,3 +242,18 @@ A useful test for future public-ground work:
 > What does this interface permit the record to do, and has the source earned that verb?
 
 If that question has a clear answer, the page is probably speaking workshop grammar rather than merely decorating research.
+
+
+## Neighbor convergence — 24 September 2026
+
+While this specimen was being refined, neighboring public-ground work independently moved in the same direction:
+
+- **Exploring Party / Shared Country** gained a visible **Sources** door asking, “What carries this ground?”
+- **People** and **Sources** were given distinct documentary weight rather than being allowed to collapse into one another.
+- Shared Country was tightened to **fail closed** when its scene contract is invalid instead of converting malformed output into plausible prose.
+
+This does not prove a settled site-wide design system. It is worth preserving because the convergence is structural rather than cosmetic:
+
+**people ≠ carriers; representation ≠ source; inability to earn a state should stop the state from being asserted.**
+
+Identity Gate expresses the same rule through persistence and administrative joining. Shared Country expresses it through source doors and contract failure. They need not look alike to speak related workshop grammar.
