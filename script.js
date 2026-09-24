@@ -105,7 +105,7 @@
     const scene = sceneById.get(id);
     if (!scene) return null;
     return {
-      setting: scene.querySelector(".scene-setting")?.textContent?.trim() || "",
+      setting: scene.querySelector(".scene-place")?.textContent?.trim() || "",
       title: scene.querySelector("h2")?.textContent?.trim() || "",
       view: Array.from(scene.querySelectorAll(".view-body > p")).map((p) => p.textContent.trim()).join("\n\n"),
       footing: scene.querySelector(".ten-footing")?.textContent?.trim() || "",
@@ -140,7 +140,10 @@
     const allowedAppearance = new Set(["", "fire", "night", "fire-night"]);
     const appearance = allowedAppearance.has(patch.appearance) ? patch.appearance : "";
 
-    if (setting) scene.querySelector(".scene-setting").textContent = setting;
+    if (setting) {
+      const target = scene.querySelector(".scene-place");
+      if (target) target.textContent = setting;
+    }
     if (title) scene.querySelector("h2").textContent = title;
 
     if (view) {
