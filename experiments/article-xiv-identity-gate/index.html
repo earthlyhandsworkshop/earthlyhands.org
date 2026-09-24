@@ -330,6 +330,27 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   font-size:.62rem;
   text-transform:uppercase;
 }
+.bridge-upload{margin-top:.75rem;padding-top:.7rem;border-top:1px solid var(--soft)}
+.bridge-upload-toggle{
+  border:0;background:transparent;padding:.28rem 0;
+  border-bottom:1px solid var(--accent);color:var(--accent);
+  font:.66rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;
+}
+.bridge-upload-form{display:grid;gap:.55rem;margin-top:.65rem;max-width:38rem}
+.bridge-upload-form label{font:.58rem/1.25 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.bridge-upload-form input[type=file]{
+  width:100%;margin-top:.25rem;padding:.55rem;border:1px dashed var(--rule);background:transparent;font:.72rem var(--mono)
+}
+.bridge-upload-form textarea{
+  width:100%;min-height:3.2rem;margin-top:.25rem;padding:.45rem .5rem;
+  border:1px solid var(--soft);background:rgba(255,255,255,.18);resize:vertical;font:.86rem/1.4 var(--serif)
+}
+.bridge-upload-form button[type=submit]{
+  justify-self:start;border:0;background:transparent;padding:.28rem 0;
+  border-bottom:1px solid var(--rule);font:.64rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase
+}
+.bridge-receive-status{margin:.15rem 0 0!important;color:var(--muted);font:.65rem/1.4 var(--mono)!important}
+
 .footer{
   display:flex;
   justify-content:space-between;
@@ -485,6 +506,19 @@ body.gate-open .gate::after{transform:scaleX(.12)}
       <div class="detail-body">
         <p id="detail-copy">Choose a proposition to descend toward its source, press IDENTICAL to perform the administrative gate, or press a [ ? ] line to inspect the missing bridge.</p>
         <p class="bridge-label" id="detail-state">attention state · threshold</p>
+        <div class="bridge-upload" id="bridge-upload" hidden>
+          <button class="bridge-upload-toggle" id="bridge-upload-toggle" type="button">Upload a bridge</button>
+          <form class="bridge-upload-form" id="bridge-upload-form" hidden>
+            <label>Bridge file
+              <input id="bridge-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required>
+            </label>
+            <label>What does this show? <span aria-hidden="true">—</span> optional
+              <textarea id="bridge-note" maxlength="1200" placeholder="One sentence is enough."></textarea>
+            </label>
+            <button type="submit">Send to Receiving</button>
+            <p class="bridge-receive-status" id="bridge-receive-status">Original preserved privately. It does not become public evidence automatically.</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -495,6 +529,7 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   </footer>
 </div>
 
+<script src="../../config.js"></script>
 <script>
 (()=>{
 const body=document.body;
@@ -508,6 +543,15 @@ const entries=[...document.querySelectorAll(".entry")];
 const bridges=[...document.querySelectorAll(".pressure-row")];
 const svg=document.getElementById("connectors");
 const upper=document.getElementById("upper");
+const receivingUrl=String(window.EARTHLY_HANDS_RECEIVING_URL||"").trim();
+const bridgeUpload=document.getElementById("bridge-upload");
+const bridgeUploadToggle=document.getElementById("bridge-upload-toggle");
+const bridgeUploadForm=document.getElementById("bridge-upload-form");
+const bridgeFile=document.getElementById("bridge-file");
+const bridgeNote=document.getElementById("bridge-note");
+const bridgeReceiveStatus=document.getElementById("bridge-receive-status");
+let activeBridgeId="";
+let activeBridgeTitle="";
 
 const source={
  robin:{title:"Robin Bell",copy:"Jane Bell, testifying on 23 March 1903, answers that her father's name was Robin Bell. When asked specifically whether his name was Robin or Robert Bell, she again answers Robin Bell. Later examiner and administrative language on the same examination uses Robert Bell. Preserve the speaker split.",state:"source descent · Jane witness voice"},
@@ -535,10 +579,18 @@ function clearActive(){
  bridges.forEach(x=>x.classList.remove("is-active"));
  draw();
 }
-function show(title,copy,state){
+function show(title,copy,state,{bridgeId="",bridgeTitle=""}={}){
  detailTitle.textContent=title;
  detailCopy.textContent=copy;
  detailState.textContent=state;
+ activeBridgeId=bridgeId;
+ activeBridgeTitle=bridgeTitle;
+ bridgeUpload.hidden=!bridgeId;
+ bridgeUploadForm.hidden=true;
+ bridgeUploadToggle.textContent="Upload a bridge";
+ bridgeFile.value="";
+ bridgeNote.value="";
+ bridgeReceiveStatus.textContent="Original preserved privately. It does not become public evidence automatically.";
  document.getElementById("detail").scrollIntoView({behavior:"smooth",block:"nearest"});
 }
 entries.forEach(btn=>btn.addEventListener("click",()=>{
@@ -552,8 +604,49 @@ bridges.forEach(btn=>btn.addEventListener("click",()=>{
  clearActive();
  btn.classList.add("is-active");
  const d=bridge[btn.dataset.bridge];
- show(d.title,d.copy,d.state);
+ show(d.title,d.copy,d.state,{bridgeId:btn.dataset.bridge,bridgeTitle:d.title});
 }));
+bridgeUploadToggle.addEventListener("click",()=>{
+ if(!activeBridgeId)return;
+ bridgeUploadForm.hidden=!bridgeUploadForm.hidden;
+ bridgeUploadToggle.textContent=bridgeUploadForm.hidden?"Upload a bridge":"Close upload";
+ if(!bridgeUploadForm.hidden)bridgeFile.focus();
+});
+
+bridgeUploadForm.addEventListener("submit",async e=>{
+ e.preventDefault();
+ if(!activeBridgeId||!receivingUrl){
+   bridgeReceiveStatus.textContent=receivingUrl?"Choose a bridge first.":"Receiving endpoint is not configured.";
+   return;
+ }
+ const file=bridgeFile.files?.[0];
+ if(!file){bridgeReceiveStatus.textContent="Choose one file.";return}
+ const button=bridgeUploadForm.querySelector('button[type="submit"]');
+ button.disabled=true;
+ bridgeReceiveStatus.textContent="Receiving…";
+ const data=new FormData();
+ data.append("file",file);
+ const note=bridgeNote.value.trim();
+ data.append("description",[
+   "ARTICLE XIV IDENTITY GATE — BRIDGE RETURN",
+   "Bridge: "+activeBridgeTitle,
+   "Bridge ID: "+activeBridgeId,
+   note?"Contributor note: "+note:""
+ ].filter(Boolean).join("\n"));
+ data.append("provenance","Submitted from /experiments/article-xiv-identity-gate/ at unresolved bridge "+activeBridgeId+".");
+ try{
+   const res=await fetch(receivingUrl,{method:"POST",body:data});
+   const out=await res.json().catch(()=>({}));
+   if(!res.ok)throw new Error(out.error||("HTTP "+res.status));
+   bridgeReceiveStatus.textContent="RECEIVED · "+out.receipt+" · This bridge is now in Receiving for review.";
+   bridgeUploadForm.reset();
+ }catch(err){
+   bridgeReceiveStatus.textContent="Not received · "+err.message;
+ }finally{
+   button.disabled=false;
+ }
+});
+
 card.addEventListener("click",()=>{
  const open=!body.classList.contains("gate-open");
  body.classList.toggle("gate-open",open);
