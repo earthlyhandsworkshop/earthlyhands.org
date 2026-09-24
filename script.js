@@ -65,6 +65,16 @@
   };
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
+  let dawsonRetrieval = [];
+
+  fetch("/data/dawson/retrieval.public.v0.json", { cache: "no-store" })
+    .then((response) => response.ok ? response.json() : null)
+    .then((payload) => {
+      if (payload && Array.isArray(payload.entries)) dawsonRetrieval = payload.entries;
+    })
+    .catch(() => {
+      // Corpus retrieval is additive; the held scene still works without it.
+    });
   const defaultSceneState = {
     night: { ten: "listening in the dark", ground: "You are awake inside the guarded camp.", presence: "" },
     morning: { ten: "looking around", ground: "You are standing in the camp at first light.", presence: "" },
@@ -325,6 +335,28 @@
     return Boolean(to && allowedMoves[from]?.includes(to));
   }
 
+  function corpusHitsFor(message, sceneId) {
+    const words = String(message || "").toLowerCase();
+    if (!words || !dawsonRetrieval.length) return [];
+
+    return dawsonRetrieval
+      .filter((entry) => Array.isArray(entry.scenes) && entry.scenes.includes(sceneId))
+      .map((entry) => {
+        const keywords = Array.isArray(entry.keywords) ? entry.keywords : [];
+        const score = keywords.reduce((n, keyword) => n + (words.includes(String(keyword).toLowerCase()) ? 1 : 0), 0);
+        return { entry, score };
+      })
+      .filter(({ score }) => score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 3)
+      .map(({ entry }) => ({
+        id: entry.id,
+        summary: entry.summary,
+        brakes: entry.brakes,
+        source_object_ids: entry.source_object_ids
+      }));
+  }
+
   function localMoveFromWords(message) {
     const lower = String(message || "").toLowerCase();
 
@@ -488,6 +520,7 @@
 
     const visible = captureVisibleScene(currentId);
     const facts = sourceFloor[currentId] || [];
+    const corpusHits = corpusHitsFor(clean, currentId);
 
     const sceneRequest = [
       "DOOR: Shared Country / Dawson Trail.",
@@ -505,6 +538,8 @@
       `ALLOWED MOVES: ${JSON.stringify(movementResolved ? [] : (allowedMoves[currentId] || []))}`,
       `CURRENT GROUND: ${currentId}`,
       `SOURCE FLOOR: ${JSON.stringify(facts)}`,
+      `DAWSON CORPUS HITS: ${JSON.stringify(corpusHits)}`,
+      "CORPUS RULE: corpus hits are public derivatives with source-object pointers. Use them only when they answer Ten's question; preserve their brakes and do not treat a derivative as a new historical witness.",
       `CURRENT SCREEN: ${JSON.stringify(visible)}`,
       `TEN: ${clean}`
     ].join("\n");
