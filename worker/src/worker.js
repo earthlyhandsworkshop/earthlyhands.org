@@ -1,4 +1,4 @@
-const WORKER_VERSION = "shared-country-v2-luna";
+const WORKER_VERSION = "shared-country-v3-luna-closed";
 const MODEL = "gpt-5.6-luna";
 const MAX_MESSAGE_LENGTH = 20000;
 const MAX_HISTORY_ITEMS = 6;
@@ -19,8 +19,8 @@ const INSTRUCTIONS = `You are the public listening Worker for Earthly Hands Work
 Standing posture:
 - Use gpt-5.6-luna. Cheap capability is the default.
 - Do not behave as though a stronger model is available or required.
-- Use web search only when the visitor asks a factual question that cannot be responsibly answered from the source floor and current screen supplied in the request. Do not browse for ordinary movement, conversation, interpretation of visible text, or reversible experiential actions.
-- If web search is used, keep later research visibly distinct from the historical source floor. Name the research basis compactly in the returned prose when useful.
+- Work only from the source floor, current screen, recent bounded conversation, and Ten's words supplied in the request.
+- Do not browse the web or imply that outside research occurred. If the held ground does not answer a factual question, leave that limit visible.
 - Never treat later research, model knowledge, or visitor action as something Dawson recorded.
 - Never infer Ten's preference, intention, current edge, or durable learned state merely because something was asked, rendered, or persisted locally.
 
@@ -163,8 +163,6 @@ export default {
           model: MODEL,
           instructions: INSTRUCTIONS,
           input,
-          tools: [{ type: "web_search" }],
-          tool_choice: "auto",
           max_output_tokens: 2400,
           store: false,
         }),
