@@ -3,8 +3,6 @@
   const lampLabel = lamp?.querySelector(".lamp-label") || null;
   const lanternHome = document.querySelector("#lantern-home");
   const lanternNote = document.querySelector(".lantern-note");
-  const where = document.querySelector("#where-label");
-  const footingPlace = document.querySelector("#footing-place");
   const trailConsole = document.querySelector("#trail-console");
   const trailBackControl = document.querySelector("#trail-back-control");
   const trailNextControl = document.querySelector("#trail-next-control");
@@ -131,10 +129,8 @@
     }
   }
 
-  function updatePlace(target) {
-    const place = target.dataset.place || "Workshop";
-    where.textContent = place;
-    if (footingPlace) footingPlace.textContent = place;
+  function updatePlace() {
+    // The scene names its own place. Do not echo that label elsewhere in the interface.
   }
 
   function closeDepth() {
