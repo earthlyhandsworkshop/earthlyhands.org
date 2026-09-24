@@ -70,15 +70,23 @@ footer{
 }
 
 .identity{
-  display:flex;
-  align-items:baseline;
-  gap:.55rem;
   text-decoration:none;
   font-weight:700;
 }
 
-.identity-note,
-.where,
+.site-nav{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.site-nav a{
+  text-decoration:none;
+}
+
 .eyebrow,
 .footing,
 .specimen-kind,
@@ -92,23 +100,6 @@ footer,
   font-family:var(--mono);
 }
 
-.identity-note{
-  color:var(--muted);
-  font-size:.76rem;
-  font-weight:400;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.where{
-  margin:0;
-  color:var(--muted);
-  font-size:.78rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.where .who-label{color:var(--accent)}
-.where #where-label{color:var(--ink)}
 
 .threshold{
   width:100%;
@@ -433,49 +424,18 @@ body[data-ground="dozen"] .experience-shell{
   border-bottom-color:var(--scene-accent);
 }
 
-/* The experiment catalogue lives on its own ground; Shared Country ends with one quiet threshold. */
-.experiments-door{
-  width:min(28rem,100%);
-  margin:3rem auto 3.4rem;
-  border-top:1px solid var(--rule);
-  border-bottom:1px solid var(--rule);
-  text-align:center;
-}
-.experiments-door a{
-  display:flex;
-  justify-content:center;
-  align-items:baseline;
-  gap:.65rem;
-  padding:.9rem .8rem;
-  text-decoration:none;
-}
-.experiments-door span{
-  color:var(--muted);
-  font-family:var(--mono);
-  font-size:.66rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.experiments-door strong{
-  font-size:.95rem;
-  font-weight:500;
-}
-.experiments-door b{
-  color:var(--accent);
-  font-family:var(--mono);
-  font-weight:400;
-}
-
-
 footer{
   display:flex;
   justify-content:space-between;
+  align-items:baseline;
   gap:1rem;
-  padding:1.5rem 0 2.5rem;
+  padding:.9rem 0 1.15rem;
   border-top:1px solid var(--rule);
   color:var(--muted);
-  font-size:.7rem;
+  font-size:.68rem;
 }
+footer p{margin:0}
+footer a{text-decoration:none}
 
 .noscript-note{
   width:var(--page);
@@ -490,17 +450,8 @@ footer{
     min-height:4rem;
   }
 
-  .identity{
-    font-size:1.05rem;
-  }
-
-  .identity-note{display:none}
-
-  .where{
-    max-width:55%;
-    text-align:right;
-    font-size:.7rem;
-  }
+  .identity{font-size:1rem}
+  .site-nav{font-size:.68rem}
 
   .experience-shell{
     min-height:calc(100svh - 4rem);
