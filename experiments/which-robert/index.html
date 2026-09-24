@@ -38,17 +38,17 @@ body[data-density="quiet"] .compare{grid-template-rows:auto repeat(3,minmax(0,1f
 <div class="shell">
 <header class="top"><a href="../../">Earthly Hands</a><span class="mark">MCR 879 · identity ground</span><nav><button data-near="source">Source</button><button data-near="bring">Bring another Robert</button></nav></header>
 <main class="room">
- <div class="head"><div><p class="kicker">Compare · do not identify</p><h1>Which Robert?</h1></div><div class="modebar"><button data-density="full" aria-pressed="true">Full</button><button data-density="quiet">Quiet</button><button data-near="ask">Near</button></div></div>
+ <div class="head"><div><p class="kicker">Three record bodies · one screen</p><h1>Which Robert?</h1></div><div class="modebar"><button data-density="full" aria-pressed="true">All rows</button><button data-density="quiet">Essentials</button></div></div>
  <section class="compare" aria-label="Three Robert Bell record bodies">
   <div class="corner">look across</div>
   <div class="person"><span class="label">family / MCR 879 body</span><strong>Robert Bell</strong></div>
   <div class="person"><span class="label">older Article XIV body</span><strong>Robert Bell</strong></div>
-  <div class="person"><span class="label">hearing-stage body</span><strong>Robert / Robin Bell</strong></div>
+  <div class="person"><span class="label">family name → later hearing name</span><strong>Robert Bell → Robin Bell</strong></div>
 
   <div class="row-label">wife</div>
-  <button class="cell" data-near="elizabeth"><strong>Elizabeth Duvall</strong><span class="source">family / case body</span></button>
-  <button class="cell" data-near="yemma"><strong>Yemma</strong><span class="source">older-record representation</span></button>
-  <button class="cell" data-near="susie"><strong>Susie Bell</strong><span class="source">hearing-stage body</span></button>
+  <button class="cell"><strong>Elizabeth Duvall</strong><span class="source">family / case body</span></button>
+  <button class="cell"><strong>Yemma</strong><span class="source">older-record representation</span></button>
+  <button class="cell"><strong>Susie Bell</strong><span class="source">hearing-stage body</span></button>
 
   <div class="row-label">father</div>
   <button class="cell"><strong>Hugh Bell</strong></button>
@@ -70,40 +70,36 @@ body[data-density="quiet"] .compare{grid-template-rows:auto repeat(3,minmax(0,1f
   <button class="cell optional"><strong>Article XIV carriers</strong></button>
   <button class="cell optional"><strong>hearing testimony</strong></button>
  </section>
- <button class="question" data-near="identical">IDENTICAL?</button>
+ <button class="question" type="button" id="identity-question">IDENTICAL?</button>
 </main>
-<form class="ask" id="ask-form"><label for="ask">Ask this ground</label><textarea id="ask" rows="1" maxlength="900" placeholder="Who says Susie?"></textarea><button type="submit">Ask</button><button type="button" data-near="bring">+ Robert</button></form>
+<form class="ask" id="ask-form"><label for="ask">Ask about what you see</label><textarea id="ask" rows="1" maxlength="900" placeholder="Why are these three bodies separate?"></textarea><button type="submit">Ask</button><button type="button" data-near="bring">Bring another Robert</button></form>
 </div>
 
 <section class="near" id="near" hidden aria-live="polite">
  <button class="close" type="button" id="close">Return to compare</button>
- <div><p class="near-kicker" id="near-kicker">Near ground</p><h2 id="near-title">Susie Bell.</h2><p id="near-copy">Stay with the name. Ask who says it, where it appears, and what this body can actually carry.</p></div>
- <div class="near-side"><h3 id="near-side-title">You’re here.</h3><p id="near-side-copy">The comparison has not disappeared. It is waiting behind this ground.</p><div class="near-actions" id="near-actions"><button type="button" data-prompt="Who says this name?">Who says this name?</button><button type="button" data-prompt="Show me the source distinction.">Show the source distinction</button><button type="button" data-near="bring">Bring another Robert</button></div></div>
+ <div><p class="near-kicker" id="near-kicker">Closer look</p><h2 id="near-title">Source.</h2><p id="near-copy">This view is for one thing at a time.</p></div>
+ <div class="near-side"><h3 id="near-side-title">What this means</h3><p id="near-side-copy">Return to the comparison whenever you want the three bodies back together.</p><div class="near-actions" id="near-actions"><button type="button" data-near="bring">Bring another Robert</button></div></div>
 </section>
 <script src="../../config.js"></script>
 <script>
 (()=>{
 const near=document.getElementById("near"), nt=document.getElementById("near-title"), nk=document.getElementById("near-kicker"), nc=document.getElementById("near-copy"), st=document.getElementById("near-side-title"), sc=document.getElementById("near-side-copy"), input=document.getElementById("ask");
 const content={
- elizabeth:["Family-side name","Elizabeth Duvall.","A family-side spouse name. Keep it attached to the body that carries it."],
- yemma:["Older-record name","Yemma.","An older-record spouse name. Do not silently turn a shared surname or first name into identity."],
- susie:["Hearing-stage name","Susie Bell.","Stay with the name. Ask who says it, where it appears, and what this body can actually carry."],
- identical:["Usable question","IDENTICAL?","Not a conclusion. A question the room can keep asking while the bodies remain separate."],
- source:["Source floor","Nothing moves without a carrier.","Every short comparison above should be able to return to the source body that earns it. Where the lower source is not controlled, the room should say so."],
- bring:["Receiving door","Bring another Robert.","Family Bible. Letter. Photograph with writing on the back. Deed. Court paper. A story with a source. Something we have not imagined."],
- ask:["Near ground","You’re here.","Ask one thing. The room can come close without pretending that attention changes the documentary record."]
+ source:["Source distinction","Three bodies, three carriers.","The short labels in the comparison are only pointers. A source view should show exactly which document carries each name or attribute, without merging the people."],
+ bring:["Receiving","Bring another Robert.","Family Bible. Letter. Photograph with writing on the back. Deed. Court paper. A story with a source. Something we have not imagined."],
+ ask:["Question","Ask about what you see.","The live Worker connection is not yet wired into this new experiment. Until it is, the question should not pretend to answer you."]
 };
 function openNear(key){
  const v=content[key]||content.ask;nk.textContent=v[0];nt.textContent=v[1];nc.textContent=v[2];
  if(key==="bring"){st.textContent="What are you bringing?";sc.textContent="A contribution enters Receiving. It does not become public evidence merely because it was submitted."}
- else{st.textContent="You’re here.";sc.textContent="The comparison has not disappeared. It is waiting behind this ground."}
+ else{st.textContent="What this means";sc.textContent="Return to compare to put the three bodies back together."}
  near.hidden=false;
 }
 document.querySelectorAll("[data-near]").forEach(b=>b.addEventListener("click",()=>openNear(b.dataset.near)));
 document.getElementById("close").addEventListener("click",()=>near.hidden=true);
 document.querySelectorAll("[data-density]").forEach(b=>b.addEventListener("click",()=>{document.body.dataset.density=b.dataset.density;document.querySelectorAll("[data-density]").forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false"))}));
-document.querySelectorAll("[data-prompt]").forEach(b=>b.addEventListener("click",()=>{near.hidden=true;input.value=b.dataset.prompt;input.focus()}));
-document.getElementById("ask-form").addEventListener("submit",e=>{e.preventDefault();const q=input.value.trim();if(!q)return;openNear("ask");nt.textContent=q;nc.textContent="Hold the question against the visible bodies. This prototype keeps the question close; source-grounded conversational response is the next live connection.";input.value=""});
+document.getElementById("identity-question").addEventListener("click",()=>{document.getElementById("identity-question").textContent="IDENTICAL?  —  OPEN QUESTION";});
+document.getElementById("ask-form").addEventListener("submit",e=>{e.preventDefault();const q=input.value.trim();if(!q)return;openNear("ask");nt.textContent=q;nc.textContent="This new room does not have its source-grounded conversational layer connected yet. I would rather say that plainly than manufacture an answer.";input.value=""});
 window.addEventListener("keydown",e=>{if(e.key==="Escape")near.hidden=true});
 })();
 </script>
