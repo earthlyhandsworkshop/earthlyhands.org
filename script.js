@@ -93,7 +93,7 @@
     dozen: { ten: "still at Blue Water", ground: "You are still beside the same creek.", presence: "" },
     guide: { ten: "watching roles change", ground: "You are still at Blue Water. Mayes is now carried as a guide.", presence: "" },
     "blue-water-mouth": { ten: "near the mouth", ground: "You are near the mouth of Blue Water at source-relative scale.", presence: "" },
-    "east-blue-water": { ten: "inside a forecast", ground: "You are inside Dawson's regional forecast east of Blue Water.", presence: "" }
+    "east-blue-water": { ten: "inside a forecast", ground: "You are still inside Dawson's regional forecast east of Blue Water.", presence: "" }
   };
   const sceneState = JSON.parse(JSON.stringify(defaultSceneState));
 
@@ -329,6 +329,15 @@
   }
 
 
+  function continuityGround(id) {
+    const base = String(defaultSceneState[id]?.ground || "").trim();
+    if (!base) return "You are still on the same ground.";
+    if (/\bstill\b/i.test(base)) return base;
+    if (/^You are\b/.test(base)) return base.replace(/^You are\b/, "You are still");
+    if (/^You have\b/.test(base)) return "You are still here. " + base;
+    return "You are still on the same ground. " + base;
+  }
+
   function receiveTenAction(message) {
     const clean = String(message || "").trim();
     const lower = clean.toLowerCase();
@@ -356,7 +365,7 @@
       state.ground = "You have a cup of coffee in hand. The ground has not moved.";
     } else if (/\b(beaver|trap|trapping|trapper)\b/.test(lower)) {
       state.ten = "asking the ground";
-      state.ground = defaultSceneState[currentId].ground;
+      state.ground = continuityGround(currentId);
     } else if (/\b(wait|sit|stay|rest)\b/.test(lower)) {
       state.ten = "staying put";
       state.ground = defaultSceneState[currentId].ground;
@@ -749,6 +758,9 @@
       "DOOR: Shared Country / Exploring-party ground.",
       "LOCAL JOB: recompose only the present Dawson scene from the held local ground. Do not claim that a companion is physically or historically present in 1831.",
       "VOICE: plain, testimonial, unresolved. Prefer exact nouns and earned verbs. Do not perform significance.",
+      "CONTINUITY: when Ten asks a fresh question without moving, make the current-ground continuity legible. Prefer words such as still / remain / same ground when accurate so a new answer does not look like a new historical movement.",
+      "COMPOSITION: the title is an active part of the answer. Change it when the question genuinely changes the aperture or documentary job. A short answer may stay spare; a rich held answer may use several paragraphs and fill the available field. Do not pad for length.",
+      "STATUS LABELING: when useful, say what kind of thing is being shown — direct source statement, Dawson judgment/forecast, public derivative, unresolved edge, or reversible visitor experience. Do not blur those classes.",
       "HELD CONTEXT ONLY: use SOURCE FLOOR, CURRENT SCREEN, recent runtime conversation, and TEN. If they do not answer a factual question, say the held ground does not answer it.",
       "EXPERIENCE LAYER: Ten may make reversible present actions such as a small fire, coffee, sitting, waiting, looking, or darkness. Keep those distinct from the 1831 source.",
       movementResolved
