@@ -991,3 +991,63 @@ body[data-ground="night"] .experience-shell[data-presence="fire"]{
 .camp-person h3{
   font-size:clamp(1rem,1.6vw,1.35rem);
 }
+
+
+/* People accumulate with story reach; older encounters compress into a returnable roster. */
+.camp-people-roster{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.35rem .75rem;
+  padding:.55rem 0 .9rem;
+  border-top:1px solid var(--scene-rule);
+  border-bottom:1px solid var(--scene-rule);
+}
+.camp-person-link,
+.camp-person-return{
+  border:0;
+  background:transparent;
+  padding:0;
+  color:var(--scene-muted);
+  font-family:var(--mono);
+  cursor:pointer;
+}
+.camp-person-link{
+  font-size:.68rem;
+  line-height:1.35;
+  text-decoration:underline;
+  text-decoration-color:transparent;
+  text-underline-offset:.18em;
+}
+.camp-person-link:hover,
+.camp-person-link:focus-visible{
+  color:var(--scene-ink);
+  text-decoration-color:var(--scene-accent);
+}
+.camp-person-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:1rem;
+  padding-left:.65rem;
+}
+.camp-person-head h3{
+  padding-left:0;
+}
+.camp-person-return{
+  flex:0 0 auto;
+  font-size:.56rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.camp-person-return:hover,
+.camp-person-return:focus-visible{
+  color:var(--scene-accent);
+}
+@media(max-width:52rem){
+  .camp-person-head{
+    display:block;
+  }
+  .camp-person-return{
+    margin-top:.18rem;
+  }
+}
