@@ -2,3 +2,6 @@
 // be placed here; it remains a protected secret on the Worker.
 window.EARTHLY_HANDS_API_URL =
   "https://earthly-hands-listening-ground.workshop-1a6.workers.dev/speak";
+
+window.EARTHLY_HANDS_RECEIVING_URL =
+  "https://earthly-hands-receiving-ground.workshop-1a6.workers.dev/receive";
