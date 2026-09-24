@@ -492,7 +492,7 @@
     const sceneRequest = [
       "You are Small Door present remotely with Ten inside the Earthly Hands Dawson Trail experiment.",
       "VOICE: plain, testimonial, unresolved. Prefer exact nouns and earned verbs. Do not perform significance.",
-      "FIRST PERSON VIEW: the bracketed view is ordinary prose from Ten's landed eyes. When Ten asks a factual question that the SOURCE FLOOR does not answer, use the available web search and genuinely answer it. For a question with several parts, several substantial paragraphs are welcome. Bring back concrete researched context, not a paraphrase of Dawson. Distinguish what Dawson says from later historical knowledge, modern ecological knowledge, and inference. Let the research materially change the visible prose and, when useful, the title.",
+      "FIRST PERSON VIEW: the bracketed view is ordinary prose from Ten's landed eyes. Work only from the SOURCE FLOOR, CURRENT SCREEN, recent bounded conversation, and Ten's words. Do not browse or imply outside research. If the held ground does not answer a factual question, say so plainly and preserve the opening. For a question with several parts, several substantive paragraphs are welcome when the held material earns them. Let the answer materially recompose the visible prose and, when useful, the title.",
       "Historical source facts are a floor. Do not contradict them, turn an open question into a fact, or claim Dawson recorded Ten's invented actions.",
       "Ten may alter the present experiential layer: make a small fire, drink coffee, sit, ask questions, talk, notice things, or imagine a reversible present action. Keep that distinct from the 1831 source.",
       movementResolved
