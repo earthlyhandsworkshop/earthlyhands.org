@@ -375,16 +375,32 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 .panel-toggle button{
   border:0;
   background:transparent;
-  padding:.44rem .45rem;
-  font:.54rem/1.2 var(--mono);
+  padding:.48rem .45rem .42rem;
+  font:.68rem/1.2 var(--mono);
   letter-spacing:.07em;
   text-transform:uppercase;
+  text-align:left;
+  position:relative;
 }
 .panel-toggle button+button{border-left:1px solid var(--rule)}
-.panel-toggle button[aria-pressed="true"]{background:var(--ink);color:var(--paper2)}
-.panel-view{min-height:14rem}
-.unresolved-view h3,.action-body h3{margin:0 0 .35rem;font-size:1rem;line-height:1.08}
-.unresolved-view p,.action-body p{margin:.3rem 0 0;color:var(--muted);font:.64rem/1.35 var(--mono)}
+.panel-toggle button[aria-pressed="true"]{background:transparent;color:var(--ink)}
+.panel-toggle button[aria-pressed="true"]::after{
+  content:"";
+  position:absolute;
+  left:.45rem;
+  right:.45rem;
+  bottom:.12rem;
+  height:1px;
+  background:var(--ink);
+}
+.panel-view{min-height:19rem}
+.unresolved-view h3,.action-body h3{margin:0 0 .55rem;font-size:1.2rem;line-height:1.05}
+.unresolved-view p,.action-body p{margin:.36rem 0 0;color:var(--muted);font:.72rem/1.42 var(--mono)}
+.bridge-facts{margin-top:.85rem;padding-top:.65rem;border-top:1px solid var(--soft)}
+.bridge-fact{margin:.55rem 0 0}
+.bridge-fact b{display:block;margin-bottom:.12rem;font:.56rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--ink)}
+.bridge-fact span{font:.8rem/1.38 var(--serif);color:var(--ink)}
+.bridge-state{margin-top:1rem;padding-top:.65rem;border-top:1px solid var(--rule);font:.58rem/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
 
 #key-default .key-summary{margin:.55rem 0 0;color:var(--muted);font:.72rem/1.42 var(--mono)}
 .action-body h3{margin:0 0 .28rem;font-size:1rem;line-height:1.1}
@@ -396,27 +412,32 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   overflow:hidden;
 }
 .action-choices{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:.28rem;
-  margin-top:.5rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.25rem .75rem;
+  align-items:baseline;
+  margin-top:.7rem;
+  padding:.45rem 0 .25rem;
+  border-top:1px solid var(--soft);
+  border-bottom:1px solid var(--soft);
 }
 .action-choice{
-  min-height:2.15rem;
-  border:1px solid var(--rule);
+  min-height:0;
+  border:0;
   background:transparent;
-  padding:.38rem .42rem;
-  text-align:center;
-  font:.56rem/1.15 var(--mono);
-  letter-spacing:.045em;
-  text-transform:uppercase;
+  padding:.18rem 0;
+  text-align:left;
+  font:.76rem/1.2 var(--mono);
+  letter-spacing:.035em;
+  text-transform:none;
+  text-decoration:none;
 }
-.action-choice[data-kind="piece"]{font-size:.5rem}
-.action-choice[data-kind="leg"]{font-size:.54rem}
-.action-choice[data-kind="brace"]{font-size:.58rem}
-.action-choice[data-kind="full bridge"]{font-size:.64rem;font-weight:700}
-.action-choice:hover{background:rgba(119,85,64,.07)}
-.action-choice.wide{grid-column:1 / -1;min-height:1.75rem}
+.action-choice:hover,.action-choice:focus-visible{text-decoration:underline}
+.action-choice[data-kind="piece"],
+.action-choice[data-kind="leg"],
+.action-choice[data-kind="brace"],
+.action-choice[data-kind="full bridge"]{font-size:.76rem;font-weight:400}
+.action-choice.wide{min-height:0}
 .bridge-invite{margin:.5rem 0 .12rem!important;font:.64rem/1.3 var(--mono)!important;text-transform:uppercase;letter-spacing:.05em}
 .properties{
   height:5.35rem;
@@ -631,8 +652,8 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
 <body>
 <div class="page">
   <header class="topline">
-    <a href="../../">Line Commons</a>
-    <span class="center">People / records / questions / a more honest history</span>
+    <a href="../../"><strong>Earthly Hands</strong> / Workshop</a>
+    <span class="center">Line Commons · people / records / questions</span>
     <span class="right">Article XIV</span>
   </header>
 
@@ -726,20 +747,26 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
         </div>
         <div class="key-body">
           <div class="panel-view unresolved-view" id="unresolved-view">
-            <h3 id="unresolved-title">Choose a question mark.</h3>
-            <p id="unresolved-copy">This rail holds the exact missing bridge. Action occupies the same space when you have something to bring.</p>
+            <h3 id="unresolved-title">Still unresolved.</h3>
+            <p id="unresolved-copy">Choose a question mark. This rail will hold both source-side claims and the exact bridge still missing.</p>
+            <div class="bridge-facts" id="bridge-facts" hidden>
+              <div class="bridge-fact"><b>One side</b><span id="bridge-left"></span></div>
+              <div class="bridge-fact"><b>Other side</b><span id="bridge-right"></span></div>
+              <div class="bridge-fact"><b>What would change this</b><span id="bridge-need"></span></div>
+            </div>
+            <div class="bridge-state" id="bridge-state">Still unresolved.</div>
           </div>
 
           <div class="panel-view action-body" id="action-body" hidden>
             <h3 id="bridge-title">Choose an unresolved line first.</h3>
             <p id="bridge-copy">Then tell us what kind of thing you have and send it to Receiving.</p>
-            <p class="bridge-invite">What have you got?</p>
+            <p class="bridge-invite">Call it what you think it is:</p>
             <div class="action-choices" id="action-choices">
-              <button class="action-choice" type="button" data-kind="piece">Piece</button>
-              <button class="action-choice" type="button" data-kind="leg">Leg</button>
-              <button class="action-choice" type="button" data-kind="brace">Brace</button>
-              <button class="action-choice" type="button" data-kind="full bridge">Full bridge</button>
-              <button class="action-choice wide" type="button" data-kind="anything useful">Anything useful</button>
+              <button class="action-choice" type="button" data-kind="piece">piece</button>
+              <button class="action-choice" type="button" data-kind="leg">leg</button>
+              <button class="action-choice" type="button" data-kind="brace">brace</button>
+              <button class="action-choice" type="button" data-kind="full bridge">full bridge</button>
+              <button class="action-choice wide" type="button" data-kind="anything useful">anything useful</button>
             </div>
             <form class="bridge-upload-form" id="bridge-upload-form" hidden>
               <label>File
@@ -780,6 +807,11 @@ const bridgeCopy=document.getElementById("bridge-copy");
 const actionChoices=document.getElementById("action-choices");
 const unresolvedTitle=document.getElementById("unresolved-title");
 const unresolvedCopy=document.getElementById("unresolved-copy");
+const bridgeFacts=document.getElementById("bridge-facts");
+const bridgeLeft=document.getElementById("bridge-left");
+const bridgeRight=document.getElementById("bridge-right");
+const bridgeNeed=document.getElementById("bridge-need");
+const bridgeState=document.getElementById("bridge-state");
 const card=document.getElementById("identical-card");
 const pressMark=document.getElementById("press-mark");
 const joinState=document.getElementById("join-state");
@@ -811,11 +843,46 @@ const source={
 };
 
 const bridge={
- "yimma-susie":{title:"Yimma ? Susie",copy:"Missing bridge: a source that relates Yimma, wife in the older Article XIV evidence representation, to Susie Bell, mother named by Jane. Same administrative Robert does not make the women identical. Remarriage, variant naming, different people, or another relation remain open until a source earns one.",state:"missing bridge · person / name relation"},
- land:{title:"694.96 acres ? about 160 acres",copy:"Missing bridge: deed, probate, partition, conveyance, tax, parcel, or other land carrier showing how the original 694.96-acre Section 4 patent relates to the portion Jane understood Wash to own and occupy. Do not say the patent 'whittled down' to 160 without that chain.",state:"missing bridge · land continuity"},
- name:{title:"Robert ? Robin",copy:"Missing bridge: a source that explains the relation between Jane's twice-stated Robin Bell and the Robert Bell form used by Marris, the examiner, administrative notes, and older Article XIV record bodies. The 1904 Commission's identity act is an administrative relation, not itself a Workshop name-resolution rule.",state:"missing bridge · naming / person continuity"},
- place:{title:"Section 4 ? Noxapater",copy:"Missing bridge: source-controlled geography and parcel history tying Jane's Noxapater/Neshoba government-land memory to the patented Section 4 tract. Later Commission treatment creates comparison pressure but does not supply every intermediate carrier.",state:"missing bridge · place / parcel relation"},
- language:{title:"1838 language ? family-side claims",copy:"Missing bridge: person continuity first. The older Robert says in 1838 that he could not speak English and communicated with Blackwell through Choctaw. Family-side language propositions belong to their own speakers and dates. They cannot be donated across an unresolved identity relation.",state:"missing bridge · identity before predicate travel"}
+ "yimma-susie":{
+   title:"Yimma ? Susie",
+   copy:"The later administrative join does not itself relate these two women.",
+   left:"Older Article XIV evidence representation: Robert Bell is represented with a wife named Yimma.",
+   right:"Jane Bell's 1903 testimony names her mother Susie Bell.",
+   need:"A source that actually relates Yimma and Susie — same woman, different women, remarriage, variant name, or another relation.",
+   state:"person / name relation"
+ },
+ land:{
+   title:"694.96 acres ? about 160 acres",
+   copy:"A patent tract and a later family land estimate are not yet one parcel history.",
+   left:"1846 patent: Section 4, T12N R12E, 694.96 surveyed acres.",
+   right:"Jane: her father received government land near Noxapater; about 160 acres; Wash owns and lives on it.",
+   need:"Deed, probate, partition, conveyance, tax, parcel, or other land carrier showing how one body reaches the other.",
+   state:"land continuity"
+ },
+ name:{
+   title:"Robert ? Robin",
+   copy:"The record carries both name forms through different speakers and layers.",
+   left:"Older Article XIV carriers and Marris's certified translated record carry Robert Bell.",
+   right:"Jane names her father Robin Bell twice, including after being asked Robin or Robert.",
+   need:"A source explaining the relation between these name forms without borrowing the Commission's later identity act as the explanation.",
+   state:"naming / person continuity"
+ },
+ place:{
+   title:"Section 4 ? Noxapater",
+   copy:"The two place propositions create pressure without yet supplying the intervening parcel chain.",
+   left:"Patent address: Section 4, Township 12 North, Range 12 East, Choctaw Meridian.",
+   right:"Jane's remembered government land: Noxapater / Neshoba County.",
+   need:"Source-controlled geography or parcel history connecting the patented tract to the land Jane remembers.",
+   state:"place / parcel relation"
+ },
+ language:{
+   title:"1838 language ? family-side language",
+   copy:"Language propositions cannot travel across an unresolved person relation.",
+   left:"Older Robert, 1838: says he could not speak English; Blackwell could understand him in Choctaw.",
+   right:"Later family-side records carry their own speakers, interpreters, translations, and language statements.",
+   need:"First earn person continuity. Then compare dated language evidence without donating one speaker's language to another.",
+   state:"identity before predicate travel"
+ }
 };
 
 function clearActive(){
@@ -838,6 +905,11 @@ function setPanelMode(mode){
 function showBridge(id,d){
  unresolvedTitle.textContent=d.title;
  unresolvedCopy.textContent=d.copy;
+ bridgeLeft.textContent=d.left;
+ bridgeRight.textContent=d.right;
+ bridgeNeed.textContent=d.need;
+ bridgeState.textContent="Still unresolved · "+d.state;
+ bridgeFacts.hidden=false;
  activeBridgeId=id;
  activeBridgeTitle=d.title;
  activeBridgeKind="";
