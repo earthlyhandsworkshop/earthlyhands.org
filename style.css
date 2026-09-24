@@ -230,18 +230,45 @@ body[data-ground="dozen"] .experience-shell{
 
 .plain-copy,
 .first-person-view{
-  grid-column:2;
-  grid-row:2;
-  max-width:var(--measure);
-  color:var(--scene-ink);
-  font-size:clamp(1.08rem,1.5vw,1.24rem);
-}
-
-.first-person-view{
-  position:relative;
   display:block;
   min-height:10rem;
-  padding:1.9rem 2.4rem 2rem;
+  padding:0;
+}
+
+.view-heading{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.3rem .65rem;
+  align-items:baseline;
+  margin:0 0 1.15rem;
+  padding:0 0 .7rem;
+  border-bottom:1px solid var(--scene-rule);
+  font-family:var(--mono);
+  font-size:.7rem;
+  line-height:1.4;
+}
+
+.view-heading span+span::before{
+  content:"·";
+  margin-right:.65rem;
+  color:var(--scene-rule);
+}
+
+.view-you{
+  color:var(--scene-accent);
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.view-place{
+  color:var(--scene-ink);
+  font-weight:600;
+}
+
+.view-source,
+.view-state{
+  color:var(--scene-muted);
 }
 
 .view-body{
@@ -250,42 +277,6 @@ body[data-ground="dozen"] .experience-shell{
 
 .first-person-view p{margin:0 0 .55em}
 .first-person-view p:last-child{margin-bottom:0}
-
-.bracket{
-  position:absolute;
-  color:var(--scene-accent);
-  font-family:var(--mono);
-  font-size:1.25rem;
-  line-height:1;
-}
-
-.bracket-open{
-  top:.15rem;
-  left:0;
-}
-
-.bracket-close{
-  right:0;
-  bottom:.15rem;
-}
-
-.footing{
-  grid-column:2;
-  display:flex;
-  flex-wrap:wrap;
-  gap:.2rem .65rem;
-  margin:.85rem 0 0;
-  padding:0;
-  color:var(--scene-muted);
-  font-size:.72rem;
-  line-height:1.45;
-}
-
-.footing span+span::before{
-  content:"·";
-  margin-right:.65rem;
-  color:var(--scene-rule);
-}
 
 .passage-actions{display:none!important}
 
@@ -582,20 +573,18 @@ footer{
 
   .first-person-view{
     display:block;
-    padding:1.65rem 1.35rem 1.75rem;
+    padding:0;
   }
 
-  .bracket{
-    font-size:1.15rem;
+  .view-heading{
+    margin-bottom:.9rem;
+    padding-bottom:.6rem;
+    gap:.2rem .45rem;
+    font-size:.67rem;
   }
 
-  .footing{
-    margin-top:.75rem;
-    gap:.15rem .5rem;
-  }
-
-  .footing span+span::before{
-    margin-right:.5rem;
+  .view-heading span+span::before{
+    margin-right:.45rem;
   }
 
   .trail-console{
