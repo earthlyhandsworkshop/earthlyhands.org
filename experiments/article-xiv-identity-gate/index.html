@@ -1446,6 +1446,108 @@ body.gate-open .connectors path{
   overflow:hidden;
 }
 </style>
+
+<style id="properties-receiving">
+.properties{position:relative}
+.properties.is-receiving{
+  grid-template-columns:minmax(8.5rem,.18fr) minmax(0,1fr) minmax(12rem,.24fr)!important;
+}
+.properties.is-receiving .properties-state{display:none!important}
+.property-receive{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:.3rem .7rem;
+  align-items:center;
+  height:100%;
+}
+.property-targets{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.2rem .7rem;
+  align-items:center;
+  min-width:0;
+}
+.property-target,
+.property-any{
+  font:.55rem/1.15 var(--mono);
+  letter-spacing:.02em;
+  white-space:nowrap;
+  cursor:pointer;
+}
+.property-target input,
+.property-any input{margin:0 .18rem 0 0;vertical-align:-.06em}
+.property-any{
+  padding-left:.65rem;
+  border-left:1px solid var(--soft);
+  color:var(--muted);
+}
+.property-upload{
+  min-width:0;
+  height:100%;
+  display:grid;
+  grid-template-rows:auto auto 1fr;
+  gap:.2rem;
+  padding:.4rem .5rem;
+  border-left:1px solid var(--rule);
+  background:rgba(247,243,233,.4);
+}
+.property-upload[hidden],.property-receive[hidden]{display:none!important}
+.property-upload input[type=text]{
+  width:100%;
+  min-width:0;
+  border:0;
+  border-bottom:1px solid var(--soft);
+  background:transparent;
+  padding:.18rem .1rem;
+  font:.55rem/1.1 var(--mono);
+}
+.property-upload-actions{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:.35rem;
+}
+.property-upload button{
+  border:0;
+  border-bottom:1px solid var(--rule);
+  background:transparent;
+  padding:.18rem .05rem;
+  font:.54rem/1.1 var(--mono);
+  text-align:left;
+}
+.property-upload-status{
+  align-self:end;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  color:var(--muted);
+  font:.46rem/1.1 var(--mono);
+}
+@media(max-width:64rem){
+  .properties.is-receiving{
+    max-height:8.5rem!important;
+    grid-template-columns:minmax(7.5rem,.28fr) minmax(0,1fr) minmax(10rem,.32fr)!important;
+  }
+}
+@media(max-width:40rem){
+  .properties.is-receiving{
+    grid-template-columns:minmax(6.5rem,.27fr) minmax(0,1fr)!important;
+  }
+  .properties.is-receiving .property-upload{
+    grid-column:1/-1;
+    height:3.2rem;
+    border-left:0;
+    border-top:1px solid var(--rule);
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-rows:auto auto;
+  }
+  .properties.is-receiving{height:8.5rem!important}
+  .property-upload input[type=text]{grid-column:1}
+  .property-upload-actions{grid-column:2;grid-row:1}
+  .property-upload-status{grid-column:1/-1}
+  .property-receive{grid-template-columns:1fr}
+  .property-any{padding-left:0;border-left:0}
+}
+</style>
 </head>
 <body>
 <div class="page">
@@ -1564,8 +1666,23 @@ body.gate-open .connectors path{
         <span>Properties</span>
         <strong id="property-title">Touch a record object.</strong>
       </div>
-      <div class="properties-copy"><span class="property-long" id="property-copy">Robin, Yimma, land, Dibbin, the patent — this panel changes immediately when you choose one.</span></div>
+      <div class="properties-copy">
+        <span class="property-long" id="property-copy">Robin, Yimma, land, Dibbin, the patent — this panel changes immediately when you choose one.</span>
+        <div class="property-receive" id="property-receive" hidden>
+          <div class="property-targets" id="property-targets"></div>
+          <label class="property-any"><input type="radio" name="property-target" value="anything related"> anything related</label>
+        </div>
+      </div>
       <div class="properties-state" id="property-state">attention · threshold</div>
+      <form class="property-upload" id="property-upload" hidden>
+        <input id="property-file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required hidden>
+        <input id="property-note" type="text" maxlength="220" placeholder="one sentence — optional">
+        <div class="property-upload-actions">
+          <button type="button" id="property-file-button">Choose record</button>
+          <button type="submit" id="property-send">Send</button>
+        </div>
+        <div class="property-upload-status" id="property-upload-status">Original preserved privately.</div>
+      </form>
     </section>
   </main>
 
@@ -1593,6 +1710,17 @@ const upper=document.getElementById("upper");
 const propertyTitle=document.getElementById("property-title");
 const propertyCopy=document.getElementById("property-copy");
 const propertyState=document.getElementById("property-state");
+const properties=document.getElementById("properties");
+const propertyReceive=document.getElementById("property-receive");
+const propertyTargets=document.getElementById("property-targets");
+const propertyUpload=document.getElementById("property-upload");
+const propertyFile=document.getElementById("property-file");
+const propertyFileButton=document.getElementById("property-file-button");
+const propertyNote=document.getElementById("property-note");
+const propertyUploadStatus=document.getElementById("property-upload-status");
+const receivingUrl=String(window.EARTHLY_HANDS_RECEIVING_URL||"").trim();
+let activeReceiveBridge="";
+let activeReceiveTitle="";
 
 const keyDefault=document.getElementById("key-default");
 const keyActive=document.getElementById("key-active");
@@ -1685,6 +1813,86 @@ function setIdenticalKey(){
  keyDefault.hidden=false;
 }
 
+const bridgeTargets={
+ "yimma-susie":["Yimma","Susie"],
+ land:["694.96 acres","about 160 acres"],
+ name:["Robert","Robin"],
+ place:["Section 4","Noxapater"],
+ language:["1838 language","family-side language"]
+};
+
+function leaveReceiveMode(){
+ properties.classList.remove("is-receiving");
+ propertyReceive.hidden=true;
+ propertyUpload.hidden=true;
+ propertyCopy.hidden=false;
+ propertyState.hidden=false;
+ activeReceiveBridge="";
+ activeReceiveTitle="";
+ propertyTargets.innerHTML="";
+ propertyFile.value="";
+ propertyNote.value="";
+ propertyUploadStatus.textContent="Original preserved privately.";
+}
+
+function enterReceiveMode(id,d){
+ activeReceiveBridge=id;
+ activeReceiveTitle=d.title;
+ properties.classList.add("is-receiving");
+ propertyCopy.hidden=true;
+ propertyState.hidden=true;
+ propertyReceive.hidden=false;
+ propertyUpload.hidden=false;
+ propertyTitle.textContent=d.title;
+ propertyTargets.innerHTML=(bridgeTargets[id]||[]).map((label,i)=>
+   '<label class="property-target"><input type="radio" name="property-target" value="'+label.replace(/"/g,'&quot;')+'" '+(i===0?'checked':'')+'> '+label+'</label>'
+ ).join("");
+ const any=propertyReceive.querySelector('.property-any input');
+ if(any) any.checked=false;
+ propertyUploadStatus.textContent="Original preserved privately.";
+}
+
+propertyFileButton.addEventListener("click",()=>propertyFile.click());
+propertyFile.addEventListener("change",()=>{
+ propertyFileButton.textContent=propertyFile.files?.[0]?.name||"Choose record";
+});
+
+propertyUpload.addEventListener("submit",async e=>{
+ e.preventDefault();
+ if(!activeReceiveBridge){propertyUploadStatus.textContent="Choose an unresolved line.";return}
+ if(!receivingUrl){propertyUploadStatus.textContent="Receiving is not configured.";return}
+ const file=propertyFile.files?.[0];
+ if(!file){propertyUploadStatus.textContent="Choose one record.";return}
+ const target=properties.querySelector('input[name="property-target"]:checked')?.value||"anything related";
+ const submit=propertyUpload.querySelector('button[type="submit"]');
+ submit.disabled=true;
+ propertyUploadStatus.textContent="Receiving…";
+ const data=new FormData();
+ data.append("file",file);
+ const note=propertyNote.value.trim();
+ data.append("description",[
+   "ARTICLE XIV IDENTITY GATE — PROPERTY RETURN",
+   "Bridge: "+activeReceiveTitle,
+   "Bridge ID: "+activeReceiveBridge,
+   "Target: "+target,
+   note?"Contributor note: "+note:""
+ ].filter(Boolean).join("\n"));
+ data.append("provenance","Submitted from /experiments/article-xiv-identity-gate/ Properties for "+activeReceiveBridge+".");
+ try{
+   const res=await fetch(receivingUrl,{method:"POST",body:data});
+   const out=await res.json().catch(()=>({}));
+   if(!res.ok)throw new Error(out.error||("HTTP "+res.status));
+   propertyUploadStatus.textContent="RECEIVED · "+(out.receipt||"record");
+   propertyFile.value="";
+   propertyFileButton.textContent="Choose record";
+   propertyNote.value="";
+ }catch(err){
+   propertyUploadStatus.textContent="Not received · "+err.message;
+ }finally{
+   submit.disabled=false;
+ }
+});
+
 const pairMap={robin:"robert",robert:"robin",susie:"yimma",yimma:"susie","160":"694","694":"160","jane-wash":"section4",section4:"jane-wash",marris:"murray",murray:"marris"};
 let pendingEntry=null;
 let pendingTimer=null;
@@ -1703,6 +1911,7 @@ function releaseManualPair(){
 }
 
 entries.forEach(btn=>btn.addEventListener("click",()=>{
+ leaveReceiveMode();
  const id=btn.dataset.entry;
  const d=source[id];
  setProperties(d.title,d.copy,d.state,d.html||"");
@@ -1742,9 +1951,11 @@ entries.forEach(btn=>btn.addEventListener("click",()=>{
 bridges.forEach(btn=>btn.addEventListener("click",()=>{
  clearActive();
  btn.classList.add("is-active");
- const d=bridge[btn.dataset.bridge];
+ const id=btn.dataset.bridge;
+ const d=bridge[id];
  setKey(d);
  setProperties(d.title,d.copy,"unresolved · "+d.state);
+ enterReceiveMode(id,d);
 }));
 
 card.addEventListener("click",()=>{
@@ -1756,6 +1967,7 @@ card.addEventListener("click",()=>{
  pressMark.textContent=open?"passed":"press";
  passCard.textContent=open?"Commission pass · IDENTICAL · issued":"Commission pass · not yet issued";
  if(open){
+   leaveReceiveMode();
    clearTimeout(pendingTimer);
    clearTimeout(fadeTimer);
    pendingEntry=null;
@@ -1764,6 +1976,7 @@ card.addEventListener("click",()=>{
    setProperties("IDENTICAL — Commission pass","The agency-level identity relation is active. The unresolved proposition lines remain open.","administrative state · SAME / source bridges · OPEN");
    requestAnimationFrame(()=>stageTwo.scrollIntoView({behavior:"smooth",block:"start"}));
  }else{
+   leaveReceiveMode();
    entries.forEach(x=>x.classList.remove("is-active","is-held","is-held-fading"));
    keyActive.hidden=true;
    keyDefault.hidden=false;
