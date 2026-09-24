@@ -67,18 +67,29 @@ h1{
   gap:clamp(.6rem,1.8vw,1.25rem);align-items:stretch;padding-top:.65rem
 }
 .body{
-  min-width:0;position:relative;border:1px solid var(--rule);background:rgba(255,255,255,.10);
-  display:grid;grid-template-rows:auto auto 1fr;transition:opacity .22s ease,transform .22s ease,background .22s ease,border-color .22s ease;
+  min-width:0;min-height:0;position:relative;border:1px solid var(--rule);background:rgba(255,255,255,.10);
+  display:grid;grid-template-rows:auto auto minmax(0,1fr);transition:opacity .22s ease,transform .22s ease,background .22s ease,border-color .22s ease;
   overflow:hidden
 }
 .body-head{padding:.65rem .75rem .55rem;border-bottom:1px solid var(--rule)}
 .body-label{margin:0;color:var(--rust);font-size:.58rem}
 .body h2{margin:.15rem 0 0;font-size:clamp(1.15rem,2.2vw,2rem);font-weight:400;line-height:1.02;letter-spacing:-.025em}
 .body-intro{margin:0;padding:.55rem .75rem;color:var(--muted);font-size:.8rem;border-bottom:1px solid var(--rule)}
-.facts{min-height:0;display:grid;grid-template-rows:repeat(3,1fr)}
+.facts{
+  min-height:0;
+  display:block;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  padding-bottom:.2rem;
+}
+.facts::-webkit-scrollbar{width:0;height:0}
+
 .fact{
-  border:0;border-bottom:1px solid var(--rule);background:transparent;text-align:left;padding:.48rem .72rem;
-  display:grid;grid-template-rows:auto 1fr auto;gap:.14rem;min-height:0
+  width:100%;
+  border:0;border-bottom:1px solid var(--rule);background:transparent;text-align:left;padding:.58rem .72rem .62rem;
+  display:grid;grid-template-rows:auto auto auto;gap:.2rem;min-height:5.3rem
 }
 .fact:last-child{border-bottom:0}
 .fact:hover,.fact.is-active{background:rgba(133,88,62,.07)}
@@ -194,7 +205,7 @@ body[data-relation="unresolved"] .seam{background:rgba(105,112,94,.06)}
   body[data-focus="compare"] .body h2{font-size:1rem;line-height:1.05}
   body[data-focus="compare"] .body-head{min-height:3.9rem}
   body[data-focus="compare"] .body-label{font-size:.5rem}
-  body[data-focus="compare"] .fact{padding:.35rem .42rem}
+  body[data-focus="compare"] .fact{padding:.45rem .5rem .5rem;min-height:4.8rem}
   body[data-focus="compare"] .fact strong{font-size:.74rem}
   body[data-focus="compare"] .fact small{display:none}
   .seam{grid-row:2;grid-column:1 / -1;grid-template-columns:auto 1fr auto;grid-template-rows:auto;border:1px solid var(--rule);min-height:3rem}
