@@ -6,8 +6,8 @@
   --accent:#8d5c3f;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --page:min(72rem,calc(100% - 2.5rem));
-  --measure:42rem;
+  --page:min(84rem,calc(100% - 3rem));
+  --measure:46rem;
 }
 
 *{box-sizing:border-box}
@@ -199,8 +199,8 @@ body[data-ground="dozen"] .experience-shell{
 
 [data-scene].is-current{
   display:grid;
-  grid-template-columns:minmax(15rem,.75fr) minmax(0,1.25fr);
-  gap:1rem clamp(2rem,6vw,6rem);
+  grid-template-columns:minmax(17rem,.72fr) minmax(0,1.38fr);
+  gap:1rem clamp(2.5rem,6vw,7rem);
   width:100%;
   align-items:start;
 }
@@ -226,6 +226,14 @@ body[data-ground="dozen"] .experience-shell{
   line-height:.92;
   letter-spacing:-.045em;
   text-wrap:balance;
+}
+
+.scene-without-eyebrow h2{
+  grid-row:1;
+}
+
+.scene-without-eyebrow .first-person-view{
+  grid-row:1;
 }
 
 .plain-copy,
@@ -260,7 +268,7 @@ body[data-ground="dozen"] .experience-shell{
 }
 
 .view-body{
-  max-width:34rem;
+  max-width:40rem;
 }
 
 .first-person-view p{margin:0 0 .55em}
@@ -501,7 +509,7 @@ footer{
 }
 
 @media(max-width:52rem){
-  :root{--page:min(100% - 1.4rem,44rem)}
+  :root{--page:min(100% - 1.5rem,46rem)}
 
   .site-header{
     min-height:4rem;
