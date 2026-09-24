@@ -52,6 +52,8 @@
   const thresholdIntro = document.querySelector("#threshold-intro");
   const experienceMount = document.querySelector("#experience-mount");
   const dawsonIndex = document.querySelector("#dawson-index");
+  const campPeople = document.querySelector("#camp-people");
+  const campPeopleList = document.querySelector(".camp-people-list");
   const dawsonStopList = document.querySelector(".dawson-stop-list");
   const viewModes = Array.from(document.querySelectorAll("[data-dawson-view]"));
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
@@ -86,6 +88,37 @@
     dozen: { ten: "still at Blue Water", ground: "You are still beside the same creek.", presence: "" }
   };
   const sceneState = JSON.parse(JSON.stringify(defaultSceneState));
+
+
+  const peopleByGround = {
+    night: [
+      { name: "J. L. Dawson", relation: "report writer / narrator-side officer", note: "The report is his carrier; that does not make every person in the camp 'Dawson's' in identity." },
+      { name: "Dawson's detachment", relation: "camp-side military body", note: "The individual men are not fully named in the held camp sequence." },
+      { name: "five or six Choctaws", relation: "source-counted camp-side body", note: "Count and Choctaw label are source-carried; individual identities remain open here." },
+      { name: "Pitman Calvert", relation: "arrived at camp that afternoon", note: "Arrival is source-controlled; later movement or overnight presence should not be assumed without the next source state." },
+      { name: "See-ly", relation: "arrived with Calvert; source labels him 'a Chickasaw named See-ly'", note: "Keep the source name-form and label; no wider identity join is required here." },
+      { name: "small guard", relation: "posted round camp during the night", note: "Unrostered body; do not merge automatically with the two men sent toward the ford." },
+      { name: "two unnamed men", relation: "sent toward the ford on the back trail", note: "The source gives purpose to watch; it does not currently give arrival, completed watch, or return." }
+    ],
+    morning: [
+      { name: "Dawson party", relation: "camp body in the morning state", note: "The report says the party was unattacked through the night." },
+      { name: "two unnamed men", relation: "no longer mentioned in the carried morning passage", note: "Not repeated ≠ returned, lost, or absent." },
+      { name: "small guard", relation: "night precaution no longer foregrounded", note: "Morning narration moves on without resolving every night-body." }
+    ],
+    southeast: [
+      { name: "Dawson party", relation: "source-carried traveling body", note: "The route is stated southeast about fifteen miles; the traveled line itself remains unresolved." }
+    ],
+    "blue-water": [
+      { name: "Mr. Mayes", relation: "found on this creek", note: "Dawson separately reports residence on James' Fork of Poteau." },
+      { name: "Mr. Criner", relation: "found on this creek", note: "Dawson separately reports residence on James' Fork of Poteau." },
+      { name: "Dawson party", relation: "encounter-side traveling body", note: "The source does not roster every individual at this encounter." }
+    ],
+    dozen: [
+      { name: "Mr. Mayes", relation: "one of the two men said to have caught but a dozen beaver", note: "The source does not divide the catch between Mayes and Criner." },
+      { name: "Mr. Criner", relation: "one of the two men said to have caught but a dozen beaver", note: "The source does not divide the catch between Mayes and Criner." },
+      { name: "Dawson party", relation: "still in the Blue Water encounter sequence", note: "No new route is earned by the catch-quantity sentence itself." }
+    ]
+  };
 
   const sourceFloor = {
     night: [
@@ -202,7 +235,7 @@
   function setLamp(isLit) {
     document.body.dataset.lamp = "lit";
     if (lamp) lamp.setAttribute("aria-pressed", "true");
-    if (lampLabel) lampLabel.textContent = "Dawson passage";
+    if (lampLabel) lampLabel.textContent = "Exploring party";
     if (lanternNote) lanternNote.hidden = true;
   }
 
@@ -380,7 +413,7 @@
   }
 
   function setDawsonView(view) {
-    const next = ["ground", "talk", "index"].includes(view) ? view : "ground";
+    const next = ["ground", "talk", "index", "people"].includes(view) ? view : "ground";
     if (experienceShell) experienceShell.dataset.view = next;
 
     viewModes.forEach((button) => {
@@ -389,8 +422,9 @@
       button.setAttribute("aria-pressed", String(active));
     });
 
-    if (experienceMount) experienceMount.hidden = next === "index";
+    if (experienceMount) experienceMount.hidden = next === "index" || next === "people";
     if (dawsonIndex) dawsonIndex.hidden = next !== "index";
+    if (campPeople) campPeople.hidden = next !== "people";
 
     if (next === "talk") {
       requestAnimationFrame(() => talkInput?.focus({ preventScroll: true }));
@@ -421,6 +455,40 @@
     });
 
     dawsonStopList.replaceChildren(fragment);
+  }
+
+
+  function buildCampPeople() {
+    if (!campPeopleList) return;
+    const people = peopleByGround[currentId] || [];
+    const fragment = document.createDocumentFragment();
+
+    people.forEach((person) => {
+      const row = document.createElement("article");
+      row.className = "camp-person";
+      const name = document.createElement("h3");
+      name.textContent = person.name;
+      const relation = document.createElement("p");
+      relation.className = "camp-person-relation";
+      relation.textContent = person.relation;
+      const note = document.createElement("p");
+      note.className = "camp-person-note";
+      note.textContent = person.note;
+      row.append(name, relation, note);
+      fragment.append(row);
+    });
+
+    campPeopleList.replaceChildren(fragment);
+  }
+
+  function asksForStops(message) {
+    const lower = String(message || "").toLowerCase();
+    return /\b(where (else )?can i go|what (other )?stops|what is open|what's open|show me (the )?stops|where all is open|index|places can i go|where can we go)\b/.test(lower);
+  }
+
+  function asksForPeople(message) {
+    const lower = String(message || "").toLowerCase();
+    return /\b(who is here|who's here|who is in (the )?camp|who's in (the )?camp|everyone in (the )?camp|people here|show me (the )?people)\b/.test(lower);
   }
 
   function updatePlace() {
@@ -479,6 +547,7 @@
 
     updatePlace(target);
     renderSceneState(target.id);
+    buildCampPeople();
     target.focus({ preventScroll: true });
   }
 
@@ -548,6 +617,24 @@
     if (!clean || asking) return;
 
     const origin = currentId;
+
+    if (asksForStops(clean)) {
+      keepTenWords(clean);
+      talkInput.value = "";
+      sizeTalkInput();
+      setDawsonView("index");
+      return;
+    }
+
+    if (asksForPeople(clean)) {
+      keepTenWords(clean);
+      talkInput.value = "";
+      sizeTalkInput();
+      buildCampPeople();
+      setDawsonView("people");
+      return;
+    }
+
     receiveTenAction(clean);
     const localMove = localMoveFromWords(clean);
     const movementResolved = Boolean(localMove && canMove(origin, localMove));
@@ -570,7 +657,7 @@
     const corpusHits = corpusHitsFor(clean, currentId);
 
     const sceneRequest = [
-      "DOOR: Shared Country / Dawson Trail.",
+      "DOOR: Shared Country / Exploring-party ground.",
       "LOCAL JOB: recompose only the present Dawson scene from the held local ground. Do not claim that a companion is physically or historically present in 1831.",
       "VOICE: plain, testimonial, unresolved. Prefer exact nouns and earned verbs. Do not perform significance.",
       "HELD CONTEXT ONLY: use SOURCE FLOOR, CURRENT SCREEN, recent runtime conversation, and TEN. If they do not answer a factual question, say the held ground does not answer it.",
