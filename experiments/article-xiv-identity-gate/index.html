@@ -299,10 +299,22 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 .q{font:1rem/1 var(--mono);white-space:nowrap}
 .pressure-state{font-size:.58rem;color:var(--muted)}
 .key{
+  height:22.5rem;
+  min-height:0;
+  overflow:hidden;
+  display:grid;
+  grid-template-rows:auto minmax(0,1fr);
   border:1px solid var(--rule);
   background:rgba(247,243,233,.55);
 }
-.key-body{padding:.65rem .75rem}
+.key-body{
+  min-height:0;
+  overflow:auto;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  padding:.65rem .75rem;
+}
+.key-body::-webkit-scrollbar{width:0;height:0}
 #key-default .key-summary{margin:.55rem 0 0;color:var(--muted);font:.72rem/1.42 var(--mono)}
 .action-body h3{margin:0 0 .4rem;font-size:1.08rem;line-height:1.15}
 .action-body p{margin:.35rem 0 0;color:var(--muted);font:.72rem/1.4 var(--mono)}
@@ -436,6 +448,7 @@ body.gate-open .card::after{content:"PASSED";background:var(--ink)}
   .record-body.commission{order:3}
   .connectors{display:none}
   .lower{grid-template-columns:1fr}
+  .key{height:auto;max-height:none}
   .machine-state{width:min(28rem,100%);margin-inline:auto}
   .properties{grid-template-columns:1fr}
   .properties-label{border-right:0;border-bottom:1px solid var(--rule)}
@@ -720,6 +733,41 @@ actionChoices.querySelectorAll("[data-kind]").forEach(btn=>btn.addEventListener(
  bridgeFile.focus();
  bridgeReceiveStatus.textContent="You called this a "+activeBridgeKind+". Original preserved privately; review decides what it becomes.";
 }));
+
+bridgeUploadForm.addEventListener("submit",async e=>{
+ e.preventDefault();
+ if(!activeBridgeId||!receivingUrl){
+   bridgeReceiveStatus.textContent=receivingUrl?"Choose a bridge first.":"Receiving endpoint is not configured.";
+   return;
+ }
+ const file=bridgeFile.files?.[0];
+ if(!file){bridgeReceiveStatus.textContent="Choose one file.";return}
+ const button=bridgeUploadForm.querySelector('button[type="submit"]');
+ button.disabled=true;
+ bridgeReceiveStatus.textContent="Receiving…";
+ const data=new FormData();
+ data.append("file",file);
+ const note=bridgeNote.value.trim();
+ data.append("description",[
+   "ARTICLE XIV IDENTITY GATE — BRIDGE RETURN",
+   "Bridge: "+activeBridgeTitle,
+   "Bridge ID: "+activeBridgeId,
+   "Contributor calls it: "+(activeBridgeKind||"unspecified"),
+   note?"Contributor note: "+note:""
+ ].filter(Boolean).join("\n"));
+ data.append("provenance","Submitted from /experiments/article-xiv-identity-gate/ at unresolved bridge "+activeBridgeId+".");
+ try{
+   const res=await fetch(receivingUrl,{method:"POST",body:data});
+   const out=await res.json().catch(()=>({}));
+   if(!res.ok)throw new Error(out.error||("HTTP "+res.status));
+   bridgeReceiveStatus.textContent="RECEIVED · "+out.receipt+" · "+activeBridgeKind+" received for review.";
+   bridgeUploadForm.reset();
+ }catch(err){
+   bridgeReceiveStatus.textContent="Not received · "+err.message;
+ }finally{
+   button.disabled=false;
+ }
+});
 
 card.addEventListener("click",()=>{
  const open=!body.classList.contains("gate-open");
