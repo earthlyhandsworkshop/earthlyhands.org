@@ -182,32 +182,11 @@ body[data-ground="dozen"] .experience-shell{
 }
 
 .experience-stage{
-  min-height:clamp(31rem,64svh,40rem);
-  display:grid;
-  grid-template-rows:auto 1fr;
-  align-items:start;
-  gap:1.4rem;
-  padding:clamp(1.8rem,5vh,3.6rem) 0 1.5rem;
-  overflow:hidden;
-}
-
-.presence-layer{
+  min-height:clamp(34rem,68svh,43rem);
   display:flex;
-  flex-wrap:wrap;
-  gap:.4rem .7rem;
-  min-height:1.7rem;
-  color:var(--scene-muted);
-  font-family:var(--mono);
-  font-size:.72rem;
-  line-height:1.35;
-}
-
-.presence-mark{
-  white-space:nowrap;
-}
-
-.presence-ground{
-  color:var(--scene-ink);
+  align-items:stretch;
+  padding:clamp(1.6rem,4vh,3rem) 0 1.35rem;
+  overflow:hidden;
 }
 
 .experience-mount{
@@ -222,24 +201,35 @@ body[data-ground="dozen"] .experience-shell{
 [data-scene].is-current{
   display:grid;
   grid-template-columns:minmax(17rem,.72fr) minmax(0,1.38fr);
-  gap:1rem clamp(2.5rem,6vw,7rem);
+  grid-template-rows:auto auto 1fr;
+  gap:.55rem clamp(2.5rem,6vw,7rem);
   width:100%;
-  min-height:22rem;
+  min-height:29rem;
   align-items:start;
 }
 
 [data-scene][tabindex="-1"]:focus{outline:none}
 
+.scene-setting{
+  grid-column:1 / -1;
+  grid-row:1;
+  margin:0 0 .35rem;
+  color:var(--scene-muted);
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
 .passage h2{
   grid-column:1;
-  grid-row:1;
+  grid-row:2;
   margin:0;
   max-width:11ch;
-  min-height:2.05em;
   color:var(--scene-ink);
-  font-size:clamp(2.5rem,5.1vw,5rem);
+  font-size:clamp(2.45rem,5vw,4.8rem);
   font-weight:400;
-  line-height:.96;
+  line-height:.98;
   letter-spacing:-.04em;
   text-wrap:balance;
 }
@@ -251,31 +241,52 @@ body[data-ground="dozen"] .experience-shell{
 .plain-copy,
 .first-person-view{
   grid-column:2;
-  grid-row:2;
+  grid-row:2 / 4;
   max-width:var(--measure);
   color:var(--scene-ink);
-  font-size:clamp(1.08rem,1.5vw,1.24rem);
+  font-size:clamp(1.08rem,1.45vw,1.22rem);
 }
 
 .first-person-view{
-  grid-row:1;
-  display:block;
-  min-height:11.5rem;
+  display:grid;
+  grid-template-rows:auto 1fr auto auto;
+  min-height:23rem;
   padding:0;
 }
 
+.fpv-open,
+.fpv-close{
+  font-family:var(--mono);
+  color:var(--scene-accent);
+  font-size:1rem;
+  line-height:1;
+}
+
+.fpv-open{margin-bottom:.55rem}
+.fpv-close{margin-top:.55rem}
+
 .view-body{
   display:grid;
-  grid-template-rows:repeat(3,minmax(2.2em,auto));
-  gap:.45em;
-  max-width:40rem;
-  min-height:9.2em;
+  grid-template-rows:repeat(4,minmax(2.25em,auto));
+  gap:.5em;
+  max-width:44rem;
+  align-content:start;
 }
 
 .first-person-view p{
   margin:0;
   align-self:start;
 }
+
+.fpv-footing{
+  margin-top:.65rem;
+  color:var(--scene-muted);
+  font-family:var(--mono);
+  font-size:.7rem;
+  line-height:1.45;
+}
+
+.fpv-footing p+p{margin-top:.12rem}
 
 .passage-actions{display:none!important}
 
@@ -517,46 +528,56 @@ footer{
   }
 
   .experience-stage{
-    min-height:31rem;
-    padding:1.7rem 0 1.4rem;
-    align-items:start;
-    gap:1.1rem;
+    min-height:36rem;
+    padding:1.35rem 0 1.2rem;
+    align-items:stretch;
   }
 
   [data-scene].is-current{
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows:auto auto;
-    gap:1.35rem;
-    min-height:25rem;
+    grid-template-rows:auto auto 1fr;
+    gap:.55rem;
+    min-height:32rem;
+  }
+
+  .scene-setting{
+    grid-column:1;
+    grid-row:1;
+    margin-bottom:.15rem;
+    font-size:.65rem;
   }
 
   .passage h2{
     grid-column:1;
-    grid-row:1;
+    grid-row:2;
     max-width:13ch;
-    min-height:2.05em;
     margin:0;
-    font-size:clamp(2.25rem,10vw,3.5rem);
+    font-size:clamp(2.15rem,9.5vw,3.35rem);
   }
 
   .plain-copy,.first-person-view{
     grid-column:1;
-    grid-row:2;
+    grid-row:3;
     max-width:none;
-    font-size:1.04rem;
+    font-size:1.03rem;
   }
 
   .first-person-view{
-    display:block;
-    min-height:10.5rem;
+    display:grid;
+    grid-template-rows:auto 1fr auto auto;
+    min-height:21rem;
     padding:0;
   }
 
   .view-body{
-    grid-template-rows:repeat(3,minmax(2.6em,auto));
-    gap:.4em;
-    min-height:9.8em;
+    grid-template-rows:repeat(4,minmax(2.45em,auto));
+    gap:.38em;
+    min-height:11.5rem;
+  }
+
+  .fpv-footing{
+    font-size:.67rem;
   }
 
   .trail-console{
@@ -580,11 +601,6 @@ footer{
   .talk-body{
     margin-left:0;
     width:100%;
-  }
-
-  .presence-layer{
-    gap:.25rem .55rem;
-    font-size:.68rem;
   }
 
   .talk-form{
