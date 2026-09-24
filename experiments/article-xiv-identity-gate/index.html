@@ -1482,7 +1482,12 @@ body.gate-open .connectors path{
   color:var(--muted);
 }
 .property-upload{
-  min-width:0;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  width:min(14rem,24%);
+  min-width:12rem;
   height:100%;
   display:grid;
   grid-template-rows:auto auto 1fr;
@@ -1527,13 +1532,20 @@ body.gate-open .connectors path{
     max-height:8.5rem!important;
     grid-template-columns:minmax(7.5rem,.28fr) minmax(0,1fr) minmax(10rem,.32fr)!important;
   }
+  .properties.is-receiving .property-upload{width:32%;min-width:10rem}
 }
 @media(max-width:40rem){
   .properties.is-receiving{
     grid-template-columns:minmax(6.5rem,.27fr) minmax(0,1fr)!important;
   }
   .properties.is-receiving .property-upload{
-    grid-column:1/-1;
+    position:absolute;
+    left:0;
+    right:0;
+    top:auto;
+    bottom:0;
+    width:100%;
+    min-width:0;
     height:3.2rem;
     border-left:0;
     border-top:1px solid var(--rule);
