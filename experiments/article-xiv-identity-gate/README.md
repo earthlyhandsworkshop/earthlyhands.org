@@ -189,3 +189,24 @@ Particular emphasis:
 - **Susie** should carry Jane Bell's 23 March 1903 witness context.
 - **Yimma** should carry the 13 May 1902 Office representation and the older record-book reference.
 - **Murray–Vroom** should be dated as the **1837–38 Article XIV commission**. Do not mislabel that commission as 1842; later 1842 statutory machinery belongs to a separate layer.
+
+
+## Properties as Receiving
+
+Properties remains one fixed-size instrument. It must not grow when receiving controls appear.
+
+When a visitor selects an unresolved proposition, Properties may switch from descriptive mode into a compact receiving mode for that exact question. The receiving mode should offer the two source-side targets carried by the selected proposition, plus a permanent **anything related** option.
+
+Examples:
+
+- Yimma / Susie / anything related
+- 694.96 acres / about 160 acres / anything related
+- Robert / Robin / anything related
+- Section 4 / Noxapater / anything related
+- 1838 language / family-side language / anything related
+
+The upload apparatus reuses the workshop Receiving endpoint. It accepts one record, an optional one-sentence note, the active bridge identity, and the selected target. The original is preserved privately and does not become public evidence automatically.
+
+When the visitor returns to an ordinary record object such as Robin Bell, Dibbin Marris, the patent, or Murray–Vroom, Properties returns to ordinary source-inspection mode.
+
+The upload form must remain physically inside the existing Properties footprint. It may reuse or overlay the right-hand compartment, but it must not add a new row or increase the box height.
