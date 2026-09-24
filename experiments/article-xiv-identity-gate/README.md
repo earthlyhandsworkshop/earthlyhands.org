@@ -210,3 +210,35 @@ The upload apparatus reuses the workshop Receiving endpoint. It accepts one reco
 When the visitor returns to an ordinary record object such as Robin Bell, Dibbin Marris, the patent, or Murray–Vroom, Properties returns to ordinary source-inspection mode.
 
 The upload form must remain physically inside the existing Properties footprint. It may reuse or overlay the right-hand compartment, but it must not add a new row or increase the box height.
+
+
+## Reference specimen — what this piece taught us
+
+This experiment is now useful as a **grammar specimen**, not as a universal template.
+
+What may be inherited:
+
+- **Interface behavior can carry an argument.** A proposition may be temporarily compared, persist only under an administrative act, and still remain historically unresolved.
+- **Visual persistence is a verb.** A thing staying lit means something different from a thing merely being selectable.
+- **Administrative state and source state can coexist visibly.** The upper machine may say IDENTICAL while the lower movement continues to hold unresolved bridges.
+- **A source object should reveal its own carrier logic.** Dibbin Marris works because witness, interpreter, certifier, and surviving record remain distinct.
+- **Properties is an instrument, not a caption.** It can inspect, receive, and route records without becoming a separate application or growing beyond its allotted footprint.
+- **Responsive behavior must preserve relation, not merely stack layout.** The spaghetti / connector intelligence is part of the meaning.
+- **Humor can be evidentiary.** The temporary manual pairing that refuses to stay put is funny because it demonstrates a real rule.
+- **Precision creates friendliness.** Dense historical material can feel approachable when labels, spacing, and transitions are exact.
+
+What should not be copied mechanically:
+
+- the exact left/right population split;
+- the exact IDENTICAL card;
+- the exact unresolved propositions;
+- the exact Properties field arrangement;
+- the same chronology for every research body.
+
+Each future body has to earn its own direction from its sources.
+
+A useful test for future public-ground work:
+
+> What does this interface permit the record to do, and has the source earned that verb?
+
+If that question has a clear answer, the page is probably speaking workshop grammar rather than merely decorating research.
