@@ -75,6 +75,8 @@
   const conversation = [];
   let currentId = "morning";
   let asking = false;
+  let touchStartX = null;
+  let touchStartY = null;
 
   function setLamp(isLit) {
     document.body.dataset.lamp = "lit";
@@ -372,6 +374,35 @@
       talkForm.requestSubmit();
     }
   });
+
+  if (experienceStage) {
+    experienceStage.addEventListener("touchstart", (event) => {
+      const touch = event.changedTouches?.[0];
+      if (!touch) return;
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+    }, { passive: true });
+
+    experienceStage.addEventListener("touchend", (event) => {
+      if (touchStartX === null || touchStartY === null) return;
+      const touch = event.changedTouches?.[0];
+      if (!touch) return;
+
+      const dx = touch.clientX - touchStartX;
+      const dy = touch.clientY - touchStartY;
+      touchStartX = null;
+      touchStartY = null;
+
+      if (Math.abs(dx) < 48 || Math.abs(dx) <= Math.abs(dy) * 1.15) return;
+
+      const index = fullSequence.indexOf(currentId);
+      if (dx < 0 && index >= 0 && index < fullSequence.length - 1) {
+        landAt(fullSequence[index + 1]);
+      } else if (dx > 0 && index > 0) {
+        landAt(fullSequence[index - 1]);
+      }
+    }, { passive: true });
+  }
 
   window.addEventListener("popstate", () => {
     const id = window.location.hash.slice(1);
