@@ -60,7 +60,7 @@
   const viewModes = Array.from(document.querySelectorAll("[data-dawson-view]"));
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const steps = Array.from(document.querySelectorAll("[data-step]"));
-  const sequence = ["night", "morning", "southeast", "blue-water", "dozen"];
+  const sequence = ["night", "morning", "southeast", "blue-water", "dozen", "guide", "blue-water-mouth", "east-blue-water"];
   const fullSequence = [...sequence];
   const sceneById = new Map(scenes.map((scene) => [scene.id, scene]));
   const trailUi = {
@@ -68,7 +68,10 @@
     morning: { name: "Morning camp", note: "unattacked / unresolved return", next: "southeast" },
     southeast: { name: "Southeast reach", note: "about fifteen miles / route line unresolved", next: "blue-water" },
     "blue-water": { name: "Blue Water", note: "Mayes / Criner / trapping", next: "dozen" },
-    dozen: { name: "A dozen", note: "catch quantity / cold weather", next: null }
+    dozen: { name: "A dozen", note: "catch quantity / cold weather", next: "guide" },
+    guide: { name: "Mayes joins", note: "guide role / Kiamiche accompaniment", next: "blue-water-mouth" },
+    "blue-water-mouth": { name: "Near Blue Water mouth", note: "inspection intent / possible garrison", next: "east-blue-water" },
+    "east-blue-water": { name: "East of Blue Water", note: "capacity / settlement forecast", next: null }
   };
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
@@ -87,7 +90,10 @@
     morning: { ten: "looking around", ground: "You are standing in the camp at first light.", presence: "" },
     southeast: { ten: "following the account", ground: "You are moving with the account toward the next camp.", presence: "" },
     "blue-water": { ten: "at the creek", ground: "You are at the creek with Mayes and Criner in view.", presence: "" },
-    dozen: { ten: "still at Blue Water", ground: "You are still beside the same creek.", presence: "" }
+    dozen: { ten: "still at Blue Water", ground: "You are still beside the same creek.", presence: "" },
+    guide: { ten: "watching roles change", ground: "You are still at Blue Water. Mayes is now carried as a guide.", presence: "" },
+    "blue-water-mouth": { ten: "near the mouth", ground: "You are near the mouth of Blue Water at source-relative scale.", presence: "" },
+    "east-blue-water": { ten: "inside a forecast", ground: "You are inside Dawson's regional forecast east of Blue Water.", presence: "" }
   };
   const sceneState = JSON.parse(JSON.stringify(defaultSceneState));
 
@@ -119,6 +125,21 @@
       { name: "Mr. Mayes", relation: "one of the two men said to have caught but a dozen beaver", note: "The source does not divide the catch between Mayes and Criner." },
       { name: "Mr. Criner", relation: "one of the two men said to have caught but a dozen beaver", note: "The source does not divide the catch between Mayes and Criner." },
       { name: "traveling party", relation: "still in the Blue Water encounter sequence", note: "No new route or complete roster is earned by the catch-quantity sentence itself." }
+    ],
+    guide: [
+      { name: "Mr. Mayes", relation: "employed as a guide", note: "The report earns the guide role here; terms, pay, and exact route remain open." },
+      { name: "Mr. Criner", relation: "induced to accompany the delegation as far as Kiamiche", note: "The source does not make Criner a guide." },
+      { name: "Col. George S. Gaines", relation: "named as one of the two men who induced Mayes and Criner to accompany", note: "This relation does not by itself establish every later movement or employer-of-record detail." },
+      { name: "Col. Reynolds", relation: "named with Gaines in the inducement relation", note: "The source does not collapse Reynolds's role into Mayes's guide employment." },
+      { name: "delegation", relation: "the moving body Mayes and Criner are induced to accompany", note: "The full roster remains a separate count and identity problem." }
+    ],
+    "blue-water-mouth": [
+      { name: "J. L. Dawson", relation: "report writer making the inspection-intent and garrison-prospect statements", note: "Desire to inspect is not proof that he reached or surveyed either mouth in this sentence." },
+      { name: "traveling party", relation: "carried as within a short distance of Blue Water's mouth", note: "The exact composition and point remain unresolved." }
+    ],
+    "east-blue-water": [
+      { name: "J. L. Dawson", relation: "speaker of the capacity and settlement forecast", note: "The judgment is attributed to Dawson; it is not a demographic measurement or mapped boundary." },
+      { name: "the Choctaw Nation", relation: "object of Dawson's capacity / future-settlement statement", note: "This does not establish actual residence, occupancy, ownership, or settlement east of Blue Water at that moment." }
     ]
   };
 
@@ -147,6 +168,21 @@
       "Dawson reports Mayes and Criner had caught but a dozen beaver.",
       "The source does not divide that catch between them.",
       "Dawson says the weather was too cold to promise much further success."
+    ],
+    guide: [
+      "Dawson says Cols. Gaines and Reynolds induced Mayes and Criner to accompany the delegation as far as Kiamiche.",
+      "He says Mr. Mayes was employed as a guide.",
+      "This sentence does not establish the terms of employment, make Criner a guide, or prove arrival at Kiamiche."
+    ],
+    "blue-water-mouth": [
+      "Dawson says the traveling body was within a short distance of the mouth of Blue Water.",
+      "He says he desired to see the mouths of Blue Water and the Washita to report on their local advantages for a possible garrison.",
+      "Inspection intent does not prove arrival, survey, site selection, executive decision, or construction."
+    ],
+    "east-blue-water": [
+      "Dawson says there is ample room for the whole nation in the portion east of Blue Water.",
+      "He predicts that this portion will fill with settlements first.",
+      "This is Dawson's forecast and comparative judgment, not proof of existing settlement or surveyed regional boundaries."
     ]
   };
 
@@ -220,7 +256,7 @@
   }
 
   try {
-    const rememberedState = JSON.parse(window.localStorage.getItem("earthly-hands-dawson-state-v4") || "null");
+    const rememberedState = JSON.parse(window.sessionStorage.getItem("earthly-hands-dawson-state-v4") || "null");
     if (rememberedState && typeof rememberedState === "object") {
       for (const id of Object.keys(sceneState)) {
         if (rememberedState[id] && typeof rememberedState[id] === "object") {
@@ -252,14 +288,17 @@
       morning: "#eee2c8",
       southeast: "#e4dcc3",
       "blue-water": "#d9dfdb",
-      dozen: "#e8dcc0"
+      dozen: "#e8dcc0",
+      guide: "#e8dcc0",
+      "blue-water-mouth": "#d8dfdc",
+      "east-blue-water": "#e1ddca"
     };
     theme.setAttribute("content", colors[id] || colors.threshold);
   }
 
   function saveSceneState() {
     try {
-      window.localStorage.setItem("earthly-hands-dawson-state-v4", JSON.stringify(sceneState));
+      window.sessionStorage.setItem("earthly-hands-dawson-state-v4", JSON.stringify(sceneState));
     } catch (_) {
       // The lived layer still works without storage.
     }
@@ -289,35 +328,6 @@
     return sentence.length <= limit ? sentence : sentence.slice(0, limit - 1).trimEnd() + "…";
   }
 
-  function proseReplyToPatch(raw, question) {
-    const text = String(raw || "").trim();
-    if (!text) return null;
-
-    const paragraphs = text
-      .replace(/^```(?:text|markdown)?\s*/i, "")
-      .replace(/\s*```$/, "")
-      .split(/\n\s*\n/)
-      .map((x) => x.replace(/^#+\s*/, "").trim())
-      .filter(Boolean);
-
-    if (!paragraphs.length) return null;
-
-    const q = String(question || "").toLowerCase();
-    let title = "";
-    if (/\bbeaver\b/.test(q)) title = "What the beaver were for.";
-    else if (/\btrap|trapping|trapper\b/.test(q)) title = "What trapping meant here.";
-    else if (/\bwater|creek|river\b/.test(q)) title = "The water around this ground.";
-    else title = shortState(question, 64).replace(/[?.!]+$/, "");
-
-    return {
-      title,
-      view: paragraphs.join("\n\n"),
-      footing: `Ten · ${sceneById.get(currentId)?.dataset.place || "Shared Country"} · asking the ground`,
-      companion: "Small Door · Mapping Grounds · remote",
-      appearance: experienceShell?.dataset.presence || "",
-      move_to: ""
-    };
-  }
 
   function receiveTenAction(message) {
     const clean = String(message || "").trim();
@@ -366,7 +376,10 @@
     morning: ["night", "southeast"],
     southeast: ["morning", "blue-water"],
     "blue-water": ["southeast", "dozen"],
-    dozen: ["blue-water"]
+    dozen: ["blue-water", "guide"],
+    guide: ["dozen", "blue-water-mouth"],
+    "blue-water-mouth": ["guide", "east-blue-water"],
+    "east-blue-water": ["blue-water-mouth"]
   };
 
   function canMove(from, to) {
@@ -405,11 +418,17 @@
     if (currentId === "morning" && forward && /\b(southeast|trail|onward|ahead)\b/.test(lower)) return "southeast";
     if (currentId === "southeast" && forward && /\b(blue water|creek|camp|onward|ahead)\b/.test(lower)) return "blue-water";
     if (currentId === "blue-water" && forward && /\b(next|onward|ahead|what happened next)\b/.test(lower)) return "dozen";
+    if (currentId === "dozen" && forward && /\b(next|onward|ahead|guide|mayes|what happened next)\b/.test(lower)) return "guide";
+    if (currentId === "guide" && forward && /\b(next|onward|ahead|mouth|blue water|what happened next)\b/.test(lower)) return "blue-water-mouth";
+    if (currentId === "blue-water-mouth" && forward && /\b(next|onward|ahead|east|what happened next)\b/.test(lower)) return "east-blue-water";
 
     if (currentId === "morning" && backward) return "night";
     if (currentId === "southeast" && backward) return "morning";
     if (currentId === "blue-water" && backward) return "southeast";
     if (currentId === "dozen" && backward) return "blue-water";
+    if (currentId === "guide" && backward) return "dozen";
+    if (currentId === "blue-water-mouth" && backward) return "guide";
+    if (currentId === "east-blue-water" && backward) return "blue-water-mouth";
 
     return null;
   }
