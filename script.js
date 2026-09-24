@@ -8,9 +8,8 @@
   const trailConsole = document.querySelector("#trail-console");
   const trailBackControl = document.querySelector("#trail-back-control");
   const trailNextControl = document.querySelector("#trail-next-control");
+  const trailBackLabel = document.querySelector("#trail-back-label");
   const trailNextLabel = document.querySelector("#trail-next-label");
-  const trailPlaceControl = document.querySelector("#trail-place-control");
-  const trailProgress = document.querySelector("#trail-progress");
   const talk = document.querySelector("#ground-talk");
   const talkToggle = document.querySelector("#talk-toggle");
   const talkBody = document.querySelector("#talk-body");
@@ -68,15 +67,15 @@
   const fullSequence = [...sequence];
   const sceneById = new Map(scenes.map((scene) => [scene.id, scene]));
   const trailUi = {
-    night: { next: "morning", nextLabel: "Wait for morning" },
-    morning: { next: "southeast", nextLabel: "Continue southeast" },
-    southeast: { next: "blue-water", nextLabel: "Reach the next camp" },
-    "blue-water": { next: "dozen", nextLabel: "See what the report says next" },
-    dozen: { next: null, nextLabel: "Current cut ends here" }
+    night: { name: "Night camp", next: "morning" },
+    morning: { name: "Morning camp", next: "southeast" },
+    southeast: { name: "Southeast reach", next: "blue-water" },
+    "blue-water": { name: "Blue Water", next: "dozen" },
+    dozen: { name: "The catch", next: null }
   };
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
-  let currentId = "night";
+  let currentId = "morning";
   let asking = false;
 
   function setLamp(isLit) {
@@ -105,28 +104,30 @@
   }
 
   function updateTrailConsole(id) {
-    if (!trailConsole || id === "threshold") return;
-    const target = sceneById.get(id);
+    if (!trailConsole) return;
     const ui = trailUi[id];
-    if (!target || !ui) return;
-    const index = sequence.indexOf(id);
-    trailPlaceControl.textContent = target.dataset.place || "Dawson passage";
-    trailProgress.textContent = String(index + 1) + " / " + String(sequence.length);
-    trailNextLabel.textContent = ui.nextLabel;
+    if (!ui) return;
+
     const previousIndex = fullSequence.indexOf(id) - 1;
     if (previousIndex >= 0) {
+      const previousId = fullSequence[previousIndex];
       trailBackControl.disabled = false;
-      trailBackControl.dataset.go = fullSequence[previousIndex];
+      trailBackControl.dataset.go = previousId;
+      trailBackLabel.textContent = trailUi[previousId].name;
     } else {
       trailBackControl.disabled = true;
       trailBackControl.dataset.go = "";
+      trailBackLabel.textContent = "";
     }
+
     if (ui.next) {
       trailNextControl.disabled = false;
       trailNextControl.dataset.go = ui.next;
+      trailNextLabel.textContent = trailUi[ui.next].name;
     } else {
       trailNextControl.disabled = true;
       trailNextControl.dataset.go = "";
+      trailNextLabel.textContent = "";
     }
   }
 
@@ -395,13 +396,13 @@
   let initialId = window.location.hash.slice(1);
   if (!fullSequence.includes(initialId)) {
     try {
-      initialId = window.localStorage.getItem("earthly-hands-footing") || "night";
+      initialId = window.localStorage.getItem("earthly-hands-footing") || "morning";
     } catch (_) {
       initialId = "night";
     }
   }
 
-  if (!fullSequence.includes(initialId)) initialId = "night";
+  if (!fullSequence.includes(initialId)) initialId = "morning";
   currentId = initialId;
   setLamp(true);
   history.replaceState({ place: initialId }, "", `#${initialId}`);
