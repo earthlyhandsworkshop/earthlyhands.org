@@ -516,7 +516,12 @@
         body: JSON.stringify({
           message: sceneRequest,
           place: currentId,
-          history: conversation.slice(-6),
+          // The current screen already carries the last model-shaped scene.
+          // Keep only Ten's recent questions as runtime continuity so we do
+          // not pay to resend the same rendered answer twice.
+          history: conversation
+            .filter((item) => item.role === "user")
+            .slice(-2),
         }),
       });
 
@@ -547,8 +552,8 @@
         }
       }
 
-      conversation.push({ role: "user", content: clean }, { role: "assistant", content: data.reply.trim() });
-      if (conversation.length > 12) conversation.splice(0, conversation.length - 12);
+      conversation.push({ role: "user", content: clean });
+      if (conversation.length > 4) conversation.splice(0, conversation.length - 4);
     } catch (error) {
       console.error("Shared Country listening error:", error);
       const scene = sceneById.get(currentId);
