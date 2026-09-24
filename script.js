@@ -368,13 +368,13 @@
       state.ground = continuityGround(currentId);
     } else if (/\b(wait|sit|stay|rest)\b/.test(lower)) {
       state.ten = "staying put";
-      state.ground = defaultSceneState[currentId].ground;
+      state.ground = continuityGround(currentId);
     } else if (/\b(look|watch|listen|notice)\b/.test(lower)) {
       state.ten = "looking around";
-      state.ground = defaultSceneState[currentId].ground;
+      state.ground = continuityGround(currentId);
     } else {
       state.ten = "asking the ground";
-      state.ground = defaultSceneState[currentId].ground;
+      state.ground = continuityGround(currentId);
     }
     saveSceneState();
     renderSceneState(currentId);
