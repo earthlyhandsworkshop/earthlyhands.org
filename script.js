@@ -5,6 +5,12 @@
   const lanternNote = document.querySelector(".lantern-note");
   const where = document.querySelector("#where-label");
   const footingPlace = document.querySelector("#footing-place");
+  const trailConsole = document.querySelector("#trail-console");
+  const trailBackControl = document.querySelector("#trail-back-control");
+  const trailNextControl = document.querySelector("#trail-next-control");
+  const trailNextLabel = document.querySelector("#trail-next-label");
+  const trailPlaceControl = document.querySelector("#trail-place-control");
+  const trailProgress = document.querySelector("#trail-progress");
   const talk = document.querySelector("#ground-talk");
   const talkToggle = document.querySelector("#talk-toggle");
   const talkBody = document.querySelector("#talk-body");
@@ -60,6 +66,14 @@
   const steps = Array.from(document.querySelectorAll("[data-step]"));
   const sequence = ["report", "night", "morning", "southeast", "blue-water", "dozen"];
   const fullSequence = ["threshold", ...sequence];
+  const trailUi = {
+    report: { next: "night", nextLabel: "Follow the trail" },
+    night: { next: "morning", nextLabel: "Wait for morning" },
+    morning: { next: "southeast", nextLabel: "Continue southeast" },
+    southeast: { next: "blue-water", nextLabel: "Reach the next camp" },
+    "blue-water": { next: "dozen", nextLabel: "See what the report says next" },
+    dozen: { next: "threshold", nextLabel: "Return to the front edge" }
+  };
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
   let currentId = "threshold";
@@ -68,10 +82,39 @@
   function setLamp(isLit) {
     document.body.dataset.lamp = isLit ? "lit" : "unlit";
     lamp.setAttribute("aria-pressed", String(isLit));
-    lampLabel.textContent = isLit ? "Extinguish the lantern" : "Light the lantern";
+    lampLabel.textContent = "Enter the Dawson passage";
     if (lanternNote) lanternNote.hidden = isLit;
+    if (trailConsole) trailConsole.hidden = !isLit;
     talk.hidden = !isLit;
+  }
 
+  function setGround(id) {
+    document.body.dataset.ground = id;
+    const theme = document.querySelector('meta[name="theme-color"]');
+    if (!theme) return;
+    const colors = {
+      threshold: "#e7dfd0",
+      report: "#2a2720",
+      night: "#12171c",
+      morning: "#eee2c8",
+      southeast: "#e4dcc3",
+      "blue-water": "#d9dfdb",
+      dozen: "#e8dcc0"
+    };
+    theme.setAttribute("content", colors[id] || colors.threshold);
+  }
+
+  function updateTrailConsole(id) {
+    if (!trailConsole || id === "threshold") return;
+    const target = document.getElementById(id);
+    const ui = trailUi[id];
+    if (!target || !ui) return;
+    const index = sequence.indexOf(id);
+    trailPlaceControl.textContent = target.dataset.place || "Dawson passage";
+    trailProgress.textContent = String(index + 1) + " / " + String(sequence.length);
+    trailNextLabel.textContent = ui.nextLabel;
+    trailBackControl.dataset.go = fullSequence[Math.max(0, fullSequence.indexOf(id) - 1)];
+    trailNextControl.dataset.go = ui.next;
   }
 
   function updatePlace(target) {
@@ -118,6 +161,8 @@
   function showScene(target, direction = "forward") {
     const isThreshold = target.id === "threshold";
     closeDepth();
+    setGround(target.id);
+    updateTrailConsole(target.id);
 
     if (!isThreshold && experienceMount && !experienceMount.contains(target)) {
       experienceMount.append(target);
@@ -264,22 +309,27 @@
   }
 
   lamp.addEventListener("click", () => {
-    const isLit = document.body.dataset.lamp !== "lit";
-
-    if (isLit) {
-      setLamp(true);
-      if (currentId === "threshold") {
-        landAt("report");
-      } else {
-        const target = document.getElementById(currentId);
-        if (target) showScene(target, "forward");
-      }
+    if (currentId === "threshold") {
+      landAt("report");
       return;
     }
-
-    setLamp(false);
-    closeTalk();
+    const target = document.getElementById(currentId);
+    if (target) showScene(target, "forward");
   });
+
+  if (trailBackControl) {
+    trailBackControl.addEventListener("click", () => {
+      const target = trailBackControl.dataset.go;
+      if (target) landAt(target);
+    });
+  }
+
+  if (trailNextControl) {
+    trailNextControl.addEventListener("click", () => {
+      const target = trailNextControl.dataset.go;
+      if (target) landAt(target);
+    });
+  }
 
   document.querySelectorAll("[data-depth]").forEach((control) => {
     control.addEventListener("click", () => openDepthPanel(control));
@@ -362,6 +412,14 @@
     : `#${initialId}`;
   history.replaceState({ place: initialId }, "", initialUrl);
   showScene(document.getElementById(initialId), "forward");
+
+  const specimenIndex = document.querySelector(".specimen-index");
+  if (specimenIndex) {
+    [...specimenIndex.children]
+      .filter((node) => node.matches?.("[data-touched]"))
+      .sort((a, b) => Date.parse(b.dataset.touched) - Date.parse(a.dataset.touched))
+      .forEach((node) => specimenIndex.append(node));
+  }
 
   steps.forEach((step) => step.setAttribute("aria-live", "polite"));
 })();
