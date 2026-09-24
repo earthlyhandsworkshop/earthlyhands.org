@@ -626,6 +626,8 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
 .key-row strong{font-size:1rem}
 .key hr{border:0;border-top:1px solid var(--rule);margin:.7rem 0}
 .key p{margin:.55rem 0 0;color:var(--muted);font:.76rem/1.45 var(--mono)}
+.key-body h3{margin:.2rem 0 .45rem;font:400 clamp(1.15rem,2vw,1.65rem)/1.05 var(--serif)}
+.key-seal{width:8rem;aspect-ratio:1;margin:.15rem auto .9rem;border:3px double var(--rule);border-radius:50%;display:grid;place-items:center;transform:rotate(-4deg);font:700 1rem/1 var(--mono);letter-spacing:.06em}
 .detail{
   margin-top:.8rem;
   border:1px solid var(--rule);
@@ -1351,45 +1353,30 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
         </button>
       </div>
 
-      <aside class="key">
+      <aside class="key" id="key-points" aria-live="polite">
         <div class="key-head"><h2>Key points</h2></div>
         <div class="key-body">
-          <div class="key-row"><span>administrative join present</span><strong>✓</strong></div>
-          <div class="key-row"><span>source bridge not recovered</span><strong>?</strong></div>
-          <div class="key-row"><span>comparison ≠ identity</span><strong>≠</strong></div>
-          <div class="key-row"><span>leave identity open</span><strong>○</strong></div>
-          <hr>
-          <p>An administrative identity act may permit propositions to travel inside the government record. The Workshop does not inherit those transfers automatically.</p>
+          <div class="key-seal" id="key-seal">IDENTICAL</div>
+          <h3 id="key-title">Commission identity proposition</h3>
+          <p id="key-copy">The Commission can issue an identity relation. That administrative act does not itself close the source bridges below.</p>
+          <div class="bridge-facts" id="key-facts">
+            <div class="bridge-fact"><b>One side</b><span id="key-left">Administrative relation: IDENTICAL.</span></div>
+            <div class="bridge-fact"><b>Other side</b><span id="key-right">The source carriers remain distinct.</span></div>
+            <div class="bridge-fact"><b>What would change this</b><span id="key-need">Test each proposition separately against a source-controlled bridge.</span></div>
+          </div>
+          <div class="bridge-state" id="key-state">administrative relation ≠ recovered historical bridge</div>
         </div>
       </aside>
     </section>
 
-    <section class="detail" id="detail" aria-live="polite">
-      <div class="detail-id">
-        <p class="source-label">Second control</p>
-        <h2 id="detail-title">Nothing joined yet.</h2>
+    <section class="properties properties-second" id="properties-second" aria-live="polite">
+      <div class="properties-label">
+        <span>Properties</span>
+        <strong id="property-title-second">IDENTICAL</strong>
       </div>
-      <div class="detail-body">
-        <p id="detail-copy">Choose a proposition to descend toward its source, press IDENTICAL to perform the administrative gate, or press a [ ? ] line to inspect the missing bridge.</p>
-        <p class="bridge-label" id="detail-state">attention state · threshold</p>
-        <button class="detail-receive-toggle" id="detail-receive-toggle" type="button" hidden>I have something for this</button>
-        <form class="bridge-upload-form detail-receive" id="bridge-upload-form" hidden>
-          <label>File
-            <input id="bridge-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required>
-          </label>
-          <label>One sentence — optional
-            <textarea id="bridge-note" maxlength="1200" placeholder="What does this show?"></textarea>
-          </label>
-          <div class="detail-kind-row" id="action-choices">
-            <button class="action-choice" type="button" data-kind="piece">piece</button>
-            <button class="action-choice" type="button" data-kind="leg">leg</button>
-            <button class="action-choice" type="button" data-kind="brace">brace</button>
-            <button class="action-choice" type="button" data-kind="full bridge">full bridge</button>
-          </div>
-          <button type="submit">Send to Receiving</button>
-          <p class="bridge-receive-status" id="bridge-receive-status">Original preserved privately. It does not become public evidence automatically.</p>
-        </form>
-      </div>
+      <div class="properties-copy"><span class="property-long" id="property-copy-second">Administrative identity relation active. Touch an unresolved proposition line to inspect its source-local properties.</span></div>
+      <div class="properties-state" id="property-state-second">administrative state · active</div>
+    </section>
     </section>
   </main>
 
@@ -1403,32 +1390,43 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
 <script>
 (()=>{
 const body=document.body;
-const detailTitle=document.getElementById("detail-title");
-const detailCopy=document.getElementById("detail-copy");
-const detailState=document.getElementById("detail-state");
-const detailReceiveToggle=document.getElementById("detail-receive-toggle");
 const card=document.getElementById("identical-card");
 const pressMark=document.getElementById("press-mark");
 const joinState=document.getElementById("join-state");
 const gateResult=document.getElementById("gate-result");
+const passCard=document.getElementById("pass-card");
+const stageTwo=document.getElementById("stage-two");
 const entries=[...document.querySelectorAll(".entry")];
 const bridges=[...document.querySelectorAll(".pressure-row")];
 const svg=document.getElementById("connectors");
 const upper=document.getElementById("upper");
-let activeBridgeId="";
-let activeBridgeTitle="";
+
+const propertyTitle=document.getElementById("property-title");
+const propertyCopy=document.getElementById("property-copy");
+const propertyState=document.getElementById("property-state");
+const propertyTitleSecond=document.getElementById("property-title-second");
+const propertyCopySecond=document.getElementById("property-copy-second");
+const propertyStateSecond=document.getElementById("property-state-second");
+
+const keySeal=document.getElementById("key-seal");
+const keyTitle=document.getElementById("key-title");
+const keyCopy=document.getElementById("key-copy");
+const keyLeft=document.getElementById("key-left");
+const keyRight=document.getElementById("key-right");
+const keyNeed=document.getElementById("key-need");
+const keyState=document.getElementById("key-state");
 
 const source={
  robin:{title:"Robin Bell",copy:"Jane Bell, testifying on 23 March 1903, answers that her father's name was Robin Bell. When asked specifically whether his name was Robin or Robert Bell, she again answers Robin Bell. Later examiner and administrative language on the same examination uses Robert Bell. Preserve the speaker split.",state:"source descent · Jane witness voice"},
  susie:{title:"Susie Bell",copy:"In that same 1903 examination Jane names her mother Susie Bell. This is Jane's witness-given family proposition. It is not converted into Yimma by the later Commission identity act.",state:"source descent · Jane witness voice"},
- "160":{title:"about 160 acres",copy:"Jane says her father got government land at Noxapater in Neshoba County, estimates about 160 acres, says she does not know whether it was Article XIV land, and says Wash Bell owns that land and lives on it. Approximate present-land testimony is not an original patent acreage.",state:"source descent · Jane land testimony"},
- "jane-wash":{title:"Jane / Wash",copy:"Jane identifies Wash Bell as her full brother. She says Wash owns and lives on the government land she associates with their father. Elsewhere the consolidated body represents Wash as owning part of Robert Bell's government land; the later decision places Wash on Section 4. Those later administrative propositions create pressure, not a recovered conveyance chain.",state:"source descent · family / administrative layers"},
- marris:{title:"Dibbin Marris",html:'<div class="property-stamp"><b>4 Apr 1902</b><span>Seale, Mississippi</span></div><div class="property-qa"><b>Commission</b><span>“What was her name?”</span><b>Record</b><strong>Robert Bell.</strong></div><div class="carrier-chain"><span class="carrier-node"><b>Dibbin Marris</b><span>Choctaw witness · interpreted utterance</span><strong>“Robert Bell”</strong></span><span class="carrier-node"><b>Oscar Billey</b><span>Official Interpreter</span><strong>Robert Bell</strong></span><span class="carrier-node"><b>R. S. Streit</b><span>reporter / certifier</span><strong>Robert Bell</strong></span><span class="carrier-node"><b>Surviving official record</b><span>certified English Q/A</span><strong>Robert Bell</strong></span></div>',copy:"",state:"ORIGINAL SPOKEN FORM NOT RECOVERED · SURVIVING CERTIFIED ENGLISH: ROBERT BELL"},
+ "160":{title:"about 160 acres",copy:"Jane says her father got government land at Noxapater in Neshoba County, estimates about 160 acres, says she does not know whether it was Article XIV land, and says Wash Bell owns that land and lives on it. Approximate later testimony is not the same object as an original patent acreage.",state:"source descent · Jane land testimony"},
+ "jane-wash":{title:"Jane / Wash",copy:"Jane identifies Wash Bell as her full brother and links him to the government land she associates with their father. Later administrative propositions can create pressure without supplying a recovered conveyance chain.",state:"source descent · family / administrative layers"},
+ marris:{title:"Dibbin Marris",html:'<div class="property-stamp"><b>4 Apr 1902</b><span>Seale, Mississippi</span></div><div class="property-qa"><b>Commission</b><span>“What was her name?”</span><b>Record</b><strong>Robert Bell.</strong></div><div class="carrier-chain"><span class="carrier-node"><b>Dibbin Marris</b><span>witness utterance · interpreted</span></span><span class="carrier-node"><b>Oscar Billey</b><span>Official Interpreter</span></span><span class="carrier-node"><b>R. S. Streit</b><span>reporter / certifier</span></span><span class="carrier-node"><b>Surviving official record</b><span>certified English Q/A</span><strong>Robert Bell</strong></span></div>',copy:"",state:"ORIGINAL SPOKEN FORM NOT RECOVERED · SURVIVING CERTIFIED ENGLISH: ROBERT BELL"},
  robert:{title:"Robert Bell",copy:"The older Article XIV record body contains a source-local Robert Bell occurrence used by later federal decision-makers. The Workshop keeps this occurrence distinct from Jane's Robin Bell unless an independent person bridge is earned.",state:"source descent · older Article XIV record body"},
  yimma:{title:"Yimma",copy:"The 13 May 1902 Office of Indian Affairs report represents an older evidence carrier, record book No. 102 p.520, as saying Robert Bell had a wife named Yimma and had been married about six months before the treaty. The direct record-book face remains unrecovered.",state:"source descent · 1902 Office representation of older testimony"},
  "694":{title:"694.96 acres",copy:"The 14 December 1846 Article XIV patent grants Robert Bell the surveyed Section 4 tract containing 694.96 acres. The patent proves that tract and patent occurrence. It does not by itself identify Jane Bell's father or explain Jane's later estimate of about 160 acres.",state:"source descent · 1846 patent"},
- section4:{title:"Section 4",copy:"The patent locates the Robert Bell tract at Section 4, Township 12 North, Range 12 East, Choctaw Meridian. The later Wash/Jane decision uses Section 4 in its own identity and land treatment. Exact parcel continuity still requires the underlying land chain.",state:"source descent · tract address"},
- murray:{title:"Murray–Vroom / patent",copy:"Later Commission and Office work reaches backward into Murray–Vroom / Court of Claims / patent materials to make identity decisions. Those historical carriers can be compared and traced without converting the agency's identity act into Workshop historical truth.",state:"source descent · administrative carrier stack"}
+ section4:{title:"Section 4",copy:"The patent locates the Robert Bell tract at Section 4, Township 12 North, Range 12 East, Choctaw Meridian. Later Commission use of Section 4 does not itself recover the intervening parcel chain.",state:"source descent · tract address"},
+ murray:{title:"Murray–Vroom / patent",copy:"Later Commission and Office work reaches backward into Murray–Vroom / Court of Claims / patent materials to make identity decisions. Those carriers can be traced without converting the agency's identity act into Workshop historical truth.",state:"source descent · administrative carrier stack"}
 };
 
 const bridge={
@@ -1451,7 +1449,7 @@ const bridge={
  name:{
    title:"Robert ? Robin",
    copy:"The record carries both name forms through different speakers and layers.",
-   left:"Older Article XIV carriers and Marris's certified translated record carry Robert Bell.",
+   left:"Older Article XIV carriers and Dibbin Marris's certified translated record carry Robert Bell.",
    right:"Jane names her father Robin Bell twice, including after being asked Robin or Robert.",
    need:"A source explaining the relation between these name forms without borrowing the Commission's later identity act as the explanation.",
    state:"naming / person continuity"
@@ -1479,86 +1477,48 @@ function clearActive(){
  bridges.forEach(x=>x.classList.remove("is-active"));
  draw();
 }
-function showDetail(title,copy,state){
- detailTitle.textContent=title;
- detailCopy.textContent=copy;
- detailState.textContent=state;
-}
-function showProperty(title,copy,state,html=""){
- const propertyTitle=document.getElementById("property-title");
- const propertyCopy=document.getElementById("property-copy");
- const propertyState=document.getElementById("property-state");
-const propertyTitleSecond=document.getElementById("property-title-second");
-const propertyCopySecond=document.getElementById("property-copy-second");
-const propertyStateSecond=document.getElementById("property-state-second");
-const stageTwo=document.getElementById("stage-two");
-const keySeal=document.getElementById("key-seal");
+function setProperties(title,copy,state,html=""){
  propertyTitle.textContent=title;
- if(html){propertyCopy.innerHTML=html}else{propertyCopy.textContent=copy}
+ propertyCopy.innerHTML=html||copy;
  propertyState.textContent=state;
+ propertyTitleSecond.textContent=title;
+ propertyCopySecond.innerHTML=html||copy;
+ propertyStateSecond.textContent=state;
 }
+function setKey(d){
+ keySeal.textContent="?";
+ keyTitle.textContent=d.title;
+ keyCopy.textContent=d.copy;
+ keyLeft.textContent=d.left;
+ keyRight.textContent=d.right;
+ keyNeed.textContent=d.need;
+ keyState.textContent="still unresolved · "+d.state;
+}
+function setIdenticalKey(){
+ keySeal.textContent="IDENTICAL";
+ keyTitle.textContent="Commission identity proposition";
+ keyCopy.textContent="The Commission can issue an identity relation. That administrative act does not itself close the source bridges below.";
+ keyLeft.textContent="Administrative relation: IDENTICAL.";
+ keyRight.textContent="The source carriers remain distinct.";
+ keyNeed.textContent="Test each proposition separately against a source-controlled bridge.";
+ keyState.textContent="administrative relation ≠ recovered historical bridge";
+}
+
 entries.forEach(btn=>btn.addEventListener("click",()=>{
  clearActive();
  btn.classList.add("is-active");
  const d=source[btn.dataset.entry];
- showProperty(d.title,d.copy,d.state,d.html||"");
+ setProperties(d.title,d.copy,d.state,d.html||"");
  draw(btn.dataset.entry);
 }));
+
 bridges.forEach(btn=>btn.addEventListener("click",()=>{
  clearActive();
  btn.classList.add("is-active");
  const d=bridge[btn.dataset.bridge];
- activeBridgeId=btn.dataset.bridge;
- activeBridgeTitle=d.title;
- activeBridgeKind="";
- showDetail(d.title,d.need||d.copy,"still unresolved · "+d.state);
- detailReceiveToggle.hidden=false;
- bridgeUploadForm.hidden=true;
+ setKey(d);
+ setProperties(d.title,d.copy,"unresolved · "+d.state);
 }));
-detailReceiveToggle.addEventListener("click",()=>{
- if(!activeBridgeId)return;
- const opening=bridgeUploadForm.hidden;
- bridgeUploadForm.hidden=!opening;
- detailReceiveToggle.textContent=opening?"Close Receiving":"I have something for this";
-});
-actionChoices.querySelectorAll("[data-kind]").forEach(btn=>btn.addEventListener("click",()=>{
- activeBridgeKind=btn.dataset.kind;
- bridgeReceiveStatus.textContent="You called this a "+activeBridgeKind+". Original preserved privately; review decides what it becomes.";
-}));
-bridgeUploadForm.addEventListener("submit",async e=>{
- e.preventDefault();
- if(!activeBridgeId||!receivingUrl){
-   bridgeReceiveStatus.textContent=receivingUrl?"Choose a bridge first.":"Receiving endpoint is not configured.";
-   return;
- }
- const file=bridgeFile.files?.[0];
- if(!file){bridgeReceiveStatus.textContent="Choose one file.";return}
- const button=bridgeUploadForm.querySelector('button[type="submit"]');
- button.disabled=true;
- bridgeReceiveStatus.textContent="Receiving…";
- const data=new FormData();
- data.append("file",file);
- const note=bridgeNote.value.trim();
- data.append("description",[
-   "ARTICLE XIV IDENTITY GATE — BRIDGE RETURN",
-   "Bridge: "+activeBridgeTitle,
-   "Bridge ID: "+activeBridgeId,
-   "Contributor calls it: "+(activeBridgeKind||"unspecified"),
-   note?"Contributor note: "+note:""
- ].filter(Boolean).join("\n"));
- data.append("provenance","Submitted from /experiments/article-xiv-identity-gate/ at unresolved bridge "+activeBridgeId+".");
- try{
-   const res=await fetch(receivingUrl,{method:"POST",body:data});
-   const out=await res.json().catch(()=>({}));
-   if(!res.ok)throw new Error(out.error||("HTTP "+res.status));
-   bridgeReceiveStatus.textContent="RECEIVED · "+out.receipt+" · received for review.";
-   bridgeUploadForm.reset();
- }catch(err){
-   bridgeReceiveStatus.textContent="Not received · "+err.message;
- }finally{
-   button.disabled=false;
- }
-});
 
 card.addEventListener("click",()=>{
  const open=!body.classList.contains("gate-open");
@@ -1567,32 +1527,25 @@ card.addEventListener("click",()=>{
  joinState.textContent=open?"present":"available";
  gateResult.textContent=open?"identification proceeds":"identity relation not yet performed";
  pressMark.textContent=open?"passed":"press";
+ passCard.textContent=open?"Commission pass · IDENTICAL · issued":"Commission pass · not yet issued";
  if(open){
-   document.getElementById("pass-card").textContent="Commission pass · IDENTICAL · issued";
-   showProperty("IDENTICAL — Commission pass","The agency-level identity relation is now active. The unresolved proposition lines below do not change with it.","administrative state · SAME / source bridges · OPEN");
-   showDetail("IDENTICAL — administrative act performed","The agency relation is active. The unresolved proposition lines remain unresolved.","administrative state · SAME / source bridges · OPEN");
+   setIdenticalKey();
+   setProperties("IDENTICAL — Commission pass","The agency-level identity relation is active. The unresolved proposition lines remain open.","administrative state · SAME / source bridges · OPEN");
+   requestAnimationFrame(()=>stageTwo.scrollIntoView({behavior:"smooth",block:"start"}));
  }else{
-   document.getElementById("pass-card").textContent="Commission pass · not yet issued";
-   showProperty("Administrative card returned","The gate is closed again. The two record bodies remain available for comparison.","administrative state · available");
-   showDetail("Administrative card returned","The gate is closed again. The record bodies remain available for comparison.","administrative state · available");
+   setProperties("Touch a record object.","Robin, Yimma, land, Dibbin, the patent — this panel changes immediately when you choose one.","attention · threshold");
  }
 });
 
 function centerPoint(el,side){
  const r=el.getBoundingClientRect();
  const u=upper.getBoundingClientRect();
- return {
-  x:(side==="left"?r.right:r.left)-u.left,
-  y:r.top+r.height/2-u.top
- };
+ return {x:(side==="left"?r.right:r.left)-u.left,y:r.top+r.height/2-u.top};
 }
 function cardPoint(side,offset){
  const r=card.getBoundingClientRect();
  const u=upper.getBoundingClientRect();
- return {
-  x:(side==="left"?r.left:r.right)-u.left,
-  y:r.top+r.height*(offset)-u.top
- };
+ return {x:(side==="left"?r.left:r.right)-u.left,y:r.top+r.height*offset-u.top};
 }
 function path(a,b){
  const bend=Math.max(42,Math.abs(b.x-a.x)*.38);
