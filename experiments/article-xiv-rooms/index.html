@@ -70,7 +70,7 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  gap:clamp(2.5rem,7vw,8rem);align-items:center;padding:7vh 0
 }
 .chamber+.chamber{margin-top:26vh}
-.room-index{align-self:start;position:sticky;top:18vh}
+.room-index{align-self:center;position:sticky;top:18vh}
 .room-tag{margin:0 0 .9rem;color:var(--rust);font-size:.62rem}
 .room-index h2{margin:0;max-width:9ch;font-size:clamp(2.7rem,5.5vw,5.8rem);font-weight:400;line-height:.88;letter-spacing:-.048em}
 .room-index p{max-width:20rem;margin:1.5rem 0 0;color:var(--faint);font-size:.9rem}
@@ -101,6 +101,9 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  overflow:hidden
 }
 .ghost-room div{max-width:36rem;margin:auto}
+.proposed-wing{align-items:start}
+.proposed-wing .room-index{align-self:start;position:static;padding-top:clamp(1.8rem,5vw,3.6rem)}
+.proposed-wing .ghost-room>div{margin:0 auto}
 .ghost-label{margin:0 0 1rem;color:#8a8174;font-size:.62rem}
 .ghost-room h3{margin:0;font-size:clamp(2.4rem,5vw,5rem);font-weight:400;line-height:.9;letter-spacing:-.045em;text-wrap:balance}
 .ghost-room p{margin:1.6rem auto 0;color:var(--faint);max-width:27rem;text-wrap:pretty}
@@ -116,11 +119,11 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
 .bridge{
  min-height:88svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:8vh 1rem
 }
-.bridge-inner{max-width:52rem}
+.bridge-inner{max-width:58rem}
 .family-voice{color:var(--rust)}
 .federal-voice{color:var(--paper)}
 .bridge .small{margin:0 0 1rem;color:var(--rust);font-size:.62rem}
-.bridge h2{margin:0;font-size:clamp(3rem,6.2vw,6rem);font-weight:400;line-height:.92;letter-spacing:-.045em;text-wrap:balance}
+.bridge h2{margin:0 auto;max-width:16ch;font-size:clamp(2.7rem,5.2vw,4.9rem);font-weight:400;line-height:.96;letter-spacing:-.04em;text-wrap:balance}
 .bridge p{max-width:35rem;margin:1.5rem auto 0;color:var(--faint)}
 .unrecovered{display:inline-block;margin-top:2.5rem;padding:.5rem .75rem;border:1px solid rgba(233,224,207,.22);font:.62rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#8f8779}
 
@@ -131,8 +134,9 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  content:"";position:absolute;left:var(--treaty-x);top:0;bottom:0;width:1px;
  background:rgba(29,27,22,.16)
 }
-.cases-head{max-width:75rem;margin:0 auto 4rem}
-.cases-head .kicker{color:#7e563e}.cases-head h2{margin:0;max-width:12ch;font-size:clamp(3.3rem,7vw,7rem);font-weight:400;line-height:.88;letter-spacing:-.055em}
+.cases-head{max-width:78rem;margin:0 auto 4.5rem;text-align:center}
+.cases-head .kicker{color:#7e563e}
+.cases-head h2{margin:0 auto;max-width:18ch;font-size:clamp(3rem,5.8vw,5.9rem);font-weight:400;line-height:.92;letter-spacing:-.048em;text-wrap:balance}
 .case-grid{max-width:88rem;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem)}
 .case{
  min-height:34rem;position:relative;padding:clamp(1.4rem,3vw,2.7rem);border:1px solid var(--line2);background:rgba(255,255,255,.14)
@@ -171,15 +175,17 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
 .overlay-body{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--line2)}
 .overlay-body p{margin:0}.overlay-body p+p{margin-top:1rem}
 .end{
- position:relative;min-height:85svh;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(18rem,.9fr);
- gap:clamp(3rem,8vw,9rem);align-items:center;padding:clamp(5rem,10vh,9rem) clamp(1.25rem,6vw,7rem)
+ position:relative;min-height:85svh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(18rem,.95fr);
+ gap:clamp(2rem,5vw,5rem);align-items:center;padding:clamp(5rem,10vh,9rem) clamp(1.25rem,6vw,7rem)
 }
 .end::before{
  content:"";position:absolute;left:var(--treaty-x);top:0;bottom:0;width:1px;
  background:rgba(233,224,207,.14)
 }
 .end>*{position:relative;z-index:1}
-.end h2{margin:0;max-width:12ch;font-size:clamp(3.2rem,6.8vw,6.8rem);font-weight:400;line-height:.9;letter-spacing:-.05em;text-wrap:balance}
+.end h2{margin:0;max-width:14ch;font-size:clamp(3rem,5.6vw,5.8rem);font-weight:400;line-height:.94;letter-spacing:-.045em;text-wrap:balance}
+.end-machine{display:block;color:var(--paper)}
+.end-source{display:block;margin-top:.22em;color:var(--rust)}
 .end-copy{max-width:30rem;color:var(--faint)}.end-copy p{margin:0}.end-copy p+p{margin-top:1rem}
 .footmark{margin-top:2.4rem!important;color:rgba(233,224,207,.5);font-size:.6rem}
 @media(max-width:62rem){
@@ -199,8 +205,10 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
  .ghost-door{margin-top:7rem;margin-bottom:8rem}
  .room::before{left:9%;right:4%}.room::after{right:10%}
  .bridge{min-height:100svh}
+ .cases-head{margin-bottom:3.5rem;padding:0 .35rem}
+ .cases-head h2{font-size:clamp(2.9rem,13vw,4.6rem)}
  .cases{padding:5rem .85rem 5rem 1.45rem}.case{min-height:30rem;padding:1.2rem}
- .end{padding:5rem 1rem 7rem}.end h2{font-size:clamp(3.4rem,17vw,5.3rem)}
+ .end{padding:5rem 1rem 7rem}.end h2{font-size:clamp(3.1rem,15vw,4.8rem)}
 }
 
 @media (max-height:34rem) and (orientation:landscape){
@@ -219,12 +227,13 @@ h1{margin:0;max-width:10ch;font-size:clamp(4.4rem,10vw,9.2rem);font-weight:400;l
   .ghost-room h3{font-size:clamp(2.2rem,5vw,3.8rem)}
   .ghost-door{margin-top:4.5rem;margin-bottom:5.5rem}
   .bridge{min-height:100svh;padding:10vh 3rem}
-  .bridge h2{font-size:clamp(2.8rem,6vw,4.8rem)}
+  .bridge h2{font-size:clamp(2.5rem,5.2vw,4.2rem)}
+  .cases-head h2{font-size:clamp(2.8rem,5vw,4.6rem)}
   .cases{padding:5rem 2.5rem}
   .case-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
   .case h3{font-size:clamp(2.3rem,4.2vw,3.7rem)}
   .end{min-height:100svh;grid-template-columns:1fr 1fr;padding:5rem 2.5rem}
-  .end h2{font-size:clamp(3rem,6vw,5.2rem)}
+  .end h2{font-size:clamp(2.8rem,5.2vw,4.6rem)}
 }
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -274,7 +283,7 @@ body{font-size:1.08rem}
   .ghost-label{font-size:.82rem}
   .ghost-room p{font-size:1.14rem;line-height:1.65}
   .bridge .small{font-size:.82rem}
-  .bridge h2{font-size:clamp(2.9rem,14vw,4.6rem)}
+  .bridge h2{font-size:clamp(2.7rem,12.5vw,4.1rem)}
   .bridge p{font-size:1.14rem;line-height:1.65}
   .unrecovered{font-size:.8rem;line-height:1.4}
   .case-label{font-size:.82rem}
@@ -386,7 +395,7 @@ body{font-size:1.08rem}
       </div>
     </section>
 
-    <section class="chamber">
+    <section class="chamber proposed-wing">
       <div class="room-index">
         <p class="room-tag">1901 · proposed wing</p>
         <h2>Designed. Not opened.</h2>
@@ -421,7 +430,7 @@ body{font-size:1.08rem}
     <section class="bridge">
       <div class="bridge-inner">
         <p class="small">A family claim enters federal machinery</p>
-        <h2><span class="family-voice">The family claimed Choctaw identity through its own people and family line.</span> <span class="federal-voice">Federal actors routed and tested that claim through Mississippi-Choctaw and Article XIV machinery.</span></h2>
+        <h2><span class="family-voice">The family claimed Choctaw identity.</span> <span class="federal-voice">Federal actors tested that claim through Mississippi-Choctaw and Article XIV machinery.</span></h2>
         <p>The file then shows Commission transmittal, Indian Affairs review and recommendation, and Interior review and affirmance. We know that review happened. What remains open is the contemporaneous rule, instruction, or administrative authority that made that merits review proper.</p>
         <span class="unrecovered">review occurred · authority not yet recovered</span>
       </div>
@@ -467,7 +476,7 @@ body{font-size:1.08rem}
 </section>
 
 <section class="end">
-  <h2>The machine changes. The source distinctions remain.</h2>
+  <h2><span class="end-machine">The machine changes.</span><span class="end-source">The source distinctions remain.</span></h2>
   <div class="end-copy">
     <p>Treaty promise. Commission theory. Statutory jurisdiction. Evidentiary rule. Case decision. Family testimony. Government characterization. Workshop inference.</p>
     <p>They may touch. They do not become one thing because the interface places them near one another.</p>
