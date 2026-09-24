@@ -608,3 +608,38 @@ body[data-ground="night"] .experience-shell[data-presence="fire"]{
     radial-gradient(circle at 20% 82%,rgba(220,139,73,.18),transparent 20rem),
     #15191d;
 }
+
+
+.experience-shell[data-presence="night"]{
+  --scene-bg:#171816;
+  --scene-ink:#f0ece2;
+  --scene-muted:#a8a397;
+  --scene-rule:rgba(240,236,226,.18);
+  --scene-accent:#d19a69;
+  background:
+    radial-gradient(circle at 50% 115%,rgba(123,138,155,.08),transparent 26rem),
+    #171816;
+}
+
+.experience-shell[data-presence="fire-night"]{
+  --scene-bg:#141412;
+  --scene-ink:#f3eee4;
+  --scene-muted:#aaa296;
+  --scene-rule:rgba(243,238,228,.18);
+  --scene-accent:#e0a15f;
+  background:
+    radial-gradient(circle at 22% 88%,rgba(224,132,58,.24),transparent 17rem),
+    radial-gradient(circle at 52% 118%,rgba(108,121,139,.08),transparent 28rem),
+    #141412;
+}
+
+.experience-shell[data-presence="night"] .fpv-open,
+.experience-shell[data-presence="night"] .fpv-close,
+.experience-shell[data-presence="fire-night"] .fpv-open,
+.experience-shell[data-presence="fire-night"] .fpv-close{
+  color:var(--scene-accent);
+}
+
+.experience-shell[data-presence="fire-night"] .ground-talk input::placeholder{
+  color:#c3ad98;
+}
