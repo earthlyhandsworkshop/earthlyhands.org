@@ -1851,6 +1851,40 @@ body.gate-open .press-mark{
   margin-bottom:5px!important;
 }
 </style>
+
+<style id="unresolved-internal-breath">
+/* Give the unresolved rows room inside the box, not below it. */
+.stage-two .lower{
+  height:23.25rem!important;
+  margin-bottom:5px!important;
+}
+.stage-two .pressure,
+.stage-two .key{
+  height:23.25rem!important;
+  min-height:23.25rem!important;
+  max-height:23.25rem!important;
+}
+.stage-two .pressure-row{
+  padding:.52rem .75rem .58rem!important;
+}
+.stage-two .pressure-row:last-child{
+  padding-bottom:.72rem!important;
+}
+.stage-two .pressure-state{
+  margin-top:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+  line-height:1.25!important;
+}
+@media(max-width:64rem){
+  .stage-two .lower{height:auto!important}
+  .stage-two .pressure,.stage-two .key{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+}
+</style>
 </head>
 <body>
 <div class="page">
