@@ -13,8 +13,9 @@
   const talkBody = document.querySelector("#talk-body");
   const talkForm = document.querySelector("#talk-form");
   const talkInput = document.querySelector("#talk-input");
-  const talkLog = document.querySelector("#talk-log");
   const talkSend = talkForm.querySelector("button[type='submit']");
+  const tenState = document.querySelector("#ten-state");
+  const groundState = document.querySelector("#ground-state");
   const depthData = {
     distance: {
       kind: "Prose Map relation",
@@ -73,6 +74,27 @@
   };
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
+  const defaultSceneState = {
+    night: { ten: "Ten · listening in the dark", ground: "Night camp · guard posted", presence: "" },
+    morning: { ten: "Ten · looking around", ground: "Morning camp · unattacked", presence: "" },
+    southeast: { ten: "Ten · following the account", ground: "Southeast · about fifteen miles", presence: "" },
+    "blue-water": { ten: "Ten · at the creek", ground: "Blue Water · Mayes and Criner here", presence: "" },
+    dozen: { ten: "Ten · still at Blue Water", ground: "A dozen beaver reported", presence: "" }
+  };
+  const sceneState = JSON.parse(JSON.stringify(defaultSceneState));
+
+  try {
+    const rememberedState = JSON.parse(window.localStorage.getItem("earthly-hands-dawson-state") || "null");
+    if (rememberedState && typeof rememberedState === "object") {
+      for (const id of Object.keys(sceneState)) {
+        if (rememberedState[id] && typeof rememberedState[id] === "object") {
+          sceneState[id] = { ...sceneState[id], ...rememberedState[id] };
+        }
+      }
+    }
+  } catch (_) {
+    // Present-state memory is optional.
+  }
   let currentId = "morning";
   let asking = false;
   let touchStartX = null;
@@ -101,6 +123,65 @@
       dozen: "#e8dcc0"
     };
     theme.setAttribute("content", colors[id] || colors.threshold);
+  }
+
+  function saveSceneState() {
+    try {
+      window.localStorage.setItem("earthly-hands-dawson-state", JSON.stringify(sceneState));
+    } catch (_) {
+      // The lived layer still works without storage.
+    }
+  }
+
+  function renderSceneState(id) {
+    const state = sceneState[id] || defaultSceneState[id];
+    if (!state) return;
+    if (tenState) tenState.textContent = `[ ${state.ten} ]`;
+    if (groundState) groundState.textContent = `[ ${state.ground} ]`;
+    if (experienceShell) experienceShell.dataset.presence = state.presence || "";
+  }
+
+  function shortState(text, limit = 118) {
+    const clean = String(text || "").replace(/\s+/g, " ").trim();
+    if (!clean) return "";
+    const sentence = clean.match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() || clean;
+    return sentence.length <= limit ? sentence : sentence.slice(0, limit - 1).trimEnd() + "…";
+  }
+
+  function receiveTenAction(message) {
+    const clean = String(message || "").trim();
+    const lower = clean.toLowerCase();
+    const state = sceneState[currentId];
+    if (!state) return;
+
+    state.presence = "";
+    if (/\b(fire|campfire|kindling|wood)\b/.test(lower)) {
+      state.ten = "Ten · tending a small fire";
+      state.ground = currentId === "night" ? "Firelight at the night camp" : "A small fire at this ground";
+      state.presence = "fire";
+    } else if (/\b(coffee|cup|mug)\b/.test(lower)) {
+      state.ten = "Ten · coffee in hand";
+      state.ground = "The ground has not moved";
+    } else if (/\b(beaver|trap|trapping|trapper)\b/.test(lower)) {
+      if (currentId === "blue-water" || currentId === "dozen") {
+        state.ten = "Ten · asking Mayes and Criner about beaver";
+        state.ground = "Blue Water · conversation opened";
+      } else {
+        state.ten = "Ten · asking about beaver trapping";
+        state.ground = "The ground has not moved";
+      }
+    } else if (/\b(wait|sit|stay|rest)\b/.test(lower)) {
+      state.ten = "Ten · staying put";
+      state.ground = defaultSceneState[currentId].ground;
+    } else if (/\b(look|watch|listen|notice)\b/.test(lower)) {
+      state.ten = "Ten · looking around";
+      state.ground = defaultSceneState[currentId].ground;
+    } else {
+      state.ten = "Ten · asking the ground";
+      state.ground = defaultSceneState[currentId].ground;
+    }
+    saveSceneState();
+    renderSceneState(currentId);
   }
 
   function updateTrailConsole(id) {
@@ -187,6 +268,7 @@
     }
 
     updatePlace(target);
+    renderSceneState(target.id);
     target.focus({ preventScroll: true });
   }
 
@@ -246,23 +328,6 @@
     talkToggle.textContent = "Ask the ground";
   }
 
-  function addTalkEntry(who, text) {
-    const entry = document.createElement("div");
-    entry.className = `talk-entry talk-entry-${who}`;
-
-    const label = document.createElement("p");
-    label.className = "talk-entry-who";
-    label.textContent = who === "you" ? "You" : "Ground";
-
-    const body = document.createElement("p");
-    body.className = "talk-entry-text";
-    body.textContent = text;
-
-    entry.append(label, body);
-    talkLog.append(entry);
-    talkLog.scrollTop = talkLog.scrollHeight;
-  }
-
   function setAsking(value) {
     asking = value;
     talkInput.disabled = value;
@@ -271,16 +336,15 @@
   }
 
   async function askGround(message) {
-    const clean = String(message || "").trim().slice(0, 600);
+    const clean = String(message || "").trim().slice(0, 240);
     if (!clean || asking) return;
 
-    openTalk();
-    addTalkEntry("you", clean);
+    receiveTenAction(clean);
     talkInput.value = "";
     setAsking(true);
+    closeTalk();
 
     if (!apiUrl) {
-      addTalkEntry("ground", "The listening ground has not been connected yet. Your place has not moved.");
       setAsking(false);
       return;
     }
@@ -290,7 +354,7 @@
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          message: clean,
+          message: `Stay in the present Dawson ground. In one short plain sentence, answer what changes, becomes perceptible, or can be discussed after this action or question. Do not move the visitor unless the user explicitly asks to move. User: ${clean}`,
           place: currentId,
           history: conversation.slice(-6),
         }),
@@ -301,15 +365,18 @@
         throw new Error(data.error || `HTTP ${response.status}`);
       }
 
-      const reply = data.reply.trim();
-      addTalkEntry("ground", reply);
-      conversation.push({ role: "user", content: clean }, { role: "assistant", content: reply });
+      const reply = shortState(data.reply);
+      if (reply && sceneState[currentId]) {
+        sceneState[currentId].ground = reply;
+        saveSceneState();
+        renderSceneState(currentId);
+      }
+      conversation.push({ role: "user", content: clean }, { role: "assistant", content: data.reply.trim() });
       if (conversation.length > 12) conversation.splice(0, conversation.length - 12);
     } catch (_) {
-      addTalkEntry("ground", "The listening ground is unavailable. Your place has not moved.");
+      // Keep the locally earned present-state change. The ground does not move.
     } finally {
       setAsking(false);
-      talkInput.focus();
     }
   }
 
@@ -357,7 +424,7 @@
   talkToggle.addEventListener("click", () => {
     if (talkBody.hidden) {
       openTalk();
-      talkInput.focus();
+      talkInput.focus({ preventScroll: true });
     } else {
       closeTalk();
     }
