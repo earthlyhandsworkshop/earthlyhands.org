@@ -3,11 +3,6 @@
   const lampLabel = lamp?.querySelector(".lamp-label") || null;
   const lanternHome = document.querySelector("#lantern-home");
   const lanternNote = document.querySelector(".lantern-note");
-  const trailConsole = document.querySelector("#trail-console");
-  const trailBackControl = document.querySelector("#trail-back-control");
-  const trailNextControl = document.querySelector("#trail-next-control");
-  const trailBackLabel = document.querySelector("#trail-back-label");
-  const trailNextLabel = document.querySelector("#trail-next-label");
   const talkForm = document.querySelector("#talk-form");
   const talkInput = document.querySelector("#talk-input");
   const talkSend = document.querySelector("#talk-send");
@@ -141,6 +136,7 @@
     const view = typeof patch.view === "string" ? patch.view.trim() : "";
     const footing = typeof patch.footing === "string" ? patch.footing.trim() : "";
     const companion = typeof patch.companion === "string" ? patch.companion.trim() : "";
+    const moveTo = typeof patch.move_to === "string" ? patch.move_to.trim() : "";
     const allowedAppearance = new Set(["", "fire"]);
     const appearance = allowedAppearance.has(patch.appearance) ? patch.appearance : "";
 
@@ -168,7 +164,7 @@
     }
 
     if (experienceShell) experienceShell.dataset.presence = appearance;
-    return Boolean(setting || title || view || footing || companion || appearance);
+    return { changed: Boolean(setting || title || view || footing || companion || appearance), moveTo };
   }
 
   try {
@@ -185,15 +181,12 @@
   }
   let currentId = "morning";
   let asking = false;
-  let touchStartX = null;
-  let touchStartY = null;
 
   function setLamp(isLit) {
     document.body.dataset.lamp = "lit";
     if (lamp) lamp.setAttribute("aria-pressed", "true");
     if (lampLabel) lampLabel.textContent = "Dawson passage";
     if (lanternNote) lanternNote.hidden = true;
-    if (trailConsole) trailConsole.hidden = false;
   }
 
   function setGround(id) {
@@ -280,32 +273,32 @@
     renderSceneState(currentId);
   }
 
-  function updateTrailConsole(id) {
-    if (!trailConsole) return;
-    const ui = trailUi[id];
-    if (!ui) return;
+  const allowedMoves = {
+    night: ["morning"],
+    morning: ["night", "southeast"],
+    southeast: ["morning", "blue-water"],
+    "blue-water": ["southeast", "dozen"],
+    dozen: ["blue-water"]
+  };
 
-    const previousIndex = fullSequence.indexOf(id) - 1;
-    if (previousIndex >= 0) {
-      const previousId = fullSequence[previousIndex];
-      trailBackControl.disabled = false;
-      trailBackControl.dataset.go = previousId;
-      trailBackLabel.textContent = trailUi[previousId].name;
-    } else {
-      trailBackControl.disabled = true;
-      trailBackControl.dataset.go = "";
-      trailBackLabel.textContent = "";
-    }
+  function canMove(from, to) {
+    return Boolean(to && allowedMoves[from]?.includes(to));
+  }
 
-    if (ui.next) {
-      trailNextControl.disabled = false;
-      trailNextControl.dataset.go = ui.next;
-      trailNextLabel.textContent = trailUi[ui.next].name;
-    } else {
-      trailNextControl.disabled = true;
-      trailNextControl.dataset.go = "";
-      trailNextLabel.textContent = "";
-    }
+  function localMoveFromWords(message) {
+    const lower = String(message || "").toLowerCase();
+
+    if (currentId === "night" && /\b(morning|wait|daylight|first light|sleep)\b/.test(lower)) return "morning";
+    if (currentId === "morning" && /\b(southeast|continue|follow|move on|trail)\b/.test(lower)) return "southeast";
+    if (currentId === "southeast" && /\b(blue water|creek|camp|continue|follow)\b/.test(lower)) return "blue-water";
+    if (currentId === "blue-water" && /\b(dozen|catch|caught|beaver|what happened next|next)\b/.test(lower)) return "dozen";
+
+    if (currentId === "morning" && /\b(back|night)\b/.test(lower)) return "night";
+    if (currentId === "southeast" && /\b(back|morning)\b/.test(lower)) return "morning";
+    if (currentId === "blue-water" && /\b(back|southeast)\b/.test(lower)) return "southeast";
+    if (currentId === "dozen" && /\b(back|blue water|creek)\b/.test(lower)) return "blue-water";
+
+    return null;
   }
 
   function updatePlace() {
@@ -350,7 +343,6 @@
   function showScene(target, direction = "forward") {
     closeDepth();
     setGround(target.id);
-    updateTrailConsole(target.id);
 
     if (experienceStage) experienceStage.dataset.direction = direction;
     scenes.forEach((scene) => scene.classList.toggle("is-current", scene === target));
@@ -420,8 +412,13 @@
     if (!clean || asking) return;
 
     receiveTenAction(clean);
+    const localMove = localMoveFromWords(clean);
     talkInput.value = "";
     setAsking(true);
+
+    if (localMove && canMove(currentId, localMove)) {
+      landAt(localMove);
+    }
 
     if (!apiUrl) {
       setAsking(false);
@@ -439,9 +436,10 @@
       "Ten may alter the present experiential layer: make a small fire, drink coffee, sit, ask questions, talk, notice things, or imagine a reversible present action. Keep that distinct from the 1831 source.",
       "Remain at the current ground unless Ten explicitly asks to move.",
       "Return ONLY valid JSON, no markdown, with exactly these keys:",
-      '{"setting":"ground/carrier line","title":"plain headline","view":"natural prose; use blank lines between paragraphs when helpful","footing":"Ten footing in whatever length is useful","companion":"Small Door footing if useful","appearance":""}',
-      'appearance may be only "" or "fire".',
+      '{"setting":"ground/carrier line","title":"plain headline","view":"natural prose; use blank lines between paragraphs when helpful","footing":"Ten footing in whatever length is useful","companion":"Small Door footing if useful","appearance":"","move_to":""}',
+      'appearance may be only "" or "fire". move_to must be "" unless Ten is actually moving; if moving, use only an adjacent ground id allowed by the trail.',
       "There is no paragraph count, line count, or word-count requirement. Let the prose breathe. Keep the page coherent and useful after Ten's action.",
+      `ALLOWED MOVES FROM HERE: ${JSON.stringify(allowedMoves[currentId] || [])}`,
       `CURRENT GROUND: ${currentId}`,
       `SOURCE FLOOR: ${JSON.stringify(facts)}`,
       `CURRENT SCREEN: ${JSON.stringify(visible)}`,
@@ -466,7 +464,11 @@
 
       const patch = parseSceneReply(data.reply);
       if (patch) {
-        applyScenePatch(currentId, patch);
+        const origin = currentId;
+        const result = applyScenePatch(origin, patch);
+        if (result.moveTo && canMove(origin, result.moveTo)) {
+          landAt(result.moveTo);
+        }
       } else {
         const reply = shortState(data.reply);
         if (reply && sceneState[currentId]) {
@@ -483,27 +485,6 @@
     } finally {
       setAsking(false);
     }
-  }
-
-  if (trailBackControl) {
-    trailBackControl.addEventListener("click", () => {
-      const target = trailBackControl.dataset.go;
-      if (target) landAt(target);
-    });
-  }
-
-  trailConsole?.addEventListener("click", (event) => {
-    const button = event.target.closest(".trail-control");
-    if (!button || button.disabled) return;
-    const target = button.dataset.go;
-    if (target && target !== currentId) landAt(target);
-  });
-
-  if (trailNextControl) {
-    trailNextControl.addEventListener("click", () => {
-      const target = trailNextControl.dataset.go;
-      if (target) landAt(target);
-    });
   }
 
   document.querySelectorAll("[data-depth]").forEach((control) => {
@@ -544,35 +525,6 @@
       talkForm.requestSubmit();
     }
   });
-
-  if (experienceStage) {
-    experienceStage.addEventListener("touchstart", (event) => {
-      const touch = event.changedTouches?.[0];
-      if (!touch) return;
-      touchStartX = touch.clientX;
-      touchStartY = touch.clientY;
-    }, { passive: true });
-
-    experienceStage.addEventListener("touchend", (event) => {
-      if (touchStartX === null || touchStartY === null) return;
-      const touch = event.changedTouches?.[0];
-      if (!touch) return;
-
-      const dx = touch.clientX - touchStartX;
-      const dy = touch.clientY - touchStartY;
-      touchStartX = null;
-      touchStartY = null;
-
-      if (Math.abs(dx) < 48 || Math.abs(dx) <= Math.abs(dy) * 1.15) return;
-
-      const index = fullSequence.indexOf(currentId);
-      if (dx < 0 && index >= 0 && index < fullSequence.length - 1) {
-        landAt(fullSequence[index + 1]);
-      } else if (dx > 0 && index > 0) {
-        landAt(fullSequence[index - 1]);
-      }
-    }, { passive: true });
-  }
 
   window.addEventListener("popstate", () => {
     const id = window.location.hash.slice(1);
