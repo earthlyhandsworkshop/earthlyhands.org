@@ -1,0 +1,156 @@
+{
+  "corpus_id": "dawson-1831",
+  "status": "PUBLIC_DERIVATIVE_V0",
+  "rule": "These fragments are public retrieval aids derived from already-public Dawson scene material. They point back to controlled workshop objects and do not replace them.",
+  "entries": [
+    {
+      "id": "DAW-RET-NIGHT-001",
+      "scenes": [
+        "night"
+      ],
+      "keywords": [
+        "guard",
+        "ford",
+        "back trail",
+        "two men",
+        "watch",
+        "night",
+        "attack"
+      ],
+      "summary": [
+        "Dawson reports a small guard around camp after an alarm.",
+        "Two unnamed men are sent toward the ford of an unresolved river on the back trail, for the purpose of watching.",
+        "The held material does not establish that they reached the ford, completed the watch, or returned."
+      ],
+      "source_object_ids": [
+        "DAW-PM-GUARD-001",
+        "DAW-PM-FORD-001"
+      ],
+      "brakes": [
+        "SENT ≠ ARRIVED",
+        "PURPOSE TO WATCH ≠ COMPLETED WATCH",
+        "UNRESOLVED RIVER ≠ BLUE WATER BY DEFAULT"
+      ]
+    },
+    {
+      "id": "DAW-RET-MORNING-001",
+      "scenes": [
+        "morning"
+      ],
+      "keywords": [
+        "morning",
+        "unattacked",
+        "guard",
+        "ford",
+        "two men",
+        "next"
+      ],
+      "summary": [
+        "Morning finds Dawson's party unattacked.",
+        "The two men, ford, and back trail do not reappear before the account moves southeast.",
+        "Absence from the next passage does not establish what happened to them."
+      ],
+      "source_object_ids": [
+        "DAW-PM-MORNING-001",
+        "DAW-PM-FORD-001"
+      ],
+      "brakes": [
+        "NOT REPEATED ≠ RETURNED",
+        "NOT REPEATED ≠ LOST",
+        "MORNING STATE ≠ EXPLANATION OF THE TWO MEN"
+      ]
+    },
+    {
+      "id": "DAW-RET-SE15-001",
+      "scenes": [
+        "southeast"
+      ],
+      "keywords": [
+        "southeast",
+        "fifteen miles",
+        "15 miles",
+        "route",
+        "trail",
+        "blue water",
+        "camp"
+      ],
+      "summary": [
+        "Dawson carries the party southeast about fifteen miles.",
+        "The traveled line is not preserved by the held source.",
+        "The source-stated leg ends in an encampment on a small branch of Blue Water."
+      ],
+      "source_object_ids": [
+        "DAW-PM-SE15-001",
+        "DAW-PM-BW-CAMP-001"
+      ],
+      "brakes": [
+        "TRAVELED QUANTITY ≠ STRAIGHT-LINE DISPLACEMENT",
+        "S.E. ≠ RECOVERED BEARING",
+        "SMALL BRANCH OF BLUE WATER ≠ MODERN HYDROGRAPHIC IDENTITY"
+      ]
+    },
+    {
+      "id": "DAW-RET-BW-001",
+      "scenes": [
+        "blue-water"
+      ],
+      "keywords": [
+        "mayes",
+        "criner",
+        "beaver",
+        "trapping",
+        "james fork",
+        "james' fork",
+        "creek",
+        "blue water",
+        "reside",
+        "residence"
+      ],
+      "summary": [
+        "On the Blue Water encounter creek Dawson reports finding Mr. Mayes and Mr. Criner.",
+        "He reports that they resided on James' Fork of Poteau.",
+        "He reports that they were trapping for beaver here; the residence relation and encounter/trapping relation remain distinct."
+      ],
+      "source_object_ids": [
+        "DAW-PM-BW-CAMP-001",
+        "DAW-PM-BEAVER-001"
+      ],
+      "brakes": [
+        "FOUND HERE ≠ RESIDED HERE",
+        "RESIDENCE GEOGRAPHY ≠ TRAPPING GEOGRAPHY",
+        "NAME OCCURRENCE ≠ BIOGRAPHICAL IDENTITY"
+      ]
+    },
+    {
+      "id": "DAW-RET-DOZEN-001",
+      "scenes": [
+        "dozen",
+        "blue-water"
+      ],
+      "keywords": [
+        "dozen",
+        "twelve",
+        "caught",
+        "catch",
+        "beaver",
+        "cold",
+        "weather",
+        "success"
+      ],
+      "summary": [
+        "Dawson reports that Mayes and Criner had caught but a dozen beaver.",
+        "The held source does not divide that catch between them or place each catch spatially.",
+        "Dawson says the cold weather promised little further trapping success."
+      ],
+      "source_object_ids": [
+        "DAW-PM-BEAVER-001",
+        "DAW-PM-COLD-001"
+      ],
+      "brakes": [
+        "DOZEN = QUANTITY, NOT LOCATION",
+        "OUTCOME ≠ TRAP SITE",
+        "COLD-WEATHER JUDGMENT ≠ ROUTE CHANGE"
+      ]
+    }
+  ]
+}
