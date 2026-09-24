@@ -1,80 +1,85 @@
-# Article XIV rooms — architectural study
+# Article XIV rooms — fixed-room identity experiment
 
-**Status:** first bounded build; not a governing website grammar  
+**Status:** bounded public-ground pressure test  
 **Public path:** `/experiments/article-xiv-rooms/`  
-**Ground:** Treaty implementation / paired Robert study  
-**Passage:** True North / Mapping Grounds / EarthlyHands.org
+**Ground:** MCR 879 · Commission decision · internal pp. 55–56  
+**Passage:** True North / EarthlyHands.org
 
-## Core visual proposition
+## Current proposition
 
-> **The 1830 treaty chamber remains standing while later identity and enrollment machinery is constructed around it.**
+> **Attention may move. Documentary state does not.**
 
-The experiment treats later legal and administrative states as additions, gates, rooms, and unfinished wings rather than as replacements for the treaty text.
+This version replaces the earlier long scrolling architectural study with one fixed viewport. The visitor remains inside a single MCR 879 identity-comparison room while attention, source depth, and representation can change around the same controlled documentary objects.
 
-## Source spine received
+The page does not ask the visitor to decide who Robert Bell was.
 
-The build was grounded against the current living body:
+It makes several later-administrative operations usable without silently adopting them:
 
-`Treaty of Dancing Rabbit Creek Article XIV — implementation into identity/enrollment machinery — paired Robert study — living body`
+- foreground the applicant-side Robert body;
+- foreground the Commission-held older Article XIV record body;
+- compare controlled propositions;
+- expose the Commission’s attributed NOT-SAME identity act;
+- step back to the Workshop state where that agency conclusion remains attributed rather than inherited as historical identity truth;
+- ask the bounded Worker to recompose attention using only the room’s held source floor.
 
-The source-controlled distinctions carried into this version are:
+## Worker split
 
-- treaty promise != later descendant identity machinery;
-- Commission interpretation != statute;
-- identity determination != settlement != proof != enrollment != Secretarial approval;
-- patent / scrip = evidentiary carrier, not origin node;
-- 1901 negotiated architecture = designed but not governing law;
-- MCR 879 = pre-final-§41 case;
-- Wash / Jane / Sallie = post-final-§41 body with multiple administrative lanes;
-- Office / Commission identity conclusions remain attributed government acts;
-- no Robert/Robin join;
-- no Susan/Susie normalization;
-- case-local MCR 879 review path is known, but its contemporaneous authority bridge remains unrecovered.
+The existing closed public-ground Worker is reused unchanged.
 
-## What the first build tests
+**Worker**
+- common source/state physics;
+- one bounded model-bearing interpretation of the visitor’s present question;
+- no web;
+- no tools;
+- no persistence.
 
-### 1. Persistent origin room
-The Article XIV treaty chamber visually precedes and conceptually survives every later addition.
+**Door**
+- local Article XIV grammar;
+- controlled source floor;
+- allowed object IDs;
+- allowed relation states;
+- deterministic rendering;
+- source and identity brakes.
 
-### 2. Administrative accretion
-1898 and 1900 appear as constructed additions rather than as restatements of 1830.
+The Worker cannot create a new source object in the room. The browser accepts only known IDs and known relation states.
 
-### 3. Unbuilt architecture
-The 1901 proposed agreement appears as a dashed, incomplete wing. It is visible because it mattered historically, but it cannot be walked as governing law.
+## Controlled documentary floor
 
-### 4. Evidence carrier
-The 1902 section presents patent / scrip as evidence of an earlier state, not the source that creates the right.
+The first room is intentionally narrow:
 
-### 5. Failed bridge as object
-The unrecovered authority for MCR 879's visible review path is allowed to remain visibly absent.
+- MCR 879 internal p.-55 / OHC_2042;
+- MCR 879 internal p.-56 / OHC_2043;
+- lower-source distinctions already controlled by the Workshop source jackets.
 
-### 6. Paired bodies without merger
-MCR 879 and Wash / Jane / Sallie appear as separate chambers. Each carries the government's identity verb, but the page does not convert either one into historical truth.
+The page preserves these brakes:
 
-## Device behavior
+- Commission finding != Workshop identity finding;
+- comparison != identity;
+- finished-decision prose order != historical search / consultation chronology;
+- Commission composite predicate != automatically equivalent lower-source depth;
+- Robert != Robin unless a source earns the join;
+- no Susan / Susie normalization.
 
-Desktop emphasizes section / plan logic: rooms, offsets, rails, walls, and long architectural spacing.
+## Local states
 
-Mobile converts the same body into a narrow walk. Rooms become successive full-screen conditions rather than a shrunk floor plan.
+Deterministic controls provide several representations of the same room:
 
-## Refusals
+1. threshold — two bodies available for inspection;
+2. applicant — applicant-side body foregrounded;
+3. records — Commission-held body foregrounded;
+4. compare — controlled attributes placed beside one another;
+5. finding — Commission’s attributed identity-separation operation;
+6. workshop — identity remains open at Workshop level.
 
-This build does not decide:
+A free-language question may select among those states and foreground controlled objects. It may not change documentary state.
 
-- the final visual grammar of EarthlyHands.org;
-- whether this architectural language should be reused elsewhere;
-- the historical identity of the two Robert Bell bodies;
-- whether the Commission's 1904 identity join was correct;
-- the unrecovered authority for MCR 879 merits review;
-- the exact Commission / Interior interpretation that explains the mixed-blood §41 tension in the 1904 body;
-- any route or chronology not already source-controlled in the living body.
+## Why this build exists
 
-## Next useful experiments
+The test is not whether Article XIV can imitate Dawson.
 
-- let the 1830 room remain faintly visible behind later rooms rather than only conceptually persistent;
-- test an explicit translucent **government layer** that can be toggled on/off over the Bell chambers;
-- test whether primary-source fragments can appear as architectural materials without turning the piece into a document viewer;
-- test one room on an actual phone before widening the system.
+The test is whether a radically different historical door can use the same small Worker physics while remaining formally and epistemically itself.
+
+No Persistent Ground state is written in this pass.
 
 ---
 
