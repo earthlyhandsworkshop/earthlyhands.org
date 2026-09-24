@@ -160,7 +160,7 @@ export default {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: env.OPENAI_MODEL || "gpt-5.6-luna",
+          model: "gpt-5.6-luna",
           instructions: INSTRUCTIONS,
           input,
           max_output_tokens: 350,
