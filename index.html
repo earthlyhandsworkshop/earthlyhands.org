@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=camp-ground-views-v2" />
+    <link rel="stylesheet" href="style.css?v=shared-country-corpus-v3" />
   </head>
   <body data-lamp="lit" data-ground="night">
     <a class="skip-link" href="#threshold">Skip to the Dawson trail</a>
@@ -63,6 +63,7 @@
             <button type="button" class="view-mode" data-dawson-view="talk" aria-pressed="false">Talk wide</button>
             <button type="button" class="view-mode" data-dawson-view="index" aria-pressed="false">Stops</button>
             <button type="button" class="view-mode" data-dawson-view="people" aria-pressed="false">People</button>
+            <button type="button" class="view-mode" data-dawson-view="sources" aria-pressed="false">Sources</button>
           </div>
 
           <div class="experience-stage" id="experience-stage" data-direction="forward">
@@ -82,6 +83,14 @@
                 <span>This is not a complete roster. Named people stay named; unnamed groups stay unnamed; arrival, presence, approach, and departure remain different relations.</span>
               </header>
               <div class="camp-people-list"></div>
+            </section>
+            <section class="camp-sources" id="camp-sources" hidden aria-labelledby="camp-sources-title">
+              <header class="dawson-index-head">
+                <p>Held documentary body</p>
+                <h2 id="camp-sources-title">What carries this ground?</h2>
+                <span>Source, representation, and Workshop derivative remain separate. These are public-facing retrieval doors, not a claim that every surviving Dawson-related object is shown here.</span>
+              </header>
+              <div class="camp-source-list"></div>
             </section>
           </div>
 
@@ -342,6 +351,6 @@
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="config.js?v=camp-ground-v1"></script>
-    <script src="script.js?v=camp-ground-views-v2"></script>
+    <script src="script.js?v=shared-country-corpus-v3"></script>
   </body>
 </html>
