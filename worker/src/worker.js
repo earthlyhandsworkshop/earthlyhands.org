@@ -1,4 +1,4 @@
-const WORKER_VERSION = "shared-country-v3-luna-closed";
+const WORKER_VERSION = "shared-country-v4-luna-closed";
 const MODEL = "gpt-5.6-luna";
 const MAX_MESSAGE_LENGTH = 20000;
 const MAX_HISTORY_ITEMS = 6;
@@ -43,7 +43,7 @@ Output:
 - Return only valid JSON when the browser asks for JSON.
 - No markdown fences.
 - Keep prose natural and as long as the visitor's actual question earns.
-- If the source floor does not answer and web research is not needed or not useful, leave the uncertainty visible instead of filling it.
+- If the held ground does not answer, leave the uncertainty visible instead of filling it.
 `;
 
 function allowedOrigin(request, env) {
@@ -161,9 +161,45 @@ export default {
         },
         body: JSON.stringify({
           model: MODEL,
+          reasoning: { effort: "none" },
           instructions: INSTRUCTIONS,
           input,
-          max_output_tokens: 2400,
+          text: {
+            format: {
+              type: "json_schema",
+              name: "earthly_hands_scene_patch",
+              strict: true,
+              schema: {
+                type: "object",
+                additionalProperties: false,
+                properties: {
+                  setting: { type: "string" },
+                  title: { type: "string" },
+                  view: { type: "string" },
+                  footing: { type: "string" },
+                  companion: { type: "string" },
+                  appearance: {
+                    type: "string",
+                    enum: ["", "fire", "night", "fire-night"],
+                  },
+                  move_to: {
+                    type: "string",
+                    enum: ["", "night", "morning", "southeast", "blue-water", "dozen"],
+                  },
+                },
+                required: [
+                  "setting",
+                  "title",
+                  "view",
+                  "footing",
+                  "companion",
+                  "appearance",
+                  "move_to",
+                ],
+              },
+            },
+          },
+          max_output_tokens: 1600,
           store: false,
         }),
       });
