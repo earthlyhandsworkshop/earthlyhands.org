@@ -287,13 +287,15 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 .divider::before,.divider::after{content:"";height:1px;background:var(--rule)}
 .lower{
   display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(14rem,.27fr);
+  grid-template-columns:1fr 1fr;
   gap:.8rem;
   align-items:stretch;
 }
 .pressure{
   border:1px solid var(--rule);
   background:rgba(247,243,233,.35);
+  display:grid;
+  grid-template-rows:auto auto minmax(10rem,1fr);
 }
 .pressure-head,.key-head{
   display:flex;
@@ -309,30 +311,42 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   letter-spacing:.06em;text-transform:uppercase
 }
 .pressure-head h2,.key-head h2{margin:0;font-size:1.15rem;letter-spacing:.04em}
+.pressure-list{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  border-bottom:1px solid var(--rule);
+}
 .pressure-row{
   width:100%;
-  display:grid;
-  grid-template-columns:minmax(8rem,.8fr) minmax(5rem,1fr) auto minmax(5rem,1fr) minmax(8rem,.8fr) auto;
-  gap:.55rem;
-  align-items:center;
-  min-height:0;
-  padding:.45rem .75rem;
+  min-width:0;
+  display:block;
+  padding:.48rem .45rem;
   border:0;
-  border-bottom:1px solid var(--soft);
+  border-right:1px solid var(--soft);
   background:transparent;
   text-align:left;
   cursor:pointer;
 }
-.pressure-row:last-child{border-bottom:0}
-.pressure-row:hover,.pressure-row.is-active{background:rgba(109,117,95,.07)}
-.pressure-row .left,.pressure-row .right{font:1rem/1.2 var(--mono);font-weight:600}
-.dashes{height:1px;border-top:1px dashed var(--muted)}
-.q{font:1rem/1 var(--mono);white-space:nowrap}
-.pressure-state{font-size:.58rem;color:var(--muted)}
-.key{
-  height:22.5rem;
+.pressure-row:last-child{border-right:0}
+.pressure-row .left,.pressure-row .right{
+  display:block;
+  font:.7rem/1.18 var(--mono);
+  font-weight:600;
+}
+.pressure-row .right{margin-top:.12rem}
+.pressure-row .q,.pressure-row .dashes,.pressure-row .pressure-state{display:none}
+.pressure-detail{
+  padding:.75rem .85rem;
   min-height:0;
-  overflow:hidden;
+}
+.pressure-detail h3{margin:0;font-size:1.35rem;font-weight:400;line-height:1.05}
+.pressure-detail p{margin:.55rem 0 0;max-width:42rem;font:.78rem/1.48 var(--mono);color:var(--muted)}
+.pressure-detail .missing-label{
+  display:block;margin:0 0 .35rem;font:.58rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)
+}
+.pressure-row:hover,.pressure-row.is-active{background:rgba(109,117,95,.07)}
+.key{
+  min-height:100%;
   display:grid;
   grid-template-rows:auto minmax(0,1fr);
   border:1px solid var(--rule);
@@ -340,12 +354,9 @@ body.gate-open .gate::after{transform:scaleX(.12)}
 }
 .key-body{
   min-height:0;
-  overflow:auto;
-  scrollbar-width:none;
-  -ms-overflow-style:none;
-  padding:.65rem .75rem;
+  padding:.75rem .85rem;
 }
-.key-body::-webkit-scrollbar{width:0;height:0}
+
 #key-default .key-summary{margin:.55rem 0 0;color:var(--muted);font:.72rem/1.42 var(--mono)}
 .action-body h3{margin:0 0 .28rem;font-size:1rem;line-height:1.1}
 .action-body p{margin:.25rem 0 0;color:var(--muted);font:.64rem/1.3 var(--mono)}
@@ -414,6 +425,17 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   max-height:4.55rem;
   overflow:hidden;
 }
+.property-stamp{
+  display:flex;
+  gap:.55rem 1rem;
+  flex-wrap:wrap;
+  margin-bottom:.3rem;
+  font:.5rem/1.15 var(--mono);
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.property-stamp b{color:var(--ink);font-weight:600}
 .property-qa{
   display:grid;
   grid-template-columns:auto 1fr;
@@ -535,6 +557,8 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
   .record-body.commission{order:3}
   .connectors{display:none}
   .lower{grid-template-columns:1fr}
+  .pressure-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pressure-row{border-bottom:1px solid var(--soft)}
   .key{height:auto;max-height:none}
   .machine-state{width:min(28rem,100%);margin-inline:auto}
   .properties{height:8.5rem;grid-template-columns:minmax(7.8rem,.32fr) minmax(0,1fr)}
@@ -591,12 +615,12 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
   <main class="instrument">
     <section class="upper" id="upper">
       <article class="record-body family">
-        <div class="body-head"><h2>Family / witness body</h2><span class="body-tag">[A]</span></div>
-        <button class="entry" data-entry="robin" type="button"><strong>Robin Bell</strong><span class="index">[A.1]</span><small>Jane Bell witness voice · 23 Mar 1903</small></button>
-        <button class="entry" data-entry="susie" type="button"><strong>Susie Bell</strong><span class="index">[A.2]</span><small>Jane Bell witness voice · mother named directly</small></button>
-        <button class="entry" data-entry="160" type="button"><strong>about 160 acres</strong><span class="index">[A.3]</span><small>Jane Bell · Noxapater / Neshoba · government land</small></button>
-        <button class="entry" data-entry="jane-wash" type="button"><strong>Jane / Wash</strong><span class="index">[A.4]</span><small>full siblings in Jane's testimony; Wash linked to the land</small></button>
-        <button class="entry" data-entry="marris" type="button"><strong>Dibbin Marris</strong><span class="index">[A.5]</span><small>1902 · Official Interpreter named · certified translated record</small></button>
+        <div class="body-head"><h2>Family / witness body</h2></div>
+        <button class="entry" data-entry="robin" type="button"><strong>Robin Bell</strong><small>Jane Bell witness voice · 23 Mar 1903</small></button>
+        <button class="entry" data-entry="susie" type="button"><strong>Susie Bell</strong><small>Jane Bell witness voice · mother named directly</small></button>
+        <button class="entry" data-entry="160" type="button"><strong>about 160 acres</strong><small>Jane Bell · Noxapater / Neshoba · government land</small></button>
+        <button class="entry" data-entry="jane-wash" type="button"><strong>Jane / Wash</strong><small>full siblings in Jane's testimony; Wash linked to the land</small></button>
+        <button class="entry" data-entry="marris" type="button"><strong>Dibbin Marris</strong><small>1902 · Official Interpreter named · certified translated record</small></button>
       </article>
 
       <section class="center-machine" aria-label="Administrative identity machine">
@@ -620,12 +644,12 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
       </section>
 
       <article class="record-body commission">
-        <div class="body-head"><h2>Commission record body</h2><span class="body-tag">[B]</span></div>
-        <button class="entry" data-entry="robert" type="button"><strong>Robert Bell</strong><span class="index">[B.1]</span><small>older Article XIV record body / later administrative use</small></button>
-        <button class="entry" data-entry="yimma" type="button"><strong>Yimma</strong><span class="index">[B.2]</span><small>1902 Office representation of older record book testimony</small></button>
-        <button class="entry" data-entry="694" type="button"><strong>694.96 acres</strong><span class="index">[B.3]</span><small>1846 Article XIV patent · surveyed tract</small></button>
-        <button class="entry" data-entry="section4" type="button"><strong>Section 4</strong><span class="index">[B.4]</span><small>T12N R12E · Choctaw Meridian</small></button>
-        <button class="entry" data-entry="murray" type="button"><strong>Murray–Vroom / patent</strong><span class="index">[B.5]</span><small>older adjudicative and patent record universe</small></button>
+        <div class="body-head"><h2>Commission record body</h2></div>
+        <button class="entry" data-entry="robert" type="button"><strong>Robert Bell</strong><small>older Article XIV record body / later administrative use</small></button>
+        <button class="entry" data-entry="yimma" type="button"><strong>Yimma</strong><small>1902 Office representation of older record book testimony</small></button>
+        <button class="entry" data-entry="694" type="button"><strong>694.96 acres</strong><small>1846 Article XIV patent · surveyed tract</small></button>
+        <button class="entry" data-entry="section4" type="button"><strong>Section 4</strong><small>T12N R12E · Choctaw Meridian</small></button>
+        <button class="entry" data-entry="murray" type="button"><strong>Murray–Vroom / patent</strong><small>older adjudicative and patent record universe</small></button>
       </article>
 
       <svg class="connectors" id="connectors" aria-hidden="true"></svg>
@@ -643,43 +667,31 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
     <div class="divider">The Commission can issue an identity relation. The questions remain.</div>
 
     <section class="lower">
-      <div class="pressure">
-        <div class="pressure-head"><h2>Unresolved proposition lines</h2><span class="body-tag">[C]</span></div>
-        <button class="pressure-row" type="button" data-bridge="yimma-susie">
-          <span class="left">YIMMA</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">SUSIE</span><span class="index">[C.1]</span>
-          <span class="pressure-state">two source-local spouse / mother propositions · person relation not earned</span>
-        </button>
-        <button class="pressure-row" type="button" data-bridge="land">
-          <span class="left">694.96 ACRES</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ABOUT 160 ACRES</span><span class="index">[C.2]</span>
-          <span class="pressure-state">original patent tract ≠ proved later parcel chain</span>
-        </button>
-        <button class="pressure-row" type="button" data-bridge="name">
-          <span class="left">ROBERT</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ROBIN</span><span class="index">[C.3]</span>
-          <span class="pressure-state">administrative / examiner naming ≠ Jane's witness-given name</span>
-        </button>
-        <button class="pressure-row" type="button" data-bridge="place">
-          <span class="left">SECTION 4</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">NOXAPATER</span><span class="index">[C.4]</span>
-          <span class="pressure-state">later decision pressure exists · exact parcel continuity still needs carriers</span>
-        </button>
-        <button class="pressure-row" type="button" data-bridge="language">
-          <span class="left">1838: CANNOT SPEAK ENGLISH</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">FAMILY-SIDE CLAIMS</span><span class="index">[C.5]</span>
-          <span class="pressure-state">older Robert source-local language proposition cannot travel without identity continuity</span>
-        </button>
-      </div>
+      <section class="pressure" aria-live="polite">
+        <div class="pressure-head"><h2>Unresolved</h2></div>
+        <div class="pressure-list">
+          <button class="pressure-row" type="button" data-bridge="yimma-susie"><span class="left">YIMMA</span><span class="right">SUSIE</span></button>
+          <button class="pressure-row" type="button" data-bridge="land"><span class="left">694.96 ACRES</span><span class="right">ABOUT 160 ACRES</span></button>
+          <button class="pressure-row" type="button" data-bridge="name"><span class="left">ROBERT</span><span class="right">ROBIN</span></button>
+          <button class="pressure-row" type="button" data-bridge="place"><span class="left">SECTION 4</span><span class="right">NOXAPATER</span></button>
+          <button class="pressure-row" type="button" data-bridge="language"><span class="left">1838 LANGUAGE</span><span class="right">FAMILY-SIDE CLAIMS</span></button>
+        </div>
+        <div class="pressure-detail" id="pressure-detail">
+          <span class="missing-label">Missing bridge</span>
+          <h3 id="unresolved-title">Choose one unresolved line.</h3>
+          <p id="unresolved-copy">The left side is the question itself. The right side is what you can do about it.</p>
+        </div>
+      </section>
 
       <aside class="key" id="action-panel" aria-live="polite">
         <div class="key-head">
-          <h2 id="action-title">Key points</h2>
+          <h2 id="action-title">Action</h2>
           <button class="key-close" id="action-reset" type="button" hidden>Clear</button>
-          <span class="body-tag">[D]</span>
         </div>
         <div class="key-body">
-          <div id="key-default">
-            <div class="key-row"><span>administrative join present</span><strong>✓</strong></div>
-            <div class="key-row"><span>source bridge not recovered</span><strong>?</strong></div>
-            <div class="key-row"><span>comparison ≠ identity</span><strong>≠</strong></div>
-            <div class="key-row"><span>leave identity open</span><strong>○</strong></div>
-            <p class="key-summary">Choose one unresolved line to work on it.</p>
+          <div id="key-default" class="action-body">
+            <h3>No bridge selected.</h3>
+            <p>Choose an unresolved line on the left. Then tell us what kind of thing you have.</p>
           </div>
           <div class="action-body" id="action-body" hidden>
             <h3 id="bridge-title"></h3>
@@ -729,6 +741,8 @@ const actionReset=document.getElementById("action-reset");
 const bridgeTitle=document.getElementById("bridge-title");
 const bridgeCopy=document.getElementById("bridge-copy");
 const actionChoices=document.getElementById("action-choices");
+const unresolvedTitle=document.getElementById("unresolved-title");
+const unresolvedCopy=document.getElementById("unresolved-copy");
 const card=document.getElementById("identical-card");
 const pressMark=document.getElementById("press-mark");
 const joinState=document.getElementById("join-state");
@@ -751,7 +765,7 @@ const source={
  susie:{title:"Susie Bell",copy:"In that same 1903 examination Jane names her mother Susie Bell. This is Jane's witness-given family proposition. It is not converted into Yimma by the later Commission identity act.",state:"source descent · Jane witness voice"},
  "160":{title:"about 160 acres",copy:"Jane says her father got government land at Noxapater in Neshoba County, estimates about 160 acres, says she does not know whether it was Article XIV land, and says Wash Bell owns that land and lives on it. Approximate present-land testimony is not an original patent acreage.",state:"source descent · Jane land testimony"},
  "jane-wash":{title:"Jane / Wash",copy:"Jane identifies Wash Bell as her full brother. She says Wash owns and lives on the government land she associates with their father. Elsewhere the consolidated body represents Wash as owning part of Robert Bell's government land; the later decision places Wash on Section 4. Those later administrative propositions create pressure, not a recovered conveyance chain.",state:"source descent · family / administrative layers"},
- marris:{title:"Dibbin Marris",html:'<div class="property-qa"><b>Commission</b><span>What was her name?</span><b>Dibbin Marris</b><strong>Robert Bell.</strong></div><div class="property-provenance">Oscar Billey — Official Interpreter · R. S. Streit — certified translated stenographic record</div>',copy:"",state:"WITNESS → INTERPRETER-MARKED RECORD → CERTIFIED TRANSLATION"},
+ marris:{title:"Dibbin Marris",html:'<div class="property-stamp"><b>Seale, Mississippi</b><span>4 April 1902</span><span>Dibbin Marris — sworn witness</span></div><div class="property-qa"><b>Commission</b><span>What was her name?</span><b>Dibbin Marris</b><strong>Robert Bell.</strong></div><div class="property-provenance">Oscar Billey — Official Interpreter · R. S. Streit — reporter / certifier · surviving English Q/A certified as translation</div>',copy:"",state:"WITNESS → INTERPRETER-MARKED RECORD → CERTIFIED TRANSLATION"},
  robert:{title:"Robert Bell",copy:"The older Article XIV record body contains a source-local Robert Bell occurrence used by later federal decision-makers. The Workshop keeps this occurrence distinct from Jane's Robin Bell unless an independent person bridge is earned.",state:"source descent · older Article XIV record body"},
  yimma:{title:"Yimma",copy:"The 13 May 1902 Office of Indian Affairs report represents an older evidence carrier, record book No. 102 p.520, as saying Robert Bell had a wife named Yimma and had been married about six months before the treaty. The direct record-book face remains unrecovered.",state:"source descent · 1902 Office representation of older testimony"},
  "694":{title:"694.96 acres",copy:"The 14 December 1846 Article XIV patent grants Robert Bell the surveyed Section 4 tract containing 694.96 acres. The patent proves that tract and patent occurrence. It does not by itself identify Jane Bell's father or explain Jane's later estimate of about 160 acres.",state:"source descent · 1846 patent"},
@@ -778,6 +792,8 @@ function showProperty(title,copy,state,html=""){
  propertyState.textContent=state;
 }
 function showBridge(id,d){
+ unresolvedTitle.textContent=d.title;
+ unresolvedCopy.textContent=d.copy;
  activeBridgeId=id;
  activeBridgeTitle=d.title;
  activeBridgeKind="";
@@ -808,7 +824,9 @@ bridges.forEach(btn=>btn.addEventListener("click",()=>{
 }));
 actionReset.addEventListener("click",()=>{
  clearActive();
- actionTitle.textContent="Key points";
+ actionTitle.textContent="Action";
+ unresolvedTitle.textContent="Choose one unresolved line.";
+ unresolvedCopy.textContent="The left side is the question itself. The right side is what you can do about it.";
  keyDefault.hidden=false;
  actionBody.hidden=true;
  actionReset.hidden=true;
