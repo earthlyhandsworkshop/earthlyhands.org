@@ -730,3 +730,11 @@ body[data-ground="night"] .experience-shell[data-presence="fire"]{
   color:var(--scene-muted);
   opacity:1;
 }
+
+.listening-error{
+  margin:.25rem 0 0;
+  color:var(--scene-muted);
+  font-family:var(--mono);
+  font-size:.68rem;
+  line-height:1.35;
+}
