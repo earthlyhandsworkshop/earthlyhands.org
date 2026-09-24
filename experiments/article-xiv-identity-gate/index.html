@@ -285,6 +285,32 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   text-transform:uppercase;
 }
 .divider::before,.divider::after{content:"";height:1px;background:var(--rule)}
+.stage-two{display:none;margin-top:1.25rem;padding-top:1rem;border-top:3px double var(--rule)}
+body.gate-open .stage-two{display:block}
+.stage-two-head{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:1rem;
+  align-items:baseline;
+  margin:0 0 .9rem;
+  padding:.2rem .15rem .65rem;
+  border-bottom:1px solid var(--rule);
+}
+.stage-two-head span{font:.6rem/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.stage-two-head strong{font:400 clamp(1.25rem,2.3vw,2.15rem)/1.05 var(--serif)}
+.key-seal{
+  width:min(10.5rem,70%);
+  aspect-ratio:1;
+  margin:.15rem auto 1rem;
+  border:3px double var(--rule);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  transform:rotate(-4deg);
+  font:700 clamp(1.15rem,2.1vw,1.75rem)/1 var(--mono);
+  letter-spacing:.08em;
+}
+.properties-second{margin-top:1rem}
 .lower{
   display:grid;
   grid-template-columns:minmax(0,1.35fr) minmax(22rem,.65fr);
@@ -472,10 +498,10 @@ body.gate-open .gate::after{transform:scaleX(.12)}
   padding:.48rem .62rem;
   border-right:1px solid var(--rule);
 }
-.properties-label span{display:block;font:.55rem/1.15 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.properties-label span{display:block;font:.64rem/1.15 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
 .properties-label strong{
   display:block;
-  margin-top:.22rem;
+  margin-top:.5rem;
   font-size:clamp(.95rem,1.45vw,1.2rem);
   font-weight:400;
   line-height:1.05;
@@ -1294,22 +1320,11 @@ body.gate-open .pass-card{opacity:1;background:var(--ink);color:var(--paper2)}
       <div class="properties-copy"><span class="property-long" id="property-copy">Robin, Yimma, land, Dibbin, the patent — this panel changes immediately when you choose one.</span></div>
       <div class="properties-state" id="property-state">attention · threshold</div>
     </section>
-
-    <section class="dibbin-apparatus" aria-label="Dibbin Marris certified translation apparatus">
-      <div class="dibbin-title">
-        <small>4 Apr 1902 · Seale, Mississippi</small>
-        <strong>Dibbin Marris</strong>
+    <section class="stage-two" id="stage-two" aria-label="Unresolved proposition page">
+      <div class="stage-two-head">
+        <span>Page II</span>
+        <strong>The Commission can issue an identity relation. The questions remain.</strong>
       </div>
-      <div class="dibbin-track">
-        <div class="dibbin-step"><b>Commission question</b><span>“What was her name?”</span></div>
-        <div class="dibbin-step"><b>Witness</b><span>Dibbin Marris</span></div>
-        <div class="dibbin-step"><b>Official Interpreter</b><span>Oscar Billey</span></div>
-        <div class="dibbin-step answer"><b>Surviving English record</b><span>Robert Bell.</span></div>
-      </div>
-      <div class="dibbin-note">R. S. Streit certifies the surviving record · spoken form and interpreter wording are not recovered here · this machinery preserves a record, not a Robin/Robert identity conclusion</div>
-    </section>
-
-    <div class="divider">The Commission can issue an identity relation. The questions remain.</div>
 
     <section class="lower">
       <div class="pressure">
@@ -1392,7 +1407,6 @@ const detailTitle=document.getElementById("detail-title");
 const detailCopy=document.getElementById("detail-copy");
 const detailState=document.getElementById("detail-state");
 const detailReceiveToggle=document.getElementById("detail-receive-toggle");
-const actionChoices=document.getElementById("action-choices");
 const card=document.getElementById("identical-card");
 const pressMark=document.getElementById("press-mark");
 const joinState=document.getElementById("join-state");
@@ -1401,14 +1415,8 @@ const entries=[...document.querySelectorAll(".entry")];
 const bridges=[...document.querySelectorAll(".pressure-row")];
 const svg=document.getElementById("connectors");
 const upper=document.getElementById("upper");
-const receivingUrl=String(window.EARTHLY_HANDS_RECEIVING_URL||"").trim();
-const bridgeUploadForm=document.getElementById("bridge-upload-form");
-const bridgeFile=document.getElementById("bridge-file");
-const bridgeNote=document.getElementById("bridge-note");
-const bridgeReceiveStatus=document.getElementById("bridge-receive-status");
 let activeBridgeId="";
 let activeBridgeTitle="";
-let activeBridgeKind="";
 
 const source={
  robin:{title:"Robin Bell",copy:"Jane Bell, testifying on 23 March 1903, answers that her father's name was Robin Bell. When asked specifically whether his name was Robin or Robert Bell, she again answers Robin Bell. Later examiner and administrative language on the same examination uses Robert Bell. Preserve the speaker split.",state:"source descent · Jane witness voice"},
@@ -1480,6 +1488,11 @@ function showProperty(title,copy,state,html=""){
  const propertyTitle=document.getElementById("property-title");
  const propertyCopy=document.getElementById("property-copy");
  const propertyState=document.getElementById("property-state");
+const propertyTitleSecond=document.getElementById("property-title-second");
+const propertyCopySecond=document.getElementById("property-copy-second");
+const propertyStateSecond=document.getElementById("property-state-second");
+const stageTwo=document.getElementById("stage-two");
+const keySeal=document.getElementById("key-seal");
  propertyTitle.textContent=title;
  if(html){propertyCopy.innerHTML=html}else{propertyCopy.textContent=copy}
  propertyState.textContent=state;
