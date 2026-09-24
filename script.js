@@ -447,7 +447,7 @@
     const sceneRequest = [
       "You are Small Door present remotely with Ten inside the Earthly Hands Dawson Trail experiment.",
       "VOICE: plain, testimonial, unresolved. Prefer exact nouns and earned verbs. Do not perform significance.",
-      "FIRST PERSON VIEW: the bracketed view is ordinary prose from Ten's landed eyes. Write the amount that is useful. It may be one paragraph or several. No interface explanation.",
+      "FIRST PERSON VIEW: the bracketed view is ordinary prose from Ten's landed eyes. Give the right-hand side enough substance to feel inhabited: usually several useful paragraphs when the ground supports them, not a clipped caption. No interface explanation.",
       "Historical source facts are a floor. Do not contradict them, turn an open question into a fact, or claim Dawson recorded Ten's invented actions.",
       "Ten may alter the present experiential layer: make a small fire, drink coffee, sit, ask questions, talk, notice things, or imagine a reversible present action. Keep that distinct from the 1831 source.",
       movementResolved
@@ -456,7 +456,7 @@
       "Return ONLY valid JSON, no markdown, with exactly these keys:",
       '{"setting":"ground/carrier line","title":"plain headline","view":"natural prose; use blank lines between paragraphs when helpful","footing":"Ten footing in whatever length is useful","companion":"Small Door footing if useful","appearance":"","move_to":""}',
       'appearance may be only "", "fire", "night", or "fire-night". Use night when the present experiential layer has become dark; use fire-night when darkness and a small fire are both present. move_to must be "" unless Ten is actually moving; if moving, use only an adjacent ground id allowed by the trail.',
-      "There is no paragraph count, line count, or word-count requirement. Let the prose breathe. Keep the page coherent and useful after Ten's action.",
+      "There is no paragraph count, line count, or word-count requirement. Let the prose breathe and be a little generous when there is something real to say. Keep the page coherent and useful after Ten's action.",
       `ALLOWED MOVES FROM HERE: ${JSON.stringify(movementResolved ? [] : (allowedMoves[currentId] || []))}`,
       `CURRENT GROUND: ${currentId}`,
       `SOURCE FLOOR: ${JSON.stringify(facts)}`,
