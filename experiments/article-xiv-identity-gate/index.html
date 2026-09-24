@@ -1783,6 +1783,50 @@ body.gate-open .connectors path{
   }
 }
 </style>
+
+<style id="properties-polish">
+/* Return Properties to the earlier page tone; keep the Fireworks-style structure. */
+.properties{
+  background:var(--paper2)!important;
+}
+.properties-tab{
+  background:rgba(24,23,18,.035)!important;
+}
+.pi-file button,
+.pi-send button,
+.property-target span,
+.property-any span{
+  background:rgba(247,243,233,.72)!important;
+}
+.property-target input:checked + span,
+.property-any input:checked + span{
+  background:rgba(119,85,64,.10)!important;
+  border-color:rgba(24,23,18,.42)!important;
+}
+
+/* Give target selection a little more breathing room without changing panel height. */
+.properties-receive{
+  grid-template-columns:minmax(8.5rem,.17fr) minmax(15rem,.34fr) minmax(0,1fr) minmax(7.5rem,.15fr) minmax(7.5rem,.15fr)!important;
+}
+.property-targets{
+  flex-wrap:wrap!important;
+  row-gap:.22rem!important;
+}
+.property-any{
+  margin-top:.18rem!important;
+  padding-left:0!important;
+  border-left:0!important;
+}
+.property-target span,
+.property-any span{
+  max-width:9.5rem!important;
+}
+@media(max-width:64rem){
+  .properties-receive{
+    grid-template-columns:minmax(7rem,.22fr) minmax(13rem,.36fr) minmax(0,1fr) minmax(7rem,.2fr)!important;
+  }
+}
+</style>
 </head>
 <body>
 <div class="page">
