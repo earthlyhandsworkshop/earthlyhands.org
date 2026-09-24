@@ -51,17 +51,20 @@
   const experienceStage = document.querySelector("#experience-stage");
   const thresholdIntro = document.querySelector("#threshold-intro");
   const experienceMount = document.querySelector("#experience-mount");
+  const dawsonIndex = document.querySelector("#dawson-index");
+  const dawsonStopList = document.querySelector(".dawson-stop-list");
+  const viewModes = Array.from(document.querySelectorAll("[data-dawson-view]"));
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const steps = Array.from(document.querySelectorAll("[data-step]"));
   const sequence = ["night", "morning", "southeast", "blue-water", "dozen"];
   const fullSequence = [...sequence];
   const sceneById = new Map(scenes.map((scene) => [scene.id, scene]));
   const trailUi = {
-    night: { name: "Night camp", next: "morning" },
-    morning: { name: "Morning camp", next: "southeast" },
-    southeast: { name: "Southeast reach", next: "blue-water" },
-    "blue-water": { name: "Blue Water", next: "dozen" },
-    dozen: { name: "A dozen", next: null }
+    night: { name: "Night camp", note: "guard / ford / two unnamed men", next: "morning" },
+    morning: { name: "Morning camp", note: "unattacked / unresolved return", next: "southeast" },
+    southeast: { name: "Southeast reach", note: "about fifteen miles / route line unresolved", next: "blue-water" },
+    "blue-water": { name: "Blue Water", note: "Mayes / Criner / trapping", next: "dozen" },
+    dozen: { name: "A dozen", note: "catch quantity / cold weather", next: null }
   };
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
@@ -376,6 +379,50 @@
     return null;
   }
 
+  function setDawsonView(view) {
+    const next = ["ground", "talk", "index"].includes(view) ? view : "ground";
+    if (experienceShell) experienceShell.dataset.view = next;
+
+    viewModes.forEach((button) => {
+      const active = button.dataset.dawsonView === next;
+      button.classList.toggle("is-current", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+
+    if (experienceMount) experienceMount.hidden = next === "index";
+    if (dawsonIndex) dawsonIndex.hidden = next !== "index";
+
+    if (next === "talk") {
+      requestAnimationFrame(() => talkInput?.focus({ preventScroll: true }));
+    }
+  }
+
+  function buildDawsonIndex() {
+    if (!dawsonStopList) return;
+    const fragment = document.createDocumentFragment();
+
+    fullSequence.forEach((id, i) => {
+      const ui = trailUi[id];
+      const row = document.createElement("button");
+      row.type = "button";
+      row.className = "dawson-stop";
+      row.dataset.stop = id;
+      row.innerHTML = `
+        <span class="stop-number">${String(i + 1).padStart(2, "0")}</span>
+        <strong>${ui?.name || id}</strong>
+        <span>${ui?.note || ""}</span>
+        <b aria-hidden="true">→</b>
+      `;
+      row.addEventListener("click", () => {
+        landAt(id);
+        setDawsonView("ground");
+      });
+      fragment.append(row);
+    });
+
+    dawsonStopList.replaceChildren(fragment);
+  }
+
   function updatePlace() {
     // The scene names its own place. Do not echo that label elsewhere in the interface.
   }
@@ -604,6 +651,13 @@
       setAsking(false);
     }
   }
+
+  viewModes.forEach((control) => {
+    control.addEventListener("click", () => setDawsonView(control.dataset.dawsonView));
+  });
+
+  buildDawsonIndex();
+  setDawsonView("ground");
 
   document.querySelectorAll("[data-depth]").forEach((control) => {
     control.addEventListener("click", () => openDepthPanel(control));
