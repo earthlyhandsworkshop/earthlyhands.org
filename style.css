@@ -125,8 +125,7 @@ footer,
 
   width:100vw;
   min-height:calc(100svh - 4.3rem);
-  display:grid;
-  grid-template-rows:minmax(0,1fr) auto;
+  display:block;
   margin-left:calc(50% - 50vw);
   margin-right:calc(50% - 50vw);
   background:var(--scene-bg);
@@ -185,17 +184,14 @@ body[data-ground="dozen"] .experience-shell{
 }
 
 .experience-stage{
-  min-height:0;
-  display:flex;
-  align-items:stretch;
-  padding:clamp(1.25rem,3.2vh,2.4rem) 0 1rem;
-  overflow:hidden;
+  min-height:clamp(28rem,64svh,40rem);
+  display:block;
+  padding:clamp(1.35rem,3.5vh,2.6rem) 0 1.4rem;
+  overflow:visible;
 }
 
 .experience-mount{
   width:100%;
-  min-height:0;
-  display:flex;
   overflow:visible;
 }
 
@@ -206,12 +202,10 @@ body[data-ground="dozen"] .experience-shell{
 [data-scene].is-current{
   display:grid;
   grid-template-columns:minmax(17rem,.72fr) minmax(0,1.38fr);
-  grid-template-rows:auto auto 1fr;
-  gap:.55rem clamp(2.5rem,6vw,7rem);
+  grid-template-rows:auto auto auto;
+  gap:.7rem clamp(2.5rem,6vw,7rem);
   width:100%;
-  min-height:100%;
   align-items:start;
-  align-content:stretch;
 }
 
 [data-scene][tabindex="-1"]:focus{outline:none}
@@ -254,9 +248,7 @@ body[data-ground="dozen"] .experience-shell{
 }
 
 .first-person-view{
-  display:grid;
-  grid-template-rows:auto minmax(0,1fr) auto auto;
-  min-height:100%;
+  display:block;
   padding:0;
 }
 
@@ -272,16 +264,15 @@ body[data-ground="dozen"] .experience-shell{
 .fpv-close{margin-top:.55rem}
 
 .view-body{
-  display:grid;
-  grid-template-rows:repeat(4,minmax(2.25em,auto));
-  gap:.48em;
   max-width:46rem;
-  align-content:center;
 }
 
-.first-person-view p{
-  margin:0;
-  align-self:start;
+.view-body p{
+  margin:0 0 .62em;
+}
+
+.view-body p:last-child{
+  margin-bottom:0;
 }
 
 .fpv-footing{
@@ -510,18 +501,15 @@ footer{
   }
 
   .experience-stage{
-    min-height:0;
-    padding:1.1rem 0 .9rem;
-    align-items:stretch;
+    min-height:28rem;
+    padding:1.1rem 0 1rem;
   }
 
   [data-scene].is-current{
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows:auto auto 1fr;
-    gap:.5rem;
-    min-height:100%;
-    align-content:stretch;
+    grid-template-rows:auto auto auto;
+    gap:.6rem;
   }
 
   .scene-setting{
@@ -547,17 +535,12 @@ footer{
   }
 
   .first-person-view{
-    display:grid;
-    grid-template-rows:auto minmax(0,1fr) auto auto;
-    min-height:100%;
+    display:block;
     padding:0;
   }
 
   .view-body{
-    grid-template-rows:repeat(4,minmax(2.45em,auto));
-    gap:.36em;
     min-height:0;
-    align-content:center;
   }
 
   .fpv-footing{
