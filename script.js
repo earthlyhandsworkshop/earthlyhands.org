@@ -54,6 +54,8 @@
   const dawsonIndex = document.querySelector("#dawson-index");
   const campPeople = document.querySelector("#camp-people");
   const campPeopleList = document.querySelector(".camp-people-list");
+  const campSources = document.querySelector("#camp-sources");
+  const campSourceList = document.querySelector(".camp-source-list");
   const dawsonStopList = document.querySelector(".dawson-stop-list");
   const viewModes = Array.from(document.querySelectorAll("[data-dawson-view]"));
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
@@ -92,8 +94,8 @@
 
   const peopleByGround = {
     night: [
-      { name: "J. L. Dawson", relation: "report writer / narrator-side officer", note: "The report is his carrier; that does not make every person in the camp 'Dawson's' in identity." },
-      { name: "Dawson's detachment", relation: "camp-side military body", note: "The individual men are not fully named in the held camp sequence." },
+      { name: "J. L. Dawson", relation: "report writer / narrator-side officer", note: "The surviving account is carried through his report. Authorship does not make the surrounding people his possessions or identities." },
+      { name: "military detachment", relation: "camp-side body under Dawson's command", note: "The individual men are not fully named in this held camp sequence." },
       { name: "five or six Choctaws", relation: "source-counted camp-side body", note: "Count and Choctaw label are source-carried; individual identities remain open here." },
       { name: "Pitman Calvert", relation: "arrived at camp that afternoon", note: "Arrival is source-controlled; later movement or overnight presence should not be assumed without the next source state." },
       { name: "See-ly", relation: "arrived with Calvert; source labels him 'a Chickasaw named See-ly'", note: "Keep the source name-form and label; no wider identity join is required here." },
@@ -101,22 +103,22 @@
       { name: "two unnamed men", relation: "sent toward the ford on the back trail", note: "The source gives purpose to watch; it does not currently give arrival, completed watch, or return." }
     ],
     morning: [
-      { name: "Dawson party", relation: "camp body in the morning state", note: "The report says the party was unattacked through the night." },
+      { name: "traveling party", relation: "narrator-carried camp body in the morning state", note: "The report says the party was unattacked through the night; this label is not a complete roster." },
       { name: "two unnamed men", relation: "no longer mentioned in the carried morning passage", note: "Not repeated ≠ returned, lost, or absent." },
       { name: "small guard", relation: "night precaution no longer foregrounded", note: "Morning narration moves on without resolving every night-body." }
     ],
     southeast: [
-      { name: "Dawson party", relation: "source-carried traveling body", note: "The route is stated southeast about fifteen miles; the traveled line itself remains unresolved." }
+      { name: "traveling party", relation: "source-carried movement body", note: "The route is stated southeast about fifteen miles; the traveled line and complete roster remain unresolved." }
     ],
     "blue-water": [
       { name: "Mr. Mayes", relation: "found on this creek", note: "Dawson separately reports residence on James' Fork of Poteau." },
       { name: "Mr. Criner", relation: "found on this creek", note: "Dawson separately reports residence on James' Fork of Poteau." },
-      { name: "Dawson party", relation: "encounter-side traveling body", note: "The source does not roster every individual at this encounter." }
+      { name: "traveling party", relation: "encounter-side body carried by the report", note: "The source does not roster every individual at this encounter." }
     ],
     dozen: [
       { name: "Mr. Mayes", relation: "one of the two men said to have caught but a dozen beaver", note: "The source does not divide the catch between Mayes and Criner." },
       { name: "Mr. Criner", relation: "one of the two men said to have caught but a dozen beaver", note: "The source does not divide the catch between Mayes and Criner." },
-      { name: "Dawson party", relation: "still in the Blue Water encounter sequence", note: "No new route is earned by the catch-quantity sentence itself." }
+      { name: "traveling party", relation: "still in the Blue Water encounter sequence", note: "No new route or complete roster is earned by the catch-quantity sentence itself." }
     ]
   };
 
@@ -413,7 +415,7 @@
   }
 
   function setDawsonView(view) {
-    const next = ["ground", "talk", "index", "people"].includes(view) ? view : "ground";
+    const next = ["ground", "talk", "index", "people", "sources"].includes(view) ? view : "ground";
     if (experienceShell) experienceShell.dataset.view = next;
 
     viewModes.forEach((button) => {
@@ -422,9 +424,10 @@
       button.setAttribute("aria-pressed", String(active));
     });
 
-    if (experienceMount) experienceMount.hidden = next === "index" || next === "people";
+    if (experienceMount) experienceMount.hidden = next === "index" || next === "people" || next === "sources";
     if (dawsonIndex) dawsonIndex.hidden = next !== "index";
     if (campPeople) campPeople.hidden = next !== "people";
+    if (campSources) campSources.hidden = next !== "sources";
 
     if (next === "talk") {
       requestAnimationFrame(() => talkInput?.focus({ preventScroll: true }));
@@ -457,6 +460,63 @@
     dawsonStopList.replaceChildren(fragment);
   }
 
+
+
+  function buildCampSources() {
+    if (!campSourceList) return;
+    const entries = dawsonRetrieval.filter((entry) => Array.isArray(entry.scenes) && entry.scenes.includes(currentId));
+    const fragment = document.createDocumentFragment();
+
+    if (!entries.length) {
+      const empty = document.createElement("p");
+      empty.className = "camp-source-empty";
+      empty.textContent = "No public retrieval object is indexed for this exact ground yet.";
+      fragment.append(empty);
+    } else {
+      entries.forEach((entry) => {
+        const card = document.createElement("article");
+        card.className = "camp-source-card";
+
+        const head = document.createElement("div");
+        head.className = "camp-source-head";
+        const kind = document.createElement("span");
+        kind.textContent = "Public derivative";
+        const id = document.createElement("code");
+        id.textContent = entry.id;
+        head.append(kind, id);
+
+        const summary = document.createElement("div");
+        summary.className = "camp-source-summary";
+        (entry.summary || []).forEach((line) => {
+          const p = document.createElement("p");
+          p.textContent = line;
+          summary.append(p);
+        });
+
+        const pointers = document.createElement("p");
+        pointers.className = "camp-source-pointers";
+        pointers.textContent = "Returns to: " + (entry.source_object_ids || []).join(" · ");
+
+        const brakes = document.createElement("div");
+        brakes.className = "camp-source-brakes";
+        (entry.brakes || []).forEach((line) => {
+          const b = document.createElement("span");
+          b.textContent = line;
+          brakes.append(b);
+        });
+
+        card.append(head, summary, pointers, brakes);
+        fragment.append(card);
+      });
+    }
+
+    campSourceList.replaceChildren(fragment);
+  }
+
+  function asksForSources(message) {
+    const lower = String(message || "").toLowerCase();
+    return /\b(show me (the )?sources|what source|what carries this|where does this come from|show me the record|show me the records|source body|source bodies|jackets? here)\b/.test(lower);
+  }
 
   function buildCampPeople() {
     if (!campPeopleList) return;
@@ -548,6 +608,7 @@
     updatePlace(target);
     renderSceneState(target.id);
     buildCampPeople();
+    buildCampSources();
     target.focus({ preventScroll: true });
   }
 
@@ -635,6 +696,15 @@
       return;
     }
 
+    if (asksForSources(clean)) {
+      keepTenWords(clean);
+      talkInput.value = "";
+      sizeTalkInput();
+      buildCampSources();
+      setDawsonView("sources");
+      return;
+    }
+
     receiveTenAction(clean);
     const localMove = localMoveFromWords(clean);
     const movementResolved = Boolean(localMove && canMove(origin, localMove));
@@ -708,17 +778,14 @@
       }
 
       const patch = parseSceneReply(data.reply);
-      if (patch) {
-        const patchOrigin = currentId;
-        const result = applyScenePatch(patchOrigin, patch);
-        if (!movementResolved && result.moveTo && canMove(patchOrigin, result.moveTo)) {
-          landAt(result.moveTo);
-        }
-      } else {
-        const prosePatch = proseReplyToPatch(data.reply, clean);
-        if (prosePatch) {
-          applyScenePatch(currentId, prosePatch);
-        }
+      if (!patch) {
+        throw new Error("Worker returned an invalid Shared Country scene contract");
+      }
+
+      const patchOrigin = currentId;
+      const result = applyScenePatch(patchOrigin, patch);
+      if (!movementResolved && result.moveTo && canMove(patchOrigin, result.moveTo)) {
+        landAt(result.moveTo);
       }
 
       conversation.push({ role: "user", content: clean });
@@ -727,7 +794,7 @@
       console.error("Shared Country listening error:", error);
       const scene = sceneById.get(currentId);
       const companion = scene?.querySelector(".companion-footing");
-      if (companion) companion.textContent = "Small Door · listening ground did not answer";
+      if (companion) companion.textContent = "";
       if (groundThread && !groundThread.querySelector(".listening-error")) {
         const note = document.createElement("p");
         note.className = "listening-error";
