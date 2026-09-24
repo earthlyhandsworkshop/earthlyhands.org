@@ -159,3 +159,33 @@ A later family-specific / other-Robert experiment may reverse the chronology:
 **older record first → later family / descendant / Commission handling**
 
 That sister piece should be built separately so both directions can be tested honestly against their source chronology. Do not retrofit this branch until its own composition is lost.
+
+
+## Manual pairing before IDENTICAL
+
+The upper record field now supports a deliberate temporary joke that teaches the rule.
+
+Before the administrative card is pressed, a visitor may try to pair corresponding objects manually:
+
+- Robin Bell ↔ Robert Bell
+- Susie ↔ Yimma
+- about 160 acres ↔ 694.96 acres
+- Jane / Wash ↔ Section 4
+- Dibbin Marris ↔ Murray–Vroom / patent
+
+A manually attempted pair may hold together briefly, then releases/fades. It is a comparison attempt, not a durable identity relation.
+
+Pressing **IDENTICAL** changes the state: the whole upper field becomes persistently selected and the connector field darkens with it. The interface is making a documentary joke, not a historical conclusion: the government administrative act can make predicates travel and stay together inside its record machinery even where the Workshop still leaves the source bridges open.
+
+The lower unresolved movement should therefore remain open after IDENTICAL. The stronger upper visual join must never erase the lower questions.
+
+## Lower-row source density
+
+The expanded lower movement should use its existing footprint more fully rather than grow much taller. Each unresolved line may carry a restrained second line of source-local detail: date, place, carrier, role, or remembered land proposition.
+
+Particular emphasis:
+
+- **Noxapater / Neshoba County** must be visible in the land/place questions.
+- **Susie** should carry Jane Bell's 23 March 1903 witness context.
+- **Yimma** should carry the 13 May 1902 Office representation and the older record-book reference.
+- **Murray–Vroom** should be dated as the **1837–38 Article XIV commission**. Do not mislabel that commission as 1842; later 1842 statutory machinery belongs to a separate layer.
