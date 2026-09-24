@@ -58,8 +58,22 @@
     <main>
       <section class="threshold" id="threshold" data-place="Front edge">
         <div class="experience-shell" id="experience-shell">
+          <div class="experience-viewbar" aria-label="Dawson view">
+            <button type="button" class="view-mode is-current" data-dawson-view="ground" aria-pressed="true">Ground</button>
+            <button type="button" class="view-mode" data-dawson-view="talk" aria-pressed="false">Talk wide</button>
+            <button type="button" class="view-mode" data-dawson-view="index" aria-pressed="false">Stops</button>
+          </div>
+
           <div class="experience-stage" id="experience-stage" data-direction="forward">
             <div class="experience-mount" id="experience-mount" aria-live="polite"></div>
+            <section class="dawson-index" id="dawson-index" hidden aria-labelledby="dawson-index-title">
+              <header class="dawson-index-head">
+                <p>Dawson passage</p>
+                <h2 id="dawson-index-title">Stops currently open</h2>
+                <span>These are public stops in the present trail. The deeper Dawson corpus is larger and is still being indexed underneath.</span>
+              </header>
+              <nav class="dawson-stop-list" aria-label="Dawson public stops"></nav>
+            </section>
           </div>
 
           <div class="experience-tools" aria-label="Dawson passage controls">
