@@ -70,7 +70,7 @@
     morning: { name: "Morning camp", next: "southeast" },
     southeast: { name: "Southeast reach", next: "blue-water" },
     "blue-water": { name: "Blue Water", next: "dozen" },
-    dozen: { name: "The catch", next: null }
+    dozen: { name: "A dozen", next: null }
   };
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
@@ -332,7 +332,7 @@
     asking = value;
     talkInput.disabled = value;
     talkSend.disabled = value;
-    talkSend.textContent = value ? "Listening…" : "Send";
+    talkSend.textContent = value ? "Listening…" : "Go";
   }
 
   async function askGround(message) {
