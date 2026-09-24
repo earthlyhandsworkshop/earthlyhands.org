@@ -124,6 +124,23 @@ body[data-focus="records"] .body-applicant{opacity:.34;transform:scale(.985)}
 body[data-focus="applicant"] .body-applicant,
 body[data-focus="records"] .body-record{border-color:var(--rule-strong);background:rgba(255,255,255,.22)}
 body[data-focus="compare"] .body{border-color:var(--rule-strong)}
+body[data-focus="compare"] .room-head{
+  grid-template-columns:1fr;
+  text-align:center;
+}
+body[data-focus="compare"] .room-title-block{
+  grid-column:1;
+  justify-self:center;
+  max-width:68rem;
+}
+body[data-focus="compare"] .room-title-block h1{
+  max-width:22ch;
+  margin-inline:auto;
+  font-size:clamp(2.15rem,4.8vw,4.8rem);
+}
+body[data-focus="compare"] .room-note{
+  display:none;
+}
 body[data-focus="compare"] .body h2{
   font-size:clamp(1.45rem,2.6vw,2.45rem);
   line-height:1;
@@ -147,8 +164,95 @@ body[data-focus="compare"] .body-record{
   transform:none;
   background:rgba(255,255,255,.16);
 }
-body[data-relation="agency-separation"] .seam{background:rgba(133,88,62,.055)}
-body[data-relation="unresolved"] .seam{background:rgba(105,112,94,.06)}
+body[data-relation="agency-separation"] .room-head,
+body[data-relation="unresolved"] .room-head{
+  grid-template-columns:1fr;
+  text-align:center;
+}
+body[data-relation="agency-separation"] .room-title-block,
+body[data-relation="unresolved"] .room-title-block{
+  grid-column:1;
+  justify-self:center;
+}
+body[data-relation="agency-separation"] .room-title-block h1,
+body[data-relation="unresolved"] .room-title-block h1{
+  max-width:20ch;
+  margin-inline:auto;
+}
+body[data-relation="agency-separation"] .room-note,
+body[data-relation="unresolved"] .room-note{display:none}
+
+body[data-relation="agency-separation"] .stage{
+  grid-template-columns:minmax(0,.82fr) minmax(12rem,.72fr) minmax(0,.82fr);
+}
+body[data-relation="agency-separation"] .body{
+  opacity:.42;
+  transform:scale(.965);
+  background:rgba(255,255,255,.06);
+}
+body[data-relation="agency-separation"] .body .fact:not(.is-active){
+  opacity:.25;
+}
+body[data-relation="agency-separation"] .seam{
+  background:var(--black);
+  color:var(--paper2);
+  border-color:var(--black);
+  box-shadow:0 0 0 1px var(--black);
+}
+body[data-relation="agency-separation"] .seam::before{background:rgba(240,232,216,.22)}
+body[data-relation="agency-separation"] .state-label,
+body[data-relation="agency-separation"] .finding,
+body[data-relation="agency-separation"] .seam-actions{
+  background:var(--black);
+}
+body[data-relation="agency-separation"] .state-label,
+body[data-relation="agency-separation"] .finding p{color:rgba(240,232,216,.65)}
+body[data-relation="agency-separation"] .finding .relation-label{color:#d8a27e}
+body[data-relation="agency-separation"] .finding strong{
+  font-size:clamp(1.35rem,2.5vw,2.45rem);
+  letter-spacing:-.03em;
+}
+body[data-relation="agency-separation"] .seam-actions button{
+  color:rgba(240,232,216,.7);
+  border-bottom-color:rgba(240,232,216,.18);
+}
+body[data-relation="agency-separation"] .seam-actions button[aria-pressed="true"]{
+  color:#fff4e3;
+  border-bottom-color:#d8a27e;
+}
+
+body[data-relation="unresolved"] .stage{
+  grid-template-columns:minmax(0,.72fr) minmax(16rem,1fr) minmax(0,.72fr);
+}
+body[data-relation="unresolved"] .body{
+  opacity:.28;
+  transform:scale(.95);
+  border-style:dashed;
+  background:transparent;
+}
+body[data-relation="unresolved"] .body .facts{opacity:.42}
+body[data-relation="unresolved"] .seam{
+  background:transparent;
+  border-left:1px dashed var(--rule-strong);
+  border-right:1px dashed var(--rule-strong);
+}
+body[data-relation="unresolved"] .seam::before{display:none}
+body[data-relation="unresolved"] .finding{
+  background:transparent;
+  padding:1rem .5rem;
+}
+body[data-relation="unresolved"] .finding .relation-label{color:var(--moss)}
+body[data-relation="unresolved"] .finding strong{
+  font-size:clamp(1.55rem,3vw,3rem);
+  letter-spacing:-.04em;
+}
+body[data-relation="unresolved"] .finding p{
+  max-width:16rem;
+  font-size:.74rem;
+}
+body[data-relation="unresolved"] .state-label,
+body[data-relation="unresolved"] .seam-actions{background:var(--paper)}
+
 
 .ask-rail{
   min-height:4.45rem;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.8rem;
@@ -198,9 +302,15 @@ body[data-relation="unresolved"] .seam{background:rgba(105,112,94,.06)}
   .body-record{display:none}
   body[data-focus="records"] .body-applicant{display:none}
   body[data-focus="records"] .body-record{display:grid}
-  body[data-focus="compare"] .stage{grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:.35rem}
-  body[data-focus="compare"] .body-applicant{display:grid;grid-column:1;grid-row:1}
-  body[data-focus="compare"] .body-record{display:grid;grid-column:2;grid-row:1}
+  body[data-focus="compare"] .stage,
+  body[data-relation="agency-separation"] .stage,
+  body[data-relation="unresolved"] .stage{grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:.35rem}
+  body[data-focus="compare"] .body-applicant,
+  body[data-relation="agency-separation"] .body-applicant,
+  body[data-relation="unresolved"] .body-applicant{display:grid;grid-column:1;grid-row:1}
+  body[data-focus="compare"] .body-record,
+  body[data-relation="agency-separation"] .body-record,
+  body[data-relation="unresolved"] .body-record{display:grid;grid-column:2;grid-row:1}
   body[data-focus="compare"] .body-intro{display:none}
   body[data-focus="compare"] .body h2{font-size:1rem;line-height:1.05}
   body[data-focus="compare"] .body-head{min-height:3.9rem}
@@ -209,6 +319,8 @@ body[data-relation="unresolved"] .seam{background:rgba(105,112,94,.06)}
   body[data-focus="compare"] .fact strong{font-size:.74rem}
   body[data-focus="compare"] .fact small{display:none}
   .seam{grid-row:2;grid-column:1 / -1;grid-template-columns:auto 1fr auto;grid-template-rows:auto;border:1px solid var(--rule);min-height:3rem}
+  body[data-relation="agency-separation"] .seam,
+  body[data-relation="unresolved"] .seam{grid-row:2;grid-column:1 / -1;transform:none;min-height:3.6rem}
   .seam::before{display:none}
   .state-label{margin:0 .35rem;padding:0;background:transparent}
   .finding{padding:.28rem .35rem;background:transparent}
@@ -291,8 +403,8 @@ body[data-relation="unresolved"] .seam{background:rgba(105,112,94,.06)}
           <button type="button" data-focus="applicant">Applicants</button>
           <button type="button" data-focus="records">Records</button>
           <button type="button" data-focus="compare">Compare</button>
-          <button type="button" data-focus="finding">Finding</button>
-          <button type="button" data-focus="workshop">Workshop</button>
+          <button type="button" data-focus="finding">Commission decides</button>
+          <button type="button" data-focus="workshop">Leave identity open</button>
         </div>
       </aside>
 
@@ -426,14 +538,14 @@ const states={
   focus:"compare",relation:"agency-separation",eyebrow:"Commission finding · attributed",
   headline:"The Commission makes the join fail here.",
   note:"This is the agency’s identity act inside the 15 April 1902 decision—not a Workshop identity finding.",
-  state:"Agency finding",relationLabel:"Commission characterization",relationTitle:"NOT THE SAME PERSON",
+  state:"Commission decides",relationLabel:"Commission characterization",relationTitle:"NOT THE SAME PERSON",
   relationNote:"The institutional conclusion remains attached to the institution that made it.",active:["record-switch","record-carrier","app-language","app-spouse","record-spouse"]
  },
  workshop:{
   focus:"compare",relation:"unresolved",eyebrow:"Workshop state",
-  headline:"The Commission decided. The room does not inherit the identity.",
+  headline:"The Commission decided. The identity stays open here.",
   note:"The surviving decision controls what the Commission concluded. It does not make that conclusion source-independent historical truth.",
-  state:"Leave identity open",relationLabel:"Workshop relation",relationTitle:"UNRESOLVED HERE",
+  state:"Identity left open",relationLabel:"What this room can responsibly carry",relationTitle:"UNRESOLVED HERE",
   relationNote:"Two bodies remain inspectable. Neither is silently promoted into the other.",active:["app-compliance","record-switch","record-carrier"]
  }
 };
