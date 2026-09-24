@@ -490,19 +490,19 @@
     const facts = sourceFloor[currentId] || [];
 
     const sceneRequest = [
-      "You are Small Door present remotely with Ten inside the Earthly Hands Dawson Trail experiment.",
+      "DOOR: Shared Country / Dawson Trail.",
+      "LOCAL JOB: recompose only the present Dawson scene from the held local ground. Do not claim that a companion is physically or historically present in 1831.",
       "VOICE: plain, testimonial, unresolved. Prefer exact nouns and earned verbs. Do not perform significance.",
-      "FIRST PERSON VIEW: the bracketed view is ordinary prose from Ten's landed eyes. Work only from the SOURCE FLOOR, CURRENT SCREEN, recent bounded conversation, and Ten's words. Do not browse or imply outside research. If the held ground does not answer a factual question, say so plainly and preserve the opening. For a question with several parts, several substantive paragraphs are welcome when the held material earns them. Let the answer materially recompose the visible prose and, when useful, the title.",
-      "Historical source facts are a floor. Do not contradict them, turn an open question into a fact, or claim Dawson recorded Ten's invented actions.",
-      "Ten may alter the present experiential layer: make a small fire, drink coffee, sit, ask questions, talk, notice things, or imagine a reversible present action. Keep that distinct from the 1831 source.",
+      "HELD CONTEXT ONLY: use SOURCE FLOOR, CURRENT SCREEN, recent runtime conversation, and TEN. If they do not answer a factual question, say the held ground does not answer it.",
+      "EXPERIENCE LAYER: Ten may make reversible present actions such as a small fire, coffee, sitting, waiting, looking, or darkness. Keep those distinct from the 1831 source.",
       movementResolved
-        ? "Ten has already moved once because this utterance clearly earned that crossing. Do not move again."
-        : "Remain at the current ground unless Ten explicitly asks to move. A subject word such as beaver, creek, trapping, Mayes, Criner, water, or weather is a topic to investigate, not a movement command.",
-      "Return ONLY valid JSON, no markdown, with exactly these keys:",
-      '{"setting":"ground/carrier line","title":"plain headline","view":"natural prose; use blank lines between paragraphs when helpful","footing":"Ten footing in whatever length is useful","companion":"Small Door footing if useful","appearance":"","move_to":""}',
-      'appearance may be only "", "fire", "night", or "fire-night". Use night when the present experiential layer has become dark; use fire-night when darkness and a small fire are both present. move_to must be "" unless Ten is actually moving; if moving, use only an adjacent ground id allowed by the trail.',
-      "There is no paragraph count, line count, or word-count requirement. Let the prose breathe. A substantive factual question will often need roughly three to five paragraphs, though use what the material earns. When Ten changes the subject or asks a real question, reconsider the title too; the title should describe what the page is now doing rather than mechanically preserving the previous Dawson headline. Keep the page coherent after Ten's action.",
-      `ALLOWED MOVES FROM HERE: ${JSON.stringify(movementResolved ? [] : (allowedMoves[currentId] || []))}`,
+        ? "MOVEMENT: Ten already moved once because this utterance clearly earned that crossing. Do not move again."
+        : "MOVEMENT: remain here unless Ten explicitly asks to move. Topic words such as beaver, creek, trapping, Mayes, Criner, water, or weather are not movement commands.",
+      "RETURN JSON ONLY with exactly these keys:",
+      '{"setting":"ground/carrier line","title":"plain headline","view":"natural prose; blank lines allowed","footing":"Ten footing","companion":"optional public-ground footing","appearance":"","move_to":""}',
+      'appearance must be "", "fire", "night", or "fire-night". move_to must be "" unless Ten explicitly moves; if moving, use only an id listed in ALLOWED MOVES.',
+      "Let the response change only what this turn earns. No change, refusal, or an unresolved edge is valid. Reconsider the title only when the page is genuinely doing something different.",
+      `ALLOWED MOVES: ${JSON.stringify(movementResolved ? [] : (allowedMoves[currentId] || []))}`,
       `CURRENT GROUND: ${currentId}`,
       `SOURCE FLOOR: ${JSON.stringify(facts)}`,
       `CURRENT SCREEN: ${JSON.stringify(visible)}`,
@@ -521,6 +521,14 @@
       });
 
       const data = await response.json().catch(() => ({}));
+
+      if (data.usage) {
+        console.info("Earthly Hands Worker usage", {
+          request_id: data.request_id || "",
+          ...data.usage,
+        });
+      }
+
       if (!response.ok || typeof data.reply !== "string") {
         throw new Error(data.error || `HTTP ${response.status}`);
       }
