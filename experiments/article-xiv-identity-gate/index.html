@@ -1412,6 +1412,40 @@ body.gate-open .stage-two{display:block!important}
   .stage-two .pressure-state{grid-column:1/4!important}
 }
 </style>
+
+<style id="pairing-pass">
+.entry.is-held{
+  background:rgba(119,85,64,.11)!important;
+  box-shadow:inset 0 0 0 1px rgba(119,85,64,.22);
+}
+.entry.is-held-fading{
+  background:rgba(119,85,64,0)!important;
+  box-shadow:inset 0 0 0 1px rgba(119,85,64,0);
+  transition:background 1.15s ease,box-shadow 1.15s ease;
+}
+body.gate-open .entry{
+  background:rgba(119,85,64,.12)!important;
+  box-shadow:inset 0 0 0 1px rgba(119,85,64,.2);
+}
+body.gate-open .connectors path{
+  stroke:var(--accent)!important;
+  stroke-width:2!important;
+}
+.stage-two .pressure-row .left small,
+.stage-two .pressure-row .right small{
+  display:block!important;
+  margin-top:.18rem!important;
+  color:var(--muted)!important;
+  font:.47rem/1.15 var(--mono)!important;
+  font-weight:400!important;
+  letter-spacing:.025em!important;
+  text-transform:none!important;
+}
+.stage-two .pressure-state{
+  max-height:1.25rem;
+  overflow:hidden;
+}
+</style>
 </head>
 <body>
 <div class="page">
@@ -1466,7 +1500,7 @@ body.gate-open .stage-two{display:block!important}
         <button class="entry" data-entry="yimma" type="button"><strong>Yimma</strong><small>1902 Office representation of older record book testimony</small></button>
         <button class="entry" data-entry="694" type="button"><strong>694.96 acres</strong><small>1846 Article XIV patent · surveyed tract</small></button>
         <button class="entry" data-entry="section4" type="button"><strong>Section 4</strong><small>T12N R12E · Choctaw Meridian</small></button>
-        <button class="entry" data-entry="murray" type="button"><strong>Murray–Vroom / patent</strong><small>older adjudicative and patent record universe</small></button>
+        <button class="entry" data-entry="murray" type="button"><strong>Murray–Vroom / patent</strong><small>1837–38 Article XIV commission · later patent / adjudicative use</small></button>
       </article>
 
       <svg class="connectors" id="connectors" aria-hidden="true"></svg>
@@ -1479,24 +1513,24 @@ body.gate-open .stage-two{display:block!important}
         <div class="pressure">
           <div class="pressure-head"><h2>Unresolved proposition lines</h2></div>
           <button class="pressure-row" type="button" data-bridge="yimma-susie">
-            <span class="left">YIMMA</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">SUSIE</span>
-            <span class="pressure-state">two source-local spouse / mother propositions · person relation not earned</span>
+            <span class="left">YIMMA<small>13 May 1902 Office report · older record book 102 p.520 · represented wife</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">SUSIE<small>Jane Bell · 23 Mar 1903 · names her mother directly</small></span>
+            <span class="pressure-state">Yimma represented as Robert Bell's wife, married about six months before the 1830 treaty · Susie is Jane's mother in Jane's own testimony</span>
           </button>
           <button class="pressure-row" type="button" data-bridge="land">
-            <span class="left">694.96 ACRES</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ABOUT 160 ACRES</span>
-            <span class="pressure-state">original patent tract ≠ proved later parcel chain</span>
+            <span class="left">694.96 ACRES<small>14 Dec 1846 patent · Section 4 · T12N R12E</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ABOUT 160 ACRES<small>Jane · government land at Noxapater, Neshoba County · Wash owns / lives there</small></span>
+            <span class="pressure-state">surveyed Article XIV patent tract ≠ proved later Noxapater parcel chain</span>
           </button>
           <button class="pressure-row" type="button" data-bridge="name">
-            <span class="left">ROBERT</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ROBIN</span>
-            <span class="pressure-state">older / translated Robert forms ≠ Jane's witness-given Robin</span>
+            <span class="left">ROBERT<small>older Article XIV carriers · Dibbin Marris certified translated record</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">ROBIN<small>Jane · 23 Mar 1903 · says Robin twice, including Robin or Robert?</small></span>
+            <span class="pressure-state">later administrative Robert forms do not by themselves rewrite Jane's witness-given Robin</span>
           </button>
           <button class="pressure-row" type="button" data-bridge="place">
-            <span class="left">SECTION 4</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">NOXAPATER</span>
-            <span class="pressure-state">later decision pressure exists · exact parcel continuity still needs carriers</span>
+            <span class="left">SECTION 4<small>1846 patent address · Choctaw Meridian</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">NOXAPATER<small>Jane's remembered government land · Neshoba County · Wash on the land</small></span>
+            <span class="pressure-state">the later record can place Wash against Section 4; the intervening land carriers are still the missing bridge</span>
           </button>
           <button class="pressure-row" type="button" data-bridge="language">
-            <span class="left">1838: CANNOT SPEAK ENGLISH</span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">FAMILY-SIDE CLAIMS</span>
-            <span class="pressure-state">older Robert source-local language proposition cannot travel without identity continuity</span>
+            <span class="left">1838: CANNOT SPEAK ENGLISH<small>older Robert · General Deposition 25 · Blackwell understands him in Choctaw</small></span><span class="dashes"></span><span class="q">[ ? ]</span><span class="dashes"></span><span class="right">FAMILY-SIDE CLAIMS<small>later speakers / interpreters / administrative wording remain their own carriers</small></span>
+            <span class="pressure-state">language evidence cannot travel across an unresolved person relation</span>
           </button>
         </div>
 
@@ -1579,7 +1613,7 @@ const source={
  yimma:{title:"Yimma",copy:"The 13 May 1902 Office of Indian Affairs report represents an older evidence carrier, record book No. 102 p.520, as saying Robert Bell had a wife named Yimma and had been married about six months before the treaty. The direct record-book face remains unrecovered.",state:"source descent · 1902 Office representation of older testimony"},
  "694":{title:"694.96 acres",copy:"The 14 December 1846 Article XIV patent grants Robert Bell the surveyed Section 4 tract containing 694.96 acres. The patent proves that tract and patent occurrence. It does not by itself identify Jane Bell's father or explain Jane's later estimate of about 160 acres.",state:"source descent · 1846 patent"},
  section4:{title:"Section 4",copy:"The patent locates the Robert Bell tract at Section 4, Township 12 North, Range 12 East, Choctaw Meridian. Later Commission use of Section 4 does not itself recover the intervening parcel chain.",state:"source descent · tract address"},
- murray:{title:"Murray–Vroom / patent",copy:"Later Commission and Office work reaches backward into Murray–Vroom / Court of Claims / patent materials to make identity decisions. Those carriers can be traced without converting the agency's identity act into Workshop historical truth.",state:"source descent · administrative carrier stack"}
+ murray:{title:"Murray–Vroom / patent",copy:"James Murray and Peter D. Vroom served on the 1837–38 Article XIV commission, whose surviving journal runs from June 1837 into May 1838. Later Office, Court of Claims, and Commission work reaches backward into that nineteenth-century claim and patent record universe. Those carriers can be traced without converting a later agency identity act into Workshop historical truth.",state:"source descent · 1837–38 commission → later administrative carrier stack"}
 };
 
 const bridge={
@@ -1651,12 +1685,58 @@ function setIdenticalKey(){
  keyDefault.hidden=false;
 }
 
+const pairMap={robin:"robert",robert:"robin",susie:"yimma",yimma:"susie","160":"694","694":"160","jane-wash":"section4",section4:"jane-wash",marris:"murray",murray:"marris"};
+let pendingEntry=null;
+let pendingTimer=null;
+let fadeTimer=null;
+
+function releaseManualPair(){
+ clearTimeout(pendingTimer);
+ clearTimeout(fadeTimer);
+ entries.forEach(x=>{
+   x.classList.remove("is-held");
+   x.classList.add("is-held-fading");
+ });
+ fadeTimer=setTimeout(()=>entries.forEach(x=>x.classList.remove("is-held-fading")),1150);
+ pendingEntry=null;
+ draw();
+}
+
 entries.forEach(btn=>btn.addEventListener("click",()=>{
- clearActive();
- btn.classList.add("is-active");
- const d=source[btn.dataset.entry];
+ const id=btn.dataset.entry;
+ const d=source[id];
  setProperties(d.title,d.copy,d.state,d.html||"");
- draw(btn.dataset.entry);
+
+ if(body.classList.contains("gate-open")){
+   draw();
+   return;
+ }
+
+ entries.forEach(x=>x.classList.remove("is-active","is-held-fading"));
+ btn.classList.add("is-active");
+
+ if(pendingEntry && pairMap[pendingEntry]===id){
+   clearTimeout(pendingTimer);
+   const first=entries.find(x=>x.dataset.entry===pendingEntry);
+   first?.classList.add("is-held");
+   btn.classList.add("is-held");
+   first?.classList.remove("is-active");
+   btn.classList.remove("is-active");
+   pendingEntry=null;
+   draw(id);
+   pendingTimer=setTimeout(releaseManualPair,1450);
+   return;
+ }
+
+ clearTimeout(pendingTimer);
+ entries.forEach(x=>x.classList.remove("is-held"));
+ pendingEntry=id;
+ draw(id);
+ pendingTimer=setTimeout(()=>{
+   btn.classList.remove("is-active");
+   pendingEntry=null;
+   draw();
+ },1450);
 }));
 
 bridges.forEach(btn=>btn.addEventListener("click",()=>{
@@ -1676,10 +1756,15 @@ card.addEventListener("click",()=>{
  pressMark.textContent=open?"passed":"press";
  passCard.textContent=open?"Commission pass · IDENTICAL · issued":"Commission pass · not yet issued";
  if(open){
+   clearTimeout(pendingTimer);
+   clearTimeout(fadeTimer);
+   pendingEntry=null;
+   entries.forEach(x=>x.classList.remove("is-active","is-held","is-held-fading"));
    setIdenticalKey();
    setProperties("IDENTICAL — Commission pass","The agency-level identity relation is active. The unresolved proposition lines remain open.","administrative state · SAME / source bridges · OPEN");
    requestAnimationFrame(()=>stageTwo.scrollIntoView({behavior:"smooth",block:"start"}));
  }else{
+   entries.forEach(x=>x.classList.remove("is-active","is-held","is-held-fading"));
    keyActive.hidden=true;
    keyDefault.hidden=false;
    setProperties("Touch a record object.","Robin, Yimma, land, Dibbin, the patent — this panel changes immediately when you choose one.","attention · threshold");
