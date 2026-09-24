@@ -78,6 +78,92 @@
   };
   const sceneState = JSON.parse(JSON.stringify(defaultSceneState));
 
+  const sourceFloor = {
+    night: [
+      "Dawson reports that a small guard was posted around camp after an alarm.",
+      "Two unnamed men were sent back to watch the ford of the river on the back trail.",
+      "The carried report does not say that they reached the ford or describe their return."
+    ],
+    morning: [
+      "Dawson reports the party was unattacked through the night.",
+      "The two unnamed men and the ford do not reappear before the account moves on.",
+      "The account next carries the party southeast."
+    ],
+    southeast: [
+      "Dawson carries the party southeast about fifteen miles.",
+      "The source does not preserve the traveled line.",
+      "The party encamps on a small branch of Blue Water."
+    ],
+    "blue-water": [
+      "On this creek Dawson reports finding Mr. Mayes and Mr. Criner.",
+      "He reports that they resided on James’ Fork of Poteau.",
+      "He reports that they were trapping for beaver here; residence and encounter remain distinct."
+    ],
+    dozen: [
+      "Dawson reports Mayes and Criner had caught but a dozen beaver.",
+      "The source does not divide that catch between them.",
+      "Dawson says the weather was too cold to promise much further success."
+    ]
+  };
+
+  function captureVisibleScene(id) {
+    const scene = sceneById.get(id);
+    if (!scene) return null;
+    return {
+      setting: scene.querySelector(".scene-setting")?.textContent?.trim() || "",
+      title: scene.querySelector("h2")?.textContent?.trim() || "",
+      view_lines: Array.from(scene.querySelectorAll(".view-body > p")).map((p) => p.textContent.trim()),
+      footing: scene.querySelector(".ten-footing")?.textContent?.trim() || "",
+      appearance: experienceShell?.dataset.presence || ""
+    };
+  }
+
+  function parseSceneReply(raw) {
+    const text = String(raw || "").trim()
+      .replace(/^\`\`\`json\s*/i, "")
+      .replace(/^\`\`\`\s*/i, "")
+      .replace(/\s*\`\`\`$/, "");
+    try {
+      const value = JSON.parse(text);
+      if (!value || typeof value !== "object") return null;
+      return value;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function applyScenePatch(id, patch) {
+    const scene = sceneById.get(id);
+    if (!scene || !patch) return false;
+
+    const setting = typeof patch.setting === "string" ? patch.setting.trim().slice(0, 100) : "";
+    const title = typeof patch.title === "string" ? patch.title.trim().slice(0, 120) : "";
+    const lines = Array.isArray(patch.view_lines)
+      ? patch.view_lines.filter((x) => typeof x === "string").map((x) => x.trim()).filter(Boolean).slice(0, 4)
+      : [];
+    const footing = typeof patch.footing === "string" ? patch.footing.trim().slice(0, 120) : "";
+    const allowedAppearance = new Set(["", "fire"]);
+    const appearance = allowedAppearance.has(patch.appearance) ? patch.appearance : "";
+
+    if (setting) scene.querySelector(".scene-setting").textContent = setting;
+    if (title) scene.querySelector("h2").textContent = title;
+
+    if (lines.length) {
+      const targets = Array.from(scene.querySelectorAll(".view-body > p"));
+      for (let i = 0; i < targets.length; i += 1) {
+        if (lines[i]) targets[i].textContent = lines[i];
+      }
+    }
+
+    if (footing) {
+      const target = scene.querySelector(".ten-footing");
+      if (target) target.textContent = footing;
+    }
+
+    if (experienceShell) experienceShell.dataset.presence = appearance;
+    return Boolean(setting || title || lines.length || footing || appearance);
+  }
+
   try {
     const rememberedState = JSON.parse(window.localStorage.getItem("earthly-hands-dawson-state-v3") || "null");
     if (rememberedState && typeof rememberedState === "object") {
@@ -330,18 +416,37 @@
     talkInput.value = "";
     setAsking(true);
 
-
     if (!apiUrl) {
       setAsking(false);
       return;
     }
+
+    const visible = captureVisibleScene(currentId);
+    const facts = sourceFloor[currentId] || [];
+
+    const sceneRequest = [
+      "You are Small Door present remotely with Ten inside the Earthly Hands Dawson Trail experiment.",
+      "VOICE: plain, testimonial, unresolved. Prefer exact nouns and earned verbs. Do not perform significance.",
+      "FIRST PERSON VIEW: the four view lines are the flat actionable view from Ten's landed eyes. No interface explanation.",
+      "Historical source facts are a floor. Do not contradict them, turn an open question into a fact, or claim Dawson recorded Ten's invented actions.",
+      "Ten may alter the present experiential layer: make a small fire, drink coffee, sit, ask questions, talk, notice things, or imagine a reversible present action. Keep that distinct from the 1831 source.",
+      "Remain at the current ground unless Ten explicitly asks to move.",
+      "Return ONLY valid JSON, no markdown, with exactly these keys:",
+      '{"setting":"short ground/carrier line","title":"one plain headline","view_lines":["line 1","line 2","line 3","line 4"],"footing":"Ten · place · present state","appearance":""}',
+      'appearance may be only "" or "fire".',
+      "Make the whole screen coherent after Ten's action. Be intelligent and specific, not cute.",
+      `CURRENT GROUND: ${currentId}`,
+      `SOURCE FLOOR: ${JSON.stringify(facts)}`,
+      `CURRENT SCREEN: ${JSON.stringify(visible)}`,
+      `TEN: ${clean}`
+    ].join("\n");
 
     try {
       const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          message: `Stay in the present Dawson ground. In one short plain sentence, answer what changes, becomes perceptible, or can be discussed after this action or question. Do not move the visitor unless the user explicitly asks to move. User: ${clean}`,
+          message: sceneRequest,
           place: currentId,
           history: conversation.slice(-6),
         }),
@@ -352,16 +457,22 @@
         throw new Error(data.error || `HTTP ${response.status}`);
       }
 
-      const reply = shortState(data.reply);
-      if (reply && sceneState[currentId]) {
-        sceneState[currentId].ground = reply;
-        saveSceneState();
-        renderSceneState(currentId);
+      const patch = parseSceneReply(data.reply);
+      if (patch) {
+        applyScenePatch(currentId, patch);
+      } else {
+        const reply = shortState(data.reply);
+        if (reply && sceneState[currentId]) {
+          sceneState[currentId].ground = reply;
+          saveSceneState();
+          renderSceneState(currentId);
+        }
       }
+
       conversation.push({ role: "user", content: clean }, { role: "assistant", content: data.reply.trim() });
       if (conversation.length > 12) conversation.splice(0, conversation.length - 12);
     } catch (_) {
-      // Keep the locally earned present-state change. The ground does not move.
+      // The local action already landed. The historical ground remains in place.
     } finally {
       setAsking(false);
     }
