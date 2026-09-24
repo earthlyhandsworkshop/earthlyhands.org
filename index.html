@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=dawson-fpv-viewport-v1" />
+    <link rel="stylesheet" href="style.css?v=dawson-fpv-writing-v2" />
   </head>
   <body data-lamp="lit" data-ground="night">
     <a class="skip-link" href="#threshold">Skip to the Dawson trail</a>
@@ -73,22 +73,11 @@
             </nav>
 
             <div class="experience-utility">
-              <section class="ground-talk" id="ground-talk" data-open="false" aria-label="Ask the ground" hidden>
-                <div class="ground-talk-inner">
-                  <div class="ground-talk-head">
-                    <button class="talk-toggle" id="talk-toggle" type="button" aria-expanded="false" aria-controls="talk-body">
-                      Ask the ground
-                    </button>
-                  </div>
-                  <div class="talk-body" id="talk-body" hidden>
-                    <form class="talk-form" id="talk-form">
-                      <label class="sr-only" for="talk-input">Say what you want to do or ask from here</label>
-                      <input id="talk-input" name="message" type="text" maxlength="240" autocomplete="off" placeholder="Make a fire. Get coffee. Ask about the beaver." />
-                      <button type="submit">Go</button>
-                    </form>
-                  </div>
-                </div>
-              </section>
+              <form class="ground-talk" id="talk-form" aria-label="Ask the ground">
+                <label class="sr-only" for="talk-input">Ask the ground</label>
+                <input id="talk-input" name="message" type="text" maxlength="240" autocomplete="off" enterkeyhint="send" placeholder="Ask the ground" />
+                <button class="sr-only" id="talk-send" type="submit">Go</button>
+              </form>
             </div>
           </div>
         </div>
@@ -231,10 +220,10 @@
         <div class="first-person-view" aria-label="First-person view from night camp">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
-            <p><span class="lived-line">You are awake inside the guarded camp.</span></p>
-            <p>A small guard has been posted around the camp.</p>
-            <p>Two unnamed men have gone back to watch the ford.</p>
-            <p>The report does not bring them back.</p>
+            <p><span class="lived-line">You are awake inside the guarded camp. The dark beyond it is not filled in for you.</span></p>
+            <p>Dawson says a small guard was posted around the camp after the alarm.</p>
+            <p>Two unnamed men were sent back to watch the ford of the river on the back trail.</p>
+            <p>The report does not say that they reached the ford, and it gives no account of their return.</p>
           </div>
           <div class="fpv-close" aria-hidden="true">]</div>
           <div class="fpv-footing">
@@ -260,10 +249,10 @@
         <div class="first-person-view" aria-label="First-person view from morning camp">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
-            <p><span class="lived-line">You are standing in the camp at first light.</span></p>
-            <p>The night has passed without attack.</p>
-            <p>The ford and the two men remain out of sight.</p>
-            <p>Dawson’s account turns southeast.</p>
+            <p><span class="lived-line">You are standing in the camp at first light. Nothing in Dawson’s account says the camp was attacked.</span></p>
+            <p>The night has passed. The small guard is no longer the thing the report is watching.</p>
+            <p>The two men, the ford, and the back trail remain outside the account that follows.</p>
+            <p>Dawson turns southeast from here. The source moves on without bringing those men back into view.</p>
           </div>
           <div class="fpv-close" aria-hidden="true">]</div>
           <div class="fpv-footing">
@@ -289,10 +278,10 @@
         <div class="first-person-view" aria-label="First-person view from southeast reach">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
-            <p><span class="lived-line">You are moving with the account toward the next camp.</span></p>
+            <p><span class="lived-line">You are moving with Dawson’s account toward the next camp. The traveled line itself is not preserved.</span></p>
             <p>Dawson carries the party <button class="inline-depth" type="button" data-depth="distance" aria-expanded="false">southeast about fifteen miles</button>.</p>
-            <p>He gives no traveled line between the camps.</p>
-            <p>The party encamps on <button class="inline-depth" type="button" data-depth="creek" aria-expanded="false">a small branch of Blue Water</button>.</p>
+            <p>That gives direction and approximate distance, but not a road, bearing, or reconstructed path.</p>
+            <p>At the end of this source-stated leg, the party encamps on <button class="inline-depth" type="button" data-depth="creek" aria-expanded="false">a small branch of Blue Water</button>.</p>
           </div>
           <div class="fpv-close" aria-hidden="true">]</div>
           <div class="fpv-footing">
@@ -318,10 +307,10 @@
         <div class="first-person-view" aria-label="First-person view from Blue Water">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
-            <p><span class="lived-line">You are at the creek with Mayes and Criner in view.</span></p>
-            <p>Dawson says they found <button class="inline-depth" type="button" data-depth="mayes" aria-expanded="false">Mr. Mayes</button> and <button class="inline-depth" type="button" data-depth="criner" aria-expanded="false">Mr. Criner</button> here.</p>
-            <p>He says the men <button class="inline-depth" type="button" data-depth="residence" aria-expanded="false">resided on James’ Fork of Poteau</button>.</p>
-            <p>Here they were <button class="inline-depth" type="button" data-depth="trapping" aria-expanded="false">trapping for beaver</button>.</p>
+            <p><span class="lived-line">You are at the creek with Mayes and Criner in view. The exact point on the creek is not given.</span></p>
+            <p>Dawson says the party found <button class="inline-depth" type="button" data-depth="mayes" aria-expanded="false">Mr. Mayes</button> and <button class="inline-depth" type="button" data-depth="criner" aria-expanded="false">Mr. Criner</button> here.</p>
+            <p>He says the two men <button class="inline-depth" type="button" data-depth="residence" aria-expanded="false">resided on James’ Fork of Poteau</button>; that residence is not made into this encounter place.</p>
+            <p>Here, on this creek, they were <button class="inline-depth" type="button" data-depth="trapping" aria-expanded="false">trapping for beaver</button>.</p>
           </div>
           <div class="fpv-close" aria-hidden="true">]</div>
           <div class="fpv-footing">
@@ -347,10 +336,10 @@
         <div class="first-person-view" aria-label="First-person view from Blue Water">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
-            <p><span class="lived-line">You are still beside the same creek.</span></p>
-            <p>Dawson says Mayes and Criner had caught but a dozen.</p>
-            <p>He does not divide the catch between them.</p>
-            <p>The weather was too cold to promise much further success.</p>
+            <p><span class="lived-line">You are still beside the same creek with Mayes and Criner. The account has not moved to their residence.</span></p>
+            <p>Dawson says they had caught but a dozen beaver.</p>
+            <p>He does not divide the catch between the two men or give a separate place for it.</p>
+            <p>The weather, he says, was too cold to promise much further success.</p>
           </div>
           <div class="fpv-close" aria-hidden="true">]</div>
           <div class="fpv-footing">
@@ -380,6 +369,6 @@
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="config.js?v=dawson-fixed-stage-v1"></script>
-    <script src="script.js?v=dawson-fpv-canonical-v1"></script>
+    <script src="script.js?v=dawson-fpv-writing-v2"></script>
   </body>
 </html>
