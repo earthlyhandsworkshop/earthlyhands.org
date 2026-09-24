@@ -1,6 +1,6 @@
 (() => {
   const lamp = document.querySelector("#lamp-control");
-  const lampLabel = lamp.querySelector(".lamp-label");
+  const lampLabel = lamp?.querySelector(".lamp-label") || null;
   const lanternHome = document.querySelector("#lantern-home");
   const lanternNote = document.querySelector(".lantern-note");
   const where = document.querySelector("#where-label");
@@ -64,28 +64,28 @@
   const experienceMount = document.querySelector("#experience-mount");
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const steps = Array.from(document.querySelectorAll("[data-step]"));
-  const sequence = ["report", "night", "morning", "southeast", "blue-water", "dozen"];
-  const fullSequence = ["threshold", ...sequence];
+  const sequence = ["night", "morning", "southeast", "blue-water", "dozen"];
+  const fullSequence = [...sequence];
+  const sceneById = new Map(scenes.map((scene) => [scene.id, scene]));
   const trailUi = {
-    report: { next: "night", nextLabel: "Follow the trail" },
     night: { next: "morning", nextLabel: "Wait for morning" },
     morning: { next: "southeast", nextLabel: "Continue southeast" },
     southeast: { next: "blue-water", nextLabel: "Reach the next camp" },
     "blue-water": { next: "dozen", nextLabel: "See what the report says next" },
-    dozen: { next: "threshold", nextLabel: "Return to the front edge" }
+    dozen: { next: null, nextLabel: "Current cut ends here" }
   };
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
-  let currentId = "threshold";
+  let currentId = "night";
   let asking = false;
 
   function setLamp(isLit) {
-    document.body.dataset.lamp = isLit ? "lit" : "unlit";
-    lamp.setAttribute("aria-pressed", String(isLit));
-    lampLabel.textContent = "Enter the Dawson passage";
-    if (lanternNote) lanternNote.hidden = isLit;
-    if (trailConsole) trailConsole.hidden = !isLit;
-    talk.hidden = !isLit;
+    document.body.dataset.lamp = "lit";
+    if (lamp) lamp.setAttribute("aria-pressed", "true");
+    if (lampLabel) lampLabel.textContent = "Dawson passage";
+    if (lanternNote) lanternNote.hidden = true;
+    if (trailConsole) trailConsole.hidden = false;
+    talk.hidden = false;
   }
 
   function setGround(id) {
@@ -113,8 +113,21 @@
     trailPlaceControl.textContent = target.dataset.place || "Dawson passage";
     trailProgress.textContent = String(index + 1) + " / " + String(sequence.length);
     trailNextLabel.textContent = ui.nextLabel;
-    trailBackControl.dataset.go = fullSequence[Math.max(0, fullSequence.indexOf(id) - 1)];
-    trailNextControl.dataset.go = ui.next;
+    const previousIndex = fullSequence.indexOf(id) - 1;
+    if (previousIndex >= 0) {
+      trailBackControl.disabled = false;
+      trailBackControl.dataset.go = fullSequence[previousIndex];
+    } else {
+      trailBackControl.disabled = true;
+      trailBackControl.dataset.go = "";
+    }
+    if (ui.next) {
+      trailNextControl.disabled = false;
+      trailNextControl.dataset.go = ui.next;
+    } else {
+      trailNextControl.disabled = true;
+      trailNextControl.dataset.go = "";
+    }
   }
 
   function updatePlace(target) {
@@ -159,28 +172,23 @@
   }
 
   function showScene(target, direction = "forward") {
-    const isThreshold = target.id === "threshold";
     closeDepth();
     setGround(target.id);
     updateTrailConsole(target.id);
-
-    if (!isThreshold && experienceMount && !experienceMount.contains(target)) {
-      experienceMount.append(target);
-    }
 
     if (experienceStage) experienceStage.dataset.direction = direction;
     scenes.forEach((scene) => scene.classList.toggle("is-current", scene === target));
 
     if (experienceMount) {
       experienceMount.hidden = false;
-      experienceMount.setAttribute("aria-hidden", String(isThreshold));
+      experienceMount.removeAttribute("aria-hidden");
+      if (experienceMount.firstElementChild !== target || experienceMount.childElementCount !== 1) {
+        experienceMount.replaceChildren(target);
+      }
     }
-    if (thresholdIntro) thresholdIntro.setAttribute("aria-hidden", String(!isThreshold));
 
     updatePlace(target);
-    if (!isThreshold) {
-      target.focus({ preventScroll: true });
-    }
+    target.focus({ preventScroll: true });
   }
 
   function remember(id) {
@@ -200,7 +208,7 @@
   }
 
   function landAt(id, { push = true } = {}) {
-    const target = document.getElementById(id);
+    const target = sceneById.get(id);
     if (!target || !fullSequence.includes(id)) return;
 
     const fromIndex = fullSequence.indexOf(currentId);
@@ -213,9 +221,7 @@
     remember(id);
 
     if (push) {
-      const url = id === "threshold"
-        ? window.location.pathname + window.location.search
-        : `#${id}`;
+      const url = `#${id}`;
       history.pushState({ place: id }, "", url);
     }
     requestAnimationFrame(() => showScene(target, direction));
@@ -223,8 +229,8 @@
 
   function stepBack() {
     const index = fullSequence.indexOf(currentId);
-    const previous = fullSequence[Math.max(0, index - 1)];
-    landAt(previous);
+    if (index <= 0) return;
+    landAt(fullSequence[index - 1]);
   }
 
   function openTalk() {
@@ -308,15 +314,6 @@
     }
   }
 
-  lamp.addEventListener("click", () => {
-    if (currentId === "threshold") {
-      landAt("report");
-      return;
-    }
-    const target = document.getElementById(currentId);
-    if (target) showScene(target, "forward");
-  });
-
   if (trailBackControl) {
     trailBackControl.addEventListener("click", () => {
       const target = trailBackControl.dataset.go;
@@ -354,7 +351,7 @@
   document.querySelectorAll("[data-home]").forEach((control) => {
     control.addEventListener("click", (event) => {
       event.preventDefault();
-      landAt("threshold");
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   });
 
@@ -381,7 +378,7 @@
 
   window.addEventListener("popstate", () => {
     const id = window.location.hash.slice(1);
-    const target = document.getElementById(id);
+    const target = sceneById.get(id);
     if (!target || !fullSequence.includes(id)) return;
 
     const fromIndex = fullSequence.indexOf(currentId);
@@ -398,20 +395,17 @@
   let initialId = window.location.hash.slice(1);
   if (!fullSequence.includes(initialId)) {
     try {
-      initialId = window.localStorage.getItem("earthly-hands-footing") || "threshold";
+      initialId = window.localStorage.getItem("earthly-hands-footing") || "night";
     } catch (_) {
-      initialId = "threshold";
+      initialId = "night";
     }
   }
 
-  if (!fullSequence.includes(initialId)) initialId = "threshold";
+  if (!fullSequence.includes(initialId)) initialId = "night";
   currentId = initialId;
-  setLamp(initialId !== "threshold");
-  const initialUrl = initialId === "threshold"
-    ? window.location.pathname + window.location.search
-    : `#${initialId}`;
-  history.replaceState({ place: initialId }, "", initialUrl);
-  showScene(document.getElementById(initialId), "forward");
+  setLamp(true);
+  history.replaceState({ place: initialId }, "", `#${initialId}`);
+  showScene(sceneById.get(initialId), "forward");
 
   const specimenIndex = document.querySelector(".specimen-index");
   if (specimenIndex) {
