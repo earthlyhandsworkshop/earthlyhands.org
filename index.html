@@ -44,11 +44,11 @@
     <script>document.documentElement.className = "js";</script>
     <link rel="stylesheet" href="style.css?v=ground-v1" />
   </head>
-  <body data-lamp="unlit">
-    <a class="skip-link" href="#threshold" data-home>Skip to the threshold</a>
+  <body data-lamp="lit" data-ground="night">
+    <a class="skip-link" href="#threshold">Skip to the Dawson trail</a>
 
     <header class="site-header">
-      <a class="identity" href="#threshold" data-home aria-label="Earthly Hands Workshop — return to the threshold">
+      <a class="identity" href="/" aria-label="Earthly Hands Workshop — return to the current Dawson footing">
         <span>Earthly Hands</span>
         <span class="identity-note">Workshop</span>
       </a>
@@ -56,7 +56,7 @@
         <span aria-hidden="true">/</span>
         <span class="who-label">Guest</span>
         <span aria-hidden="true">·</span>
-        <span id="where-label">Front edge</span>
+        <span id="where-label">Night camp</span>
       </p>
     </header>
 
@@ -64,41 +64,27 @@
       <section class="threshold" id="threshold" data-place="Front edge">
         <div class="experience-shell" id="experience-shell">
           <div class="experience-stage" id="experience-stage" data-direction="forward">
-          <div class="threshold-intro" id="threshold-intro">
-            <p class="eyebrow">Dawson passage · 1831</p>
-            <h1>The trail begins in the dark.</h1>
-            <p class="threshold-line">One carried report. Night camp, morning, a southeast reach, and Blue Water. The interface changes with the ground; the source brakes do not.</p>
-          </div>
-
-          <div class="experience-mount" id="experience-mount" aria-live="polite" hidden></div>
+            <div class="experience-mount" id="experience-mount" aria-live="polite"></div>
           </div>
 
           <div class="experience-tools" aria-label="Dawson passage controls">
-            <div class="threshold-lantern" id="lantern-home">
-              <button class="door lamp-control" id="lamp-control" type="button" aria-pressed="false">
-                <span class="door-mark" aria-hidden="true">&gt;</span>
-                <span class="lamp-label">Enter the Dawson passage</span>
-              </button>
-              <span class="lantern-note">night first · the field changes as the report moves</span>
-            </div>
-
-            <nav class="trail-console" id="trail-console" aria-label="Dawson passage navigation" hidden>
+            <nav class="trail-console" id="trail-console" aria-label="Dawson passage navigation">
               <button class="trail-control trail-control-back" id="trail-back-control" type="button">
                 <span aria-hidden="true">←</span><span>Back</span>
               </button>
               <div class="trail-bearing">
-                <span class="trail-progress" id="trail-progress">1 / 6</span>
-                <strong id="trail-place-control">By lantern light</strong>
+                <span class="trail-progress" id="trail-progress">1 / 5</span>
+                <strong id="trail-place-control">Night camp</strong>
               </div>
               <button class="trail-control trail-control-next" id="trail-next-control" type="button">
-                <span id="trail-next-label">Follow the trail</span><span aria-hidden="true">→</span>
+                <span id="trail-next-label">Wait for morning</span><span aria-hidden="true">→</span>
               </button>
             </nav>
 
             <div class="experience-utility">
               <div class="footing-rail" aria-label="Current footing">
                 <span><b>Guest</b></span>
-                <span><b id="footing-place">Front edge</b></span>
+                <span><b id="footing-place">Night camp</b></span>
                 <span><b>Carried report</b></span>
               </div>
 
