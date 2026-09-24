@@ -179,14 +179,14 @@ body[data-ground="dozen"] .experience-shell{
 
 .experience-stage,
 .experience-tools{
-  width:min(56.25rem,calc(100% - 2rem));
+  width:min(50rem,calc(100% - 2rem));
   margin-inline:auto;
 }
 
 .experience-stage{
-  min-height:clamp(28rem,64svh,40rem);
+  min-height:0;
   display:block;
-  padding:clamp(3rem,7vh,4.2rem) 0 .55rem;
+  padding:clamp(3rem,7vh,4.2rem) 0 .2rem;
   overflow:visible;
 }
 
@@ -362,6 +362,7 @@ body[data-ground="dozen"] .experience-shell{
 
 .experience-tools{
   padding:0 0 1rem;
+  margin-top:0;
 }
 
 .trail-console{
@@ -393,7 +394,7 @@ body[data-ground="dozen"] .experience-shell{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,2fr);
   column-gap:2rem;
-  margin:.12rem 0 0;
+  margin:0;
 }
 .experience-utility .ground-thread,
 .experience-utility .ground-talk{
@@ -401,7 +402,7 @@ body[data-ground="dozen"] .experience-shell{
   max-width:34rem;
 }
 .experience-utility .ground-talk{
-  margin-top:.28rem;
+  margin-top:.05rem;
 }
 
 .ground-talk{
@@ -691,7 +692,7 @@ body[data-ground="night"] .experience-shell[data-presence="fire"]{
 
 .ground-thread{
   display:block;
-  margin:0;
+  margin:.15rem 0 0;
 }
 
 .ten-utterance{
