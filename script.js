@@ -701,59 +701,107 @@
     });
 
     const people = Array.from(encountered.values());
-    if (campPeopleCount) campPeopleCount.textContent = people.length + (people.length === 1 ? " encounter" : " encounters");
-
-    const compact = people.length > 8;
-    const richNames = new Set(compact ? people.slice(-5).map((person) => person.name) : people.map((person) => person.name));
-    const fragment = document.createDocumentFragment();
-
-    if (compact) {
-      const roster = document.createElement("div");
-      roster.className = "camp-people-roster";
-      people
-        .filter((person) => !richNames.has(person.name))
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .forEach((person) => {
-          const chip = document.createElement("span");
-          chip.className = "camp-person-chip";
-          chip.textContent = person.name;
-          chip.title = "First encountered at " + (trailUi[person.firstSeen]?.name || person.firstSeen);
-          roster.append(chip);
-        });
-      if (roster.childElementCount) fragment.append(roster);
+    if (campPeopleCount) {
+      campPeopleCount.textContent = people.length
+        ? String(people.length).padStart(2, "0") + " held so far"
+        : "none yet";
     }
 
-    people
-      .filter((person) => richNames.has(person.name))
-      .forEach((person) => {
-        const widget = document.createElement("details");
-        widget.className = "camp-person-widget";
+    const batches = new Map();
+    people.forEach((person, index) => {
+      const batchId = person.firstSeen;
+      if (!batches.has(batchId)) batches.set(batchId, []);
+      batches.get(batchId).push({ ...person, encounterNumber: index + 1 });
+    });
+
+    const fragment = document.createDocumentFragment();
+
+    batches.forEach((batchPeople, batchId) => {
+      const batch = document.createElement("section");
+      batch.className = "encounter-batch";
+
+      const batchHead = document.createElement("header");
+      batchHead.className = "encounter-batch-head";
+
+      const batchLabel = document.createElement("span");
+      batchLabel.textContent = trailUi[batchId]?.name || batchId;
+
+      const batchCount = document.createElement("span");
+      batchCount.textContent = batchPeople.length + (batchPeople.length === 1 ? " entry" : " entries");
+
+      batchHead.append(batchLabel, batchCount);
+      batch.append(batchHead);
+
+      const cards = document.createElement("div");
+      cards.className = "encounter-card-grid";
+
+      batchPeople.forEach((person) => {
+        const card = document.createElement("details");
+        card.className = "person-card";
 
         const summary = document.createElement("summary");
+        summary.className = "person-card-face";
+
+        const serial = document.createElement("span");
+        serial.className = "person-card-serial";
+        serial.textContent = "PERSON " + String(person.encounterNumber).padStart(2, "0");
+
         const name = document.createElement("strong");
+        name.className = "person-card-name";
         name.textContent = person.name;
-        const first = document.createElement("span");
-        first.textContent = "first encountered · " + (trailUi[person.firstSeen]?.name || person.firstSeen);
-        summary.append(name, first);
+
+        const known = document.createElement("span");
+        known.className = "person-card-known";
+        known.textContent = person.relations[person.relations.length - 1] || "encountered";
+
+        const mark = document.createElement("span");
+        mark.className = "person-card-mark";
+        mark.setAttribute("aria-hidden", "true");
+        mark.textContent = "+";
+
+        summary.append(serial, name, known, mark);
 
         const body = document.createElement("div");
-        body.className = "camp-person-widget-body";
+        body.className = "person-card-body";
 
-        person.relations.forEach((text) => {
-          const p = document.createElement("p");
-          p.className = "camp-person-relation";
-          p.textContent = text;
-          body.append(p);
-        });
+        const first = document.createElement("p");
+        first.className = "person-card-field";
+        first.innerHTML = "<span>first encountered</span><b></b>";
+        first.querySelector("b").textContent = trailUi[person.firstSeen]?.name || person.firstSeen;
 
-        const note = document.createElement("p");
-        note.className = "camp-person-note";
-        note.textContent = person.notes[person.notes.length - 1] || "";
-        body.append(note);
+        const current = document.createElement("p");
+        current.className = "person-card-field";
+        current.innerHTML = "<span>known here</span><b></b>";
+        current.querySelector("b").textContent = person.relations[person.relations.length - 1] || "—";
 
-        widget.append(summary, body);
-        fragment.append(widget);
+        const open = document.createElement("p");
+        open.className = "person-card-open";
+        open.textContent = person.notes[person.notes.length - 1] || "Nothing further is carried here.";
+
+        body.append(first, current);
+
+        if (person.relations.length > 1) {
+          const history = document.createElement("div");
+          history.className = "person-card-history";
+          const label = document.createElement("span");
+          label.textContent = "other held relations";
+          history.append(label);
+          person.relations.slice(0, -1).forEach((relation) => {
+            const p = document.createElement("p");
+            p.textContent = relation;
+            history.append(p);
+          });
+          body.append(history);
+        }
+
+        body.append(open);
+        card.append(summary, body);
+        cards.append(card);
       });
+
+      batch.append(cards);
+      fragment.append(batch);
+    });
 
     campPeopleList.replaceChildren(fragment);
   }
