@@ -33,7 +33,6 @@ const relations=[
 const beats=[...document.querySelectorAll(".source-beat")];
 const door=document.querySelector("#field-door");
 const field=document.querySelector("#carrier-field");
-const closeField=document.querySelector("#close-field");
 const stage=document.querySelector("#field-stage");
 const props=document.querySelector("#properties-body");
 const status=document.querySelector("#field-status");
@@ -46,7 +45,8 @@ function earn(ids){
  if(changed){persist();renderField();updateCount();}
 }
 function updateCount(){
- count.textContent=earned.size?(earned.size+" marks have become reachable from this scene."):"The scene has begun to carry a field.";
+ door.hidden=earned.size===0;
+ count.textContent=earned.size?(earned.size+" reachable"):"0 reachable";
  status.textContent=earned.size?(earned.size+" reachable"):"";
 }
 const observer=new IntersectionObserver(function(entries){
@@ -62,18 +62,19 @@ beats.forEach(function(b){observer.observe(b);});
 function openField(){
  field.hidden=false;
  door.setAttribute("aria-expanded","true");
- door.querySelector("span").textContent="FIELD OPEN";
+ door.querySelector("span").textContent="FIELD";
+ door.querySelector("b").textContent="↑";
  renderField();
  requestAnimationFrame(function(){field.scrollIntoView({behavior:"smooth",block:"start"});});
 }
 function shutField(){
  field.hidden=true;
  door.setAttribute("aria-expanded","false");
- door.querySelector("span").textContent="OPEN THE FIELD";
+ door.querySelector("span").textContent="FIELD";
+ door.querySelector("b").textContent="↓";
  document.querySelector("#source-piece").scrollIntoView({behavior:"smooth",block:"end"});
 }
 door.addEventListener("click",function(){field.hidden?openField():shutField();});
-closeField.addEventListener("click",shutField);
 
 function point(el){
  const r=el.getBoundingClientRect(),s=stage.getBoundingClientRect();
@@ -108,7 +109,8 @@ function renderField(){
    if(!earned.has(id))return;
    const b=document.createElement("button");
    b.type="button";b.className="mark "+p.kind;b.dataset.id=id;b.style.left=p.x+"%";b.style.top=p.y+"%";
-   b.innerHTML='<span class="dot"></span><strong>'+p.title+'</strong><small>'+p.note+'</small>';
+   const shownKind=p.kind==="recordmark"?"record":p.kind;
+   b.innerHTML='<span class="mark-kind">'+shownKind+'</span><span class="dot"></span><strong>'+p.title+'</strong><small>'+p.note+'</small>';
    b.addEventListener("click",function(){inspect(id,b);});
    stage.append(b);
  });
