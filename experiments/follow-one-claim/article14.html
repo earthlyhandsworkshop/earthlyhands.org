@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#f2eee4">
+<title>Put the Pieces In — Earthly Hands</title>
+<meta name="description" content="Put source-controlled pieces of MCR 879 into one working claim and watch what each piece changes without collapsing source state or identity.">
+<style>
+:root{--paper:#f2eee4;--ink:#22211e;--muted:#6f6a60;--line:#bdb5a7;--card:#faf7ef;--machine:#292b2b;--machineInk:#f6f1e7;--warm:#9d5b35;--green:#426249;--red:#87463f;--blue:#355f70;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:var(--sans)}body{margin:0}.shell{width:min(86rem,calc(100% - 1.2rem));margin:auto}.top{min-height:3rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);font:700 .64rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}.top a{text-decoration:none;color:inherit}.top span{color:var(--muted)}
+.intro{padding:clamp(2rem,6vw,5rem) 0 2rem;max-width:54rem}.intro .kicker{font:700 .66rem/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--warm)}h1{margin:.5rem 0 .7rem;font:700 clamp(3rem,8vw,7rem)/.86 var(--serif);letter-spacing:-.055em}.intro p{font-size:clamp(1rem,2vw,1.35rem);line-height:1.45;margin:.5rem 0}.intro .plain{color:var(--muted);font-size:.9rem}
+.machine{background:var(--machine);color:var(--machineInk);border-radius:.4rem;padding:clamp(1rem,3vw,2rem);box-shadow:0 .6rem 2rem rgba(0,0,0,.13)}.machine-label{font:700 .62rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#c9c3b8}.claim{margin:.7rem 0 1.25rem;font:700 clamp(1.55rem,4vw,3.35rem)/1.02 var(--serif);max-width:28ch}.claim small{display:block;margin-top:.8rem;font:400 .72rem/1.5 var(--mono);color:#c7c1b5;letter-spacing:0}
+.slot{border:1px dashed #7f817e;min-height:8rem;padding:1rem;background:#212323}.slot.empty{display:flex;align-items:center;justify-content:center;color:#aaa49a;font:700 .72rem/1.4 var(--mono);text-transform:uppercase;text-align:center}.inside{display:grid;gap:.6rem}.inside-row{display:grid;grid-template-columns:auto 1fr auto;gap:.8rem;align-items:start;padding:.72rem;border:1px solid #555957;background:#303332}.inside-row .num{font:700 .62rem/1 var(--mono);color:#bdb7ac}.inside-row strong{display:block;font-family:var(--serif);font-size:1.05rem}.inside-row span{display:block;margin-top:.2rem;color:#c8c2b7;font:.65rem/1.4 var(--mono)}.inside-row button{border:0;background:transparent;color:#c8c2b7;cursor:pointer;font:700 .6rem/1 var(--mono);text-transform:uppercase}
+.readout{margin-top:1rem;border-top:1px solid #555957;padding-top:1rem}.readout .status{font:700 .65rem/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:#d9c79b}.readout h2{font:700 clamp(1.35rem,3vw,2.3rem)/1.02 var(--serif);margin:.4rem 0}.readout p{max-width:64rem;line-height:1.52;color:#ddd7cb}.readout .brake{font:.68rem/1.5 var(--mono);color:#bdb7ac}
+.table-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;padding:2rem 0 .8rem}.table-head h2{margin:0;font:700 clamp(2rem,5vw,4rem)/.92 var(--serif);letter-spacing:-.04em}.table-head p{margin:0;color:var(--muted);max-width:34rem;line-height:1.4}.pieces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;padding-bottom:2rem}.piece{border:1px solid var(--line);background:var(--card);padding:1rem;display:flex;flex-direction:column;gap:.75rem;min-height:18rem}.piece.used{opacity:.48}.piece .eyebrow{font:700 .61rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--warm)}.piece h3{margin:0;font:700 1.42rem/1.05 var(--serif)}.piece .front{margin:0;line-height:1.45}.piece .effect{margin-top:auto;padding-top:.7rem;border-top:1px solid var(--line);font:.68rem/1.45 var(--mono);color:var(--muted)}.piece-actions{display:flex;gap:.5rem;flex-wrap:wrap}.piece button{border:1px solid var(--ink);background:transparent;padding:.55rem .65rem;cursor:pointer;font:700 .61rem/1 var(--mono);text-transform:uppercase}.piece button.primary{background:var(--ink);color:var(--card)}.piece button:disabled{opacity:.35;cursor:not-allowed}.back{display:none;border-top:1px solid var(--line);padding-top:.7rem}.back.show{display:block}.back dl{margin:0;display:grid;grid-template-columns:6rem 1fr;gap:.35rem .6rem;font-size:.78rem}.back dt{font:700 .6rem/1.4 var(--mono);text-transform:uppercase;color:var(--muted)}.back dd{margin:0;line-height:1.4;overflow-wrap:anywhere}
+.test{border-top:1px solid var(--line);padding:2rem 0}.test h2{font:700 clamp(1.8rem,4vw,3.2rem)/.95 var(--serif);margin:0 0 .4rem}.test>p{color:var(--muted);max-width:48rem}.tests{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}.test-card{border:1px solid var(--line);padding:1rem;background:var(--card)}.test-card p{line-height:1.4}.test-card button{border:1px solid var(--ink);background:var(--ink);color:var(--card);padding:.55rem .65rem;cursor:pointer;font:700 .61rem/1 var(--mono);text-transform:uppercase}.answer{display:none;margin-top:.65rem;padding:.7rem;border-left:3px solid var(--red);background:#f1e4df}.answer.show{display:block}.answer strong{font:700 .62rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--red)}.answer p{margin:.4rem 0 0}
+footer{border-top:1px solid var(--line);padding:1rem 0 2rem;display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font:700 .6rem/1.4 var(--mono);text-transform:uppercase}
+@media(max-width:62rem){.pieces{grid-template-columns:repeat(2,minmax(0,1fr))}.tests{grid-template-columns:1fr}}
+@media(max-width:38rem){.shell{width:calc(100% - .7rem)}.pieces{grid-template-columns:1fr}.table-head{display:block}.table-head p{margin-top:.6rem}.inside-row{grid-template-columns:auto 1fr}.inside-row button{grid-column:2;justify-self:start}footer{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><a href="/">Earthly Hands Workshop</a><span><a href="../catharine-mckinney/" style="margin-right:1rem">Go Catherine →</a>Quire · put the pieces in · v4</span></header>
+
+<section class="intro">
+  <span class="kicker">MCR 879 · one working table</span>
+  <h1>Put the pieces in.</h1>
+  <p>You do not have to learn this machine. Pick a record below. Put it in. Watch what changes.</p>
+  <p class="plain">The machine does not score the family, decide historical identity, or turn an administrative finding into truth. It only tells you what the pieces presently let the Workshop say.</p>
+</section>
+
+<section class="machine" aria-labelledby="claim-title">
+  <div class="machine-label">Working claim — a question, not a finding</div>
+  <div class="claim" id="claim-title">Could the family’s Article XIV claim survive the Commission’s later two-Robert framing?
+    <small>This deliberately separates the family’s filed Article XIV claim from the Commission’s later choice to test it against a particular record-side Robert.</small>
+  </div>
+  <div class="slot empty" id="slot">PUT A PIECE IN</div>
+  <div class="readout" aria-live="polite">
+    <div class="status" id="status">Nothing tested yet</div>
+    <h2 id="readout-title">The machine is waiting.</h2>
+    <p id="readout-text">Choose any box below. There is no correct order.</p>
+    <p class="brake" id="readout-brake">A piece can support one part of the working claim while complicating another. No piece silently performs an identity join.</p>
+  </div>
+</section>
+
+<section>
+  <div class="table-head"><h2>Pieces on the table</h2><p>Front = plain consequence. Turn a box over only when you want speaker, object, date, documentary state, verb, and exact source return.</p></div>
+  <div class="pieces" id="pieces"></div>
+</section>
+
+<section class="test">
+  <h2>Push the claim too far.</h2>
+  <p>These are stronger statements the current body has to refuse or hold open. Testing one does not change the source.</p>
+  <div class="tests" id="tests"></div>
+</section>
+
+<footer><span>Source authority remains senior to this derivative instrument.</span><span>Powerful finger. Trustworthy result.</span></footer>
+</div>
+
+<script>
+(async()=>{
+ const res=await fetch('./data/mcr879-robert-article14.json',{cache:'no-store'});
+ const data=await res.json();
+ const q=s=>document.querySelector(s);
+ const effects={
+   oral:{
+     label:'FAMILY VOICE ENTERS',
+     title:'This helps separate the family from the later government frame.',
+     text:'The oral record does not give us a uniform family statement identifying their Robert with a particular Article XIV Robert in a government comparator record. That matters: the later two-Robert test cannot be donated backward and called the family’s original wording.',
+     brake:'What it does NOT do: erase the written Article XIV pleadings, prove the family had no treaty claim, or prove which Robert was historically which.'
+   },
+   pleadings:{
+     label:'ARTICLE XIV CLAIM IS IN THE FILE',
+     title:'The family-side filed body really does carry Article XIV allegations.',
+     text:'This piece keeps the Article XIV claim alive at the pleading layer. It shows that the later Commission did not invent Article XIV out of nothing. But the pleading is not the same thing as the later proposition that the family’s Robert must be identical to one particular record-side Robert.',
+     brake:'What remains open: who originated the recurring legal formulation—applicant, counsel, form, or another filing practice—and how each packet’s exact wording was produced.'
+   },
+   p53:{
+     label:'THE CLAIM IS REFRAMED AT GROUP SCALE',
+     title:'Here the Commission begins speaking for the consolidated body.',
+     text:'The Commission says “they claim” Robert took advantage of Article XIV. That is an administrative characterization of a compound record. It is evidence of how the Commission framed the case, not a verbatim replacement for sixteen applicants and their witnesses.',
+     brake:'Commission “they claim” ≠ family oral wording ≠ proof that the family originated every term of the Commission’s frame.'
+   },
+   p55p56:{
+     label:'THE TWO-ROBERT MACHINE APPEARS',
+     title:'This is the hinge.',
+     text:'The Commission brings forward a positive Article XIV Robert Bell record and makes the adverse result turn on NOT IDENTICAL. The dispute has now become claimant-line Robert versus record-side Article XIV Robert inside the Commission’s reasoning.',
+     brake:'Administrative NOT IDENTICAL ≠ historical nonidentity. The comparator can be tested; it cannot be treated as self-proving.'
+   },
+   oia:{
+     label:'THE GOVERNMENT ADDS MORE RECORDS',
+     title:'The later review strengthens the administrative comparator without making it family speech.',
+     text:'Indian Affairs adds its own patent record and map material and restates a two-Robert analysis. This makes the administrative case more heavily carried, but also gives the Workshop more concrete record objects whose genealogy, completeness, and use can be tested.',
+     brake:'More federal carriers ≠ exhaustive record population ≠ historical identity proof.'
+   },
+   interior:{
+     label:'THE FRAME BECOMES OPERATIVE',
+     title:'Interior affirms the exclusion.',
+     text:'By this point the two-Robert framing has administrative force: Interior approves and affirms. That tells us what happened to the claim in 1902. It does not answer whether the underlying family claim, the comparator population, or the historical identity question was correct.',
+     brake:'Administrative finality in this 1902 sequence ≠ present-day historical truth or a present legal adjudication.'
+   }
+ };
+ const chosen=[];
+ const pieces=q('#pieces'), slot=q('#slot');
+ function esc(x){return String(x).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+ function renderSlot(){
+   if(!chosen.length){slot.className='slot empty';slot.textContent='PUT A PIECE IN';return;}
+   slot.className='slot';
+   const wrap=document.createElement('div');wrap.className='inside';
+   chosen.forEach((id,n)=>{
+     const c=data.carriers.find(x=>x.id===id), e=effects[id];
+     const row=document.createElement('div');row.className='inside-row';
+     row.innerHTML='<div class="num">'+String(n+1).padStart(2,'0')+'</div><div><strong>'+esc(e.label)+'</strong><span>'+esc(c.actor)+' · '+esc(c.date)+'</span></div>';
+     const rm=document.createElement('button');rm.type='button';rm.textContent='take out';rm.onclick=()=>{chosen.splice(chosen.indexOf(id),1);renderSlot();updateButtons();readoutAfterRemoval();};
+     row.appendChild(rm);wrap.appendChild(row);
+   });
+   slot.innerHTML='';slot.appendChild(wrap);
+ }
+ function readout(id){
+   const e=effects[id];
+   q('#status').textContent=e.label;
+   q('#readout-title').textContent=e.title;
+   q('#readout-text').textContent=e.text;
+   q('#readout-brake').textContent=e.brake;
+ }
+ function readoutAfterRemoval(){
+   if(!chosen.length){q('#status').textContent='Nothing tested yet';q('#readout-title').textContent='The machine is waiting.';q('#readout-text').textContent='Choose any box below. There is no correct order.';q('#readout-brake').textContent='A piece can support one part of the working claim while complicating another. No piece silently performs an identity join.';return;}
+   readout(chosen[chosen.length-1]);
+ }
+ function updateButtons(){
+   document.querySelectorAll('[data-put]').forEach(b=>{b.disabled=chosen.includes(b.dataset.put);b.textContent=b.disabled?'IN THE MACHINE':'PUT THIS IN';});
+   document.querySelectorAll('.piece').forEach(p=>p.classList.toggle('used',chosen.includes(p.dataset.id)));
+ }
+ data.carriers.forEach((c,n)=>{
+   const e=effects[c.id]||{label:c.state,title:c.actor,text:c.claim,brake:c.change};
+   const card=document.createElement('article');card.className='piece';card.dataset.id=c.id;
+   card.innerHTML='<div class="eyebrow">PIECE '+String(n+1).padStart(2,'0')+' · '+esc(c.date)+'</div><h3>'+esc(e.label)+'</h3><p class="front">'+esc(e.text)+'</p><div class="effect">'+esc(e.brake)+'</div><div class="piece-actions"></div><div class="back"><dl><dt>speaker</dt><dd>'+esc(c.actor)+'</dd><dt>object</dt><dd>'+esc(c.object)+'</dd><dt>state</dt><dd>'+esc(c.state)+'</dd><dt>verb</dt><dd>'+esc(c.verb)+'</dd><dt>source</dt><dd>'+esc(c.source)+'</dd></dl></div>';
+   const acts=card.querySelector('.piece-actions');
+   const put=document.createElement('button');put.className='primary';put.type='button';put.dataset.put=c.id;put.textContent='PUT THIS IN';put.onclick=()=>{if(!chosen.includes(c.id))chosen.push(c.id);renderSlot();updateButtons();readout(c.id);q('.machine').scrollIntoView({behavior:'smooth',block:'start'});};
+   const turn=document.createElement('button');turn.type='button';turn.textContent='TURN IT OVER';turn.onclick=()=>{const back=card.querySelector('.back');back.classList.toggle('show');turn.textContent=back.classList.contains('show')?'HIDE BACK':'TURN IT OVER';};
+   acts.append(put,turn);pieces.appendChild(card);
+ });
+ const tests=q('#tests');
+ data.refusals.forEach(r=>{
+   const card=document.createElement('div');card.className='test-card';
+   const p=document.createElement('p');p.textContent=r.proposal;
+   const b=document.createElement('button');b.type='button';b.textContent='PUT PRESSURE HERE';
+   const ans=document.createElement('div');ans.className='answer';ans.innerHTML='<strong>'+esc(r.result)+'</strong><p>'+esc(r.reason)+'</p>';
+   b.onclick=()=>ans.classList.toggle('show');
+   card.append(p,b,ans);tests.appendChild(card);
+ });
+ renderSlot();updateButtons();
+})().catch(err=>{
+ document.querySelector('#readout-title').textContent='The record body could not be loaded.';
+ document.querySelector('#readout-text').textContent='Nothing has been inferred from the failed load.';
+ console.error(err);
+});
+</script>
+</body>
+</html>
