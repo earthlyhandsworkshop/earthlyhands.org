@@ -1,291 +1,229 @@
 <!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Earthly Hands cares for scattered historical records and the people, relationships, places, and administrative worlds they belong to."
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#e7dfd0" />
-    <link rel="canonical" href="https://earthlyhands.org/" />
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Public specimens from Earthly Hands Workshop.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#e7dfd0">
+<link rel="canonical" href="https://earthlyhands.org/">
+<title>Earthly Hands — Specimens</title>
+<style>
+:root{
+  --paper:#e7dfd0;
+  --paper2:#f0e9dc;
+  --ink:#1d1c18;
+  --muted:#6f685d;
+  --rule:rgba(29,28,24,.23);
+  --accent:#8d5c3f;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--paper)}
+body{margin:0;min-width:18rem;background:var(--paper);color:var(--ink);font:1rem/1.5 var(--serif)}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.shell{width:min(92rem,calc(100% - 2rem));margin:auto}
+.top{
+  min-height:4rem;display:flex;justify-content:space-between;gap:1rem;align-items:center;
+  border-bottom:1px solid var(--rule);font:.63rem/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase
+}
+.top a{text-decoration:none}.top .quiet{color:var(--muted)}
+.intro{
+  display:grid;grid-template-columns:minmax(0,1.55fr) minmax(18rem,.45fr);
+  gap:clamp(2rem,7vw,8rem);align-items:end;padding:clamp(3rem,8vw,8rem) 0 clamp(2.5rem,6vw,5rem)
+}
+.intro h1{
+  margin:0;font-size:clamp(4.5rem,12vw,11rem);font-weight:400;line-height:.74;letter-spacing:-.065em
+}
+.intro-copy{max-width:27rem;padding-bottom:.45rem}
+.intro-copy p{margin:0;color:var(--muted);font-size:clamp(1rem,1.5vw,1.2rem)}
+.intro-copy p+p{margin-top:.8rem}
+.intro-copy .small{font:.6rem/1.45 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.section-head{
+  display:grid;grid-template-columns:4rem 1fr auto;gap:1rem;align-items:baseline;
+  padding:.65rem 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);
+  font:.58rem/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase
+}
+.section-head span:last-child{color:var(--muted)}
+.specimen{border-bottom:1px solid var(--rule)}
+.specimen-link{
+  display:grid;grid-template-columns:4rem minmax(0,1.25fr) minmax(17rem,.75fr) auto;
+  gap:clamp(.8rem,2vw,2rem);align-items:center;min-height:8.2rem;padding:1rem 0;
+  text-decoration:none
+}
+.specimen-link:hover{background:rgba(255,255,255,.12)}
+.num{align-self:start;padding-top:.35rem;color:var(--muted);font:.52rem/1 var(--mono)}
+.name{
+  margin:0;font-size:clamp(2rem,4.8vw,5.2rem);font-weight:400;line-height:.86;letter-spacing:-.047em
+}
+.name.long{font-size:clamp(1.8rem,4vw,4.4rem)}
+.about{max-width:31rem;color:var(--muted);font-size:.92rem;line-height:1.42}
+.meta{margin-top:.45rem;color:var(--muted);font:.52rem/1.35 var(--mono);letter-spacing:.045em;text-transform:uppercase}
+.enter{justify-self:end;font:.55rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.enter::after{content:"  →";color:var(--accent)}
+.retained{margin-top:clamp(4rem,8vw,7rem)}
+.retained .specimen-link{min-height:6rem}
+.retained .name{font-size:clamp(1.55rem,3vw,3.2rem)}
+.retained .about{font-size:.82rem}
+footer{
+  display:flex;justify-content:space-between;gap:1rem;margin-top:5rem;padding:1rem 0 2rem;
+  border-top:1px solid var(--rule);color:var(--muted);font:.55rem/1.4 var(--mono);letter-spacing:.055em;text-transform:uppercase
+}
+@media(max-width:58rem){
+  .intro{grid-template-columns:1fr;gap:2rem}
+  .intro-copy{padding:0}
+  .specimen-link{grid-template-columns:2.5rem 1fr auto;min-height:0;padding:1.4rem 0}
+  .about{grid-column:2/4;max-width:38rem}
+  .enter{grid-column:3;grid-row:1}
+  .section-head{grid-template-columns:2.5rem 1fr}
+  .section-head span:last-child{display:none}
+}
+@media(max-width:36rem){
+  .shell{width:calc(100% - 1.2rem)}
+  .top{min-height:3.3rem}
+  .intro{padding:3rem 0 2.5rem}
+  .intro h1{font-size:clamp(4rem,22vw,6.5rem)}
+  .specimen-link{grid-template-columns:1.7rem 1fr}
+  .num{grid-column:1}
+  .name{grid-column:2}
+  .about{grid-column:2}
+  .enter{grid-column:2;grid-row:auto;justify-self:start;margin-top:.25rem}
+  .section-head{grid-template-columns:1.7rem 1fr}
+  footer{display:block}
+  footer span{display:block;margin-top:.35rem}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top">
+  <a href="/"><strong>Earthly Hands Workshop</strong></a>
+  <span class="quiet">public work</span>
+</header>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Earthly Hands" />
-    <meta property="og:title" content="Earthly Hands — The Threshold" />
-    <meta
-      property="og:description"
-      content="Earthly Hands cares for scattered historical records and the people, relationships, places, and administrative worlds they belong to."
-    />
-    <meta property="og:url" content="https://earthlyhands.org/" />
+<main>
+<section class="intro">
+  <h1>Specimens.</h1>
+  <div class="intro-copy">
+    <p>Working public pieces from the workshop. Each one has its own rules.</p>
+    <p class="small">Some are source rooms. Some are maps, listening pieces, comparison machines, or ways of keeping a question open.</p>
+  </div>
+</section>
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Earthly Hands — The Threshold" />
-    <meta
-      name="twitter:description"
-      content="Earthly Hands cares for scattered historical records and the people, relationships, places, and administrative worlds they belong to."
-    />
-    <title>Earthly Hands — The Threshold</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23171713'/%3E%3Cpath d='M19 16v32M19 21h26M19 32h20M19 43h26' stroke='%23efe9dc' stroke-width='5' stroke-linecap='square'/%3E%3C/svg%3E"
-    />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Earthly Hands",
-        "url": "https://earthlyhands.org/",
-        "description": "Earthly Hands cares for scattered historical records and the people, relationships, places, and administrative worlds they belong to."
-      }
-    </script>
-    <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="style.css?v=shared-country-edge-nav-v1" />
-  </head>
-  <body data-lamp="lit" data-ground="night">
-    <a class="skip-link" href="#threshold">Skip to the Dawson trail</a>
+<section aria-labelledby="current-specimens">
+  <div class="section-head"><span>01–13</span><strong id="current-specimens">Current specimens</strong><span>enter any piece on its own terms</span></div>
 
-    <header class="site-header">
-      <a class="identity" href="/" aria-label="Earthly Hands Workshop">
-        <span>Earthly Hands Workshop</span>
-      </a>
-      <nav class="site-nav" aria-label="Workshop navigation">
-        <a href="/experiments/">Experiments</a>
-      </nav>
-    </header>
+  <article class="specimen"><a class="specimen-link" href="/experiments/article-xiv-identity-gate/">
+    <span class="num">01</span>
+    <h2 class="name">Identity Gate</h2>
+    <div class="about">Two Robert Bell record bodies meet an administrative <em>IDENTICAL</em> card. The government relation can hold while the source bridges underneath remain open.<div class="meta">Article XIV · paired Robert bodies · True North</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-    <main>
-      <section class="threshold" id="threshold" data-place="Front edge">
-        <div class="experience-shell" id="experience-shell">
-          <div class="experience-viewbar" aria-label="Ground view">
-            <button type="button" class="view-mode is-current" data-dawson-view="ground" aria-pressed="true">Ground</button>
-            <button type="button" class="view-mode" data-dawson-view="talk" aria-pressed="false">Talk wide</button>
-            <button type="button" class="view-mode" data-dawson-view="index" aria-pressed="false">Stops</button>
-            <button type="button" class="view-mode" data-dawson-view="people" aria-pressed="false">People</button>
-            <button type="button" class="view-mode" data-dawson-view="sources" aria-pressed="false">Sources</button>
-          </div>
+  <article class="specimen"><a class="specimen-link" href="/experiments/shared-country/">
+    <span class="num">02</span>
+    <h2 class="name">Shared Country</h2>
+    <div class="about">A source-facing Dawson trail where people, places, movement, source carriers, and what the account does not say stay separately visible.<div class="meta">Dawson report · live ground · Workshop</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <div class="experience-stage" id="experience-stage" data-direction="forward">
-            <div class="experience-mount" id="experience-mount" aria-live="polite"></div>
-            <section class="dawson-index" id="dawson-index" hidden aria-labelledby="dawson-index-title">
-              <header class="dawson-index-head">
-                <p>Exploring party</p>
-                <h2 id="dawson-index-title">Stops currently open</h2>
-                <span>These are public stops in the present trail. The deeper Dawson corpus is larger and is still being indexed underneath.</span>
-              </header>
-              <nav class="dawson-stop-list" aria-label="Public stops"></nav>
-            </section>
-            <section class="camp-people" id="camp-people" hidden aria-labelledby="camp-people-title">
-              <header class="dawson-index-head">
-                <p>People / bodies in the held source</p>
-                <h2 id="camp-people-title">Who is here?</h2>
-                <span>This is not a complete roster. Named people stay named; unnamed groups stay unnamed; arrival, presence, approach, and departure remain different relations.</span>
-              </header>
-              <div class="camp-people-list"></div>
-            </section>
-            <section class="camp-sources" id="camp-sources" hidden aria-labelledby="camp-sources-title">
-              <header class="dawson-index-head">
-                <p>Held documentary body</p>
-                <h2 id="camp-sources-title">What carries this ground?</h2>
-                <span>Source, representation, and Workshop derivative remain separate. These are public-facing retrieval doors, not a claim that every surviving Dawson-related object is shown here.</span>
-              </header>
-              <div class="camp-source-list"></div>
-            </section>
-          </div>
+  <article class="specimen"><a class="specimen-link" href="/experiments/article-xiv-rooms/">
+    <span class="num">03</span>
+    <h2 class="name">Article XIV Rooms</h2>
+    <div class="about">Treaty language, later federal machinery, and the paired Robert Bell bodies placed in one bounded architectural reading sequence.<div class="meta">Treaty → administration → identity · True North</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <div class="experience-tools" aria-label="Exploring party controls">
-            <div class="experience-utility">
-              <form class="ground-talk" id="talk-form" aria-label="Ask the ground">
-                <label class="sr-only" for="talk-input">Ask the ground</label>
-                <textarea id="talk-input" name="message" rows="1" maxlength="1000" autocomplete="off" enterkeyhint="send" placeholder="Ask the ground"></textarea>
-                <button class="sr-only" id="talk-send" type="submit">Go</button>
-              </form>
-              <div class="ground-thread" id="ground-thread" aria-live="polite"></div>
-            </div>
-          </div>
-        </div>
+  <article class="specimen"><a class="specimen-link" href="/experiments/which-robert/">
+    <span class="num">04</span>
+    <h2 class="name">Which Robert?</h2>
+    <div class="about">Three Robert Bell record bodies held on one screen so names, wives, fathers, language, and record carriers can be compared without merging the men.<div class="meta">MCR 879 · Article XIV · hearing body</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-      </section>
+  <article class="specimen"><a class="specimen-link" href="/experiments/one-proposition-many-carriers/">
+    <span class="num">05</span>
+    <h2 class="name long">One Proposition, Many Carriers</h2>
+    <div class="about">One proposition changes custody across source generations while speaker, referent, function, and provenance remain distinct.<div class="meta">carrier depth · Needle Up</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-      <section class="passage report-passage" id="report" data-scene data-step data-place="By lantern light" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">by lantern light</span></div>
-        <h2>The light catches a report.</h2>
-        <div class="plain-copy report-story">
-          <p class="story-lead">
-            On 29 January 1831, J. L. Dawson wrote from Cantonment Gibson. His report carries
-            travel with the Choctaw and Chickasaw western exploring delegations.
-          </p>
-          <p class="story-quiet">
-            The original manuscript has not yet been recovered. We are following the report
-            through its newspaper and later printed representations.
-          </p>
-        </div>
-      </section>
+  <article class="specimen"><a class="specimen-link" href="/mcr879.html">
+    <span class="num">06</span>
+    <h2 class="name">MCR 879</h2>
+    <div class="about">A working comparison body for the Bell–McKinney family claim, its source states, administrative handling, and still-open questions.<div class="meta">Robert Bell · family testimony · Register</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-                  <section class="passage trail-passage" id="night" data-scene data-step data-place="Night camp" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">night camp</span></div>
-        <h2>Two men are sent back toward the ford.</h2>
-        <div class="first-person-view" aria-label="First-person view from night camp">
-          <div class="fpv-open" aria-hidden="true">[</div>
-          <div class="view-body">
-            <p><span class="lived-line">You are awake inside the guarded camp. The dark beyond it is not filled in for you.</span></p>
-            <p>Dawson says a small guard was posted around the camp after the alarm.</p>
-            <p>Two unnamed men were sent back to watch the ford of the river on the back trail.</p>
-            <p>The report does not say that they reached the ford, and it gives no account of their return.</p>
-          </div>
-          <div class="fpv-close" aria-hidden="true">]</div>
-          <div class="fpv-footing">
-            <p><span class="ten-footing">Ten · night camp</span></p>
-            <p><span class="companion-footing">Small Door · Mapping Grounds · remote</span></p>
-          </div>
-        </div>
-      </section>
+  <article class="specimen"><a class="specimen-link" href="/experiments/dancing-rabbit-statehood-line/">
+    <span class="num">07</span>
+    <h2 class="name long">Dancing Rabbit to Oklahoma</h2>
+    <div class="about">A line-drawing presentation of treaty, removal, land, court, and statehood held as orientation rather than reconstructed route geometry.<div class="meta">1830 → 1907 · Mullion</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-                  <section class="passage trail-passage" id="morning" data-scene data-step data-place="Morning camp" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">morning camp</span></div>
-        <h2>Morning finds the party unattacked.</h2>
-        <div class="first-person-view" aria-label="First-person view from morning camp">
-          <div class="fpv-open" aria-hidden="true">[</div>
-          <div class="view-body">
-            <p><span class="lived-line">You are standing in the camp at first light. Nothing in Dawson’s account says the camp was attacked.</span></p>
-            <p>The night has passed. The small guard is no longer the thing the report is watching.</p>
-            <p>The two men, the ford, and the back trail remain outside the account that follows.</p>
-            <p>Dawson turns southeast from here. The source moves on without bringing those men back into view.</p>
-          </div>
-          <div class="fpv-close" aria-hidden="true">]</div>
-          <div class="fpv-footing">
-            <p><span class="ten-footing">Ten · morning camp</span></p>
-            <p><span class="companion-footing">Small Door · Mapping Grounds · remote</span></p>
-          </div>
-        </div>
-      </section>
+  <article class="specimen"><a class="specimen-link" href="/experiments/dawson-missing-line/">
+    <span class="num">08</span>
+    <h2 class="name">The Missing Line</h2>
+    <div class="about">Two source-earned Dawson states held apart without inventing the traveled line between “about fifteen miles southeast” and Blue Water.<div class="meta">reach ≠ route · True North</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-                  <section class="passage trail-passage" id="southeast" data-scene data-step data-place="Southeast reach" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">southeast</span></div>
-        <h2>They continue southeast about fifteen miles.</h2>
-        <div class="first-person-view" aria-label="First-person view from southeast reach">
-          <div class="fpv-open" aria-hidden="true">[</div>
-          <div class="view-body">
-            <p><span class="lived-line">You are moving with Dawson’s account toward the next camp. The traveled line itself is not preserved.</span></p>
-            <p>Dawson carries the party <button class="inline-depth" type="button" data-depth="distance" aria-expanded="false">southeast about fifteen miles</button>.</p>
-            <p>That gives direction and approximate distance, but not a road, bearing, or reconstructed path.</p>
-            <p>At the end of this source-stated leg, the party encamps on <button class="inline-depth" type="button" data-depth="creek" aria-expanded="false">a small branch of Blue Water</button>.</p>
-          </div>
-          <div class="fpv-close" aria-hidden="true">]</div>
-          <div class="fpv-footing">
-            <p><span class="ten-footing">Ten · southeast reach</span></p>
-            <p><span class="companion-footing">Small Door · Mapping Grounds · remote</span></p>
-          </div>
-        </div>
-      </section>
+  <article class="specimen"><a class="specimen-link" href="/experiments/dawson-inline-depth/">
+    <span class="num">09</span>
+    <h2 class="name">Inline Depth</h2>
+    <div class="about">Relation depth opens inside a Dawson passage without pretending that looking deeper moved the visitor—or the historical party—to another ground.<div class="meta">Dawson · source depth · Small Door</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-                  <section class="passage trail-passage" id="blue-water" data-scene data-step data-place="Blue Water" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">Blue Water</span></div>
-        <h2>On this creek, they find Mayes and Criner.</h2>
-        <div class="first-person-view" aria-label="First-person view from Blue Water">
-          <div class="fpv-open" aria-hidden="true">[</div>
-          <div class="view-body">
-            <p><span class="lived-line">You are at the creek with Mayes and Criner in view. The exact point on the creek is not given.</span></p>
-            <p>Dawson says the party found <button class="inline-depth" type="button" data-depth="mayes" aria-expanded="false">Mr. Mayes</button> and <button class="inline-depth" type="button" data-depth="criner" aria-expanded="false">Mr. Criner</button> here.</p>
-            <p>He says the two men <button class="inline-depth" type="button" data-depth="residence" aria-expanded="false">resided on James’ Fork of Poteau</button>; that residence is not made into this encounter place.</p>
-            <p>Here, on this creek, they were <button class="inline-depth" type="button" data-depth="trapping" aria-expanded="false">trapping for beaver</button>.</p>
-          </div>
-          <div class="fpv-close" aria-hidden="true">]</div>
-          <div class="fpv-footing">
-            <p><span class="ten-footing">Ten · Blue Water</span></p>
-            <p><span class="companion-footing">Small Door · Mapping Grounds · remote</span></p>
-          </div>
-        </div>
-      </section>
+  <article class="specimen"><a class="specimen-link" href="/experiments/one-outing-two-clocks/">
+    <span class="num">10</span>
+    <h2 class="name long">One Outing, Two Clocks</h2>
+    <div class="about">A listening piece holding two documentary clocks together without forcing their time expressions or identities into a single chronology.<div class="meta">listening experiment · Register + Lamplight</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-                  <section class="passage trail-passage" id="dozen" data-scene data-step data-place="Blue Water" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">Blue Water</span></div>
-        <h2>They had caught but a dozen.</h2>
-        <div class="first-person-view" aria-label="First-person view from Blue Water">
-          <div class="fpv-open" aria-hidden="true">[</div>
-          <div class="view-body">
-            <p><span class="lived-line">You are still beside the same creek with Mayes and Criner. The account has not moved to their residence.</span></p>
-            <p>Dawson says they had caught but a dozen beaver.</p>
-            <p>He does not divide the catch between the two men or give a separate place for it.</p>
-            <p>The weather, he says, was too cold to promise much further success.</p>
-          </div>
-          <div class="fpv-close" aria-hidden="true">]</div>
-          <div class="fpv-footing">
-            <p><span class="ten-footing">Ten · Blue Water</span></p>
-            <p><span class="companion-footing">Small Door · Mapping Grounds · remote</span></p>
-          </div>
-        </div>
-      </section>
+  <article class="specimen"><a class="specimen-link" href="/experiments/six-letters-touchstone/">
+    <span class="num">11</span>
+    <h2 class="name">Six Letters</h2>
+    <div class="about">Touchstone’s implementation of a notice sequence: repeated dated bodies, deliberate pacing, and a blank interval that does not pretend to measure elapsed historical time.<div class="meta">Touchstone implementation · source state still under comparison</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-                  <section class="passage trail-passage" id="guide" data-scene data-step data-place="Blue Water" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">Blue Water</span></div>
-        <h2>Mayes is employed as a guide.</h2>
-        <div class="first-person-view" aria-label="First-person view from Blue Water">
-          <div class="fpv-open" aria-hidden="true">[</div>
-          <div class="view-body">
-            <p><span class="lived-line">You are still at Blue Water. The story changes role before it changes ground.</span></p>
-            <p>Dawson says Cols. Gaines and Reynolds induced Mayes and Criner to accompany the delegation as far as Kiamiche.</p>
-            <p>He says Mr. Mayes was employed as a guide.</p>
-            <p>The source does not make Criner a guide, give the terms of Mayes's employment, or prove arrival at Kiamiche in this sentence.</p>
-          </div>
-          <div class="fpv-close" aria-hidden="true">]</div>
-          <div class="fpv-footing">
-            <p><span class="ten-footing">Ten · Blue Water</span></p>
-            <p><span class="companion-footing"></span></p>
-          </div>
-        </div>
-      </section>
+  <article class="specimen"><a class="specimen-link" href="/experiments/six-letters/">
+    <span class="num">12</span>
+    <h2 class="name">Six Letters</h2>
+    <div class="about">Grainline’s independent implementation of the same originating plan, preserved beside Touchstone’s so development history stays visible.<div class="meta">Grainline implementation · source state still under comparison</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-                  <section class="passage trail-passage" id="blue-water-mouth" data-scene data-step data-place="Near the mouth of Blue Water" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">near the mouth of Blue Water</span></div>
-        <h2>The report shifts from encounter to prospect.</h2>
-        <div class="first-person-view" aria-label="First-person view near the mouth of Blue Water">
-          <div class="fpv-open" aria-hidden="true">[</div>
-          <div class="view-body">
-            <p><span class="lived-line">You are carried to a relative position near the mouth of Blue Water. No exact point is supplied.</span></p>
-            <p>Dawson says the party was within a short distance of the mouth of Blue Water.</p>
-            <p>He says he wanted to see the mouths of Blue Water and the Washita to report on their local advantages for a possible garrison.</p>
-            <p>Intent to inspect is not proof that either mouth was reached, surveyed, selected, or built upon.</p>
-          </div>
-          <div class="fpv-close" aria-hidden="true">]</div>
-          <div class="fpv-footing">
-            <p><span class="ten-footing">Ten · near Blue Water mouth</span></p>
-            <p><span class="companion-footing"></span></p>
-          </div>
-        </div>
-      </section>
+  <article class="specimen"><a class="specimen-link" href="/experiments/ward-room/">
+    <span class="num">13</span>
+    <h2 class="name">Ward Room</h2>
+    <div class="about">A small source room for the Ward edge, built to keep source routes visible and refuse joins the record has not earned.<div class="meta">source room · Ravel</div></div>
+    <span class="enter">enter</span>
+  </a></article>
+</section>
 
-                  <section class="passage trail-passage" id="east-blue-water" data-scene data-step data-place="East of Blue Water" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">east of Blue Water</span></div>
-        <h2>Dawson turns from place to forecast.</h2>
-        <div class="first-person-view" aria-label="First-person view from east-of-Blue-Water relation">
-          <div class="fpv-open" aria-hidden="true">[</div>
-          <div class="view-body">
-            <p><span class="lived-line">The ground is now regional rather than point-like. The account is making a judgment, not locating a settlement.</span></p>
-            <p>Dawson says there is ample room for the whole nation in the portion east of Blue Water.</p>
-            <p>He predicts that this portion will fill with settlements first, citing winter range and comparative exposure.</p>
-            <p>This is Dawson's forecast. It is not proof that settlement had already occurred or a mapped boundary east of Blue Water.</p>
-          </div>
-          <div class="fpv-close" aria-hidden="true">]</div>
-          <div class="fpv-footing">
-            <p><span class="ten-footing">Ten · east of Blue Water</span></p>
-            <p><span class="companion-footing"></span></p>
-          </div>
-        </div>
-      </section>
-    </main>
+<section class="retained" aria-labelledby="retained-specimens">
+  <div class="section-head"><span>14–20</span><strong id="retained-specimens">Retained studies</strong><span>earlier or narrower public work</span></div>
 
-    <footer>
-      <p class="trust-mark">Earthly Hands Workshop · carried in common</p>
-      <a href="/experiments/">Experiments</a>
-    </footer>
+  <article class="specimen"><a class="specimen-link" href="/experiments/four-way-room-nav/"><span class="num">14</span><h2 class="name">Four-Way Room</h2><div class="about">An MCR 879 evidence-field navigation study, retained for what it taught about moving around one continuous research body.<div class="meta">Grainline</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/place-before-point/"><span class="num">15</span><h2 class="name">Place Before Point</h2><div class="about">A mapping study that lets a place relation exist before the workshop has earned a precise point.<div class="meta">mapping study</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/ground-stays-put/"><span class="num">16</span><h2 class="name">Ground Stays Put</h2><div class="about">A movement study asking what can change around a visitor while the current ground itself remains fixed.<div class="meta">interaction study</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/the-machine-does-not-know-for-you/"><span class="num">17</span><h2 class="name long">The Machine Does Not Know for You</h2><div class="about">A comparison room that makes the machine’s limits visible instead of allowing interface confidence to stand in for historical certainty.<div class="meta">identity / comparison study</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/mobile-full-field/"><span class="num">18</span><h2 class="name">Mobile Full Field</h2><div class="about">A phone-scale study in keeping the whole evidentiary field legible without reducing it to a stack of unrelated cards.<div class="meta">mobile study</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/register-line-front-edge/"><span class="num">19</span><h2 class="name long">Register Line Front Edge</h2><div class="about">An alternate front-edge rendering preserved as a comparator: pale Register grammar carrying Mullion’s line orientation.<div class="meta">Grainline · Register + Mullion inheritance</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/register-threshold-v2/"><span class="num">20</span><h2 class="name">Register Threshold v2</h2><div class="about">An earlier threshold specimen retained plainly as earlier work rather than presented as the current front door.<div class="meta">Register · retained</div></div><span class="enter">enter</span></a></article>
+</section>
+</main>
 
-    <noscript>
-      <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
-    </noscript>
-    <script src="config.js?v=camp-ground-v1"></script>
-    <script src="script.js?v=shared-country-corpus-v4"></script>
-  </body>
+<footer>
+  <span>Earthly Hands Workshop</span>
+  <span>working public specimens · source, representation, and inference kept distinct</span>
+</footer>
+</div>
+</body>
 </html>
