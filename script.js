@@ -513,6 +513,15 @@
       const active = button.dataset.dawsonView === next;
       button.classList.toggle("is-current", active);
       button.setAttribute("aria-pressed", String(active));
+
+      if (button.dataset.dawsonView === "ground") {
+        const heldPlace = trailUi[currentId]?.name || sceneById.get(currentId)?.dataset.place || "the ground";
+        button.textContent = next === "sources" ? `Return to ${heldPlace}` : "Ground";
+        button.setAttribute(
+          "aria-label",
+          next === "sources" ? `Return to ${heldPlace} without moving the story` : "Ground"
+        );
+      }
     });
 
     if (experienceMount) experienceMount.hidden = next === "map" || next === "people" || next === "sources";
