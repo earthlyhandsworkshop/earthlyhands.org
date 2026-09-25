@@ -291,67 +291,69 @@ main{padding:0 0 .75rem}
 
 .about{
   display:grid;
-  grid-template-columns:minmax(9rem,.22fr) minmax(28rem,1fr) minmax(14rem,.32fr);
-  gap:1.35rem;
-  margin-top:.95rem;
-  padding:1rem 0 1.1rem;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  gap:1rem 1.25rem;
+  margin-top:.85rem;
+  padding:.72rem 0 .78rem;
   border-top:1px solid var(--rule2);
   border-bottom:1px solid var(--rule);
-  align-items:start;
+  align-items:center;
 }
 .about-brand{
-  min-width:0;
+  white-space:nowrap;
 }
 .about-brand strong{
-  display:block;
   font:600 .8rem/1 var(--mono);
   letter-spacing:.09em;
   text-transform:uppercase;
 }
 .about-brand span{
-  display:block;
-  margin-top:.18rem;
+  margin-left:.38rem;
   color:var(--muted);
-  font:.46rem/1.15 var(--mono);
+  font:.46rem/1 var(--mono);
   letter-spacing:.08em;
   text-transform:uppercase;
 }
 .about-copy{
-  max-width:50rem;
-  padding-right:1rem;
+  min-width:0;
+  max-width:none;
+  padding:0;
 }
 .about p{
   margin:0;
   color:var(--muted);
-  font-size:.78rem;
-  line-height:1.42;
+  font-size:.74rem;
+  line-height:1.34;
 }
-.about p+p{margin-top:.34rem}
+.about p+p{margin-top:.18rem}
 .family-line{
   justify-self:end;
-  min-width:14rem;
-  padding-left:1.1rem;
-  border-left:1px solid var(--rule);
-}
-.family-line span,
-.family-line em{
-  display:block;
+  white-space:nowrap;
   color:var(--muted);
-  font:.45rem/1.25 var(--mono);
-  letter-spacing:.07em;
+  font:.48rem/1.15 var(--mono);
+  letter-spacing:.065em;
   text-transform:uppercase;
-  font-style:normal;
 }
 .family-line strong{
-  display:block;
-  margin:.22rem 0 .14rem;
-  color:var(--accent);
-  font:400 1.22rem/1.02 var(--serif);
-  letter-spacing:-.012em;
+  color:var(--ink);
+  font:inherit;
+  font-weight:600;
+}
+.family-line em{
+  color:var(--muted);
+  font:inherit;
+  font-style:normal;
 }
 @media(max-width:72rem){
-  .about{grid-template-columns:minmax(8rem,.25fr) minmax(0,1fr)}
-  .family-line{grid-column:2;justify-self:start;min-width:0;padding-left:0;padding-top:.55rem;border-left:0;border-top:1px solid var(--rule)}
+  .about{
+    grid-template-columns:auto minmax(0,1fr);
+    align-items:start;
+  }
+  .family-line{
+    grid-column:2;
+    justify-self:start;
+    white-space:normal;
+  }
   .properties-footer{height:6.7rem;min-height:6.7rem;max-height:6.7rem}
   .properties-receive{
     height:5.55rem;
@@ -383,9 +385,16 @@ main{padding:0 0 .75rem}
   .pi-provenance{display:none}
   .pi-file{grid-column:3;grid-row:2}
   .pi-send{display:none}
-  .about{grid-template-columns:1fr;gap:.65rem;padding:.85rem 0 1rem}
-  .about-copy{padding-right:0}
-  .family-line{grid-column:auto;justify-self:start;min-width:0;width:100%;padding-left:0;padding-top:.6rem;border-left:0;border-top:1px solid var(--rule)}
+  .about{
+    grid-template-columns:1fr;
+    gap:.35rem;
+    padding:.7rem 0 .8rem;
+  }
+  .family-line{
+    grid-column:auto;
+    justify-self:start;
+    white-space:normal;
+  }
 
   .shell{width:calc(100% - .7rem)}
   .work-link{
@@ -775,17 +784,13 @@ main{padding:0 0 .75rem}
 
   <footer class="about" aria-label="Earthly Hands Workshop">
     <div class="about-brand">
-      <strong>Earthly Hands</strong>
-      <span>Workshop</span>
+      <strong>Earthly Hands</strong><span>Workshop</span>
     </div>
     <div class="about-copy">
-      <p>A research and documentation workshop for historical records, people, places, maps, archives, and the strange paths between them.</p>
-      <p>We publish source-facing work, keep unresolved questions visible, and welcome records that complicate what we think we know.</p>
+      <p>A research and documentation workshop for historical records, people, places, maps, archives, and the strange paths between them. We publish source-facing work, keep unresolved questions visible, and welcome records that complicate what we think we know.</p>
     </div>
-    <div class="family-line" aria-label="Bell–McKinney family line">
-      <span>Bell–McKinney family line</span>
-      <strong>Choctaw descent</strong>
-      <em>recognition unresolved</em>
+    <div class="family-line" aria-label="Choctaw descent, recognition unresolved">
+      <strong>Choctaw descent</strong> · <em>recognition unresolved</em>
     </div>
   </footer>
 </main>
