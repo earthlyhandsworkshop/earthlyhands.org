@@ -98,6 +98,27 @@
   };
   const sceneState = JSON.parse(JSON.stringify(defaultSceneState));
 
+  // A deliberate fresh crossing is different from an ordinary return.
+  // ?fresh=1 clears only Shared Country's visitor-experience browser state,
+  // then removes itself from the URL so the new visitor can proceed normally.
+  const freshEntry = new URLSearchParams(window.location.search).get("fresh") === "1";
+  if (freshEntry) {
+    try {
+      [
+        "earthly-hands-footing-v3",
+        "earthly-hands-story-reach-v3",
+        "earthly-hands-discovery-open-v3",
+        "earthly-hands-thought-given-v3"
+      ].forEach((key) => window.localStorage.removeItem(key));
+      window.sessionStorage.removeItem("earthly-hands-discovery-scene-v3");
+    } catch (_) {
+      // Fresh entry still degrades safely when browser storage is unavailable.
+    }
+
+    const cleanUrl = window.location.pathname + window.location.hash;
+    window.history.replaceState(window.history.state, "", cleanUrl);
+  }
+
 
   const peopleByGround = {
     night: [
