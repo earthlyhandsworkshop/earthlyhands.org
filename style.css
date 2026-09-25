@@ -1347,3 +1347,98 @@ body[data-ground="night"] .experience-shell[data-presence="fire"]{
     grid-template-columns:1fr;
   }
 }
+
+
+/* Shared Country discovery entry.
+   Before the first question, the visitor has ground but not yet a disclosed record. */
+body[data-discovery="closed"] .experience-shell{
+  --scene-bg:#0c0f11;
+  --scene-ink:#f0ede5;
+  --scene-muted:#92999a;
+  --scene-rule:rgba(240,237,229,.16);
+  --scene-accent:#d29a68;
+  min-height:calc(100svh - 3.1rem);
+  background:
+    radial-gradient(circle at 50% 68%,rgba(210,154,104,.035),transparent 24rem),
+    #0c0f11;
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+}
+body[data-discovery="closed"] .experience-viewbar{
+  justify-content:flex-start;
+  padding-top:.7rem;
+}
+body[data-discovery="closed"] .view-mode[data-dawson-view="ground"]{
+  color:var(--scene-muted);
+  border-bottom:0;
+  cursor:default;
+}
+body[data-discovery="closed"] .experience-stage{
+  min-height:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+}
+body[data-discovery="closed"] .experience-mount{
+  visibility:hidden;
+  position:absolute;
+  pointer-events:none;
+}
+body[data-discovery="closed"] .experience-tools{
+  width:min(42rem,calc(100% - 2rem));
+  padding:0 0 clamp(3.2rem,9vh,6rem);
+}
+body[data-discovery="closed"] .experience-utility{
+  display:block;
+  margin:0;
+}
+body[data-discovery="closed"] .experience-utility .ground-talk,
+body[data-discovery="closed"] .experience-utility .ground-thread{
+  grid-column:auto;
+  max-width:none;
+  width:100%;
+}
+body[data-discovery="closed"] .ground-thread{
+  display:none;
+}
+body[data-discovery="closed"] .ground-talk textarea{
+  min-height:3.4rem;
+  padding:.72rem 0 .45rem;
+  border:0;
+  border-bottom:1px solid var(--scene-rule);
+  background:transparent;
+  color:var(--scene-ink);
+  font:400 clamp(1.25rem,3vw,2rem)/1.3 var(--serif);
+  resize:none;
+}
+body[data-discovery="closed"] .ground-talk textarea::placeholder{
+  color:var(--scene-ink);
+  opacity:.88;
+}
+body[data-discovery="closed"] .ground-talk textarea:focus{
+  outline:0;
+  border-bottom-color:var(--scene-accent);
+}
+body[data-discovery="closed"] footer{
+  border-top-color:rgba(240,237,229,.12);
+  color:#8e9494;
+}
+
+/* Once discovery begins, the first scene is allowed to exist visibly. */
+body[data-discovery="open"] .experience-shell{
+  transition:background-color .3s ease,color .3s ease;
+}
+
+@media(max-width:52rem){
+  body[data-discovery="closed"] .experience-shell{
+    min-height:calc(100svh - 2.8rem);
+  }
+  body[data-discovery="closed"] .experience-tools{
+    width:calc(100% - 1.4rem);
+    padding-bottom:3rem;
+  }
+  body[data-discovery="closed"] .ground-talk textarea{
+    font-size:1.45rem;
+  }
+}
