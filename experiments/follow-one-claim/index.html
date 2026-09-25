@@ -12,7 +12,7 @@
 *{box-sizing:border-box}html{background:var(--bg);color:var(--ink);font-family:var(--sans)}body{margin:0}.shell{width:min(92rem,calc(100% - 1rem));margin:auto}.top{min-height:3rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);font:700 .62rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}.top a{text-decoration:none;color:inherit}.top .old{color:var(--muted)}
 .route-deck{padding:.7rem 0;border-bottom:1px solid var(--line)}.human-input{display:grid;gap:.35rem;margin-bottom:.75rem}.human-input label{font:700 .64rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}.human-input-row{display:grid;grid-template-columns:1fr auto auto;gap:.4rem}.human-input input{min-width:0;border:1px solid var(--line);background:#fffaf0;color:var(--ink);padding:.65rem .7rem;font:700 1rem/1.2 var(--serif)}.human-input button{border:1px solid var(--ink);background:var(--ink);color:var(--paper);padding:.55rem .65rem;cursor:pointer;font:700 .58rem/1 var(--mono);text-transform:uppercase}.human-input button:last-child{background:transparent;color:var(--ink)}.route-label{display:block;font:700 .58rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.45rem}.route-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:.45rem}.route-card{border:1px solid var(--line);background:var(--paper);padding:.6rem;text-align:left;cursor:pointer;display:grid;grid-template-columns:auto 1fr;gap:.15rem .5rem}.route-card b{grid-row:1/3;font:700 .58rem/1 var(--mono);color:var(--warm)}.route-card span{font:700 .85rem/1.05 var(--serif)}.route-card small{font:.55rem/1.3 var(--mono);color:var(--muted)}.route-card.active{outline:2px solid var(--ink);outline-offset:-2px}.hero{padding:clamp(1.2rem,3vw,2.3rem) 0 1rem}.kicker{font:700 .64rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--warm)}h1{font:700 clamp(3rem,7vw,7.2rem)/.86 var(--serif);letter-spacing:-.055em;margin:.5rem 0 .8rem;max-width:10ch}.hero p{max-width:55rem;font-size:clamp(1rem,1.7vw,1.27rem);line-height:1.48;margin:.45rem 0}.hero .plain{font-size:.9rem;color:var(--muted)}
 .machine{background:var(--dark);color:var(--light);padding:clamp(.75rem,2vw,1.2rem);border-radius:.25rem;box-shadow:inset 0 0 0 3px #181b1a;position:relative}.machine:before{content:"[ DOCUMENT READER / CLAIM TESTER ]";display:block;margin:-.1rem 0 .6rem;font:700 .54rem/1 var(--mono);letter-spacing:.08em;color:#9e988e}.machine:after{content:"tick · tick · click · read";position:absolute;right:.8rem;top:.75rem;font:700 .5rem/1 var(--mono);color:#817d75}.question-label{font:700 .6rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#c2bbb0}.question{font:700 clamp(1.65rem,4vw,3.25rem)/1 var(--serif);margin:.6rem 0 1.2rem;max-width:28ch}.bay-grid{display:grid;grid-template-columns:1fr minmax(14rem,.72fr) 1fr;gap:.8rem}.bay,.test-bay{border:1px solid #505653;background:#292d2b;min-height:14rem}.bay-head{padding:.8rem;border-bottom:1px solid #505653}.bay-head span{display:block;font:700 .58rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#bdb6aa}.bay-head strong{display:block;margin-top:.35rem;font-family:var(--serif);font-size:1.3rem}.bay-body{padding:.7rem;display:grid;gap:.5rem}.empty{color:#9f998f;font:.65rem/1.45 var(--mono);text-transform:uppercase;text-align:center;padding:2rem .5rem}.loaded{padding:.62rem;border:1px solid #505653;background:#343936}.loaded strong{font-family:var(--serif)}.loaded span{display:block;margin-top:.2rem;font:.6rem/1.4 var(--mono);color:#c7c1b7}.loaded button{margin-top:.45rem;border:0;background:transparent;color:#c7c1b7;font:700 .57rem/1 var(--mono);text-transform:uppercase;cursor:pointer;padding:0}
-.test-bay{display:flex;flex-direction:column}.test-body{padding:.8rem;display:grid;gap:.5rem}.test-body button{border:1px solid #777d79;background:#1e211f;color:var(--light);padding:.62rem;text-align:left;cursor:pointer;font:700 .62rem/1.25 var(--mono);text-transform:uppercase}.test-body button:hover{border-color:#d8c595}.test-body button:disabled{opacity:.25;cursor:not-allowed}.readout{margin-top:.8rem;border:1px solid #505653;background:#1e211f;padding:1rem}.readout .state{font:700 .62rem/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:#dbc998}.readout h2{font:700 clamp(1.3rem,3vw,2.2rem)/1 var(--serif);margin:.4rem 0}.readout p{line-height:1.5;color:#ddd7cc;margin:.4rem 0}.readout .brake{font:.66rem/1.5 var(--mono);color:#bcb5ab}
+.test-bay{display:flex;flex-direction:column}.operator-seat{padding:.75rem;border-bottom:1px solid #505653;background:#252927}.operator-seat span{display:block;font:700 .52rem/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:#aaa49a}.operator-seat strong{display:block;margin-top:.28rem;font:700 1rem/1.05 var(--serif)}.operator-actions{display:flex;gap:.35rem;margin-top:.55rem}.operator-actions button{border:1px solid #777d79;background:#1e211f;color:var(--light);padding:.48rem .55rem;cursor:pointer;font:700 .54rem/1 var(--mono);text-transform:uppercase}.operator-seat p{margin:.5rem 0 0;font:.57rem/1.4 var(--mono);color:#aaa49a}.test-body{padding:.8rem;display:grid;gap:.5rem}#custom-tests{display:grid;gap:.35rem}#custom-tests:empty{display:none}.test-body button{border:1px solid #777d79;background:#1e211f;color:var(--light);padding:.62rem;text-align:left;cursor:pointer;font:700 .62rem/1.25 var(--mono);text-transform:uppercase}.test-body button:hover{border-color:#d8c595}.test-body button:disabled{opacity:.25;cursor:not-allowed}.readout{margin-top:.8rem;border:1px solid #505653;background:#1e211f;padding:1rem}.readout .state{font:700 .62rem/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:#dbc998}.readout h2{font:700 clamp(1.3rem,3vw,2.2rem)/1 var(--serif);margin:.4rem 0}.readout p{line-height:1.5;color:#ddd7cc;margin:.4rem 0}.readout .brake{font:.66rem/1.5 var(--mono);color:#bcb5ab}
 .tables{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;padding:.7rem 0}.table{min-height:0}.table h2{font-size:clamp(1.25rem,2.6vw,2.2rem)!important}.pieces{max-height:19rem;overflow:auto;padding-right:.15rem}.table h2{font:700 clamp(1.8rem,4vw,3.5rem)/.92 var(--serif);margin:0}.table>p{color:var(--muted);line-height:1.45;min-height:3.8rem}.pieces{display:grid;gap:.65rem}.piece{border:1px solid var(--line);background:var(--paper);padding:.9rem}.piece.used{opacity:.5}.eyebrow{font:700 .58rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--warm)}.piece h3{font:700 1.22rem/1.05 var(--serif);margin:.35rem 0}.piece p{line-height:1.43;margin:.3rem 0}.piece .brake{font:.65rem/1.45 var(--mono);color:var(--muted);border-top:1px solid var(--line);padding-top:.55rem;margin-top:.55rem}.actions{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.65rem}.actions button{border:1px solid var(--ink);background:transparent;padding:.5rem .6rem;cursor:pointer;font:700 .58rem/1 var(--mono);text-transform:uppercase}.actions button.primary{background:var(--ink);color:var(--paper)}.actions button:disabled{opacity:.35}.back{display:none;border-top:1px solid var(--line);margin-top:.6rem;padding-top:.6rem}.back.show{display:block}.back dl{display:grid;grid-template-columns:6rem 1fr;gap:.25rem .5rem;margin:0;font-size:.76rem}.back dt{font:700 .56rem/1.4 var(--mono);text-transform:uppercase;color:var(--muted)}.back dd{margin:0;line-height:1.4;overflow-wrap:anywhere}
 .ticket-form{width:min(34rem,90vw);display:grid;gap:.65rem;background:var(--paper);color:var(--ink);padding:1rem}.ticket-form-head{display:flex;justify-content:space-between;align-items:center;font:700 1.2rem/1 var(--serif)}.ticket-form-head button{border:0;background:transparent;font-size:1.4rem;cursor:pointer}.ticket-form label{display:grid;gap:.3rem;font:700 .58rem/1 var(--mono);text-transform:uppercase;color:var(--muted)}.ticket-form input,.ticket-form textarea,.ticket-form select{width:100%;border:1px solid var(--line);background:#fffaf0;color:var(--ink);padding:.6rem;font:inherit;text-transform:none}.ticket-form-actions{display:flex;justify-content:flex-end;gap:.4rem}.ticket-form-actions button{border:1px solid var(--ink);background:transparent;padding:.5rem .65rem;cursor:pointer;font:700 .58rem/1 var(--mono);text-transform:uppercase}.ticket-form-actions button:last-child{background:var(--ink);color:var(--paper)}dialog{border:1px solid var(--ink);padding:0;background:var(--paper)}dialog::backdrop{background:rgba(0,0,0,.36)}.state-record{border-top:1px solid var(--line);padding:1.4rem 0}.state-record h2{font-family:var(--serif);margin:0 0 .5rem}.state-record p{margin:.3rem 0;color:var(--muted);line-height:1.45}
 footer{border-top:1px solid var(--line);padding:1rem 0 2rem;display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font:700 .58rem/1.4 var(--mono);text-transform:uppercase}
@@ -56,7 +56,13 @@ footer{border-top:1px solid var(--line);padding:1rem 0 2rem;display:flex;justify
   </div>
   <div class="test-bay">
     <div class="bay-head"><span>Test bench</span><strong>Ask one earned question</strong></div>
+    <div class="operator-seat">
+      <div><span>Operator seat</span><strong>What should we test next?</strong></div>
+      <div class="operator-actions"><button id="ask-operator" type="button">ask operator</button><button id="make-test" type="button">make a test</button></div>
+      <p id="operator-note">The operator may propose a test. It may not answer it without running through the loaded tickets.</p>
+    </div>
     <div class="test-body">
+      <div id="custom-tests"></div>
       <button data-test="exists">Did this Article XIX body exist in federal records?</button>
       <button data-test="case">Can we prove it was in the MCR 879 case record?</button>
       <button data-test="named">Is it named in the stated 1902 review path?</button>
@@ -89,6 +95,15 @@ footer{border-top:1px solid var(--line);padding:1rem 0 2rem;display:flex;justify
     <label>What must it NOT be allowed to prove?<textarea id="ticket-brake" rows="2" placeholder="Optional brake / uncertainty"></textarea></label>
     <label>Source / return path<input id="ticket-source" placeholder="file, citation, link, archive box, etc."></label>
     <div class="ticket-form-actions"><button value="cancel" type="submit">cancel</button><button id="save-ticket" value="default" type="button">add ticket</button></div>
+  </form>
+</dialog>
+
+<dialog id="test-dialog">
+  <form method="dialog" class="ticket-form" id="test-form">
+    <div class="ticket-form-head"><strong>Make a test</strong><button value="cancel" type="submit">×</button></div>
+    <label>Question to test<input id="custom-test-question" required placeholder="e.g. Do these two tickets describe the same event?"></label>
+    <label>What would count as a safe result?<textarea id="custom-test-rule" rows="3" placeholder="e.g. Only say SAME if a source explicitly bridges them; otherwise OPEN."></textarea></label>
+    <div class="ticket-form-actions"><button value="cancel" type="submit">cancel</button><button id="save-test" value="default" type="button">add test</button></div>
   </form>
 </dialog>
 
@@ -135,6 +150,7 @@ const STORAGE_KEY='quire-review-machine-v7';
 const selected={review:[],other:[]};
 let lastTest=null;
 let customTickets={review:[],other:[]};
+let customTests=[];
 let customQuestion='Was the 1902 review adequate to the identity and ancestry question it actually decided?';
 try{
   const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');
@@ -143,11 +159,12 @@ try{
     selected.other.push(...saved.other.filter(id=>other.some(x=>x.id===id)));
     lastTest=typeof saved.lastTest==='string'?saved.lastTest:null;
     if(saved.customTickets&&Array.isArray(saved.customTickets.review)&&Array.isArray(saved.customTickets.other)) customTickets=saved.customTickets;
+    if(Array.isArray(saved.customTests)) customTests=saved.customTests;
     if(typeof saved.customQuestion==='string'&&saved.customQuestion.trim()) customQuestion=saved.customQuestion;
   }
 }catch(e){}
 function persist(){
-  try{localStorage.setItem(STORAGE_KEY,JSON.stringify({review:selected.review,other:selected.other,lastTest,customTickets,customQuestion}));}catch(e){}
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify({review:selected.review,other:selected.other,lastTest,customTickets,customTests,customQuestion}));}catch(e){}
 }
 const q=s=>document.querySelector(s), esc=x=>String(x).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function card(p,side){
@@ -161,11 +178,16 @@ function card(p,side){
 }
 review.forEach(p=>q('#review-pieces').appendChild(card(p,'review')));
 other.forEach(p=>q('#other-pieces').appendChild(card(p,'other')));
+function attachCustomTickets(){
+  customTickets.review.forEach(p=>{if(!review.some(x=>x.id===p.id))review.push(p)});
+  customTickets.other.forEach(p=>{if(!other.some(x=>x.id===p.id))other.push(p)});
+}
 function renderCustomTickets(){
   document.querySelectorAll('.piece.custom').forEach(x=>x.remove());
   customTickets.review.forEach(p=>{const c=card(p,'review');c.classList.add('custom');q('#review-pieces').appendChild(c)});
   customTickets.other.forEach(p=>{const c=card(p,'other');c.classList.add('custom');q('#other-pieces').appendChild(c)});
 }
+attachCustomTickets();
 renderCustomTickets();
 function renderBay(side){
  const bay=q(side==='review'?'#review-bay':'#other-bay'), list=side==='review'?review:other;
@@ -184,6 +206,44 @@ const answers={
  failure:()=> selected.review.includes('interior')&&selected.other.length?['NOT YET EARNED — BUT NOW TESTABLE','Do not call failure before the duty edge is proved.','The present body can show a potentially material Article XIX record population outside the stated review path. It can also show substantive 1902 review. To say the reviewers failed their job, the machine still needs the rule or practice defining what that job required them to examine, plus evidence that the relevant Catherine body fell within that required scope.','POTENTIALLY MATERIAL + NOT NAMED ≠ PROVED ADMINISTRATIVE FAILURE. The next source is the duty / scope bridge.']:['BUILD BOTH SIDES FIRST','Failure cannot be tested from one side.','Load Interior or another review piece plus Article XIX pieces.']
 };
 document.querySelectorAll('[data-test]').forEach(b=>b.onclick=()=>{lastTest=b.dataset.test;const a=answers[b.dataset.test]();status(a[0],a[1],a[2],a[3]);persist()});
+function loadedTickets(){
+  const lookup=id=>review.find(x=>x.id===id)||other.find(x=>x.id===id);
+  return [...selected.review,...selected.other].map(lookup).filter(Boolean);
+}
+function operatorSuggestion(){
+  const loaded=loadedTickets(), qtext=customQuestion.toLowerCase();
+  if(!loaded.length) return {question:'Which evidence piece should enter first?',rule:'Do not infer from an empty machine. Add the source closest to the human question.'};
+  const hasSource=loaded.some(t=>t.meta&&t.meta.source&& !String(t.meta.source).includes('not yet specified'));
+  const customLoaded=loaded.some(t=>String(t.id).startsWith('custom-'));
+  if(customLoaded&&!hasSource) return {question:'Can the source / return path for the visitor-added ticket be verified?',rule:'Do not use a visitor-supplied ticket as verified evidence until its return path is checked.'};
+  if(selected.review.length&&selected.other.length){
+    if(/same|identity|identical|who|person/.test(qtext)) return {question:'What exact source, if any, bridges the two loaded identity occurrences?',rule:'Name similarity, compatibility, or administrative comparison cannot perform the identity join. Return OPEN without an independent bridge.'};
+    if(/review|adequate|required|duty|job|consult|search/.test(qtext)) return {question:'What rule or source defines the reviewer’s required documentary reach?',rule:'Performed review and relevant external records do not alone prove the scope of the review duty.'};
+    return {question:'What relation between Feed A and Feed B is actually earned by the loaded objects?',rule:'State the narrowest source-visible relation first. If no carrier supplies a verb, return OPEN.'};
+  }
+  if(selected.review.length||selected.other.length) return {question:'What does the loaded side establish before it is compared with anything else?',rule:'Preserve object discovery before relation discovery. Do not invent the missing opposite side.'};
+  return {question:'What should be loaded next?',rule:'Choose the object nearest the human question.'};
+}
+function addCustomTest(test){
+  const id='ct-'+Date.now();
+  customTests.push({id,question:test.question,rule:test.rule||'Return OPEN unless the loaded tickets earn a stronger result.'});
+  renderCustomTests();persist();return id;
+}
+function renderCustomTests(){
+  const box=q('#custom-tests');box.innerHTML='';
+  customTests.forEach(t=>{const b=document.createElement('button');b.type='button';b.textContent=t.question;b.dataset.customTest=t.id;b.onclick=()=>runCustomTest(t);box.appendChild(b)});
+}
+function runCustomTest(t){
+  lastTest='custom:'+t.id;
+  const loaded=loadedTickets();
+  if(!loaded.length){status('OPEN · MACHINE EMPTY',t.question,'No evidence tickets are loaded. The machine cannot answer the test.','NO LOADED EVIDENCE ≠ NEGATIVE RESULT.');persist();return;}
+  const names=loaded.map(x=>x.title).join(' · ');
+  status('OPEN · OPERATOR TEST',t.question,'Loaded objects: '+names+'. This custom test has been formed, but no problem-specific evaluator has yet earned a stronger YES / NO / REFUSED result. '+t.rule,'FORMED TEST ≠ ANSWERED TEST. The operator may propose; the governed evidence still controls the result.');persist();
+}
+q('#ask-operator').onclick=()=>{const s=operatorSuggestion();q('#operator-note').textContent='Suggested: '+s.question;const id=addCustomTest(s);status('OPERATOR PROPOSED A TEST','A new test is on the bench.',s.question,s.rule);};
+q('#make-test').onclick=()=>q('#test-dialog').showModal();
+q('#save-test').onclick=()=>{const question=q('#custom-test-question').value.trim(),rule=q('#custom-test-rule').value.trim();if(!question)return;addCustomTest({question,rule});q('#test-form').reset();q('#test-dialog').close();status('HUMAN TEST ADDED','The test is now on the bench.',question,rule||'No automatic promotion beyond what loaded evidence earns.');};
+renderCustomTests();
 q('#problem-input').value=customQuestion;
 q('#live-question').textContent=customQuestion;
 q('#load-problem').onclick=()=>{const v=q('#problem-input').value.trim();if(!v)return;customQuestion=v;q('#live-question').textContent=v;lastTest=null;persist();status('NEW QUESTION LOADED','The machine now holds your question.','Add or choose tickets that bear on it, then use the existing tests as pressure checks. The built-in tests remain examples until a custom test builder is added.','QUESTION ≠ CONCLUSION.');};
@@ -208,6 +268,7 @@ renderBay('review');renderBay('other');buttons();
 q('#live-question').textContent=customQuestion;
 q('#problem-input').value=customQuestion;
 if(lastTest&&answers[lastTest]){const a=answers[lastTest]();status(a[0],a[1],a[2],a[3]);}
+else if(lastTest&&lastTest.startsWith('custom:')){const t=customTests.find(x=>'custom:'+x.id===lastTest);if(t)runCustomTest(t);}
 persist();
 })();
 </script>
