@@ -8,6 +8,7 @@ const files = [
   ["style.css", "/style.css"],
   ["script.js", "/script.js"],
   ["config.js", "/config.js"],
+  ["experiments/shared-country/index.html", "/experiments/shared-country/"],
   ["mcr879.html", "/mcr879.html"],
   ["mcr879.css", "/mcr879.css"]
 ];
