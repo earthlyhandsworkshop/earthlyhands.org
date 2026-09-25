@@ -117,3 +117,39 @@ button:focus-visible,a:focus-visible,.mark:focus-visible{outline:2px solid var(-
  background:rgba(255,255,255,.055)
 }
 .opening-next .opening-note{font-style:italic;color:var(--muted)}
+
+.page-shelf{
+ position:sticky;top:0;z-index:24;
+ display:grid;grid-template-columns:7rem auto 1fr;gap:.8rem;align-items:center;
+ min-height:4.25rem;padding:.45rem .7rem;
+ border-bottom:1px solid var(--rule);
+ background:rgba(238,233,221,.97);backdrop-filter:blur(7px)
+}
+.page-shelf-label{display:flex;flex-direction:column;gap:.14rem;font:.52rem/1.15 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.page-shelf-label strong{font-weight:400;color:var(--muted);letter-spacing:.03em;text-transform:none}
+.page-tabs{display:flex;gap:.42rem;align-items:center}
+.page-tab{
+ appearance:none;border:0;background:transparent;padding:.18rem .18rem .1rem;cursor:pointer;
+ display:grid;gap:.2rem;justify-items:center;color:var(--muted)
+}
+.page-tab[hidden]{display:none}
+.page-tab.is-active{color:var(--ink)}
+.page-glyph{
+ width:1.85rem;height:2.35rem;border:1px solid currentColor;background:var(--paper2);
+ display:flex;flex-direction:column;gap:.23rem;padding:.38rem .28rem;box-shadow:1px 1px 0 rgba(23,22,17,.08)
+}
+.page-glyph i{display:block;height:1px;background:currentColor;opacity:.58}
+.page-glyph i:nth-child(2){width:78%}.page-glyph i:nth-child(3){width:62%}
+.page-tab.is-active .page-glyph{box-shadow:inset 0 0 0 1px var(--ink),2px 2px 0 rgba(23,22,17,.07)}
+.page-tab-label{font:.46rem/1 var(--mono);letter-spacing:.07em}
+.page-peek{min-width:0;border-left:1px solid var(--rule);padding-left:.7rem}
+.page-peek b{display:block;font:.58rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase;font-weight:600}
+.page-peek span{display:block;margin-top:.12rem;color:var(--muted);font:.58rem/1.25 var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.source-page[hidden]{display:none}
+.source-page{display:block}
+@media(max-width:760px){
+ .page-shelf{grid-template-columns:4.4rem auto 1fr;gap:.45rem;min-height:3.75rem;padding:.4rem .45rem}
+ .page-shelf-label{font-size:.47rem}
+ .page-glyph{width:1.55rem;height:2rem;padding:.32rem .22rem}
+ .page-peek b{font-size:.5rem}.page-peek span{font-size:.49rem}
+}
