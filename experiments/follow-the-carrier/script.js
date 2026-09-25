@@ -1,4 +1,4 @@
-const key="eh-follow-carrier-mary-v1";
+const key="eh-follow-carrier-mary-william-v1";
 const earned=new Set(JSON.parse(localStorage.getItem(key)||"[]"));
 
 const pieces={
@@ -16,7 +16,12 @@ const pieces={
  grandmother:{kind:"person",title:"Grandmother",note:"unnamed in this scene",x:58,y:77,props:{state:"EXISTS AS RELATION",carrier:"Mary's testimony",name:"not supplied here",limit:"do not donate a name from another source"}},
  correction:{kind:"proposition",title:"“I said not that I knew of.”",note:"Mary corrects the paraphrase",x:13,y:82,props:{state:"SOURCE VOICE",function:"correction / strength control",limit:"Commission paraphrase does not replace Mary's qualifier"}},
  children:{kind:"proposition",title:"Six minor children",note:"application population",x:72,y:86,props:{state:"EXISTS IN CASE",carrier:"Mary's answers",limit:"their later records are not opened by this mark alone"}},
- "exhibit-a":{kind:"recordmark",title:"Exhibit A",note:"petition + named affidavits",x:44,y:92,props:{state:"FILED / MADE PART OF RECORD",carrier:"record statement",contains:"petition + affidavits of Elizabeth D. Bell, W. R. Collins, F. Atkinson, Margaret Elizabeth Williams, T. E. Donaldson",limit:"filed ≠ accepted as historically true"}}
+ "exhibit-a":{kind:"recordmark",title:"Exhibit A",note:"petition + named affidavits",x:44,y:92,props:{state:"FILED / MADE PART OF RECORD",carrier:"record statement",contains:"petition + affidavits of Elizabeth D. Bell, W. R. Collins, F. Atkinson, Margaret Elizabeth Williams, T. E. Donaldson",limit:"filed ≠ accepted as historically true"}},
+ william:{kind:"person",title:"William D. Bell",note:"second family witness",x:8,y:20,props:{state:"EXISTS",voice:"direct examination",record_time:"23 Oct 1900",limit:"second witness ≠ automatic corroboration"}},
+ texas:{kind:"place",title:"Texas",note:"William says lived there since 1874",x:84,y:18,props:{state:"EXISTS",relation:"William states prior residence",limit:"no route geometry earned"}},
+ "martha-jane":{kind:"person",title:"Martha Jane",note:"William's wife occurrence",x:62,y:38,props:{state:"EXISTS",relation:"William names his wife",limit:"this scene does not supply her full documentary body"}},
+ "document-window":{kind:"recordmark",title:"15-day evidence window",note:"additional documentary proof",x:65,y:68,props:{state:"PROCEDURAL WINDOW",carrier:"attorney request + Commission grant",limit:"permission to file ≠ proof filed or accepted"}},
+ "william-children":{kind:"proposition",title:"Four minor children",note:"application population",x:83,y:83,props:{state:"EXISTS IN CASE",carrier:"William's answers",limit:"later records not opened here"}}
 };
 
 const relations=[
@@ -27,7 +32,14 @@ const relations=[
  ["mary","remembered-roll","says / heard","family"],
  ["mcr879","commission-records","record search","admin"],
  ["mcr879","approved-roll","Commission states search","admin"],
- ["mcr879","exhibit-a","filed into record","admin"]
+ ["mcr879","exhibit-a","filed into record","admin"],
+ ["william","durant","post office / recent arrival","family"],
+ ["william","texas","prior residence","family"],
+ ["william","pontotoc","earlier residence","family"],
+ ["william","robert","father","family"],
+ ["william","remembered-roll","told / father's name","family"],
+ ["william","martha-jane","wife","family"],
+ ["mcr879","document-window","15-day filing window","admin"]
 ];
 
 const beats=[...document.querySelectorAll(".source-beat")];
@@ -93,10 +105,37 @@ function drawLine(a,b,label,kind){
  t.className="line-label";t.textContent=label;t.style.left=((p.x+q.x)/2)+"px";t.style.top=((p.y+q.y)/2)+"px";
  stage.append(t);
 }
+function effectiveProps(id){
+ const base=Object.assign({},pieces[id].props||{});
+ if(id==="remembered-roll" && earned.has("william-roll")){
+   base.carrier="Mary Caroline Atkinson + William D. Bell";
+   base.carrier_count="2 family witness carriers";
+   base.limit="multiple family carriers ≠ recovered roll occurrence or automatic corroboration";
+ }
+ if(id==="robert" && earned.has("william-robert")){
+   base.relation="named as father by Mary Caroline Atkinson and William D. Bell";
+   base.carrier_count="2 family witness carriers";
+   base.limit="shared father proposition does not merge this occurrence with another Robert Bell body";
+ }
+ if(id==="durant" && earned.has("william-durant")){
+   base.relation="Mary: post-office address · William: post-office / recent arrival";
+   base.limit="same place label carries different source-local jobs";
+ }
+ if(id==="pontotoc" && earned.has("william-pontotoc")){
+   base.relation="Mary: prior residence · William: born there / lived until 1874";
+   base.limit="shared place does not collapse the witnesses or create route geometry";
+ }
+ if(id==="exhibit-a" && earned.has("document-window")){
+   base.additional_state="William scene: petition and affidavits filed; 15-day request granted for more documentary proof";
+   base.limit="same exhibit label / repeated packet material does not duplicate historical witness acts";
+ }
+ return base;
+}
+
 function inspect(id,el){
  stage.querySelectorAll(".mark").forEach(function(x){x.classList.toggle("is-active",x===el);});
  const p=pieces[id];
- const rows=Object.entries(p.props||{}).map(function(pair){
+ const rows=Object.entries(effectiveProps(id)).map(function(pair){
    return '<div class="prop-row"><b>'+pair[0].replaceAll("_"," ")+'</b><p>'+pair[1]+'</p></div>';
  }).join("");
  props.innerHTML='<div class="prop-kind">'+p.kind+'</div><div class="prop-title">'+p.title+'</div>'+rows+'<div class="brake">Looking at this mark does not create a new carrier.</div>';
@@ -110,6 +149,9 @@ function renderField(){
    const b=document.createElement("button");
    b.type="button";b.className="mark "+p.kind;b.dataset.id=id;b.style.left=p.x+"%";b.style.top=p.y+"%";
    const shownKind=p.kind==="recordmark"?"record":p.kind;
+   let note=p.note;
+   if(id==="remembered-roll" && earned.has("william-roll")) note="2 family witness carriers";
+   if(id==="robert" && earned.has("william-robert")) note="father proposition · 2 carriers";
    b.innerHTML='<span class="mark-kind">'+shownKind+'</span><span class="dot"></span><strong>'+p.title+'</strong><small>'+p.note+'</small>';
    b.addEventListener("click",function(){inspect(id,b);});
    stage.append(b);
