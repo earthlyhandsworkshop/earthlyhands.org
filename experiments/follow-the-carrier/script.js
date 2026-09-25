@@ -54,6 +54,7 @@ const sourcePages=[...document.querySelectorAll(".source-page")];
 const pagePeek=document.querySelector("#page-peek");
 const shelfStatus=document.querySelector("#page-shelf-status");
 const pageUnlocks=[...document.querySelectorAll(".source-page-unlock")];
+const pageTurns=[...document.querySelectorAll("[data-open-page]")];
 const pageMeta={
  mary:{title:"01 · Mary Caroline Atkinson",meta:"23 Oct 1900 · MCR 879 · sworn examination · Myra Young"},
  william:{title:"02 · William D. Bell",meta:"23 Oct 1900 · MCR 879 · sworn examination · Kate De Bord"}
@@ -83,6 +84,9 @@ function updatePageShelf(){
  const m=pageMeta[activePage]||pageMeta.mary;
  pagePeek.innerHTML="<b>"+m.title+"</b><span>"+m.meta+"</span>";
  shelfStatus.textContent=reachedPages.size+" reached";
+ pageTurns.forEach(function(turn){
+   turn.hidden=!reachedPages.has(turn.dataset.openPage);
+ });
 }
 function openSourcePage(id){
  if(!reachedPages.has(id))return;
@@ -104,6 +108,9 @@ pageTabs.forEach(function(tab){
  tab.addEventListener("focus",function(){previewPage(id);});
  tab.addEventListener("mouseleave",restorePagePeek);
  tab.addEventListener("blur",restorePagePeek);
+});
+pageTurns.forEach(function(turn){
+ turn.addEventListener("click",function(){openSourcePage(turn.dataset.openPage);});
 });
 pageUnlocks.forEach(function(node){
  const obs=new IntersectionObserver(function(entries){
