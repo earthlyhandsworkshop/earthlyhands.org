@@ -1760,3 +1760,202 @@ body[data-discovery="open"] .prose-map-key{
     margin-bottom:1.1rem;
   }
 }
+
+
+/* Shared Country refinement — Ground speaks; Map and People only show what has accumulated. */
+.experience-shell[data-view="map"] .experience-tools,
+.experience-shell[data-view="people"] .experience-tools,
+.experience-shell[data-view="sources"] .experience-tools{
+  display:none;
+}
+
+/* People: small accumulated record slips, grouped by first encounter. */
+.people-head{
+  max-width:46rem;
+  margin:0 0 .7rem;
+  padding-bottom:.55rem;
+}
+.people-head h2{
+  font-size:clamp(1.55rem,3vw,2.4rem);
+}
+.people-head > span{
+  font-size:.5rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.camp-people-list{
+  display:block!important;
+  max-width:46rem;
+}
+.encounter-batch{
+  margin:0 0 1.1rem;
+}
+.encounter-batch-head{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  padding:.32rem 0 .38rem;
+  border-bottom:1px solid var(--scene-rule);
+  color:var(--scene-muted);
+  font:.5rem/1.2 var(--mono);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.encounter-card-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.5rem;
+  padding-top:.5rem;
+}
+.person-card{
+  min-width:0;
+  border:1px solid var(--scene-rule);
+  background:transparent;
+}
+.person-card summary{
+  list-style:none;
+}
+.person-card summary::-webkit-details-marker{
+  display:none;
+}
+.person-card-face{
+  position:relative;
+  min-height:8.4rem;
+  display:grid;
+  grid-template-columns:1fr auto;
+  grid-template-rows:auto 1fr auto;
+  align-content:start;
+  gap:.5rem .8rem;
+  padding:.68rem .72rem .72rem;
+  cursor:pointer;
+}
+.person-card-serial{
+  grid-column:1;
+  color:var(--scene-muted);
+  font:.48rem/1.2 var(--mono);
+  letter-spacing:.11em;
+}
+.person-card-name{
+  grid-column:1/-1;
+  align-self:center;
+  max-width:12ch;
+  font:400 clamp(1.35rem,2.6vw,2rem)/.95 var(--serif);
+  letter-spacing:-.025em;
+}
+.person-card-known{
+  grid-column:1;
+  align-self:end;
+  color:var(--scene-muted);
+  font:.58rem/1.35 var(--mono);
+}
+.person-card-mark{
+  grid-column:2;
+  grid-row:1;
+  color:var(--scene-accent);
+  font:400 .78rem/1 var(--mono);
+}
+.person-card[open] .person-card-mark{
+  transform:rotate(45deg);
+}
+.person-card-body{
+  padding:.62rem .72rem .75rem;
+  border-top:1px solid var(--scene-rule);
+}
+.person-card-field{
+  display:grid;
+  grid-template-columns:7rem 1fr;
+  gap:.55rem;
+  margin:0;
+  padding:.28rem 0;
+  border-bottom:1px solid color-mix(in srgb,var(--scene-rule) 65%,transparent);
+  font:.57rem/1.35 var(--mono);
+}
+.person-card-field span{
+  color:var(--scene-muted);
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.person-card-field b{
+  font-weight:400;
+}
+.person-card-history{
+  padding:.45rem 0 .2rem;
+  font:.56rem/1.4 var(--mono);
+}
+.person-card-history > span{
+  display:block;
+  margin-bottom:.22rem;
+  color:var(--scene-muted);
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.person-card-history p{
+  margin:.12rem 0;
+}
+.person-card-open{
+  margin:.55rem 0 0;
+  color:var(--scene-muted);
+  font:.61rem/1.45 var(--mono);
+}
+.person-card-open::before{
+  content:"open · ";
+  color:var(--scene-ink);
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+
+/* Threshold placement: intentionally off-center and slightly low, like a line found on an old page. */
+body[data-discovery="closed"] .experience-tools{
+  width:min(31rem,38vw);
+  margin-left:clamp(2rem,53vw,54rem);
+  padding-top:clamp(7.2rem,17vh,11.5rem);
+}
+body[data-discovery="closed"] .ground-talk textarea{
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  font-size:.98rem;
+  line-height:1.35;
+  letter-spacing:.008em;
+}
+body[data-discovery="closed"] .ground-talk textarea::placeholder{
+  font-style:normal;
+  letter-spacing:.018em;
+}
+.threshold-thought{
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  font-size:1rem;
+  line-height:1.48;
+}
+
+/* Loosen the visible ground from the box: narrower text, more uneven air, fewer frame effects. */
+body[data-discovery="open"] .experience-stage,
+body[data-discovery="open"] .experience-tools{
+  width:min(43rem,calc(100% - 2rem));
+}
+body[data-discovery="open"] .experience-stage{
+  padding-top:clamp(2.8rem,8vh,5rem);
+}
+body[data-discovery="open"] .plain-copy,
+body[data-discovery="open"] .first-person-view{
+  max-width:36rem;
+}
+body[data-discovery="open"] .experience-utility .ground-talk,
+body[data-discovery="open"] .experience-utility .ground-thread{
+  max-width:36rem;
+}
+body[data-discovery="open"] footer{
+  padding:.65rem 0 .8rem;
+}
+
+@media(max-width:52rem){
+  body[data-discovery="closed"] .experience-tools{
+    width:calc(100% - 2.6rem);
+    margin-left:1.3rem;
+    padding-top:clamp(5.5rem,13vh,7.5rem);
+  }
+  .encounter-card-grid{
+    grid-template-columns:1fr;
+  }
+  .person-card-face{
+    min-height:7.4rem;
+  }
+}
