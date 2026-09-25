@@ -74,6 +74,23 @@
     "blue-water-mouth": { name: "Near Blue Water mouth", note: "inspection intent / possible garrison", next: "east-blue-water" },
     "east-blue-water": { name: "East of Blue Water", note: "capacity / settlement forecast", next: null }
   };
+  // Story aperture and physical held ground are separate browser-owned states.
+  // Blue Water's beaver and guide apertures advance the story without relocating the visitor.
+  const heldGroundAliases = {
+    "blue-water": "blue-water",
+    dozen: "blue-water",
+    guide: "blue-water"
+  };
+
+  function heldGroundIdFor(id) {
+    return heldGroundAliases[id] || id;
+  }
+
+  function heldGroundNameFor(id) {
+    const heldId = heldGroundIdFor(id);
+    return sceneById.get(heldId)?.dataset.place || trailUi[heldId]?.name || "the ground";
+  }
+
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
   let dawsonRetrieval = [];
@@ -536,7 +553,7 @@
       button.setAttribute("aria-pressed", String(active));
 
       if (button.dataset.dawsonView === "ground") {
-        const heldPlace = trailUi[currentId]?.name || sceneById.get(currentId)?.dataset.place || "the ground";
+        const heldPlace = heldGroundNameFor(currentId);
         button.textContent = next === "sources" ? `Return to ${heldPlace}` : "Ground";
         button.setAttribute(
           "aria-label",
@@ -899,7 +916,7 @@
 
   function showScene(target, direction = "forward") {
     closeDepth();
-    setGround(target.id);
+    setGround(heldGroundIdFor(target.id));
 
     if (experienceStage) experienceStage.dataset.direction = direction;
     scenes.forEach((scene) => scene.classList.toggle("is-current", scene === target));
@@ -1028,13 +1045,17 @@
     if (!thoughtTurn && !discoveryOpen) openDiscovery();
     receiveTenAction(clean);
     const localMove = thoughtTurn ? null : localMoveFromWords(clean);
-    const movementResolved = Boolean(localMove && canMove(origin, localMove));
+    const transitionResolved = Boolean(localMove && canMove(origin, localMove));
+    const relocationResolved = Boolean(
+      transitionResolved &&
+      heldGroundIdFor(origin) !== heldGroundIdFor(localMove)
+    );
     if (!thoughtTurn) keepTenWords(clean);
     talkInput.value = "";
     sizeTalkInput();
     setAsking(true);
 
-    if (movementResolved) {
+    if (transitionResolved) {
       landAt(localMove);
     }
 
@@ -1059,15 +1080,19 @@
       "STATUS LABELING: when useful, say what kind of thing is being shown — direct source statement, attributed judgment/forecast, public derivative, unresolved edge, or reversible visitor experience. Do not blur those classes.",
       "HELD CONTEXT ONLY: use SOURCE FLOOR, CURRENT SCREEN, recent runtime conversation, and TEN. If they do not answer a factual historical question, say the held ground does not answer it. A visitor question addressed to the present interface voice (for example, 'do you like beavers?') is not a historical source question: answer without pretending the record has a preference, and do not invent a personal preference for the service.",
       "EXPERIENCE LAYER: Ten may make reversible present actions such as a small fire, coffee, sitting, waiting, looking, or darkness. Keep those distinct from the 1831 source.",
-      movementResolved
-        ? "MOVEMENT: Ten already moved once because this utterance clearly earned that crossing. Do not move again."
-        : "MOVEMENT: remain here unless Ten explicitly asks to move. Topic words such as beaver, creek, trapping, Mayes, Criner, water, or weather are not movement commands.",
+      relocationResolved
+        ? "MOVEMENT: Ten already relocated once because this utterance clearly earned that crossing. Do not move again."
+        : transitionResolved
+          ? "HELD-GROUND APERTURE: the story advanced within the same physical ground. Do not narrate relocation. Keep the held place recognizable while attention, source depth, role, or uncertainty changes."
+          : "MOVEMENT: remain here unless Ten explicitly asks to move. Topic words such as beaver, creek, trapping, Mayes, Criner, water, or weather are not movement commands.",
       "RETURN JSON ONLY with exactly these keys:",
       '{"setting":"ground/carrier line","title":"plain headline","view":"natural prose; blank lines allowed","footing":"Ten footing","companion":"optional public-ground footing","appearance":"","move_to":""}',
-      'appearance must be "", "fire", "night", or "fire-night". move_to must be "" unless Ten explicitly moves; if moving, use only an id listed in ALLOWED MOVES.',
+      'appearance must be "", "fire", "night", or "fire-night". move_to must be "" unless Ten explicitly advances or relocates; if used, choose only an id listed in ALLOWED STORY TRANSITIONS.',
       "Let the response change only what this turn earns. No change, refusal, or an unresolved edge is valid. Reconsider the title only when the page is genuinely doing something different.",
-      `ALLOWED MOVES: ${JSON.stringify(movementResolved ? [] : (allowedMoves[currentId] || []))}`,
-      `CURRENT GROUND: ${currentId}`,
+      "STATE SPLIT: CURRENT STORY APERTURE is sequence/attention. HELD GROUND is physical visitor footing. An aperture may advance while HELD GROUND remains unchanged.",
+      `ALLOWED STORY TRANSITIONS: ${JSON.stringify(transitionResolved ? [] : (allowedMoves[currentId] || []))}`,
+      `CURRENT STORY APERTURE: ${currentId}`,
+      `HELD GROUND: ${heldGroundIdFor(currentId)}`,
       `SOURCE FLOOR: ${JSON.stringify(facts)}`,
       `CORPUS HITS: ${JSON.stringify(corpusHits)}`,
       "CORPUS RULE: corpus hits are public derivatives with source-object pointers. Use them only when they answer Ten's question; preserve their brakes and do not treat a derivative as a new historical witness.",
@@ -1081,7 +1106,7 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           message: sceneRequest,
-          place: currentId,
+          place: heldGroundIdFor(currentId),
           // The current screen already carries the last model-shaped scene.
           // Keep only Ten's recent questions as runtime continuity so we do
           // not pay to resend the same rendered answer twice.
@@ -1114,7 +1139,7 @@
       } else {
         const patchOrigin = currentId;
         const result = applyScenePatch(patchOrigin, patch);
-        if (!movementResolved && result.moveTo && canMove(patchOrigin, result.moveTo)) {
+        if (!transitionResolved && result.moveTo && canMove(patchOrigin, result.moveTo)) {
           landAt(result.moveTo);
         }
       }
