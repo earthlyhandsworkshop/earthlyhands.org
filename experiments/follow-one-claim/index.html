@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#101214">
+<title>Follow One Claim — Earthly Hands</title>
+<meta name="description" content="Follow one historical proposition through changing documentary carriers without collapsing speaker, identity, or source state.">
+<style>
+:root{--bg:#101214;--panel:#171a1d;--ink:#f0eee8;--muted:#9ba1a5;--line:#343a40;--hot:#ffb85c;--cold:#8fd3ff;--ok:#9ed69a;--bad:#ff8f82;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--sans:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-text-size-adjust:100%}body{margin:0;background:linear-gradient(180deg,#0e1012,#121519 45%,#0e1012);min-width:18rem}button,a{font:inherit;color:inherit}.shell{width:min(96rem,calc(100% - 1rem));margin:auto}.top{min-height:2.7rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);font:600 .68rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}.top a{text-decoration:none}.top span{color:var(--muted)}
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(18rem,.85fr);gap:clamp(2rem,7vw,8rem);padding:clamp(3rem,8vw,7rem) 0 3rem;border-bottom:1px solid var(--line)}.kicker{font:600 .67rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--hot)}h1{margin:.45rem 0 0;font-size:clamp(3.5rem,8vw,8rem);line-height:.84;letter-spacing:-.065em;font-weight:700;max-width:8ch}.hero-copy{align-self:end}.hero-copy p{max-width:42rem;margin:.7rem 0;font-size:clamp(1rem,1.7vw,1.24rem);line-height:1.45}.hero-copy .small{font:.72rem/1.55 var(--mono);color:var(--muted)}
+.machine{padding:1rem 0 3rem}.statusbar{display:grid;grid-template-columns:1fr auto auto;gap:1rem;align-items:center;padding:.65rem 0;border-bottom:1px solid var(--line);font:.66rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.055em}.statusbar .dim{color:var(--muted)}.state{color:var(--cold)}.grid{display:grid;grid-template-columns:minmax(16rem,.46fr) minmax(0,1.54fr);gap:1rem;padding-top:1rem}
+.rail{border:1px solid var(--line);background:rgba(23,26,29,.72)}.rail-head{padding:.75rem;border-bottom:1px solid var(--line)}.rail-head strong{display:block;font-size:1.12rem}.rail-head span{display:block;margin-top:.25rem;color:var(--muted);font:.65rem/1.4 var(--mono)}.carrier-list{display:grid}.carrier{border:0;border-bottom:1px solid var(--line);background:transparent;text-align:left;padding:.8rem;cursor:pointer;display:grid;grid-template-columns:5.5rem 1fr;gap:.7rem}.carrier:last-child{border-bottom:0}.carrier .date{font:.62rem/1.25 var(--mono);color:var(--muted)}.carrier .name{font-weight:650;line-height:1.15}.carrier .verb{grid-column:2;margin-top:.2rem;font:.58rem/1.3 var(--mono);color:var(--hot);text-transform:uppercase}.carrier[aria-current="true"]{background:#20252a;box-shadow:inset 3px 0 0 var(--hot)}
+.stage{border:1px solid var(--line);background:rgba(23,26,29,.62);min-height:31rem}.stage-head{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:1rem;border-bottom:1px solid var(--line)}.stage-head .label{font:.62rem/1.3 var(--mono);text-transform:uppercase;color:var(--muted)}.stage-head .actor{margin-top:.2rem;font-size:clamp(1.55rem,3vw,3rem);line-height:.95;font-weight:700;letter-spacing:-.035em}.badge{align-self:start;padding:.25rem .4rem;border:1px solid var(--line);font:.58rem/1 var(--mono);text-transform:uppercase;color:var(--cold)}
+.stage-body{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}.cell{background:var(--panel);padding:1rem;min-height:10rem}.cell h2{margin:0 0 .55rem;font:600 .61rem/1.3 var(--mono);letter-spacing:.075em;text-transform:uppercase;color:var(--muted)}.cell p{margin:.35rem 0;line-height:1.5}.change{color:var(--ok)}.source{font:.69rem/1.5 var(--mono);color:var(--muted);overflow-wrap:anywhere}
+.actions{display:flex;gap:.5rem;flex-wrap:wrap;padding:1rem;border-top:1px solid var(--line)}.actions button{border:1px solid var(--line);background:#111418;padding:.52rem .7rem;cursor:pointer;font:.65rem/1 var(--mono);text-transform:uppercase}.actions button:hover{border-color:var(--hot)}.actions button:disabled{opacity:.4;cursor:not-allowed}
+.proposal{margin-top:1rem;border:1px solid var(--line);background:rgba(23,26,29,.72)}.proposal-head{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:.75rem;border-bottom:1px solid var(--line)}.proposal-head h2{margin:0;font-size:1rem}.proposal-head span{font:.6rem/1 var(--mono);color:var(--muted);text-transform:uppercase}.proposal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}.proposal-card{background:var(--panel);padding:.85rem;display:flex;flex-direction:column;gap:.65rem}.proposal-card p{margin:0;line-height:1.4}.proposal-card button{margin-top:auto;border:1px solid var(--line);background:#111418;padding:.48rem .6rem;text-align:left;cursor:pointer;font:.62rem/1.2 var(--mono);text-transform:uppercase}.proposal-card button:hover{border-color:var(--bad)}.result{display:none;margin:.85rem;padding:.85rem;border-left:3px solid var(--bad);background:#21191a}.result.show{display:block}.result strong{display:block;color:var(--bad);font:.7rem/1 var(--mono);letter-spacing:.08em}.result p{margin:.45rem 0 0}
+.open{margin-top:1rem;display:grid;grid-template-columns:.6fr 1.4fr;gap:1rem;border-top:1px solid var(--line);padding-top:1rem}.open h2{margin:0;font-size:clamp(1.8rem,4vw,4rem);line-height:.9;letter-spacing:-.04em}.open ul{margin:0;padding-left:1.2rem}.open li{margin:.35rem 0;color:var(--muted)}
+footer{padding:1rem 0 2rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font:.62rem/1.4 var(--mono);text-transform:uppercase}
+@media(max-width:65rem){.hero,.grid,.open{grid-template-columns:1fr}.rail{order:2}.stage{order:1}.stage-body{grid-template-columns:1fr}.proposal-grid{grid-template-columns:1fr}.carrier-list{grid-template-columns:repeat(2,1fr)}.carrier:nth-last-child(-n+2){border-bottom:0}.carrier:nth-child(odd){border-right:1px solid var(--line)}}
+@media(max-width:38rem){.shell{width:calc(100% - .7rem)}.statusbar{grid-template-columns:1fr;gap:.2rem}.carrier-list{grid-template-columns:1fr}.carrier{border-right:0!important}.stage-head{grid-template-columns:1fr}.badge{justify-self:start}.hero{padding-top:2.5rem}footer{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><a href="/">Earthly Hands Workshop</a><span>Quire · executable documentary body · v1</span></header>
+<section class="hero"><div><span class="kicker">Follow one claim through the machine</span><h1>What changed?</h1></div><div class="hero-copy"><p id="question">Loading proposition…</p><p class="small">The machine tracks documentary state, not historical truth. A later office may change the administrative force of a proposition without becoming the original speaker.</p></div></section>
+<main class="machine">
+<div class="statusbar"><div><span class="dim">proposition / </span><span id="prop-short"></span></div><div class="state" id="identity-state"></div><div class="dim">no scoring · refusal is valid</div></div>
+<div class="grid">
+<aside class="rail"><div class="rail-head"><strong>Carriers</strong><span>Choose a documentary state. The proposition does not stay the same merely because the name does.</span></div><div class="carrier-list" id="carrier-list"></div></aside>
+<section class="stage">
+<div class="stage-head"><div><div class="label" id="stage-object"></div><div class="actor" id="stage-actor"></div></div><div class="badge" id="stage-state"></div></div>
+<div class="stage-body">
+<div class="cell"><h2>What this carrier says</h2><p id="stage-claim"></p></div>
+<div class="cell"><h2>What changed here</h2><p class="change" id="stage-change"></p></div>
+<div class="cell"><h2>Operative verb</h2><p id="stage-verb"></p></div>
+<div class="cell"><h2>Way home</h2><p class="source" id="stage-source"></p></div>
+</div>
+<div class="actions"><button id="prev">← previous carrier</button><button id="next">next carrier →</button></div>
+</section>
+</div>
+
+<section class="proposal">
+<div class="proposal-head"><h2>Try a stronger claim</h2><span>The machine must refuse what the body does not earn.</span></div>
+<div class="proposal-grid" id="proposal-grid"></div>
+<div class="result" id="result"><strong id="result-state"></strong><p id="result-reason"></p></div>
+</section>
+
+<section class="open"><h2>Still open.</h2><ul id="open-list"></ul></section>
+</main>
+<footer><span>Source authority remains senior to this derivative instrument.</span><span>Powerful finger. Trustworthy result.</span></footer>
+</div>
+<script>
+(async()=> {
+ const res=await fetch('./data/mcr879-robert-article14.json',{cache:'no-store'});
+ const data=await res.json();
+ let i=0;
+ const q=s=>document.querySelector(s);
+ q('#question').textContent=data.question;
+ q('#prop-short').textContent=data.proposition.short;
+ q('#identity-state').textContent=data.proposition.identity_state;
+ const list=q('#carrier-list');
+ data.carriers.forEach((c,n)=>{
+   const b=document.createElement('button'); b.className='carrier'; b.type='button';
+   b.innerHTML='<span class="date">'+c.date+'</span><span class="name">'+c.actor+'</span><span class="verb">'+c.verb+'</span>';
+   b.addEventListener('click',()=>render(n)); list.appendChild(b);
+ });
+ function render(n){
+   i=n; const c=data.carriers[i];
+   [...list.children].forEach((el,j)=>el.setAttribute('aria-current',j===i?'true':'false'));
+   q('#stage-object').textContent=c.object+' · '+c.date;
+   q('#stage-actor').textContent=c.actor;
+   q('#stage-state').textContent=c.state;
+   q('#stage-claim').textContent=c.claim;
+   q('#stage-change').textContent=c.change;
+   q('#stage-verb').textContent=c.verb;
+   q('#stage-source').textContent=c.source;
+   q('#prev').disabled=i===0; q('#next').disabled=i===data.carriers.length-1;
+ }
+ q('#prev').addEventListener('click',()=>render(Math.max(0,i-1)));
+ q('#next').addEventListener('click',()=>render(Math.min(data.carriers.length-1,i+1)));
+ const pg=q('#proposal-grid'), result=q('#result');
+ data.refusals.forEach(r=>{
+   const card=document.createElement('div'); card.className='proposal-card';
+   const p=document.createElement('p'); p.textContent=r.proposal;
+   const b=document.createElement('button'); b.type='button'; b.textContent='Test this proposition';
+   b.addEventListener('click',()=>{q('#result-state').textContent=r.result; q('#result-reason').textContent=r.reason; result.classList.add('show'); result.scrollIntoView({behavior:'smooth',block:'nearest'});});
+   card.append(p,b); pg.appendChild(card);
+ });
+ data.open.forEach(x=>{const li=document.createElement('li');li.textContent=x;q('#open-list').appendChild(li)});
+ render(0);
+})().catch(err=>{
+ document.querySelector('#question').textContent='The claim body could not be loaded.';
+ console.error(err);
+});
+</script>
+</body>
+</html>
