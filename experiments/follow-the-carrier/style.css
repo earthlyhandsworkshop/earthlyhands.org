@@ -153,3 +153,29 @@ button:focus-visible,a:focus-visible,.mark:focus-visible{outline:2px solid var(-
  .page-glyph{width:1.55rem;height:2rem;padding:.32rem .22rem}
  .page-peek b{font-size:.5rem}.page-peek span{font-size:.49rem}
 }
+
+
+.page-turn{
+ width:100%;
+ margin:.9rem 0 .2rem;
+ border:1px solid var(--rule);
+ background:var(--ink);
+ color:var(--paper2);
+ padding:.8rem .9rem;
+ text-align:left;
+ cursor:pointer;
+ display:grid;
+ gap:.18rem;
+ box-shadow:3px 3px 0 rgba(23,22,17,.1);
+}
+.page-turn[hidden]{display:none}
+.page-turn span{
+ font:.5rem/1.2 var(--mono);
+ letter-spacing:.09em;
+ text-transform:uppercase;
+ opacity:.72;
+}
+.page-turn strong{
+ font:400 1.15rem/1.25 var(--serif);
+}
+.page-turn:hover{transform:translateY(-1px)}
