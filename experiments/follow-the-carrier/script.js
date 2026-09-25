@@ -33,13 +33,13 @@ const relations=[
  ["mcr879","commission-records","record search","admin"],
  ["mcr879","approved-roll","Commission states search","admin"],
  ["mcr879","exhibit-a","filed into record","admin"],
- ["william","durant","post office / recent arrival","family"],
- ["william","texas","prior residence","family"],
- ["william","pontotoc","earlier residence","family"],
- ["william","robert","father","family"],
- ["william","remembered-roll","told / father's name","family"],
- ["william","martha-jane","wife","family"],
- ["mcr879","document-window","15-day filing window","admin"]
+ ["william","durant","post office / recent arrival","family","william-durant"],
+ ["william","texas","prior residence","family","texas"],
+ ["william","pontotoc","earlier residence","family","william-pontotoc"],
+ ["william","robert","father","family","william-robert"],
+ ["william","remembered-roll","told / father's name","family","william-roll"],
+ ["william","martha-jane","wife","family","martha-jane"],
+ ["mcr879","document-window","15-day filing window","admin","document-window"]
 ];
 
 const beats=[...document.querySelectorAll(".source-beat")];
@@ -56,10 +56,14 @@ function earn(ids){
  ids.forEach(function(id){if(id&&!earned.has(id)){earned.add(id);changed=true;}});
  if(changed){persist();renderField();updateCount();}
 }
+function visibleCount(){
+ return Object.keys(pieces).filter(function(id){return earned.has(id);}).length;
+}
 function updateCount(){
- door.hidden=earned.size===0;
- count.textContent=earned.size?(earned.size+" reachable"):"0 reachable";
- status.textContent=earned.size?(earned.size+" reachable"):"";
+ const n=visibleCount();
+ door.hidden=n===0;
+ count.textContent=n?(n+" reachable"):"0 reachable";
+ status.textContent=n?(n+" reachable"):"";
 }
 const observer=new IntersectionObserver(function(entries){
  entries.forEach(function(e){
@@ -157,9 +161,9 @@ function renderField(){
    stage.append(b);
  });
  requestAnimationFrame(function(){
-   relations.forEach(function(r){if(earned.has(r[0])&&earned.has(r[1]))drawLine(r[0],r[1],r[2],r[3]);});
+   relations.forEach(function(r){const condition=!r[4]||earned.has(r[4]);if(earned.has(r[0])&&earned.has(r[1])&&condition)drawLine(r[0],r[1],r[2],r[3]);});
  });
- status.textContent=earned.size+" reachable";
+ status.textContent=visibleCount()+" reachable";
 }
 
 window.addEventListener("resize",function(){if(!field.hidden)renderField();});
