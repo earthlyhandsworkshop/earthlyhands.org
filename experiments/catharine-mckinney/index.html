@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#eee8db">
+<title>Catharine McKinney — Earthly Hands</title>
+<style>
+:root{--paper:#eee8db;--ink:#27231e;--muted:#756d61;--line:#b9ae9e;--card:#f8f3e9;--machine:#342f29;--machineInk:#f8f0e3;--earth:#8c583a;--green:#53694f;--blue:#456575;--red:#8a5148;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:var(--sans)}body{margin:0}.shell{width:min(88rem,calc(100% - 1rem));margin:auto}.top{min-height:3rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);font:700 .63rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}.top a{text-decoration:none;color:inherit}.top span{color:var(--muted)}
+.hero{padding:clamp(2.5rem,7vw,6rem) 0 2.2rem;max-width:63rem}.kicker{font:700 .64rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--earth)}h1{margin:.5rem 0 .7rem;font:700 clamp(3.2rem,8vw,7.4rem)/.84 var(--serif);letter-spacing:-.06em}.hero p{margin:.45rem 0;font-size:clamp(1rem,2vw,1.3rem);line-height:1.45}.hero .small{font:.73rem/1.5 var(--mono);color:var(--muted);max-width:54rem}
+.machine{background:var(--machine);color:var(--machineInk);border-radius:.35rem;padding:clamp(1rem,3vw,2rem)}.machine-label{font:700 .6rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#cfc3b3}.question{margin:.6rem 0 1rem;font:700 clamp(1.5rem,4vw,3rem)/1.03 var(--serif);max-width:32ch}.slot{min-height:7rem;border:1px dashed #81776b;background:#2b2723;padding:1rem;display:grid;gap:.55rem}.slot.empty{place-items:center;color:#b8ad9f;font:700 .7rem/1.4 var(--mono);text-transform:uppercase;text-align:center}.in{padding:.65rem;border:1px solid #5c554d;background:#3d3832;display:grid;grid-template-columns:auto 1fr auto;gap:.7rem;align-items:start}.in b{font:700 .6rem/1 var(--mono);color:#ccbca8}.in strong{font-family:var(--serif);display:block}.in span{display:block;margin-top:.18rem;color:#cfc6b9;font:.62rem/1.35 var(--mono)}.in button{border:0;background:none;color:#d0c4b4;font:700 .58rem/1 var(--mono);text-transform:uppercase;cursor:pointer}
+.readout{margin-top:1rem;border-top:1px solid #5b554d;padding-top:.9rem}.readout .state{font:700 .63rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#dcc590}.readout h2{margin:.35rem 0;font:700 clamp(1.35rem,3vw,2.2rem)/1.03 var(--serif)}.readout p{margin:.35rem 0;line-height:1.5;max-width:65rem}.brake{font:.67rem/1.5 var(--mono);color:#c9beaf}
+.head{display:flex;justify-content:space-between;gap:1rem;align-items:end;padding:2rem 0 .8rem}.head h2{margin:0;font:700 clamp(2rem,5vw,4rem)/.9 var(--serif);letter-spacing:-.04em}.head p{margin:0;max-width:36rem;color:var(--muted);line-height:1.4}.pieces{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem;padding-bottom:2rem}.piece{background:var(--card);border:1px solid var(--line);padding:1rem;display:flex;flex-direction:column;gap:.7rem;min-height:18rem}.piece.used{opacity:.46}.eyebrow{font:700 .59rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--earth)}.piece h3{font:700 1.3rem/1.05 var(--serif);margin:0}.piece p{margin:0;line-height:1.42}.effect{margin-top:auto;border-top:1px solid var(--line);padding-top:.65rem;color:var(--muted);font:.66rem/1.45 var(--mono)}.actions{display:flex;gap:.45rem;flex-wrap:wrap}.piece button{border:1px solid var(--ink);background:transparent;padding:.5rem .6rem;font:700 .6rem/1 var(--mono);text-transform:uppercase;cursor:pointer}.piece .primary{background:var(--ink);color:var(--card)}.piece button:disabled{opacity:.35;cursor:not-allowed}.back{display:none;border-top:1px solid var(--line);padding-top:.7rem}.back.show{display:block}.back dl{margin:0;display:grid;grid-template-columns:5.2rem 1fr;gap:.35rem .55rem;font-size:.76rem}.back dt{font:700 .58rem/1.4 var(--mono);text-transform:uppercase;color:var(--muted)}.back dd{margin:0;overflow-wrap:anywhere;line-height:1.4}
+.open{border-top:1px solid var(--line);padding:2rem 0}.open h2{margin:0;font:700 clamp(2rem,5vw,4rem)/.9 var(--serif)}.open p{max-width:54rem;line-height:1.5}.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}.door{background:var(--card);border:1px solid var(--line);padding:1rem}.door strong{display:block;font-family:var(--serif);font-size:1.15rem}.door span{display:block;margin-top:.45rem;color:var(--muted);line-height:1.4;font-size:.86rem}
+footer{border-top:1px solid var(--line);padding:1rem 0 2rem;display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font:700 .59rem/1.4 var(--mono);text-transform:uppercase}
+@media(max-width:70rem){.pieces{grid-template-columns:repeat(2,minmax(0,1fr))}.doors{grid-template-columns:1fr}}@media(max-width:38rem){.pieces{grid-template-columns:1fr}.head{display:block}.head p{margin-top:.6rem}.in{grid-template-columns:auto 1fr}.in button{grid-column:2;justify-self:start}footer{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><a href="/">Earthly Hands Workshop</a><span>Quire · Catharine road · v1</span></header>
+<section class="hero">
+<span class="kicker">Article XIX · start somewhere else</span>
+<h1>Go Catherine.</h1>
+<p>Leave the two-Robert machine alone for a minute. Start with the McKinney land body.</p>
+<p class="small">Source-visible name forms remain source-local. The 1831 return and the later patent each say <strong>Catharine McKinney</strong>. This experiment does not merge them merely because the name and Article XIX structure align.</p>
+</section>
+
+<section class="machine">
+<div class="machine-label">Working question</div>
+<div class="question">How far does Catharine McKinney’s Article XIX record body carry before we need a bridge?</div>
+<div class="slot empty" id="slot">PUT A CATHERINE PIECE IN</div>
+<div class="readout" aria-live="polite">
+<div class="state" id="state">Nothing tested yet</div>
+<h2 id="title">The Article XIV hallway is not the starting point here.</h2>
+<p id="text">Choose any box below. There is no required order.</p>
+<p class="brake" id="brake">One occurrence may align with another without becoming the same historical person. The machine keeps that brake on.</p>
+</div>
+</section>
+
+<section>
+<div class="head"><h2>Pieces on the table</h2><p>Put the plain piece in first. Turn it over only when you want the source state and exact brake.</p></div>
+<div class="pieces" id="pieces"></div>
+</section>
+
+<section class="open">
+<h2>Three doors still open.</h2>
+<p>The present body is already substantial, but three missing bridges would change what the machine can safely say.</p>
+<div class="doors">
+<div class="door"><strong>Reserve File C</strong><span>Find Catharine in the Article XIX index/register, then recover the individual reserve case if it survives.</span></div>
+<div class="door"><strong>Brown sale certification</strong><span>Recover the 25 July 1838 Brown report / schedule 101 body and compare its fuller sale state with the later patent recital.</span></div>
+<div class="door"><strong>Identity bridge</strong><span>Find an independent carrier that connects the 1831 cultivation-return occurrence to the later Section 11 patent occurrence. Shared name + three-quarter structure is compatibility, not identity.</span></div>
+</div>
+</section>
+
+<footer><span>Article XIX ≠ Article XIV · patent recital ≠ underlying deed · bounded negative stays bounded</span><span>Powerful finger. Trustworthy result.</span></footer>
+</div>
+
+<script>
+(()=>{
+ const piecesData=[
+  {id:'farm',date:'1831',name:'40 cultivated acres',front:'A Public Lands return carries Catharine McKinney with 40 cultivated acres, household six, a Yazoo Valley locality chain, and 480 total acres.',state:'ARTICLE XIX FARM-RETURN OCCURRENCE',title:'There is a Catharine McKinney Article XIX land body before the 1902 case.',text:'This is not Robert Bell evidence. It is a separate treaty-implementation occurrence under Article XIX, with cultivation, household, locality, and acreage fields.',brake:'This occurrence is not silently merged with the later patent Catharine.',source:'OHC_2480 / Public Lands No. 3 p.89; governing farm-return jacket 18DrjY2k0r_LVB5ySBNXUyS-khEGraz7gXOVKrRTRtyg'},
+  {id:'class',date:'1830 treaty / 1831 return',name:'Three-quarter class',front:'Article XIX gives heads of families with 30 and less than 50 cultivated acres three quarter sections. The Catharine row carries 40 acres and 480 total.',state:'TREATY CLASS FITS THE ROW',title:'The 1831 row fits Article XIX’s three-quarter-section class.',text:'This places the farm-return occurrence inside a specific treaty acreage class without needing Article XIV at all.',brake:'Treaty-class fit does not by itself identify the later patent holder.',source:'Treaty of Dancing Rabbit Creek, Article XIX + OHC_2480 farm-return jacket'},
+  {id:'patent',date:'patent carrier / 1850 grant',name:'Article XIX patent face',front:'A separate Catharine McKinney patent states entitlement to three quarters of a section and locates S 1/2 + NW 1/4, Sec. 11, T17N R1E, Choctaw Meridian — 515.88 acres.',state:'SEPARATE PATENT OCCURRENCE',title:'The later patent carries the same three-quarter legal structure, with a surveyed tract.',text:'The nominal 480-acre farm-return state and the 515.88-acre surveyed patent state can coexist. Legal unit / aliquot structure and surveyed acreage are different documentary fields.',brake:'480 ↔ 515.88 neither proves sameness nor proves difference. The identity bridge remains open.',source:'Held high-resolution Catharine McKinney Article XIX patent face; Article XIX archival-route jacket 1B43HoOCyGd_PNjdeIDbDNEyKFbJK8eSk1D50AsFPHhg'},
+  {id:'deed',date:'12 Apr 1833',name:'Sale to Linsey C. Hall',front:'The patent recites that Catharine McKinney sold the reserve to Linsey C. Hall by deed dated 12 April 1833 and that the deed was deposited in the General Land Office.',state:'PATENT RECITES A DEED',title:'A sale transaction enters the chain.',text:'This gives us a named buyer, a deed date, and a stated deposit in the General Land Office — but only as carried by the later patent.',brake:'Patent recital ≠ recovered deed. We do not yet possess the underlying conveyance through this piece.',source:'Catharine McKinney Article XIX patent face; recital of 12 Apr 1833 deed to Linsey C. Hall'},
+  {id:'brown',date:'25 Jul 1838 report',name:'Brown schedule 101',front:'A controlled printed Brown sales-report extract places Catharine McKinney at schedule 101 in a report closing 25 July 1838.',state:'SALE-CERTIFICATION OCCURRENCE',title:'The sale has another administrative carrier between deed and patent.',text:'Brown/Kincannon certification records form their own record population. This makes the sale chain thicker than deed → patent.',brake:'Printed extract ≠ recovered original report or full certification packet. Entry 263 is still a retrieval door.',source:'Court of Claims No. 12742, Evidence for Claimant Vol. I, printed p.26; governing Brown-report jacket referenced in Article XIX route body'},
+  {id:'approval',date:'15–20 Jun 1850',name:'Presidential approval + grant',front:'The patent recites presidential approval of the sale on 15 June 1850 and grants the located land to Hall on 20 June 1850.',state:'APPROVAL / PATENT CARRIER',title:'The sale reaches an approved federal disposition state.',text:'Article XIX itself expects presidential consent for a sale. The patent says that approval occurred and then carries the grant to Hall.',brake:'Patent recital ≠ recovered presidential approval instrument. Approval date and grant date remain distinct states.',source:'Catharine McKinney Article XIX patent face; 15 Jun 1850 approval recital / 20 Jun 1850 grant'},
+  {id:'p57',date:'15 Apr 1902',name:'MCR 879 p.-57 McKinney negative',front:'The Commission’s McKinney negative is bounded to an Article XIV compliance / attempted-compliance record predicate: Ward notice and later 1837 / 1842 beneficiary claims.',state:'OUTSIDE THE STATED ARTICLE XIV PREDICATE',title:'The Catherine Article XIX body is not answered by this negative.',text:'OHC_2480 is an Article XIX cultivation/allowance return. The p.-57 negative describes a different legal-function record population. That is a source-class distinction.',brake:'This does NOT prove the Commission failed to search Article XIX elsewhere. It only refuses to turn p.-57 into an Article XIX negative.',source:'MCR 879 p.-57 / OHC_2044; governing jacket 14m5eSVKVgLJTx6co3p8DlAQEVZ2kiPAtd2ghG_Qytho'},
+  {id:'reserve',date:'1831–1889 series',name:'Reserve File C',front:'National Archives identifies a distinct Article XIX case system: Reserve File C, with index, register, and individual reserve papers.',state:'EXACT ARCHIVAL DOOR',title:'There is somewhere specific to look for the missing bridge.',text:'Reserve File C can potentially connect early entitlement, location, sale, later action, and disposition states. The Catharine case itself has not yet been recovered there.',brake:'Archival series existence ≠ Catharine case recovered ≠ proof of 1902 consultation.',source:'NARA RG 75 / PI 163 entries 522, 526, 527; Article XIX archival-route jacket 1B43HoOCyGd_PNjdeIDbDNEyKFbJK8eSk1D50AsFPHhg'}
+ ];
+ const q=s=>document.querySelector(s), slot=q('#slot'), chosen=[];
+ const esc=x=>String(x).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+ function show(p){q('#state').textContent=p.state;q('#title').textContent=p.title;q('#text').textContent=p.text;q('#brake').textContent=p.brake}
+ function render(){
+   if(!chosen.length){slot.className='slot empty';slot.textContent='PUT A CATHERINE PIECE IN';return}
+   slot.className='slot';slot.innerHTML='';
+   chosen.forEach((id,n)=>{const p=piecesData.find(x=>x.id===id),row=document.createElement('div');row.className='in';row.innerHTML='<b>'+String(n+1).padStart(2,'0')+'</b><div><strong>'+esc(p.name)+'</strong><span>'+esc(p.state)+'</span></div>';const b=document.createElement('button');b.type='button';b.textContent='take out';b.onclick=()=>{chosen.splice(chosen.indexOf(id),1);render();update();if(chosen.length)show(piecesData.find(x=>x.id===chosen[chosen.length-1]));};row.appendChild(b);slot.appendChild(row)})
+ }
+ function update(){document.querySelectorAll('[data-put]').forEach(b=>{b.disabled=chosen.includes(b.dataset.put);b.textContent=b.disabled?'IN THE MACHINE':'PUT THIS IN'});document.querySelectorAll('.piece').forEach(c=>c.classList.toggle('used',chosen.includes(c.dataset.id)))}
+ const mount=q('#pieces');
+ piecesData.forEach((p,n)=>{const c=document.createElement('article');c.className='piece';c.dataset.id=p.id;c.innerHTML='<div class="eyebrow">PIECE '+String(n+1).padStart(2,'0')+' · '+esc(p.date)+'</div><h3>'+esc(p.name)+'</h3><p>'+esc(p.front)+'</p><div class="effect">'+esc(p.brake)+'</div><div class="actions"></div><div class="back"><dl><dt>state</dt><dd>'+esc(p.state)+'</dd><dt>source</dt><dd>'+esc(p.source)+'</dd></dl></div>';const a=c.querySelector('.actions'),put=document.createElement('button');put.type='button';put.className='primary';put.dataset.put=p.id;put.textContent='PUT THIS IN';put.onclick=()=>{if(!chosen.includes(p.id))chosen.push(p.id);render();update();show(p);q('.machine').scrollIntoView({behavior:'smooth',block:'start'})};const turn=document.createElement('button');turn.type='button';turn.textContent='TURN IT OVER';turn.onclick=()=>{const back=c.querySelector('.back');back.classList.toggle('show');turn.textContent=back.classList.contains('show')?'HIDE BACK':'TURN IT OVER'};a.append(put,turn);mount.appendChild(c)});
+ render();update();
+})();
+</script>
+</body></html>
