@@ -11,7 +11,7 @@
   "carriers": [
     {
       "id": "oral",
-      "date": "1901–1902",
+      "date": "1900–1902",
       "actor": "principal applicants / witnesses",
       "object": "individual oral examinations",
       "state": "SOURCE-LOCAL TESTIMONY",
@@ -19,8 +19,14 @@
       "claim": "Across many inspected principal examinations, witnesses do not themselves supply a uniform affirmative Article XIV proposition. Answers repeatedly preserve nonknowledge or nonaffirmation.",
       "change": "The proposition is not yet safely carried as collective witness testimony.",
       "source": "MCR 879 individual examination packets; proposition genealogy jacket 15HtKO-5KWQpwFDpi2FAgkbZYVRGI3gBOUCZkfqoitOc",
-      "allows": ["inspect", "compare", "carry_nonknowledge"],
-      "forbids": ["promote_to_collective_testimony"]
+      "allows": [
+        "inspect",
+        "compare",
+        "carry_nonknowledge"
+      ],
+      "forbids": [
+        "promote_to_collective_testimony"
+      ]
     },
     {
       "id": "pleadings",
@@ -32,8 +38,13 @@
       "claim": "Applicant-side written pleadings can carry an affirmative Article XIV theory even when the applicant's oral knowledge does not.",
       "change": "A legal proposition may enter the case without becoming firsthand witness knowledge.",
       "source": "All sixteen applicant-side written pleading occurrences are now returned under source-facing control; packet-specific attached evidence remains distinct.",
-      "allows": ["inspect", "carry_claim"],
-      "forbids": ["back_assign_to_oral_knowledge"]
+      "allows": [
+        "inspect",
+        "carry_claim"
+      ],
+      "forbids": [
+        "back_assign_to_oral_knowledge"
+      ]
     },
     {
       "id": "p53",
@@ -45,8 +56,13 @@
       "claim": "The Commission consolidates the applications as claims from a common ancestor and states at group scale that 'they claim' Robert Bell took advantage of Article XIV.",
       "change": "The proposition gains administrative scope and a new speaker. It does not gain witness authorship.",
       "source": "OHC_2040.pdf / internal p.-53; governing jacket 1nsFXniw8Vnl1ScNi1Ynh9nBCIuAlzv0mJ7VNGjPqxtY",
-      "allows": ["inspect", "carry_characterization"],
-      "forbids": ["quote_backward_as_collective_testimony"]
+      "allows": [
+        "inspect",
+        "carry_characterization"
+      ],
+      "forbids": [
+        "quote_backward_as_collective_testimony"
+      ]
     },
     {
       "id": "p55p56",
@@ -58,8 +74,15 @@
       "claim": "The Commission recognizes a positive Article XIV Robert Bell record, then says the Robert shown by that record is not the same Robert through whom the applicants claim.",
       "change": "The case turns from compliance proposition to identity partition. The adverse result is downstream of a positive Robert record, not simple record absence.",
       "source": "OHC_2042–2043; relation control 1dBogAlbWX-egSshms42J8he3UXu4imtQgsnHxkFYJZk; p.-56 jacket 1C4FAN5VwspBQLDwdFtzmu4M93_oyWTMWutXXJYZZ4NU",
-      "allows": ["inspect", "compare_identities", "carry_admin_not_same"],
-      "forbids": ["promote_admin_identity_to_historical_fact", "describe_as_no_robert_record"]
+      "allows": [
+        "inspect",
+        "compare_identities",
+        "carry_admin_not_same"
+      ],
+      "forbids": [
+        "promote_admin_identity_to_historical_fact",
+        "describe_as_no_robert_record"
+      ]
     },
     {
       "id": "oia",
@@ -71,8 +94,15 @@
       "claim": "The Office uses its own record holdings, including a Robert Bell patent record and an Office-held Mississippi map, and carries forward a two-Robert administrative analysis.",
       "change": "The comparator body gains additional federal carriers and the two-Robert conclusion is independently restated at a new office layer.",
       "source": "Office of Indian Affairs report, 13 May 1902; governing source jacket 1U1KJ-si1F04WO7U8AasDLaNHFSykIzvAwfK6GJgky1w",
-      "allows": ["inspect", "follow_new_carriers", "carry_recommendation"],
-      "forbids": ["treat_as_witness_testimony", "assume_complete_record_population"]
+      "allows": [
+        "inspect",
+        "follow_new_carriers",
+        "carry_recommendation"
+      ],
+      "forbids": [
+        "treat_as_witness_testimony",
+        "assume_complete_record_population"
+      ]
     },
     {
       "id": "interior",
@@ -84,8 +114,14 @@
       "claim": "Interior says the records show one Robert Bell did comply with Article XIV, while the applicants' alleged ancestor is not the identical person; it approves the Commission's action and affirms the decision.",
       "change": "The identity-conditioned exclusion becomes the Department's operative administrative disposition.",
       "source": "OHC_2054–2055; governing jacket 1KFl6FxtuRUCVxFc5Li3AibOItdyPvDX__ILij8u_jUg",
-      "allows": ["inspect", "carry_affirmance"],
-      "forbids": ["convert_to_historical_identity_fact", "erase_prior_speakers"]
+      "allows": [
+        "inspect",
+        "carry_affirmance"
+      ],
+      "forbids": [
+        "convert_to_historical_identity_fact",
+        "erase_prior_speakers"
+      ]
     }
   ],
   "refusals": [
