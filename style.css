@@ -1959,3 +1959,181 @@ body[data-discovery="open"] footer{
     min-height:7.4rem;
   }
 }
+
+
+/* Shared Country — common frame, local instruments.
+   Ground / Map / People change tool without pretending the visitor changed ground. */
+body[data-discovery="open"] .experience-viewbar,
+body[data-discovery="open"] .experience-stage{
+  width:min(64rem,calc(100% - 2rem));
+  margin-inline:auto;
+}
+body[data-discovery="open"] .experience-stage{
+  padding-top:clamp(2.2rem,6vh,4.25rem);
+}
+.experience-shell[data-view="ground"] .experience-mount{
+  width:min(43rem,100%);
+}
+.experience-shell[data-view="map"] .prose-map,
+.experience-shell[data-view="people"] .camp-people,
+.experience-shell[data-view="sources"] .camp-sources{
+  width:100%;
+  margin-inline:0;
+}
+.experience-shell[data-view="map"] .experience-stage,
+.experience-shell[data-view="people"] .experience-stage{
+  min-height:34rem;
+}
+
+/* Map: anchors remain fixed; labels can negotiate. Keep the drawing light. */
+#prose-map-svg{
+  overflow:visible;
+}
+.map-horizon{
+  opacity:.55;
+}
+.map-note,
+.map-small,
+.map-place{
+  paint-order:stroke;
+  stroke:var(--scene-bg);
+  stroke-width:3px;
+  stroke-linejoin:round;
+}
+.map-small{
+  stroke-width:2.5px;
+}
+.map-place{
+  stroke-width:4px;
+}
+
+/* People: enough room to become a public Name Web front, without pretending
+   every body has the same documentary density. */
+.people-intro{
+  max-width:42rem;
+  margin:.15rem 0 1.45rem;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem 1.5rem;
+  color:var(--scene-muted);
+  font:.66rem/1.5 var(--mono);
+}
+.people-intro p{
+  margin:0;
+}
+.encounter-batch{
+  margin-bottom:1.55rem;
+}
+.encounter-batch-head{
+  align-items:end;
+  padding:.42rem 0 .5rem;
+}
+.encounter-batch-head > div{
+  display:flex;
+  flex-direction:column;
+  gap:.08rem;
+}
+.encounter-batch-head strong{
+  color:var(--scene-ink);
+  font:500 .63rem/1.2 var(--mono);
+  letter-spacing:.07em;
+}
+.encounter-batch-head > div span{
+  letter-spacing:.055em;
+}
+.encounter-card-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.68rem;
+  padding-top:.68rem;
+}
+.person-card{
+  border-color:color-mix(in srgb,var(--scene-rule) 82%,transparent);
+}
+.person-card-face{
+  min-height:10.25rem;
+  padding:.8rem .85rem .82rem;
+}
+.person-card-name{
+  max-width:16ch;
+  font-size:clamp(1.55rem,2.8vw,2.35rem);
+}
+.person-card-known{
+  max-width:34rem;
+  font:.61rem/1.42 var(--mono);
+}
+.person-card-body{
+  padding:.82rem .85rem .9rem;
+}
+.person-card-prose{
+  margin:0 0 .8rem;
+  max-width:34rem;
+  font-size:.92rem;
+  line-height:1.45;
+}
+.person-encounter-line{
+  border-top:1px solid var(--scene-rule);
+}
+.person-encounter{
+  display:grid;
+  grid-template-columns:8.25rem minmax(0,1fr);
+  gap:.7rem;
+  padding:.42rem 0;
+  border-bottom:1px solid color-mix(in srgb,var(--scene-rule) 65%,transparent);
+}
+.person-encounter > span{
+  color:var(--scene-muted);
+  font:.52rem/1.35 var(--mono);
+  letter-spacing:.045em;
+  text-transform:uppercase;
+}
+.person-encounter p{
+  margin:0;
+  font:.62rem/1.42 var(--mono);
+}
+.person-links{
+  margin-top:.8rem;
+  padding-top:.6rem;
+  border-top:1px solid var(--scene-rule);
+  display:flex;
+  flex-wrap:wrap;
+  gap:.35rem;
+  align-items:center;
+}
+.person-links > span{
+  width:100%;
+  color:var(--scene-muted);
+  font:.5rem/1.2 var(--mono);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.person-link{
+  border:0;
+  border-bottom:1px solid var(--scene-rule);
+  background:transparent;
+  padding:.12rem .05rem .1rem;
+  cursor:pointer;
+  font:.66rem/1.2 var(--mono);
+}
+.person-link:hover{
+  border-color:var(--scene-accent);
+}
+
+@media(max-width:52rem){
+  body[data-discovery="open"] .experience-viewbar,
+  body[data-discovery="open"] .experience-stage{
+    width:calc(100% - 1.2rem);
+  }
+  .people-intro{
+    grid-template-columns:1fr;
+    gap:.5rem;
+  }
+  .encounter-card-grid{
+    grid-template-columns:1fr;
+  }
+  .person-card-face{
+    min-height:8.8rem;
+  }
+  .person-encounter{
+    grid-template-columns:6.5rem minmax(0,1fr);
+  }
+}
