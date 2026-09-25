@@ -1,0 +1,40 @@
+name: Fast public witness
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  witness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Check out enough history to compare the push
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check only the public files changed by this push
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          MAX_ATTEMPTS: "8"
+          DELAY_MS: "3000"
+        run: node scripts/fast-public-witness.mjs
+
+      - name: Keep the tiny witness record
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fast-public-observation-${{ github.sha }}
+          path: fast-public-observation/
+          if-no-files-found: error
+          retention-days: 7
