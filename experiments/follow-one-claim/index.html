@@ -15,7 +15,7 @@
 .rail{border:1px solid var(--line);background:rgba(23,26,29,.72)}.rail-head{padding:.75rem;border-bottom:1px solid var(--line)}.rail-head strong{display:block;font-size:1.12rem}.rail-head span{display:block;margin-top:.25rem;color:var(--muted);font:.65rem/1.4 var(--mono)}.carrier-list{display:grid}.carrier{border:0;border-bottom:1px solid var(--line);background:transparent;text-align:left;padding:.8rem;cursor:pointer;display:grid;grid-template-columns:5.5rem 1fr;gap:.7rem}.carrier:last-child{border-bottom:0}.carrier .date{font:.62rem/1.25 var(--mono);color:var(--muted)}.carrier .name{font-weight:650;line-height:1.15}.carrier .verb{grid-column:2;margin-top:.2rem;font:.58rem/1.3 var(--mono);color:var(--hot);text-transform:uppercase}.carrier[aria-current="true"]{background:#20252a;box-shadow:inset 3px 0 0 var(--hot)}
 .stage{border:1px solid var(--line);background:rgba(23,26,29,.62);min-height:31rem}.stage-head{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:1rem;border-bottom:1px solid var(--line)}.stage-head .label{font:.62rem/1.3 var(--mono);text-transform:uppercase;color:var(--muted)}.stage-head .actor{margin-top:.2rem;font-size:clamp(1.55rem,3vw,3rem);line-height:.95;font-weight:700;letter-spacing:-.035em}.badge{align-self:start;padding:.25rem .4rem;border:1px solid var(--line);font:.58rem/1 var(--mono);text-transform:uppercase;color:var(--cold)}
 .stage-body{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}.cell{background:var(--panel);padding:1rem;min-height:10rem}.cell h2{margin:0 0 .55rem;font:600 .61rem/1.3 var(--mono);letter-spacing:.075em;text-transform:uppercase;color:var(--muted)}.cell p{margin:.35rem 0;line-height:1.5}.change{color:var(--ok)}.source{font:.69rem/1.5 var(--mono);color:var(--muted);overflow-wrap:anywhere}
-.actions{display:flex;gap:.5rem;flex-wrap:wrap;padding:1rem;border-top:1px solid var(--line)}.actions button{border:1px solid var(--line);background:#111418;padding:.52rem .7rem;cursor:pointer;font:.65rem/1 var(--mono);text-transform:uppercase}.actions button:hover{border-color:var(--hot)}.actions button:disabled{opacity:.4;cursor:not-allowed}
+.actions{display:flex;gap:.5rem;flex-wrap:wrap;padding:1rem;border-top:1px solid var(--line)}.actions button{border:1px solid var(--line);background:#111418;padding:.52rem .7rem;cursor:pointer;font:.65rem/1 var(--mono);text-transform:uppercase}.actions button:hover{border-color:var(--hot)}.actions button:disabled{opacity:.32;cursor:not-allowed;text-decoration:line-through}.encounter{margin:0 1rem 1rem;padding:.9rem 1rem;border-left:3px solid var(--cold);background:#10161a}.encounter-label{font:700 .6rem/1 var(--mono);letter-spacing:.09em;color:var(--cold);text-transform:uppercase}.encounter p{margin:.45rem 0 0;line-height:1.5}.encounter.refuse{border-left-color:var(--bad);background:#21191a}.encounter.refuse .encounter-label{color:var(--bad)}
 .proposal{margin-top:1rem;border:1px solid var(--line);background:rgba(23,26,29,.72)}.proposal-head{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:.75rem;border-bottom:1px solid var(--line)}.proposal-head h2{margin:0;font-size:1rem}.proposal-head span{font:.6rem/1 var(--mono);color:var(--muted);text-transform:uppercase}.proposal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}.proposal-card{background:var(--panel);padding:.85rem;display:flex;flex-direction:column;gap:.65rem}.proposal-card p{margin:0;line-height:1.4}.proposal-card button{margin-top:auto;border:1px solid var(--line);background:#111418;padding:.48rem .6rem;text-align:left;cursor:pointer;font:.62rem/1.2 var(--mono);text-transform:uppercase}.proposal-card button:hover{border-color:var(--bad)}.result{display:none;margin:.85rem;padding:.85rem;border-left:3px solid var(--bad);background:#21191a}.result.show{display:block}.result strong{display:block;color:var(--bad);font:.7rem/1 var(--mono);letter-spacing:.08em}.result p{margin:.45rem 0 0}
 .open{margin-top:1rem;display:grid;grid-template-columns:.6fr 1.4fr;gap:1rem;border-top:1px solid var(--line);padding-top:1rem}.open h2{margin:0;font-size:clamp(1.8rem,4vw,4rem);line-height:.9;letter-spacing:-.04em}.open ul{margin:0;padding-left:1.2rem}.open li{margin:.35rem 0;color:var(--muted)}
 footer{padding:1rem 0 2rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font:.62rem/1.4 var(--mono);text-transform:uppercase}
@@ -25,10 +25,10 @@ footer{padding:1rem 0 2rem;border-top:1px solid var(--line);display:flex;justify
 </head>
 <body>
 <div class="shell">
-<header class="top"><a href="/">Earthly Hands Workshop</a><span>Quire · executable documentary body · v1</span></header>
+<header class="top"><a href="/">Earthly Hands Workshop</a><span>Quire · executable documentary body · v2</span></header>
 <section class="hero"><div><span class="kicker">Follow one claim through the machine</span><h1>What changed?</h1></div><div class="hero-copy"><p id="question">Loading proposition…</p><p class="small">The machine tracks documentary state, not historical truth. A later office may change the administrative force of a proposition without becoming the original speaker.</p></div></section>
 <main class="machine">
-<div class="statusbar"><div><span class="dim">proposition / </span><span id="prop-short"></span></div><div class="state" id="identity-state"></div><div class="dim">no scoring · refusal is valid</div></div>
+<div class="statusbar"><div><span class="dim">proposition / </span><span id="prop-short"></span></div><div class="state" id="identity-state"></div><div class="dim"><span id="position">carrier 1 / 6</span> · no scoring · refusal is valid</div></div>
 <div class="grid">
 <aside class="rail"><div class="rail-head"><strong>Carriers</strong><span>Choose a documentary state. The proposition does not stay the same merely because the name does.</span></div><div class="carrier-list" id="carrier-list"></div></aside>
 <section class="stage">
@@ -39,7 +39,8 @@ footer{padding:1rem 0 2rem;border-top:1px solid var(--line);display:flex;justify
 <div class="cell"><h2>Operative verb</h2><p id="stage-verb"></p></div>
 <div class="cell"><h2>Way home</h2><p class="source" id="stage-source"></p></div>
 </div>
-<div class="actions"><button id="prev">← previous carrier</button><button id="next">next carrier →</button></div>
+<div class="actions" aria-label="Ways to work this carrier"><button id="read">read</button><button id="inspect">inspect object</button><button id="compare">compare backward</button><button id="prev">← previous carrier</button><button id="next">follow carrier →</button><button id="source-home">return to source</button><button id="test-claim">try a stronger claim</button></div>
+<div class="encounter" id="encounter" aria-live="polite"><div class="encounter-label" id="encounter-label">START HERE</div><p id="encounter-text">Read the first carrier as its own documentary state. Then follow the proposition forward. A move may be unavailable because the record has not earned it.</p></div>
 </section>
 </div>
 
@@ -66,7 +67,7 @@ footer{padding:1rem 0 2rem;border-top:1px solid var(--line);display:flex;justify
  data.carriers.forEach((c,n)=>{
    const b=document.createElement('button'); b.className='carrier'; b.type='button';
    b.innerHTML='<span class="date">'+c.date+'</span><span class="name">'+c.actor+'</span><span class="verb">'+c.verb+'</span>';
-   b.addEventListener('click',()=>render(n)); list.appendChild(b);
+   b.addEventListener('click',()=>{render(n); say('CARRIER SELECTED', 'You moved directly to '+c.actor+'. Read it as '+c.state+'; do not carry later force backward into earlier speakers.');}); list.appendChild(b);
  });
  function render(n){
    i=n; const c=data.carriers[i];
@@ -78,16 +79,30 @@ footer{padding:1rem 0 2rem;border-top:1px solid var(--line);display:flex;justify
    q('#stage-change').textContent=c.change;
    q('#stage-verb').textContent=c.verb;
    q('#stage-source').textContent=c.source;
-   q('#prev').disabled=i===0; q('#next').disabled=i===data.carriers.length-1;
+   q('#position').textContent='carrier '+(i+1)+' / '+data.carriers.length;
+   q('#prev').disabled=i===0;
+   q('#compare').disabled=i===0;
+   q('#next').disabled=i===data.carriers.length-1;
+   q('#next').textContent=i===data.carriers.length-1?'end of controlled chain':'follow carrier →';
  }
- q('#prev').addEventListener('click',()=>render(Math.max(0,i-1)));
- q('#next').addEventListener('click',()=>render(Math.min(data.carriers.length-1,i+1)));
+ function say(label,text,refuse=false){
+   q('#encounter-label').textContent=label;
+   q('#encounter-text').textContent=text;
+   q('#encounter').classList.toggle('refuse',refuse);
+ }
+ q('#read').addEventListener('click',()=>{ const c=data.carriers[i]; say('READ · '+c.state,c.claim); });
+ q('#inspect').addEventListener('click',()=>{ const c=data.carriers[i]; say('INSPECT OBJECT',c.object+' · '+c.date+' · maker/speaker: '+c.actor+' · operative verb: '+c.verb+'. These fields travel together here; none silently becomes another.'); });
+ q('#compare').addEventListener('click',()=>{ if(i===0){say('COMPARE UNAVAILABLE','There is no earlier carrier inside this bounded public chain. The machine will not invent one.',true);return;} const before=data.carriers[i-1],c=data.carriers[i]; say('COMPARE · '+before.state+' → '+c.state,c.change+' Previous speaker: '+before.actor+'. Current speaker: '+c.actor+'.'); });
+ q('#prev').addEventListener('click',()=>{const from=data.carriers[i];render(Math.max(0,i-1));const to=data.carriers[i];say('RETURNED ONE CARRIER',from.actor+' → '+to.actor+'. Administrative force is not carried backward automatically.');});
+ q('#next').addEventListener('click',()=>{ if(i===data.carriers.length-1){say('CONTROLLED CHAIN ENDS HERE','The public body stops here. An unresolved documentary interval is a real result; the machine will not pad it with an invented carrier.',true);return;} const from=data.carriers[i];render(i+1);const to=data.carriers[i];say('CARRIER FOLLOWED',from.actor+' → '+to.actor+'. '+to.change); });
+ q('#source-home').addEventListener('click',()=>{ const c=data.carriers[i]; say('RETURN TO SOURCE',c.source+' — this is the controlled return path carried by this specimen, not a replacement for the source face.'); q('#stage-source').scrollIntoView({behavior:'smooth',block:'center'}); });
+ q('#test-claim').addEventListener('click',()=>{ q('.proposal').scrollIntoView({behavior:'smooth',block:'start'}); say('PROPOSE A RELATION','Choose a stronger proposition below. A refusal is a playable result when the governed body does not earn the promotion.'); });
  const pg=q('#proposal-grid'), result=q('#result');
  data.refusals.forEach(r=>{
    const card=document.createElement('div'); card.className='proposal-card';
    const p=document.createElement('p'); p.textContent=r.proposal;
    const b=document.createElement('button'); b.type='button'; b.textContent='Test this proposition';
-   b.addEventListener('click',()=>{q('#result-state').textContent=r.result; q('#result-reason').textContent=r.reason; result.classList.add('show'); result.scrollIntoView({behavior:'smooth',block:'nearest'});});
+   b.addEventListener('click',()=>{q('#result-state').textContent=r.result; q('#result-reason').textContent=r.reason; result.classList.add('show'); say('REFUSED PROMOTION',r.reason,true); result.scrollIntoView({behavior:'smooth',block:'nearest'});});
    card.append(p,b); pg.appendChild(card);
  });
  data.open.forEach(x=>{const li=document.createElement('li');li.textContent=x;q('#open-list').appendChild(li)});
