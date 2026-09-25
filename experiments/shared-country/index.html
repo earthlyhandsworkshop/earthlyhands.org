@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="../../style.css?v=b80a2d0dbbcf" />
+    <link rel="stylesheet" href="../../style.css?v=e699afdf3733" />
   </head>
   <body data-lamp="lit" data-ground="night" data-discovery="closed" data-thought="none">
     <a class="skip-link" href="#threshold">Skip to the ground</a>
@@ -60,9 +60,12 @@
       <section class="threshold" id="threshold" data-place="Front edge">
         <div class="experience-shell" id="experience-shell">
           <div class="experience-viewbar" aria-label="Shared Country views">
-            <button type="button" class="view-mode is-current" data-dawson-view="ground" aria-pressed="true">Ground</button>
-            <button type="button" class="view-mode" data-dawson-view="map" aria-pressed="false" hidden>Map</button>
-            <button type="button" class="view-mode" data-dawson-view="people" aria-pressed="false" hidden>People</button>
+            <div class="experience-bearing" id="experience-bearing" aria-live="polite"></div>
+            <div class="experience-modes">
+              <button type="button" class="view-mode is-current" data-dawson-view="ground" aria-pressed="true">Ground</button>
+              <button type="button" class="view-mode" data-dawson-view="map" aria-pressed="false" hidden>Map</button>
+              <button type="button" class="view-mode" data-dawson-view="people" aria-pressed="false" hidden>People</button>
+            </div>
           </div>
 
           <div class="experience-stage" id="experience-stage" data-direction="forward">
@@ -297,6 +300,6 @@
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="../../config.js?v=9d26bbb0e579"></script>
-    <script src="../../script.js?v=680908570181"></script>
+    <script src="../../script.js?v=4ae23eab6551"></script>
   </body>
 </html>
