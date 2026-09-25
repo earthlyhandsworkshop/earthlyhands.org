@@ -156,6 +156,7 @@ footer{
 </head>
 <body>
 <div class="shell">
+<div class="identity-line"><strong>Earthly Hands Workshop</strong><span>research & documentation</span></div>
 <main>
   <section aria-label="Current public work">
     <div class="section-label" style="border-top:0">Public work</div>
@@ -374,7 +375,63 @@ footer{
       <div class="title">Register Threshold v2</div><div class="desc">Earlier threshold body.</div><div class="entry"><span class="state-stamp">archive</span><span class="enter">enter</span></div>
     </a></article>
   </section>
+
+  <section class="contact" aria-label="Contact and receiving">
+    <div class="contact-head"><span>Receiving</span><span>archive door open</span></div>
+    <form class="contact-grid" id="receive-form">
+      <label>
+        <span class="contact-label">File</span>
+        <input name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required>
+      </label>
+      <label>
+        <span class="contact-label">Related to · optional</span>
+        <input name="description" type="text" maxlength="1000" placeholder="person, place, record, question, or not sure">
+      </label>
+      <div>
+        <span class="contact-label">Email</span>
+        <a href="mailto:workshop@earthlyhands.org">workshop@earthlyhands.org</a>
+      </div>
+      <div class="send-cell">
+        <span class="contact-label">Send to Receiving</span>
+        <button type="submit">Send file</button>
+        <div class="receive-status" id="receive-status">Private on receipt · reviewed before any public use.</div>
+      </div>
+    </form>
+  </section>
+
+  <section class="about" aria-label="About Earthly Hands Workshop">
+    <h2>Earthly Hands</h2>
+    <div>
+      <p>A research and documentation workshop for historical records, people, places, maps, archives, and the strange paths between them.</p>
+      <p>We publish source-facing work, keep unresolved questions visible, and welcome records that complicate what we think we know.</p>
+    </div>
+  </section>
 </main>
 </div>
+<script src="/config.js"></script>
+<script>
+(()=>{
+  const form=document.getElementById("receive-form");
+  const status=document.getElementById("receive-status");
+  const endpoint=String(window.EARTHLY_HANDS_RECEIVING_URL||"").trim();
+  form?.addEventListener("submit",async e=>{
+    e.preventDefault();
+    if(!endpoint){status.textContent="Receiving is not configured.";return}
+    const button=form.querySelector('button[type="submit"]');
+    button.disabled=true;status.textContent="Receiving…";
+    try{
+      const res=await fetch(endpoint,{method:"POST",body:new FormData(form)});
+      const data=await res.json().catch(()=>({}));
+      if(!res.ok)throw new Error(data.error||("HTTP "+res.status));
+      status.textContent="RECEIVED · "+(data.receipt||"held for review");
+      form.reset();
+    }catch(err){
+      status.textContent="Not received · "+err.message;
+    }finally{
+      button.disabled=false;
+    }
+  });
+})();
+</script>
 </body>
 </html>
