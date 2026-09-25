@@ -385,7 +385,7 @@ function syncUrl(){
   const url=new URL(location.href);
   if(current===0) url.searchParams.delete("carrier");
   else url.searchParams.set("carrier",String(current+1));
-  history.replaceState(null,"",url);
+  window.history.replaceState(null,"",url);
 }
 
 function renderProgress(){
