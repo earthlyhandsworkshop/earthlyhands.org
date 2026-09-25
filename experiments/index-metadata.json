@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T17:40:50.152Z",
+  "generated": "2026-09-25T17:44:42.132Z",
   "source": "git history",
   "entries": {
     "/experiments/follow-one-claim/": {
@@ -206,6 +206,5 @@
         "experiments/register-threshold-v2"
       ]
     }
-  },
-  "witness_probe": "small-door-2026-09-25"
+  }
 }
