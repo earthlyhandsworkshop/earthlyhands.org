@@ -1885,6 +1885,88 @@ body.gate-open .press-mark{
   }
 }
 </style>
+
+<style id="midwidth-key-properties-row">
+/* Mid-width composition only:
+   unresolved propositions stay full-width;
+   Key Points + Properties share the next complete row. */
+@media (min-width:40.01rem) and (max-width:64rem){
+  body.gate-open .instrument{
+    display:grid!important;
+    grid-template-columns:minmax(15rem,.32fr) minmax(0,.68fr)!important;
+    column-gap:.8rem!important;
+    align-items:stretch!important;
+  }
+
+  body.gate-open .upper{
+    grid-column:1 / -1!important;
+  }
+
+  body.gate-open .stage-two,
+  body.gate-open .stage-two .lower{
+    display:contents!important;
+  }
+
+  body.gate-open .stage-two .divider{
+    grid-column:1 / -1!important;
+  }
+
+  body.gate-open .stage-two .pressure{
+    grid-column:1 / -1!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    margin:0!important;
+  }
+
+  body.gate-open .stage-two .key{
+    grid-column:1!important;
+    height:10.75rem!important;
+    min-height:10.75rem!important;
+    max-height:10.75rem!important;
+    margin:0!important;
+    align-self:stretch!important;
+  }
+
+  body.gate-open .properties{
+    grid-column:2!important;
+    height:10.75rem!important;
+    min-height:10.75rem!important;
+    max-height:10.75rem!important;
+    margin:0!important;
+    align-self:stretch!important;
+  }
+
+  body.gate-open .properties-default,
+  body.gate-open .properties-receive{
+    height:9.6rem!important;
+  }
+
+  body.gate-open .properties-default{
+    grid-template-columns:minmax(8rem,.25fr) minmax(0,1fr)!important;
+  }
+
+  body.gate-open .properties-default .pi-state{
+    display:none!important;
+  }
+
+  body.gate-open .properties-receive{
+    grid-template-columns:minmax(7.5rem,.2fr) minmax(12rem,.34fr) minmax(0,1fr) minmax(7rem,.18fr)!important;
+    grid-template-rows:auto!important;
+  }
+
+  body.gate-open .properties-receive .pi-send{
+    position:static!important;
+    width:auto!important;
+    display:block!important;
+    background:transparent!important;
+  }
+
+  body.gate-open .stage-two .key-body{
+    overflow:auto!important;
+  }
+}
+</style>
 </head>
 <body>
 <div class="page">
