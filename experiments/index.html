@@ -742,10 +742,27 @@ footer{
         const link = document.querySelector(`.work-link[href="${href}"]`);
         const article = link?.closest(".work");
         if (!article) continue;
+        article.dataset.updatedAt = entry.updated || "";
         const date = entry.updated ? fmt.format(new Date(entry.updated)).replace(",", " ·") + " CT" : "";
         setField(article, "updated", date);
         setField(article, "hand", entry.hand || "");
       }
+
+      function sortByRecency(section) {
+        if (!section) return;
+        const articles = [...section.children].filter(node => node.matches?.("article.work"));
+        articles
+          .map((article, index) => ({
+            article,
+            index,
+            time: Date.parse(article.dataset.updatedAt || "") || 0
+          }))
+          .sort((a,b) => (b.time - a.time) || (a.index - b.index))
+          .forEach(({article}) => section.appendChild(article));
+      }
+
+      sortByRecency(document.querySelector('section[aria-label="Current public work"]'));
+      sortByRecency(document.querySelector("section.secondary"));
     })
     .catch(() => {
       // Static custody text remains a trustworthy fallback if metadata cannot load.
