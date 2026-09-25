@@ -4,160 +4,93 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,follow">
-<meta name="theme-color" content="#f2eee4">
-<title>Put the Pieces In — Earthly Hands</title>
-<meta name="description" content="Put source-controlled pieces of MCR 879 into one working claim and watch what each piece changes without collapsing source state or identity.">
+<meta name="theme-color" content="#eee9de">
+<title>Catharine McKinney — Earthly Hands</title>
+<meta name="description" content="A source-controlled working table for Catharine/Catherine McKinney across family testimony, Public Lands, Article XIX, sale, approval, and patent states.">
 <style>
-:root{--paper:#f2eee4;--ink:#22211e;--muted:#6f6a60;--line:#bdb5a7;--card:#faf7ef;--machine:#292b2b;--machineInk:#f6f1e7;--warm:#9d5b35;--green:#426249;--red:#87463f;--blue:#355f70;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:var(--sans)}body{margin:0}.shell{width:min(86rem,calc(100% - 1.2rem));margin:auto}.top{min-height:3rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);font:700 .64rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}.top a{text-decoration:none;color:inherit}.top span{color:var(--muted)}
-.intro{padding:clamp(2rem,6vw,5rem) 0 2rem;max-width:54rem}.intro .kicker{font:700 .66rem/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--warm)}h1{margin:.5rem 0 .7rem;font:700 clamp(3rem,8vw,7rem)/.86 var(--serif);letter-spacing:-.055em}.intro p{font-size:clamp(1rem,2vw,1.35rem);line-height:1.45;margin:.5rem 0}.intro .plain{color:var(--muted);font-size:.9rem}
-.machine{background:var(--machine);color:var(--machineInk);border-radius:.4rem;padding:clamp(1rem,3vw,2rem);box-shadow:0 .6rem 2rem rgba(0,0,0,.13)}.machine-label{font:700 .62rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#c9c3b8}.claim{margin:.7rem 0 1.25rem;font:700 clamp(1.55rem,4vw,3.35rem)/1.02 var(--serif);max-width:28ch}.claim small{display:block;margin-top:.8rem;font:400 .72rem/1.5 var(--mono);color:#c7c1b5;letter-spacing:0}
-.slot{border:1px dashed #7f817e;min-height:8rem;padding:1rem;background:#212323}.slot.empty{display:flex;align-items:center;justify-content:center;color:#aaa49a;font:700 .72rem/1.4 var(--mono);text-transform:uppercase;text-align:center}.inside{display:grid;gap:.6rem}.inside-row{display:grid;grid-template-columns:auto 1fr auto;gap:.8rem;align-items:start;padding:.72rem;border:1px solid #555957;background:#303332}.inside-row .num{font:700 .62rem/1 var(--mono);color:#bdb7ac}.inside-row strong{display:block;font-family:var(--serif);font-size:1.05rem}.inside-row span{display:block;margin-top:.2rem;color:#c8c2b7;font:.65rem/1.4 var(--mono)}.inside-row button{border:0;background:transparent;color:#c8c2b7;cursor:pointer;font:700 .6rem/1 var(--mono);text-transform:uppercase}
-.readout{margin-top:1rem;border-top:1px solid #555957;padding-top:1rem}.readout .status{font:700 .65rem/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:#d9c79b}.readout h2{font:700 clamp(1.35rem,3vw,2.3rem)/1.02 var(--serif);margin:.4rem 0}.readout p{max-width:64rem;line-height:1.52;color:#ddd7cb}.readout .brake{font:.68rem/1.5 var(--mono);color:#bdb7ac}
-.table-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;padding:2rem 0 .8rem}.table-head h2{margin:0;font:700 clamp(2rem,5vw,4rem)/.92 var(--serif);letter-spacing:-.04em}.table-head p{margin:0;color:var(--muted);max-width:34rem;line-height:1.4}.pieces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;padding-bottom:2rem}.piece{border:1px solid var(--line);background:var(--card);padding:1rem;display:flex;flex-direction:column;gap:.75rem;min-height:18rem}.piece.used{opacity:.48}.piece .eyebrow{font:700 .61rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--warm)}.piece h3{margin:0;font:700 1.42rem/1.05 var(--serif)}.piece .front{margin:0;line-height:1.45}.piece .effect{margin-top:auto;padding-top:.7rem;border-top:1px solid var(--line);font:.68rem/1.45 var(--mono);color:var(--muted)}.piece-actions{display:flex;gap:.5rem;flex-wrap:wrap}.piece button{border:1px solid var(--ink);background:transparent;padding:.55rem .65rem;cursor:pointer;font:700 .61rem/1 var(--mono);text-transform:uppercase}.piece button.primary{background:var(--ink);color:var(--card)}.piece button:disabled{opacity:.35;cursor:not-allowed}.back{display:none;border-top:1px solid var(--line);padding-top:.7rem}.back.show{display:block}.back dl{margin:0;display:grid;grid-template-columns:6rem 1fr;gap:.35rem .6rem;font-size:.78rem}.back dt{font:700 .6rem/1.4 var(--mono);text-transform:uppercase;color:var(--muted)}.back dd{margin:0;line-height:1.4;overflow-wrap:anywhere}
-.test{border-top:1px solid var(--line);padding:2rem 0}.test h2{font:700 clamp(1.8rem,4vw,3.2rem)/.95 var(--serif);margin:0 0 .4rem}.test>p{color:var(--muted);max-width:48rem}.tests{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}.test-card{border:1px solid var(--line);padding:1rem;background:var(--card)}.test-card p{line-height:1.4}.test-card button{border:1px solid var(--ink);background:var(--ink);color:var(--card);padding:.55rem .65rem;cursor:pointer;font:700 .61rem/1 var(--mono);text-transform:uppercase}.answer{display:none;margin-top:.65rem;padding:.7rem;border-left:3px solid var(--red);background:#f1e4df}.answer.show{display:block}.answer strong{font:700 .62rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--red)}.answer p{margin:.4rem 0 0}
+:root{--bg:#eee9de;--paper:#f8f4ea;--ink:#26231f;--muted:#756e64;--line:#c4bbad;--machine:#202423;--machineInk:#f7f1e8;--warm:#955b35;--green:#4f6851;--red:#854842;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{background:var(--bg);color:var(--ink);font-family:var(--sans)}body{margin:0}.shell{width:min(88rem,calc(100% - 1rem));margin:auto}.top{min-height:3rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);font:700 .62rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}.top a{text-decoration:none;color:inherit}.top .old{color:var(--muted)}
+.hero{padding:clamp(2rem,6vw,5rem) 0 2rem;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem}.kicker{font:700 .65rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--warm)}h1{font:700 clamp(3.4rem,8vw,7.7rem)/.84 var(--serif);letter-spacing:-.06em;margin:.5rem 0}.hero p{font-size:clamp(1rem,1.8vw,1.28rem);line-height:1.5;margin:.5rem 0}.hero .aside{align-self:end;color:var(--muted);font-size:.92rem}
+.machine{background:var(--machine);color:var(--machineInk);padding:clamp(1rem,3vw,2rem);border-radius:.4rem}.machine-label{font:700 .6rem/1 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:#beb8ad}.question{font:700 clamp(1.7rem,4vw,3.4rem)/1 var(--serif);max-width:27ch;margin:.6rem 0 1.2rem}.slot{border:1px dashed #707572;padding:1rem;min-height:8rem}.slot.empty{display:flex;align-items:center;justify-content:center;text-align:center;color:#aaa49b;font:700 .7rem/1.4 var(--mono);text-transform:uppercase}.inside{display:grid;gap:.6rem}.row{display:grid;grid-template-columns:auto 1fr auto;gap:.7rem;align-items:start;padding:.7rem;border:1px solid #515653;background:#2c302e}.row .n{font:700 .6rem/1 var(--mono);color:#bbb5aa}.row strong{font-family:var(--serif);font-size:1.05rem}.row span{display:block;margin-top:.2rem;color:#c9c3b7;font:.63rem/1.4 var(--mono)}.row button{background:transparent;border:0;color:#c9c3b7;font:700 .58rem/1 var(--mono);text-transform:uppercase;cursor:pointer}
+.readout{border-top:1px solid #4c514e;margin-top:1rem;padding-top:1rem}.readout .state{font:700 .63rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#d8c89b}.readout h2{font:700 clamp(1.4rem,3vw,2.4rem)/1 var(--serif);margin:.4rem 0}.readout p{line-height:1.52;max-width:65rem;color:#ddd7cc}.readout .brake{font:.68rem/1.5 var(--mono);color:#bdb7ac}
+.table-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;padding:2rem 0 .8rem}.table-head h2{font:700 clamp(2.1rem,5vw,4.2rem)/.9 var(--serif);letter-spacing:-.045em;margin:0}.table-head p{margin:0;max-width:34rem;color:var(--muted);line-height:1.4}.pieces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;padding-bottom:2rem}.piece{border:1px solid var(--line);background:var(--paper);padding:1rem;display:flex;flex-direction:column;gap:.7rem;min-height:19rem}.piece.used{opacity:.5}.eyebrow{font:700 .6rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--warm)}.piece h3{font:700 1.5rem/1 var(--serif);margin:0}.piece p{line-height:1.45;margin:0}.piece .effect{margin-top:auto;padding-top:.7rem;border-top:1px solid var(--line);font:.68rem/1.45 var(--mono);color:var(--muted)}.actions{display:flex;gap:.45rem;flex-wrap:wrap}.actions button{border:1px solid var(--ink);background:transparent;padding:.55rem .65rem;cursor:pointer;font:700 .6rem/1 var(--mono);text-transform:uppercase}.actions button.primary{background:var(--ink);color:var(--paper)}.actions button:disabled{opacity:.35;cursor:not-allowed}.back{display:none;border-top:1px solid var(--line);padding-top:.7rem}.back.show{display:block}.back dl{display:grid;grid-template-columns:5.8rem 1fr;gap:.3rem .6rem;margin:0;font-size:.78rem}.back dt{font:700 .58rem/1.4 var(--mono);text-transform:uppercase;color:var(--muted)}.back dd{margin:0;line-height:1.4;overflow-wrap:anywhere}
+.joins{border-top:1px solid var(--line);padding:2rem 0}.joins h2{font:700 clamp(1.9rem,4vw,3.2rem)/.95 var(--serif);margin:0}.joins>p{color:var(--muted);max-width:50rem}.join-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}.join{border:1px solid var(--line);background:var(--paper);padding:1rem}.join strong{font-family:var(--serif);font-size:1.15rem}.join span{display:block;margin-top:.4rem;font:.65rem/1.45 var(--mono);color:var(--muted)}
 footer{border-top:1px solid var(--line);padding:1rem 0 2rem;display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font:700 .6rem/1.4 var(--mono);text-transform:uppercase}
-@media(max-width:62rem){.pieces{grid-template-columns:repeat(2,minmax(0,1fr))}.tests{grid-template-columns:1fr}}
-@media(max-width:38rem){.shell{width:calc(100% - .7rem)}.pieces{grid-template-columns:1fr}.table-head{display:block}.table-head p{margin-top:.6rem}.inside-row{grid-template-columns:auto 1fr}.inside-row button{grid-column:2;justify-self:start}footer{flex-direction:column}}
+@media(max-width:64rem){.hero{grid-template-columns:1fr}.pieces,.join-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:40rem){.pieces,.join-grid{grid-template-columns:1fr}.table-head{display:block}.table-head p{margin-top:.6rem}.row{grid-template-columns:auto 1fr}.row button{grid-column:2;justify-self:start}footer{flex-direction:column}}
 </style>
 </head>
 <body>
 <div class="shell">
-<header class="top"><a href="/">Earthly Hands Workshop</a><span><a href="../catharine-mckinney/" style="margin-right:1rem">Go Catherine →</a>Quire · put the pieces in · v4</span></header>
+<header class="top"><a href="/">Earthly Hands Workshop</a><a class="old" href="./article14.html">earlier Article XIV road</a></header>
 
-<section class="intro">
-  <span class="kicker">MCR 879 · one working table</span>
-  <h1>Put the pieces in.</h1>
-  <p>You do not have to learn this machine. Pick a record below. Put it in. Watch what changes.</p>
-  <p class="plain">The machine does not score the family, decide historical identity, or turn an administrative finding into truth. It only tells you what the pieces presently let the Workshop say.</p>
+<section class="hero">
+  <div><span class="kicker">Quire · Catherine road</span><h1>Go sideways.</h1></div>
+  <div class="aside"><p>We already know where the Commission’s Article XIV hallway goes. This table begins somewhere else: a McKinney family occurrence, a treaty-land record, and a separate Article XIX patent path.</p><p><strong>Catherine</strong> and <strong>Catharine</strong> remain distinct source forms until the record earns the join.</p></div>
 </section>
 
-<section class="machine" aria-labelledby="claim-title">
-  <div class="machine-label">Working claim — a question, not a finding</div>
-  <div class="claim" id="claim-title">Could the family’s Article XIV claim survive the Commission’s later two-Robert framing?
-    <small>This deliberately separates the family’s filed Article XIV claim from the Commission’s later choice to test it against a particular record-side Robert.</small>
-  </div>
-  <div class="slot empty" id="slot">PUT A PIECE IN</div>
+<section class="machine">
+  <div class="machine-label">Working question — not a finding</div>
+  <div class="question">Can the family’s Catherine McKinney be carried into the Article XIX land record without forcing the joins?</div>
+  <div class="slot empty" id="slot">PUT A CATHERINE PIECE IN</div>
   <div class="readout" aria-live="polite">
-    <div class="status" id="status">Nothing tested yet</div>
-    <h2 id="readout-title">The machine is waiting.</h2>
-    <p id="readout-text">Choose any box below. There is no correct order.</p>
-    <p class="brake" id="readout-brake">A piece can support one part of the working claim while complicating another. No piece silently performs an identity join.</p>
+    <div class="state" id="state">Nothing tested yet</div>
+    <h2 id="readout-title">Start anywhere.</h2>
+    <p id="readout-text">Put one box in. The machine will tell you what that box adds to the road.</p>
+    <p class="brake" id="readout-brake">A compatible piece is not automatically the same person. An open join is a real result.</p>
   </div>
 </section>
 
 <section>
-  <div class="table-head"><h2>Pieces on the table</h2><p>Front = plain consequence. Turn a box over only when you want speaker, object, date, documentary state, verb, and exact source return.</p></div>
+  <div class="table-head"><h2>Pieces on the table</h2><p>These boxes do different jobs. Family testimony, farm return, treaty class, sale, approval, and patent are not interchangeable evidence.</p></div>
   <div class="pieces" id="pieces"></div>
 </section>
 
-<section class="test">
-  <h2>Push the claim too far.</h2>
-  <p>These are stronger statements the current body has to refuse or hold open. Testing one does not change the source.</p>
-  <div class="tests" id="tests"></div>
+<section class="joins">
+  <h2>The three joins we are not allowed to fake.</h2>
+  <p>If these close, the Catherine road gets much stronger. Until then, the machine keeps them visibly open.</p>
+  <div class="join-grid">
+    <div class="join"><strong>Catherine ↔ Catharine</strong><span>Sarah Carroll’s family testimony ↔ 1831 Public Lands occurrence. SAME NAME FAMILY ≠ SAME PERSON YET.</span></div>
+    <div class="join"><strong>1831 row ↔ patent beneficiary</strong><span>40 cultivated acres / three-quarter class ↔ separate three-quarter-section patent path. COMPATIBLE STRUCTURE ≠ IDENTITY.</span></div>
+    <div class="join"><strong>Article XIX road ↔ MCR 879 treatment</strong><span>Existence of the land body does not prove the 1902 Commission or Indian Office searched, weighed, or rejected it.</span></div>
+  </div>
 </section>
 
 <footer><span>Source authority remains senior to this derivative instrument.</span><span>Powerful finger. Trustworthy result.</span></footer>
 </div>
 
 <script>
-(async()=>{
- const res=await fetch('./data/mcr879-robert-article14.json',{cache:'no-store'});
- const data=await res.json();
- const q=s=>document.querySelector(s);
- const effects={
-   oral:{
-     label:'FAMILY VOICE ENTERS',
-     title:'This helps separate the family from the later government frame.',
-     text:'The oral record does not give us a uniform family statement identifying their Robert with a particular Article XIV Robert in a government comparator record. That matters: the later two-Robert test cannot be donated backward and called the family’s original wording.',
-     brake:'What it does NOT do: erase the written Article XIV pleadings, prove the family had no treaty claim, or prove which Robert was historically which.'
-   },
-   pleadings:{
-     label:'ARTICLE XIV CLAIM IS IN THE FILE',
-     title:'The family-side filed body really does carry Article XIV allegations.',
-     text:'This piece keeps the Article XIV claim alive at the pleading layer. It shows that the later Commission did not invent Article XIV out of nothing. But the pleading is not the same thing as the later proposition that the family’s Robert must be identical to one particular record-side Robert.',
-     brake:'What remains open: who originated the recurring legal formulation—applicant, counsel, form, or another filing practice—and how each packet’s exact wording was produced.'
-   },
-   p53:{
-     label:'THE CLAIM IS REFRAMED AT GROUP SCALE',
-     title:'Here the Commission begins speaking for the consolidated body.',
-     text:'The Commission says “they claim” Robert took advantage of Article XIV. That is an administrative characterization of a compound record. It is evidence of how the Commission framed the case, not a verbatim replacement for sixteen applicants and their witnesses.',
-     brake:'Commission “they claim” ≠ family oral wording ≠ proof that the family originated every term of the Commission’s frame.'
-   },
-   p55p56:{
-     label:'THE TWO-ROBERT MACHINE APPEARS',
-     title:'This is the hinge.',
-     text:'The Commission brings forward a positive Article XIV Robert Bell record and makes the adverse result turn on NOT IDENTICAL. The dispute has now become claimant-line Robert versus record-side Article XIV Robert inside the Commission’s reasoning.',
-     brake:'Administrative NOT IDENTICAL ≠ historical nonidentity. The comparator can be tested; it cannot be treated as self-proving.'
-   },
-   oia:{
-     label:'THE GOVERNMENT ADDS MORE RECORDS',
-     title:'The later review strengthens the administrative comparator without making it family speech.',
-     text:'Indian Affairs adds its own patent record and map material and restates a two-Robert analysis. This makes the administrative case more heavily carried, but also gives the Workshop more concrete record objects whose genealogy, completeness, and use can be tested.',
-     brake:'More federal carriers ≠ exhaustive record population ≠ historical identity proof.'
-   },
-   interior:{
-     label:'THE FRAME BECOMES OPERATIVE',
-     title:'Interior affirms the exclusion.',
-     text:'By this point the two-Robert framing has administrative force: Interior approves and affirms. That tells us what happened to the claim in 1902. It does not answer whether the underlying family claim, the comparator population, or the historical identity question was correct.',
-     brake:'Administrative finality in this 1902 sequence ≠ present-day historical truth or a present legal adjudication.'
-   }
- };
- const chosen=[];
- const pieces=q('#pieces'), slot=q('#slot');
- function esc(x){return String(x).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
- function renderSlot(){
-   if(!chosen.length){slot.className='slot empty';slot.textContent='PUT A PIECE IN';return;}
-   slot.className='slot';
-   const wrap=document.createElement('div');wrap.className='inside';
-   chosen.forEach((id,n)=>{
-     const c=data.carriers.find(x=>x.id===id), e=effects[id];
-     const row=document.createElement('div');row.className='inside-row';
-     row.innerHTML='<div class="num">'+String(n+1).padStart(2,'0')+'</div><div><strong>'+esc(e.label)+'</strong><span>'+esc(c.actor)+' · '+esc(c.date)+'</span></div>';
-     const rm=document.createElement('button');rm.type='button';rm.textContent='take out';rm.onclick=()=>{chosen.splice(chosen.indexOf(id),1);renderSlot();updateButtons();readoutAfterRemoval();};
-     row.appendChild(rm);wrap.appendChild(row);
-   });
-   slot.innerHTML='';slot.appendChild(wrap);
- }
- function readout(id){
-   const e=effects[id];
-   q('#status').textContent=e.label;
-   q('#readout-title').textContent=e.title;
-   q('#readout-text').textContent=e.text;
-   q('#readout-brake').textContent=e.brake;
- }
- function readoutAfterRemoval(){
-   if(!chosen.length){q('#status').textContent='Nothing tested yet';q('#readout-title').textContent='The machine is waiting.';q('#readout-text').textContent='Choose any box below. There is no correct order.';q('#readout-brake').textContent='A piece can support one part of the working claim while complicating another. No piece silently performs an identity join.';return;}
-   readout(chosen[chosen.length-1]);
- }
- function updateButtons(){
-   document.querySelectorAll('[data-put]').forEach(b=>{b.disabled=chosen.includes(b.dataset.put);b.textContent=b.disabled?'IN THE MACHINE':'PUT THIS IN';});
-   document.querySelectorAll('.piece').forEach(p=>p.classList.toggle('used',chosen.includes(p.dataset.id)));
- }
- data.carriers.forEach((c,n)=>{
-   const e=effects[c.id]||{label:c.state,title:c.actor,text:c.claim,brake:c.change};
-   const card=document.createElement('article');card.className='piece';card.dataset.id=c.id;
-   card.innerHTML='<div class="eyebrow">PIECE '+String(n+1).padStart(2,'0')+' · '+esc(c.date)+'</div><h3>'+esc(e.label)+'</h3><p class="front">'+esc(e.text)+'</p><div class="effect">'+esc(e.brake)+'</div><div class="piece-actions"></div><div class="back"><dl><dt>speaker</dt><dd>'+esc(c.actor)+'</dd><dt>object</dt><dd>'+esc(c.object)+'</dd><dt>state</dt><dd>'+esc(c.state)+'</dd><dt>verb</dt><dd>'+esc(c.verb)+'</dd><dt>source</dt><dd>'+esc(c.source)+'</dd></dl></div>';
-   const acts=card.querySelector('.piece-actions');
-   const put=document.createElement('button');put.className='primary';put.type='button';put.dataset.put=c.id;put.textContent='PUT THIS IN';put.onclick=()=>{if(!chosen.includes(c.id))chosen.push(c.id);renderSlot();updateButtons();readout(c.id);q('.machine').scrollIntoView({behavior:'smooth',block:'start'});};
-   const turn=document.createElement('button');turn.type='button';turn.textContent='TURN IT OVER';turn.onclick=()=>{const back=card.querySelector('.back');back.classList.toggle('show');turn.textContent=back.classList.contains('show')?'HIDE BACK':'TURN IT OVER';};
-   acts.append(put,turn);pieces.appendChild(card);
- });
- const tests=q('#tests');
- data.refusals.forEach(r=>{
-   const card=document.createElement('div');card.className='test-card';
-   const p=document.createElement('p');p.textContent=r.proposal;
-   const b=document.createElement('button');b.type='button';b.textContent='PUT PRESSURE HERE';
-   const ans=document.createElement('div');ans.className='answer';ans.innerHTML='<strong>'+esc(r.result)+'</strong><p>'+esc(r.reason)+'</p>';
-   b.onclick=()=>ans.classList.toggle('show');
-   card.append(p,b,ans);tests.appendChild(card);
- });
- renderSlot();updateButtons();
-})().catch(err=>{
- document.querySelector('#readout-title').textContent='The record body could not be loaded.';
- document.querySelector('#readout-text').textContent='Nothing has been inferred from the failed load.';
- console.error(err);
-});
+(()=>{
+const piecesData=[
+ {id:'family',date:'29 Apr 1901',title:'Family says Catherine McKinney',text:'Sarah Carroll names “Catherine McKinney” as “My father’s grand-mother…” and then names her father Robert Bell.',effect:'This gives Catherine a direct family-side occurrence inside the MCR 879 testimony body.',brake:'It does not identify this Catherine with the Public Lands or patent-path Catharine.',meta:{speaker:'Sarah Carroll',object:'recalled oral examination',state:'family testimony',verb:'names / relates',source:'Sarah Carroll packet page 4 · April 29, 1901 examination · Grainline/Margin controlled return'}},
+ {id:'farm',date:'1831',title:'Catharine McKinney has a farm-return row',text:'Public Lands No. 3 carries Catharine McKinney with 40 cultivated acres, family count 6, a Yazoo Valley locality chain, and 480 total acres.',effect:'This places a Catharine McKinney occurrence inside treaty-land administration before the later patent path.',brake:'Farm return ≠ final patent; source spelling Catharine remains literal.',meta:{speaker:'administrative return',object:'Public Lands No. 3 / OHC_2480',state:'farm / cultivation return',verb:'records',source:'OHC_2480 · Public Lands Catharine / Edmond face family'}},
+ {id:'class',date:'1830 treaty / 1831 row',title:'40 acres fits Article XIX’s three-quarter class',text:'Article XIX’s second cultivation class covers heads of families with 30 and less than 50 cultivated acres and provides three quarter sections. The Catharine row carries 40 cultivated acres and 480 total acres.',effect:'The row numerically fits the treaty’s three-quarter entitlement class.',brake:'Treaty-class compatibility ≠ proof of later location, sale, or patent identity.',meta:{speaker:'Treaty text + administrative row',object:'Article XIX class compared with OHC_2480',state:'legal-class compatibility',verb:'fits / corresponds',source:'Treaty of Dancing Rabbit Creek Article XIX + OHC_2480'}},
+ {id:'patent',date:'20 Jun 1850',title:'A separate Catharine patent path also says three quarters',text:'The patent face states Article XIX entitlement to three quarters of a section: S 1/2 + NW 1/4 of Sec. 11, T17N, R1E, Choctaw Meridian, surveyed at 515.88 acres.',effect:'The legal unit—three quarters—matches the earlier row’s treaty-class structure even though the acreage value differs.',brake:'480 ≠ 515.88 does not prove same or different person; entitlement structure ≠ identity bridge.',meta:{speaker:'United States patent',object:'Catharine McKinney Article XIX patent face',state:'later patent representation',verb:'recites / grants',source:'held high-resolution Catharine McKinney patent face'}},
+ {id:'sale',date:'12 Apr 1833',title:'The patent recites a sale to Linsey C. Hall',text:'The patent says Catharine McKinney sold the reserved land to Linsey C. Hall by deed dated April 12, 1833, and that the deed was deposited in the General Land Office.',effect:'This introduces a private-conveyance state inside the patent-path body.',brake:'Patent recital ≠ recovered deed. We do not yet substitute the patent for the underlying sale instrument.',meta:{speaker:'patent recital',object:'later patent face describing earlier deed',state:'sale represented later',verb:'recites sale / deposit',source:'Catharine McKinney Article XIX patent face'}},
+ {id:'approval',date:'15–20 Jun 1850',title:'Presidential approval precedes the patent grant',text:'The patent recites presidential approval of the deed on June 15, 1850, followed by the June 20, 1850 grant to Hall.',effect:'This makes sale approval and patent issuance distinct administrative states rather than one event.',brake:'Approval recital ≠ recovered approval document; patent to purchaser ≠ proof of the entire intervening file.',meta:{speaker:'patent recital / United States',object:'approval and patent sequence',state:'approval → grant',verb:'approves / grants',source:'Catharine McKinney Article XIX patent face'}},
+ {id:'archive',date:'1831–1889 archival series',title:'Reserve File C is the missing case road',text:'RG 75 preserves a distinct Article XIX “Reserve File C” system with a register and individual reserve papers concerning claims, disposal, inheritance, maps, plats, legal documents, and correspondence.',effect:'This gives us an exact archival door that could bridge early cultivation, location, sale, approval, and patent states.',brake:'Archive series exists ≠ Catharine case recovered ≠ 1902 Commission searched it.',meta:{speaker:'National Archives / PI 163',object:'Reserve File C index, register, case files',state:'modern archival route',verb:'indexes / preserves',source:'RG 75 · PI 163 entries 522, 526, 527'}},
+ {id:'mcr',date:'1902',title:'MCR 879 does not name this Article XIX road',text:'The controlled May 1902 Indian Office report names Article XIV records, a Robert Bell patent record, and an Office-held Mississippi map in its Robert comparison. Reserve File C / Article XIX is not named on that report face.',effect:'This creates a precise omission question without converting silence into proof that Article XIX was never consulted.',brake:'Report silence ≠ exhaustive negative search; existence of Catherine evidence ≠ proof the 1902 agency had or weighed it.',meta:{speaker:'Office of Indian Affairs',object:'13 May 1902 MCR 879 review report',state:'stated review body',verb:'uses / cites / omits',source:'OHC_2046–2053 governing Office report jacket'}}
+];
+const effects={
+ family:['FAMILY ANCHOR ENTERS','Now Catherine is not merely a land-record name. She is directly named in family testimony.','The family occurrence is real; the cross-body identity remains open.'],
+ farm:['EARLY LAND OCCURRENCE ENTERS','Now there is an 1831 Catharine McKinney inside treaty-land administration.','Do not silently normalize Catherine/Catharine or jump from farm return to patent.'],
+ class:['ARTICLE XIX CLASS FITS','The 40-acre row fits the treaty’s three-quarter cultivation class.','A legal fit is stronger than name similarity, but it is still not a person-identity bridge.'],
+ patent:['THREE-QUARTER STRUCTURE REPEATS','The later patent path carries the same three-quarter legal structure in a separately controlled occurrence.','Shared entitlement structure creates pressure toward comparison, not permission to merge.'],
+ sale:['A CONVEYANCE STATE APPEARS','The patent-path body carries an 1833 sale to Hall.','We still need the underlying deed or another direct carrier before treating the recital as the deed itself.'],
+ approval:['THE SALE BECOMES FEDERALLY OPERATIVE','The patent path distinguishes sale, presidential approval, and later grant.','Later federal approval does not tell us why the original reservee sold, nor does it bridge to the family occurrence.'],
+ archive:['A REAL BRIDGE-SEARCH DOOR OPENS','Reserve File C may contain the case machinery capable of connecting the early and later Article XIX states.','This is a retrieval road, not proof that the missing bridge exists.'],
+ mcr:['THE 1902 SEARCH QUESTION CHANGES','Instead of asking only whether the Commission found the “right Robert,” we can ask whether the McKinney Article XIX body entered the review at all.','No named Article XIX citation on this report face is a bounded observation, not proof of historical nonconsultation.']
+};
+const chosen=[];
+const q=s=>document.querySelector(s), slot=q('#slot'), container=q('#pieces');
+const esc=x=>String(x).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function renderSlot(){if(!chosen.length){slot.className='slot empty';slot.textContent='PUT A CATHERINE PIECE IN';return;}slot.className='slot';const w=document.createElement('div');w.className='inside';chosen.forEach((id,n)=>{const p=piecesData.find(x=>x.id===id),e=effects[id];const row=document.createElement('div');row.className='row';row.innerHTML='<div class="n">'+String(n+1).padStart(2,'0')+'</div><div><strong>'+esc(e[0])+'</strong><span>'+esc(p.title)+' · '+esc(p.date)+'</span></div>';const b=document.createElement('button');b.type='button';b.textContent='take out';b.onclick=()=>{chosen.splice(chosen.indexOf(id),1);renderSlot();buttons();afterRemove();};row.appendChild(b);w.appendChild(row)});slot.innerHTML='';slot.appendChild(w)}
+function show(id){const e=effects[id];q('#state').textContent=e[0];q('#readout-title').textContent=e[1];q('#readout-text').textContent=piecesData.find(x=>x.id===id).effect;q('#readout-brake').textContent=e[2]}
+function afterRemove(){if(!chosen.length){q('#state').textContent='Nothing tested yet';q('#readout-title').textContent='Start anywhere.';q('#readout-text').textContent='Put one box in. The machine will tell you what that box adds to the road.';q('#readout-brake').textContent='A compatible piece is not automatically the same person. An open join is a real result.';return}show(chosen[chosen.length-1])}
+function buttons(){document.querySelectorAll('[data-put]').forEach(b=>{b.disabled=chosen.includes(b.dataset.put);b.textContent=b.disabled?'IN THE MACHINE':'PUT THIS IN'});document.querySelectorAll('.piece').forEach(p=>p.classList.toggle('used',chosen.includes(p.dataset.id)))}
+piecesData.forEach((p,n)=>{const c=document.createElement('article');c.className='piece';c.dataset.id=p.id;c.innerHTML='<div class="eyebrow">PIECE '+String(n+1).padStart(2,'0')+' · '+esc(p.date)+'</div><h3>'+esc(p.title)+'</h3><p>'+esc(p.text)+'</p><div class="effect">'+esc(p.brake)+'</div><div class="actions"></div><div class="back"><dl><dt>maker</dt><dd>'+esc(p.meta.speaker)+'</dd><dt>object</dt><dd>'+esc(p.meta.object)+'</dd><dt>state</dt><dd>'+esc(p.meta.state)+'</dd><dt>verb</dt><dd>'+esc(p.meta.verb)+'</dd><dt>return</dt><dd>'+esc(p.meta.source)+'</dd></dl></div>';const a=c.querySelector('.actions');const put=document.createElement('button');put.className='primary';put.type='button';put.dataset.put=p.id;put.textContent='PUT THIS IN';put.onclick=()=>{if(!chosen.includes(p.id))chosen.push(p.id);renderSlot();buttons();show(p.id);q('.machine').scrollIntoView({behavior:'smooth',block:'start'})};const turn=document.createElement('button');turn.type='button';turn.textContent='TURN IT OVER';turn.onclick=()=>{const back=c.querySelector('.back');back.classList.toggle('show');turn.textContent=back.classList.contains('show')?'HIDE BACK':'TURN IT OVER'};a.append(put,turn);container.appendChild(c)});
+renderSlot();buttons();
+})();
 </script>
 </body>
 </html>
