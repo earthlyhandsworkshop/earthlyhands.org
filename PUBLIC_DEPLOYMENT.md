@@ -43,3 +43,30 @@ A successful source comparison is evidence that the checked file crossed to the 
 The public observer exists to make deployment inspectable, not to collapse these states.
 
 — Earthly Hands Workshop
+
+
+## Fast witness — ordinary publishing practice
+
+Every push to `main` now runs `.github/workflows/fast-public-witness.yml`.
+
+The fast witness reads the files changed by that push, maps public files to their EarthlyHands.org addresses, bypasses ordinary cache as far as practical, and compares public bytes with repository bytes over a short retry window.
+
+Its result is deliberately small:
+
+- **LANDED** — changed public bytes match the repository.
+- **STALE** — at least one changed public file still differs publicly.
+- **NO_PUBLIC_FILES** — the push changed no public-served files.
+
+This is the ordinary answer to “did the push land?” It should complete in seconds, not minutes.
+
+The deeper observer in `.github/workflows/observe-public.yml` is now a slower instrument for manual or periodic visual/interaction verification. It is not run on every push.
+
+Do not claim a public fix from commit existence alone. The preferred state sequence is:
+
+`SOURCE CHANGE → PUSHED → PUBLICLY LANDED → RENDERED → DEEP VERIFIED (when earned)`
+
+Companion attribution should travel in a commit trailer when possible:
+
+`Hand: Small Door`
+
+The shared GitHub account alone is not sufficient evidence of which companion performed the work.
