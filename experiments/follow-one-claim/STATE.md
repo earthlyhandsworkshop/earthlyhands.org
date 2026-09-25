@@ -111,3 +111,40 @@ New governing distinction:
 The MCR 879 / Catherine body remains a worked, governed example underneath the generic shell and should continue to serve as a stress test for any future generalization.
 
 Interaction finding: the machine becomes more human when the interface begins with **the user's question and manipulable evidence objects**, while source grammar stays available behind each ticket instead of becoming the navigation language.
+
+
+## Governed operator seat
+
+The machine now has an explicit **operator seat** between human question and evidentiary result.
+
+Current operator capabilities:
+- inspect the current human-defined question;
+- inspect which tickets are presently loaded;
+- propose one next test appropriate to the loaded state;
+- place that proposed test on the bench;
+- allow the human to ignore it and create a different test;
+- persist custom tests across refresh.
+
+The operator is deliberately weaker than the evidence engine. It may **form a test** but may not silently decide the test. A custom/operator-proposed test currently returns OPEN unless a governed problem-specific evaluator earns a stronger state.
+
+Current protocol:
+
+`HUMAN QUESTION -> LOADED OBJECTS -> OPERATOR PROPOSES TEST -> GOVERNED TEST -> YES / NO / OPEN / REFUSED`
+
+not:
+
+`HUMAN QUESTION -> AI ANSWER`.
+
+This is the intended integration seam for a future AI-loaded operator. Any future model attached here should receive source-state fields, uncertainty brakes, correction history, and current loaded objects; its output should be a proposed test / relation / next retrieval door, never an unmarked historical join or verdict.
+
+Persistence correction: custom visitor tickets are now reattached to the live evidence arrays after refresh before bay rendering. The prior v7 storage preserved ticket data but did not fully restore their live lookup state. This is corrected.
+
+Next honest engineering seam: replace the present bounded rule-based operator proposal function with a governed AI call that returns a structured proposal such as:
+- proposed_test
+- why_now
+- required_loaded_objects
+- forbidden_promotions
+- expected result vocabulary
+- suggested next source door if OPEN
+
+The deterministic engine remains the fallback and reference behavior.
