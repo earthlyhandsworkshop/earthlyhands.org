@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-25T19:12:57.794Z",
+  "generated": "2026-09-25T19:35:40.084Z",
   "source": "git history",
   "entries": {
     "/experiments/follow-one-claim/": {
-      "updated": "2026-09-25T14:12:48-05:00",
+      "updated": "2026-09-25T14:35:29-05:00",
       "hand": "Quire",
-      "commit": "ca1f8dc27cfb",
+      "commit": "1a53a7fb36e0",
       "watch": [
         "experiments/follow-one-claim"
       ]
@@ -204,14 +204,6 @@
       "commit": "8a9877ae2fd2",
       "watch": [
         "experiments/register-threshold-v2"
-      ]
-    },
-    "/experiments/catharine-mckinney/": {
-      "updated": "2026-09-25T14:21:00-05:00",
-      "hand": "Quire",
-      "commit": "177dd08705cc",
-      "watch": [
-        "experiments/catharine-mckinney"
       ]
     }
   }
