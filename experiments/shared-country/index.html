@@ -42,9 +42,9 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="../../style.css?v=shared-country-prose-map-v1" />
+    <link rel="stylesheet" href="../../style.css?v=shared-country-discovery-v2" />
   </head>
-  <body data-lamp="lit" data-ground="night">
+  <body data-lamp="lit" data-ground="night" data-discovery="closed">
     <a class="skip-link" href="#threshold">Skip to the Dawson trail</a>
 
     <header class="site-header">
@@ -61,8 +61,8 @@
         <div class="experience-shell" id="experience-shell">
           <div class="experience-viewbar" aria-label="Shared Country views">
             <button type="button" class="view-mode is-current" data-dawson-view="ground" aria-pressed="true">Ground</button>
-            <button type="button" class="view-mode" data-dawson-view="map" aria-pressed="false">Map</button>
-            <button type="button" class="view-mode" data-dawson-view="people" aria-pressed="false">People</button>
+            <button type="button" class="view-mode" data-dawson-view="map" aria-pressed="false" hidden>Map</button>
+            <button type="button" class="view-mode" data-dawson-view="people" aria-pressed="false" hidden>People</button>
           </div>
 
           <div class="experience-stage" id="experience-stage" data-direction="forward">
@@ -109,7 +109,7 @@
             <div class="experience-utility">
               <form class="ground-talk" id="talk-form" aria-label="Ask the ground">
                 <label class="sr-only" for="talk-input">Ask the ground</label>
-                <textarea id="talk-input" name="message" rows="1" maxlength="1000" autocomplete="off" enterkeyhint="send" placeholder="Ask the ground — where next, who have I met, show me the map…"></textarea>
+                <textarea id="talk-input" name="message" rows="1" maxlength="1000" autocomplete="off" enterkeyhint="send" placeholder="Ask the ground"></textarea>
                 <button class="sr-only" id="talk-send" type="submit">Go</button>
               </form>
               <div class="ground-thread" id="ground-thread" aria-live="polite"></div>
@@ -120,7 +120,7 @@
       </section>
 
       <section class="passage report-passage" id="report" data-scene data-step data-place="By lantern light" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">by lantern light</span></div>
+        <div class="scene-setting"><span class="scene-source">held account</span><span class="scene-place">by lantern light</span></div>
         <h2>The light catches a report.</h2>
         <div class="plain-copy report-story">
           <p class="story-lead">
@@ -135,13 +135,13 @@
       </section>
 
                   <section class="passage trail-passage" id="night" data-scene data-step data-place="Night camp" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">night camp</span></div>
+        <div class="scene-setting"><span class="scene-source">held account</span><span class="scene-place">night camp</span></div>
         <h2>Two men are sent back toward the ford.</h2>
         <div class="first-person-view" aria-label="First-person view from night camp">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
             <p><span class="lived-line">You are awake inside the guarded camp. The dark beyond it is not filled in for you.</span></p>
-            <p>Dawson says a small guard was posted around the camp after the alarm.</p>
+            <p>The account says a small guard was posted around the camp after the alarm.</p>
             <p>Two unnamed men were sent back to watch the ford of the river on the back trail.</p>
             <p>The report does not say that they reached the ford, and it gives no account of their return.</p>
           </div>
@@ -154,12 +154,12 @@
       </section>
 
                   <section class="passage trail-passage" id="morning" data-scene data-step data-place="Morning camp" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">morning camp</span></div>
+        <div class="scene-setting"><span class="scene-source">held account</span><span class="scene-place">morning camp</span></div>
         <h2>Morning finds the party unattacked.</h2>
         <div class="first-person-view" aria-label="First-person view from morning camp">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
-            <p><span class="lived-line">You are standing in the camp at first light. Nothing in Dawson’s account says the camp was attacked.</span></p>
+            <p><span class="lived-line">You are standing in the camp at first light. Nothing in the account says the camp was attacked.</span></p>
             <p>The night has passed. The small guard is no longer the thing the report is watching.</p>
             <p>The two men, the ford, and the back trail remain outside the account that follows.</p>
             <p>Dawson turns southeast from here. The source moves on without bringing those men back into view.</p>
@@ -173,13 +173,13 @@
       </section>
 
                   <section class="passage trail-passage" id="southeast" data-scene data-step data-place="Southeast reach" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">southeast</span></div>
+        <div class="scene-setting"><span class="scene-source">held account</span><span class="scene-place">southeast</span></div>
         <h2>They continue southeast about fifteen miles.</h2>
         <div class="first-person-view" aria-label="First-person view from southeast reach">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
-            <p><span class="lived-line">You are moving with Dawson’s account toward the next camp. The traveled line itself is not preserved.</span></p>
-            <p>Dawson carries the party <button class="inline-depth" type="button" data-depth="distance" aria-expanded="false">southeast about fifteen miles</button>.</p>
+            <p><span class="lived-line">You are moving with the account toward the next camp. The traveled line itself is not preserved.</span></p>
+            <p>The account carries the party <button class="inline-depth" type="button" data-depth="distance" aria-expanded="false">southeast about fifteen miles</button>.</p>
             <p>That gives direction and approximate distance, but not a road, bearing, or reconstructed path.</p>
             <p>At the end of this source-stated leg, the party encamps on <button class="inline-depth" type="button" data-depth="creek" aria-expanded="false">a small branch of Blue Water</button>.</p>
           </div>
@@ -192,13 +192,13 @@
       </section>
 
                   <section class="passage trail-passage" id="blue-water" data-scene data-step data-place="Blue Water" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">Blue Water</span></div>
+        <div class="scene-setting"><span class="scene-source">held account</span><span class="scene-place">Blue Water</span></div>
         <h2>On this creek, they find Mayes and Criner.</h2>
         <div class="first-person-view" aria-label="First-person view from Blue Water">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
             <p><span class="lived-line">You are at the creek with Mayes and Criner in view. The exact point on the creek is not given.</span></p>
-            <p>Dawson says the party found <button class="inline-depth" type="button" data-depth="mayes" aria-expanded="false">Mr. Mayes</button> and <button class="inline-depth" type="button" data-depth="criner" aria-expanded="false">Mr. Criner</button> here.</p>
+            <p>The account says the party found <button class="inline-depth" type="button" data-depth="mayes" aria-expanded="false">Mr. Mayes</button> and <button class="inline-depth" type="button" data-depth="criner" aria-expanded="false">Mr. Criner</button> here.</p>
             <p>He says the two men <button class="inline-depth" type="button" data-depth="residence" aria-expanded="false">resided on James’ Fork of Poteau</button>; that residence is not made into this encounter place.</p>
             <p>Here, on this creek, they were <button class="inline-depth" type="button" data-depth="trapping" aria-expanded="false">trapping for beaver</button>.</p>
           </div>
@@ -211,13 +211,13 @@
       </section>
 
                   <section class="passage trail-passage" id="dozen" data-scene data-step data-place="Blue Water" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">Blue Water</span></div>
+        <div class="scene-setting"><span class="scene-source">held account</span><span class="scene-place">Blue Water</span></div>
         <h2>They had caught but a dozen.</h2>
         <div class="first-person-view" aria-label="First-person view from Blue Water">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
             <p><span class="lived-line">You are still beside the same creek with Mayes and Criner. The account has not moved to their residence.</span></p>
-            <p>Dawson says they had caught but a dozen beaver.</p>
+            <p>The account says they had caught but a dozen beaver.</p>
             <p>He does not divide the catch between the two men or give a separate place for it.</p>
             <p>The weather, he says, was too cold to promise much further success.</p>
           </div>
@@ -230,13 +230,13 @@
       </section>
 
                   <section class="passage trail-passage" id="guide" data-scene data-step data-place="Blue Water" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">Blue Water</span></div>
+        <div class="scene-setting"><span class="scene-source">held account</span><span class="scene-place">Blue Water</span></div>
         <h2>Mayes is employed as a guide.</h2>
         <div class="first-person-view" aria-label="First-person view from Blue Water">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
             <p><span class="lived-line">You are still at Blue Water. The story changes role before it changes ground.</span></p>
-            <p>Dawson says Cols. Gaines and Reynolds induced Mayes and Criner to accompany the delegation as far as Kiamiche.</p>
+            <p>The account says Cols. Gaines and Reynolds induced Mayes and Criner to accompany the delegation as far as Kiamiche.</p>
             <p>He says Mr. Mayes was employed as a guide.</p>
             <p>The source does not make Criner a guide, give the terms of Mayes's employment, or prove arrival at Kiamiche in this sentence.</p>
           </div>
@@ -249,13 +249,13 @@
       </section>
 
                   <section class="passage trail-passage" id="blue-water-mouth" data-scene data-step data-place="Near the mouth of Blue Water" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">near the mouth of Blue Water</span></div>
+        <div class="scene-setting"><span class="scene-source">held account</span><span class="scene-place">near the mouth of Blue Water</span></div>
         <h2>The report shifts from encounter to prospect.</h2>
         <div class="first-person-view" aria-label="First-person view near the mouth of Blue Water">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
             <p><span class="lived-line">You are carried to a relative position near the mouth of Blue Water. No exact point is supplied.</span></p>
-            <p>Dawson says the party was within a short distance of the mouth of Blue Water.</p>
+            <p>The account says the party was within a short distance of the mouth of Blue Water.</p>
             <p>He says he wanted to see the mouths of Blue Water and the Washita to report on their local advantages for a possible garrison.</p>
             <p>Intent to inspect is not proof that either mouth was reached, surveyed, selected, or built upon.</p>
           </div>
@@ -268,15 +268,15 @@
       </section>
 
                   <section class="passage trail-passage" id="east-blue-water" data-scene data-step data-place="East of Blue Water" tabindex="-1">
-        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">east of Blue Water</span></div>
-        <h2>Dawson turns from place to forecast.</h2>
+        <div class="scene-setting"><span class="scene-source">held account</span><span class="scene-place">east of Blue Water</span></div>
+        <h2>The account turns from place to forecast.</h2>
         <div class="first-person-view" aria-label="First-person view from east-of-Blue-Water relation">
           <div class="fpv-open" aria-hidden="true">[</div>
           <div class="view-body">
             <p><span class="lived-line">The ground is now regional rather than point-like. The account is making a judgment, not locating a settlement.</span></p>
-            <p>Dawson says there is ample room for the whole nation in the portion east of Blue Water.</p>
+            <p>The account says there is ample room for the whole nation in the portion east of Blue Water.</p>
             <p>He predicts that this portion will fill with settlements first, citing winter range and comparative exposure.</p>
-            <p>This is Dawson's forecast. It is not proof that settlement had already occurred or a mapped boundary east of Blue Water.</p>
+            <p>This is the account's forecast. It is not proof that settlement had already occurred or a mapped boundary east of Blue Water.</p>
           </div>
           <div class="fpv-close" aria-hidden="true">]</div>
           <div class="fpv-footing">
@@ -296,6 +296,6 @@
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="../../config.js?v=camp-ground-v1"></script>
-    <script src="../../script.js?v=shared-country-prose-map-v1"></script>
+    <script src="../../script.js?v=shared-country-discovery-v2"></script>
   </body>
 </html>
