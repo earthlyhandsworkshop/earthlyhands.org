@@ -1051,3 +1051,299 @@ body[data-ground="night"] .experience-shell[data-presence="fire"]{
     margin-top:.18rem;
   }
 }
+
+
+/* Shared Country vNext — Ask the Ground is locomotion.
+   Map and People are inspectable memory, never travel controls. */
+.experience-viewbar{
+  width:min(50rem,calc(100% - 2rem));
+  margin:0 auto;
+  padding:.52rem 0 .28rem;
+  display:flex;
+  justify-content:flex-end;
+  gap:.85rem;
+  border:0;
+}
+.view-mode{
+  border:0;
+  background:transparent;
+  padding:.1rem 0;
+  color:var(--scene-muted);
+  font:600 .58rem/1.2 var(--mono);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.view-mode.is-current{
+  color:var(--scene-ink);
+  border-bottom:1px solid var(--scene-accent);
+}
+.experience-shell[data-view="map"],
+.experience-shell[data-view="people"]{
+  --scene-bg:#eee8dc;
+  --scene-ink:#201f1a;
+  --scene-muted:#6d675c;
+  --scene-rule:rgba(32,31,26,.19);
+  --scene-accent:#845b43;
+}
+
+.prose-map,
+.camp-people{
+  width:min(64rem,calc(100% - 2rem));
+  margin:0 auto;
+  padding:1.4rem 0 2.2rem;
+}
+.prose-map-head,
+.people-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:1.5rem;
+  padding-bottom:.75rem;
+  border-bottom:1px solid var(--scene-rule);
+}
+.prose-map-head p,
+.people-head p{
+  margin:0 0 .18rem;
+  color:var(--scene-muted);
+  font:600 .58rem/1.2 var(--mono);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.prose-map-head h2,
+.people-head h2{
+  margin:0;
+  font-size:clamp(1.7rem,4vw,3.3rem);
+  font-weight:400;
+  line-height:.95;
+}
+.prose-map-head > span,
+.people-head > span{
+  max-width:22rem;
+  color:var(--scene-muted);
+  font:.62rem/1.35 var(--mono);
+  text-align:right;
+}
+.prose-map-frame{
+  margin-top:.85rem;
+  padding:.25rem 0 .45rem;
+  overflow:hidden;
+}
+#prose-map-svg{
+  width:100%;
+  height:auto;
+  display:block;
+  color:var(--scene-ink);
+}
+#prose-map-svg text{
+  fill:currentColor;
+  font-family:var(--mono);
+}
+.map-horizon{
+  stroke:var(--scene-rule);
+  stroke-width:1;
+}
+.map-caption{
+  font-size:10px;
+  letter-spacing:1.5px;
+  fill:var(--scene-muted)!important;
+}
+.map-place{
+  font-size:16px;
+  font-family:var(--serif)!important;
+}
+.map-note{
+  font-size:11px;
+}
+.map-small{
+  font-size:9px;
+  letter-spacing:.5px;
+  fill:var(--scene-muted)!important;
+}
+.map-node{
+  fill:var(--scene-bg);
+  stroke:var(--scene-ink);
+  stroke-width:2;
+}
+.map-node-open{
+  fill:var(--scene-bg);
+  stroke:var(--scene-ink);
+  stroke-width:1.5;
+  stroke-dasharray:3 3;
+}
+.map-water{
+  fill:none;
+  stroke:var(--scene-ink);
+  stroke-width:1.25;
+  opacity:.72;
+}
+.map-route-unknown{
+  fill:none;
+  stroke:var(--scene-ink);
+  stroke-width:1.45;
+  stroke-dasharray:7 8;
+}
+.map-proximity{
+  fill:none;
+  stroke:var(--scene-ink);
+  stroke-width:1.25;
+  stroke-dasharray:2 7;
+}
+.map-same-ground{
+  stroke:var(--scene-ink);
+  stroke-width:1;
+}
+.map-region{
+  fill:transparent;
+  stroke:var(--scene-ink);
+  stroke-width:1;
+  stroke-dasharray:2 6;
+  opacity:.75;
+}
+.prose-map-key{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.45rem 1rem;
+  padding-top:.65rem;
+  border-top:1px solid var(--scene-rule);
+  color:var(--scene-muted);
+  font:.56rem/1.3 var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.prose-map-key span{
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+}
+.prose-map-key i{
+  display:inline-block;
+  width:1.6rem;
+  height:.5rem;
+  position:relative;
+}
+.map-key-solid::before,
+.map-key-dash::before,
+.map-key-dot::before{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:50%;
+  border-top:1px solid var(--scene-ink);
+}
+.map-key-dash::before{border-top-style:dashed}
+.map-key-dot::before{border-top-style:dotted}
+.map-key-region{border:1px dashed var(--scene-ink);border-radius:1rem}
+
+.people-head{
+  margin-bottom:.45rem;
+}
+.camp-people-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));
+  gap:.55rem;
+}
+.camp-people-roster{
+  grid-column:1/-1;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.3rem;
+  padding:.5rem 0 .15rem;
+  border:0;
+}
+.camp-person-chip{
+  display:inline-block;
+  padding:.28rem .45rem;
+  border:1px solid var(--scene-rule);
+  border-radius:999px;
+  color:var(--scene-muted);
+  font:.58rem/1.2 var(--mono);
+}
+.camp-person-widget{
+  border:1px solid var(--scene-rule);
+  background:rgba(255,255,255,.10);
+}
+.camp-person-widget summary{
+  list-style:none;
+  cursor:pointer;
+  padding:.62rem .7rem;
+  display:flex;
+  flex-direction:column;
+  gap:.12rem;
+}
+.camp-person-widget summary::-webkit-details-marker{display:none}
+.camp-person-widget summary::after{
+  content:"+";
+  position:absolute;
+  align-self:flex-end;
+  color:var(--scene-accent);
+  font:600 .72rem/1 var(--mono);
+}
+.camp-person-widget[open] summary::after{content:"−"}
+.camp-person-widget summary strong{
+  padding-right:1rem;
+  font:400 1rem/1.15 var(--serif);
+}
+.camp-person-widget summary span{
+  color:var(--scene-muted);
+  font:.52rem/1.2 var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.camp-person-widget-body{
+  padding:.55rem .7rem .7rem;
+  border-top:1px solid var(--scene-rule);
+}
+.camp-person-widget-body p{
+  margin:0;
+  padding:0;
+}
+.camp-person-widget-body p+p{margin-top:.35rem}
+.camp-person-relation{
+  color:var(--scene-ink);
+  font:.7rem/1.35 var(--mono);
+}
+.camp-person-note{
+  color:var(--scene-muted);
+  font:.67rem/1.38 var(--mono);
+}
+
+.ground-talk textarea{
+  width:100%;
+}
+.ground-talk textarea::placeholder{
+  color:var(--scene-muted);
+  opacity:.8;
+}
+
+@media(max-width:52rem){
+  .experience-viewbar{
+    width:calc(100% - 1.4rem);
+    padding:.4rem 0 .15rem;
+    gap:.7rem;
+  }
+  .prose-map,
+  .camp-people{
+    width:calc(100% - 1.2rem);
+    padding:1rem 0 1.4rem;
+  }
+  .prose-map-head,
+  .people-head{
+    display:block;
+  }
+  .prose-map-head > span,
+  .people-head > span{
+    display:block;
+    margin-top:.35rem;
+    max-width:none;
+    text-align:left;
+  }
+  .prose-map-frame{
+    overflow-x:auto;
+  }
+  #prose-map-svg{
+    min-width:44rem;
+  }
+  .camp-people-list{
+    grid-template-columns:1fr;
+  }
+}
