@@ -49,6 +49,7 @@
   const main = document.querySelector("main");
   const experienceShell = document.querySelector("#experience-shell");
   const experienceStage = document.querySelector("#experience-stage");
+  const experienceBearing = document.querySelector("#experience-bearing");
   const thresholdIntro = document.querySelector("#threshold-intro");
   const experienceMount = document.querySelector("#experience-mount");
   const dawsonIndex = document.querySelector("#dawson-index");
@@ -92,6 +93,28 @@
     return sceneById.get(heldId)?.dataset.place || trailUi[heldId]?.name || "the ground";
   }
 
+  // Shared Country change grammar. The browser owns why the composition changed.
+  // Model prose may recompose a scene, but it cannot redefine movement, held ground,
+  // instrument change, source descent, return, or stillness.
+  function setChangePhysics(kind, text = "") {
+    const allowed = new Set(["still", "attention", "movement", "instrument", "source", "return"]);
+    const next = allowed.has(kind) ? kind : "still";
+    if (experienceShell) experienceShell.dataset.change = next;
+    if (experienceBearing) {
+      experienceBearing.textContent = text;
+      experienceBearing.hidden = !text;
+    }
+  }
+
+  function bearingForView(view) {
+    const held = heldGroundNameFor(currentId);
+    const aperture = trailUi[currentId]?.name || currentId;
+    if (view === "map") return { kind:"instrument", text:`Map · what has become reachable from ${held}` };
+    if (view === "people") return { kind:"instrument", text:`People · encountered through ${aperture}` };
+    if (view === "sources") return { kind:"source", text:`Source descent · ${held} remains held` };
+    return { kind:"still", text: held };
+  }
+
   const apiUrl = String(window.EARTHLY_HANDS_API_URL || "").trim();
   const conversation = [];
   let dawsonRetrieval = [];
@@ -99,7 +122,10 @@
   fetch("/data/dawson/retrieval.public.v0.json", { cache: "no-store" })
     .then((response) => response.ok ? response.json() : null)
     .then((payload) => {
-      if (payload && Array.isArray(payload.entries)) dawsonRetrieval = payload.entries;
+      if (payload && Array.isArray(payload.entries)) {
+        dawsonRetrieval = payload.entries;
+        if (experienceShell?.dataset.view === "sources") buildCampSources();
+      }
     })
     .catch(() => {
       // Corpus retrieval is additive; the held scene still works without it.
@@ -616,7 +642,15 @@
 
   function setDawsonView(view) {
     const next = ["ground", "map", "people", "sources"].includes(view) ? view : "ground";
+    const previous = experienceShell?.dataset.view || "ground";
     if (experienceShell) experienceShell.dataset.view = next;
+
+    const bearing = bearingForView(next);
+    if (next === "ground" && previous !== "ground") {
+      setChangePhysics("return", `Returned · ${heldGroundNameFor(currentId)}`);
+    } else {
+      setChangePhysics(bearing.kind, bearing.text);
+    }
 
     viewModes.forEach((button) => {
       const active = button.dataset.dawsonView === next;
@@ -1128,12 +1162,22 @@
     const target = sceneById.get(id);
     if (!target || !fullSequence.includes(id)) return;
 
-    const fromIndex = fullSequence.indexOf(currentId);
+    const fromId = currentId;
+    const fromIndex = fullSequence.indexOf(fromId);
     const toIndex = fullSequence.indexOf(id);
     const direction = toIndex < fromIndex ? "back" : "forward";
+    const sameHeldGround = heldGroundIdFor(fromId) === heldGroundIdFor(id);
     setLamp(id !== "threshold");
     currentId = id;
     remember(id);
+
+    if (sameHeldGround && fromId !== id) {
+      setChangePhysics("attention", `${heldGroundNameFor(id)} · story continues here`);
+    } else if (fromId !== id) {
+      setChangePhysics("movement", `${heldGroundNameFor(fromId)} → ${heldGroundNameFor(id)}`);
+    } else {
+      setChangePhysics("still", heldGroundNameFor(id));
+    }
 
     if (push) {
       const url = `#${id}`;
