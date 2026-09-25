@@ -1973,12 +1973,16 @@ body[data-discovery="open"] .experience-stage{
 }
 .experience-shell[data-view="ground"] .experience-mount{
   width:min(43rem,100%);
+  margin-inline:auto;
 }
 .experience-shell[data-view="map"] .prose-map,
-.experience-shell[data-view="people"] .camp-people,
-.experience-shell[data-view="sources"] .camp-sources{
+.experience-shell[data-view="people"] .camp-people{
   width:100%;
   margin-inline:0;
+}
+.experience-shell[data-view="sources"] .camp-sources{
+  width:min(50rem,100%);
+  margin-inline:auto;
 }
 .experience-shell[data-view="map"] .experience-stage,
 .experience-shell[data-view="people"] .experience-stage{
