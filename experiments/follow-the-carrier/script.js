@@ -21,7 +21,15 @@ const pieces={
  texas:{kind:"place",title:"Texas",note:"William says lived there since 1874",x:84,y:18,props:{state:"EXISTS",relation:"William states prior residence",limit:"no route geometry earned"}},
  "martha-jane":{kind:"person",title:"Martha Jane",note:"William's wife occurrence",x:62,y:38,props:{state:"EXISTS",relation:"William names his wife",limit:"this scene does not supply her full documentary body"}},
  "document-window":{kind:"recordmark",title:"15-day evidence window",note:"additional documentary proof",x:65,y:68,props:{state:"PROCEDURAL WINDOW",carrier:"attorney request + Commission grant",limit:"permission to file ≠ proof filed or accepted"}},
- "william-children":{kind:"proposition",title:"Four minor children",note:"application population",x:83,y:83,props:{state:"EXISTS IN CASE",carrier:"William's answers",limit:"later records not opened here"}}
+ "william-children":{kind:"proposition",title:"Four minor children",note:"application population",x:83,y:83,props:{state:"EXISTS IN CASE",carrier:"William's answers",limit:"later records not opened here"}},
+ thomas:{kind:"person",title:"Thomas Ellen Donaldson",note:"third family witness",x:7,y:33,props:{state:"EXISTS",voice:"direct examination",record_time:"23 Oct 1900",limit:"third witness remains a separate source voice"}},
+ "thomas-right":{kind:"proposition",title:"“My father had a right here.”",note:"family-carried right proposition",x:21,y:65,props:{state:"CARRIED AS TESTIMONY",carrier:"Thomas Ellen Donaldson",qualifier:"I think / from what I have always been told",limit:"right proposition ≠ proved entitlement"}},
+ "kin-carriers":{kind:"proposition",title:"“My own brothers and sisters.”",note:"family carrier population",x:5,y:72,props:{state:"SOURCE VOICE",carrier:"Thomas Ellen Donaldson",function:"names family testimony as proof source",limit:"family repetition ≠ independent documentary proof"}},
+ "james-donaldson":{kind:"person",title:"James P. Donaldson",note:"Thomas's husband occurrence",x:80,y:37,props:{state:"EXISTS",relation:"Thomas names her husband",limit:"no further documentary body opened here"}},
+ "thomas-children":{kind:"proposition",title:"Three minor children",note:"application population",x:86,y:74,props:{state:"EXISTS IN CASE",carrier:"Thomas's answers",limit:"later records not opened here"}},
+ "margaret-mckinney":{kind:"person",title:"Margaret McKinney",note:"Thomas says father's mother",x:51,y:58,props:{state:"CARRIED AS FAMILY TESTIMONY",relation:"Thomas says Margaret McKinney was her father's mother",limit:"do not silently donate this name to Mary's unnamed grandmother occurrence"}},
+ "ancestral-target":{kind:"proposition",title:"Claimed ancestor shifts",note:"Robert → Margaret McKinney",x:57,y:69,props:{state:"SOURCE-LOCAL CLAIM TARGET",carrier:"Thomas's examination",meaning:"Commission asks ancestor in Mississippi under whom she claims; Thomas names Margaret McKinney",limit:"changing claim target does not erase Robert or prove Article XIV status"}},
+ "thomas-filing-window":{kind:"recordmark",title:"Thomas filing window",note:"30 days asked · 15 granted",x:72,y:93,props:{state:"PROCEDURAL WINDOW",carrier:"attorney request + Commission grant",requested:"30 days",granted:"15 days",limit:"request ≠ grant; grant ≠ later filing"}}
 };
 
 const relations=[
@@ -39,7 +47,16 @@ const relations=[
  ["william","robert","father","family","william-robert"],
  ["william","remembered-roll","told / father's name","family","william-roll"],
  ["william","martha-jane","wife","family","martha-jane"],
- ["mcr879","document-window","15-day filing window","admin","document-window"]
+ ["mcr879","document-window","15-day filing window","admin","document-window"],
+ ["thomas","durant","post-office / residence","family","thomas-durant"],
+ ["thomas","robert","father","family","thomas-robert"],
+ ["thomas","elizabeth","mother","family","thomas-elizabeth"],
+ ["thomas","thomas-right","says / told","family","thomas-right"],
+ ["thomas","kin-carriers","names family as proof source","family","kin-carriers"],
+ ["thomas","james-donaldson","husband","family","james-donaldson"],
+ ["thomas","margaret-mckinney","father's mother","family","margaret-mckinney"],
+ ["margaret-mckinney","ancestral-target","claimed ancestor","family","ancestral-target"],
+ ["mcr879","thomas-filing-window","15 days granted","admin","thomas-filing-window"]
 ];
 
 const beats=[...document.querySelectorAll(".source-beat")];
@@ -57,11 +74,13 @@ const pageUnlocks=[...document.querySelectorAll(".source-page-unlock")];
 const pageTurns=[...document.querySelectorAll("[data-open-page]")];
 const pageMeta={
  mary:{title:"01 · Mary Caroline Atkinson",meta:"23 Oct 1900 · MCR 879 · sworn examination · Myra Young"},
- william:{title:"02 · William D. Bell",meta:"23 Oct 1900 · MCR 879 · sworn examination · Kate De Bord"}
+ william:{title:"02 · William D. Bell",meta:"23 Oct 1900 · MCR 879 · sworn examination · Kate De Bord"},
+ thomas:{title:"03 · Thomas Ellen Donaldson",meta:"23 Oct 1900 · MCR 879 · sworn examination · Kate De Bord"}
 };
 const pageKey="eh-follow-carrier-pages-v1";
 const reachedPages=new Set(JSON.parse(localStorage.getItem(pageKey)||'["mary"]'));
 if(earned.has("william")) reachedPages.add("william");
+if(earned.has("thomas")) reachedPages.add("thomas");
 let activePage=localStorage.getItem(pageKey+"-active")||"mary";
 
 function persistPages(){
@@ -204,6 +223,19 @@ function effectiveProps(id){
    base.relation="Mary: prior residence · William: born there / lived until 1874";
    base.limit="shared place does not collapse the witnesses or create route geometry";
  }
+ if(id==="robert" && earned.has("thomas-robert")){
+   base.relation="named as father by Mary Caroline Atkinson, William D. Bell, and Thomas Ellen Donaldson";
+   base.carrier_count="3 family witness carriers";
+   base.limit="three family carriers do not merge this Robert with another Robert body or prove the historical identity";
+ }
+ if(id==="durant" && earned.has("thomas-durant")){
+   base.relation="Mary: post-office address · William: post-office / recent arrival · Thomas: post-office / five-year residence";
+   base.limit="same place label carries different source-local jobs";
+ }
+ if(id==="elizabeth" && earned.has("thomas-elizabeth")){
+   base.relation="Mary names Elizabeth D. Bell as mother; Thomas names Elizabeth D. Bell and says Kennedy was her name before marriage";
+   base.limit="do not import later administrative normalization beyond the source-local statements";
+ }
  if(id==="exhibit-a" && earned.has("document-window")){
    base.additional_state="William scene: petition and affidavits filed; 15-day request granted for more documentary proof";
    base.limit="same exhibit label / repeated packet material does not duplicate historical witness acts";
@@ -230,7 +262,8 @@ function renderField(){
    const shownKind=p.kind==="recordmark"?"record":p.kind;
    let note=p.note;
    if(id==="remembered-roll" && earned.has("william-roll")) note="2 family witness carriers";
-   if(id==="robert" && earned.has("william-robert")) note="father proposition · 2 carriers";
+   if(id==="robert" && earned.has("thomas-robert")) note="father proposition · 3 carriers";
+   else if(id==="robert" && earned.has("william-robert")) note="father proposition · 2 carriers";
    b.innerHTML='<span class="mark-kind">'+shownKind+'</span><span class="dot"></span><strong>'+p.title+'</strong><small>'+note+'</small>';
    b.addEventListener("click",function(){inspect(id,b);});
    stage.append(b);
