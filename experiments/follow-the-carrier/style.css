@@ -109,3 +109,11 @@ button:focus-visible,a:focus-visible,.mark:focus-visible{outline:2px solid var(-
 @media(max-width:760px){
  .field-toggle{right:.6rem;bottom:max(.6rem,env(safe-area-inset-bottom));min-width:9.3rem}
 }
+
+.opening-next{
+ border-top:1px solid var(--rule);
+ min-height:19rem;
+ align-items:center;
+ background:rgba(255,255,255,.055)
+}
+.opening-next .opening-note{font-style:italic;color:var(--muted)}
