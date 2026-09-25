@@ -144,3 +144,52 @@ First inspect Mary on a phone:
 Only then decide what the next source voice earns.
 
 Powerful finger. Trustworthy result.
+
+
+## Second-pass cleanup — 24 September 2026
+
+The first live use exposed three interface corrections worth making before adding another source voice.
+
+### One field control
+
+The separate `OPEN THE FIELD` / `Close field` controls were visually too far apart.
+
+They are now one persistent control:
+
+`FIELD ↓` when closed.  
+`FIELD ↑` when open.
+
+The same control also carries the current reachable-piece count.
+
+### Pieces should read as carried objects
+
+The historical field already held roughly fifteen Mary-earned marks, but their visual form read too much like graph labels.
+
+They now receive a restrained object face:
+- type;
+- dot / documentary mark;
+- title;
+- source-local note.
+
+This is still not a card grid. The pieces remain positioned inside one field, with lines rare and expensive.
+
+### Reading typography remains primary
+
+The transcript received a small type / line-height / spacing pass. The goal is not theatrical styling. Mary remains easier to read than the field is to manipulate.
+
+## Next technical branch — listening / animated mode
+
+Do not bolt synthetic audio onto the current reading page by default.
+
+The earned next branch is a parallel listening mode with the same source and the same field state:
+
+- full transcript remains available as the quiet reading mode;
+- listening mode presents the current exchange on one screen;
+- voice playback advances source-local beats;
+- earned field pieces appear from the same event/state model used by reading mode;
+- pausing, rewinding, opening the field, and returning to the voice must not duplicate historical events or strengthen source state;
+- voice casting must preserve speaker / institutional boundaries without melodrama;
+- an AI-generated voice is performance, not historical voice reconstruction.
+
+The first technical study should therefore be about **playback/state synchronization and voice quality**, not about adding more historical material.
+
