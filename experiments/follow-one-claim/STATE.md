@@ -84,3 +84,30 @@ Public physics remain unchanged:
 `EXISTED != IN CASE != NAMED IN REVIEW != REQUIRED TO CONSULT != ADEQUATE / INADEQUATE`.
 
 Presentation direction: literal document reader / punch-card grammar is allowed where it clarifies documentary operations. The humor must remain mechanical rather than evidentiary: clicks, tickets, lamps, jams, and refusals may be expressive; source state, identity brakes, bounded negatives, and open joins remain exact.
+
+
+## General-human-machine opening
+
+The public instrument is no longer limited to pre-authored MCR 879 propositions.
+
+A visitor can now:
+
+- type a new question into **What are you trying to figure out?**
+- load that question into the machine;
+- create a new evidence ticket with a chosen feed, plain description, explicit brake, and source / return path;
+- load that custom ticket beside governed built-in tickets;
+- preserve the current question, custom tickets, loaded bays, and last test across ordinary refresh in browser-local state.
+
+This does **not** yet make the instrument fully general. The present test buttons still inherit the Catherine / review-adequacy specimen's testing vocabulary. That limitation is intentional and visible: the next generalization seam is a human-readable **MAKE A TEST** / relationship-question layer that can derive or choose tests appropriate to a new problem without silently inventing evidentiary logic.
+
+New governing distinction:
+
+`HUMAN-DEFINED QUESTION != VERIFIED PROPOSITION`
+
+`USER-SUPPLIED TICKET != VERIFIED SOURCE`
+
+`LOADED TICKET != ENDORSED CLAIM`
+
+The MCR 879 / Catherine body remains a worked, governed example underneath the generic shell and should continue to serve as a stress test for any future generalization.
+
+Interaction finding: the machine becomes more human when the interface begins with **the user's question and manipulable evidence objects**, while source grammar stays available behind each ticket instead of becoming the navigation language.
