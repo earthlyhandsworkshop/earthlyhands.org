@@ -9,6 +9,9 @@ const files = [
   ["script.js", "/script.js"],
   ["config.js", "/config.js"],
   ["experiments/shared-country/index.html", "/experiments/shared-country/"],
+  ["experiments/follow-the-carrier/index.html", "/experiments/follow-the-carrier/"],
+  ["experiments/follow-the-carrier/style.css", "/experiments/follow-the-carrier/style.css"],
+  ["experiments/follow-the-carrier/script.js", "/experiments/follow-the-carrier/script.js"],
   ["mcr879.html", "/mcr879.html"],
   ["mcr879.css", "/mcr879.css"]
 ];
@@ -93,3 +96,4 @@ if (process.env.GITHUB_STEP_SUMMARY) {
 }
 
 if (!observation.all_observed) process.exitCode = 2;
+if (!observation.all_match_source) process.exitCode = 3;
