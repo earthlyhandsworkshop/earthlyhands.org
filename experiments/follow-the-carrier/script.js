@@ -1,101 +1,122 @@
-const pages=[
- {title:"The case names its people",meta:"MCR 879 · prototype binding pending",body:"The proceeding gives us people before it gives us a complete route between them.",unlock:["mcr879","robert-family","margaret","catherine"]},
- {title:"A person opens a documentary neighborhood",meta:"Catherine McKinney · prototype relation test",body:"Catherine can bring a controlled historical object into view without that object becoming evidence in this proceeding.",unlock:["catherine-patent"]},
- {title:"Names accumulate before bridges do",meta:"Bell name population · prototype relation test",body:"James and Levy can become visible as neighboring historical names. Visibility does not merge them into later Bell identities.",unlock:["james","levy","family-memory"]},
- {title:"Robert survives in another carrier",meta:"1837 add-back · Robert name-form",body:"A Robert Bell name-form appears in an earlier administrative body. A name can travel farther than a person can speak.",unlock:["robert-1837"]},
- {title:"Robin enters by witness naming",meta:"later hearing stage · Robin name-form",body:"A later witness-side object brings Robin Bell into the field. The interface may now expose the question. It may not answer it.",unlock:["robin","robert-robin"]}
-];
+const key="eh-follow-carrier-mary-v1";
+const earned=new Set(JSON.parse(localStorage.getItem(key)||"[]"));
 
 const pieces={
- "mcr879":{type:"proceeding",title:"MCR 879",note:"active case body",x:5,y:7,kind:"admin",props:{state:"ACTIVE PROCEEDING",carrier:"case body",limit:"does not contain every historical object visible in this field"}},
- "robert-family":{type:"person occurrence",title:"Robert Bell",note:"family-side occurrence",x:32,y:7,kind:"family",props:{state:"EXISTS",voice:"family / applicant-side",limit:"do not merge with another Robert occurrence"}},
- "margaret":{type:"person occurrence",title:"Margaret McKinney",note:"family-side occurrence",x:56,y:7,kind:"family",props:{state:"EXISTS",limit:"prototype exact page binding still open"}},
- "catherine":{type:"person occurrence",title:"Catherine McKinney",note:"family-side occurrence",x:76,y:17,kind:"family",props:{state:"EXISTS",opens:"controlled documentary neighborhood",limit:"appearance does not import her records into MCR 879"}},
- "catherine-patent":{type:"historical object",title:"Article XIX patent",note:"exists · no case carrier earned",x:68,y:42,kind:"source",props:{state:"EXISTS",relation:"documentary neighborhood of Catherine McKinney",carrier_into_mcr879:"NOT EARNED",limit:"presence is not carriage"}},
- "james":{type:"name occurrence",title:"James Bell",note:"visible · identity open",x:8,y:44,kind:"unresolved",props:{state:"EXISTS",identity:"OPEN",limit:"same or similar name earns no merge"}},
- "levy":{type:"name occurrence",title:"Levy Bell",note:"visible · identity open",x:29,y:57,kind:"unresolved",props:{state:"EXISTS",identity:"OPEN",limit:"same or similar name earns no merge"}},
- "family-memory":{type:"family carrier",title:"Family voice",note:"relation remembered",x:46,y:64,kind:"family",props:{state:"CARRIED AS FAMILY MEMORY",carrier:"family testimony / memory",limit:"does not become administrative proof automatically"}},
- "robert-1837":{type:"administrative name carrier",title:"Robert Bell",note:"1837 add-back name-form",x:6,y:72,kind:"admin",props:{state:"EXISTS",carrier:"1837 administrative body",limit:"name-form continuity does not prove person identity"}},
- "robin":{type:"witness name carrier",title:"Robin Bell",note:"later hearing-stage naming",x:39,y:29,kind:"family",props:{state:"EXISTS",carrier:"witness-side naming",limit:"preserve Robin exactly where the source says Robin"}},
- "robert-robin":{type:"unresolved relation",title:"ROBERT ? ROBIN",note:"question visible · bridge not earned",x:42,y:45,kind:"unresolved",props:{state:"UNRESOLVED",relation:"person identity",needed:"an earned independent bridge",limit:"a name resemblance is not a carrier"}}
+ mcr879:{kind:"recordmark",title:"MCR 879",note:"proceeding",x:8,y:8,props:{state:"EXISTS",carrier:"active proceeding",source:"Scene One register",limit:"case body is not every historical object around it"}},
+ mary:{kind:"person",title:"Mary Caroline Atkinson",note:"sworn witness",x:31,y:11,props:{state:"EXISTS",voice:"direct examination",record_time:"23 Oct 1900",limit:"her statements remain her testimony"}},
+ durant:{kind:"place",title:"Durant",note:"post-office address",x:65,y:9,props:{state:"EXISTS",relation:"Mary states post-office address",limit:"postal address ≠ residence point"}},
+ pontotoc:{kind:"place",title:"Pontotoc",note:"prior residence",x:76,y:27,props:{state:"EXISTS",relation:"Mary states prior residence in Pontotoc County / town of Pontotoc",limit:"no route to Indian Territory earned"}},
+ robert:{kind:"person",title:"Robert Bell",note:"Mary's father occurrence",x:27,y:31,props:{state:"EXISTS",relation:"Mary names Robert Bell as her father",identity:"occurrence-local",limit:"does not merge with another Robert Bell"}},
+ elizabeth:{kind:"person",title:"Elizabeth D. Bell",note:"Mary's mother occurrence",x:48,y:25,props:{state:"EXISTS",relation:"Mary names Elizabeth D. Bell as her mother",limit:"this scene does not import Elizabeth's affidavit contents"}},
+ "remembered-roll":{kind:"proposition",title:"“His name is on the register.”",note:"family-carried proposition",x:10,y:50,props:{state:"CARRIED AS TESTIMONY",carrier:"Mary's voice / what she has heard",object:"roll / register not yet identified here",limit:"testimony ≠ recovered historical roll occurrence"}},
+ "commission-records":{kind:"recordmark",title:"Commission record searches",note:"administrative acts",x:69,y:48,props:{state:"EXISTS IN SCENE",carrier:"Commission / record statements",scope:"tribal roll, 1896 applications, U.S. court admissions",limit:"search result ≠ universal historical negative"}},
+ article14:{kind:"proposition",title:"Article XIV",note:"claim / questioning frame",x:36,y:55,props:{state:"CLAIM PRESENT",carrier:"questioning + Mary's answers",limit:"claim present ≠ credential accepted"}},
+ "approved-roll":{kind:"recordmark",title:"Approved roll of locations",note:"Commission-stated search target",x:82,y:62,props:{state:"ADMINISTRATIVE REPRESENTATION",carrier:"Commission recorded statement",result:"no party by name Robert Bell appears on the cited roll",limit:"do not generalize beyond the stated object / search"}},
+ "knowledge-limit":{kind:"proposition",title:"“I don't know.”",note:"witness limit",x:38,y:76,props:{state:"SOURCE VOICE",function:"limits proposition strength",limit:"uncertainty is not absence of all knowledge"}},
+ grandmother:{kind:"person",title:"Grandmother",note:"unnamed in this scene",x:58,y:77,props:{state:"EXISTS AS RELATION",carrier:"Mary's testimony",name:"not supplied here",limit:"do not donate a name from another source"}},
+ correction:{kind:"proposition",title:"“I said not that I knew of.”",note:"Mary corrects the paraphrase",x:13,y:82,props:{state:"SOURCE VOICE",function:"correction / strength control",limit:"Commission paraphrase does not replace Mary's qualifier"}},
+ children:{kind:"proposition",title:"Six minor children",note:"application population",x:72,y:86,props:{state:"EXISTS IN CASE",carrier:"Mary's answers",limit:"their later records are not opened by this mark alone"}},
+ "exhibit-a":{kind:"recordmark",title:"Exhibit A",note:"petition + named affidavits",x:44,y:92,props:{state:"FILED / MADE PART OF RECORD",carrier:"record statement",contains:"petition + affidavits of Elizabeth D. Bell, W. R. Collins, F. Atkinson, Margaret Elizabeth Williams, T. E. Donaldson",limit:"filed ≠ accepted as historically true"}}
 };
 
 const relations=[
- {from:"catherine",to:"catherine-patent",label:"documentary neighborhood",kind:"family",requires:["catherine","catherine-patent"]},
- {from:"robert-family",to:"family-memory",label:"family voice carries",kind:"family",requires:["robert-family","family-memory"]},
- {from:"robert-1837",to:"robert-robin",label:"question only",kind:"family",requires:["robert-1837","robert-robin"]},
- {from:"robin",to:"robert-robin",label:"question only",kind:"family",requires:["robin","robert-robin"]}
+ ["mary","robert","father","family"],
+ ["mary","elizabeth","mother","family"],
+ ["mary","durant","post-office address","family"],
+ ["mary","pontotoc","prior residence","family"],
+ ["mary","remembered-roll","says / heard","family"],
+ ["mcr879","commission-records","record search","admin"],
+ ["mcr879","approved-roll","Commission states search","admin"],
+ ["mcr879","exhibit-a","filed into record","admin"]
 ];
 
-let pageIndex=Number(localStorage.getItem("eh-carrier-page")||0);
-if(!Number.isFinite(pageIndex)||pageIndex<0||pageIndex>=pages.length) pageIndex=0;
-const unlocked=new Set();
-for(let i=0;i<=pageIndex;i++) pages[i].unlock.forEach(id=>unlocked.add(id));
-
-const passage=document.querySelector("#passage");
+const beats=[...document.querySelectorAll(".source-beat")];
+const door=document.querySelector("#field-door");
+const field=document.querySelector("#carrier-field");
+const closeField=document.querySelector("#close-field");
 const stage=document.querySelector("#field-stage");
-const properties=document.querySelector("#properties-body");
-const next=document.querySelector("#read-next");
-const state=document.querySelector("#read-state");
+const props=document.querySelector("#properties-body");
+const status=document.querySelector("#field-status");
+const count=document.querySelector("#earned-count");
 
-function renderPage(){
- const p=pages[pageIndex];
- passage.innerHTML=`<p class="meta">${p.meta}</p><h3>${p.title}</h3><p>${p.body}</p><p class="prototype">Prototype note: this reading card tests interaction. Final public wording must return to the governed source body.</p>`;
- state.textContent=`${pageIndex+1} / ${pages.length}`;
- next.disabled=pageIndex===pages.length-1;
- next.textContent=next.disabled?"Field remains open":"Read next controlled page";
- passage.focus({preventScroll:true});
+function persist(){localStorage.setItem(key,JSON.stringify([...earned]));}
+function earn(ids){
+ let changed=false;
+ ids.forEach(function(id){if(id&&!earned.has(id)){earned.add(id);changed=true;}});
+ if(changed){persist();renderField();updateCount();}
 }
-
-function center(el){
- const a=el.getBoundingClientRect(),b=stage.getBoundingClientRect();
- return {x:a.left-b.left+a.width/2,y:a.top-b.top+a.height/2};
+function updateCount(){
+ count.textContent=earned.size?(earned.size+" marks have become reachable from this scene."):"The scene has begun to carry a field.";
+ status.textContent=earned.size?(earned.size+" reachable"):"";
 }
-
-function drawRelation(r){
- if(!r.requires.every(id=>unlocked.has(id))) return;
- const a=stage.querySelector(`[data-piece="${r.from}"]`);
- const b=stage.querySelector(`[data-piece="${r.to}"]`);
- if(!a||!b)return;
- const A=center(a),B=center(b),dx=B.x-A.x,dy=B.y-A.y,len=Math.hypot(dx,dy),ang=Math.atan2(dy,dx)*180/Math.PI;
- const line=document.createElement("div");
- line.className="connector "+(r.kind||"");
- line.style.left=A.x+"px";line.style.top=A.y+"px";line.style.width=len+"px";line.style.transform=`rotate(${ang}deg)`;
- const label=document.createElement("span");
- label.className="relation-label";
- label.textContent=r.label;
- label.style.left=((A.x+B.x)/2)+"px";label.style.top=((A.y+B.y)/2)+"px";
- stage.prepend(line,label);
-}
-
-function renderField(){
- stage.replaceChildren();
- Object.entries(pieces).forEach(([id,p])=>{
-   if(!unlocked.has(id))return;
-   const el=document.createElement("button");
-   el.type="button";el.className="piece "+(p.kind||"");el.dataset.piece=id;
-   el.style.left=p.x+"%";el.style.top=p.y+"%";
-   el.innerHTML=`<span class="type">${p.type}</span><strong>${p.title}</strong><small>${p.note}</small>`;
-   el.addEventListener("click",()=>inspect(id,el));
-   stage.append(el);
+const observer=new IntersectionObserver(function(entries){
+ entries.forEach(function(e){
+   if(e.isIntersecting){
+     e.target.classList.add("is-read");
+     earn((e.target.dataset.earn||"").split(","));
+   }
  });
- requestAnimationFrame(()=>relations.forEach(drawRelation));
-}
+},{rootMargin:"-20% 0px -55% 0px",threshold:.01});
+beats.forEach(function(b){observer.observe(b);});
 
+function openField(){
+ field.hidden=false;
+ door.setAttribute("aria-expanded","true");
+ door.querySelector("span").textContent="FIELD OPEN";
+ renderField();
+ requestAnimationFrame(function(){field.scrollIntoView({behavior:"smooth",block:"start"});});
+}
+function shutField(){
+ field.hidden=true;
+ door.setAttribute("aria-expanded","false");
+ door.querySelector("span").textContent="OPEN THE FIELD";
+ document.querySelector("#source-piece").scrollIntoView({behavior:"smooth",block:"end"});
+}
+door.addEventListener("click",function(){field.hidden?openField():shutField();});
+closeField.addEventListener("click",shutField);
+
+function point(el){
+ const r=el.getBoundingClientRect(),s=stage.getBoundingClientRect();
+ return {x:r.left-s.left+r.width/2,y:r.top-s.top+r.height/2};
+}
+function drawLine(a,b,label,kind){
+ const A=stage.querySelector('[data-id="'+a+'"]');
+ const B=stage.querySelector('[data-id="'+b+'"]');
+ if(!A||!B)return;
+ const p=point(A),q=point(B),dx=q.x-p.x,dy=q.y-p.y,len=Math.hypot(dx,dy),ang=Math.atan2(dy,dx)*180/Math.PI;
+ const l=document.createElement("div");
+ l.className="line "+(kind||"");
+ l.style.left=p.x+"px";l.style.top=p.y+"px";l.style.width=len+"px";l.style.transform="rotate("+ang+"deg)";
+ stage.prepend(l);
+ const t=document.createElement("span");
+ t.className="line-label";t.textContent=label;t.style.left=((p.x+q.x)/2)+"px";t.style.top=((p.y+q.y)/2)+"px";
+ stage.append(t);
+}
 function inspect(id,el){
- stage.querySelectorAll(".piece").forEach(x=>x.classList.toggle("is-active",x===el));
+ stage.querySelectorAll(".mark").forEach(function(x){x.classList.toggle("is-active",x===el);});
  const p=pieces[id];
- const rows=Object.entries(p.props||{}).map(([k,v])=>`<div class="prop-row"><dt>${k.replaceAll("_"," ")}</dt><dd>${v}</dd></div>`).join("");
- properties.innerHTML=`<div class="prop-type">${p.type}</div><div class="prop-title">${p.title}</div><dl class="prop-list">${rows}</dl><div class="brake">Properties describes this object only. Selecting it does not create a new relation.</div>`;
+ const rows=Object.entries(p.props||{}).map(function(pair){
+   return '<div class="prop-row"><b>'+pair[0].replaceAll("_"," ")+'</b><p>'+pair[1]+'</p></div>';
+ }).join("");
+ props.innerHTML='<div class="prop-kind">'+p.kind+'</div><div class="prop-title">'+p.title+'</div>'+rows+'<div class="brake">Looking at this mark does not create a new carrier.</div>';
+}
+function renderField(){
+ if(field.hidden)return;
+ stage.replaceChildren();
+ Object.entries(pieces).forEach(function(pair){
+   const id=pair[0],p=pair[1];
+   if(!earned.has(id))return;
+   const b=document.createElement("button");
+   b.type="button";b.className="mark "+p.kind;b.dataset.id=id;b.style.left=p.x+"%";b.style.top=p.y+"%";
+   b.innerHTML='<span class="dot"></span><strong>'+p.title+'</strong><small>'+p.note+'</small>';
+   b.addEventListener("click",function(){inspect(id,b);});
+   stage.append(b);
+ });
+ requestAnimationFrame(function(){
+   relations.forEach(function(r){if(earned.has(r[0])&&earned.has(r[1]))drawLine(r[0],r[1],r[2],r[3]);});
+ });
+ status.textContent=earned.size+" reachable";
 }
 
-next.addEventListener("click",()=>{
- if(pageIndex>=pages.length-1)return;
- pageIndex+=1;
- pages[pageIndex].unlock.forEach(id=>unlocked.add(id));
- localStorage.setItem("eh-carrier-page",String(pageIndex));
- renderPage();renderField();
-});
-
-window.addEventListener("resize",()=>renderField());
-renderPage();renderField();
+window.addEventListener("resize",function(){if(!field.hidden)renderField();});
+updateCount();
