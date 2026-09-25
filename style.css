@@ -1989,6 +1989,11 @@ body[data-discovery="open"] .experience-stage{
   min-height:34rem;
 }
 
+.experience-shell[data-view="map"] .experience-stage,
+.experience-shell[data-view="people"] .experience-stage{
+  padding-top:clamp(.9rem,2.5vh,1.6rem);
+}
+
 /* Map: anchors remain fixed; labels can negotiate. Keep the drawing light. */
 #prose-map-svg{
   overflow:visible;
