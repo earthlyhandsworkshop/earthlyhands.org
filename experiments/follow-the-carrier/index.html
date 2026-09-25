@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#eee9dd">
 <title>Follow the Carrier — Mary Caroline Atkinson — Earthly Hands</title>
 <meta name="description" content="Read one MCR 879 family voice. Open the field it earns.">
-<link rel="stylesheet" href="style.css?v=mary-one-v1">
+<link rel="stylesheet" href="style.css?v=mary-two-v1">
 </head>
 <body>
 <main class="sheet">
@@ -184,16 +184,12 @@
     </div>
   </div>
 
-  <div class="field-door-wrap">
-    <p id="earned-count">The scene has begun to carry a field.</p>
-    <button id="field-door" type="button" aria-expanded="false" aria-controls="carrier-field"><span>OPEN THE FIELD</span><b>↓</b></button>
-  </div>
 </article>
 
 <section id="carrier-field" class="carrier-field" hidden>
   <header class="field-head">
     <div><p class="eyebrow">WHAT THIS VOICE HAS MADE REACHABLE</p><h2>Historical field</h2></div>
-    <button id="close-field" type="button">Close field ↑</button>
+    <span class="field-head-note">Reading earns pieces. Sources earn connections.</span>
   </header>
   <div class="field-layout">
     <div id="field-stage" class="field-stage" aria-live="polite"></div>
@@ -211,6 +207,9 @@
   <p>This specimen stops with Mary. The field may remain open without requiring another scene.</p>
 </section>
 </main>
-<script src="script.js?v=mary-one-v1"></script>
+<button id="field-door" class="field-toggle" type="button" aria-expanded="false" aria-controls="carrier-field" hidden>
+  <span>FIELD</span><b>↓</b><em id="earned-count">0 reachable</em>
+</button>
+<script src="script.js?v=mary-two-v1"></script>
 </body>
 </html>
