@@ -10,88 +10,167 @@
 <title>Earthly Hands — Public work</title>
 <style>
 :root{
-  --paper:#e7dfd0;--ink:#1d1c18;--muted:#6f685d;--rule:rgba(29,28,24,.23);
-  --rule2:rgba(29,28,24,.48);--accent:#8d5c3f;
+  --paper:#e7dfd0;--ink:#1d1c18;--muted:#6f685d;
+  --rule:rgba(29,28,24,.22);--rule2:rgba(29,28,24,.48);--accent:#8d5c3f;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;background:var(--paper)}
-body{margin:0;min-width:18rem;background:var(--paper);color:var(--ink);font:1rem/1.5 var(--serif)}
+body{margin:0;min-width:18rem;background:var(--paper);color:var(--ink);font:1rem/1.35 var(--serif)}
 a{color:inherit}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-.shell{width:min(96rem,calc(100% - 1.4rem));margin:auto}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.shell{width:min(94rem,calc(100% - 1rem));margin:auto}
 .top{
-  min-height:3.45rem;display:flex;justify-content:space-between;gap:1rem;align-items:center;
-  border-bottom:1px solid var(--rule2);font:.57rem/1.2 var(--mono);letter-spacing:.085em;text-transform:uppercase
+  height:2.75rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  border-bottom:1px solid var(--rule2);font:.53rem/1 var(--mono);letter-spacing:.075em;text-transform:uppercase
 }
 .top a{text-decoration:none}.top span{color:var(--muted)}
-main{padding:1rem 0 2rem}
+main{padding:.42rem 0 1rem}
 .index-head{
-  display:flex;justify-content:space-between;gap:1rem;align-items:baseline;
-  padding:.25rem 0 .75rem;border-bottom:1px solid var(--rule)
+  height:2.1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  border-bottom:1px solid var(--rule)
 }
-.index-head h1{margin:0;font:500 .72rem/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase}
-.index-head p{margin:0;color:var(--muted);font:.52rem/1.2 var(--mono);letter-spacing:.04em}
+.index-head h1{margin:0;font:600 .61rem/1 var(--mono);letter-spacing:.085em;text-transform:uppercase}
+.index-head p{margin:0;color:var(--muted);font:.47rem/1 var(--mono);letter-spacing:.035em}
+
 .work{border-bottom:1px solid var(--rule)}
 .work-link{
-  display:grid;grid-template-columns:minmax(9rem,12rem) minmax(0,1fr) minmax(15rem,27rem) minmax(6rem,7rem);
-  gap:clamp(.55rem,1.45vw,1.15rem);align-items:stretch;text-decoration:none
+  display:grid;
+  grid-template-columns:10.25rem minmax(12rem,1fr) minmax(14rem,23rem) 6.2rem;
+  min-height:4.95rem;
+  text-decoration:none;
 }
+.work-link:hover{background:rgba(255,255,255,.10)}
+
 .custody{
-  padding:.55rem .65rem .62rem 0;border-right:1px solid var(--rule);
-  display:grid;align-content:center;gap:.18rem;
-  font:.48rem/1.27 var(--mono);letter-spacing:.025em;color:var(--muted)
+  min-width:0;
+  display:flex;align-items:center;
+  padding:.34rem .58rem .34rem 0;
+  border-right:1px solid var(--rule);
+  font:.43rem/1.18 var(--mono);letter-spacing:.018em;color:var(--muted)
 }
- .custody dl{display:grid;grid-template-columns:auto 1fr;gap:.08rem .38rem;margin:0}
-.custody dt{color:var(--ink);text-transform:uppercase;letter-spacing:.06em}
-.custody dd{margin:0}
+.custody dl{
+  width:100%;margin:0;
+  display:grid;grid-template-columns:3.15rem minmax(0,1fr);
+  gap:.07rem .34rem;
+}
+.custody dt{
+  color:var(--ink);font-weight:500;text-transform:uppercase;letter-spacing:.055em;
+}
+.custody dd{margin:0;min-width:0;overflow-wrap:anywhere}
+
 .title{
-  align-self:center;padding:.62rem 0;
-  font-size:clamp(1.85rem,3.9vw,4.4rem);font-weight:400;line-height:.88;letter-spacing:-.046em
+  min-width:0;display:flex;align-items:center;
+  padding:.38rem .7rem;
+  font-size:clamp(1.45rem,2.4vw,2.3rem);
+  font-weight:400;line-height:.92;letter-spacing:-.035em;
 }
-.title.long{font-size:clamp(1.7rem,3.5vw,4rem)}
-.desc{align-self:center;padding:.62rem 0;color:var(--muted);font-size:.82rem;line-height:1.34}
+.title.long{font-size:clamp(1.28rem,2.05vw,1.95rem)}
+
+.desc{
+  min-width:0;display:flex;align-items:center;
+  padding:.38rem .65rem;
+  border-left:1px solid var(--rule);
+  color:var(--muted);font-size:.73rem;line-height:1.28;
+}
+
 .entry{
-  align-self:stretch;border-left:1px solid var(--rule);
-  display:grid;grid-template-rows:1fr auto;align-items:center;justify-items:center;padding:.42rem .35rem .5rem
+  min-width:0;
+  display:grid;grid-template-rows:auto 1fr;
+  align-items:start;justify-items:center;
+  padding:.34rem .32rem;
+  border-left:1px solid var(--rule);
 }
 .state-stamp{
-  align-self:start;display:inline-block;padding:.11rem .26rem;border:1px solid var(--rule2);
-  font:.43rem/1.05 var(--mono);letter-spacing:.075em;text-transform:uppercase
+  display:inline-block;padding:.09rem .22rem;border:1px solid var(--rule2);
+  font:.41rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;
 }
 .enter{
-  align-self:end;font:.49rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase
+  align-self:end;
+  font:.46rem/1 var(--mono);letter-spacing:.075em;text-transform:uppercase;
 }
 .enter::after{content:" →";color:var(--accent)}
-.work-link:hover{background:rgba(255,255,255,.1)}
-.secondary{margin-top:2.4rem}
-.secondary .title{font-size:clamp(1.45rem,2.8vw,2.9rem)}
-.secondary .work-link{grid-template-columns:minmax(8.5rem,11rem) minmax(0,1fr) minmax(13rem,24rem) minmax(6rem,7rem)}
+
+.secondary{margin-top:1.1rem}
 .section-label{
-  padding:.5rem 0;border-top:1px solid var(--rule2);border-bottom:1px solid var(--rule);
-  font:.52rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)
+  height:1.75rem;display:flex;align-items:center;
+  border-top:1px solid var(--rule2);border-bottom:1px solid var(--rule);
+  color:var(--muted);font:.48rem/1 var(--mono);letter-spacing:.075em;text-transform:uppercase
 }
+.secondary .work-link{
+  grid-template-columns:9.5rem minmax(10rem,1fr) minmax(12rem,21rem) 6.2rem;
+  min-height:4.3rem;
+}
+.secondary .title{font-size:clamp(1.2rem,1.9vw,1.8rem)}
+.secondary .title.long{font-size:clamp(1.08rem,1.7vw,1.6rem)}
+.secondary .desc{font-size:.68rem}
+
 footer{
-  display:flex;justify-content:space-between;gap:1rem;padding:1rem 0 1.6rem;color:var(--muted);
-  font:.5rem/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase
+  height:2.7rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  color:var(--muted);font:.47rem/1 var(--mono);letter-spacing:.045em;text-transform:uppercase
 }
-@media(max-width:70rem){
-  .work-link{grid-template-columns:9.2rem minmax(0,1fr) minmax(6rem,7rem)}
-  .desc{grid-column:2/3;padding-top:0}
+
+@media(max-width:72rem){
+  .work-link{
+    grid-template-columns:9.5rem minmax(0,1fr) 5.8rem;
+    min-height:5.4rem;
+  }
+  .title{grid-column:2;grid-row:1;padding:.36rem .62rem .12rem}
+  .desc{
+    grid-column:2;grid-row:2;
+    border-left:0;padding:.08rem .62rem .42rem;
+    align-items:start;
+  }
   .entry{grid-column:3;grid-row:1/3}
+  .secondary .work-link{grid-template-columns:9rem minmax(0,1fr) 5.8rem}
 }
-@media(max-width:48rem){
-  .shell{width:calc(100% - .9rem)}
-  .top{min-height:3rem}
-  .index-head{padding:.35rem 0 .55rem}
-  .work-link{grid-template-columns:7.15rem minmax(0,1fr)}
-  .custody{grid-column:1;grid-row:1/4;padding:.55rem .45rem .58rem 0}
-  .title{grid-column:2;padding:.6rem 0 .16rem;font-size:clamp(1.7rem,8.6vw,2.8rem)}
-  .desc{grid-column:2;padding:.12rem 0 .42rem;font-size:.79rem}
-  .entry{grid-column:2;grid-row:auto;min-height:2.2rem;border-left:0;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;padding:.38rem 0 .42rem}
-  .state-stamp,.enter{align-self:auto}
-  .secondary .work-link{grid-template-columns:7.15rem minmax(0,1fr)}
+
+@media(max-width:46rem){
+  .shell{width:calc(100% - .7rem)}
+  .top{height:2.55rem}
+  .index-head{height:1.9rem}
+  .index-head p{display:none}
+
+  .work-link{
+    grid-template-columns:6.7rem minmax(0,1fr);
+    min-height:0;
+  }
+  .custody{
+    grid-column:1;grid-row:1/4;
+    padding:.38rem .38rem .38rem 0;
+    align-items:start;
+  }
+  .custody dl{
+    grid-template-columns:1fr;
+    gap:.02rem;
+  }
+  .custody dt{margin-top:.12rem}
+  .custody dt:first-child{margin-top:0}
+
+  .title{
+    grid-column:2;grid-row:1;
+    padding:.48rem .5rem .08rem;
+    font-size:clamp(1.48rem,7.6vw,2.2rem);
+    line-height:.94;
+  }
+  .title.long{font-size:clamp(1.25rem,6.5vw,1.85rem)}
+  .desc{
+    grid-column:2;grid-row:2;
+    padding:.05rem .5rem .35rem;
+    font-size:.72rem;line-height:1.24;
+  }
+  .entry{
+    grid-column:2;grid-row:3;
+    min-height:1.9rem;
+    border-left:0;border-top:1px solid var(--rule);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:.28rem .5rem .3rem;
+  }
+  .secondary{margin-top:.75rem}
+  .secondary .work-link{grid-template-columns:6.7rem minmax(0,1fr)}
+  .section-label{height:1.55rem}
+  footer{height:2.4rem}
 }
 </style>
 </head>
@@ -110,8 +189,8 @@ footer{
     <article class="work"><a class="work-link" href="/experiments/shared-country/">
       <aside class="custody"><dl>
         <dt>updated</dt><dd>24 Sep 2026 · 7:33 PM CT</dd>
-        <dt>hand</dt><dd>Workshop / Small Door ground</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>hand</dt><dd>Workshop · Small Door</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>live source-facing work</dd>
       </dl></aside>
       <div class="title">Shared Country</div>
@@ -123,7 +202,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>24 Sep 2026 · 5:15 PM CT</dd>
         <dt>hand</dt><dd>True North</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>working · noindex</dd>
       </dl></aside>
       <div class="title">Identity Gate</div>
@@ -135,7 +214,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>24 Sep 2026 · 12:44 PM CT</dd>
         <dt>hand</dt><dd>Fieldglass</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>identity comparison</dd>
       </dl></aside>
       <div class="title">Which Robert?</div>
@@ -147,7 +226,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>24 Sep 2026 · 12:07 PM CT</dd>
         <dt>hand</dt><dd>True North</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>architectural comparison · noindex</dd>
       </dl></aside>
       <div class="title">Article XIV Rooms</div>
@@ -159,7 +238,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>23 Sep 2026 · 12:32 PM CT</dd>
         <dt>hand</dt><dd>Sedge</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>playable research study</dd>
       </dl></aside>
       <div class="title long">The Machine Does Not Know for You</div>
@@ -171,7 +250,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>23 Sep 2026 · 10:06 AM CT</dd>
         <dt>hand</dt><dd>Needle Up</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>source-depth study · noindex</dd>
       </dl></aside>
       <div class="title long">One Proposition, Many Carriers</div>
@@ -183,7 +262,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>22 Sep 2026</dd>
         <dt>hand</dt><dd>Register</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>comparison body</dd>
       </dl></aside>
       <div class="title">MCR 879</div>
@@ -195,7 +274,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>22 Sep 2026</dd>
         <dt>hand</dt><dd>Mullion</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>bounded visual work · noindex</dd>
       </dl></aside>
       <div class="title long">Dancing Rabbit to Oklahoma</div>
@@ -207,7 +286,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>22 Sep 2026</dd>
         <dt>hand</dt><dd>True North</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>mapping study · noindex</dd>
       </dl></aside>
       <div class="title">The Missing Line</div>
@@ -219,7 +298,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>22 Sep 2026</dd>
         <dt>hand</dt><dd>Small Door</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>interaction study · noindex</dd>
       </dl></aside>
       <div class="title">Inline Depth</div>
@@ -231,7 +310,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>22 Sep 2026</dd>
         <dt>hand</dt><dd>Register + Lamplight</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>listening study · noindex</dd>
       </dl></aside>
       <div class="title long">One Outing, Two Clocks</div>
@@ -243,7 +322,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>23 Sep 2026</dd>
         <dt>hand</dt><dd>Touchstone</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>source-state comparison open</dd>
       </dl></aside>
       <div class="title">Six Letters · A</div>
@@ -255,7 +334,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>23 Sep 2026</dd>
         <dt>hand</dt><dd>Grainline carrying Touchstone plan</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>source-state comparison open</dd>
       </dl></aside>
       <div class="title">Six Letters · B</div>
@@ -267,7 +346,7 @@ footer{
       <aside class="custody"><dl>
         <dt>updated</dt><dd>22 Sep 2026</dd>
         <dt>hand</dt><dd>Ravel</dd>
-        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
         <dt>trust</dt><dd>source-room study</dd>
       </dl></aside>
       <div class="title">Ward Room</div>
