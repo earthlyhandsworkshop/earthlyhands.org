@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#eee9dd">
 <title>Follow the Carrier — Mary & William — Earthly Hands</title>
 <meta name="description" content="Read MCR 879 family voices. Watch a shared historical field change as their carriers accumulate.">
-<link rel="stylesheet" href="style.css?v=mary-william-v1">
+<link rel="stylesheet" href="style.css?v=source-shelf-v1">
 </head>
 <body>
 <main class="sheet">
@@ -17,6 +17,28 @@
   <span>MCR 879 · Part One</span>
 </header>
 
+<nav class="page-shelf" aria-label="Reached source pages">
+  <div class="page-shelf-label">
+    <span>PAGES</span>
+    <strong id="page-shelf-status">1 reached</strong>
+  </div>
+  <div class="page-tabs">
+    <button class="page-tab is-active" type="button" data-page-target="mary" aria-pressed="true">
+      <span class="page-glyph" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="page-tab-label">01</span>
+    </button>
+    <button class="page-tab" type="button" data-page-target="william" aria-pressed="false" hidden>
+      <span class="page-glyph" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="page-tab-label">02</span>
+    </button>
+  </div>
+  <div class="page-peek" id="page-peek">
+    <b>01 · Mary Caroline Atkinson</b>
+    <span>23 Oct 1900 · MCR 879 · sworn examination · Myra Young</span>
+  </div>
+</nav>
+
+<section class="source-page is-active" data-source-page="mary">
 <section class="opening">
   <div>
     <p class="eyebrow">LISTENING CUT · SCENE ONE</p>
@@ -177,7 +199,7 @@
       </div>
     </div>
 
-    <div class="register end">
+    <div class="register end source-page-unlock" data-page-unlock="william">
       <b>REGISTER</b>
       <p>The oral examination ends. The Commission says its written decision will be mailed to Mary. Myra Young, the stenographer, certifies that she reported the October 23 proceedings in full and that the transcript is full, true and correct to her notes.</p>
       <p class="silence">[silence]</p>
@@ -185,7 +207,9 @@
   </div>
 
 </article>
+</section>
 
+<section class="source-page" data-source-page="william" hidden>
 <section class="opening opening-next">
   <div>
     <p class="eyebrow">LISTENING CUT · SCENE TWO</p>
@@ -300,6 +324,7 @@
     </div>
   </div>
 </article>
+</section>
 
 <section id="carrier-field" class="carrier-field" hidden>
   <header class="field-head">
@@ -325,6 +350,6 @@
 <button id="field-door" class="field-toggle" type="button" aria-expanded="false" aria-controls="carrier-field" hidden>
   <span>FIELD</span><b>↓</b><em id="earned-count">0 reachable</em>
 </button>
-<script src="script.js?v=mary-william-v1"></script>
+<script src="script.js?v=source-shelf-v1"></script>
 </body>
 </html>
