@@ -112,7 +112,10 @@ function openSourcePage(id){
  activePage=id;
  persistPages();
  updatePageShelf();
- window.scrollTo({top:document.querySelector(".page-shelf").offsetTop,behavior:"smooth"});
+ window.scrollTo({
+   top:0,
+   behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"
+ });
 }
 function previewPage(id){
  const m=pageMeta[id];
