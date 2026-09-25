@@ -137,6 +137,47 @@ footer{
   letter-spacing:.08em;
   text-transform:uppercase;
 }
+.workshop-bearings{
+  min-height:2rem;
+  display:flex;
+  align-items:center;
+  gap:.55rem 1rem;
+  flex-wrap:wrap;
+  border-bottom:1px solid var(--rule);
+  color:var(--muted);
+  font:.48rem/1.2 var(--mono);
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+.workshop-bearings .bearing{
+  display:inline-flex;
+  align-items:baseline;
+  gap:.34rem;
+}
+.workshop-bearings .address{
+  color:var(--ink);
+  font-weight:600;
+  letter-spacing:.08em;
+}
+.workshop-bearings .current{
+  color:var(--accent);
+}
+.workshop-bearings .note{
+  margin-left:auto;
+  color:var(--muted);
+  text-transform:none;
+  letter-spacing:.015em;
+}
+@media(max-width:46rem){
+  .workshop-bearings{
+    padding:.4rem 0;
+    align-items:flex-start;
+  }
+  .workshop-bearings .note{
+    width:100%;
+    margin-left:0;
+  }
+}
 
 .properties-footer{
   position:relative;
@@ -382,7 +423,13 @@ footer{
 <div class="shell">
 <div class="identity-line">
     <div class="identity-mark"><strong>Earthly Hands</strong><span>Workshop</span></div>
-    <span class="identity-right">Public Work</span>
+    <span class="identity-right">16 — Public Ground</span>
+  </div>
+  <div class="workshop-bearings" aria-label="Workshop bearings">
+    <span class="bearing"><span class="address">10</span><span>Shared Marks</span></span>
+    <span class="bearing"><span class="address">15</span><span>Sandbox</span></span>
+    <span class="bearing current"><span class="address">16</span><span>Public Ground · you are here</span></span>
+    <span class="note">live bearings, not a settled floor plan</span>
   </div>
 <main>
   <h1 class="sr-only">Earthly Hands Public Work</h1>
