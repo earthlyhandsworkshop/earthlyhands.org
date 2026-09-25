@@ -29,7 +29,7 @@ jobs:
 
       - name: Commit metadata when it changed
         run: |
-          if git diff --quiet -- experiments/index-metadata.json; then
+          if [ -z "$(git status --porcelain -- experiments/index-metadata.json)" ]; then
             exit 0
           fi
           git config user.name "earthlyhandsworkshop"
