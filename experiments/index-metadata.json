@@ -206,5 +206,6 @@
         "experiments/register-threshold-v2"
       ]
     }
-  }
+  },
+  "witness_probe": "small-door-2026-09-25"
 }
