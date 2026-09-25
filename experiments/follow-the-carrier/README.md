@@ -193,3 +193,31 @@ The earned next branch is a parallel listening mode with the same source and the
 
 The first technical study should therefore be about **playback/state synchronization and voice quality**, not about adding more historical material.
 
+
+
+## William D. Bell enters the same field
+
+Scene Two is now present as a second source piece: **William D. Bell, 23 October 1900**.
+
+William changes the existing field rather than starting another one.
+
+Mary already made a family-carried roll/register proposition reachable. William later says that finding his father's name on the Choctaw roll of 1830 makes him think he has a right; he has not seen it there himself; what he knows is what he has been told; and he does not know whether Robert took advantage of Article XIV.
+
+When that beat is read, the existing roll/register piece changes from one family witness carrier to two family witness carriers. It does not become a recovered historical roll occurrence, independent corroboration, proved Article XIV enrollment, or a person-identity join.
+
+William also reaches objects already present from Mary:
+- Durant;
+- Pontotoc;
+- Robert Bell.
+
+Properties preserves the different source-local jobs. For example, Mary carries Durant as a post-office address; William carries Durant as post-office / recent arrival. Same place label does not mean same evidentiary job.
+
+William also adds:
+- Texas — prior residence;
+- Martha Jane — wife occurrence;
+- a 15-day additional-documentary-proof window;
+- four minor children as application population.
+
+Current test:
+
+> Can one persistent field accumulate several source voices without turning repeated propositions into false certainty or repeated people into duplicate history?
