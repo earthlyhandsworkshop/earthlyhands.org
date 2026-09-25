@@ -162,24 +162,28 @@ h1{margin:0;max-width:11ch;font-size:clamp(3.4rem,7.8vw,7.7rem);font-weight:400;
   body{font-size:1.13rem}
   .shell{width:calc(100% - .5rem);margin:.25rem auto .6rem}
   .identity{min-height:2rem;padding:.42rem .55rem}
-  .identity strong{font-size:.72rem}.identity span{font-size:.64rem}
+  .identity strong{font-size:.78rem}.identity span{font-size:.72rem}
   .hero{padding:1.35rem .7rem 1.55rem}
   h1{font-size:clamp(3.5rem,17vw,5.8rem)}
   .hero-copy .plain{font-size:1.18rem}
   .instrument{padding:.65rem}
   .subject{grid-template-columns:1fr;gap:.15rem}
+  .subject .step-label{font-size:.78rem}
   .subject strong{font-size:1.55rem}
   .stage-top{padding:.6rem .65rem}
+  .stage-top .meta,.stage-top .position{font-size:.78rem}
   .statement{padding:1.5rem .7rem 1.7rem}
   .statement p{font-size:clamp(2.5rem,12vw,4.2rem)}
   .state-grid{grid-template-columns:1fr}
   .state{padding:.9rem .7rem 1rem}
   .state+.state{border-left:0;border-top:1px solid var(--rule)}
+  .state-label{font-size:.78rem}
   .state h2{font-size:1.48rem}
   .state p{font-size:1.08rem}
   .details{grid-template-columns:1fr}
   .detail{border-right:0;border-bottom:1px solid var(--soft);padding:.68rem .7rem}
   .detail:last-child{border-bottom:0}
+  .detail b{font-size:.72rem}
   .detail span{font-size:1.08rem}
   .controls{padding:.65rem .7rem;align-items:flex-end}
   .controls button{min-height:3rem;font-size:.82rem}
@@ -187,6 +191,7 @@ h1{margin:0;max-width:11ch;font-size:clamp(3.4rem,7.8vw,7.7rem);font-weight:400;
   .progress i{width:.62rem;height:.62rem}
   .history{margin-top:.2rem}
   .history-head{padding:.5rem .6rem}
+  .history-label,.history-count{font-size:.74rem}
   .history-list{display:flex;overflow-x:auto}
   .history-button{min-width:9.5rem;padding:.62rem .55rem}
   .history-button span{font-size:1rem}
@@ -194,7 +199,7 @@ h1{margin:0;max-width:11ch;font-size:clamp(3.4rem,7.8vw,7.7rem);font-weight:400;
   .brake h2{border-right:0;border-bottom:1px solid var(--rule)}
   .brake-copy,.source-floor{font-size:1.08rem}
   .source-floor{gap:.35rem}
-  .footer{flex-direction:column;gap:.35rem;font-size:.7rem}
+  .footer{flex-direction:column;gap:.35rem;font-size:.76rem}
 }
 </style>
 </head>
@@ -355,8 +360,9 @@ const carriers=[
   }
 ];
 
-let current=0;
-let reached=1;
+const requestedCarrier=Math.max(1,Math.min(carriers.length,Number(new URLSearchParams(location.search).get("carrier"))||1));
+let current=requestedCarrier-1;
+let reached=requestedCarrier;
 const statement=document.getElementById("statement");
 const meta=document.getElementById("carrier-meta");
 const pos=document.getElementById("carrier-position");
@@ -381,10 +387,17 @@ function renderHistory(){
     b.className="history-button "+(i===current?"is-current ":"")+(i>=reached?"is-future":"");
     b.disabled=i>=reached;
     b.innerHTML="<b>"+String(i+1).padStart(2,"0")+"</b><span>"+c.short+"</span><small>"+c.meta+"</small>";
-    b.addEventListener("click",()=>{current=i;render()});
+    b.addEventListener("click",()=>{current=i;syncUrl();render()});
     history.append(b);
   });
   count.textContent=reached+" of "+carriers.length+" reached";
+}
+
+function syncUrl(){
+  const url=new URL(location.href);
+  if(current===0) url.searchParams.delete("carrier");
+  else url.searchParams.set("carrier",String(current+1));
+  history.replaceState(null,"",url);
 }
 
 function renderProgress(){
@@ -416,11 +429,12 @@ function render(){
   renderProgress();
 }
 
-back.addEventListener("click",()=>{if(current>0){current--;render()}});
+back.addEventListener("click",()=>{if(current>0){current--;syncUrl();render()}});
 next.addEventListener("click",()=>{
   if(current<carriers.length-1){
     current++;
     reached=Math.max(reached,current+1);
+    syncUrl();
     render();
   }
 });
