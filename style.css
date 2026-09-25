@@ -2197,3 +2197,47 @@ body[data-discovery="open"] .camp-people{
     min-height:0;
   }
 }
+
+
+/* Shared Country · People speaks in relations, not a reading column.
+   Its datum is the full revealed field; individual bodies remain bounded. */
+.experience-shell[data-view="people"] .camp-people{
+  width:100%;
+}
+.experience-shell[data-view="people"] .people-head,
+.experience-shell[data-view="people"] .camp-people-list{
+  max-width:none;
+  width:100%;
+}
+.experience-shell[data-view="people"] .people-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:end;
+}
+.experience-shell[data-view="people"] .people-intro{
+  max-width:none;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+}
+.experience-shell[data-view="people"] .encounter-card-grid{
+  grid-template-columns:repeat(auto-fit,minmax(min(20rem,100%),1fr));
+}
+.experience-shell[data-view="people"] .person-card-face{
+  min-height:11rem;
+}
+.experience-shell[data-view="people"] .person-card-name{
+  max-width:18ch;
+}
+@media(min-width:72rem){
+  .experience-shell[data-view="people"] .encounter-card-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+@media(max-width:52rem){
+  .experience-shell[data-view="people"] .people-head{
+    grid-template-columns:1fr;
+  }
+  .experience-shell[data-view="people"] .people-intro,
+  .experience-shell[data-view="people"] .encounter-card-grid{
+    grid-template-columns:1fr;
+  }
+}
