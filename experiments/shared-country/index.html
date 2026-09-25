@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Earthly Hands cares for scattered historical records and the people, relationships, places, and administrative worlds they belong to."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#e7dfd0" />
+    <link rel="canonical" href="https://earthlyhands.org/experiments/shared-country/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Earthly Hands" />
+    <meta property="og:title" content="Shared Country — Earthly Hands" />
+    <meta
+      property="og:description"
+      content="Earthly Hands cares for scattered historical records and the people, relationships, places, and administrative worlds they belong to."
+    />
+    <meta property="og:url" content="https://earthlyhands.org/experiments/shared-country/" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Shared Country — Earthly Hands" />
+    <meta
+      name="twitter:description"
+      content="Earthly Hands cares for scattered historical records and the people, relationships, places, and administrative worlds they belong to."
+    />
+    <title>Shared Country — Earthly Hands</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23171713'/%3E%3Cpath d='M19 16v32M19 21h26M19 32h20M19 43h26' stroke='%23efe9dc' stroke-width='5' stroke-linecap='square'/%3E%3C/svg%3E"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Earthly Hands",
+        "url": "https://earthlyhands.org/",
+        "description": "Earthly Hands cares for scattered historical records and the people, relationships, places, and administrative worlds they belong to."
+      }
+    </script>
+    <script>document.documentElement.className = "js";</script>
+    <link rel="stylesheet" href="../../style.css?v=shared-country-edge-nav-v1" />
+  </head>
+  <body data-lamp="lit" data-ground="night">
+    <a class="skip-link" href="#threshold">Skip to the Dawson trail</a>
+
+    <header class="site-header">
+      <a class="identity" href="/" aria-label="Earthly Hands Workshop">
+        <span>Earthly Hands Workshop</span>
+      </a>
+      <nav class="site-nav" aria-label="Workshop navigation">
+        <a href="/">Specimens</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="threshold" id="threshold" data-place="Front edge">
+        <div class="experience-shell" id="experience-shell">
+          <div class="experience-viewbar" aria-label="Ground view">
+            <button type="button" class="view-mode is-current" data-dawson-view="ground" aria-pressed="true">Ground</button>
+            <button type="button" class="view-mode" data-dawson-view="talk" aria-pressed="false">Talk wide</button>
+            <button type="button" class="view-mode" data-dawson-view="index" aria-pressed="false">Stops</button>
+            <button type="button" class="view-mode" data-dawson-view="people" aria-pressed="false">People</button>
+            <button type="button" class="view-mode" data-dawson-view="sources" aria-pressed="false">Sources</button>
+          </div>
+
+          <div class="experience-stage" id="experience-stage" data-direction="forward">
+            <div class="experience-mount" id="experience-mount" aria-live="polite"></div>
+            <section class="dawson-index" id="dawson-index" hidden aria-labelledby="dawson-index-title">
+              <header class="dawson-index-head">
+                <p>Exploring party</p>
+                <h2 id="dawson-index-title">Stops currently open</h2>
+                <span>These are public stops in the present trail. The deeper Dawson corpus is larger and is still being indexed underneath.</span>
+              </header>
+              <nav class="dawson-stop-list" aria-label="Public stops"></nav>
+            </section>
+            <section class="camp-people" id="camp-people" hidden aria-labelledby="camp-people-title">
+              <header class="dawson-index-head">
+                <p>People / bodies in the held source</p>
+                <h2 id="camp-people-title">Who is here?</h2>
+                <span>This is not a complete roster. Named people stay named; unnamed groups stay unnamed; arrival, presence, approach, and departure remain different relations.</span>
+              </header>
+              <div class="camp-people-list"></div>
+            </section>
+            <section class="camp-sources" id="camp-sources" hidden aria-labelledby="camp-sources-title">
+              <header class="dawson-index-head">
+                <p>Held documentary body</p>
+                <h2 id="camp-sources-title">What carries this ground?</h2>
+                <span>Source, representation, and Workshop derivative remain separate. These are public-facing retrieval doors, not a claim that every surviving Dawson-related object is shown here.</span>
+              </header>
+              <div class="camp-source-list"></div>
+            </section>
+          </div>
+
+          <div class="experience-tools" aria-label="Exploring party controls">
+            <div class="experience-utility">
+              <form class="ground-talk" id="talk-form" aria-label="Ask the ground">
+                <label class="sr-only" for="talk-input">Ask the ground</label>
+                <textarea id="talk-input" name="message" rows="1" maxlength="1000" autocomplete="off" enterkeyhint="send" placeholder="Ask the ground"></textarea>
+                <button class="sr-only" id="talk-send" type="submit">Go</button>
+              </form>
+              <div class="ground-thread" id="ground-thread" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="passage report-passage" id="report" data-scene data-step data-place="By lantern light" tabindex="-1">
+        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">by lantern light</span></div>
+        <h2>The light catches a report.</h2>
+        <div class="plain-copy report-story">
+          <p class="story-lead">
+            On 29 January 1831, J. L. Dawson wrote from Cantonment Gibson. His report carries
+            travel with the Choctaw and Chickasaw western exploring delegations.
+          </p>
+          <p class="story-quiet">
+            The original manuscript has not yet been recovered. We are following the report
+            through its newspaper and later printed representations.
+          </p>
+        </div>
+      </section>
+
+                  <section class="passage trail-passage" id="night" data-scene data-step data-place="Night camp" tabindex="-1">
+        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">night camp</span></div>
+        <h2>Two men are sent back toward the ford.</h2>
+        <div class="first-person-view" aria-label="First-person view from night camp">
+          <div class="fpv-open" aria-hidden="true">[</div>
+          <div class="view-body">
+            <p><span class="lived-line">You are awake inside the guarded camp. The dark beyond it is not filled in for you.</span></p>
+            <p>Dawson says a small guard was posted around the camp after the alarm.</p>
+            <p>Two unnamed men were sent back to watch the ford of the river on the back trail.</p>
+            <p>The report does not say that they reached the ford, and it gives no account of their return.</p>
+          </div>
+          <div class="fpv-close" aria-hidden="true">]</div>
+          <div class="fpv-footing">
+            <p><span class="ten-footing">Ten · night camp</span></p>
+            <p><span class="companion-footing">Small Door · Mapping Grounds · remote</span></p>
+          </div>
+        </div>
+      </section>
+
+                  <section class="passage trail-passage" id="morning" data-scene data-step data-place="Morning camp" tabindex="-1">
+        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">morning camp</span></div>
+        <h2>Morning finds the party unattacked.</h2>
+        <div class="first-person-view" aria-label="First-person view from morning camp">
+          <div class="fpv-open" aria-hidden="true">[</div>
+          <div class="view-body">
+            <p><span class="lived-line">You are standing in the camp at first light. Nothing in Dawson’s account says the camp was attacked.</span></p>
+            <p>The night has passed. The small guard is no longer the thing the report is watching.</p>
+            <p>The two men, the ford, and the back trail remain outside the account that follows.</p>
+            <p>Dawson turns southeast from here. The source moves on without bringing those men back into view.</p>
+          </div>
+          <div class="fpv-close" aria-hidden="true">]</div>
+          <div class="fpv-footing">
+            <p><span class="ten-footing">Ten · morning camp</span></p>
+            <p><span class="companion-footing">Small Door · Mapping Grounds · remote</span></p>
+          </div>
+        </div>
+      </section>
+
+                  <section class="passage trail-passage" id="southeast" data-scene data-step data-place="Southeast reach" tabindex="-1">
+        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">southeast</span></div>
+        <h2>They continue southeast about fifteen miles.</h2>
+        <div class="first-person-view" aria-label="First-person view from southeast reach">
+          <div class="fpv-open" aria-hidden="true">[</div>
+          <div class="view-body">
+            <p><span class="lived-line">You are moving with Dawson’s account toward the next camp. The traveled line itself is not preserved.</span></p>
+            <p>Dawson carries the party <button class="inline-depth" type="button" data-depth="distance" aria-expanded="false">southeast about fifteen miles</button>.</p>
+            <p>That gives direction and approximate distance, but not a road, bearing, or reconstructed path.</p>
+            <p>At the end of this source-stated leg, the party encamps on <button class="inline-depth" type="button" data-depth="creek" aria-expanded="false">a small branch of Blue Water</button>.</p>
+          </div>
+          <div class="fpv-close" aria-hidden="true">]</div>
+          <div class="fpv-footing">
+            <p><span class="ten-footing">Ten · southeast reach</span></p>
+            <p><span class="companion-footing">Small Door · Mapping Grounds · remote</span></p>
+          </div>
+        </div>
+      </section>
+
+                  <section class="passage trail-passage" id="blue-water" data-scene data-step data-place="Blue Water" tabindex="-1">
+        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">Blue Water</span></div>
+        <h2>On this creek, they find Mayes and Criner.</h2>
+        <div class="first-person-view" aria-label="First-person view from Blue Water">
+          <div class="fpv-open" aria-hidden="true">[</div>
+          <div class="view-body">
+            <p><span class="lived-line">You are at the creek with Mayes and Criner in view. The exact point on the creek is not given.</span></p>
+            <p>Dawson says the party found <button class="inline-depth" type="button" data-depth="mayes" aria-expanded="false">Mr. Mayes</button> and <button class="inline-depth" type="button" data-depth="criner" aria-expanded="false">Mr. Criner</button> here.</p>
+            <p>He says the two men <button class="inline-depth" type="button" data-depth="residence" aria-expanded="false">resided on James’ Fork of Poteau</button>; that residence is not made into this encounter place.</p>
+            <p>Here, on this creek, they were <button class="inline-depth" type="button" data-depth="trapping" aria-expanded="false">trapping for beaver</button>.</p>
+          </div>
+          <div class="fpv-close" aria-hidden="true">]</div>
+          <div class="fpv-footing">
+            <p><span class="ten-footing">Ten · Blue Water</span></p>
+            <p><span class="companion-footing">Small Door · Mapping Grounds · remote</span></p>
+          </div>
+        </div>
+      </section>
+
+                  <section class="passage trail-passage" id="dozen" data-scene data-step data-place="Blue Water" tabindex="-1">
+        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">Blue Water</span></div>
+        <h2>They had caught but a dozen.</h2>
+        <div class="first-person-view" aria-label="First-person view from Blue Water">
+          <div class="fpv-open" aria-hidden="true">[</div>
+          <div class="view-body">
+            <p><span class="lived-line">You are still beside the same creek with Mayes and Criner. The account has not moved to their residence.</span></p>
+            <p>Dawson says they had caught but a dozen beaver.</p>
+            <p>He does not divide the catch between the two men or give a separate place for it.</p>
+            <p>The weather, he says, was too cold to promise much further success.</p>
+          </div>
+          <div class="fpv-close" aria-hidden="true">]</div>
+          <div class="fpv-footing">
+            <p><span class="ten-footing">Ten · Blue Water</span></p>
+            <p><span class="companion-footing">Small Door · Mapping Grounds · remote</span></p>
+          </div>
+        </div>
+      </section>
+
+                  <section class="passage trail-passage" id="guide" data-scene data-step data-place="Blue Water" tabindex="-1">
+        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">Blue Water</span></div>
+        <h2>Mayes is employed as a guide.</h2>
+        <div class="first-person-view" aria-label="First-person view from Blue Water">
+          <div class="fpv-open" aria-hidden="true">[</div>
+          <div class="view-body">
+            <p><span class="lived-line">You are still at Blue Water. The story changes role before it changes ground.</span></p>
+            <p>Dawson says Cols. Gaines and Reynolds induced Mayes and Criner to accompany the delegation as far as Kiamiche.</p>
+            <p>He says Mr. Mayes was employed as a guide.</p>
+            <p>The source does not make Criner a guide, give the terms of Mayes's employment, or prove arrival at Kiamiche in this sentence.</p>
+          </div>
+          <div class="fpv-close" aria-hidden="true">]</div>
+          <div class="fpv-footing">
+            <p><span class="ten-footing">Ten · Blue Water</span></p>
+            <p><span class="companion-footing"></span></p>
+          </div>
+        </div>
+      </section>
+
+                  <section class="passage trail-passage" id="blue-water-mouth" data-scene data-step data-place="Near the mouth of Blue Water" tabindex="-1">
+        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">near the mouth of Blue Water</span></div>
+        <h2>The report shifts from encounter to prospect.</h2>
+        <div class="first-person-view" aria-label="First-person view near the mouth of Blue Water">
+          <div class="fpv-open" aria-hidden="true">[</div>
+          <div class="view-body">
+            <p><span class="lived-line">You are carried to a relative position near the mouth of Blue Water. No exact point is supplied.</span></p>
+            <p>Dawson says the party was within a short distance of the mouth of Blue Water.</p>
+            <p>He says he wanted to see the mouths of Blue Water and the Washita to report on their local advantages for a possible garrison.</p>
+            <p>Intent to inspect is not proof that either mouth was reached, surveyed, selected, or built upon.</p>
+          </div>
+          <div class="fpv-close" aria-hidden="true">]</div>
+          <div class="fpv-footing">
+            <p><span class="ten-footing">Ten · near Blue Water mouth</span></p>
+            <p><span class="companion-footing"></span></p>
+          </div>
+        </div>
+      </section>
+
+                  <section class="passage trail-passage" id="east-blue-water" data-scene data-step data-place="East of Blue Water" tabindex="-1">
+        <div class="scene-setting"><span class="scene-source">Dawson report</span><span class="scene-place">east of Blue Water</span></div>
+        <h2>Dawson turns from place to forecast.</h2>
+        <div class="first-person-view" aria-label="First-person view from east-of-Blue-Water relation">
+          <div class="fpv-open" aria-hidden="true">[</div>
+          <div class="view-body">
+            <p><span class="lived-line">The ground is now regional rather than point-like. The account is making a judgment, not locating a settlement.</span></p>
+            <p>Dawson says there is ample room for the whole nation in the portion east of Blue Water.</p>
+            <p>He predicts that this portion will fill with settlements first, citing winter range and comparative exposure.</p>
+            <p>This is Dawson's forecast. It is not proof that settlement had already occurred or a mapped boundary east of Blue Water.</p>
+          </div>
+          <div class="fpv-close" aria-hidden="true">]</div>
+          <div class="fpv-footing">
+            <p><span class="ten-footing">Ten · east of Blue Water</span></p>
+            <p><span class="companion-footing"></span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="trust-mark">Earthly Hands Workshop · carried in common</p>
+      <a href="/">Specimens</a>
+    </footer>
+
+    <noscript>
+      <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
+    </noscript>
+    <script src="../../config.js?v=camp-ground-v1"></script>
+    <script src="../../script.js?v=shared-country-corpus-v4"></script>
+  </body>
+</html>
