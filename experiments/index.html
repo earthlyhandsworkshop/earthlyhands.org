@@ -156,7 +156,10 @@ footer{
 </head>
 <body>
 <div class="shell">
-<div class="identity-line"><strong>Earthly Hands Workshop</strong><span>research & documentation</span></div>
+<div class="identity-line">
+    <div class="identity-mark"><strong>Earthly Hands</strong><span>Workshop</span></div>
+    <span class="identity-right">Public Work</span>
+  </div>
 <main>
   <section aria-label="Current public work">
     <div class="section-label" style="border-top:0">Public work</div>
@@ -376,25 +379,30 @@ footer{
     </a></article>
   </section>
 
-  <section class="contact" aria-label="Contact and receiving">
-    <div class="contact-head"><span>Receiving</span><span>archive door open</span></div>
-    <form class="contact-grid" id="receive-form">
-      <label>
-        <span class="contact-label">File</span>
+  <section class="properties-footer" aria-label="Properties">
+    <div class="properties-tab">PROPERTIES</div>
+    <form class="properties-form" id="receive-form">
+      <div class="pf-group pf-workshop">
+        <span class="pf-label">Workshop</span>
+        <strong>Earthly Hands</strong>
+        <span>Receiving open</span>
+      </div>
+      <label class="pf-group pf-file">
+        <span class="pf-label">File</span>
         <input name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required>
       </label>
-      <label>
-        <span class="contact-label">Related to · optional</span>
+      <label class="pf-group pf-note">
+        <span class="pf-label">Related to · optional</span>
         <input name="description" type="text" maxlength="1000" placeholder="person, place, record, question, or not sure">
       </label>
-      <div>
-        <span class="contact-label">Email</span>
+      <div class="pf-group pf-email">
+        <span class="pf-label">Email</span>
         <a href="mailto:workshop@earthlyhands.org">workshop@earthlyhands.org</a>
       </div>
-      <div class="send-cell">
-        <span class="contact-label">Send to Receiving</span>
+      <div class="pf-group pf-send">
+        <span class="pf-label">Receiving</span>
         <button type="submit">Send file</button>
-        <div class="receive-status" id="receive-status">Private on receipt · reviewed before any public use.</div>
+        <span class="receive-status" id="receive-status">Private on receipt · reviewed before public use.</span>
       </div>
     </form>
   </section>
