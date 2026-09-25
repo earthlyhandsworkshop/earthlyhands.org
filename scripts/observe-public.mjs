@@ -3,17 +3,31 @@ import crypto from "node:crypto";
 
 const base = (process.env.PUBLIC_BASE_URL || "https://earthlyhands.org").replace(/\/$/, "");
 const commit = process.env.GITHUB_SHA || "manual";
+async function collectPublicExperimentFiles(dir) {
+  const out = [];
+  for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
+    const localPath = `${dir}/${entry.name}`;
+    if (entry.isDirectory()) {
+      out.push(...await collectPublicExperimentFiles(localPath));
+      continue;
+    }
+    if (!/\.(?:html|css|js)$/.test(entry.name)) continue;
+    const publicPath = entry.name === "index.html"
+      ? `/${dir}/`
+      : `/${localPath}`;
+    out.push([localPath, publicPath]);
+  }
+  return out;
+}
+
 const files = [
   ["index.html", "/"],
   ["style.css", "/style.css"],
   ["script.js", "/script.js"],
   ["config.js", "/config.js"],
-  ["experiments/shared-country/index.html", "/experiments/shared-country/"],
-  ["experiments/follow-the-carrier/index.html", "/experiments/follow-the-carrier/"],
-  ["experiments/follow-the-carrier/style.css", "/experiments/follow-the-carrier/style.css"],
-  ["experiments/follow-the-carrier/script.js", "/experiments/follow-the-carrier/script.js"],
   ["mcr879.html", "/mcr879.html"],
-  ["mcr879.css", "/mcr879.css"]
+  ["mcr879.css", "/mcr879.css"],
+  ...await collectPublicExperimentFiles("experiments")
 ];
 
 const sha256 = (value) =>
