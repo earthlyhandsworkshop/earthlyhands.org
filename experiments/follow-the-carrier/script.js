@@ -49,6 +49,74 @@ const stage=document.querySelector("#field-stage");
 const props=document.querySelector("#properties-body");
 const status=document.querySelector("#field-status");
 const count=document.querySelector("#earned-count");
+const pageTabs=[...document.querySelectorAll(".page-tab")];
+const sourcePages=[...document.querySelectorAll(".source-page")];
+const pagePeek=document.querySelector("#page-peek");
+const shelfStatus=document.querySelector("#page-shelf-status");
+const pageUnlocks=[...document.querySelectorAll(".source-page-unlock")];
+const pageMeta={
+ mary:{title:"01 · Mary Caroline Atkinson",meta:"23 Oct 1900 · MCR 879 · sworn examination · Myra Young"},
+ william:{title:"02 · William D. Bell",meta:"23 Oct 1900 · MCR 879 · sworn examination · Kate De Bord"}
+};
+const pageKey="eh-follow-carrier-pages-v1";
+const reachedPages=new Set(JSON.parse(localStorage.getItem(pageKey)||'["mary"]'));
+if(earned.has("william")) reachedPages.add("william");
+let activePage=localStorage.getItem(pageKey+"-active")||"mary";
+
+function persistPages(){
+ localStorage.setItem(pageKey,JSON.stringify([...reachedPages]));
+ localStorage.setItem(pageKey+"-active",activePage);
+}
+function updatePageShelf(){
+ pageTabs.forEach(function(tab){
+   const id=tab.dataset.pageTarget;
+   tab.hidden=!reachedPages.has(id);
+   const on=id===activePage;
+   tab.classList.toggle("is-active",on);
+   tab.setAttribute("aria-pressed",on?"true":"false");
+ });
+ sourcePages.forEach(function(page){
+   const on=page.dataset.sourcePage===activePage;
+   page.hidden=!on;
+   page.classList.toggle("is-active",on);
+ });
+ const m=pageMeta[activePage]||pageMeta.mary;
+ pagePeek.innerHTML="<b>"+m.title+"</b><span>"+m.meta+"</span>";
+ shelfStatus.textContent=reachedPages.size+" reached";
+}
+function openSourcePage(id){
+ if(!reachedPages.has(id))return;
+ activePage=id;
+ persistPages();
+ updatePageShelf();
+ window.scrollTo({top:document.querySelector(".page-shelf").offsetTop,behavior:"smooth"});
+}
+function previewPage(id){
+ const m=pageMeta[id];
+ if(m)pagePeek.innerHTML="<b>"+m.title+"</b><span>"+m.meta+"</span>";
+}
+function restorePagePeek(){previewPage(activePage);}
+
+pageTabs.forEach(function(tab){
+ const id=tab.dataset.pageTarget;
+ tab.addEventListener("click",function(){openSourcePage(id);});
+ tab.addEventListener("mouseenter",function(){previewPage(id);});
+ tab.addEventListener("focus",function(){previewPage(id);});
+ tab.addEventListener("mouseleave",restorePagePeek);
+ tab.addEventListener("blur",restorePagePeek);
+});
+pageUnlocks.forEach(function(node){
+ const obs=new IntersectionObserver(function(entries){
+   entries.forEach(function(e){
+     if(e.isIntersecting){
+       const id=node.dataset.pageUnlock;
+       if(id&&!reachedPages.has(id)){reachedPages.add(id);persistPages();updatePageShelf();}
+     }
+   });
+ },{rootMargin:"-10% 0px -45% 0px",threshold:.01});
+ obs.observe(node);
+});
+updatePageShelf();
 
 function persist(){localStorage.setItem(key,JSON.stringify([...earned]));}
 function earn(ids){
@@ -88,7 +156,7 @@ function shutField(){
  door.setAttribute("aria-expanded","false");
  door.querySelector("span").textContent="FIELD";
  door.querySelector("b").textContent="↓";
- document.querySelector("#source-piece").scrollIntoView({behavior:"smooth",block:"end"});
+ const active=document.querySelector(".source-page.is-active"); if(active)active.scrollIntoView({behavior:"smooth",block:"start"});
 }
 door.addEventListener("click",function(){field.hidden?openField():shutField();});
 
@@ -156,7 +224,7 @@ function renderField(){
    let note=p.note;
    if(id==="remembered-roll" && earned.has("william-roll")) note="2 family witness carriers";
    if(id==="robert" && earned.has("william-robert")) note="father proposition · 2 carriers";
-   b.innerHTML='<span class="mark-kind">'+shownKind+'</span><span class="dot"></span><strong>'+p.title+'</strong><small>'+p.note+'</small>';
+   b.innerHTML='<span class="mark-kind">'+shownKind+'</span><span class="dot"></span><strong>'+p.title+'</strong><small>'+note+'</small>';
    b.addEventListener("click",function(){inspect(id,b);});
    stage.append(b);
  });
