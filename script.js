@@ -52,11 +52,12 @@
   const thresholdIntro = document.querySelector("#threshold-intro");
   const experienceMount = document.querySelector("#experience-mount");
   const dawsonIndex = document.querySelector("#dawson-index");
+  const proseMapSvg = document.querySelector("#prose-map-svg");
   const campPeople = document.querySelector("#camp-people");
   const campPeopleList = document.querySelector(".camp-people-list");
+  const campPeopleCount = document.querySelector("#camp-people-count");
   const campSources = document.querySelector("#camp-sources");
   const campSourceList = document.querySelector(".camp-source-list");
-  const dawsonStopList = document.querySelector(".dawson-stop-list");
   const viewModes = Array.from(document.querySelectorAll("[data-dawson-view]"));
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const steps = Array.from(document.querySelectorAll("[data-step]"));
@@ -268,7 +269,15 @@
     // Present-state memory is optional.
   }
   let currentId = "morning";
+  let furthestIndex = 0;
   let asking = false;
+
+  try {
+    const rememberedReach = Number(window.localStorage.getItem("earthly-hands-story-reach") || "0");
+    if (Number.isFinite(rememberedReach)) furthestIndex = Math.max(0, Math.min(fullSequence.length - 1, rememberedReach));
+  } catch (_) {
+    // Visitor reach can remain session-local when durable browser storage is unavailable.
+  }
 
   function setLamp(isLit) {
     document.body.dataset.lamp = "lit";
@@ -443,7 +452,7 @@
   }
 
   function setDawsonView(view) {
-    const next = ["ground", "talk", "index", "people", "sources"].includes(view) ? view : "ground";
+    const next = ["ground", "map", "people", "sources"].includes(view) ? view : "ground";
     if (experienceShell) experienceShell.dataset.view = next;
 
     viewModes.forEach((button) => {
@@ -452,40 +461,104 @@
       button.setAttribute("aria-pressed", String(active));
     });
 
-    if (experienceMount) experienceMount.hidden = next === "index" || next === "people" || next === "sources";
-    if (dawsonIndex) dawsonIndex.hidden = next !== "index";
+    if (experienceMount) experienceMount.hidden = next === "map" || next === "people" || next === "sources";
+    if (dawsonIndex) dawsonIndex.hidden = next !== "map";
     if (campPeople) campPeople.hidden = next !== "people";
     if (campSources) campSources.hidden = next !== "sources";
 
-    if (next === "talk") {
-      requestAnimationFrame(() => talkInput?.focus({ preventScroll: true }));
-    }
+    if (next === "map") buildProseMap();
+    if (next === "people") buildCampPeople();
   }
 
-  function buildDawsonIndex() {
-    if (!dawsonStopList) return;
-    const fragment = document.createDocumentFragment();
+  function svgEl(name, attrs = {}, text = "") {
+    const el = document.createElementNS("http://www.w3.org/2000/svg", name);
+    Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, String(value)));
+    if (text) el.textContent = text;
+    return el;
+  }
 
-    fullSequence.forEach((id, i) => {
-      const ui = trailUi[id];
-      const row = document.createElement("button");
-      row.type = "button";
-      row.className = "dawson-stop";
-      row.dataset.stop = id;
-      row.innerHTML = `
-        <span class="stop-number">${String(i + 1).padStart(2, "0")}</span>
-        <strong>${ui?.name || id}</strong>
-        <span>${ui?.note || ""}</span>
-        <b aria-hidden="true">→</b>
-      `;
-      row.addEventListener("click", () => {
-        landAt(id);
-        setDawsonView("ground");
-      });
-      fragment.append(row);
-    });
+  function buildProseMap() {
+    if (!proseMapSvg) return;
+    proseMapSvg.replaceChildren();
 
-    dawsonStopList.replaceChildren(fragment);
+    const reached = Math.max(furthestIndex, fullSequence.indexOf(currentId));
+    const ink = "currentColor";
+
+    const backgroundRule = svgEl("line", { x1: 42, y1: 326, x2: 818, y2: 326, class: "map-horizon" });
+    proseMapSvg.append(backgroundRule);
+
+    const caption = svgEl("text", { x: 44, y: 356, class: "map-caption" }, "REVEALED BY STORY REACH · NOT A RECONSTRUCTED ROUTE");
+    proseMapSvg.append(caption);
+
+    // Night and morning are one held camp occurrence across a time change.
+    if (reached >= 0) {
+      proseMapSvg.append(
+        svgEl("circle", { cx: 105, cy: 244, r: 9, class: "map-node" }),
+        svgEl("text", { x: 82, y: 218, class: "map-place" }, "camp"),
+        svgEl("text", { x: 82, y: 264, class: "map-small" }, "night")
+      );
+    }
+    if (reached >= 1) {
+      proseMapSvg.append(
+        svgEl("line", { x1: 105, y1: 234, x2: 105, y2: 188, class: "map-same-ground" }),
+        svgEl("text", { x: 82, y: 176, class: "map-small" }, "morning"),
+        svgEl("text", { x: 126, y: 205, class: "map-note" }, "same camp · time changes")
+      );
+    }
+
+    // About fifteen miles southeast: quantity + direction, physical track unresolved.
+    if (reached >= 2) {
+      proseMapSvg.append(
+        svgEl("path", { d: "M 118 238 C 172 226, 220 210, 286 194", class: "map-route-unknown" }),
+        svgEl("text", { x: 155, y: 190, class: "map-note" }, "about 15 miles S.E."),
+        svgEl("text", { x: 165, y: 207, class: "map-small" }, "traveled line unresolved")
+      );
+    }
+
+    // Blue Water is one place with multiple apertures, not three separate destinations.
+    if (reached >= 3) {
+      proseMapSvg.append(
+        svgEl("path", { d: "M 326 88 C 307 120, 336 151, 316 184 C 296 217, 324 252, 306 286", class: "map-water" }),
+        svgEl("circle", { cx: 306, cy: 188, r: 10, class: "map-node" }),
+        svgEl("text", { x: 337, y: 174, class: "map-place" }, "Blue Water"),
+        svgEl("text", { x: 337, y: 193, class: "map-small" }, "small branch · exact identity open")
+      );
+    }
+    if (reached >= 4) {
+      proseMapSvg.append(
+        svgEl("line", { x1: 318, y1: 203, x2: 365, y2: 229, class: "map-same-ground" }),
+        svgEl("text", { x: 374, y: 234, class: "map-note" }, "but a dozen beaver"),
+        svgEl("text", { x: 374, y: 251, class: "map-small" }, "same creek · attention changes")
+      );
+    }
+    if (reached >= 5) {
+      proseMapSvg.append(
+        svgEl("line", { x1: 318, y1: 177, x2: 365, y2: 145, class: "map-same-ground" }),
+        svgEl("text", { x: 374, y: 142, class: "map-note" }, "Mayes employed as guide"),
+        svgEl("text", { x: 374, y: 159, class: "map-small" }, "role changes before ground")
+      );
+    }
+
+    // Mouth relation is qualitative proximity, not a solved point/route.
+    if (reached >= 6) {
+      proseMapSvg.append(
+        svgEl("path", { d: "M 323 186 C 410 178, 468 164, 554 150", class: "map-proximity" }),
+        svgEl("circle", { cx: 574, cy: 147, r: 8, class: "map-node-open" }),
+        svgEl("text", { x: 596, y: 142, class: "map-place" }, "mouth of Blue Water"),
+        svgEl("text", { x: 596, y: 160, class: "map-small" }, "within a short distance"),
+        svgEl("text", { x: 453, y: 190, class: "map-note" }, "qualitative proximity")
+      );
+    }
+
+    // Regional forecast is an area relation, deliberately not a point.
+    if (reached >= 7) {
+      proseMapSvg.append(
+        svgEl("rect", { x: 654, y: 76, width: 150, height: 202, rx: 70, class: "map-region" }),
+        svgEl("text", { x: 678, y: 104, class: "map-place" }, "east of Blue Water"),
+        svgEl("text", { x: 678, y: 124, class: "map-small" }, "Dawson forecast / capacity judgment"),
+        svgEl("text", { x: 678, y: 145, class: "map-small" }, "not occupied geometry")
+      );
+    }
   }
 
 
@@ -549,10 +622,10 @@
   function buildCampPeople() {
     if (!campPeopleList) return;
 
-    const currentIndex = Math.max(0, fullSequence.indexOf(currentId));
+    const reachedIndex = Math.max(furthestIndex, fullSequence.indexOf(currentId));
     const encountered = new Map();
 
-    fullSequence.slice(0, currentIndex + 1).forEach((sceneId) => {
+    fullSequence.slice(0, reachedIndex + 1).forEach((sceneId) => {
       (peopleByGround[sceneId] || []).forEach((person) => {
         const key = person.name;
         if (!encountered.has(key)) {
@@ -574,75 +647,66 @@
     });
 
     const people = Array.from(encountered.values());
+    if (campPeopleCount) campPeopleCount.textContent = people.length + (people.length === 1 ? " encounter" : " encounters");
+
     const compact = people.length > 8;
     const richNames = new Set(compact ? people.slice(-5).map((person) => person.name) : people.map((person) => person.name));
     const fragment = document.createDocumentFragment();
 
     if (compact) {
-      const roster = document.createElement("nav");
+      const roster = document.createElement("div");
       roster.className = "camp-people-roster";
-      roster.setAttribute("aria-label", "People encountered so far");
-
       people
         .filter((person) => !richNames.has(person.name))
         .sort((a, b) => a.name.localeCompare(b.name))
         .forEach((person) => {
-          const button = document.createElement("button");
-          button.type = "button";
-          button.className = "camp-person-link";
-          button.textContent = person.name;
-          button.title = "Return to " + (trailUi[person.firstSeen]?.name || person.firstSeen);
-          button.addEventListener("click", () => {
-            landAt(person.firstSeen);
-            setDawsonView("ground");
-          });
-          roster.append(button);
+          const chip = document.createElement("span");
+          chip.className = "camp-person-chip";
+          chip.textContent = person.name;
+          chip.title = "First encountered at " + (trailUi[person.firstSeen]?.name || person.firstSeen);
+          roster.append(chip);
         });
-
       if (roster.childElementCount) fragment.append(roster);
     }
 
     people
       .filter((person) => richNames.has(person.name))
       .forEach((person) => {
-        const row = document.createElement("article");
-        row.className = "camp-person";
+        const widget = document.createElement("details");
+        widget.className = "camp-person-widget";
 
-        const head = document.createElement("div");
-        head.className = "camp-person-head";
-
-        const name = document.createElement("h3");
+        const summary = document.createElement("summary");
+        const name = document.createElement("strong");
         name.textContent = person.name;
+        const first = document.createElement("span");
+        first.textContent = "first encountered · " + (trailUi[person.firstSeen]?.name || person.firstSeen);
+        summary.append(name, first);
 
-        const returnButton = document.createElement("button");
-        returnButton.type = "button";
-        returnButton.className = "camp-person-return";
-        returnButton.textContent = "first seen · " + (trailUi[person.firstSeen]?.name || person.firstSeen);
-        returnButton.addEventListener("click", () => {
-          landAt(person.firstSeen);
-          setDawsonView("ground");
+        const body = document.createElement("div");
+        body.className = "camp-person-widget-body";
+
+        person.relations.forEach((text) => {
+          const p = document.createElement("p");
+          p.className = "camp-person-relation";
+          p.textContent = text;
+          body.append(p);
         });
-
-        head.append(name, returnButton);
-
-        const relation = document.createElement("p");
-        relation.className = "camp-person-relation";
-        relation.textContent = person.relations[person.relations.length - 1] || "";
 
         const note = document.createElement("p");
         note.className = "camp-person-note";
         note.textContent = person.notes[person.notes.length - 1] || "";
+        body.append(note);
 
-        row.append(head, relation, note);
-        fragment.append(row);
+        widget.append(summary, body);
+        fragment.append(widget);
       });
 
     campPeopleList.replaceChildren(fragment);
   }
 
-  function asksForStops(message) {
+  function asksForMap(message) {
     const lower = String(message || "").toLowerCase();
-    return /\b(where (else )?can i go|what (other )?stops|what is open|what's open|show me (the )?stops|where all is open|index|places can i go|where can we go)\b/.test(lower);
+    return /\b(show me (the )?map|map|where have i been|where are we|what ground have i reached|show the ground|what have i reached)\b/.test(lower);
   }
 
   function asksForPeople(message) {
@@ -708,20 +772,28 @@
     renderSceneState(target.id);
     buildCampPeople();
     buildCampSources();
+    buildProseMap();
     target.focus({ preventScroll: true });
   }
 
   function remember(id) {
     try {
       window.localStorage.setItem("earthly-hands-footing", id);
+      const index = fullSequence.indexOf(id);
+      if (index > furthestIndex) {
+        furthestIndex = index;
+        window.localStorage.setItem("earthly-hands-story-reach", String(furthestIndex));
+      }
     } catch (_) {
-      // The passage still works when storage is unavailable.
+      const index = fullSequence.indexOf(id);
+      if (index > furthestIndex) furthestIndex = index;
     }
   }
 
   function forget() {
     try {
       window.localStorage.removeItem("earthly-hands-footing");
+      window.localStorage.removeItem("earthly-hands-story-reach");
     } catch (_) {
       // Nothing else is required.
     }
@@ -778,11 +850,11 @@
 
     const origin = currentId;
 
-    if (asksForStops(clean)) {
+    if (asksForMap(clean)) {
       keepTenWords(clean);
       talkInput.value = "";
       sizeTalkInput();
-      setDawsonView("index");
+      setDawsonView("map");
       return;
     }
 
@@ -912,28 +984,17 @@
     control.addEventListener("click", () => setDawsonView(control.dataset.dawsonView));
   });
 
-  buildDawsonIndex();
+  buildProseMap();
   setDawsonView("ground");
 
   document.querySelectorAll("[data-depth]").forEach((control) => {
     control.addEventListener("click", () => openDepthPanel(control));
   });
 
-  document.querySelectorAll("[data-reveal]").forEach((control) => {
-    control.addEventListener("click", () => landAt(control.dataset.reveal));
-  });
-
-  document.querySelectorAll("[data-back]").forEach((control) => {
-    control.addEventListener("click", stepBack);
-  });
-
   document.querySelectorAll("[data-prompt]").forEach((control) => {
     control.addEventListener("click", () => askGround(control.dataset.prompt));
   });
 
-  document.querySelectorAll("[data-scroll]").forEach((control) => {
-    control.addEventListener("click", () => landAt(control.dataset.scroll));
-  });
 
   document.querySelectorAll("[data-home]").forEach((control) => {
     control.addEventListener("click", (event) => {
@@ -981,6 +1042,7 @@
 
   if (!fullSequence.includes(initialId)) initialId = "morning";
   currentId = initialId;
+  furthestIndex = Math.max(furthestIndex, fullSequence.indexOf(initialId));
   setLamp(true);
   history.replaceState({ place: initialId }, "", `#${initialId}`);
   showScene(sceneById.get(initialId), "forward");
