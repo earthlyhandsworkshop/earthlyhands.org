@@ -177,6 +177,76 @@
     ]
   };
 
+  // Public-facing person/group bodies. These do not replace the source-local
+  // encounter rows above; they let People grow into a readable Name Web front.
+  const personProfiles = {
+    "small guard": {
+      kind: "group body",
+      display: "Small guard",
+      summary: "A camp precaution named as a body, not a roster.",
+      carried: "Posted round the camp during the night after the alarm.",
+      open: "Who composed the guard, how long it remained posted, and whether either ford-watch man belonged to it are not carried here.",
+      links: ["two unnamed men", "traveling party"]
+    },
+    "two unnamed men": {
+      kind: "unnamed pair",
+      display: "Two unnamed men",
+      summary: "Two people given an assignment without names or a returned ending.",
+      carried: "Sent back toward the river ford on the back trail to watch.",
+      open: "The account does not presently state that they reached the ford, completed the watch, returned, or rejoined the party.",
+      links: ["small guard", "traveling party"]
+    },
+    "traveling party": {
+      kind: "collective carrier",
+      display: "Traveling party",
+      summary: "The moving body carried by Dawson's report; not yet a complete roster.",
+      carried: "Present through camp, southeast movement, and the Blue Water encounter.",
+      open: "Group continuity does not supply every member's identity at every aperture.",
+      links: ["Mr. Mayes", "Mr. Criner"]
+    },
+    "Mr. Mayes": {
+      kind: "named person",
+      display: "Mr. Mayes",
+      summary: "Found at Blue Water trapping beaver; later carried as guide.",
+      carried: "Found with Criner on this creek. Dawson separately states residence on James’ Fork of Poteau.",
+      open: "Encounter place is not residence. Guide employment does not supply terms, pay, exact route, or arrival at Kiamiche.",
+      links: ["Mr. Criner", "traveling party"]
+    },
+    "Mr. Criner": {
+      kind: "named person",
+      display: "Mr. Criner",
+      summary: "Found with Mayes at Blue Water and induced to accompany the delegation.",
+      carried: "Found on the creek trapping beaver; separately said to reside on James’ Fork of Poteau.",
+      open: "The report does not make Criner a guide and does not divide the dozen-beaver catch between the two men.",
+      links: ["Mr. Mayes", "traveling party"]
+    },
+    "Col. George S. Gaines": {
+      kind: "named person",
+      display: "Col. George S. Gaines",
+      summary: "Named in the inducement relation that brings Mayes and Criner alongside the delegation.",
+      carried: "Named with Reynolds as inducing Mayes and Criner to accompany the delegation as far as Kiamiche.",
+      open: "This sentence alone does not settle later movement, employment terms, or every institutional role.",
+      links: ["Col. Reynolds", "Mr. Mayes", "Mr. Criner"]
+    },
+    "Col. Reynolds": {
+      kind: "named person",
+      display: "Col. Reynolds",
+      summary: "Named with Gaines in the accompaniment relation.",
+      carried: "Named with Gaines as inducing Mayes and Criner to accompany the delegation.",
+      open: "The source does not turn Reynolds into Mayes's guide employer simply by proximity in the sentence.",
+      links: ["Col. George S. Gaines", "Mr. Mayes", "Mr. Criner"]
+    },
+    "J. L. Dawson": {
+      kind: "named person / narrator",
+      display: "J. L. Dawson",
+      summary: "Writer of the held report and speaker of the later prospect and forecast statements.",
+      carried: "Writes from Cantonment Gibson on 29 January 1831 about the western exploring delegation.",
+      open: "Report authorship does not make every historical event independently verified.",
+      links: ["traveling party"]
+    }
+  };
+
+
   const sourceFloor = {
     night: [
       "The held account reports that a small guard was posted around camp after an alarm.",
@@ -578,90 +648,158 @@
     return el;
   }
 
+
+  function mapLabelBox(text, x, y, size = 11) {
+    // Deliberately simple and deterministic. The anchor belongs to evidence;
+    // only the label is allowed to negotiate around occupied text.
+    const width = Math.max(18, String(text).length * size * 0.57);
+    const height = size * 1.35;
+    return { x, y: y - height, width, height };
+  }
+
+  function mapBoxesOverlap(a, b, pad = 5) {
+    return !(
+      a.x + a.width + pad < b.x ||
+      b.x + b.width + pad < a.x ||
+      a.y + a.height + pad < b.y ||
+      b.y + b.height + pad < a.y
+    );
+  }
+
+  function placeMapLabel(parent, occupied, text, anchorX, anchorY, {
+    className = "map-note",
+    size = 11,
+    candidates = [[10,-8],[10,12],[-10,-8],[-10,12],[20,-24],[20,28]],
+    align = "start"
+  } = {}) {
+    let chosen = candidates[0];
+    for (const candidate of candidates) {
+      const [dx,dy] = candidate;
+      const width = Math.max(18, String(text).length * size * 0.57);
+      const x = align === "end" ? anchorX + dx - width : anchorX + dx;
+      const box = mapLabelBox(text, x, anchorY + dy, size);
+      if (!occupied.some((held) => mapBoxesOverlap(box, held))) {
+        chosen = candidate;
+        occupied.push(box);
+        break;
+      }
+    }
+
+    const [dx,dy] = chosen;
+    const width = Math.max(18, String(text).length * size * 0.57);
+    const x = align === "end" ? anchorX + dx - width : anchorX + dx;
+    const box = mapLabelBox(text, x, anchorY + dy, size);
+    if (!occupied.includes(box)) occupied.push(box);
+    const label = svgEl("text", { x, y: anchorY + dy, class: className }, text);
+    parent.append(label);
+    return label;
+  }
+
   function buildProseMap() {
     if (!proseMapSvg) return;
     proseMapSvg.replaceChildren();
 
     const reached = Math.max(furthestIndex, fullSequence.indexOf(currentId));
-    const ink = "currentColor";
+    const occupied = [];
 
-    const backgroundRule = svgEl("line", { x1: 42, y1: 326, x2: 818, y2: 326, class: "map-horizon" });
-    proseMapSvg.append(backgroundRule);
+    proseMapSvg.append(
+      svgEl("line", { x1: 42, y1: 326, x2: 818, y2: 326, class: "map-horizon" }),
+      svgEl("text", { x: 44, y: 356, class: "map-caption" }, "REVEALED BY STORY REACH · NOT A RECONSTRUCTED ROUTE")
+    );
 
-    const caption = svgEl("text", { x: 44, y: 356, class: "map-caption" }, "REVEALED BY STORY REACH · NOT A RECONSTRUCTED ROUTE");
-    proseMapSvg.append(caption);
-
-    // Night and morning are one held camp occurrence across a time change.
+    // Anchors are documentary claims. Labels are the only things that move to make room.
     if (reached >= 0) {
-      proseMapSvg.append(
-        svgEl("circle", { cx: 105, cy: 244, r: 9, class: "map-node" }),
-        svgEl("text", { x: 82, y: 218, class: "map-place" }, "camp"),
-        svgEl("text", { x: 82, y: 264, class: "map-small" }, "night")
-      );
+      proseMapSvg.append(svgEl("circle", { cx: 105, cy: 244, r: 9, class: "map-node" }));
+      placeMapLabel(proseMapSvg, occupied, "camp", 105, 244, {
+        className:"map-place", size:16, candidates:[[-23,-25],[15,-24],[-23,31]]
+      });
+      placeMapLabel(proseMapSvg, occupied, "night", 105, 244, {
+        className:"map-small", size:9, candidates:[[-23,23],[16,19]]
+      });
     }
+
     if (reached >= 1) {
-      proseMapSvg.append(
-        svgEl("line", { x1: 105, y1: 234, x2: 105, y2: 188, class: "map-same-ground" }),
-        svgEl("text", { x: 82, y: 176, class: "map-small" }, "morning"),
-        svgEl("text", { x: 126, y: 205, class: "map-note" }, "same camp · time changes")
-      );
+      proseMapSvg.append(svgEl("line", { x1:105,y1:234,x2:105,y2:188,class:"map-same-ground" }));
+      placeMapLabel(proseMapSvg, occupied, "morning", 105, 188, {
+        className:"map-small", size:9, candidates:[[-23,-12],[14,-8]]
+      });
+      placeMapLabel(proseMapSvg, occupied, "same camp · time changes", 105, 211, {
+        className:"map-note", size:11, candidates:[[22,-4],[24,18],[-150,-4]]
+      });
     }
 
-    // About fifteen miles southeast: quantity + direction, physical track unresolved.
     if (reached >= 2) {
-      proseMapSvg.append(
-        svgEl("path", { d: "M 118 238 C 172 226, 220 210, 286 194", class: "map-route-unknown" }),
-        svgEl("text", { x: 155, y: 190, class: "map-note" }, "about 15 miles S.E."),
-        svgEl("text", { x: 165, y: 207, class: "map-small" }, "traveled line unresolved")
-      );
+      proseMapSvg.append(svgEl("path", { d:"M 118 238 C 172 226, 220 210, 286 194", class:"map-route-unknown" }));
+      placeMapLabel(proseMapSvg, occupied, "about 15 miles S.E.", 204, 211, {
+        className:"map-note", size:11, candidates:[[-48,-19],[-48,31],[16,-20]]
+      });
+      placeMapLabel(proseMapSvg, occupied, "traveled line unresolved", 210, 213, {
+        className:"map-small", size:9, candidates:[[-38,10],[-42,43],[18,9]]
+      });
     }
 
-    // Blue Water is one place with multiple apertures, not three separate destinations.
     if (reached >= 3) {
       proseMapSvg.append(
-        svgEl("path", { d: "M 326 88 C 307 120, 336 151, 316 184 C 296 217, 324 252, 306 286", class: "map-water" }),
-        svgEl("circle", { cx: 306, cy: 188, r: 10, class: "map-node" }),
-        svgEl("text", { x: 337, y: 174, class: "map-place" }, "Blue Water"),
-        svgEl("text", { x: 337, y: 193, class: "map-small" }, "small branch · exact identity open")
+        svgEl("path", { d:"M 326 88 C 307 120, 336 151, 316 184 C 296 217, 324 252, 306 286", class:"map-water" }),
+        svgEl("circle", { cx:306,cy:188,r:10,class:"map-node" })
       );
-    }
-    if (reached >= 4) {
-      proseMapSvg.append(
-        svgEl("line", { x1: 318, y1: 203, x2: 365, y2: 229, class: "map-same-ground" }),
-        svgEl("text", { x: 374, y: 234, class: "map-note" }, "but a dozen beaver"),
-        svgEl("text", { x: 374, y: 251, class: "map-small" }, "same creek · attention changes")
-      );
-    }
-    if (reached >= 5) {
-      proseMapSvg.append(
-        svgEl("line", { x1: 318, y1: 177, x2: 365, y2: 145, class: "map-same-ground" }),
-        svgEl("text", { x: 374, y: 142, class: "map-note" }, "Mayes employed as guide"),
-        svgEl("text", { x: 374, y: 159, class: "map-small" }, "role changes before ground")
-      );
+      placeMapLabel(proseMapSvg, occupied, "Blue Water", 306, 188, {
+        className:"map-place", size:16, candidates:[[30,-14],[30,15],[-116,-16]]
+      });
+      placeMapLabel(proseMapSvg, occupied, "small branch · exact identity open", 306, 188, {
+        className:"map-small", size:9, candidates:[[30,10],[30,35],[-175,11]]
+      });
     }
 
-    // Mouth relation is qualitative proximity, not a solved point/route.
+    if (reached >= 4) {
+      proseMapSvg.append(svgEl("line", { x1:318,y1:203,x2:365,y2:229,class:"map-same-ground" }));
+      placeMapLabel(proseMapSvg, occupied, "but a dozen beaver", 365, 229, {
+        className:"map-note", size:11, candidates:[[12,4],[12,26],[12,-20]]
+      });
+      placeMapLabel(proseMapSvg, occupied, "same creek · attention changes", 365, 229, {
+        className:"map-small", size:9, candidates:[[12,22],[12,44],[12,-38]]
+      });
+    }
+
+    if (reached >= 5) {
+      proseMapSvg.append(svgEl("line", { x1:318,y1:177,x2:365,y2:145,class:"map-same-ground" }));
+      placeMapLabel(proseMapSvg, occupied, "Mayes employed as guide", 365, 145, {
+        className:"map-note", size:11, candidates:[[12,-4],[12,-26],[12,18]]
+      });
+      placeMapLabel(proseMapSvg, occupied, "role changes before ground", 365, 145, {
+        className:"map-small", size:9, candidates:[[12,14],[12,-43],[12,36]]
+      });
+    }
+
     if (reached >= 6) {
       proseMapSvg.append(
-        svgEl("path", { d: "M 323 186 C 410 178, 468 164, 554 150", class: "map-proximity" }),
-        svgEl("circle", { cx: 574, cy: 147, r: 8, class: "map-node-open" }),
-        svgEl("text", { x: 596, y: 142, class: "map-place" }, "mouth of Blue Water"),
-        svgEl("text", { x: 596, y: 160, class: "map-small" }, "within a short distance"),
-        svgEl("text", { x: 453, y: 190, class: "map-note" }, "qualitative proximity")
+        svgEl("path", { d:"M 323 186 C 410 178, 468 164, 554 150", class:"map-proximity" }),
+        svgEl("circle", { cx:574,cy:147,r:8,class:"map-node-open" })
       );
+      placeMapLabel(proseMapSvg, occupied, "mouth of Blue Water", 574, 147, {
+        className:"map-place", size:16, candidates:[[22,-5],[22,22],[-172,-28]]
+      });
+      placeMapLabel(proseMapSvg, occupied, "within a short distance", 574, 147, {
+        className:"map-small", size:9, candidates:[[22,17],[22,40],[-145,-8]]
+      });
+      placeMapLabel(proseMapSvg, occupied, "qualitative proximity", 458, 178, {
+        className:"map-note", size:11, candidates:[[-28,24],[-25,-17],[18,25]]
+      });
     }
 
-    // Regional forecast is an area relation, deliberately not a point.
     if (reached >= 7) {
-      proseMapSvg.append(
-        svgEl("rect", { x: 654, y: 76, width: 150, height: 202, rx: 70, class: "map-region" }),
-        svgEl("text", { x: 678, y: 104, class: "map-place" }, "east of Blue Water"),
-        svgEl("text", { x: 678, y: 124, class: "map-small" }, "account forecast / capacity judgment"),
-        svgEl("text", { x: 678, y: 145, class: "map-small" }, "not occupied geometry")
-      );
+      proseMapSvg.append(svgEl("rect", { x:654,y:76,width:150,height:202,rx:70,class:"map-region" }));
+      placeMapLabel(proseMapSvg, occupied, "east of Blue Water", 676, 108, {
+        className:"map-place", size:16, candidates:[[0,0],[-16,24]]
+      });
+      placeMapLabel(proseMapSvg, occupied, "account forecast / capacity judgment", 676, 131, {
+        className:"map-small", size:9, candidates:[[0,0],[-20,23]]
+      });
+      placeMapLabel(proseMapSvg, occupied, "not occupied geometry", 676, 151, {
+        className:"map-small", size:9, candidates:[[0,0],[-18,22]]
+      });
     }
   }
-
 
 
   function buildCampSources() {
@@ -734,23 +872,21 @@
             ...person,
             firstSeen: sceneId,
             lastSeen: sceneId,
-            relations: [person.relation],
-            notes: [person.note]
+            encounters: [{ sceneId, relation:person.relation, note:person.note }]
           });
           return;
         }
-
         const held = encountered.get(key);
         held.lastSeen = sceneId;
-        if (person.relation && !held.relations.includes(person.relation)) held.relations.push(person.relation);
-        if (person.note && !held.notes.includes(person.note)) held.notes.push(person.note);
+        held.encounters.push({ sceneId, relation:person.relation, note:person.note });
       });
     });
 
     const people = Array.from(encountered.values());
     if (campPeopleCount) {
+      const named = people.filter(p => personProfiles[p.name]?.kind?.startsWith("named person")).length;
       campPeopleCount.textContent = people.length
-        ? String(people.length).padStart(2, "0") + " held so far"
+        ? `${String(people.length).padStart(2,"0")} encountered · ${named} named`
         : "none yet";
     }
 
@@ -758,103 +894,116 @@
     people.forEach((person, index) => {
       const batchId = person.firstSeen;
       if (!batches.has(batchId)) batches.set(batchId, []);
-      batches.get(batchId).push({ ...person, encounterNumber: index + 1 });
+      batches.get(batchId).push({ ...person, encounterNumber:index + 1 });
     });
 
     const fragment = document.createDocumentFragment();
+    const intro = document.createElement("div");
+    intro.className = "people-intro";
+    intro.innerHTML = "<p>People grows from encounter. Named people, unnamed people, and collective bodies stay different until the record earns more.</p><p>Open a body to see what has accumulated; recurrence adds another encounter without silently adding certainty.</p>";
+    fragment.append(intro);
 
-    // People is a living encounter shelf: newest encounters sit nearest the visitor,
-    // while each person's serial still preserves historical encounter order.
-    const orderedBatches = Array.from(batches.entries()).sort(([a], [b]) => {
-      return fullSequence.indexOf(b) - fullSequence.indexOf(a);
-    });
+    const orderedBatches = Array.from(batches.entries()).sort(([a],[b]) => fullSequence.indexOf(b) - fullSequence.indexOf(a));
 
-    orderedBatches.forEach(([batchId, batchPeople]) => {
+    orderedBatches.forEach(([batchId,batchPeople]) => {
       const batch = document.createElement("section");
       batch.className = "encounter-batch";
 
       const batchHead = document.createElement("header");
       batchHead.className = "encounter-batch-head";
-
-      const batchLabel = document.createElement("span");
+      const left = document.createElement("div");
+      const batchLabel = document.createElement("strong");
       batchLabel.textContent = trailUi[batchId]?.name || batchId;
-
+      const batchNote = document.createElement("span");
+      batchNote.textContent = "first encountered here";
+      left.append(batchLabel,batchNote);
       const batchCount = document.createElement("span");
-      batchCount.textContent = batchPeople.length + (batchPeople.length === 1 ? " entry" : " entries");
-
-      batchHead.append(batchLabel, batchCount);
+      batchCount.textContent = batchPeople.length + (batchPeople.length===1 ? " body" : " bodies");
+      batchHead.append(left,batchCount);
       batch.append(batchHead);
 
       const cards = document.createElement("div");
       cards.className = "encounter-card-grid";
 
       batchPeople.forEach((person) => {
+        const profile = personProfiles[person.name] || {};
         const card = document.createElement("details");
         card.className = "person-card";
+        card.dataset.person = person.name;
 
         const summary = document.createElement("summary");
         summary.className = "person-card-face";
 
-        const serial = document.createElement("span");
-        serial.className = "person-card-serial";
-        serial.textContent = "PERSON " + String(person.encounterNumber).padStart(2, "0");
+        const meta = document.createElement("span");
+        meta.className = "person-card-serial";
+        meta.textContent = (profile.kind || "encounter body").toUpperCase();
 
         const name = document.createElement("strong");
         name.className = "person-card-name";
-        name.textContent = person.name;
+        name.textContent = profile.display || person.name;
 
         const known = document.createElement("span");
         known.className = "person-card-known";
-        known.textContent = person.relations[person.relations.length - 1] || "encountered";
+        known.textContent = profile.summary || person.encounters.at(-1)?.relation || "encountered";
 
         const mark = document.createElement("span");
         mark.className = "person-card-mark";
-        mark.setAttribute("aria-hidden", "true");
+        mark.setAttribute("aria-hidden","true");
         mark.textContent = "+";
-
-        summary.append(serial, name, known, mark);
+        summary.append(meta,name,known,mark);
 
         const body = document.createElement("div");
         body.className = "person-card-body";
 
-        const first = document.createElement("p");
-        first.className = "person-card-field";
-        first.innerHTML = "<span>first encountered</span><b></b>";
-        first.querySelector("b").textContent = trailUi[person.firstSeen]?.name || person.firstSeen;
+        const carried = document.createElement("p");
+        carried.className = "person-card-prose";
+        carried.textContent = profile.carried || person.encounters.at(-1)?.relation || "";
 
-        const current = document.createElement("p");
-        current.className = "person-card-field";
-        current.innerHTML = "<span>known here</span><b></b>";
-        current.querySelector("b").textContent = person.relations[person.relations.length - 1] || "—";
-
-        const last = document.createElement("p");
-        last.className = "person-card-field";
-        last.innerHTML = "<span>last encountered</span><b></b>";
-        last.querySelector("b").textContent = trailUi[person.lastSeen]?.name || person.lastSeen;
+        const chronology = document.createElement("div");
+        chronology.className = "person-encounter-line";
+        person.encounters.forEach((encounter,idx) => {
+          const row = document.createElement("div");
+          row.className = "person-encounter";
+          const where = document.createElement("span");
+          where.textContent = trailUi[encounter.sceneId]?.name || encounter.sceneId;
+          const relation = document.createElement("p");
+          relation.textContent = encounter.relation || "occurs";
+          row.append(where,relation);
+          chronology.append(row);
+        });
 
         const open = document.createElement("p");
         open.className = "person-card-open";
-        open.textContent = person.notes[person.notes.length - 1] || "Nothing further is carried here.";
+        open.textContent = profile.open || person.encounters.at(-1)?.note || "Nothing further is carried here.";
 
-        body.append(first, current);
-        if (person.lastSeen !== person.firstSeen) body.append(last);
+        body.append(carried,chronology,open);
 
-        if (person.relations.length > 1) {
-          const history = document.createElement("div");
-          history.className = "person-card-history";
-          const label = document.createElement("span");
-          label.textContent = "other held relations";
-          history.append(label);
-          person.relations.slice(0, -1).forEach((relation) => {
-            const p = document.createElement("p");
-            p.textContent = relation;
-            history.append(p);
+        const visibleLinks=(profile.links||[]).filter(link => encountered.has(link));
+        if(visibleLinks.length){
+          const rel=document.createElement("div");
+          rel.className="person-links";
+          const label=document.createElement("span");
+          label.textContent="reachable relations";
+          rel.append(label);
+          visibleLinks.forEach(linkName=>{
+            const button=document.createElement("button");
+            button.type="button";
+            button.className="person-link";
+            button.textContent=personProfiles[linkName]?.display || linkName;
+            button.addEventListener("click",()=>{
+              const target=campPeopleList.querySelector(`[data-person="${CSS.escape(linkName)}"]`);
+              if(target){
+                target.open=true;
+                target.scrollIntoView({behavior:"smooth",block:"center"});
+                target.querySelector("summary")?.focus({preventScroll:true});
+              }
+            });
+            rel.append(button);
           });
-          body.append(history);
+          body.append(rel);
         }
 
-        body.append(open);
-        card.append(summary, body);
+        card.append(summary,body);
         cards.append(card);
       });
 
