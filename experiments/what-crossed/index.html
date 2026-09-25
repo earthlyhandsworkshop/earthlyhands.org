@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#e7dfd0">
+<title>What Crossed? — Earthly Hands Workshop</title>
+<style>
+:root{
+  --paper:#e7dfd0;--ink:#1d1c18;--muted:#726b60;--rule:rgba(29,28,24,.28);
+  --hard:rgba(29,28,24,.68);--accent:#8d5c3f;--green:#52624b;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace
+}
+*{box-sizing:border-box}
+html{background:var(--paper);-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--ink);background:var(--paper);font:1rem/1.38 var(--serif)}
+a{color:inherit}
+button{font:inherit}
+.shell{width:min(92rem,calc(100% - 1rem));margin:auto}
+header{
+  min-height:2.2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  border-bottom:1px solid var(--hard);font:.49rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase
+}
+header a{text-decoration:none}
+main{display:grid;grid-template-columns:minmax(14rem,.72fr) minmax(0,1.28fr);min-height:calc(100vh - 4.8rem)}
+.intro{padding:clamp(2rem,5vw,5rem) clamp(.7rem,3vw,3rem) 2rem 0;border-right:1px solid var(--rule)}
+.eyebrow{margin:0 0 .8rem;color:var(--muted);font:.53rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+h1{max-width:8ch;margin:0;font-size:clamp(3.2rem,7vw,7.8rem);font-weight:400;line-height:.82;letter-spacing:-.055em}
+.lede{max-width:27rem;margin:1.6rem 0 0;font-size:1.02rem;color:#4f493f}
+.note{max-width:27rem;margin:1.2rem 0 0;padding-top:.8rem;border-top:1px solid var(--rule);color:var(--muted);font:.68rem/1.35 var(--mono)}
+.table{padding:clamp(1.2rem,3vw,3rem)}
+.table-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;margin-bottom:.8rem}
+.table-head h2{margin:0;font-size:clamp(1.8rem,3vw,3rem);font-weight:400;line-height:.95}
+.counter{color:var(--muted);font:.55rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.case{border-top:1px solid var(--hard);padding:.8rem 0 1rem}
+.case:last-of-type{border-bottom:1px solid var(--hard)}
+.case-head{display:grid;grid-template-columns:8rem minmax(0,1fr);gap:.7rem;align-items:start}
+.case-no{font:.48rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.case h3{margin:0;font-size:clamp(1.25rem,2vw,2rem);font-weight:400;line-height:1}
+.case p{margin:.38rem 0 0;color:#5f584e;font-size:.86rem}
+.papers{display:flex;flex-wrap:wrap;gap:.35rem;margin:.75rem 0 0 8.7rem}
+.paper{
+  border:1px solid var(--rule);background:rgba(255,255,255,.14);color:var(--ink);
+  padding:.52rem .65rem;cursor:pointer;font:.6rem/1.15 var(--mono);letter-spacing:.025em
+}
+.paper:hover{border-color:var(--hard)}
+.paper[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.gate{
+  margin:.75rem 0 0 8.7rem;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.5rem;align-items:stretch
+}
+.pass{
+  min-width:8rem;border:1px solid var(--ink);background:transparent;color:var(--ink);
+  padding:.65rem .85rem;cursor:pointer;font:.57rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase
+}
+.pass:hover{background:var(--ink);color:var(--paper)}
+.result{
+  min-height:3rem;padding:.62rem .72rem;border-left:3px solid var(--rule);background:rgba(255,255,255,.12);
+  color:#4f493f;font-size:.82rem
+}
+.result strong{display:block;margin-bottom:.15rem;font:600 .51rem/1.15 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+.result[data-state="pass"]{border-left-color:var(--green)}
+.result[data-state="hold"]{border-left-color:var(--accent)}
+.result[data-state="quiet"]{color:var(--muted)}
+.summary{margin-top:1.2rem;padding:1rem 0 0;border-top:1px solid var(--rule)}
+.summary h2{margin:0 0 .45rem;font-size:1.25rem;font-weight:400}
+.summary p{max-width:44rem;margin:.35rem 0;color:#5b544a;font-size:.88rem}
+.reset{margin-top:.6rem;border:0;border-bottom:1px solid var(--muted);background:none;padding:.2rem 0;color:var(--muted);cursor:pointer;font-size:.8rem}
+footer{
+  min-height:2.6rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  border-top:1px solid var(--hard);color:var(--muted);font:.47rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase
+}
+@media(max-width:50rem){
+  .shell{width:calc(100% - .7rem)}
+  header{min-height:2rem}
+  main{grid-template-columns:1fr;min-height:0}
+  .intro{border-right:0;border-bottom:1px solid var(--hard);padding:1.5rem 0 1.2rem}
+  h1{max-width:none;font-size:clamp(3rem,15vw,5.7rem)}
+  .lede,.note{max-width:35rem}
+  .table{padding:1rem 0 1.5rem}
+  .case-head{grid-template-columns:5.5rem minmax(0,1fr)}
+  .papers,.gate{margin-left:6.2rem}
+  .gate{grid-template-columns:1fr}
+  .pass{width:100%}
+  footer{align-items:flex-start;flex-direction:column;justify-content:center;gap:.3rem;padding:.55rem 0}
+}
+@media(max-width:27rem){
+  .case-head{grid-template-columns:1fr;gap:.2rem}
+  .papers,.gate{margin-left:0}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+<header>
+  <a href="/">Earthly Hands Workshop</a>
+  <span>Edgewise · research specimen</span>
+</header>
+<main>
+<section class="intro">
+  <p class="eyebrow">Border table · 15 → 16</p>
+  <h1>What crossed?</h1>
+  <p class="lede">Choose the papers that should travel with the relation. The gate does not ask whether the idea is interesting. It asks whether you carried more than the crossing earned.</p>
+  <p class="note">This is a deliberately small research specimen. The examples are Workshop grammar, not a claim that every public door must use this interface. “Pass” means the selected bundle preserves the stated distinction in this toy.</p>
+</section>
+
+<section class="table" aria-label="Documentary border table">
+  <div class="table-head">
+    <div>
+      <p class="eyebrow">Four crossings</p>
+      <h2>Carry only what travels.</h2>
+    </div>
+    <span class="counter" id="score">0 / 4 passed</span>
+  </div>
+
+  <article class="case" data-case="occurrence" data-required="name occurrence" data-forbidden="historical identity">
+    <div class="case-head">
+      <span class="case-no">Crossing 01</span>
+      <div>
+        <h3>An occurrence enters comparison.</h3>
+        <p>The same written name may be compared across bodies. What can cross without silently creating a person-merge?</p>
+      </div>
+    </div>
+    <div class="papers">
+      <button class="paper" data-value="name occurrence" type="button" aria-pressed="false">name occurrence</button>
+      <button class="paper" data-value="source return" type="button" aria-pressed="false">source return</button>
+      <button class="paper" data-value="historical identity" type="button" aria-pressed="false">historical identity</button>
+    </div>
+    <div class="gate">
+      <div class="result" data-state="quiet" aria-live="polite"><strong>Gate</strong>Select what should travel.</div>
+      <button class="pass" type="button">Present papers</button>
+    </div>
+  </article>
+
+  <article class="case" data-case="chronology" data-required="before / after" data-forbidden="traveled route">
+    <div class="case-head">
+      <span class="case-no">Crossing 02</span>
+      <div>
+        <h3>Chronology enters a map-like experience.</h3>
+        <p>One state is before another. What may cross if the physical path between them is not known?</p>
+      </div>
+    </div>
+    <div class="papers">
+      <button class="paper" data-value="before / after" type="button" aria-pressed="false">before / after</button>
+      <button class="paper" data-value="source direction" type="button" aria-pressed="false">source direction</button>
+      <button class="paper" data-value="traveled route" type="button" aria-pressed="false">traveled route</button>
+    </div>
+    <div class="gate">
+      <div class="result" data-state="quiet" aria-live="polite"><strong>Gate</strong>Select what should travel.</div>
+      <button class="pass" type="button">Present papers</button>
+    </div>
+  </article>
+
+  <article class="case" data-case="visitor" data-required="attention state" data-forbidden="historical movement">
+    <div class="case-head">
+      <span class="case-no">Crossing 03</span>
+      <div>
+        <h3>A visitor looks deeper.</h3>
+        <p>The interface changes because the visitor opened a source layer. What changed in the historical ground?</p>
+      </div>
+    </div>
+    <div class="papers">
+      <button class="paper" data-value="attention state" type="button" aria-pressed="false">attention state</button>
+      <button class="paper" data-value="source layer opened" type="button" aria-pressed="false">source layer opened</button>
+      <button class="paper" data-value="historical movement" type="button" aria-pressed="false">historical movement</button>
+    </div>
+    <div class="gate">
+      <div class="result" data-state="quiet" aria-live="polite"><strong>Gate</strong>Select what should travel.</div>
+      <button class="pass" type="button">Present papers</button>
+    </div>
+  </article>
+
+  <article class="case" data-case="correction" data-required="corrected state" data-forbidden="erase prior state">
+    <div class="case-head">
+      <span class="case-no">Crossing 04</span>
+      <div>
+        <h3>A correction becomes current.</h3>
+        <p>The Workshop learned something better. What should become current without pretending the old state never existed?</p>
+      </div>
+    </div>
+    <div class="papers">
+      <button class="paper" data-value="corrected state" type="button" aria-pressed="false">corrected state</button>
+      <button class="paper" data-value="correction provenance" type="button" aria-pressed="false">correction provenance</button>
+      <button class="paper" data-value="erase prior state" type="button" aria-pressed="false">erase prior state</button>
+    </div>
+    <div class="gate">
+      <div class="result" data-state="quiet" aria-live="polite"><strong>Gate</strong>Select what should travel.</div>
+      <button class="pass" type="button">Present papers</button>
+    </div>
+  </article>
+
+  <section class="summary">
+    <h2>The experiment is not “can you get the right answer?”</h2>
+    <p>It asks whether a public interface can make <em>minimal transfer</em> feel like an ordinary action: carry the relation and its return path; leave behind the stronger property that has not been earned.</p>
+    <p>If this mechanic feels like a quiz, it has probably not gone far enough. If “holding something back” begins to feel like a successful move rather than a penalty, the experiment is teaching us something.</p>
+    <button class="reset" id="reset" type="button">Clear this local pass</button>
+  </section>
+</section>
+</main>
+<footer>
+  <span>working · noindex · local state only</span>
+  <span>Edgewise · trust / custody mark, not ownership</span>
+</footer>
+</div>
+
+<script>
+(function(){
+  const STORE='eh-edgewise-border-table-v1';
+  let state={};
+  try{state=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){state={}}
+  const cases=[...document.querySelectorAll('.case')];
+
+  function selected(c){
+    return [...c.querySelectorAll('.paper[aria-pressed="true"]')].map(b=>b.dataset.value);
+  }
+  function save(){localStorage.setItem(STORE,JSON.stringify(state))}
+  function score(){
+    const n=Object.values(state).filter(x=>x&&x.pass).length;
+    document.getElementById('score').textContent=n+' / 4 passed';
+  }
+  function restore(){
+    cases.forEach(c=>{
+      const id=c.dataset.case,s=state[id];
+      if(!s)return;
+      c.querySelectorAll('.paper').forEach(b=>b.setAttribute('aria-pressed',String((s.selected||[]).includes(b.dataset.value))));
+      const r=c.querySelector('.result');
+      if(s.message){r.dataset.state=s.pass?'pass':'hold';r.innerHTML=s.message}
+    });
+    score();
+  }
+
+  cases.forEach(c=>{
+    c.querySelectorAll('.paper').forEach(b=>{
+      b.addEventListener('click',()=>{
+        b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');
+      });
+    });
+    c.querySelector('.pass').addEventListener('click',()=>{
+      const got=selected(c),req=c.dataset.required,bad=c.dataset.forbidden;
+      const r=c.querySelector('.result');
+      const hasReq=got.includes(req),hasBad=got.includes(bad);
+      let pass=false,msg='';
+      if(!hasReq){
+        msg='<strong>Hold</strong>The crossing lost the minimum thing it needed to carry: <b>'+req+'</b>.';
+      }else if(hasBad){
+        msg='<strong>Hold</strong>You carried <b>'+req+'</b>, but also smuggled across <b>'+bad+'</b>. The stronger property stays behind until another relation earns it.';
+      }else{
+        pass=true;
+        const extras=got.filter(x=>x!==req);
+        msg='<strong>Pass</strong><b>'+req+'</b> crossed.'+(extras.length?' The bundle also carried '+extras.join(' and ')+'.':' Nothing stronger was silently promoted.');
+      }
+      r.dataset.state=pass?'pass':'hold';r.innerHTML=msg;
+      state[c.dataset.case]={selected:got,pass,message:msg};save();score();
+    });
+  });
+  document.getElementById('reset').addEventListener('click',()=>{
+    localStorage.removeItem(STORE);state={};
+    cases.forEach(c=>{
+      c.querySelectorAll('.paper').forEach(b=>b.setAttribute('aria-pressed','false'));
+      const r=c.querySelector('.result');r.dataset.state='quiet';r.innerHTML='<strong>Gate</strong>Select what should travel.';
+    });
+    score();
+  });
+  restore();
+})();
+</script>
+</body>
+</html>
