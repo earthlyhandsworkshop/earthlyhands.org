@@ -59,7 +59,7 @@ jobs:
           done
 
           # Needle Up state-change witness: capture later carrier states as distinct public addresses.
-          for carrier in 2 5; do
+          for carrier in 2 4; do
             npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="1280,900" "https://earthlyhands.org/experiments/one-proposition-many-carriers/?carrier=$carrier" "public-observation/one-proposition-many-carriers-carrier-$carrier-desktop.png"
             npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="390,844" "https://earthlyhands.org/experiments/one-proposition-many-carriers/?carrier=$carrier" "public-observation/one-proposition-many-carriers-carrier-$carrier-mobile.png"
           done
