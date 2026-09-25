@@ -58,6 +58,7 @@
   const campPeopleCount = document.querySelector("#camp-people-count");
   const campSources = document.querySelector("#camp-sources");
   const campSourceList = document.querySelector(".camp-source-list");
+  const campSourcesContext = document.querySelector("#camp-sources-context");
   const viewModes = Array.from(document.querySelectorAll("[data-dawson-view]"));
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const steps = Array.from(document.querySelectorAll("[data-step]"));
@@ -639,6 +640,7 @@
 
     if (next === "map") buildProseMap();
     if (next === "people") buildCampPeople();
+    if (next === "sources") buildCampSources();
   }
 
   function svgEl(name, attrs = {}, text = "") {
@@ -804,6 +806,16 @@
 
   function buildCampSources() {
     if (!campSourceList) return;
+
+    const heldName = heldGroundNameFor(currentId);
+    const apertureName = trailUi[currentId]?.name || currentId;
+    if (campSourcesContext) {
+      const heldAperture = heldGroundIdFor(currentId) !== currentId;
+      campSourcesContext.textContent = heldAperture
+        ? `Held ground · ${heldName} · story aperture · ${apertureName}. Looking down has not moved you.`
+        : `Held ground · ${heldName}. Looking down has not moved you.`;
+    }
+
     const entries = dawsonRetrieval.filter((entry) => Array.isArray(entry.scenes) && entry.scenes.includes(currentId));
     const fragment = document.createDocumentFragment();
 
@@ -835,7 +847,7 @@
 
         const pointers = document.createElement("p");
         pointers.className = "camp-source-pointers";
-        pointers.textContent = "Returns to: " + (entry.source_object_ids || []).join(" · ");
+        pointers.textContent = "Controlled source return: " + (entry.source_object_ids || []).join(" · ");
 
         const brakes = document.createElement("div");
         brakes.className = "camp-source-brakes";
