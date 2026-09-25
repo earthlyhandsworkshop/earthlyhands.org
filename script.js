@@ -101,11 +101,8 @@
 
   const peopleByGround = {
     night: [
-      { name: "J. L. Dawson", relation: "report writer / narrator-side officer", note: "The surviving account is carried through his report. Authorship does not make the surrounding people his possessions or identities." },
-      { name: "military detachment", relation: "camp-side body under Dawson's command", note: "The individual men are not fully named in this held camp sequence." },
+      { name: "military detachment", relation: "camp-side military body", note: "The individual men are not fully named in this held public sequence." },
       { name: "five or six Choctaws", relation: "source-counted camp-side body", note: "Count and Choctaw label are source-carried; individual identities remain open here." },
-      { name: "Pitman Calvert", relation: "arrived at camp that afternoon", note: "Arrival is source-controlled; later movement or overnight presence should not be assumed without the next source state." },
-      { name: "See-ly", relation: "arrived with Calvert; source labels him 'a Chickasaw named See-ly'", note: "Keep the source name-form and label; no wider identity join is required here." },
       { name: "small guard", relation: "posted round camp during the night", note: "Unrostered body; do not merge automatically with the two men sent toward the ford." },
       { name: "two unnamed men", relation: "sent toward the ford on the back trail", note: "The source gives purpose to watch; it does not currently give arrival, completed watch, or return." }
     ],
@@ -257,7 +254,7 @@
   }
 
   try {
-    const rememberedState = JSON.parse(window.sessionStorage.getItem("earthly-hands-dawson-state-v4") || "null");
+    const rememberedState = JSON.parse(window.sessionStorage.getItem("earthly-hands-discovery-scene-v2") || "null");
     if (rememberedState && typeof rememberedState === "object") {
       for (const id of Object.keys(sceneState)) {
         if (rememberedState[id] && typeof rememberedState[id] === "object") {
@@ -268,12 +265,19 @@
   } catch (_) {
     // Present-state memory is optional.
   }
-  let currentId = "morning";
+  let currentId = "night";
   let furthestIndex = 0;
   let asking = false;
+  let discoveryOpen = false;
 
   try {
-    const rememberedReach = Number(window.localStorage.getItem("earthly-hands-story-reach") || "0");
+    discoveryOpen = window.localStorage.getItem("earthly-hands-discovery-open-v2") === "1";
+  } catch (_) {
+    discoveryOpen = false;
+  }
+
+  try {
+    const rememberedReach = Number(window.localStorage.getItem("earthly-hands-story-reach-v2") || "0");
     if (Number.isFinite(rememberedReach)) furthestIndex = Math.max(0, Math.min(fullSequence.length - 1, rememberedReach));
   } catch (_) {
     // Visitor reach can remain session-local when durable browser storage is unavailable.
@@ -307,7 +311,7 @@
 
   function saveSceneState() {
     try {
-      window.sessionStorage.setItem("earthly-hands-dawson-state-v4", JSON.stringify(sceneState));
+      window.sessionStorage.setItem("earthly-hands-discovery-scene-v2", JSON.stringify(sceneState));
     } catch (_) {
       // The lived layer still works without storage.
     }
@@ -449,6 +453,39 @@
     if (currentId === "east-blue-water" && backward) return "blue-water-mouth";
 
     return null;
+  }
+
+  function encounteredPeopleCount() {
+    const reachedIndex = Math.max(furthestIndex, fullSequence.indexOf(currentId));
+    const names = new Set();
+    fullSequence.slice(0, reachedIndex + 1).forEach((sceneId) => {
+      (peopleByGround[sceneId] || []).forEach((person) => names.add(person.name));
+    });
+    return names.size;
+  }
+
+  function mapIsEarned() {
+    // Camp + Blue Water are the first two distinct public place relations.
+    return Math.max(furthestIndex, fullSequence.indexOf(currentId)) >= fullSequence.indexOf("blue-water");
+  }
+
+  function syncDiscoveryChrome() {
+    const peopleButton = document.querySelector('[data-dawson-view="people"]');
+    const mapButton = document.querySelector('[data-dawson-view="map"]');
+
+    if (peopleButton) peopleButton.hidden = !discoveryOpen || encounteredPeopleCount() === 0;
+    if (mapButton) mapButton.hidden = !discoveryOpen || !mapIsEarned();
+
+    document.body.dataset.discovery = discoveryOpen ? "open" : "closed";
+  }
+
+  function openDiscovery() {
+    if (discoveryOpen) return;
+    discoveryOpen = true;
+    try {
+      window.localStorage.setItem("earthly-hands-discovery-open-v2", "1");
+    } catch (_) {}
+    syncDiscoveryChrome();
   }
 
   function setDawsonView(view) {
@@ -773,16 +810,17 @@
     buildCampPeople();
     buildCampSources();
     buildProseMap();
+    syncDiscoveryChrome();
     target.focus({ preventScroll: true });
   }
 
   function remember(id) {
     try {
-      window.localStorage.setItem("earthly-hands-footing", id);
+      window.localStorage.setItem("earthly-hands-footing-v2", id);
       const index = fullSequence.indexOf(id);
       if (index > furthestIndex) {
         furthestIndex = index;
-        window.localStorage.setItem("earthly-hands-story-reach", String(furthestIndex));
+        window.localStorage.setItem("earthly-hands-story-reach-v2", String(furthestIndex));
       }
     } catch (_) {
       const index = fullSequence.indexOf(id);
@@ -792,8 +830,9 @@
 
   function forget() {
     try {
-      window.localStorage.removeItem("earthly-hands-footing");
-      window.localStorage.removeItem("earthly-hands-story-reach");
+      window.localStorage.removeItem("earthly-hands-footing-v2");
+      window.localStorage.removeItem("earthly-hands-story-reach-v2");
+      window.localStorage.removeItem("earthly-hands-discovery-open-v2");
     } catch (_) {
       // Nothing else is required.
     }
@@ -849,6 +888,7 @@
     if (!clean || asking) return;
 
     const origin = currentId;
+    openDiscovery();
 
     if (asksForMap(clean)) {
       keepTenWords(clean);
@@ -898,8 +938,8 @@
     const corpusHits = corpusHitsFor(clean, currentId);
 
     const sceneRequest = [
-      "DOOR: Shared Country / Exploring-party ground.",
-      "LOCAL JOB: recompose only the present Dawson scene from the held local ground. Do not claim that a companion is physically or historically present in 1831.",
+      "DOOR: Shared Country / discovery ground.",
+      "LOCAL JOB: recompose only the present held scene. The visitor is discovering the record from inside the experience. Do not announce the report writer, source title, larger expedition, or future story merely because the backend knows them. Reveal identity, carrier, people, and place only when Ten's question or already-earned public ground supports that reveal. Do not claim that a companion is physically or historically present in 1831.",
       "VOICE: plain, testimonial, unresolved. Prefer exact nouns and earned verbs. Do not perform significance.",
       "CONTINUITY: when Ten asks a fresh question without moving, make the current-ground continuity legible. Prefer words such as still / remain / same ground when accurate so a new answer does not look like a new historical movement.",
       "COMPOSITION: the title is an active part of the answer. Change it when the question genuinely changes the aperture or documentary job. A short answer may stay spare; a rich held answer may use several paragraphs and fill the available field. Do not pad for length.",
@@ -1031,21 +1071,30 @@
     showScene(target, direction);
   });
 
-  let initialId = window.location.hash.slice(1);
-  if (!fullSequence.includes(initialId)) {
-    try {
-      initialId = window.localStorage.getItem("earthly-hands-footing") || "morning";
-    } catch (_) {
-      initialId = "night";
+  let initialId = "night";
+
+  if (discoveryOpen) {
+    const hashId = window.location.hash.slice(1);
+    if (fullSequence.includes(hashId)) {
+      initialId = hashId;
+    } else {
+      try {
+        initialId = window.localStorage.getItem("earthly-hands-footing-v2") || "night";
+      } catch (_) {
+        initialId = "night";
+      }
     }
+  } else {
+    furthestIndex = 0;
   }
 
-  if (!fullSequence.includes(initialId)) initialId = "morning";
+  if (!fullSequence.includes(initialId)) initialId = "night";
   currentId = initialId;
   furthestIndex = Math.max(furthestIndex, fullSequence.indexOf(initialId));
   setLamp(true);
-  history.replaceState({ place: initialId }, "", `#${initialId}`);
+  history.replaceState({ place: initialId }, "", discoveryOpen ? `#${initialId}` : window.location.pathname);
   showScene(sceneById.get(initialId), "forward");
+  syncDiscoveryChrome();
 
   const specimenIndex = document.querySelector(".specimen-index");
   if (specimenIndex) {
