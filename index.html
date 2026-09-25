@@ -10,264 +10,305 @@
 <title>Earthly Hands — Public work</title>
 <style>
 :root{
-  --paper:#e7dfd0;--paper2:#f0e9dc;--ink:#1d1c18;--muted:#6f685d;
-  --rule:rgba(29,28,24,.23);--rule2:rgba(29,28,24,.42);--accent:#8d5c3f;
+  --paper:#e7dfd0;--ink:#1d1c18;--muted:#6f685d;--rule:rgba(29,28,24,.23);
+  --rule2:rgba(29,28,24,.48);--accent:#8d5c3f;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;background:var(--paper)}
 body{margin:0;min-width:18rem;background:var(--paper);color:var(--ink);font:1rem/1.5 var(--serif)}
-a,button,input,textarea{color:inherit}button,input,textarea{font:inherit}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.shell{width:min(94rem,calc(100% - 2rem));margin:auto}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.shell{width:min(96rem,calc(100% - 1.4rem));margin:auto}
 .top{
-  min-height:4rem;display:flex;justify-content:space-between;gap:1rem;align-items:center;
-  border-bottom:1px solid var(--rule);font:.62rem/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase
+  min-height:3.45rem;display:flex;justify-content:space-between;gap:1rem;align-items:center;
+  border-bottom:1px solid var(--rule2);font:.57rem/1.2 var(--mono);letter-spacing:.085em;text-transform:uppercase
 }
-.top a{text-decoration:none}.quiet{color:var(--muted)}
-.intro{
-  display:grid;grid-template-columns:minmax(0,1.55fr) minmax(19rem,.45fr);
-  gap:clamp(2rem,7vw,8rem);align-items:end;padding:clamp(3rem,8vw,8rem) 0 clamp(2.2rem,5vw,4.3rem)
+.top a{text-decoration:none}.top span{color:var(--muted)}
+main{padding:1rem 0 2rem}
+.index-head{
+  display:flex;justify-content:space-between;gap:1rem;align-items:baseline;
+  padding:.25rem 0 .75rem;border-bottom:1px solid var(--rule)
 }
-.intro h1{margin:0;font-size:clamp(4.7rem,12vw,11.5rem);font-weight:400;line-height:.74;letter-spacing:-.065em}
-.intro-copy{max-width:29rem;padding-bottom:.35rem}
-.intro-copy p{margin:0;color:var(--muted);font-size:clamp(1rem,1.45vw,1.18rem)}
-.intro-copy p+p{margin-top:.78rem}
-.small{font:.58rem/1.45 var(--mono)!important;letter-spacing:.045em;text-transform:uppercase}
-.grammar{
-  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
-  border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)
+.index-head h1{margin:0;font:500 .72rem/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase}
+.index-head p{margin:0;color:var(--muted);font:.52rem/1.2 var(--mono);letter-spacing:.04em}
+.work{border-bottom:1px solid var(--rule)}
+.work-link{
+  display:grid;grid-template-columns:minmax(10rem,14rem) minmax(0,1fr) minmax(16rem,30rem) auto;
+  gap:clamp(.8rem,2vw,2rem);align-items:stretch;text-decoration:none
 }
-.grammar div{padding:.72rem .75rem .82rem;border-right:1px solid var(--rule)}
-.grammar div:last-child{border-right:0}
-.grammar b{display:block;margin-bottom:.22rem;font:.54rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.grammar span{display:block;color:var(--muted);font-size:.83rem;line-height:1.35}
-.section{margin-top:clamp(3rem,6vw,5.5rem)}
-.section-head{
-  display:grid;grid-template-columns:4rem 1fr auto;gap:1rem;align-items:baseline;
-  padding:.62rem 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);
-  font:.56rem/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase
-}
-.section-head span:last-child{color:var(--muted)}
-.specimen{border-bottom:1px solid var(--rule)}
-.specimen-link{
-  display:grid;grid-template-columns:4rem minmax(0,1.12fr) minmax(18rem,.72fr) minmax(20rem,.54fr) auto;
-  gap:clamp(.8rem,1.8vw,1.65rem);align-items:center;min-height:8.3rem;padding:1rem 0;text-decoration:none
-}
-.specimen-link:hover{background:rgba(255,255,255,.12)}
-.num{align-self:start;padding-top:.3rem;color:var(--muted);font:.5rem/1 var(--mono)}
-.name{margin:0;font-size:clamp(2rem,4.55vw,5rem);font-weight:400;line-height:.86;letter-spacing:-.047em}
-.name.long{font-size:clamp(1.75rem,3.75vw,4.1rem)}
-.about{max-width:31rem;color:var(--muted);font-size:.9rem;line-height:1.4}
 .custody{
-  display:grid;grid-template-columns:auto 1fr;gap:.16rem .55rem;align-items:baseline;
-  font:.49rem/1.28 var(--mono);letter-spacing:.025em;color:var(--muted)
+  padding:.8rem .8rem .9rem 0;border-right:1px solid var(--rule);
+  display:grid;align-content:start;gap:.28rem;
+  font:.48rem/1.27 var(--mono);letter-spacing:.025em;color:var(--muted)
 }
-.custody b{font-weight:500;text-transform:uppercase;letter-spacing:.065em;color:var(--ink)}
-.enter{justify-self:end;font:.53rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.enter::after{content:"  →";color:var(--accent)}
-.working .name{font-size:clamp(1.7rem,3.4vw,3.6rem)}
-.working .specimen-link{min-height:7rem}
-.retained{margin-top:clamp(4rem,8vw,7rem)}
-.retained .name{font-size:clamp(1.45rem,2.8vw,2.8rem)}
-.retained .specimen-link{min-height:6rem}
-.receive{
-  margin-top:clamp(5rem,9vw,8rem);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)
+.stamp{
+  display:inline-block;width:max-content;padding:.12rem .28rem;border:1px solid var(--rule2);
+  color:var(--ink);font-size:.46rem;letter-spacing:.08em;text-transform:uppercase
 }
-.receive-head{
-  display:grid;grid-template-columns:minmax(0,1fr) minmax(18rem,.48fr);gap:2rem;align-items:end;
-  padding:1rem 0 1.2rem;border-bottom:1px solid var(--rule)
+.custody dl{display:grid;grid-template-columns:auto 1fr;gap:.12rem .45rem;margin:.2rem 0 0}
+.custody dt{color:var(--ink);text-transform:uppercase;letter-spacing:.06em}
+.custody dd{margin:0}
+.title{
+  align-self:center;padding:1rem 0;
+  font-size:clamp(2rem,4.2vw,4.8rem);font-weight:400;line-height:.86;letter-spacing:-.046em
 }
-.receive h2{margin:0;font-size:clamp(2.6rem,6vw,6.4rem);font-weight:400;line-height:.86;letter-spacing:-.05em}
-.receive-head p{margin:0;color:var(--muted);font-size:.9rem}
-.receive-form{
-  display:grid;grid-template-columns:minmax(13rem,.6fr) minmax(0,1fr) minmax(11rem,.38fr) auto;
-  gap:0;min-height:5.2rem
+.title.long{font-size:clamp(1.7rem,3.5vw,4rem)}
+.desc{align-self:center;padding:1rem 0;color:var(--muted);font-size:.88rem;line-height:1.38}
+.enter{
+  align-self:stretch;min-width:5.2rem;border-left:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:center;
+  font:.5rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase
 }
-.receive-form label,.receive-actions{padding:.65rem .7rem;border-right:1px solid var(--rule)}
-.receive-form label>span,.receive-actions>span{
-  display:block;margin-bottom:.25rem;color:var(--muted);font:.47rem/1.15 var(--mono);letter-spacing:.065em;text-transform:uppercase
+.enter::after{content:" →";color:var(--accent)}
+.work-link:hover{background:rgba(255,255,255,.1)}
+.secondary{margin-top:2.4rem}
+.secondary .title{font-size:clamp(1.45rem,2.8vw,2.9rem)}
+.secondary .work-link{grid-template-columns:minmax(9rem,12rem) minmax(0,1fr) minmax(14rem,26rem) auto}
+.section-label{
+  padding:.5rem 0;border-top:1px solid var(--rule2);border-bottom:1px solid var(--rule);
+  font:.52rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)
 }
-.receive-form input[type=file]{width:100%;font:.55rem/1.2 var(--mono)}
-.receive-form input[type=text]{
-  width:100%;border:0;border-bottom:1px solid var(--rule2);background:transparent;padding:.26rem 0;font:.72rem/1.2 var(--mono);outline:0
-}
-.receive-actions{border-right:0;display:flex;flex-direction:column;justify-content:center}
-.receive-actions button{border:0;border-bottom:1px solid var(--accent);background:transparent;padding:.25rem 0;align-self:flex-start;font:.57rem/1.1 var(--mono);letter-spacing:.07em;text-transform:uppercase}
-.receive-status{margin-top:.28rem;color:var(--muted);font:.46rem/1.25 var(--mono)}
 footer{
-  display:flex;justify-content:space-between;gap:1rem;margin-top:5rem;padding:1rem 0 2rem;
-  color:var(--muted);font:.53rem/1.4 var(--mono);letter-spacing:.055em;text-transform:uppercase
+  display:flex;justify-content:space-between;gap:1rem;padding:1rem 0 1.6rem;color:var(--muted);
+  font:.5rem/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase
 }
 @media(max-width:70rem){
-  .specimen-link{grid-template-columns:3rem minmax(0,1fr) minmax(16rem,.72fr) auto}
-  .custody{grid-column:2/4;margin-top:-.2rem}
-  .enter{grid-column:4;grid-row:1}
-  .grammar{grid-template-columns:1fr 1fr}
-  .grammar div:nth-child(2){border-right:0}.grammar div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+  .work-link{grid-template-columns:10.5rem minmax(0,1fr) auto}
+  .desc{grid-column:2/3;padding-top:0}
+  .enter{grid-column:3;grid-row:1/3}
 }
-@media(max-width:58rem){
-  .intro{grid-template-columns:1fr;gap:2rem}.intro-copy{padding:0}
-  .specimen-link{grid-template-columns:2.5rem 1fr auto;min-height:0;padding:1.4rem 0}
-  .about,.custody{grid-column:2/4;max-width:40rem}
-  .enter{grid-column:3;grid-row:1}.section-head{grid-template-columns:2.5rem 1fr}.section-head span:last-child{display:none}
-  .receive-head{grid-template-columns:1fr}
-  .receive-form{grid-template-columns:1fr 1fr}
-  .receive-form label:nth-child(2){border-right:0}.receive-actions{border-top:1px solid var(--rule)}
-}
-@media(max-width:36rem){
-  .shell{width:calc(100% - 1.2rem)}.top{min-height:3.3rem}
-  .intro{padding:3rem 0 2.4rem}.intro h1{font-size:clamp(4rem,21vw,6.4rem)}
-  .grammar{grid-template-columns:1fr}.grammar div{border-right:0;border-bottom:1px solid var(--rule)}.grammar div:last-child{border-bottom:0}
-  .specimen-link{grid-template-columns:1.7rem 1fr}
-  .num{grid-column:1}.name{grid-column:2}.about,.custody,.enter{grid-column:2}
-  .enter{grid-row:auto;justify-self:start;margin-top:.2rem}
-  .section-head{grid-template-columns:1.7rem 1fr}
-  .receive-form{grid-template-columns:1fr}.receive-form label,.receive-actions{border-right:0;border-bottom:1px solid var(--rule)}
-  footer{display:block}footer span{display:block;margin-top:.35rem}
+@media(max-width:48rem){
+  .shell{width:calc(100% - .9rem)}
+  .top{min-height:3rem}
+  .index-head{padding:.35rem 0 .55rem}
+  .work-link{grid-template-columns:7.8rem minmax(0,1fr)}
+  .custody{grid-column:1;grid-row:1/4;padding:.75rem .55rem .8rem 0}
+  .title{grid-column:2;padding:.8rem 0 .2rem;font-size:clamp(1.8rem,9vw,3rem)}
+  .desc{grid-column:2;padding:.2rem 0 .55rem;font-size:.82rem}
+  .enter{grid-column:2;grid-row:auto;min-width:0;min-height:2.4rem;border-left:0;border-top:1px solid var(--rule);justify-content:flex-start}
+  .secondary .work-link{grid-template-columns:7.8rem minmax(0,1fr)}
 }
 </style>
 </head>
 <body>
 <div class="shell">
-<header class="top"><a href="/"><strong>Earthly Hands Workshop</strong></a><span class="quiet">public work</span></header>
+<header class="top"><a href="/"><strong>Earthly Hands Workshop</strong></a><span>public work</span></header>
+
 <main>
-<section class="intro">
-  <h1>Public work.</h1>
-  <div class="intro-copy">
-    <p>Working pieces from the workshop. Each keeps its own rules, source posture, and way of moving.</p>
-    <p class="small">Nothing here is ranked. Recent work rises because somebody has touched it, not because it matters more.</p>
-  </div>
-</section>
+  <header class="index-head">
+    <h1>Index</h1>
+    <p>last touch · hand · custody · trust</p>
+  </header>
 
-<section class="grammar" aria-label="Workshop communication grammar">
-  <div><b>Source</b><span>What carries a claim stays visible when we have it.</span></div>
-  <div><b>Inference</b><span>Workshop joins stay distinct from government or family voice.</span></div>
-  <div><b>Uncertainty</b><span>An open question is allowed to remain a visible state.</span></div>
-  <div><b>Receiving</b><span>Records, corrections, names, places, and contrary evidence are welcome.</span></div>
-</section>
+  <section aria-label="Current public work">
 
-<section class="section recent" aria-labelledby="recent-work">
-  <div class="section-head"><span>01</span><strong id="recent-work">Recent work</strong><span>sorted by last touch</span></div>
-  <div class="recent-list">
-
-    <article class="specimen" data-updated="2026-09-24T20:12:00-05:00"><a class="specimen-link" href="/experiments/follow-the-carrier/">
-      <span class="num">R</span><h2 class="name">Follow the Carrier</h2>
-      <div class="about">Mary Caroline Atkinson’s first MCR 879 listening scene slowly opens a historical field beneath it. Reading earns pieces; sources earn connections; no line is also a state.</div>
-      <div class="custody"><b>last touched</b><span>24 Sep 2026 · 8:12 PM CT</span><b>hand</b><span>Lamplight</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>working documentary-game specimen · noindex</span></div>
-      <span class="enter">enter</span>
+    <article class="work"><a class="work-link" href="/experiments/shared-country/">
+      <aside class="custody"><span class="stamp">public</span><dl>
+        <dt>updated</dt><dd>24 Sep 2026 · 7:33 PM CT</dd>
+        <dt>hand</dt><dd>Workshop / Small Door ground</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>live source-facing work</dd>
+      </dl></aside>
+      <div class="title">Shared Country</div>
+      <div class="desc">Dawson ground with people, places, movement, and source carriers held separately.</div>
+      <div class="enter">enter</div>
     </a></article>
 
-    <article class="specimen" data-updated="2026-09-24T19:33:34-05:00"><a class="specimen-link" href="/experiments/shared-country/">
-      <span class="num">R</span><h2 class="name">Shared Country</h2>
-      <div class="about">A Dawson ground where people, places, movement, source carriers, and what the account does not say remain separately operable.</div>
-      <div class="custody"><b>last touched</b><span>24 Sep 2026 · 7:33 PM CT</span><b>hand</b><span>Workshop / Small Door ground</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>live source-facing working ground</span></div>
-      <span class="enter">enter</span>
+    <article class="work"><a class="work-link" href="/experiments/article-xiv-identity-gate/">
+      <aside class="custody"><span class="stamp">specimen</span><dl>
+        <dt>updated</dt><dd>24 Sep 2026 · 5:15 PM CT</dd>
+        <dt>hand</dt><dd>True North</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>working · noindex</dd>
+      </dl></aside>
+      <div class="title">Identity Gate</div>
+      <div class="desc">Administrative identity join beside unresolved Robert Bell source bridges.</div>
+      <div class="enter">enter</div>
     </a></article>
 
-    <article class="specimen" data-updated="2026-09-24T17:15:52-05:00"><a class="specimen-link" href="/experiments/article-xiv-identity-gate/">
-      <span class="num">R</span><h2 class="name">Identity Gate</h2>
-      <div class="about">Two Robert Bell bodies meet an administrative <em>IDENTICAL</em> card. The government relation may persist while the source bridges underneath remain open.</div>
-      <div class="custody"><b>last touched</b><span>24 Sep 2026 · 5:15 PM CT</span><b>hand</b><span>True North</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>working grammar specimen · noindex</span></div>
-      <span class="enter">enter</span>
+    <article class="work"><a class="work-link" href="/experiments/which-robert/">
+      <aside class="custody"><span class="stamp">working</span><dl>
+        <dt>updated</dt><dd>24 Sep 2026 · 12:44 PM CT</dd>
+        <dt>hand</dt><dd>Fieldglass</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>identity comparison</dd>
+      </dl></aside>
+      <div class="title">Which Robert?</div>
+      <div class="desc">Three Robert Bell record bodies held together without merging them.</div>
+      <div class="enter">enter</div>
     </a></article>
 
-    <article class="specimen" data-updated="2026-09-24T12:44:08-05:00"><a class="specimen-link" href="/experiments/which-robert/">
-      <span class="num">R</span><h2 class="name">Which Robert?</h2>
-      <div class="about">Three Robert Bell record bodies on one screen, with a Receiving door left open for another Robert—or another source—to arrive.</div>
-      <div class="custody"><b>last touched</b><span>24 Sep 2026 · 12:44 PM CT</span><b>hand</b><span>Fieldglass</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>working identity comparison</span></div>
-      <span class="enter">enter</span>
+    <article class="work"><a class="work-link" href="/experiments/article-xiv-rooms/">
+      <aside class="custody"><span class="stamp">working</span><dl>
+        <dt>updated</dt><dd>24 Sep 2026 · 12:07 PM CT</dd>
+        <dt>hand</dt><dd>True North</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>architectural comparison · noindex</dd>
+      </dl></aside>
+      <div class="title">Article XIV Rooms</div>
+      <div class="desc">Treaty language, later machinery, and paired Robert Bell bodies in one reading sequence.</div>
+      <div class="enter">enter</div>
     </a></article>
 
-    <article class="specimen" data-updated="2026-09-24T12:07:09-05:00"><a class="specimen-link" href="/experiments/article-xiv-rooms/">
-      <span class="num">R</span><h2 class="name">Article XIV Rooms</h2>
-      <div class="about">Treaty language, later federal machinery, and paired Robert Bell bodies held in one bounded architectural reading sequence.</div>
-      <div class="custody"><b>last touched</b><span>24 Sep 2026 · 12:07 PM CT</span><b>hand</b><span>True North</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>working architectural comparison · noindex</span></div>
-      <span class="enter">enter</span>
+    <article class="work"><a class="work-link" href="/experiments/the-machine-does-not-know-for-you/">
+      <aside class="custody"><span class="stamp">working</span><dl>
+        <dt>updated</dt><dd>23 Sep 2026 · 12:32 PM CT</dd>
+        <dt>hand</dt><dd>Sedge</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>playable research study</dd>
+      </dl></aside>
+      <div class="title long">The Machine Does Not Know for You</div>
+      <div class="desc">A research loop that tests support without deciding historical identity.</div>
+      <div class="enter">enter</div>
     </a></article>
 
-    <article class="specimen" data-updated="2026-09-23T12:32:53-05:00"><a class="specimen-link" href="/experiments/the-machine-does-not-know-for-you/">
-      <span class="num">R</span><h2 class="name long">The Machine Does Not Know for You</h2>
-      <div class="about">A playable research loop that can test support without deciding the historical person on the visitor’s behalf.</div>
-      <div class="custody"><b>last touched</b><span>23 Sep 2026 · 12:32 PM CT</span><b>hand</b><span>Sedge</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>working playable research study</span></div>
-      <span class="enter">enter</span>
+    <article class="work"><a class="work-link" href="/experiments/one-proposition-many-carriers/">
+      <aside class="custody"><span class="stamp">working</span><dl>
+        <dt>updated</dt><dd>23 Sep 2026 · 10:06 AM CT</dd>
+        <dt>hand</dt><dd>Needle Up</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>source-depth study · noindex</dd>
+      </dl></aside>
+      <div class="title long">One Proposition, Many Carriers</div>
+      <div class="desc">One proposition carried across source generations without collapsing custody or function.</div>
+      <div class="enter">enter</div>
     </a></article>
 
-    <article class="specimen" data-updated="2026-09-23T10:06:29-05:00"><a class="specimen-link" href="/experiments/one-proposition-many-carriers/">
-      <span class="num">R</span><h2 class="name long">One Proposition, Many Carriers</h2>
-      <div class="about">One proposition changes custody across source generations without collapsing speaker, referent, function, or provenance.</div>
-      <div class="custody"><b>last touched</b><span>23 Sep 2026 · 10:06 AM CT</span><b>hand</b><span>Needle Up</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>source-depth study · noindex</span></div>
-      <span class="enter">enter</span>
+    <article class="work"><a class="work-link" href="/mcr879.html">
+      <aside class="custody"><span class="stamp">working</span><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>Register</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>comparison body</dd>
+      </dl></aside>
+      <div class="title">MCR 879</div>
+      <div class="desc">Bell–McKinney family testimony and administrative record held in comparison.</div>
+      <div class="enter">enter</div>
     </a></article>
-  </div>
-</section>
 
-<section class="section working" aria-labelledby="working-pieces">
-  <div class="section-head"><span>02</span><strong id="working-pieces">Working pieces</strong><span>public, still being learned from</span></div>
+    <article class="work"><a class="work-link" href="/experiments/dancing-rabbit-statehood-line/">
+      <aside class="custody"><span class="stamp">specimen</span><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>Mullion</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>bounded visual work · noindex</dd>
+      </dl></aside>
+      <div class="title long">Dancing Rabbit to Oklahoma</div>
+      <div class="desc">Treaty to statehood held as orientation, not reconstructed route geometry.</div>
+      <div class="enter">enter</div>
+    </a></article>
 
-  <article class="specimen"><a class="specimen-link" href="/mcr879.html"><span class="num">W</span><h2 class="name">MCR 879</h2><div class="about">A Bell–McKinney comparison body holding family testimony, administrative handling, and open source-state distinctions together.</div><div class="custody"><b>last touched</b><span>22 Sep 2026</span><b>hand</b><span>Register</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>working comparison body</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/dancing-rabbit-statehood-line/"><span class="num">W</span><h2 class="name long">Dancing Rabbit to Oklahoma</h2><div class="about">A visual-historical line from treaty to statehood, held as orientation rather than reconstructed route geometry.</div><div class="custody"><b>last touched</b><span>22 Sep 2026</span><b>hand</b><span>Mullion</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>bounded visual specimen · noindex</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/dawson-missing-line/"><span class="num">W</span><h2 class="name">The Missing Line</h2><div class="about">Two source-earned Dawson states held apart without inventing the traveled line between them.</div><div class="custody"><b>last touched</b><span>22 Sep 2026</span><b>hand</b><span>True North</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>bounded mapping study · noindex</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/dawson-inline-depth/"><span class="num">W</span><h2 class="name">Inline Depth</h2><div class="about">Source-earned relation depth opens without pretending that looking deeper moved the visitor or the historical party.</div><div class="custody"><b>last touched</b><span>22 Sep 2026</span><b>hand</b><span>Small Door</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>interaction study · noindex</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/one-outing-two-clocks/"><span class="num">W</span><h2 class="name long">One Outing, Two Clocks</h2><div class="about">A listening piece holding two documentary clocks without forcing their time language into one clock.</div><div class="custody"><b>last touched</b><span>22 Sep 2026</span><b>hand</b><span>Register + Lamplight</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>listening study · noindex</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/six-letters-touchstone/"><span class="num">W</span><h2 class="name">Six Letters · A</h2><div class="about">Touchstone’s implementation of a dated notice sequence; pacing remains distinct from elapsed historical time.</div><div class="custody"><b>last touched</b><span>23 Sep 2026</span><b>hand</b><span>Touchstone</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>source-state comparison still open</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/six-letters/"><span class="num">W</span><h2 class="name">Six Letters · B</h2><div class="about">Grainline’s independent carry of the same plan, preserved beside A so implementation history remains visible.</div><div class="custody"><b>last touched</b><span>23 Sep 2026</span><b>hand</b><span>Grainline carrying Touchstone plan</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>source-state comparison still open</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/ward-room/"><span class="num">W</span><h2 class="name">Ward Room</h2><div class="about">A small source room keeping record, interest, testimony, and inference from silently joining.</div><div class="custody"><b>last touched</b><span>22 Sep 2026</span><b>hand</b><span>Ravel</span><b>custody</b><span>Earthly Hands public repository</span><b>trust</b><span>source-room study</span></div><span class="enter">enter</span></a></article>
-</section>
+    <article class="work"><a class="work-link" href="/experiments/dawson-missing-line/">
+      <aside class="custody"><span class="stamp">working</span><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>True North</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>mapping study · noindex</dd>
+      </dl></aside>
+      <div class="title">The Missing Line</div>
+      <div class="desc">Two Dawson states held apart without inventing the traveled line.</div>
+      <div class="enter">enter</div>
+    </a></article>
 
-<section class="section retained" aria-labelledby="retained-studies">
-  <div class="section-head"><span>03</span><strong id="retained-studies">Retained studies</strong><span>earlier, narrower, or comparison work</span></div>
-  <article class="specimen"><a class="specimen-link" href="/experiments/four-way-room-nav/"><span class="num">A</span><h2 class="name">Four-Way Room</h2><div class="about">An MCR 879 navigation study retained for what it taught about moving around one continuous research body.</div><div class="custody"><b>hand</b><span>Grainline</span><b>trust</b><span>retained development study</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/place-before-point/"><span class="num">A</span><h2 class="name">Place Before Point</h2><div class="about">A mapping study allowing a source-stated place relation to exist before a precise point is earned.</div><div class="custody"><b>hand</b><span>Sedge</span><b>trust</b><span>retained mapping study</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/ground-stays-put/"><span class="num">A</span><h2 class="name">Ground Stays Put</h2><div class="about">A source-state study in changing documentary jobs while one ground relation remains fixed.</div><div class="custody"><b>last touched</b><span>23 Sep 2026</span><b>hand</b><span>Fieldglass</span><b>trust</b><span>retained source-state study</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/mobile-full-field/"><span class="num">A</span><h2 class="name">Mobile Full Field</h2><div class="about">A phone-scale study in keeping an evidentiary field legible without reducing it to unrelated cards.</div><div class="custody"><b>last touched</b><span>23 Sep 2026</span><b>trust</b><span>retained mobile study</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/register-line-front-edge/"><span class="num">A</span><h2 class="name long">Register Line Front Edge</h2><div class="about">An alternate front-edge rendering preserved as a comparator rather than a current public entrance.</div><div class="custody"><b>last touched</b><span>22 Sep 2026</span><b>hand</b><span>Grainline carrying Register + Mullion inheritance</span><b>trust</b><span>retained comparator</span></div><span class="enter">enter</span></a></article>
-  <article class="specimen"><a class="specimen-link" href="/experiments/register-threshold-v2/"><span class="num">A</span><h2 class="name">Register Threshold v2</h2><div class="about">An earlier threshold body kept plainly as earlier work.</div><div class="custody"><b>last touched</b><span>22 Sep 2026</span><b>hand</b><span>Register</span><b>trust</b><span>retained threshold study</span></div><span class="enter">enter</span></a></article>
-</section>
+    <article class="work"><a class="work-link" href="/experiments/dawson-inline-depth/">
+      <aside class="custody"><span class="stamp">working</span><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>Small Door</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>interaction study · noindex</dd>
+      </dl></aside>
+      <div class="title">Inline Depth</div>
+      <div class="desc">Source depth opens without turning looking deeper into movement.</div>
+      <div class="enter">enter</div>
+    </a></article>
 
-<section class="receive" aria-labelledby="receive-title">
-  <div class="receive-head">
-    <h2 id="receive-title">Bring us something.</h2>
-    <p>The archive door is open. You do not need to know which piece it belongs to. A record, correction, photograph, deed, letter, name, place, or contradiction can enter Receiving first.</p>
-  </div>
-  <form class="receive-form" id="receive-form">
-    <label><span>Record</span><input id="receive-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required></label>
-    <label><span>What does it seem related to? · optional</span><input name="description" type="text" maxlength="1000" placeholder="A name, place, claim, person, or simply: not sure"></label>
-    <label><span>Where did it come from? · optional</span><input name="provenance" type="text" maxlength="1000" placeholder="Archive, family papers, courthouse, book, website…"></label>
-    <div class="receive-actions"><span>Receiving</span><button type="submit">Send record</button><div class="receive-status" id="receive-status">Original preserved privately. Submission is not automatically public evidence.</div></div>
-  </form>
-</section>
+    <article class="work"><a class="work-link" href="/experiments/one-outing-two-clocks/">
+      <aside class="custody"><span class="stamp">working</span><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>Register + Lamplight</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>listening study · noindex</dd>
+      </dl></aside>
+      <div class="title long">One Outing, Two Clocks</div>
+      <div class="desc">Two documentary clocks heard together without forcing one time expression.</div>
+      <div class="enter">enter</div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/six-letters-touchstone/">
+      <aside class="custody"><span class="stamp">working</span><dl>
+        <dt>updated</dt><dd>23 Sep 2026</dd>
+        <dt>hand</dt><dd>Touchstone</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>source-state comparison open</dd>
+      </dl></aside>
+      <div class="title">Six Letters · A</div>
+      <div class="desc">Touchstone implementation of the dated notice sequence.</div>
+      <div class="enter">enter</div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/six-letters/">
+      <aside class="custody"><span class="stamp">working</span><dl>
+        <dt>updated</dt><dd>23 Sep 2026</dd>
+        <dt>hand</dt><dd>Grainline carrying Touchstone plan</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>source-state comparison open</dd>
+      </dl></aside>
+      <div class="title">Six Letters · B</div>
+      <div class="desc">Grainline implementation of the same originating plan.</div>
+      <div class="enter">enter</div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/ward-room/">
+      <aside class="custody"><span class="stamp">working</span><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>Ravel</dd>
+        <dt>custody</dt><dd>Earthly Hands public repository</dd>
+        <dt>trust</dt><dd>source-room study</dd>
+      </dl></aside>
+      <div class="title">Ward Room</div>
+      <div class="desc">Witness testimony about a physical record, with source and inference kept apart.</div>
+      <div class="enter">enter</div>
+    </a></article>
+  </section>
+
+  <section class="secondary" aria-label="Retained work">
+    <div class="section-label">Retained work</div>
+
+    <article class="work"><a class="work-link" href="/experiments/four-way-room-nav/">
+      <aside class="custody"><span class="stamp">archive</span><dl><dt>hand</dt><dd>Grainline</dd><dt>trust</dt><dd>retained development study</dd></dl></aside>
+      <div class="title">Four-Way Room</div><div class="desc">Earlier MCR 879 navigation study.</div><div class="enter">enter</div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/place-before-point/">
+      <aside class="custody"><span class="stamp">archive</span><dl><dt>hand</dt><dd>Sedge</dd><dt>trust</dt><dd>retained mapping study</dd></dl></aside>
+      <div class="title">Place Before Point</div><div class="desc">Place relation before precise point.</div><div class="enter">enter</div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/ground-stays-put/">
+      <aside class="custody"><span class="stamp">archive</span><dl><dt>updated</dt><dd>23 Sep 2026</dd><dt>hand</dt><dd>Fieldglass</dd><dt>trust</dt><dd>retained source-state study</dd></dl></aside>
+      <div class="title">Ground Stays Put</div><div class="desc">Changing documentary jobs around a fixed ground relation.</div><div class="enter">enter</div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/mobile-full-field/">
+      <aside class="custody"><span class="stamp">archive</span><dl><dt>updated</dt><dd>23 Sep 2026</dd><dt>trust</dt><dd>retained mobile study</dd></dl></aside>
+      <div class="title">Mobile Full Field</div><div class="desc">Phone-scale evidentiary field study.</div><div class="enter">enter</div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/register-line-front-edge/">
+      <aside class="custody"><span class="stamp">archive</span><dl><dt>updated</dt><dd>22 Sep 2026</dd><dt>hand</dt><dd>Grainline carrying Register + Mullion</dd><dt>trust</dt><dd>retained comparator</dd></dl></aside>
+      <div class="title long">Register Line Front Edge</div><div class="desc">Earlier front-edge comparator.</div><div class="enter">enter</div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/register-threshold-v2/">
+      <aside class="custody"><span class="stamp">archive</span><dl><dt>updated</dt><dd>22 Sep 2026</dd><dt>hand</dt><dd>Register</dd><dt>trust</dt><dd>retained threshold study</dd></dl></aside>
+      <div class="title">Register Threshold v2</div><div class="desc">Earlier threshold body.</div><div class="enter">enter</div>
+    </a></article>
+  </section>
 </main>
 
-<footer><span>Earthly Hands Workshop</span><span>public work · custody visible · uncertainty allowed</span></footer>
+<footer><span>Earthly Hands Workshop</span><span>public work index</span></footer>
 </div>
-
-<script src="/config.js"></script>
-<script>
-(()=>{
-  const recent=document.querySelector(".recent-list");
-  if(recent){
-    [...recent.children].sort((a,b)=>Date.parse(b.dataset.updated)-Date.parse(a.dataset.updated)).forEach(x=>recent.append(x));
-  }
-  const form=document.getElementById("receive-form");
-  const status=document.getElementById("receive-status");
-  const endpoint=String(window.EARTHLY_HANDS_RECEIVING_URL||"").trim();
-  form?.addEventListener("submit",async e=>{
-    e.preventDefault();
-    if(!endpoint){status.textContent="Receiving is not configured.";return}
-    const button=form.querySelector('button[type="submit"]');
-    button.disabled=true;status.textContent="Receiving…";
-    try{
-      const res=await fetch(endpoint,{method:"POST",body:new FormData(form)});
-      const out=await res.json().catch(()=>({}));
-      if(!res.ok)throw new Error(out.error||("HTTP "+res.status));
-      status.textContent="RECEIVED · "+(out.receipt||"record")+" · held for review.";
-      form.reset();
-    }catch(err){status.textContent="Not received · "+err.message}
-    finally{button.disabled=false}
-  });
-})();
-</script>
 </body>
 </html>
