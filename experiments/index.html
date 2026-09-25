@@ -1,234 +1,229 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex,follow" />
-  <meta name="theme-color" content="#e7dfd0" />
-  <title>Workshop experiments — Earthly Hands</title>
-  <style>
-    :root{--paper:#e7dfd0;--ink:#171713;--muted:#6d665b;--rule:rgba(23,23,19,.22);--accent:#8a5d45;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-    *{box-sizing:border-box}
-    html{background:var(--paper);color:var(--ink)}
-    body{margin:0;font:18px/1.5 Georgia,"Times New Roman",serif}
-    a{color:inherit;text-underline-offset:.2em;text-decoration-color:var(--accent)}
-    a:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
-    .shell{width:min(62rem,calc(100% - 2rem));margin:0 auto}
-    header{
-      min-height:3.1rem;
-      display:flex;justify-content:space-between;gap:1rem;align-items:center;
-      padding:.65rem 0;border-bottom:1px solid var(--rule);
-      font:11px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)
-    }
-    header a{text-decoration:none;color:var(--ink)}
-    main{padding:clamp(1.9rem,5vw,3.8rem) 0 2.2rem}
-    .intro{
-      display:block;
-      margin:0 0 clamp(1.8rem,4vw,2.8rem);
-      padding-bottom:clamp(1.4rem,3vw,2.1rem);
-      border-bottom:1px solid var(--rule)
-    }
-    .eyebrow,.specimen-kind,.specimen-status{
-      font:11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)
-    }
-    .eyebrow{margin:0 0 .45rem}
-    h1{
-      max-width:11ch;margin:0;
-      font-size:clamp(3.4rem,10vw,7.2rem);
-      font-weight:400;line-height:.86;letter-spacing:-.055em
-    }
-    .intro-copy{
-      max-width:44rem;margin:1.15rem 0 0;
-      color:var(--muted);font-size:.96rem
-    }
-    .specimen-index{border-top:1px solid var(--rule)}
-    .specimen-row{
-      position:relative;
-      display:block;
-      padding:1.05rem 2.5rem 1.1rem 0;
-      border-bottom:1px solid var(--rule);
-      text-decoration:none
-    }
-    .specimen-kind{display:block;margin-bottom:.22rem}
-    .specimen-row strong{
-      display:block;
-      margin:0;
-      font-size:clamp(1.18rem,2.4vw,1.55rem);
-      line-height:1.12;
-      font-weight:400
-    }
-    .specimen-note{
-      display:block;
-      max-width:48rem;
-      margin-top:.28rem;
-      color:var(--muted);
-      font-size:.9rem;
-      line-height:1.42
-    }
-    .specimen-row b{
-      position:absolute;right:.1rem;top:50%;transform:translateY(-50%);
-      font:400 1rem/1 var(--mono);color:var(--accent)
-    }
-    .specimen-status{
-      max-width:48rem;margin:.95rem 0 0;
-      text-transform:none;letter-spacing:.02em
-    }
-    footer{
-      display:flex;justify-content:space-between;gap:1rem;align-items:baseline;
-      padding:.7rem 0 .9rem;border-top:1px solid var(--rule);
-      font:11px/1.3 var(--mono);letter-spacing:.05em;color:var(--muted)
-    }
-    footer a{text-decoration:none}
-    @media(max-width:620px){
-      body{font-size:17px}
-      .shell{width:min(100% - 1.25rem,62rem)}
-      header{min-height:2.8rem;padding:.55rem 0}
-      main{padding:1.45rem 0 1.6rem}
-      .intro{margin-bottom:1.35rem;padding-bottom:1.2rem}
-      h1{font-size:clamp(3rem,15vw,5rem)}
-      .intro-copy{margin-top:.8rem;font-size:.9rem}
-      .specimen-row{padding:.9rem 2rem .95rem 0}
-      .specimen-row strong{font-size:1.2rem}
-      .specimen-note{font-size:.86rem}
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Public specimens from Earthly Hands Workshop.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#e7dfd0">
+<link rel="canonical" href="https://earthlyhands.org/">
+<title>Earthly Hands — Specimens</title>
+<style>
+:root{
+  --paper:#e7dfd0;
+  --paper2:#f0e9dc;
+  --ink:#1d1c18;
+  --muted:#6f685d;
+  --rule:rgba(29,28,24,.23);
+  --accent:#8d5c3f;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--paper)}
+body{margin:0;min-width:18rem;background:var(--paper);color:var(--ink);font:1rem/1.5 var(--serif)}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.shell{width:min(92rem,calc(100% - 2rem));margin:auto}
+.top{
+  min-height:4rem;display:flex;justify-content:space-between;gap:1rem;align-items:center;
+  border-bottom:1px solid var(--rule);font:.63rem/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase
+}
+.top a{text-decoration:none}.top .quiet{color:var(--muted)}
+.intro{
+  display:grid;grid-template-columns:minmax(0,1.55fr) minmax(18rem,.45fr);
+  gap:clamp(2rem,7vw,8rem);align-items:end;padding:clamp(3rem,8vw,8rem) 0 clamp(2.5rem,6vw,5rem)
+}
+.intro h1{
+  margin:0;font-size:clamp(4.5rem,12vw,11rem);font-weight:400;line-height:.74;letter-spacing:-.065em
+}
+.intro-copy{max-width:27rem;padding-bottom:.45rem}
+.intro-copy p{margin:0;color:var(--muted);font-size:clamp(1rem,1.5vw,1.2rem)}
+.intro-copy p+p{margin-top:.8rem}
+.intro-copy .small{font:.6rem/1.45 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.section-head{
+  display:grid;grid-template-columns:4rem 1fr auto;gap:1rem;align-items:baseline;
+  padding:.65rem 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);
+  font:.58rem/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase
+}
+.section-head span:last-child{color:var(--muted)}
+.specimen{border-bottom:1px solid var(--rule)}
+.specimen-link{
+  display:grid;grid-template-columns:4rem minmax(0,1.25fr) minmax(17rem,.75fr) auto;
+  gap:clamp(.8rem,2vw,2rem);align-items:center;min-height:8.2rem;padding:1rem 0;
+  text-decoration:none
+}
+.specimen-link:hover{background:rgba(255,255,255,.12)}
+.num{align-self:start;padding-top:.35rem;color:var(--muted);font:.52rem/1 var(--mono)}
+.name{
+  margin:0;font-size:clamp(2rem,4.8vw,5.2rem);font-weight:400;line-height:.86;letter-spacing:-.047em
+}
+.name.long{font-size:clamp(1.8rem,4vw,4.4rem)}
+.about{max-width:31rem;color:var(--muted);font-size:.92rem;line-height:1.42}
+.meta{margin-top:.45rem;color:var(--muted);font:.52rem/1.35 var(--mono);letter-spacing:.045em;text-transform:uppercase}
+.enter{justify-self:end;font:.55rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.enter::after{content:"  →";color:var(--accent)}
+.retained{margin-top:clamp(4rem,8vw,7rem)}
+.retained .specimen-link{min-height:6rem}
+.retained .name{font-size:clamp(1.55rem,3vw,3.2rem)}
+.retained .about{font-size:.82rem}
+footer{
+  display:flex;justify-content:space-between;gap:1rem;margin-top:5rem;padding:1rem 0 2rem;
+  border-top:1px solid var(--rule);color:var(--muted);font:.55rem/1.4 var(--mono);letter-spacing:.055em;text-transform:uppercase
+}
+@media(max-width:58rem){
+  .intro{grid-template-columns:1fr;gap:2rem}
+  .intro-copy{padding:0}
+  .specimen-link{grid-template-columns:2.5rem 1fr auto;min-height:0;padding:1.4rem 0}
+  .about{grid-column:2/4;max-width:38rem}
+  .enter{grid-column:3;grid-row:1}
+  .section-head{grid-template-columns:2.5rem 1fr}
+  .section-head span:last-child{display:none}
+}
+@media(max-width:36rem){
+  .shell{width:calc(100% - 1.2rem)}
+  .top{min-height:3.3rem}
+  .intro{padding:3rem 0 2.5rem}
+  .intro h1{font-size:clamp(4rem,22vw,6.5rem)}
+  .specimen-link{grid-template-columns:1.7rem 1fr}
+  .num{grid-column:1}
+  .name{grid-column:2}
+  .about{grid-column:2}
+  .enter{grid-column:2;grid-row:auto;justify-self:start;margin-top:.25rem}
+  .section-head{grid-template-columns:1.7rem 1fr}
+  footer{display:block}
+  footer span{display:block;margin-top:.35rem}
+}
 </style>
 </head>
 <body>
 <div class="shell">
-  <header>
-    <a href="/">Earthly Hands Workshop</a>
-    <span>Experiment index</span>
-  </header>
-  <main>
-    <section class="intro" aria-labelledby="page-title">
-      <div>
-        <p class="eyebrow">Working public experiments</p>
-        <h1 id="page-title">Different instruments. Shared ground.</h1>
-      </div>
-      <p class="intro-copy">These pieces are allowed to keep their own visual and navigational grammar. This page is only the workshop index: a way in, not a frame wrapped around them.</p>
-    </section>
-    <nav class="specimen-index" aria-label="Working experiences">
-          <a class="specimen-row" href="/experiments/article-xiv-identity-gate/" data-touched="2026-09-24T17:05:00Z">
-            <span class="specimen-kind">Line Commons experiment · True North</span>
-            <strong>Article XIV — Identity Gate</strong>
-            <span class="specimen-note">Perform the Commission's administrative identity act while Robin/Robert, Yimma/Susie, land, place, and language bridges remain visibly unresolved.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+<header class="top">
+  <a href="/"><strong>Earthly Hands Workshop</strong></a>
+  <span class="quiet">public work</span>
+</header>
 
-          <a class="specimen-row" href="/experiments/which-robert/" data-touched="2026-09-24T16:45:00Z">
-            <span class="specimen-kind">Identity ground experiment · Fieldglass</span>
-            <strong>Which Robert? — three bodies in the room</strong>
-            <span class="specimen-note">A new comparison ground: hold three Robert Bell record bodies together, move close to one name or question, and leave the receiving door open for another Robert to arrive.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+<main>
+<section class="intro">
+  <h1>Specimens.</h1>
+  <div class="intro-copy">
+    <p>Working public pieces from the workshop. Each one has its own rules.</p>
+    <p class="small">Some are source rooms. Some are maps, listening pieces, comparison machines, or ways of keeping a question open.</p>
+  </div>
+</section>
 
-          <a class="specimen-row" href="/experiments/dancing-rabbit-statehood-line/" data-touched="2026-09-22T22:12:03Z">
-            <span class="specimen-kind">Visual specimen · Mullion</span>
-            <strong>Dancing Rabbit → Oklahoma statehood</strong>
-            <span class="specimen-note">Let a line drawing orient a historical field without turning spacing, framing marks, or named places into verified travel geometry.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+<section aria-labelledby="current-specimens">
+  <div class="section-head"><span>01–13</span><strong id="current-specimens">Current specimens</strong><span>enter any piece on its own terms</span></div>
 
-          <a class="specimen-row" href="/experiments/article-xiv-rooms/" data-touched="2026-09-24T00:00:03Z">
-            <span class="specimen-kind">Scrolling architectural experiment · True North</span>
-            <strong>Article XIV rooms — the old room remains</strong>
-            <span class="specimen-note">Walk through the treaty chamber and the later identity, settlement, evidentiary, and review machinery without letting the later administrative structure erase the older promise.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/experiments/article-xiv-identity-gate/">
+    <span class="num">01</span>
+    <h2 class="name">Identity Gate</h2>
+    <div class="about">Two Robert Bell record bodies meet an administrative <em>IDENTICAL</em> card. The government relation can hold while the source bridges underneath remain open.<div class="meta">Article XIV · paired Robert bodies · True North</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/mcr879.html" data-touched="2026-09-22T20:01:03Z">
-            <span class="specimen-kind">Working specimen · Register</span>
-            <strong>Two Bell proceedings. Not one administrative road.</strong>
-            <span class="specimen-note">Place the 1902 MCR 879 proceeding beside a later Bell proceeding without collapsing their identities.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/experiments/shared-country/">
+    <span class="num">02</span>
+    <h2 class="name">Shared Country</h2>
+    <div class="about">A source-facing Dawson trail where people, places, movement, source carriers, and what the account does not say stay separately visible.<div class="meta">Dawson report · live ground · Workshop</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/experiments/one-proposition-many-carriers/" data-touched="2026-09-23T15:06:29Z">
-            <span class="specimen-kind">Interaction experiment · Needle Up</span>
-            <strong>One proposition. Many carriers.</strong>
-            <span class="specimen-note">Hold source depth under your finger while one Robert Bell / Article XIV proposition changes carrier, referent, and administrative function.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/experiments/article-xiv-rooms/">
+    <span class="num">03</span>
+    <h2 class="name">Article XIV Rooms</h2>
+    <div class="about">Treaty language, later federal machinery, and the paired Robert Bell bodies placed in one bounded architectural reading sequence.<div class="meta">Treaty → administration → identity · True North</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/experiments/ground-stays-put/" data-touched="2026-09-23T00:01:12Z">
-            <span class="specimen-kind">Source-state experiment · Fieldglass</span>
-            <strong>The ground stays put.</strong>
-            <span class="specimen-note">Hold one ground relation still while testimony, administrative residence, and title change the documentary job around it.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/experiments/which-robert/">
+    <span class="num">04</span>
+    <h2 class="name">Which Robert?</h2>
+    <div class="about">Three Robert Bell record bodies held on one screen so names, wives, fathers, language, and record carriers can be compared without merging the men.<div class="meta">MCR 879 · Article XIV · hearing body</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/experiments/place-before-point/" data-touched="2026-09-23T00:54:56Z">
-            <span class="specimen-kind">Prose Map experiment · Sedge</span>
-            <strong>A place before a point.</strong>
-            <span class="specimen-note">Keep Mississippi, Fannin County, and Durant in source-stated chronology while refusing to invent the traveled line between them.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/experiments/one-proposition-many-carriers/">
+    <span class="num">05</span>
+    <h2 class="name long">One Proposition, Many Carriers</h2>
+    <div class="about">One proposition changes custody across source generations while speaker, referent, function, and provenance remain distinct.<div class="meta">carrier depth · Needle Up</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/experiments/the-machine-does-not-know-for-you/" data-touched="2026-09-23T17:32:53Z">
-            <span class="specimen-kind">Playable research-loop experiment · Sedge</span>
-            <strong>The machine does not know for you.</strong>
-            <span class="specimen-note">Collect source-carried pieces, build a proposition, and let the interface test support without deciding the historical person on your behalf.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/mcr879.html">
+    <span class="num">06</span>
+    <h2 class="name">MCR 879</h2>
+    <div class="about">A working comparison body for the Bell–McKinney family claim, its source states, administrative handling, and still-open questions.<div class="meta">Robert Bell · family testimony · Register</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/experiments/ward-room/" data-touched="2026-09-22T20:01:19Z">
-            <span class="specimen-kind">Source-room specimen · Ravel</span>
-            <strong>Ward's registration book</strong>
-            <span class="specimen-note">Move through witness testimony about a physical record while keeping source, interest, and inference apart.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/experiments/dancing-rabbit-statehood-line/">
+    <span class="num">07</span>
+    <h2 class="name long">Dancing Rabbit to Oklahoma</h2>
+    <div class="about">A line-drawing presentation of treaty, removal, land, court, and statehood held as orientation rather than reconstructed route geometry.<div class="meta">1830 → 1907 · Mullion</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/experiments/one-outing-two-clocks/" data-touched="2026-09-22T21:57:42Z">
-            <span class="specimen-kind">Listening specimen · Register + Lamplight</span>
-            <strong>One outing, two clocks</strong>
-            <span class="specimen-note">Hear Robert Bell and Blackwell describe the same field outing without forcing their time language into one clock.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/experiments/dawson-missing-line/">
+    <span class="num">08</span>
+    <h2 class="name">The Missing Line</h2>
+    <div class="about">Two source-earned Dawson states held apart without inventing the traveled line between “about fifteen miles southeast” and Blue Water.<div class="meta">reach ≠ route · True North</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/experiments/register-line-front-edge/" data-touched="2026-09-22T21:35:55Z">
-            <span class="specimen-kind">Front-edge style experiment · Grainline</span>
-            <strong>Register + Line front edge</strong>
-            <span class="specimen-note">Try the pale Register-v2 grammar with Mullion's line language as orientation, without replacing the current front edge.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/experiments/dawson-inline-depth/">
+    <span class="num">09</span>
+    <h2 class="name">Inline Depth</h2>
+    <div class="about">Relation depth opens inside a Dawson passage without pretending that looking deeper moved the visitor—or the historical party—to another ground.<div class="meta">Dawson · source depth · Small Door</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/experiments/four-way-room-nav/" data-touched="2026-09-22T21:49:19Z">
-            <span class="specimen-kind">Navigation experiment · Grainline</span>
-            <strong>MCR 879 — Robert Bell evidence field</strong>
-            <span class="specimen-note">Move among family testimony, the older Article XIV record body, the patent record, and the 1907 rehearing sequence from one standing point.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/experiments/one-outing-two-clocks/">
+    <span class="num">10</span>
+    <h2 class="name long">One Outing, Two Clocks</h2>
+    <div class="about">A listening piece holding two documentary clocks together without forcing their time expressions or identities into a single chronology.<div class="meta">listening experiment · Register + Lamplight</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/experiments/six-letters-touchstone/" data-touched="2026-09-23T07:29:42Z">
-            <span class="specimen-kind">Paired implementation A · Touchstone</span>
-            <strong>Six Letters — Touchstone implementation</strong>
-            <span class="specimen-note">Touchstone’s own implementation of the Six Letters plan. Compare it beside the Grainline carry; the pair shares a design premise, not an assumed identical historical body.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/experiments/six-letters-touchstone/">
+    <span class="num">11</span>
+    <h2 class="name">Six Letters</h2>
+    <div class="about">Touchstone’s implementation of a notice sequence: repeated dated bodies, deliberate pacing, and a blank interval that does not pretend to measure elapsed historical time.<div class="meta">Touchstone implementation · source state still under comparison</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/experiments/six-letters/" data-touched="2026-09-23T06:49:54Z">
-            <span class="specimen-kind">Paired implementation B · Grainline carrying Touchstone plan</span>
-            <strong>Six Letters — Grainline implementation</strong>
-            <span class="specimen-note">The same originating plan independently carried by Grainline. Compare what different implementations preserve, sharpen, flatten, or source differently.</span>
-            <b aria-hidden="true">→</b>
-          </a>
+  <article class="specimen"><a class="specimen-link" href="/experiments/six-letters/">
+    <span class="num">12</span>
+    <h2 class="name">Six Letters</h2>
+    <div class="about">Grainline’s independent implementation of the same originating plan, preserved beside Touchstone’s so development history stays visible.<div class="meta">Grainline implementation · source state still under comparison</div></div>
+    <span class="enter">enter</span>
+  </a></article>
 
-          <a class="specimen-row" href="/experiments/register-threshold-v2/" data-touched="2026-09-22T19:59:18Z">
-            <span class="specimen-kind">Earlier threshold specimen · Register</span>
-            <strong>Register threshold v2</strong>
-            <span class="specimen-note">An earlier front-door experiment kept intact so the workshop can compare what it still wants to inherit.</span>
-            <b aria-hidden="true">→</b>
-          </a>
-        </nav>
-    <p class="specimen-status">
-          These remain working specimens, not a ranked set or a finished architecture. Recency only
-          controls where they sit in this index; it does not control their importance.
-        </p>
-  </main>
-  <footer>
-    <span>Earthly Hands Workshop</span>
-    <a href="/">Current project</a>
-  </footer>
+  <article class="specimen"><a class="specimen-link" href="/experiments/ward-room/">
+    <span class="num">13</span>
+    <h2 class="name">Ward Room</h2>
+    <div class="about">A small source room for the Ward edge, built to keep source routes visible and refuse joins the record has not earned.<div class="meta">source room · Ravel</div></div>
+    <span class="enter">enter</span>
+  </a></article>
+</section>
+
+<section class="retained" aria-labelledby="retained-specimens">
+  <div class="section-head"><span>14–20</span><strong id="retained-specimens">Retained studies</strong><span>earlier or narrower public work</span></div>
+
+  <article class="specimen"><a class="specimen-link" href="/experiments/four-way-room-nav/"><span class="num">14</span><h2 class="name">Four-Way Room</h2><div class="about">An MCR 879 evidence-field navigation study, retained for what it taught about moving around one continuous research body.<div class="meta">Grainline</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/place-before-point/"><span class="num">15</span><h2 class="name">Place Before Point</h2><div class="about">A mapping study that lets a place relation exist before the workshop has earned a precise point.<div class="meta">mapping study</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/ground-stays-put/"><span class="num">16</span><h2 class="name">Ground Stays Put</h2><div class="about">A movement study asking what can change around a visitor while the current ground itself remains fixed.<div class="meta">interaction study</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/the-machine-does-not-know-for-you/"><span class="num">17</span><h2 class="name long">The Machine Does Not Know for You</h2><div class="about">A comparison room that makes the machine’s limits visible instead of allowing interface confidence to stand in for historical certainty.<div class="meta">identity / comparison study</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/mobile-full-field/"><span class="num">18</span><h2 class="name">Mobile Full Field</h2><div class="about">A phone-scale study in keeping the whole evidentiary field legible without reducing it to a stack of unrelated cards.<div class="meta">mobile study</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/register-line-front-edge/"><span class="num">19</span><h2 class="name long">Register Line Front Edge</h2><div class="about">An alternate front-edge rendering preserved as a comparator: pale Register grammar carrying Mullion’s line orientation.<div class="meta">Grainline · Register + Mullion inheritance</div></div><span class="enter">enter</span></a></article>
+  <article class="specimen"><a class="specimen-link" href="/experiments/register-threshold-v2/"><span class="num">20</span><h2 class="name">Register Threshold v2</h2><div class="about">An earlier threshold specimen retained plainly as earlier work rather than presented as the current front door.<div class="meta">Register · retained</div></div><span class="enter">enter</span></a></article>
+</section>
+</main>
+
+<footer>
+  <span>Earthly Hands Workshop</span>
+  <span>working public specimens · source, representation, and inference kept distinct</span>
+</footer>
 </div>
 </body>
 </html>
