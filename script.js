@@ -716,7 +716,13 @@
 
     const fragment = document.createDocumentFragment();
 
-    batches.forEach((batchPeople, batchId) => {
+    // People is a living encounter shelf: newest encounters sit nearest the visitor,
+    // while each person's serial still preserves historical encounter order.
+    const orderedBatches = Array.from(batches.entries()).sort(([a], [b]) => {
+      return fullSequence.indexOf(b) - fullSequence.indexOf(a);
+    });
+
+    orderedBatches.forEach(([batchId, batchPeople]) => {
       const batch = document.createElement("section");
       batch.className = "encounter-batch";
 
