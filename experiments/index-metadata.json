@@ -205,6 +205,14 @@
       "watch": [
         "experiments/register-threshold-v2"
       ]
+    },
+    "/experiments/catharine-mckinney/": {
+      "updated": "2026-09-25T14:21:00-05:00",
+      "hand": "Quire",
+      "commit": "177dd08705cc",
+      "watch": [
+        "experiments/catharine-mckinney"
+      ]
     }
   }
 }
