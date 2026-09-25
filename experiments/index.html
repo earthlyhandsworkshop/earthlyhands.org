@@ -705,6 +705,53 @@ footer{
   </section>
 </main>
 </div>
+<script>
+(()=>{
+  const fmt = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true
+  });
+
+  function setField(article, label, value) {
+    if (!value) return;
+    const dts = [...article.querySelectorAll(".custody dt")];
+    const dt = dts.find(node => node.textContent.trim().toLowerCase() === label);
+    if (dt?.nextElementSibling) {
+      dt.nextElementSibling.textContent = value;
+      return;
+    }
+    const dl = article.querySelector(".custody dl");
+    if (!dl) return;
+    const newDt = document.createElement("dt");
+    const newDd = document.createElement("dd");
+    newDt.textContent = label;
+    newDd.textContent = value;
+    dl.prepend(newDd);
+    dl.prepend(newDt);
+  }
+
+  fetch("/experiments/index-metadata.json", { cache: "no-store" })
+    .then(r => r.ok ? r.json() : Promise.reject(new Error("metadata unavailable")))
+    .then(meta => {
+      for (const [href, entry] of Object.entries(meta.entries || {})) {
+        const link = document.querySelector(`.work-link[href="${href}"]`);
+        const article = link?.closest(".work");
+        if (!article) continue;
+        const date = entry.updated ? fmt.format(new Date(entry.updated)).replace(",", " ·") + " CT" : "";
+        setField(article, "updated", date);
+        setField(article, "hand", entry.hand || "");
+      }
+    })
+    .catch(() => {
+      // Static custody text remains a trustworthy fallback if metadata cannot load.
+    });
+})();
+</script>
 <script src="/config.js?v=9d26bbb0e579"></script>
 <script>
 (()=>{
