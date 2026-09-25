@@ -66,3 +66,21 @@ The machine became more useful when uncertainty changed the available action rat
 The instrument should continue to prefer **small physical-looking source pieces + one explicit test** over administrative vocabulary presented as navigation.
 
 **Powerful finger. Trustworthy result.**
+
+
+## Interaction-state deepening — persistent punch-card pass
+
+The live public instrument now preserves visitor machine state across ordinary refresh using browser-local storage. Loaded review tickets, loaded Article XIX tickets, and the last test survive refresh on the same browser/device. This is local interaction persistence only; it does not alter any historical or Workshop source state.
+
+The front edge now exposes three proposition-forming roads before the evidence feeds:
+
+1. **Family citizenship / ancestry** — family voice before later legal compression.
+2. **Commission Article XIV road** — applicant pleading -> Commission group framing -> two-Robert comparator.
+3. **Catherine / Article XIX review** — the current live road testing review adequacy against a separately controlled federal record body.
+
+This is an earned interaction lesson: proposition formation is part of the research object. A visitor should be able to see not only which evidence was tested, but **what question the Workshop had learned to ask before the evidence entered the machine**.
+
+Public physics remain unchanged:
+`EXISTED != IN CASE != NAMED IN REVIEW != REQUIRED TO CONSULT != ADEQUATE / INADEQUATE`.
+
+Presentation direction: literal document reader / punch-card grammar is allowed where it clarifies documentary operations. The humor must remain mechanical rather than evidentiary: clicks, tickets, lamps, jams, and refusals may be expressive; source state, identity brakes, bounded negatives, and open joins remain exact.
