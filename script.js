@@ -252,7 +252,7 @@
   }
 
   try {
-    const rememberedState = JSON.parse(window.sessionStorage.getItem("earthly-hands-discovery-scene-v2") || "null");
+    const rememberedState = JSON.parse(window.sessionStorage.getItem("earthly-hands-discovery-scene-v3") || "null");
     if (rememberedState && typeof rememberedState === "object") {
       for (const id of Object.keys(sceneState)) {
         if (rememberedState[id] && typeof rememberedState[id] === "object") {
@@ -267,15 +267,18 @@
   let furthestIndex = 0;
   let asking = false;
   let discoveryOpen = false;
+  let thresholdThoughtGiven = false;
 
   try {
-    discoveryOpen = window.localStorage.getItem("earthly-hands-discovery-open-v2") === "1";
+    discoveryOpen = window.localStorage.getItem("earthly-hands-discovery-open-v3") === "1";
+    thresholdThoughtGiven = window.localStorage.getItem("earthly-hands-thought-given-v3") === "1";
   } catch (_) {
     discoveryOpen = false;
+    thresholdThoughtGiven = false;
   }
 
   try {
-    const rememberedReach = Number(window.localStorage.getItem("earthly-hands-story-reach-v2") || "0");
+    const rememberedReach = Number(window.localStorage.getItem("earthly-hands-story-reach-v3") || "0");
     if (Number.isFinite(rememberedReach)) furthestIndex = Math.max(0, Math.min(fullSequence.length - 1, rememberedReach));
   } catch (_) {
     // Visitor reach can remain session-local when durable browser storage is unavailable.
@@ -309,7 +312,7 @@
 
   function saveSceneState() {
     try {
-      window.sessionStorage.setItem("earthly-hands-discovery-scene-v2", JSON.stringify(sceneState));
+      window.sessionStorage.setItem("earthly-hands-discovery-scene-v3", JSON.stringify(sceneState));
     } catch (_) {
       // The lived layer still works without storage.
     }
@@ -475,13 +478,29 @@
     if (mapButton) mapButton.hidden = !discoveryOpen || !mapIsEarned();
 
     document.body.dataset.discovery = discoveryOpen ? "open" : "closed";
+    document.body.dataset.thought = thresholdThoughtGiven ? "given" : "none";
+  }
+
+  function showThresholdThought(patch) {
+    if (!groundThread) return;
+    const raw = patch?.view || patch?.title || patch?.setting || "";
+    const line = shortState(raw, 180) || "The ground does not answer that yet.";
+    const p = document.createElement("p");
+    p.className = "threshold-thought";
+    p.textContent = line;
+    groundThread.replaceChildren(p);
+    thresholdThoughtGiven = true;
+    document.body.dataset.thought = "given";
+    try {
+      window.localStorage.setItem("earthly-hands-thought-given-v3", "1");
+    } catch (_) {}
   }
 
   function openDiscovery() {
     if (discoveryOpen) return;
     discoveryOpen = true;
     try {
-      window.localStorage.setItem("earthly-hands-discovery-open-v2", "1");
+      window.localStorage.setItem("earthly-hands-discovery-open-v3", "1");
     } catch (_) {}
     syncDiscoveryChrome();
   }
@@ -814,11 +833,11 @@
 
   function remember(id) {
     try {
-      window.localStorage.setItem("earthly-hands-footing-v2", id);
+      window.localStorage.setItem("earthly-hands-footing-v3", id);
       const index = fullSequence.indexOf(id);
       if (index > furthestIndex) {
         furthestIndex = index;
-        window.localStorage.setItem("earthly-hands-story-reach-v2", String(furthestIndex));
+        window.localStorage.setItem("earthly-hands-story-reach-v3", String(furthestIndex));
       }
     } catch (_) {
       const index = fullSequence.indexOf(id);
@@ -828,9 +847,10 @@
 
   function forget() {
     try {
-      window.localStorage.removeItem("earthly-hands-footing-v2");
-      window.localStorage.removeItem("earthly-hands-story-reach-v2");
-      window.localStorage.removeItem("earthly-hands-discovery-open-v2");
+      window.localStorage.removeItem("earthly-hands-footing-v3");
+      window.localStorage.removeItem("earthly-hands-story-reach-v3");
+      window.localStorage.removeItem("earthly-hands-discovery-open-v3");
+      window.localStorage.removeItem("earthly-hands-thought-given-v3");
     } catch (_) {
       // Nothing else is required.
     }
@@ -886,9 +906,10 @@
     if (!clean || asking) return;
 
     const origin = currentId;
-    openDiscovery();
+    const thoughtTurn = !discoveryOpen && !thresholdThoughtGiven;
+    if (!thoughtTurn && !discoveryOpen) openDiscovery();
 
-    if (asksForMap(clean) && mapIsEarned()) {
+    if (!thoughtTurn && asksForMap(clean) && mapIsEarned()) {
       keepTenWords(clean);
       talkInput.value = "";
       sizeTalkInput();
@@ -896,7 +917,7 @@
       return;
     }
 
-    if (asksForPeople(clean) && encounteredPeopleCount() > 0) {
+    if (!thoughtTurn && asksForPeople(clean) && encounteredPeopleCount() > 0) {
       keepTenWords(clean);
       talkInput.value = "";
       sizeTalkInput();
@@ -914,10 +935,11 @@
       return;
     }
 
+    if (!thoughtTurn && !discoveryOpen) openDiscovery();
     receiveTenAction(clean);
-    const localMove = localMoveFromWords(clean);
+    const localMove = thoughtTurn ? null : localMoveFromWords(clean);
     const movementResolved = Boolean(localMove && canMove(origin, localMove));
-    keepTenWords(clean);
+    if (!thoughtTurn) keepTenWords(clean);
     talkInput.value = "";
     sizeTalkInput();
     setAsking(true);
@@ -939,6 +961,9 @@
       "DOOR: Shared Country / discovery ground.",
       "LOCAL JOB: recompose only the present held scene. The visitor is discovering the record from inside the experience. Do not announce the report writer, source title, larger expedition, or future story merely because the backend knows them. Reveal identity, carrier, people, and place only when Ten's question or already-earned public ground supports that reveal. Do not claim that a companion is physically or historically present in 1831.",
       "VOICE: plain, testimonial, unresolved. Prefer exact nouns and earned verbs. Do not perform significance.",
+      thoughtTurn
+        ? "THRESHOLD TURN: this is the visitor's first contact with the ground. Return one short line only in view. Do not name Dawson, the report, the expedition, the date, the route, or future places unless Ten's exact question has already earned that fact. The line may orient, refuse, or expose one concrete thing. Do not explain the mechanic."
+        : "DISCOVERY TURN: reveal only what the visitor has earned through the current public ground and conversation. Do not front-load the larger body.",
       "CONTINUITY: when Ten asks a fresh question without moving, make the current-ground continuity legible. Prefer words such as still / remain / same ground when accurate so a new answer does not look like a new historical movement.",
       "COMPOSITION: the title is an active part of the answer. Change it when the question genuinely changes the aperture or documentary job. A short answer may stay spare; a rich held answer may use several paragraphs and fill the available field. Do not pad for length.",
       "STATUS LABELING: when useful, say what kind of thing is being shown — direct source statement, Dawson judgment/forecast, public derivative, unresolved edge, or reversible visitor experience. Do not blur those classes.",
@@ -994,10 +1019,14 @@
         throw new Error("Worker returned an invalid Shared Country scene contract");
       }
 
-      const patchOrigin = currentId;
-      const result = applyScenePatch(patchOrigin, patch);
-      if (!movementResolved && result.moveTo && canMove(patchOrigin, result.moveTo)) {
-        landAt(result.moveTo);
+      if (thoughtTurn) {
+        showThresholdThought(patch);
+      } else {
+        const patchOrigin = currentId;
+        const result = applyScenePatch(patchOrigin, patch);
+        if (!movementResolved && result.moveTo && canMove(patchOrigin, result.moveTo)) {
+          landAt(result.moveTo);
+        }
       }
 
       conversation.push({ role: "user", content: clean });
@@ -1077,7 +1106,7 @@
       initialId = hashId;
     } else {
       try {
-        initialId = window.localStorage.getItem("earthly-hands-footing-v2") || "night";
+        initialId = window.localStorage.getItem("earthly-hands-footing-v3") || "night";
       } catch (_) {
         initialId = "night";
       }
@@ -1092,6 +1121,7 @@
   setLamp(true);
   history.replaceState({ place: initialId }, "", discoveryOpen ? `#${initialId}` : window.location.pathname);
   showScene(sceneById.get(initialId), "forward");
+  document.body.dataset.thought = thresholdThoughtGiven ? "given" : "none";
   syncDiscoveryChrome();
 
   const specimenIndex = document.querySelector(".specimen-index");
