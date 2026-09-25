@@ -789,11 +789,17 @@
         current.innerHTML = "<span>known here</span><b></b>";
         current.querySelector("b").textContent = person.relations[person.relations.length - 1] || "—";
 
+        const last = document.createElement("p");
+        last.className = "person-card-field";
+        last.innerHTML = "<span>last encountered</span><b></b>";
+        last.querySelector("b").textContent = trailUi[person.lastSeen]?.name || person.lastSeen;
+
         const open = document.createElement("p");
         open.className = "person-card-open";
         open.textContent = person.notes[person.notes.length - 1] || "Nothing further is carried here.";
 
         body.append(first, current);
+        if (person.lastSeen !== person.firstSeen) body.append(last);
 
         if (person.relations.length > 1) {
           const history = document.createElement("div");
