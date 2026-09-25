@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="../../style.css?v=shared-country-edge-nav-v1" />
+    <link rel="stylesheet" href="../../style.css?v=shared-country-prose-map-v1" />
   </head>
   <body data-lamp="lit" data-ground="night">
     <a class="skip-link" href="#threshold">Skip to the Dawson trail</a>
@@ -59,29 +59,39 @@
     <main>
       <section class="threshold" id="threshold" data-place="Front edge">
         <div class="experience-shell" id="experience-shell">
-          <div class="experience-viewbar" aria-label="Ground view">
+          <div class="experience-viewbar" aria-label="Shared Country views">
             <button type="button" class="view-mode is-current" data-dawson-view="ground" aria-pressed="true">Ground</button>
-            <button type="button" class="view-mode" data-dawson-view="talk" aria-pressed="false">Talk wide</button>
-            <button type="button" class="view-mode" data-dawson-view="index" aria-pressed="false">Stops</button>
+            <button type="button" class="view-mode" data-dawson-view="map" aria-pressed="false">Map</button>
             <button type="button" class="view-mode" data-dawson-view="people" aria-pressed="false">People</button>
-            <button type="button" class="view-mode" data-dawson-view="sources" aria-pressed="false">Sources</button>
           </div>
 
           <div class="experience-stage" id="experience-stage" data-direction="forward">
             <div class="experience-mount" id="experience-mount" aria-live="polite"></div>
-            <section class="dawson-index" id="dawson-index" hidden aria-labelledby="dawson-index-title">
-              <header class="dawson-index-head">
-                <p>Exploring party</p>
-                <h2 id="dawson-index-title">Stops currently open</h2>
-                <span>These are public stops in the present trail. The deeper Dawson corpus is larger and is still being indexed underneath.</span>
+            <section class="prose-map" id="dawson-index" hidden aria-labelledby="dawson-index-title">
+              <header class="prose-map-head">
+                <div>
+                  <p>Prose Map · revealed ground</p>
+                  <h2 id="dawson-index-title">What the story has earned so far.</h2>
+                </div>
+                <span>Relation drawing · not to scale · uncertainty stays visible</span>
               </header>
-              <nav class="dawson-stop-list" aria-label="Public stops"></nav>
+              <div class="prose-map-frame">
+                <svg id="prose-map-svg" viewBox="0 0 860 390" role="img" aria-label="A progressively revealed relation map of the Exploring Party story"></svg>
+              </div>
+              <div class="prose-map-key" aria-label="Map key">
+                <span><i class="map-key-solid"></i> same / held ground</span>
+                <span><i class="map-key-dash"></i> source-stated movement · exact line unresolved</span>
+                <span><i class="map-key-dot"></i> qualitative relation</span>
+                <span><i class="map-key-region"></i> regional judgment / forecast</span>
+              </div>
             </section>
             <section class="camp-people" id="camp-people" hidden aria-labelledby="camp-people-title">
-              <header class="dawson-index-head">
-                <p>People / bodies in the held source</p>
-                <h2 id="camp-people-title">Who is here?</h2>
-                <span>This is not a complete roster. Named people stay named; unnamed groups stay unnamed; arrival, presence, approach, and departure remain different relations.</span>
+              <header class="people-head">
+                <div>
+                  <p>Encountered so far</p>
+                  <h2 id="camp-people-title">People</h2>
+                </div>
+                <span id="camp-people-count"></span>
               </header>
               <div class="camp-people-list"></div>
             </section>
@@ -99,7 +109,7 @@
             <div class="experience-utility">
               <form class="ground-talk" id="talk-form" aria-label="Ask the ground">
                 <label class="sr-only" for="talk-input">Ask the ground</label>
-                <textarea id="talk-input" name="message" rows="1" maxlength="1000" autocomplete="off" enterkeyhint="send" placeholder="Ask the ground"></textarea>
+                <textarea id="talk-input" name="message" rows="1" maxlength="1000" autocomplete="off" enterkeyhint="send" placeholder="Ask the ground — where next, who have I met, show me the map…"></textarea>
                 <button class="sr-only" id="talk-send" type="submit">Go</button>
               </form>
               <div class="ground-thread" id="ground-thread" aria-live="polite"></div>
@@ -286,6 +296,6 @@
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
     <script src="../../config.js?v=camp-ground-v1"></script>
-    <script src="../../script.js?v=shared-country-corpus-v4"></script>
+    <script src="../../script.js?v=shared-country-prose-map-v1"></script>
   </body>
 </html>
