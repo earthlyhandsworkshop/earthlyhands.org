@@ -2141,3 +2141,59 @@ body[data-discovery="open"] .experience-stage{
     grid-template-columns:6.5rem minmax(0,1fr);
   }
 }
+
+
+/* Shared Country language of change.
+   Changes may be expressive; their cause must remain legible. */
+.experience-viewbar{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:end;
+  gap:1.25rem;
+}
+.experience-bearing{
+  min-height:1rem;
+  color:var(--scene-muted);
+  font:500 .52rem/1.25 var(--mono);
+  letter-spacing:.055em;
+}
+.experience-modes{
+  display:flex;
+  justify-content:flex-end;
+  gap:1rem;
+}
+body[data-discovery="open"] .experience-mount,
+body[data-discovery="open"] .camp-sources,
+body[data-discovery="open"] .prose-map,
+body[data-discovery="open"] .camp-people{
+  transition:
+    width .24s ease,
+    max-width .24s ease,
+    opacity .18s ease,
+    transform .24s ease;
+}
+.experience-shell[data-change="attention"] .experience-mount{
+  transform:translateY(.12rem);
+}
+.experience-shell[data-change="movement"] .experience-mount{
+  transform:translateY(.36rem);
+}
+.experience-shell[data-change="source"] .camp-sources{
+  transform:translateY(.2rem);
+}
+.experience-shell[data-change="return"] .experience-mount{
+  transform:translateY(0);
+}
+@media(max-width:52rem){
+  .experience-viewbar{
+    grid-template-columns:1fr;
+    align-items:start;
+    gap:.35rem;
+  }
+  .experience-modes{
+    justify-content:flex-start;
+  }
+  .experience-bearing{
+    min-height:0;
+  }
+}
