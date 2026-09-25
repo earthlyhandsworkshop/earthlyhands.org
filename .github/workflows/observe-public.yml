@@ -1,9 +1,9 @@
 name: Observe public deployment
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: "17 8 * * *"
 
 permissions:
   contents: read
@@ -37,18 +37,23 @@ jobs:
         if: always()
         run: |
           npx --yes -p playwright@1.55.0 node - <<'NODE'
-          const { chromium } = require("playwright");
-          const browser = await chromium.launch({headless:true});
-          const page = await browser.newPage({viewport:{width:390,height:844}});
-          await page.goto("https://earthlyhands.org/experiments/one-proposition-many-carriers/", {waitUntil:"networkidle"});
-          const before = await page.locator("#carrier-position").textContent();
-          await page.locator("#next").click();
-          const after = await page.locator("#carrier-position").textContent();
-          const statement = await page.locator("#statement").textContent();
-          if (!before?.includes("01") || !after?.includes("02") || !statement?.includes("did comply")) {
-            throw new Error(`Follow One Proposition did not advance correctly: before=${before} after=${after} statement=${statement}`);
-          }
-          await browser.close();
+          (async () => {
+            const { chromium } = require("playwright");
+            const browser = await chromium.launch({headless:true});
+            const page = await browser.newPage({viewport:{width:390,height:844}});
+            await page.goto("https://earthlyhands.org/experiments/one-proposition-many-carriers/", {waitUntil:"networkidle"});
+            const before = await page.locator("#carrier-position").textContent();
+            await page.locator("#next").click();
+            const after = await page.locator("#carrier-position").textContent();
+            const statement = await page.locator("#statement").textContent();
+            if (!before?.includes("01") || !after?.includes("02") || !statement?.includes("did comply")) {
+              throw new Error(`Follow One Proposition did not advance correctly: before=${before} after=${after} statement=${statement}`);
+            }
+            await browser.close();
+          })().catch(err => {
+            console.error(err);
+            process.exit(1);
+          });
           NODE
 
       - name: Capture public ground
