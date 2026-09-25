@@ -30,6 +30,25 @@ const files = [
   ...await collectPublicExperimentFiles("experiments")
 ];
 
+const experimentDirs = [...new Set(
+  files
+    .filter(([localPath]) => /^experiments\/[^/]+\/index\.html$/.test(localPath))
+    .map(([localPath]) => localPath.split("/")[1])
+)].sort();
+
+const [rootIndexSource, experimentsIndexSource] = await Promise.all([
+  fs.readFile("index.html", "utf8"),
+  fs.readFile("experiments/index.html", "utf8")
+]);
+
+const indexedExperimentDirs = (source) =>
+  new Set([...source.matchAll(/href="\/experiments\/([^/]+)\//g)].map((m) => m[1]));
+
+const rootIndexDirs = indexedExperimentDirs(rootIndexSource);
+const experimentsIndexDirs = indexedExperimentDirs(experimentsIndexSource);
+const missingFromRootIndex = experimentDirs.filter((dir) => !rootIndexDirs.has(dir));
+const missingFromExperimentsIndex = experimentDirs.filter((dir) => !experimentsIndexDirs.has(dir));
+
 const sha256 = (value) =>
   crypto.createHash("sha256").update(value).digest("hex");
 
@@ -37,7 +56,12 @@ const observation = {
   observed_at: new Date().toISOString(),
   requested_commit: commit,
   public_base_url: base,
-  files: []
+  files: [],
+  experiment_index: {
+    discovered: experimentDirs,
+    missing_from_root_index: missingFromRootIndex,
+    missing_from_experiments_index: missingFromExperimentsIndex
+  }
 };
 
 for (const [localPath, publicPath] of files) {
@@ -89,6 +113,10 @@ const lines = [
   "",
   `All observed: **${observation.all_observed ? "yes" : "no"}**`,
   `All checked files match repository source: **${observation.all_match_source ? "yes" : "no"}**`,
+  `Root index includes every experiment: **${missingFromRootIndex.length === 0 ? "yes" : "no"}**`,
+  `Experiments index includes every experiment: **${missingFromExperimentsIndex.length === 0 ? "yes" : "no"}**`,
+  missingFromRootIndex.length ? `Missing from root index: ${missingFromRootIndex.join(", ")}` : "",
+  missingFromExperimentsIndex.length ? `Missing from experiments index: ${missingFromExperimentsIndex.join(", ")}` : "",
   "",
   "| Public path | HTTP | Matches source | Final URL |",
   "|---|---:|:---:|---|",
@@ -111,3 +139,4 @@ if (process.env.GITHUB_STEP_SUMMARY) {
 
 if (!observation.all_observed) process.exitCode = 2;
 if (!observation.all_match_source) process.exitCode = 3;
+if (missingFromRootIndex.length || missingFromExperimentsIndex.length) process.exitCode = 4;
