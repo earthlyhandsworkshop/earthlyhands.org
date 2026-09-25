@@ -101,8 +101,6 @@
 
   const peopleByGround = {
     night: [
-      { name: "military detachment", relation: "camp-side military body", note: "The individual men are not fully named in this held public sequence." },
-      { name: "five or six Choctaws", relation: "source-counted camp-side body", note: "Count and Choctaw label are source-carried; individual identities remain open here." },
       { name: "small guard", relation: "posted round camp during the night", note: "Unrostered body; do not merge automatically with the two men sent toward the ford." },
       { name: "two unnamed men", relation: "sent toward the ford on the back trail", note: "The source gives purpose to watch; it does not currently give arrival, completed watch, or return." }
     ],
@@ -890,7 +888,7 @@
     const origin = currentId;
     openDiscovery();
 
-    if (asksForMap(clean)) {
+    if (asksForMap(clean) && mapIsEarned()) {
       keepTenWords(clean);
       talkInput.value = "";
       sizeTalkInput();
@@ -898,7 +896,7 @@
       return;
     }
 
-    if (asksForPeople(clean)) {
+    if (asksForPeople(clean) && encounteredPeopleCount() > 0) {
       keepTenWords(clean);
       talkInput.value = "";
       sizeTalkInput();
