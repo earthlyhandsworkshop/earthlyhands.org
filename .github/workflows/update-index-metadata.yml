@@ -1,0 +1,39 @@
+name: Refresh public-work index metadata
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "experiments/index-metadata.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Derive index metadata from Git history
+        run: node scripts/update-index-metadata.mjs
+
+      - name: Commit metadata when it changed
+        run: |
+          if git diff --quiet -- experiments/index-metadata.json; then
+            exit 0
+          fi
+          git config user.name "earthlyhandsworkshop"
+          git config user.email "workshop@earthlyhands.org"
+          git add experiments/index-metadata.json
+          git commit -m "Refresh public-work index metadata" -m "Hand: Workshop automation"
+          git push
