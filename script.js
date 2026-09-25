@@ -141,9 +141,9 @@
 
   const sourceFloor = {
     night: [
-      "Dawson reports that a small guard was posted around camp after an alarm.",
+      "The held account reports that a small guard was posted around camp after an alarm.",
       "Two unnamed men were sent back to watch the ford of the river on the back trail.",
-      "The carried report does not say that they reached the ford or describe their return."
+      "The held account does not say that they reached the ford or describe their return."
     ],
     morning: [
       "Dawson reports the party was unattacked through the night.",
@@ -609,7 +609,7 @@
       proseMapSvg.append(
         svgEl("rect", { x: 654, y: 76, width: 150, height: 202, rx: 70, class: "map-region" }),
         svgEl("text", { x: 678, y: 104, class: "map-place" }, "east of Blue Water"),
-        svgEl("text", { x: 678, y: 124, class: "map-small" }, "Dawson forecast / capacity judgment"),
+        svgEl("text", { x: 678, y: 124, class: "map-small" }, "account forecast / capacity judgment"),
         svgEl("text", { x: 678, y: 145, class: "map-small" }, "not occupied geometry")
       );
     }
@@ -926,7 +926,7 @@
       return;
     }
 
-    if (asksForSources(clean)) {
+    if (!thoughtTurn && asksForSources(clean)) {
       keepTenWords(clean);
       talkInput.value = "";
       sizeTalkInput();
@@ -966,7 +966,7 @@
         : "DISCOVERY TURN: reveal only what the visitor has earned through the current public ground and conversation. Do not front-load the larger body.",
       "CONTINUITY: when Ten asks a fresh question without moving, make the current-ground continuity legible. Prefer words such as still / remain / same ground when accurate so a new answer does not look like a new historical movement.",
       "COMPOSITION: the title is an active part of the answer. Change it when the question genuinely changes the aperture or documentary job. A short answer may stay spare; a rich held answer may use several paragraphs and fill the available field. Do not pad for length.",
-      "STATUS LABELING: when useful, say what kind of thing is being shown — direct source statement, Dawson judgment/forecast, public derivative, unresolved edge, or reversible visitor experience. Do not blur those classes.",
+      "STATUS LABELING: when useful, say what kind of thing is being shown — direct source statement, attributed judgment/forecast, public derivative, unresolved edge, or reversible visitor experience. Do not blur those classes.",
       "HELD CONTEXT ONLY: use SOURCE FLOOR, CURRENT SCREEN, recent runtime conversation, and TEN. If they do not answer a factual question, say the held ground does not answer it.",
       "EXPERIENCE LAYER: Ten may make reversible present actions such as a small fire, coffee, sitting, waiting, looking, or darkness. Keep those distinct from the 1831 source.",
       movementResolved
@@ -979,7 +979,7 @@
       `ALLOWED MOVES: ${JSON.stringify(movementResolved ? [] : (allowedMoves[currentId] || []))}`,
       `CURRENT GROUND: ${currentId}`,
       `SOURCE FLOOR: ${JSON.stringify(facts)}`,
-      `DAWSON CORPUS HITS: ${JSON.stringify(corpusHits)}`,
+      `CORPUS HITS: ${JSON.stringify(corpusHits)}`,
       "CORPUS RULE: corpus hits are public derivatives with source-object pointers. Use them only when they answer Ten's question; preserve their brakes and do not treat a derivative as a new historical witness.",
       `CURRENT SCREEN: ${JSON.stringify(visible)}`,
       `TEN: ${clean}`
