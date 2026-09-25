@@ -1,12 +1,12 @@
 {
   "id": "mcr879-robert-article14",
-  "title": "Robert Bell / Article XIV — one proposition through the machine",
-  "question": "How did the proposition that the applicants' Robert Bell had Article XIV standing change as it moved through the MCR 879 record?",
+  "title": "Robert Bell / Article XIV — watch the proposition change",
+  "question": "What did the applicant-side record actually claim about Robert Bell and Article XIV, and when did the government turn that body into a specific identity comparison?",
   "status": "working research-through-design specimen",
-  "non_goal": "This does not decide which historical Robert Bell was the same person, whether the applicants' Robert actually complied with Article XIV, or whether the 1902 administrative conclusion was correct.",
+  "non_goal": "This does not assume the family originally claimed that their Robert Bell was the particular Article XIV Robert found in a government comparator record. It does not decide historical identity, Article XIV compliance, entitlement, or whether the 1902 administrative conclusion was correct.",
   "proposition": {
-    "short": "The applicants' Robert Bell was the Article XIV Robert Bell.",
-    "identity_state": "OPEN HISTORICALLY / REJECTED ADMINISTRATIVELY IN MCR 879"
+    "short": "Applicant pleading → Commission framing → identity comparator",
+    "identity_state": "NO SINGLE IDENTITY PROPOSITION AT ENTRY / COMPARATOR APPEARS LATER"
   },
   "carriers": [
     {
@@ -16,8 +16,8 @@
       "object": "individual oral examinations",
       "state": "SOURCE-LOCAL TESTIMONY",
       "verb": "KNOW / DO NOT KNOW / HAVE NOT HEARD",
-      "claim": "Across many inspected principal examinations, witnesses do not themselves supply a uniform affirmative Article XIV proposition. Answers repeatedly preserve nonknowledge or nonaffirmation.",
-      "change": "The proposition is not yet safely carried as collective witness testimony.",
+      "claim": "The inspected oral examinations do not supply a uniform family proposition that their Robert Bell was a particular Article XIV Robert in a government record. Witnesses repeatedly preserve nonknowledge, told knowledge, or nonaffirmation about Article XIV.",
+      "change": "Start with family knowledge as actually spoken. No specific two-Robert identity comparator is safely present here.",
       "source": "MCR 879 individual examination packets; proposition genealogy jacket 15HtKO-5KWQpwFDpi2FAgkbZYVRGI3gBOUCZkfqoitOc",
       "allows": [
         "inspect",
@@ -35,8 +35,8 @@
       "object": "applications, petitions, affidavits and attached documentary bodies",
       "state": "PLEADING / SUBMITTED BODY",
       "verb": "ALLEGE / CLAIM / SUBMIT",
-      "claim": "Applicant-side written pleadings can carry an affirmative Article XIV theory even when the applicant's oral knowledge does not.",
-      "change": "A legal proposition may enter the case without becoming firsthand witness knowledge.",
+      "claim": "The sixteen controlled applicant-side written pleadings carry Article XIV allegations in source-local forms. William D. Bell's petition, for example, says on information and belief that Robert Bell was duly enrolled in Mississippi under Article XIV. That pleading is not William's firsthand oral knowledge, and the origin of the recurring legal formulation remains open.",
+      "change": "An affirmative Article XIV legal allegation enters the filed case. This still does not by itself establish that the applicants framed their claim as identity with the particular Article XIV Robert later selected from government records.",
       "source": "All sixteen applicant-side written pleading occurrences are now returned under source-facing control; packet-specific attached evidence remains distinct.",
       "allows": [
         "inspect",
@@ -53,8 +53,8 @@
       "object": "consolidated decision, internal p.-53 / OHC_2040",
       "state": "COMMISSION CHARACTERIZATION",
       "verb": "CONSOLIDATE / CHARACTERIZE",
-      "claim": "The Commission consolidates the applications as claims from a common ancestor and states at group scale that 'they claim' Robert Bell took advantage of Article XIV.",
-      "change": "The proposition gains administrative scope and a new speaker. It does not gain witness authorship.",
+      "claim": "The Commission consolidates the applications as claims from a common ancestor and says at group scale that 'they claim' Robert Bell took advantage of Article XIV.",
+      "change": "A compound applicant-side body becomes one Commission-authored group characterization. The Commission's 'they claim' formulation must not be back-assigned verbatim to family testimony or treated as proof that the family originated the later comparator frame.",
       "source": "OHC_2040.pdf / internal p.-53; governing jacket 1nsFXniw8Vnl1ScNi1Ynh9nBCIuAlzv0mJ7VNGjPqxtY",
       "allows": [
         "inspect",
@@ -71,8 +71,8 @@
       "object": "decision pp.-55–56 / OHC_2042–2043",
       "state": "IDENTITY COMPARATOR / EXCLUSION",
       "verb": "COMPARE / FIND NOT IDENTICAL",
-      "claim": "The Commission recognizes a positive Article XIV Robert Bell record, then says the Robert shown by that record is not the same Robert through whom the applicants claim.",
-      "change": "The case turns from compliance proposition to identity partition. The adverse result is downstream of a positive Robert record, not simple record absence.",
+      "claim": "The Commission brings a positive Article XIV Robert Bell record into the decision and then says the Robert shown by that record is not the same Robert through whom the applicants claim.",
+      "change": "This is where the controlled body visibly becomes a specific identity comparison: claimant-line Robert versus record-side Article XIV Robert. The comparator is an administrative construction, not a proposition silently donated backward to the family.",
       "source": "OHC_2042–2043; relation control 1dBogAlbWX-egSshms42J8he3UXu4imtQgsnHxkFYJZk; p.-56 jacket 1C4FAN5VwspBQLDwdFtzmu4M93_oyWTMWutXXJYZZ4NU",
       "allows": [
         "inspect",
@@ -126,6 +126,12 @@
   ],
   "refusals": [
     {
+      "id": "family-originated-comparator",
+      "proposal": "The family's original claim was that their Robert Bell was the specific Article XIV Robert in the government's comparator record.",
+      "result": "NOT EARNED",
+      "reason": "The controlled applicant-side pleadings do carry Article XIV allegations, but the present source genealogy does not establish that the family originated the later government-record identity comparator. Oral family testimony often preserves nonknowledge; the Commission later consolidates the body as 'they claim' and then constructs the specific record-side comparison."
+    },
+    {
       "id": "witness-testified",
       "proposal": "The applicants testified that Robert Bell took advantage of Article XIV.",
       "result": "REFUSED",
@@ -145,6 +151,7 @@
     }
   ],
   "open": [
+    "Whether the recurring applicant-side Article XIV pleading language originated with applicants, counsel, a form/template, or another filing practice remains open.",
     "Historical identity of the Robert Bell occurrences remains unresolved at the Workshop level.",
     "The exact completeness and formation history of the Commission and Indian Office comparator populations remain open.",
     "The exact object genealogy of every affirmative applicant-side Article XIV proposition remains packet-specific.",
