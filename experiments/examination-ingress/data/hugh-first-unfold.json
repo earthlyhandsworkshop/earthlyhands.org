@@ -1,11 +1,11 @@
 {
-  "occurrence_id": "mcr1546-hugh-g-bell-examination-p1",
+  "occurrence_id": "mcr1546-hugh-g-bell-recognition-sequence-p1",
   "carrier_id": "mcr1546",
   "representation_id": "bell-hugh-g-page-3-1-jpg",
   "person": "Hugh G. Bell",
-  "object_label": "Recorded Commission examination",
+  "object_label": "Bounded recognition sequence within recorded Commission examination",
   "source_locator": "MCR 1546, internal p.1",
-  "source_face_return": "https://drive.google.com/drive/folders/1vrQJNjI9eGo_s-sbbuAsMvA5s4j08Oop",
+  "source_face_return": "https://drive.google.com/file/d/1vrQJNjI9eGo_s-sbbuAsMvA5s4j08Oop/view",
   "governing_jacket_return": "https://docs.google.com/document/d/1CrD7pJrN6DRs4BoBJsGqyx3vuHhO7jmDeMdxl5y1W-U/edit",
   "states": [
     {
@@ -71,21 +71,23 @@
   ],
   "emitted_ticket": {
     "actor": "Hugh G. Bell within a Commission examination",
-    "object": "Governed descendant ticket from one three-pair examination occurrence",
+    "object": "Governed descendant ticket from one bounded three-pair recognition sequence",
     "state": "KNOWLEDGE LIMITED",
     "verb": "heard / was told → supposes → does not know",
     "claim": "Hugh says he was told Robert Bell was recognized. When the examiner specifies council action, voting, and membership, Hugh says “I suppose so” and then says he does not know.",
-    "change": "Three source-local question-and-answer pairs are summarized as one bounded descendant representation after the knowledge test; the examination remains intact.",
+    "change": "Three source-local question-and-answer pairs are summarized as one bounded descendant representation after the knowledge test; the sequence remains intact and its examination carrier continues beyond it.",
     "source": "MCR 1546, internal p.1; Bell Hugh G - Page 3 (1).jpg",
     "allows": [
-      "Follow to a distinct later carrier when its occurrence is supplied",
-      "Compare exact later wording with this completed examination unit"
+      "Follow to a distinct later source-local sequence or later carrier when its occurrence is supplied",
+      "Compare exact later wording with this completed recognition sequence"
     ],
     "forbids": [
       "Treat the council, voting, or membership wording as Hugh-originated",
       "Treat tentative assent as personal knowledge",
-      "Replace the examination with this ticket",
+      "Replace the bounded recognition sequence or its continuing examination carrier with this ticket",
+      "Treat this bounded sequence as the complete examination",
       "Perform an automatic Robert identity join"
     ]
-  }
+  },
+  "carrier_scope_note": "The recorded examination continues beyond this bounded three-pair recognition sequence."
 }

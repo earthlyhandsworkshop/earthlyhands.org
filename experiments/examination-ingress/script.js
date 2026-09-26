@@ -68,7 +68,7 @@ function renderTurns() {
     ui.unfold.textContent = "unfold knowledge test";
     ui.note.textContent = "The examiner’s supplied wording and Hugh’s tentative answer remain separate. The knowledge test is still closed.";
   } else {
-    ui.note.textContent = "The source-local unit is complete. A descendant ticket may now be formed, but no later carrier appears automatically.";
+    ui.note.textContent = "The bounded recognition sequence is complete. The examination carrier continues beyond it; no later source-local sequence or later carrier appears automatically.";
   }
 }
 
