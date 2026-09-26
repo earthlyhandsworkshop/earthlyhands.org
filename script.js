@@ -1430,10 +1430,10 @@
       night: "Try: “wait until morning,” or ask what the camp actually knows.",
       morning: "Try: “continue southeast,” or ask who is traveling here.",
       southeast: "Try: “follow Dawson,” “continue to Blue Water,” or ask “where can I go?”",
-      "blue-water": "Ask what is happening at Blue Water, then try “what happened next?”",
-      dozen: "Try: “what happened next?” or ask about the beaver count.",
-      guide: "Ask about Mayes or Criner, then try “what happened next?”",
-      "blue-water-mouth": "Try: “continue east,” or ask what the source does not establish here.",
+      "blue-water": "Blue Water is not the end. Try “what happened next?” to stay at Blue Water and open the beaver-count aperture.",
+      dozen: "You are still at Blue Water. Try “what happened next?” to open the guide aperture.",
+      guide: "You are still at Blue Water. Try “what happened next?” to move toward the mouth of Blue Water.",
+      "blue-water-mouth": "Now the held ground changes. Try “what happened next?” or “continue east.”",
       "east-blue-water": "You are at the current end of this public story reach. Try Map, People, Sources, or ask “where can I go?”"
     };
     return hints[currentId] || "Try asking what is strange here, where you are, or where you can go.";
@@ -1487,6 +1487,18 @@
       talkInput.value = "";
       sizeTalkInput();
       startFreshThread();
+      return;
+    }
+
+    const asksStoryExtent = /\b(how many stops|more stops|anything after blue water|after blue water|where next|what comes after blue water)\b/i.test(clean);
+    if (asksStoryExtent && groundThread) {
+      keepTenWords(clean);
+      talkInput.value = "";
+      sizeTalkInput();
+      const p = document.createElement("p");
+      p.className = "ground-response";
+      p.textContent = "The current public story continues through Blue Water → beaver count → Mayes as guide → near the mouth of Blue Water → east of Blue Water. Some of those are new apertures on the same held ground, not relocations.";
+      groundThread.append(p);
       return;
     }
 
