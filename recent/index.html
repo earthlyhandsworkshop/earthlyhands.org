@@ -1,0 +1,959 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Public work from Earthly Hands Workshop.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#e7dfd0">
+<link rel="canonical" href="https://earthlyhands.org/recent/">
+<title>Recent — Earthly Hands</title>
+<!-- index composition revised 24 Sep 2026 · 11 PM CT -->
+<style>
+:root{
+  --paper:#e7dfd0;--ink:#1d1c18;--muted:#6f685d;
+  --rule:rgba(29,28,24,.22);--rule2:rgba(29,28,24,.48);--accent:#8d5c3f;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+html{-webkit-text-size-adjust:100%;background:var(--paper)}
+body{margin:0;min-width:18rem;background:var(--paper);color:var(--ink);font:1rem/1.35 var(--serif)}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.shell{width:min(94rem,calc(100% - 1rem));margin:auto}
+main{padding:0 0 .75rem}
+
+.work{border-bottom:1px solid var(--rule)}
+.work-link{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 13.5rem 7.5rem;
+  grid-template-rows:auto auto auto;
+  min-height:5rem;
+  text-decoration:none;
+}
+.work-link:hover{background:rgba(255,255,255,.10)}
+
+.custody{
+  grid-column:2;grid-row:1/4;
+  min-width:0;
+  display:flex;align-items:center;
+  padding:.34rem .58rem .34rem 0;
+  border-left:1px solid var(--rule);
+  border-right:0;
+  padding-left:.58rem;
+  font:.47rem/1.24 var(--mono);letter-spacing:.02em;color:var(--muted)
+}
+.custody dl{
+  width:100%;margin:0;
+  display:grid;grid-template-columns:3.15rem minmax(0,1fr);
+  gap:.07rem .34rem;
+}
+.custody dt{
+  color:var(--ink);font-weight:600;text-transform:uppercase;letter-spacing:.09em;
+}
+.custody dd{margin:0;min-width:0;overflow-wrap:anywhere}
+
+.title{
+  grid-column:1;grid-row:1;
+  min-width:0;display:flex;align-items:end;
+  padding:.34rem .58rem .06rem;
+  font-size:clamp(1.42rem,2.3vw,2.2rem);
+  font-weight:400;line-height:.92;letter-spacing:-.035em;
+}
+.title.long{font-size:clamp(1.28rem,2.05vw,1.95rem)}
+.brief{
+  grid-column:1;grid-row:2;
+  min-width:0;
+  padding:.02rem .58rem .06rem;
+  color:var(--accent);
+  font:.46rem/1.15 var(--mono);
+  letter-spacing:.075em;
+  text-transform:uppercase;
+}
+
+.desc{
+  grid-column:1;grid-row:3;
+  min-width:0;display:flex;align-items:start;
+  padding:.08rem .58rem .34rem;
+  border-left:0;
+  color:var(--muted);font-size:.71rem;line-height:1.24;
+}
+
+.entry{
+  grid-column:3;grid-row:1/4;
+  min-width:0;
+  display:flex;align-items:center;justify-content:center;gap:.28rem;
+  padding:.26rem .28rem;
+  border-left:1px solid var(--rule);
+}
+.state-stamp{
+  display:inline-block;padding:.07rem .18rem;border:1px solid var(--rule2);
+  font:.39rem/1 var(--mono);letter-spacing:.065em;text-transform:uppercase;
+}
+.enter{
+  font:.44rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;
+}
+.enter::before{content:"/ ";color:var(--muted)}.enter::after{content:" →";color:var(--accent)}
+
+.secondary{margin-top:1.1rem}
+.section-label{
+  height:1.75rem;display:flex;align-items:center;
+  border-top:1px solid var(--rule2);border-bottom:1px solid var(--rule);
+  color:var(--muted);font:.48rem/1 var(--mono);letter-spacing:.075em;text-transform:uppercase
+}
+.secondary .work-link{
+  grid-template-columns:minmax(0,1fr) 11.5rem 7rem;
+  grid-template-rows:auto auto auto;
+  min-height:3.9rem;
+}
+.secondary .title{font-size:clamp(1.2rem,1.9vw,1.8rem)}
+.secondary .title.long{font-size:clamp(1.08rem,1.7vw,1.6rem)}
+.secondary .desc{font-size:.68rem}
+
+.page-footer-legacy{
+  height:2.7rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  color:var(--muted);font:.47rem/1 var(--mono);letter-spacing:.045em;text-transform:uppercase
+}
+
+
+.identity-line{
+  min-height:2.7rem;
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:1rem;
+  border-bottom:1px solid var(--rule2);
+}
+.identity-mark{
+  display:flex;
+  align-items:baseline;
+  gap:.42rem;
+}
+.identity-mark strong{
+  font:600 .82rem/1 var(--mono);
+  letter-spacing:.085em;
+  text-transform:uppercase;
+}
+.identity-mark span{
+  color:var(--muted);
+  font:.53rem/1 var(--mono);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.identity-right{
+  justify-self:end;
+  color:var(--muted);
+  font:.46rem/1 var(--mono);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.workshop-bearings{
+  min-height:2rem;
+  display:flex;
+  align-items:center;
+  gap:.55rem 1rem;
+  flex-wrap:wrap;
+  border-bottom:1px solid var(--rule);
+  color:var(--muted);
+  font:.48rem/1.2 var(--mono);
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+.workshop-bearings .bearing{
+  display:inline-flex;
+  align-items:baseline;
+  gap:.34rem;
+}
+.workshop-bearings .address{
+  color:var(--ink);
+  font-weight:600;
+  letter-spacing:.08em;
+}
+.workshop-bearings .current{
+  color:var(--accent);
+}
+.workshop-bearings .note{
+  margin-left:auto;
+  color:var(--muted);
+  text-transform:none;
+  letter-spacing:.015em;
+}
+@media(max-width:46rem){
+  .workshop-bearings{
+    padding:.4rem 0;
+    align-items:flex-start;
+  }
+  .workshop-bearings .note{
+    width:100%;
+    margin-left:0;
+  }
+}
+
+.properties-footer{
+  position:relative;
+  height:5.6rem;
+  min-height:5.6rem;
+  max-height:5.6rem;
+  margin:.8rem 0 0;
+  padding-top:1.15rem;
+  overflow:hidden;
+  border:1px solid var(--rule2);
+  background:rgba(240,233,220,.48);
+}
+.properties-tab{
+  position:absolute;
+  inset:0 0 auto 0;
+  height:1.15rem;
+  display:flex;
+  align-items:center;
+  padding:0 .55rem;
+  border-bottom:1px solid var(--rule);
+  background:rgba(29,28,24,.035);
+  font:500 .56rem/1 var(--mono);
+  letter-spacing:.035em;
+}
+.properties-receive{
+  height:4.45rem;
+  display:grid;
+  grid-template-columns:minmax(8rem,.16fr) minmax(15rem,.27fr) minmax(0,1fr) minmax(10rem,.19fr) minmax(7.5rem,.14fr) minmax(7.5rem,.14fr);
+}
+.pi-group{
+  min-width:0;
+  padding:.38rem .5rem;
+  border-right:1px solid var(--rule);
+  overflow:hidden;
+}
+.pi-group:last-child{border-right:0}
+.pi-label{
+  display:block;
+  margin-bottom:.18rem;
+  color:var(--muted);
+  font:500 .45rem/1.05 var(--mono);
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+.pi-context strong{
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font:400 1.02rem/1.05 var(--serif);
+}
+.property-email{
+  display:block;
+  margin-top:.18rem;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:var(--muted);
+  font:.43rem/1 var(--mono);
+  text-underline-offset:.16em;
+}
+.property-targets{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.2rem .24rem;
+  min-width:0;
+}
+.property-target{
+  position:relative;
+  display:inline-flex;
+  min-width:0;
+  cursor:pointer;
+}
+.property-target input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+.property-target span{
+  display:block;
+  max-width:9rem;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  padding:.22rem .34rem;
+  border:1px solid var(--rule);
+  background:rgba(247,243,233,.66);
+  font:.48rem/1 var(--mono);
+}
+.property-target input:checked + span{
+  background:rgba(141,92,63,.10);
+  border-color:var(--rule2);
+  box-shadow:inset 0 0 0 1px rgba(141,92,63,.10);
+}
+.pi-note input,
+.pi-provenance input{
+  width:100%;
+  height:1.55rem;
+  border:1px solid var(--rule);
+  background:rgba(247,243,233,.72);
+  padding:.2rem .35rem;
+  color:var(--ink);
+  font:.55rem/1.1 var(--mono);
+  outline:none;
+}
+.pi-file button,
+.pi-send button{
+  width:100%;
+  min-height:1.55rem;
+  border:1px solid var(--rule);
+  background:rgba(247,243,233,.72);
+  color:var(--ink);
+  padding:.22rem .35rem;
+}
+.pi-file button{text-align:left}
+.pi-send button{text-align:center}
+.pi-file button strong,
+.pi-send button strong{
+  display:block;
+  font:600 .57rem/1 var(--mono);
+}
+.pi-file button span{
+  display:block;
+  margin-top:.12rem;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:var(--muted);
+  font:.42rem/1 var(--mono);
+}
+.property-upload-status{
+  display:block;
+  margin-top:.18rem;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:var(--muted);
+  font:.4rem/1 var(--mono);
+}
+
+.about{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  gap:1rem 1.25rem;
+  margin-top:.85rem;
+  padding:.72rem 0 .78rem;
+  border-top:1px solid var(--rule2);
+  border-bottom:1px solid var(--rule);
+  align-items:center;
+}
+.about-brand{
+  white-space:nowrap;
+}
+.about-brand strong{
+  font:600 .8rem/1 var(--mono);
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.about-brand span{
+  margin-left:.38rem;
+  color:var(--muted);
+  font:.46rem/1 var(--mono);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.about-copy{
+  min-width:0;
+  max-width:none;
+  padding:0;
+}
+.about p{
+  margin:0;
+  color:var(--muted);
+  font-size:.74rem;
+  line-height:1.34;
+}
+.about p+p{margin-top:.18rem}
+.family-line{
+  justify-self:end;
+  white-space:nowrap;
+  color:var(--muted);
+  font:.48rem/1.15 var(--mono);
+  letter-spacing:.065em;
+  text-transform:uppercase;
+}
+.family-line strong{
+  color:var(--ink);
+  font:inherit;
+  font-weight:600;
+}
+.family-line em{
+  color:var(--muted);
+  font:inherit;
+  font-style:normal;
+}
+@media(max-width:72rem){
+  .about{
+    grid-template-columns:auto minmax(0,1fr);
+    align-items:start;
+  }
+  .family-line{
+    grid-column:2;
+    justify-self:start;
+    white-space:normal;
+  }
+  .properties-footer{height:6.7rem;min-height:6.7rem;max-height:6.7rem}
+  .properties-receive{
+    height:5.55rem;
+    grid-template-columns:minmax(7rem,.22fr) minmax(13rem,.34fr) minmax(0,1fr) minmax(8rem,.22fr);
+    grid-template-rows:2.75rem 2.8rem;
+  }
+  .pi-context{grid-column:1;grid-row:1/3}
+  .pi-target{grid-column:2;grid-row:1/3}
+  .pi-note{grid-column:3;grid-row:1}
+  .pi-provenance{grid-column:3;grid-row:2}
+  .pi-file{grid-column:4;grid-row:1}
+  .pi-send{grid-column:4;grid-row:2}
+
+  .work-link{grid-template-columns:minmax(0,1fr) 11.5rem 7.2rem}
+  .secondary .work-link{grid-template-columns:minmax(0,1fr) 10rem 6.9rem}
+}
+
+@media(max-width:46rem){
+  .identity-line{min-height:1.95rem}
+  .properties-footer{height:8.25rem;min-height:8.25rem;max-height:8.25rem}
+  .properties-receive{
+    height:7.1rem;
+    grid-template-columns:minmax(6.1rem,.28fr) minmax(0,1fr) minmax(6.8rem,.3fr);
+    grid-template-rows:3.3rem 3.8rem;
+  }
+  .pi-context{grid-column:1;grid-row:1}
+  .pi-target{grid-column:2/4;grid-row:1}
+  .pi-note{grid-column:1/3;grid-row:2}
+  .pi-provenance{display:none}
+  .pi-file{grid-column:3;grid-row:2}
+  .pi-send{display:none}
+  .about{
+    grid-template-columns:1fr;
+    gap:.35rem;
+    padding:.7rem 0 .8rem;
+  }
+  .family-line{
+    grid-column:auto;
+    justify-self:start;
+    white-space:normal;
+  }
+
+  .shell{width:calc(100% - .7rem)}
+  .work-link{
+    grid-template-columns:minmax(0,1fr) 6.7rem;
+    grid-template-rows:auto auto auto auto;
+    min-height:0;
+  }
+  .custody{
+    grid-column:2;grid-row:1/4;
+    padding:.38rem 0 .38rem .42rem;
+    border-left:1px solid var(--rule);
+    align-items:start;
+  }
+  .custody dl{
+    grid-template-columns:1fr;
+    gap:.02rem;
+  }
+  .custody dt{margin-top:.12rem}
+  .custody dt:first-child{margin-top:0}
+
+  .title{
+    grid-column:1;grid-row:1;
+    padding:.38rem .42rem .04rem 0;
+    font-size:clamp(1.48rem,7.6vw,2.2rem);
+    line-height:.94;
+  }
+  .title.long{font-size:clamp(1.25rem,6.5vw,1.85rem)}
+  .brief{grid-column:1;grid-row:2;padding:.02rem .42rem .08rem 0;font-size:.43rem}
+  .desc{
+    grid-column:1;grid-row:3;
+    padding:.03rem .42rem .28rem 0;
+    font-size:.72rem;line-height:1.24;
+  }
+  .entry{
+    grid-column:1 / -1;grid-row:4;
+    min-height:1.55rem;
+    border-left:0;border-top:1px solid var(--rule);
+    display:flex;align-items:center;justify-content:flex-start;gap:.25rem;
+    padding:.22rem .42rem .24rem;
+  }
+  .secondary{margin-top:.75rem}
+  .secondary .work-link{grid-template-columns:minmax(0,1fr) 6.7rem}
+  .section-label{height:1.55rem}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+<div class="identity-line">
+    <div class="identity-mark"><strong>Earthly Hands</strong><span>Workshop</span></div>
+    <span class="identity-right">16 — Public Ground</span>
+  </div>
+  <div class="workshop-bearings" aria-label="Workshop bearings">
+    <span class="bearing"><span class="address">10</span><span>Shared Marks</span></span>
+    <span class="bearing"><span class="address">15</span><span>Sandbox</span></span>
+    <span class="bearing current"><span class="address">16</span><span>Public Ground · you are here</span></span>
+    <span class="note">live bearings, not a settled floor plan</span>
+  </div>
+<main>
+  <h1 class="sr-only">Earthly Hands Public Work</h1>
+  <section aria-label="Current public work">
+<article class="work"><a class="work-link" href="/experiments/follow-one-claim/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>24 Sep 2026 · 11:20 PM CT</dd>
+        <dt>hand</dt><dd>Quire</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>executable documentary body · noindex</dd>
+      </dl></aside>
+      <div class="title">Follow One Claim</div>
+      <div class="desc">Follow the Robert Bell / Article XIV proposition through testimony, pleadings, Commission comparison, Indian Affairs review, and Interior affirmance without collapsing speaker, identity, or source state.</div>
+      <div class="entry"><span class="state-stamp">specimen</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/quire-look-again/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>24 Sep 2026 · 10:17 PM CT</dd>
+        <dt>hand</dt><dd>Quire</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>epistemic-history specimen · noindex</dd>
+      </dl></aside>
+      <div class="title">Look Again</div>
+      <div class="brief">epistemic-history specimen · noindex</div>
+      <div class="desc">A fixed MCR 879 chart representation, two Workshop readings, and one carried correction: the source stays put while the responsible claim changes.</div>
+      <div class="entry"><span class="state-stamp">specimen</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/what-crossed/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>24 Sep 2026</dd>
+        <dt>hand</dt><dd>Edgewise</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>research-through-design specimen · noindex</dd>
+      </dl></aside>
+      <div class="title">What Crossed?</div>
+      <div class="brief">research-through-design specimen · noindex</div>
+      <div class="desc">A small border table: carry the relation and its return path without silently carrying identity, route, historical movement, or erased provenance.</div>
+      <div class="entry"><span class="state-stamp">specimen</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/follow-the-carrier/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>24 Sep 2026 · 8:12 PM CT</dd>
+        <dt>hand</dt><dd>Lamplight</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>documentary-game specimen · noindex</dd>
+      </dl></aside>
+      <div class="title">Follow the Carrier</div>
+      <div class="brief">documentary-game specimen · noindex</div>
+      <div class="desc">Mary Caroline Atkinson and William D. Bell now reach into one persistent MCR 879 field; repeated people, places, and propositions can gain another carrier without silently gaining certainty.</div>
+      <div class="entry"><span class="state-stamp">specimen</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/shared-country/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>24 Sep 2026 · 7:33 PM CT</dd>
+        <dt>hand</dt><dd>Workshop · Small Door</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>live source-facing work</dd>
+      </dl></aside>
+      <div class="title">Shared Country</div>
+      <div class="brief">live source-facing work</div>
+      <div class="desc">Dawson ground with people, places, movement, and source carriers held separately.</div>
+      <div class="entry"><span class="state-stamp">public</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/article-xiv-identity-gate/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>24 Sep 2026 · 10:53 PM CT</dd>
+        <dt>hand</dt><dd>True North</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>working · noindex</dd>
+      </dl></aside>
+      <div class="title">Identity Gate</div>
+      <div class="brief">working · noindex</div>
+      <div class="desc">Administrative identity join beside unresolved Robert Bell source bridges.</div>
+      <div class="entry"><span class="state-stamp">specimen</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/which-robert/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>24 Sep 2026 · 12:44 PM CT</dd>
+        <dt>hand</dt><dd>Fieldglass</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>identity comparison</dd>
+      </dl></aside>
+      <div class="title">Which Robert?</div>
+      <div class="brief">identity comparison</div>
+      <div class="desc">Three Robert Bell record bodies held together without merging them.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/article-xiv-rooms/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>24 Sep 2026 · 12:07 PM CT</dd>
+        <dt>hand</dt><dd>True North</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>architectural comparison · noindex</dd>
+      </dl></aside>
+      <div class="title">Article XIV Rooms</div>
+      <div class="brief">architectural comparison · noindex</div>
+      <div class="desc">Treaty language, later machinery, and paired Robert Bell bodies in one reading sequence.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/the-machine-does-not-know-for-you/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>23 Sep 2026 · 12:32 PM CT</dd>
+        <dt>hand</dt><dd>Sedge</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>playable research study</dd>
+      </dl></aside>
+      <div class="title long">The Machine Does Not Know for You</div>
+      <div class="brief">playable research study</div>
+      <div class="desc">A research loop that tests support without deciding historical identity.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/one-proposition-many-carriers/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>24 Sep 2026</dd>
+        <dt>hand</dt><dd>Needle Up</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>carrier-state public work · noindex</dd>
+      </dl></aside>
+      <div class="title long">Follow One Proposition</div>
+      <div class="brief">carrier-state public work · noindex</div>
+      <div class="desc">Carry one MCR 879 proposition through Commission, Indian Affairs, and Interior while speaker, referent, and documentary job stay visible.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/mcr879.html">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>Register</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>comparison body</dd>
+      </dl></aside>
+      <div class="title">MCR 879</div>
+      <div class="brief">comparison body</div>
+      <div class="desc">Bell–McKinney family testimony and administrative record held in comparison.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/dancing-rabbit-statehood-line/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>Mullion</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>bounded visual work · noindex</dd>
+      </dl></aside>
+      <div class="title long">Dancing Rabbit to Oklahoma</div>
+      <div class="brief">bounded visual work · noindex</div>
+      <div class="desc">Treaty to statehood held as orientation, not reconstructed route geometry.</div>
+      <div class="entry"><span class="state-stamp">specimen</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/dawson-missing-line/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>True North</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>mapping study · noindex</dd>
+      </dl></aside>
+      <div class="title">The Missing Line</div>
+      <div class="brief">mapping study · noindex</div>
+      <div class="desc">Two Dawson states held apart without inventing the traveled line.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/dawson-inline-depth/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>Small Door</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>interaction study · noindex</dd>
+      </dl></aside>
+      <div class="title">Inline Depth</div>
+      <div class="brief">interaction study · noindex</div>
+      <div class="desc">Source depth opens without turning looking deeper into movement.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/one-outing-two-clocks/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>Register + Lamplight</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>listening study · noindex</dd>
+      </dl></aside>
+      <div class="title long">One Outing, Two Clocks</div>
+      <div class="brief">listening study · noindex</div>
+      <div class="desc">Two documentary clocks heard together without forcing one time expression.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/six-letters-touchstone/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>23 Sep 2026</dd>
+        <dt>hand</dt><dd>Touchstone</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>source-state comparison open</dd>
+      </dl></aside>
+      <div class="title">Six Letters · A</div>
+      <div class="brief">source-state comparison open</div>
+      <div class="desc">Touchstone implementation of the dated notice sequence.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/six-letters/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>23 Sep 2026</dd>
+        <dt>hand</dt><dd>Grainline carrying Touchstone plan</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>source-state comparison open</dd>
+      </dl></aside>
+      <div class="title">Six Letters · B</div>
+      <div class="brief">source-state comparison open</div>
+      <div class="desc">Grainline implementation of the same originating plan.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/ward-room/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>22 Sep 2026</dd>
+        <dt>hand</dt><dd>Ravel</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>source-room study</dd>
+      </dl></aside>
+      <div class="title">Ward Room</div>
+      <div class="brief">source-room study</div>
+      <div class="desc">Witness testimony about a physical record, with source and inference kept apart.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+  </section>
+
+
+    <article class="work"><a class="work-link" href="/experiments/listening-threshold/">
+      <aside class="custody"><dl>
+        <dt>updated</dt><dd>24 Sep 2026</dd>
+        <dt>hand</dt><dd>Register + Lamplight</dd>
+        <dt>custody</dt><dd>EH public repo</dd>
+        <dt>trust</dt><dd>threshold footing · noindex</dd>
+      </dl></aside>
+      <div class="title">Listening Threshold</div>
+      <div class="brief">threshold footing · noindex</div>
+      <div class="desc">Robert Bell and Blackwell enter one listening threshold with differing time expressions held visible before the listening room opens.</div>
+      <div class="entry"><span class="state-stamp">working</span><span class="enter">enter</span></div>
+    </a></article>
+
+  <section class="secondary" aria-label="Retained work">
+    <div class="section-label">Retained work</div>
+
+    <article class="work"><a class="work-link" href="/experiments/four-way-room-nav/">
+      <aside class="custody"><dl><dt>hand</dt><dd>Grainline</dd><dt>trust</dt><dd>retained development study</dd></dl></aside>
+      <div class="title">Four-Way Room</div>
+      <div class="brief">retained development study</div><div class="desc">Earlier MCR 879 navigation study.</div><div class="entry"><span class="state-stamp">archive</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/place-before-point/">
+      <aside class="custody"><dl><dt>hand</dt><dd>Sedge</dd><dt>trust</dt><dd>retained mapping study</dd></dl></aside>
+      <div class="title">Place Before Point</div>
+      <div class="brief">retained mapping study</div><div class="desc">Place relation before precise point.</div><div class="entry"><span class="state-stamp">archive</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/ground-stays-put/">
+      <aside class="custody"><dl><dt>updated</dt><dd>23 Sep 2026</dd><dt>hand</dt><dd>Fieldglass</dd><dt>trust</dt><dd>retained source-state study</dd></dl></aside>
+      <div class="title">Ground Stays Put</div>
+      <div class="brief">retained source-state study</div><div class="desc">Changing documentary jobs around a fixed ground relation.</div><div class="entry"><span class="state-stamp">archive</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/mobile-full-field/">
+      <aside class="custody"><dl><dt>updated</dt><dd>23 Sep 2026</dd><dt>trust</dt><dd>retained mobile study</dd></dl></aside>
+      <div class="title">Mobile Full Field</div>
+      <div class="brief">retained mobile study</div><div class="desc">Phone-scale evidentiary field study.</div><div class="entry"><span class="state-stamp">archive</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/register-line-front-edge/">
+      <aside class="custody"><dl><dt>updated</dt><dd>22 Sep 2026</dd><dt>hand</dt><dd>Grainline carrying Register + Mullion</dd><dt>trust</dt><dd>retained comparator</dd></dl></aside>
+      <div class="title long">Register Line Front Edge</div>
+      <div class="brief">retained comparator</div><div class="desc">Earlier front-edge comparator.</div><div class="entry"><span class="state-stamp">archive</span><span class="enter">enter</span></div>
+    </a></article>
+
+    <article class="work"><a class="work-link" href="/experiments/register-threshold-v2/">
+      <aside class="custody"><dl><dt>updated</dt><dd>22 Sep 2026</dd><dt>hand</dt><dd>Register</dd><dt>trust</dt><dd>retained threshold study</dd></dl></aside>
+      <div class="title">Register Threshold v2</div>
+      <div class="brief">retained threshold study</div><div class="desc">Earlier threshold body.</div><div class="entry"><span class="state-stamp">archive</span><span class="enter">enter</span></div>
+    </a></article>
+  </section>
+
+  <section class="properties-footer" aria-label="Properties">
+    <div class="properties-tab">Send a record or write to the workshop</div>
+    <form class="properties-receive" id="receive-form">
+      <input id="property-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required hidden>
+
+      <div class="pi-group pi-context">
+        <span class="pi-label">Selection</span>
+        <strong>Public Work</strong>
+        <a class="property-email" href="mailto:workshop@earthlyhands.org">workshop@earthlyhands.org</a>
+      </div>
+
+      <div class="pi-group pi-target">
+        <span class="pi-label">Attach record to</span>
+        <div class="property-targets">
+          <label class="property-target"><input type="radio" name="property-target" value="Bell / McKinney"><span>Bell / McKinney</span></label>
+          <label class="property-target"><input type="radio" name="property-target" value="Dawson"><span>Dawson</span></label>
+          <label class="property-target"><input type="radio" name="property-target" value="Treaty / Article XIV"><span>Treaty / Article XIV</span></label>
+          <label class="property-target"><input type="radio" name="property-target" value="anything related" checked><span>Anything related</span></label>
+        </div>
+      </div>
+
+      <label class="pi-group pi-note">
+        <span class="pi-label">One sentence · optional</span>
+        <input id="property-note" name="description" type="text" maxlength="1000" placeholder="What does this record show?">
+      </label>
+
+      <label class="pi-group pi-provenance">
+        <span class="pi-label">Came from · optional</span>
+        <input id="property-provenance" name="provenance" type="text" maxlength="1000" placeholder="archive, family papers, courthouse…">
+      </label>
+
+      <div class="pi-group pi-file">
+        <span class="pi-label">Record</span>
+        <button type="button" id="property-file-button"><strong>Choose</strong><span id="property-file-name">no file</span></button>
+      </div>
+
+      <div class="pi-group pi-send">
+        <span class="pi-label">Receiving</span>
+        <button type="submit" id="property-send"><strong>Send</strong></button>
+        <span class="property-upload-status" id="receive-status">Original preserved privately.</span>
+      </div>
+    </form>
+  </section>
+
+  <footer class="about" aria-label="Earthly Hands Workshop">
+    <div class="about-brand">
+      <strong>Earthly Hands</strong><span>Workshop</span>
+    </div>
+    <div class="about-copy">
+      <p>A research and documentation workshop for historical records, people, places, maps, and archives. We publish source-facing work, keep unresolved questions visible, and receive records related to the work.</p>
+    </div>
+    <div class="family-line" aria-label="Choctaw descent, recognition unresolved">
+      <strong>Choctaw descent</strong> · <em>recognition unresolved</em>
+    </div>
+  </footer>
+</main>
+</div>
+<script>
+(()=>{
+  const fmt = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true
+  });
+
+  function setField(article, label, value) {
+    if (!value) return;
+    const dts = [...article.querySelectorAll(".custody dt")];
+    const dt = dts.find(node => node.textContent.trim().toLowerCase() === label);
+    if (dt?.nextElementSibling) {
+      dt.nextElementSibling.textContent = value;
+      return;
+    }
+    const dl = article.querySelector(".custody dl");
+    if (!dl) return;
+    const newDt = document.createElement("dt");
+    const newDd = document.createElement("dd");
+    newDt.textContent = label;
+    newDd.textContent = value;
+    dl.prepend(newDd);
+    dl.prepend(newDt);
+  }
+
+  fetch("/experiments/index-metadata.json", { cache: "no-store" })
+    .then(r => r.ok ? r.json() : Promise.reject(new Error("metadata unavailable")))
+    .then(meta => {
+      for (const [href, entry] of Object.entries(meta.entries || {})) {
+        const link = document.querySelector(`.work-link[href="${href}"]`);
+        const article = link?.closest(".work");
+        if (!article) continue;
+        article.dataset.updatedAt = entry.updated || "";
+        const date = entry.updated ? fmt.format(new Date(entry.updated)).replace(",", " ·") + " CT" : "";
+        setField(article, "updated", date);
+        setField(article, "hand", entry.hand || "");
+      }
+
+      function sortByRecency(section) {
+        if (!section) return;
+        const articles = [...section.children].filter(node => node.matches?.("article.work"));
+        articles
+          .map((article, index) => ({
+            article,
+            index,
+            time: Date.parse(article.dataset.updatedAt || "") || 0
+          }))
+          .sort((a,b) => (b.time - a.time) || (a.index - b.index))
+          .forEach(({article}) => section.appendChild(article));
+      }
+
+      sortByRecency(document.querySelector('section[aria-label="Current public work"]'));
+      sortByRecency(document.querySelector("section.secondary"));
+    })
+    .catch(() => {
+      // Static custody text remains a fallback if metadata cannot load.
+    });
+})();
+</script>
+<script src="/config.js?v=9d26bbb0e579"></script>
+<script>
+(()=>{
+  const form=document.getElementById("receive-form");
+  const status=document.getElementById("receive-status");
+  const endpoint=String(window.EARTHLY_HANDS_RECEIVING_URL||"").trim();
+  const file=document.getElementById("property-file");
+  const fileButton=document.getElementById("property-file-button");
+  const fileName=document.getElementById("property-file-name");
+
+  fileButton?.addEventListener("click",()=>file?.click());
+  file?.addEventListener("change",()=>{
+    fileName.textContent=file.files?.[0]?.name||"no file";
+  });
+
+  form?.addEventListener("submit",async e=>{
+    e.preventDefault();
+    if(!endpoint){status.textContent="Receiving is not configured.";return}
+    if(!file?.files?.length){status.textContent="Choose a record first.";return}
+
+    const button=document.getElementById("property-send");
+    const data=new FormData(form);
+    const target=form.querySelector('input[name="property-target"]:checked')?.value||"anything related";
+    const note=String(data.get("description")||"").trim();
+    data.set("description",[
+      "PUBLIC WORK — PROPERTY RETURN",
+      "Attach to: "+target,
+      note ? "Contributor note: "+note : ""
+    ].filter(Boolean).join("\n"));
+
+    button.disabled=true;
+    status.textContent="Receiving…";
+    try{
+      const res=await fetch(endpoint,{method:"POST",body:data});
+      const out=await res.json().catch(()=>({}));
+      if(!res.ok)throw new Error(out.error||("HTTP "+res.status));
+      status.textContent="RECEIVED · "+(out.receipt||"held for review");
+      form.reset();
+      fileName.textContent="no file";
+    }catch(err){
+      status.textContent="Not received · "+err.message;
+    }finally{
+      button.disabled=false;
+    }
+  });
+})();
+</script>
+
+<!-- public-root-index-metadata: 2026-09-25-recency-sort -->
+</body>
+</html>
