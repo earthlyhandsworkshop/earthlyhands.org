@@ -49,6 +49,10 @@ h1{font-size:clamp(2.2rem,6vw,5.2rem);font-weight:400;line-height:.94;margin:.45
 .ask input{flex:1;min-width:0;background:rgba(233,225,210,.55);border:1px solid rgba(25,24,20,.35);padding:.7rem .75rem;font:16px/1.2 Georgia,serif}
 .ask button{background:transparent;border:1px solid rgba(25,24,20,.45);padding:.7rem .9rem;cursor:pointer}
 .answer{margin-top:.8rem;line-height:1.5;min-height:1.4em}
+.answer-entry{padding:.45rem 0;border-top:1px solid rgba(25,24,20,.16)}
+.answer-entry:first-child{border-top:0}
+.answer-q{font:11px/1.4 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;opacity:.5;margin-bottom:.18rem}
+.answer-a{margin:0}
 footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:flex;justify-content:space-between;gap:1rem;opacity:.62}
 @media(max-width:650px){
  .top{padding:.9rem 1rem}.top .bearing{max-width:48%}
@@ -107,7 +111,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
         <input id="ask-input" maxlength="240" placeholder="What does this ground actually know?">
         <button type="submit">Ask</button>
       </div>
-      <div class="answer" id="answer" aria-live="polite"></div>
+      <div class="answer" id="answer" aria-live="polite" aria-label="Questions asked from this ground"></div>
     </form>
   </div>
 
@@ -189,24 +193,76 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   const input = document.getElementById('ask-input');
   const answer = document.getElementById('answer');
 
+  function emitGroundEvent(type, detail = {}){
+    window.dispatchEvent(new CustomEvent('earthlyhands:ground-event', {
+      detail: {
+        experiment: 'holderness-ground',
+        ground: 'noxubee-turnpike-agency-relation',
+        type,
+        ...detail
+      }
+    }));
+  }
+
+  function appendExchange(question, response){
+    const entry = document.createElement('div');
+    entry.className = 'answer-entry';
+    const q = document.createElement('div');
+    q.className = 'answer-q';
+    q.textContent = question;
+    const a = document.createElement('p');
+    a.className = 'answer-a';
+    a.textContent = response;
+    entry.append(q, a);
+    answer.append(entry);
+    entry.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+
+  emitGroundEvent('ground_open');
+
+  document.querySelectorAll('[data-panel]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.panel;
+      emitGroundEvent(
+        id === 'source' ? 'source_descent' :
+        id === 'open-edge' ? 'unjoined_edge' :
+        'window_open',
+        {target:id}
+      );
+    });
+  });
+
+  const refusedRoad = document.querySelector('.tool[disabled]');
+  if(refusedRoad){
+    refusedRoad.addEventListener('pointerdown', () => emitGroundEvent('refused_road', {target:'later-holderness-land-records'}));
+  }
+
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const q = input.value.trim().toLowerCase();
+    const raw = input.value.trim();
+    const q = raw.toLowerCase();
     if(!q){
-      answer.textContent = 'Ask from the relation you are standing in.';
+      input.focus();
       return;
     }
+
+    let response;
     if(/where|location|map|coordinate|exact/.test(q)){
-      answer.textContent = 'This ground knows an approximate relation: on the Noxubee turnpike, about 1¼ miles from the Choctaw agency. It does not have an exact point or reconstructed route.';
+      response = 'This ground knows an approximate relation: on the Noxubee turnpike, about 1¼ miles from the Choctaw agency. It does not have an exact point or reconstructed route.';
     } else if(/same|land|patent|glo|later|record/.test(q)){
-      answer.textContent = 'Other Holderness occurrences are held separately. This footing does not earn identity, biography, travel, or a land-to-agency chain. You can stand at the unjoined edge, but there is no road through it yet.';
+      response = 'Other Holderness occurrences are held separately. This footing does not earn identity, biography, travel, or a land-to-agency chain. You can stand at the unjoined edge, but there is no road through it yet.';
     } else if(/agency|visit|often|frequen/.test(q)){
-      answer.textContent = 'The testimony state says Holderness went to the agency every two or three days during the period he described. That earns repeated relation to the agency, not a reconstructed route or motive.';
+      response = 'The testimony state says Holderness went to the agency every two or three days during the period he described. That earns repeated relation to the agency, not a reconstructed route or motive.';
     } else if(/source|testimony|prove|know/.test(q)){
-      answer.textContent = 'This specimen is bounded to the controlled 1837 testimony state and its stated 1832–1834 relation. Open “Go down to the source state” to see what the ground inherits and what it refuses.';
+      response = 'This specimen is bounded to the controlled 1837 testimony state and its stated 1832–1834 relation. Open “Go down to the source state” to see what the ground inherits and what it refuses.';
     } else {
-      answer.textContent = 'From here the ground can answer about the testimony footing, the agency relation, the approximate distance, repeated visits, and what remains unjoined. It will not create a road beyond those relations.';
+      response = 'From here the ground can answer about the testimony footing, the agency relation, the approximate distance, repeated visits, and what remains unjoined. It will not create a road beyond those relations.';
     }
+
+    appendExchange(raw, response);
+    emitGroundEvent('ask', {question_length: raw.length});
+    input.value = '';
+    input.focus();
   });
 })();
 </script>
