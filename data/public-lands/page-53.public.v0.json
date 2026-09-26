@@ -548,5 +548,106 @@
       "The rows 22–23 cultivated-acre brace remains one cross-row source mark with unresolved allocation.",
       "The Allen Yates locality field remains layered rather than flattened into one phrase."
     ]
-  }
+  },
+  "routes": [
+    {
+      "id": "PL53-BRACE",
+      "label": "rows 22–23 brace",
+      "kind": "object-local uncertainty",
+      "host": "cultivated-acres field / rows 22–23",
+      "opens": "The brace makes one grouped source mark across two rows. Compare is available; row assignment is not.",
+      "allowed_actions": [
+        "inspect grouping",
+        "compare the two hosted rows",
+        "carry the grouped value as unresolved"
+      ],
+      "unavailable_actions": [
+        "assign 7 to row 22",
+        "assign 7 to row 23",
+        "merge the people or households"
+      ],
+      "destination": null
+    },
+    {
+      "id": "PL53-ALLEN-YATES",
+      "label": "Allen Yates",
+      "kind": "source-local person occurrence",
+      "host": "row 26",
+      "opens": "This occurrence can deepen into the row, its layered locality field, acreage, category/count annotation, correction state, and source return.",
+      "allowed_actions": [
+        "inspect this occurrence",
+        "follow source-local fields",
+        "compare an independently controlled Allen Yates occurrence when one is published"
+      ],
+      "unavailable_actions": [
+        "merge same-name people by name alone",
+        "turn row adjacency into kinship"
+      ],
+      "destination": null
+    },
+    {
+      "id": "PL53-BUCKATUNNA",
+      "label": "Buckatunna creek",
+      "kind": "place relation",
+      "host": "rows 25, 26, and 29",
+      "opens": "Buckatunna Creek is reachable here as source-carried locality language. The present public body does not earn a point, line, route, or modern hydrographic identity.",
+      "allowed_actions": [
+        "collect controlled occurrences",
+        "compare directional language",
+        "open Prose Map relation when a mapped relation is earned"
+      ],
+      "unavailable_actions": [
+        "plot an exact point",
+        "draw a route",
+        "equate historical wording with a modern feature"
+      ],
+      "destination": null
+    },
+    {
+      "id": "PL53-SUPPLEMENT",
+      "label": "Provided for in supplement; two sections.",
+      "kind": "named documentary door",
+      "host": "row 26 / General Remarks",
+      "opens": "The page names a supplement. That earns a documentary door and a retrieval target, not an invented supplement body.",
+      "allowed_actions": [
+        "carry the exact pointer",
+        "trace later if the supplement is recovered"
+      ],
+      "unavailable_actions": [
+        "invent the supplement",
+        "treat the remark as proof of patent, possession, or completed grant"
+      ],
+      "destination": null
+    },
+    {
+      "id": "PL53-P54-NEXT",
+      "label": "manuscript page 54",
+      "kind": "documentary succession",
+      "host": "page 53",
+      "opens": "Page 54 is the next manuscript face in the controlled pagination sequence.",
+      "allowed_actions": [
+        "move by manuscript succession when page 54 is publicly opened"
+      ],
+      "unavailable_actions": [
+        "treat pagination as person, place, or causal relation"
+      ],
+      "destination": null,
+      "state": "PUBLIC GROUND NOT YET OPEN"
+    },
+    {
+      "id": "PL53-P54-CATEGORY",
+      "label": "another category-annotation occurrence",
+      "kind": "comparative source relation",
+      "host": "1 white 12 Slaves] / row 26",
+      "opens": "The next manuscript face independently carries another source-visible slave-count annotation. This is a comparative relation distinct from pagination.",
+      "allowed_actions": [
+        "move by comparative relation when page 54 is publicly opened"
+      ],
+      "unavailable_actions": [
+        "treat recurrence as one annotator, one date, one administrative rule, or one household system"
+      ],
+      "destination": null,
+      "state": "PUBLIC GROUND NOT YET OPEN"
+    }
+  ]
 }
