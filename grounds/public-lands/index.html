@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#171711">
+<title>Public Lands — Earthly Hands Workshop</title>
+<meta name="description" content="Enter Public Lands as held documentary ground: one lit working table, bounded Ask, source-first depth, and only earned reaches.">
+<style>
+:root{--night:#171711;--night2:#202018;--paper:#e9e1d2;--ink:#1f1e19;--muted:#9f9789;--rule:rgba(233,225,210,.24);--rust:#ad7654;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+*{box-sizing:border-box}html{background:var(--night);color-scheme:dark;-webkit-text-size-adjust:100%}body{margin:0;min-width:19rem;background:radial-gradient(ellipse at 50% 28%,#29271d 0,#1c1c15 40%,#15150f 100%);color:#eee7da;font:1rem/1.45 var(--serif);min-height:100svh}button,input{font:inherit}a{color:inherit}.shell{width:min(92rem,calc(100% - 1rem));margin:auto;min-height:100svh;display:grid;grid-template-rows:auto auto 1fr auto}.top{min-height:3rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--rule);font:600 .58rem/1 var(--mono);letter-spacing:.09em;text-transform:uppercase}.top a{text-decoration:none}.top span{color:var(--muted)}.bearing{padding:.7rem 0 .55rem;display:flex;align-items:end;justify-content:space-between;gap:1rem}.bearing h1{margin:0;font:400 clamp(2.7rem,6vw,6.5rem)/.82 var(--serif);letter-spacing:-.06em}.bearing p{margin:0 0 .2rem;max-width:34rem;color:var(--muted);font-size:.86rem}.ground{position:relative;min-height:68svh;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);overflow:hidden}.field-note{position:absolute;z-index:3;max-width:18rem;color:var(--muted);font:.54rem/1.45 var(--mono);letter-spacing:.02em}.field-note strong{display:block;margin-bottom:.18rem;color:#eee7da;font:600 .54rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}.note-west{left:1rem;top:7%}.note-east{right:1rem;top:9%;text-align:right}.table-zone{position:absolute;left:50%;top:51%;transform:translate(-50%,-50%);width:min(54rem,76vw);perspective:1200px}.table{position:relative;padding:1rem 1rem 1.3rem;background:linear-gradient(180deg,#4a3929,#30241a);border:1px solid rgba(255,255,255,.14);box-shadow:0 2rem 6rem rgba(0,0,0,.5);transform:rotateX(3deg)}.sheet-link{display:block;position:relative;background:var(--paper);padding:.45rem;box-shadow:0 .8rem 2rem rgba(0,0,0,.28);text-decoration:none;transform:rotate(-.25deg)}.sheet-link img{display:block;width:100%;height:auto;filter:grayscale(1) contrast(1.02)}.sheet-caption{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.5rem .1rem .05rem;color:var(--ink);font:.52rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}.sheet-caption span:last-child{color:#675e52}.glint{position:absolute;z-index:5;width:min(17rem,31vw);padding:.65rem .72rem;background:rgba(23,23,17,.93);border:1px solid var(--rule);box-shadow:0 .7rem 2.2rem rgba(0,0,0,.3);opacity:0;pointer-events:none;transform:translateY(7px);transition:.22s ease}.glint.is-visible{opacity:1;pointer-events:auto;transform:none}.glint .kind{display:block;color:var(--rust);font:600 .47rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase}.glint h2{margin:.2rem 0 .25rem;font:400 1.18rem/1.05 var(--serif)}.glint p{margin:.2rem 0;color:#c6beaf;font-size:.76rem}.glint a,.glint button{display:inline-block;margin-top:.38rem;border:0;background:transparent;padding:0;color:#eee7da;text-decoration:underline;text-underline-offset:.18em;cursor:pointer;font:.55rem/1.2 var(--mono)}#glint-brace{left:2%;bottom:10%}#glint-yates{right:2%;bottom:9%}#glint-account{right:4%;top:28%}.thread{position:absolute;height:1px;background:rgba(173,118,84,.48);transform-origin:left center;opacity:0;transition:.2s ease}.thread.is-visible{opacity:1}.ask-dock{position:absolute;z-index:10;left:50%;bottom:1.15rem;transform:translateX(-50%);width:min(43rem,calc(100% - 1rem));background:rgba(23,23,17,.96);border:1px solid var(--rule)}.ask-label{display:flex;justify-content:space-between;gap:1rem;padding:.42rem .55rem;border-bottom:1px solid var(--rule);color:var(--muted);font:.48rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}.ask-form{display:grid;grid-template-columns:1fr auto}.ask-form input{min-width:0;border:0;background:transparent;color:#eee7da;padding:.7rem .72rem;outline:none}.ask-form button{border:0;border-left:1px solid var(--rule);background:#eee7da;color:#211f19;padding:.7rem .9rem;cursor:pointer}.answer{min-height:1.3rem;padding:.4rem .55rem 0;color:#c7bfb1;font:.68rem/1.35 var(--serif)}.answer:empty{display:none}.lower{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.65rem 0;color:var(--muted);font:.53rem/1.3 var(--mono)}.lower a{text-underline-offset:.18em}.quiet{font-style:italic}.return-door{display:none}.return-door.is-visible{display:inline}.tiny{opacity:.72}
+@media(max-width:52rem){.bearing{display:block}.bearing p{margin-top:.55rem}.ground{min-height:74svh}.field-note{display:none}.table-zone{width:92vw;top:44%}.glint{width:min(16rem,72vw)}#glint-brace{left:.6rem;bottom:7.5rem}#glint-yates{right:.6rem;bottom:7.5rem}#glint-account{right:.6rem;top:.8rem}.ask-dock{bottom:.5rem}.sheet-caption{font-size:.44rem}.lower{align-items:flex-start;flex-direction:column}}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><a href="/">Earthly Hands Workshop</a><strong>Public Lands</strong><span id="standing">entered ground</span></header>
+<section class="bearing">
+  <h1>Public Lands</h1>
+  <p>The records are the ground. One table is lit because one face is presently controlled strongly enough to work from. Nothing farther appears merely because it exists.</p>
+</section>
+<main class="ground" id="ground">
+  <div class="field-note note-west"><strong>Held ground</strong>Available depth is not present depth. Ask, look, or approach something that has actually earned a door.</div>
+  <div class="field-note note-east"><strong>Current footing</strong><span id="footing">Public Lands · working table</span></div>
+
+  <div class="table-zone" id="table-zone">
+    <div class="table">
+      <a class="sheet-link" href="/experiments/public-lands-page-53/" id="page53">
+        <img src="/experiments/public-lands-page-53/OHC_2435.png?v=07bbd075" alt="Manuscript page 53 of Public Lands No. 1">
+        <div class="sheet-caption"><span>Public Lands No. 1 · manuscript p.53</span><span>approach the table →</span></div>
+      </a>
+    </div>
+  </div>
+
+  <aside class="glint" id="glint-brace">
+    <span class="kind">object-local uncertainty</span>
+    <h2>The brace will not choose a row.</h2>
+    <p>One source-drawn brace spans rows 22–23 with one numeral 7. The allocation remains unresolved.</p>
+    <a href="/experiments/public-lands-page-53/#brace">Approach through page 53</a>
+  </aside>
+
+  <aside class="glint" id="glint-yates">
+    <span class="kind">source-local occurrence</span>
+    <h2>Allen Yates</h2>
+    <p>Row 26 carries acreage, layered locality writing, a category/count annotation, and a pointer to a supplement that is not yet present here.</p>
+    <a href="/experiments/public-lands-page-53/#allen-yates">Approach this occurrence</a>
+  </aside>
+
+  <aside class="glint" id="glint-account">
+    <span class="kind">open accounting line</span>
+    <h2>The numbers do not close yet.</h2>
+    <p>Page 53 contributes explicit category counts. Page 60 later carries a district aggregate. The intervening accounting has not been lawfully reconciled.</p>
+    <a href="/experiments/public-lands-page-53/#account">Inspect the held account</a>
+  </aside>
+
+  <form class="ask-dock" id="ask-form">
+    <div class="ask-label"><span>Ask the Ground</span><span id="ask-footing">Public Lands · working table</span></div>
+    <div class="ask-form"><input id="ask-input" autocomplete="off" maxlength="900" placeholder="What is strange here?"><button type="submit">Ask</button></div>
+    <div class="answer" id="answer" aria-live="polite"></div>
+  </form>
+</main>
+<footer class="lower">
+  <span>Glean · Public Lands ↔ Public Ground</span>
+  <span class="quiet">The ground does not open farther than the source carries.</span>
+  <a class="return-door" id="return-door" href="/experiments/public-lands-page-53/">Return to the lit table</a>
+</footer>
+</div>
+<script src="/config.js?v=64aae42b52b2"></script>
+<script src="/public-listening.js?v=1"></script>
+<script>
+(()=>{
+  const groundId="public-lands-ground";
+  const input=document.getElementById("ask-input");
+  const answer=document.getElementById("answer");
+  const standing=document.getElementById("standing");
+  const footing=document.getElementById("footing");
+  const askFooting=document.getElementById("ask-footing");
+  const returnDoor=document.getElementById("return-door");
+  const visible=new Set();
+
+  function record(event,aperture,instrument="ground"){
+    try{window.EarthlyHandsListening?.record(event,{ground:groundId,instrument,aperture})}catch(_){}
+  }
+  function reveal(id){
+    const el=document.getElementById(id);if(!el||visible.has(id))return;
+    visible.add(id);el.classList.add("is-visible");standing.textContent="ground opened";
+    record("REACHED",id,"ground");
+  }
+  function say(text){answer.textContent=text}
+  function localAsk(q){
+    const s=q.toLowerCase();
+    if(/strange|odd|notice|glint|interesting|what.*here/.test(s)){
+      reveal("glint-brace");reveal("glint-yates");reveal("glint-account");
+      return "Three things can honestly come forward from this footing: a brace that will not assign its 7, Allen Yates's unusually layered row, and an accounting line that reaches toward a later district aggregate without yet closing. Nothing else needs to appear.";
+    }
+    if(/brace|row 22|row 23|seven|\b7\b/.test(s)){
+      reveal("glint-brace");
+      return "The brace is real; the row assignment is not. You can inhabit that limit here without choosing for the manuscript.";
+    }
+    if(/allen|yates|row 26|supplement|white|slave/.test(s)){
+      reveal("glint-yates");
+      return "Allen Yates is reachable as one source-local occurrence. The layered writing can deepen; the named supplement remains a door without a body.";
+    }
+    if(/count|account|total|aggregate|page 60|reconcile|number/.test(s)){
+      reveal("glint-account");
+      return "The account can be followed, but not closed. Page 53 carries explicit counts; page 60 later carries a district aggregate. The held ground does not yet supply a lawful reconciliation.";
+    }
+    if(/where am i|where.*stand|footing/.test(s))return "You are in Public Lands, at the one working table presently lit. Page 53 is on the table; opening its reading or jacket does not move the ground.";
+    if(/leave|back|return/.test(s)){returnDoor.classList.add("is-visible");return "The table remains where you left it. Return is available."}
+    return "";
+  }
+
+  document.getElementById("ask-form").addEventListener("submit",async e=>{
+    e.preventDefault();const q=input.value.trim();if(!q)return;input.value="";record("ASKED_GROUND","working-table","ask");
+    const local=localAsk(q);if(local){say(local);return}
+    const api=String(window.EARTHLY_HANDS_API_URL||"").trim();
+    if(!api){say("This ground does not have an answer for that from the held source floor.");return}
+    say("…");
+    const request=[
+      "PUBLIC LANDS GROUND — BOUNDED INTERPRETER",
+      "The visitor is inside Public Lands, standing at one lit working table. Page 53 is the only controlled source body presently open enough to inhabit.",
+      "The ground may describe only these earned reaches: rows 22–23 brace with unresolved allocation; Allen Yates row 26 with layered locality/category annotation and a named but absent supplement; page-53 explicit category counts and a later page-60 district aggregate with no lawful reconciliation yet.",
+      "Do not invent scenery, routes, people, identities, motives, dates, households, ownership, or a supplement body. Do not imply page sequence is historical travel.",
+      "If the question falls outside the held floor, preserve the limit.",
+      "Answer in 1-3 short sentences as ground, not as a tour guide. No JSON.",
+      "VISITOR: "+q
+    ].join("\n");
+    try{
+      const r=await fetch(api,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:request,place:groundId,history:[]})});
+      const b=await r.json().catch(()=>({}));
+      if(!r.ok||typeof b.reply!=="string")throw new Error("closed");
+      say(b.reply.trim());
+    }catch(_){say("The ground does not answer farther than what is held here.")}
+  });
+
+  document.getElementById("page53").addEventListener("click",()=>record("REACHED","page-53-working-table","source"));
+  footing.textContent="Public Lands · working table";
+  askFooting.textContent=footing.textContent;
+})();
+</script>
+</body>
+</html>
