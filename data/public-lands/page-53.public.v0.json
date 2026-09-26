@@ -108,9 +108,445 @@
     "movement": "No Worker response may relocate the visitor or change source state."
   },
   "responsibility": {
-    "source_reading": ["Fieldglass", "Glean"],
+    "source_reading": [
+      "Fieldglass",
+      "Glean"
+    ],
     "public_compilation": "Glean",
     "public_renderer": "EarthlyHands.org bounded specimen",
     "ownership_claim": false
+  },
+  "transcription": {
+    "state": "EARTHLY_HANDS_CONTROLLED_WORKING_TRANSCRIPTION",
+    "rule": "clarify structure; do not repair the source",
+    "empty_mark": "No numeral adopted in the current controlled transcription; this does not mean zero.",
+    "rows": [
+      {
+        "r": 1,
+        "name": "Okishaulaudubblade",
+        "cultivated": 3,
+        "family": 7,
+        "over16": 2,
+        "under10": 4,
+        "locality": [
+          "Chickasawhay River",
+          "east side"
+        ]
+      },
+      {
+        "r": 2,
+        "name": "John and Phill",
+        "cultivated": 1,
+        "family": 7,
+        "over16": 2,
+        "under10": 3,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 3,
+        "name": "Capt John Lake",
+        "cultivated": 12,
+        "family": 6,
+        "over16": 3,
+        "under10": 1,
+        "locality": [
+          "Tallaboke branch",
+          "north side"
+        ],
+        "total_acres": 160,
+        "remarks": "Land tillable."
+      },
+      {
+        "r": 4,
+        "name": "Bamtoo",
+        "cultivated": 2,
+        "family": 4,
+        "over16": 1,
+        "under10": 2,
+        "locality": [
+          "Chickasawhay river",
+          "west side"
+        ],
+        "remarks": "Poor land."
+      },
+      {
+        "r": 5,
+        "name": "Yokatabi",
+        "cultivated": 2,
+        "family": 6,
+        "over16": 1,
+        "under10": 3,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 6,
+        "name": "Jesse Cole",
+        "cultivated": 3,
+        "family": 4,
+        "over16": 1,
+        "under10": 1,
+        "locality": [
+          "Tallaboke branch",
+          "north side"
+        ]
+      },
+      {
+        "r": 7,
+        "name": "Capt John Cooper",
+        "cultivated": null,
+        "family": 6,
+        "over16": 2,
+        "under10": 3,
+        "locality": [
+          "Konappa creek",
+          "north side"
+        ],
+        "remarks": "Poor land"
+      },
+      {
+        "r": 8,
+        "name": "Hitakimayabi",
+        "cultivated": 1,
+        "family": 4,
+        "over16": 1,
+        "under10": 2,
+        "locality": [
+          "Chickasawhay River",
+          "west side"
+        ]
+      },
+      {
+        "r": 9,
+        "name": "Tapiochea",
+        "cultivated": 1,
+        "family": 2,
+        "over16": 1,
+        "under10": null,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 10,
+        "name": "Hoyopachobi",
+        "cultivated": 7,
+        "family": 5,
+        "over16": 2,
+        "under10": 1,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 11,
+        "name": "Nopho. (widow)",
+        "cultivated": 3,
+        "family": 5,
+        "over16": 1,
+        "under10": 1,
+        "locality": [
+          "do"
+        ],
+        "correction": "Direct source-facing reading supersedes derivative Nopius (widow)."
+      },
+      {
+        "r": 12,
+        "name": "Illotomastabi",
+        "cultivated": 30,
+        "family": 6,
+        "over16": 3,
+        "under10": 2,
+        "locality": [
+          "do",
+          "east side"
+        ],
+        "total_acres": 480
+      },
+      {
+        "r": 13,
+        "name": "Mamby",
+        "cultivated": null,
+        "family": 7,
+        "over16": 2,
+        "under10": 2,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 14,
+        "name": "Hopowahoma",
+        "cultivated": 3,
+        "family": 15,
+        "over16": 3,
+        "under10": 6,
+        "locality": [
+          "Chickasawhay river"
+        ],
+        "remarks": "Poor land"
+      },
+      {
+        "r": 15,
+        "name": "Hommachabi",
+        "cultivated": 3,
+        "family": 5,
+        "over16": 1,
+        "under10": 3,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 16,
+        "name": "Panapishtiyabe",
+        "cultivated": 7,
+        "family": 3,
+        "over16": 1,
+        "under10": 1,
+        "locality": [
+          "Konappa creek",
+          "south side"
+        ]
+      },
+      {
+        "r": 17,
+        "name": "Pashahimmitta",
+        "cultivated": 8,
+        "family": 8,
+        "over16": 1,
+        "under10": 3,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 18,
+        "name": "Tishowa Kaiya",
+        "cultivated": 3,
+        "family": 5,
+        "over16": 2,
+        "under10": 2,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 19,
+        "name": "Nowa (aid of Hitakachabi)",
+        "cultivated": null,
+        "family": 5,
+        "over16": 1,
+        "under10": 1,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 20,
+        "name": "Hophemastabi",
+        "cultivated": 2,
+        "family": 3,
+        "over16": 1,
+        "under10": 1,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 21,
+        "name": "William Ropes",
+        "cultivated": 7,
+        "family": 2,
+        "over16": 1,
+        "under10": null,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 22,
+        "name": "Hoyopahoma",
+        "cultivated": {
+          "brace": "7",
+          "span": [
+            22,
+            23
+          ],
+          "state": "allocation unresolved"
+        },
+        "family": 4,
+        "over16": 2,
+        "under10": 1,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 23,
+        "name": "Okchanokahoma",
+        "cultivated": {
+          "continuation_of_brace": 22
+        },
+        "family": 2,
+        "over16": 1,
+        "under10": null,
+        "locality": [
+          "do"
+        ]
+      },
+      {
+        "r": 24,
+        "name": "Nakatollabi",
+        "cultivated": null,
+        "family": 7,
+        "over16": 2,
+        "under10": 2,
+        "locality": [
+          "do",
+          "north side"
+        ]
+      },
+      {
+        "r": 25,
+        "name": "Capt Mintubba",
+        "cultivated": 7,
+        "family": 4,
+        "over16": 1,
+        "under10": 1,
+        "locality": [
+          "Buckatunna creek",
+          "west side"
+        ],
+        "remarks": "Poor land. well timbered."
+      },
+      {
+        "r": 26,
+        "name": "Allen Yates",
+        "cultivated": 140,
+        "family": 19,
+        "over16": {
+          "state": "marked-nonnumeric / dotted; no zero adopted"
+        },
+        "under10": 3,
+        "locality": [
+          "Buckatunna creek. west side",
+          "from white settlements.",
+          "1 white 12 Slaves]",
+          "[middle wording unresolved] 1/2 a mile."
+        ],
+        "total_acres": 1280,
+        "remarks": "Provided for in supplement; two sections."
+      },
+      {
+        "r": 27,
+        "name": "Tom Nickson",
+        "cultivated": null,
+        "family": 5,
+        "over16": 1,
+        "under10": 2,
+        "locality": [],
+        "remarks": "Poor land"
+      },
+      {
+        "r": 28,
+        "name": "Ishtonahoma",
+        "cultivated": null,
+        "family": 2,
+        "over16": 2,
+        "under10": null,
+        "locality": [
+          "Tombigbee River",
+          "east side"
+        ]
+      },
+      {
+        "r": 29,
+        "name": "Panapaya",
+        "cultivated": 7,
+        "family": 6,
+        "over16": 1,
+        "under10": 2,
+        "locality": [
+          "Buckatunna creek",
+          "west side"
+        ]
+      },
+      {
+        "r": 30,
+        "name": "George May",
+        "cultivated": 3,
+        "family": 3,
+        "over16": 1,
+        "under10": 1,
+        "locality": [
+          "do"
+        ],
+        "remarks": "Land tillable."
+      },
+      {
+        "r": 31,
+        "name": "William Fields",
+        "cultivated": 12,
+        "family": 4,
+        "over16": 1,
+        "under10": null,
+        "locality": [
+          "do"
+        ],
+        "total_acres": 160
+      },
+      {
+        "r": 32,
+        "name": "Thomas Conga",
+        "cultivated": 14,
+        "family": 5,
+        "over16": 2,
+        "under10": 2,
+        "locality": [
+          "do"
+        ],
+        "total_acres": 160
+      },
+      {
+        "r": 33,
+        "name": "Lawi Conga",
+        "cultivated": 4,
+        "family": 4,
+        "over16": 2,
+        "under10": null,
+        "locality": [
+          "do",
+          "west side"
+        ]
+      },
+      {
+        "r": 34,
+        "name": "Daniel Crabgrave",
+        "cultivated": null,
+        "family": 5,
+        "over16": 1,
+        "under10": 3,
+        "locality": [
+          "do"
+        ]
+      }
+    ],
+    "arithmetic": {
+      "visible_body_rows": 34,
+      "family_column_total": 185,
+      "family_column_operation": "sum of the 34 numeric entries currently carried in the printed Entire No. of the Family column",
+      "category_annotation_relation": "The separate `1 white 12 Slaves]` annotation is not added to 185 because the source has not established whether those counted people are included in or outside the printed family totals."
+    },
+    "caveats": [
+      "Many name forms remain occurrence-level working readings; a disputed name returns to the source face.",
+      "Literal `do` is not expanded into inherited locality wording.",
+      "A null numeric field means no numeral is adopted in this controlled transcription, not zero.",
+      "The rows 22–23 cultivated-acre brace remains one cross-row source mark with unresolved allocation.",
+      "The Allen Yates locality field remains layered rather than flattened into one phrase."
+    ]
   }
 }
