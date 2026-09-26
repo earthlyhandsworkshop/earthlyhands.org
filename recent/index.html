@@ -740,6 +740,12 @@ main{padding:0 0 1rem}
   function ask(q){
     const clean=String(q||'').trim();
     if(!clean){initialState();return}
+    const nav=window.EarthlyHandsWayfinding?.resolve(clean);
+    if(nav){window.location.assign(nav.path);return}
+    if(/\b(where can i go|what can i visit|where else can i go|how do i navigate)\b/i.test(clean)){
+      if(answer) answer.textContent='You can ask to go to '+(window.EarthlyHandsWayfinding?.names().join(', ')||'another public ground')+'.';
+      return;
+    }
     const lower=clean.toLowerCase();
 
     if(/\b(all|everything|browse|more|current work)\b/.test(lower)){
@@ -793,5 +799,6 @@ main{padding:0 0 1rem}
 <!-- public-root-index-metadata: 2026-09-25-recency-sort -->
 <script src="../config.js?v=64aae42b52b2"></script>
 <script src="../public-listening.js?v=1"></script>
+<script src="../public-wayfinding.js?v=1"></script>
 </body>
 </html>
