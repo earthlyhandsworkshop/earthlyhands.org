@@ -9,10 +9,12 @@
 <style>
 :root{--paper:#ece5d8;--paper2:#f6f0e5;--ink:#22211d;--muted:#70695e;--rule:rgba(34,33,29,.22);--strong:rgba(34,33,29,.55);--rust:#84563a;--dark:#1b1b19;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
 *{box-sizing:border-box}html{background:var(--paper);-webkit-text-size-adjust:100%}body{margin:0;min-width:19rem;background:var(--paper);color:var(--ink);font:1rem/1.45 var(--serif)}button,input{font:inherit;color:inherit}a{color:inherit}.shell{width:min(98rem,calc(100% - .8rem));margin:auto}.top{min-height:3rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--strong);font:600 .62rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}.top a{text-decoration:none}.top span{color:var(--muted);font-weight:400}.head{display:grid;grid-template-columns:minmax(16rem,.8fr) minmax(20rem,1.2fr);gap:1rem;border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong);padding:.8rem}.eyebrow{margin:0;color:var(--rust);font:600 .52rem/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase}.head h1{margin:.2rem 0 0;font:400 clamp(2.8rem,5vw,5.5rem)/.86 var(--serif);letter-spacing:-.055em}.head-copy{align-self:end;max-width:46rem;color:var(--muted);font-size:.92rem}.head-copy p{margin:.2rem 0}.tabs{display:flex;overflow-x:auto;border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong)}.tab{flex:0 0 auto;min-width:8rem;border:0;border-right:1px solid var(--rule);background:transparent;padding:.7rem .8rem;cursor:pointer;font:600 .52rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}.tab[aria-selected="true"]{background:var(--dark);color:#f4eee3}.panel[hidden]{display:none!important}.panel{border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong)}.trans-wrap{overflow:auto;max-height:calc(100svh - 12rem);background:var(--paper2)}table{border-collapse:separate;border-spacing:0;width:100%;min-width:78rem;font-size:.79rem;line-height:1.25}thead th{position:sticky;top:0;z-index:3;background:var(--dark);color:#f2ebdf;padding:.48rem .42rem;border-right:1px solid #44413b;border-bottom:1px solid #44413b;font:600 .43rem/1.15 var(--mono);letter-spacing:.055em;text-transform:uppercase;text-align:left}thead th.num{text-align:center}tbody td{padding:.44rem .42rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);vertical-align:top;background:rgba(255,255,255,.08)}tbody tr:hover td{background:rgba(255,255,255,.26)}td.r{width:2.5rem;text-align:center;color:var(--muted);font:.56rem/1.3 var(--mono)}td.name{min-width:12rem;font-size:.9rem}td.num{width:5.5rem;text-align:center;font-family:var(--mono)}td.locality{min-width:19rem}td.remarks{min-width:15rem}.layer{display:block}.layer+.layer{margin-top:.2rem}.literal{font-family:var(--mono)}.unresolved{color:var(--rust);font-style:italic}.no-num{color:var(--muted);font:600 .5rem/1.25 var(--mono);letter-spacing:.03em;text-transform:uppercase}.brace{position:relative;font-family:var(--mono);font-size:1rem}.brace::before{content:"⎫";margin-right:.25rem;color:var(--rust)}.brace-cont::before{content:"⎭";color:var(--rust)}.foot{display:grid;grid-template-columns:12rem minmax(0,1fr);gap:1rem;padding:.6rem .7rem;border-top:1px solid var(--strong);background:var(--paper)}.foot strong{font:600 .48rem/1.3 var(--mono);letter-spacing:.07em;text-transform:uppercase}.foot p{margin:0;color:var(--muted);font-size:.75rem}.deep{width:min(78rem,calc(100% - 1rem));margin:auto;padding:1rem 0 2rem}.deep-head{display:grid;grid-template-columns:11rem 1fr;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--strong)}.deep-head span{color:var(--muted);font:600 .52rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}.deep-head h2{margin:0;font:400 clamp(2rem,4vw,4.2rem)/.92 var(--serif);letter-spacing:-.045em}.rows{border-left:1px solid var(--strong);border-right:1px solid var(--strong)}.row{display:grid;grid-template-columns:11rem 1fr;border-bottom:1px solid var(--rule)}.row-label{padding:.7rem;color:var(--muted);font:600 .48rem/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}.row-body{padding:.7rem .85rem;border-left:1px solid var(--rule);max-width:55rem}.row-body p{margin:0 0 .5rem}.row-body p:last-child{margin-bottom:0}.big{font:400 clamp(3rem,8vw,7.8rem)/.8 var(--serif);letter-spacing:-.07em}.account-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--strong);margin:1rem 0}.account-grid div{padding:1rem}.account-grid div+div{border-left:1px solid var(--rule)}.account-grid span{display:block;margin-top:.45rem;color:var(--muted);font:600 .46rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.06em}.source-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(18rem,.4fr);min-height:68svh}.viewer{background:#111;overflow:auto;display:grid;place-items:start center;padding:.6rem}.viewer img{display:block;width:100%;height:auto;max-width:none}.viewer[data-zoom="2"] img{width:155%}.viewer[data-zoom="3"] img{width:225%}.source-note{padding:1rem;border-left:1px solid var(--strong)}.source-note h2{font-weight:400;margin:.1rem 0 .7rem}.source-note p{color:var(--muted)}.zoom{display:flex;gap:.35rem;margin-top:1rem}.zoom button{border:1px solid var(--strong);background:transparent;padding:.45rem .7rem;cursor:pointer}.ask{padding:1rem 0}.ask-form{display:grid;grid-template-columns:1fr auto;border:1px solid var(--strong);background:var(--paper2)}.ask-form input{border:0;background:transparent;padding:.75rem}.ask-form button{border:0;border-left:1px solid var(--strong);background:var(--dark);color:#f4eee3;padding:.75rem 1rem;cursor:pointer}.ask-log p{margin:.4rem 0;padding:.5rem 0;border-bottom:1px solid var(--rule)}.ask-log .question{color:var(--muted);font-family:var(--mono);font-size:.75rem}.trust{color:var(--muted);font:.55rem/1.4 var(--mono);margin-top:1rem}.status{display:inline-block;border:1px solid var(--rule);padding:.12rem .35rem;font:600 .5rem/1.2 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
-.ground-strip{display:grid;grid-template-columns:minmax(0,1fr) auto auto auto;gap:.5rem;align-items:center;border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong);padding:.45rem .6rem;background:rgba(255,255,255,.12)}
+.ground-strip{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:.5rem;align-items:center;border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong);padding:.45rem .6rem;background:rgba(255,255,255,.12)}
 .footing-now{min-width:0;color:var(--muted);font:.56rem/1.35 var(--mono);letter-spacing:.03em}.footing-now strong{color:var(--ink);font-weight:600}
 .ground-strip button,.receive-actions button,.source-return{border:1px solid var(--strong);background:transparent;padding:.42rem .62rem;cursor:pointer;font:600 .5rem/1 var(--mono);letter-spacing:.05em;text-transform:uppercase}
-.ground-strip button[disabled]{opacity:.35;cursor:default}.ground-strip .send-record{background:var(--dark);color:#f4eee3}.ground-strip .share-presence[hidden]{display:none}
+.ground-strip button[disabled]{opacity:.35;cursor:default}.ground-strip .share-presence[hidden]{display:none}
+.workshop-crossing{margin-top:1.2rem;border:1px solid var(--strong);background:rgba(255,255,255,.08)}.workshop-crossing-head{display:grid;grid-template-columns:11rem minmax(0,1fr) auto;gap:1rem;align-items:center;padding:.7rem .8rem}.workshop-crossing-head span{color:var(--muted);font:600 .48rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}.workshop-crossing-head p{margin:0;color:var(--muted);font-size:.78rem}.workshop-crossing-head button{border:1px solid var(--strong);background:transparent;padding:.48rem .7rem;cursor:pointer;font:600 .5rem/1 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.ask-context{margin:.45rem 0 .7rem;padding:.48rem .58rem;border-left:2px solid var(--rust);background:rgba(255,255,255,.12);color:var(--muted);font:.58rem/1.35 var(--mono)}.ask-context strong{color:var(--ink);font-weight:600}.ask-starters{display:flex;flex-wrap:wrap;gap:.35rem;margin:.55rem 0 .7rem}.ask-starters button{border:1px solid var(--rule);background:transparent;padding:.42rem .55rem;cursor:pointer;color:var(--muted);font:.52rem/1.2 var(--mono)}.ask-starters button:hover{border-color:var(--strong);color:var(--ink)}.ask-log:empty{display:none}
 .presence-ground{border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong);background:rgba(255,255,255,.08);padding:.65rem .75rem}.presence-ground[hidden]{display:none}.presence-ground h2{margin:.05rem 0 .3rem;font:400 1.25rem/1 var(--serif)}.presence-ground p{margin:.25rem 0;color:var(--muted);font-size:.75rem}.presence-controls{display:grid;grid-template-columns:minmax(10rem,1fr) auto auto;gap:.45rem;align-items:end;margin-top:.5rem}.presence-controls label{display:grid;gap:.18rem;color:var(--muted);font:.48rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}.presence-controls input[type="text"]{border:1px solid var(--rule);background:transparent;padding:.48rem}.presence-controls button{border:1px solid var(--strong);background:transparent;padding:.48rem .62rem;cursor:pointer;font:.5rem/1 var(--mono);text-transform:uppercase}.presence-list{display:grid;gap:.22rem;margin-top:.5rem;padding-top:.45rem;border-top:1px solid var(--rule);color:var(--muted);font:.56rem/1.3 var(--mono)}.presence-list strong{color:var(--ink)}.presence-check{display:flex!important;align-items:center;gap:.35rem!important;text-transform:none!important;letter-spacing:0!important}
 tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,58,.12)}tbody tr:focus{outline:2px solid var(--rust);outline-offset:-2px}
 .receive-ground{border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong);background:var(--paper2);padding:.8rem}
@@ -41,7 +43,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
 
 @media(max-width:50rem){
 .shell{width:calc(100% - .35rem)}.head{grid-template-columns:1fr}.head-copy{align-self:start}.deep-head,.row{grid-template-columns:1fr}.row-body{border-left:0;border-top:1px solid var(--rule)}.account-grid{grid-template-columns:1fr}.account-grid div+div{border-left:0;border-top:1px solid var(--rule)}.source-layout{grid-template-columns:1fr}.source-note{border-left:0;border-top:1px solid var(--strong)}.viewer{max-height:62svh}.viewer[data-zoom="2"] img{width:190%}.viewer[data-zoom="3"] img{width:280%}
-.ground-strip{grid-template-columns:minmax(0,1fr) auto}.ground-strip .send-record{grid-column:1/-1}.ground-strip .share-presence{grid-column:1/-1}.presence-controls{grid-template-columns:1fr}.presence-controls button{justify-self:start}.receive-form{grid-template-columns:1fr}.receive-file,.receive-actions,.receive-covenant,.consequence-note{grid-column:1}.receive-head{grid-template-columns:1fr}.receive-covenant{grid-template-columns:1fr 1fr}.receive-covenant div:nth-child(2){border-right:0}.receive-covenant div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+.ground-strip{grid-template-columns:minmax(0,1fr) auto}.ground-strip .share-presence{grid-column:1/-1}.presence-controls{grid-template-columns:1fr}.workshop-crossing-head{grid-template-columns:1fr;gap:.35rem}.workshop-crossing-head button{justify-self:start}.presence-controls button{justify-self:start}.receive-form{grid-template-columns:1fr}.receive-file,.receive-actions,.receive-covenant,.consequence-note{grid-column:1}.receive-head{grid-template-columns:1fr}.receive-covenant{grid-template-columns:1fr 1fr}.receive-covenant div:nth-child(2){border-right:0}.receive-covenant div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
 .trans-wrap{max-height:none;overflow:visible;background:transparent}.foot{grid-template-columns:1fr;gap:.3rem}table{display:block;min-width:0;width:100%}thead{display:none}tbody{display:grid;gap:.65rem;padding:.35rem}tbody tr{display:block;border:1px solid var(--strong);background:var(--paper2)}tbody td{display:grid;grid-template-columns:minmax(7.2rem,38%) minmax(0,1fr);align-items:start;gap:.65rem;width:100%!important;min-width:0!important;border-right:0;padding:.55rem .6rem;text-align:left!important;overflow-wrap:anywhere}tbody td::before{content:attr(data-label);color:var(--muted);font:600 .45rem/1.25 var(--mono);letter-spacing:.05em;text-transform:uppercase}tbody td>*{min-width:0;max-width:100%}tbody td.r{display:grid;grid-template-columns:1fr;background:var(--dark);color:#f2ebdf}tbody td.r::before{content:"row";color:#bbb4aa}tbody td.name{font-size:.95rem}tbody td.num{font-family:var(--mono)}.no-num{overflow-wrap:anywhere;word-break:normal}.relation-slip{grid-template-columns:1fr}.route-actions{grid-template-columns:1fr}
 }
 </style>
@@ -58,13 +60,12 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
   <button class="tab" data-view="transcription" aria-selected="false">Read</button>
   <button class="tab" data-view="account" aria-selected="false">Account</button>
   <button class="tab" data-view="jacket" aria-selected="false">Jacket</button>
-  <button class="tab" data-view="ask" aria-selected="false">Ask</button>
+  <button class="tab" data-view="ask" aria-selected="false">Ask the Ground</button>
 </nav>
 <section class="ground-strip" aria-label="Current Public Lands footing">
   <div class="footing-now" id="footing-now"><strong>Page 53</strong> · historical face · look</div>
   <button type="button" id="exact-return" disabled>Return</button>
   <button type="button" class="share-presence" id="open-presence" hidden>Shared ground</button>
-  <button type="button" class="send-record" id="open-receive">Send a record</button>
 </section>
 <section class="presence-ground" id="presence-ground" hidden aria-labelledby="presence-title">
   <h2 id="presence-title">Shared ground</h2>
@@ -77,24 +78,6 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
   <p id="presence-status"></p>
   <div class="presence-list" id="presence-list"></div>
 </section>
-<section class="receive-ground" id="receive-ground" hidden aria-labelledby="receive-title">
-  <div class="receive-head"><span>Return to the Workshop</span><div><h2 id="receive-title">Send something from where you are standing.</h2><p id="receive-footing">Page 53 · controlled working face</p></div></div>
-  <form class="receive-form" id="receive-form">
-    <label><span>Name · optional</span><input id="guest-name" name="contributor_name" type="text" maxlength="200" autocomplete="name" placeholder="If you want us to know you next time"></label>
-    <label><span>Came from · optional</span><input name="provenance" type="text" maxlength="1000" placeholder="archive, family papers, courthouse…"></label>
-    <label style="grid-column:1/-1"><span>One sentence · optional</span><textarea name="description" maxlength="1000" placeholder="What does this record show, or what did you notice?"></textarea></label>
-    <div class="receive-file"><input id="receive-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required><span class="receive-status">Original preserved privately · received ≠ published.</span></div>
-    <div class="receive-actions"><button type="submit" class="submit">Send to receiving</button><button type="button" id="close-receive">Close</button><span class="receive-status" id="receive-status" aria-live="polite"></span></div>
-    <div class="receive-covenant" aria-label="What happens to a return">
-      <div><strong>Received</strong><span>The original stays private.</span></div>
-      <div><strong>Reviewed</strong><span>A companion tests it against the ground.</span></div>
-      <div><strong>Held or adopted</strong><span>Uncertainty can remain uncertainty.</span></div>
-      <div><strong>Returned</strong><span>If the work changes, the road home stays visible.</span></div>
-    </div>
-    <p class="consequence-note"><strong>A return can matter without publishing itself.</strong> Receiving is an invitation into the work, not permission to strengthen the record.</p>
-  </form>
-</section>
-
 <section class="panel" data-panel="transcription" hidden>
   <div class="trans-wrap">
     <table aria-label="Controlled working transcription of Public Lands No. 1 manuscript page 53">
@@ -149,13 +132,46 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
 
 <section class="panel" data-panel="ask" hidden>
   <div class="deep ask">
-    <header class="deep-head"><span>Ask the Ground</span><h2>Ask the controlled page, not an imagined archive.</h2></header>
-    <p>The listening ground receives this transcription, its arithmetic, correction state, and brakes. It cannot inspect the image or silently strengthen a relation.</p>
+    <header class="deep-head"><span>Ask the Ground</span><h2>Ask from where you stand.</h2></header>
+    <div class="ask-context" id="ask-context"><strong>Page 53</strong> · historical face</div>
+    <p>The ground receives your present footing, the controlled reading, its arithmetic, corrections, and brakes. It can bring forward what this held body supports; it cannot repair the manuscript or make a missing relation true.</p>
+    <div class="ask-starters" aria-label="Questions that fit this ground">
+      <button type="button" data-ask-starter="What is strange here?">What is strange here?</button>
+      <button type="button" data-ask-starter="What is unresolved from where I am standing?">What is unresolved?</button>
+      <button type="button" data-ask-starter="What does this footing actually support?">What does this support?</button>
+      <button type="button" data-ask-starter="Where can this carry me without strengthening the record?">Where can this carry me?</button>
+    </div>
     <div class="ask-log" id="ask-log" aria-live="polite"></div>
-    <form class="ask-form" id="ask-form"><input id="ask-input" maxlength="1200" autocomplete="off" placeholder="How many people are recorded on this page?"><button type="submit">Ask</button></form>
-    <p class="trust">A page-local deterministic answer is preferred when the controlled body already carries it. Otherwise the bounded Worker interprets the supplied floor.</p>
+    <form class="ask-form" id="ask-form"><input id="ask-input" maxlength="1200" autocomplete="off" placeholder="Ask the ground"><button type="submit">Ask</button></form>
+    <p class="trust">A deterministic answer is preferred when the held body already carries it. Otherwise the bounded Worker interprets only the supplied floor and present footing.</p>
   </div>
 </section>
+
+<section class="workshop-crossing" aria-label="Leave something with the Workshop">
+  <div class="workshop-crossing-head">
+    <span>Workshop crossing</span>
+    <p>Notice something worth handing across? Leave a record from this exact footing. Receiving does not publish it.</p>
+    <button type="button" id="open-receive">Leave something</button>
+  </div>
+</section>
+<section class="receive-ground" id="receive-ground" hidden aria-labelledby="receive-title">
+  <div class="receive-head"><span>Return to the Workshop</span><div><h2 id="receive-title">Send something from where you are standing.</h2><p id="receive-footing">Page 53 · controlled working face</p></div></div>
+  <form class="receive-form" id="receive-form">
+    <label><span>Name · optional</span><input id="guest-name" name="contributor_name" type="text" maxlength="200" autocomplete="name" placeholder="If you want us to know you next time"></label>
+    <label><span>Came from · optional</span><input name="provenance" type="text" maxlength="1000" placeholder="archive, family papers, courthouse…"></label>
+    <label style="grid-column:1/-1"><span>One sentence · optional</span><textarea name="description" maxlength="1000" placeholder="What does this record show, or what did you notice?"></textarea></label>
+    <div class="receive-file"><input id="receive-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required><span class="receive-status">Original preserved privately · received ≠ published.</span></div>
+    <div class="receive-actions"><button type="submit" class="submit">Send to receiving</button><button type="button" id="close-receive">Close</button><span class="receive-status" id="receive-status" aria-live="polite"></span></div>
+    <div class="receive-covenant" aria-label="What happens to a return">
+      <div><strong>Received</strong><span>The original stays private.</span></div>
+      <div><strong>Reviewed</strong><span>A companion tests it against the ground.</span></div>
+      <div><strong>Held or adopted</strong><span>Uncertainty can remain uncertainty.</span></div>
+      <div><strong>Returned</strong><span>If the work changes, the road home stays visible.</span></div>
+    </div>
+    <p class="consequence-note"><strong>A return can matter without publishing itself.</strong> Receiving is an invitation into the work, not permission to strengthen the record.</p>
+  </form>
+</section>
+
 </div>
 
 <script src="../../config.js?v=64aae42b52b2"></script>
@@ -175,6 +191,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
     footingNow.innerHTML='<strong>Page 53</strong> · '+escapeHtml(hostLabel())+' · '+escapeHtml(current);
     returnButton.disabled=!trail.length;
     var rf=document.getElementById('receive-footing');if(rf)rf.textContent='Public Lands No. 1 · page 53 · '+hostLabel()+' · '+current;
+    var ac=document.getElementById('ask-context');if(ac)ac.innerHTML='<strong>Page 53</strong> · '+escapeHtml(hostLabel())+' · '+escapeHtml(current);
   }
   function snapshot(){var wrap=document.querySelector('.trans-wrap');return {view:current,row:selectedRow,host:selectedHost,scrollY:window.scrollY,tableY:wrap?wrap.scrollTop:0}}
   function show(v,opts){
@@ -304,6 +321,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
   document.querySelector('[data-zoom-reset]').onclick=function(){setZoom(1)};
 
   var form=document.getElementById('ask-form'),input=document.getElementById('ask-input'),log=document.getElementById('ask-log');
+  document.querySelectorAll('[data-ask-starter]').forEach(function(button){button.addEventListener('click',function(){input.value=button.dataset.askStarter||'';input.focus()})});
   function add(text,kind){var p=document.createElement('p');p.className=kind;p.textContent=text;log.appendChild(p)}
   function localAnswer(q){
     var s=q.toLowerCase();
