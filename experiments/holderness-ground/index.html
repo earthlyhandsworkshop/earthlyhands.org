@@ -35,7 +35,7 @@ h1{font-size:clamp(2.2rem,6vw,5.2rem);font-weight:400;line-height:.94;margin:.45
 .tools{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2.4rem}
 .tool{background:transparent;border:1px solid rgba(25,24,20,.48);padding:.62rem .8rem;cursor:pointer}
 .tool:hover,.tool:focus{background:var(--soft);outline:2px solid transparent}
-.tool[disabled]{opacity:.38;cursor:not-allowed;border-style:dashed}
+.tool[disabled],.tool[aria-disabled="true"]{opacity:.38;cursor:not-allowed;border-style:dashed}
 .no-road{font:12px/1.45 system-ui,sans-serif;margin-top:.7rem;opacity:.56;max-width:35rem}
 .panel{max-width:var(--measure);margin:2rem 0 0 clamp(0rem,8vw,7rem);padding:1.1rem 1rem 1.2rem;border-left:1px solid var(--line);background:rgba(233,225,210,.42)}
 .panel[hidden]{display:none}
@@ -101,7 +101,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
       <button class="tool" type="button" data-panel="person">Look toward Holderness</button>
       <button class="tool" type="button" data-panel="source">Go down to the source state</button>
       <button class="tool" type="button" data-panel="open-edge">Stand at the unjoined edge</button>
-      <button class="tool" type="button" disabled aria-describedby="no-road-note">Follow Holderness to later land records</button>
+      <button class="tool refused-road" type="button" aria-disabled="true" aria-describedby="no-road-note">Follow Holderness to later land records</button>
     </div>
     <p class="no-road" id="no-road-note">No road yet. Later occurrences under the same name-form are held separately; this ground does not inherit identity, biography, or travel between them.</p>
 
@@ -232,9 +232,14 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     });
   });
 
-  const refusedRoad = document.querySelector('.tool[disabled]');
+  const refusedRoad = document.querySelector('.refused-road');
   if(refusedRoad){
-    refusedRoad.addEventListener('pointerdown', () => emitGroundEvent('refused_road', {target:'later-holderness-land-records'}));
+    refusedRoad.addEventListener('click', () => {
+      emitGroundEvent('refused_road', {target:'later-holderness-land-records'});
+      const note = document.getElementById('no-road-note');
+      note.textContent = 'No road yet. Later occurrences under the same name-form are held separately; this ground does not inherit identity, biography, or travel between them.';
+      note.setAttribute('role','status');
+    });
   }
 
   form.addEventListener('submit', e => {
