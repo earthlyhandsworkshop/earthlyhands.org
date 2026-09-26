@@ -173,6 +173,45 @@ function cleanPlace(value) {
     .slice(0, MAX_PLACE_LENGTH);
 }
 
+const LISTEN_EVENTS = new Set([
+  "ARRIVED",
+  "REACHED",
+  "OPENED_MAP",
+  "OPENED_PEOPLE",
+  "OPENED_SOURCES",
+  "OPENED_JACKET",
+  "ASKED_GROUND",
+  "RETURNED",
+  "FRESH_STARTED",
+  "STOPPED"
+]);
+
+function cleanListenValue(value, max = 160) {
+  return String(value || "").trim().slice(0, max);
+}
+
+async function ensureListeningTable(db) {
+  await db.prepare(
+    "CREATE TABLE IF NOT EXISTS public_listening_events (" +
+    "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+    "occurred_at TEXT NOT NULL," +
+    "visit_id TEXT NOT NULL," +
+    "event TEXT NOT NULL," +
+    "path TEXT NOT NULL," +
+    "ground TEXT," +
+    "instrument TEXT," +
+    "aperture TEXT," +
+    "device_class TEXT" +
+    ")"
+  ).run();
+  await db.prepare(
+    "CREATE INDEX IF NOT EXISTS idx_public_listening_time ON public_listening_events(occurred_at)"
+  ).run();
+  await db.prepare(
+    "CREATE INDEX IF NOT EXISTS idx_public_listening_visit ON public_listening_events(visit_id)"
+  ).run();
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -191,6 +230,78 @@ export default {
     }
 
     const origin = allowedOrigin(request, env);
+
+    if (request.method === "OPTIONS" && (url.pathname === "/listen" || url.pathname === "/listening-summary")) {
+      if (!origin) return new Response(null, { status: 403, headers: workerHeaders() });
+      return new Response(null, { status: 204, headers: { ...corsHeaders(origin), ...workerHeaders() } });
+    }
+
+    if (request.method === "POST" && url.pathname === "/listen") {
+      if (!origin) return json({ error: "This listening door is not open from that origin.", code: "origin_not_allowed", request_id: requestId }, 403);
+      if (!env.RECEIVING_DB) return json({ error: "Public Listening is not configured.", code: "listening_not_configured", request_id: requestId }, 503, corsHeaders(origin));
+
+      let body;
+      try { body = await request.json(); }
+      catch { return json({ error: "The visit event could not be read.", code: "invalid_json", request_id: requestId }, 400, corsHeaders(origin)); }
+
+      const event = cleanListenValue(body?.event, 40).toUpperCase();
+      const visitId = cleanListenValue(body?.visit_id, 80);
+      const path = cleanListenValue(body?.path, 240);
+      const ground = cleanListenValue(body?.ground, 120);
+      const instrument = cleanListenValue(body?.instrument, 80);
+      const aperture = cleanListenValue(body?.aperture, 120);
+      const deviceClass = cleanListenValue(body?.device_class, 30);
+
+      if (!LISTEN_EVENTS.has(event)) return json({ error: "Unknown visit event.", code: "event_not_allowed", request_id: requestId }, 400, corsHeaders(origin));
+      if (!visitId || !path) return json({ error: "Visit and path are required.", code: "visit_event_incomplete", request_id: requestId }, 400, corsHeaders(origin));
+
+      try {
+        await ensureListeningTable(env.RECEIVING_DB);
+        await env.RECEIVING_DB.prepare(
+          "INSERT INTO public_listening_events (occurred_at,visit_id,event,path,ground,instrument,aperture,device_class) VALUES (?,?,?,?,?,?,?,?)"
+        ).bind(new Date().toISOString(), visitId, event, path, ground, instrument, aperture, deviceClass).run();
+      } catch (error) {
+        console.error("Public Listening failed", requestId, error);
+        return json({ error: "Public Listening could not preserve this visit event.", code: "listening_failed", request_id: requestId }, 500, corsHeaders(origin));
+      }
+
+      return json({ ok: true }, 201, corsHeaders(origin));
+    }
+
+    if (request.method === "GET" && url.pathname === "/listening-summary") {
+      if (!origin) return json({ error: "This summary is not open from that origin.", code: "origin_not_allowed", request_id: requestId }, 403);
+      if (!env.RECEIVING_DB) return json({ error: "Public Listening is not configured.", code: "listening_not_configured", request_id: requestId }, 503, corsHeaders(origin));
+
+      try {
+        await ensureListeningTable(env.RECEIVING_DB);
+        const windowHours = Math.max(1, Math.min(168, Number(url.searchParams.get("hours") || 24)));
+        const since = new Date(Date.now() - windowHours * 3600 * 1000).toISOString();
+
+        const totals = await env.RECEIVING_DB.prepare(
+          "SELECT COUNT(*) AS events, COUNT(DISTINCT visit_id) AS visits FROM public_listening_events WHERE occurred_at >= ?"
+        ).bind(since).first();
+
+        const byEvent = await env.RECEIVING_DB.prepare(
+          "SELECT event, COUNT(*) AS count FROM public_listening_events WHERE occurred_at >= ? GROUP BY event ORDER BY count DESC, event ASC"
+        ).bind(since).all();
+
+        const byPath = await env.RECEIVING_DB.prepare(
+          "SELECT path, COUNT(DISTINCT visit_id) AS visits FROM public_listening_events WHERE occurred_at >= ? GROUP BY path ORDER BY visits DESC, path ASC LIMIT 20"
+        ).bind(since).all();
+
+        return json({
+          window_hours: windowHours,
+          since,
+          visits: Number(totals?.visits || 0),
+          events: Number(totals?.events || 0),
+          by_event: byEvent?.results || [],
+          by_path: byPath?.results || []
+        }, 200, corsHeaders(origin));
+      } catch (error) {
+        console.error("Public Listening summary failed", requestId, error);
+        return json({ error: "Public Listening summary is unavailable.", code: "listening_summary_failed", request_id: requestId }, 500, corsHeaders(origin));
+      }
+    }
 
     if (request.method === "OPTIONS" && url.pathname === "/receive") {
       if (!origin) return new Response(null, { status: 403, headers: workerHeaders() });
