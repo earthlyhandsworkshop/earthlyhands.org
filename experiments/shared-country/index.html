@@ -121,8 +121,12 @@
             <div class="experience-utility">
               <form class="ground-talk" id="talk-form" aria-label="Ask the ground">
                 <label class="sr-only" for="talk-input">Ask the ground</label>
-                <textarea id="talk-input" name="message" rows="1" maxlength="1000" autocomplete="off" enterkeyhint="send" placeholder="Ask the ground"></textarea>
-                <button class="sr-only" id="talk-send" type="submit">Go</button>
+                <div class="ground-input-row">
+                  <textarea id="talk-input" name="message" rows="1" maxlength="1000" autocomplete="off" enterkeyhint="send" placeholder="Ask the ground"></textarea>
+                  <button class="ground-send" id="talk-send" type="submit" aria-label="Send to the ground">Send</button>
+                </div>
+                <button class="ground-hint" id="ground-hint" type="button">Hint</button>
+                <p class="ground-hint-copy" id="ground-hint-copy" hidden></p>
               </form>
               <div class="ground-thread" id="ground-thread" aria-live="polite"></div>
             </div>
