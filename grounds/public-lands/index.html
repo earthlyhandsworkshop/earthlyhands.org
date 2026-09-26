@@ -9,6 +9,8 @@
 <style>
 :root{--night:#171711;--night2:#202018;--paper:#e9e1d2;--ink:#1f1e19;--muted:#9f9789;--rule:rgba(233,225,210,.24);--rust:#ad7654;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
 *{box-sizing:border-box}html{background:var(--night);color-scheme:dark;-webkit-text-size-adjust:100%}body{margin:0;min-width:19rem;background:radial-gradient(ellipse at 50% 28%,#29271d 0,#1c1c15 40%,#15150f 100%);color:#eee7da;font:1rem/1.45 var(--serif);min-height:100svh}button,input{font:inherit}a{color:inherit}.shell{width:min(92rem,calc(100% - 1rem));margin:auto;min-height:100svh;display:grid;grid-template-rows:auto auto 1fr auto}.top{min-height:3rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--rule);font:600 .58rem/1 var(--mono);letter-spacing:.09em;text-transform:uppercase}.top a{text-decoration:none}.top span{color:var(--muted)}.bearing{padding:.7rem 0 .55rem;display:flex;align-items:end;justify-content:space-between;gap:1rem}.bearing h1{margin:0;font:400 clamp(2.7rem,6vw,6.5rem)/.82 var(--serif);letter-spacing:-.06em}.bearing p{margin:0 0 .2rem;max-width:34rem;color:var(--muted);font-size:.86rem}.ground{position:relative;min-height:68svh;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);overflow:hidden}.field-note{position:absolute;z-index:3;max-width:18rem;color:var(--muted);font:.54rem/1.45 var(--mono);letter-spacing:.02em}.field-note strong{display:block;margin-bottom:.18rem;color:#eee7da;font:600 .54rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}.note-west{left:1rem;top:7%}.note-east{right:1rem;top:9%;text-align:right}.table-zone{position:absolute;left:50%;top:51%;transform:translate(-50%,-50%);width:min(54rem,76vw);perspective:1200px}.table{position:relative;padding:1rem 1rem 1.3rem;background:linear-gradient(180deg,#4a3929,#30241a);border:1px solid rgba(255,255,255,.14);box-shadow:0 2rem 6rem rgba(0,0,0,.5);transform:rotateX(3deg)}.sheet-link{display:block;position:relative;background:var(--paper);padding:.45rem;box-shadow:0 .8rem 2rem rgba(0,0,0,.28);text-decoration:none;transform:rotate(-.25deg)}.sheet-link img{display:block;width:100%;height:auto;filter:grayscale(1) contrast(1.02)}.sheet-caption{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.5rem .1rem .05rem;color:var(--ink);font:.52rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}.sheet-caption span:last-child{color:#675e52}.glint{position:absolute;z-index:5;width:min(17rem,31vw);padding:.65rem .72rem;background:rgba(23,23,17,.93);border:1px solid var(--rule);box-shadow:0 .7rem 2.2rem rgba(0,0,0,.3);opacity:0;pointer-events:none;transform:translateY(7px);transition:.22s ease}.glint.is-visible{opacity:1;pointer-events:auto;transform:none}.glint .kind{display:block;color:var(--rust);font:600 .47rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase}.glint h2{margin:.2rem 0 .25rem;font:400 1.18rem/1.05 var(--serif)}.glint p{margin:.2rem 0;color:#c6beaf;font-size:.76rem}.glint a,.glint button{display:inline-block;margin-top:.38rem;border:0;background:transparent;padding:0;color:#eee7da;text-decoration:underline;text-underline-offset:.18em;cursor:pointer;font:.55rem/1.2 var(--mono)}#glint-brace{left:2%;bottom:10%}#glint-yates{right:2%;bottom:9%}#glint-account{right:4%;top:28%}.thread{position:absolute;height:1px;background:rgba(173,118,84,.48);transform-origin:left center;opacity:0;transition:.2s ease}.thread.is-visible{opacity:1}.ask-dock{position:absolute;z-index:10;left:50%;bottom:1.15rem;transform:translateX(-50%);width:min(43rem,calc(100% - 1rem));background:rgba(23,23,17,.96);border:1px solid var(--rule)}.ask-label{display:flex;justify-content:space-between;gap:1rem;padding:.42rem .55rem;border-bottom:1px solid var(--rule);color:var(--muted);font:.48rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}.ask-form{display:grid;grid-template-columns:1fr auto}.ask-form input{min-width:0;border:0;background:transparent;color:#eee7da;padding:.7rem .72rem;outline:none}.ask-form button{border:0;border-left:1px solid var(--rule);background:#eee7da;color:#211f19;padding:.7rem .9rem;cursor:pointer}.answer{min-height:1.3rem;padding:.4rem .55rem 0;color:#c7bfb1;font:.68rem/1.35 var(--serif)}.answer:empty{display:none}.lower{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.65rem 0;color:var(--muted);font:.53rem/1.3 var(--mono)}.lower a{text-underline-offset:.18em}.quiet{font-style:italic}.return-door{display:none}.return-door.is-visible{display:inline}.tiny{opacity:.72}
+.presence-door{border:0;background:transparent;color:var(--muted);padding:0;text-decoration:underline;text-underline-offset:.18em;cursor:pointer;font:inherit}.presence-door[hidden]{display:none}
+.presence-card{position:absolute;z-index:14;left:1rem;bottom:1rem;width:min(20rem,calc(100% - 2rem));background:rgba(23,23,17,.97);border:1px solid var(--rule);box-shadow:0 1rem 3rem rgba(0,0,0,.35);padding:.7rem}.presence-card[hidden]{display:none}.presence-card h2{margin:0 0 .2rem;font:400 1.15rem/1 var(--serif)}.presence-card p{margin:.25rem 0;color:#c6beaf;font-size:.73rem}.presence-card label{display:grid;gap:.18rem;margin-top:.45rem;color:var(--muted);font:.48rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}.presence-card input[type="text"]{width:100%;border:1px solid var(--rule);background:transparent;color:#eee7da;padding:.48rem}.presence-name-share{display:flex!important;grid-template-columns:none!important;align-items:center;gap:.4rem;text-transform:none!important;letter-spacing:0!important;font-size:.58rem!important}.presence-actions{display:flex;gap:.45rem;margin-top:.55rem}.presence-actions button{border:1px solid var(--rule);background:transparent;color:#eee7da;padding:.4rem .55rem;cursor:pointer;font:.52rem/1 var(--mono)}.presence-actions .primary{background:#eee7da;color:#211f19}.presence-list{margin-top:.55rem;padding-top:.45rem;border-top:1px solid var(--rule);display:grid;gap:.28rem;color:#d1c9bb;font:.6rem/1.3 var(--mono)}.presence-list strong{color:#eee7da;font-weight:600}.presence-status{color:var(--muted);font:.52rem/1.3 var(--mono);margin-top:.4rem}
 @media(max-width:52rem){.bearing{display:block}.bearing p{margin-top:.55rem}.ground{min-height:74svh}.field-note{display:none}.table-zone{width:92vw;top:44%}.glint{width:min(16rem,72vw)}#glint-brace{left:.6rem;bottom:7.5rem}#glint-yates{right:.6rem;bottom:7.5rem}#glint-account{right:.6rem;top:.8rem}.ask-dock{bottom:.5rem}.sheet-caption{font-size:.44rem}.lower{align-items:flex-start;flex-direction:column}}
 button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
 </style>
@@ -54,6 +56,16 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
     <a href="/experiments/public-lands-page-53/#account">Inspect the held account</a>
   </aside>
 
+  <section class="presence-card" id="presence-card" hidden aria-labelledby="presence-title">
+    <h2 id="presence-title">Shared ground</h2>
+    <p>Be present here without sharing your pockets. Ask history, uploads, and visit history stay separate.</p>
+    <label>Name · optional<input id="presence-name" type="text" maxlength="80" autocomplete="name" placeholder="Your name"></label>
+    <label class="presence-name-share"><input id="presence-share-name" type="checkbox"> show this name to people here</label>
+    <div class="presence-actions"><button type="button" class="primary" id="presence-join">Be present</button><button type="button" id="presence-close">Close</button></div>
+    <div class="presence-status" id="presence-status"></div>
+    <div class="presence-list" id="presence-list"></div>
+  </section>
+
   <form class="ask-dock" id="ask-form">
     <div class="ask-label"><span>Ask the Ground</span><span id="ask-footing">Public Lands · working table</span></div>
     <div class="ask-form"><input id="ask-input" autocomplete="off" maxlength="900" placeholder="What is strange here?"><button type="submit">Ask</button></div>
@@ -63,6 +75,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
 <footer class="lower">
   <span>Glean · Public Lands ↔ Public Ground</span>
   <span class="quiet">The ground does not open farther than the source carries.</span>
+  <button type="button" class="presence-door" id="presence-open" hidden>Shared ground</button>
   <a class="return-door" id="return-door" href="/experiments/public-lands-page-53/">Return to the lit table</a>
 </footer>
 </div>
@@ -78,6 +91,26 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
   const askFooting=document.getElementById("ask-footing");
   const returnDoor=document.getElementById("return-door");
   const visible=new Set();
+  const presenceOpen=document.getElementById("presence-open");
+  const presenceCard=document.getElementById("presence-card");
+  const presenceName=document.getElementById("presence-name");
+  const presenceShareName=document.getElementById("presence-share-name");
+  const presenceStatus=document.getElementById("presence-status");
+  const presenceList=document.getElementById("presence-list");
+  const presenceEndpoint=String(window.EARTHLY_HANDS_API_URL||"").replace(/\/speak(?:\?.*)?$/,"/presence");
+  const presenceKey="earthly-hands-public-presence-id-v1";
+  let presenceId="",presenceActive=false,presenceTimer=0,presencePoll=0;
+
+  try{
+    presenceId=sessionStorage.getItem(presenceKey)||"";
+    if(!presenceId){
+      presenceId=(crypto&&crypto.randomUUID)?crypto.randomUUID():("presence-"+Date.now()+"-"+Math.random().toString(16).slice(2));
+      sessionStorage.setItem(presenceKey,presenceId);
+    }
+    presenceName.value=localStorage.getItem("earthly-hands-guest-name-v1")||"";
+  }catch(_){
+    presenceId="presence-"+Date.now()+"-"+Math.random().toString(16).slice(2);
+  }
 
   function record(event,aperture,instrument="ground"){
     try{window.EarthlyHandsListening?.record(event,{ground:groundId,instrument,aperture})}catch(_){}
@@ -134,9 +167,76 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
     }catch(_){say("The ground does not answer farther than what is held here.")}
   });
 
+  async function readPresence(){
+    if(!presenceEndpoint)return;
+    try{
+      const url=presenceEndpoint+"?ground="+encodeURIComponent(groundId)+"&self="+encodeURIComponent(presenceId);
+      const r=await fetch(url,{cache:"no-store"});
+      if(!r.ok)throw new Error("closed");
+      const body=await r.json();
+      presenceOpen.hidden=false;
+      const people=Array.isArray(body.people)?body.people:[];
+      presenceList.replaceChildren();
+      const head=document.createElement("div");
+      head.innerHTML="<strong>"+people.length+"</strong> other"+(people.length===1?"":"s")+" presently here";
+      presenceList.appendChild(head);
+      people.forEach(person=>{
+        const row=document.createElement("div");
+        const name=person.name?person.name:"another visitor";
+        row.textContent=name+" · "+(person.footing||"Public Lands");
+        presenceList.appendChild(row);
+      });
+    }catch(_){
+      if(!presenceActive)presenceOpen.hidden=true;
+    }
+  }
+
+  async function writePresence(){
+    if(!presenceEndpoint||!presenceActive)return;
+    const body={
+      presence_id:presenceId,
+      ground:groundId,
+      footing:"working table",
+      display_name:presenceName.value.trim(),
+      share_name:presenceShareName.checked
+    };
+    try{
+      const r=await fetch(presenceEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+      if(!r.ok)throw new Error("closed");
+      presenceStatus.textContent="You are present here. Your pockets remain separate.";
+      await readPresence();
+    }catch(_){
+      presenceStatus.textContent="Shared presence is not open on this ground yet.";
+      presenceActive=false;
+      clearInterval(presenceTimer);clearInterval(presencePoll);
+    }
+  }
+
+  async function leavePresence(){
+    if(!presenceEndpoint||!presenceActive)return;
+    presenceActive=false;clearInterval(presenceTimer);clearInterval(presencePoll);
+    try{await fetch(presenceEndpoint,{method:"DELETE",headers:{"Content-Type":"application/json"},body:JSON.stringify({presence_id:presenceId}),keepalive:true})}catch(_){}
+    presenceStatus.textContent="You left shared presence. Your ground remains.";
+  }
+
+  presenceOpen.addEventListener("click",()=>{presenceCard.hidden=false;readPresence()});
+  document.getElementById("presence-close").addEventListener("click",()=>{presenceCard.hidden=true});
+  document.getElementById("presence-join").addEventListener("click",async()=>{
+    presenceActive=true;
+    if(presenceName.value.trim()){try{localStorage.setItem("earthly-hands-guest-name-v1",presenceName.value.trim())}catch(_){}}
+    await writePresence();
+    clearInterval(presenceTimer);clearInterval(presencePoll);
+    if(presenceActive){
+      presenceTimer=setInterval(writePresence,25000);
+      presencePoll=setInterval(readPresence,12000);
+    }
+  });
+  window.addEventListener("pagehide",()=>{if(presenceActive)leavePresence()},{once:true});
+
   document.getElementById("page53").addEventListener("click",()=>record("REACHED","page-53-working-table","source"));
   footing.textContent="Public Lands · working table";
   askFooting.textContent=footing.textContent;
+  readPresence();
 })();
 </script>
 </body>
