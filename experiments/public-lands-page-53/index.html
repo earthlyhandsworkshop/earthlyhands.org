@@ -15,7 +15,7 @@
 .ground-strip button[disabled]{opacity:.35;cursor:default}.ground-strip .share-presence[hidden]{display:none}
 .workshop-crossing{margin-top:1.2rem;border:1px solid var(--strong);background:rgba(255,255,255,.08)}.workshop-crossing-head{display:grid;grid-template-columns:11rem minmax(0,1fr) auto;gap:1rem;align-items:center;padding:.7rem .8rem}.workshop-crossing-head span{color:var(--muted);font:600 .48rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}.workshop-crossing-head p{margin:0;color:var(--muted);font-size:.78rem}.workshop-crossing-head button{border:1px solid var(--strong);background:transparent;padding:.48rem .7rem;cursor:pointer;font:600 .5rem/1 var(--mono);letter-spacing:.05em;text-transform:uppercase}
 .ask-context{margin:.45rem 0 .7rem;padding:.48rem .58rem;border-left:2px solid var(--rust);background:rgba(255,255,255,.12);color:var(--muted);font:.58rem/1.35 var(--mono)}.ask-context strong{color:var(--ink);font-weight:600}.ask-starters{display:flex;flex-wrap:wrap;gap:.35rem;margin:.55rem 0 .7rem}.ask-starters button{border:1px solid var(--rule);background:transparent;padding:.42rem .55rem;cursor:pointer;color:var(--muted);font:.52rem/1.2 var(--mono)}.ask-starters button:hover{border-color:var(--strong);color:var(--ink)}.ask-log:empty{display:none}.ask-reach{margin:.55rem 0;padding:.65rem .7rem;border:1px solid var(--strong);background:rgba(255,255,255,.12)}.ask-reach strong{display:block;font:400 1.18rem/1.1 var(--serif)}.ask-reach .kind{display:block;margin:.16rem 0 .35rem;color:var(--rust);font:600 .48rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}.ask-reach p{margin:.28rem 0;border:0;padding:0}.ask-reach .reach-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.55rem}.ask-reach button,.ask-reach a{border:0;background:transparent;padding:0;color:var(--ink);text-decoration:underline;text-underline-offset:.18em;cursor:pointer;font:.56rem/1.2 var(--mono)}
-.presence-ground{border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong);background:rgba(255,255,255,.08);padding:.65rem .75rem}.presence-ground[hidden]{display:none}.presence-ground h2{margin:.05rem 0 .3rem;font:400 1.25rem/1 var(--serif)}.presence-ground p{margin:.25rem 0;color:var(--muted);font-size:.75rem}.presence-controls{display:grid;grid-template-columns:minmax(10rem,1fr) auto auto;gap:.45rem;align-items:end;margin-top:.5rem}.presence-controls label{display:grid;gap:.18rem;color:var(--muted);font:.48rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}.presence-controls input[type="text"]{border:1px solid var(--rule);background:transparent;padding:.48rem}.presence-controls button{border:1px solid var(--strong);background:transparent;padding:.48rem .62rem;cursor:pointer;font:.5rem/1 var(--mono);text-transform:uppercase}.presence-list{display:grid;gap:.22rem;margin-top:.5rem;padding-top:.45rem;border-top:1px solid var(--rule);color:var(--muted);font:.56rem/1.3 var(--mono)}.presence-list strong{color:var(--ink)}.presence-check{display:flex!important;align-items:center;gap:.35rem!important;text-transform:none!important;letter-spacing:0!important}
+.presence-ground{border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong);background:rgba(255,255,255,.08);padding:.65rem .75rem}.presence-ground[hidden]{display:none}.presence-ground h2{margin:.05rem 0 .3rem;font:400 1.25rem/1 var(--serif)}.presence-ground p{margin:.25rem 0;color:var(--muted);font-size:.75rem}.presence-controls{display:grid;grid-template-columns:minmax(10rem,1fr) auto auto auto;gap:.45rem;align-items:end;margin-top:.5rem}.presence-controls label{display:grid;gap:.18rem;color:var(--muted);font:.48rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}.presence-controls input[type="text"]{border:1px solid var(--rule);background:transparent;padding:.48rem}.presence-controls button{border:1px solid var(--strong);background:transparent;padding:.48rem .62rem;cursor:pointer;font:.5rem/1 var(--mono);text-transform:uppercase}.presence-list{display:grid;gap:.3rem;margin-top:.5rem;padding-top:.45rem;border-top:1px solid var(--rule);color:var(--muted);font:.56rem/1.3 var(--mono)}.presence-list strong{color:var(--ink)}.presence-person{display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap}.presence-person button{border:0;background:transparent;padding:0;color:var(--ink);text-decoration:underline;text-underline-offset:.18em;cursor:pointer;font:inherit}.presence-check{display:flex!important;align-items:center;gap:.35rem!important;text-transform:none!important;letter-spacing:0!important}
 tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,58,.12)}tbody tr:focus{outline:2px solid var(--rust);outline-offset:-2px}
 .receive-ground{border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong);background:var(--paper2);padding:.8rem}
 .receive-ground[hidden]{display:none}.receive-head{display:grid;grid-template-columns:11rem minmax(0,1fr);gap:1rem;border-bottom:1px solid var(--rule);padding-bottom:.65rem;margin-bottom:.65rem}
@@ -74,6 +74,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
     <label>Name · optional<input id="presence-name" type="text" maxlength="80" autocomplete="name" placeholder="Your name"></label>
     <label class="presence-check"><input id="presence-share-name" type="checkbox"> show name</label>
     <button type="button" id="presence-join">Be present</button>
+    <button type="button" id="presence-point">Point here</button>
   </div>
   <p id="presence-status"></p>
   <div class="presence-list" id="presence-list"></div>
@@ -180,9 +181,10 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
 <script src="../../public-wayfinding.js?v=1"></script>
 <script>
 (function(){
-  var data=null, conversation=[], current='source', selectedHost='historical face', selectedRow=null, trail=[];
+  var data=null, conversation=[], current='source', selectedHost='historical face', selectedRow=null, selectedRouteId=null, trail=[];
   var presenceGround=document.getElementById('presence-ground'),presenceOpen=document.getElementById('open-presence'),presenceName=document.getElementById('presence-name'),presenceShareName=document.getElementById('presence-share-name'),presenceStatus=document.getElementById('presence-status'),presenceList=document.getElementById('presence-list');
   var presenceEndpoint=String(window.EARTHLY_HANDS_API_URL||'').replace(/\/speak(?:\?.*)?$/,'/presence'),presenceKey='earthly-hands-public-presence-id-v1',presenceId='',presenceActive=false,presenceTimer=0,presencePoll=0;
+  var activePoint=null;
   try{presenceId=sessionStorage.getItem(presenceKey)||'';if(!presenceId){presenceId=(crypto&&crypto.randomUUID)?crypto.randomUUID():('presence-'+Date.now()+'-'+Math.random().toString(16).slice(2));sessionStorage.setItem(presenceKey,presenceId)}presenceName.value=localStorage.getItem('earthly-hands-guest-name-v1')||''}catch(_){presenceId='presence-'+Date.now()+'-'+Math.random().toString(16).slice(2)}
   var tabs=[].slice.call(document.querySelectorAll('[data-view]'));
   var panels=[].slice.call(document.querySelectorAll('[data-panel]'));
@@ -271,7 +273,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
     bindRoutes();
     tbody.querySelectorAll('tr').forEach(function(tr){
       function selectRow(){
-        selectedRow=Number(tr.dataset.row);selectedHost='row '+selectedRow;
+        selectedRow=Number(tr.dataset.row);selectedRouteId=null;selectedHost='row '+selectedRow;
         tbody.querySelectorAll('tr').forEach(function(x){x.setAttribute('aria-current',String(x===tr))});
         updateFooting();
         try{window.EarthlyHandsListening?.record('REACHED',{ground:'public-lands-no-1-page-53',instrument:'transcription',aperture:'row-'+selectedRow});}catch(_){}
@@ -287,6 +289,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
   function openRoute(id){
     if(!data||!Array.isArray(data.routes))return;
     var route=data.routes.find(function(x){return x.id===id});if(!route)return;
+    selectedRouteId=id;
     selectedHost=route.host||route.label||id;
     routeKind.textContent=route.kind||'relation';
     routeTitle.textContent=route.label||id;
@@ -300,7 +303,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
     try{window.EarthlyHandsListening?.record('REACHED',{ground:'public-lands-no-1-page-53',instrument:'transcription',aperture:id});}catch(_){}
   }
   function bindRoutes(){document.querySelectorAll('[data-route]').forEach(function(b){b.onclick=function(){openRoute(b.dataset.route)}})}
-  document.getElementById('route-close').onclick=function(){slip.hidden=true;selectedHost=selectedRow?('row '+selectedRow):'';updateFooting()};
+  document.getElementById('route-close').onclick=function(){slip.hidden=true;selectedRouteId=null;selectedHost=selectedRow?('row '+selectedRow):'';updateFooting()};
 
   fetch('../../data/public-lands/page-53.public.v0.json',{cache:'no-store'})
     .then(function(r){return r.ok?r.json():Promise.reject(new Error('data unavailable'))})
@@ -383,6 +386,50 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
     finally{button.disabled=false}
   });
 
+  function pointForCurrent(){
+    if(selectedRouteId)return {id:selectedRouteId,label:routeTitle&&routeTitle.textContent?routeTitle.textContent:hostLabel()};
+    if(selectedRow)return {id:'row-'+selectedRow,label:'row '+selectedRow};
+    return {id:'view-'+current,label:hostLabel()+' · '+current};
+  }
+  function encodeFooting(){
+    var base=hostLabel()+' · '+current;
+    return activePoint?base+' [[point:'+activePoint.id+']]':base;
+  }
+  function parseSharedFooting(value){
+    var raw=String(value||'');
+    var m=raw.match(/\s*\[\[point:([^\]]+)\]\]\s*$/);
+    return {label:raw.replace(/\s*\[\[point:[^\]]+\]\]\s*$/,'').trim(),point:m?m[1]:''};
+  }
+  function followPoint(id){
+    if(!id)return;
+    if(/^PL53-/.test(id)){
+      show('transcription');
+      requestAnimationFrame(function(){openRoute(id)});
+      return;
+    }
+    if(/^row-\d+$/.test(id)){
+      var n=Number(id.split('-')[1]);
+      show('transcription');
+      selectedRow=n;selectedRouteId=null;selectedHost='row '+n;
+      document.querySelectorAll('#transcription-body tr').forEach(function(tr){tr.setAttribute('aria-current',String(Number(tr.dataset.row)===n))});
+      var row=document.querySelector('#transcription-body tr[data-row="'+n+'"]');
+      if(row)row.scrollIntoView({behavior:'smooth',block:'center'});
+      updateFooting();
+      return;
+    }
+    if(/^view-/.test(id)){
+      var view=id.slice(5);
+      if(['source','transcription','account','jacket','ask'].includes(view))show(view);
+    }
+  }
+  function pointHere(){
+    if(!presenceActive){presenceStatus.textContent='Be present first, then you can point to what you are looking at.';return}
+    activePoint=pointForCurrent();
+    presenceStatus.textContent='Pointing to '+activePoint.label+'.';
+    try{window.EarthlyHandsListening?.record('REACHED',{ground:'public-lands-no-1-page-53',instrument:'point',aperture:activePoint.id})}catch(_){}
+    writePresence();
+  }
+
   async function readPresence(){
     if(!presenceEndpoint)return;
     try{
@@ -391,18 +438,30 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
       var body=await r.json(),people=Array.isArray(body.people)?body.people:[];
       presenceOpen.hidden=false;presenceList.replaceChildren();
       var head=document.createElement('div');head.innerHTML='<strong>'+people.length+'</strong> other'+(people.length===1?'':'s')+' over this document';presenceList.appendChild(head);
-      people.forEach(function(person){var row=document.createElement('div');row.textContent=(person.name||'another visitor')+' · '+(person.footing||'page 53');presenceList.appendChild(row)});
+      people.forEach(function(person){
+        var parsed=parseSharedFooting(person.footing||'page 53');
+        var row=document.createElement('div');row.className='presence-person';
+        var text=document.createElement('span');text.textContent=(person.name||'another visitor')+' · '+(parsed.label||'page 53');
+        row.appendChild(text);
+        if(parsed.point){
+          var follow=document.createElement('button');follow.type='button';follow.textContent='follow point';
+          follow.addEventListener('click',function(){followPoint(parsed.point)});
+          row.appendChild(follow);
+        }
+        presenceList.appendChild(row)
+      });
     }catch(_){if(!presenceActive)presenceOpen.hidden=true}
   }
   async function writePresence(){
     if(!presenceEndpoint||!presenceActive)return;
     try{
-      var r=await fetch(presenceEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({presence_id:presenceId,ground:'public-lands-page-53',footing:hostLabel()+' · '+current,display_name:presenceName.value.trim(),share_name:presenceShareName.checked})});
+      var r=await fetch(presenceEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({presence_id:presenceId,ground:'public-lands-page-53',footing:encodeFooting(),display_name:presenceName.value.trim(),share_name:presenceShareName.checked})});
       if(!r.ok)throw new Error('closed');
       presenceStatus.textContent='You are present here. Your pockets remain separate.';await readPresence();
     }catch(_){presenceStatus.textContent='Shared presence is not open on this ground yet.';presenceActive=false;clearInterval(presenceTimer);clearInterval(presencePoll)}
   }
   presenceOpen.addEventListener('click',function(){presenceGround.hidden=!presenceGround.hidden;if(!presenceGround.hidden)readPresence()});
+  document.getElementById('presence-point').addEventListener('click',pointHere);
   document.getElementById('presence-join').addEventListener('click',async function(){
     presenceActive=true;
     if(presenceName.value.trim()){try{localStorage.setItem('earthly-hands-guest-name-v1',presenceName.value.trim())}catch(_){}}
