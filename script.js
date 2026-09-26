@@ -728,6 +728,15 @@
     if (next === "people") buildCampPeople();
     if (next === "sources") buildCampSources();
     if (next === "jacket") buildGroundJacket();
+
+    if (next !== previous) {
+      const eventByView = { map:"OPENED_MAP", people:"OPENED_PEOPLE", sources:"OPENED_SOURCES", jacket:"OPENED_JACKET" };
+      if (eventByView[next]) {
+        listen(eventByView[next], { ground:heldGroundIdFor(currentId), instrument:next, aperture:currentId });
+      } else if (next === "ground" && previous !== "ground") {
+        listen("RETURNED", { ground:heldGroundIdFor(currentId), instrument:"ground", aperture:currentId });
+      }
+    }
   }
 
   function svgEl(name, attrs = {}, text = "") {
@@ -1088,6 +1097,7 @@
 
   function startFreshThread() {
     conversation.splice(0, conversation.length);
+    listen("FRESH_STARTED", { ground:heldGroundIdFor(currentId), instrument:experienceShell?.dataset.view||"ground", aperture:currentId });
     if (groundThread) {
       const note = document.createElement("p");
       note.className = "fresh-thread-note";
@@ -1372,6 +1382,7 @@
     setLamp(id !== "threshold");
     currentId = id;
     remember(id);
+    listen("REACHED", { ground:heldGroundIdFor(id), instrument:"ground", aperture:id });
 
     if (sameHeldGround && fromId !== id) {
       setChangePhysics("attention", `${heldGroundNameFor(id)} · story continues here`);
@@ -1418,6 +1429,8 @@
   async function askGround(message) {
     const clean = String(message || "").trim().slice(0, 1000);
     if (!clean || asking) return;
+
+    listen("ASKED_GROUND", { ground:heldGroundIdFor(currentId), instrument:experienceShell?.dataset.view||"ground", aperture:currentId });
 
     const origin = currentId;
     const heldView = experienceShell?.dataset.view || "ground";
