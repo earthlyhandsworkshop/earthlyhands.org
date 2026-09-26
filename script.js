@@ -60,6 +60,10 @@
   const campSources = document.querySelector("#camp-sources");
   const campSourceList = document.querySelector(".camp-source-list");
   const campSourcesContext = document.querySelector("#camp-sources-context");
+  const campJacket = document.querySelector("#camp-jacket");
+  const campJacketBody = document.querySelector(".camp-jacket-body");
+  const campJacketTitle = document.querySelector("#camp-jacket-title");
+  const campJacketContext = document.querySelector("#camp-jacket-context");
   const viewModes = Array.from(document.querySelectorAll("[data-dawson-view]"));
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const steps = Array.from(document.querySelectorAll("[data-step]"));
@@ -112,6 +116,7 @@
     if (view === "map") return { kind:"instrument", text:`Map · what has become reachable from ${held}` };
     if (view === "people") return { kind:"instrument", text:`People · encountered through ${aperture}` };
     if (view === "sources") return { kind:"source", text:`Source descent · ${held} remains held` };
+    if (view === "jacket") return { kind:"instrument", text:`Jacket · available depth at ${held}` };
     return { kind:"still", text: held };
   }
 
@@ -152,7 +157,8 @@
         "earthly-hands-footing-v3",
         "earthly-hands-story-reach-v3",
         "earthly-hands-discovery-open-v3",
-        "earthly-hands-thought-given-v3"
+        "earthly-hands-thought-given-v3",
+        "earthly-hands-jacket-reach-v1"
       ].forEach((key) => window.localStorage.removeItem(key));
       window.sessionStorage.removeItem("earthly-hands-discovery-scene-v3");
     } catch (_) {
@@ -616,12 +622,38 @@
     return Math.max(furthestIndex, fullSequence.indexOf(currentId)) >= fullSequence.indexOf("blue-water");
   }
 
+  function jacketReachSet() {
+    try {
+      const parsed = JSON.parse(window.localStorage.getItem("earthly-hands-jacket-reach-v1") || "[]");
+      return new Set(Array.isArray(parsed) ? parsed : []);
+    } catch (_) {
+      return new Set();
+    }
+  }
+
+  function jacketIsEarned(id = currentId) {
+    return jacketReachSet().has(heldGroundIdFor(id));
+  }
+
+  function earnGroundJacket(id = currentId) {
+    const heldId = heldGroundIdFor(id);
+    const reach = jacketReachSet();
+    if (reach.has(heldId)) return;
+    reach.add(heldId);
+    try {
+      window.localStorage.setItem("earthly-hands-jacket-reach-v1", JSON.stringify(Array.from(reach)));
+    } catch (_) {}
+    syncDiscoveryChrome();
+  }
+
   function syncDiscoveryChrome() {
     const peopleButton = document.querySelector('[data-dawson-view="people"]');
     const mapButton = document.querySelector('[data-dawson-view="map"]');
+    const jacketButton = document.querySelector('[data-dawson-view="jacket"]');
 
     if (peopleButton) peopleButton.hidden = !discoveryOpen || encounteredPeopleCount() === 0;
     if (mapButton) mapButton.hidden = !discoveryOpen || !mapIsEarned();
+    if (jacketButton) jacketButton.hidden = !discoveryOpen || !jacketIsEarned();
 
     document.body.dataset.discovery = discoveryOpen ? "open" : "closed";
     document.body.dataset.thought = thresholdThoughtGiven ? "given" : "none";
@@ -652,7 +684,7 @@
   }
 
   function setDawsonView(view) {
-    const next = ["ground", "map", "people", "sources"].includes(view) ? view : "ground";
+    const next = ["ground", "map", "people", "sources", "jacket"].includes(view) ? view : "ground";
     const previous = experienceShell?.dataset.view || "ground";
     if (experienceShell) experienceShell.dataset.view = next;
 
@@ -670,22 +702,25 @@
 
       if (button.dataset.dawsonView === "ground") {
         const heldPlace = heldGroundNameFor(currentId);
-        button.textContent = next === "sources" ? `Return to ${heldPlace}` : "Ground";
+        const depthView = next === "sources" || next === "jacket";
+        button.textContent = depthView ? `Return to ${heldPlace}` : "Ground";
         button.setAttribute(
           "aria-label",
-          next === "sources" ? `Return to ${heldPlace} without moving the story` : "Ground"
+          depthView ? `Return to ${heldPlace} without moving the story` : "Ground"
         );
       }
     });
 
-    if (experienceMount) experienceMount.hidden = next === "map" || next === "people" || next === "sources";
+    if (experienceMount) experienceMount.hidden = next === "map" || next === "people" || next === "sources" || next === "jacket";
     if (dawsonIndex) dawsonIndex.hidden = next !== "map";
     if (campPeople) campPeople.hidden = next !== "people";
     if (campSources) campSources.hidden = next !== "sources";
+    if (campJacket) campJacket.hidden = next !== "jacket";
 
     if (next === "map") buildProseMap();
     if (next === "people") buildCampPeople();
     if (next === "sources") buildCampSources();
+    if (next === "jacket") buildGroundJacket();
   }
 
   function svgEl(name, attrs = {}, text = "") {
@@ -852,6 +887,7 @@
   function buildCampSources() {
     if (!campSourceList) return;
 
+    earnGroundJacket(currentId);
     const heldName = heldGroundNameFor(currentId);
     const apertureName = trailUi[currentId]?.name || currentId;
     if (campSourcesContext) {
@@ -938,6 +974,93 @@
     }
 
     campSourceList.replaceChildren(fragment);
+  }
+
+  function buildGroundJacket() {
+    if (!campJacketBody || !campJacketTitle) return;
+
+    const heldId = heldGroundIdFor(currentId);
+    const heldName = heldGroundNameFor(currentId);
+    const reachedIndex = Math.max(furthestIndex, fullSequence.indexOf(currentId));
+    const apertures = fullSequence
+      .slice(0, reachedIndex + 1)
+      .filter((sceneId) => heldGroundIdFor(sceneId) === heldId);
+
+    const sourceEntries = dawsonRetrieval.filter((entry) =>
+      Array.isArray(entry.scenes) && entry.scenes.some((sceneId) => apertures.includes(sceneId))
+    );
+
+    const carried = [];
+    apertures.forEach((sceneId) => {
+      (sourceFloor[sceneId] || []).forEach((line) => {
+        if (!carried.includes(line)) carried.push(line);
+      });
+    });
+
+    const brakes = [];
+    sourceEntries.forEach((entry) => {
+      (entry.brakes || []).forEach((line) => {
+        if (!brakes.includes(line)) brakes.push(line);
+      });
+    });
+
+    const people = [];
+    apertures.forEach((sceneId) => {
+      (peopleByGround[sceneId] || []).forEach((person) => {
+        const display = personProfiles[person.name]?.display || person.name;
+        if (!people.includes(display)) people.push(display);
+      });
+    });
+
+    campJacketTitle.textContent = heldName;
+    if (campJacketContext) {
+      campJacketContext.textContent = `Present aperture · ${trailUi[currentId]?.name || currentId}. Prior depth remains available without being forced open.`;
+    }
+
+    const fragment = document.createDocumentFragment();
+
+    const intro = document.createElement("p");
+    intro.className = "jacket-intro";
+    intro.textContent = "This jacket became reachable after source depth was opened here. It records available depth; it does not replace the present ground.";
+    fragment.append(intro);
+
+    const addSection = (labelText, values, className = "") => {
+      if (!values.length) return;
+      const section = document.createElement("section");
+      section.className = "jacket-section " + className;
+      const label = document.createElement("h3");
+      label.textContent = labelText;
+      const body = document.createElement("div");
+      body.className = "jacket-section-body";
+      values.forEach((valueText) => {
+        const p = document.createElement("p");
+        p.textContent = valueText;
+        body.append(p);
+      });
+      section.append(label, body);
+      fragment.append(section);
+    };
+
+    addSection("PRESENTLY CARRIES", carried);
+    addSection("PEOPLE REACHED HERE", people);
+    addSection("SOURCE / REPRESENTATION", sourceEntries.map((entry) =>
+      `Public derivative ${entry.id} · controlled return ${(entry.source_object_ids || []).join(" · ") || "not yet released"}`
+    ));
+    addSection("REFUSES / REMAINS OPEN", brakes, "jacket-open");
+
+    const returnSection = document.createElement("section");
+    returnSection.className = "jacket-section jacket-return";
+    const returnLabel = document.createElement("h3");
+    returnLabel.textContent = "RETURN";
+    const returnBody = document.createElement("div");
+    returnBody.className = "jacket-section-body";
+    const returnText = document.createElement("p");
+    returnText.textContent = `Return restores ${heldName} at the ${trailUi[currentId]?.name || currentId} aperture.`;
+    returnBody.append(returnText);
+    returnSection.append(returnLabel, returnBody);
+    fragment.append(returnSection);
+
+    campJacketBody.replaceChildren(fragment);
   }
 
   function asksForSources(message) {
