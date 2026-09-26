@@ -574,6 +574,9 @@
   }
 
   function publicGroundFromWords(message) {
+    const shared = window.EarthlyHandsWayfinding?.resolve(message);
+    if (shared) return shared.path;
+
     const lower = String(message || "").toLowerCase();
     const asksToGo = /\b(take me|go to|go see|show me|open|visit|enter|walk to|bring me to)\b/.test(lower);
     if (!asksToGo) return null;
@@ -1445,6 +1448,20 @@
       talkInput.value = "";
       sizeTalkInput();
       startFreshThread();
+      return;
+    }
+
+    const whereCanIGo = /\b(where can i go|what can i visit|what places can i reach|where else can i go|how do i navigate)\b/i.test(clean);
+    if (whereCanIGo && window.EarthlyHandsWayfinding) {
+      keepTenWords(clean);
+      talkInput.value = "";
+      sizeTalkInput();
+      if (groundThread) {
+        const p = document.createElement("p");
+        p.className = "ground-response";
+        p.textContent = "You can ask to go to " + window.EarthlyHandsWayfinding.names().join(", ") + ". You can also type a known public path such as /recent.";
+        groundThread.append(p);
+      }
       return;
     }
 
