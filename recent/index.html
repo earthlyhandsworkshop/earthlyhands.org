@@ -184,6 +184,36 @@ main{padding:0 0 1rem}
   .pi-provenance{display:none}.pi-file{grid-column:3;grid-row:2}.pi-send{display:none}
   .about{grid-template-columns:1fr;gap:.32rem}.family-line{justify-self:start;white-space:normal}
 }
+
+/* earned reveal: the index exists before it is shown */
+.recent-ask{
+  width:min(42rem,100%);display:grid;grid-template-columns:minmax(0,1fr) auto auto;
+  margin-top:.55rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)
+}
+.recent-ask input{
+  min-width:0;border:0;background:transparent;padding:.54rem .08rem;
+  color:var(--ink);font:.72rem/1.15 var(--mono);outline:none
+}
+.recent-ask button{
+  border:0;border-left:1px solid var(--rule);background:transparent;padding:.52rem .68rem;
+  color:var(--ink);font:600 .43rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;cursor:pointer
+}
+.recent-ask button[type="submit"]{background:rgba(30,28,23,.035)}
+.recent-answer{
+  min-height:1.2rem;margin-top:.35rem;color:var(--muted);
+  font:.49rem/1.28 var(--mono)
+}
+.work.is-unrevealed{display:none}
+.secondary.is-unrevealed{display:none}
+.work-latest{background:rgba(255,255,255,.055)}
+.work-latest .entry{background:rgba(255,255,255,.035)}
+.return-body.has-reveal .work:not(.work-main):not(.work-latest){animation:recentReveal .18s ease-out}
+@keyframes recentReveal{from{opacity:.35;transform:translateY(-2px)}to{opacity:1;transform:none}}
+@media(max-width:50rem){
+  .recent-ask{grid-template-columns:minmax(0,1fr) auto}
+  .recent-browse{grid-column:1/-1;border-left:0!important;border-top:1px solid var(--rule)!important;text-align:left}
+}
+
 </style>
 </head>
 <body>
@@ -198,19 +228,26 @@ main{padding:0 0 1rem}
     <div class="return-heading">
       <span class="return-eyebrow">Public Ground</span>
       <h1 id="recent-title">Recent</h1>
+      <form class="recent-ask" id="recent-ask" role="search" aria-label="Ask Public Ground">
+        <label class="sr-only" for="recent-ask-input">Ask the ground</label>
+        <input id="recent-ask-input" type="search" autocomplete="off" maxlength="160" placeholder="Ask the ground">
+        <button type="submit">Ask</button>
+        <button type="button" class="recent-browse" id="recent-browse">Browse</button>
+      </form>
+      <div class="recent-answer" id="recent-answer" aria-live="polite"></div>
     </div>
   </section>
   <div class="form-head" aria-hidden="true">
     <span>work</span><span>remarks</span><span>return</span><span></span>
   </div>
   <section class="return-body" aria-label="Current public work">
-<article class="work work-main"><a class="work-link" href="/experiments/public-lands-page-53/">
+<article class="work work-latest"><a class="work-link" href="/experiments/public-lands-page-53/">
       <aside class="custody"><dl>
         <dt>returned</dt><dd>26 Sep 2026 · afternoon</dd>
         <dt>hand</dt><dd>Glean · Fieldglass</dd>
       </dl></aside>
       <div class="title">Public Lands · Page 53</div>
-      <div class="brief">bounded source-face ground</div>
+      <div class="brief">latest return</div>
       <div class="desc">Page 53 now opens as an Earthly Hands controlled working transcription: all 34 visible rows, page-local arithmetic, layered writing, the cross-row brace, Jacket, Source, and bounded Ask. The manuscript remains one deliberate door down when a reading needs to be checked.</div>
       <div class="entry"><span class="state-stamp">specimen</span><span class="enter">enter</span></div>
     </a></article>
@@ -647,6 +684,109 @@ main{padding:0 0 1rem}
       button.disabled=false;
     }
   });
+})();
+</script>
+
+
+<script>
+(()=>{
+  const currentSection=document.querySelector('section.return-body[aria-label="Current public work"]');
+  const retainedSection=document.querySelector('section.secondary');
+  const askForm=document.getElementById('recent-ask');
+  const askInput=document.getElementById('recent-ask-input');
+  const answer=document.getElementById('recent-answer');
+  const browse=document.getElementById('recent-browse');
+
+  function currentRows(){
+    return [...document.querySelectorAll('article.work')];
+  }
+  function rowText(row){
+    return [
+      row.querySelector('.title')?.textContent||'',
+      row.querySelector('.brief')?.textContent||'',
+      row.querySelector('.desc')?.textContent||'',
+      row.querySelector('.custody')?.textContent||'',
+      row.querySelector('.work-link')?.getAttribute('href')||''
+    ].join(' ').toLowerCase();
+  }
+  function initialState(){
+    currentRows().forEach(row=>{
+      const keep=row.classList.contains('work-main')||row.classList.contains('work-latest');
+      row.classList.toggle('is-unrevealed',!keep);
+    });
+    retainedSection?.classList.add('is-unrevealed');
+    currentSection?.classList.remove('has-reveal');
+    if(answer) answer.textContent='';
+  }
+  function tokens(q){
+    const stop=new Set(['the','a','an','of','to','and','or','in','on','for','with','me','show','find','about','what','is','are','do','does','can','i']);
+    return q.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim().split(/\s+/).filter(x=>x&&x.length>1&&!stop.has(x));
+  }
+  function revealRows(rows,message){
+    currentRows().forEach(row=>{
+      const keep=row.classList.contains('work-main')||row.classList.contains('work-latest')||rows.includes(row);
+      row.classList.toggle('is-unrevealed',!keep);
+    });
+    currentSection?.classList.toggle('has-reveal',rows.length>0);
+    if(answer) answer.textContent=message;
+  }
+  function revealCurrent(){
+    const rows=[...currentSection.querySelectorAll('article.work')];
+    rows.forEach(row=>row.classList.remove('is-unrevealed'));
+    currentSection?.classList.add('has-reveal');
+    retainedSection?.classList.add('is-unrevealed');
+    if(answer) answer.textContent='Current public work is open. Retained studies remain folded away.';
+  }
+  function ask(q){
+    const clean=String(q||'').trim();
+    if(!clean){initialState();return}
+    const lower=clean.toLowerCase();
+
+    if(/\b(all|everything|browse|more|current work)\b/.test(lower)){
+      revealCurrent();
+      return;
+    }
+    if(/\b(retained|older|archive|archived|earlier studies)\b/.test(lower)){
+      revealCurrent();
+      retainedSection?.classList.remove('is-unrevealed');
+      retainedSection?.querySelectorAll('article.work').forEach(row=>row.classList.remove('is-unrevealed'));
+      if(answer) answer.textContent='Current work and retained studies are open.';
+      return;
+    }
+
+    const all=[...currentSection.querySelectorAll('article.work:not(.work-main):not(.work-latest)')];
+    let match=[];
+    if(/\b(new|newest|latest|changed|recent|today)\b/.test(lower)){
+      match=all.filter(row=>!row.classList.contains('work-main')).slice(0,5);
+    }else{
+      const ts=tokens(clean);
+      match=all.filter(row=>{
+        const body=rowText(row);
+        return ts.length && ts.every(t=>body.includes(t));
+      });
+      if(!match.length && ts.length>1){
+        match=all.filter(row=>{
+          const body=rowText(row);
+          return ts.some(t=>body.includes(t));
+        });
+      }
+    }
+
+    if(match.length){
+      revealRows(match,match.length===1?'One public return opened.':match.length+' public returns opened.');
+    }else{
+      revealRows([],'This public index does not carry a direct return for that yet. Shared Country remains open.');
+    }
+  }
+
+  askForm?.addEventListener('submit',event=>{
+    event.preventDefault();
+    ask(askInput?.value||'');
+  });
+  browse?.addEventListener('click',revealCurrent);
+
+  // Initial public footing: one main ground and one newest return.
+  initialState();
 })();
 </script>
 
