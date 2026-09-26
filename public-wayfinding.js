@@ -3,6 +3,8 @@
     {id:"shared-country",label:"Shared Country",path:"/experiments/shared-country/",aliases:["shared country","home","front ground","dawson"]},
     {id:"recent",label:"Recent",path:"/recent/",aliases:["recent","/recent","recent work","what's recent","whats recent"]},
     {id:"creek-look-back",label:"Creek Look-Back",path:"/grounds/line-commons/creek-look-back/",aliases:["creek look-back","creek look back","line commons","look back from the creek"]},
+    {id:"holderness-ground",label:"Holderness Ground",path:"/experiments/holderness-ground/",aliases:["holderness ground","noxubee turnpike","holderness"]},
+    {id:"ward-room",label:"Ward Registration Book",path:"/experiments/ward-room/",aliases:["ward room","ward registration book","registration book"]},
     {id:"listening",label:"Public Listening",path:"/listening/",aliases:["public listening","listening","visitor listening"]}
   ];
 
