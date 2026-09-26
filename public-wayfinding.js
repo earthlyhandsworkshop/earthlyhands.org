@@ -2,8 +2,6 @@
   const destinations=[
     {id:"shared-country",label:"Shared Country",path:"/experiments/shared-country/",aliases:["shared country","home","front ground","dawson"]},
     {id:"recent",label:"Recent",path:"/recent/",aliases:["recent","/recent","recent work","what's recent","whats recent"]},
-    {id:"public-lands",label:"Public Lands",path:"/grounds/public-lands/",aliases:["public lands","public lands ground","/grounds/public-lands"]},
-    {id:"public-lands-page-53",label:"Public Lands · page 53",path:"/experiments/public-lands-page-53/",aliases:["page 53","public lands page 53","p.53","p53"]},
     {id:"creek-look-back",label:"Creek Look-Back",path:"/grounds/line-commons/creek-look-back/",aliases:["creek look-back","creek look back","line commons","look back from the creek"]},
     {id:"listening",label:"Public Listening",path:"/listening/",aliases:["public listening","listening","visitor listening"]}
   ];
