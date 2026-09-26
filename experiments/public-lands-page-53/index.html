@@ -160,6 +160,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
 
 <script src="../../config.js?v=64aae42b52b2"></script>
 <script src="../../public-listening.js?v=1"></script>
+<script src="../../public-wayfinding.js?v=1"></script>
 <script>
 (function(){
   var data=null, conversation=[], current='source', selectedHost='historical face', selectedRow=null, trail=[];
@@ -314,6 +315,12 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
   }
   form.addEventListener('submit',async function(e){
     e.preventDefault();var clean=input.value.trim();if(!clean)return;input.value='';add(clean,'question');
+    var nav=window.EarthlyHandsWayfinding?.resolve(clean);
+    if(nav){window.location.assign(nav.path);return}
+    if(/\b(where can i go|what can i visit|where else can i go|how do i navigate)\b/i.test(clean)){
+      add('You can ask to go to '+(window.EarthlyHandsWayfinding?.names().join(', ')||'another public ground')+'. A known path such as /recent also works.','reply');
+      return;
+    }
     try{window.EarthlyHandsListening?.record('ASKED_GROUND',{ground:'public-lands-no-1-page-53',instrument:current,aperture:hostLabel()});}catch(_){}
     var local=localAnswer(clean);if(local){add(local,'reply');return}
     if(!data){add('The controlled page body is not available this turn.','reply');return}
