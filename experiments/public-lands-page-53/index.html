@@ -14,7 +14,7 @@
 .ground-strip button,.receive-actions button,.source-return{border:1px solid var(--strong);background:transparent;padding:.42rem .62rem;cursor:pointer;font:600 .5rem/1 var(--mono);letter-spacing:.05em;text-transform:uppercase}
 .ground-strip button[disabled]{opacity:.35;cursor:default}.ground-strip .share-presence[hidden]{display:none}
 .workshop-crossing{margin-top:1.2rem;border:1px solid var(--strong);background:rgba(255,255,255,.08)}.workshop-crossing-head{display:grid;grid-template-columns:11rem minmax(0,1fr) auto;gap:1rem;align-items:center;padding:.7rem .8rem}.workshop-crossing-head span{color:var(--muted);font:600 .48rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}.workshop-crossing-head p{margin:0;color:var(--muted);font-size:.78rem}.workshop-crossing-head button{border:1px solid var(--strong);background:transparent;padding:.48rem .7rem;cursor:pointer;font:600 .5rem/1 var(--mono);letter-spacing:.05em;text-transform:uppercase}
-.ask-context{margin:.45rem 0 .7rem;padding:.48rem .58rem;border-left:2px solid var(--rust);background:rgba(255,255,255,.12);color:var(--muted);font:.58rem/1.35 var(--mono)}.ask-context strong{color:var(--ink);font-weight:600}.ask-starters{display:flex;flex-wrap:wrap;gap:.35rem;margin:.55rem 0 .7rem}.ask-starters button{border:1px solid var(--rule);background:transparent;padding:.42rem .55rem;cursor:pointer;color:var(--muted);font:.52rem/1.2 var(--mono)}.ask-starters button:hover{border-color:var(--strong);color:var(--ink)}.ask-log:empty{display:none}
+.ask-context{margin:.45rem 0 .7rem;padding:.48rem .58rem;border-left:2px solid var(--rust);background:rgba(255,255,255,.12);color:var(--muted);font:.58rem/1.35 var(--mono)}.ask-context strong{color:var(--ink);font-weight:600}.ask-starters{display:flex;flex-wrap:wrap;gap:.35rem;margin:.55rem 0 .7rem}.ask-starters button{border:1px solid var(--rule);background:transparent;padding:.42rem .55rem;cursor:pointer;color:var(--muted);font:.52rem/1.2 var(--mono)}.ask-starters button:hover{border-color:var(--strong);color:var(--ink)}.ask-log:empty{display:none}.ask-reach{margin:.55rem 0;padding:.65rem .7rem;border:1px solid var(--strong);background:rgba(255,255,255,.12)}.ask-reach strong{display:block;font:400 1.18rem/1.1 var(--serif)}.ask-reach .kind{display:block;margin:.16rem 0 .35rem;color:var(--rust);font:600 .48rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}.ask-reach p{margin:.28rem 0;border:0;padding:0}.ask-reach .reach-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.55rem}.ask-reach button,.ask-reach a{border:0;background:transparent;padding:0;color:var(--ink);text-decoration:underline;text-underline-offset:.18em;cursor:pointer;font:.56rem/1.2 var(--mono)}
 .presence-ground{border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong);background:rgba(255,255,255,.08);padding:.65rem .75rem}.presence-ground[hidden]{display:none}.presence-ground h2{margin:.05rem 0 .3rem;font:400 1.25rem/1 var(--serif)}.presence-ground p{margin:.25rem 0;color:var(--muted);font-size:.75rem}.presence-controls{display:grid;grid-template-columns:minmax(10rem,1fr) auto auto;gap:.45rem;align-items:end;margin-top:.5rem}.presence-controls label{display:grid;gap:.18rem;color:var(--muted);font:.48rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}.presence-controls input[type="text"]{border:1px solid var(--rule);background:transparent;padding:.48rem}.presence-controls button{border:1px solid var(--strong);background:transparent;padding:.48rem .62rem;cursor:pointer;font:.5rem/1 var(--mono);text-transform:uppercase}.presence-list{display:grid;gap:.22rem;margin-top:.5rem;padding-top:.45rem;border-top:1px solid var(--rule);color:var(--muted);font:.56rem/1.3 var(--mono)}.presence-list strong{color:var(--ink)}.presence-check{display:flex!important;align-items:center;gap:.35rem!important;text-transform:none!important;letter-spacing:0!important}
 tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,58,.12)}tbody tr:focus{outline:2px solid var(--rust);outline-offset:-2px}
 .receive-ground{border-left:1px solid var(--strong);border-right:1px solid var(--strong);border-bottom:1px solid var(--strong);background:var(--paper2);padding:.8rem}
@@ -140,6 +140,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
       <button type="button" data-ask-starter="What is unresolved from where I am standing?">What is unresolved?</button>
       <button type="button" data-ask-starter="What does this footing actually support?">What does this support?</button>
       <button type="button" data-ask-starter="Where can this carry me without strengthening the record?">Where can this carry me?</button>
+      <button type="button" data-ask-starter="Who has worked here?">Who has worked here?</button>
     </div>
     <div class="ask-log" id="ask-log" aria-live="polite"></div>
     <form class="ask-form" id="ask-form"><input id="ask-input" maxlength="1200" autocomplete="off" placeholder="Ask the ground"><button type="submit">Ask</button></form>
@@ -323,12 +324,27 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
   var form=document.getElementById('ask-form'),input=document.getElementById('ask-input'),log=document.getElementById('ask-log');
   document.querySelectorAll('[data-ask-starter]').forEach(function(button){button.addEventListener('click',function(){input.value=button.dataset.askStarter||'';input.focus()})});
   function add(text,kind){var p=document.createElement('p');p.className=kind;p.textContent=text;log.appendChild(p)}
+  function addCompanionReach(){
+    var route=data&&Array.isArray(data.routes)?data.routes.find(function(x){return x.id==='PL53-COMPANION-GLEAN'}):null;
+    if(!route){add('No companion reach is presently held from this footing.','reply');return}
+    var card=document.createElement('aside');card.className='ask-reach';
+    var title=document.createElement('strong');title.textContent=route.label||'Glean';
+    var kind=document.createElement('span');kind.className='kind';kind.textContent=route.kind||'Workshop companion';
+    var copy=document.createElement('p');copy.textContent=route.opens||'';
+    var actions=document.createElement('div');actions.className='reach-actions';
+    var approach=document.createElement('button');approach.type='button';approach.textContent='Approach this work';
+    approach.addEventListener('click',function(){show('transcription');requestAnimationFrame(function(){openRoute(route.id)})});
+    actions.appendChild(approach);
+    if(route.destination){var follow=document.createElement('a');follow.href=route.destination;follow.textContent='Latest attributable return';actions.appendChild(follow)}
+    card.append(title,kind,copy,actions);log.appendChild(card);
+  }
   function localAnswer(q){
     var s=q.toLowerCase();
     if((/how many people/.test(s)&&/page|here|everyone|total/.test(s))||/family (column )?total/.test(s)){
       return 'The printed “Entire No. of the Family” column totals 185 across the 34 visible rows on page 53. The page separately carries “1 white 12 Slaves]” on Allen Yates’s row. The source has not established whether those 13 people are already included within the printed family totals, so they are not added to 185.';
     }
     if(/how many (rows|entries)/.test(s))return 'There are 34 visible body rows on page 53.';
+    if(/who (has )?(worked|is working)|companion|\bglean\b/.test(s))return '__COMPANION__';
     return '';
   }
   form.addEventListener('submit',async function(e){
@@ -340,7 +356,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
       return;
     }
     try{window.EarthlyHandsListening?.record('ASKED_GROUND',{ground:'public-lands-no-1-page-53',instrument:current,aperture:hostLabel()});}catch(_){}
-    var local=localAnswer(clean);if(local){add(local,'reply');return}
+    var local=localAnswer(clean);if(local==='__COMPANION__'){add('One Workshop companion can lawfully become present from this footing. The historical person occurrence remains a different kind of body.','reply');addCompanionReach();return}if(local){add(local,'reply');return}
     if(!data){add('The controlled page body is not available this turn.','reply');return}
     var api=String(window.EARTHLY_HANDS_API_URL||'').trim();if(!api){add('The listening ground is not available this turn.','reply');return}
     var button=form.querySelector('button');button.disabled=true;
