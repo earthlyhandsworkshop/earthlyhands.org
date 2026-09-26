@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#ebe5d8">
+<title>Carrier Field — Earthly Hands</title>
+<meta name="description" content="A small documentary-game study: hold the source above and let only earned carriers appear below.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="ground">
+  <header class="bearing">
+    <a href="../../">Earthly Hands Workshop</a>
+    <span>Shared Country · specimen</span>
+    <span>Carrier Field</span>
+  </header>
+
+  <section class="work-surface" aria-labelledby="title">
+    <div class="work-head">
+      <div>
+        <p class="eyebrow">EXAMINATION TABLE · WORKING SPECIMEN</p>
+        <h1 id="title">What can carry?</h1>
+      </div>
+      <p class="lead">Keep the page. Open the little field only when you want to see what has actually found a carrier.</p>
+    </div>
+
+    <article class="document" aria-label="Mary Caroline Atkinson examination excerpt">
+      <header class="doc-head">
+        <div><b>MCR 879</b><span>Mary Caroline Atkinson</span></div>
+        <div><span>Muskogee, Indian Territory</span><span>23 October 1900</span></div>
+      </header>
+
+      <div class="exchange">
+        <p class="speaker">COMMISSION</p>
+        <p>Was his name ever on any of the tribal rolls of the Choctaw Nation?</p>
+        <p class="speaker human">MARY CAROLINE ATKINSON</p>
+        <p>Yes sir it was on the roll of the Mississippi Choctaws, the treaty of 1830. It was registered in Mississippi.</p>
+
+        <p class="speaker">COMMISSION</p>
+        <p>Have you any evidence of the fact that he was a recognized member of the Choctaw tribe of Indians at that time?</p>
+        <p class="speaker human">MARY CAROLINE ATKINSON</p>
+        <p>Of course I don't know anything only what I have heard them say. His name is there and I have often heard him speak of his right here.</p>
+
+        <div class="record">
+          <b>COMMISSION — RECORDED STATEMENT</b>
+          <p>No party by the name of Robert Bell appears upon the approved roll of locations of the Choctaw reservations under the fourteenth article of the treaty of 1830, approved June 3, 1836.</p>
+        </div>
+
+        <p class="speaker human">MARY CAROLINE ATKINSON</p>
+        <p>I said not that I knew of.</p>
+      </div>
+    </article>
+
+    <aside class="table-note">
+      <b>TABLE NOTE</b>
+      <p>One voice carries a proposition. One administrative search reports a negative in a particular carrier. Neither gets to become the other.</p>
+    </aside>
+  </section>
+</main>
+
+<section class="tray" id="tray" aria-label="Carrier field" data-open="false">
+  <button class="tray-handle" id="tray-handle" type="button" aria-expanded="false" aria-controls="tray-body">
+    <span>CARRIERS</span>
+    <em id="tray-status">3 little bodies · 1 open seam</em>
+    <b aria-hidden="true">↑</b>
+  </button>
+  <div class="tray-body" id="tray-body">
+    <div class="pieces" aria-label="Named bodies">
+      <button class="piece is-active" type="button" data-piece="robert"><i></i><span>Robert Bell</span><small>administrative comparator body</small></button>
+      <button class="piece" type="button" data-piece="mary"><i></i><span>Mary</span><small>direct witness · 1900</small></button>
+      <button class="piece" type="button" data-piece="mcr"><i></i><span>MCR 879</span><small>case carrier · 1900–1907</small></button>
+    </div>
+
+    <div class="field" id="field" aria-live="polite">
+      <div class="goalposts" aria-hidden="true">
+        <span style="--x:7%"><b>1830</b><small>Treaty frame</small></span>
+        <span style="--x:25%"><b>1836</b><small>approved locations</small></span>
+        <span style="--x:39%"><b>1837–38</b><small>adjudicative body</small></span>
+        <span style="--x:61%"><b>1900</b><small>MCR 879</small></span>
+        <span style="--x:75%"><b>1902</b><small>identity use</small></span>
+        <span style="--x:88%"><b>1907</b><small>rehearing</small></span>
+        <span class="horizon" style="--x:97%"><b>now</b><small>Choctaw Nation</small></span>
+      </div>
+
+      <div class="carrier-row" data-row="robert">
+        <div class="name">Robert Bell</div>
+        <div class="track">
+          <span class="ghost" style="--left:7%;--width:18%"></span>
+          <span class="gap" style="--left:25%;--width:14%"><em>open</em></span>
+          <span class="earned" style="--left:39%;--width:36%"></span>
+          <span class="stop" style="--left:75%"></span>
+        </div>
+      </div>
+
+      <div class="carrier-row is-hidden" data-row="mary">
+        <div class="name">Mary</div>
+        <div class="track">
+          <span class="point" style="--left:61%"></span>
+        </div>
+      </div>
+
+      <div class="carrier-row is-hidden" data-row="mcr">
+        <div class="name">MCR 879</div>
+        <div class="track">
+          <span class="earned case" style="--left:61%;--width:27%"></span>
+          <span class="stop" style="--left:88%"></span>
+        </div>
+      </div>
+
+      <div class="horizon-line"><span>goalposts appear only when earned</span></div>
+    </div>
+
+    <aside class="properties" id="properties">
+      <b>ROBERT BELL</b>
+      <p>The later federal comparator is substantially visible in the 1837–38 adjudicative body and is carried into later land / patent / identity machinery.</p>
+      <p class="brake">No free line back to 1830. The missing span stays open unless a carrier earns it.</p>
+    </aside>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
