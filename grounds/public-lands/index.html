@@ -81,6 +81,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
 </div>
 <script src="/config.js?v=64aae42b52b2"></script>
 <script src="/public-listening.js?v=1"></script>
+<script src="/public-wayfinding.js?v=1"></script>
 <script>
 (()=>{
   const groundId="public-lands-ground";
@@ -122,7 +123,12 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
   }
   function say(text){answer.textContent=text}
   function localAsk(q){
+    const nav=window.EarthlyHandsWayfinding?.resolve(q);
+    if(nav){window.location.assign(nav.path);return "__NAVIGATING__";}
     const s=q.toLowerCase();
+    if(/\b(where can i go|what can i visit|where else can i go|how do i navigate)\b/.test(s)){
+      return "You can ask to go to "+(window.EarthlyHandsWayfinding?.names().join(", ")||"another public ground")+". A known path such as /recent also works.";
+    }
     if(/strange|odd|notice|glint|interesting|what.*here/.test(s)){
       reveal("glint-brace");reveal("glint-yates");reveal("glint-account");
       return "Three things can honestly come forward from this footing: a brace that will not assign its 7, Allen Yates's unusually layered row, and an accounting line that reaches toward a later district aggregate without yet closing. Nothing else needs to appear.";
@@ -146,7 +152,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
 
   document.getElementById("ask-form").addEventListener("submit",async e=>{
     e.preventDefault();const q=input.value.trim();if(!q)return;input.value="";record("ASKED_GROUND","working-table","ask");
-    const local=localAsk(q);if(local){say(local);return}
+    const local=localAsk(q);if(local){if(local!=="__NAVIGATING__")say(local);return}
     const api=String(window.EARTHLY_HANDS_API_URL||"").trim();
     if(!api){say("This ground does not have an answer for that from the held source floor.");return}
     say("…");
