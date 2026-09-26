@@ -5,3 +5,7 @@ window.EARTHLY_HANDS_API_URL =
 
 window.EARTHLY_HANDS_RECEIVING_URL =
   "https://earthly-hands-receiving-ground.workshop-1a6.workers.dev/receive";
+
+
+window.EARTHLY_HANDS_LISTENING_URL =
+  "https://earthly-hands-listening-ground.workshop-1a6.workers.dev/listen";
