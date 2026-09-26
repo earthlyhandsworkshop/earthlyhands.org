@@ -566,6 +566,17 @@
       }));
   }
 
+  function publicGroundFromWords(message) {
+    const lower = String(message || "").toLowerCase();
+    const asksToGo = /\b(take me|go to|go see|show me|open|visit|enter|walk to|bring me to)\b/.test(lower);
+    if (!asksToGo) return null;
+
+    const creekLookBack = /\b(creek[ -]?look[ -]?back|line commons|look back from (?:the )?creek|workshop from (?:the )?creek)\b/.test(lower);
+    if (creekLookBack) return "/grounds/line-commons/creek-look-back/";
+
+    return null;
+  }
+
   function localMoveFromWords(message) {
     const lower = String(message || "").toLowerCase();
 
@@ -1219,6 +1230,16 @@
 
     const origin = currentId;
     const thoughtTurn = !discoveryOpen && !thresholdThoughtGiven;
+    const publicGroundDoor = publicGroundFromWords(clean);
+
+    if (publicGroundDoor) {
+      keepTenWords(clean);
+      talkInput.value = "";
+      sizeTalkInput();
+      window.location.assign(publicGroundDoor);
+      return;
+    }
+
     if (!thoughtTurn && !discoveryOpen) openDiscovery();
 
     if (!thoughtTurn && asksForMap(clean) && mapIsEarned()) {
@@ -1409,12 +1430,24 @@
     const target = sceneById.get(id);
     if (!target || !fullSequence.includes(id)) return;
 
-    const fromIndex = fullSequence.indexOf(currentId);
+    const fromId = currentId;
+    const fromIndex = fullSequence.indexOf(fromId);
     const toIndex = fullSequence.indexOf(id);
     const direction = toIndex < fromIndex ? "back" : "forward";
+    const sameHeldGround = heldGroundIdFor(fromId) === heldGroundIdFor(id);
+
     setLamp(id !== "threshold");
     currentId = id;
     remember(id);
+
+    if (sameHeldGround && fromId !== id) {
+      setChangePhysics("attention", `${heldGroundNameFor(id)} · story continues here`);
+    } else if (fromId !== id) {
+      setChangePhysics("movement", `${heldGroundNameFor(fromId)} → ${heldGroundNameFor(id)}`);
+    } else {
+      setChangePhysics("still", heldGroundNameFor(id));
+    }
+
     showScene(target, direction);
   });
 
