@@ -65,8 +65,9 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
 <section class="receive-ground" id="receive-ground" hidden aria-labelledby="receive-title">
   <div class="receive-head"><span>Return to the Workshop</span><div><h2 id="receive-title">Send something from where you are standing.</h2><p id="receive-footing">Page 53 · controlled working face</p></div></div>
   <form class="receive-form" id="receive-form">
-    <label><span>One sentence · optional</span><textarea name="description" maxlength="1000" placeholder="What does this record show, or what did you notice?"></textarea></label>
+    <label><span>Name · optional</span><input id="guest-name" name="contributor_name" type="text" maxlength="200" autocomplete="name" placeholder="If you want us to know you next time"></label>
     <label><span>Came from · optional</span><input name="provenance" type="text" maxlength="1000" placeholder="archive, family papers, courthouse…"></label>
+    <label style="grid-column:1/-1"><span>One sentence · optional</span><textarea name="description" maxlength="1000" placeholder="What does this record show, or what did you notice?"></textarea></label>
     <div class="receive-file"><input id="receive-file" name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.heic,.heif,.pdf,.txt" required><span class="receive-status">Original preserved privately · received ≠ published.</span></div>
     <div class="receive-actions"><button type="submit" class="submit">Send to receiving</button><button type="button" id="close-receive">Close</button><span class="receive-status" id="receive-status" aria-live="polite"></span></div>
   </form>
@@ -154,6 +155,8 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
   function show(v,opts){
     opts=opts||{};var previous=current;
     if(v!==current&&!opts.noTrail)trail.push(snapshot());
+    if(v==='transcription'&&selectedHost==='historical face'&&!selectedRow)selectedHost='controlled working face';
+    if(v==='source'&&selectedHost==='controlled working face'&&!selectedRow)selectedHost='historical face';
     current=v;
     tabs.forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.view===v))});
     panels.forEach(function(p){p.hidden=p.dataset.panel!==v});
@@ -308,6 +311,8 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
   });
 
   var receive=document.getElementById('receive-ground'),receiveForm=document.getElementById('receive-form'),receiveStatus=document.getElementById('receive-status');
+  var guestName=document.getElementById('guest-name'),guestNameKey='earthly-hands-guest-name-v1';
+  try{var rememberedName=localStorage.getItem(guestNameKey)||'';if(rememberedName)guestName.value=rememberedName}catch(_){}
   function openReceive(){
     receive.hidden=false;updateFooting();receive.scrollIntoView({behavior:'smooth',block:'nearest'});
     try{window.EarthlyHandsListening?.record('REACHED',{ground:'public-lands-no-1-page-53',instrument:'receiving',aperture:hostLabel()});}catch(_){}
@@ -335,7 +340,10 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
       if(!res.ok)throw new Error(out.error||('HTTP '+res.status));
       receiveStatus.textContent='RECEIVED · '+(out.receipt||'held for review');
       try{window.EarthlyHandsListening?.record('REACHED',{ground:'public-lands-no-1-page-53',instrument:'receiving',aperture:'received@'+hostLabel()});}catch(_){}
+      var offeredName=String(fd.get('contributor_name')||'').trim();
+      if(offeredName){try{localStorage.setItem(guestNameKey,offeredName)}catch(_){}}
       receiveForm.reset();
+      if(offeredName)guestName.value=offeredName;
     }catch(err){receiveStatus.textContent='Not received · '+err.message}
     finally{button.disabled=false}
   });
