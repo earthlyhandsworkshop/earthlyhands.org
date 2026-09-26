@@ -864,6 +864,33 @@
     const entries = dawsonRetrieval.filter((entry) => Array.isArray(entry.scenes) && entry.scenes.includes(currentId));
     const fragment = document.createDocumentFragment();
 
+    const jacket = document.createElement("details");
+    jacket.className = "ground-jacket";
+    const jacketSummary = document.createElement("summary");
+    jacketSummary.innerHTML = "<span>Ground jacket</span><strong>" + heldName + "</strong>";
+    const jacketBody = document.createElement("div");
+    jacketBody.className = "ground-jacket-body";
+
+    const jacketFields = [
+      ["HELD GROUND", heldName],
+      ["PRESENT APERTURE", apertureName],
+      ["SOURCE DESCENT", "Depth inside the same ground. Opening this view has not moved the story."],
+      ["PUBLIC BOUNDARY", "This surface carries released derivatives and controlled source pointers. It does not manufacture an unreleased exact carrier."],
+      ["RETURN", "Ground returns to the same story aperture."]
+    ];
+    jacketFields.forEach(([labelText,valueText]) => {
+      const row = document.createElement("div");
+      row.className = "ground-jacket-row";
+      const label = document.createElement("span");
+      label.textContent = labelText;
+      const value = document.createElement("p");
+      value.textContent = valueText;
+      row.append(label,value);
+      jacketBody.append(row);
+    });
+    jacket.append(jacketSummary,jacketBody);
+    fragment.append(jacket);
+
     if (!entries.length) {
       const empty = document.createElement("p");
       empty.className = "camp-source-empty";
@@ -892,7 +919,10 @@
 
         const pointers = document.createElement("p");
         pointers.className = "camp-source-pointers";
-        pointers.textContent = "Controlled source return: " + (entry.source_object_ids || []).join(" · ");
+        const ids = (entry.source_object_ids || []).join(" · ");
+        pointers.textContent = ids
+          ? "Controlled source return · " + ids + " · original host is a separate deliberate door when released."
+          : "Controlled source return remains inside Earthly Hands at this public depth.";
 
         const brakes = document.createElement("div");
         brakes.className = "camp-source-brakes";
@@ -913,6 +943,37 @@
   function asksForSources(message) {
     const lower = String(message || "").toLowerCase();
     return /\b(show me (the )?sources|what source|what carries this|where does this come from|show me the record|show me the records|source body|source bodies|jackets? here)\b/.test(lower);
+  }
+
+  function asksForFreshThread(message) {
+    const lower = String(message || "").toLowerCase().trim();
+    return /^(?:open|start|begin|make)?\s*(?:a\s*)?(?:fresh|new)\s*(?:thread|aperture|conversation|thing)?\s*(?:here|again)?[.!?]*$/.test(lower)
+      || /\b(start fresh|open fresh|fresh thread|new thread|new little thing)\b/.test(lower);
+  }
+
+  function asksForResetVisit(message) {
+    const lower = String(message || "").toLowerCase();
+    return /\b(reset (?:this )?visit|start as (?:a )?new visitor|start from scratch|first[- ]time visitor|clear (?:this )?visit)\b/.test(lower);
+  }
+
+  function startFreshThread() {
+    conversation.splice(0, conversation.length);
+    if (groundThread) {
+      const note = document.createElement("p");
+      note.className = "fresh-thread-note";
+      note.textContent = `Fresh thread · ${heldGroundNameFor(currentId)}. Earlier reach remains available.`;
+      groundThread.replaceChildren(note);
+    }
+    closeDepth();
+    setDawsonView("ground");
+    setChangePhysics("still", `${heldGroundNameFor(currentId)} · fresh thread`);
+  }
+
+  function resetVisit() {
+    const url = new URL(window.location.href);
+    url.search = "?fresh=1";
+    url.hash = "";
+    window.location.assign(url.pathname + url.search);
   }
 
   function buildCampPeople() {
@@ -1230,6 +1291,19 @@
 
     const origin = currentId;
     const thoughtTurn = !discoveryOpen && !thresholdThoughtGiven;
+
+    if (asksForResetVisit(clean)) {
+      resetVisit();
+      return;
+    }
+
+    if (asksForFreshThread(clean)) {
+      talkInput.value = "";
+      sizeTalkInput();
+      startFreshThread();
+      return;
+    }
+
     const publicGroundDoor = publicGroundFromWords(clean);
 
     if (publicGroundDoor) {
