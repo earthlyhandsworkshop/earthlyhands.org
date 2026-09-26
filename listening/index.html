@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Public Listening — Earthly Hands Workshop</title>
+<style>
+:root{--paper:#ece5d8;--ink:#22211d;--muted:#70695e;--rule:rgba(34,33,29,.22);--strong:rgba(34,33,29,.55);--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.45 var(--serif)}
+main{width:min(72rem,calc(100% - 1.2rem));margin:auto;padding:2rem 0 4rem}
+header{border-bottom:1px solid var(--strong);padding:0 0 1rem}h1{margin:.2rem 0;font-size:clamp(2.5rem,7vw,6rem);font-weight:400;line-height:.9;letter-spacing:-.05em}
+.kicker,.meta,.label{font:600 .58rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.controls{display:flex;gap:.5rem;margin:1rem 0}.controls button{border:1px solid var(--rule);background:transparent;padding:.45rem .65rem;cursor:pointer;font:.6rem var(--mono);text-transform:uppercase}.controls button[aria-pressed="true"]{border-color:var(--strong);background:rgba(255,255,255,.18)}
+.totals{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--strong);border-left:1px solid var(--strong);margin-top:1rem}.totals div{padding:1rem;border-right:1px solid var(--strong);border-bottom:1px solid var(--strong)}.totals strong{display:block;font-size:clamp(2.5rem,7vw,5rem);font-weight:400;line-height:1}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.2rem}.panel{border-top:1px solid var(--strong)}.panel h2{font-size:1.3rem;font-weight:400}.row{display:flex;justify-content:space-between;gap:1rem;border-top:1px solid var(--rule);padding:.45rem 0}.row code{font:.62rem var(--mono);color:var(--muted)}.note{margin-top:1.5rem;color:var(--muted);max-width:50rem}
+@media(max-width:46rem){.grid,.totals{grid-template-columns:1fr}.totals div{border-right:0}.totals{border-right:1px solid var(--strong)}}
+</style>
+</head>
+<body>
+<main>
+<header><div class="kicker">16 / 06 — Public Listening</div><h1>Follow the visit, not the person.</h1><p class="meta" id="window-label">Waiting for the listening ground.</p></header>
+<div class="controls"><button type="button" data-hours="24" aria-pressed="true">24 hours</button><button type="button" data-hours="168" aria-pressed="false">7 days</button></div>
+<section class="totals"><div><span class="label">anonymous visits</span><strong id="visits">—</strong></div><div><span class="label">visit events</span><strong id="events">—</strong></div></section>
+<section class="grid"><div class="panel"><h2>What happened</h2><div id="by-event"></div></div><div class="panel"><h2>Where visits reached</h2><div id="by-path"></div></div></section>
+<p class="note">These are visit-level counts only. Earthly Hands does not store a hidden person profile here, does not fingerprint visitors, and does not infer identity, belief, ancestry, or intention from browsing. A visit is not a person.</p>
+</main>
+<script src="../config.js?v=64aae42b52b2"></script>
+<script>
+(function(){
+  const label=document.getElementById('window-label'),visits=document.getElementById('visits'),events=document.getElementById('events');
+  const byEvent=document.getElementById('by-event'),byPath=document.getElementById('by-path');
+  function row(name,count){const d=document.createElement('div');d.className='row';const a=document.createElement('span');a.textContent=name;const b=document.createElement('code');b.textContent=String(count);d.append(a,b);return d}
+  async function load(hours){
+    const base=String(window.EARTHLY_HANDS_LISTENING_URL||'').replace(/\/listen$/,'/listening-summary');
+    if(!base){label.textContent='Listening is not configured.';return}
+    label.textContent='Loading…';
+    try{
+      const r=await fetch(base+'?hours='+hours,{cache:'no-store'});const j=await r.json();if(!r.ok)throw new Error('unavailable');
+      visits.textContent=j.visits;events.textContent=j.events;label.textContent='Window · last '+j.window_hours+' hours · since '+new Date(j.since).toLocaleString();
+      byEvent.replaceChildren(...(j.by_event||[]).map(x=>row(x.event,x.count)));
+      byPath.replaceChildren(...(j.by_path||[]).map(x=>row(x.path,x.visits)));
+    }catch(_){label.textContent='The listening summary is not available yet.'}
+  }
+  document.querySelectorAll('[data-hours]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-hours]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));load(Number(b.dataset.hours))}));
+  load(24);
+})();
+</script>
+</body>
+</html>
