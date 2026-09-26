@@ -82,7 +82,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   <div class="anchor">
     <p class="kicker">McKinney Holderness · testimony state</p>
     <h1 id="ground-title">About 1¼ miles from the Choctaw agency.</h1>
-    <p class="lead">Holderness testified in 1837 that, from October 1832 to January 1834, he lived on the Noxubee turnpike about 1¼ miles from the Choctaw agency and went to the agency every two or three days.</p>
+    <p class="lead">Holderness testified in 1837 that, from October 1832 to January 1834, he lived on the Noxubee turnpike about 1¼ miles from the Choctaw agency and was very often at the agency—he estimated once every two or three days.</p>
     <p class="quiet">This ground does not reconstruct the road, the agency building, or an exact modern point. You are standing in the relation carried by the testimony.</p>
   </div>
 
@@ -125,14 +125,14 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   <section class="panel" id="agency" hidden tabindex="-1">
     <p class="meta">Window · place / institution occurrence</p>
     <h2>The agency is reachable as a named relation before it is reachable as another ground.</h2>
-    <p>The testimony places Holderness in repeated relation to the Choctaw agency. A separate agency ground would require its own controlled body and an earned crossing. This window does not pretend that crossing already exists.</p>
+    <p>The testimony places Holderness in repeated presence at the Choctaw agency. The cadence is source-carried; movement from the turnpike place is not. A separate agency ground would require its own controlled body and an earned crossing.</p>
     <button class="close" type="button">Close and stay here</button>
   </section>
 
   <section class="panel" id="person" hidden tabindex="-1">
     <p class="meta">People · occurrence before biography</p>
     <h2>McKinney Holderness</h2>
-    <p><strong>Role here:</strong> witness describing residence/proximity and repeated agency visits.</p>
+    <p><strong>Role here:</strong> witness describing residence, proximity, and repeated agency presence.</p>
     <p><strong>Time spoken about:</strong> October 1832–January 1834.</p>
     <p><strong>Identity state:</strong> this occurrence is controlled. Early-1830s GLO occurrences, later patent/cadastral occurrences, and the Ward registration-book handling/testimony relation remain separately governed.</p>
     <button class="close" type="button">Close and stay here</button>
@@ -257,11 +257,11 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     } else if(/same|land|patent|glo|later|record/.test(q)){
       response = 'Other Holderness occurrences are held separately. This footing does not earn identity, biography, travel, or a land-to-agency chain. You can stand at the unjoined edge, but there is no road through it yet.';
     } else if(/agency|visit|often|frequen/.test(q)){
-      response = 'The testimony state says Holderness went to the agency every two or three days during the period he described. That earns repeated relation to the agency, not a reconstructed route or motive.';
+      response = 'The testimony state says Holderness was very often at the agency—approximately once every two or three days—during the period he described. That earns repeated presence, not a departure point, route, means of travel, or motive.';
     } else if(/source|testimony|prove|know/.test(q)){
       response = 'This specimen is bounded to the controlled 1837 testimony state and its stated 1832–1834 relation. Open “Go down to the source state” to see what the ground inherits and what it refuses.';
     } else {
-      response = 'From here the ground can answer about the testimony footing, the agency relation, the approximate distance, repeated visits, and what remains unjoined. It will not create a road beyond those relations.';
+      response = 'From here the ground can answer about the testimony footing, the agency relation, the approximate distance, repeated agency presence, and what remains unjoined. It will not create a road beyond those relations.';
     }
 
     appendExchange(raw, response);
