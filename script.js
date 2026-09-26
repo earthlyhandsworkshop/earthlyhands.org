@@ -6,6 +6,8 @@
   const talkForm = document.querySelector("#talk-form");
   const talkInput = document.querySelector("#talk-input");
   const talkSend = document.querySelector("#talk-send");
+  const groundHint = document.querySelector("#ground-hint");
+  const groundHintCopy = document.querySelector("#ground-hint-copy");
   const groundThread = document.querySelector("#ground-thread");
   const depthData = {
     distance: {
@@ -590,8 +592,14 @@
   function localMoveFromWords(message) {
     const lower = String(message || "").toLowerCase();
 
-    const forward = /\b(go|walk|head|move|continue|follow|travel|leave|carry on|move on)\b/.test(lower);
+    const followsDawson = /\bfollow (?:dawson|the account|the story)\b/.test(lower);
+    const forward = followsDawson || /\b(go|walk|head|move|continue|follow|travel|leave|carry on|move on)\b/.test(lower);
     const backward = /\b(go back|walk back|head back|move back|return|backtrack)\b/.test(lower);
+
+    if (followsDawson) {
+      const index = fullSequence.indexOf(currentId);
+      if (index >= 0 && index < fullSequence.length - 1) return fullSequence[index + 1];
+    }
 
     if (currentId === "night" && /\b(wait until morning|stay until morning|sleep until morning|first light|daylight)\b/.test(lower)) return "morning";
     if (currentId === "morning" && forward && /\b(southeast|trail|onward|ahead)\b/.test(lower)) return "southeast";
@@ -1408,6 +1416,37 @@
     landAt(fullSequence[index - 1]);
   }
 
+  function hintForCurrentGround() {
+    const view = experienceShell?.dataset.view || "ground";
+    if (view !== "ground") {
+      if (view === "map") return "Try: “take me back to the ground” — or ask what one map relation means.";
+      if (view === "people") return "Open one person, or ask: “why is this person reachable from here?”";
+      if (view === "sources") return "Try: “what does this source actually establish?” — then return to the held ground.";
+      if (view === "jacket") return "Ask about one open question, correction, or source road in this jacket.";
+    }
+
+    const hints = {
+      report: "You can ask what this report is, or say “follow Dawson.”",
+      night: "Try: “wait until morning,” or ask what the camp actually knows.",
+      morning: "Try: “continue southeast,” or ask who is traveling here.",
+      southeast: "Try: “follow Dawson,” “continue to Blue Water,” or ask “where can I go?”",
+      "blue-water": "Ask what is happening at Blue Water, then try “what happened next?”",
+      dozen: "Try: “what happened next?” or ask about the beaver count.",
+      guide: "Ask about Mayes or Criner, then try “what happened next?”",
+      "blue-water-mouth": "Try: “continue east,” or ask what the source does not establish here.",
+      "east-blue-water": "You are at the current end of this public story reach. Try Map, People, Sources, or ask “where can I go?”"
+    };
+    return hints[currentId] || "Try asking what is strange here, where you are, or where you can go.";
+  }
+
+  function showGroundHint() {
+    if (!groundHintCopy) return;
+    const next = hintForCurrentGround();
+    groundHintCopy.textContent = next;
+    groundHintCopy.hidden = false;
+    listen("REACHED", { ground:heldGroundIdFor(currentId), instrument:"hint", aperture:currentId });
+  }
+
   function setAsking(value) {
     asking = value;
     talkInput.disabled = value;
@@ -1665,6 +1704,8 @@
   });
 
   talkInput.addEventListener("input", sizeTalkInput);
+
+  groundHint?.addEventListener("click", showGroundHint);
 
   talkInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter" && !event.shiftKey) {
