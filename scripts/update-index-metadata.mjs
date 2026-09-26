@@ -64,6 +64,21 @@ while ((match = articleRe.exec(html))) {
   };
 }
 
+const publicLandsPaths = [
+  "grounds/public-lands",
+  "experiments/public-lands-page-53",
+  "data/public-lands"
+];
+const publicLandsCommit = lastCommit(publicLandsPaths);
+if (publicLandsCommit) {
+  entries["/grounds/public-lands/"] = {
+    updated: publicLandsCommit.iso,
+    hand: handFromCommit(publicLandsCommit, "Glean"),
+    commit: publicLandsCommit.sha.slice(0, 12),
+    watch: publicLandsPaths
+  };
+}
+
 fs.writeFileSync(
   outputPath,
   JSON.stringify(
