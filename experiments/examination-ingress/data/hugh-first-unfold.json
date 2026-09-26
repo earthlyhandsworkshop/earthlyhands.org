@@ -1,0 +1,91 @@
+{
+  "occurrence_id": "mcr1546-hugh-g-bell-examination-p1",
+  "carrier_id": "mcr1546",
+  "representation_id": "bell-hugh-g-page-3-1-jpg",
+  "person": "Hugh G. Bell",
+  "object_label": "Recorded Commission examination",
+  "source_locator": "MCR 1546, internal p.1",
+  "source_face_return": "https://drive.google.com/drive/folders/1vrQJNjI9eGo_s-sbbuAsMvA5s4j08Oop",
+  "governing_jacket_return": "https://docs.google.com/document/d/1CrD7pJrN6DRs4BoBJsGqyx3vuHhO7jmDeMdxl5y1W-U/edit",
+  "states": [
+    {
+      "id": "H0",
+      "label": "Held occurrence",
+      "turns": [
+        {
+          "turn_id": "q1",
+          "voice": "Commission examiner",
+          "role": "question",
+          "exact_text": "Was he recognized by the Choctaw tribal authorities as a Choctaw Indian?",
+          "knowledge_or_action_state": "EXAMINER ASKS"
+        },
+        {
+          "turn_id": "a1",
+          "voice": "Hugh G. Bell",
+          "role": "answer",
+          "exact_text": "Yes, that is what they tell me; I have heard them say he was.",
+          "knowledge_or_action_state": "HEARD / WAS TOLD"
+        }
+      ]
+    },
+    {
+      "id": "H1",
+      "label": "Commission specifies / Hugh supposes",
+      "turns": [
+        {
+          "turn_id": "q2",
+          "voice": "Commission examiner",
+          "role": "question",
+          "exact_text": "Well, by the tribal authorities, I mean by act of council did they vote upon him and vote him in and make him a member?",
+          "knowledge_or_action_state": "EXAMINER SUPPLIES"
+        },
+        {
+          "turn_id": "a2",
+          "voice": "Hugh G. Bell",
+          "role": "answer",
+          "exact_text": "I suppose so.",
+          "knowledge_or_action_state": "SUPPOSES"
+        }
+      ]
+    },
+    {
+      "id": "H2",
+      "label": "Knowledge test complete",
+      "turns": [
+        {
+          "turn_id": "q3",
+          "voice": "Commission examiner",
+          "role": "question",
+          "exact_text": "Do you know?",
+          "knowledge_or_action_state": "EXAMINER ASKS"
+        },
+        {
+          "turn_id": "a3",
+          "voice": "Hugh G. Bell",
+          "role": "answer",
+          "exact_text": "No, I don’t.",
+          "knowledge_or_action_state": "DOES NOT KNOW"
+        }
+      ]
+    }
+  ],
+  "emitted_ticket": {
+    "actor": "Hugh G. Bell within a Commission examination",
+    "object": "Governed descendant ticket from one three-pair examination occurrence",
+    "state": "KNOWLEDGE LIMITED",
+    "verb": "heard / was told → supposes → does not know",
+    "claim": "Hugh says he was told Robert Bell was recognized. When the examiner specifies council action, voting, and membership, Hugh says “I suppose so” and then says he does not know.",
+    "change": "Three source-local question-and-answer pairs are summarized as one bounded descendant representation after the knowledge test; the examination remains intact.",
+    "source": "MCR 1546, internal p.1; Bell Hugh G - Page 3 (1).jpg",
+    "allows": [
+      "Follow to a distinct later carrier when its occurrence is supplied",
+      "Compare exact later wording with this completed examination unit"
+    ],
+    "forbids": [
+      "Treat the council, voting, or membership wording as Hugh-originated",
+      "Treat tentative assent as personal knowledge",
+      "Replace the examination with this ticket",
+      "Perform an automatic Robert identity join"
+    ]
+  }
+}
