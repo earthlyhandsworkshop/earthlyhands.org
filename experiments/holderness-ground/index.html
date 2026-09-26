@@ -27,7 +27,19 @@ main{min-height:calc(100vh - 5rem);display:grid;place-items:center;padding:7vh 1
 h1{font-size:clamp(2.2rem,6vw,5.2rem);font-weight:400;line-height:.94;margin:.45rem 0 1rem}
 .lead{font-size:clamp(1.12rem,2.2vw,1.46rem);line-height:1.48;margin:0 0 1rem}
 .quiet{font-size:.98rem;line-height:1.55;max-width:39rem;color:#5d574f}
-.relation{margin:clamp(4rem,10vh,8rem) 0 0 clamp(0rem,13vw,11rem);max-width:42rem;display:grid;grid-template-columns:auto 1fr;gap:1rem 1.2rem;align-items:center}
+.presence-field{margin:clamp(4.5rem,11vh,8.5rem) 0 clamp(3.5rem,8vh,6rem);min-height:clamp(17rem,39vh,29rem);position:relative;border-top:1px solid rgba(25,24,20,.18);border-bottom:1px solid rgba(25,24,20,.18)}
+.presence-point{position:absolute;max-width:18rem}
+.presence-point strong{display:block;font:600 11px/1.35 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase}
+.presence-point span{display:block;margin-top:.28rem;font-size:clamp(1.02rem,1.9vw,1.34rem);line-height:1.28}
+.presence-here{left:0;top:1.1rem}
+.presence-away{right:0;bottom:1.25rem;text-align:right}
+.presence-middle{position:absolute;left:50%;top:51%;transform:translate(-50%,-50%);width:min(22rem,64%);text-align:center;color:var(--faint);font:11px/1.5 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.presence-time{position:absolute;left:0;right:0;bottom:.95rem;display:flex;justify-content:space-between;pointer-events:none;color:var(--faint);font:10px/1.3 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.presence-time span:last-child{margin-right:calc(min(18rem,30vw) + 1rem)}
+.recurrence{max-width:34rem;margin:0 0 0 clamp(0rem,8vw,7rem);padding:0 0 clamp(2.5rem,6vh,4.5rem)}
+.recurrence .phrase{font-size:clamp(1.2rem,2.5vw,1.75rem);line-height:1.28}
+.recurrence .under{margin-top:.55rem;color:var(--faint);font:11px/1.5 system-ui,sans-serif;letter-spacing:.04em}
+.relation{margin:clamp(3rem,7vh,5.5rem) 0 0 clamp(0rem,13vw,11rem);max-width:42rem;display:grid;grid-template-columns:auto 1fr;gap:1rem 1.2rem;align-items:center}
 .mark{width:12px;height:12px;border:1px solid var(--ink);border-radius:50%;background:var(--paper)}
 .rel-copy{font-size:1.07rem;line-height:1.5}
 .inline{border:0;border-bottom:1px dotted currentColor;background:none;padding:0;cursor:pointer}
@@ -62,10 +74,17 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
 @media(max-width:650px){
  .top{padding:.9rem 1rem}.top .bearing{max-width:48%}
  main{padding:4vh .9rem 3rem;align-items:start}
- .ground{min-height:72vh;padding:1.1rem .6rem;border-top-color:rgba(25,24,20,.22)}
- .field-note{margin-bottom:12vh}
+ .ground{min-height:78vh;padding:1.1rem .6rem;border-top-color:rgba(25,24,20,.22)}
+ .field-note{margin-bottom:10vh}
  .anchor,.panel{margin-left:0}
- .relation{margin-left:1.2rem;grid-template-columns:auto 1fr;margin-top:13vh}
+ .presence-field{min-height:52vh;margin-top:9vh;margin-bottom:8vh}
+ .presence-here{top:1rem;left:.1rem}
+ .presence-away{right:.1rem;bottom:3.2rem;max-width:13rem}
+ .presence-middle{top:48%;width:72%;font-size:10px}
+ .presence-time{bottom:.8rem}
+ .presence-time span:last-child{margin-right:0}
+ .recurrence{margin-left:0;padding-bottom:3.2rem}
+ .relation{margin-left:1.2rem;grid-template-columns:auto 1fr;margin-top:8vh}
  .tools{display:grid;grid-template-columns:1fr}
  .tool{text-align:left}
  .ask-row{display:grid;grid-template-columns:1fr auto}
@@ -87,17 +106,41 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   <div class="anchor">
     <p class="kicker">McKinney Holderness · testimony state</p>
     <h1 id="ground-title">About 1¼ miles from the Choctaw agency.</h1>
-    <p class="lead">Holderness testified in 1837 that, from October 1832 to January 1834, he lived on the Noxubee turnpike about 1¼ miles from the Choctaw agency and was very often at the agency—he estimated <button class="inline" type="button" data-panel="frequency">once every two or three days</button>.</p>
-    <p class="quiet">This ground does not reconstruct the road, the agency building, or an exact modern point. You are standing in the relation carried by the testimony.</p>
+    <p class="lead">Holderness testified in 1837 that, from October 1832 to January 1834, he lived on the Noxubee turnpike about 1¼ miles from the Choctaw agency and was very often at the agency.</p>
+    <p class="quiet">You are standing in the relation carried by the testimony. The source gives a place relation, a distance, a span of months, and repeated agency presence. It does not give us the traveled line between them.</p>
   </div>
+
+  <section class="presence-field" aria-label="Held spatial relation">
+    <div class="presence-point presence-here">
+      <strong>Standing</strong>
+      <span>Noxubee turnpike relation</span>
+    </div>
+
+    <div class="presence-middle">
+      distance held<br>
+      traveled line not held
+    </div>
+
+    <div class="presence-point presence-away">
+      <strong>In relation</strong>
+      <span><button class="inline" type="button" data-panel="agency">Choctaw agency</button><br><button class="inline" type="button" data-panel="distance">about 1¼ miles from this footing</button></span>
+    </div>
+
+    <div class="presence-time" aria-label="Period described">
+      <span>Oct. 1832</span>
+      <span>Jan. 1834</span>
+    </div>
+  </section>
+
+  <section class="recurrence" aria-label="Repeated agency presence">
+    <div class="phrase">The relation repeats: <button class="inline" type="button" data-panel="frequency">very often at the agency</button>.</div>
+    <div class="under">Holderness estimated approximately once every two or three days during the period he described. This is cadence, not a reconstructed journey.</div>
+  </section>
 
   <div class="relation" aria-label="Source-controlled spatial relation">
     <span class="mark" aria-hidden="true"></span>
     <div class="rel-copy">
-      <button class="inline" type="button" data-panel="distance">about 1¼ miles from</button>
-      <button class="inline" type="button" data-panel="agency">the Choctaw agency</button>
-      <br>
-      <span>from a residence described as being on the Noxubee turnpike.</span>
+      <span>A residence described as being on the Noxubee turnpike stands in a repeated relation to the agency. The record gives distance and cadence; the space between remains unclaimed.</span>
     </div>
   </div>
 
