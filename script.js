@@ -129,6 +129,7 @@
     .then((payload) => {
       if (payload && Array.isArray(payload.entries)) {
         dawsonRetrieval = payload.entries;
+        syncDiscoveryChrome();
         if (experienceShell?.dataset.view === "sources") buildCampSources();
       }
     })
@@ -632,7 +633,8 @@
   }
 
   function jacketIsEarned(id = currentId) {
-    return jacketReachSet().has(heldGroundIdFor(id));
+    const reach = jacketReachSet();
+    return reach.has(heldGroundIdFor(id)) || reach.size > 0;
   }
 
   function earnGroundJacket(id = currentId) {
@@ -649,10 +651,15 @@
   function syncDiscoveryChrome() {
     const peopleButton = document.querySelector('[data-dawson-view="people"]');
     const mapButton = document.querySelector('[data-dawson-view="map"]');
+    const sourcesButton = document.querySelector('[data-dawson-view="sources"]');
     const jacketButton = document.querySelector('[data-dawson-view="jacket"]');
 
     if (peopleButton) peopleButton.hidden = !discoveryOpen || encounteredPeopleCount() === 0;
     if (mapButton) mapButton.hidden = !discoveryOpen || !mapIsEarned();
+    if (sourcesButton) {
+      const hasSourceDepth = dawsonRetrieval.some((entry) => Array.isArray(entry.scenes) && entry.scenes.includes(currentId));
+      sourcesButton.hidden = !discoveryOpen || !(hasSourceDepth || jacketReachSet().size > 0);
+    }
     if (jacketButton) jacketButton.hidden = !discoveryOpen || !jacketIsEarned();
 
     document.body.dataset.discovery = discoveryOpen ? "open" : "closed";
@@ -1413,6 +1420,7 @@
     if (!clean || asking) return;
 
     const origin = currentId;
+    const heldView = experienceShell?.dataset.view || "ground";
     const thoughtTurn = !discoveryOpen && !thresholdThoughtGiven;
 
     if (asksForResetVisit(clean)) {
@@ -1562,8 +1570,21 @@
       } else {
         const patchOrigin = currentId;
         const result = applyScenePatch(patchOrigin, patch);
+
+        if (heldView !== "ground" && !transitionResolved && !(result.moveTo && canMove(patchOrigin, result.moveTo))) {
+          const reply = shortState(patch.view || patch.title || patch.setting || "", 220);
+          if (reply && groundThread) {
+            const p = document.createElement("p");
+            p.className = "ground-response";
+            p.textContent = reply;
+            groundThread.append(p);
+          }
+        }
+
         if (!transitionResolved && result.moveTo && canMove(patchOrigin, result.moveTo)) {
           landAt(result.moveTo);
+        } else if (heldView !== "ground") {
+          setDawsonView(heldView);
         }
       }
 
