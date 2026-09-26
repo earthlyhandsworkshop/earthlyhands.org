@@ -86,13 +86,24 @@
 </section>
 </div>
 
-<script src="../../config.js"></script>
+<script src="../../config.js?v=64aae42b52b2"></script>
+<script src="../../public-listening.js?v=1"></script>
 <script>
 (function(){
   var data=null, conversation=[], current='transcription';
   var tabs=[].slice.call(document.querySelectorAll('[data-view]'));
   var panels=[].slice.call(document.querySelectorAll('[data-panel]'));
-  function show(v){current=v;tabs.forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.view===v))});panels.forEach(function(p){p.hidden=p.dataset.panel!==v});window.scrollTo({top:0,behavior:'smooth'})}
+  function show(v){
+    var previous=current;
+    current=v;
+    tabs.forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.view===v))});
+    panels.forEach(function(p){p.hidden=p.dataset.panel!==v});
+    window.scrollTo({top:0,behavior:'smooth'});
+    if(v!==previous){
+      var map={account:'REACHED',jacket:'OPENED_JACKET',source:'OPENED_SOURCES',ask:'REACHED',transcription:'RETURNED'};
+      try{window.EarthlyHandsListening?.record(map[v]||'REACHED',{ground:'public-lands-no-1-page-53',instrument:v,aperture:v});}catch(_){}
+    }
+  }
   tabs.forEach(function(b){b.onclick=function(){show(b.dataset.view)}});
 
   function fmtNum(v){
@@ -146,6 +157,7 @@
   }
   form.addEventListener('submit',async function(e){
     e.preventDefault();var clean=input.value.trim();if(!clean)return;input.value='';add(clean,'question');
+    try{window.EarthlyHandsListening?.record('ASKED_GROUND',{ground:'public-lands-no-1-page-53',instrument:current,aperture:current});}catch(_){}
     var local=localAnswer(clean);if(local){add(local,'reply');return}
     if(!data){add('The controlled page body is not available this turn.','reply');return}
     var api=String(window.EARTHLY_HANDS_API_URL||'').trim();if(!api){add('The listening ground is not available this turn.','reply');return}
