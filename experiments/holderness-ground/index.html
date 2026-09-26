@@ -53,6 +53,11 @@ h1{font-size:clamp(2.2rem,6vw,5.2rem);font-weight:400;line-height:.94;margin:.45
 .answer-entry:first-child{border-top:0}
 .answer-q{font:11px/1.4 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;opacity:.5;margin-bottom:.18rem}
 .answer-a{margin:0}
+.prose-map{margin:1.1rem 0;padding:1.1rem;border:1px solid rgba(25,24,20,.22);background:rgba(246,241,231,.58)}
+.pm-node{padding:.8rem .85rem;border-left:2px solid rgba(25,24,20,.55);max-width:28rem}
+.pm-node small{display:block;margin-top:.25rem;font:11px/1.45 system-ui,sans-serif;opacity:.58}
+.pm-relation{margin:2rem 0 2rem clamp(1rem,8vw,5rem);font-size:1.05rem}
+.pm-empty{margin:1.2rem 0 0 clamp(1rem,8vw,5rem);font:11px/1.5 system-ui,sans-serif;letter-spacing:.03em;opacity:.55}
 footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:flex;justify-content:space-between;gap:1rem;opacity:.62}
 @media(max-width:650px){
  .top{padding:.9rem 1rem}.top .bearing{max-width:48%}
@@ -99,6 +104,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   <div class="anchor">
     <div class="tools" aria-label="Available actions">
       <button class="tool" type="button" data-panel="person">Look toward Holderness</button>
+      <button class="tool" id="prose-map-door" type="button" data-panel="prose-map" hidden>See what this ground knows spatially</button>
       <button class="tool" type="button" data-panel="source">Go down to the source state</button>
       <button class="tool" type="button" data-panel="open-edge">Stand at the unjoined edge</button>
       <button class="tool refused-road" type="button" aria-disabled="true" aria-describedby="no-road-note">Follow Holderness to later land records</button>
@@ -120,6 +126,19 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     <h2>“About 1¼ miles” is the precision ceiling here.</h2>
     <p>The testimony supplies approximate distance. This specimen does not convert that wording into a measured radius, a road segment, or a modern coordinate.</p>
     <button class="close" type="button">Close and stay here</button>
+  </section>
+
+  <section class="panel" id="prose-map" hidden tabindex="-1">
+    <p class="meta">Prose Map · spatial memory of this footing</p>
+    <h2>One spatial relation is held.</h2>
+    <div class="prose-map" aria-label="Holderness testimony footing is about one and one-quarter miles from the Choctaw agency occurrence; no route is held">
+      <div class="pm-node"><strong>Holderness testimony footing</strong><small>Noxubee turnpike relation · October 1832–January 1834</small></div>
+      <div class="pm-relation">about 1¼ miles from</div>
+      <div class="pm-node"><strong>Choctaw agency occurrence</strong><small>Named by the testimony; not coordinate-fixed here</small></div>
+      <div class="pm-empty">No road, path, or travel geometry is held between these occurrences.</div>
+    </div>
+    <p>Holderness's repeated agency presence is also source-carried. It supplies cadence, not a line between the two places.</p>
+    <button class="close" type="button">Return to the exact ground</button>
   </section>
 
   <section class="panel" id="agency" hidden tabindex="-1">
@@ -239,6 +258,13 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   document.querySelectorAll('[data-panel]').forEach(btn => {
     btn.addEventListener('click', () => {
       const id = btn.dataset.panel;
+      if(id === 'distance' || id === 'agency'){
+        const proseDoor = document.getElementById('prose-map-door');
+        if(proseDoor && proseDoor.hidden){
+          proseDoor.hidden = false;
+          emitGroundEvent('capability_reveal', {target:'prose-map'});
+        }
+      }
       emitGroundEvent(
         id === 'source' ? 'source_descent' :
         id === 'open-edge' ? 'unjoined_edge' :
