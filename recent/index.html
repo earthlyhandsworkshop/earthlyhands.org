@@ -616,7 +616,8 @@ main{padding:0 0 1rem}
   fetch("/experiments/index-metadata.json", { cache: "no-store" })
     .then(r => r.ok ? r.json() : Promise.reject(new Error("metadata unavailable")))
     .then(meta => {
-      for (const [href, entry] of Object.entries(meta.entries || {})) {
+      const entries = Object.entries(meta.entries || {});
+      for (const [href, entry] of entries) {
         const link = document.querySelector(`.work-link[href="${href}"]`);
         const article = link?.closest(".work");
         if (!article) continue;
@@ -624,6 +625,58 @@ main{padding:0 0 1rem}
         const date = entry.updated ? fmt.format(new Date(entry.updated)).replace(",", " ·") + " CT" : "";
         setField(article, "updated", date);
         setField(article, "hand", entry.hand || "");
+      }
+
+      // Safety net: a public body should not disappear merely because its maker
+      // forgot to hand-place a Recent row. Missing indexed work is appended to
+      // Retained studies as a plain navigational return until someone gives it
+      // a fuller human-facing description.
+      const retained = document.querySelector("section.secondary");
+      if (retained) {
+        const known = new Set([...document.querySelectorAll(".work-link")].map(a => a.getAttribute("href")));
+        const titleFromHref = (href) => {
+          const slug = String(href||"").replace(/^\/+|\/+$/g,"").split("/").pop() || "public work";
+          return slug.replace(/[-_]+/g," ").replace(/\b\w/g, c => c.toUpperCase());
+        };
+        entries.forEach(([href, entry]) => {
+          if (known.has(href)) return;
+          const article = document.createElement("article");
+          article.className = "work auto-return";
+          article.dataset.updatedAt = entry.updated || "";
+          const a = document.createElement("a");
+          a.className = "work-link";
+          a.href = href;
+
+          const custody = document.createElement("aside");
+          custody.className = "custody";
+          const dl = document.createElement("dl");
+          const dt1 = document.createElement("dt"); dt1.textContent = "updated";
+          const dd1 = document.createElement("dd"); dd1.textContent = entry.updated ? fmt.format(new Date(entry.updated)).replace(",", " ·") + " CT" : "";
+          const dt2 = document.createElement("dt"); dt2.textContent = "hand";
+          const dd2 = document.createElement("dd"); dd2.textContent = entry.hand || "Workshop";
+          dl.append(dt1,dd1,dt2,dd2); custody.append(dl);
+
+          const title = document.createElement("div");
+          title.className = "title";
+          title.textContent = titleFromHref(href);
+          const brief = document.createElement("div");
+          brief.className = "brief";
+          brief.textContent = "indexed public work";
+          const desc = document.createElement("div");
+          desc.className = "desc";
+          desc.textContent = "Public work returned through the Workshop index. Open it to inspect the body in its own local form.";
+          const entryCell = document.createElement("div");
+          entryCell.className = "entry";
+          const enter = document.createElement("span");
+          enter.className = "enter";
+          enter.textContent = "enter";
+          entryCell.append(enter);
+
+          a.append(custody,title,brief,desc,entryCell);
+          article.append(a);
+          retained.append(article);
+          known.add(href);
+        });
       }
 
       function sortByRecency(section) {
