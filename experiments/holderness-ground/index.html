@@ -82,7 +82,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   <div class="anchor">
     <p class="kicker">McKinney Holderness · testimony state</p>
     <h1 id="ground-title">About 1¼ miles from the Choctaw agency.</h1>
-    <p class="lead">Holderness testified in 1837 that, from October 1832 to January 1834, he lived on the Noxubee turnpike about 1¼ miles from the Choctaw agency and was very often at the agency—he estimated once every two or three days.</p>
+    <p class="lead">Holderness testified in 1837 that, from October 1832 to January 1834, he lived on the Noxubee turnpike about 1¼ miles from the Choctaw agency and was very often at the agency—he estimated <button class="inline" type="button" data-panel="frequency">once every two or three days</button>.</p>
     <p class="quiet">This ground does not reconstruct the road, the agency building, or an exact modern point. You are standing in the relation carried by the testimony.</p>
   </div>
 
@@ -129,6 +129,13 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     <button class="close" type="button">Close and stay here</button>
   </section>
 
+  <section class="panel" id="frequency" hidden tabindex="-1">
+    <p class="meta">Window · testimony-local cadence · no route</p>
+    <h2>“Once every two or three days” earns repeated presence, not a path.</h2>
+    <p>The testimony supplies a rough cadence for Holderness being at the agency during the period he described. It does not supply departure points, means of travel, route geometry, duration of visits, or motive.</p>
+    <button class="close" type="button">Close and stay here</button>
+  </section>
+
   <section class="panel" id="person" hidden tabindex="-1">
     <p class="meta">People · occurrence before biography</p>
     <h2>McKinney Holderness</h2>
@@ -164,6 +171,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
 <script>
 (() => {
   let opener = null;
+  let returnY = null;
   const panels = [...document.querySelectorAll('.panel')];
 
   function openPanel(id, button){
@@ -171,6 +179,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     const panel = document.getElementById(id);
     if(!panel) return;
     opener = button || document.activeElement;
+    returnY = window.scrollY;
     panel.hidden = false;
     panel.focus({preventScroll:true});
     panel.scrollIntoView({behavior:'smooth', block:'nearest'});
@@ -179,9 +188,12 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   function closePanels(){
     panels.forEach(p => p.hidden = true);
     const target = opener;
+    const y = returnY;
     opener = null;
+    returnY = null;
     if(target && target.focus) target.focus({preventScroll:true});
-    document.getElementById('ground').scrollIntoView({behavior:'smooth', block:'nearest'});
+    if(Number.isFinite(y)) window.scrollTo({top:y, behavior:'auto'});
+    emitGroundEvent('return_close');
   }
 
   document.querySelectorAll('[data-panel]').forEach(btn => {
