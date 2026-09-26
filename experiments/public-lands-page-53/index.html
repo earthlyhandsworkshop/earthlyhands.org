@@ -47,7 +47,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
 </head>
 <body>
 <div class="shell">
-<header class="top"><a href="/">Earthly Hands Workshop</a><strong>Public Lands</strong><span>source-first ground · p.53</span></header>
+<header class="top"><a href="/">Earthly Hands Workshop</a><a href="/grounds/public-lands/" style="text-decoration:none"><strong>Public Lands</strong></a><span>source-first ground · p.53</span></header>
 <section class="head">
   <div><p class="eyebrow">Public Lands No. 1 · manuscript page 53</p><h1>Page 53</h1></div>
   <div class="head-copy"><p>One manuscript face, held as itself first. Look before the Workshop reads for you.</p><p>Controlled reading, accounting, jacket depth, Ask, and receiving stay reachable from the same footing. Nothing here repairs the source.</p></div>
@@ -269,7 +269,15 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
 
   fetch('../../data/public-lands/page-53.public.v0.json',{cache:'no-store'})
     .then(function(r){return r.ok?r.json():Promise.reject(new Error('data unavailable'))})
-    .then(function(j){data=j;render()})
+    .then(function(j){
+      data=j;render();
+      var hash=location.hash.replace(/^#/,'');
+      var map={brace:'PL53-BRACE','allen-yates':'PL53-ALLEN-YATES',account:'__ACCOUNT__'};
+      if(map[hash]){
+        if(map[hash]==='__ACCOUNT__')show('account',{instant:true});
+        else{show('transcription',{instant:true});requestAnimationFrame(function(){openRoute(map[hash])})}
+      }
+    })
     .catch(function(){document.getElementById('transcription-body').innerHTML='<tr><td colspan="9">Controlled transcription unavailable.</td></tr>'});
 
   var viewer=document.getElementById('viewer'),zoom=1;
