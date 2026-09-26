@@ -648,6 +648,25 @@
       ],
       "destination": null,
       "state": "PUBLIC GROUND NOT YET OPEN"
+    },
+    {
+      "id": "PL53-COMPANION-GLEAN",
+      "label": "Glean",
+      "kind": "Workshop companion underfoot",
+      "host": "Public Lands No. 1 / manuscript page 53 / current public ground",
+      "opens": "Glean is discoverable here because Glean has active, attributable work in the page-53 account and its public-ground rendering. This is Workshop presence, not a historical person occurrence and not a source witness.",
+      "state": "discoverable from this footing; not continuously present",
+      "allowed_actions": [
+        "inspect the latest attributable Public Lands return",
+        "ask from the current documentary footing",
+        "leave something for Workshop receiving"
+      ],
+      "unavailable_actions": [
+        "treat Glean as a source witness",
+        "expose another visitor’s Ask history or pockets",
+        "merge Glean with Allen Yates or another person occurrence"
+      ],
+      "destination": "/recent/"
     }
   ]
 }
