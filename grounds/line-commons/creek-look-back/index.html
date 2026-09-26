@@ -18,11 +18,9 @@ a{color:inherit}
 .face.is-current{display:flex}
 .work{align-items:center;justify-content:center;background:var(--blue)}
 .work img{display:block;width:100vw;height:auto;max-height:100svh;object-fit:contain}
-.bearing{position:fixed;z-index:5;top:0;left:0;right:0;display:flex;justify-content:space-between;gap:1rem;padding:.7rem .9rem;color:#cad4dc;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(to bottom,rgba(15,31,45,.64),transparent)}
-.bearing a{text-decoration:none}
-.controls{position:fixed;z-index:6;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:.7rem;padding:max(.7rem,env(safe-area-inset-bottom)) .9rem .85rem;background:linear-gradient(to top,rgba(15,31,45,.76),transparent)}
-.controls button,.controls a{border:1px solid rgba(222,232,239,.48);background:rgba(23,47,66,.66);color:white;padding:.58rem .72rem;text-decoration:none;cursor:pointer}
-.controls .quiet{border-color:transparent;background:transparent;color:#c4d0d8}
+.controls{position:fixed;z-index:6;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:.7rem;padding:max(.7rem,env(safe-area-inset-bottom)) .9rem .85rem}
+.controls button{border:1px solid #9d978e;background:rgba(238,232,220,.94);color:var(--ink);padding:.58rem .72rem;cursor:pointer}
+.work{cursor:pointer}
 .jacket,.maker{background:var(--paper);color:var(--ink);overflow:auto;padding:4.3rem clamp(1rem,5vw,4rem) 5.5rem}
 .page{width:min(78ch,100%);margin:auto}
 .kicker{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 2rem}
@@ -36,25 +34,18 @@ ul{padding-left:1.3rem}
 .maker blockquote p{margin:0 0 1.1rem}
 .maker-title{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 2.2rem}
 .paper-controls{background:linear-gradient(to top,rgba(238,232,220,.96),rgba(238,232,220,.7),transparent)}
-.paper-controls button,.paper-controls a{color:var(--ink);border-color:#9d978e;background:rgba(238,232,220,.9)}
+.paper-controls button{color:var(--ink);border-color:#9d978e;background:rgba(238,232,220,.94)}
 @media(max-width:640px){
   .work{align-items:center}
   .work img{width:100vw;max-height:none}
   .jacket,.maker{padding-left:1rem;padding-right:1rem}
-  .bearing{font-size:.6rem}
 }
 </style>
 </head>
 <body>
 <div class="shell">
-  <div class="bearing"><a href="/experiments/shared-country/">Earthly Hands · Shared Country</a><span>Line Commons · Creek Look-Back</span></div>
-
-  <section class="face work is-current" id="work" aria-label="Creek Look-Back drawing">
+  <section class="face work is-current" id="work" tabindex="0" role="button" aria-label="Creek Look-Back drawing. Tap or press Enter to turn it over." data-go="jacket">
     <img src="creek-look-back.jpg" alt="A restrained line drawing from Dancing Rabbit Creek looking uphill toward the long, low Workshop building." />
-    <div class="controls">
-      <a class="quiet" href="/recent/">Recent</a>
-      <button type="button" data-go="jacket">Turn over</button>
-    </div>
   </section>
 
   <section class="face jacket" id="jacket" aria-label="Specimen jacket">
@@ -140,6 +131,12 @@ document.addEventListener('click',e=>{
   const b=e.target.closest('[data-go]');
   if(!b)return;
   show(b.dataset.go);
+});
+document.addEventListener('keydown',e=>{
+  if((e.key==='Enter'||e.key===' ') && e.target.matches('[data-go]')){
+    e.preventDefault();
+    show(e.target.dataset.go);
+  }
 });
 </script>
 </body>
