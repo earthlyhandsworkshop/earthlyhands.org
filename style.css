@@ -2394,3 +2394,113 @@ body[data-discovery="open"] .camp-people{
     grid-template-columns:1fr;
   }
 }
+
+
+/* Shared Country second pass — earned ground jacket.
+   Available depth may persist without forcing present depth onto the screen. */
+.experience-shell[data-view="jacket"] .experience-stage{
+  width:min(64rem,calc(100% - 2rem));
+  padding-top:clamp(1.2rem,3vh,2.1rem);
+}
+.camp-jacket{
+  width:min(58rem,100%);
+  margin:0 auto;
+  padding:0 0 2.4rem;
+}
+.jacket-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(13rem,.55fr);
+  gap:1.25rem 2rem;
+  align-items:end;
+  padding:0 0 1rem;
+  border-bottom:1px solid var(--scene-ink);
+}
+.jacket-head p{
+  margin:0 0 .22rem;
+  color:var(--scene-muted);
+  font:600 .56rem/1.2 var(--mono);
+  letter-spacing:.085em;
+  text-transform:uppercase;
+}
+.jacket-head h2{
+  margin:0;
+  max-width:13ch;
+  font-size:clamp(2.2rem,5.5vw,5rem);
+  font-weight:400;
+  line-height:.92;
+  letter-spacing:-.04em;
+}
+.jacket-head > span{
+  color:var(--scene-muted);
+  font:.64rem/1.45 var(--mono);
+}
+.jacket-intro{
+  max-width:43rem;
+  margin:1.1rem 0 1.25rem 28%;
+  color:var(--scene-muted);
+  font-size:.88rem;
+  line-height:1.5;
+}
+.jacket-section{
+  display:grid;
+  grid-template-columns:minmax(8rem,24%) minmax(0,1fr);
+  gap:.75rem 1.6rem;
+  padding:.82rem 0;
+  border-top:1px solid var(--scene-rule);
+}
+.jacket-section h3{
+  margin:0;
+  color:var(--scene-muted);
+  font:600 .56rem/1.35 var(--mono);
+  letter-spacing:.075em;
+}
+.jacket-section-body{
+  max-width:44rem;
+}
+.jacket-section-body p{
+  margin:0 0 .42rem;
+  font-size:clamp(.98rem,1.45vw,1.16rem);
+  line-height:1.46;
+}
+.jacket-section-body p:last-child{margin-bottom:0}
+.jacket-open .jacket-section-body p{
+  color:var(--scene-muted);
+  font:600 .65rem/1.45 var(--mono);
+  letter-spacing:.01em;
+}
+.jacket-open .jacket-section-body p::before{
+  content:"[ ";
+  color:var(--scene-accent);
+}
+.jacket-open .jacket-section-body p::after{
+  content:" ]";
+  color:var(--scene-accent);
+}
+.jacket-return{
+  border-bottom:1px solid var(--scene-rule);
+}
+.experience-shell[data-change="instrument"] .camp-jacket{
+  transform:translateY(.08rem);
+}
+
+@media(max-width:52rem){
+  .experience-shell[data-view="jacket"] .experience-stage,
+  .camp-jacket{
+    width:calc(100% - 1.2rem);
+  }
+  .jacket-head{
+    grid-template-columns:1fr;
+    gap:.55rem;
+  }
+  .jacket-head h2{
+    max-width:14ch;
+    font-size:clamp(2.35rem,11vw,4rem);
+  }
+  .jacket-intro{
+    margin:1rem 0 1.2rem;
+  }
+  .jacket-section{
+    grid-template-columns:1fr;
+    gap:.35rem;
+  }
+}
