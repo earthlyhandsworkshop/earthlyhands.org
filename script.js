@@ -1,4 +1,12 @@
 (() => {
+  function listen(event, detail = {}) {
+    try {
+      window.EarthlyHandsListening?.record(event, detail);
+    } catch (_) {
+      // Listening must never block the visitor's action.
+    }
+  }
+
   const lamp = document.querySelector("#lamp-control");
   const lampLabel = lamp?.querySelector(".lamp-label") || null;
   const lanternHome = document.querySelector("#lantern-home");
