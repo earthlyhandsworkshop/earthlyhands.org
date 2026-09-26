@@ -88,7 +88,7 @@ function corsHeaders(origin) {
   return {
     "Access-Control-Allow-Origin": origin,
     "Access-Control-Allow-Headers": "Content-Type",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
     "Access-Control-Max-Age": "86400",
     Vary: "Origin",
   };
@@ -190,6 +190,22 @@ function cleanListenValue(value, max = 160) {
   return String(value || "").trim().slice(0, max);
 }
 
+async function ensurePresenceTable(db) {
+  await db.prepare(
+    "CREATE TABLE IF NOT EXISTS public_ground_presence (" +
+    "presence_id TEXT PRIMARY KEY," +
+    "ground TEXT NOT NULL," +
+    "footing TEXT," +
+    "display_name TEXT," +
+    "share_name INTEGER NOT NULL DEFAULT 0," +
+    "seen_at TEXT NOT NULL" +
+    ")"
+  ).run();
+  await db.prepare(
+    "CREATE INDEX IF NOT EXISTS idx_public_presence_ground_time ON public_ground_presence(ground,seen_at)"
+  ).run();
+}
+
 async function ensureListeningTable(db) {
   await db.prepare(
     "CREATE TABLE IF NOT EXISTS public_listening_events (" +
@@ -231,9 +247,79 @@ export default {
 
     const origin = allowedOrigin(request, env);
 
-    if (request.method === "OPTIONS" && (url.pathname === "/listen" || url.pathname === "/listening-summary")) {
+    if (request.method === "OPTIONS" && (url.pathname === "/listen" || url.pathname === "/listening-summary" || url.pathname === "/presence")) {
       if (!origin) return new Response(null, { status: 403, headers: workerHeaders() });
       return new Response(null, { status: 204, headers: { ...corsHeaders(origin), ...workerHeaders() } });
+    }
+
+    if (url.pathname === "/presence") {
+      if (!origin) return json({ error: "This shared ground is not open from that origin.", code: "origin_not_allowed", request_id: requestId }, 403);
+      if (!env.RECEIVING_DB) return json({ error: "Shared presence is not configured.", code: "presence_not_configured", request_id: requestId }, 503, corsHeaders(origin));
+
+      const activeSince = new Date(Date.now() - 90 * 1000).toISOString();
+
+      if (request.method === "GET") {
+        const ground = cleanListenValue(url.searchParams.get("ground"), 120);
+        const self = cleanListenValue(url.searchParams.get("self"), 80);
+        if (!ground) return json({ error: "Ground is required.", code: "ground_required", request_id: requestId }, 400, corsHeaders(origin));
+        try {
+          await ensurePresenceTable(env.RECEIVING_DB);
+          await env.RECEIVING_DB.prepare("DELETE FROM public_ground_presence WHERE seen_at < ?").bind(activeSince).run();
+          const rows = await env.RECEIVING_DB.prepare(
+            "SELECT presence_id,footing,display_name,share_name FROM public_ground_presence WHERE ground = ? AND seen_at >= ? ORDER BY seen_at DESC LIMIT 24"
+          ).bind(ground, activeSince).all();
+          const people = (rows?.results || [])
+            .filter((row) => String(row.presence_id || "") !== self)
+            .map((row) => ({
+              footing: cleanListenValue(row.footing, 160),
+              name: Number(row.share_name || 0) === 1 ? cleanListenValue(row.display_name, 80) : ""
+            }));
+          return json({ ground, others: people.length, people }, 200, corsHeaders(origin));
+        } catch (error) {
+          console.error("Shared presence read failed", requestId, error);
+          return json({ error: "Shared presence is unavailable.", code: "presence_read_failed", request_id: requestId }, 500, corsHeaders(origin));
+        }
+      }
+
+      if (request.method === "POST") {
+        let body;
+        try { body = await request.json(); }
+        catch { return json({ error: "Presence could not be read.", code: "invalid_json", request_id: requestId }, 400, corsHeaders(origin)); }
+        const presenceId = cleanListenValue(body?.presence_id, 80);
+        const ground = cleanListenValue(body?.ground, 120);
+        const footing = cleanListenValue(body?.footing, 160);
+        const displayName = cleanListenValue(body?.display_name, 80);
+        const shareName = body?.share_name === true ? 1 : 0;
+        if (!presenceId || !ground) return json({ error: "Presence and ground are required.", code: "presence_incomplete", request_id: requestId }, 400, corsHeaders(origin));
+        try {
+          await ensurePresenceTable(env.RECEIVING_DB);
+          await env.RECEIVING_DB.prepare(
+            "INSERT INTO public_ground_presence (presence_id,ground,footing,display_name,share_name,seen_at) VALUES (?,?,?,?,?,?) " +
+            "ON CONFLICT(presence_id) DO UPDATE SET ground=excluded.ground,footing=excluded.footing,display_name=excluded.display_name,share_name=excluded.share_name,seen_at=excluded.seen_at"
+          ).bind(presenceId, ground, footing, displayName, shareName, new Date().toISOString()).run();
+          return json({ ok: true }, 201, corsHeaders(origin));
+        } catch (error) {
+          console.error("Shared presence write failed", requestId, error);
+          return json({ error: "Shared presence could not be preserved.", code: "presence_write_failed", request_id: requestId }, 500, corsHeaders(origin));
+        }
+      }
+
+      if (request.method === "DELETE") {
+        let body = {};
+        try { body = await request.json(); } catch {}
+        const presenceId = cleanListenValue(body?.presence_id || url.searchParams.get("presence_id"), 80);
+        if (!presenceId) return json({ error: "Presence is required.", code: "presence_required", request_id: requestId }, 400, corsHeaders(origin));
+        try {
+          await ensurePresenceTable(env.RECEIVING_DB);
+          await env.RECEIVING_DB.prepare("DELETE FROM public_ground_presence WHERE presence_id = ?").bind(presenceId).run();
+          return json({ ok: true }, 200, corsHeaders(origin));
+        } catch (error) {
+          console.error("Shared presence leave failed", requestId, error);
+          return json({ error: "Shared presence could not close.", code: "presence_delete_failed", request_id: requestId }, 500, corsHeaders(origin));
+        }
+      }
+
+      return json({ error: "Method not allowed.", code: "method_not_allowed", request_id: requestId }, 405, corsHeaders(origin));
     }
 
     if (request.method === "POST" && url.pathname === "/listen") {
