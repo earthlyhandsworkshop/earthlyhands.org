@@ -2504,3 +2504,69 @@ body[data-discovery="open"] .camp-people{
     gap:.35rem;
   }
 }
+
+/* Shared Country third pass — Ask the Ground survives instrument changes. */
+.experience-shell[data-view="map"] .experience-tools,
+.experience-shell[data-view="people"] .experience-tools,
+.experience-shell[data-view="sources"] .experience-tools,
+.experience-shell[data-view="jacket"] .experience-tools{
+  width:min(58rem,calc(100% - 2rem));
+  margin-inline:auto;
+}
+.experience-shell[data-view="map"] .experience-utility,
+.experience-shell[data-view="people"] .experience-utility,
+.experience-shell[data-view="sources"] .experience-utility,
+.experience-shell[data-view="jacket"] .experience-utility{
+  grid-template-columns:minmax(8rem,24%) minmax(0,1fr);
+  gap:.6rem 1.6rem;
+}
+.experience-shell[data-view="map"] .experience-utility::before,
+.experience-shell[data-view="people"] .experience-utility::before,
+.experience-shell[data-view="sources"] .experience-utility::before,
+.experience-shell[data-view="jacket"] .experience-utility::before{
+  content:"ASK THE GROUND";
+  grid-column:1;
+  color:var(--scene-muted);
+  font:600 .54rem/1.35 var(--mono);
+  letter-spacing:.075em;
+}
+.experience-shell[data-view="map"] .ground-talk,
+.experience-shell[data-view="people"] .ground-talk,
+.experience-shell[data-view="sources"] .ground-talk,
+.experience-shell[data-view="jacket"] .ground-talk,
+.experience-shell[data-view="map"] .ground-thread,
+.experience-shell[data-view="people"] .ground-thread,
+.experience-shell[data-view="sources"] .ground-thread,
+.experience-shell[data-view="jacket"] .ground-thread{
+  grid-column:2;
+  max-width:none;
+}
+.ground-response{
+  margin:.35rem 0 0;
+  max-width:42rem;
+  color:var(--scene-ink);
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  font-size:1rem;
+  line-height:1.48;
+}
+@media(max-width:52rem){
+  .experience-shell[data-view="map"] .experience-tools,
+  .experience-shell[data-view="people"] .experience-tools,
+  .experience-shell[data-view="sources"] .experience-tools,
+  .experience-shell[data-view="jacket"] .experience-tools{
+    width:calc(100% - 1.2rem);
+  }
+  .experience-shell[data-view="map"] .experience-utility,
+  .experience-shell[data-view="people"] .experience-utility,
+  .experience-shell[data-view="sources"] .experience-utility,
+  .experience-shell[data-view="jacket"] .experience-utility{
+    display:block;
+  }
+  .experience-shell[data-view="map"] .experience-utility::before,
+  .experience-shell[data-view="people"] .experience-utility::before,
+  .experience-shell[data-view="sources"] .experience-utility::before,
+  .experience-shell[data-view="jacket"] .experience-utility::before{
+    display:block;
+    margin-bottom:.2rem;
+  }
+}
