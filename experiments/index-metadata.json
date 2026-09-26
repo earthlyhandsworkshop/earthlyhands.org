@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T16:41:04.278Z",
+  "generated": "2026-09-26T17:02:32.461Z",
   "source": "git history",
   "entries": {
     "/experiments/follow-one-claim/": {
@@ -35,9 +35,9 @@
       ]
     },
     "/experiments/shared-country/": {
-      "updated": "2026-09-26T02:34:22-05:00",
+      "updated": "2026-09-26T12:02:22-05:00",
       "hand": "Workshop · Small Door",
-      "commit": "921523fa88fe",
+      "commit": "43748aaa7bed",
       "watch": [
         "experiments/shared-country",
         "script.js",
