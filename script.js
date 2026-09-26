@@ -8,6 +8,8 @@
   const talkSend = document.querySelector("#talk-send");
   const groundHint = document.querySelector("#ground-hint");
   const groundHintCopy = document.querySelector("#ground-hint-copy");
+  let groundHintTimer = 0;
+  let groundHintEarned = false;
   const groundThread = document.querySelector("#ground-thread");
   const depthData = {
     distance: {
@@ -702,6 +704,7 @@
   }
 
   function setDawsonView(view) {
+    resetHintPatience();
     const next = ["ground", "map", "people", "sources", "jacket"].includes(view) ? view : "ground";
     const previous = experienceShell?.dataset.view || "ground";
     if (experienceShell) experienceShell.dataset.view = next;
@@ -1354,6 +1357,7 @@
     buildProseMap();
     syncDiscoveryChrome();
     target.focus({ preventScroll: true });
+    resetHintPatience();
   }
 
   function remember(id) {
@@ -1416,6 +1420,22 @@
     landAt(fullSequence[index - 1]);
   }
 
+  function scheduleGroundHint() {
+    if (!groundHint || groundHintEarned) return;
+    clearTimeout(groundHintTimer);
+    groundHint.hidden = true;
+    groundHintTimer = window.setTimeout(() => {
+      groundHintEarned = true;
+      groundHint.hidden = false;
+      listen("REACHED", { ground:heldGroundIdFor(currentId), instrument:"hint_available", aperture:currentId });
+    }, 35000);
+  }
+
+  function resetHintPatience() {
+    if (groundHintEarned) return;
+    scheduleGroundHint();
+  }
+
   function hintForCurrentGround() {
     const view = experienceShell?.dataset.view || "ground";
     if (view !== "ground") {
@@ -1472,6 +1492,7 @@
     const clean = String(message || "").trim().slice(0, 1000);
     if (!clean || asking) return;
 
+    resetHintPatience();
     listen("ASKED_GROUND", { ground:heldGroundIdFor(currentId), instrument:experienceShell?.dataset.view||"ground", aperture:currentId });
 
     const origin = currentId;
@@ -1715,7 +1736,10 @@
     askGround(talkInput.value);
   });
 
-  talkInput.addEventListener("input", sizeTalkInput);
+  talkInput.addEventListener("input", () => {
+    sizeTalkInput();
+    resetHintPatience();
+  });
 
   groundHint?.addEventListener("click", showGroundHint);
 
@@ -1777,6 +1801,7 @@
   showScene(sceneById.get(initialId), "forward");
   document.body.dataset.thought = thresholdThoughtGiven ? "given" : "none";
   syncDiscoveryChrome();
+  scheduleGroundHint();
 
   const specimenIndex = document.querySelector(".specimen-index");
   if (specimenIndex) {
