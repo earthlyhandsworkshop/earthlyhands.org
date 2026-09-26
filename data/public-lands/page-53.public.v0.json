@@ -1,0 +1,116 @@
+{
+  "schema": "earthly-hands.public-relation.v0",
+  "ground_id": "public-lands-no-1-page-53",
+  "label": "Public Lands No. 1 — manuscript page 53",
+  "publication_state": "BOUNDED_SPECIMEN",
+  "held_face": {
+    "historical_object": "one manuscript face within a continued Choctaw Treaty farm return",
+    "manuscript_page": 53,
+    "source_pdf": {
+      "filename": "OHC_2435.pdf",
+      "drive_ids": [
+        "1Cixr1gAzEGijYc7uvFlkSDrjMsHaeN3J",
+        "1cc2KGG6HIUAVfqUWwvAlosriUqdGUgV9"
+      ],
+      "representation_relation": "byte-identical custody copies; one digital payload and one manuscript-page witness"
+    },
+    "public_representation": {
+      "filename": "OHC_2435.png",
+      "drive_id": "1YMYk_RJO6PpiiBwOhsq-9EDTy9saYYoD",
+      "relation": "study representation of the same manuscript face; not an additional witness"
+    },
+    "governing_jacket": {
+      "title": "FIELDGLASS SOURCE-FACING JACKET — OHC_2435 page 53 — brace control, Allen Yates layered annotations, and Quoin corrections",
+      "drive_id": "1dYupfCZkgppJeKk9H6wvYWPdYkwelwli3NN7ugwykHI"
+    }
+  },
+  "portable_relations": [
+    {
+      "id": "PL-N1-P53-R22-R23-BRACE",
+      "type": "source-visible-cross-row-grouping",
+      "host": "PL:p53:r22–r23 / cultivated-acres field",
+      "reading": "one source-drawn brace spans two adjacent rows; one numeral 7 sits with the braced field",
+      "state": "allocation-unresolved",
+      "do_not_promote": [
+        "do not assign 7 to row 22 alone",
+        "do not infer kinship, household, or shared ownership from the brace"
+      ]
+    },
+    {
+      "id": "PL-N1-P53-R26-CATEGORY",
+      "type": "source-visible-category-count-annotation",
+      "host": "PL:p53:r26 / Allen Yates / printed Locality of Farms field",
+      "literal": "1 white 12 Slaves]",
+      "placement": "smaller lower annotation beneath the principal locality line",
+      "state": "secure-literal; administrative-function-open",
+      "same_cell": [
+        "Buckatunna creek. west side",
+        "from white settlements.",
+        "annotation ending 1/2 a mile; middle wording unresolved"
+      ],
+      "do_not_promote": [
+        "not a household composition formula",
+        "not reconciled with family 19",
+        "not converted into named identities or ownership mechanics"
+      ]
+    },
+    {
+      "id": "PL-N1-P53-R26-ROW",
+      "type": "controlled-row-reading",
+      "host": "PL:p53:r26 / Allen Yates",
+      "cells": {
+        "cultivated_acres": 140,
+        "entire_family": 19,
+        "males_over_16": "marked-nonnumeric / dotted; no zero adopted",
+        "under_10": 3,
+        "total_acres": 1280,
+        "general_remarks": "Provided for in supplement; two sections."
+      }
+    },
+    {
+      "id": "PL-N1-P53-AUDIT",
+      "type": "bounded-visible-word-audit",
+      "scope": "surviving visible manuscript page 53",
+      "observed_explicit_counts": {
+        "Whites": 1,
+        "Slaves": 12
+      },
+      "second_target_phrase_found": false,
+      "nonclaim": "visible-word result; not a historical zero for categories or people not expressly written in those terms"
+    },
+    {
+      "id": "PL-N1-P39-P53-OBSERVED-SUBTOTAL",
+      "type": "derived-observed-subtotal",
+      "scope": "controlled explicit category annotations through manuscript page 53",
+      "Whites": 10,
+      "Slaves": 15,
+      "state": "open-not-reconciled",
+      "known_loss_states": [
+        "page 41 lower active rows outside captured edge",
+        "page 50 right-edge loss"
+      ],
+      "later_closing_aggregate": "14 Whites & 67 Slaves in this district",
+      "aggregate_host": "manuscript page 60",
+      "rule": "do not assign the mismatch to a loss state or infer the roll-up rule"
+    }
+  ],
+  "correction_history": [
+    {
+      "subject": "Allen Yates layered locality annotation",
+      "superseded_derivative": "compressed the layers and read 1/4 a mile",
+      "active_source_facing_state": "principal locality, interlinear wording, and smaller category annotation remain distinct; terminal distance reads 1/2 a mile",
+      "open": "middle wording after 12 Slaves remains unresolved"
+    }
+  ],
+  "worker_floor": {
+    "authority": "The page and this controlled relation body govern. The Worker may explain only this bounded present encounter.",
+    "refusal": "If the held relations do not answer a factual historical question, say the held page does not answer it.",
+    "movement": "No Worker response may relocate the visitor or change source state."
+  },
+  "responsibility": {
+    "source_reading": ["Fieldglass", "Glean"],
+    "public_compilation": "Glean",
+    "public_renderer": "EarthlyHands.org bounded specimen",
+    "ownership_claim": false
+  }
+}

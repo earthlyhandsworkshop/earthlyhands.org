@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#181817">
+<title>Public Lands No. 1 — page 53 — Earthly Hands Workshop</title>
+<meta name="description" content="One Public Lands manuscript face, held still while its source grammar becomes reachable.">
+<style>
+:root{
+  --black:#181817;--ink:#25231f;--paper:#eee9dc;--paper-2:#e2dac9;
+  --muted:#6b655b;--rule:#aaa08e;--rust:#875236;--cream:#f7f2e7;
+}
+*{box-sizing:border-box}
+html{background:var(--black);color:var(--ink)}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--paper);line-height:1.5}
+button,input{font:inherit}
+button{color:inherit}
+.top{
+  min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.65rem clamp(.85rem,2.5vw,2rem);border-bottom:1px solid #3a3832;background:var(--black);color:#eee8da;
+  font:.74rem/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.07em;text-transform:uppercase
+}
+.top a{color:inherit;text-decoration:none}.top span{color:#aaa294}
+.shell{min-height:calc(100vh - 48px);display:grid;grid-template-columns:minmax(0,1.7fr) minmax(21rem,.78fr)}
+.face-side{min-width:0;background:#111;display:flex;flex-direction:column;position:relative}
+.face-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;padding:.8rem 1rem;color:#d9d2c4;border-bottom:1px solid #36342f}
+.face-head p{margin:0}.face-head .name{font-size:.92rem}.face-head .kind{font: .68rem/1.35 ui-monospace,monospace;color:#979085;text-transform:uppercase;letter-spacing:.07em}
+.viewer{position:relative;min-height:0;flex:1;overflow:auto;display:grid;place-items:center;padding:clamp(.45rem,1.6vw,1.15rem);touch-action:pan-x pan-y}
+.viewer img{display:block;width:100%;height:auto;max-width:none;transform-origin:top left;filter:contrast(1.02)}
+.viewer[data-zoom="1"] img{width:100%}.viewer[data-zoom="2"] img{width:155%}.viewer[data-zoom="3"] img{width:225%}
+.zoom{position:absolute;right:.8rem;bottom:.8rem;z-index:2;display:flex;background:rgba(24,24,23,.88);border:1px solid #545049}
+.zoom button{width:2.65rem;height:2.65rem;border:0;border-right:1px solid #545049;background:none;color:#f0eadc;cursor:pointer;font:1rem/1 ui-monospace,monospace}.zoom button:last-child{border-right:0}
+.rail{min-width:0;background:var(--paper);border-left:1px solid var(--rule);display:flex;flex-direction:column}
+.bearing{padding:1rem 1.15rem .85rem;border-bottom:1px solid var(--rule)}
+.bearing p{margin:0}.bearing .kicker{font:.68rem/1.3 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--rust)}
+.bearing h1{margin:.35rem 0 .25rem;font-size:clamp(1.35rem,2.4vw,2rem);line-height:1.03;font-weight:400}.bearing .still{font-size:.9rem;color:var(--muted)}
+.tabs{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--rule)}
+.tabs button{padding:.75rem .2rem;border:0;border-right:1px solid var(--rule);background:none;cursor:pointer;font:.68rem/1.2 ui-monospace,monospace;letter-spacing:.03em;text-transform:uppercase}
+.tabs button:last-child{border-right:0}.tabs button[aria-selected="true"]{background:var(--black);color:var(--cream)}.tabs button:disabled{color:#a39b8d;cursor:not-allowed}
+.panel{padding:1.1rem 1.15rem 2rem;overflow:auto;flex:1}.panel[hidden]{display:none}
+.panel h2{font-size:1.25rem;font-weight:400;margin:.1rem 0 .9rem}.panel h3{margin:1.2rem 0 .35rem;font: .72rem/1.3 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--rust)}
+.panel p{margin:.55rem 0}.panel ul{margin:.55rem 0;padding-left:1.25rem}.panel li{margin:.45rem 0}
+.literal{margin:.85rem 0;padding:.8rem .9rem;border-left:3px solid var(--rust);background:var(--cream);font:1rem/1.45 ui-monospace,monospace}
+.host{color:var(--muted);font-size:.86rem}.state{display:inline-block;padding:.16rem .4rem;border:1px solid var(--rule);font:.67rem/1.25 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.04em}
+.account{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin:.9rem 0}.account div{padding:.75rem;background:var(--cream);border:1px solid var(--rule)}.account strong{display:block;font-size:1.55rem;font-weight:400}.account span{font:.68rem/1.3 ui-monospace,monospace;text-transform:uppercase;color:var(--muted)}
+.return{margin-top:1.4rem;padding-top:.8rem;border-top:1px solid var(--rule)}.return button{border:0;background:none;padding:0;text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
+.ask-log{min-height:2.5rem}.ask-log p{padding:.65rem 0;border-bottom:1px solid var(--rule)}.ask-log .reply{white-space:pre-wrap}.ask-log .error{color:var(--muted)}
+.ask-form{margin-top:1rem;display:grid;grid-template-columns:1fr auto;border:1px solid var(--rule);background:var(--cream)}
+.ask-form input{min-width:0;border:0;background:transparent;padding:.72rem .8rem;color:var(--ink)}.ask-form button{border:0;border-left:1px solid var(--rule);background:var(--black);color:var(--cream);padding:.72rem .85rem;cursor:pointer}.ask-form button:disabled{opacity:.55}
+.fine{font-size:.8rem;color:var(--muted)}
+@media(max-width:760px){
+  .top span{display:none}.shell{display:block}.face-side{height:56vh;min-height:25rem}.rail{border-left:0;border-top:1px solid var(--rule);min-height:44vh}.face-head{padding:.65rem .75rem}.tabs{position:sticky;top:0;z-index:5;background:var(--paper)}.panel{min-height:20rem}.viewer[data-zoom="2"] img{width:190%}.viewer[data-zoom="3"] img{width:280%}
+}
+@media(prefers-reduced-motion:no-preference){.panel:not([hidden]){animation:arrive .14s ease-out}@keyframes arrive{from{opacity:.3}to{opacity:1}}}
+</style>
+</head>
+<body>
+<header class="top"><a href="/">Earthly Hands Workshop</a><strong>Public Lands</strong><span>one face held still</span></header>
+<main class="shell">
+  <section class="face-side" aria-label="Historical source face">
+    <div class="face-head">
+      <p class="name">Public Lands No. 1 · manuscript p. 53</p>
+      <p class="kind">Study representation · one witness</p>
+    </div>
+    <div class="viewer" id="viewer" data-zoom="1">
+      <img src="OHC_2435.png" alt="Grayscale manuscript page 53 of Public Lands No. 1, a ruled Choctaw Treaty farm return with handwritten rows and annotations">
+    </div>
+    <div class="zoom" aria-label="Source image scale">
+      <button type="button" data-zoom-out aria-label="Zoom out">−</button>
+      <button type="button" data-zoom-reset aria-label="Fit source face">1:1</button>
+      <button type="button" data-zoom-in aria-label="Zoom in">+</button>
+    </div>
+  </section>
+
+  <section class="rail" aria-label="Public Lands instruments">
+    <div class="bearing">
+      <p class="kicker">Held ground</p>
+      <h1>The form is doing more than its headings say.</h1>
+      <p class="still" id="bearing">The manuscript face does not move when an instrument opens.</p>
+    </div>
+    <nav class="tabs" aria-label="Inspect this face">
+      <button type="button" data-view="look" aria-selected="true">Look</button>
+      <button type="button" data-view="read" aria-selected="false">Read</button>
+      <button type="button" data-view="account" aria-selected="false">Account</button>
+      <button type="button" data-view="jacket" aria-selected="false" disabled title="Read the controlled face first">Jacket</button>
+      <button type="button" data-view="ask" aria-selected="false">Ask</button>
+    </nav>
+
+    <article class="panel" data-panel="look">
+      <h2>Stay with the face.</h2>
+      <p>The printed columns propose one order. The handwriting uses them for several kinds of relation.</p>
+      <p>Scale the manuscript. Nothing here is cleaned, redrawn, or made into a master transcription.</p>
+      <h3>Inspection boundary</h3>
+      <p class="host">OHC_2435 · manuscript page 53 · one face in a continued return</p>
+      <p class="fine">The image is a study representation of the source PDF. Repeated files are not extra witnesses.</p>
+    </article>
+
+    <article class="panel" data-panel="read" hidden>
+      <h2>Three jobs inside one printed form.</h2>
+      <h3>Rows 22–23 · cultivated acres</h3>
+      <p>A source-drawn brace spans two adjacent rows. One numeral <strong>7</strong> sits with the braced field.</p>
+      <p><span class="state">allocation unresolved</span></p>
+      <p class="fine">The 7 is not assigned to the first row alone. The brace does not establish kinship or shared ownership.</p>
+
+      <h3>Row 26 · Allen Yates · Locality of Farms</h3>
+      <p class="literal">1 white 12 Slaves]</p>
+      <p>The same cell also carries <em>Buckatunna creek. west side</em>, interlinear <em>from white settlements.</em>, and an annotation ending <em>1/2 a mile</em>. The middle wording remains open.</p>
+      <p class="fine">The printed heading does not turn every handwritten entry beneath it into locality.</p>
+
+      <h3>Row 26 · other controlled cells</h3>
+      <p>140 cultivated acres · family 19 · over-sixteen cell marked nonnumeric · 3 under ten · 1280 total acres.</p>
+      <p class="literal">Provided for in supplement; two sections.</p>
+      <p class="fine">The supplement is source-named here. This face does not identify or supply it.</p>
+      <div class="return"><button type="button" data-return>Return to the unassisted face</button></div>
+    </article>
+
+    <article class="panel" data-panel="account" hidden>
+      <h2>What survives beneath a later district total?</h2>
+      <p>This face contributes one explicit category-count cluster. No second White / Slave / Black phrase was found on the surviving visible face.</p>
+      <div class="account"><div><strong>1</strong><span>White · p.53</span></div><div><strong>12</strong><span>Slaves · p.53</span></div></div>
+      <h3>Observed subtotal through this face</h3>
+      <div class="account"><div><strong>10</strong><span>Whites · pp.39–53</span></div><div><strong>15</strong><span>Slaves · pp.39–53</span></div></div>
+      <h3>Later closing aggregate · p.60</h3>
+      <p class="literal">14 Whites &amp; 67 Slaves in this district</p>
+      <p><span class="state">not reconciled</span></p>
+      <p class="fine">Page 41 loses lower active rows at the captured edge. Page 50 loses part of its right edge. No missing difference is assigned to either loss, and no roll-up rule is inferred.</p>
+      <div class="return"><button type="button" data-return>Return to the unassisted face</button></div>
+    </article>
+
+    <article class="panel" data-panel="jacket" hidden>
+      <h2>The jacket opens by portion.</h2>
+      <h3>Object and representations</h3>
+      <ul>
+        <li>Historical object: one manuscript face within a continued return.</li>
+        <li>Two OHC_2435 PDFs: byte-identical custody copies of one payload.</li>
+        <li>This PNG: a study representation of that same face.</li>
+        <li>Repeated representations do not multiply the witness.</li>
+      </ul>
+      <h3>Correction carried</h3>
+      <p>A prior derivative flattened Allen Yates’s locality layers and read the terminal distance as <em>1/4 a mile</em>. Direct inspection supports distinct layers and <em>1/2 a mile</em>. The middle wording remains unresolved.</p>
+      <h3>What this does not say</h3>
+      <p>The category annotation is not a household formula, named identity body, ownership rule, or explanation of the later district aggregate.</p>
+      <h3>Road home</h3>
+      <p><a href="https://drive.google.com/file/d/1Cixr1gAzEGijYc7uvFlkSDrjMsHaeN3J/view" target="_blank" rel="noopener">Source PDF</a> · <a href="https://docs.google.com/document/d/1dYupfCZkgppJeKk9H6wvYWPdYkwelwli3NN7ugwykHI/edit" target="_blank" rel="noopener">Governing jacket</a></p>
+      <p class="fine">Reading: Fieldglass / Glean. Public compilation: Glean. Historical object owned by neither.</p>
+      <div class="return"><button type="button" data-return>Return to the unassisted face</button></div>
+    </article>
+
+    <article class="panel" data-panel="ask" hidden>
+      <h2>Ask from this face.</h2>
+      <p>The listening ground receives only the controlled relations above. It cannot inspect the manuscript, search the Workshop, alter the accounting, or move you.</p>
+      <div class="ask-log" id="ask-log" aria-live="polite"></div>
+      <form class="ask-form" id="ask-form">
+        <input id="ask-input" autocomplete="off" maxlength="1200" aria-label="Question about this source face" placeholder="What is the brace doing?">
+        <button type="submit">Ask</button>
+      </form>
+      <p class="fine">If this held body does not answer, the answer should remain here.</p>
+      <div class="return"><button type="button" data-return>Return to the unassisted face</button></div>
+    </article>
+  </section>
+</main>
+<script src="../../config.js"></script>
+<script>
+(function(){
+  var viewer=document.getElementById('viewer');
+  var zoom=1;
+  function setZoom(n){zoom=Math.max(1,Math.min(3,n));viewer.dataset.zoom=String(zoom);if(zoom===1){viewer.scrollLeft=0;viewer.scrollTop=0;}}
+  document.querySelector('[data-zoom-out]').onclick=function(){setZoom(zoom-1)};
+  document.querySelector('[data-zoom-in]').onclick=function(){setZoom(zoom+1)};
+  document.querySelector('[data-zoom-reset]').onclick=function(){setZoom(1)};
+
+  var tabs=[].slice.call(document.querySelectorAll('[data-view]'));
+  var panels=[].slice.call(document.querySelectorAll('[data-panel]'));
+  var bearing=document.getElementById('bearing');
+  var data=null;
+  var conversation=[];
+  var jacketKey='earthly-hands-public-lands-p53-jacket-v1';
+  var fresh=new URLSearchParams(location.search).get('fresh')==='1';
+  if(fresh){try{localStorage.removeItem(jacketKey)}catch(_){}history.replaceState(null,'',location.pathname)}
+  function jacketEarned(){try{return localStorage.getItem(jacketKey)==='earned'}catch(_){return false}}
+  function syncJacket(){var b=document.querySelector('[data-view="jacket"]');b.disabled=!jacketEarned();b.title=b.disabled?'Read the controlled face first':''}
+  function show(view){
+    tabs.forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.view===view))});
+    panels.forEach(function(p){p.hidden=p.dataset.panel!==view});
+    bearing.textContent=view==='look'?'The manuscript face does not move when an instrument opens.':
+      view==='read'?'Controlled readings open. The manuscript face remains held.':
+      view==='account'?'The arithmetic changes depth, not ground.':
+      view==='jacket'?'The source road opens. The manuscript face remains held.':
+      'The question stays with manuscript page 53.';
+    if(view==='read'&&!jacketEarned()){try{localStorage.setItem(jacketKey,'earned')}catch(_){}syncJacket()}
+  }
+  tabs.forEach(function(b){b.onclick=function(){if(!b.disabled)show(b.dataset.view)}});
+  document.querySelectorAll('[data-return]').forEach(function(b){b.onclick=function(){show('look')}});
+  syncJacket();
+
+  fetch('../../data/public-lands/page-53.public.v0.json',{cache:'no-store'})
+    .then(function(r){return r.ok?r.json():Promise.reject(new Error('relation body unavailable'))})
+    .then(function(j){data=j})
+    .catch(function(){data=null});
+
+  var form=document.getElementById('ask-form');
+  var input=document.getElementById('ask-input');
+  var log=document.getElementById('ask-log');
+  function add(text,kind){var p=document.createElement('p');p.className=kind;p.textContent=text;log.appendChild(p);}
+  function parseReply(raw){try{var p=JSON.parse(raw);return p&&typeof p.view==='string'?p:null}catch(_){return null}}
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();var clean=input.value.trim();if(!clean)return;input.value='';add(clean,'question');
+    var submit=form.querySelector('button');submit.disabled=true;
+    var api=String(window.EARTHLY_HANDS_API_URL||'').trim();
+    if(!api||!data){add('The listening ground did not answer this turn.','error');submit.disabled=false;return;}
+    var request=[
+      'PUBLIC LANDS LOCAL DOOR CONTRACT',
+      'You are beside one fixed administrative source face. The page supplies the controlled relations. You do not read the image.',
+      'Use only SOURCE FLOOR, CURRENT INSTRUMENT, recent questions, and TEN. If they do not answer a historical question, say the held page does not answer it.',
+      'Do not equate categories, complete names, infer household or ownership, assign missing arithmetic, or convert representation repetition into witnesses.',
+      'The browser owns source state, accounting, correction history, inspection doors, and return. Do not move the visitor or change any deterministic fact.',
+      'VOICE: plain, testimonial, unresolved. Prefer the fact to a metaphor about the fact.',
+      'RETURN JSON ONLY with exactly these keys:',
+      '{"setting":"Public Lands No. 1 / manuscript p.53","title":"short plain heading","view":"bounded answer","footing":"still at manuscript p.53","companion":"","appearance":"","move_to":""}',
+      'appearance and move_to must remain empty.',
+      'SOURCE FLOOR: '+JSON.stringify(data),
+      'CURRENT INSTRUMENT: '+document.querySelector('[data-view][aria-selected="true"]').dataset.view,
+      'TEN: '+clean
+    ].join('\n');
+    try{
+      var response=await fetch(api,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:request,place:'public-lands-no-1-page-53',history:conversation.slice(-2)})});
+      var body=await response.json().catch(function(){return {}});
+      if(!response.ok||typeof body.reply!=='string')throw new Error('closed');
+      var patch=parseReply(body.reply);if(!patch)throw new Error('contract');
+      add(patch.view,'reply');conversation.push({role:'user',content:clean});conversation=conversation.slice(-2);
+    }catch(_){add('The listening ground did not answer this turn.','error');}
+    finally{submit.disabled=false;}
+  });
+})();
+</script>
+</body>
+</html>
