@@ -42,6 +42,26 @@
 
   window.EarthlyHandsListening={record:record,visitId:visitId};
 
+  window.addEventListener("earthlyhands:ground-event",function(event){
+    const d=event?.detail||{};
+    const type=String(d.type||"").toLowerCase();
+    const mapped={
+      ground_open:"REACHED",
+      window_open:"REACHED",
+      unjoined_edge:"REACHED",
+      refused_road:"REACHED",
+      source_descent:"OPENED_SOURCES",
+      return_close:"RETURNED",
+      ask:"ASKED_GROUND"
+    }[type]||"";
+    if(!mapped)return;
+    record(mapped,{
+      ground:String(d.ground||""),
+      instrument:type,
+      aperture:String(d.target||d.experiment||"")
+    });
+  });
+
   if(document.readyState==="loading"){
     document.addEventListener("DOMContentLoaded",function(){record("ARRIVED");},{once:true});
   }else{
