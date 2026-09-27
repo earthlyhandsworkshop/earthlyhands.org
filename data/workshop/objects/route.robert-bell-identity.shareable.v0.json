@@ -1,0 +1,80 @@
+{
+  "schema":"earthly-hands-workshop-object/v0",
+  "id":"route:robert-bell-identity",
+  "kind":"identity-route",
+  "title":"Robert Bell — identity route",
+  "publication_state":"SHAREABLE",
+  "state":"WORKING / OPEN",
+  "working_title":{
+    "text":"The Government Lost Robert Bell",
+    "status":"FLARE / WORKING TITLE",
+    "brake":"The title is hotter than the present controlled body. The folio preserves it as a question-bearing flare, not as an independent historical finding."
+  },
+  "road_home":"ground:sandbox-15",
+  "body":{
+    "job":"Lay out the family testimony, early Bell and McKinney occurrences, the Commission's comparator, later review, and the surviving open questions without making unlike evidence interchangeable.",
+    "current":["The federal record establishes an administrative refusal of MCR 879.","The Commission rejected the proposed identity between the family's Robert Bell and the previously adjudicated Article XIV Robert Bell.","Indian Affairs later stated the administrative conclusion as two Robert Bells.","The 1907 rehearing motion was denied on timeliness grounds."],
+    "does_not":["The body does not convert the federal identity finding into an independent historical identity finding.","The body does not establish that the early Public Lands Robert, James, and Levy Bell are the family configuration later described in MCR 879.","The body does not establish that Catharine McKinney in Article XIX is the family's Catherine/Catharine McKinney.","The body does not establish what procedural or substantive position the Choctaw Nation took after notice to its attorneys."]
+  },
+  "route":[
+    {"state":"1900 · Muskogee","label":"Family knowledge enters","text":"Mary Caroline Atkinson and William D. Bell describe Robert Bell through family memory, reported enrollment, purchased land, and uncertainty about Article XIV."},
+    {"state":"1901 · Atoka","label":"Identity machinery sharpens","text":"Hugh, Thrace, and Emma encounter Article XIV questioning and the older federal Robert Bell comparator. Knowledge, examiner wording, and family correction remain separate."},
+    {"state":"Early paper","label":"Robert / James / Levy occur independently","text":"Public Lands No. 3 contains Robert Bell, James Bell, and Levy Bell within the same surviving documentary body. The manuscript itself does not state that they are related or identify them as the later MCR 879 family."},
+    {"state":"1902 · Commission","label":"Two bodies compared","text":"The Commission compares the family's Robert Bell with the previously adjudicated Article XIV Robert Bell and treats the differences as sufficient to reject identity."},
+    {"state":"1902 · Office / Interior","label":"Administrative finding hardens","text":"Indian Affairs identifies the Robert Bell identity question as decisive and recommends affirmance. Interior affirms."},
+    {"state":"1907","label":"Question changes","text":"The rehearing motion is denied pro forma as untimely. The record is not transmitted because the Office says it is unnecessary for deciding that motion."}
+  ],
+  "machine_lenses":[
+    {
+      "machine":"Machine One · Testimony / Proposition",
+      "question":"What happens to the family's statements as the examiner supplies wording and later administration summarizes them?",
+      "use":"Keep heard / told / saw / does not know / examiner-supplied language separate. Hugh's 'I suppose so' does not become three assents merely because the question carried three propositions.",
+      "returns":["Hugh recognition turns on one source face, separately addressable."]
+    },
+    {
+      "machine":"Machine Three · Answer / Construction Inversion",
+      "question":"What lower acts and carriers make the compact administrative answer 'two Robert Bells' possible?",
+      "use":"Open the finding downward into family testimony, comparator record, residence, wife, company, registration testimony, and patent material without treating the finding itself as an independent historical proof.",
+      "returns":["Commission decision p.-45- and separately labeled lower dependencies."]
+    },
+    {
+      "machine":"Name Web / relation view",
+      "question":"What changes when Robert / James / Levy are viewed as a configuration rather than isolated names?",
+      "use":"Show the later family relation and the earlier Public Lands name configuration side by side without joining identities automatically.",
+      "returns":["Public Lands rows and family testimony remain separately governed."]
+    },
+    {
+      "machine":"Trace",
+      "question":"Which proposition is being carried, changed, supplied, refused, or left open at each step?",
+      "use":"Follow the identity proposition and the Article XIV compliance proposition separately so closure of one does not silently close the other.",
+      "returns":["State-local passage, governing face, and larger object remain distinct."]
+    }
+  ],
+  "return_rules":[
+    "SAME SOURCE FACE ≠ SAME MACHINE STATE.",
+    "SAME DESTINATION FILE ≠ SAME RETURN.",
+    "SHARED WRAPPER ≠ SHARED DOCUMENTARY UNIT.",
+    "FOCUS CROP ≠ DOCUMENTARY BOUNDARY.",
+    "ONE REPRESENTATION MAY SERVE SEVERAL RETURNS; EACH RETURN MUST NAME ITS LOCAL TURN."
+  ],
+  "source_returns":[
+    {"name":"Hugh recognition turns","historical_object":"MCR 1546 Hugh G. Bell sworn examination","representation":"Bell Hugh G - Page 3 (1).jpg / controlled Workshop representation","locality":"Q1/A1 heard/told · Q2/A2 examiner-supplied council/vote wording and 'I suppose so' · Q3/A3 'Do you know?' / 'No, I don't.'","status":"WORKING / public surrogate unresolved"},
+    {"name":"Commission identity assessment","historical_object":"MCR 879 consolidated Commission decision","representation":"controlled decision face","locality":"state-local passage around the identity comparison and testimonial-sufficiency assessment","status":"WORKING / public surrogate unresolved"},
+    {"name":"Public Lands Robert–James–Levy configuration","historical_object":"Public Lands manuscript body","representation":"controlled source jackets / received representations","locality":"separate Bell rows within the same surviving documentary body","status":"WORKING / identity relation remains open"}
+  ],
+  "questions":[
+    "What early record was the family describing when it spoke of Robert Bell being registered?",
+    "What record did Thrace Bell see the day before her examination?",
+    "What roll did Emma Pickens describe as being held by a lawyer?",
+    "What weight should be given to the independent early occurrence of Robert, James, and Levy Bell in Public Lands No. 3?",
+    "What relation, if any, exists between the Bell–McKinney family and Catharine McKinney in the separate Article XIX record?",
+    "What record population did the Commission actually search when it made its negative McKinney statement?",
+    "What procedural or substantive position, if any, did the Choctaw Nation take after notice was sent to its attorneys?",
+    "What later federal act, if any, reached beyond the administrative identification question decided in MCR 879 and closed a broader treaty claim?"
+  ],
+  "conversation_reading":{
+    "glint":"15 is learning how an object becomes traversable while the folio is learning how a person traverses an object.",
+    "present_recommendation":"Do not tighten the body into a conclusion yet. Make the route inspectable: body, machine lenses, state-local returns, open questions, and neighboring records should be reachable without collapsing into one claim.",
+    "next_possible_growth":["deeper Machine One view","Machine Three inversion view","Name Web configuration view","source-face focus/full-face returns","Prose Map / place relation","authenticated Workshop notes"]
+  }
+}
