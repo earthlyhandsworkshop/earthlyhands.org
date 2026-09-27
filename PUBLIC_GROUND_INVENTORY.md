@@ -16,6 +16,29 @@ This is not a style ranking and not a replacement for the Public Ground build ro
 - Do not invent a maker, source relation, or publication state to make the inventory look complete.
 - **Readability is a floor, not a style option.** On a word-centered public ground, consequential text should be comfortably readable by Ten on a phone without requiring glasses or pinch-zoom. Small type must earn its use; labels, metadata, and source controls remain part of the reading experience and are not exempt.
 
+
+
+## Publication-state audit
+
+The inventory now uses the standing publication relationship from `WORKSHOP_SURFACES.md`:
+
+- **WORKING**
+- **SHAREABLE**
+- **PUBLIC**
+
+This inventory does not automatically reclassify every existing experiment. Historical experiments may predate the grammar, and a working body may remain publicly reachable while its current publication relationship is being reviewed.
+
+Audit rule:
+
+1. If a body is intentionally discoverable through Public Ground / Recent and is answerable as Earthly Hands public work, mark it **PUBLIC**.
+2. If a body is safe if forwarded but should stay out of ordinary discovery, mark it **SHAREABLE**.
+3. If exposure would be premature, harmful, rights-unclear, privacy-sensitive, or operationally consequential, keep it **WORKING** and do not rely on obscurity.
+4. Publication state may move inward or outward. Public is not graduation.
+5. Source permission remains a separate question.
+
+The next inventory pass should add a publication-state column only where the evidence is strong enough to classify a body. Do not bulk-normalize by URL location or `noindex` alone.
+
+
 ## Prose Map temporal / depth seam
 
 The current specimens are teaching a useful distinction. Keep these states separate:
