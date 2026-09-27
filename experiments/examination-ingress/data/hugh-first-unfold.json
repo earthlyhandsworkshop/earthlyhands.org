@@ -89,5 +89,57 @@
       "Perform an automatic Robert identity join"
     ]
   },
-  "carrier_scope_note": "The recorded examination continues beyond this bounded three-pair recognition sequence."
+  "carrier_scope_note": "The recorded examination continues beyond this bounded three-pair recognition sequence.",
+  "follow_forward_sequence": {
+    "sequence_id": "mcr1546-hugh-g-bell-land-knowledge-sequence-p3",
+    "representation_id": "bell-hugh-g-page-5-1-jpg",
+    "object_label": "Later bounded land-knowledge sequence within the same recorded examination",
+    "source_locator": "MCR 1546, internal p.3",
+    "source_face_label": "Bell Hugh G - Page 5 (1).jpg",
+    "source_face_return": "https://drive.google.com/file/d/1alx-CWzK5EngoxhUBFTmPgKbwnOG-Lgk/view",
+    "gap_note": "The examination continues across intervening testimony not shown here. This is a later bounded sequence, not the next turn.",
+    "states": [
+      {
+        "id": "F0",
+        "label": "Remembered conditional speech",
+        "turns": [
+          {
+            "turn_id": "q4",
+            "voice": "Commission examiner",
+            "role": "question",
+            "exact_text": "Did he ever claim or receive any land in Mississippi as a beneficiary under article fourteen of the treaty of 1830?",
+            "knowledge_or_action_state": "EXAMINER ASKS"
+          },
+          {
+            "turn_id": "a4",
+            "voice": "Hugh G. Bell",
+            "role": "answer",
+            "exact_text": "I only heard him say that if he could come to the Indian Territory he would have a right here.",
+            "knowledge_or_action_state": "REMEMBERS CONDITIONAL SPEECH"
+          }
+        ]
+      },
+      {
+        "id": "F1",
+        "label": "Land knowledge limit",
+        "turns": [
+          {
+            "turn_id": "q5",
+            "voice": "Commission examiner",
+            "role": "question",
+            "exact_text": "What do you know with reference to his having any land in Mississippi from the Government?",
+            "knowledge_or_action_state": "EXAMINER ASKS"
+          },
+          {
+            "turn_id": "a5",
+            "voice": "Hugh G. Bell",
+            "role": "answer",
+            "exact_text": "I don’t know anything at all.",
+            "knowledge_or_action_state": "DOES NOT KNOW"
+          }
+        ]
+      }
+    ],
+    "sequence_note": "The first answer reports remembered conditional speech attributed to Robert Bell. It is not Robert’s direct testimony and does not establish a claim, land receipt, travel, or what “right here” meant. The following answer separately limits Hugh’s knowledge of government land in Mississippi."
+  }
 }
