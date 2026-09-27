@@ -1597,7 +1597,15 @@
     setAsking(true);
 
     if (transitionResolved) {
+      // An earned local movement is already a complete turn.
+      // Land once and let the authored scene hold. Sending the same gesture
+      // to the model immediately afterwards causes a second render to
+      // overwrite the landing (for example: "wait until morning").
       landAt(localMove);
+      conversation.push({ role: "user", content: clean });
+      if (conversation.length > 4) conversation.splice(0, conversation.length - 4);
+      setAsking(false);
+      return;
     }
 
     if (!apiUrl) {
