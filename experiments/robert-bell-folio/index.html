@@ -70,6 +70,29 @@ textarea{width:100%;min-height:8rem;resize:vertical;border:1px solid var(--hair)
 .reading{margin-top:1.5rem;border:1px solid var(--rule);padding:1rem}.reading h3{margin:0 0 .45rem;font-weight:400;font-size:1.3rem}.reading p{margin:.45rem 0}.reading .glint{font-size:1.1rem}
 .links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}.links a{font:.58rem/1.2 var(--mono);border-bottom:1px solid var(--rust);text-decoration:none;padding:.15rem 0}
 .foot{display:flex;justify-content:space-between;gap:1rem;margin-top:.65rem;color:var(--muted);font:.54rem/1.4 var(--mono)}
+.machine-workspace{max-width:none}
+.machine-toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-bottom:1rem}
+.machine-tool{min-height:4.8rem;border:0;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);background:transparent;text-align:left;padding:.72rem .8rem;cursor:pointer;font-size:1rem}
+.machine-tool span{color:var(--muted);font:.48rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.machine-tool:hover,.machine-tool.active{background:rgba(134,85,58,.07)}
+.machine-operating{border:1px solid var(--rule);min-height:31rem;background:rgba(255,255,255,.045)}
+.machine-sheet{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(17rem,.85fr)}
+.machine-main{padding:1rem}.machine-side{padding:1rem;border-left:1px solid var(--rule);background:rgba(255,255,255,.07)}
+.machine-label{margin:0 0 .35rem;color:var(--rust);font:700 .49rem/1.2 var(--mono);letter-spacing:.075em;text-transform:uppercase}
+.machine-main h3,.machine-side h3{margin:.1rem 0 .7rem;font-size:1.55rem;line-height:1.05;font-weight:400}
+.machine-main>p,.machine-side>p{margin:.45rem 0}
+.turns{border-top:1px solid var(--rule);margin-top:1rem}.turn{display:grid;grid-template-columns:7rem minmax(0,1fr);border-bottom:1px solid var(--hair)}
+.turn-meta{padding:.7rem;border-right:1px solid var(--hair);color:var(--muted);font:.47rem/1.35 var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.turn-body{padding:.7rem}.turn-body blockquote{margin:0;font-size:1.05rem;line-height:1.45}.turn-reading{margin:.55rem 0 0;color:var(--muted);font-size:.86rem}
+.clauses{display:none;flex-wrap:wrap;gap:.35rem;margin-top:.6rem}.turn.open .clauses{display:flex}.clause{border:1px solid var(--hair);padding:.28rem .36rem;font:.57rem/1.2 var(--mono)}
+.machine-actions{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}.machine-actions button{border:1px solid var(--hair);background:transparent;padding:.48rem .58rem;cursor:pointer;font:.56rem/1.2 var(--mono);letter-spacing:.04em;text-transform:uppercase}.machine-actions button:hover{background:var(--wash);border-color:var(--rule)}
+.machine-result{margin-top:1rem;padding:1rem;border:1px solid var(--rule);background:rgba(134,85,58,.05)}.machine-result[hidden]{display:none}.machine-result h4{margin:0 0 .45rem;font-weight:400;font-size:1.25rem}.machine-result p{margin:.4rem 0}.machine-result .brake-line{color:var(--muted);font-size:.85rem}
+.inversion-stack{display:grid;gap:.5rem;margin-top:1rem}.inv-row{border:1px solid var(--hair);padding:.7rem;background:rgba(255,255,255,.08)}.inv-row b{display:block;margin-bottom:.25rem;font:700 .49rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em}.inv-row.hidden-row{opacity:.2}.inv-row.revealed{opacity:1}
+.name-compare{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-top:1rem}.name-col{padding:.8rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}.name-col h4{margin:0 0 .6rem;font-weight:400;font-size:1.15rem}.name-node{padding:.5rem 0;border-top:1px solid var(--hair)}.name-node:first-of-type{border-top:0}.name-node strong{display:block;font-weight:400}.name-node span{color:var(--muted);font-size:.82rem}
+.join-list{margin-top:1rem;border-top:1px solid var(--rule)}.join-row{display:grid;grid-template-columns:11rem minmax(0,1fr) auto;gap:.75rem;align-items:center;padding:.7rem 0;border-bottom:1px solid var(--hair)}.join-row b{font-weight:400}.join-status{color:var(--rust);font:.48rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.trace-selector{display:flex;gap:.45rem;flex-wrap:wrap;margin:.7rem 0}.trace-selector button{border:1px solid var(--hair);background:transparent;padding:.45rem .55rem;cursor:pointer}.trace-selector button.active{background:rgba(134,85,58,.07);border-color:var(--rule)}
+.trace-stations{border-top:1px solid var(--rule)}.trace-station{display:grid;grid-template-columns:10rem minmax(0,1fr);border-bottom:1px solid var(--rule)}.trace-station>div:first-child{padding:.7rem;border-right:1px solid var(--rule)}.trace-station>div:last-child{padding:.7rem}.trace-station small{display:block;color:var(--muted);font:.47rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}.trace-station strong{display:block;margin:.12rem 0;font-weight:400}.trace-station p{margin:.25rem 0;color:var(--muted);font-size:.87rem}
+@media(max-width:50rem){.machine-toolbar{grid-template-columns:repeat(2,1fr)}.machine-sheet{grid-template-columns:1fr}.machine-side{border-left:0;border-top:1px solid var(--rule)}.name-compare{grid-template-columns:1fr}.join-row{grid-template-columns:1fr}.turn{grid-template-columns:5.5rem minmax(0,1fr)}.trace-station{grid-template-columns:7rem minmax(0,1fr)}}
 .toast{position:fixed;right:1rem;bottom:1rem;background:var(--ink);color:var(--sheet);padding:.55rem .7rem;font:.58rem/1.2 var(--mono);opacity:0;transform:translateY(.5rem);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:none}
 @media(max-width:64rem){.folio{grid-template-columns:1fr}.spine{border-right:0;border-bottom:1px solid var(--rule)}.tabs{display:grid;grid-template-columns:repeat(6,1fr);overflow:auto}.tab{display:block;text-align:center;border-right:1px solid var(--hair);border-bottom:0;padding:.65rem .3rem}.tab[aria-selected="true"]{box-shadow:inset 0 -3px 0 var(--rust)}.tab .n{display:none}.tab .t{font-size:.78rem}.spine-foot{display:none}.identity p:last-child{display:none}.cards{grid-template-columns:1fr}.notes-grid{grid-template-columns:1fr}.notebook{border-left:0;border-top:1px solid var(--rule)}}
 @media(max-width:40rem){.shell{width:calc(100% - .5rem)}.tabs{grid-template-columns:repeat(3,1fr)}.head{grid-template-columns:1fr}.state{justify-self:start}.head h2{font-size:2.7rem}.inner{padding:1rem .8rem 1.5rem}.cols{grid-template-columns:1fr}.flare{grid-template-columns:1fr}.flare-label{border-right:0;border-bottom:1px solid var(--rule)}.return{grid-template-columns:1fr}.return h3{border-right:0;border-bottom:1px solid var(--rule)}.return dt{width:6rem}.return dd{margin-left:6.5rem}.question{grid-template-columns:1fr}.pin{justify-self:start}}
@@ -103,7 +126,15 @@ textarea{width:100%;min-height:8rem;resize:vertical;border:1px solid var(--hair)
 
 <section class="panel" data-panel="route"><div class="inner"><p class="lede">This is not one road. It is a sequence of documentary states through which the identity question changes shape.</p><div class="route" id="route-list"></div></div></section>
 
-<section class="panel" data-panel="machines"><div class="inner"><p class="lede">Bring different instruments to the same body. Each one should expose a different hidden dimension without strengthening the record.</p><div class="cards" id="machine-cards"></div></div></section>
+<section class="panel" data-panel="machines"><div class="inner machine-workspace">
+ <div class="machine-toolbar" aria-label="Choose a machine">
+  <button class="machine-tool active" data-tool="one">Machine One<br><span>testimony</span></button>
+  <button class="machine-tool" data-tool="three">Machine Three<br><span>inversion</span></button>
+  <button class="machine-tool" data-tool="names">Name Web<br><span>configuration</span></button>
+  <button class="machine-tool" data-tool="trace">Trace<br><span>carrier states</span></button>
+ </div>
+ <div class="machine-operating" id="machine-operating" aria-live="polite"></div>
+</div></section>
 
 <section class="panel" data-panel="returns"><div class="inner"><p class="lede">A trustworthy return lands on the governing object and the exact local passage. Opening the right file is not enough if the machine state disappears inside it.</p><div class="rules" id="return-rules"></div><div class="return-list" id="return-list"></div></div></section>
 
@@ -132,6 +163,8 @@ const titles={
  notes:["Ten's scratch flap · browser-local","What do you want to carry?"]
 };
 const tabs=[...document.querySelectorAll(".tab")],panels=[...document.querySelectorAll(".panel")];
+const machineTools=[...document.querySelectorAll(".machine-tool")];
+const machineHost=document.getElementById("machine-operating");
 let currentView="body", object=null;
 function toast(message){const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),1500);}
 function show(view){currentView=view;tabs.forEach(t=>t.setAttribute("aria-selected",String(t.dataset.view===view)));panels.forEach(p=>p.classList.toggle("active",p.dataset.panel===view));document.getElementById("bearing").textContent=titles[view][0];document.getElementById("stage-title").textContent=titles[view][1];history.replaceState(null,"","#"+view);}
@@ -146,6 +179,43 @@ document.getElementById("save-note").addEventListener("click",()=>{const input=d
 document.getElementById("copy-notes").addEventListener("click",async()=>{const notes=loadNotes();const text=notes.map(n=>"["+n.label+" · "+n.view+"]\n"+n.text).join("\n\n");try{await navigator.clipboard.writeText(text);toast("Notes copied");}catch(_){toast("Copy unavailable");}});
 document.getElementById("clear-notes").addEventListener("click",()=>{if(!confirm("Clear the notes saved in this browser for this folio?"))return;localStorage.removeItem(NOTE_KEY);renderNotes();toast("Local notes cleared");});
 renderNotes();
+
+function esc(s){return String(s??"").replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));}
+function setTool(key){machineTools.forEach(b=>b.classList.toggle("active",b.dataset.tool===key));renderMachineTool(key);}
+machineTools.forEach(b=>b.addEventListener("click",()=>setTool(b.dataset.tool)));
+
+function renderMachineTool(key){
+ if(!object?.machine_cases||!machineHost)return;
+ const hugh=object.machine_cases.hugh_recognition;
+ if(key==="one"){
+   const turns=hugh.machine_one.turns.map(t=>`<div class="turn" data-turn="${esc(t.id)}"><div class="turn-meta">${esc(t.speaker)}<br>${esc(t.kind)}</div><div class="turn-body"><blockquote>${esc(t.text)}</blockquote>${t.reading?`<p class="turn-reading">${esc(t.reading)}</p>`:""}${t.clauses?`<div class="clauses">${t.clauses.map(x=>`<span class="clause">${esc(x)}</span>`).join("")}</div>`:""}</div></div>`).join("");
+   machineHost.innerHTML=`<div class="machine-sheet"><div class="machine-main"><p class="machine-label">Machine One · testimony / proposition</p><h3>${esc(hugh.title)}</h3><p>Work the exchange itself. The question is not “what does this mean overall?” but which words belong to whom, what kind of knowledge each answer carries, and what survives when the record moves forward.</p><div class="turns">${turns}</div><div class="machine-actions"><button data-act="unfold">Unfold examiner's compound question</button><button data-act="forward">Follow this testimony forward</button><button data-act="negate">Try: “not recognized”</button></div><div class="machine-result" id="machine-result" hidden></div></div><aside class="machine-side"><p class="machine-label">What the machine protects</p><h3>One answer stays one answer.</h3><p>“I suppose so” occurs once. The examiner supplied the council, vote-upon, vote-in, and membership formulation. Hugh later says he does not know.</p><p>Those states can sit beside each other without cancelling each other or multiplying themselves.</p><button class="pin" id="pin-current">Pin this exchange to notes</button></aside></div>`;
+   machineHost.querySelector('[data-act="unfold"]').onclick=()=>{machineHost.querySelector('[data-turn="q2"]').classList.add("open");showMachineResult("Examiner-supplied wording","The four visible clauses belong to one compound Commission question. Hugh gives one tentative response to that entire question occurrence.","ONE ANSWER OCCURRENCE MUST NOT BE CLONED INTO MULTIPLE ASSENTS.");};
+   machineHost.querySelector('[data-act="forward"]').onclick=()=>{const f=hugh.machine_one.forward;showMachineResult(f.verb,f.text,(f.brakes||[]).join("  "));};
+   machineHost.querySelector('[data-act="negate"]').onclick=()=>showMachineResult("REFUSED","The source does not allow “No, I don't” to become NOT RECOGNIZED. Hugh declines personal knowledge; he does not testify that recognition never occurred.","PERSONAL KNOWLEDGE NOT CLAIMED ≠ NEGATIVE HISTORICAL FACT.");
+   machineHost.querySelector("#pin-current").onclick=()=>pin("Hugh recognition exchange — preserve reported information, examiner-supplied compound wording, one tentative response, and the later personal-knowledge boundary as distinct states.","Machine One");
+ } else if(key==="three"){
+   const m=hugh.machine_three;
+   machineHost.innerHTML=`<div class="machine-sheet"><div class="machine-main"><p class="machine-label">Machine Three · answer / construction inversion</p><h3>${esc(m.compact)}</h3><p>Begin with the Commission's compact administrative assessment and open it backward. The point is not to overturn the answer. The point is to see what the answer is made of, what it directly selects, what it merely neighbors, and where the support stops.</p><div class="inversion-stack"><div class="inv-row revealed"><b>Answer under test</b>${esc(m.compact)}</div><div class="inv-row hidden-row" data-inv="maker"><b>Maker</b>${esc(m.maker)}</div><div class="inv-row hidden-row" data-inv="input"><b>Direct input</b>${esc(m.input)}</div><div class="inv-row hidden-row" data-inv="character"><b>Administrative characterization</b>${esc(m.characterization)}</div><div class="inv-row hidden-row" data-inv="frame"><b>Administrative frame</b>${m.frame.map(x=>`<div>• ${esc(x)}</div>`).join("")}</div><div class="inv-row hidden-row" data-inv="neighbors"><b>Neighboring evidence</b>${esc(m.neighbors.join(" · "))}<div class="turn-reading">${esc(m.neighbor_brake)}</div></div></div><div class="machine-actions"><button data-open="maker">Open maker</button><button data-open="input">Open input</button><button data-open="character">Open characterization</button><button data-open="frame">Open frame</button><button data-open="neighbors">Open neighbors</button><button data-act="history">Try historical negation</button><button data-act="case">Try case disposition</button></div><div class="machine-result" id="machine-result" hidden></div></div><aside class="machine-side"><p class="machine-label">Earned edge</p><h3>${esc(m.edge)}</h3><p>The decision reaches Hugh's testimonial body as an administrative sufficiency assessment. It does not quote the recognition exchange turn by turn.</p><p>Opening the construction is useful even if nothing overturns.</p></aside></div>`;
+   machineHost.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>machineHost.querySelector('[data-inv="'+b.dataset.open+'"]').classList.add("revealed"));
+   machineHost.querySelector('[data-act="history"]').onclick=()=>showMachineResult("REFUSED",m.refusal_history,"NEGATIVE SUFFICIENCY ASSESSMENT ≠ NEGATIVE HISTORICAL FACT.");
+   machineHost.querySelector('[data-act="case"]').onclick=()=>showMachineResult("REFUSED",m.refusal_case,"LOCAL SUFFICIENCY ASSESSMENT ≠ COMPLETE CASE DISPOSITION.");
+ } else if(key==="names"){
+   const n=object.machine_cases.bell_configuration;
+   const later=n.later.map(x=>`<div class="name-node"><strong>${esc(x.name)}</strong><span>${esc(x.relation)}</span></div>`).join("");
+   const earlier=n.earlier.map(x=>`<div class="name-node"><strong>${esc(x.name)}</strong><span>${esc(x.relation)}</span></div>`).join("");
+   const joins=n.joins.map((x,i)=>`<div class="join-row"><b>${esc(x.label)}</b><div><span class="join-status">${esc(x.status)}</span><div class="turn-reading">${esc(x.need)}</div></div><button class="pin" data-join="${i}">Pin</button></div>`).join("");
+   machineHost.innerHTML=`<div class="machine-main"><p class="machine-label">Name Web · configuration test</p><h3>${esc(n.title)}</h3><p>Put the later family relation beside the earlier manuscript occurrence without making the resemblance do the work of identity evidence.</p><div class="name-compare"><section class="name-col"><h4>Later family testimony</h4>${later}</section><section class="name-col"><h4>Earlier Public Lands body</h4>${earlier}</section></div><div class="join-list">${joins}</div><div class="machine-result"><h4>Brake</h4><p>${esc(n.brake)}</p></div></div>`;
+   machineHost.querySelectorAll("[data-join]").forEach(b=>b.onclick=()=>{const j=n.joins[Number(b.dataset.join)];pin(j.label+" — "+j.status+" — Needed: "+j.need,"Name Web join");});
+ } else if(key==="trace"){
+   machineHost.innerHTML=`<div class="machine-main"><p class="machine-label">Trace · choose a proposition</p><h3>Follow what the record carries, not merely where the documents sit.</h3><div class="trace-selector"><button class="active" data-trace="registration">Registration / enrollment</button><button data-trace="article14">Article XIV compliance</button></div><div id="trace-machine"></div></div>`;
+   const draw=k=>{machineHost.querySelectorAll("[data-trace]").forEach(b=>b.classList.toggle("active",b.dataset.trace===k));const t=object.machine_cases.trace_cases[k];machineHost.querySelector("#trace-machine").innerHTML=`<h3>${esc(t.title)}</h3><div class="trace-stations">${t.states.map(s=>`<div class="trace-station"><div><small>${esc(s.station)}</small><strong>${esc(s.carrier)}</strong></div><div><small>${esc(s.state)}</small><p>${esc(s.text)}</p></div></div>`).join("")}</div><button class="pin" id="pin-trace">Pin this trace</button>`;machineHost.querySelector("#pin-trace").onclick=()=>pin(t.title+" — "+t.states.map(s=>s.station+": "+s.state).join(" → "),"Trace");};
+   machineHost.querySelectorAll("[data-trace]").forEach(b=>b.onclick=()=>draw(b.dataset.trace));draw("registration");
+ }
+}
+function showMachineResult(title,text,brake){
+ const box=machineHost.querySelector("#machine-result");if(!box)return;box.hidden=false;box.innerHTML=`<h4>${esc(title)}</h4><p>${esc(text)}</p>${brake?`<p class="brake-line">${esc(brake)}</p>`:""}`;
+}
 
 async function hydrate(){
  if(!window.EarthlyHandsResolver) throw new Error("Resolver unavailable");
@@ -162,8 +232,7 @@ async function hydrate(){
  const route=document.getElementById("route-list");
  (object.route||[]).forEach(item=>{const d=document.createElement("div");d.className="stop";const s=document.createElement("small");s.textContent=item.state||"";const strong=document.createElement("strong");strong.textContent=item.label||"";const p=document.createElement("p");p.textContent=item.text||"";d.append(s,strong,p,buttonPin((item.state||"")+" — "+(item.label||"")+": "+(item.text||""),"Route stop"));route.append(d);});
 
- const cards=document.getElementById("machine-cards");
- (object.machine_lenses||[]).forEach(item=>{const c=document.createElement("article");c.className="card";const s=document.createElement("small");s.textContent=item.machine||"";const h=document.createElement("h3");h.textContent=item.question||"";const p=document.createElement("p");p.className="use";p.textContent=item.use||"";c.append(s,h,p,buttonPin((item.machine||"")+": "+(item.question||"")+" — "+(item.use||""),"Machine lens"));cards.append(c);});
+ renderMachineTool("one");
 
  const rules=document.getElementById("return-rules");
  (object.return_rules||[]).forEach(text=>{const span=document.createElement("span");span.className="rule-pill";span.textContent=text;rules.append(span);});
