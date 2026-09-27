@@ -5,8 +5,6 @@
   "person": "Hugh G. Bell",
   "object_label": "Bounded recognition sequence within recorded Commission examination",
   "source_locator": "MCR 1546, internal p.1",
-  "source_face_return": "https://drive.google.com/file/d/1vrQJNjI9eGo_s-sbbuAsMvA5s4j08Oop/view",
-  "governing_jacket_return": "https://docs.google.com/document/d/1CrD7pJrN6DRs4BoBJsGqyx3vuHhO7jmDeMdxl5y1W-U/edit",
   "states": [
     {
       "id": "H0",
@@ -96,7 +94,6 @@
     "object_label": "Later bounded land-knowledge sequence within the same recorded examination",
     "source_locator": "MCR 1546, internal p.3",
     "source_face_label": "Bell Hugh G - Page 5 (1).jpg",
-    "source_face_return": "https://drive.google.com/file/d/1alx-CWzK5EngoxhUBFTmPgKbwnOG-Lgk/view",
     "gap_note": "The examination continues across intervening testimony not shown here. This is a later bounded sequence, not the next turn.",
     "states": [
       {
