@@ -1,0 +1,48 @@
+{
+  "object": "Hugh G. Bell claimant-specific section of the consolidated Commission decision",
+  "source_locator": "MCR 879, internal decision p.-45-",
+  "compact_state": "NOT SHOWN BY THIS TESTIMONY",
+  "layers": [
+    {
+      "id": "maker",
+      "label": "maker",
+      "title": "The Commission makes the assessment.",
+      "text": "This is an administrative assessment of the evidentiary reach of Hugh G. Bell’s oral statement. It is not Hugh’s conclusion and not a historical verdict.",
+      "state": "maker visible",
+      "button": "open maker",
+      "prompt": "Open the institutional voice that made the compact answer."
+    },
+    {
+      "id": "input",
+      "label": "selected input",
+      "title": "The selected input is Hugh G. Bell’s oral statement.",
+      "text": "The decision says the oral statement attempted to show Hugh’s birth in Mississippi, lifelong residence there, one-quarter Choctaw blood, descent through his father, and reported registration of that father in the old Choctaw Nation in 1836.",
+      "quote": "This is the Commission’s characterization of the attempted showing—not a quotation of Hugh’s complete examination.",
+      "state": "input visible",
+      "button": "open selected input",
+      "prompt": "Open the testimony the Commission expressly assesses."
+    },
+    {
+      "id": "frame",
+      "label": "applied frame",
+      "title": "The Commission names three things the testimony did not tend to show.",
+      "items": [
+        "By whom Hugh’s father was registered.",
+        "Whether his father was recognized by Choctaw tribal authorities in Mississippi as a member of the Choctaw tribe there.",
+        "Whether his father or any other alleged Choctaw ancestor complied or attempted to comply with Article Fourteen of the 1830 treaty."
+      ],
+      "quote": "The source says there is nothing in his testimony which would tend to show these things.",
+      "state": "frame visible",
+      "button": "open applied frame",
+      "prompt": "Open the administrative criteria contained inside the answer."
+    }
+  ],
+  "neighbors": [
+    "Ex parte affidavit of H. G. Bell.",
+    "Ex parte affidavit of W. D. Bell.",
+    "Ex parte affidavit of John Lewis.",
+    "Ex parte affidavit of Elizabeth D. Bell.",
+    "Certified marriage record of H. G. Bell and Miss O. M. Morrow."
+  ],
+  "source_custody": "held privately in Source House"
+}
