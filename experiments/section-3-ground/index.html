@@ -77,6 +77,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     </div>
     <p class="boundary">The middle descriptions, E½SW and W½SE, share the SW/SE quarter boundary in ordinary PLSS aliquot grammar.</p>
     <button class="boundary-door" id="boundary-compare" type="button" hidden>Compare what each side can say</button>
+    <button class="boundary-door" id="ward-role-compare" type="button" hidden>Compare the Ward name-form across the southeast quarter</button>
   </section>
 
   <section class="panel" id="tract-panel" hidden tabindex="-1">
@@ -108,8 +109,11 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   const limit = document.getElementById('panel-limit');
   let opener = null;
   const boundaryCompare = document.getElementById('boundary-compare');
+  const wardRoleCompare = document.getElementById('ward-role-compare');
   const inspectedBoundary = new Set();
+  const inspectedWardRoles = new Set();
   let compareEarned = false;
+  let wardCompareEarned = false;
   const states = {
     'w-sw': {
       meta: 'STA-MS0940__.006 · Certificate 1430 · W½SW',
@@ -140,6 +144,12 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
       title: 'One edge, two patent grammars',
       body: 'On E½SW, Holderness is purchaser and payment party while Bell and Gillespie are assignees and grantees. Across the shared boundary on W½SE, Garth is purchaser and payment party while Ward is assignee and grantee.',
       limit: 'The descriptions adjoin and the role contrast is now face-controlled. A transaction chain, coordinated acquisition, person identity, residence, influence, and movement remain closed.'
+    },
+    'ward-role-compare': {
+      meta: 'Adjacent southeast-quarter halves · same name-form, changed role',
+      title: 'One name-form, two instrument positions',
+      body: 'On W½SE, the patent face names William Ward as Jesse W. Garth’s assignee and grants Ward the tract. On E½SE, William Ward of Lowndes County is the payment party and direct grantee.',
+      limit: 'This compares two documentary occurrences. The faces do not by themselves prove one person, date Ward’s acquisition from Garth, create a combined holding, or establish residence, possession, coordination, or movement.'
     }
   };
   function emit(type, detail={}){
@@ -149,7 +159,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     const state=states[key]; if(!state) return;
     opener=button; meta.textContent=state.meta; title.textContent=state.title; body.textContent=state.body; limit.textContent=state.limit;
     panel.hidden=false; panel.focus({preventScroll:true}); panel.scrollIntoView({behavior:'smooth',block:'nearest'});
-    emit(key === 'boundary-compare' ? 'compare' : 'inspect',{target:key,moved:false,identity_joined:false});
+    emit((key === 'boundary-compare' || key === 'ward-role-compare') ? 'compare' : 'inspect',{target:key,moved:false,identity_joined:false});
     if(key === 'e-sw' || key === 'w-se'){
       inspectedBoundary.add(key);
       if(inspectedBoundary.size === 2 && !compareEarned){
@@ -158,9 +168,18 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
         emit('capability_reveal',{target:'boundary-compare',earned_by:['e-sw','w-se']});
       }
     }
+    if(key === 'w-se' || key === 'e-se'){
+      inspectedWardRoles.add(key);
+      if(inspectedWardRoles.size === 2 && !wardCompareEarned){
+        wardCompareEarned = true;
+        wardRoleCompare.hidden = false;
+        emit('capability_reveal',{target:'ward-role-compare',earned_by:['w-se','e-se']});
+      }
+    }
   }
   document.querySelectorAll('[data-tract]').forEach(button=>button.addEventListener('click',()=>openState(button.dataset.tract,button)));
   boundaryCompare.addEventListener('click',()=>openState('boundary-compare',boundaryCompare));
+  wardRoleCompare.addEventListener('click',()=>openState('ward-role-compare',wardRoleCompare));
   document.getElementById('close-panel').addEventListener('click',()=>{
     panel.hidden=true; if(opener) opener.focus({preventScroll:true}); emit('return_close',{target:'south-half-sequence'});
   });
