@@ -23,6 +23,8 @@ After the recognition ticket forms, the visitor may choose to follow later withi
 
 The route expressly marks that intervening testimony is not shown. It does not present the p.3 sequence as the next transcript turn, and it does not treat Hugh’s remembered sentence as Robert’s direct testimony, travel proof, land receipt, or a resolved meaning of “right here.”
 
+The specimen’s public return door goes to `/recent/`, the route by which the visitor entered. Shared Country remains unchanged.
+
 ## Governing controls
 
 - Question wording remains Commission-supplied.
