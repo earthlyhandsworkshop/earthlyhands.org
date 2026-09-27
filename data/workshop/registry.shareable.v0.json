@@ -1,0 +1,56 @@
+{
+  "schema": "earthly-hands-workshop-registry/v0",
+  "status": "SHAREABLE_DERIVATIVE",
+  "rule": "Stable Workshop IDs identify governed things across providers. This public-safe registry exposes only shareable/public routing. WORKING provider addresses and private bodies do not cross here.",
+  "objects": {
+    "instrument:perceptual-machines": {
+      "id": "instrument:perceptual-machines",
+      "kind": "instrument-family",
+      "title": "Perceptual Machines",
+      "publication_state": "SHAREABLE",
+      "object_record": "/data/workshop/objects/instrument.perceptual-machines.shareable.v0.json",
+      "faces": {
+        "folio": "/experiments/working-folio/",
+        "workshop": null
+      },
+      "available_views": ["machine","jacket","lineage","try","trace","ground"],
+      "relations": [
+        {"verb":"STANDS_ON","to":"ground:sandbox-15"},
+        {"verb":"NEIGHBORS","to":"ground:shared-country"},
+        {"verb":"NEIGHBORS","to":"ground:ward-room"}
+      ]
+    },
+    "ground:shared-country": {
+      "id": "ground:shared-country",
+      "kind": "ground",
+      "title": "Shared Country",
+      "publication_state": "PUBLIC",
+      "faces": {"public":"/experiments/shared-country/"},
+      "relations": [
+        {"verb":"NEIGHBORS","to":"instrument:perceptual-machines"},
+        {"verb":"NEIGHBORS","to":"ground:ward-room"}
+      ]
+    },
+    "ground:ward-room": {
+      "id": "ground:ward-room",
+      "kind": "ground",
+      "title": "Ward's registration book",
+      "publication_state": "PUBLIC",
+      "faces": {"public":"/experiments/ward-room/"},
+      "relations": [
+        {"verb":"NEIGHBORS","to":"ground:shared-country"},
+        {"verb":"NEIGHBORS","to":"instrument:perceptual-machines"}
+      ]
+    },
+    "ground:sandbox-15": {
+      "id": "ground:sandbox-15",
+      "kind": "working-ground",
+      "title": "15 — Sandbox — Soft Working Ground",
+      "publication_state": "WORKING",
+      "faces": {"public":null},
+      "relations": [
+        {"verb":"HOLDS","to":"instrument:perceptual-machines"}
+      ]
+    }
+  }
+}
