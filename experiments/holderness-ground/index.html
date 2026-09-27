@@ -468,7 +468,9 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     }
 
     let response;
-    if(/public room|same room|ward.*room|room.*ward|house.*room|room.*house/.test(q)){
+    if(/choctaw nation|inside.*nation|in the nation|boundary|territor/.test(q)){
+      response = 'The examiner asks whether Holderness was living “in the Choctaw nation” in 1832 and 1833. Holderness answers with the turnpike place, its distance from the agency, the period he remained there, and his repeated agency presence; he does not give a freestanding yes. This earns question-framed territorial placement, not a mapped boundary, exact point, or categorical finding that the place lay inside it.';
+    } else if(/public room|same room|ward.*room|room.*ward|house.*room|room.*house/.test(q)){
       response = 'The deposition carries two separate place phrases: Holderness’s “public house on the road” and Ward’s “public room,” where Ward kept books and papers on a table. The shared word “public” and the shared deposition do not make them one place. No route, shared room, or location for any sale is earned.';
     } else if(/house|spirits|liquor|tavern|kind of place|what place|business/.test(q)){
       response = 'In the same answer, Holderness first describes moving to a place at the Noxubee turnpike and later says, “I kept spirits at my public house on the road,” adding that he very often sold to Ward. The testimony does not explicitly equate those two place phrases, locate any sale, or create a route to the agency.';
