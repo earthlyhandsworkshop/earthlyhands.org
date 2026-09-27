@@ -22,10 +22,6 @@ const ui = {
   continuationReturn: document.querySelector("#continuation-return"),
   continuationNote: document.querySelector("#continuation-note"),
   continuationSourceLabel: document.querySelector("#continuation-source-label"),
-  continuationSource: document.querySelector("#continuation-source"),
-  continuationJacket: document.querySelector("#continuation-jacket"),
-  sourceFace: document.querySelector("#source-face"),
-  sourceJacket: document.querySelector("#source-jacket"),
   error: document.querySelector("#error")
 };
 
@@ -109,8 +105,6 @@ function emitTicket() {
     occurrence_id: record.occurrence_id,
     carrier_id: record.carrier_id,
     representation_id: record.representation_id,
-    source_face_return: record.source_face_return,
-    governing_jacket_return: record.governing_jacket_return,
     ...record.emitted_ticket
   };
 
@@ -169,12 +163,6 @@ function openContinuation() {
   ui.continuationLocator.textContent = sequence.source_locator;
   ui.continuationGap.textContent = sequence.gap_note;
   ui.continuationSourceLabel.textContent = sequence.source_face_label;
-  ui.continuationSource.href = sequence.source_face_return;
-  ui.continuationJacket.href = record.governing_jacket_return;
-  ui.continuationSource.target = "_blank";
-  ui.continuationJacket.target = "_blank";
-  ui.continuationSource.rel = "noreferrer";
-  ui.continuationJacket.rel = "noreferrer";
   renderContinuation();
   ui.continuation.hidden = false;
   ui.followButton.disabled = true;
@@ -188,12 +176,6 @@ async function start() {
     if (!response.ok) throw new Error(`Could not load examination data (${response.status})`);
     record = await response.json();
 
-    ui.sourceFace.href = record.source_face_return;
-    ui.sourceJacket.href = record.governing_jacket_return;
-    ui.sourceFace.target = "_blank";
-    ui.sourceJacket.target = "_blank";
-    ui.sourceFace.rel = "noreferrer";
-    ui.sourceJacket.rel = "noreferrer";
 
     ui.unfold.addEventListener("click", () => {
       if (step >= record.states.length - 1) return;
