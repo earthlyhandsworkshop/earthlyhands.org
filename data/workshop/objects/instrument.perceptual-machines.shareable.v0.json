@@ -1,0 +1,40 @@
+{
+  "schema":"earthly-hands-workshop-object/v0",
+  "id":"instrument:perceptual-machines",
+  "kind":"instrument-family",
+  "title":"Perceptual Machines",
+  "publication_state":"SHAREABLE",
+  "state":"ACTIVE / OPEN TO INHERITANCE",
+  "governing_body":{"provider":"google-drive","visibility":"WORKING","address":null,"note":"Provider address remains inside Workshop custody."},
+  "road_home":"ground:sandbox-15",
+  "perceptual_job":"Make documentary transformation, movement, and construction easier to perceive without strengthening the source beneath them.",
+  "current_physics":["Source-local states remain distinct.","Routes must be earned.","Inversion tests support; it does not manufacture support.","Unresolved and refusal are successful states."],
+  "inherits":["source-facing prose discipline","source jackets","Follow One Claim","Historical Ground / Prose Map","film cutting questions"],
+  "open":"Whether these remain separate instruments, become one cabinet, cross into film grammar, or produce bounded public specimens remains unresolved.",
+  "machines":{
+    "one":{"label":"Machine one","name":"Testimony / Proposition","dimension":"TRANSFORMATION","question":"What happens after a person says it?","steps":["PERSON SPEAKS","EXAMINER SUPPLIES","TENTATIVE ANSWER","LATER SUMMARY","FINDING"],"brake":"HEARD / WAS TOLD ≠ EXAMINER SUPPLIES ≠ SUPPOSES ≠ KNOWS."},
+    "two":{"label":"Machine two","name":"Field / Route","dimension":"MOVEMENT / ENCOUNTER","question":"What movement is actually earned?","steps":["PLACE OCCURS","PRESENCE?","ACCESS?","MOVEMENT?","ROUTE ONLY IF EARNED"],"brake":"PLACE REFERENCE ≠ ROUTE. ADMINISTRATIVE MEMORY ≠ PHYSICAL TRAVEL. NAMED ≠ PRESENT."},
+    "three":{"label":"Machine three","name":"Answer / Construction Inversion","dimension":"CONSTRUCTION / PREREQUISITE","question":"What had to happen for this answer to become possible?","steps":["ADMINISTRATIVE ANSWER","LOWER ACTS","CARRIERS","WITNESSES / RECORDS","SUPPORT OR GAP"],"brake":"Opening the construction does not overturn the answer. A useful result can be: the present source body does not yet earn this answer."}
+  },
+  "lineage":[
+    {"state":"Concept","hand":"True North + Ten","text":"A perceptual-machine idea became clear enough to catch, but not clear enough to force into production."},
+    {"state":"Soft body","hand":"15 holds the idea","text":"The concept was put down where another mind could encounter it without inheriting an assignment."},
+    {"state":"Embodiment","hand":"First Light","text":"A working specimen gave the idea visible mechanics and made it inspectable as an object."},
+    {"state":"Relation / inversion","hand":"Quiet Reach","text":"Machine one and two could work together; a third neighboring machine became visible when the direction was reversed."},
+    {"state":"Documentation catches up","hand":"Instrument Jacket","text":"The Workshop recognized its inventions as things with lineage: low attachment, high attention, enough trace to inherit."}
+  ],
+  "specimens":{"hugh-bell":{"machine":"one","title":"Hugh G. Bell — bounded testimony unfold","choices":{
+    "heard":{"question":"What did Hugh carry himself?","answer":"Hugh carries a heard / was told state about Robert.","limit":"The instrument does not upgrade it into personal knowledge."},
+    "supplied":{"question":"What wording did the examiner supply?","answer":"The examiner supplies the more specific council / vote / membership formulation.","limit":"The wording entering through the question remains examiner-supplied unless Hugh independently adopts it."},
+    "knows":{"question":"What does Hugh finally say he knows?","answer":"Asked whether he knows, Hugh answers: No, I don't.","limit":"The qualification remains part of the evidentiary state; it is not smoothed away."}
+  }}},
+  "trace":[
+    {"state":"Witness","statement":"Hugh reports what he had heard about Robert Bell.","brake":"Source-local statement."},
+    {"state":"Examiner","statement":"More specific council / vote / membership wording enters through the question.","brake":"Supplied wording remains supplied wording."},
+    {"state":"Answer","statement":"I suppose so.","brake":"Tentative assent does not silently strengthen itself."},
+    {"state":"Knowledge","statement":"Asked whether he knows, Hugh answers that he does not.","brake":"Qualification stays attached."},
+    {"state":"Later carrier","statement":"A later administrative body may assess sufficiency or summarize the record.","brake":"Any forward edge must remain carrier-local and explicitly earned."}
+  ],
+  "ground":{"id":"ground:sandbox-15","title":"Soft working ground · perceptual-machine family","note":"The family presently stands near film work, source-audit practice, Prose Map / Historical Ground, and the Workshop's documentation grammar.","brake":"Blank ground may be accurate. A missing road can remain missing. Refusal is a successful action.","neighbors":["ground:shared-country","ground:ward-room"]},
+  "last_consequential_change":"The first Working Folio consumes this portable object through the Workshop Resolver rather than owning its meaning in page-specific code."
+}
