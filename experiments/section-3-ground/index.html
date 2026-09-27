@@ -28,6 +28,8 @@ h1{max-width:52rem;font-size:clamp(2.35rem,6vw,5.4rem);font-weight:400;line-heig
 .names{font-size:clamp(.86rem,1.5vw,1.02rem);line-height:1.4}
 .depth{display:block;margin-top:.7rem;font:10px/1.45 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
 .boundary{margin:1rem 0 0;text-align:center;font:11px/1.5 system-ui,sans-serif;letter-spacing:.05em;color:var(--faint)}
+.boundary-door{display:block;margin:.8rem auto 0;background:transparent;border:0;border-bottom:1px dotted currentColor;padding:.18rem 0;cursor:pointer;color:var(--ink);font:12px/1.45 Georgia,serif}
+.boundary-door:hover,.boundary-door:focus{background:var(--soft);outline:none}
 .panel{max-width:46rem;margin:2rem 0 0;padding:1.15rem;border-left:1px solid var(--line);background:rgba(233,225,210,.5)}
 .panel[hidden]{display:none}.panel h2{font-size:1.3rem;font-weight:400;margin:.15rem 0 .65rem}.panel p{line-height:1.55}.meta{font:10px/1.5 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
 .close{background:none;border:0;border-bottom:1px solid currentColor;padding:.12rem 0;cursor:pointer}
@@ -73,6 +75,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
       </button>
     </div>
     <p class="boundary">The middle descriptions, E½SW and W½SE, share the SW/SE quarter boundary in ordinary PLSS aliquot grammar.</p>
+    <button class="boundary-door" id="boundary-compare" type="button" hidden>Compare what each side can say</button>
   </section>
 
   <section class="panel" id="tract-panel" hidden tabindex="-1">
@@ -103,6 +106,9 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   const body = document.getElementById('panel-body');
   const limit = document.getElementById('panel-limit');
   let opener = null;
+  const boundaryCompare = document.getElementById('boundary-compare');
+  const inspectedBoundary = new Set();
+  let compareEarned = false;
   const states = {
     'w-sw': {
       meta: 'STA-MS0940__.006 · Certificate 1430 · W½SW',
@@ -127,6 +133,12 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
       title: 'East half of the southeast quarter',
       body: 'The current result representation carries William Ward, labeled by the interface as Patentee.',
       limit: 'No same-person identity with Colonel William Ward or the Choctaw agent is earned. Residence and possession are not stated.'
+    },
+    'boundary-compare': {
+      meta: 'Shared cadastral boundary · unequal source depth',
+      title: 'One edge, two documentary rooms',
+      body: 'On E½SW, a controlled patent face restores Bell and Gillespie as assignees and grantees and Holderness as purchaser and payment party. On W½SE, the current result representation only carries Jesse W. Garth and William Ward under the interface label Patentee.',
+      limit: 'The descriptions adjoin. Their legal-role grammar does not yet. Comparison is earned; a transaction chain, coordinated acquisition, person identity, residence, and movement remain closed.'
     }
   };
   function emit(type, detail={}){
@@ -136,9 +148,18 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     const state=states[key]; if(!state) return;
     opener=button; meta.textContent=state.meta; title.textContent=state.title; body.textContent=state.body; limit.textContent=state.limit;
     panel.hidden=false; panel.focus({preventScroll:true}); panel.scrollIntoView({behavior:'smooth',block:'nearest'});
-    emit('inspect',{target:key,moved:false,identity_joined:false});
+    emit(key === 'boundary-compare' ? 'compare' : 'inspect',{target:key,moved:false,identity_joined:false});
+    if(key === 'e-sw' || key === 'w-se'){
+      inspectedBoundary.add(key);
+      if(inspectedBoundary.size === 2 && !compareEarned){
+        compareEarned = true;
+        boundaryCompare.hidden = false;
+        emit('capability_reveal',{target:'boundary-compare',earned_by:['e-sw','w-se']});
+      }
+    }
   }
   document.querySelectorAll('[data-tract]').forEach(button=>button.addEventListener('click',()=>openState(button.dataset.tract,button)));
+  boundaryCompare.addEventListener('click',()=>openState('boundary-compare',boundaryCompare));
   document.getElementById('close-panel').addEventListener('click',()=>{
     panel.hidden=true; if(opener) opener.focus({preventScroll:true}); emit('return_close',{target:'south-half-sequence'});
   });
