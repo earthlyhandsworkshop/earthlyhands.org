@@ -241,7 +241,8 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
         <h3>McKinney Holderness — 1837 testimony</h3>
         <p><strong>Role here:</strong> witness carrying the Noxubee-turnpike / agency relation.</p>
         <p><strong>Same carrier also reaches:</strong> testimony about Ward's registration book coming apart and leaves falling out.</p>
-        <p class="state">Controlled testimony occurrence · return: this ground or the Ward-book ground</p>
+        <p><a class="carrier-crossing" href="/experiments/ward-room/?from=holderness-name-web">Follow this deposition carrier to the Ward-book ground →</a></p>
+        <p class="state">Controlled testimony occurrence · viewer crossing through the carrier, not historical movement</p>
       </article>
 
       <article class="occurrence-card">
@@ -410,19 +411,40 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   });
 
   const nameWeb = document.getElementById('name-web');
+  function setNameWeb(opening, origin = 'visitor'){
+    if(!nameDoor || !nameWeb) return;
+    nameDoor.setAttribute('aria-expanded', String(opening));
+    nameDoor.textContent = opening ? 'Close occurrence comparison' : 'Other occurrences are held';
+    nameWeb.hidden = !opening;
+    if(opening && origin !== 'carrier-return') nameWeb.scrollIntoView({behavior:'smooth', block:'nearest'});
+    emitGroundEvent(opening ? 'instrument_open' : 'instrument_close', {
+      target:'name-web',
+      origin,
+      identity_joined:false,
+      standing:'noxubee-turnpike-relation'
+    });
+  }
+
   if(nameDoor && nameWeb){
     nameDoor.addEventListener('click', () => {
-      const opening = nameDoor.getAttribute('aria-expanded') !== 'true';
-      nameDoor.setAttribute('aria-expanded', String(opening));
-      nameDoor.textContent = opening ? 'Close occurrence comparison' : 'Other occurrences are held';
-      nameWeb.hidden = !opening;
-      if(opening) nameWeb.scrollIntoView({behavior:'smooth', block:'nearest'});
-      emitGroundEvent(opening ? 'instrument_open' : 'instrument_close', {
+      setNameWeb(nameDoor.getAttribute('aria-expanded') !== 'true');
+    });
+
+    const returnParams = new URLSearchParams(window.location.search);
+    if(returnParams.get('return') === 'name-web'){
+      revealNameWeb('carrier-return');
+      const personPanel = document.getElementById('person');
+      panels.forEach(panel => panel.hidden = true);
+      personPanel.hidden = false;
+      personPanel.focus({preventScroll:true});
+      setNameWeb(true, 'carrier-return');
+      requestAnimationFrame(() => nameWeb.scrollIntoView({behavior:'auto', block:'nearest'}));
+      emitGroundEvent('return_restore', {
+        from:'ward-room',
         target:'name-web',
-        identity_joined:false,
         standing:'noxubee-turnpike-relation'
       });
-    });
+    }
   }
 
   const refusedRoad = document.querySelector('.refused-road');
