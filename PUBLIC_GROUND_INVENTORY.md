@@ -39,6 +39,88 @@ Audit rule:
 The next inventory pass should add a publication-state column only where the evidence is strong enough to classify a body. Do not bulk-normalize by URL location or `noindex` alone.
 
 
+
+
+## First publication sweep — 26 Sep 2026
+
+This is the first bounded sweep under **WORKING ↔ SHAREABLE ↔ PUBLIC**. It classifies the small web corpus we actually have now. The state belongs to the body’s publication relationship, not its historical truth, source permission, or aesthetic quality.
+
+### PUBLIC — deliberately discoverable Earthly Hands work
+
+These bodies are already intentionally exposed through the front edge, Recent, a named public ground, or explicit public wayfinding, and can presently stand as Earthly Hands public work:
+
+- `/`
+- `/recent/`
+- `/experiments/shared-country/`
+- `/grounds/public-lands/`
+- `/experiments/public-lands-page-53/`
+- `/experiments/holderness-ground/`
+- `/experiments/ward-room/`
+- `/experiments/examination-ingress/`
+- `/experiments/carrier-field/`
+- `/experiments/follow-one-claim/`
+- `/experiments/quire-look-again/`
+- `/experiments/what-crossed/`
+- `/experiments/follow-the-carrier/`
+- `/experiments/article-xiv-identity-gate/`
+- `/experiments/which-robert/`
+- `/experiments/article-xiv-rooms/`
+- `/experiments/the-machine-does-not-know-for-you/`
+- `/experiments/one-proposition-many-carriers/`
+- `/mcr879.html`
+- `/experiments/dancing-rabbit-statehood-line/`
+- `/experiments/dawson-missing-line/`
+- `/experiments/dawson-inline-depth/`
+- `/experiments/one-outing-two-clocks/`
+- `/experiments/six-letters-touchstone/`
+- `/experiments/six-letters/`
+- `/experiments/listening-threshold/`
+- `/experiments/four-way-room-nav/`
+- `/experiments/place-before-point/`
+- `/experiments/ground-stays-put/`
+- `/experiments/mobile-full-field/`
+- `/experiments/register-line-front-edge/`
+- `/experiments/register-threshold-v2/`
+- `/grounds/line-commons/creek-look-back/`
+- `/experiments/full-jacket/`
+
+A `noindex` meta tag does not make any of the above non-public when the body is deliberately reachable from Public Ground / Recent or otherwise intentionally published. Search visibility and publication relationship remain separate controls.
+
+### SHAREABLE — safe if forwarded, but not ordinary public discovery
+
+These are useful experimental / comparison bodies that appear safe enough to hand to a trusted reviewer but are not presently part of ordinary public discovery:
+
+- `/experiments/catharine-mckinney/`
+- `/experiments/follow-one-claim/article14.html`
+- `/experiments/index.html`
+- `/listening/` — aggregate operational listening surface; safe only so long as it remains visit-level and non-identifying.
+
+Shareable means **safe if forwarded**. It does not mean private.
+
+### WORKING — development bodies that should not be treated as publication
+
+These are version-history bodies rather than current public statements:
+
+- `/experiments/article-xiv-identity-gate/versions/v1/`
+- `/experiments/article-xiv-identity-gate/versions/v2/`
+
+They are presently exposed by public repository/static-host history, which means they are **not actually private**. Their classification is a remediation flag: keep them as development history, but do not mistake obscurity for access control. If future working versions contain material that would be harmful or premature if forwarded, they must live behind real access control or remain outside the public web repository.
+
+### Immediate findings
+
+1. The corpus is still small enough to sweep by hand.
+2. Most current web bodies have already crossed into **PUBLIC** because Recent / public navigation deliberately exposes them.
+3. `noindex` is currently doing search-engine work, not publication-state work.
+4. The two identity-gate version snapshots are the clearest current example of **WORKING-but-exposed** development history.
+5. The typed-only listening surface is the clearest current **SHAREABLE** operational body.
+6. No additional publication state is earned yet.
+7. Future bodies should declare their intended state when created, so this sweep does not have to infer it afterward.
+
+### Next mechanical step
+
+Add a small publication-state field to the public-work metadata / creation practice so new bodies enter as **WORKING**, **SHAREABLE**, or **PUBLIC** deliberately. Do not bulk-rewrite old HTML merely to display the label. The state should first govern discovery, repository placement, and access behavior; visible badges are optional and local.
+
+
 ## Prose Map temporal / depth seam
 
 The current specimens are teaching a useful distinction. Keep these states separate:
