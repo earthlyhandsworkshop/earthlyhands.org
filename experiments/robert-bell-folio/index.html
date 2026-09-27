@@ -7,6 +7,7 @@
 <meta name="theme-color" content="#d9cfbb">
 <title>Robert Bell — Working Folio</title>
 <script src="/workshop-resolver.js"></script>
+<script src="/config.js"></script>
 <style>
 :root{
  --paper:#ddd3bf;--sheet:#e9e1d1;--ink:#211e18;--muted:#71695b;--rule:#4d473d;
@@ -70,6 +71,23 @@ textarea{width:100%;min-height:8rem;resize:vertical;border:1px solid var(--hair)
 .reading{margin-top:1.5rem;border:1px solid var(--rule);padding:1rem}.reading h3{margin:0 0 .45rem;font-weight:400;font-size:1.3rem}.reading p{margin:.45rem 0}.reading .glint{font-size:1.1rem}
 .links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}.links a{font:.58rem/1.2 var(--mono);border-bottom:1px solid var(--rust);text-decoration:none;padding:.15rem 0}
 .foot{display:flex;justify-content:space-between;gap:1rem;margin-top:.65rem;color:var(--muted);font:.54rem/1.4 var(--mono)}
+.folio-command{display:grid;grid-template-columns:minmax(0,1fr) auto;border:1px solid var(--rule);margin-top:.7rem;background:rgba(255,255,255,.06)}
+.folio-command input{min-width:0;border:0;background:transparent;padding:.7rem .75rem;color:var(--ink);font:1rem/1.3 var(--serif);outline:none}
+.folio-command button{border:0;border-left:1px solid var(--rule);background:transparent;padding:.6rem .8rem;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.folio-command button:hover{background:var(--wash)}
+.folio-command-answer{min-height:1rem;margin:.4rem 0 0;color:var(--muted);font:.7rem/1.35 var(--mono)}
+.quick-actions{display:flex;flex-wrap:wrap;gap:.42rem;margin:1rem 0}
+.quick-actions button{border:1px solid var(--hair);background:transparent;padding:.45rem .55rem;cursor:pointer;font:.54rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.04em}
+.quick-actions button:hover{background:var(--wash);border-color:var(--rule)}
+.body-claims{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.claim-column{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.claim-column h3{margin:0;padding:.65rem .75rem;border-bottom:1px solid var(--rule);font:400 1.15rem/1.1 var(--serif)}
+.claim-row{padding:.75rem;border-bottom:1px solid var(--hair);font-size:.98rem}.claim-row:last-child{border-bottom:0}
+.route-stop-button{display:block;width:100%;border:0;background:transparent;text-align:left;padding:0;cursor:pointer;color:inherit}.route-stop-button:hover strong{text-decoration:underline;text-decoration-color:var(--rust);text-underline-offset:.2em}
+.return button.return-open{margin-top:.45rem;border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.1rem 0;cursor:pointer;font:.5rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.question button.question-open{border:1px solid var(--hair);background:transparent;padding:.4rem .5rem;cursor:pointer;font:.5rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.question button.question-open:hover{background:var(--wash)}
+@media(max-width:50rem){.body-claims{grid-template-columns:1fr}.folio-command{grid-template-columns:1fr auto}}
 .machine-workspace{max-width:none}
 .machine-toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-bottom:1rem}
 .machine-tool{min-height:4.8rem;border:0;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);background:transparent;text-align:left;padding:.72rem .8rem;cursor:pointer;font-size:1rem}
@@ -115,16 +133,20 @@ textarea{width:100%;min-height:8rem;resize:vertical;border:1px solid var(--hair)
  <div class="spine-foot">Reach is not route.<br>Finding is not identity.<br>Closure of one question does not silently close another.</div>
 </aside>
 <section class="stage">
-<header class="head"><div><div class="bearing" id="bearing">current body · what is actually held</div><h2 id="stage-title">What does the body earn?</h2></div><span class="state">working</span></header>
+<header class="head"><div style="min-width:0"><div class="bearing" id="bearing">current body · what is actually held</div><h2 id="stage-title">What does the body earn?</h2><form class="folio-command" id="folio-command"><input id="folio-command-input" autocomplete="off" maxlength="700" placeholder="What do you want to look at?"><button type="submit">Load it</button></form><p class="folio-command-answer" id="folio-command-answer"></p></div><span class="state">working</span></header>
 
 <section class="panel active" data-panel="body"><div class="inner">
- <div class="flare"><div class="flare-label">working flare</div><div class="flare-body"><strong id="flare-title">The Government Lost Robert Bell</strong><p id="flare-brake">Loading brake…</p></div></div>
- <p class="lede" id="body-job"></p>
- <div class="cols"><div class="box"><h3>Current footing</h3><ul id="body-current"></ul></div><div class="box"><h3>Do not silently say</h3><ul id="body-does-not"></ul></div></div>
- <div class="reading"><p class="kicker">Workshop reading</p><h3>What glinted in 15</h3><p class="glint" id="glint"></p><p id="recommendation"></p><div class="links"><a href="/experiments/working-folio/">Open Perceptual Machines folio →</a><a href="/experiments/ward-room/">Ward room →</a></div></div>
+ <div class="flare"><div class="flare-label">working title</div><div class="flare-body"><strong id="flare-title">The Government Lost Robert Bell</strong><p id="flare-brake"></p></div></div>
+ <div class="quick-actions">
+  <button data-jump-tool="one">Work Hugh's testimony</button>
+  <button data-jump-tool="three">Open the Commission answer</button>
+  <button data-jump-tool="names">Put Robert / James / Levy side by side</button>
+  <button data-jump-tool="trace">Trace registration</button>
+ </div>
+ <div class="body-claims"><section class="claim-column"><h3>What the record holds</h3><div id="body-current"></div></section><section class="claim-column"><h3>What does not follow from it</h3><div id="body-does-not"></div></section></div>
 </div></section>
 
-<section class="panel" data-panel="route"><div class="inner"><p class="lede">This is not one road. It is a sequence of documentary states through which the identity question changes shape.</p><div class="route" id="route-list"></div></div></section>
+<section class="panel" data-panel="route"><div class="inner"><div class="route" id="route-list"></div></div></section>
 
 <section class="panel" data-panel="machines"><div class="inner machine-workspace">
  <div class="machine-toolbar" aria-label="Choose a machine">
@@ -136,12 +158,12 @@ textarea{width:100%;min-height:8rem;resize:vertical;border:1px solid var(--hair)
  <div class="machine-operating" id="machine-operating" aria-live="polite"></div>
 </div></section>
 
-<section class="panel" data-panel="returns"><div class="inner"><p class="lede">A trustworthy return lands on the governing object and the exact local passage. Opening the right file is not enough if the machine state disappears inside it.</p><div class="rules" id="return-rules"></div><div class="return-list" id="return-list"></div></div></section>
+<section class="panel" data-panel="returns"><div class="inner"><div class="return-list" id="return-list"></div><div class="rules" id="return-rules" style="margin-top:1rem"></div></div></section>
 
-<section class="panel" data-panel="questions"><div class="inner"><p class="lede">These are live questions, not deficits to be hurried away. Pin one into Notes when you want to carry it while we work elsewhere.</p><div class="questions" id="question-list"></div></div></section>
+<section class="panel" data-panel="questions"><div class="inner"><div class="questions" id="question-list"></div></div></section>
 
 <section class="panel" data-panel="notes"><div class="inner">
- <p class="lede">This is your scratch flap. Notes save only in this browser for now. That is intentionally modest until authenticated Workshop write-back exists.</p>
+ <p class="lede">Keep what catches. Notes stay in this browser for now.</p>
  <div class="notes-grid"><div class="compose"><p class="kicker">Add to this folio</p><textarea id="note-input" placeholder="What caught? What should we test? What do you want to ask me when we return here?"></textarea><div class="note-actions"><button id="save-note">Save note</button><button id="copy-notes">Copy all notes</button><button id="clear-notes">Clear local notes</button></div></div><aside class="notebook"><p class="kicker">Held locally</p><div class="note-list" id="note-list"></div></aside></div>
 </div></section>
 
@@ -169,7 +191,7 @@ let currentView="body", object=null;
 function toast(message){const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),1500);}
 function show(view){currentView=view;tabs.forEach(t=>t.setAttribute("aria-selected",String(t.dataset.view===view)));panels.forEach(p=>p.classList.toggle("active",p.dataset.panel===view));document.getElementById("bearing").textContent=titles[view][0];document.getElementById("stage-title").textContent=titles[view][1];history.replaceState(null,"","#"+view);}
 tabs.forEach(t=>t.addEventListener("click",()=>show(t.dataset.view)));
-function addLi(host,text){const li=document.createElement("li");li.textContent=text;host.append(li);}
+function addClaim(host,text){const row=document.createElement("div");row.className="claim-row";row.textContent=text;host.append(row);}
 function pin(text,label="Pinned"){const notes=loadNotes();notes.unshift({text,view:currentView,label,time:new Date().toISOString()});saveNotes(notes);renderNotes();toast("Pinned to Notes");}
 function buttonPin(text,label){const b=document.createElement("button");b.className="pin";b.textContent="Pin to notes";b.addEventListener("click",()=>pin(text,label));return b;}
 function loadNotes(){try{return JSON.parse(localStorage.getItem(NOTE_KEY)||"[]");}catch(_){return[];}}
@@ -217,30 +239,82 @@ function showMachineResult(title,text,brake){
  const box=machineHost.querySelector("#machine-result");if(!box)return;box.hidden=false;box.innerHTML=`<h4>${esc(title)}</h4><p>${esc(text)}</p>${brake?`<p class="brake-line">${esc(brake)}</p>`:""}`;
 }
 
+
+function localCommand(raw){
+ const q=String(raw||"").toLowerCase();
+ if(/robert.*james.*levy|james.*levy|name web|configuration/.test(q)) return {view:"machines",tool:"names",reply:"Robert / James / Levy are side by side. The joins remain open."};
+ if(/machine one|hugh|recognition|suppose|do you know|testimony/.test(q)) return {view:"machines",tool:"one",reply:"Hugh's recognition exchange is open."};
+ if(/machine three|commission answer|construction|inversion|not shown|sufficien/.test(q)) return {view:"machines",tool:"three",reply:"The Commission assessment is open backward."};
+ if(/article.*14|article.*xiv|compliance/.test(q)) return {view:"machines",tool:"trace",trace:"article14",reply:"Article XIV compliance is traced across its carriers."};
+ if(/registration|enroll|roll/.test(q)) return {view:"machines",tool:"trace",trace:"registration",reply:"Registration / enrollment is traced across its carriers."};
+ if(/source|return|face|representation/.test(q)) return {view:"returns",reply:"Source returns are open."};
+ if(/question|open edge|unknown/.test(q)) return {view:"questions",reply:"Open questions are in view."};
+ if(/note|remember|write/.test(q)) return {view:"notes",reply:"Notes are open."};
+ if(/route|timeline|1900|1901|1902|1907/.test(q)) return {view:"route",reply:"The documentary route is open."};
+ return null;
+}
+function applyFolioAction(action){
+ if(!action)return;
+ if(action.view && titles[action.view]) show(action.view);
+ if(action.tool){setTool(action.tool); if(action.tool==="trace"&&action.trace){setTimeout(()=>{const b=machineHost?.querySelector('[data-trace="'+action.trace+'"]');b?.click();},0);}}
+ const answer=document.getElementById("folio-command-answer"); if(answer)answer.textContent=action.reply||"";
+}
+async function runFolioCommand(raw){
+ const clean=String(raw||"").trim(); if(!clean)return;
+ const local=localCommand(clean); if(local){applyFolioAction(local);return;}
+ const answer=document.getElementById("folio-command-answer");
+ const apiUrl=String(window.EARTHLY_HANDS_API_URL||"").trim();
+ if(!apiUrl){answer.textContent="This folio cannot load that thought yet.";return;}
+ answer.textContent="Looking…";
+ const held={
+   title:object?.title,
+   current:object?.body?.current,
+   open_questions:object?.questions,
+   available:["body","route","machines:one","machines:three","machines:names","machines:trace-registration","machines:trace-article14","returns","questions","notes"]
+ };
+ const prompt=[
+   "You are arranging an Earthly Hands working folio, not answering from outside knowledge.",
+   "Use only HELD FOLIO below. Decide which existing view best serves TEN's request.",
+   "Do not invent evidence, people, sources, routes, identities, or conclusions.",
+   "Return JSON only: {\"view\":\"body|route|machines|returns|questions|notes\",\"tool\":\"one|three|names|trace|\",\"trace\":\"registration|article14|\",\"reply\":\"one plain useful sentence\"}.",
+   "If the request asks for material not held here, choose the nearest view and say exactly what is missing in reply.",
+   "HELD FOLIO: "+JSON.stringify(held),
+   "TEN: "+clean
+ ].join("\n");
+ try{
+   const res=await fetch(apiUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:prompt,place:"robert-bell-folio",history:[]})});
+   const data=await res.json().catch(()=>({}));
+   if(!res.ok||typeof data.reply!=="string")throw new Error(data.error||("HTTP "+res.status));
+   let action=null; try{action=JSON.parse(data.reply.replace(/^\`\`\`(?:json)?|\`\`\`$/g,"").trim());}catch(_){}
+   if(!action){answer.textContent=data.reply.slice(0,240);return;}
+   applyFolioAction(action);
+ }catch(e){answer.textContent="The folio could not arrange that thought this turn.";}
+}
+const commandForm=document.getElementById("folio-command"),commandInput=document.getElementById("folio-command-input");
+commandForm?.addEventListener("submit",e=>{e.preventDefault();const q=commandInput.value.trim();if(!q)return;runFolioCommand(q);commandInput.value="";});
+document.querySelectorAll("[data-jump-tool]").forEach(b=>b.addEventListener("click",()=>{show("machines");setTool(b.dataset.jumpTool);if(b.dataset.jumpTool==="trace")setTimeout(()=>machineHost?.querySelector('[data-trace="registration"]')?.click(),0);}));
+
 async function hydrate(){
  if(!window.EarthlyHandsResolver) throw new Error("Resolver unavailable");
  object=await window.EarthlyHandsResolver.get(OBJECT_ID);
  document.getElementById("object-title").textContent=object.title||"Robert Bell";
  document.getElementById("flare-title").textContent=object.working_title?.text||"";
  document.getElementById("flare-brake").textContent=object.working_title?.brake||"";
- document.getElementById("body-job").textContent=object.body?.job||"";
- (object.body?.current||[]).forEach(x=>addLi(document.getElementById("body-current"),x));
- (object.body?.does_not||[]).forEach(x=>addLi(document.getElementById("body-does-not"),x));
- document.getElementById("glint").textContent=object.conversation_reading?.glint||"";
- document.getElementById("recommendation").textContent=object.conversation_reading?.present_recommendation||"";
+ (object.body?.current||[]).forEach(x=>addClaim(document.getElementById("body-current"),x));
+ (object.body?.does_not||[]).forEach(x=>addClaim(document.getElementById("body-does-not"),x));
 
  const route=document.getElementById("route-list");
- (object.route||[]).forEach(item=>{const d=document.createElement("div");d.className="stop";const s=document.createElement("small");s.textContent=item.state||"";const strong=document.createElement("strong");strong.textContent=item.label||"";const p=document.createElement("p");p.textContent=item.text||"";d.append(s,strong,p,buttonPin((item.state||"")+" — "+(item.label||"")+": "+(item.text||""),"Route stop"));route.append(d);});
+ (object.route||[]).forEach(item=>{const d=document.createElement("div");d.className="stop";const b=document.createElement("button");b.className="route-stop-button";const s=document.createElement("small");s.textContent=item.state||"";const strong=document.createElement("strong");strong.textContent=item.label||"";const p=document.createElement("p");p.textContent=item.text||"";b.append(s,strong,p);b.addEventListener("click",()=>pin((item.state||"")+" — "+(item.label||"")+": "+(item.text||""),"Route stop"));d.append(b);route.append(d);});
 
  renderMachineTool("one");
 
  const rules=document.getElementById("return-rules");
  (object.return_rules||[]).forEach(text=>{const span=document.createElement("span");span.className="rule-pill";span.textContent=text;rules.append(span);});
  const returns=document.getElementById("return-list");
- (object.source_returns||[]).forEach(item=>{const row=document.createElement("article");row.className="return";const h=document.createElement("h3");h.textContent=item.name||"";const dl=document.createElement("dl");[["Object",item.historical_object],["Representation",item.representation],["Locality",item.locality],["Status",item.status]].forEach(([k,v])=>{const dt=document.createElement("dt");dt.textContent=k;const dd=document.createElement("dd");dd.textContent=v||"";dl.append(dt,dd);});row.append(h,dl);returns.append(row);});
+ (object.source_returns||[]).forEach(item=>{const row=document.createElement("article");row.className="return";const h=document.createElement("h3");h.textContent=item.name||"";const dl=document.createElement("dl");[["Object",item.historical_object],["Representation",item.representation],["Locality",item.locality],["Status",item.status]].forEach(([k,v])=>{const dt=document.createElement("dt");dt.textContent=k;const dd=document.createElement("dd");dd.textContent=v||"";dl.append(dt,dd);});const use=document.createElement("button");use.className="return-open";use.textContent="Work this return";use.onclick=()=>{show("machines"); if(/Hugh recognition/i.test(item.name)) setTool("one"); else if(/Commission/i.test(item.name)) setTool("three"); else setTool("names");};h.append(document.createElement("br"),use);row.append(h,dl);returns.append(row);});
 
  const qs=document.getElementById("question-list");
- (object.questions||[]).forEach(q=>{const row=document.createElement("div");row.className="question";const p=document.createElement("p");p.textContent=q;row.append(p,buttonPin(q,"Open question"));qs.append(row);});
+ (object.questions||[]).forEach(q=>{const row=document.createElement("div");row.className="question";const p=document.createElement("p");p.textContent=q;const actions=document.createElement("div");const examine=document.createElement("button");examine.className="question-open";examine.textContent="Examine";examine.onclick=()=>runFolioCommand(q);actions.append(examine,buttonPin(q,"Open question"));row.append(p,actions);qs.append(row);});
 }
 hydrate().catch(error=>{console.error("Robert Bell folio:",error);document.getElementById("body-job").textContent="The Workshop object did not load. The folio shell remains intact; reload when the resolver is available.";});
 const initial=location.hash.slice(1);if(titles[initial])show(initial);
