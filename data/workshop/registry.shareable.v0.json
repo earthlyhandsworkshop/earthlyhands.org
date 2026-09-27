@@ -13,11 +13,27 @@
         "folio": "/experiments/working-folio/",
         "workshop": null
       },
-      "available_views": ["machine","jacket","lineage","try","trace","ground"],
+      "available_views": [
+        "machine",
+        "jacket",
+        "lineage",
+        "try",
+        "trace",
+        "ground"
+      ],
       "relations": [
-        {"verb":"STANDS_ON","to":"ground:sandbox-15"},
-        {"verb":"NEIGHBORS","to":"ground:shared-country"},
-        {"verb":"NEIGHBORS","to":"ground:ward-room"}
+        {
+          "verb": "STANDS_ON",
+          "to": "ground:sandbox-15"
+        },
+        {
+          "verb": "NEIGHBORS",
+          "to": "ground:shared-country"
+        },
+        {
+          "verb": "NEIGHBORS",
+          "to": "ground:ward-room"
+        }
       ]
     },
     "ground:shared-country": {
@@ -25,10 +41,18 @@
       "kind": "ground",
       "title": "Shared Country",
       "publication_state": "PUBLIC",
-      "faces": {"public":"/experiments/shared-country/"},
+      "faces": {
+        "public": "/experiments/shared-country/"
+      },
       "relations": [
-        {"verb":"NEIGHBORS","to":"instrument:perceptual-machines"},
-        {"verb":"NEIGHBORS","to":"ground:ward-room"}
+        {
+          "verb": "NEIGHBORS",
+          "to": "instrument:perceptual-machines"
+        },
+        {
+          "verb": "NEIGHBORS",
+          "to": "ground:ward-room"
+        }
       ]
     },
     "ground:ward-room": {
@@ -36,10 +60,18 @@
       "kind": "ground",
       "title": "Ward's registration book",
       "publication_state": "PUBLIC",
-      "faces": {"public":"/experiments/ward-room/"},
+      "faces": {
+        "public": "/experiments/ward-room/"
+      },
       "relations": [
-        {"verb":"NEIGHBORS","to":"ground:shared-country"},
-        {"verb":"NEIGHBORS","to":"instrument:perceptual-machines"}
+        {
+          "verb": "NEIGHBORS",
+          "to": "ground:shared-country"
+        },
+        {
+          "verb": "NEIGHBORS",
+          "to": "instrument:perceptual-machines"
+        }
       ]
     },
     "ground:sandbox-15": {
@@ -47,9 +79,51 @@
       "kind": "working-ground",
       "title": "15 — Sandbox — Soft Working Ground",
       "publication_state": "WORKING",
-      "faces": {"public":null},
+      "faces": {
+        "public": null
+      },
       "relations": [
-        {"verb":"HOLDS","to":"instrument:perceptual-machines"}
+        {
+          "verb": "HOLDS",
+          "to": "instrument:perceptual-machines"
+        },
+        {
+          "verb": "HOLDS",
+          "to": "route:robert-bell-identity"
+        }
+      ]
+    },
+    "route:robert-bell-identity": {
+      "id": "route:robert-bell-identity",
+      "kind": "identity-route",
+      "title": "Robert Bell — identity route",
+      "publication_state": "SHAREABLE",
+      "object_record": "/data/workshop/objects/route.robert-bell-identity.shareable.v0.json",
+      "faces": {
+        "folio": "/experiments/robert-bell-folio/",
+        "workshop": null
+      },
+      "available_views": [
+        "body",
+        "route",
+        "machines",
+        "returns",
+        "questions",
+        "notes"
+      ],
+      "relations": [
+        {
+          "verb": "STANDS_ON",
+          "to": "ground:sandbox-15"
+        },
+        {
+          "verb": "USES",
+          "to": "instrument:perceptual-machines"
+        },
+        {
+          "verb": "NEIGHBORS",
+          "to": "ground:ward-room"
+        }
       ]
     }
   }
