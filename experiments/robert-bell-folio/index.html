@@ -304,7 +304,7 @@ async function hydrate(){
  (object.body?.does_not||[]).forEach(x=>addClaim(document.getElementById("body-does-not"),x));
 
  const route=document.getElementById("route-list");
- (object.route||[]).forEach(item=>{const d=document.createElement("div");d.className="stop";const b=document.createElement("button");b.className="route-stop-button";const s=document.createElement("small");s.textContent=item.state||"";const strong=document.createElement("strong");strong.textContent=item.label||"";const p=document.createElement("p");p.textContent=item.text||"";b.append(s,strong,p);b.addEventListener("click",()=>pin((item.state||"")+" — "+(item.label||"")+": "+(item.text||""),"Route stop"));d.append(b);route.append(d);});
+ (object.route||[]).forEach(item=>{const d=document.createElement("div");d.className="stop";const b=document.createElement("button");b.className="route-stop-button";const s=document.createElement("small");s.textContent=item.state||"";const strong=document.createElement("strong");strong.textContent=item.label||"";const p=document.createElement("p");p.textContent=item.text||"";b.append(s,strong,p);b.addEventListener("click",()=>{const state=String(item.state||"");const label=String(item.label||"");show("machines");if(/1901|identity machinery/i.test(state+" "+label))setTool("one");else if(/early paper|robert \/ james \/ levy/i.test(state+" "+label))setTool("names");else if(/1902|commission|office|interior/i.test(state+" "+label))setTool("three");else{setTool("trace");setTimeout(()=>machineHost?.querySelector('[data-trace="registration"]')?.click(),0);}});d.append(b);route.append(d);});
 
  renderMachineTool("one");
 
@@ -316,7 +316,7 @@ async function hydrate(){
  const qs=document.getElementById("question-list");
  (object.questions||[]).forEach(q=>{const row=document.createElement("div");row.className="question";const p=document.createElement("p");p.textContent=q;const actions=document.createElement("div");const examine=document.createElement("button");examine.className="question-open";examine.textContent="Examine";examine.onclick=()=>runFolioCommand(q);actions.append(examine,buttonPin(q,"Open question"));row.append(p,actions);qs.append(row);});
 }
-hydrate().catch(error=>{console.error("Robert Bell folio:",error);document.getElementById("body-job").textContent="The Workshop object did not load. The folio shell remains intact; reload when the resolver is available.";});
+hydrate().catch(error=>{console.error("Robert Bell folio:",error);const answer=document.getElementById("folio-command-answer");if(answer)answer.textContent="The Workshop object did not load. Reload when the resolver is available.";});
 const initial=location.hash.slice(1);if(titles[initial])show(initial);
 })();
 </script>
