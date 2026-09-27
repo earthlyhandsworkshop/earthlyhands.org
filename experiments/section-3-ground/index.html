@@ -25,7 +25,7 @@ h1{max-width:52rem;font-size:clamp(2.35rem,6vw,5.4rem);font-weight:400;line-heig
 .tract{appearance:none;border:0;border-left:1px solid rgba(25,24,20,.25);background:rgba(233,225,210,.42);padding:1rem .9rem;text-align:left;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer}
 .tract:first-child{border-left:0}.tract:hover,.tract:focus{background:rgba(246,241,231,.7);outline:2px solid var(--ink);outline-offset:-2px}
 .aliquot{font-size:clamp(1.45rem,3.5vw,2.55rem)}
-.names{font-size:clamp(.86rem,1.5vw,1.02rem);line-height:1.4}
+.names{font-size:clamp(.86rem,1.5vw,1.02rem);line-height:1.4}.role{display:block;margin-bottom:.16rem;color:var(--faint);font:10px/1.35 system-ui,sans-serif;letter-spacing:.045em;text-transform:uppercase}.role-gap{margin-top:.72rem}
 .depth{display:block;margin-top:.7rem;font:10px/1.45 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
 .boundary{margin:1rem 0 0;text-align:center;font:11px/1.5 system-ui,sans-serif;letter-spacing:.05em;color:var(--faint)}
 .boundary-door{display:block;margin:.8rem auto 0;background:transparent;border:0;border-bottom:1px dotted currentColor;padding:.18rem 0;cursor:pointer;color:var(--ink);font:12px/1.45 Georgia,serif}
@@ -60,19 +60,19 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     <div class="strip">
       <button class="tract" type="button" data-tract="w-sw">
         <span class="aliquot">W½SW</span>
-        <span class="names">Robert Bell<br>William C. Gillespie<br>McKinney Holderness<span class="depth">Patent face controlled</span></span>
+        <span class="names"><span class="role">purchaser · payment party</span>McKinney Holderness<span class="role role-gap">assignees · grantees</span>Robert Bell<br>William C. Gillespie<span class="depth">Patent face controlled</span></span>
       </button>
       <button class="tract" type="button" data-tract="e-sw">
         <span class="aliquot">E½SW</span>
-        <span class="names">Robert Bell<br>William C. Gillespie<br>McKinney Holderness<span class="depth">Patent face controlled</span></span>
+        <span class="names"><span class="role">purchaser · payment party</span>McKinney Holderness<span class="role role-gap">assignees · grantees</span>Robert Bell<br>William C. Gillespie<span class="depth">Patent face controlled</span></span>
       </button>
       <button class="tract" type="button" data-tract="w-se">
         <span class="aliquot">W½SE</span>
-        <span class="names">Jesse W. Garth<br>William Ward<span class="depth">Patent face controlled</span></span>
+        <span class="names"><span class="role">purchaser · payment party</span>Jesse W. Garth<span class="role role-gap">assignee · grantee</span>William Ward<span class="depth">Patent face controlled</span></span>
       </button>
       <button class="tract" type="button" data-tract="e-se">
         <span class="aliquot">E½SE</span>
-        <span class="names">William Ward<span class="depth">Patent face controlled</span></span>
+        <span class="names"><span class="role">purchaser · payment party · direct grantee</span>William Ward<span class="role">of Lowndes County, Mississippi</span><span class="depth">Patent face controlled</span></span>
       </button>
     </div>
     <p class="boundary">The middle descriptions, E½SW and W½SE, share the SW/SE quarter boundary in ordinary PLSS aliquot grammar.</p>
