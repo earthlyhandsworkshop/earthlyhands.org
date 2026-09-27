@@ -47,13 +47,13 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
 <body>
 <header class="top">
   <a href="/">Earthly Hands Workshop</a>
-  <span>Shared Country · mixed-depth ground<br>cadastral relation, not biography</span>
+  <span>Shared Country · four patent faces held<br>cadastral relation, not biography</span>
 </header>
 <main>
   <p class="kicker">Standing · Section 3, T18N R14E · south-half descriptions</p>
   <h1>Four adjoining descriptions. No chain between the people.</h1>
   <p class="lead">BLM/GLO records place four patent occurrences in a west-to-east sequence across the south half of Section 3.</p>
-  <p class="ceiling">This ground holds the source-described aliquot order. It is not a surveyed parcel drawing, a residence map, or a route. The eastern Ward occurrence is now controlled by its patent face; the adjoining Garth/Ward occurrence remains at the result layer.</p>
+  <p class="ceiling">This ground holds the source-described aliquot order. It is not a surveyed parcel drawing, a residence map, or a route. All four occurrences are now controlled by their patent faces; face completion does not create a transaction chain.</p>
 
   <section class="ground" aria-label="West-to-east textual aliquot sequence across the south half of Section 3">
     <div class="bearing"><span>west</span><span>east</span></div>
@@ -68,7 +68,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
       </button>
       <button class="tract" type="button" data-tract="w-se">
         <span class="aliquot">W½SE</span>
-        <span class="names">Jesse W. Garth<br>William Ward<span class="depth">Result layer only</span></span>
+        <span class="names">Jesse W. Garth<br>William Ward<span class="depth">Patent face controlled</span></span>
       </button>
       <button class="tract" type="button" data-tract="e-se">
         <span class="aliquot">E½SE</span>
@@ -95,7 +95,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
 </main>
 <footer>
   <span>Ravel · Mapping Grounds ↔ Public Lands ↔ Shared Country</span>
-  <span>Adjacency is held. Source depth remains uneven.</span>
+  <span>Four faces held. Chain still closed.</span>
 </footer>
 <script src="../../config.js"></script>
 <script src="../../public-listening.js?v=ground-events-1"></script>
@@ -124,10 +124,10 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
       limit: 'Its eastern description adjoins W½SE. That shared boundary does not extend the assignment chain into the Ward-side results.'
     },
     'w-se': {
-      meta: 'STA-MS0930__.499 · W½SE',
+      meta: 'STA-MS0930__.499 · Certificate 1422 · W½SE',
       title: 'West half of the southeast quarter',
-      body: 'The current result representation carries Jesse W. Garth and William Ward, labeled by the interface as Patentees.',
-      limit: 'The underlying patent face is not held here. Purchaser, payment, assignee, grantee, tenancy, and authority roles remain closed.'
+      body: 'The controlled patent face names William Ward as assignee of Jesse W. Garth. It states that Garth made full payment through the Columbus land office and grants the tract to Ward and his heirs.',
+      limit: 'This restores Garth as purchaser and payment party, and Ward as assignee and grantee, for this instrument. It does not date the assignment, place either man bodily on the tract, establish possession, coordinate this patent with its neighbors, or identify this Ward occurrence with any other William Ward.'
     },
     'e-se': {
       meta: 'STA-MS0940__.004 · Certificate 1428 · E½SE',
@@ -136,10 +136,10 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
       limit: 'This restores purchaser, payment-party, and direct grantee roles for this instrument. It does not place Ward bodily on the tract, earn residence or possession, or identify this occurrence with Colonel William Ward or the Choctaw agent.'
     },
     'boundary-compare': {
-      meta: 'Shared cadastral boundary · unequal source depth',
-      title: 'One edge, two documentary rooms',
-      body: 'On E½SW, a controlled patent face restores Bell and Gillespie as assignees and grantees and Holderness as purchaser and payment party. On W½SE, the current result representation only carries Jesse W. Garth and William Ward under the interface label Patentee.',
-      limit: 'The descriptions adjoin. Their legal-role grammar does not yet. Comparison is earned; a transaction chain, coordinated acquisition, person identity, residence, and movement remain closed.'
+      meta: 'Shared cadastral boundary · both faces controlled',
+      title: 'One edge, two patent grammars',
+      body: 'On E½SW, Holderness is purchaser and payment party while Bell and Gillespie are assignees and grantees. Across the shared boundary on W½SE, Garth is purchaser and payment party while Ward is assignee and grantee.',
+      limit: 'The descriptions adjoin and the role contrast is now face-controlled. A transaction chain, coordinated acquisition, person identity, residence, influence, and movement remain closed.'
     }
   };
   function emit(type, detail={}){
@@ -165,9 +165,9 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     panel.hidden=true; if(opener) opener.focus({preventScroll:true}); emit('return_close',{target:'south-half-sequence'});
   });
   document.getElementById('source-depth').addEventListener('click',event=>{
-    opener=event.currentTarget; meta.textContent='Open source door'; title.textContent='Return the remaining Garth/Ward patent face.';
-    body.textContent='STA-MS0930__.499 is now the next capable object. It can restore purchaser, payment, assignee, grantee, certificate, and authority language for W½SE.';
-    limit.textContent='Until that face is controlled, adjacency may be compared across the south half, but legal-role grammar remains uneven.';
+    opener=event.currentTarget; meta.textContent='Source edge'; title.textContent='All four patent faces are now held.';
+    body.textContent='For W½SE, Certificate 1422 restores Garth as purchaser and payment party and Ward as assignee and grantee. The next capable object is the Columbus certificate or entry register if the earlier administrative act needs to be opened.';
+    limit.textContent='Face completion does not turn adjacency into a chain, place any person on the ground, or merge same-name occurrences.';
     panel.hidden=false; panel.focus({preventScroll:true}); panel.scrollIntoView({behavior:'smooth',block:'nearest'}); emit('ask',{target:'source-depth'});
   });
   emit('ground_open',{standing:'section-3-south-half-result-neighborhood'});
