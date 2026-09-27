@@ -79,6 +79,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     <button class="boundary-door" id="boundary-compare" type="button" hidden>Compare what each side can say</button>
     <button class="boundary-door" id="ward-role-compare" type="button" hidden>Compare the Ward name-form across the southeast quarter</button>
     <button class="boundary-door" id="certificate-order-compare" type="button" hidden>Compare ground order with certificate order</button>
+    <button class="boundary-door" id="carrier-series-compare" type="button" hidden>Compare the patent return keys</button>
   </section>
 
   <section class="panel" id="tract-panel" hidden tabindex="-1">
@@ -112,12 +113,14 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   const boundaryCompare = document.getElementById('boundary-compare');
   const wardRoleCompare = document.getElementById('ward-role-compare');
   const certificateOrderCompare = document.getElementById('certificate-order-compare');
+  const carrierSeriesCompare = document.getElementById('carrier-series-compare');
   const inspectedBoundary = new Set();
   const inspectedWardRoles = new Set();
   const inspectedTracts = new Set();
   let compareEarned = false;
   let wardCompareEarned = false;
   let certificateCompareEarned = false;
+  let carrierCompareEarned = false;
   const states = {
     'w-sw': {
       meta: 'STA-MS0940__.006 · Certificate 1430 · W½SW',
@@ -160,6 +163,12 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
       title: 'The ground sequence is not the certificate sequence',
       body: 'Read west to east, the four descriptions carry Columbus Certificates 1430, 1429, 1422, and 1428. Read numerically, 1422 and 1428 occupy the southeast quarter; 1429 and 1430 occupy the southwest quarter.',
       limit: 'This earns a mismatch between cadastral order and certificate numbering. It does not by itself establish issuance chronology, one filing batch, a shared purchase, a transaction chain, or movement by any person.'
+    },
+    'carrier-series-compare': {
+      meta: 'Four controlled patent faces · carrier-depth comparison',
+      title: 'One adjoining face returns through a different patent series',
+      body: 'W½SW, E½SW, and E½SE carry BLM/GLO return keys beginning STA-MS0940. W½SE—the Garth-to-Ward instrument—carries STA-MS0930__.499.',
+      limit: 'This earns a carrier-series difference only. It does not establish a different issue date, land office, legal status, assignment act, purchase batch, or transaction chain.'
     }
   };
   function emit(type, detail={}){
@@ -169,7 +178,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     const state=states[key]; if(!state) return;
     opener=button; meta.textContent=state.meta; title.textContent=state.title; body.textContent=state.body; limit.textContent=state.limit;
     panel.hidden=false; panel.focus({preventScroll:true}); panel.scrollIntoView({behavior:'smooth',block:'nearest'});
-    emit((key === 'boundary-compare' || key === 'ward-role-compare' || key === 'certificate-order-compare') ? 'compare' : 'inspect',{target:key,moved:false,identity_joined:false});
+    emit((key === 'boundary-compare' || key === 'ward-role-compare' || key === 'certificate-order-compare' || key === 'carrier-series-compare') ? 'compare' : 'inspect',{target:key,moved:false,identity_joined:false});
     if(key === 'e-sw' || key === 'w-se'){
       inspectedBoundary.add(key);
       if(inspectedBoundary.size === 2 && !compareEarned){
@@ -193,12 +202,18 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
         certificateOrderCompare.hidden = false;
         emit('capability_reveal',{target:'certificate-order-compare',earned_by:['w-sw','e-sw','w-se','e-se']});
       }
+      if(inspectedTracts.size === 4 && !carrierCompareEarned){
+        carrierCompareEarned = true;
+        carrierSeriesCompare.hidden = false;
+        emit('capability_reveal',{target:'carrier-series-compare',earned_by:['w-sw','e-sw','w-se','e-se']});
+      }
     }
   }
   document.querySelectorAll('[data-tract]').forEach(button=>button.addEventListener('click',()=>openState(button.dataset.tract,button)));
   boundaryCompare.addEventListener('click',()=>openState('boundary-compare',boundaryCompare));
   wardRoleCompare.addEventListener('click',()=>openState('ward-role-compare',wardRoleCompare));
   certificateOrderCompare.addEventListener('click',()=>openState('certificate-order-compare',certificateOrderCompare));
+  carrierSeriesCompare.addEventListener('click',()=>openState('carrier-series-compare',carrierSeriesCompare));
   document.getElementById('close-panel').addEventListener('click',()=>{
     panel.hidden=true; if(opener) opener.focus({preventScroll:true}); emit('return_close',{target:'south-half-sequence'});
   });
