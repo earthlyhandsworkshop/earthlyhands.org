@@ -49,3 +49,38 @@ A beautiful surface should not overstate the record.
 Receive → work what catches → leave a trustworthy piece → cross back.
 
 Powerful finger. Trustworthy result.
+
+
+## Publication relationship
+
+Earthly Hands now uses three publication relationships:
+
+- **WORKING** — Workshop ground. Unfinished or sensitive work may remain difficult, strange, private, or operational. A web body in this state requires real access control; a hidden route in a public repository is not private.
+- **SHAREABLE** — Safe enough to hand to a trusted person by link, but not presented as an Earthly Hands public statement. A Share link may be forwarded, archived, or screenshotted. Shareable therefore means safe if forwarded, not secret.
+- **PUBLIC** — Deliberately published work answerable as Earthly Hands public ground.
+
+These are publication / maturity states. They do not replace source permission, provenance, custody, uncertainty, or privacy controls.
+
+Crossings are deliberate and reversible:
+
+`WORKING ↔ SHAREABLE ↔ PUBLIC`
+
+No automatic promotion.
+
+A beautiful machine does not become public because it is beautiful.
+A useful Share body does not become public because somebody liked it.
+A public body may return inward when substantial work is needed.
+
+Working rule:
+
+**Build wildly inside. Share when useful. Publish when earned.**
+
+Additional brakes:
+
+- **Publication state ≠ source permission.**
+- **Shareable ≠ private.**
+- **Git history ≠ epistemic history.**
+- **WORKSHOP is a publication relationship, not a URL pattern.**
+- If experiencing a machine is itself the public value, publication may be part of the work.
+- If operating the machine with Workshop judgment is the valuable capability, notice that before publishing the operating machinery wholesale.
+
