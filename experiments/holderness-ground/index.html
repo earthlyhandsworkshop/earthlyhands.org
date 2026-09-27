@@ -468,7 +468,9 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     }
 
     let response;
-    if(/where|location|map|coordinate|exact/.test(q)){
+    if(/house|spirits|liquor|tavern|kind of place|what place|business/.test(q)){
+      response = 'In the same deposition, Holderness calls it “my public house on the road” and says he kept spirits there. He also says he very often sold spirits to Ward. That earns a place-function and transaction relation; it does not place Ward at the house, date any sale, or create a route from the house to the agency.';
+    } else if(/where|location|map|coordinate|exact/.test(q)){
       response = 'This ground knows an approximate relation: on the Noxubee turnpike, about 1¼ miles from the Choctaw agency. It does not have an exact point or reconstructed route.';
     } else if(/same|other|land|patent|glo|later|record/.test(q)){
       revealNameWeb('ask');
