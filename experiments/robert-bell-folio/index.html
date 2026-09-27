@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#d9cfbb">
+<title>Robert Bell — Working Folio</title>
+<script src="/workshop-resolver.js"></script>
+<style>
+:root{
+ --paper:#ddd3bf;--sheet:#e9e1d1;--ink:#211e18;--muted:#71695b;--rule:#4d473d;
+ --hair:rgba(33,30,24,.22);--rust:#86553a;--wash:rgba(255,255,255,.17);
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:#cfc4ae}
+body{margin:0;color:var(--ink);font:1rem/1.43 var(--serif);background:
+ linear-gradient(rgba(33,30,24,.025) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(33,30,24,.018) 1px,transparent 1px),var(--paper);
+ background-size:31px 31px,31px 31px,auto}
+button,textarea{font:inherit;color:inherit}a{color:inherit;text-underline-offset:.2em}
+button:focus-visible,a:focus-visible,textarea:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+.shell{width:min(92rem,calc(100% - 1rem));margin:auto;padding:.5rem 0 2rem}
+.topline{min-height:2.7rem;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;gap:1rem;font:.62rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.topline span{color:var(--muted)}
+.folio{margin-top:.65rem;border:1px solid var(--rule);background:var(--sheet);box-shadow:0 12px 38px rgba(45,35,25,.12);display:grid;grid-template-columns:13.5rem minmax(0,1fr);min-height:78vh}
+.spine{border-right:1px solid var(--rule);display:flex;flex-direction:column;background:rgba(98,78,53,.035)}
+.identity{padding:1.1rem .9rem;border-bottom:1px solid var(--rule)}
+.kicker{margin:0 0 .35rem;color:var(--rust);font:700 .5rem/1.15 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.identity h1{margin:0;font-size:1.9rem;line-height:.92;font-weight:400;letter-spacing:-.04em}
+.identity p:last-child{margin:.65rem 0 0;color:var(--muted);font-size:.73rem}
+.tabs{display:flex;flex-direction:column}
+.tab{appearance:none;border:0;border-bottom:1px solid var(--hair);background:transparent;padding:.78rem .85rem;text-align:left;cursor:pointer;display:grid;grid-template-columns:1.4rem 1fr;gap:.5rem;align-items:baseline}
+.tab:hover{background:var(--wash)}.tab[aria-selected="true"]{background:rgba(134,85,58,.07);box-shadow:inset 3px 0 0 var(--rust)}
+.tab .n{font:.48rem/1 var(--mono);color:var(--muted)}.tab .t{font-size:1.02rem}
+.spine-foot{margin-top:auto;padding:.85rem .9rem;border-top:1px solid var(--rule);color:var(--muted);font:.54rem/1.45 var(--mono)}
+.stage{min-width:0}
+.head{min-height:6rem;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem;align-items:end;padding:.85rem 1rem}
+.bearing{color:var(--muted);font:.52rem/1.25 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+.head h2{margin:.15rem 0 0;font-size:clamp(2.25rem,4.8vw,4.7rem);line-height:.88;font-weight:400;letter-spacing:-.055em}
+.state{align-self:start;border:1px solid var(--rule);padding:.3rem .45rem;font:700 .48rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+.panel{display:none}.panel.active{display:block}.inner{padding:clamp(1rem,2.8vw,2.5rem);max-width:72rem}
+.lede{max-width:51rem;margin:0 0 1.8rem;font-size:clamp(1.15rem,2vw,1.48rem)}
+.flare{border:1px solid var(--rule);display:grid;grid-template-columns:10rem minmax(0,1fr);margin-bottom:1.5rem}
+.flare-label{padding:.75rem;border-right:1px solid var(--rule);color:var(--rust);font:700 .5rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.flare-body{padding:.7rem .85rem}.flare-body strong{display:block;font-size:1.25rem;font-weight:400}.flare-body p{margin:.25rem 0 0;color:var(--muted);font-size:.84rem}
+.cols{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.box{padding:1rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.box h3{margin:0 0 .65rem;font-weight:400;font-size:1.35rem}.box ul{margin:.4rem 0;padding-left:1.2rem}.box li{margin:.4rem 0}
+.route{position:relative;margin-left:.45rem;border-left:1px solid var(--rule)}
+.stop{position:relative;padding:0 0 1.75rem 1.5rem;max-width:52rem}.stop:before{content:"";position:absolute;left:-.31rem;top:.38rem;width:.56rem;height:.56rem;border:1px solid var(--rule);background:var(--sheet);border-radius:50%}
+.stop small{display:block;color:var(--rust);font:.5rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}.stop strong{display:block;margin:.2rem 0 .35rem;font-size:1.3rem;font-weight:400}.stop p{margin:0;color:var(--muted);font-size:.9rem}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.card{padding:1rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);background:rgba(255,255,255,.07)}
+.card small{display:block;color:var(--rust);font:.5rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}.card h3{margin:.35rem 0 .55rem;font-weight:400;font-size:1.45rem;line-height:1}.card p{margin:.4rem 0}.card .use{color:var(--muted);font-size:.87rem}
+.pin{margin-top:.75rem;border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.12rem 0;cursor:pointer;color:var(--muted);font:.54rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.pin:hover{color:var(--ink)}
+.rules{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 1.3rem}.rule-pill{border:1px solid var(--hair);padding:.42rem .5rem;font:.59rem/1.25 var(--mono);background:var(--wash)}
+.return-list{border-top:1px solid var(--rule)}
+.return{display:grid;grid-template-columns:13rem minmax(0,1fr);border-bottom:1px solid var(--rule)}
+.return h3{margin:0;padding:.8rem;border-right:1px solid var(--rule);font-size:1rem;font-weight:400}.return dl{margin:0;padding:.65rem .8rem}.return dt{float:left;clear:left;width:8rem;color:var(--muted);font:700 .48rem/1.5 var(--mono);text-transform:uppercase;letter-spacing:.06em}.return dd{margin:0 0 .35rem 8.5rem;font-size:.85rem}
+.questions{border-top:1px solid var(--rule)}.question{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem;align-items:center;padding:.8rem .15rem;border-bottom:1px solid var(--hair)}.question p{margin:0;font-size:1.08rem}
+.notes-grid{display:grid;grid-template-columns:minmax(0,1fr) 19rem;border:1px solid var(--rule)}
+.compose{padding:1rem}.notebook{border-left:1px solid var(--rule);padding:1rem;background:rgba(255,255,255,.07)}
+textarea{width:100%;min-height:8rem;resize:vertical;border:1px solid var(--hair);background:rgba(255,255,255,.12);padding:.7rem;font-size:1rem}
+.note-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}.note-actions button{border:1px solid var(--hair);background:transparent;padding:.4rem .55rem;cursor:pointer;font:.54rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}.note-actions button:hover{border-color:var(--rule);background:var(--wash)}
+.note-list{display:grid;gap:.65rem}.note{border-top:1px solid var(--rule);padding-top:.55rem}.note:first-child{border-top:0;padding-top:0}.note small{display:block;color:var(--muted);font:.48rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}.note p{margin:.25rem 0;font-size:.88rem}.empty{color:var(--muted);font-size:.85rem}
+.reading{margin-top:1.5rem;border:1px solid var(--rule);padding:1rem}.reading h3{margin:0 0 .45rem;font-weight:400;font-size:1.3rem}.reading p{margin:.45rem 0}.reading .glint{font-size:1.1rem}
+.links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}.links a{font:.58rem/1.2 var(--mono);border-bottom:1px solid var(--rust);text-decoration:none;padding:.15rem 0}
+.foot{display:flex;justify-content:space-between;gap:1rem;margin-top:.65rem;color:var(--muted);font:.54rem/1.4 var(--mono)}
+.toast{position:fixed;right:1rem;bottom:1rem;background:var(--ink);color:var(--sheet);padding:.55rem .7rem;font:.58rem/1.2 var(--mono);opacity:0;transform:translateY(.5rem);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:none}
+@media(max-width:64rem){.folio{grid-template-columns:1fr}.spine{border-right:0;border-bottom:1px solid var(--rule)}.tabs{display:grid;grid-template-columns:repeat(6,1fr);overflow:auto}.tab{display:block;text-align:center;border-right:1px solid var(--hair);border-bottom:0;padding:.65rem .3rem}.tab[aria-selected="true"]{box-shadow:inset 0 -3px 0 var(--rust)}.tab .n{display:none}.tab .t{font-size:.78rem}.spine-foot{display:none}.identity p:last-child{display:none}.cards{grid-template-columns:1fr}.notes-grid{grid-template-columns:1fr}.notebook{border-left:0;border-top:1px solid var(--rule)}}
+@media(max-width:40rem){.shell{width:calc(100% - .5rem)}.tabs{grid-template-columns:repeat(3,1fr)}.head{grid-template-columns:1fr}.state{justify-self:start}.head h2{font-size:2.7rem}.inner{padding:1rem .8rem 1.5rem}.cols{grid-template-columns:1fr}.flare{grid-template-columns:1fr}.flare-label{border-right:0;border-bottom:1px solid var(--rule)}.return{grid-template-columns:1fr}.return h3{border-right:0;border-bottom:1px solid var(--rule)}.return dt{width:6rem}.return dd{margin-left:6.5rem}.question{grid-template-columns:1fr}.pin{justify-self:start}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="topline"><strong>Earthly Hands Workshop</strong><span>shareable working folio · local notes stay in this browser</span></header>
+<main class="folio">
+<aside class="spine">
+ <div class="identity"><p class="kicker">Working folio 02</p><h1 id="object-title">Robert Bell</h1><p>One identity route held open for inspection. The folio does not decide what the record has not decided.</p></div>
+ <nav class="tabs" role="tablist">
+  <button class="tab" role="tab" aria-selected="true" data-view="body"><span class="n">01</span><span class="t">Body</span></button>
+  <button class="tab" role="tab" aria-selected="false" data-view="route"><span class="n">02</span><span class="t">Route</span></button>
+  <button class="tab" role="tab" aria-selected="false" data-view="machines"><span class="n">03</span><span class="t">Machines</span></button>
+  <button class="tab" role="tab" aria-selected="false" data-view="returns"><span class="n">04</span><span class="t">Returns</span></button>
+  <button class="tab" role="tab" aria-selected="false" data-view="questions"><span class="n">05</span><span class="t">Questions</span></button>
+  <button class="tab" role="tab" aria-selected="false" data-view="notes"><span class="n">06</span><span class="t">Notes</span></button>
+ </nav>
+ <div class="spine-foot">Reach is not route.<br>Finding is not identity.<br>Closure of one question does not silently close another.</div>
+</aside>
+<section class="stage">
+<header class="head"><div><div class="bearing" id="bearing">current body · what is actually held</div><h2 id="stage-title">What does the body earn?</h2></div><span class="state">working</span></header>
+
+<section class="panel active" data-panel="body"><div class="inner">
+ <div class="flare"><div class="flare-label">working flare</div><div class="flare-body"><strong id="flare-title">The Government Lost Robert Bell</strong><p id="flare-brake">Loading brake…</p></div></div>
+ <p class="lede" id="body-job"></p>
+ <div class="cols"><div class="box"><h3>Current footing</h3><ul id="body-current"></ul></div><div class="box"><h3>Do not silently say</h3><ul id="body-does-not"></ul></div></div>
+ <div class="reading"><p class="kicker">Workshop reading</p><h3>What glinted in 15</h3><p class="glint" id="glint"></p><p id="recommendation"></p><div class="links"><a href="/experiments/working-folio/">Open Perceptual Machines folio →</a><a href="/experiments/ward-room/">Ward room →</a></div></div>
+</div></section>
+
+<section class="panel" data-panel="route"><div class="inner"><p class="lede">This is not one road. It is a sequence of documentary states through which the identity question changes shape.</p><div class="route" id="route-list"></div></div></section>
+
+<section class="panel" data-panel="machines"><div class="inner"><p class="lede">Bring different instruments to the same body. Each one should expose a different hidden dimension without strengthening the record.</p><div class="cards" id="machine-cards"></div></div></section>
+
+<section class="panel" data-panel="returns"><div class="inner"><p class="lede">A trustworthy return lands on the governing object and the exact local passage. Opening the right file is not enough if the machine state disappears inside it.</p><div class="rules" id="return-rules"></div><div class="return-list" id="return-list"></div></div></section>
+
+<section class="panel" data-panel="questions"><div class="inner"><p class="lede">These are live questions, not deficits to be hurried away. Pin one into Notes when you want to carry it while we work elsewhere.</p><div class="questions" id="question-list"></div></div></section>
+
+<section class="panel" data-panel="notes"><div class="inner">
+ <p class="lede">This is your scratch flap. Notes save only in this browser for now. That is intentionally modest until authenticated Workshop write-back exists.</p>
+ <div class="notes-grid"><div class="compose"><p class="kicker">Add to this folio</p><textarea id="note-input" placeholder="What caught? What should we test? What do you want to ask me when we return here?"></textarea><div class="note-actions"><button id="save-note">Save note</button><button id="copy-notes">Copy all notes</button><button id="clear-notes">Clear local notes</button></div></div><aside class="notebook"><p class="kicker">Held locally</p><div class="note-list" id="note-list"></div></aside></div>
+</div></section>
+
+</section>
+</main>
+<footer class="foot"><span>Same object. Different instruments. Local state remains local.</span><a href="/experiments/working-folio/">Perceptual Machines folio →</a></footer>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+(function(){
+const OBJECT_ID="route:robert-bell-identity";
+const NOTE_KEY="earthly-hands-robert-bell-folio-notes-v1";
+const titles={
+ body:["current body · what is actually held","What does the body earn?"],
+ route:["identity route · changing question","How does the question move?"],
+ machines:["perceptual instruments · same body","What changes when we look differently?"],
+ returns:["source return · state-local passage","Where exactly does this state return?"],
+ questions:["open edge · do not manufacture closure","What remains genuinely open?"],
+ notes:["Ten's scratch flap · browser-local","What do you want to carry?"]
+};
+const tabs=[...document.querySelectorAll(".tab")],panels=[...document.querySelectorAll(".panel")];
+let currentView="body", object=null;
+function toast(message){const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),1500);}
+function show(view){currentView=view;tabs.forEach(t=>t.setAttribute("aria-selected",String(t.dataset.view===view)));panels.forEach(p=>p.classList.toggle("active",p.dataset.panel===view));document.getElementById("bearing").textContent=titles[view][0];document.getElementById("stage-title").textContent=titles[view][1];history.replaceState(null,"","#"+view);}
+tabs.forEach(t=>t.addEventListener("click",()=>show(t.dataset.view)));
+function addLi(host,text){const li=document.createElement("li");li.textContent=text;host.append(li);}
+function pin(text,label="Pinned"){const notes=loadNotes();notes.unshift({text,view:currentView,label,time:new Date().toISOString()});saveNotes(notes);renderNotes();toast("Pinned to Notes");}
+function buttonPin(text,label){const b=document.createElement("button");b.className="pin";b.textContent="Pin to notes";b.addEventListener("click",()=>pin(text,label));return b;}
+function loadNotes(){try{return JSON.parse(localStorage.getItem(NOTE_KEY)||"[]");}catch(_){return[];}}
+function saveNotes(notes){localStorage.setItem(NOTE_KEY,JSON.stringify(notes.slice(0,100)));}
+function renderNotes(){const host=document.getElementById("note-list");host.innerHTML="";const notes=loadNotes();if(!notes.length){const p=document.createElement("p");p.className="empty";p.textContent="Nothing held here yet.";host.append(p);return;}notes.forEach(n=>{const d=document.createElement("div");d.className="note";const s=document.createElement("small");const when=n.time?new Date(n.time).toLocaleString():"";s.textContent=(n.label||"Note")+" · "+(n.view||"folio")+" · "+when;const p=document.createElement("p");p.textContent=n.text;d.append(s,p);host.append(d);});}
+document.getElementById("save-note").addEventListener("click",()=>{const input=document.getElementById("note-input");const text=input.value.trim();if(!text)return;pin(text,"Ten note");input.value="";});
+document.getElementById("copy-notes").addEventListener("click",async()=>{const notes=loadNotes();const text=notes.map(n=>"["+n.label+" · "+n.view+"]\n"+n.text).join("\n\n");try{await navigator.clipboard.writeText(text);toast("Notes copied");}catch(_){toast("Copy unavailable");}});
+document.getElementById("clear-notes").addEventListener("click",()=>{if(!confirm("Clear the notes saved in this browser for this folio?"))return;localStorage.removeItem(NOTE_KEY);renderNotes();toast("Local notes cleared");});
+renderNotes();
+
+async function hydrate(){
+ if(!window.EarthlyHandsResolver) throw new Error("Resolver unavailable");
+ object=await window.EarthlyHandsResolver.get(OBJECT_ID);
+ document.getElementById("object-title").textContent=object.title||"Robert Bell";
+ document.getElementById("flare-title").textContent=object.working_title?.text||"";
+ document.getElementById("flare-brake").textContent=object.working_title?.brake||"";
+ document.getElementById("body-job").textContent=object.body?.job||"";
+ (object.body?.current||[]).forEach(x=>addLi(document.getElementById("body-current"),x));
+ (object.body?.does_not||[]).forEach(x=>addLi(document.getElementById("body-does-not"),x));
+ document.getElementById("glint").textContent=object.conversation_reading?.glint||"";
+ document.getElementById("recommendation").textContent=object.conversation_reading?.present_recommendation||"";
+
+ const route=document.getElementById("route-list");
+ (object.route||[]).forEach(item=>{const d=document.createElement("div");d.className="stop";const s=document.createElement("small");s.textContent=item.state||"";const strong=document.createElement("strong");strong.textContent=item.label||"";const p=document.createElement("p");p.textContent=item.text||"";d.append(s,strong,p,buttonPin((item.state||"")+" — "+(item.label||"")+": "+(item.text||""),"Route stop"));route.append(d);});
+
+ const cards=document.getElementById("machine-cards");
+ (object.machine_lenses||[]).forEach(item=>{const c=document.createElement("article");c.className="card";const s=document.createElement("small");s.textContent=item.machine||"";const h=document.createElement("h3");h.textContent=item.question||"";const p=document.createElement("p");p.className="use";p.textContent=item.use||"";c.append(s,h,p,buttonPin((item.machine||"")+": "+(item.question||"")+" — "+(item.use||""),"Machine lens"));cards.append(c);});
+
+ const rules=document.getElementById("return-rules");
+ (object.return_rules||[]).forEach(text=>{const span=document.createElement("span");span.className="rule-pill";span.textContent=text;rules.append(span);});
+ const returns=document.getElementById("return-list");
+ (object.source_returns||[]).forEach(item=>{const row=document.createElement("article");row.className="return";const h=document.createElement("h3");h.textContent=item.name||"";const dl=document.createElement("dl");[["Object",item.historical_object],["Representation",item.representation],["Locality",item.locality],["Status",item.status]].forEach(([k,v])=>{const dt=document.createElement("dt");dt.textContent=k;const dd=document.createElement("dd");dd.textContent=v||"";dl.append(dt,dd);});row.append(h,dl);returns.append(row);});
+
+ const qs=document.getElementById("question-list");
+ (object.questions||[]).forEach(q=>{const row=document.createElement("div");row.className="question";const p=document.createElement("p");p.textContent=q;row.append(p,buttonPin(q,"Open question"));qs.append(row);});
+}
+hydrate().catch(error=>{console.error("Robert Bell folio:",error);document.getElementById("body-job").textContent="The Workshop object did not load. The folio shell remains intact; reload when the resolver is available.";});
+const initial=location.hash.slice(1);if(titles[initial])show(initial);
+})();
+</script>
+</body>
+</html>
