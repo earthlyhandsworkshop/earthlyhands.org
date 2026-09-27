@@ -9,6 +9,21 @@ const ui = {
   note: document.querySelector("#control-note"),
   ticketPanel: document.querySelector("#ticket-panel"),
   ticketFields: document.querySelector("#ticket-fields"),
+  followPanel: document.querySelector("#follow-panel"),
+  followButton: document.querySelector("#follow-button"),
+  continuation: document.querySelector("#continuation"),
+  continuationTitle: document.querySelector("#continuation-title"),
+  continuationLocator: document.querySelector("#continuation-locator"),
+  continuationGap: document.querySelector("#continuation-gap"),
+  continuationTurns: document.querySelector("#continuation-turns"),
+  continuationState: document.querySelector("#continuation-state"),
+  continuationUnfold: document.querySelector("#continuation-unfold"),
+  continuationClose: document.querySelector("#continuation-close"),
+  continuationReturn: document.querySelector("#continuation-return"),
+  continuationNote: document.querySelector("#continuation-note"),
+  continuationSourceLabel: document.querySelector("#continuation-source-label"),
+  continuationSource: document.querySelector("#continuation-source"),
+  continuationJacket: document.querySelector("#continuation-jacket"),
   sourceFace: document.querySelector("#source-face"),
   sourceJacket: document.querySelector("#source-jacket"),
   error: document.querySelector("#error")
@@ -17,6 +32,7 @@ const ui = {
 let record = null;
 let step = 0;
 let ticketEmitted = false;
+let continuationStep = 0;
 
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, character => ({
@@ -82,6 +98,7 @@ function renderTicket(ticket) {
     return `<dl class="ticket-field"><dt>${escapeHtml(key)}</dt><dd>${body}</dd></dl>`;
   }).join("");
   ui.ticketPanel.hidden = false;
+  ui.followPanel.hidden = !record.follow_forward_sequence;
 }
 
 function emitTicket() {
@@ -105,17 +122,64 @@ function emitTicket() {
   ui.ticketPanel.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function closeContinuation() {
+  continuationStep = 0;
+  ui.continuation.hidden = true;
+  ui.followButton.disabled = false;
+  ui.followButton.textContent = "follow later in this examination";
+}
+
 function closeNewest() {
   if (step === 0) return;
   step -= 1;
   if (ticketEmitted) {
     ticketEmitted = false;
     ui.ticketPanel.hidden = true;
+    ui.followPanel.hidden = true;
     ui.ticketFields.innerHTML = "";
     ui.emit.textContent = "form descendant ticket";
     delete document.body.dataset.ticketReady;
+    closeContinuation();
   }
   renderTurns();
+}
+
+function renderContinuation() {
+  const sequence = record.follow_forward_sequence;
+  const visibleStates = sequence.states.slice(0, continuationStep + 1);
+  ui.continuationTurns.innerHTML = visibleStates.map(pairMarkup).join("");
+  ui.continuationState.textContent = sequence.states[continuationStep].label;
+  ui.continuationUnfold.disabled = continuationStep >= sequence.states.length - 1;
+  ui.continuationClose.disabled = continuationStep === 0;
+
+  if (continuationStep === 0) {
+    ui.continuationUnfold.textContent = "unfold knowledge limit";
+    ui.continuationNote.textContent = "The remembered conditional sentence is attributed speech. It is not Robert Bell’s direct testimony.";
+  } else {
+    ui.continuationNote.textContent = sequence.sequence_note;
+  }
+}
+
+function openContinuation() {
+  const sequence = record.follow_forward_sequence;
+  if (!sequence) return;
+
+  continuationStep = 0;
+  ui.continuationTitle.textContent = sequence.object_label;
+  ui.continuationLocator.textContent = sequence.source_locator;
+  ui.continuationGap.textContent = sequence.gap_note;
+  ui.continuationSourceLabel.textContent = sequence.source_face_label;
+  ui.continuationSource.href = sequence.source_face_return;
+  ui.continuationJacket.href = record.governing_jacket_return;
+  ui.continuationSource.target = "_blank";
+  ui.continuationJacket.target = "_blank";
+  ui.continuationSource.rel = "noreferrer";
+  ui.continuationJacket.rel = "noreferrer";
+  renderContinuation();
+  ui.continuation.hidden = false;
+  ui.followButton.disabled = true;
+  ui.followButton.textContent = "later sequence opened";
+  ui.continuation.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 async function start() {
@@ -139,6 +203,23 @@ async function start() {
     });
     ui.close.addEventListener("click", closeNewest);
     ui.emit.addEventListener("click", emitTicket);
+    ui.followButton.addEventListener("click", openContinuation);
+    ui.continuationUnfold.addEventListener("click", () => {
+      const sequence = record.follow_forward_sequence;
+      if (continuationStep >= sequence.states.length - 1) return;
+      continuationStep += 1;
+      renderContinuation();
+      ui.continuationTurns.lastElementChild?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+    ui.continuationClose.addEventListener("click", () => {
+      if (continuationStep === 0) return;
+      continuationStep -= 1;
+      renderContinuation();
+    });
+    ui.continuationReturn.addEventListener("click", () => {
+      closeContinuation();
+      ui.ticketPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
 
     renderTurns();
   } catch (error) {
