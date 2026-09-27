@@ -75,7 +75,7 @@ textarea{width:100%;min-height:8rem;resize:vertical;border:1px solid var(--hair)
 @media(max-width:40rem){.shell{width:calc(100% - .5rem)}.tabs{grid-template-columns:repeat(3,1fr)}.head{grid-template-columns:1fr}.state{justify-self:start}.head h2{font-size:2.7rem}.inner{padding:1rem .8rem 1.5rem}.cols{grid-template-columns:1fr}.flare{grid-template-columns:1fr}.flare-label{border-right:0;border-bottom:1px solid var(--rule)}.return{grid-template-columns:1fr}.return h3{border-right:0;border-bottom:1px solid var(--rule)}.return dt{width:6rem}.return dd{margin-left:6.5rem}.question{grid-template-columns:1fr}.pin{justify-self:start}}
 </style>
 </head>
-<body>
+<body data-receiving-target="Robert Bell identity folio" data-receiving-object="route:robert-bell-identity">
 <div class="shell">
 <header class="topline"><strong>Earthly Hands Workshop</strong><span>shareable working folio · local notes stay in this browser</span></header>
 <main class="folio">
@@ -177,5 +177,5 @@ hydrate().catch(error=>{console.error("Robert Bell folio:",error);document.getEl
 const initial=location.hash.slice(1);if(titles[initial])show(initial);
 })();
 </script>
-</body>
+<script src="/receiving-door.js"></script>\n</body>
 </html>
