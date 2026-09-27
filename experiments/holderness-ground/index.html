@@ -381,16 +381,18 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     });
   }
 
+  const nameDoor = document.getElementById('name-web-door');
+  function revealNameWeb(origin){
+    if(nameDoor && nameDoor.hidden){
+      nameDoor.hidden = false;
+      emitGroundEvent('capability_reveal', {target:'name-web', origin});
+    }
+  }
+
   document.querySelectorAll('[data-panel]').forEach(btn => {
     btn.addEventListener('click', () => {
       const id = btn.dataset.panel;
-      if(id === 'person'){
-        const nameDoor = document.getElementById('name-web-door');
-        if(nameDoor && nameDoor.hidden){
-          nameDoor.hidden = false;
-          emitGroundEvent('capability_reveal', {target:'name-web'});
-        }
-      }
+      if(id === 'open-edge') revealNameWeb('unjoined-edge');
       if(id === 'distance' || id === 'agency'){
         const proseDoor = document.getElementById('prose-map-door');
         if(proseDoor && proseDoor.hidden){
@@ -407,7 +409,6 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     });
   });
 
-  const nameDoor = document.getElementById('name-web-door');
   const nameWeb = document.getElementById('name-web');
   if(nameDoor && nameWeb){
     nameDoor.addEventListener('click', () => {
@@ -446,8 +447,9 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     let response;
     if(/where|location|map|coordinate|exact/.test(q)){
       response = 'This ground knows an approximate relation: on the Noxubee turnpike, about 1¼ miles from the Choctaw agency. It does not have an exact point or reconstructed route.';
-    } else if(/same|land|patent|glo|later|record/.test(q)){
-      response = 'Other Holderness occurrences are held separately. This footing does not earn identity, biography, travel, or a land-to-agency chain. You can stand at the unjoined edge, but there is no road through it yet.';
+    } else if(/same|other|land|patent|glo|later|record/.test(q)){
+      revealNameWeb('ask');
+      response = 'Other Holderness occurrences are held separately. This footing does not earn identity, biography, travel, or a land-to-agency chain. Look toward Holderness to inspect the occurrence comparison; no road is created between the cards.';
     } else if(/agency|visit|often|frequen/.test(q)){
       response = 'The testimony state says Holderness was very often at the agency—approximately once every two or three days—during the period he described. That earns repeated presence, not a departure point, route, means of travel, or motive.';
     } else if(/source|testimony|prove|know/.test(q)){
