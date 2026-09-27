@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27T20:38:44.140Z",
+  "generated": "2026-09-27T21:02:38.909Z",
   "source": "git history",
   "entries": {
     "/experiments/follow-one-claim/": {
@@ -143,9 +143,9 @@
       ]
     },
     "/experiments/ward-room/": {
-      "updated": "2026-09-27T09:59:12-05:00",
+      "updated": "2026-09-27T16:02:28-05:00",
       "hand": "Ravel",
-      "commit": "0944c38947a2",
+      "commit": "ef28e9c8d94c",
       "watch": [
         "experiments/ward-room"
       ]
