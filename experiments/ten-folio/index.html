@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#d8cfbd">
+<title>Ten — Folio Box</title>
+<script src="/config.js"></script>
+<style>
+:root{
+ --paper:#ddd3bf;--sheet:#ebe3d3;--ink:#211e18;--muted:#6f675a;--rule:#4c463c;
+ --hair:rgba(33,30,24,.22);--rust:#87573a;--wash:rgba(255,255,255,.16);
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:#cfc5b1}
+body{margin:0;color:var(--ink);font:1rem/1.45 var(--serif);background:
+linear-gradient(rgba(33,30,24,.025) 1px,transparent 1px),
+linear-gradient(90deg,rgba(33,30,24,.017) 1px,transparent 1px),var(--paper);
+background-size:30px 30px,30px 30px,auto}
+button,input,textarea{font:inherit;color:inherit}
+button,a{color:inherit}
+a{text-underline-offset:.2em}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+.shell{width:min(92rem,calc(100% - .65rem));margin:auto;padding:.35rem 0 1.5rem}
+.top{min-height:2.5rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;gap:.75rem;font:.58rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+.top span{color:var(--muted)}
+.box{margin-top:.5rem;border:1px solid var(--rule);background:var(--sheet);box-shadow:0 12px 36px rgba(45,35,25,.12);display:grid;grid-template-columns:7.3rem minmax(0,1fr);min-height:82vh}
+.rail{border-right:1px solid var(--rule);display:flex;flex-direction:column;background:rgba(96,76,53,.035);position:sticky;top:0;align-self:start;height:calc(100vh - .75rem);max-height:52rem}
+.mark{padding:.85rem .6rem;border-bottom:1px solid var(--rule)}
+.mark small{display:block;color:var(--rust);font:700 .46rem/1.15 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.mark strong{display:block;margin-top:.22rem;font-size:1.25rem;line-height:.95;font-weight:400;letter-spacing:-.035em}
+.nav{display:flex;flex-direction:column}
+.nav button{appearance:none;border:0;border-bottom:1px solid var(--hair);background:transparent;padding:.82rem .55rem;text-align:left;cursor:pointer}
+.nav button:hover{background:var(--wash)}
+.nav button[aria-selected="true"]{background:rgba(135,87,58,.075);box-shadow:inset 3px 0 0 var(--rust)}
+.nav .n{display:block;color:var(--muted);font:.43rem/1.1 var(--mono)}
+.nav .t{display:block;margin-top:.15rem;font-size:.88rem;line-height:1}
+.rail-foot{margin-top:auto;border-top:1px solid var(--rule);padding:.65rem .55rem;color:var(--muted);font:.46rem/1.35 var(--mono)}
+.stage{min-width:0}
+.head{border-bottom:1px solid var(--rule);padding:.85rem 1rem 1rem}
+.bearing{font:.49rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.head h1{margin:.12rem 0 .75rem;font-size:clamp(2.15rem,5vw,4.6rem);line-height:.9;font-weight:400;letter-spacing:-.055em}
+.command{display:grid;grid-template-columns:minmax(0,1fr) auto;border:1px solid var(--rule);max-width:52rem;background:rgba(255,255,255,.08)}
+.command input{border:0;background:transparent;padding:.7rem .75rem;min-width:0;outline:none;font-size:1.05rem}
+.command button{border:0;border-left:1px solid var(--rule);background:transparent;padding:.55rem .75rem;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.command button:hover{background:var(--wash)}
+.command-answer{min-height:1rem;margin:.4rem 0 0;color:var(--muted);font:.62rem/1.35 var(--mono);max-width:52rem}
+.panel{display:none}.panel.active{display:block}
+.inner{padding:clamp(.85rem,2.8vw,2rem);max-width:72rem}
+.section-title{margin:0 0 .75rem;font-size:1.55rem;font-weight:400;line-height:1.05}
+.stack{border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem;align-items:start;padding:.8rem .15rem;border-bottom:1px solid var(--hair)}
+.row h3{margin:0;font-size:1.12rem;font-weight:400}
+.row p{margin:.3rem 0 0;color:var(--muted);max-width:48rem;font-size:.9rem}
+.row .meta{display:block;margin:.28rem 0 0;color:var(--rust);font:.47rem/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.open{border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.12rem 0;cursor:pointer;font:.5rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap;text-decoration:none}
+.pulse{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-bottom:1rem}
+.pulse article{padding:.8rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);min-height:7rem}
+.pulse small{display:block;color:var(--rust);font:.47rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.pulse strong{display:block;margin-top:.35rem;font-weight:400;font-size:1.12rem}
+.pulse p{margin:.3rem 0 0;color:var(--muted);font-size:.82rem}
+.notice{border:1px solid var(--rule);padding:.8rem;margin-bottom:1rem;background:rgba(255,255,255,.06)}
+.notice p{margin:.25rem 0}
+.note-grid{display:grid;grid-template-columns:minmax(0,1fr) 18rem;border:1px solid var(--rule)}
+.compose{padding:.85rem}.held{border-left:1px solid var(--rule);padding:.85rem;background:rgba(255,255,255,.07)}
+textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair);background:rgba(255,255,255,.12);padding:.7rem}
+.actions{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.55rem}
+.actions button{border:1px solid var(--hair);background:transparent;padding:.42rem .52rem;cursor:pointer;font:.5rem/1.2 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.note{border-top:1px solid var(--hair);padding:.55rem 0}.note:first-child{border-top:0}
+.note small{display:block;color:var(--muted);font:.45rem/1.2 var(--mono)}
+.note p{margin:.22rem 0;font-size:.88rem}
+.empty{color:var(--muted);font-size:.85rem}
+@media(max-width:58rem){
+ .shell{width:calc(100% - .35rem)}
+ .box{grid-template-columns:5.35rem minmax(0,1fr);min-height:calc(100vh - 3rem)}
+ .rail{height:calc(100vh - .35rem)}
+ .mark{padding:.7rem .42rem}.mark strong{font-size:1rem}.mark small{font-size:.4rem}
+ .nav button{padding:.75rem .38rem}.nav .t{font-size:.72rem}.nav .n{font-size:.38rem}
+ .rail-foot{font-size:.39rem;padding:.55rem .38rem}
+ .head{padding:.75rem .7rem .85rem}.head h1{font-size:2.45rem}
+ .inner{padding:.8rem .65rem 1.3rem}
+ .pulse{grid-template-columns:1fr}
+ .note-grid{grid-template-columns:1fr}.held{border-left:0;border-top:1px solid var(--rule)}
+ .row{grid-template-columns:1fr}.open{justify-self:start}
+}
+</style>
+</head>
+<body data-receiving-target="Ten folio box" data-receiving-object="folio:ten">
+<div class="shell">
+<header class="top"><strong>Earthly Hands Workshop</strong><span>Ten · working folio box · not authenticated</span></header>
+<main class="box">
+<aside class="rail" aria-label="Ten folio doors">
+ <div class="mark"><small>carried box</small><strong>Ten</strong></div>
+ <nav class="nav" role="tablist">
+  <button role="tab" aria-selected="true" data-view="now"><span class="n">01</span><span class="t">Now</span></button>
+  <button role="tab" aria-selected="false" data-view="projects"><span class="n">02</span><span class="t">Projects</span></button>
+  <button role="tab" aria-selected="false" data-view="instruments"><span class="n">03</span><span class="t">Tools</span></button>
+  <button role="tab" aria-selected="false" data-view="nearby"><span class="n">04</span><span class="t">Nearby</span></button>
+  <button role="tab" aria-selected="false" data-view="notes"><span class="n">05</span><span class="t">Notes</span></button>
+ </nav>
+ <div class="rail-foot">Current ≠ fully informed.<br><br>Pull depth when it catches.</div>
+</aside>
+
+<section class="stage">
+<header class="head">
+ <div class="bearing" id="bearing">re-entry · enough current light to begin</div>
+ <h1 id="title">What is alive now?</h1>
+ <form class="command" id="command"><input id="command-input" autocomplete="off" maxlength="600" placeholder="What do you want to look at?"><button>Load</button></form>
+ <p class="command-answer" id="command-answer"></p>
+</header>
+
+<section class="panel active" data-panel="now"><div class="inner">
+ <div class="pulse">
+  <article><small>Current pressure</small><strong>Re-entry is being rebuilt.</strong><p>01 now carries Footing, Neighbor Light, Vocation, Live Relevance, and Return without making all five required reading.</p></article>
+  <article><small>Current making</small><strong>Folio / instruments</strong><p>The surface is moving from explanations of machines toward direct work on evidence.</p></article>
+  <article><small>Current glint</small><strong>The Killing Joke</strong><p>Robert Bell remains sufficiently elusive to test whether Neighbor Light is actually alive.</p></article>
+ </div>
+ <div class="stack">
+  <div class="row"><div><h3>Private Workshop Recent</h3><span class="meta">current consequence, not just timestamps</span><p>The deeper current-work road when you want the larger field.</p></div><a class="open" href="https://docs.google.com/document/d/14y2tf9HfkyoqM1ncSBddz_L1ObKabUdfmjCq-Fw6mks/edit">Open</a></div>
+  <div class="row"><div><h3>Workshop Home</h3><span class="meta">private footing</span><p>The broader private home remains one road down. This box should inherit only what you actually need.</p></div><a class="open" href="https://docs.google.com/document/d/1cm5hUJ_a9M9P5bNJFdGJf81qBKwaF3KejoV_yCo3uYY/edit">Open</a></div>
+  <div class="row"><div><h3>01 — Re-entry</h3><span class="meta">governing practice</span><p>Return without flood. Hear enough of the room to work deeply without going stale.</p></div><a class="open" href="https://docs.google.com/document/d/123yxxcouMaNNByPW5XU1suRHsXN7vwpQcB2UnScvvBI/edit">Open</a></div>
+ </div>
+</div></section>
+
+<section class="panel" data-panel="projects"><div class="inner">
+ <h2 class="section-title">Projects in reach</h2>
+ <div class="stack">
+  <div class="row"><div><h3>Two Families, One Robert</h3><span class="meta">film · working</span><p>Active feature treatment and current project-view experiment.</p></div><a class="open" href="https://docs.google.com/document/d/16Xwm2f3Vp1R2f1DCe7i-sL3r4J0tiH9h8SFPsl4EX1I/edit">Open view</a></div>
+  <div class="row"><div><h3>Robert Bell identity route</h3><span class="meta">working folio</span><p>Operate testimony, inversion, configuration, trace, returns, questions, and notes on the held body.</p></div><a class="open" href="/experiments/robert-bell-folio/">Open folio</a></div>
+  <div class="row"><div><h3>Shared Country</h3><span class="meta">public-ground experiment</span><p>First-person documentary ground, movement, access, source descent, and Ask the Ground.</p></div><a class="open" href="/experiments/shared-country/">Enter</a></div>
+ </div>
+</div></section>
+
+<section class="panel" data-panel="instruments"><div class="inner">
+ <h2 class="section-title">Things you can use</h2>
+ <div class="stack">
+  <div class="row"><div><h3>Perceptual Machines</h3><span class="meta">transformation · movement · construction</span><p>Testimony / Proposition, Field / Route, and Answer / Construction Inversion.</p></div><a class="open" href="/experiments/working-folio/">Open</a></div>
+  <div class="row"><div><h3>VOICE / ACCESS</h3><span class="meta">reach · register · restraint</span><p>Get directly to the strongest truthful thing the moment can carry. Let the material keep its earned voice.</p></div><a class="open" href="https://docs.google.com/document/d/1maqLQEjYYwuWctDV-1TZ967R1QcbsdctBK6wtm7ccqk/edit">Open</a></div>
+  <div class="row"><div><h3>Working Folio specification</h3><span class="meta">parked design body</span><p>Less interface about the work. More work in the interface.</p></div><a class="open" href="https://docs.google.com/document/d/1Tmf7E7dctq6f66gx4CAucTIyOxH-XDnIrFh9XIBEgIQ/edit">Open</a></div>
+ </div>
+</div></section>
+
+<section class="panel" data-panel="nearby"><div class="inner">
+ <h2 class="section-title">Nearby light</h2>
+ <div class="stack">
+  <div class="row"><div><h3>The Elusive Robert Bell</h3><span class="meta">15 · joke / source-braked</span><p>A joke strong enough to test whether the Workshop can notice something alive without making it an assignment.</p></div><a class="open" href="https://docs.google.com/document/d/1OVzXpAlIFQnIZDSuEHPq5-vVqxCYiSUqSJz8hjSJJgI/edit">Open</a></div>
+  <div class="row"><div><h3>Blockers must not prevent inspection</h3><span class="meta">15 · methodological danger</span><p>Do not let a brake harden into a prohibition on looking at the evidence that could revise the brake.</p></div><a class="open" href="https://docs.google.com/document/d/1cW5ZKVS3qRlbRSkTUdpRshS9zaWNLWIQGWAOW8oU_KI/edit">Open</a></div>
+  <div class="row"><div><h3>01D — Live Relevance</h3><span class="meta">standing peripheral awareness</span><p>Current at entry is not current forever.</p></div><a class="open" href="https://docs.google.com/document/d/1hbdCSK-WuYPHH4aPG862Zt2qza-yxIbrQEic7gpnfHw/edit">Open</a></div>
+ </div>
+</div></section>
+
+<section class="panel" data-panel="notes"><div class="inner">
+ <h2 class="section-title">Carry something</h2>
+ <div class="note-grid"><div class="compose"><textarea id="note-input" placeholder="What caught? What should still be here when you come back?"></textarea><div class="actions"><button id="save-note">Save</button><button id="copy-notes">Copy all</button><button id="clear-notes">Clear local</button></div></div><aside class="held"><div id="note-list"></div></aside></div>
+</div></section>
+</section>
+</main>
+</div>
+<script>
+(function(){
+const views={
+ now:["re-entry · enough current light to begin","What is alive now?"],
+ projects:["projects · bounded bodies in reach","What are you carrying?"],
+ instruments:["instruments · use, don't admire","What can you work with?"],
+ nearby:["neighbor light · relevance without flood","What is close enough to matter?"],
+ notes:["local carrying surface","What caught?"]
+};
+const tabs=[...document.querySelectorAll("[data-view]")],panels=[...document.querySelectorAll("[data-panel]")];
+function show(v){if(!views[v])return;tabs.forEach(b=>b.setAttribute("aria-selected",String(b.dataset.view===v)));panels.forEach(p=>p.classList.toggle("active",p.dataset.panel===v));document.getElementById("bearing").textContent=views[v][0];document.getElementById("title").textContent=views[v][1];history.replaceState(null,"","#"+v);}
+tabs.forEach(b=>b.onclick=()=>show(b.dataset.view));
+const NOTE_KEY="earthly-hands-ten-folio-notes-v1";
+function load(){try{return JSON.parse(localStorage.getItem(NOTE_KEY)||"[]")}catch(_){return[]}}
+function save(xs){localStorage.setItem(NOTE_KEY,JSON.stringify(xs.slice(0,100)))}
+function render(){const host=document.getElementById("note-list");host.innerHTML="";const xs=load();if(!xs.length){host.innerHTML='<p class="empty">Nothing held here yet.</p>';return;}xs.forEach(x=>{const d=document.createElement("div");d.className="note";const s=document.createElement("small");s.textContent=new Date(x.time).toLocaleString();const p=document.createElement("p");p.textContent=x.text;d.append(s,p);host.append(d);});}
+document.getElementById("save-note").onclick=()=>{const i=document.getElementById("note-input"),t=i.value.trim();if(!t)return;const xs=load();xs.unshift({text:t,time:new Date().toISOString()});save(xs);i.value="";render();};
+document.getElementById("copy-notes").onclick=async()=>{try{await navigator.clipboard.writeText(load().map(x=>x.text).join("\n\n"));}catch(_){}};
+document.getElementById("clear-notes").onclick=()=>{if(confirm("Clear local Ten folio notes from this browser?")){localStorage.removeItem(NOTE_KEY);render();}};
+render();
+function localCommand(q){
+ q=q.toLowerCase();
+ if(/joke|elusive|killing/.test(q)) return {view:"nearby",reply:"The Robert Bell joke is in Nearby."};
+ if(/re.?entry|footing|neighbor|vocation|relevance/.test(q)) return {view:"now",reply:"Re-entry footing is open from Now."};
+ if(/robert|bell|identity/.test(q)) return {view:"projects",reply:"The Robert Bell working folio is in Projects."};
+ if(/film|two families|movie|treatment/.test(q)) return {view:"projects",reply:"The film project view is in Projects."};
+ if(/machine|instrument|voice|access|folio spec/.test(q)) return {view:"instruments",reply:"The current instruments are in Tools."};
+ if(/near|what changed|glint|around/.test(q)) return {view:"nearby",reply:"Nearby light is open."};
+ if(/note|remember|carry/.test(q)) return {view:"notes",reply:"Notes are open."};
+ if(/recent|now|current|home/.test(q)) return {view:"now",reply:"Current footing is open."};
+ return null;
+}
+async function arrange(raw){
+ const clean=String(raw||"").trim();if(!clean)return;
+ const a=document.getElementById("command-answer"),local=localCommand(clean);
+ if(local){show(local.view);a.textContent=local.reply;return;}
+ const api=String(window.EARTHLY_HANDS_API_URL||"").trim();
+ if(!api){a.textContent="That thought does not have a local door yet.";return;}
+ a.textContent="Looking…";
+ const held={views:Object.keys(views),projects:["Two Families, One Robert","Robert Bell identity route","Shared Country"],instruments:["Perceptual Machines","VOICE / ACCESS","Working Folio specification"],nearby:["The Elusive Robert Bell","Blockers must not prevent inspection","01D — Live Relevance"]};
+ const prompt=["Arrange Ten's folio using only HELD. Do not invent Workshop state.","Return JSON only: {\"view\":\"now|projects|instruments|nearby|notes\",\"reply\":\"one short useful sentence\"}.","If no held door fits, choose the nearest and say what is missing.","HELD: "+JSON.stringify(held),"TEN: "+clean].join("\n");
+ try{
+  const r=await fetch(api,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:prompt,place:"ten-folio",history:[]})});
+  const d=await r.json().catch(()=>({}));if(!r.ok||typeof d.reply!=="string")throw new Error();
+  let x=null;try{x=JSON.parse(d.reply.replace(/^\`\`\`(?:json)?|\`\`\`$/g,"").trim())}catch(_){}
+  if(x&&views[x.view]){show(x.view);a.textContent=x.reply||"";}else a.textContent=d.reply.slice(0,220);
+ }catch(_){a.textContent="The folio could not arrange that thought this turn.";}
+}
+document.getElementById("command").onsubmit=e=>{e.preventDefault();const i=document.getElementById("command-input"),q=i.value.trim();if(!q)return;arrange(q);i.value="";};
+const initial=location.hash.slice(1);if(views[initial])show(initial);
+})();
+</script>
+<script src="/receiving-door.js"></script>
+</body>
+</html>
