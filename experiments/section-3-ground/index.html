@@ -78,6 +78,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     <p class="boundary">The middle descriptions, E½SW and W½SE, share the SW/SE quarter boundary in ordinary PLSS aliquot grammar.</p>
     <button class="boundary-door" id="boundary-compare" type="button" hidden>Compare what each side can say</button>
     <button class="boundary-door" id="ward-role-compare" type="button" hidden>Compare the Ward name-form across the southeast quarter</button>
+    <button class="boundary-door" id="certificate-order-compare" type="button" hidden>Compare ground order with certificate order</button>
   </section>
 
   <section class="panel" id="tract-panel" hidden tabindex="-1">
@@ -110,10 +111,13 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   let opener = null;
   const boundaryCompare = document.getElementById('boundary-compare');
   const wardRoleCompare = document.getElementById('ward-role-compare');
+  const certificateOrderCompare = document.getElementById('certificate-order-compare');
   const inspectedBoundary = new Set();
   const inspectedWardRoles = new Set();
+  const inspectedTracts = new Set();
   let compareEarned = false;
   let wardCompareEarned = false;
+  let certificateCompareEarned = false;
   const states = {
     'w-sw': {
       meta: 'STA-MS0940__.006 · Certificate 1430 · W½SW',
@@ -150,6 +154,12 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
       title: 'One name-form, two instrument positions',
       body: 'On W½SE, the patent face names William Ward as Jesse W. Garth’s assignee and grants Ward the tract. On E½SE, William Ward of Lowndes County is the payment party and direct grantee.',
       limit: 'This compares two documentary occurrences. The faces do not by themselves prove one person, date Ward’s acquisition from Garth, create a combined holding, or establish residence, possession, coordination, or movement.'
+    },
+    'certificate-order-compare': {
+      meta: 'Four controlled patent faces · two kinds of order',
+      title: 'The ground sequence is not the certificate sequence',
+      body: 'Read west to east, the four descriptions carry Columbus Certificates 1430, 1429, 1422, and 1428. Read numerically, 1422 and 1428 occupy the southeast quarter; 1429 and 1430 occupy the southwest quarter.',
+      limit: 'This earns a mismatch between cadastral order and certificate numbering. It does not by itself establish issuance chronology, one filing batch, a shared purchase, a transaction chain, or movement by any person.'
     }
   };
   function emit(type, detail={}){
@@ -159,7 +169,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     const state=states[key]; if(!state) return;
     opener=button; meta.textContent=state.meta; title.textContent=state.title; body.textContent=state.body; limit.textContent=state.limit;
     panel.hidden=false; panel.focus({preventScroll:true}); panel.scrollIntoView({behavior:'smooth',block:'nearest'});
-    emit((key === 'boundary-compare' || key === 'ward-role-compare') ? 'compare' : 'inspect',{target:key,moved:false,identity_joined:false});
+    emit((key === 'boundary-compare' || key === 'ward-role-compare' || key === 'certificate-order-compare') ? 'compare' : 'inspect',{target:key,moved:false,identity_joined:false});
     if(key === 'e-sw' || key === 'w-se'){
       inspectedBoundary.add(key);
       if(inspectedBoundary.size === 2 && !compareEarned){
@@ -176,10 +186,19 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
         emit('capability_reveal',{target:'ward-role-compare',earned_by:['w-se','e-se']});
       }
     }
+    if(['w-sw','e-sw','w-se','e-se'].includes(key)){
+      inspectedTracts.add(key);
+      if(inspectedTracts.size === 4 && !certificateCompareEarned){
+        certificateCompareEarned = true;
+        certificateOrderCompare.hidden = false;
+        emit('capability_reveal',{target:'certificate-order-compare',earned_by:['w-sw','e-sw','w-se','e-se']});
+      }
+    }
   }
   document.querySelectorAll('[data-tract]').forEach(button=>button.addEventListener('click',()=>openState(button.dataset.tract,button)));
   boundaryCompare.addEventListener('click',()=>openState('boundary-compare',boundaryCompare));
   wardRoleCompare.addEventListener('click',()=>openState('ward-role-compare',wardRoleCompare));
+  certificateOrderCompare.addEventListener('click',()=>openState('certificate-order-compare',certificateOrderCompare));
   document.getElementById('close-panel').addEventListener('click',()=>{
     panel.hidden=true; if(opener) opener.focus({preventScroll:true}); emit('return_close',{target:'south-half-sequence'});
   });
