@@ -236,6 +236,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--rust);outline-offse
 <footer class="bottom"><span>Build wildly inside. Share when useful. Publish when earned.</span><a href="/experiments/shared-country/">Leave the folio →</a></footer>
 </div>
 
+<script src="/workshop-resolver.js"></script>
 <script>
 (function(){
 const titles={
@@ -256,7 +257,7 @@ function show(view){
 }
 tabs.forEach(t=>t.addEventListener("click",()=>show(t.dataset.view)));
 
-const machineData={
+let machineData={
  one:{label:"Machine one",question:"what happens after a person says it?",steps:["PERSON SPEAKS","EXAMINER SUPPLIES","TENTATIVE ANSWER","LATER SUMMARY","FINDING"],brake:"HEARD / WAS TOLD ≠ EXAMINER SUPPLIES ≠ SUPPOSES ≠ KNOWS."},
  two:{label:"Machine two",question:"what movement is actually earned?",steps:["PLACE OCCURS","PRESENCE?","ACCESS?","MOVEMENT?","ROUTE ONLY IF EARNED"],brake:"PLACE REFERENCE ≠ ROUTE. ADMINISTRATIVE MEMORY ≠ PHYSICAL TRAVEL. NAMED ≠ PRESENT."},
  three:{label:"Machine three",question:"what had to happen for this answer to become possible?",steps:["ADMINISTRATIVE ANSWER","LOWER ACTS","CARRIERS","WITNESSES / RECORDS","SUPPORT OR GAP"],brake:"Opening the construction does not overturn the answer. A useful result can be: the present source body does not yet earn this answer."}
@@ -273,7 +274,7 @@ function renderMachine(key){
 document.querySelectorAll(".machine").forEach(m=>m.addEventListener("click",()=>renderMachine(m.dataset.machine)));
 renderMachine("one");
 
-const tryData={
+let tryData={
  heard:'<p class="source">Hugh carries a <span class="qualifier">heard / was told</span> state about Robert.</p><p class="limit">That is the lower statement. The instrument does not upgrade it into personal knowledge.</p>',
  supplied:'<p class="source">The examiner supplies the more specific council / vote / membership formulation.</p><p class="limit">The wording entering through the question remains examiner-supplied unless Hugh independently adopts it.</p>',
  knows:'<p class="source">Asked whether he knows, Hugh answers: <span class="qualifier">No, I don’t.</span></p><p class="limit">The qualification remains part of the evidentiary state; it is not an inconvenience for the machine to smooth away.</p>'
@@ -284,6 +285,80 @@ function tryIt(key){
 }
 document.querySelectorAll(".choice").forEach(c=>c.addEventListener("click",()=>tryIt(c.dataset.try)));
 tryIt("heard");
+
+async function hydrateFromWorkshop(){
+  if(!window.EarthlyHandsResolver) return;
+  const object=await window.EarthlyHandsResolver.get("instrument:perceptual-machines");
+  if(!object) return;
+
+  document.querySelector(".folio-id h1").textContent=object.title||"Perceptual Machines";
+
+  if(object.machines){
+    machineData=object.machines;
+    for(const [key,d] of Object.entries(object.machines)){
+      const card=document.querySelector('.machine[data-machine="'+key+'"]');
+      if(!card) continue;
+      const small=card.querySelector("small"), h3=card.querySelector("h3"), p=card.querySelector("p");
+      if(small) small.textContent=(d.label||key)+" · "+String(d.dimension||"").toLowerCase();
+      if(h3) h3.textContent=d.name||d.label||key;
+      if(p) p.textContent=d.question||"";
+    }
+    const current=document.querySelector(".machine.current")?.dataset.machine||"one";
+    renderMachine(current);
+  }
+
+  if(object.lineage){
+    const host=document.querySelector(".lineage");
+    if(host){
+      host.innerHTML="";
+      object.lineage.forEach(item=>{
+        const event=document.createElement("div"); event.className="event";
+        const small=document.createElement("small"); small.textContent=item.state||"";
+        const strong=document.createElement("strong"); strong.textContent=item.hand||"";
+        const p=document.createElement("p"); p.textContent=item.text||"";
+        event.append(small,strong,p); host.append(event);
+      });
+    }
+  }
+
+  if(object.specimens?.["hugh-bell"]?.choices){
+    tryData={};
+    for(const [key,item] of Object.entries(object.specimens["hugh-bell"].choices)){
+      tryData[key]='<p class="source">'+item.answer+'</p><p class="limit">'+item.limit+'</p>';
+      const button=document.querySelector('.choice[data-try="'+key+'"]');
+      if(button) button.textContent=item.question;
+    }
+    const active=document.querySelector(".choice.active")?.dataset.try||"heard";
+    tryIt(active);
+  }
+
+  if(Array.isArray(object.trace)){
+    const host=document.querySelector(".trace-list");
+    if(host){
+      host.innerHTML="";
+      object.trace.forEach(item=>{
+        const row=document.createElement("div"); row.className="trace-row";
+        const b=document.createElement("b"); b.textContent=item.state||"";
+        const div=document.createElement("div"); div.textContent=item.statement||"";
+        const p=document.createElement("p"); p.textContent=item.brake||"";
+        div.append(p); row.append(b,div); host.append(row);
+      });
+    }
+  }
+
+  if(object.ground){
+    const card=document.querySelector(".ground-card");
+    if(card){
+      const h3=card.querySelector("h3"); if(h3) h3.textContent=object.ground.title||"";
+      const ps=card.querySelectorAll("p");
+      if(ps[1]) ps[1].textContent=object.ground.note||"";
+      if(ps[2]) ps[2].innerHTML="<strong>"+(object.ground.brake||"")+"</strong>";
+    }
+  }
+
+  document.documentElement.dataset.workshopObject=object.id;
+}
+hydrateFromWorkshop().catch(error=>console.error("Workshop folio resolver:",error));
 
 const initial=location.hash.slice(1);
 if(titles[initial])show(initial);
