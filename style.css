@@ -564,9 +564,69 @@ footer a{text-decoration:none}
 }
 
 
+
+/* Dawn is a change in held ground, not a page flash. */
+.experience-shell[data-dawn]{
+  transition:
+    background-color 1.05s ease,
+    color 1.05s ease,
+    filter 1.05s ease;
+}
+.experience-shell[data-dawn="predawn"]{
+  --scene-bg:#171b1d;
+  --scene-ink:#dedbd3;
+  --scene-muted:#979d9b;
+  --scene-rule:rgba(222,219,211,.15);
+  --scene-accent:#bf8560;
+  background:
+    radial-gradient(circle at 50% 115%,rgba(91,105,118,.10),transparent 30rem),
+    radial-gradient(circle at 18% 80%,rgba(187,121,70,.07),transparent 20rem),
+    #171b1d;
+}
+.experience-shell[data-dawn="gray"]{
+  --scene-bg:#343b3d;
+  --scene-ink:#e4e0d7;
+  --scene-muted:#b0b1aa;
+  --scene-rule:rgba(228,224,215,.16);
+  --scene-accent:#c58c63;
+  background:
+    radial-gradient(circle at 50% 110%,rgba(147,156,158,.14),transparent 32rem),
+    radial-gradient(circle at 18% 82%,rgba(188,127,76,.06),transparent 20rem),
+    #343b3d;
+}
+.experience-shell[data-dawn="edges"]{
+  --scene-bg:#8f9188;
+  --scene-ink:#f2eee4;
+  --scene-muted:#d5d0c5;
+  --scene-rule:rgba(242,238,228,.20);
+  --scene-accent:#d2a27b;
+  background:
+    linear-gradient(to bottom,rgba(213,207,191,.16),transparent 56%),
+    #8f9188;
+}
+.experience-shell[data-dawn="first-light"]{
+  --scene-bg:#d7cfb9;
+  --scene-ink:#2c2a24;
+  --scene-muted:#797266;
+  --scene-rule:rgba(44,42,36,.19);
+  --scene-accent:#9b6949;
+  background:
+    linear-gradient(to bottom,rgba(247,235,208,.30),transparent 52%),
+    #d7cfb9;
+}
+.experience-shell[data-dawn] .experience-stage{
+  transition:opacity .8s ease,filter .9s ease;
+}
+.experience-shell[data-dawn="predawn"] .experience-stage{opacity:.82;filter:contrast(.94)}
+.experience-shell[data-dawn="gray"] .experience-stage{opacity:.88;filter:contrast(.96)}
+.experience-shell[data-dawn="edges"] .experience-stage{opacity:.94;filter:contrast(.98)}
+.experience-shell[data-dawn="first-light"] .experience-stage{opacity:1;filter:none}
+
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .experience-shell{transition:none}
+  .experience-shell,
+  .experience-shell[data-dawn],
+  .experience-shell[data-dawn] .experience-stage{transition:none}
 }
 
 
