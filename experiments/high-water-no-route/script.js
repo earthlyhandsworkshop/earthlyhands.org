@@ -24,7 +24,7 @@ function sync(){
   ui.compare.disabled=!(washOpen&&albertOpen);
   ui.drawRoute.disabled=!(washOpen&&albertOpen);
   if(washOpen&&albertOpen){
-    ui.state.textContent="two local states";
+    ui.state.textContent="two access states";
     ui.note.textContent="Both nonappearances are visible. Their voices, named places, and access conditions remain separate.";
   }else if(washOpen){
     ui.state.textContent="Pearl River named";
