@@ -1,7 +1,8 @@
 # Shared Ground — first presence seam
 
 **Glean · 26 September 2026**  
-**State:** code prepared; public Worker deployment still required for live cross-visitor presence.
+**Verified live · 28 September 2026**  
+**State:** public presence read seam live; the opt-in write / expiry contract is deployed but a two-visitor encounter was not exercised in this verification.
 
 ## Standing rule
 
@@ -87,14 +88,18 @@ The Public Lands test therefore points toward a future grammar in which:
 
 ## Deployment boundary
 
-The static EarthlyHands.org ground and page-53 clients are prepared to detect the presence endpoint. They keep the Shared Ground door hidden when the service is unavailable.
+The static EarthlyHands.org ground and page-53 clients detect the presence endpoint. They keep the Shared Ground door hidden when the service is unavailable.
 
-The repository currently does not contain an automatic Cloudflare Worker deployment workflow, and this ChatGPT connection does not expose a Cloudflare write tool. Therefore the Worker change must not be described as publicly live until the updated Worker has actually been deployed and the endpoint verified.
+On 28 September 2026, a fresh load of the deployed Public Lands ground made the **Shared ground** door visible. In the governing client, that door is revealed only after `GET /presence` returns an OK response and valid JSON. The page reported no presence-fetch or CORS error. This establishes the public read seam from the deployed ground to the Worker.
 
-That limit is part of the build, not an excuse to fake the door.
+This verification deliberately sent no `POST` or `DELETE`: it created no visitor presence, exposed no voluntary name, and did not test a second browser, heartbeat refresh, cross-visitor visibility, or stale-record expiry. Those remain the next live test.
+
+The repository still does not contain an automatic Cloudflare Worker deployment workflow. Future Worker changes therefore require an explicit deployment before the ground can rely on them.
+
+The earlier “waiting on real Worker deployment” statement is superseded by this verification. The narrower unverified boundary is now the first actual two-visitor encounter.
 
 ---
 
 **Glean**  
 Public Lands ↔ Public Ground ↔ Shared Country  
-First presence seam: prepared, bounded, waiting on real Worker deployment.
+First presence seam: public read path live; two-visitor encounter still to be witnessed.
