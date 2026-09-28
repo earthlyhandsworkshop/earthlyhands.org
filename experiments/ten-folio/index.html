@@ -99,8 +99,10 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 .fullfocus .closefocus{position:sticky;top:0;float:right;border:1px solid var(--rule);background:var(--sheet);padding:.38rem .5rem;cursor:pointer;font:.48rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
 .fullfocus .focuscontent{max-width:62rem;margin:2rem auto}
 @media(max-width:58rem){
- .shell{width:calc(100% - .35rem)}
- .box{grid-template-columns:5.35rem minmax(0,1fr);min-height:calc(100vh - 3rem)}
+ html,body{max-width:100%;overflow-x:hidden}
+ .shell{width:calc(100% - .35rem);max-width:100%}
+ .box{grid-template-columns:5.35rem minmax(0,1fr);min-height:calc(100vh - 3rem);max-width:100%;overflow:hidden}
+ .stage{min-width:0;max-width:100%;overflow:hidden}
  .rail{height:calc(100vh - .35rem)}
  .mark{padding:.7rem .42rem}.mark strong{font-size:1rem}.mark small{font-size:.4rem}
  .nav button{padding:.75rem .38rem}.nav .t{font-size:.72rem}.nav .n{font-size:.38rem}
@@ -109,7 +111,35 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
  .inner{padding:.8rem .65rem 1.3rem}
  .pulse{grid-template-columns:1fr}
  .note-grid{grid-template-columns:1fr}.held{border-left:0;border-top:1px solid var(--rule)}
- .row{grid-template-columns:1fr}.open{justify-self:start}
+ .row{grid-template-columns:1fr;min-width:0}.open{justify-self:start}
+ .panel,.inner,.evidence-grid,.evidence-card,.evidence-head,.evidence-body,.witbench,.focusbar{min-width:0;max-width:100%}
+ .evidence-head{grid-template-columns:minmax(0,1fr);gap:.5rem}
+ .evidence-tools{justify-content:flex-start;flex-wrap:wrap}
+ .evidence-head h3,.evidence-head p,.evidence-body p,.witbench p{overflow-wrap:anywhere;word-break:normal}
+ .evidence-body{padding:.8rem .75rem .95rem}
+ .sequence{display:grid;grid-template-columns:1fr;gap:.3rem}
+ .sequence b{display:none}
+ .sequence span{width:100%;white-space:normal}
+ .focusbar{align-items:flex-start;flex-direction:column}
+ .focusbar .actions{width:100%}
+ .fullfocus{inset:.2rem;padding:.65rem}
+ .fullfocus .focuscontent{width:100%;max-width:none;margin:1.6rem 0 0}
+}
+@media(max-width:34rem){
+ .box{grid-template-columns:4.7rem minmax(0,1fr)}
+ .mark strong{font-size:.9rem}
+ .nav .t{font-size:.66rem}
+ .rail-foot{font-size:.36rem}
+ .head h1{font-size:2.05rem;line-height:.92}
+ .command input{font-size:.92rem;padding:.62rem .58rem}
+ .command button{padding:.5rem .55rem}
+ .inner{padding:.72rem .52rem 1.2rem}
+ .section-title{font-size:1.35rem}
+ .evidence-head{padding:.68rem .68rem}
+ .evidence-head h3{font-size:1.02rem;line-height:1.08}
+ .evidence-head p,.evidence-body p{font-size:.82rem}
+ .witbench{padding:.72rem}
+ .witbench h3{font-size:1.18rem}
 }
 </style>
 </head>
