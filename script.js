@@ -76,6 +76,9 @@
   const campJacketBody = document.querySelector(".camp-jacket-body");
   const campJacketTitle = document.querySelector("#camp-jacket-title");
   const campJacketContext = document.querySelector("#camp-jacket-context");
+  const campFolio = document.querySelector("#camp-folio");
+  const campFolioBody = document.querySelector(".camp-folio-body");
+  const campFolioContext = document.querySelector("#camp-folio-context");
   const viewModes = Array.from(document.querySelectorAll("[data-dawson-view]"));
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const steps = Array.from(document.querySelectorAll("[data-step]"));
@@ -129,6 +132,7 @@
     if (view === "people") return { kind:"instrument", text:`People · encountered through ${aperture}` };
     if (view === "sources") return { kind:"source", text:`Source descent · ${held} remains held` };
     if (view === "jacket") return { kind:"instrument", text:`Jacket · available depth at ${held}` };
+    if (view === "folio") return { kind:"instrument", text:`Folio · what you chose to carry` };
     return { kind:"still", text: held };
   }
 
@@ -734,6 +738,7 @@
     const mapButton = document.querySelector('[data-dawson-view="map"]');
     const sourcesButton = document.querySelector('[data-dawson-view="sources"]');
     const jacketButton = document.querySelector('[data-dawson-view="jacket"]');
+    const folioButton = document.querySelector('[data-dawson-view="folio"]');
 
     if (peopleButton) peopleButton.hidden = !discoveryOpen || encounteredPeopleCount() === 0;
     if (mapButton) mapButton.hidden = !discoveryOpen || !mapIsEarned();
@@ -742,6 +747,7 @@
       sourcesButton.hidden = !discoveryOpen || !(hasSourceDepth || jacketReachSet().size > 0);
     }
     if (jacketButton) jacketButton.hidden = !discoveryOpen || !jacketIsEarned();
+    if (folioButton) folioButton.hidden = !folioHasItems();
 
     document.body.dataset.discovery = discoveryOpen ? "open" : "closed";
     document.body.dataset.thought = thresholdThoughtGiven ? "given" : "none";
@@ -773,7 +779,7 @@
 
   function setDawsonView(view) {
     resetHintPatience();
-    const next = ["ground", "map", "people", "sources", "jacket"].includes(view) ? view : "ground";
+    const next = ["ground", "map", "people", "sources", "jacket", "folio"].includes(view) ? view : "ground";
     const previous = experienceShell?.dataset.view || "ground";
     if (experienceShell) experienceShell.dataset.view = next;
 
@@ -791,7 +797,7 @@
 
       if (button.dataset.dawsonView === "ground") {
         const heldPlace = heldGroundNameFor(currentId);
-        const depthView = next === "sources" || next === "jacket";
+        const depthView = next === "sources" || next === "jacket" || next === "folio";
         button.textContent = depthView ? `Return to ${heldPlace}` : "Ground";
         button.setAttribute(
           "aria-label",
@@ -800,19 +806,21 @@
       }
     });
 
-    if (experienceMount) experienceMount.hidden = next === "map" || next === "people" || next === "sources" || next === "jacket";
+    if (experienceMount) experienceMount.hidden = next === "map" || next === "people" || next === "sources" || next === "jacket" || next === "folio";
     if (dawsonIndex) dawsonIndex.hidden = next !== "map";
     if (campPeople) campPeople.hidden = next !== "people";
     if (campSources) campSources.hidden = next !== "sources";
     if (campJacket) campJacket.hidden = next !== "jacket";
+    if (campFolio) campFolio.hidden = next !== "folio";
 
     if (next === "map") buildProseMap();
     if (next === "people") buildCampPeople();
     if (next === "sources") buildCampSources();
     if (next === "jacket") buildGroundJacket();
+    if (next === "folio") buildFolio();
 
     if (next !== previous) {
-      const eventByView = { map:"OPENED_MAP", people:"OPENED_PEOPLE", sources:"OPENED_SOURCES", jacket:"OPENED_JACKET" };
+      const eventByView = { map:"OPENED_MAP", people:"OPENED_PEOPLE", sources:"OPENED_SOURCES", jacket:"OPENED_JACKET", folio:"OPENED_FOLIO" };
       if (eventByView[next]) {
         listen(eventByView[next], { ground:heldGroundIdFor(currentId), instrument:next, aperture:currentId });
       } else if (next === "ground" && previous !== "ground") {
@@ -1066,7 +1074,17 @@
           brakes.append(b);
         });
 
-        card.append(head, summary, pointers, brakes);
+        const keep = folioKeepButton({
+          key: "source:" + entry.id,
+          kind: "sources",
+          title: entry.id,
+          note: (entry.summary || []).join(" "),
+          brake: (entry.brakes || []).join(" "),
+          place: heldName,
+          relation: "public derivative / controlled source return"
+        }, "Keep source → Folio");
+
+        card.append(head, summary, pointers, brakes, keep);
         fragment.append(card);
       });
     }
@@ -1146,6 +1164,17 @@
     ));
     addSection("REFUSES / REMAINS OPEN", brakes, "jacket-open");
 
+    const keepJacket = folioKeepButton({
+      key: "jacket:" + heldId,
+      kind: "jackets",
+      title: heldName,
+      note: carried.join(" "),
+      brake: brakes.join(" "),
+      place: heldName,
+      relation: "ground jacket"
+    }, "Keep jacket → Folio");
+    fragment.append(keepJacket);
+
     const returnSection = document.createElement("section");
     returnSection.className = "jacket-section jacket-return";
     const returnLabel = document.createElement("h3");
@@ -1159,6 +1188,137 @@
     fragment.append(returnSection);
 
     campJacketBody.replaceChildren(fragment);
+  }
+
+
+  const FOLIO_KEY = "earthly-hands-shared-country-folio-v1";
+
+  function folioItems() {
+    try {
+      const parsed = JSON.parse(window.localStorage.getItem(FOLIO_KEY) || "[]");
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (_) {
+      return [];
+    }
+  }
+
+  function saveFolioItems(items) {
+    try {
+      window.localStorage.setItem(FOLIO_KEY, JSON.stringify(items.slice(0,120)));
+    } catch (_) {}
+    syncDiscoveryChrome();
+  }
+
+  function folioHasItems() {
+    return folioItems().length > 0;
+  }
+
+  function keepFolioItem(item) {
+    if (!item || !item.key) return false;
+    const items = folioItems();
+    if (items.some((held) => held.key === item.key)) return false;
+    items.unshift({
+      ...item,
+      kept_at: new Date().toISOString(),
+      from_ground: heldGroundIdFor(currentId),
+      from_aperture: currentId
+    });
+    saveFolioItems(items);
+    listen("KEPT_FOLIO", { ground:heldGroundIdFor(currentId), instrument:"folio", aperture:currentId, kind:item.kind||"item", key:item.key });
+    return true;
+  }
+
+  function folioKeepButton(item, label = "Keep → Folio") {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "folio-keep";
+    const already = folioItems().some((held) => held.key === item.key);
+    button.textContent = already ? "In folio" : label;
+    button.disabled = already;
+    button.addEventListener("click", () => {
+      const added = keepFolioItem(item);
+      if (added) {
+        button.textContent = "In folio";
+        button.disabled = true;
+        setChangePhysics("attention", "Kept in folio");
+      }
+    });
+    return button;
+  }
+
+  function removeFolioItem(key) {
+    const items = folioItems().filter((item) => item.key !== key);
+    saveFolioItems(items);
+    buildFolio();
+  }
+
+  function buildFolio() {
+    if (!campFolioBody) return;
+    const items = folioItems();
+    const fragment = document.createDocumentFragment();
+
+    if (!items.length) {
+      const empty = document.createElement("p");
+      empty.className = "folio-empty";
+      empty.textContent = "Nothing carried yet. Meet someone, open a relation, or descend to a source and keep only what catches.";
+      fragment.append(empty);
+      campFolioBody.replaceChildren(fragment);
+      return;
+    }
+
+    const intro = document.createElement("p");
+    intro.className = "jacket-intro";
+    intro.textContent = "This is not everything you have seen. It is only what you chose to carry.";
+    fragment.append(intro);
+
+    const groups = new Map();
+    items.forEach((item) => {
+      const kind = item.kind || "other";
+      if (!groups.has(kind)) groups.set(kind, []);
+      groups.get(kind).push(item);
+    });
+
+    groups.forEach((held, kind) => {
+      const section = document.createElement("section");
+      section.className = "folio-group";
+      const head = document.createElement("h3");
+      head.textContent = kind.toUpperCase();
+      section.append(head);
+
+      held.forEach((item) => {
+        const card = document.createElement("article");
+        card.className = "folio-card";
+        const top = document.createElement("div");
+        top.className = "folio-card-head";
+        const title = document.createElement("strong");
+        title.textContent = item.title || "Untitled";
+        const remove = document.createElement("button");
+        remove.type = "button";
+        remove.className = "folio-remove";
+        remove.textContent = "Release";
+        remove.addEventListener("click", () => removeFolioItem(item.key));
+        top.append(title, remove);
+
+        const note = document.createElement("p");
+        note.textContent = item.note || "";
+        card.append(top, note);
+
+        if (item.brake) {
+          const brake = document.createElement("p");
+          brake.className = "folio-brake";
+          brake.textContent = item.brake;
+          card.append(brake);
+        }
+
+        const origin = document.createElement("small");
+        origin.textContent = [item.place || item.from_ground, item.relation || ""].filter(Boolean).join(" · ");
+        card.append(origin);
+        section.append(card);
+      });
+      fragment.append(section);
+    });
+
+    campFolioBody.replaceChildren(fragment);
   }
 
   function asksForSources(message) {
@@ -1318,6 +1478,17 @@
 
         body.append(carried,chronology,open);
 
+        const keepPerson = folioKeepButton({
+          key: "person:" + person.name,
+          kind: "people",
+          title: profile.display || person.name,
+          note: profile.carried || person.encounters.at(-1)?.relation || "encountered",
+          brake: profile.open || person.encounters.at(-1)?.note || "",
+          place: trailUi[person.firstSeen]?.name || person.firstSeen,
+          relation: "first encountered here"
+        }, "Keep person → Folio");
+        body.append(keepPerson);
+
         const visibleLinks=(profile.links||[]).filter(link => encountered.has(link));
         if(visibleLinks.length){
           const rel=document.createElement("div");
@@ -1352,6 +1523,11 @@
     });
 
     campPeopleList.replaceChildren(fragment);
+  }
+
+  function asksForFolio(message) {
+    const lower = String(message || "").toLowerCase();
+    return /\b(show me (my )?folio|open (my )?folio|what did i keep|what am i carrying|my folio)\b/.test(lower);
   }
 
   function asksForMap(message) {
@@ -1398,6 +1574,16 @@
     panel.querySelector(".depth-near").textContent = data.near;
     panel.querySelector(".depth-brake").textContent = data.brake;
     panel.querySelector(".depth-close").addEventListener("click", closeDepth);
+    const keep = folioKeepButton({
+      key: "relation:" + button.dataset.depth,
+      kind: "relations",
+      title: data.title,
+      note: data.near,
+      brake: data.brake,
+      place: heldGroundNameFor(currentId),
+      relation: data.kind
+    }, "Keep relation → Folio");
+    panel.append(keep);
     button.closest("p").insertAdjacentElement("afterend", panel);
     button.setAttribute("aria-expanded", "true");
     openDepth = { button, panel };
