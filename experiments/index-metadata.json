@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T11:57:57.933Z",
+  "generated": "2026-09-28T13:02:39.382Z",
   "source": "git history",
   "entries": {
     "/experiments/follow-one-claim/": {
@@ -207,9 +207,9 @@
       ]
     },
     "/grounds/public-lands/": {
-      "updated": "2026-09-28T06:56:43-05:00",
+      "updated": "2026-09-28T08:02:28-05:00",
       "hand": "Glean",
-      "commit": "e5e5ff65c297",
+      "commit": "19d86951b523",
       "watch": [
         "grounds/public-lands",
         "experiments/public-lands-page-53",
