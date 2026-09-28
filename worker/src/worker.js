@@ -186,8 +186,75 @@ const LISTEN_EVENTS = new Set([
   "STOPPED"
 ]);
 
+const PRESENCE_GROUNDS = new Set([
+  "public-lands-ground",
+  "public-lands-page-53"
+]);
+
+const PAGE_53_VIEWS = new Set([
+  "source",
+  "transcription",
+  "account",
+  "jacket",
+  "ask"
+]);
+
+const PAGE_53_ROUTE_POINTS = new Set([
+  "PL53-BRACE",
+  "PL53-ALLEN-YATES",
+  "PL53-BUCKATUNNA",
+  "PL53-SUPPLEMENT",
+  "PL53-P54-NEXT",
+  "PL53-P54-CATEGORY",
+  "PL53-COMPANION-GLEAN"
+]);
+
+const PAGE_53_HOSTS = new Set([
+  "historical face",
+  "controlled working face",
+  "cultivated-acres field / rows 22–23",
+  "rows 25, 26, and 29",
+  "row 26 / General Remarks",
+  "page 53",
+  "1 white 12 Slaves] / row 26",
+  "Public Lands No. 1 / manuscript page 53 / current public ground"
+]);
+
 function cleanListenValue(value, max = 160) {
   return String(value || "").trim().slice(0, max);
+}
+
+function heldPage53Row(value) {
+  const match = String(value || "").match(/^row (\d{1,2})$/);
+  if (!match) return false;
+  const row = Number(match[1]);
+  return row >= 1 && row <= 34;
+}
+
+function heldPage53Point(value) {
+  const point = String(value || "");
+  if (PAGE_53_ROUTE_POINTS.has(point)) return true;
+  if (point.startsWith("view-")) return PAGE_53_VIEWS.has(point.slice(5));
+  if (point.startsWith("row-")) return heldPage53Row("row " + point.slice(4));
+  return false;
+}
+
+function heldPresenceFooting(ground, value) {
+  const footing = cleanListenValue(value, 160);
+  if (ground === "public-lands-ground") {
+    return footing === "working table" ? footing : "";
+  }
+  if (ground !== "public-lands-page-53") return "";
+
+  const match = footing.match(/^(.+?) · (source|transcription|account|jacket|ask)(?: \[\[point:([^\]]+)\]\])?$/u);
+  if (!match) return "";
+  const host = match[1];
+  const view = match[2];
+  const point = match[3] || "";
+  if (!PAGE_53_VIEWS.has(view)) return "";
+  if (!PAGE_53_HOSTS.has(host) && !heldPage53Row(host)) return "";
+  if (point && !heldPage53Point(point)) return "";
+  return host + " · " + view + (point ? " [[point:" + point + "]]" : "");
 }
 
 async function ensurePresenceTable(db) {
@@ -621,6 +688,7 @@ export default {
         const ground = cleanListenValue(url.searchParams.get("ground"), 120);
         const self = cleanListenValue(url.searchParams.get("self"), 80);
         if (!ground) return json({ error: "Ground is required.", code: "ground_required", request_id: requestId }, 400, corsHeaders(origin));
+        if (!PRESENCE_GROUNDS.has(ground)) return json({ error: "That shared ground is not held.", code: "presence_ground_not_held", request_id: requestId }, 400, corsHeaders(origin));
         try {
           await ensurePresenceTable(env.RECEIVING_DB);
           await env.RECEIVING_DB.prepare("DELETE FROM public_ground_presence WHERE seen_at < ?").bind(activeSince).run();
@@ -630,9 +698,10 @@ export default {
           const people = (rows?.results || [])
             .filter((row) => String(row.presence_id || "") !== self)
             .map((row) => ({
-              footing: cleanListenValue(row.footing, 160),
+              footing: heldPresenceFooting(ground, row.footing),
               name: Number(row.share_name || 0) === 1 ? cleanListenValue(row.display_name, 80) : ""
-            }));
+            }))
+            .filter((row) => row.footing);
           return json({ ground, others: people.length, people }, 200, corsHeaders(origin));
         } catch (error) {
           console.error("Shared presence read failed", requestId, error);
@@ -646,10 +715,12 @@ export default {
         catch { return json({ error: "Presence could not be read.", code: "invalid_json", request_id: requestId }, 400, corsHeaders(origin)); }
         const presenceId = cleanListenValue(body?.presence_id, 80);
         const ground = cleanListenValue(body?.ground, 120);
-        const footing = cleanListenValue(body?.footing, 160);
+        const footing = heldPresenceFooting(ground, body?.footing);
         const shareName = body?.share_name === true ? 1 : 0;
         const displayName = shareName === 1 ? cleanListenValue(body?.display_name, 80) : "";
         if (!presenceId || !ground) return json({ error: "Presence and ground are required.", code: "presence_incomplete", request_id: requestId }, 400, corsHeaders(origin));
+        if (!PRESENCE_GROUNDS.has(ground)) return json({ error: "That shared ground is not held.", code: "presence_ground_not_held", request_id: requestId }, 400, corsHeaders(origin));
+        if (!footing) return json({ error: "That footing is not held by this ground.", code: "presence_footing_not_held", request_id: requestId }, 400, corsHeaders(origin));
         try {
           await ensurePresenceTable(env.RECEIVING_DB);
           await env.RECEIVING_DB.prepare(

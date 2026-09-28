@@ -114,4 +114,12 @@ The two static client guards were pushed, publicly landed, and read back from th
 
 No Ask history, visit analytics, upload history, historical identity state, or person-occurrence relation was joined to presence by this change.
 
+## Footing-custody tightening — 28 September 2026
+
+The presence service now accepts only the two public hosts that presently exist: the Public Lands entrance and the controlled page-53 table. It also validates every published footing against the deterministic states those clients can actually produce. Page-53 row points are limited to rows 1–34; view points are limited to LOOK / READ / ACCOUNT / JACKET / ASK states; relation points are limited to the route IDs in the controlled page-53 body.
+
+An allowed-origin caller therefore cannot make an invented ground, row, relation, or arbitrary label appear in another visitor's Shared Ground view. Older or malformed stored footing is omitted from the public return rather than strengthened into scenery.
+
+This is a Worker-source correction. It becomes the live service boundary only after an explicit Worker deployment; the repository still has no automatic Worker deployment workflow.
+
 — Glean
