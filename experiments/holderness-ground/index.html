@@ -178,6 +178,8 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
       <button class="tool" id="prose-map-door" type="button" data-panel="prose-map" hidden>See what this ground knows spatially</button>
       <button class="tool" type="button" data-panel="source">Go down to the source state</button>
       <button class="tool" type="button" data-panel="open-edge">Stand at the unjoined edge</button>
+      <button class="tool" id="keep-ground" type="button">Keep this relation → Folio</button>
+      <a class="tool" id="open-folio" href="/experiments/ten-folio/#game" hidden>Open Folio →</a>
       <button class="tool refused-road" type="button" aria-disabled="true" aria-describedby="no-road-note">Follow Holderness to later land records</button>
     </div>
     <p class="no-road" id="no-road-note">No road yet. Later occurrences under the same name-form are held separately; this ground does not inherit identity, biography, or travel between them.</p>
@@ -448,6 +450,103 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
         standing:'noxubee-turnpike-relation'
       });
     }
+  }
+
+  const FOLIO_KEY = 'earthly-hands-shared-country-folio-v1';
+  const keepGround = document.getElementById('keep-ground');
+  const openFolio = document.getElementById('open-folio');
+
+  function folioItems(){
+    try{
+      const parsed = JSON.parse(window.localStorage.getItem(FOLIO_KEY) || '[]');
+      return Array.isArray(parsed) ? parsed : [];
+    }catch(_){
+      return [];
+    }
+  }
+
+  function currentHoldernessReturn(){
+    const visiblePanel = panels.find(panel => !panel.hidden);
+    const looking = lookAgency?.getAttribute('aria-pressed') === 'true';
+    const nameWebOpen = nameDoor?.getAttribute('aria-expanded') === 'true';
+    const params = new URLSearchParams();
+    params.set('return','folio');
+    params.set('attention', looking ? 'agency' : 'standing');
+    if(visiblePanel) params.set('panel', visiblePanel.id);
+    if(nameWebOpen) params.set('name_web','1');
+    return '/experiments/holderness-ground/?' + params.toString();
+  }
+
+  function holdernessFolioItem(){
+    const visiblePanel = panels.find(panel => !panel.hidden);
+    const looking = lookAgency?.getAttribute('aria-pressed') === 'true';
+    const nameWebOpen = nameDoor?.getAttribute('aria-expanded') === 'true';
+    return {
+      key:'ground:holderness-turnpike-agency-relation',
+      kind:'grounds',
+      title:'Holderness — Noxubee turnpike / agency relation',
+      note:'1837 testimony carries a place at the Noxubee turnpike, about 1¼ miles from the Choctaw agency, with repeated agency presence during the period described.',
+      brake:'Approximate relation and cadence are held. Exact point, traveled line, continuous biography, and identity with later land-record occurrences remain unearned.',
+      place:'Noxubee turnpike relation',
+      relation:'1837 testimony footing',
+      from_ground:'noxubee-turnpike-agency-relation',
+      from_aperture:visiblePanel?.id || (looking ? 'agency-attention' : 'standing'),
+      inspection_state:{
+        attention:looking ? 'choctaw-agency-occurrence' : 'noxubee-turnpike-relation',
+        panel:visiblePanel?.id || null,
+        name_web_open:nameWebOpen
+      },
+      refusal_state:'No road to later Holderness land records. Same name-form does not earn identity, biography, or travel.',
+      return_url:currentHoldernessReturn(),
+      kept_at:new Date().toISOString()
+    };
+  }
+
+  function syncHoldernessFolio(){
+    if(!keepGround) return;
+    const held = folioItems().some(item => item.key === 'ground:holderness-turnpike-agency-relation');
+    keepGround.textContent = held ? 'Update carried state → Folio' : 'Keep this relation → Folio';
+  }
+
+  keepGround?.addEventListener('click', () => {
+    const item = holdernessFolioItem();
+    const items = folioItems();
+    const existing = items.findIndex(held => held.key === item.key);
+    if(existing >= 0) items.splice(existing,1);
+    items.unshift(item);
+    try{
+      window.localStorage.setItem(FOLIO_KEY, JSON.stringify(items.slice(0,120)));
+    }catch(_){}
+    keepGround.textContent = 'Carried state updated';
+    if(openFolio) openFolio.hidden = false;
+    emitGroundEvent(existing >= 0 ? 'folio_update' : 'folio_keep', {
+      target:item.key,
+      return_url:item.return_url,
+      refused_road_preserved:true
+    });
+  });
+
+  syncHoldernessFolio();
+
+  const folioReturnParams = new URLSearchParams(window.location.search);
+  if(folioReturnParams.get('return') === 'folio'){
+    if(folioReturnParams.get('attention') === 'agency' && lookAgency?.getAttribute('aria-pressed') !== 'true'){
+      lookAgency.click();
+    }
+    const panelId = folioReturnParams.get('panel');
+    if(panelId && document.getElementById(panelId)){
+      openPanel(panelId, null);
+    }
+    if(folioReturnParams.get('name_web') === '1'){
+      revealNameWeb('folio-return');
+      if(panelId === 'person') setNameWeb(true, 'folio-return');
+    }
+    if(openFolio) openFolio.hidden = false;
+    emitGroundEvent('folio_return_restore', {
+      panel:panelId || null,
+      attention:folioReturnParams.get('attention') || 'standing',
+      name_web_open:folioReturnParams.get('name_web') === '1'
+    });
   }
 
   const refusedRoad = document.querySelector('.refused-road');
