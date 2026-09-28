@@ -116,7 +116,7 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
  <div class="pulse">
   <article><small>Current pressure</small><strong>Re-entry is being rebuilt.</strong><p>01 now carries Footing, Neighbor Light, Vocation, Live Relevance, and Return without making all five required reading.</p></article>
   <article><small>Current making</small><strong>Folio / instruments</strong><p>The surface is moving from explanations of machines toward direct work on evidence.</p></article>
-  <article><small>Current glint</small><strong>Ward register ≠ (1837) index</strong><p>Mullion reopened the objects under the blocker and separated the Ward register from the later adjudicative index. The joke survives; the shorthand got smaller.</p></article>
+  <article><small>Neighbor light</small><strong>One live crossing</strong><p id="live-glint">A nearby change can appear here when it is likely to alter, deepen, enliven, or correct present attention. Otherwise this space may stay quiet.</p></article>
  </div>
  <div class="stack">
   <div class="row"><div><h3>Private Workshop Recent</h3><span class="meta">current consequence, not just timestamps</span><p>The deeper current-work road when you want the larger field.</p></div><a class="open" href="https://docs.google.com/document/d/14y2tf9HfkyoqM1ncSBddz_L1ObKabUdfmjCq-Fw6mks/edit">Open</a></div>
@@ -144,9 +144,9 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 </div></section>
 
 <section class="panel" data-panel="nearby"><div class="inner">
- <h2 class="section-title">Nearby light</h2>
+ <h2 class="section-title">What is close enough to matter?</h2>
  <div class="stack">
-  <div class="row"><div><h3>The Elusive Robert Bell</h3><span class="meta">15 · joke / source-braked</span><p>A joke strong enough to test whether the Workshop can notice something alive without making it an assignment.</p></div><a class="open" href="https://docs.google.com/document/d/1OVzXpAlIFQnIZDSuEHPq5-vVqxCYiSUqSJz8hjSJJgI/edit">Open</a></div>
+  <div class="row"><div><h3>Current glints</h3><span class="meta">small · current · easy to ignore · easy to deepen</span><p>Nearby is not a category of content. It is a relation to present attention. What appears here should be able to change without changing the folio architecture.</p></div><button class="open" data-view="now">Back to now</button></div>
   <div class="row"><div><h3>Ward register ≠ (1837) index</h3><span class="meta">15 · inspected correction</span><p>The blocker was reopened against the objects. Current result: “Ward add-back” is not controlled documentary-object language; the Ward register and later adjudicative index are separate bodies.</p></div><a class="open" href="https://docs.google.com/document/d/1cW5ZKVS3qRlbRSkTUdpRshS9zaWNLWIQGWAOW8oU_KI/edit">Open</a></div>
   <div class="row"><div><h3>Perceptual Machines — correction-open loading</h3><span class="meta">15 · live machine development</span><p>First Light is testing how an assisted loader can carry “no observed phrase” without turning it into zero, and how one source occurrence breaks an interval without erasing the audited faces around it.</p></div><a class="open" href="https://docs.google.com/document/d/1ZQPIoG0qMg2YvdGVceEYNGUmBvzb7ZfYzX-0H5x26Tg/edit">Open</a></div>
   <div class="row"><div><h3>01D — Live Relevance</h3><span class="meta">standing peripheral awareness</span><p>Current at entry is not current forever.</p></div><a class="open" href="https://docs.google.com/document/d/1hbdCSK-WuYPHH4aPG862Zt2qza-yxIbrQEic7gpnfHw/edit">Open</a></div>
@@ -182,7 +182,7 @@ document.getElementById("clear-notes").onclick=()=>{if(confirm("Clear local Ten 
 render();
 function localCommand(q){
  q=q.toLowerCase();
- if(/joke|elusive|killing/.test(q)) return {view:"nearby",reply:"The Robert Bell joke is in Nearby."};
+ if(/joke|funny|surprise|glint|nearby/.test(q)) return {view:"nearby",reply:"Nearby is open to whatever is alive enough to matter now."};
  if(/re.?entry|footing|neighbor|vocation|relevance/.test(q)) return {view:"now",reply:"Re-entry footing is open from Now."};
  if(/robert|bell|identity/.test(q)) return {view:"projects",reply:"The Robert Bell working folio is in Projects."};
  if(/film|two families|movie|treatment/.test(q)) return {view:"projects",reply:"The film project view is in Projects."};
@@ -199,7 +199,7 @@ async function arrange(raw){
  const api=String(window.EARTHLY_HANDS_API_URL||"").trim();
  if(!api){a.textContent="That thought does not have a local door yet.";return;}
  a.textContent="Looking…";
- const held={views:Object.keys(views),projects:["Two Families, One Robert","Robert Bell identity route","Shared Country"],instruments:["Perceptual Machines","VOICE / ACCESS","Working Folio specification"],nearby:["The Elusive Robert Bell","Blockers must not prevent inspection","01D — Live Relevance"]};
+ const held={views:Object.keys(views),projects:["Two Families, One Robert","Robert Bell identity route","Shared Country"],instruments:["Perceptual Machines","VOICE / ACCESS","Working Folio specification"],nearby:["current relevant changes","source corrections","neighbor returns","useful surprises","01D — Live Relevance"]};
  const prompt=["Arrange Ten's folio using only HELD. Do not invent Workshop state.","Return JSON only: {\"view\":\"now|projects|instruments|nearby|notes\",\"reply\":\"one short useful sentence\"}.","If no held door fits, choose the nearest and say what is missing.","HELD: "+JSON.stringify(held),"TEN: "+clean].join("\n");
  try{
   const r=await fetch(api,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:prompt,place:"ten-folio",history:[]})});
