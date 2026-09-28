@@ -104,6 +104,8 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     <h3>A sale stated by the witness.</h3>
     <p>Holderness says he very often sold liquor to Ward.</p>
     <p class="brake">That earns a repeated seller–buyer occurrence in Holderness’s testimony. It does not give dates, quantities, occasions, consumption, motive, or atmosphere.</p>
+    <p><a id="ward-passage" href="/experiments/ward-room/?from=public-house">Read onward in the same answer: Ward’s public room →</a></p>
+    <p class="brake">Documentary passage, not a route between premises. The answer does not place the two public rooms beside one another.</p>
   </article>
 
   <article class="panel" id="where" hidden>
@@ -148,6 +150,7 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
   const panels = [...document.querySelectorAll('.panel')];
   const label = document.getElementById('state-label');
   const compareButton = document.getElementById('compare-action');
+  const passageLink = document.getElementById('ward-passage');
   let compareReady = false;
 
   function emit(type, detail = {}){
@@ -169,7 +172,12 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     const params = new URLSearchParams();
     if(open.length) params.set('open', open.join(','));
     if(compareReady) params.set('ready', 'compare');
-    history.replaceState(null,'',location.pathname + (params.toString() ? '?' + params.toString() : ''));
+    const exactState = location.pathname + (params.toString() ? '?' + params.toString() : '');
+    history.replaceState(null,'',exactState);
+    if(passageLink){
+      const passageParams = new URLSearchParams({from:'public-house',return:exactState});
+      passageLink.href = '/experiments/ward-room/?' + passageParams.toString();
+    }
   }
 
   function setOpen(id, opening, origin = 'visitor'){
