@@ -443,6 +443,79 @@ footer a{text-decoration:none}
   color:var(--muted);
 }
 
+
+.folio-keep{
+  margin-top:.7rem;
+  padding:.28rem 0;
+  border:0;
+  border-bottom:1px solid var(--scene-accent);
+  background:transparent;
+  color:var(--scene-ink);
+  font-family:var(--mono);
+  font-size:.66rem;
+  cursor:pointer;
+}
+.folio-keep:disabled{
+  color:var(--scene-muted);
+  border-bottom-color:transparent;
+  cursor:default;
+}
+.camp-folio-body{
+  display:grid;
+  gap:1rem;
+}
+.folio-empty{
+  max-width:35rem;
+  color:var(--scene-muted);
+}
+.folio-group{
+  border-top:1px solid var(--scene-rule);
+  padding-top:.7rem;
+}
+.folio-group>h3{
+  margin:0 0 .5rem;
+  color:var(--scene-muted);
+  font-family:var(--mono);
+  font-size:.64rem;
+  letter-spacing:.08em;
+  font-weight:400;
+}
+.folio-card{
+  padding:.7rem 0;
+  border-bottom:1px solid var(--scene-rule);
+}
+.folio-card-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:1rem;
+}
+.folio-card-head strong{
+  font-size:1.18rem;
+  font-weight:400;
+}
+.folio-card p{
+  max-width:38rem;
+  margin:.3rem 0 0;
+  font-size:.92rem;
+}
+.folio-card small{
+  display:block;
+  margin-top:.38rem;
+  color:var(--scene-muted);
+  font-family:var(--mono);
+  font-size:.62rem;
+}
+.folio-brake{color:var(--scene-muted)}
+.folio-remove{
+  border:0;
+  background:transparent;
+  color:var(--scene-muted);
+  font-family:var(--mono);
+  font-size:.6rem;
+  cursor:pointer;
+}
+
 @media(max-width:52rem){
   :root{--page:min(100% - 1.5rem,46rem)}
 
