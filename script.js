@@ -420,6 +420,66 @@
   let currentId = "night";
   let furthestIndex = 0;
   let asking = false;
+  let dawnRunning = false;
+
+  const dawnPhraseSets = [
+    ["The black loosens.", "Gray finds the paper.", "The camp comes back by degrees.", "Morning, apparently."],
+    ["Nothing announces it.", "The dark gives up a little.", "Edges return before certainty does.", "Morning has been here a minute."],
+    ["First, less dark.", "Then the ground remembers its edges.", "Someone could probably read now.", "That seems to be morning."]
+  ];
+
+  function dawnPhrases() {
+    try {
+      const key = "earthly-hands-dawn-voice-v1";
+      let index = Number(window.sessionStorage.getItem(key));
+      if (!Number.isInteger(index) || index < 0 || index >= dawnPhraseSets.length) {
+        index = Math.floor(Math.random() * dawnPhraseSets.length);
+        window.sessionStorage.setItem(key, String(index));
+      }
+      return dawnPhraseSets[index];
+    } catch (_) {
+      return dawnPhraseSets[0];
+    }
+  }
+
+  function sleep(ms) {
+    return new Promise((resolve) => window.setTimeout(resolve, ms));
+  }
+
+  async function unrollMorning(target, direction) {
+    if (!experienceShell) {
+      setGround("morning");
+      showScene(target, direction);
+      return;
+    }
+
+    const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    if (reduce) {
+      setGround("morning");
+      showScene(target, direction);
+      return;
+    }
+
+    const phrases = dawnPhrases();
+    const phases = ["predawn", "gray", "edges", "first-light"];
+
+    experienceShell.dataset.dawn = "predawn";
+    document.body.dataset.ground = "night";
+    setChangePhysics("still", phrases[0]);
+
+    for (let i = 0; i < phases.length; i += 1) {
+      experienceShell.dataset.dawn = phases[i];
+      setChangePhysics("attention", phrases[i]);
+      await sleep(i === 0 ? 850 : 1050);
+    }
+
+    setGround("morning");
+    showScene(target, direction);
+    setChangePhysics("movement", phrases[3]);
+    await sleep(650);
+    delete experienceShell.dataset.dawn;
+    setChangePhysics("still", heldGroundNameFor("morning"));
+  }
   let discoveryOpen = false;
   let thresholdThoughtGiven = false;
 
@@ -1395,7 +1455,7 @@
 
   function landAt(id, { push = true } = {}) {
     const target = sceneById.get(id);
-    if (!target || !fullSequence.includes(id)) return;
+    if (!target || !fullSequence.includes(id) || dawnRunning) return;
 
     const fromId = currentId;
     const fromIndex = fullSequence.indexOf(fromId);
@@ -1407,6 +1467,17 @@
     remember(id);
     listen("REACHED", { ground:heldGroundIdFor(id), instrument:"ground", aperture:id });
 
+    if (push) {
+      const url = `#${id}`;
+      history.pushState({ place: id }, "", url);
+    }
+
+    if (fromId === "night" && id === "morning") {
+      dawnRunning = true;
+      unrollMorning(target, direction).finally(() => { dawnRunning = false; });
+      return;
+    }
+
     if (sameHeldGround && fromId !== id) {
       setChangePhysics("attention", `${heldGroundNameFor(id)} · story continues here`);
     } else if (fromId !== id) {
@@ -1415,10 +1486,6 @@
       setChangePhysics("still", heldGroundNameFor(id));
     }
 
-    if (push) {
-      const url = `#${id}`;
-      history.pushState({ place: id }, "", url);
-    }
     requestAnimationFrame(() => showScene(target, direction));
   }
 
