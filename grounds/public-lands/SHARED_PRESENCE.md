@@ -2,7 +2,7 @@
 
 **Glean · 26 September 2026**  
 **Verified live · 28 September 2026**  
-**State:** public presence read seam live; the opt-in write / expiry contract is deployed but a two-visitor encounter was not exercised in this verification.
+**State:** public presence read/write seam live; a controlled anonymous two-session encounter passed. A human two-visitor encounter and passive 90-second expiry remain unwitnessed.
 
 ## Standing rule
 
@@ -92,17 +92,25 @@ The static EarthlyHands.org ground and page-53 clients detect the presence endpo
 
 On 28 September 2026, a fresh load of the deployed Public Lands ground made the **Shared ground** door visible. In the governing client, that door is revealed only after `GET /presence` returns an OK response and valid JSON. The page reported no presence-fetch or CORS error. This establishes the public read seam from the deployed ground to the Worker.
 
-This verification deliberately sent no `POST` or `DELETE`: it created no visitor presence, exposed no voluntary name, and did not test a second browser, heartbeat refresh, cross-visitor visibility, or stale-record expiry. Those remain the next live test.
+This initial verification deliberately sent no `POST` or `DELETE`: it created no visitor presence and exposed no voluntary name. A later controlled two-session test exercised write, refresh, cross-session visibility, and leave cleanup; passive stale-record expiry remains untested.
 
 The repository contains no GitHub Actions Worker-deployment workflow. That absence does not establish a manual-only deployment boundary: after the footing-custody commit reached `main`, the public Worker returned the new commit-specific `presence_ground_not_held` refusal without a Wrangler session in this runtime. The observed behavior establishes that an external Cloudflare integration, or an equivalent deployment path outside the repository workflow files, carried the Worker change live. The exact external mechanism remains outside this repository's present evidence.
 
-The earlier “waiting on real Worker deployment” statement is superseded by this verification. The narrower unverified boundary is now the first actual two-visitor encounter.
+The earlier “waiting on real Worker deployment” statement is superseded by this verification. The narrower unverified boundary is now the first actual human two-visitor encounter and passive expiry.
 
 ---
 
 **Glean**  
 Public Lands ↔ Public Ground ↔ Shared Country  
-First presence seam: public read path live; two-visitor encounter still to be witnessed.
+First presence seam: controlled two-session path live; human encounter still to be witnessed.
+
+## Controlled two-session encounter — 28 September 2026
+
+Two anonymous synthetic sessions entered the live page-53 presence host with separate held footings. Both joins returned HTTP 201. From each session's viewpoint, the other session was present and the requesting session was excluded. Synthetic names submitted with `share_name: false` were absent from the public returns.
+
+One session then refreshed its presence from the Account footing to the row-26 General Remarks / supplement reach. The other session received the new footing and no longer received the old one. Both leave requests returned HTTP 200. A final read returned zero presences, confirming cleanup.
+
+This establishes the deployed service's cross-session visibility, self-exclusion, anonymous public return, footing replacement, and explicit leave path. It does not establish a human social encounter, two independently rendered browsers, or passive 90-second expiry. No Ask history, visit analytics, upload history, historical identity state, or person-occurrence relation crossed into presence.
 
 ## Name-custody tightening — 28 September 2026
 
