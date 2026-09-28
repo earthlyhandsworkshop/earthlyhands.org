@@ -291,7 +291,37 @@ async function ensureFolioTables(db) {
   ).run();
 }
 
-function folioHtml({ leafCount = 0 } = {}) {
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+function folioHtml({ leaves = [] } = {}) {
+  const cards = leaves.map((leaf, index) => {
+    const body = escapeHtml(leaf.body || "").replaceAll("\n","<br>");
+    const source = escapeHtml(leaf.source_pointer || "");
+    return `<article class="leaf" data-leaf="${escapeHtml(leaf.id)}">
+      <button class="leaf-open" type="button" aria-expanded="false">
+        <span class="leaf-num">${String(index + 1).padStart(2,"0")}</span>
+        <span class="leaf-main">
+          <span class="leaf-kind">${escapeHtml(leaf.kind || "leaf")}${leaf.publication_state ? " · " + escapeHtml(leaf.publication_state) : ""}</span>
+          <strong>${escapeHtml(leaf.title || "Untitled")}</strong>
+          ${leaf.why_here ? `<span class="leaf-why">${escapeHtml(leaf.why_here)}</span>` : ""}
+        </span>
+        <span class="leaf-pull">open</span>
+      </button>
+      <div class="leaf-body" hidden>
+        <div class="leaf-prose">${body || "<span class=\"quiet\">This leaf currently carries a road, not a copied body.</span>"}</div>
+        ${source ? `<details class="provenance"><summary>Source / provenance road</summary><p>${source}</p></details>` : ""}
+        <button class="leaf-focus" type="button">Take the desk</button>
+      </div>
+    </article>`;
+  }).join("");
+
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -300,23 +330,58 @@ function folioHtml({ leafCount = 0 } = {}) {
 <meta name="robots" content="noindex,nofollow">
 <title>Ten — Folio</title>
 <style>
-:root{--paper:#ddd3bf;--sheet:#ebe3d3;--ink:#211e18;--muted:#6f675a;--rule:#4c463c;--rust:#87573a;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-*{box-sizing:border-box}html{background:#cfc5b1}body{margin:0;color:var(--ink);font:1rem/1.5 var(--serif);background:var(--paper);min-height:100vh}
-main{width:min(54rem,calc(100% - 1rem));margin:.5rem auto 3rem;border:1px solid var(--rule);background:var(--sheet);box-shadow:0 12px 36px rgba(45,35,25,.12)}
-header{padding:1rem;border-bottom:1px solid var(--rule)}.k{font:.55rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
-h1{font-weight:400;font-size:clamp(2.6rem,8vw,5.4rem);line-height:.9;letter-spacing:-.055em;margin:.18rem 0 .6rem}
-.body{padding:1rem}.card{border:1px solid var(--rule);padding:1rem;background:rgba(255,255,255,.08)}.card h2{font-weight:400;margin:0 0 .45rem}.card p{max-width:40rem}.state{margin-top:1rem;padding-top:.7rem;border-top:1px solid rgba(33,30,24,.2);font:.62rem/1.4 var(--mono);color:var(--muted)}
-a{color:inherit;text-underline-offset:.2em}
+:root{--paper:#ddd3bf;--sheet:#ebe3d3;--ink:#211e18;--muted:#6f675a;--rule:#4c463c;--hair:rgba(33,30,24,.22);--rust:#87573a;--wash:rgba(255,255,255,.14);--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html{background:#cfc5b1;-webkit-text-size-adjust:100%}body{margin:0;color:var(--ink);font:1rem/1.5 var(--serif);background:linear-gradient(rgba(33,30,24,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(33,30,24,.017) 1px,transparent 1px),var(--paper);background-size:30px 30px,30px 30px,auto;min-height:100vh}
+button{font:inherit;color:inherit}button:focus-visible,summary:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+.shell{width:min(74rem,calc(100% - .5rem));margin:.25rem auto 3rem;border:1px solid var(--rule);background:var(--sheet);box-shadow:0 12px 36px rgba(45,35,25,.12)}
+.top{padding:.55rem .7rem;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:1rem;font:.52rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.head{padding:clamp(.9rem,3vw,2rem);border-bottom:1px solid var(--rule)}.k{font:.55rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--rust)}
+h1{font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.88;letter-spacing:-.06em;margin:.15rem 0 .65rem}.head p{max-width:42rem;margin:.2rem 0}
+.apertures{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}.apertures button{border:1px solid var(--hair);background:transparent;padding:.32rem .48rem;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.04em}.apertures button[aria-pressed="true"]{border-color:var(--rust);background:rgba(135,87,58,.07)}
+.body{padding:clamp(.7rem,2vw,1.2rem)}.folio-status{margin-bottom:.75rem;color:var(--muted);font:.56rem/1.35 var(--mono);text-transform:uppercase;letter-spacing:.04em}
+.leaves{border:1px solid var(--rule);background:var(--wash)}.leaf{border-bottom:1px solid var(--hair)}.leaf:last-child{border-bottom:0}
+.leaf-open{width:100%;display:grid;grid-template-columns:2.2rem minmax(0,1fr) auto;gap:.65rem;align-items:start;border:0;background:transparent;padding:.8rem;text-align:left;cursor:pointer}.leaf-open:hover{background:rgba(255,255,255,.1)}
+.leaf-num,.leaf-kind,.leaf-pull{font:.48rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}.leaf-main{min-width:0}.leaf-main strong{display:block;margin:.1rem 0;font-size:1.18rem;font-weight:400;line-height:1.05}.leaf-why{display:block;color:var(--muted);font-size:.88rem;max-width:48rem}.leaf-pull{color:var(--rust)}
+.leaf-body{border-top:1px solid var(--hair);padding:1rem 1rem 1.2rem 2.85rem}.leaf-prose{max-width:52rem;font-size:1.04rem;line-height:1.58}.quiet{color:var(--muted)}
+.provenance{max-width:52rem;margin-top:1rem;border-top:1px solid var(--hair);padding-top:.65rem}.provenance summary{cursor:pointer;font:.55rem/1.3 var(--mono);text-transform:uppercase;color:var(--muted)}.provenance p{overflow-wrap:anywhere}
+.leaf-focus{margin-top:1rem;border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.12rem 0;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.empty{border:1px solid var(--rule);padding:1rem;background:var(--wash)}.empty h2{font-weight:400;margin:0 0 .35rem}.empty p{max-width:40rem}
+.focus{position:fixed;inset:.25rem;z-index:20;background:rgba(235,227,211,.98);border:1px solid var(--rule);overflow:auto;padding:1rem;display:none}.focus.open{display:block}.focus-close{position:sticky;top:0;display:block;margin-left:auto;border:1px solid var(--rule);background:var(--sheet);padding:.4rem .55rem;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase}.focus-content{max-width:58rem;margin:1rem auto 3rem}.focus-content .leaf-body{display:block!important;border:0;padding:0}.focus-content .leaf-open{display:none}.focus-content .leaf-prose{font-size:1.12rem;max-width:52rem}
+@media(max-width:38rem){.top{font-size:.44rem}.head{padding:.9rem .75rem}.body{padding:.55rem}.leaf-open{grid-template-columns:1.65rem minmax(0,1fr);padding:.7rem .55rem}.leaf-pull{display:none}.leaf-body{padding:.8rem .7rem 1rem}.leaf-main strong{font-size:1.05rem}.focus{inset:0;border-left:0;border-right:0;padding:.7rem}.focus-content{margin:.5rem 0 2rem}.focus-content .leaf-prose{font-size:1rem}}
 </style>
 </head>
-<body><main>
-<header><div class="k">Earthly Hands Workshop · authenticated folio</div><h1>Good to see you.</h1><p>Here is what we are carrying together.</p></header>
-<div class="body"><section class="card">
-<h2>The private aperture is open.</h2>
-<p>Authentication is working. Private folio bodies will live behind this door rather than in the public repository. The Google Doc remains provenance and custody; the folio becomes the normal place to work.</p>
-<div class="state">TEN FIRST · ${leafCount} PRIVATE LEAF${leafCount===1?"":"S"} · D1-BACKED · ACCESS-REQUIRED</div>
-</section></div>
-</main></body></html>`;
+<body>
+<main class="shell">
+<div class="top"><strong>Earthly Hands Workshop</strong><span>Ten · private · continuing</span></div>
+<header class="head"><div class="k">authenticated folio</div><h1>Good to see you.</h1><p>Here is what is close enough to work with. Pull depth when it catches; provenance stays one layer down.</p>
+<div class="apertures"><button type="button" aria-pressed="true">Workshop folio</button><button type="button" aria-pressed="false" disabled>Game folio · crossing next</button></div></header>
+<section class="body">
+<div class="folio-status">${leaves.length} private leaf${leaves.length===1?"":"s"} · D1-backed · no public cache</div>
+${cards ? `<div class="leaves">${cards}</div>` : `<div class="empty"><h2>The room is ready.</h2><p>The authenticated aperture is working. No private Workshop body has been copied into public source. The first curated leaves can now arrive here as relationship data.</p></div>`}
+</section>
+</main>
+<div class="focus" id="focus" aria-hidden="true"><button class="focus-close" type="button">Back to folio</button><div class="focus-content"></div></div>
+<script>
+const focus=document.querySelector("#focus"),focusContent=focus.querySelector(".focus-content");
+document.addEventListener("click",(event)=>{
+  const opener=event.target.closest(".leaf-open");
+  if(opener){
+    const leaf=opener.closest(".leaf"),body=leaf.querySelector(".leaf-body"),open=body.hidden;
+    body.hidden=!open;opener.setAttribute("aria-expanded",String(open));return;
+  }
+  const take=event.target.closest(".leaf-focus");
+  if(take){
+    const leaf=take.closest(".leaf");
+    focusContent.replaceChildren(leaf.cloneNode(true));
+    const cloned=focusContent.querySelector(".leaf-body");if(cloned)cloned.hidden=false;
+    focus.classList.add("open");focus.setAttribute("aria-hidden","false");document.documentElement.style.overflow="hidden";return;
+  }
+  if(event.target.closest(".focus-close")){
+    focus.classList.remove("open");focus.setAttribute("aria-hidden","true");focusContent.replaceChildren();document.documentElement.style.overflow="";
+  }
+});
+</script>
+</body></html>`;
 }
 
 async function authenticatedFolio(request, env, ctx, url) {
@@ -357,11 +422,13 @@ async function authenticatedFolio(request, env, ctx, url) {
     return json({ ok:true, authenticated:true, relationship:"ten", storage:"d1", private:true });
   }
 
-  const count = await env.RECEIVING_DB.prepare(
-    "SELECT COUNT(*) AS n FROM folio_leaves WHERE relationship_id=? AND released_at IS NULL"
-  ).bind("ten").first();
+  const rows = await env.RECEIVING_DB.prepare(
+    "SELECT id,object_id,kind,title,why_here,body,source_pointer,publication_state,position,updated_at " +
+    "FROM folio_leaves WHERE relationship_id=? AND released_at IS NULL ORDER BY position ASC, updated_at DESC LIMIT 80"
+  ).bind("ten").all();
+  const leaves = rows?.results || [];
 
-  return new Response(folioHtml({ leafCount:Number(count?.n || 0) }), {
+  return new Response(folioHtml({ leaves }), {
     status:200,
     headers:{
       "Content-Type":"text/html; charset=utf-8",
