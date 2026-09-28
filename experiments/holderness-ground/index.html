@@ -236,6 +236,8 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     <p><strong>Witness position disclosed later in this same deposition:</strong> Holderness says he had opposed the reservation locations. After the register and receiver would not sell, he says he and Samuel Ragsdale paid Wilie Davis $3,500 cash for three and one-half sections and took Davis's bond to make title or refund the money. Holderness says he did not know whether he would get the land or the money.</p>
     <p class="state">This earns a cash-payment and bond state with the outcome unresolved. It does not establish that title passed or the land was received, and it does not by itself prove motive, bias, residence, or a causal relation to the testimony about Ward or the registration book.</p>
     <p><strong>Identity state:</strong> this occurrence is controlled. Early-1830s GLO occurrences and the later patent/cadastral occurrence remain separately governed. The Ward registration-book relation travels through this same deposition carrier.</p>
+    <p><strong>Another place occurrence in this testimony:</strong> Holderness says he kept spirits at “my public house on the road” and very often sold liquor to Ward. The testimony does not expressly identify that house as this measured turnpike place.</p>
+    <p><a href="/experiments/public-house-on-the-road/?from=holderness-ground">Stand at the public house on the road →</a></p>
     <button class="capability" id="name-web-door" type="button" aria-expanded="false" aria-controls="name-web" hidden>Other occurrences are held</button>
 
     <div class="name-web" id="name-web" hidden>
@@ -530,6 +532,15 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
   syncHoldernessFolio();
 
   const folioReturnParams = new URLSearchParams(window.location.search);
+  if(folioReturnParams.get('return') === 'public-house'){
+    openPanel('person', null);
+    emitGroundEvent('return_restore', {
+      from:'public-house-on-the-road',
+      target:'person',
+      standing:'noxubee-turnpike-relation'
+    });
+  }
+
   if(folioReturnParams.get('return') === 'folio'){
     if(folioReturnParams.get('attention') === 'agency' && lookAgency?.getAttribute('aria-pressed') !== 'true'){
       lookAgency.click();
