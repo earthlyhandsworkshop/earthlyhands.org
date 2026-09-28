@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A source-controlled public-house occurrence whose location and road remain unresolved.">
+<meta name="theme-color" content="#261d16">
+<title>Public House on the Road — Earthly Hands</title>
+<style>
+:root{--night:#261d16;--paper:#e9dcc6;--rust:#b8683f;--ash:#aa9a86;--line:rgba(233,220,198,.22)}
+*{box-sizing:border-box}
+html{background:var(--night);color:var(--paper);font-family:Georgia,"Times New Roman",serif}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 52% 38%,rgba(184,104,63,.12),transparent 29rem)}
+button,a{font:inherit;color:inherit}
+a{text-underline-offset:.18em}
+.top{display:flex;justify-content:space-between;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid var(--line);font:11px/1.4 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ash)}
+.top a{text-decoration:none}
+main{width:min(74rem,calc(100% - 2rem));margin:auto;padding:clamp(3rem,8vh,6rem) 0 5rem}
+.approach{max-width:48rem}
+.kicker,.state-label,.panel-kicker{font:11px/1.45 system-ui,sans-serif;letter-spacing:.11em;text-transform:uppercase;color:var(--rust)}
+h1{font-size:clamp(3rem,8vw,7rem);font-weight:400;line-height:.88;letter-spacing:-.04em;margin:.6rem 0 1.7rem;max-width:9ch}
+.lead{font-size:clamp(1.17rem,2.3vw,1.55rem);line-height:1.5;max-width:42rem}
+.quiet{color:var(--ash);line-height:1.55;max-width:40rem}
+.ground{margin-top:clamp(4rem,10vh,8rem);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ground-head{display:flex;justify-content:space-between;gap:2rem;padding:1rem 0;border-bottom:1px solid var(--line);font:11px/1.45 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--ash)}
+.road{min-height:27rem;position:relative;display:grid;place-items:center;padding:3rem 0}
+.road:before{content:"";position:absolute;left:7%;right:7%;top:50%;border-top:1px solid rgba(233,220,198,.28)}
+.road:after{content:"road named only as road";position:absolute;left:50%;top:calc(50% + .9rem);transform:translateX(-50%);font:10px/1.4 system-ui,sans-serif;letter-spacing:.11em;text-transform:uppercase;color:var(--ash);white-space:nowrap}
+.house{position:relative;z-index:1;width:min(31rem,88%);padding:2rem 2.1rem;background:#2e241c;border:1px solid rgba(233,220,198,.45);box-shadow:0 1.2rem 3rem rgba(0,0,0,.24)}
+.house .voice{display:block;margin-bottom:.65rem;font:10px/1.4 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--rust)}
+.house h2{font-size:clamp(1.7rem,4vw,3rem);font-weight:400;line-height:1.02;margin:0 0 1rem}
+.house p{margin:.45rem 0;line-height:1.48}
+.controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;padding:1rem 0}
+.controls button{min-height:3.6rem;padding:.7rem .8rem;background:transparent;border:1px solid rgba(233,220,198,.35);cursor:pointer;text-align:left}
+.controls button:hover,.controls button:focus{background:rgba(233,220,198,.08);outline:none}
+.controls button[disabled]{opacity:.42;border-style:dashed;cursor:not-allowed}
+.route-note{margin:0;padding:0 0 1.2rem;color:var(--ash);font:12px/1.5 system-ui,sans-serif}
+.depth{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1rem}
+.panel{min-height:15rem;padding:1.2rem 1.25rem;border:1px solid var(--line);background:rgba(46,36,28,.72)}
+.panel[hidden]{display:none}
+.panel h3{font-size:1.28rem;font-weight:400;margin:.35rem 0 .8rem}
+.panel p{line-height:1.52;margin:.55rem 0}
+.brake{color:var(--ash);font-size:.94rem}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem}
+.compare div{padding:.85rem;border-top:1px solid var(--line)}
+.compare strong{display:block;margin-bottom:.35rem}
+.return{display:flex;justify-content:space-between;gap:1rem;align-items:flex-end;margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ash);font:12px/1.5 system-ui,sans-serif}
+footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,sans-serif;letter-spacing:.05em}
+@media(max-width:760px){
+ .top{padding:.85rem 1rem}.top span{display:none}
+ main{width:min(100% - 1.4rem,74rem);padding-top:3rem}
+ .ground-head{display:block}.ground-head span{display:block;margin-top:.35rem}
+ .road{min-height:31rem}.house{padding:1.45rem}
+ .controls{grid-template-columns:1fr 1fr}
+ .depth{grid-template-columns:1fr}
+ .panel{min-height:auto}
+ .compare{grid-template-columns:1fr}
+ .return{display:block}.return a{display:inline-block;margin-top:1rem}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a href="/">Earthly Hands Workshop</a>
+  <span>Shared Country · source-controlled place occurrence</span>
+</header>
+
+<main>
+<section class="approach" aria-labelledby="title">
+  <p class="kicker">McKinney Holderness · 1837 testimony</p>
+  <h1 id="title">A public house on the road.</h1>
+  <p class="lead">Holderness says, “I kept spirits at my public house on the road.” The testimony gives the place and the ordinary transaction. It does not give the address.</p>
+  <p class="quiet">Stand with the occurrence. Open only what the testimony carries. The road is named as a relation, not recovered as a route.</p>
+</section>
+
+<section class="ground" aria-labelledby="ground-title">
+  <header class="ground-head">
+    <strong id="ground-title">Standing: public-house occurrence</strong>
+    <span>field state · <b id="state-label">place held</b></span>
+  </header>
+
+  <div class="road">
+    <article class="house">
+      <span class="voice">Holderness speaking · testimony carried in a later printed evidence volume</span>
+      <h2>My public house</h2>
+      <p><strong>Relation:</strong> on the road</p>
+      <p><strong>What was kept:</strong> spirits</p>
+    </article>
+  </div>
+
+  <div class="controls" aria-label="Available actions">
+    <button type="button" data-reveal="transaction">Notice the transaction</button>
+    <button type="button" data-reveal="where">Ask where this is</button>
+    <button type="button" data-reveal="compare">Compare Holderness place-states</button>
+    <button type="button" disabled aria-describedby="route-note">Follow to the agency</button>
+  </div>
+  <p class="route-note" id="route-note">No route. The testimony does not expressly identify this house as the measured turnpike place or name “the road” as the Noxubee turnpike.</p>
+</section>
+
+<section class="depth" aria-label="Optional depth">
+  <article class="panel" id="transaction" hidden>
+    <p class="panel-kicker">Notice · ordinary handling</p>
+    <h3>A sale stated by the witness.</h3>
+    <p>Holderness says he very often sold liquor to Ward.</p>
+    <p class="brake">That earns a repeated seller–buyer occurrence in Holderness’s testimony. It does not give dates, quantities, occasions, consumption, motive, or atmosphere.</p>
+  </article>
+
+  <article class="panel" id="where" hidden>
+    <p class="panel-kicker">Ask · unresolved locality</p>
+    <h3>The house is present. Its point is not.</h3>
+    <p>“On the road” is the location relation supplied here. The road is otherwise unnamed in this statement.</p>
+    <p class="brake">No coordinate, road segment, agency distance, residence, or traveled line is inherited.</p>
+  </article>
+
+  <article class="panel" id="compare" hidden>
+    <p class="panel-kicker">Compare · no place merge</p>
+    <h3>Two Holderness place phrases.</h3>
+    <div class="compare">
+      <div><strong>Public house</strong>“my public house on the road”</div>
+      <div><strong>Measured place</strong>a place at the Noxubee turnpike, about 1¼ miles from the agency</div>
+    </div>
+    <p class="brake">The same witness and deposition make comparison available. They do not expressly make these the same premises.</p>
+  </article>
+</section>
+
+<div class="return">
+  <span>Source occurrence → optional depth → exact return.<br>Available depth is not displayed depth.</span>
+  <a href="/experiments/holderness-ground/?return=public-house">Return to Holderness Ground →</a>
+</div>
+
+<details class="return">
+  <summary>Source and brake</summary>
+  <div>
+    <p>McKinney Holderness, General Deposition No. 3, sworn 30 November 1837; later printed in <em>Choctaw Nation of Indians v. United States</em>, Evidence for Claimant, vol. I, p. 153.</p>
+    <p><a href="https://archive.org/details/choctaw-nation-v-united-states-v1/page/n192/mode/1up">Open the Holderness carrier</a></p>
+    <p>This ground does not equate the public house with Holderness’s measured turnpike place, reconstruct a tavern interior, or turn repeated sale into character evidence.</p>
+  </div>
+</details>
+</main>
+
+<footer>Ravel · Mapping Grounds ↔ Public Lands ↔ Shared Country · place earned, route dark</footer>
+<script src="../../config.js"></script>
+<script src="../../public-listening.js?v=ground-events-1"></script>
+<script>
+(() => {
+  const buttons = [...document.querySelectorAll('[data-reveal]')];
+  const panels = [...document.querySelectorAll('.panel')];
+  const label = document.getElementById('state-label');
+
+  function emit(type, detail = {}){
+    window.dispatchEvent(new CustomEvent('earthlyhands:ground-event', {
+      detail:{experiment:'public-house-on-the-road',ground:'holderness-public-house-occurrence',type,...detail}
+    }));
+  }
+
+  function sync(){
+    const open = panels.filter(panel => !panel.hidden).map(panel => panel.id);
+    label.textContent = open.length ? open.length + (open.length === 1 ? ' depth open' : ' depths open') : 'place held';
+    const params = new URLSearchParams();
+    if(open.length) params.set('open', open.join(','));
+    history.replaceState(null,'',location.pathname + (params.toString() ? '?' + params.toString() : ''));
+  }
+
+  function setOpen(id, opening, origin = 'visitor'){
+    const panel = document.getElementById(id);
+    const button = document.querySelector('[data-reveal="' + id + '"]');
+    if(!panel || !button) return;
+    panel.hidden = !opening;
+    button.textContent = opening ?
+      (id === 'transaction' ? 'Close the transaction' : id === 'where' ? 'Close the locality question' : 'Close the comparison') :
+      (id === 'transaction' ? 'Notice the transaction' : id === 'where' ? 'Ask where this is' : 'Compare Holderness place-states');
+    emit(opening ? 'depth_open' : 'depth_close',{target:id,origin,route_created:false});
+  }
+
+  buttons.forEach(button => button.addEventListener('click', () => {
+    const panel = document.getElementById(button.dataset.reveal);
+    setOpen(button.dataset.reveal, panel.hidden);
+    sync();
+  }));
+
+  const params = new URLSearchParams(location.search);
+  const restored = (params.get('open') || '').split(',').filter(Boolean);
+  restored.forEach(id => setOpen(id, true, 'exact-return'));
+  sync();
+  emit('ground_open',{standing:'holderness-public-house-occurrence',point_held:false,route_held:false});
+})();
+</script>
+</body>
+</html>
