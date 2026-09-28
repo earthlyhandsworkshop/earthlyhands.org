@@ -34,6 +34,7 @@ h1{font-size:clamp(3rem,8vw,7rem);font-weight:400;line-height:.88;letter-spacing
 .controls button{min-height:3.6rem;padding:.7rem .8rem;background:transparent;border:1px solid rgba(233,220,198,.35);cursor:pointer;text-align:left}
 .controls button:hover,.controls button:focus{background:rgba(233,220,198,.08);outline:none}
 .controls button[disabled]{opacity:.42;border-style:dashed;cursor:not-allowed}
+.controls button[hidden]{display:none}
 .route-note{margin:0;padding:0 0 1.2rem;color:var(--ash);font:12px/1.5 system-ui,sans-serif}
 .depth{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1rem}
 .panel{min-height:15rem;padding:1.2rem 1.25rem;border:1px solid var(--line);background:rgba(46,36,28,.72)}
@@ -91,7 +92,7 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
   <div class="controls" aria-label="Available actions">
     <button type="button" data-reveal="transaction">Notice the transaction</button>
     <button type="button" data-reveal="where">Ask where this is</button>
-    <button type="button" data-reveal="compare">Compare Holderness place-states</button>
+    <button type="button" data-reveal="compare" id="compare-action" hidden>Compare Holderness place-states</button>
     <button type="button" disabled aria-describedby="route-note">Follow to the agency</button>
   </div>
   <p class="route-note" id="route-note">No route. The testimony does not expressly identify this house as the measured turnpike place or name “the road” as the Noxubee turnpike.</p>
@@ -146,6 +147,8 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
   const buttons = [...document.querySelectorAll('[data-reveal]')];
   const panels = [...document.querySelectorAll('.panel')];
   const label = document.getElementById('state-label');
+  const compareButton = document.getElementById('compare-action');
+  let compareReady = false;
 
   function emit(type, detail = {}){
     window.dispatchEvent(new CustomEvent('earthlyhands:ground-event', {
@@ -153,11 +156,19 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     }));
   }
 
+  function refreshCapabilities(){
+    const transactionOpen = !document.getElementById('transaction').hidden;
+    const whereOpen = !document.getElementById('where').hidden;
+    if(transactionOpen && whereOpen) compareReady = true;
+    compareButton.hidden = !compareReady;
+  }
+
   function sync(){
     const open = panels.filter(panel => !panel.hidden).map(panel => panel.id);
     label.textContent = open.length ? open.length + (open.length === 1 ? ' depth open' : ' depths open') : 'place held';
     const params = new URLSearchParams();
     if(open.length) params.set('open', open.join(','));
+    if(compareReady) params.set('ready', 'compare');
     history.replaceState(null,'',location.pathname + (params.toString() ? '?' + params.toString() : ''));
   }
 
@@ -169,6 +180,7 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     button.textContent = opening ?
       (id === 'transaction' ? 'Close the transaction' : id === 'where' ? 'Close the locality question' : 'Close the comparison') :
       (id === 'transaction' ? 'Notice the transaction' : id === 'where' ? 'Ask where this is' : 'Compare Holderness place-states');
+    refreshCapabilities();
     emit(opening ? 'depth_open' : 'depth_close',{target:id,origin,route_created:false});
   }
 
@@ -180,6 +192,8 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
 
   const params = new URLSearchParams(location.search);
   const restored = (params.get('open') || '').split(',').filter(Boolean);
+  compareReady = params.get('ready') === 'compare' || restored.includes('compare');
+  refreshCapabilities();
   restored.forEach(id => setOpen(id, true, 'exact-return'));
   sync();
   emit('ground_open',{standing:'holderness-public-house-occurrence',point_held:false,route_held:false});
