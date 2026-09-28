@@ -19,6 +19,9 @@
   let groundHintTimer = 0;
   let groundHintEarned = false;
   const groundThread = document.querySelector("#ground-thread");
+  const groundCarry = document.querySelector("#ground-carry");
+  const groundCarryButton = document.querySelector("#ground-carry-button");
+  const groundCarryNote = document.querySelector("#ground-carry-note");
   const depthData = {
     distance: {
       kind: "Prose Map relation",
@@ -733,6 +736,32 @@
     syncDiscoveryChrome();
   }
 
+  function currentGroundFolioItem() {
+    const heldId = heldGroundIdFor(currentId);
+    return {
+      key: "ground:" + heldId,
+      kind: "grounds",
+      title: heldGroundNameFor(currentId),
+      note: sceneState[currentId]?.ground || defaultSceneState[currentId]?.ground || "Reached ground.",
+      brake: "Carried ground preserves present footing; it does not add route, identity, or certainty.",
+      place: heldGroundNameFor(currentId),
+      relation: "reached in Shared Country"
+    };
+  }
+
+  function syncGroundCarry() {
+    if (!groundCarryButton) return;
+    const item = currentGroundFolioItem();
+    const already = folioItems().some((held) => held.key === item.key);
+    groundCarryButton.disabled = already;
+    groundCarryButton.textContent = already ? "This ground is in your folio" : "Keep this ground → Folio";
+    if (groundCarryNote) {
+      groundCarryNote.textContent = already
+        ? "The folio now carries a road back to this ground."
+        : "Carry the place, not the whole page.";
+    }
+  }
+
   function syncDiscoveryChrome() {
     const peopleButton = document.querySelector('[data-dawson-view="people"]');
     const mapButton = document.querySelector('[data-dawson-view="map"]');
@@ -749,6 +778,7 @@
     if (jacketButton) jacketButton.hidden = !discoveryOpen || !jacketIsEarned();
     if (folioButton) folioButton.hidden = !folioHasItems();
 
+    syncGroundCarry();
     document.body.dataset.discovery = discoveryOpen ? "open" : "closed";
     document.body.dataset.thought = thresholdThoughtGiven ? "given" : "none";
   }
@@ -1717,6 +1747,9 @@
       "blue-water-mouth": "Now the held ground changes. Try “what happened next?” or “continue east.”",
       "east-blue-water": "You are at the current end of this public story reach. Try Map, People, Sources, or ask “where can I go?”"
     };
+    if (folioHasItems()) {
+      return (hints[currentId] || "Try asking what is strange here, where you are, or where you can go.") + " You can also ask: “show me my folio.”";
+    }
     return hints[currentId] || "Try asking what is strange here, where you are, or where you can go.";
   }
 
@@ -1752,6 +1785,13 @@
   async function askGround(message) {
     const clean = String(message || "").trim().slice(0, 1000);
     if (!clean || asking) return;
+
+    if (asksForFolio(clean) && folioHasItems()) {
+      openDiscovery();
+      keepTenWords(clean);
+      setDawsonView("folio");
+      return;
+    }
 
     resetHintPatience();
     listen("ASKED_GROUND", { ground:heldGroundIdFor(currentId), instrument:experienceShell?.dataset.view||"ground", aperture:currentId });
@@ -1976,6 +2016,16 @@
       setAsking(false);
     }
   }
+
+  groundCarryButton?.addEventListener("click", () => {
+    const item = currentGroundFolioItem();
+    const added = keepFolioItem(item);
+    if (added) {
+      openDiscovery();
+      syncGroundCarry();
+      setChangePhysics("attention", "Ground kept in folio");
+    }
+  });
 
   viewModes.forEach((control) => {
     control.addEventListener("click", () => setDawsonView(control.dataset.dawsonView));
