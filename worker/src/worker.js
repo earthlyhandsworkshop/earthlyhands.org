@@ -299,6 +299,24 @@ async function ensureFolioTables(db) {
     "PRIMARY KEY (relationship_id,subject_hash,leaf_id)" +
     ")"
   ).run();
+  await db.prepare(
+    "CREATE TABLE IF NOT EXISTS folio_offers (" +
+    "id TEXT PRIMARY KEY," +
+    "relationship_id TEXT NOT NULL," +
+    "from_label TEXT," +
+    "title TEXT NOT NULL," +
+    "why_now TEXT," +
+    "body TEXT," +
+    "source_pointer TEXT," +
+    "state TEXT NOT NULL DEFAULT 'offered'," +
+    "created_at TEXT NOT NULL," +
+    "updated_at TEXT NOT NULL," +
+    "expires_at TEXT" +
+    ")"
+  ).run();
+  await db.prepare(
+    "CREATE INDEX IF NOT EXISTS idx_folio_offers_relationship ON folio_offers(relationship_id,state,updated_at)"
+  ).run();
 }
 
 function escapeHtml(value) {
@@ -310,7 +328,7 @@ function escapeHtml(value) {
     .replaceAll("'","&#039;");
 }
 
-function folioHtml({ leaves = [] } = {}) {
+function folioHtml({ leaves = [], offers = [] } = {}) {
   const cards = leaves.map((leaf, index) => {
     const body = escapeHtml(leaf.body || "").replaceAll("\n","<br>");
     const source = escapeHtml(leaf.source_pointer || "");
@@ -334,6 +352,23 @@ function folioHtml({ leaves = [] } = {}) {
     </article>`;
   }).join("");
 
+  const offerCards = offers.map((offer) => `<article class="offer" data-offer="${escapeHtml(offer.id)}">
+    <div class="offer-glint">
+      <span class="offer-from">${escapeHtml(offer.from_label || "Workshop")}</span>
+      <strong>${escapeHtml(offer.title || "Something nearby")}</strong>
+      ${offer.why_now ? `<p>${escapeHtml(offer.why_now)}</p>` : ""}
+      <div class="offer-actions">
+        <button type="button" data-offer-open>Open</button>
+        <button type="button" data-offer-action="keep">Keep</button>
+        <button type="button" data-offer-action="release">Let pass</button>
+      </div>
+    </div>
+    <div class="offer-body" hidden>
+      <div>${escapeHtml(offer.body || "").replaceAll("\n","<br>") || '<span class="quiet">The offer carries a road rather than a copied body.</span>'}</div>
+      ${offer.source_pointer ? `<details class="provenance"><summary>Road home</summary><p>${escapeHtml(offer.source_pointer)}</p></details>` : ""}
+    </div>
+  </article>`).join("");
+
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -351,6 +386,8 @@ button{font:inherit;color:inherit}button:focus-visible,summary:focus-visible{out
 h1{font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.88;letter-spacing:-.06em;margin:.15rem 0 .65rem}.head p{max-width:42rem;margin:.2rem 0}
 .apertures{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}.apertures button{border:1px solid var(--hair);background:transparent;padding:.32rem .48rem;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.04em}.apertures button[aria-pressed="true"]{border-color:var(--rust);background:rgba(135,87,58,.07)}
 .body{padding:clamp(.7rem,2vw,1.2rem)}.folio-status{margin-bottom:.75rem;color:var(--muted);font:.56rem/1.35 var(--mono);text-transform:uppercase;letter-spacing:.04em}
+.nearby{margin:0 0 1rem}.nearby>h2{margin:0 0 .45rem;font:400 1.25rem/1.1 var(--serif)}.nearby-note{margin:0 0 .65rem;color:var(--muted);font-size:.88rem;max-width:42rem}
+.offers{border:1px solid var(--rule);background:rgba(255,255,255,.08)}.offer{padding:.8rem;border-bottom:1px solid var(--hair)}.offer:last-child{border-bottom:0}.offer-from{display:block;color:var(--rust);font:.48rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}.offer strong{display:block;font-weight:400;font-size:1.08rem;margin:.12rem 0}.offer p{margin:.25rem 0;color:var(--muted);max-width:45rem}.offer-actions{display:flex;gap:.7rem;margin-top:.55rem}.offer-actions button{border:0;border-bottom:1px solid var(--hair);background:transparent;padding:.15rem 0;cursor:pointer;font:.5rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.04em}.offer-actions button[data-offer-action="keep"]{border-bottom-color:var(--rust)}.offer-body{margin-top:.7rem;padding-top:.65rem;border-top:1px solid var(--hair);max-width:52rem}
 .leaves{border:1px solid var(--rule);background:var(--wash)}.leaf{border-bottom:1px solid var(--hair)}.leaf:last-child{border-bottom:0}
 .leaf-open{width:100%;display:grid;grid-template-columns:2.2rem minmax(0,1fr) auto;gap:.65rem;align-items:start;border:0;background:transparent;padding:.8rem;text-align:left;cursor:pointer}.leaf-open:hover{background:rgba(255,255,255,.1)}
 .leaf-num,.leaf-kind,.leaf-pull,.leaf-change,.leaf-new{font:.48rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}.leaf-change,.leaf-new{display:inline-block;margin:.45rem .8rem 0;color:var(--rust);border-bottom:1px solid var(--rust)}.leaf-main{min-width:0}.leaf-main strong{display:block;margin:.1rem 0;font-size:1.18rem;font-weight:400;line-height:1.05}.leaf-why{display:block;color:var(--muted);font-size:.88rem;max-width:48rem}.leaf-pull{color:var(--rust)}
@@ -368,14 +405,32 @@ h1{font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.88;letter-spaci
 <header class="head"><div class="k">authenticated folio</div><h1>Good to see you.</h1><p>Here is what is close enough to work with. Pull depth when it catches; provenance stays one layer down.</p>
 <div class="apertures"><button type="button" aria-pressed="true">Workshop folio</button><button type="button" aria-pressed="false" disabled>Game folio · crossing next</button></div></header>
 <section class="body">
-<div class="folio-status">${leaves.length} private leaf${leaves.length===1?"":"s"} · D1-backed · no public cache</div>
-${cards ? `<div class="leaves">${cards}</div>` : `<div class="empty"><h2>The room is ready.</h2><p>The authenticated aperture is working. No private Workshop body has been copied into public source. The first curated leaves can now arrive here as relationship data.</p></div>`}
+<div class="folio-status">${leaves.length} carried leaf${leaves.length===1?"":"s"} · D1-backed · no public cache</div>
+${offerCards ? `<section class="nearby"><h2>Beside your elbow</h2><p class="nearby-note">A few things may be offered because a real relation brought them near. Nothing here is assignment. Open, keep, or let pass.</p><div class="offers">${offerCards}</div></section>` : ""}
+${cards ? `<div class="leaves">${cards}</div>` : `<div class="empty"><h2>The room is ready.</h2><p>No carried leaves yet. Nearby offers may come and go; only what you keep becomes part of the carried folio.</p></div>`}
 </section>
 </main>
 <div class="focus" id="focus" aria-hidden="true"><button class="focus-close" type="button">Back to folio</button><div class="focus-content"></div></div>
 <script>
 const focus=document.querySelector("#focus"),focusContent=focus.querySelector(".focus-content");
-document.addEventListener("click",(event)=>{
+document.addEventListener("click",async(event)=>{
+  const offerOpen=event.target.closest("[data-offer-open]");
+  if(offerOpen){
+    const offer=offerOpen.closest(".offer"),body=offer.querySelector(".offer-body"),open=body.hidden;
+    body.hidden=!open;offerOpen.textContent=open?"Close":"Open";return;
+  }
+  const offerAction=event.target.closest("[data-offer-action]");
+  if(offerAction){
+    const offer=offerAction.closest(".offer"),action=offerAction.dataset.offerAction;
+    offerAction.disabled=true;
+    try{
+      const response=await fetch("/folio/offer-action",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({offer_id:offer.dataset.offer,action})});
+      if(!response.ok)throw new Error("offer action failed");
+      if(action==="keep"){window.location.reload();return;}
+      offer.remove();
+    }catch(_){offerAction.disabled=false}
+    return;
+  }
   const opener=event.target.closest(".leaf-open");
   if(opener){
     const leaf=opener.closest(".leaf"),body=leaf.querySelector(".leaf-body"),open=body.hidden;
@@ -455,6 +510,31 @@ async function authenticatedFolio(request, env, ctx, url) {
     return json({ ok:true, authenticated:true, relationship:"ten", storage:"d1", private:true, allowlist:"worker-enforced" });
   }
 
+  if (request.method === "POST" && url.pathname === "/folio/offer-action") {
+    let body = {};
+    try { body = await request.json(); } catch {}
+    const offerId = String(body?.offer_id || "").trim().slice(0,160);
+    const action = String(body?.action || "").trim().toLowerCase();
+    if (!offerId || !["keep","release"].includes(action)) return json({ error:"Offer and action are required.", code:"folio_offer_action_incomplete" }, 400);
+    const offer = await env.RECEIVING_DB.prepare(
+      "SELECT * FROM folio_offers WHERE relationship_id=? AND id=? AND state='offered'"
+    ).bind("ten",offerId).first();
+    if (!offer) return json({ error:"Offer not found.", code:"folio_offer_not_found" }, 404);
+    const actionNow = new Date().toISOString();
+    if (action === "keep") {
+      const leafId = "offer:" + offerId;
+      const why = [offer.from_label ? "From " + offer.from_label + "." : "", offer.why_now || ""].filter(Boolean).join(" ");
+      await env.RECEIVING_DB.prepare(
+        "INSERT OR IGNORE INTO folio_leaves (id,relationship_id,object_id,kind,title,why_here,body,source_pointer,publication_state,position,created_at,updated_at,released_at) " +
+        "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,NULL)"
+      ).bind(leafId,"ten",offerId,"offer",String(offer.title||"Offered body"),why,String(offer.body||""),String(offer.source_pointer||""),"carried from offer",900,actionNow,actionNow).run();
+    }
+    await env.RECEIVING_DB.prepare(
+      "UPDATE folio_offers SET state=?,updated_at=? WHERE relationship_id=? AND id=?"
+    ).bind(action==="keep"?"kept":"released",actionNow,"ten",offerId).run();
+    return json({ ok:true, offer_id:offerId, state:action==="keep"?"kept":"released" });
+  }
+
   if (request.method === "POST" && url.pathname === "/folio/seen") {
     let body = {};
     try { body = await request.json(); } catch {}
@@ -473,6 +553,12 @@ async function authenticatedFolio(request, env, ctx, url) {
     return json({ ok:true, leaf_id:leafId, seen_updated_at:safeSeen });
   }
 
+  const offerRows = await env.RECEIVING_DB.prepare(
+    "SELECT id,from_label,title,why_now,body,source_pointer,created_at,updated_at,expires_at FROM folio_offers " +
+    "WHERE relationship_id=? AND state='offered' AND (expires_at IS NULL OR expires_at > ?) ORDER BY updated_at DESC LIMIT 8"
+  ).bind("ten",new Date().toISOString()).all();
+  const offers = offerRows?.results || [];
+
   const rows = await env.RECEIVING_DB.prepare(
     "SELECT l.id,l.object_id,l.kind,l.title,l.why_here,l.body,l.source_pointer,l.publication_state,l.position,l.updated_at," +
     "r.seen_updated_at AS seen_updated_at " +
@@ -485,7 +571,7 @@ async function authenticatedFolio(request, env, ctx, url) {
     never_opened: !leaf.seen_updated_at
   }));
 
-  return new Response(folioHtml({ leaves }), {
+  return new Response(folioHtml({ leaves, offers }), {
     status:200,
     headers:{
       "Content-Type":"text/html; charset=utf-8",
@@ -502,7 +588,7 @@ export default {
     const requestId = crypto.randomUUID();
 
     if ((request.method === "GET" && (url.pathname === "/folio" || url.pathname === "/folio/" || url.pathname === "/folio/health")) ||
-        (request.method === "POST" && url.pathname === "/folio/seen")) {
+        (request.method === "POST" && (url.pathname === "/folio/seen" || url.pathname === "/folio/offer-action"))) {
       return authenticatedFolio(request, env, ctx, url);
     }
 
