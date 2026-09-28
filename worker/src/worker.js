@@ -228,10 +228,158 @@ async function ensureListeningTable(db) {
   ).run();
 }
 
+
+async function folioSubject(identity) {
+  const raw = String(identity?.user_uuid || identity?.id || identity?.sub || identity?.email || "").trim();
+  if (!raw) return "";
+  const bytes = new TextEncoder().encode(raw);
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function ensureFolioTables(db) {
+  await db.prepare(
+    "CREATE TABLE IF NOT EXISTS folio_relationships (" +
+    "id TEXT PRIMARY KEY," +
+    "name TEXT NOT NULL," +
+    "state TEXT NOT NULL," +
+    "created_at TEXT NOT NULL," +
+    "updated_at TEXT NOT NULL" +
+    ")"
+  ).run();
+  await db.prepare(
+    "CREATE TABLE IF NOT EXISTS folio_memberships (" +
+    "relationship_id TEXT NOT NULL," +
+    "subject_hash TEXT NOT NULL," +
+    "role TEXT NOT NULL," +
+    "active INTEGER NOT NULL DEFAULT 1," +
+    "created_at TEXT NOT NULL," +
+    "PRIMARY KEY (relationship_id,subject_hash)" +
+    ")"
+  ).run();
+  await db.prepare(
+    "CREATE TABLE IF NOT EXISTS folio_leaves (" +
+    "id TEXT PRIMARY KEY," +
+    "relationship_id TEXT NOT NULL," +
+    "object_id TEXT," +
+    "kind TEXT NOT NULL," +
+    "title TEXT NOT NULL," +
+    "why_here TEXT," +
+    "body TEXT," +
+    "source_pointer TEXT," +
+    "publication_state TEXT," +
+    "position INTEGER NOT NULL DEFAULT 0," +
+    "created_at TEXT NOT NULL," +
+    "updated_at TEXT NOT NULL," +
+    "released_at TEXT" +
+    ")"
+  ).run();
+  await db.prepare(
+    "CREATE INDEX IF NOT EXISTS idx_folio_leaves_relationship ON folio_leaves(relationship_id,released_at,position,updated_at)"
+  ).run();
+  await db.prepare(
+    "CREATE TABLE IF NOT EXISTS folio_notes (" +
+    "id TEXT PRIMARY KEY," +
+    "relationship_id TEXT NOT NULL," +
+    "subject_hash TEXT NOT NULL," +
+    "linked_object_id TEXT," +
+    "body TEXT NOT NULL," +
+    "visibility TEXT NOT NULL," +
+    "created_at TEXT NOT NULL," +
+    "updated_at TEXT NOT NULL" +
+    ")"
+  ).run();
+}
+
+function folioHtml({ leafCount = 0 } = {}) {
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Ten — Folio</title>
+<style>
+:root{--paper:#ddd3bf;--sheet:#ebe3d3;--ink:#211e18;--muted:#6f675a;--rule:#4c463c;--rust:#87573a;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html{background:#cfc5b1}body{margin:0;color:var(--ink);font:1rem/1.5 var(--serif);background:var(--paper);min-height:100vh}
+main{width:min(54rem,calc(100% - 1rem));margin:.5rem auto 3rem;border:1px solid var(--rule);background:var(--sheet);box-shadow:0 12px 36px rgba(45,35,25,.12)}
+header{padding:1rem;border-bottom:1px solid var(--rule)}.k{font:.55rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+h1{font-weight:400;font-size:clamp(2.6rem,8vw,5.4rem);line-height:.9;letter-spacing:-.055em;margin:.18rem 0 .6rem}
+.body{padding:1rem}.card{border:1px solid var(--rule);padding:1rem;background:rgba(255,255,255,.08)}.card h2{font-weight:400;margin:0 0 .45rem}.card p{max-width:40rem}.state{margin-top:1rem;padding-top:.7rem;border-top:1px solid rgba(33,30,24,.2);font:.62rem/1.4 var(--mono);color:var(--muted)}
+a{color:inherit;text-underline-offset:.2em}
+</style>
+</head>
+<body><main>
+<header><div class="k">Earthly Hands Workshop · authenticated folio</div><h1>Good to see you.</h1><p>Here is what we are carrying together.</p></header>
+<div class="body"><section class="card">
+<h2>The private aperture is open.</h2>
+<p>Authentication is working. Private folio bodies will live behind this door rather than in the public repository. The Google Doc remains provenance and custody; the folio becomes the normal place to work.</p>
+<div class="state">TEN FIRST · ${leafCount} PRIVATE LEAF${leafCount===1?"":"S"} · D1-BACKED · ACCESS-REQUIRED</div>
+</section></div>
+</main></body></html>`;
+}
+
+async function authenticatedFolio(request, env, ctx, url) {
+  if (!ctx?.access) {
+    return json({ error:"Access required.", code:"folio_access_required" }, 403);
+  }
+  if (!env.RECEIVING_DB) {
+    return json({ error:"Folio storage is not configured.", code:"folio_storage_missing" }, 503);
+  }
+
+  let identity;
+  try {
+    identity = await ctx.access.getIdentity();
+  } catch {
+    return json({ error:"Authenticated identity could not be read.", code:"folio_identity_unavailable" }, 403);
+  }
+
+  const subjectHash = await folioSubject(identity);
+  if (!subjectHash) return json({ error:"Authenticated identity is incomplete.", code:"folio_identity_incomplete" }, 403);
+
+  await ensureFolioTables(env.RECEIVING_DB);
+  const now = new Date().toISOString();
+  await env.RECEIVING_DB.prepare(
+    "INSERT INTO folio_relationships (id,name,state,created_at,updated_at) VALUES (?,?,?,?,?) " +
+    "ON CONFLICT(id) DO UPDATE SET updated_at=excluded.updated_at"
+  ).bind("ten","Ten","working",now,now).run();
+  await env.RECEIVING_DB.prepare(
+    "INSERT INTO folio_memberships (relationship_id,subject_hash,role,active,created_at) VALUES (?,?,?,?,?) " +
+    "ON CONFLICT(relationship_id,subject_hash) DO UPDATE SET active=1"
+  ).bind("ten",subjectHash,"holder",1,now).run();
+
+  const member = await env.RECEIVING_DB.prepare(
+    "SELECT active FROM folio_memberships WHERE relationship_id=? AND subject_hash=?"
+  ).bind("ten",subjectHash).first();
+  if (Number(member?.active || 0) !== 1) return json({ error:"This folio is not available to this identity.", code:"folio_not_authorized" }, 403);
+
+  if (url.pathname === "/folio/health") {
+    return json({ ok:true, authenticated:true, relationship:"ten", storage:"d1", private:true });
+  }
+
+  const count = await env.RECEIVING_DB.prepare(
+    "SELECT COUNT(*) AS n FROM folio_leaves WHERE relationship_id=? AND released_at IS NULL"
+  ).bind("ten").first();
+
+  return new Response(folioHtml({ leafCount:Number(count?.n || 0) }), {
+    status:200,
+    headers:{
+      "Content-Type":"text/html; charset=utf-8",
+      "Cache-Control":"no-store",
+      "X-Robots-Tag":"noindex, nofollow",
+      ...workerHeaders()
+    }
+  });
+}
+
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const requestId = crypto.randomUUID();
+
+    if (request.method === "GET" && (url.pathname === "/folio" || url.pathname === "/folio/" || url.pathname === "/folio/health")) {
+      return authenticatedFolio(request, env, ctx, url);
+    }
 
     if (request.method === "GET" && url.pathname === "/health") {
       return json({
