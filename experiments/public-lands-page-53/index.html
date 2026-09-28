@@ -456,7 +456,7 @@ tbody tr{cursor:pointer}tbody tr[aria-current="true"] td{background:rgba(132,86,
   async function writePresence(){
     if(!presenceEndpoint||!presenceActive)return;
     try{
-      var r=await fetch(presenceEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({presence_id:presenceId,ground:'public-lands-page-53',footing:encodeFooting(),display_name:presenceName.value.trim(),share_name:presenceShareName.checked})});
+      var r=await fetch(presenceEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({presence_id:presenceId,ground:'public-lands-page-53',footing:encodeFooting(),display_name:presenceShareName.checked?presenceName.value.trim():'',share_name:presenceShareName.checked})});
       if(!r.ok)throw new Error('closed');
       presenceStatus.textContent='You are present here. Your pockets remain separate.';await readPresence();
     }catch(_){presenceStatus.textContent='Shared presence is not open on this ground yet.';presenceActive=false;clearInterval(presenceTimer);clearInterval(presencePoll)}

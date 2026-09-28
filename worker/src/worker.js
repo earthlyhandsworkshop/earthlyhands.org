@@ -647,8 +647,8 @@ export default {
         const presenceId = cleanListenValue(body?.presence_id, 80);
         const ground = cleanListenValue(body?.ground, 120);
         const footing = cleanListenValue(body?.footing, 160);
-        const displayName = cleanListenValue(body?.display_name, 80);
         const shareName = body?.share_name === true ? 1 : 0;
+        const displayName = shareName === 1 ? cleanListenValue(body?.display_name, 80) : "";
         if (!presenceId || !ground) return json({ error: "Presence and ground are required.", code: "presence_incomplete", request_id: requestId }, 400, corsHeaders(origin));
         try {
           await ensurePresenceTable(env.RECEIVING_DB);

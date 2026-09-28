@@ -203,7 +203,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
       presence_id:presenceId,
       ground:groundId,
       footing:"working table",
-      display_name:presenceName.value.trim(),
+      display_name:presenceShareName.checked?presenceName.value.trim():"",
       share_name:presenceShareName.checked
     };
     try{
