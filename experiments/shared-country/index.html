@@ -42,7 +42,7 @@
       }
     </script>
     <script>document.documentElement.className = "js";</script>
-    <link rel="stylesheet" href="../../style.css?v=d94e1fea4689" />
+    <link rel="stylesheet" href="../../style.css?v=folio1" />
   </head>
   <body data-lamp="lit" data-ground="night" data-discovery="closed" data-thought="none">
     <a class="skip-link" href="#threshold">Skip to the ground</a>
@@ -63,6 +63,7 @@
               <button type="button" class="view-mode" data-dawson-view="map" aria-pressed="false" hidden>Map</button>
               <button type="button" class="view-mode" data-dawson-view="people" aria-pressed="false" hidden>People</button>
               <button type="button" class="view-mode" data-dawson-view="jacket" aria-pressed="false" hidden>Jacket</button>
+              <button type="button" class="view-mode" data-dawson-view="folio" aria-pressed="false" hidden>Folio</button>
             </div>
           </div>
 
@@ -114,6 +115,16 @@
                 <span id="camp-jacket-context"></span>
               </header>
               <div class="camp-jacket-body"></div>
+            </section>
+            <section class="camp-jacket camp-folio" id="camp-folio" hidden aria-labelledby="camp-folio-title">
+              <header class="jacket-head">
+                <div>
+                  <p>Carried folio · browser-local prototype</p>
+                  <h2 id="camp-folio-title">What did you keep?</h2>
+                </div>
+                <span id="camp-folio-context">The visit may reset. What you chose to carry stays here.</span>
+              </header>
+              <div class="camp-folio-body"></div>
             </section>
           </div>
 
@@ -313,6 +324,6 @@
     <script src="../../config.js?v=64aae42b52b2"></script>
     <script src="../../public-listening.js?v=1"></script>
     <script src="../../public-wayfinding.js?v=930ebdb27274"></script>
-    <script src="../../script.js?v=cc6e67b056ea"></script>
+    <script src="../../script.js?v=folio1"></script>
   </body>
 </html>
