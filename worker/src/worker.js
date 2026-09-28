@@ -289,6 +289,16 @@ async function ensureFolioTables(db) {
     "updated_at TEXT NOT NULL" +
     ")"
   ).run();
+  await db.prepare(
+    "CREATE TABLE IF NOT EXISTS folio_leaf_reads (" +
+    "relationship_id TEXT NOT NULL," +
+    "subject_hash TEXT NOT NULL," +
+    "leaf_id TEXT NOT NULL," +
+    "seen_updated_at TEXT NOT NULL," +
+    "seen_at TEXT NOT NULL," +
+    "PRIMARY KEY (relationship_id,subject_hash,leaf_id)" +
+    ")"
+  ).run();
 }
 
 function escapeHtml(value) {
@@ -304,7 +314,9 @@ function folioHtml({ leaves = [] } = {}) {
   const cards = leaves.map((leaf, index) => {
     const body = escapeHtml(leaf.body || "").replaceAll("\n","<br>");
     const source = escapeHtml(leaf.source_pointer || "");
-    return `<article class="leaf" data-leaf="${escapeHtml(leaf.id)}">
+    const attention = leaf.changed_since_seen ? '<span class="leaf-change">changed</span>' : (leaf.never_opened ? '<span class="leaf-new">new</span>' : '');
+    return `<article class="leaf" data-leaf="${escapeHtml(leaf.id)}" data-updated="${escapeHtml(leaf.updated_at || "")}">
+      ${attention}
       <button class="leaf-open" type="button" aria-expanded="false">
         <span class="leaf-num">${String(index + 1).padStart(2,"0")}</span>
         <span class="leaf-main">
@@ -341,7 +353,7 @@ h1{font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.88;letter-spaci
 .body{padding:clamp(.7rem,2vw,1.2rem)}.folio-status{margin-bottom:.75rem;color:var(--muted);font:.56rem/1.35 var(--mono);text-transform:uppercase;letter-spacing:.04em}
 .leaves{border:1px solid var(--rule);background:var(--wash)}.leaf{border-bottom:1px solid var(--hair)}.leaf:last-child{border-bottom:0}
 .leaf-open{width:100%;display:grid;grid-template-columns:2.2rem minmax(0,1fr) auto;gap:.65rem;align-items:start;border:0;background:transparent;padding:.8rem;text-align:left;cursor:pointer}.leaf-open:hover{background:rgba(255,255,255,.1)}
-.leaf-num,.leaf-kind,.leaf-pull{font:.48rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}.leaf-main{min-width:0}.leaf-main strong{display:block;margin:.1rem 0;font-size:1.18rem;font-weight:400;line-height:1.05}.leaf-why{display:block;color:var(--muted);font-size:.88rem;max-width:48rem}.leaf-pull{color:var(--rust)}
+.leaf-num,.leaf-kind,.leaf-pull,.leaf-change,.leaf-new{font:.48rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}.leaf-change,.leaf-new{display:inline-block;margin:.45rem .8rem 0;color:var(--rust);border-bottom:1px solid var(--rust)}.leaf-main{min-width:0}.leaf-main strong{display:block;margin:.1rem 0;font-size:1.18rem;font-weight:400;line-height:1.05}.leaf-why{display:block;color:var(--muted);font-size:.88rem;max-width:48rem}.leaf-pull{color:var(--rust)}
 .leaf-body{border-top:1px solid var(--hair);padding:1rem 1rem 1.2rem 2.85rem}.leaf-prose{max-width:52rem;font-size:1.04rem;line-height:1.58}.quiet{color:var(--muted)}
 .provenance{max-width:52rem;margin-top:1rem;border-top:1px solid var(--hair);padding-top:.65rem}.provenance summary{cursor:pointer;font:.55rem/1.3 var(--mono);text-transform:uppercase;color:var(--muted)}.provenance p{overflow-wrap:anywhere}
 .leaf-focus{margin-top:1rem;border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.12rem 0;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
@@ -367,7 +379,12 @@ document.addEventListener("click",(event)=>{
   const opener=event.target.closest(".leaf-open");
   if(opener){
     const leaf=opener.closest(".leaf"),body=leaf.querySelector(".leaf-body"),open=body.hidden;
-    body.hidden=!open;opener.setAttribute("aria-expanded",String(open));return;
+    body.hidden=!open;opener.setAttribute("aria-expanded",String(open));
+    if(open){
+      fetch("/folio/seen",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({leaf_id:leaf.dataset.leaf,updated_at:leaf.dataset.updated})}).catch(()=>{});
+      leaf.querySelector(".leaf-change")?.remove();leaf.querySelector(".leaf-new")?.remove();
+    }
+    return;
   }
   const take=event.target.closest(".leaf-focus");
   if(take){
@@ -384,6 +401,15 @@ document.addEventListener("click",(event)=>{
 </body></html>`;
 }
 
+function folioEmailAllowed(identity, env) {
+  const email = String(identity?.email || "").trim().toLowerCase();
+  const allowed = String(env.FOLIO_ALLOWED_EMAILS || "")
+    .split(",")
+    .map((value) => value.trim().toLowerCase())
+    .filter(Boolean);
+  return Boolean(email && allowed.includes(email));
+}
+
 async function authenticatedFolio(request, env, ctx, url) {
   if (!ctx?.access) {
     return json({ error:"Access required.", code:"folio_access_required" }, 403);
@@ -397,6 +423,13 @@ async function authenticatedFolio(request, env, ctx, url) {
     identity = await ctx.access.getIdentity();
   } catch {
     return json({ error:"Authenticated identity could not be read.", code:"folio_identity_unavailable" }, 403);
+  }
+
+  if (!String(env.FOLIO_ALLOWED_EMAILS || "").trim()) {
+    return json({ error:"The private folio allowlist is not configured.", code:"folio_allowlist_missing" }, 503);
+  }
+  if (!folioEmailAllowed(identity, env)) {
+    return json({ error:"This authenticated identity is not on the private folio allowlist.", code:"folio_not_authorized" }, 403);
   }
 
   const subjectHash = await folioSubject(identity);
@@ -419,14 +452,38 @@ async function authenticatedFolio(request, env, ctx, url) {
   if (Number(member?.active || 0) !== 1) return json({ error:"This folio is not available to this identity.", code:"folio_not_authorized" }, 403);
 
   if (url.pathname === "/folio/health") {
-    return json({ ok:true, authenticated:true, relationship:"ten", storage:"d1", private:true });
+    return json({ ok:true, authenticated:true, relationship:"ten", storage:"d1", private:true, allowlist:"worker-enforced" });
+  }
+
+  if (request.method === "POST" && url.pathname === "/folio/seen") {
+    let body = {};
+    try { body = await request.json(); } catch {}
+    const leafId = String(body?.leaf_id || "").trim().slice(0,160);
+    const seenUpdatedAt = String(body?.updated_at || "").trim().slice(0,80);
+    if (!leafId || !seenUpdatedAt) return json({ error:"Leaf and version are required.", code:"folio_seen_incomplete" }, 400);
+    const leaf = await env.RECEIVING_DB.prepare(
+      "SELECT updated_at FROM folio_leaves WHERE relationship_id=? AND id=? AND released_at IS NULL"
+    ).bind("ten",leafId).first();
+    if (!leaf) return json({ error:"Leaf not found.", code:"folio_leaf_not_found" }, 404);
+    const safeSeen = String(leaf.updated_at || "") === seenUpdatedAt ? seenUpdatedAt : String(leaf.updated_at || "");
+    await env.RECEIVING_DB.prepare(
+      "INSERT INTO folio_leaf_reads (relationship_id,subject_hash,leaf_id,seen_updated_at,seen_at) VALUES (?,?,?,?,?) " +
+      "ON CONFLICT(relationship_id,subject_hash,leaf_id) DO UPDATE SET seen_updated_at=excluded.seen_updated_at,seen_at=excluded.seen_at"
+    ).bind("ten",subjectHash,leafId,safeSeen,new Date().toISOString()).run();
+    return json({ ok:true, leaf_id:leafId, seen_updated_at:safeSeen });
   }
 
   const rows = await env.RECEIVING_DB.prepare(
-    "SELECT id,object_id,kind,title,why_here,body,source_pointer,publication_state,position,updated_at " +
-    "FROM folio_leaves WHERE relationship_id=? AND released_at IS NULL ORDER BY position ASC, updated_at DESC LIMIT 80"
-  ).bind("ten").all();
-  const leaves = rows?.results || [];
+    "SELECT l.id,l.object_id,l.kind,l.title,l.why_here,l.body,l.source_pointer,l.publication_state,l.position,l.updated_at," +
+    "r.seen_updated_at AS seen_updated_at " +
+    "FROM folio_leaves l LEFT JOIN folio_leaf_reads r ON r.relationship_id=l.relationship_id AND r.leaf_id=l.id AND r.subject_hash=? " +
+    "WHERE l.relationship_id=? AND l.released_at IS NULL ORDER BY l.position ASC,l.updated_at DESC LIMIT 80"
+  ).bind(subjectHash,"ten").all();
+  const leaves = (rows?.results || []).map((leaf) => ({
+    ...leaf,
+    changed_since_seen: Boolean(leaf.seen_updated_at && String(leaf.updated_at || "") > String(leaf.seen_updated_at || "")),
+    never_opened: !leaf.seen_updated_at
+  }));
 
   return new Response(folioHtml({ leaves }), {
     status:200,
@@ -444,7 +501,8 @@ export default {
     const url = new URL(request.url);
     const requestId = crypto.randomUUID();
 
-    if (request.method === "GET" && (url.pathname === "/folio" || url.pathname === "/folio/" || url.pathname === "/folio/health")) {
+    if ((request.method === "GET" && (url.pathname === "/folio" || url.pathname === "/folio/" || url.pathname === "/folio/health")) ||
+        (request.method === "POST" && url.pathname === "/folio/seen")) {
       return authenticatedFolio(request, env, ctx, url);
     }
 
