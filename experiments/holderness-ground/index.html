@@ -506,6 +506,7 @@ footer{padding:1.3rem 1.4rem 2rem;font:11px/1.5 system-ui,sans-serif;display:fle
     if(!keepGround) return;
     const held = folioItems().some(item => item.key === 'ground:holderness-turnpike-agency-relation');
     keepGround.textContent = held ? 'Update carried state → Folio' : 'Keep this relation → Folio';
+    if(openFolio) openFolio.hidden = !held;
   }
 
   keepGround?.addEventListener('click', () => {
