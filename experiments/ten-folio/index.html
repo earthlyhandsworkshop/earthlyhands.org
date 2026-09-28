@@ -79,6 +79,8 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 .evidence-grid{display:grid;gap:.7rem}
 .evidence-card{position:relative;border:1px solid rgba(76,70,60,.72);background:rgba(255,255,255,.095);box-shadow:0 6px 16px rgba(45,35,25,.035),0 1px 0 rgba(255,255,255,.28) inset;backdrop-filter:blur(.35px);-webkit-backdrop-filter:blur(.35px)}
 .evidence-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.75rem;align-items:start;padding:.75rem .8rem;cursor:pointer}
+.evidence-tools{display:flex;align-items:center;gap:.42rem}
+.expandpiece{border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.1rem 0;cursor:pointer;font:.44rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
 .evidence-head h3{margin:.08rem 0;font-size:1.16rem;font-weight:400}
 .evidence-head p{margin:.25rem 0 0;color:var(--muted);font-size:.83rem}
 .badge{font:.44rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--hair);padding:.24rem .3rem;white-space:nowrap}
@@ -179,37 +181,37 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 
 
 <section class="panel" data-panel="joke"><div class="inner">
- <div class="focusbar"><div><span class="meta">full folio test · present / absent / present / “no Robert here”</span><h2 class="section-title">The Robert Bell joke</h2></div><button data-back-projects>Back to projects</button></div>
+ <div class="focusbar"><div><span class="meta">full folio test · present / absent / present / “no Robert here”</span><h2 class="section-title">The Robert Bell joke</h2></div><div class="actions"><button data-toggle-all>Open all pieces</button><button data-back-projects>Back to projects</button></div></div>
  <div class="sequence"><span>earlier Robert</span><b>→</b><span>different populations</span><b>→</b><span>1837 adjudicated Robert</span><b>→</b><span>1900 approved-location negative</span></div>
 
  <div class="evidence-grid">
   <article class="evidence-card">
-   <div class="evidence-head"><div><span class="meta">controlled earlier occurrence</span><h3>Bell Robert is already in an earlier reserve compilation.</h3><p>RG 75 Entry 259 carries a Bell Robert occurrence. This is an administrative compilation layer, not automatically the original claimant list.</p></div><span class="badge">controlled</span></div>
+   <div class="evidence-head"><div><span class="meta">controlled earlier occurrence</span><h3>Bell Robert is already in an earlier reserve compilation.</h3><p>RG 75 Entry 259 carries a Bell Robert occurrence. This is an administrative compilation layer, not automatically the original claimant list.</p></div><div class="evidence-tools"><button class="expandpiece" data-expand-piece>Full page</button><span class="badge">controlled</span></div></div>
    <div class="evidence-body"><p>The current source-facing spine identifies an earlier Alphabetical List of Choctaw Reserves with Bell Robert in the Leflore district run, source page 26.</p><p class="source-note">Do not merge this occurrence automatically with every later Robert. Its comic job is simply to establish that “Robert exists in the paperwork” is not a late invention.</p><p><a class="open" href="https://docs.google.com/document/d/1Dy6c2dkgR1J6NUmeGj-P-9iMUfe_8-WdTT2TSNpGz08/edit">Open source jacket</a></p></div>
   </article>
 
   <article class="evidence-card">
-   <div class="evidence-head"><div><span class="meta">handwritten true-copy body</span><h3>David 412. Robert 413.</h3><p>OHC_2110 visibly carries David Bell and Robert Bell together in a handwritten claimant body identified as a later true copy of the original.</p></div><span class="badge">controlled</span></div>
+   <div class="evidence-head"><div><span class="meta">handwritten true-copy body</span><h3>David 412. Robert 413.</h3><p>OHC_2110 visibly carries David Bell and Robert Bell together in a handwritten claimant body identified as a later true copy of the original.</p></div><div class="evidence-tools"><button class="expandpiece" data-expand-piece>Full page</button><span class="badge">controlled</span></div></div>
    <div class="evidence-body"><p>Robert is source-visible in the surviving copy. The copy is not the original. Its relation to the earlier reserve compilation and later approved-location population must be demonstrated rather than assumed.</p><p class="source-note">This is one of the joke’s cleanest visual beats because nothing needs to be inferred: David, then Robert, simply sit there.</p><p><a class="open" href="https://docs.google.com/document/d/19ZpJPs_YgropqIUXKMnACX4N8NzRD4EyyKl6EEs0JoQ/edit">Open carrier-sequence jacket</a></p></div>
   </article>
 
   <article class="evidence-card">
-   <div class="evidence-head"><div><span class="meta">selection-pattern question</span><h3>The typed / congressional list looks much thinner.</h3><p>Ten remembers a strong selection pattern in which many European-sounding Bell and McKinney names disappear from the typed body, including names carrying source-written mixed-blood wording in the handwritten material.</p></div><span class="badge">open / re-control</span></div>
+   <div class="evidence-head"><div><span class="meta">selection-pattern question</span><h3>The typed / congressional list looks much thinner.</h3><p>Ten remembers a strong selection pattern in which many European-sounding Bell and McKinney names disappear from the typed body, including names carrying source-written mixed-blood wording in the handwritten material.</p></div><div class="evidence-tools"><button class="expandpiece" data-expand-piece>Full page</button><span class="badge">open / re-control</span></div></div>
    <div class="evidence-body"><p>This folio does not convert that remembered comparison into a settled finding yet.</p><p><strong>Allowed question:</strong> What exact handwritten population was transformed into what exact typed / congressional population, and which names survived or disappeared?</p><p><strong>Not allowed:</strong> infer motive from the selection pattern.</p><p class="source-note">The pattern may become very funny if the source comparison earns it. The motive remains outside the joke unless a source supplies one.</p></div>
   </article>
 
   <article class="evidence-card">
-   <div class="evidence-head"><div><span class="meta">physical-object observation</span><h3>The paper itself has had a life.</h3><p>Ten remembers a handwritten-list cover with an obvious scraped / wiped-looking physical scar, joking that somebody may have wiped a razor blade on it.</p></div><span class="badge">memory / inspect</span></div>
+   <div class="evidence-head"><div><span class="meta">physical-object observation</span><h3>The paper itself has had a life.</h3><p>Ten remembers a handwritten-list cover with an obvious scraped / wiped-looking physical scar, joking that somebody may have wiped a razor blade on it.</p></div><div class="evidence-tools"><button class="expandpiece" data-expand-piece>Full page</button><span class="badge">memory / inspect</span></div></div>
    <div class="evidence-body"><p>The comic image is good. The present folio treats the razor explanation as Ten’s observation/joke until the exact face is reopened and the physical mark is described source-facing.</p><p class="source-note">Damage is real only when the object shows it. Cause remains open.</p></div>
   </article>
 
   <article class="evidence-card">
-   <div class="evidence-head"><div><span class="meta">1837 index grammar</span><h3>Robert returns in the later adjudicative population.</h3><p>The later index carries Bell, Robert (1837). The governing key says the marker identifies claims adjudicated by commissioners.</p></div><span class="badge">controlled brake</span></div>
+   <div class="evidence-head"><div><span class="meta">1837 index grammar</span><h3>Robert returns in the later adjudicative population.</h3><p>The later index carries Bell, Robert (1837). The governing key says the marker identifies claims adjudicated by commissioners.</p></div><div class="evidence-tools"><button class="expandpiece" data-expand-piece>Full page</button><span class="badge">controlled brake</span></div></div>
    <div class="evidence-body"><p><strong>1837 = adjudication route.</strong></p><p><strong>1837 ≠ “added back” by itself.</strong></p><p>The funny thing survives anyway: Robert is present in a later government body after being absent from another relevant population. The missing connective verb is part of the joke’s machinery, not a reason to kill the joke.</p><p><a class="open" href="https://docs.google.com/document/d/10qRM6vLdRzxjlnHL1BnWt0GYAFCw66ZeB15jvFQ9FGE/edit">Open index jacket</a></p></div>
   </article>
 
   <article class="evidence-card">
-   <div class="evidence-head"><div><span class="meta">1900 hearing-room beat</span><h3>“No Robert Bell appears.”</h3><p>In Mary Caroline Atkinson’s examination, the Commission checks the President-approved Article XIV location-roll population it names and says no Robert Bell appears there.</p></div><span class="badge">source-bounded negative</span></div>
+   <div class="evidence-head"><div><span class="meta">1900 hearing-room beat</span><h3>“No Robert Bell appears.”</h3><p>In Mary Caroline Atkinson’s examination, the Commission checks the President-approved Article XIV location-roll population it names and says no Robert Bell appears there.</p></div><div class="evidence-tools"><button class="expandpiece" data-expand-piece>Full page</button><span class="badge">source-bounded negative</span></div></div>
    <div class="evidence-body"><p>This is a real negative, but only for the named approved-location population.</p><p>It does not mean Robert never registered, never claimed, or appears nowhere else in Article XIV records.</p><p class="source-note">The comedy is stronger because the government is not generally clueless here. It is confidently consulting a particular book and giving a bounded answer from that book.</p><p><a class="open" href="https://docs.google.com/document/d/1uWO2B9mC6Of153kMYybmdyZdru4X7M1vbhwyaWP5egI/edit">Open hearing control</a></p></div>
   </article>
  </div>
@@ -249,11 +251,14 @@ tabs.forEach(b=>b.onclick=()=>show(b.dataset.view));
 document.addEventListener("click",e=>{
  const j=e.target.closest("[data-open-joke]");if(j){show("joke");return;}
  const bp=e.target.closest("[data-back-projects]");if(bp){show("projects");return;}
+ const xp=e.target.closest("[data-expand-piece]");if(xp){const card=xp.closest(".evidence-card"),title=card.querySelector("h3")?.textContent||"Evidence body",body=card.querySelector(".evidence-body")?.innerHTML||"";openFocusHTML(title,body);return;}
+ const ta=e.target.closest("[data-toggle-all]");if(ta){const cards=[...document.querySelectorAll('[data-panel="joke"] .evidence-card')],opening=cards.some(x=>!x.classList.contains("open"));cards.forEach(x=>x.classList.toggle("open",opening));ta.textContent=opening?"Close all pieces":"Open all pieces";return;}
  const ec=e.target.closest(".evidence-head");if(ec){ec.parentElement.classList.toggle("open");return;}
  const fc=e.target.closest(".focusable");if(fc){openFocus(fc.dataset.focusTitle||"",fc.dataset.focusBody||"");return;}
 });
 const focus=document.getElementById("fullfocus"),focusTitle=document.getElementById("focus-title"),focusBody=document.getElementById("focus-body");
 function openFocus(title,body){focusTitle.textContent=title;focusBody.textContent=body;focus.classList.add("open");focus.setAttribute("aria-hidden","false");document.documentElement.style.overflow="hidden";}
+function openFocusHTML(title,html){focusTitle.textContent=title;focusBody.innerHTML=html;focus.classList.add("open");focus.setAttribute("aria-hidden","false");document.documentElement.style.overflow="hidden";}
 function closeFocus(){focus.classList.remove("open");focus.setAttribute("aria-hidden","true");document.documentElement.style.overflow="";}
 document.getElementById("closefocus").onclick=closeFocus;
 const NOTE_KEY="earthly-hands-ten-folio-notes-v1";
