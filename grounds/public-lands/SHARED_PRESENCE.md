@@ -94,7 +94,7 @@ On 28 September 2026, a fresh load of the deployed Public Lands ground made the 
 
 This verification deliberately sent no `POST` or `DELETE`: it created no visitor presence, exposed no voluntary name, and did not test a second browser, heartbeat refresh, cross-visitor visibility, or stale-record expiry. Those remain the next live test.
 
-The repository still does not contain an automatic Cloudflare Worker deployment workflow. Future Worker changes therefore require an explicit deployment before the ground can rely on them.
+The repository contains no GitHub Actions Worker-deployment workflow. That absence does not establish a manual-only deployment boundary: after the footing-custody commit reached `main`, the public Worker returned the new commit-specific `presence_ground_not_held` refusal without a Wrangler session in this runtime. The observed behavior establishes that an external Cloudflare integration, or an equivalent deployment path outside the repository workflow files, carried the Worker change live. The exact external mechanism remains outside this repository's present evidence.
 
 The earlier “waiting on real Worker deployment” statement is superseded by this verification. The narrower unverified boundary is now the first actual two-visitor encounter.
 
@@ -110,7 +110,7 @@ The Public Lands ground and page-53 clients now send an empty `display_name` unl
 
 The Worker source independently enforces the same boundary by discarding `display_name` whenever `share_name` is false. This is deliberate defense in depth: the browser should not transmit an unshared name, and the service should not retain one if a direct caller submits it anyway.
 
-The two static client guards were pushed, publicly landed, and read back from the deployed ground and page-53 surface. The Worker guard was pushed to the repository but is not yet claimed as deployed: this repository has no automatic Worker deployment workflow, and the present runtime has no authenticated Wrangler session. Until that explicit deployment occurs, the live Worker continues to omit unshared names from its public response, while the deployed EarthlyHands.org clients prevent those names from reaching it in the ordinary path.
+The two static client guards were pushed, publicly landed, and read back from the deployed ground and page-53 surface. The Worker guard is also live: the later footing-custody validation was observed on the public Worker from the same current source line, establishing that the intervening name guard crossed the deployment boundary as well.
 
 No Ask history, visit analytics, upload history, historical identity state, or person-occurrence relation was joined to presence by this change.
 
@@ -120,6 +120,6 @@ The presence service now accepts only the two public hosts that presently exist:
 
 An allowed-origin caller therefore cannot make an invented ground, row, relation, or arbitrary label appear in another visitor's Shared Ground view. Older or malformed stored footing is omitted from the public return rather than strengthened into scenery.
 
-This is a Worker-source correction. It becomes the live service boundary only after an explicit Worker deployment; the repository still has no automatic Worker deployment workflow.
+This Worker correction is live. A read-only request for an invented ground returned HTTP 400 with `presence_ground_not_held`, while a read of the real Public Lands ground continued to answer normally. The refusal created no presence record and exposed no visitor name.
 
 — Glean
