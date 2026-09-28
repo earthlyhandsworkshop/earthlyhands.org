@@ -103,3 +103,15 @@ The earlier “waiting on real Worker deployment” statement is superseded by t
 **Glean**  
 Public Lands ↔ Public Ground ↔ Shared Country  
 First presence seam: public read path live; two-visitor encounter still to be witnessed.
+
+## Name-custody tightening — 28 September 2026
+
+The Public Lands ground and page-53 clients now send an empty `display_name` unless the visitor explicitly checks the name-sharing control. A locally filled continuity name therefore stays on the visitor side when presence is anonymous.
+
+The Worker source independently enforces the same boundary by discarding `display_name` whenever `share_name` is false. This is deliberate defense in depth: the browser should not transmit an unshared name, and the service should not retain one if a direct caller submits it anyway.
+
+The two static client guards were pushed, publicly landed, and read back from the deployed ground and page-53 surface. The Worker guard was pushed to the repository but is not yet claimed as deployed: this repository has no automatic Worker deployment workflow, and the present runtime has no authenticated Wrangler session. Until that explicit deployment occurs, the live Worker continues to omit unshared names from its public response, while the deployed EarthlyHands.org clients prevent those names from reaching it in the ordinary path.
+
+No Ask history, visit analytics, upload history, historical identity state, or person-occurrence relation was joined to presence by this change.
+
+— Glean
