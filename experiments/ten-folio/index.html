@@ -94,10 +94,13 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 .witbench{margin-top:1rem;border:1px solid var(--rule);padding:.9rem;background:rgba(255,255,255,.075)}
 .witbench h3{margin:0 0 .45rem;font-weight:400;font-size:1.35rem}
 .witbench p{margin:.42rem 0}
-.fullfocus{position:fixed;inset:.35rem;z-index:30;overflow:auto;background:rgba(235,227,211,.965);border:1px solid var(--rule);box-shadow:0 20px 70px rgba(30,24,18,.22);padding:1rem;display:none}
+.fullfocus{position:fixed;inset:.35rem;z-index:30;overflow-y:auto;overflow-x:hidden;max-width:calc(100vw - .7rem);background:rgba(235,227,211,.965);border:1px solid var(--rule);box-shadow:0 20px 70px rgba(30,24,18,.22);padding:1rem;display:none;-webkit-text-size-adjust:100%}
 .fullfocus.open{display:block}
-.fullfocus .closefocus{position:sticky;top:0;float:right;border:1px solid var(--rule);background:var(--sheet);padding:.38rem .5rem;cursor:pointer;font:.48rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
-.fullfocus .focuscontent{max-width:62rem;margin:2rem auto}
+.fullfocus .closefocus{position:sticky;z-index:4;top:.15rem;display:block;margin-left:auto;border:1px solid var(--rule);background:var(--sheet);padding:.45rem .58rem;cursor:pointer;font:.58rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.fullfocus .focuscontent{width:min(100%,62rem);min-width:0;max-width:62rem;margin:1rem auto 2rem;font-family:var(--serif);text-transform:none;overflow-wrap:anywhere;word-break:normal}
+.fullfocus .focuscontent .bearing{font-family:var(--mono);font-size:.52rem}
+.fullfocus #focus-title{margin:.28rem 0 .85rem;font-family:var(--serif);font-size:clamp(2rem,5vw,3.8rem);line-height:.94;text-transform:none;overflow-wrap:anywhere}
+.fullfocus #focus-body{max-width:46rem;font-family:var(--serif);font-size:1.08rem!important;line-height:1.55!important;text-transform:none;white-space:normal;overflow-wrap:anywhere}
 
 .aperture-switch{display:flex;gap:.35rem;align-items:center;margin-top:.55rem}
 .aperture-switch button{border:1px solid var(--hair);background:transparent;padding:.3rem .45rem;cursor:pointer;font:.46rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}
@@ -135,8 +138,13 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
  .sequence span{width:100%;white-space:normal}
  .focusbar{align-items:flex-start;flex-direction:column}
  .focusbar .actions{width:100%}
- .fullfocus{inset:.2rem;padding:.65rem}
- .fullfocus .focuscontent{width:100%;max-width:none;margin:1.6rem 0 0}
+ .fullfocus{inset:0;max-width:100vw;width:100vw;padding:max(.65rem,env(safe-area-inset-top)) .75rem max(1rem,env(safe-area-inset-bottom));border-left:0;border-right:0}
+ .fullfocus .closefocus{top:max(.15rem,env(safe-area-inset-top));margin-bottom:.65rem;font-size:.62rem}
+ .fullfocus .focuscontent{width:100%;min-width:0;max-width:100%;margin:0 auto 2rem;padding:0}
+ .fullfocus #focus-title{font-size:clamp(1.75rem,8vw,2.55rem);line-height:.96;margin:.2rem 0 .75rem}
+ .fullfocus #focus-body{width:100%;max-width:100%;font-size:1rem!important;line-height:1.52!important}
+ .fullfocus #focus-body *{max-width:100%;overflow-wrap:anywhere}
+
 }
 @media(max-width:34rem){
  .box{grid-template-columns:4.7rem minmax(0,1fr)}
@@ -153,6 +161,9 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
  .evidence-head p,.evidence-body p{font-size:.82rem}
  .witbench{padding:.72rem}
  .witbench h3{font-size:1.18rem}
+ .fullfocus{padding-left:.72rem;padding-right:.72rem}
+ .fullfocus #focus-title{font-size:1.85rem}
+ .fullfocus #focus-body{font-size:.98rem!important}
 }
 </style>
 </head>
