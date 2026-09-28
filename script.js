@@ -767,7 +767,7 @@
     const mapButton = document.querySelector('[data-dawson-view="map"]');
     const sourcesButton = document.querySelector('[data-dawson-view="sources"]');
     const jacketButton = document.querySelector('[data-dawson-view="jacket"]');
-    const folioButton = document.querySelector('[data-dawson-view="folio"]');
+    const folioButton = document.querySelector("#folio-door");
 
     if (peopleButton) peopleButton.hidden = !discoveryOpen || encounteredPeopleCount() === 0;
     if (mapButton) mapButton.hidden = !discoveryOpen || !mapIsEarned();
@@ -1787,9 +1787,8 @@
     if (!clean || asking) return;
 
     if (asksForFolio(clean) && folioHasItems()) {
-      openDiscovery();
       keepTenWords(clean);
-      setDawsonView("folio");
+      window.location.assign("/experiments/ten-folio/#game");
       return;
     }
 
