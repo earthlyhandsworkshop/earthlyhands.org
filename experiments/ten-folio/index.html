@@ -98,6 +98,19 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 .fullfocus.open{display:block}
 .fullfocus .closefocus{position:sticky;top:0;float:right;border:1px solid var(--rule);background:var(--sheet);padding:.38rem .5rem;cursor:pointer;font:.48rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
 .fullfocus .focuscontent{max-width:62rem;margin:2rem auto}
+
+.aperture-switch{display:flex;gap:.35rem;align-items:center;margin-top:.55rem}
+.aperture-switch button{border:1px solid var(--hair);background:transparent;padding:.3rem .45rem;cursor:pointer;font:.46rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.aperture-switch button[aria-pressed="true"]{border-color:var(--rust);background:rgba(135,87,58,.07)}
+.game-empty{color:var(--muted);max-width:40rem}
+.game-groups{display:grid;gap:1rem}
+.game-group{border-top:1px solid var(--rule);padding-top:.7rem}
+.game-group h3{margin:0 0 .45rem;color:var(--muted);font:.52rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.game-card{border-bottom:1px solid var(--hair);padding:.7rem 0}
+.game-card strong{font-weight:400;font-size:1.08rem}
+.game-card p{margin:.28rem 0 0;color:var(--muted);font-size:.88rem}
+.game-card small{display:block;margin-top:.3rem;color:var(--rust);font:.45rem/1.2 var(--mono)}
+
 @media(max-width:58rem){
  html,body{max-width:100%;overflow-x:hidden}
  .shell{width:calc(100% - .35rem);max-width:100%}
@@ -145,7 +158,7 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 </head>
 <body data-receiving-target="Ten folio box" data-receiving-object="folio:ten">
 <div class="shell">
-<header class="top"><strong>Earthly Hands Workshop</strong><span>Ten · working folio box · not authenticated</span></header>
+<header class="top"><strong>Earthly Hands Workshop</strong><span>Ten · workshop folio · continuing</span></header>
 <main class="box">
 <aside class="rail" aria-label="Ten folio doors">
  <div class="mark"><small>carried box</small><strong>Ten</strong></div>
@@ -165,6 +178,10 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
  <h1 id="title">What is alive now?</h1>
  <form class="command" id="command"><input id="command-input" autocomplete="off" maxlength="600" placeholder="What do you want to look at?"><button>Load</button></form>
  <p class="command-answer" id="command-answer"></p>
+ <div class="aperture-switch" aria-label="Folio aperture">
+  <button type="button" id="workshop-mode" aria-pressed="true">Workshop folio</button>
+  <button type="button" id="game-mode" aria-pressed="false">Game folio</button>
+ </div>
 </header>
 
 <section class="panel active" data-panel="now"><div class="inner">
@@ -184,10 +201,13 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 <section class="panel" data-panel="projects"><div class="inner">
  <h2 class="section-title">Projects in reach</h2>
  <div class="stack">
+  <div class="row"><div><h3>Ravel — What Counts as Historical Ground</h3><span class="meta">Holderness specimen · source-controlled ground</span><p>Place before point. Relation before line. Source verb before geometry. A bounded test of how a visitor can stand somewhere historically without pretending to reconstruct the past.</p></div><a class="open" href="https://docs.google.com/document/d/127xfr6MS0XXmBQK0ns2prsRb2edJtv5He-fiXU01CJM/edit">Open</a></div>
   <div class="row"><div><h3>Two Families, One Robert</h3><span class="meta">film · working</span><p>Active feature treatment and current project-view experiment.</p></div><a class="open" href="https://docs.google.com/document/d/16Xwm2f3Vp1R2f1DCe7i-sL3r4J0tiH9h8SFPsl4EX1I/edit">Open view</a></div>
   <div class="row"><div><h3>Robert Bell identity route</h3><span class="meta">working folio</span><p>Operate testimony, inversion, configuration, trace, returns, questions, and notes on the held body.</p></div><a class="open" href="/experiments/robert-bell-folio/">Open folio</a></div>
   <div class="row"><div><h3>Robert Bell joke — full folio test</h3><span class="meta">current experiment · source / observation / memory separated</span><p>Lay the whole documentary sequence out, enlarge each piece, and see whether the wit survives the brakes.</p></div><button class="open" data-open-joke>Open here</button></div>
   <div class="row"><div><h3>Shared Country</h3><span class="meta">public-ground experiment</span><p>First-person documentary ground, movement, access, source descent, and Ask the Ground.</p></div><a class="open" href="/experiments/shared-country/">Enter</a></div>
+  <div class="row"><div><h3>Workshop Recent</h3><span class="meta">road across current work</span><p>Use Recent when you want to scan broadly instead of following one project.</p></div><a class="open" href="/recent/">Open Recent</a></div>
+  <div class="row"><div><h3>15 — Sandbox</h3><span class="meta">soft working ground</span><p>Current unfinished bodies, mechanics, experiments, and things under active pressure.</p></div><a class="open" href="https://drive.google.com/drive/folders/1MP8EX_h7pyuP-Qip6n41DTT0btZZTrTu">Open 15</a></div>
  </div>
 </div></section>
 
@@ -258,6 +278,13 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
  </div>
 </div></section>
 
+<section class="panel" data-panel="game"><div class="inner">
+ <h2 class="section-title">Shared Country carried folio</h2>
+ <div class="notice"><p><strong>Same Ten. Smaller aperture.</strong></p><p>This side carries only what you chose to keep while inhabiting Shared Country. It does not replace the Workshop folio.</p></div>
+ <div id="game-folio-body"></div>
+ <div class="actions"><a class="open" href="/experiments/shared-country/">Return to Shared Country</a></div>
+</div></section>
+
 <section class="panel" data-panel="notes"><div class="inner">
  <h2 class="section-title">Carry something</h2>
  <div class="note-grid"><div class="compose"><textarea id="note-input" placeholder="What caught? What should still be here when you come back?"></textarea><div class="actions"><button id="save-note">Save</button><button id="copy-notes">Copy all</button><button id="clear-notes">Clear local</button></div></div><aside class="held"><div id="note-list"></div></aside></div>
@@ -274,11 +301,46 @@ const views={
  instruments:["instruments · use, don't admire","What can you work with?"],
  nearby:["neighbor light · relevance without flood","What is close enough to matter?"],
  notes:["local carrying surface","What caught?"],
+ game:["Shared Country · carried aperture","What did you carry out of the ground?"],
  joke:["Robert Bell · full folio test","Can the whole joke survive inspection?"]
 };
 const tabs=[...document.querySelectorAll("[data-view]")],panels=[...document.querySelectorAll("[data-panel]")];
 function show(v){if(!views[v])return;tabs.forEach(b=>b.setAttribute("aria-selected",String(b.dataset.view===v)));panels.forEach(p=>p.classList.toggle("active",p.dataset.panel===v));document.getElementById("bearing").textContent=views[v][0];document.getElementById("title").textContent=views[v][1];history.replaceState(null,"","#"+v);}
-tabs.forEach(b=>b.onclick=()=>show(b.dataset.view));
+
+const GAME_FOLIO_KEY="earthly-hands-shared-country-folio-v1";
+function gameItems(){try{const x=JSON.parse(localStorage.getItem(GAME_FOLIO_KEY)||"[]");return Array.isArray(x)?x:[]}catch(_){return[]}}
+function renderGameFolio(){
+ const host=document.getElementById("game-folio-body"); if(!host)return;
+ const items=gameItems(); host.replaceChildren();
+ if(!items.length){const p=document.createElement("p");p.className="game-empty";p.textContent="Nothing carried from Shared Country yet. When something catches there, Keep → Folio and it will appear here.";host.append(p);return;}
+ const groups=new Map();
+ items.forEach(item=>{const k=item.kind||"other";if(!groups.has(k))groups.set(k,[]);groups.get(k).push(item)});
+ const wrap=document.createElement("div");wrap.className="game-groups";
+ groups.forEach((held,kind)=>{
+   const section=document.createElement("section");section.className="game-group";
+   const h=document.createElement("h3");h.textContent=kind;section.append(h);
+   held.forEach(item=>{
+     const card=document.createElement("article");card.className="game-card";
+     const strong=document.createElement("strong");strong.textContent=item.title||"Untitled";
+     const p=document.createElement("p");p.textContent=item.note||"";
+     const small=document.createElement("small");small.textContent=[item.place||item.from_ground,item.relation||""].filter(Boolean).join(" · ");
+     card.append(strong,p,small);section.append(card);
+   });
+   wrap.append(section);
+ });
+ host.append(wrap);
+}
+const workshopMode=document.getElementById("workshop-mode"),gameMode=document.getElementById("game-mode");
+function setFolioMode(mode){
+ const game=mode==="game";
+ workshopMode?.setAttribute("aria-pressed",String(!game));
+ gameMode?.setAttribute("aria-pressed",String(game));
+ if(game){renderGameFolio();show("game");}
+ else if(location.hash==="#game"){show("now");}
+}
+workshopMode?.addEventListener("click",()=>setFolioMode("workshop"));
+gameMode?.addEventListener("click",()=>setFolioMode("game"));
+tabs.forEach(b=>b.onclick=()=>{workshopMode?.setAttribute("aria-pressed","true");gameMode?.setAttribute("aria-pressed","false");show(b.dataset.view)});
 document.addEventListener("click",e=>{
  const j=e.target.closest("[data-open-joke]");if(j){show("joke");return;}
  const bp=e.target.closest("[data-back-projects]");if(bp){show("projects");return;}
@@ -332,6 +394,8 @@ async function arrange(raw){
 document.getElementById("command").onsubmit=e=>{e.preventDefault();const i=document.getElementById("command-input"),q=i.value.trim();if(!q)return;arrange(q);i.value="";};
 const initial=location.hash.slice(1);if(views[initial])show(initial);
 [...document.body.childNodes].forEach(n=>{if(n.nodeType===3&&/^\\n\s*$/.test(n.nodeValue||""))n.remove();});
+const initialHash=location.hash.slice(1);
+if(initialHash==="game"){setFolioMode("game");}else if(views[initialHash]){show(initialHash);}
 })();
 </script>
 <script src="/receiving-door.js"></script>
