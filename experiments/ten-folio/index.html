@@ -196,6 +196,7 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 </header>
 
 <section class="panel active" data-panel="now"><div class="inner">
+ <div id="current-work-card" class="notice" hidden></div>
  <div class="notice"><p><strong>Workshop folio specimen · landed snapshot</strong></p><p>This web surface does not automatically ingest private Workshop Recent yet. For live private change, use Workshop Recent below. Game Folio carriage updates locally as you keep things in Shared Country.</p><p class="bearing">last folio landing · 28 Sep 2026 · authenticated live inheritance not yet enabled</p></div>
  <div class="pulse">
   <article class="focusable" data-focus-title="Re-entry pressure" data-focus-body="01 is now canonical footing rather than optional advice. Its live work is not to make everyone read more; it is to let people return, regain enough current state, reset cadence when needed, notice nearby relevance, and begin without reconstructing the Workshop."><small>Current pressure</small><strong>Re-entry is being rebuilt.</strong><p>01 now carries Footing, Neighbor Light, Vocation, Live Relevance, and Return without making all five required reading.</p></article>
@@ -328,6 +329,19 @@ const views={
 const tabs=[...document.querySelectorAll("[data-view]")],panels=[...document.querySelectorAll("[data-panel]")];
 function show(v){if(!views[v])return;tabs.forEach(b=>b.setAttribute("aria-selected",String(b.dataset.view===v)));panels.forEach(p=>p.classList.toggle("active",p.dataset.panel===v));document.getElementById("bearing").textContent=views[v][0];document.getElementById("title").textContent=views[v][1];history.replaceState(null,"","#"+v);}
 
+const CURRENT_WORK_KEY="earthly-hands-ten-folio-current-work-v1";
+function currentWork(){try{const x=JSON.parse(localStorage.getItem(CURRENT_WORK_KEY)||"null");return x&&typeof x==="object"?x:null}catch(_){return null}}
+function renderCurrentWork(){
+ const host=document.getElementById("current-work-card");if(!host)return;
+ const x=currentWork();if(!x||!x.url||!x.title){host.hidden=true;host.innerHTML="";return;}
+ host.hidden=false;
+ const when=x.updated_at?new Date(x.updated_at).toLocaleString():"recent";
+ const a=document.createElement("a");a.className="open";a.href=x.url;a.textContent="Return to "+x.title;
+ const p=document.createElement("p");p.innerHTML="<strong>Current work-attached Folio</strong><br>"+(x.question||"Return to the work where you left it.");
+ const meta=document.createElement("p");meta.className="bearing";meta.textContent="last entered · "+when;
+ host.replaceChildren(p,meta,a);
+}
+renderCurrentWork();
 const GAME_FOLIO_KEY="earthly-hands-shared-country-folio-v1";
 function gameItems(){try{const x=JSON.parse(localStorage.getItem(GAME_FOLIO_KEY)||"[]");return Array.isArray(x)?x:[]}catch(_){return[]}}
 function renderGameFolio(){
@@ -404,11 +418,13 @@ document.getElementById("clear-notes").onclick=()=>{if(confirm("Clear local Ten 
 render();
 function localCommand(q){
  q=q.toLowerCase();
- if(/no particular bargain|particular bargain|blackwell.*robert|robert.*blackwell/.test(q)) return {view:"bargain",reply:"No particular bargain is open at the shared field-work body."};\n if(/robert.*joke|joke.*robert|full joke|analy.*joke/.test(q)) return {view:"joke",reply:"The full Robert Bell joke folio is open."};
+ if(/no particular bargain|particular bargain|blackwell.*robert|robert.*blackwell/.test(q)) return {view:"bargain",reply:"No particular bargain is open at the shared field-work body."};
+ if(/robert.*joke|joke.*robert|full joke|analy.*joke/.test(q)) return {view:"joke",reply:"The full Robert Bell joke folio is open."};
  if(/joke|funny|surprise|glint|nearby/.test(q)) return {view:"nearby",reply:"Nearby is open to whatever is alive enough to matter now."};
  if(/re.?entry|footing|neighbor|vocation|relevance/.test(q)) return {view:"now",reply:"Re-entry footing is open from Now."};
  if(/robert|bell|identity/.test(q)) return {view:"projects",reply:"The Robert Bell working folio is in Projects."};
  if(/film|two families|movie|treatment/.test(q)) return {view:"projects",reply:"The film project view is in Projects."};
+ if(/17|economic independence|economics question|economic question/.test(q)) return {view:"projects",reply:"17 — Economic Independence Instrument is in Projects and may also appear in Current work."};
  if(/machine|instrument|voice|access|folio spec/.test(q)) return {view:"instruments",reply:"The current instruments are in Tools."};
  if(/near|what changed|glint|around/.test(q)) return {view:"nearby",reply:"Nearby light is open."};
  if(/note|remember|carry/.test(q)) return {view:"notes",reply:"Notes are open."};
