@@ -193,13 +193,24 @@ h1{margin:.2rem 0 0;font-size:clamp(2.6rem,7vw,6rem);line-height:.88;font-weight
 <script>
 const tabs=[...document.querySelectorAll('.roomnav button')];
 const rooms=[...document.querySelectorAll('.room')];
-tabs.forEach(btn=>btn.addEventListener('click',()=>{
+function openRoom(id,{scroll=false}={}){
+ const room=document.getElementById(id);
+ const tab=tabs.find(b=>b.dataset.room===id);
+ if(!room||!tab)return;
  tabs.forEach(b=>b.setAttribute('aria-selected','false'));
  rooms.forEach(r=>r.classList.remove('active'));
- btn.setAttribute('aria-selected','true');
- document.getElementById(btn.dataset.room).classList.add('active');
- window.scrollTo({top:0,behavior:'smooth'});
-}));
+ tab.setAttribute('aria-selected','true');
+ room.classList.add('active');
+ if(location.hash!==`#${id}`) history.replaceState(null,'',`#${id}`);
+ if(scroll) window.scrollTo({top:0,behavior:'smooth'});
+}
+tabs.forEach(btn=>btn.addEventListener('click',()=>openRoom(btn.dataset.room,{scroll:true})));
+const first=(location.hash||'').slice(1);
+if(first==='beef'||first==='bargain') openRoom(first);
+window.addEventListener('hashchange',()=>{
+ const id=(location.hash||'').slice(1);
+ if(id==='beef'||id==='bargain') openRoom(id);
+});
 document.querySelectorAll('[data-toggle]').forEach(btn=>btn.addEventListener('click',()=>{
  const el=document.getElementById(btn.dataset.toggle);
  const open=el.classList.toggle('open');
