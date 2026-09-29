@@ -461,7 +461,7 @@ h1{font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.88;letter-spaci
 .leaf-body{border-top:1px solid var(--hair);padding:1rem 1rem 1.2rem 2.85rem}.leaf-prose{max-width:52rem;font-size:1.04rem;line-height:1.58}.quiet{color:var(--muted)}
 .provenance{max-width:52rem;margin-top:1rem;border-top:1px solid var(--hair);padding-top:.65rem}.provenance summary{cursor:pointer;font:.55rem/1.3 var(--mono);text-transform:uppercase;color:var(--muted)}.provenance p{overflow-wrap:anywhere}
 .leaf-focus{margin-top:1rem;border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.12rem 0;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
-.empty{border:1px solid var(--rule);padding:1rem;background:var(--wash)}.empty h2{font-weight:400;margin:0 0 .35rem}.empty p{max-width:40rem}
+.empty{border:1px solid var(--rule);padding:1rem;background:var(--wash)}.empty h2{font-weight:400;margin:0 0 .35rem}.empty p{max-width:40rem}.proof-seed{margin-top:.55rem;border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.18rem 0;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}.proof-note{color:var(--muted);font:.72rem/1.4 var(--mono);margin:.5rem 0 0}
 .focus{position:fixed;inset:.25rem;z-index:20;background:rgba(235,227,211,.98);border:1px solid var(--rule);overflow:auto;padding:1rem;display:none}.focus.open{display:block}.focus-close{position:sticky;top:0;display:block;margin-left:auto;border:1px solid var(--rule);background:var(--sheet);padding:.4rem .55rem;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase}.focus-content{max-width:58rem;margin:1rem auto 3rem}.focus-content .leaf-body{display:block!important;border:0;padding:0}.focus-content .leaf-open{display:none}.focus-content .leaf-prose{font-size:1.12rem;max-width:52rem}
 @media(max-width:38rem){.top{font-size:.44rem}.head{padding:.9rem .75rem}.body{padding:.55rem}.leaf-open{grid-template-columns:1.65rem minmax(0,1fr);padding:.7rem .55rem}.leaf-pull{display:none}.leaf-body{padding:.8rem .7rem 1rem}.leaf-main strong{font-size:1.05rem}.focus{inset:0;border-left:0;border-right:0;padding:.7rem}.focus-content{margin:.5rem 0 2rem}.focus-content .leaf-prose{font-size:1rem}}
 </style>
@@ -474,13 +474,23 @@ h1{font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.88;letter-spaci
 <section class="body">
 <div class="folio-status">${leaves.length} carried leaf${leaves.length===1?"":"s"} · D1-backed · no public cache</div>
 ${offerCards ? `<section class="nearby"><h2>Beside your elbow</h2><p class="nearby-note">A few things may be offered because a real relation brought them near. Nothing here is assignment. Open, keep, or let pass.</p><div class="offers">${offerCards}</div></section>` : ""}
-${cards ? `<div class="leaves">${cards}</div>` : `<div class="empty"><h2>The room is ready.</h2><p>No carried leaves yet. Nearby offers may come and go; only what you keep becomes part of the carried folio.</p></div>`}
+${cards ? `<div class="leaves">${cards}</div>` : `<div class="empty"><h2>The room is ready.</h2><p>No carried leaves yet. Nearby offers may come and go; only what you keep becomes part of the carried folio.</p><button class="proof-seed" type="button" data-proof-seed>Place one harmless proof leaf</button><p class="proof-note">This creates one private D1 leaf only to prove that the folio survives leaving and returning.</p></div>`}
 </section>
 </main>
 <div class="focus" id="focus" aria-hidden="true"><button class="focus-close" type="button">Back to folio</button><div class="focus-content"></div></div>
 <script>
 const focus=document.querySelector("#focus"),focusContent=focus.querySelector(".focus-content");
 document.addEventListener("click",async(event)=>{
+  const proofSeed=event.target.closest("[data-proof-seed]");
+  if(proofSeed){
+    proofSeed.disabled=true;
+    try{
+      const response=await fetch("/folio/seed-proof",{method:"POST"});
+      if(!response.ok)throw new Error("proof seed failed");
+      window.location.reload();
+    }catch(_){proofSeed.disabled=false}
+    return;
+  }
   const offerOpen=event.target.closest("[data-offer-open]");
   if(offerOpen){
     const offer=offerOpen.closest(".offer"),body=offer.querySelector(".offer-body"),open=body.hidden;
@@ -602,6 +612,29 @@ async function authenticatedFolio(request, env, ctx, url) {
     return json({ ok:true, offer_id:offerId, state:action==="keep"?"kept":"released" });
   }
 
+  if (request.method === "POST" && url.pathname === "/folio/seed-proof") {
+    const leafId = "proof:ten-first-private-leaf";
+    const proofNow = new Date().toISOString();
+    await env.RECEIVING_DB.prepare(
+      "INSERT OR IGNORE INTO folio_leaves (id,relationship_id,object_id,kind,title,why_here,body,source_pointer,publication_state,position,created_at,updated_at,released_at) " +
+      "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,NULL)"
+    ).bind(
+      leafId,
+      "ten",
+      "private-folio-persistence-proof",
+      "proof leaf",
+      "The first private leaf",
+      "Placed deliberately to prove that Ten can leave this authenticated folio and return to the same carried body.",
+      "This leaf carries no private Workshop research. Its only job is to prove durable D1 continuity behind the authenticated folio lock.",
+      "Real Folios — durable relationship surface — live proof return",
+      "PRIVATE TO HOLDER",
+      10,
+      proofNow,
+      proofNow
+    ).run();
+    return json({ ok:true, leaf_id:leafId, relationship:"ten", storage:"d1" });
+  }
+
   if (request.method === "POST" && url.pathname === "/folio/seen") {
     let body = {};
     try { body = await request.json(); } catch {}
@@ -655,7 +688,7 @@ export default {
     const requestId = crypto.randomUUID();
 
     if ((request.method === "GET" && (url.pathname === "/folio" || url.pathname === "/folio/" || url.pathname === "/folio/health")) ||
-        (request.method === "POST" && (url.pathname === "/folio/seen" || url.pathname === "/folio/offer-action"))) {
+        (request.method === "POST" && (url.pathname === "/folio/seen" || url.pathname === "/folio/offer-action" || url.pathname === "/folio/seed-proof"))) {
       return authenticatedFolio(request, env, ctx, url);
     }
 
