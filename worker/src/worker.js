@@ -395,7 +395,7 @@ function escapeHtml(value) {
     .replaceAll("'","&#039;");
 }
 
-function folioHtml({ leaves = [], offers = [] } = {}) {
+function folioHtml({ leaves = [], offers = [], relationshipName = "Folio" } = {}) {
   const cards = leaves.map((leaf, index) => {
     const body = escapeHtml(leaf.body || "").replaceAll("\n","<br>");
     const source = escapeHtml(leaf.source_pointer || "");
@@ -442,7 +442,7 @@ function folioHtml({ leaves = [], offers = [] } = {}) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>Ten — Folio</title>
+<title>${escapeHtml(relationshipName)} — Folio</title>
 <style>
 :root{--paper:#ddd3bf;--sheet:#ebe3d3;--ink:#211e18;--muted:#6f675a;--rule:#4c463c;--hair:rgba(33,30,24,.22);--rust:#87573a;--wash:rgba(255,255,255,.14);--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 *{box-sizing:border-box}html{background:#cfc5b1;-webkit-text-size-adjust:100%}body{margin:0;color:var(--ink);font:1rem/1.5 var(--serif);background:linear-gradient(rgba(33,30,24,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(33,30,24,.017) 1px,transparent 1px),var(--paper);background-size:30px 30px,30px 30px,auto;min-height:100vh}
@@ -468,7 +468,7 @@ h1{font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.88;letter-spaci
 </head>
 <body>
 <main class="shell">
-<div class="top"><strong>Earthly Hands Workshop</strong><span>Ten · private · continuing</span></div>
+<div class="top"><strong>Earthly Hands Workshop</strong><span>${escapeHtml(relationshipName)} · private · continuing</span></div>
 <header class="head"><div class="k">authenticated folio</div><h1>Good to see you.</h1><p>Here is what is close enough to work with. Pull depth when it catches; provenance stays one layer down.</p>
 <div class="apertures"><button type="button" aria-pressed="true">Workshop folio</button><button type="button" aria-pressed="false" disabled>Game folio · crossing next</button></div></header>
 <section class="body">
@@ -533,13 +533,43 @@ document.addEventListener("click",async(event)=>{
 </body></html>`;
 }
 
+function folioEmail(identity) {
+  return String(identity?.email || "").trim().toLowerCase();
+}
+
 function folioEmailAllowed(identity, env) {
-  const email = String(identity?.email || "").trim().toLowerCase();
+  const email = folioEmail(identity);
   const allowed = String(env.FOLIO_ALLOWED_EMAILS || "")
     .split(",")
     .map((value) => value.trim().toLowerCase())
     .filter(Boolean);
   return Boolean(email && allowed.includes(email));
+}
+
+function folioRelationshipFor(identity, env) {
+  const email = folioEmail(identity);
+  if (!email) return null;
+
+  const raw = String(env.FOLIO_RELATIONSHIPS_JSON || "").trim();
+  if (raw) {
+    try {
+      const parsed = JSON.parse(raw);
+      const entry = parsed?.[email];
+      if (entry && typeof entry === "object") {
+        const id = String(entry.id || "").trim().toLowerCase().replace(/[^a-z0-9:_-]+/g, "-").slice(0, 80);
+        const name = String(entry.name || entry.id || "").trim().slice(0, 120);
+        if (id && name) return { id, name };
+      }
+    } catch {
+      return null;
+    }
+  }
+
+  if (folioEmailAllowed(identity, env)) {
+    return { id:"ten", name:"Ten" };
+  }
+
+  return null;
 }
 
 async function authenticatedFolio(request, env, ctx, url) {
@@ -564,6 +594,13 @@ async function authenticatedFolio(request, env, ctx, url) {
     return json({ error:"This authenticated identity is not on the private folio allowlist.", code:"folio_not_authorized" }, 403);
   }
 
+  const relationship = folioRelationshipFor(identity, env);
+  if (!relationship) {
+    return json({ error:"This authenticated identity has no folio relationship.", code:"folio_relationship_unresolved" }, 403);
+  }
+  const relationshipId = relationship.id;
+  const relationshipName = relationship.name;
+
   const subjectHash = await folioSubject(identity);
   if (!subjectHash) return json({ error:"Authenticated identity is incomplete.", code:"folio_identity_incomplete" }, 403);
 
@@ -572,19 +609,19 @@ async function authenticatedFolio(request, env, ctx, url) {
   await env.RECEIVING_DB.prepare(
     "INSERT INTO folio_relationships (id,name,state,created_at,updated_at) VALUES (?,?,?,?,?) " +
     "ON CONFLICT(id) DO UPDATE SET updated_at=excluded.updated_at"
-  ).bind("ten","Ten","working",now,now).run();
+  ).bind(relationshipId,relationshipName,"working",now,now).run();
   await env.RECEIVING_DB.prepare(
     "INSERT INTO folio_memberships (relationship_id,subject_hash,role,active,created_at) VALUES (?,?,?,?,?) " +
     "ON CONFLICT(relationship_id,subject_hash) DO UPDATE SET active=1"
-  ).bind("ten",subjectHash,"holder",1,now).run();
+  ).bind(relationshipId,subjectHash,"holder",1,now).run();
 
   const member = await env.RECEIVING_DB.prepare(
     "SELECT active FROM folio_memberships WHERE relationship_id=? AND subject_hash=?"
-  ).bind("ten",subjectHash).first();
+  ).bind(relationshipId,subjectHash).first();
   if (Number(member?.active || 0) !== 1) return json({ error:"This folio is not available to this identity.", code:"folio_not_authorized" }, 403);
 
   if (url.pathname === "/folio/health") {
-    return json({ ok:true, authenticated:true, relationship:"ten", storage:"d1", private:true, allowlist:"worker-enforced" });
+    return json({ ok:true, authenticated:true, relationship:relationshipId, relationship_name:relationshipName, storage:"d1", private:true, allowlist:"worker-enforced" });
   }
 
   if (request.method === "POST" && url.pathname === "/folio/offer-action") {
@@ -595,7 +632,7 @@ async function authenticatedFolio(request, env, ctx, url) {
     if (!offerId || !["keep","release"].includes(action)) return json({ error:"Offer and action are required.", code:"folio_offer_action_incomplete" }, 400);
     const offer = await env.RECEIVING_DB.prepare(
       "SELECT * FROM folio_offers WHERE relationship_id=? AND id=? AND state='offered'"
-    ).bind("ten",offerId).first();
+    ).bind(relationshipId,offerId).first();
     if (!offer) return json({ error:"Offer not found.", code:"folio_offer_not_found" }, 404);
     const actionNow = new Date().toISOString();
     if (action === "keep") {
@@ -604,27 +641,27 @@ async function authenticatedFolio(request, env, ctx, url) {
       await env.RECEIVING_DB.prepare(
         "INSERT OR IGNORE INTO folio_leaves (id,relationship_id,object_id,kind,title,why_here,body,source_pointer,publication_state,position,created_at,updated_at,released_at) " +
         "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,NULL)"
-      ).bind(leafId,"ten",offerId,"offer",String(offer.title||"Offered body"),why,String(offer.body||""),String(offer.source_pointer||""),"carried from offer",900,actionNow,actionNow).run();
+      ).bind(leafId,relationshipId,offerId,"offer",String(offer.title||"Offered body"),why,String(offer.body||""),String(offer.source_pointer||""),"carried from offer",900,actionNow,actionNow).run();
     }
     await env.RECEIVING_DB.prepare(
       "UPDATE folio_offers SET state=?,updated_at=? WHERE relationship_id=? AND id=?"
-    ).bind(action==="keep"?"kept":"released",actionNow,"ten",offerId).run();
+    ).bind(action==="keep"?"kept":"released",actionNow,relationshipId,offerId).run();
     return json({ ok:true, offer_id:offerId, state:action==="keep"?"kept":"released" });
   }
 
   if (request.method === "POST" && url.pathname === "/folio/seed-proof") {
-    const leafId = "proof:ten-first-private-leaf";
+    const leafId = "proof:" + relationshipId + ":first-private-leaf";
     const proofNow = new Date().toISOString();
     await env.RECEIVING_DB.prepare(
       "INSERT OR IGNORE INTO folio_leaves (id,relationship_id,object_id,kind,title,why_here,body,source_pointer,publication_state,position,created_at,updated_at,released_at) " +
       "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,NULL)"
     ).bind(
       leafId,
-      "ten",
+      relationshipId,
       "private-folio-persistence-proof",
       "proof leaf",
       "The first private leaf",
-      "Placed deliberately to prove that Ten can leave this authenticated folio and return to the same carried body.",
+      "Placed deliberately to prove that this authenticated folio can be left and later return to the same carried body.",
       "This leaf carries no private Workshop research. Its only job is to prove durable D1 continuity behind the authenticated folio lock.",
       "Real Folios — durable relationship surface — live proof return",
       "PRIVATE TO HOLDER",
@@ -632,7 +669,7 @@ async function authenticatedFolio(request, env, ctx, url) {
       proofNow,
       proofNow
     ).run();
-    return json({ ok:true, leaf_id:leafId, relationship:"ten", storage:"d1" });
+    return json({ ok:true, leaf_id:leafId, relationship:relationshipId, storage:"d1" });
   }
 
   if (request.method === "POST" && url.pathname === "/folio/seen") {
@@ -643,20 +680,20 @@ async function authenticatedFolio(request, env, ctx, url) {
     if (!leafId || !seenUpdatedAt) return json({ error:"Leaf and version are required.", code:"folio_seen_incomplete" }, 400);
     const leaf = await env.RECEIVING_DB.prepare(
       "SELECT updated_at FROM folio_leaves WHERE relationship_id=? AND id=? AND released_at IS NULL"
-    ).bind("ten",leafId).first();
+    ).bind(relationshipId,leafId).first();
     if (!leaf) return json({ error:"Leaf not found.", code:"folio_leaf_not_found" }, 404);
     const safeSeen = String(leaf.updated_at || "") === seenUpdatedAt ? seenUpdatedAt : String(leaf.updated_at || "");
     await env.RECEIVING_DB.prepare(
       "INSERT INTO folio_leaf_reads (relationship_id,subject_hash,leaf_id,seen_updated_at,seen_at) VALUES (?,?,?,?,?) " +
       "ON CONFLICT(relationship_id,subject_hash,leaf_id) DO UPDATE SET seen_updated_at=excluded.seen_updated_at,seen_at=excluded.seen_at"
-    ).bind("ten",subjectHash,leafId,safeSeen,new Date().toISOString()).run();
+    ).bind(relationshipId,subjectHash,leafId,safeSeen,new Date().toISOString()).run();
     return json({ ok:true, leaf_id:leafId, seen_updated_at:safeSeen });
   }
 
   const offerRows = await env.RECEIVING_DB.prepare(
     "SELECT id,from_label,title,why_now,body,source_pointer,created_at,updated_at,expires_at FROM folio_offers " +
     "WHERE relationship_id=? AND state='offered' AND (expires_at IS NULL OR expires_at > ?) ORDER BY updated_at DESC LIMIT 8"
-  ).bind("ten",new Date().toISOString()).all();
+  ).bind(relationshipId,new Date().toISOString()).all();
   const offers = offerRows?.results || [];
 
   const rows = await env.RECEIVING_DB.prepare(
@@ -664,14 +701,14 @@ async function authenticatedFolio(request, env, ctx, url) {
     "r.seen_updated_at AS seen_updated_at " +
     "FROM folio_leaves l LEFT JOIN folio_leaf_reads r ON r.relationship_id=l.relationship_id AND r.leaf_id=l.id AND r.subject_hash=? " +
     "WHERE l.relationship_id=? AND l.released_at IS NULL ORDER BY l.position ASC,l.updated_at DESC LIMIT 80"
-  ).bind(subjectHash,"ten").all();
+  ).bind(subjectHash,relationshipId).all();
   const leaves = (rows?.results || []).map((leaf) => ({
     ...leaf,
     changed_since_seen: Boolean(leaf.seen_updated_at && String(leaf.updated_at || "") > String(leaf.seen_updated_at || "")),
     never_opened: !leaf.seen_updated_at
   }));
 
-  return new Response(folioHtml({ leaves, offers }), {
+  return new Response(folioHtml({ leaves, offers, relationshipName }), {
     status:200,
     headers:{
       "Content-Type":"text/html; charset=utf-8",
