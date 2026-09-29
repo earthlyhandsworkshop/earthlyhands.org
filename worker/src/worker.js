@@ -405,6 +405,9 @@ async function ensureFolioTables(db) {
   await db.prepare(
     "CREATE INDEX IF NOT EXISTS idx_folio_companion_acts_current ON folio_companion_acts(relationship_id,object_id,hand,is_current,updated_at)"
   ).run();
+  await db.prepare(
+    "CREATE UNIQUE INDEX IF NOT EXISTS idx_folio_companion_acts_one_current ON folio_companion_acts(relationship_id,object_id,hand) WHERE is_current=1"
+  ).run();
 }
 
 function escapeHtml(value) {
@@ -482,10 +485,21 @@ async function companionActIngress(request, env) {
   const supersedesId = cleanCompanionActValue(body?.supersedes_id, 200);
   const visibilityRaw = cleanCompanionActValue(body?.visibility, 40).toLowerCase();
   const visibility = visibilityRaw === "workshop" ? "workshop" : "holder";
-  const isCurrent = body?.is_current === false ? 0 : 1;
+  const stateRaw = cleanCompanionActValue(body?.state, 40).toUpperCase();
+  const booleanState = typeof body?.is_current === "boolean" ? (body.is_current ? 1 : 0) : null;
+  const namedState = stateRaw === "CURRENT"
+    ? 1
+    : (stateRaw === "HISTORY" || stateRaw === "SUPERSEDED AS CURRENT" ? 0 : null);
 
   if (!relationshipId || !objectId || !hand || !act || !returnId) {
     return json({ error:"Relationship, object, hand, act, and return_id are required.", code:"folio_companion_act_incomplete" }, 400);
+  }
+  if (booleanState !== null && namedState !== null && booleanState !== namedState) {
+    return json({ error:"Companion act current/history state conflicts.", code:"folio_companion_act_state_conflict" }, 400);
+  }
+  const isCurrent = booleanState ?? namedState;
+  if (isCurrent === null) {
+    return json({ error:"Companion act state must explicitly say CURRENT or HISTORY.", code:"folio_companion_act_state_required" }, 400);
   }
   if (!folioRelationshipIdAllowed(relationshipId, env)) {
     return json({ error:"That folio relationship is not configured.", code:"folio_companion_relationship_unheld" }, 400);
