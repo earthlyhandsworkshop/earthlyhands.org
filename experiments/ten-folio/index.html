@@ -403,7 +403,7 @@ document.getElementById("clear-notes").onclick=()=>{if(confirm("Clear local Ten 
 render();
 function localCommand(q){
  q=q.toLowerCase();
- if(/robert.*joke|joke.*robert|full joke|analy.*joke/.test(q)) return {view:"joke",reply:"The full Robert Bell joke folio is open."};
+ if(/no particular bargain|particular bargain|blackwell.*robert|robert.*blackwell/.test(q)) return {view:"bargain",reply:"No particular bargain is open at the shared field-work body."};\n if(/robert.*joke|joke.*robert|full joke|analy.*joke/.test(q)) return {view:"joke",reply:"The full Robert Bell joke folio is open."};
  if(/joke|funny|surprise|glint|nearby/.test(q)) return {view:"nearby",reply:"Nearby is open to whatever is alive enough to matter now."};
  if(/re.?entry|footing|neighbor|vocation|relevance/.test(q)) return {view:"now",reply:"Re-entry footing is open from Now."};
  if(/robert|bell|identity/.test(q)) return {view:"projects",reply:"The Robert Bell working folio is in Projects."};
