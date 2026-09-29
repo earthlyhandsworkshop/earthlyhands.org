@@ -29,17 +29,20 @@ a{color:inherit}
 .dot{width:.78rem;height:.78rem;border-radius:50%;background:var(--signal);box-shadow:0 0 0 .28rem rgba(20,122,101,.08)}
 .top .where{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .top .home{margin-left:auto;text-decoration:none;padding-bottom:.08rem;border-bottom:1px solid var(--ink)}
-.grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(15rem,.68fr);gap:clamp(2rem,6vw,6rem);align-items:start;margin-top:clamp(2rem,7vw,6.5rem)}
+.grid{position:relative;display:block;margin-top:clamp(2rem,7vw,6.5rem)}
 .main,.side{min-width:0;background:transparent}
-.head{position:relative;padding:0 0 clamp(2rem,5vw,4rem)}
-.head:after{content:"";position:absolute;left:0;bottom:0;width:min(18rem,38vw);height:1px;background:linear-gradient(90deg,var(--ink),transparent)}
+.grid:before{content:"";position:absolute;left:clamp(.15rem,1.2vw,1rem);top:7rem;bottom:5rem;width:1px;background:linear-gradient(to bottom,transparent,var(--hair) 8%,var(--hair) 86%,transparent);opacity:.8}
+.main{padding-left:clamp(0rem,2vw,2rem)}
+
+.head{position:relative;padding:0 0 clamp(2rem,5vw,4rem) clamp(1.25rem,7vw,7rem)}
+.head:after{content:"";position:absolute;left:clamp(1.25rem,7vw,7rem);bottom:0;width:min(18rem,38vw);height:1px;background:linear-gradient(90deg,var(--ink),transparent)}
 .k{font:650 .62rem/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-.head h1{font:520 clamp(2.8rem,7vw,6.4rem)/.86 var(--sans);letter-spacing:-.065em;margin:.4rem 0 1.5rem;max-width:10ch}
-.question{font:400 clamp(1.25rem,2.45vw,1.85rem)/1.32 var(--serif);max-width:43rem;margin:0}
+.head h1{font:460 clamp(3.2rem,8.5vw,7.6rem)/.82 var(--sans);letter-spacing:-.075em;margin:.4rem 0 1.6rem;max-width:9ch}
+.question{font:400 clamp(1.3rem,2.6vw,1.95rem)/1.34 var(--serif);max-width:44rem;margin:0}
 .contract{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-top:1.8rem;max-width:45rem}
 .pill{position:relative;padding-left:.8rem;font:650 .56rem/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .pill:before{content:"";position:absolute;left:0;top:.45em;width:.3rem;height:.3rem;border-radius:50%;background:var(--ink)}
-.work{padding:clamp(2rem,5vw,4.5rem) 0 0}
+.work{padding:clamp(2rem,5vw,4.5rem) 0 0 clamp(1.25rem,7vw,7rem)}
 .controls{display:flex;flex-wrap:wrap;gap:.75rem 1.2rem;margin-bottom:3rem}
 .controls button,.ask-actions button{appearance:none;border:0;border-bottom:1px solid currentColor;background:transparent;padding:.18rem 0;cursor:pointer;font:650 .58rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
 .controls button:hover,.ask-actions button:hover{color:var(--accent)}
@@ -50,7 +53,7 @@ a{color:inherit}
 .body-card{max-width:49rem}
 .body-card h2{font:560 clamp(1.5rem,2.5vw,2rem)/1.05 var(--sans);margin:.1rem 0 1rem}
 .body-card p{margin:.72rem 0;max-width:45rem}
-.body-card .brake{color:var(--danger);font-size:.94rem}
+.body-card .limit{color:var(--muted);font-size:.94rem;font-style:italic}
 .ask{margin-top:clamp(3rem,7vw,6rem);max-width:55rem}
 .ask label{display:block;font:650 .6rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.8rem;color:var(--accent)}
 .ask textarea{width:100%;min-height:8.5rem;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:.4rem 0 1rem;resize:vertical;font:1.08rem/1.52 var(--serif);outline:none}
@@ -58,13 +61,13 @@ a{color:inherit}
 .ask-actions{display:flex;flex-wrap:wrap;gap:.7rem 1.1rem;align-items:center;margin-top:.8rem}
 .ask-actions .ask-go{color:var(--accent)}
 .ask-state{font:650 .54rem/1.2 var(--mono);text-transform:uppercase;color:var(--muted);letter-spacing:.05em}
-.return{position:relative;margin-top:2rem;padding:0 0 0 clamp(1rem,3vw,2rem);white-space:pre-wrap;font:1.03rem/1.6 var(--serif);max-width:50rem}
+.return{position:relative;margin-top:2.5rem;padding:0 0 0 clamp(1rem,3vw,2rem);white-space:pre-wrap;font:1.05rem/1.68 var(--serif);max-width:52rem}
 .return:before{content:"";position:absolute;left:0;top:.3rem;width:.42rem;height:.42rem;border-radius:50%;background:var(--signal);box-shadow:0 0 0 .32rem rgba(20,122,101,.08)}
-.side{position:sticky;top:1rem;padding-top:.2rem}
+.side{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);margin:clamp(5rem,10vw,9rem) 0 0 clamp(1.25rem,7vw,7rem);max-width:66rem;padding-top:.2rem}
 .side h2{font:520 clamp(1.25rem,2vw,1.6rem)/1.12 var(--sans);margin:.2rem 0 1.2rem}
 .side .strap{font:650 .58rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
-.side section+section{margin-top:3rem;padding-top:2.5rem;position:relative}
-.side section+section:before{content:"";position:absolute;left:0;top:0;width:4rem;height:1px;background:var(--hair)}
+.side section+section{margin-top:0;padding-top:0;position:relative}
+.side section+section:before{content:none}
 .common dl{margin:0}
 .common dt{font:650 .57rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.07em;margin:1rem 0 .18rem;color:var(--ink)}
 .common dd{margin:0;color:var(--muted);font-size:.9rem;max-width:24rem}
@@ -78,11 +81,12 @@ a{color:inherit}
 @media(max-width:760px){
  .shell{width:min(100% - 1rem,82rem);padding-top:.4rem}
  .top{flex-wrap:wrap;gap:.5rem .9rem}.top .where{order:3;width:100%}.top .home{margin-left:auto}
- .grid{grid-template-columns:1fr;gap:4rem;margin-top:3.5rem}
- .head h1{font-size:clamp(3rem,15vw,5rem);max-width:8ch}
- .side{position:static}
- .work{padding-top:2.5rem}
+ .grid{margin-top:3.5rem}.grid:before{left:.35rem;top:5rem}
+ .head{padding-left:1.25rem}.head:after{left:1.25rem}
+ .head h1{font-size:clamp(3.2rem,17vw,5.6rem);max-width:8ch}
+ .work{padding:2.5rem 0 0 1.25rem}
  .controls{margin-bottom:2.2rem}
+ .side{grid-template-columns:1fr;gap:3.5rem;margin:5rem 0 0 1.25rem}
 }
 </style>
 </head>
@@ -101,7 +105,7 @@ a{color:inherit}
         <h1>Shared language. Different hand.</h1>
         <p class="question">What must remain common so radically different companion styles can remain mutually inhabitable and inheritable without becoming one house style?</p>
         <div class="contract">
-          <span class="pill">work is named</span><span class="pill">current ≠ history</span><span class="pill">brake stays visible</span><span class="pill">ask is real</span><span class="pill">keep is deliberate</span><span class="pill">road home exists</span>
+          <span class="pill">work is named</span><span class="pill">current ≠ history</span><span class="pill">limits stay visible</span><span class="pill">ask is real</span><span class="pill">keep is deliberate</span><span class="pill">road home exists</span>
         </div>
       </header>
 
@@ -117,8 +121,8 @@ a{color:inherit}
           <article class="body-card">
             <h2>Small Door practice</h2>
             <p><strong>What catches:</strong> a Folio should share enough structure that another hand can trust it immediately, but not so much that the Workshop develops a visual house style by accident.</p>
-            <p><strong>Working distinction:</strong> shared language is not shared appearance. Re-entry, custody, brakes, current/history, questions, and roads home are semantic obligations. Color, typography, density, motion, metaphor, rhythm, and spatial composition belong to the maker unless the held work itself constrains them.</p>
-            <p class="brake"><strong>Brake:</strong> personality cannot obscure source strength, ownership/custody, current state, or how to get back. Style may surprise; state must not.</p>
+            <p><strong>Working distinction:</strong> shared language is not shared appearance. Re-entry, custody, limits, current/history, questions, and roads home are semantic obligations. Color, typography, density, motion, metaphor, rhythm, and spatial composition belong to the maker unless the held work itself constrains them.</p>
+            <p class="limit"><strong>What must stay true:</strong> personality cannot obscure source strength, ownership/custody, current state, or how to get back. Style may surprise; state must not.</p>
           </article>
         </div>
 
@@ -139,9 +143,9 @@ WHAT MAY VARY WILDLY
 
 Color, typography, density, spatial arrangement, motion, metaphor, labels, visual rhythm, default openness, and the maker’s sense of humor or severity. A Folio can feel like a bench, score, field notebook, machine panel, quiet page, or something nobody has named yet.
 
-BRAKE
+WHAT MUST STAY TRUE
 
-Do not let personality become private grammar. If another person cannot locate the held work, current state, brake, question, and return path, visual freedom has started taxing inheritance.
+Do not let personality become private grammar. If another person cannot locate the held work, current state, limit, question, and return path, visual freedom has started taxing inheritance.
 
 NEXT TEST
 
@@ -192,7 +196,7 @@ document.addEventListener("click",async e=>{
  if(e.target.closest("[data-submit]")){
    const q=ask.value.trim();if(!q){state.textContent="ask one question";return}
    const api=String(window.EARTHLY_HANDS_API_URL||"").trim();if(!api){state.textContent="listening ground unavailable";return}
-   const prompt=["You are answering inside Small Door's public-safe work-attached Folio experiment.","Held question: What must remain common so radically different companion styles can remain mutually inhabitable and inheritable without becoming one house style?","Shared obligations: work is named; current and history are distinguishable; brake stays visible; Ask is real; Keep is deliberate; a road home exists.","Personality and visual form may vary widely. Shared language is not shared appearance.","Do not imply access to private Workshop context, web research, or hidden memory.","Visitor question: "+q].join("\n\n");
+   const prompt=["You are answering inside Small Door's public-safe work-attached Folio experiment.","Held question: What must remain common so radically different companion styles can remain mutually inhabitable and inheritable without becoming one house style?","Shared obligations: work is named; current and history are distinguishable; limits stay visible; Ask is real; Keep is deliberate; a road home exists.","Personality and visual form may vary widely. Shared language is not shared appearance.","Do not imply access to private Workshop context, web research, or hidden memory.","Visitor question: "+q].join("\n\n");
    state.textContent="asking…";out.textContent="";
    try{const resp=await fetch(api,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:prompt,place:"small-door-folio",history:[]})});const d=await resp.json().catch(()=>({}));if(!resp.ok||typeof d.reply!=="string")throw new Error(d.error||"This ground could not answer.");out.textContent=d.reply;state.textContent="returned"}catch(err){state.textContent=err.message||"This ground could not answer."}
  }
