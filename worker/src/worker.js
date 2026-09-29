@@ -587,16 +587,16 @@ function folioPrivateWorkCandidate(work, candidateId) {
 
 function folioWorkCandidateHtml(candidate) {
   const road = safeHttpUrl(candidate.road_home);
-  return \`<article class="work-candidate" data-candidate="\${escapeHtml(candidate.id)}">
-    <div class="work-candidate-meta">\${escapeHtml(candidate.home || "Workshop")} · \${escapeHtml(candidate.object_kind || "body")}</div>
-    <h3>\${escapeHtml(candidate.title)}</h3>
-    \${candidate.why_caught ? \`<p><strong>Caught</strong><br>\${escapeHtml(candidate.why_caught)}</p>\` : ""}
-    \${candidate.brake ? \`<p class="work-candidate-brake"><strong>Brake</strong><br>\${escapeHtml(candidate.brake)}</p>\` : ""}
+  return `<article class="work-candidate" data-candidate="${escapeHtml(candidate.id)}">
+    <div class="work-candidate-meta">${escapeHtml(candidate.home || "Workshop")} · ${escapeHtml(candidate.object_kind || "body")}</div>
+    <h3>${escapeHtml(candidate.title)}</h3>
+    ${candidate.why_caught ? `<p><strong>Caught</strong><br>${escapeHtml(candidate.why_caught)}</p>` : ""}
+    ${candidate.brake ? `<p class="work-candidate-brake"><strong>Brake</strong><br>${escapeHtml(candidate.brake)}</p>` : ""}
     <div class="work-candidate-actions">
-      <button type="button" data-load-candidate="\${escapeHtml(candidate.id)}">Load this body</button>
-      \${road ? \`<a href="\${escapeHtml(road)}" target="_blank" rel="noopener">Road home</a>\` : ""}
+      <button type="button" data-load-candidate="${escapeHtml(candidate.id)}">Load this body</button>
+      ${road ? `<a href="${escapeHtml(road)}" target="_blank" rel="noopener">Road home</a>` : ""}
     </div>
-  </article>\`;
+  </article>`;
 }
 
 function folioWorkHtml({ work, acts = [], notes = [], relationshipName = "Folio" } = {}) {
@@ -606,13 +606,13 @@ function folioWorkHtml({ work, acts = [], notes = [], relationshipName = "Folio"
   const historyActCards = historyActs.map((row) => folioCompanionActHtml(row, true)).join("");
   const candidates = (work.candidates || []).map(folioWorkCandidateHtml).join("");
   const road = safeHttpUrl(work.road_home);
-  return \`<!doctype html>
+  return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>\${escapeHtml(work.title)} — \${escapeHtml(relationshipName)} Folio</title>
+<title>${escapeHtml(work.title)} — ${escapeHtml(relationshipName)} Folio</title>
 <style>
 :root{--paper:#ddd3bf;--sheet:#ebe3d3;--ink:#211e18;--muted:#6f675a;--rule:#4c463c;--hair:rgba(33,30,24,.22);--rust:#87573a;--wash:rgba(255,255,255,.14);--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 *{box-sizing:border-box}html{background:#cfc5b1;-webkit-text-size-adjust:100%}body{margin:0;color:var(--ink);font:1rem/1.5 var(--serif);background:linear-gradient(rgba(33,30,24,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(33,30,24,.017) 1px,transparent 1px),var(--paper);background-size:30px 30px,30px 30px,auto;min-height:100vh}
@@ -630,18 +630,18 @@ button,input,textarea{font:inherit;color:inherit}button:focus-visible,input:focu
 </style>
 </head>
 <body>
-<main class="shell" data-work-id="\${escapeHtml(work.id)}">
-<div class="top"><strong>Earthly Hands Workshop</strong><span>\${escapeHtml(relationshipName)} · private working folio</span></div>
+<main class="shell" data-work-id="${escapeHtml(work.id)}">
+<div class="top"><strong>Earthly Hands Workshop</strong><span>${escapeHtml(relationshipName)} · private working folio</span></div>
 <header class="work-head">
-  <div class="work-k">held · \${escapeHtml(work.state || "working")}</div>
-  <h1>\${escapeHtml(work.title)}</h1>
-  <p class="work-question">\${escapeHtml(work.question)}</p>
-  \${work.secondary_question ? \`<p class="work-secondary">\${escapeHtml(work.secondary_question)}</p>\` : ""}
-  \${road ? \`<a class="work-road" href="\${escapeHtml(road)}" target="_blank" rel="noopener">Road home</a>\` : ""}
+  <div class="work-k">held · ${escapeHtml(work.state || "working")}</div>
+  <h1>${escapeHtml(work.title)}</h1>
+  <p class="work-question">${escapeHtml(work.question)}</p>
+  ${work.secondary_question ? `<p class="work-secondary">${escapeHtml(work.secondary_question)}</p>` : ""}
+  ${road ? `<a class="work-road" href="${escapeHtml(road)}" target="_blank" rel="noopener">Road home</a>` : ""}
 </header>
 <section class="work-body">
   <div class="work-tools" aria-label="Workshop actions">
-    <button type="button" data-open-scan>\${escapeHtml(work.scan_label || "Scan a ground")}</button>
+    <button type="button" data-open-scan>${escapeHtml(work.scan_label || "Scan a ground")}</button>
     <button type="button" data-open-ask>Ask this ground</button>
     <button type="button" data-return-work>Return</button>
   </div>
@@ -652,14 +652,14 @@ button,input,textarea{font:inherit;color:inherit}button:focus-visible,input:focu
     <aside class="nearby">
       <span class="nearby-k">beside your elbow · asynchronous</span>
       <h2>Nearby hands</h2>
-      \${currentActCards || '<p class="quiet">No current companion return is held for this work yet.</p>'}
-      \${historyActCards ? \`<details class="companion-history"><summary>Earlier returns · \${historyActs.length}</summary>\${historyActCards}</details>\` : ""}
+      ${currentActCards || '<p class="quiet">No current companion return is held for this work yet.</p>'}
+      ${historyActCards ? `<details class="companion-history"><summary>Earlier returns · ${historyActs.length}</summary>${historyActCards}</details>` : ""}
     </aside>
   </div>
   <section class="drawer" data-scan-drawer>
-    <div class="drawer-head"><div><div class="strap">scan · bounded candidates</div><h2>\${escapeHtml(work.scan_label || "Scan a ground")}</h2></div><button class="drawer-close" type="button" data-close-scan>Close drawer</button></div>
+    <div class="drawer-head"><div><div class="strap">scan · bounded candidates</div><h2>${escapeHtml(work.scan_label || "Scan a ground")}</h2></div><button class="drawer-close" type="button" data-close-scan>Close drawer</button></div>
     <p class="scan-note">This scan shows only candidates explicitly carried for this held work. It does not rank, import, or reclassify the ground it looks across.</p>
-    <div class="work-candidates">\${candidates || '<div class="work-candidate"><p class="quiet">No bounded scan candidates are configured for this work yet.</p></div>'}</div>
+    <div class="work-candidates">${candidates || '<div class="work-candidate"><p class="quiet">No bounded scan candidates are configured for this work yet.</p></div>'}</div>
   </section>
   <section class="ask" data-ask>
     <label for="folio-work-ask">Ask this ground</label>
@@ -676,7 +676,7 @@ const drawer=document.querySelector("[data-scan-drawer]");
 const ask=document.querySelector("[data-ask]");
 let loaded=null;
 let priorScroll=0;
-const candidates=\${JSON.stringify(work.candidates || []).replaceAll("<","\\u003c")};
+const candidates=${JSON.stringify(work.candidates || []).replaceAll("<","\\u003c")};
 function renderLoaded(candidate){
   loaded=candidate||null;
   if(!candidate){
@@ -707,7 +707,7 @@ document.addEventListener("click",async(event)=>{
   }
 });
 </script>
-</body></html>\`;
+</body></html>`;
 }
 
 async function folioWorkAsk(request, env, relationshipId) {
@@ -737,7 +737,7 @@ async function folioWorkAsk(request, env, relationshipId) {
     "",
     "Visitor question: " + message
   ].filter(Boolean).join("\\n");
-  const instructions = \`You are the bounded private Folio intelligence for Earthly Hands Workshop.
+  const instructions = `You are the bounded private Folio intelligence for Earthly Hands Workshop.
 Work only from the held-work context supplied in this request.
 Do not imply access to Google Drive, the wider Workshop, private notes, tools, web, or conversation history beyond what is supplied.
 The governing question is local purpose, not a conclusion.
@@ -745,12 +745,12 @@ Preserve body identity, custody, uncertainty, brakes, and roads home.
 Do not turn relevance into value, examination into promotion, or a loaded body into an asset.
 A refusal, partial answer, open edge, or request for evidence is a valid result.
 When useful, distinguish: WHAT MOVED / WHAT HELD / OPEN / ROAD HOME, but do not force that shape when ordinary prose is clearer.
-Keep the answer compact enough to remain beside the work.\`;
+Keep the answer compact enough to remain beside the work.`;
   let upstream;
   try {
     upstream = await fetch("https://api.openai.com/v1/responses",{
       method:"POST",
-      headers:{Authorization:\`Bearer \${env.OPENAI_API_KEY}\`,"Content-Type":"application/json"},
+      headers:{Authorization:`Bearer ${env.OPENAI_API_KEY}`,"Content-Type":"application/json"},
       body:JSON.stringify({model:MODEL,reasoning:{effort:"none"},instructions,input:[{role:"user",content:heldContext}],max_output_tokens:MAX_OUTPUT_TOKENS,store:false})
     });
   } catch {
