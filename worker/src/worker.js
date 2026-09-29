@@ -384,6 +384,27 @@ async function ensureFolioTables(db) {
   await db.prepare(
     "CREATE INDEX IF NOT EXISTS idx_folio_offers_relationship ON folio_offers(relationship_id,state,updated_at)"
   ).run();
+  await db.prepare(
+    "CREATE TABLE IF NOT EXISTS folio_companion_acts (" +
+    "id TEXT PRIMARY KEY," +
+    "relationship_id TEXT NOT NULL," +
+    "object_id TEXT NOT NULL," +
+    "hand TEXT NOT NULL," +
+    "act TEXT NOT NULL," +
+    "changed TEXT," +
+    "open_state TEXT," +
+    "road_home TEXT," +
+    "visibility TEXT NOT NULL DEFAULT 'holder'," +
+    "source_return_id TEXT," +
+    "supersedes_id TEXT," +
+    "is_current INTEGER NOT NULL DEFAULT 1," +
+    "created_at TEXT NOT NULL," +
+    "updated_at TEXT NOT NULL" +
+    ")"
+  ).run();
+  await db.prepare(
+    "CREATE INDEX IF NOT EXISTS idx_folio_companion_acts_current ON folio_companion_acts(relationship_id,object_id,hand,is_current,updated_at)"
+  ).run();
 }
 
 function escapeHtml(value) {
@@ -395,7 +416,133 @@ function escapeHtml(value) {
     .replaceAll("'","&#039;");
 }
 
-function folioHtml({ leaves = [], offers = [], notes = [], relationshipName = "Folio" } = {}) {
+function safeHttpUrl(value) {
+  const raw = String(value || "").trim();
+  return /^https:\/\//i.test(raw) ? raw.slice(0, 2000) : "";
+}
+
+function cleanCompanionActValue(value, max) {
+  return String(value || "").trim().slice(0, max);
+}
+
+function folioRelationshipIdAllowed(relationshipId, env) {
+  const id = String(relationshipId || "").trim();
+  if (!id) return false;
+
+  const raw = String(env.FOLIO_RELATIONSHIPS_JSON || "").trim();
+  if (raw) {
+    try {
+      const parsed = JSON.parse(raw);
+      for (const entry of Object.values(parsed || {})) {
+        if (!entry || typeof entry !== "object") continue;
+        const candidate = String(entry.id || "").trim().toLowerCase().replace(/[^a-z0-9:_-]+/g, "-").slice(0, 80);
+        if (candidate && candidate === id) return true;
+      }
+    } catch {
+      return false;
+    }
+  }
+
+  return id === "ten" && Boolean(String(env.FOLIO_ALLOWED_EMAILS || "").trim());
+}
+
+function folioCompanionAuthorized(request, env) {
+  const expected = String(env.FOLIO_COMPANION_KEY || "").trim();
+  if (!expected) return false;
+  const authorization = String(request.headers.get("Authorization") || "");
+  const bearer = authorization.toLowerCase().startsWith("bearer ") ? authorization.slice(7).trim() : "";
+  const alternate = String(request.headers.get("X-Folio-Companion-Key") || "").trim();
+  return bearer === expected || alternate === expected;
+}
+
+async function companionActIngress(request, env) {
+  if (!env.RECEIVING_DB) {
+    return json({ error:"Folio storage is not configured.", code:"folio_storage_missing" }, 503);
+  }
+  if (!String(env.FOLIO_COMPANION_KEY || "").trim()) {
+    return json({ error:"Companion-act ingress is not configured.", code:"folio_companion_ingress_unconfigured" }, 503);
+  }
+  if (!folioCompanionAuthorized(request, env)) {
+    return json({ error:"Companion-act ingress denied.", code:"folio_companion_ingress_denied" }, 403);
+  }
+
+  let body = {};
+  try { body = await request.json(); }
+  catch { return json({ error:"Companion act could not be read.", code:"folio_companion_act_invalid" }, 400); }
+
+  const relationshipId = cleanCompanionActValue(body?.relationship_id, 80).toLowerCase().replace(/[^a-z0-9:_-]+/g, "-");
+  const objectId = cleanCompanionActValue(body?.object_id, 240);
+  const hand = cleanCompanionActValue(body?.hand, 120);
+  const act = cleanCompanionActValue(body?.act, 120).toUpperCase();
+  const returnId = cleanCompanionActValue(body?.return_id || body?.source_return_id, 200);
+  const changed = cleanCompanionActValue(body?.changed, 8000);
+  const openState = cleanCompanionActValue(body?.open_state ?? body?.open, 4000);
+  const roadHome = cleanCompanionActValue(body?.road_home, 2000);
+  const sourceReturnId = cleanCompanionActValue(body?.source_return_id || returnId, 200);
+  const supersedesId = cleanCompanionActValue(body?.supersedes_id, 200);
+  const visibilityRaw = cleanCompanionActValue(body?.visibility, 40).toLowerCase();
+  const visibility = visibilityRaw === "workshop" ? "workshop" : "holder";
+  const isCurrent = body?.is_current === false ? 0 : 1;
+
+  if (!relationshipId || !objectId || !hand || !act || !returnId) {
+    return json({ error:"Relationship, object, hand, act, and return_id are required.", code:"folio_companion_act_incomplete" }, 400);
+  }
+  if (!folioRelationshipIdAllowed(relationshipId, env)) {
+    return json({ error:"That folio relationship is not configured.", code:"folio_companion_relationship_unheld" }, 400);
+  }
+
+  await ensureFolioTables(env.RECEIVING_DB);
+  const now = new Date().toISOString();
+  const statements = [];
+
+  if (isCurrent === 1) {
+    statements.push(
+      env.RECEIVING_DB.prepare(
+        "UPDATE folio_companion_acts SET is_current=0 WHERE relationship_id=? AND object_id=? AND hand=? AND is_current=1 AND id<>?"
+      ).bind(relationshipId,objectId,hand,returnId)
+    );
+  }
+  if (supersedesId) {
+    statements.push(
+      env.RECEIVING_DB.prepare(
+        "UPDATE folio_companion_acts SET is_current=0 WHERE relationship_id=? AND id=?"
+      ).bind(relationshipId,supersedesId)
+    );
+  }
+
+  statements.push(
+    env.RECEIVING_DB.prepare(
+      "INSERT INTO folio_companion_acts (id,relationship_id,object_id,hand,act,changed,open_state,road_home,visibility,source_return_id,supersedes_id,is_current,created_at,updated_at) " +
+      "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) " +
+      "ON CONFLICT(id) DO UPDATE SET relationship_id=excluded.relationship_id,object_id=excluded.object_id,hand=excluded.hand,act=excluded.act,changed=excluded.changed,open_state=excluded.open_state,road_home=excluded.road_home,visibility=excluded.visibility,source_return_id=excluded.source_return_id,supersedes_id=excluded.supersedes_id,is_current=excluded.is_current,updated_at=excluded.updated_at"
+    ).bind(returnId,relationshipId,objectId,hand,act,changed,openState,roadHome,visibility,sourceReturnId,supersedesId,isCurrent,now,now)
+  );
+
+  await env.RECEIVING_DB.batch(statements);
+  return json({
+    ok:true,
+    relationship:relationshipId,
+    object_id:objectId,
+    hand,
+    act,
+    return_id:returnId,
+    state:isCurrent === 1 ? "current" : "history"
+  }, 201);
+}
+
+function folioCompanionActHtml(row, history = false) {
+  const road = safeHttpUrl(row.road_home);
+  const sourceReturn = safeHttpUrl(row.source_return_id);
+  const returnLink = road || sourceReturn;
+  return `<article class="companion-act${history ? " history" : ""}">
+    <span class="companion-act-meta">${escapeHtml(row.hand || "Workshop")} · ${escapeHtml(row.act || "RETURN")} · ${history ? "history" : "current"}</span>
+    ${row.changed ? `<p>${escapeHtml(row.changed)}</p>` : ""}
+    ${row.open_state ? `<p class="companion-act-open"><strong>Open</strong><br>${escapeHtml(row.open_state)}</p>` : ""}
+    ${returnLink ? `<a class="companion-act-road" href="${escapeHtml(returnLink)}" target="_blank" rel="noopener">Open return</a>` : (row.road_home ? `<p class="companion-act-roadtext"><strong>Road home</strong><br>${escapeHtml(row.road_home)}</p>` : "")}
+  </article>`;
+}
+
+function folioHtml({ leaves = [], offers = [], notes = [], acts = [], relationshipName = "Folio" } = {}) {
   const notesByObject = new Map();
   for (const note of notes) {
     const key = String(note.linked_object_id || "");
@@ -403,11 +550,24 @@ function folioHtml({ leaves = [], offers = [], notes = [], relationshipName = "F
     if (!notesByObject.has(key)) notesByObject.set(key, []);
     notesByObject.get(key).push(note);
   }
+  const actsByObject = new Map();
+  for (const act of acts) {
+    const key = String(act.object_id || "");
+    if (!key) continue;
+    if (!actsByObject.has(key)) actsByObject.set(key, []);
+    actsByObject.get(key).push(act);
+  }
   const cards = leaves.map((leaf, index) => {
     const leafNotes = notesByObject.get(String(leaf.object_id || "")) || [];
     const restingNotes = leafNotes.map((note) => `<button class="resting-note" type="button" data-note-id="${escapeHtml(note.id)}" data-note-body="${escapeHtml(note.body || "")}"><span>${escapeHtml((note.body || "Untitled note").split("\n")[0].slice(0,72))}</span><small>private · resting</small></button>`).join("");
     const body = escapeHtml(leaf.body || "").replaceAll("\n","<br>");
     const source = escapeHtml(leaf.source_pointer || "");
+    const leafActs = actsByObject.get(String(leaf.object_id || "")) || [];
+    const currentActs = leafActs.filter((row) => Number(row.is_current || 0) === 1);
+    const historyActs = leafActs.filter((row) => Number(row.is_current || 0) !== 1);
+    const currentActCards = currentActs.map((row) => folioCompanionActHtml(row, false)).join("");
+    const historyActCards = historyActs.map((row) => folioCompanionActHtml(row, true)).join("");
+    const companionActs = currentActCards || historyActCards ? `<section class="companion-acts"><span class="companion-acts-k">nearby hands · durable returns</span>${currentActCards || '<p class="quiet">No current companion return is held for this object.</p>'}${historyActCards ? `<details class="companion-history"><summary>Earlier returns · ${historyActs.length}</summary>${historyActCards}</details>` : ""}</section>` : "";
     const attention = leaf.changed_since_seen ? '<span class="leaf-change">changed</span>' : (leaf.never_opened ? '<span class="leaf-new">new</span>' : '');
     return `<article class="leaf" data-leaf="${escapeHtml(leaf.id)}" data-object="${escapeHtml(leaf.object_id || "")}" data-updated="${escapeHtml(leaf.updated_at || "")}">
       ${attention}
@@ -422,6 +582,7 @@ function folioHtml({ leaves = [], offers = [], notes = [], relationshipName = "F
       </button>
       <div class="leaf-body" hidden>
         <div class="leaf-prose">${body || "<span class=\"quiet\">This leaf currently carries a road, not a copied body.</span>"}</div>
+        ${companionActs}
         ${source ? `<details class="provenance"><summary>Source / provenance road</summary><p>${source}</p></details>` : ""}
         <div class="leaf-tools"><button class="inverse-open" type="button">What earns this?</button><button class="note-open" type="button">Notes${leafNotes.length ? ` · ${leafNotes.length} resting` : ""}</button><button class="leaf-focus" type="button" title="Open this leaf in full focus">Take the desk · full focus</button></div>
         <section class="inverse-layer" hidden><span class="inverse-k">inverse · held support</span><h3>What earns this?</h3>${leaf.why_here ? `<p><strong>Why it is here</strong><br>${escapeHtml(leaf.why_here)}</p>` : `<p class="quiet">No stronger why-here state is held on this leaf.</p>`}${source ? `<p><strong>Road down</strong><br>${source}</p>` : `<p class="quiet">No deeper source road is carried on this leaf yet.</p>`}<p class="inverse-limit">This layer exposes only support already carried by the leaf. It does not strengthen the underlying claim.</p><button class="inverse-close" type="button">Return to leaf</button></section><section class="note-desk" hidden><div class="note-head"><span>Private working notes</span><button class="note-close" type="button">Rest notes</button></div><textarea class="note-editor" rows="12" placeholder="You may think here."></textarea><input class="note-id" type="hidden" value=""><div class="note-actions"><button class="note-save" type="button">Keep private</button><span class="note-state" aria-live="polite"></span></div><div class="resting-notes">${restingNotes || `<span class="quiet">No resting notes here yet.</span>`}</div></section>
@@ -470,6 +631,7 @@ h1{font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.88;letter-spaci
 .leaf-num,.leaf-kind,.leaf-pull,.leaf-change,.leaf-new{font:.48rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}.leaf-change,.leaf-new{display:inline-block;margin:.45rem .8rem 0;color:var(--rust);border-bottom:1px solid var(--rust)}.leaf-main{min-width:0}.leaf-main strong{display:block;margin:.1rem 0;font-size:1.18rem;font-weight:400;line-height:1.05}.leaf-why{display:block;color:var(--muted);font-size:.88rem;max-width:48rem}.leaf-pull{color:var(--rust)}
 .leaf-body{border-top:1px solid var(--hair);padding:1rem 1rem 1.2rem 2.85rem}.leaf-prose{max-width:52rem;font-size:1.04rem;line-height:1.58}.quiet{color:var(--muted)}
 .provenance{max-width:52rem;margin-top:1rem;border-top:1px solid var(--hair);padding-top:.65rem}.provenance summary{cursor:pointer;font:.55rem/1.3 var(--mono);text-transform:uppercase;color:var(--muted)}.provenance p{overflow-wrap:anywhere}
+.companion-acts{max-width:52rem;margin-top:1rem;border-top:1px solid var(--hair);padding-top:.75rem}.companion-acts-k,.companion-act-meta{display:block;font:.5rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--rust)}.companion-act{padding:.65rem 0;border-bottom:1px solid var(--hair)}.companion-act:last-child{border-bottom:0}.companion-act p{margin:.3rem 0}.companion-act.history{color:var(--muted)}.companion-act-open{font-size:.9rem}.companion-act-road,.companion-act-roadtext{font:.5rem/1.35 var(--mono);letter-spacing:.02em;color:var(--muted)}.companion-history{margin-top:.55rem}.companion-history summary{cursor:pointer;font:.5rem/1.3 var(--mono);text-transform:uppercase;color:var(--muted)}
 .leaf-tools{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:1rem}.leaf-focus,.inverse-open,.inverse-close,.note-open,.note-close,.note-save{border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.12rem 0;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}.inverse-layer,.note-desk{max-width:52rem;margin-top:1rem;border-top:1px solid var(--rule);padding-top:1rem}.inverse-k{font:.5rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--rust)}.inverse-layer h3{font-weight:400;font-size:1.65rem;margin:.2rem 0 .7rem}.inverse-layer p{margin:.55rem 0}.inverse-limit{color:var(--muted);font-size:.88rem}.note-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.65rem;font:.5rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--rust)}.note-editor{width:100%;min-height:16rem;resize:vertical;border:1px solid var(--rule);background:rgba(255,255,255,.16);color:var(--ink);padding:.85rem;font:1rem/1.5 var(--serif)}.note-actions{display:flex;align-items:center;gap:.7rem;margin:.55rem 0 1rem}.note-state{font:.5rem/1.2 var(--mono);text-transform:uppercase;color:var(--muted)}.resting-notes{border-top:1px solid var(--hair);padding-top:.6rem}.resting-note{width:100%;display:flex;justify-content:space-between;gap:1rem;text-align:left;border:0;border-bottom:1px solid var(--hair);background:transparent;padding:.55rem 0;cursor:pointer}.resting-note small{font:.45rem/1.2 var(--mono);text-transform:uppercase;color:var(--muted);white-space:nowrap}
 .empty{border:1px solid var(--rule);padding:1rem;background:var(--wash)}.empty h2{font-weight:400;margin:0 0 .35rem}.empty p{max-width:40rem}.proof-seed{margin-top:.55rem;border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.18rem 0;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}.proof-note{color:var(--muted);font:.72rem/1.4 var(--mono);margin:.5rem 0 0}
 .focus{position:fixed;inset:.25rem;z-index:20;background:rgba(235,227,211,.98);border:1px solid var(--rule);overflow:auto;padding:1rem;display:none}.focus.open{display:block}.focus-close{position:sticky;top:0;display:block;margin-left:auto;border:1px solid var(--rule);background:var(--sheet);padding:.4rem .55rem;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase}.focus-content{max-width:58rem;margin:1rem auto 3rem}.focus-content .leaf-body{display:block!important;border:0;padding:0}.focus-content .leaf-open{display:none}.focus-content .leaf-prose{font-size:1.12rem;max-width:52rem}
@@ -734,6 +896,13 @@ async function authenticatedFolio(request, env, ctx, url) {
   const noteRows = await env.RECEIVING_DB.prepare("SELECT id,linked_object_id,body,visibility,created_at,updated_at FROM folio_notes WHERE relationship_id=? AND subject_hash=? ORDER BY updated_at DESC LIMIT 200").bind(relationshipId,subjectHash).all();
   const notes = noteRows?.results || [];
 
+  const actRows = await env.RECEIVING_DB.prepare(
+    "SELECT id,object_id,hand,act,changed,open_state,road_home,visibility,source_return_id,supersedes_id,is_current,created_at,updated_at " +
+    "FROM folio_companion_acts WHERE relationship_id=? AND visibility IN ('holder','workshop') " +
+    "ORDER BY object_id ASC,hand ASC,is_current DESC,updated_at DESC LIMIT 400"
+  ).bind(relationshipId).all();
+  const acts = actRows?.results || [];
+
   const rows = await env.RECEIVING_DB.prepare(
     "SELECT l.id,l.object_id,l.kind,l.title,l.why_here,l.body,l.source_pointer,l.publication_state,l.position,l.updated_at," +
     "r.seen_updated_at AS seen_updated_at " +
@@ -746,7 +915,7 @@ async function authenticatedFolio(request, env, ctx, url) {
     never_opened: !leaf.seen_updated_at
   }));
 
-  return new Response(folioHtml({ leaves, offers, notes, relationshipName }), {
+  return new Response(folioHtml({ leaves, offers, notes, acts, relationshipName }), {
     status:200,
     headers:{
       "Content-Type":"text/html; charset=utf-8",
@@ -761,6 +930,10 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const requestId = crypto.randomUUID();
+
+    if (request.method === "POST" && url.pathname === "/folio/companion-act") {
+      return companionActIngress(request, env);
+    }
 
     if ((request.method === "GET" && (url.pathname === "/folio" || url.pathname === "/folio/" || url.pathname === "/folio/health")) ||
         (request.method === "POST" && (url.pathname === "/folio/seen" || url.pathname === "/folio/note" || url.pathname === "/folio/offer-action" || url.pathname === "/folio/seed-proof"))) {
