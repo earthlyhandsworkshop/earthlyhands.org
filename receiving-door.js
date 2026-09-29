@@ -26,6 +26,19 @@
     letter-spacing:.09em;text-transform:uppercase;cursor:pointer
   }
   .eh-receive-door:hover{background:#f0e9dc}
+  .eh-receive-door.eh-receive-inline{
+    position:static;right:auto;top:auto;z-index:auto;transform:none;writing-mode:horizontal-tb;
+    width:100%;border:0;border-bottom:1px solid rgba(33,30,24,.22);background:transparent;
+    padding:.82rem .55rem;text-align:left;font:700 .52rem/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    letter-spacing:.05em;text-transform:uppercase
+  }
+  .eh-receive-door.eh-receive-inline:hover{background:rgba(255,255,255,.16)}
+  @media(max-width:50rem){
+    .eh-receive-door.eh-receive-inline{
+      border-right:1px solid rgba(33,30,24,.22);border-bottom:0;text-align:center;padding:.6rem .25rem;
+      font-size:.55rem
+    }
+  }
   .eh-receive-overlay{position:fixed;inset:0;z-index:100;background:#ddd3bf;color:#211e18;display:none;overflow:auto}
   .eh-receive-overlay.open{display:block}
   .eh-receive-shell{width:min(78rem,calc(100% - 1rem));margin:auto;padding:.6rem 0 3rem}
@@ -111,7 +124,16 @@
       </form>
     </div>`;
 
-  document.body.append(door, overlay);
+  const folioNav = document.body.dataset.receivingObject === "folio:ten"
+    ? document.querySelector(".nav")
+    : null;
+  if (folioNav) {
+    door.classList.add("eh-receive-inline");
+    folioNav.append(door);
+    document.body.append(overlay);
+  } else {
+    document.body.append(door, overlay);
+  }
 
   const close = overlay.querySelector(".eh-receive-close");
   const form = overlay.querySelector(".eh-receive-form");
