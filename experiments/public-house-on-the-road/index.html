@@ -30,7 +30,7 @@ h1{font-size:clamp(3rem,8vw,7rem);font-weight:400;line-height:.88;letter-spacing
 .house .voice{display:block;margin-bottom:.65rem;font:10px/1.4 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--rust)}
 .house h2{font-size:clamp(1.7rem,4vw,3rem);font-weight:400;line-height:1.02;margin:0 0 1rem}
 .house p{margin:.45rem 0;line-height:1.48}
-.controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;padding:1rem 0}
+.controls{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.65rem;padding:1rem 0}
 .controls button{min-height:3.6rem;padding:.7rem .8rem;background:transparent;border:1px solid rgba(233,220,198,.35);cursor:pointer;text-align:left}
 .controls button:hover,.controls button:focus{background:rgba(233,220,198,.08);outline:none}
 .controls button[disabled]{opacity:.42;border-style:dashed;cursor:not-allowed}
@@ -93,6 +93,7 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     <button type="button" data-reveal="transaction">Notice the transaction</button>
     <button type="button" data-reveal="where">Ask where this is</button>
     <button type="button" data-reveal="compare" id="compare-action" hidden>Compare Holderness place-states</button>
+    <button type="button" data-reveal="ravel" id="ravel-action" hidden>Ravel has been working here</button>
     <button type="button" disabled aria-describedby="route-note">Follow to the agency</button>
   </div>
   <p class="route-note" id="route-note">No route. The testimony does not expressly identify this house as the measured turnpike place or name “the road” as the Noxubee turnpike.</p>
@@ -124,6 +125,16 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     </div>
     <p class="brake">The same answer places both phrases within Holderness’s October 1832–January 1834 footing. It does not expressly make them the same premises.</p>
   </article>
+
+  <article class="panel" id="ravel" hidden>
+    <p class="panel-kicker">Nearby attributable hand · current bearing</p>
+    <h3>Ravel has been working here.</h3>
+    <p><strong>Current edge:</strong> what may a visitor honestly stand in, notice, compare, ask from, or follow without turning reach into movement.</p>
+    <p><strong>Last return:</strong> the public-house phrase and the measured turnpike-place phrase occur within the same Holderness answer and time footing. The premises still do not merge.</p>
+    <p><strong>Open:</strong> let this room remain object-led; use Shared Country only where an earned relation between rooms or grounds needs to be perceived.</p>
+    <p class="brake">This is Ravel’s present camera, not authority you inherit. The source remains senior. Another hand may enter this same work and see differently.</p>
+    <p><a href="https://docs.google.com/document/d/14HqR2uO1GXI3UL9T5cmwgzPqiCg9HTumIK5cr5gUI2s/edit">Open Ravel’s current bearing →</a></p>
+  </article>
 </section>
 
 <div class="return">
@@ -150,8 +161,10 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
   const panels = [...document.querySelectorAll('.panel')];
   const label = document.getElementById('state-label');
   const compareButton = document.getElementById('compare-action');
+  const ravelButton = document.getElementById('ravel-action');
   const passageLink = document.getElementById('ward-passage');
   let compareReady = false;
+  let handReady = false;
 
   function emit(type, detail = {}){
     window.dispatchEvent(new CustomEvent('earthlyhands:ground-event', {
@@ -162,8 +175,11 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
   function refreshCapabilities(){
     const transactionOpen = !document.getElementById('transaction').hidden;
     const whereOpen = !document.getElementById('where').hidden;
+    const compareOpen = !document.getElementById('compare').hidden;
     if(transactionOpen && whereOpen) compareReady = true;
+    if(transactionOpen || whereOpen || compareOpen) handReady = true;
     compareButton.hidden = !compareReady;
+    ravelButton.hidden = !handReady;
   }
 
   function sync(){
@@ -171,7 +187,10 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     label.textContent = open.length ? open.length + (open.length === 1 ? ' depth open' : ' depths open') : 'place held';
     const params = new URLSearchParams();
     if(open.length) params.set('open', open.join(','));
-    if(compareReady) params.set('ready', 'compare');
+    const ready = [];
+    if(compareReady) ready.push('compare');
+    if(handReady) ready.push('ravel');
+    if(ready.length) params.set('ready', ready.join(','));
     const exactState = location.pathname + (params.toString() ? '?' + params.toString() : '');
     history.replaceState(null,'',exactState);
     if(passageLink){
@@ -186,8 +205,8 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     if(!panel || !button) return;
     panel.hidden = !opening;
     button.textContent = opening ?
-      (id === 'transaction' ? 'Close the transaction' : id === 'where' ? 'Close the locality question' : 'Close the comparison') :
-      (id === 'transaction' ? 'Notice the transaction' : id === 'where' ? 'Ask where this is' : 'Compare Holderness place-states');
+      (id === 'transaction' ? 'Close the transaction' : id === 'where' ? 'Close the locality question' : id === 'compare' ? 'Close the comparison' : 'Close Ravel') :
+      (id === 'transaction' ? 'Notice the transaction' : id === 'where' ? 'Ask where this is' : id === 'compare' ? 'Compare Holderness place-states' : 'Ravel has been working here');
     refreshCapabilities();
     emit(opening ? 'depth_open' : 'depth_close',{target:id,origin,route_created:false});
   }
@@ -200,7 +219,9 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
 
   const params = new URLSearchParams(location.search);
   const restored = (params.get('open') || '').split(',').filter(Boolean);
-  compareReady = params.get('ready') === 'compare' || restored.includes('compare');
+  const ready = (params.get('ready') || '').split(',').filter(Boolean);
+  compareReady = ready.includes('compare') || restored.includes('compare');
+  handReady = ready.includes('ravel') || restored.includes('ravel');
   refreshCapabilities();
   restored.forEach(id => setOpen(id, true, 'exact-return'));
   sync();
