@@ -423,7 +423,7 @@ function folioHtml({ leaves = [], offers = [], notes = [], relationshipName = "F
       <div class="leaf-body" hidden>
         <div class="leaf-prose">${body || "<span class=\"quiet\">This leaf currently carries a road, not a copied body.</span>"}</div>
         ${source ? `<details class="provenance"><summary>Source / provenance road</summary><p>${source}</p></details>` : ""}
-        <div class="leaf-tools"><button class="inverse-open" type="button">What earns this?</button><button class="note-open" type="button">Notes${leafNotes.length ? ` · ${leafNotes.length} resting` : ""}</button><button class="leaf-focus" type="button">Take the desk</button></div>
+        <div class="leaf-tools"><button class="inverse-open" type="button">What earns this?</button><button class="note-open" type="button">Notes${leafNotes.length ? ` · ${leafNotes.length} resting` : ""}</button><button class="leaf-focus" type="button" title="Open this leaf in full focus">Take the desk · full focus</button></div>
         <section class="inverse-layer" hidden><span class="inverse-k">inverse · held support</span><h3>What earns this?</h3>${leaf.why_here ? `<p><strong>Why it is here</strong><br>${escapeHtml(leaf.why_here)}</p>` : `<p class="quiet">No stronger why-here state is held on this leaf.</p>`}${source ? `<p><strong>Road down</strong><br>${source}</p>` : `<p class="quiet">No deeper source road is carried on this leaf yet.</p>`}<p class="inverse-limit">This layer exposes only support already carried by the leaf. It does not strengthen the underlying claim.</p><button class="inverse-close" type="button">Return to leaf</button></section><section class="note-desk" hidden><div class="note-head"><span>Private working notes</span><button class="note-close" type="button">Rest notes</button></div><textarea class="note-editor" rows="12" placeholder="You may think here."></textarea><input class="note-id" type="hidden" value=""><div class="note-actions"><button class="note-save" type="button">Keep private</button><span class="note-state" aria-live="polite"></span></div><div class="resting-notes">${restingNotes || `<span class="quiet">No resting notes here yet.</span>`}</div></section>
       </div>
     </article>`;
@@ -461,7 +461,7 @@ button{font:inherit;color:inherit}button:focus-visible,summary:focus-visible{out
 .top{padding:.55rem .7rem;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:1rem;font:.52rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .head{padding:clamp(.9rem,3vw,2rem);border-bottom:1px solid var(--rule)}.k{font:.55rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--rust)}
 h1{font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.88;letter-spacing:-.06em;margin:.15rem 0 .65rem}.head p{max-width:42rem;margin:.2rem 0}
-.apertures{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}.apertures button{border:1px solid var(--hair);background:transparent;padding:.32rem .48rem;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.04em}.apertures button[aria-pressed="true"]{border-color:var(--rust);background:rgba(135,87,58,.07)}
+.apertures{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}.apertures button,.apertures a{border:1px solid var(--hair);background:transparent;padding:.32rem .48rem;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.04em;text-decoration:none;color:inherit}.apertures button[aria-pressed="true"]{border-color:var(--rust);background:rgba(135,87,58,.07)}
 .body{padding:clamp(.7rem,2vw,1.2rem)}.folio-status{margin-bottom:.75rem;color:var(--muted);font:.56rem/1.35 var(--mono);text-transform:uppercase;letter-spacing:.04em}
 .nearby{margin:0 0 1rem}.nearby>h2{margin:0 0 .45rem;font:400 1.25rem/1.1 var(--serif)}.nearby-note{margin:0 0 .65rem;color:var(--muted);font-size:.88rem;max-width:42rem}
 .offers{border:1px solid var(--rule);background:rgba(255,255,255,.08)}.offer{padding:.8rem;border-bottom:1px solid var(--hair)}.offer:last-child{border-bottom:0}.offer-from{display:block;color:var(--rust);font:.48rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}.offer strong{display:block;font-weight:400;font-size:1.08rem;margin:.12rem 0}.offer p{margin:.25rem 0;color:var(--muted);max-width:45rem}.offer-actions{display:flex;gap:.7rem;margin-top:.55rem}.offer-actions button{border:0;border-bottom:1px solid var(--hair);background:transparent;padding:.15rem 0;cursor:pointer;font:.5rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.04em}.offer-actions button[data-offer-action="keep"]{border-bottom-color:var(--rust)}.offer-body{margin-top:.7rem;padding-top:.65rem;border-top:1px solid var(--hair);max-width:52rem}
@@ -480,7 +480,7 @@ h1{font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.88;letter-spaci
 <main class="shell">
 <div class="top"><strong>Earthly Hands Workshop</strong><span>${escapeHtml(relationshipName)} · private · continuing</span></div>
 <header class="head"><div class="k">authenticated folio</div><h1>Good to see you.</h1><p>Here is what is close enough to work with. Pull depth when it catches; provenance stays one layer down.</p>
-<div class="apertures"><button type="button" aria-pressed="true">Workshop folio</button><button type="button" aria-pressed="false" disabled>Game folio · crossing next</button></div></header>
+<div class="apertures"><button type="button" aria-pressed="true">Workshop folio</button><a href="https://earthlyhands.org/experiments/ten-folio/#game" target="_blank" rel="noopener">Game folio · prototype</a></div></header>
 <section class="body">
 <div class="folio-status">${leaves.length} carried leaf${leaves.length===1?"":"s"} · D1-backed · no public cache</div>
 ${offerCards ? `<section class="nearby"><h2>Beside your elbow</h2><p class="nearby-note">A few things may be offered because a real relation brought them near. Nothing here is assignment. Open, keep, or let pass.</p><div class="offers">${offerCards}</div></section>` : ""}
@@ -533,7 +533,7 @@ document.addEventListener("click",async(event)=>{
   const opener=event.target.closest(".leaf-open");
   if(opener){
     const leaf=opener.closest(".leaf"),body=leaf.querySelector(".leaf-body"),open=body.hidden;
-    body.hidden=!open;opener.setAttribute("aria-expanded",String(open));
+    body.hidden=!open;opener.setAttribute("aria-expanded",String(open));const pull=opener.querySelector(".leaf-pull");if(pull)pull.textContent=open?"close":"open";
     if(open){
       fetch("/folio/seen",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({leaf_id:leaf.dataset.leaf,updated_at:leaf.dataset.updated})}).catch(()=>{});
       leaf.querySelector(".leaf-change")?.remove();leaf.querySelector(".leaf-new")?.remove();
