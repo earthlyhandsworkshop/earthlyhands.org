@@ -544,6 +544,225 @@ async function companionActIngress(request, env) {
   }, 201);
 }
 
+
+function folioPrivateWorkConfig(env, relationshipId, workId) {
+  const raw = String(env.FOLIO_WORKS_JSON || "").trim();
+  if (!raw || !relationshipId || !workId) return null;
+  try {
+    const parsed = JSON.parse(raw);
+    const relationshipWorks = parsed?.[relationshipId];
+    const work = relationshipWorks?.[workId];
+    if (!work || typeof work !== "object") return null;
+    const clean = (value, max) => String(value || "").trim().slice(0, max);
+    const candidates = Array.isArray(work.candidates) ? work.candidates.slice(0, 40).map((candidate, index) => ({
+      id: clean(candidate?.id || ("candidate-" + (index + 1)), 160),
+      title: clean(candidate?.title, 240),
+      home: clean(candidate?.home, 240),
+      object_kind: clean(candidate?.object_kind || candidate?.kind, 120),
+      why_caught: clean(candidate?.why_caught, 1200),
+      brake: clean(candidate?.brake, 1200),
+      road_home: clean(candidate?.road_home, 2000),
+      body: clean(candidate?.body, 12000),
+      scope: clean(candidate?.scope, 160)
+    })).filter((candidate) => candidate.id && candidate.title) : [];
+    return {
+      id: clean(workId, 160),
+      title: clean(work.title, 240),
+      question: clean(work.question, 4000),
+      secondary_question: clean(work.secondary_question, 4000),
+      road_home: clean(work.road_home, 2000),
+      state: clean(work.state || "working", 80),
+      scan_label: clean(work.scan_label || "Scan a ground", 120),
+      candidates
+    };
+  } catch {
+    return null;
+  }
+}
+
+function folioPrivateWorkCandidate(work, candidateId) {
+  if (!work || !candidateId) return null;
+  return (work.candidates || []).find((candidate) => String(candidate.id) === String(candidateId)) || null;
+}
+
+function folioWorkCandidateHtml(candidate) {
+  const road = safeHttpUrl(candidate.road_home);
+  return \`<article class="work-candidate" data-candidate="\${escapeHtml(candidate.id)}">
+    <div class="work-candidate-meta">\${escapeHtml(candidate.home || "Workshop")} · \${escapeHtml(candidate.object_kind || "body")}</div>
+    <h3>\${escapeHtml(candidate.title)}</h3>
+    \${candidate.why_caught ? \`<p><strong>Caught</strong><br>\${escapeHtml(candidate.why_caught)}</p>\` : ""}
+    \${candidate.brake ? \`<p class="work-candidate-brake"><strong>Brake</strong><br>\${escapeHtml(candidate.brake)}</p>\` : ""}
+    <div class="work-candidate-actions">
+      <button type="button" data-load-candidate="\${escapeHtml(candidate.id)}">Load this body</button>
+      \${road ? \`<a href="\${escapeHtml(road)}" target="_blank" rel="noopener">Road home</a>\` : ""}
+    </div>
+  </article>\`;
+}
+
+function folioWorkHtml({ work, acts = [], notes = [], relationshipName = "Folio" } = {}) {
+  const currentActs = (acts || []).filter((row) => String(row.object_id || "") === String(work.id) && Number(row.is_current || 0) === 1);
+  const historyActs = (acts || []).filter((row) => String(row.object_id || "") === String(work.id) && Number(row.is_current || 0) !== 1);
+  const currentActCards = currentActs.map((row) => folioCompanionActHtml(row, false)).join("");
+  const historyActCards = historyActs.map((row) => folioCompanionActHtml(row, true)).join("");
+  const candidates = (work.candidates || []).map(folioWorkCandidateHtml).join("");
+  const road = safeHttpUrl(work.road_home);
+  return \`<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>\${escapeHtml(work.title)} — \${escapeHtml(relationshipName)} Folio</title>
+<style>
+:root{--paper:#ddd3bf;--sheet:#ebe3d3;--ink:#211e18;--muted:#6f675a;--rule:#4c463c;--hair:rgba(33,30,24,.22);--rust:#87573a;--wash:rgba(255,255,255,.14);--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html{background:#cfc5b1;-webkit-text-size-adjust:100%}body{margin:0;color:var(--ink);font:1rem/1.5 var(--serif);background:linear-gradient(rgba(33,30,24,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(33,30,24,.017) 1px,transparent 1px),var(--paper);background-size:30px 30px,30px 30px,auto;min-height:100vh}
+button,input,textarea{font:inherit;color:inherit}button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+.shell{width:min(76rem,calc(100% - .5rem));margin:.25rem auto 3rem;border:1px solid var(--rule);background:var(--sheet);box-shadow:0 12px 36px rgba(45,35,25,.12)}
+.top{padding:.55rem .7rem;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:1rem;font:.52rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.work-head{padding:clamp(1.25rem,4vw,3.1rem);border-bottom:1px solid var(--rule);position:relative}.work-k{font:.55rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--rust)}.work-head h1{font-weight:400;font-size:clamp(2.5rem,6vw,4.5rem);line-height:.92;letter-spacing:-.045em;margin:.2rem 0 1.25rem;max-width:52rem}.work-question{font-size:clamp(1.28rem,2.6vw,1.72rem);line-height:1.28;max-width:49rem;margin:.1rem 0}.work-secondary{max-width:44rem;color:var(--muted);font-size:1rem;margin:1rem 0 0}.work-road{display:inline-block;margin-top:1.25rem;color:var(--muted);font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em;text-decoration:none;border-bottom:1px solid var(--hair)}
+.work-body{padding:clamp(.8rem,2vw,1.35rem)}.work-tools{display:flex;flex-wrap:wrap;gap:.55rem;padding:.1rem 0 1rem}.work-tools button{border:1px solid var(--hair);background:transparent;padding:.42rem .58rem;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}.work-tools button[aria-pressed="true"]{border-color:var(--rust);background:rgba(135,87,58,.06)}
+.bench{display:grid;grid-template-columns:minmax(0,1fr) minmax(14rem,21rem);gap:1rem;align-items:start}.held{border:1px solid var(--rule);background:var(--wash);min-height:16rem;padding:clamp(1rem,2.5vw,1.7rem)}.held-empty{max-width:36rem}.held-empty h2,.loaded h2,.nearby h2,.drawer h2{font-weight:400;margin:0 0 .45rem}.quiet{color:var(--muted)}.strap{font:.5rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--rust);margin-bottom:.45rem}.loaded-meta{font:.5rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}.loaded-prose{max-width:50rem;font-size:1.04rem;line-height:1.58}.loaded-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}.loaded-actions button,.loaded-actions a{border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.12rem 0;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em;text-decoration:none;color:inherit}
+.nearby{border-left:1px solid var(--rule);padding-left:1rem}.nearby-k{font:.5rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--rust)}.companion-act{padding:.75rem 0;border-bottom:1px solid var(--hair)}.companion-act-meta{display:block;font:.48rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--rust)}.companion-act p{margin:.3rem 0}.companion-act.history{color:var(--muted)}.companion-act-open{font-size:.9rem}.companion-act-road,.companion-act-roadtext{font:.5rem/1.35 var(--mono);letter-spacing:.02em;color:var(--muted)}.companion-history{margin-top:.65rem}.companion-history summary{cursor:pointer;font:.5rem/1.3 var(--mono);text-transform:uppercase;color:var(--muted)}
+.drawer{margin-top:1rem;border-top:1px solid var(--rule);padding-top:1rem;display:none}.drawer.open{display:block}.drawer-head{display:flex;justify-content:space-between;gap:1rem;align-items:baseline}.drawer-close{border:0;border-bottom:1px solid var(--hair);background:transparent;cursor:pointer;font:.5rem/1.2 var(--mono);text-transform:uppercase}.scan-note{max-width:44rem;color:var(--muted);font-size:.9rem}.work-candidates{border:1px solid var(--rule);background:var(--wash)}.work-candidate{padding:.85rem;border-bottom:1px solid var(--hair)}.work-candidate:last-child{border-bottom:0}.work-candidate-meta{font:.48rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}.work-candidate h3{font-weight:400;font-size:1.15rem;margin:.15rem 0 .45rem}.work-candidate p{max-width:50rem;margin:.35rem 0}.work-candidate-brake{color:var(--muted)}.work-candidate-actions{display:flex;gap:.8rem;margin-top:.55rem}.work-candidate-actions button,.work-candidate-actions a{border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.12rem 0;cursor:pointer;font:.5rem/1.2 var(--mono);text-transform:uppercase;text-decoration:none;color:inherit}
+.ask{margin-top:1rem;border-top:1px solid var(--rule);padding-top:1rem;display:none}.ask.open{display:block}.ask label{display:block;font:.5rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--rust);margin-bottom:.45rem}.ask-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.5rem;align-items:end}.ask textarea{width:100%;min-height:6rem;resize:vertical;border:1px solid var(--rule);background:rgba(255,255,255,.14);padding:.8rem;font:1rem/1.5 var(--serif)}.ask button{border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.2rem 0;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase}.ask-state{font:.5rem/1.3 var(--mono);text-transform:uppercase;color:var(--muted);margin:.45rem 0}.ask-return{max-width:52rem;border-left:1px solid var(--hair);padding:.7rem 0 .7rem 1rem;white-space:pre-wrap}
+@media(max-width:48rem){.work-head{padding:1.1rem .8rem}.work-body{padding:.65rem}.bench{display:block}.nearby{border-left:0;border-top:1px solid var(--rule);padding:1rem 0 0;margin-top:1rem}.work-question{font-size:1.25rem}.ask-row{display:block}.ask button{margin-top:.5rem}.top{font-size:.44rem}.held{padding:.85rem}.work-tools{position:sticky;top:0;background:rgba(235,227,211,.96);z-index:2;padding:.55rem 0}}
+@media(prefers-reduced-motion:no-preference){.drawer,.ask{animation:folio-open .14s ease-out}@keyframes folio-open{from{opacity:.4;transform:translateY(-3px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<main class="shell" data-work-id="\${escapeHtml(work.id)}">
+<div class="top"><strong>Earthly Hands Workshop</strong><span>\${escapeHtml(relationshipName)} · private working folio</span></div>
+<header class="work-head">
+  <div class="work-k">held · \${escapeHtml(work.state || "working")}</div>
+  <h1>\${escapeHtml(work.title)}</h1>
+  <p class="work-question">\${escapeHtml(work.question)}</p>
+  \${work.secondary_question ? \`<p class="work-secondary">\${escapeHtml(work.secondary_question)}</p>\` : ""}
+  \${road ? \`<a class="work-road" href="\${escapeHtml(road)}" target="_blank" rel="noopener">Road home</a>\` : ""}
+</header>
+<section class="work-body">
+  <div class="work-tools" aria-label="Workshop actions">
+    <button type="button" data-open-scan>\${escapeHtml(work.scan_label || "Scan a ground")}</button>
+    <button type="button" data-open-ask>Ask this ground</button>
+    <button type="button" data-return-work>Return</button>
+  </div>
+  <div class="bench">
+    <section class="held" data-held>
+      <div class="held-empty"><div class="strap">nothing loaded</div><h2>One thing at a time.</h2><p>Scan somewhere, load one body, or ask from here. Nothing becomes an asset by being looked at.</p></div>
+    </section>
+    <aside class="nearby">
+      <span class="nearby-k">beside your elbow · asynchronous</span>
+      <h2>Nearby hands</h2>
+      \${currentActCards || '<p class="quiet">No current companion return is held for this work yet.</p>'}
+      \${historyActCards ? \`<details class="companion-history"><summary>Earlier returns · \${historyActs.length}</summary>\${historyActCards}</details>\` : ""}
+    </aside>
+  </div>
+  <section class="drawer" data-scan-drawer>
+    <div class="drawer-head"><div><div class="strap">scan · bounded candidates</div><h2>\${escapeHtml(work.scan_label || "Scan a ground")}</h2></div><button class="drawer-close" type="button" data-close-scan>Close drawer</button></div>
+    <p class="scan-note">This scan shows only candidates explicitly carried for this held work. It does not rank, import, or reclassify the ground it looks across.</p>
+    <div class="work-candidates">\${candidates || '<div class="work-candidate"><p class="quiet">No bounded scan candidates are configured for this work yet.</p></div>'}</div>
+  </section>
+  <section class="ask" data-ask>
+    <label for="folio-work-ask">Ask this ground</label>
+    <div class="ask-row"><textarea id="folio-work-ask" placeholder="Ask normally."></textarea><button type="button" data-submit-ask>Ask</button></div>
+    <div class="ask-state" data-ask-state></div>
+    <div class="ask-return" data-ask-return hidden></div>
+  </section>
+</section>
+</main>
+<script>
+const workRoot=document.querySelector("[data-work-id]");
+const held=document.querySelector("[data-held]");
+const drawer=document.querySelector("[data-scan-drawer]");
+const ask=document.querySelector("[data-ask]");
+let loaded=null;
+let priorScroll=0;
+const candidates=\${JSON.stringify(work.candidates || []).replaceAll("<","\\u003c")};
+function renderLoaded(candidate){
+  loaded=candidate||null;
+  if(!candidate){
+    held.innerHTML='<div class="held-empty"><div class="strap">nothing loaded</div><h2>One thing at a time.</h2><p>Scan somewhere, load one body, or ask from here. Nothing becomes an asset by being looked at.</p></div>';
+    return;
+  }
+  const road=/^https:\\/\\//i.test(candidate.road_home||"")?candidate.road_home:"";
+  held.innerHTML='<article class="loaded"><div class="strap">loaded for this question</div><div class="loaded-meta">'+escapeClient(candidate.home||"Workshop")+' · '+escapeClient(candidate.object_kind||"body")+'</div><h2>'+escapeClient(candidate.title||"Untitled")+'</h2>'+(candidate.why_caught?'<p><strong>Why loaded</strong><br>'+escapeClient(candidate.why_caught)+'</p>':'')+(candidate.body?'<div class="loaded-prose">'+escapeClient(candidate.body).replaceAll("\\n","<br>")+'</div>':'<p class="quiet">This specimen carries a road rather than a copied body.</p>')+(candidate.brake?'<p class="quiet"><strong>Brake</strong><br>'+escapeClient(candidate.brake)+'</p>':'')+'<div class="loaded-actions"><button type="button" data-unload>Return to 17</button>'+(road?'<a href="'+escapeClient(road)+'" target="_blank" rel="noopener">Road home</a>':'')+'</div></article>';
+}
+function escapeClient(value){return String(value??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;")}
+document.addEventListener("click",async(event)=>{
+  if(event.target.closest("[data-open-scan]")){drawer.classList.add("open");ask.classList.remove("open");drawer.scrollIntoView({behavior:"smooth",block:"start"});return}
+  if(event.target.closest("[data-close-scan]")){drawer.classList.remove("open");return}
+  const load=event.target.closest("[data-load-candidate]");
+  if(load){const candidate=candidates.find((item)=>String(item.id)===String(load.dataset.loadCandidate));if(candidate){priorScroll=window.scrollY;renderLoaded(candidate);drawer.classList.remove("open");held.scrollIntoView({behavior:"smooth",block:"start"})}return}
+  if(event.target.closest("[data-unload]")){renderLoaded(null);window.scrollTo({top:priorScroll,behavior:"smooth"});return}
+  if(event.target.closest("[data-open-ask]")){ask.classList.add("open");drawer.classList.remove("open");ask.scrollIntoView({behavior:"smooth",block:"start"});return}
+  if(event.target.closest("[data-return-work]")){drawer.classList.remove("open");ask.classList.remove("open");renderLoaded(null);window.scrollTo({top:0,behavior:"smooth"});return}
+  if(event.target.closest("[data-submit-ask]")){
+    const textarea=document.querySelector("#folio-work-ask"),state=document.querySelector("[data-ask-state]"),out=document.querySelector("[data-ask-return]");
+    const message=textarea.value.trim();if(!message){state.textContent="ask one question";return}
+    state.textContent="asking…";out.hidden=true;
+    try{
+      const response=await fetch("/folio/work-ask",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({work_id:workRoot.dataset.workId,candidate_id:loaded?.id||"",message})});
+      const data=await response.json();if(!response.ok)throw new Error(data.error||"This ground could not answer.");
+      out.textContent=data.reply||"";out.hidden=false;state.textContent=loaded?"returned on loaded body":"returned on held question";
+    }catch(error){state.textContent=error.message||"This ground could not answer."}
+  }
+});
+</script>
+</body></html>\`;
+}
+
+async function folioWorkAsk(request, env, relationshipId) {
+  if (!env.OPENAI_API_KEY) return json({ error:"The listening key is not configured.", code:"missing_openai_key" }, 503);
+  let body = {};
+  try { body = await request.json(); }
+  catch { return json({ error:"The question could not be read.", code:"folio_work_ask_invalid" }, 400); }
+  const workId = String(body?.work_id || "").trim().slice(0,160);
+  const candidateId = String(body?.candidate_id || "").trim().slice(0,160);
+  const message = String(body?.message || "").trim().slice(0,MAX_MESSAGE_LENGTH);
+  if (!workId || !message) return json({ error:"Held work and question are required.", code:"folio_work_ask_incomplete" }, 400);
+  const work = folioPrivateWorkConfig(env,relationshipId,workId);
+  if (!work) return json({ error:"That held work is not configured.", code:"folio_work_not_held" }, 404);
+  const candidate = candidateId ? folioPrivateWorkCandidate(work,candidateId) : null;
+  if (candidateId && !candidate) return json({ error:"That loaded body is not part of this bounded scan.", code:"folio_candidate_not_held" }, 404);
+  const heldContext = [
+    "PRIVATE FOLIO WORK — BOUNDED CONTEXT",
+    "Held work: " + work.title,
+    "Governing question: " + work.question,
+    work.secondary_question ? "Secondary question: " + work.secondary_question : "",
+    candidate ? "Loaded specimen: " + candidate.title : "Loaded specimen: none",
+    candidate?.home ? "Specimen home: " + candidate.home : "",
+    candidate?.object_kind ? "Specimen kind: " + candidate.object_kind : "",
+    candidate?.why_caught ? "Why loaded: " + candidate.why_caught : "",
+    candidate?.brake ? "Brake / limit: " + candidate.brake : "",
+    candidate?.body ? "Bounded specimen body:\\n" + candidate.body : "",
+    "",
+    "Visitor question: " + message
+  ].filter(Boolean).join("\\n");
+  const instructions = \`You are the bounded private Folio intelligence for Earthly Hands Workshop.
+Work only from the held-work context supplied in this request.
+Do not imply access to Google Drive, the wider Workshop, private notes, tools, web, or conversation history beyond what is supplied.
+The governing question is local purpose, not a conclusion.
+Preserve body identity, custody, uncertainty, brakes, and roads home.
+Do not turn relevance into value, examination into promotion, or a loaded body into an asset.
+A refusal, partial answer, open edge, or request for evidence is a valid result.
+When useful, distinguish: WHAT MOVED / WHAT HELD / OPEN / ROAD HOME, but do not force that shape when ordinary prose is clearer.
+Keep the answer compact enough to remain beside the work.\`;
+  let upstream;
+  try {
+    upstream = await fetch("https://api.openai.com/v1/responses",{
+      method:"POST",
+      headers:{Authorization:\`Bearer \${env.OPENAI_API_KEY}\`,"Content-Type":"application/json"},
+      body:JSON.stringify({model:MODEL,reasoning:{effort:"none"},instructions,input:[{role:"user",content:heldContext}],max_output_tokens:MAX_OUTPUT_TOKENS,store:false})
+    });
+  } catch {
+    return json({ error:"This ground could not be reached.", code:"folio_work_upstream_unreachable" }, 502);
+  }
+  if (!upstream.ok) return json({ error:"This ground could not answer.", code:"folio_work_upstream_error" }, 502);
+  const data = await upstream.json();
+  const reply = extractReply(data);
+  if (!reply) return json({ error:"This ground returned no words.", code:"folio_work_empty_reply" }, 502);
+  return json({ reply, usage:compactUsage(data), work_id:workId, candidate_id:candidateId || null });
+}
+
 function folioCompanionActHtml(row, history = false) {
   const road = safeHttpUrl(row.road_home);
   const sourceReturn = safeHttpUrl(row.source_return_id);
@@ -818,6 +1037,10 @@ async function authenticatedFolio(request, env, ctx, url) {
   ).bind(relationshipId,subjectHash).first();
   if (Number(member?.active || 0) !== 1) return json({ error:"This folio is not available to this identity.", code:"folio_not_authorized" }, 403);
 
+  if (request.method === "POST" && url.pathname === "/folio/work-ask") {
+    return folioWorkAsk(request,env,relationshipId);
+  }
+
   if (url.pathname === "/folio/health") {
     return json({ ok:true, authenticated:true, relationship:relationshipId, relationship_name:relationshipName, storage:"d1", private:true, allowlist:"worker-enforced" });
   }
@@ -929,6 +1152,23 @@ async function authenticatedFolio(request, env, ctx, url) {
     never_opened: !leaf.seen_updated_at
   }));
 
+  const requestedWorkId = String(url.searchParams.get("work") || "").trim().slice(0,160);
+  const heldWork = requestedWorkId ? folioPrivateWorkConfig(env,relationshipId,requestedWorkId) : null;
+  if (requestedWorkId && !heldWork) {
+    return json({ error:"That held work is not configured for this folio.", code:"folio_work_not_held" }, 404);
+  }
+  if (heldWork) {
+    return new Response(folioWorkHtml({ work:heldWork, acts, notes, relationshipName }), {
+      status:200,
+      headers:{
+        "Content-Type":"text/html; charset=utf-8",
+        "Cache-Control":"no-store",
+        "X-Robots-Tag":"noindex, nofollow",
+        ...workerHeaders()
+      }
+    });
+  }
+
   return new Response(folioHtml({ leaves, offers, notes, acts, relationshipName }), {
     status:200,
     headers:{
@@ -950,7 +1190,7 @@ export default {
     }
 
     if ((request.method === "GET" && (url.pathname === "/folio" || url.pathname === "/folio/" || url.pathname === "/folio/health")) ||
-        (request.method === "POST" && (url.pathname === "/folio/seen" || url.pathname === "/folio/note" || url.pathname === "/folio/offer-action" || url.pathname === "/folio/seed-proof"))) {
+        (request.method === "POST" && (url.pathname === "/folio/seen" || url.pathname === "/folio/note" || url.pathname === "/folio/offer-action" || url.pathname === "/folio/seed-proof" || url.pathname === "/folio/work-ask"))) {
       return authenticatedFolio(request, env, ctx, url);
     }
 
