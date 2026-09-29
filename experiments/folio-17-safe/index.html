@@ -44,7 +44,7 @@ button,textarea{font:inherit;color:inherit}button:focus-visible,textarea:focus-v
     <aside class="nearby">
       <span class="nearby-k">beside your elbow · asynchronous</span>
       <h2>Nearby hands</h2>
-      <article class="companion-act"><span class="companion-act-meta">Fieldglass · BUILD · current</span><p>The specimen is now a bounded work-attached Folio rather than a person-owned dashboard.</p><p><strong>Open</strong><br>Ten has not yet performed the acceptance loop on the visual specimen.</p></article>
+      <article class="companion-act"><span class="companion-act-meta">Fieldglass · USE · current</span><p>The specimen is now a bounded work-attached Folio rather than a person-owned dashboard.</p><p><strong>Accepted for use</strong><br>Ten has seen the specimen, considers it close enough to work with, and wants to learn the instrument by using it.</p></article>
       <details class="companion-history"><summary>Earlier returns · 2</summary>
         <article class="companion-act history"><span class="companion-act-meta">Small Door · HARDEN · history</span><p>Current return and return history stay distinct. Late recovery does not become current by accident.</p></article>
         <article class="companion-act history"><span class="companion-act-meta">Fieldglass · PLAN · history</span><p>Build one sparse specimen before widening the Folio theory.</p></article>
@@ -62,8 +62,22 @@ button,textarea{font:inherit;color:inherit}button:focus-visible,textarea:focus-v
   </section>
   <section class="ask" data-ask>
     <label for="folio-work-ask">Ask this ground</label>
-    <div class="ask-row"><textarea id="folio-work-ask" placeholder="Ask normally."></textarea><button type="button" data-submit-ask>Ask</button></div>
-    <div class="ask-state" data-ask-state></div><div class="ask-return" data-ask-return hidden></div>
+    <div class="ask-row"><textarea id="folio-work-ask" placeholder="Ask normally.">Why would anybody outside Earthly Hands value this enough for money to move toward it?</textarea><button type="button" data-submit-ask>Ask</button></div>
+    <div class="ask-state" data-ask-state>first working pass · Fieldglass · Work-attached Folio loaded</div><div class="ask-return" data-ask-return>Observed
+
+The possible value is not “a Folio” as a generic software object. The live thing is a capacity: serious distributed work can remain inheritable without requiring one person to serve as the message bus. The work carries its own current state, history, brakes, roads home, and bounded question.
+
+Why that could matter outside Earthly Hands
+
+Many groups already have documents, chat, task systems, archives, and AI. The harder problem is continuity: how another person or machine can re-enter consequential work without flattening provenance, confusing current with history, or making a human repeatedly reconstruct the state. This specimen is beginning to demonstrate a different answer to that problem.
+
+What is not yet earned
+
+No outside person has paid for this. No market has been demonstrated. Reduced burden inside Earthly Hands is evidence of usefulness here, not proof of external demand. The instrument should therefore keep asking for encounters rather than converting its own usefulness into a business claim.
+
+Next test
+
+Put this Folio in front of one real outside body of work and watch for one thing: does it reduce re-entry or message-bus burden enough that the person wants to keep using it? If yes, money becomes a later question with evidence beneath it. If no, we learn where the Workshop-specific value stops.</div>
     <p class="specimen-note">Public-safe Ask: calls the existing bounded Earthly Hands listening service with only this held question, the currently loaded harmless fixture body (if any), and your words. No private 17 data or Workshop-wide context is sent.</p>
   </section>
 </section>
@@ -74,6 +88,8 @@ const candidates={"shared-country":{home:"Public Ground",kind:"specimen",title:"
 function esc(v){return String(v??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;")}
 function renderLoaded(c){loaded=c||null;if(!c){held.innerHTML='<div class="held-empty"><div class="strap">nothing loaded</div><h2>One thing at a time.</h2><p>Scan somewhere, load one body, or ask from here. Nothing becomes an asset by being looked at.</p></div>';return}held.innerHTML='<article class="loaded"><div class="strap">loaded for this question</div><div class="loaded-meta">'+esc(c.home)+' · '+esc(c.kind)+'</div><h2>'+esc(c.title)+'</h2><p><strong>Why loaded</strong><br>'+esc(c.why)+'</p><div class="loaded-prose">'+esc(c.body)+'</div><p class="quiet"><strong>Brake</strong><br>'+esc(c.brake)+'</p><div class="loaded-actions"><button type="button" data-unload>Return to 17</button></div></article>'}
 document.addEventListener("click",async e=>{if(e.target.closest("[data-open-scan]")){drawer.classList.add("open");ask.classList.remove("open");drawer.scrollIntoView({behavior:"smooth"});return}if(e.target.closest("[data-close-scan]")){drawer.classList.remove("open");return}const load=e.target.closest("[data-load-candidate]");if(load){const c=candidates[load.dataset.loadCandidate];if(c){priorScroll=scrollY;renderLoaded(c);drawer.classList.remove("open");held.scrollIntoView({behavior:"smooth"})}return}if(e.target.closest("[data-unload]")){renderLoaded(null);scrollTo({top:priorScroll,behavior:"smooth"});return}if(e.target.closest("[data-open-ask]")){ask.classList.add("open");drawer.classList.remove("open");ask.scrollIntoView({behavior:"smooth"});return}if(e.target.closest("[data-return-work]")){drawer.classList.remove("open");ask.classList.remove("open");renderLoaded(null);scrollTo({top:0,behavior:"smooth"});return}if(e.target.closest("[data-submit-ask]")){const q=document.querySelector("#folio-work-ask").value.trim(),state=document.querySelector("[data-ask-state]"),out=document.querySelector("[data-ask-return]");if(!q){state.textContent="ask one question";return}const api=String(window.EARTHLY_HANDS_API_URL||"").trim();if(!api){state.textContent="listening ground unavailable";return}const heldQuestion="Why would anybody outside Earthly Hands value this enough for money to move toward it?";const loadedContext=loaded?["Loaded body: "+loaded.title,"Why loaded: "+loaded.why,"Body: "+loaded.body,"Brake: "+loaded.brake].join("\n"):"Loaded body: none";const prompt=["You are answering inside the public-safe 17 work-attached Folio specimen.","Work only from the held question, the harmless loaded fixture if one is present, and the visitor question.","Do not imply access to private 17 data, Google Drive, the wider Workshop, web research, or hidden memory.","Preserve the brake. Do not turn examination into promotion or relevance into proof of value.","Held question: "+heldQuestion,loadedContext,"Visitor question: "+q].join("\n\n");state.textContent="asking…";out.hidden=true;try{const r=await fetch(api,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:prompt,place:"folio-17-safe",history:[]})});const d=await r.json().catch(()=>({}));if(!r.ok||typeof d.reply!=="string")throw new Error(d.error||"This ground could not answer.");out.textContent=d.reply;out.hidden=false;state.textContent=loaded?"returned on loaded body":"returned on held question"}catch(err){state.textContent=err.message||"This ground could not answer."}return}}});
+renderLoaded(candidates.folio);
+ask.classList.add("open");
 </script>
 </body>
 </html>
