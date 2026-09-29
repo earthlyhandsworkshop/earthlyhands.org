@@ -2894,3 +2894,50 @@ body[data-discovery="open"][data-ground="night"] .ground-talk textarea{
     max-width:none;
   }
 }
+
+
+/* Shared Country — morning keeps the unresolved back trail perceptually open.
+   This is an attributable derivative trace, not source text. */
+body[data-ground="morning"] .back-trail-trace{
+  grid-column:2;
+  margin:1.9rem 0 0;
+  padding:1rem 0 0 1.2rem;
+  border-left:1px solid var(--scene-rule);
+  max-width:28rem;
+  color:var(--scene-muted);
+}
+body[data-ground="morning"] .back-trail-trace span{
+  display:block;
+  margin-bottom:.35rem;
+  font:600 .56rem/1.3 var(--mono);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+body[data-ground="morning"] .back-trail-trace p{
+  margin:0;
+  color:var(--scene-ink);
+  font-family:var(--serif);
+  font-size:1rem;
+  line-height:1.55;
+}
+body[data-ground="morning"] .back-trail-trace a{
+  display:inline-block;
+  margin-top:.5rem;
+  color:var(--scene-muted);
+  font:600 .55rem/1.3 var(--mono);
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:1px solid var(--scene-accent);
+}
+body[data-ground="morning"] .back-trail-trace a:hover,
+body[data-ground="morning"] .back-trail-trace a:focus-visible{
+  color:var(--scene-accent);
+}
+@media(max-width:52rem){
+  body[data-ground="morning"] .back-trail-trace{
+    grid-column:1;
+    margin-top:1.4rem;
+    max-width:none;
+  }
+}
