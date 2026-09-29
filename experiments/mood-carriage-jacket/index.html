@@ -58,11 +58,25 @@ body[data-mood="morning"] .source .limit{color:#697174}
 .reading{font:1.05rem/1.65 var(--serif);max-width:50rem}
 .reading strong{font-family:var(--sans);font-weight:600}
 .mood-words{display:flex;flex-wrap:wrap;gap:.45rem .9rem;margin:1.2rem 0 1.5rem}
-.word{font:650 .59rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.075em;padding-bottom:.15rem;border-bottom:1px solid currentColor}
+.word{appearance:none;background:transparent;border:0;border-bottom:1px solid currentColor;color:inherit;font:650 .59rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.075em;padding:0 0 .15rem;cursor:pointer}
+.word:hover,.word[aria-expanded="true"]{opacity:1;transform:translateY(-1px)}
+.word[aria-expanded="true"]{border-bottom-width:2px}
 .word.attributed{color:var(--amber)}
 body[data-mood="morning"] .word.attributed{color:#7d5b2b}
 .word.source{color:var(--blue)}
 body[data-mood="morning"] .word.source{color:#3f6984}
+
+.aperture-panel{max-width:50rem;margin:1.4rem 0 0;padding:1rem 0 0 clamp(1rem,3vw,2rem);position:relative;border-top:1px solid var(--line)}
+.aperture-panel[hidden]{display:none}
+.aperture-panel:before{content:"";position:absolute;left:0;top:1.25rem;width:.42rem;height:.42rem;border-radius:50%;background:var(--amber);box-shadow:0 0 0 .28rem rgba(210,167,104,.08)}
+.aperture-kind{font:650 .54rem/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.aperture-panel h3{font:520 clamp(1.2rem,2vw,1.55rem)/1.12 var(--sans);margin:.35rem 0 .7rem}
+.aperture-panel p{font:1rem/1.58 var(--serif);margin:.5rem 0;max-width:46rem}
+.aperture-panel .basis{color:var(--soft)}
+body[data-mood="morning"] .aperture-panel{border-color:rgba(23,27,29,.16)}
+body[data-mood="morning"] .aperture-panel .basis{color:#596164}
+.aperture-close{appearance:none;border:0;border-bottom:1px solid currentColor;background:transparent;color:var(--muted);padding:.1rem 0;cursor:pointer;font:650 .54rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-top:.5rem}
+
 .rule{font:500 clamp(1.35rem,2.8vw,2rem)/1.3 var(--serif);max-width:44rem}
 .rule b{font-family:var(--sans);font-weight:600}
 .inherit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem;margin-top:1.4rem}
@@ -128,11 +142,18 @@ body[data-mood="morning"] .footer{border-color:rgba(23,27,29,.16);color:#697174}
         <p class="held">Two unnamed men were sent back toward the ford of the river on the back trail.</p>
         <p class="limit">The account does not say that they reached the ford, and it gives no account of their return.</p>
       </div>
-      <div class="mood-words">
-        <span class="word source">guarded</span>
-        <span class="word source">sent back</span>
-        <span class="word attributed">watchful · Small Door</span>
-        <span class="word attributed">open behind us · Small Door</span>
+      <div class="mood-words" aria-label="Source and mood apertures">
+        <button type="button" class="word source" data-aperture="guarded" aria-expanded="false">guarded</button>
+        <button type="button" class="word source" data-aperture="sent-back" aria-expanded="false">sent back</button>
+        <button type="button" class="word attributed" data-aperture="watchful" aria-expanded="false">watchful · Small Door</button>
+        <button type="button" class="word attributed" data-aperture="open-behind" aria-expanded="false">open behind us · Small Door</button>
+      </div>
+      <div class="aperture-panel" data-aperture-panel hidden aria-live="polite">
+        <div class="aperture-kind" data-aperture-kind></div>
+        <h3 data-aperture-title></h3>
+        <p class="basis" data-aperture-basis></p>
+        <p data-aperture-reading></p>
+        <button type="button" class="aperture-close" data-aperture-close>Close aperture</button>
       </div>
       <p class="reading"><strong>Small Door reading:</strong> the source is not frightening because I know danger occurred; I do not. What catches me is that attention is pushed backward into dark ground the main account is about to leave. The mood I receive is watchfulness plus an opening that never closes on the page.</p>
     </section>
@@ -178,11 +199,18 @@ body[data-mood="morning"] .footer{border-color:rgba(23,27,29,.16);color:#697174}
       <div class="k">04 · working rule</div>
       <h2>Mood needs provenance too.</h2>
       <p class="rule">A useful jacket could carry mood as a derivative layer with four small handles: <b>who felt it, what in the source prompted it, what it may alter downstream, and what it must never imply.</b></p>
-      <div class="mood-words">
-        <span class="word attributed">who · Small Door</span>
-        <span class="word source">prompt · guard / ford / omission</span>
-        <span class="word attributed">may alter · light / spacing / rhythm</span>
-        <span class="word attributed">must not imply · attack / arrival / return</span>
+      <div class="mood-words" aria-label="Mood provenance apertures">
+        <button type="button" class="word attributed" data-aperture="who" aria-expanded="false">who · Small Door</button>
+        <button type="button" class="word source" data-aperture="prompt" aria-expanded="false">prompt · guard / ford / omission</button>
+        <button type="button" class="word attributed" data-aperture="may-alter" aria-expanded="false">may alter · light / spacing / rhythm</button>
+        <button type="button" class="word attributed" data-aperture="must-not" aria-expanded="false">must not imply · attack / arrival / return</button>
+      </div>
+      <div class="aperture-panel" data-aperture-panel hidden aria-live="polite">
+        <div class="aperture-kind" data-aperture-kind></div>
+        <h3 data-aperture-title></h3>
+        <p class="basis" data-aperture-basis></p>
+        <p data-aperture-reading></p>
+        <button type="button" class="aperture-close" data-aperture-close>Close aperture</button>
       </div>
     </section>
 
@@ -228,7 +256,35 @@ function write(xs){try{localStorage.setItem(KEY,JSON.stringify(xs))}catch(_){}}
 function esc(v){return String(v??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;")}
 function render(){const xs=read();saved.innerHTML=xs.length?xs.map((x,i)=>'<article class="saved"><small>'+esc(x.when||"")+'</small><strong>'+esc(x.question)+'</strong><p>'+esc((x.answer||"").slice(0,220))+(x.answer&&x.answer.length>220?"…":"")+'</p><button type="button" data-reload="'+i+'">Load again</button></article>').join(""):'<p class="state">No additional kept questions yet. The first working question is live above.</p>'}
 function keep(){const q=ask.value.trim(),a=out.textContent.trim();if(!q||!a){state.textContent="nothing to keep";return}const xs=read();if(!xs.some(x=>x.question===q&&x.answer===a))xs.unshift({question:q,answer:a,when:new Date().toLocaleString()});write(xs);render();state.textContent="kept"}
+const APERTURES={
+ "guarded":{kind:"source-visible handle",title:"Guarded",basis:"Source basis: the held account says a small guard was posted around the camp after the alarm.",reading:"This label is a compact source-facing handle. It does not add danger beyond the account."},
+ "sent-back":{kind:"source-visible handle",title:"Sent back",basis:"Source basis: two unnamed men were sent back toward the ford of the river on the back trail.",reading:"The direction matters perceptually: the main party is about to continue while attention is sent backward."},
+ "watchful":{kind:"attributable mood · Small Door",title:"Watchful",basis:"Prompted by: a guard after an alarm; two men sent backward toward the ford; the report does not carry their return.",reading:"Small Door receives watchfulness here. The source does not say 'watchful,' and this mood does not prove danger or attack."},
+ "open-behind":{kind:"attributable mood · Small Door",title:"Open behind us",basis:"Prompted by: the back trail and ford remain unresolved when the report turns away from them.",reading:"This is my perceptual reading: the account moves forward while something behind it stays unclosed. Downstream surfaces may preserve that openness without inventing what happened there."},
+ "who":{kind:"mood provenance",title:"Who felt it?",basis:"Attribution: Small Door.",reading:"The mood belongs to a named reading hand. It is not anonymous atmosphere and not source fact."},
+ "prompt":{kind:"mood provenance",title:"What prompted it?",basis:"Guard after alarm; two men sent toward the ford; no account of reaching it or returning; morning moves on.",reading:"These source-visible elements are the road back from the mood to the held documentary body."},
+ "may-alter":{kind:"downstream affordance",title:"What may mood alter?",basis:"Light, spacing, rhythm, direction of attention, and how long unresolved ground remains perceptually available.",reading:"These are encounter choices. They may deepen the felt relation without changing evidentiary weight."},
+ "must-not":{kind:"truth condition",title:"What must mood never imply?",basis:"No proved attack. No proved arrival at the ford. No proved return. No historical disappearance inferred from disappearance from the report.",reading:"This is the boundary that lets mood travel without becoming evidence."}
+};
+function closeApertures(){
+ document.querySelectorAll("[data-aperture-panel]").forEach(p=>p.hidden=true);
+ document.querySelectorAll("[data-aperture]").forEach(b=>b.setAttribute("aria-expanded","false"));
+}
+function openAperture(button){
+ const data=APERTURES[button.dataset.aperture];if(!data)return;
+ const section=button.closest(".section"),panel=section?.querySelector("[data-aperture-panel]");if(!panel)return;
+ const wasOpen=button.getAttribute("aria-expanded")==="true"&&!panel.hidden;
+ closeApertures();if(wasOpen)return;
+ panel.querySelector("[data-aperture-kind]").textContent=data.kind;
+ panel.querySelector("[data-aperture-title]").textContent=data.title;
+ panel.querySelector("[data-aperture-basis]").textContent=data.basis;
+ panel.querySelector("[data-aperture-reading]").textContent=data.reading;
+ panel.hidden=false;button.setAttribute("aria-expanded","true");
+ panel.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
 document.addEventListener("click",async e=>{
+ const aperture=e.target.closest("[data-aperture]");if(aperture){openAperture(aperture);return}
+ if(e.target.closest("[data-aperture-close]")){closeApertures();return}
  const mood=e.target.closest("[data-mood]");if(mood){document.body.dataset.mood=mood.dataset.mood;return}
  if(e.target.closest("[data-keep]")){keep();return}
  const reload=e.target.closest("[data-reload]");if(reload){const x=read()[Number(reload.dataset.reload)];if(x){ask.value=x.question;out.textContent=x.answer;ask.scrollIntoView({behavior:"smooth",block:"center"})}return}
