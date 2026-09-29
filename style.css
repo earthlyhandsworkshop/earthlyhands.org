@@ -2801,3 +2801,96 @@ body[data-discovery="open"] .camp-people{
     margin-bottom:.2rem;
   }
 }
+
+
+/* Shared Country fourth pass — Folio footing, persistent voice, right-held night opening. */
+
+/* Ask remains available while the visitor changes instruments.
+   Ground, Map, People, Sources, and Jacket are one working body. */
+.experience-shell[data-view="map"] .experience-tools,
+.experience-shell[data-view="people"] .experience-tools,
+.experience-shell[data-view="sources"] .experience-tools,
+.experience-shell[data-view="jacket"] .experience-tools{
+  display:block;
+}
+
+/* Night opening: keep the guarded encounter intentionally off balance.
+   The two men remain somewhere beyond the held camp; the page itself leans right. */
+body[data-discovery="open"][data-ground="night"] .experience-stage,
+body[data-discovery="open"][data-ground="night"] .experience-tools{
+  width:min(43rem,calc(100% - 2rem));
+  margin-left:auto;
+  margin-right:clamp(1.35rem,7vw,8.5rem);
+}
+body[data-discovery="open"][data-ground="night"] .experience-mount{
+  width:100%;
+  margin:0;
+}
+body[data-discovery="open"][data-ground="night"] #night.is-current{
+  max-width:38rem;
+  margin-left:auto;
+}
+body[data-discovery="open"][data-ground="night"] #night .scene-setting{
+  margin-bottom:1.35rem;
+  font-size:.52rem;
+  line-height:1.35;
+  letter-spacing:.105em;
+}
+body[data-discovery="open"][data-ground="night"] #night h2{
+  max-width:13ch;
+  margin-bottom:1.7rem;
+  font-size:clamp(2.45rem,5vw,4.35rem);
+  line-height:.93;
+  letter-spacing:-.038em;
+  text-wrap:balance;
+}
+body[data-discovery="open"][data-ground="night"] #night .first-person-view{
+  max-width:35rem;
+  font-size:clamp(1.02rem,1.35vw,1.16rem);
+  line-height:1.72;
+  letter-spacing:.002em;
+}
+body[data-discovery="open"][data-ground="night"] #night .view-body p{
+  margin-bottom:1.02rem;
+}
+body[data-discovery="open"][data-ground="night"] #night .lived-line{
+  font-size:1.08em;
+  line-height:1.58;
+}
+body[data-discovery="open"][data-ground="night"] #night .fpv-footing{
+  max-width:31rem;
+  margin-top:1.75rem;
+  padding-top:.68rem;
+  font-size:.52rem;
+  line-height:1.45;
+  letter-spacing:.045em;
+}
+body[data-discovery="open"][data-ground="night"] .experience-utility{
+  max-width:35rem;
+  margin-left:auto;
+}
+body[data-discovery="open"][data-ground="night"] .ground-talk textarea{
+  font-size:.94rem;
+  line-height:1.5;
+  letter-spacing:.006em;
+}
+
+@media(max-width:52rem){
+  body[data-discovery="open"][data-ground="night"] .experience-stage,
+  body[data-discovery="open"][data-ground="night"] .experience-tools{
+    width:calc(100% - 2.2rem);
+    margin-left:1.35rem;
+    margin-right:.85rem;
+  }
+  body[data-discovery="open"][data-ground="night"] #night.is-current{
+    max-width:none;
+  }
+  body[data-discovery="open"][data-ground="night"] #night h2{
+    max-width:12ch;
+    font-size:clamp(2.3rem,11vw,3.5rem);
+  }
+  body[data-discovery="open"][data-ground="night"] #night .first-person-view,
+  body[data-discovery="open"][data-ground="night"] .experience-utility{
+    max-width:none;
+  }
+}
