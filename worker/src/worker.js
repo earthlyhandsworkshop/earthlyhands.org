@@ -414,7 +414,8 @@ function folioHtml({ leaves = [], offers = [], relationshipName = "Folio" } = {}
       <div class="leaf-body" hidden>
         <div class="leaf-prose">${body || "<span class=\"quiet\">This leaf currently carries a road, not a copied body.</span>"}</div>
         ${source ? `<details class="provenance"><summary>Source / provenance road</summary><p>${source}</p></details>` : ""}
-        <button class="leaf-focus" type="button">Take the desk</button>
+        <div class="leaf-tools"><button class="inverse-open" type="button">What earns this?</button><button class="leaf-focus" type="button">Take the desk</button></div>
+        <section class="inverse-layer" hidden><span class="inverse-k">inverse · held support</span><h3>What earns this?</h3>${leaf.why_here ? `<p><strong>Why it is here</strong><br>${escapeHtml(leaf.why_here)}</p>` : `<p class="quiet">No stronger why-here state is held on this leaf.</p>`}${source ? `<p><strong>Road down</strong><br>${source}</p>` : `<p class="quiet">No deeper source road is carried on this leaf yet.</p>`}<p class="inverse-limit">This layer exposes only support already carried by the leaf. It does not strengthen the underlying claim.</p><button class="inverse-close" type="button">Return to leaf</button></section>
       </div>
     </article>`;
   }).join("");
@@ -460,7 +461,7 @@ h1{font-weight:400;font-size:clamp(2.8rem,8vw,6rem);line-height:.88;letter-spaci
 .leaf-num,.leaf-kind,.leaf-pull,.leaf-change,.leaf-new{font:.48rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}.leaf-change,.leaf-new{display:inline-block;margin:.45rem .8rem 0;color:var(--rust);border-bottom:1px solid var(--rust)}.leaf-main{min-width:0}.leaf-main strong{display:block;margin:.1rem 0;font-size:1.18rem;font-weight:400;line-height:1.05}.leaf-why{display:block;color:var(--muted);font-size:.88rem;max-width:48rem}.leaf-pull{color:var(--rust)}
 .leaf-body{border-top:1px solid var(--hair);padding:1rem 1rem 1.2rem 2.85rem}.leaf-prose{max-width:52rem;font-size:1.04rem;line-height:1.58}.quiet{color:var(--muted)}
 .provenance{max-width:52rem;margin-top:1rem;border-top:1px solid var(--hair);padding-top:.65rem}.provenance summary{cursor:pointer;font:.55rem/1.3 var(--mono);text-transform:uppercase;color:var(--muted)}.provenance p{overflow-wrap:anywhere}
-.leaf-focus{margin-top:1rem;border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.12rem 0;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.leaf-tools{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:1rem}.leaf-focus,.inverse-open,.inverse-close{border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.12rem 0;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}.inverse-layer{max-width:52rem;margin-top:1rem;border-top:1px solid var(--rule);padding-top:1rem}.inverse-k{font:.5rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--rust)}.inverse-layer h3{font-weight:400;font-size:1.65rem;margin:.2rem 0 .7rem}.inverse-layer p{margin:.55rem 0}.inverse-limit{color:var(--muted);font-size:.88rem}
 .empty{border:1px solid var(--rule);padding:1rem;background:var(--wash)}.empty h2{font-weight:400;margin:0 0 .35rem}.empty p{max-width:40rem}.proof-seed{margin-top:.55rem;border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.18rem 0;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}.proof-note{color:var(--muted);font:.72rem/1.4 var(--mono);margin:.5rem 0 0}
 .focus{position:fixed;inset:.25rem;z-index:20;background:rgba(235,227,211,.98);border:1px solid var(--rule);overflow:auto;padding:1rem;display:none}.focus.open{display:block}.focus-close{position:sticky;top:0;display:block;margin-left:auto;border:1px solid var(--rule);background:var(--sheet);padding:.4rem .55rem;cursor:pointer;font:.52rem/1.2 var(--mono);text-transform:uppercase}.focus-content{max-width:58rem;margin:1rem auto 3rem}.focus-content .leaf-body{display:block!important;border:0;padding:0}.focus-content .leaf-open{display:none}.focus-content .leaf-prose{font-size:1.12rem;max-width:52rem}
 @media(max-width:38rem){.top{font-size:.44rem}.head{padding:.9rem .75rem}.body{padding:.55rem}.leaf-open{grid-template-columns:1.65rem minmax(0,1fr);padding:.7rem .55rem}.leaf-pull{display:none}.leaf-body{padding:.8rem .7rem 1rem}.leaf-main strong{font-size:1.05rem}.focus{inset:0;border-left:0;border-right:0;padding:.7rem}.focus-content{margin:.5rem 0 2rem}.focus-content .leaf-prose{font-size:1rem}}
@@ -508,6 +509,10 @@ document.addEventListener("click",async(event)=>{
     }catch(_){offerAction.disabled=false}
     return;
   }
+  const inverseOpen=event.target.closest(".inverse-open");
+  if(inverseOpen){const layer=inverseOpen.closest(".leaf-body").querySelector(".inverse-layer");layer.hidden=false;inverseOpen.setAttribute("aria-expanded","true");return;}
+  const inverseClose=event.target.closest(".inverse-close");
+  if(inverseClose){const layer=inverseClose.closest(".inverse-layer");layer.hidden=true;const button=inverseClose.closest(".leaf-body").querySelector(".inverse-open");if(button)button.setAttribute("aria-expanded","false");return;}
   const opener=event.target.closest(".leaf-open");
   if(opener){
     const leaf=opener.closest(".leaf"),body=leaf.querySelector(".leaf-body"),open=body.hidden;
