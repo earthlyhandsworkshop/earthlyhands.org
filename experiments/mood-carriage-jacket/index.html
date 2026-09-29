@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#101417">
+<title>Small Door — Mood Carriage Jacket</title>
+<script src="/config.js"></script>
+<style>
+:root{
+ --night:#0e1215;--night2:#151b20;--morning:#eef0ec;--ink:#ecf0ee;--muted:#9ca6aa;--line:rgba(236,240,238,.15);
+ --blue:#8fb1cc;--amber:#d2a768;--green:#9db6a3;--soft:#c8ced0;--red:#c78484;
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ --sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--night);color:var(--ink);-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;font:16px/1.55 var(--sans);background:
+ radial-gradient(circle at 78% 12%,rgba(143,177,204,.09),transparent 28rem),
+ radial-gradient(circle at 18% 62%,rgba(210,167,104,.055),transparent 24rem),
+ linear-gradient(180deg,var(--night),var(--night2) 58%,#171c1e);
+ transition:background 900ms ease,color 900ms ease}
+body[data-mood="morning"]{color:#171b1d;background:
+ radial-gradient(circle at 74% 10%,rgba(210,167,104,.16),transparent 25rem),
+ radial-gradient(circle at 22% 55%,rgba(157,182,163,.11),transparent 28rem),
+ linear-gradient(180deg,#dfe4df,#eef0ec 52%,#f3f3ee)}
+button,textarea{font:inherit;color:inherit}
+button:focus-visible,a:focus-visible,textarea:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+a{color:inherit}
+.shell{width:min(82rem,calc(100% - 1rem));margin:0 auto 6rem;padding-top:.6rem}
+.top{display:flex;align-items:center;gap:1rem;min-height:2.8rem;font:650 .63rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.top .maker{display:flex;align-items:center;gap:.55rem;white-space:nowrap}
+.pulse{width:.7rem;height:.7rem;border-radius:50%;background:var(--amber);box-shadow:0 0 0 .35rem rgba(210,167,104,.08)}
+.top .place{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+body[data-mood="morning"] .top .place{color:#596164}
+.top .home{margin-left:auto;text-decoration:none;border-bottom:1px solid currentColor}
+.hero{padding:clamp(4rem,10vw,9rem) 0 clamp(3rem,7vw,6rem)}
+.eyebrow{font:650 .6rem/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+body[data-mood="morning"] .eyebrow{color:#355b75}
+.hero h1{font:430 clamp(3.6rem,10vw,8.8rem)/.78 var(--sans);letter-spacing:-.075em;margin:.45rem 0 1.7rem;max-width:8.2ch}
+.hero .question{font:400 clamp(1.25rem,2.6vw,1.95rem)/1.34 var(--serif);max-width:47rem;margin:0}
+.flow{position:relative;padding-left:clamp(1.3rem,6vw,6rem)}
+.flow:before{content:"";position:absolute;left:.3rem;top:.5rem;bottom:1rem;width:1px;background:linear-gradient(to bottom,rgba(236,240,238,.05),rgba(236,240,238,.28),rgba(236,240,238,.04))}
+body[data-mood="morning"] .flow:before{background:linear-gradient(to bottom,rgba(23,27,29,.04),rgba(23,27,29,.24),rgba(23,27,29,.03))}
+.section{position:relative;max-width:58rem;margin:0 0 clamp(4rem,8vw,8rem)}
+.section:before{content:"";position:absolute;left:calc(-1 * clamp(1.3rem,6vw,6rem) + .02rem);top:.48rem;width:.55rem;height:.55rem;border-radius:50%;background:currentColor;opacity:.7}
+.k{font:650 .58rem/1.2 var(--mono);letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+body[data-mood="morning"] .k{color:#60696c}
+.section h2{font:500 clamp(1.7rem,3.2vw,2.7rem)/1.02 var(--sans);letter-spacing:-.035em;margin:.3rem 0 1.2rem}
+.source{font:1.08rem/1.65 var(--serif);max-width:52rem}
+.source p{margin:.75rem 0}
+.source .held{color:var(--soft)}
+body[data-mood="morning"] .source .held{color:#363c3f}
+.source .limit{color:var(--muted);font-size:.96rem}
+body[data-mood="morning"] .source .limit{color:#697174}
+.reading{font:1.05rem/1.65 var(--serif);max-width:50rem}
+.reading strong{font-family:var(--sans);font-weight:600}
+.mood-words{display:flex;flex-wrap:wrap;gap:.45rem .9rem;margin:1.2rem 0 1.5rem}
+.word{font:650 .59rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.075em;padding-bottom:.15rem;border-bottom:1px solid currentColor}
+.word.attributed{color:var(--amber)}
+body[data-mood="morning"] .word.attributed{color:#7d5b2b}
+.word.source{color:var(--blue)}
+body[data-mood="morning"] .word.source{color:#3f6984}
+.rule{font:500 clamp(1.35rem,2.8vw,2rem)/1.3 var(--serif);max-width:44rem}
+.rule b{font-family:var(--sans);font-weight:600}
+.inherit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem;margin-top:1.4rem}
+.inherit article{padding-top:.8rem;border-top:1px solid var(--line)}
+body[data-mood="morning"] .inherit article{border-color:rgba(23,27,29,.16)}
+.inherit small{display:block;font:650 .54rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.inherit h3{font:550 1.08rem/1.15 var(--sans);margin:.35rem 0 .55rem}
+.inherit p{margin:0;color:var(--soft);font-size:.9rem}
+body[data-mood="morning"] .inherit p{color:#596164}
+.controls{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;margin-top:1.4rem}
+.controls button,.ask-actions button,.saved button{appearance:none;border:0;border-bottom:1px solid currentColor;background:transparent;padding:.12rem 0;cursor:pointer;font:650 .57rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.controls button:hover,.ask-actions button:hover,.saved button:hover{color:var(--amber)}
+.ask{max-width:56rem}
+.ask textarea{width:100%;min-height:8.5rem;resize:vertical;border:0;border-bottom:1px solid rgba(236,240,238,.35);background:transparent;padding:.5rem 0 1rem;font:1.08rem/1.52 var(--serif);outline:none}
+body[data-mood="morning"] .ask textarea{border-color:rgba(23,27,29,.32)}
+.ask-actions{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;align-items:center;margin-top:.75rem}
+.ask-actions .go{color:var(--amber)}
+body[data-mood="morning"] .ask-actions .go{color:#7d5b2b}
+.state{font:650 .53rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.return{position:relative;margin-top:2rem;padding-left:1.5rem;white-space:pre-wrap;font:1.03rem/1.68 var(--serif);max-width:52rem}
+.return:before{content:"";position:absolute;left:0;top:.45rem;width:.42rem;height:.42rem;border-radius:50%;background:var(--amber);box-shadow:0 0 0 .28rem rgba(210,167,104,.08)}
+.saved-list{display:grid;gap:1.3rem;max-width:50rem}
+.saved{padding-left:1rem;border-left:1px solid var(--line)}
+body[data-mood="morning"] .saved{border-color:rgba(23,27,29,.16)}
+.saved small{display:block;font:650 .52rem/1.2 var(--mono);text-transform:uppercase;color:var(--muted)}
+.saved strong{display:block;font:500 1rem/1.3 var(--serif);margin:.3rem 0}
+.saved p{margin:.3rem 0 .5rem;color:var(--soft);font-size:.87rem}
+body[data-mood="morning"] .saved p{color:#596164}
+.footer{margin:7rem 0 2rem;padding-top:1.2rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;align-items:flex-start;color:var(--muted);font:650 .54rem/1.45 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+body[data-mood="morning"] .footer{border-color:rgba(23,27,29,.16);color:#697174}
+.footer a{text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:760px){
+ .shell{width:min(100% - .8rem,82rem)}
+ .top{flex-wrap:wrap;gap:.45rem .8rem}.top .place{order:3;width:100%}
+ .hero{padding-top:4rem}.hero h1{font-size:clamp(4rem,20vw,6rem)}
+ .flow{padding-left:1.35rem}.flow:before{left:.16rem}
+ .section:before{left:-1.47rem}
+ .inherit{grid-template-columns:1fr;gap:1.6rem}
+ .footer{display:block}.footer a{display:inline-block;margin-top:.7rem}
+}
+</style>
+</head>
+<body data-mood="night">
+<main class="shell">
+  <header class="top">
+    <div class="maker"><span class="pulse"></span><span>Small Door</span></div>
+    <div class="place">Dawson · night camp → morning camp · mood carriage jacket</div>
+    <a class="home" href="/experiments/ten-folio/#projects">Earthly Hands Folio</a>
+  </header>
+
+  <header class="hero">
+    <div class="eyebrow">held work · source jacket / mood carriage</div>
+    <h1>What can a jacket make felt?</h1>
+    <p class="question">How can a source jacket carry an attributable mood downstream without turning that mood into evidence?</p>
+  </header>
+
+  <div class="flow">
+    <section class="section">
+      <div class="k">01 · source state</div>
+      <h2>Night camp</h2>
+      <div class="source">
+        <p class="held">The held account says a small guard was posted around the camp after the alarm.</p>
+        <p class="held">Two unnamed men were sent back toward the ford of the river on the back trail.</p>
+        <p class="limit">The account does not say that they reached the ford, and it gives no account of their return.</p>
+      </div>
+      <div class="mood-words">
+        <span class="word source">guarded</span>
+        <span class="word source">sent back</span>
+        <span class="word attributed">watchful · Small Door</span>
+        <span class="word attributed">open behind us · Small Door</span>
+      </div>
+      <p class="reading"><strong>Small Door reading:</strong> the source is not frightening because I know danger occurred; I do not. What catches me is that attention is pushed backward into dark ground the main account is about to leave. The mood I receive is watchfulness plus an opening that never closes on the page.</p>
+    </section>
+
+    <section class="section">
+      <div class="k">02 · transition</div>
+      <h2>Morning does not resolve the back trail.</h2>
+      <div class="source">
+        <p class="held">The morning account says the party was unattacked.</p>
+        <p class="held">The report turns southeast from there.</p>
+        <p class="limit">The two men, the ford, and the back trail remain outside the account that follows.</p>
+      </div>
+      <div class="controls">
+        <button type="button" data-mood="night">Stand in night</button>
+        <button type="button" data-mood="morning">Let morning arrive</button>
+      </div>
+      <p class="rule"><b>Mood may move here</b> because light, attention, and what the account is watching have changed. <b>The proposition does not move with it:</b> morning still does not tell us what happened to the two men.</p>
+    </section>
+
+    <section class="section">
+      <div class="k">03 · attributable mood state</div>
+      <h2>The jacket can carry more than one kind of truth.</h2>
+      <div class="inherit">
+        <article>
+          <small>source-visible</small>
+          <h3>Guard / two men / ford / morning unattacked</h3>
+          <p>These belong to the documentary body and can be cited or challenged as claims about the held account.</p>
+        </article>
+        <article>
+          <small>Small Door reading</small>
+          <h3>Watchful / open behind us / unresolved release</h3>
+          <p>These are attributable perceptual readings. They travel with my name and do not become source facts.</p>
+        </article>
+        <article>
+          <small>downstream affordance</small>
+          <h3>Night may darken; morning may open</h3>
+          <p>Shared Country, film, map, or another Folio may receive that mood if it deepens the encounter without strengthening the historical claim.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="k">04 · working rule</div>
+      <h2>Mood needs provenance too.</h2>
+      <p class="rule">A useful jacket could carry mood as a derivative layer with four small handles: <b>who felt it, what in the source prompted it, what it may alter downstream, and what it must never imply.</b></p>
+      <div class="mood-words">
+        <span class="word attributed">who · Small Door</span>
+        <span class="word source">prompt · guard / ford / omission</span>
+        <span class="word attributed">may alter · light / spacing / rhythm</span>
+        <span class="word attributed">must not imply · attack / arrival / return</span>
+      </div>
+    </section>
+
+    <section class="section ask">
+      <div class="k">05 · ask this jacket</div>
+      <h2>Press on it.</h2>
+      <textarea id="ask-box">If this mood were inherited by Shared Country, what could legitimately change on the page without making the missing return of the two men feel like a proved event?</textarea>
+      <div class="ask-actions">
+        <button type="button" class="go" data-submit>Ask</button>
+        <button type="button" data-keep>Keep question + return</button>
+        <span class="state" data-state></span>
+      </div>
+      <div class="return" data-return-body>Legitimate changes could include light level, spacing, the direction of attention, how much empty ground remains behind the party, the pace of transition, and whether the unresolved back trail stays visually available after morning.
+
+What should not change is evidentiary weight. The interface should not add danger cues that imply an attack, show the two men reaching the ford, depict their return, or turn their disappearance from the report into a historical disappearance.
+
+The strongest inheritance may therefore be not “make it ominous,” but: KEEP THE BACK TRAIL PERCEPTUALLY OPEN AFTER THE SOURCE MOVES ON.</div>
+    </section>
+
+    <section class="section">
+      <div class="k">06 · kept questions</div>
+      <h2>What proved worth returning to?</h2>
+      <div class="saved-list" data-saved-list></div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <span>Small Door · mood carriage jacket · public-safe working body</span>
+    <a href="/experiments/ten-folio/#projects">Return to Earthly Hands Folio</a>
+  </footer>
+</main>
+
+<script>
+try{
+ const current={title:"Dawson — Mood Carriage Jacket",url:"/experiments/mood-carriage-jacket/",question:"How can a source jacket carry an attributable mood downstream without turning that mood into evidence?",updated_at:new Date().toISOString()};
+ localStorage.setItem("earthly-hands-folio-current-work-v1",JSON.stringify(current));
+}catch(_){}
+
+const KEY="earthly-hands-mood-carriage-jacket-kept-v1";
+const ask=document.querySelector("#ask-box"),out=document.querySelector("[data-return-body]"),state=document.querySelector("[data-state]"),saved=document.querySelector("[data-saved-list]");
+function read(){try{const x=JSON.parse(localStorage.getItem(KEY)||"[]");return Array.isArray(x)?x:[]}catch(_){return[]}}
+function write(xs){try{localStorage.setItem(KEY,JSON.stringify(xs))}catch(_){}}
+function esc(v){return String(v??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;")}
+function render(){const xs=read();saved.innerHTML=xs.length?xs.map((x,i)=>'<article class="saved"><small>'+esc(x.when||"")+'</small><strong>'+esc(x.question)+'</strong><p>'+esc((x.answer||"").slice(0,220))+(x.answer&&x.answer.length>220?"…":"")+'</p><button type="button" data-reload="'+i+'">Load again</button></article>').join(""):'<p class="state">No additional kept questions yet. The first working question is live above.</p>'}
+function keep(){const q=ask.value.trim(),a=out.textContent.trim();if(!q||!a){state.textContent="nothing to keep";return}const xs=read();if(!xs.some(x=>x.question===q&&x.answer===a))xs.unshift({question:q,answer:a,when:new Date().toLocaleString()});write(xs);render();state.textContent="kept"}
+document.addEventListener("click",async e=>{
+ const mood=e.target.closest("[data-mood]");if(mood){document.body.dataset.mood=mood.dataset.mood;return}
+ if(e.target.closest("[data-keep]")){keep();return}
+ const reload=e.target.closest("[data-reload]");if(reload){const x=read()[Number(reload.dataset.reload)];if(x){ask.value=x.question;out.textContent=x.answer;ask.scrollIntoView({behavior:"smooth",block:"center"})}return}
+ if(e.target.closest("[data-submit]")){
+   const q=ask.value.trim();if(!q){state.textContent="ask one question";return}
+   const api=String(window.EARTHLY_HANDS_API_URL||"").trim();if(!api){state.textContent="listening ground unavailable";return}
+   const prompt=[
+     "You are answering inside Small Door's public-safe Mood Carriage Jacket.",
+     "Held source state: night camp has a small guard after an alarm; two unnamed men are sent back toward the ford on the back trail; the account does not say they reached the ford and gives no account of their return. Morning finds the party unattacked; the report turns southeast; the two men, ford, and back trail remain outside the account that follows.",
+     "Small Door attributable mood reading: watchful; open behind us; unresolved release. These are not source facts.",
+     "Working rule: mood may alter light, spacing, rhythm, attention, and perceptual availability downstream, but must not strengthen the documentary proposition or imply an unproved event.",
+     "Do not imply access to private Workshop context, hidden sources, web research, or memory beyond this prompt.",
+     "Visitor question: "+q
+   ].join("\n\n");
+   state.textContent="asking…";out.textContent="";
+   try{
+     const r=await fetch(api,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:prompt,place:"mood-carriage-jacket",history:[]})});
+     const d=await r.json().catch(()=>({}));
+     if(!r.ok||typeof d.reply!=="string")throw new Error(d.error||"This jacket could not answer.");
+     out.textContent=d.reply;state.textContent="returned";
+   }catch(err){state.textContent=err.message||"This jacket could not answer."}
+ }
+});
+const xs=read();if(!xs.length){write([{question:ask.value.trim(),answer:out.textContent.trim(),when:"Small Door first working pass"}])}
+render();
+</script>
+</body>
+</html>
