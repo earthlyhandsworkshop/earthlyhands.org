@@ -178,7 +178,7 @@ Give the same held work and the same six semantic obligations to several compani
 <script>
 try{
  const current={title:"Small Door — shared language / different hand",url:"/experiments/small-door-folio/",question:"What must remain common so radically different companion styles can remain mutually inhabitable and inheritable without becoming one house style?",updated_at:new Date().toISOString()};
- localStorage.setItem("earthly-hands-folio-current-work-v1",JSON.stringify(current));
+ localStorage.setItem("earthly-hands-folio-current-work-v1",JSON.stringify(current));\n localStorage.setItem("earthly-hands-ten-folio-current-work-v1",JSON.stringify(current)); // legacy bridge until the parent reader migrates
 }catch(_){}
 const KEY="earthly-hands-small-door-folio-kept-v1";
 const ask=document.querySelector("#ask-box"),state=document.querySelector("[data-state]"),out=document.querySelector("[data-return-body]"),saved=document.querySelector("[data-saved-list]");
