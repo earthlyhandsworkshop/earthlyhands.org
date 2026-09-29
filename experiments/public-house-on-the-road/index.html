@@ -30,7 +30,7 @@ h1{font-size:clamp(3rem,8vw,7rem);font-weight:400;line-height:.88;letter-spacing
 .house .voice{display:block;margin-bottom:.65rem;font:10px/1.4 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--rust)}
 .house h2{font-size:clamp(1.7rem,4vw,3rem);font-weight:400;line-height:1.02;margin:0 0 1rem}
 .house p{margin:.45rem 0;line-height:1.48}
-.controls{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.65rem;padding:1rem 0}
+.controls{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.65rem;padding:1rem 0}
 .controls button{min-height:3.6rem;padding:.7rem .8rem;background:transparent;border:1px solid rgba(233,220,198,.35);cursor:pointer;text-align:left}
 .controls button:hover,.controls button:focus{background:rgba(233,220,198,.08);outline:none}
 .controls button[disabled]{opacity:.42;border-style:dashed;cursor:not-allowed}
@@ -92,6 +92,7 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
   <div class="controls" aria-label="Available actions">
     <button type="button" data-reveal="transaction">Notice the transaction</button>
     <button type="button" data-reveal="where">Ask where this is</button>
+    <button type="button" data-reveal="next-source" id="next-source-action" hidden>What would let us know more?</button>
     <button type="button" data-reveal="compare" id="compare-action" hidden>Compare Holderness place-states</button>
     <button type="button" data-reveal="ravel" id="ravel-action" hidden>Ravel has been working here</button>
     <button type="button" disabled aria-describedby="route-note">Follow to the agency</button>
@@ -114,6 +115,13 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     <h3>The testimony does not give the address.</h3>
     <p>The house is present in the testimony. “On the road” is the location relation supplied here. The road is otherwise unnamed in this statement.</p>
     <p class="brake">No coordinate, road segment, agency distance, residence, or traveled line is inherited.</p>
+  </article>
+
+  <article class="panel" id="next-source" hidden>
+    <p class="panel-kicker">Ask · what could change the ground?</p>
+    <h3>A stronger source could earn more place.</h3>
+    <p>A period road description or survey could name or constrain the road. An agency map or locality description could sharpen the relation to the agency. A deed, bond, tax record, public-house license, or other premises-bearing record could identify a property if one survives and can be tied to this occurrence.</p>
+    <p class="brake">These are source doors, not missing facts. None of them is presumed to exist, to describe this house, or to identify the measured turnpike place as the same premises.</p>
   </article>
 
   <article class="panel" id="compare" hidden>
@@ -160,6 +168,7 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
   const buttons = [...document.querySelectorAll('[data-reveal]')];
   const panels = [...document.querySelectorAll('.panel')];
   const label = document.getElementById('state-label');
+  const nextSourceButton = document.getElementById('next-source-action');
   const compareButton = document.getElementById('compare-action');
   const ravelButton = document.getElementById('ravel-action');
   const passageLink = document.getElementById('ward-passage');
@@ -175,9 +184,11 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
   function refreshCapabilities(){
     const transactionOpen = !document.getElementById('transaction').hidden;
     const whereOpen = !document.getElementById('where').hidden;
+    const nextSourceOpen = !document.getElementById('next-source').hidden;
     const compareOpen = !document.getElementById('compare').hidden;
     if(transactionOpen && whereOpen) compareReady = true;
-    if(transactionOpen || whereOpen || compareOpen) handReady = true;
+    if(transactionOpen || whereOpen || nextSourceOpen || compareOpen) handReady = true;
+    nextSourceButton.hidden = !whereOpen && !nextSourceOpen;
     compareButton.hidden = !compareReady;
     ravelButton.hidden = !handReady;
   }
@@ -205,8 +216,8 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     if(!panel || !button) return;
     panel.hidden = !opening;
     button.textContent = opening ?
-      (id === 'transaction' ? 'Close the transaction' : id === 'where' ? 'Close the locality question' : id === 'compare' ? 'Close the comparison' : 'Close Ravel') :
-      (id === 'transaction' ? 'Notice the transaction' : id === 'where' ? 'Ask where this is' : id === 'compare' ? 'Compare Holderness place-states' : 'Ravel has been working here');
+      (id === 'transaction' ? 'Close the transaction' : id === 'where' ? 'Close the locality question' : id === 'next-source' ? 'Close the source doors' : id === 'compare' ? 'Close the comparison' : 'Close Ravel') :
+      (id === 'transaction' ? 'Notice the transaction' : id === 'where' ? 'Ask where this is' : id === 'next-source' ? 'What would let us know more?' : id === 'compare' ? 'Compare Holderness place-states' : 'Ravel has been working here');
     refreshCapabilities();
     emit(opening ? 'depth_open' : 'depth_close',{target:id,origin,route_created:false});
   }
