@@ -125,6 +125,22 @@
           "to": "ground:ward-room"
         }
       ]
+    },
+    "ground:line-commons": {
+      "id": "ground:line-commons",
+      "kind": "working-ground",
+      "title": "Line Commons",
+      "publication_state": "PUBLIC",
+      "faces": {
+        "workshop": "/grounds/line-commons/"
+      },
+      "state_manifest": "/data/workshop/line-commons.live.json",
+      "relations": [
+        {
+          "verb": "NEIGHBORS",
+          "to": "ground:shared-country"
+        }
+      ]
     }
   }
 }
