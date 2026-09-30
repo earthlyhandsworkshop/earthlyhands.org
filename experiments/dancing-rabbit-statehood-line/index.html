@@ -62,8 +62,14 @@ p{font-size:1.08rem;line-height:1.62;margin:0 0 1.2rem}h2{margin:3rem 0 .8rem;pa
 </section>
 <script>
 const faces=[...document.querySelectorAll('.face')];
-function show(id){faces.forEach(f=>f.classList.toggle('is-current',f.id===id));scrollTo({top:0,behavior:'instant'});}
+function show(id){
+  const next=["picture","jacket"].includes(id)?id:'picture';
+  faces.forEach(f=>f.classList.toggle('is-current',f.id===next));
+  history.replaceState(null,'','#'+next);
+  scrollTo({top:0,behavior:'instant'});
+}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-show]');if(b)show(b.dataset.show);});
+const initial=location.hash.slice(1);if(initial)show(initial);
 </script>
 </body>
 </html>
