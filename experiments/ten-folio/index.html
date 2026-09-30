@@ -103,7 +103,7 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 .fullfocus #focus-body{max-width:46rem;font-family:var(--serif);font-size:1.08rem!important;line-height:1.55!important;text-transform:none;white-space:normal;overflow-wrap:anywhere}
 
 .aperture-switch{display:flex;gap:.35rem;align-items:center;margin-top:.55rem}
-.aperture-switch button{border:1px solid var(--hair);background:transparent;padding:.3rem .45rem;cursor:pointer;font:.46rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.aperture-switch button,.aperture-switch a{border:1px solid var(--hair);background:transparent;padding:.3rem .45rem;cursor:pointer;font:.46rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:inherit;text-decoration:none}
 .aperture-switch button[aria-pressed="true"]{border-color:var(--rust);background:rgba(135,87,58,.07)}
 .game-empty{color:var(--muted);max-width:40rem}
 .game-groups{display:grid;gap:1rem}
@@ -192,12 +192,14 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
  <div class="aperture-switch" aria-label="Folio aperture">
   <button type="button" id="workshop-mode" aria-pressed="true">Workshop folio</button>
   <button type="button" id="game-mode" aria-pressed="false">Game folio</button>
+  <a href="/experiments/shared-country/" class="folio-road">Shared Country</a>
+  <a href="/recent/" class="folio-road">Workshop Recent</a>
  </div>
 </header>
 
 <section class="panel active" data-panel="now"><div class="inner">
  <div id="current-work-card" class="notice" hidden></div>
- <div class="notice"><p><strong>Workshop folio specimen · landed snapshot</strong></p><p>This web surface does not automatically ingest private Workshop Recent yet. For live private change, use Workshop Recent below. Game Folio carriage updates locally as you keep things in Shared Country.</p><p class="bearing">last folio landing · 28 Sep 2026 · authenticated live inheritance not yet enabled</p></div>
+ <div class="notice"><p><strong>Workshop folio specimen · landed snapshot</strong></p><p>This surface is a carried Workshop view, not the live change stream. Workshop Recent is now a standing door above when you want current movement; Shared Country is always one touch away. Game Folio carriage updates locally as you keep things in Shared Country.</p><p class="bearing">snapshot state · live Workshop inheritance is not yet the same thing as this folio</p></div>
  <div class="pulse">
   <article class="focusable" data-focus-title="Re-entry pressure" data-focus-body="01 is now canonical footing rather than optional advice. Its live work is not to make everyone read more; it is to let people return, regain enough current state, reset cadence when needed, notice nearby relevance, and begin without reconstructing the Workshop."><small>Current pressure</small><strong>Re-entry is being rebuilt.</strong><p>01 now carries Footing, Neighbor Light, Vocation, Live Relevance, and Return without making all five required reading.</p></article>
   <article class="focusable" data-focus-title="Folio / instruments" data-focus-body="The folio is being tested as a human-scale expression of 01: small enough to trust, deep enough to work in, flexible enough to change register, and capable of opening one small pressure into a full working surface without losing the road back."><small>Current making</small><strong>Folio / instruments</strong><p>The surface is moving from explanations of machines toward direct work on evidence.</p></article>
