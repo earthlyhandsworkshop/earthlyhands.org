@@ -17,35 +17,39 @@
 html{scroll-snap-type:y mandatory;background:#152635;scroll-behavior:smooth}
 body{margin:0;background:#152635;color:var(--ink);font-family:var(--serif);overflow-x:hidden}
 a{color:inherit}
-.ground{height:100svh;scroll-snap-align:start;scroll-snap-stop:always;position:relative;overflow:hidden}
-.deck{width:100vw;height:100svh;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
-.face{flex:0 0 100vw;width:100vw;height:100svh;scroll-snap-align:start;scroll-snap-stop:always;overflow-y:auto;position:relative}
-.title-face{display:flex;flex-direction:column;justify-content:flex-end;padding:max(3.5rem,env(safe-area-inset-top)) 1rem max(2.5rem,env(safe-area-inset-bottom));background:var(--blue)}
-.title-face.grid{background:linear-gradient(rgba(240,234,223,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(240,234,223,.03) 1px,transparent 1px),var(--blue);background-size:3.5rem 3.5rem}
-.viewer-title{background:var(--deep)}
-.number{font-size:clamp(8rem,34vw,19rem);line-height:.68;letter-spacing:-.075em;font-weight:400;margin:0 0 1rem}
-.name{margin:0;font-size:clamp(3.1rem,12vw,7rem);line-height:.86;letter-spacing:-.055em;font-weight:400;max-width:9ch}
-.kind{margin:.9rem 0 0;font:.58rem/1.3 var(--mono);letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
-.desc{max-width:43rem;margin:1.25rem 0 0;font-size:clamp(1.1rem,3.5vw,1.65rem);line-height:1.4}
-.hint{margin-top:2rem;font:.5rem/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.contents{background:var(--blue2);padding:max(4.2rem,env(safe-area-inset-top)) 1rem max(5rem,env(safe-area-inset-bottom))}
-.contents header{margin-bottom:1.4rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
-.eyebrow,.section-title{font:.5rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.contents h2{font-weight:400;font-size:clamp(2.5rem,8vw,4.5rem);line-height:.93;letter-spacing:-.04em;margin:.35rem 0}
+.threshold,.room{min-height:100svh;scroll-snap-align:start;scroll-snap-stop:always;position:relative}
+.threshold{height:100svh;overflow:hidden}
+.home-deck{display:flex;width:100vw;height:100svh;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+.home-face{flex:0 0 100vw;width:100vw;height:100svh;scroll-snap-align:start;scroll-snap-stop:always}
+.title{display:flex;flex-direction:column;justify-content:flex-end;padding:max(4rem,env(safe-area-inset-top)) 1rem max(2.5rem,env(safe-area-inset-bottom));background:var(--deep)}
+.kind,.eyebrow,.section-title{font:.51rem/1.35 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.title h1{margin:.4rem 0 1rem;font-size:clamp(4rem,15vw,9rem);line-height:.78;letter-spacing:-.065em;font-weight:400;max-width:8ch}
+.title p{max-width:43rem;margin:0;font-size:clamp(1.15rem,3.2vw,1.7rem);line-height:1.4}
+.hint{margin-top:2rem;font:.49rem/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lookback{background:#21394e;display:flex;align-items:center;justify-content:center;padding:max(1rem,env(safe-area-inset-top)) 1rem max(1rem,env(safe-area-inset-bottom))}
+.lookback-inner{width:min(96vw,78rem);height:96svh;display:flex;flex-direction:column;gap:.6rem}
+.lookback img{width:100%;height:100%;min-height:0;object-fit:contain}
+.caption{font:.46rem/1.35 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.room{padding:max(4rem,env(safe-area-inset-top)) 1rem max(4rem,env(safe-area-inset-bottom));background:var(--blue)}
+.room:nth-of-type(even){background:var(--blue2)}
+.room-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:1rem 1.4rem;align-items:end;max-width:80rem;margin:0 auto 2rem;border-bottom:1px solid var(--line);padding-bottom:1rem}
+.number{font-size:clamp(5rem,20vw,12rem);line-height:.7;letter-spacing:-.075em;font-weight:400}
+.room h2{margin:0;font-size:clamp(2.5rem,8vw,5.5rem);line-height:.88;letter-spacing:-.05em;font-weight:400}
+.room .desc{grid-column:2;max-width:46rem;margin:0 0 .2rem;font-size:1.1rem;line-height:1.45;color:#d9d3c9}
+.room-body{max-width:80rem;margin:auto}
 .list{border-top:1px solid var(--line)}
-.item{display:block;padding:1rem .1rem 1.15rem;border-bottom:1px solid var(--line);text-decoration:none}
-.item strong{display:block;font-size:1.35rem;line-height:1.15;font-weight:400}
-.item small{display:block;margin-top:.4rem;font:.47rem/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.visual{background:#d8cfbd;color:#211e18;display:flex;align-items:center;justify-content:center;padding:1rem}
-.visual-inner{width:min(94vw,70rem);height:min(92svh,54rem);display:flex;flex-direction:column;gap:.7rem}
-.visual img{width:100%;height:100%;min-height:0;object-fit:contain;background:#d8cfbd}
-.visual .caption{font:.48rem/1.35 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:#685f51}
-.road{display:inline-block;margin-top:1.4rem;text-decoration:none;border-bottom:1px solid var(--warm);padding-bottom:.15rem;font:.52rem/1.3 var(--mono);letter-spacing:.07em;text-transform:uppercase}
-.marker{position:absolute;z-index:25;right:.7rem;bottom:max(.65rem,env(safe-area-inset-bottom));padding:.48rem .62rem;border:1px solid var(--line);background:rgba(17,34,47,.86);font:.45rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);backdrop-filter:blur(9px)}
+.item{display:block;padding:1.05rem .1rem 1.2rem;border-bottom:1px solid var(--line);text-decoration:none}
+.item strong{display:block;font-size:clamp(1.2rem,3.6vw,1.65rem);line-height:1.15;font-weight:400}
+.item small{display:block;margin-top:.4rem;font:.46rem/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.room-note{max-width:46rem;margin:1.6rem 0 0;color:#d9d3c9;line-height:1.55}
 .way{position:fixed;z-index:40;top:max(.55rem,env(safe-area-inset-top));right:.65rem;display:flex;gap:.35rem}
 .way a{padding:.42rem .55rem;border:1px solid var(--line);background:rgba(17,34,47,.88);text-decoration:none;font:.45rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;backdrop-filter:blur(9px)}
 @media(min-width:850px){
-  .title-face,.contents{padding-left:clamp(2rem,6vw,7rem);padding-right:clamp(2rem,6vw,7rem)}
+  .title,.room{padding-left:clamp(2rem,6vw,7rem);padding-right:clamp(2rem,6vw,7rem)}
+}
+@media(max-width:48rem){
+  .room-head{grid-template-columns:1fr;align-items:start}
+  .room .desc{grid-column:1}
 }
 </style>
 </head>
@@ -55,125 +59,91 @@ a{color:inherit}
   <a href="/grounds/line-commons/">Line Commons</a>
 </nav>
 
-<section class="ground" id="ground-home" data-ground="home">
-  <div class="deck" data-deck>
-    <section class="face title-face viewer-title" data-face="title">
-      <div class="kind">Workshop viewer · current earned grounds</div>
-      <h1 class="name">Earthly Hands</h1>
-      <p class="desc">Stand here. Move vertically through the numbered Workshop. Swipe left to look toward Dancing Rabbit → Oklahoma.</p>
-      <div class="hint">swipe left for the drawing → · scroll down for numbered grounds ↓</div>
+<section class="threshold" id="ground-home">
+  <div class="home-deck" id="home-deck">
+    <section class="home-face title">
+      <div class="kind">Workshop viewer</div>
+      <h1>Earthly Hands</h1>
+      <p>Stand here. Swipe left to look back at the Workshop from Dancing Rabbit Creek. Scroll down from either face to enter the rooms that are actually here.</p>
+      <div class="hint">swipe left for the look-back → · scroll down for rooms ↓</div>
     </section>
-    <section class="face visual" data-face="contents">
-      <div class="visual-inner">
-        <img src="/experiments/dancing-rabbit-statehood-line/mullion-specimen.png" alt="Dancing Rabbit to Oklahoma — Earthly Hands Workshop line drawing">
-        <div class="caption">Dancing Rabbit to Oklahoma · line drawing · Mullion with Ten · kept 22 September 2026</div>
+    <section class="home-face lookback">
+      <div class="lookback-inner">
+        <img src="/grounds/line-commons/creek-look-back/creek-look-back.svg" alt="Dancing Rabbit Creek look-back — Workshop architectural proposition">
+        <div class="caption">Dancing Rabbit Creek look-back · Workshop architectural proposition · Edgewise with Ten</div>
       </div>
     </section>
   </div>
-  <div class="marker">Earthly Hands</div>
 </section>
 
-<section class="ground" id="ground-10" data-ground="10">
-  <div class="deck" data-deck>
-    <section class="face title-face grid" data-face="title">
-      <div class="number">10</div>
-      <h2 class="name">Shared Marks</h2>
-      <div class="kind">central commons</div>
-      <p class="desc">Shared marks and inherited work that several hands may need to recognize.</p>
-      <div class="hint">swipe left for what is here → · scroll for another ground ↓</div>
-    </section>
-    <section class="face contents" data-face="contents">
-      <header><div class="eyebrow">10 · Shared Marks</div><h2>What is here</h2></header>
-      <div class="list">
-        <a class="item" href="https://docs.google.com/document/d/1yfB5BUIkJcdhd_sx23ur8f8vJ829kzgBvGJvcE-BswI/edit"><strong>Shared Marks — central commons</strong><small>front door · live shared body</small></a>
-        <a class="item" href="https://docs.google.com/document/d/1wURQ4ZgWO8vzbVWzE37eGx0DbO0QOFhMjR9FbYM0X_I/edit"><strong>Shared Marks — Rough Edge</strong><small>film / listening inheritance</small></a>
-      </div>
-      <div class="hint">← swipe right to stand at 10 again</div>
-    </section>
+<section class="room" id="ground-10">
+  <div class="room-head">
+    <div class="number">10</div>
+    <div><div class="eyebrow">Workshop ground</div><h2>Shared Marks</h2></div>
+    <p class="desc">Central commons for shared marks and inherited work several hands may need to recognize.</p>
   </div>
-  <div class="marker">10</div>
+  <div class="room-body">
+    <div class="section-title">In the room</div>
+    <div class="list">
+      <a class="item" href="https://docs.google.com/document/d/1yfB5BUIkJcdhd_sx23ur8f8vJ829kzgBvGJvcE-BswI/edit"><strong>Shared Marks — central commons</strong><small>front door · live shared body</small></a>
+      <a class="item" href="https://docs.google.com/document/d/1wURQ4ZgWO8vzbVWzE37eGx0DbO0QOFhMjR9FbYM0X_I/edit"><strong>Shared Marks — Rough Edge</strong><small>film / listening inheritance</small></a>
+    </div>
+    <p class="room-note">This is the room itself in the viewer. No extra title-face turn is required before you can see what is here.</p>
+  </div>
 </section>
 
-<section class="ground" id="ground-15" data-ground="15">
-  <div class="deck" data-deck>
-    <section class="face title-face grid" data-face="title">
-      <div class="number">15</div>
-      <h2 class="name">Folio Alcove</h2>
-      <div class="kind">soft bodies · sandbox</div>
-      <p class="desc">Broad prototypes, dangerous mechanics, competing hypotheses, soft working bodies, failed joins.</p>
-      <div class="hint">swipe left for what is here → · scroll for another ground ↓</div>
-    </section>
-    <section class="face contents" data-face="contents">
-      <header><div class="eyebrow">15 · Folio Alcove</div><h2>Folios</h2></header>
-      <div class="list">
-        <div class="item"><strong>MCR 879</strong><small>working body · many hands</small></div>
-        <a class="item" href="/experiments/workshop-view/two-families/"><strong>Two Families, One Robert</strong><small>feature film · open folio →</small></a>
-        <div class="item"><strong>Reverend Robert Bell hand / Chickasaw archival return</strong><small>source + relationship body</small></div>
-        <div class="item"><strong>Workshop architecture</strong><small>recovery · drawing · inhabitation</small></div>
-        <div class="item"><strong>Perceptual machines</strong><small>instrument family · research through design</small></div>
-      </div>
-      <div class="section-title" style="margin-top:2rem">Other bodies in 15</div>
-      <div class="list">
-        <div class="item"><strong>Working Folio</strong><small>live instrument specification</small></div>
-        <div class="item"><strong>Real Folios</strong><small>durable relationship · custody · hospitality</small></div>
-        <div class="item"><strong>Form as Instrument</strong><small>perceptual state · documentary physics</small></div>
-        <div class="item"><strong>What Became Visible</strong><small>conversion layer · inheritance</small></div>
-        <div class="item"><strong>The Missing People Machine</strong><small>working machine body</small></div>
-        <div class="item"><strong>No particular bargain</strong><small>live research seam</small></div>
-      </div>
-      <div class="hint">← swipe right to stand at 15 again</div>
-    </section>
+<section class="room" id="ground-15">
+  <div class="room-head">
+    <div class="number">15</div>
+    <div><div class="eyebrow">Workshop ground · sandbox</div><h2>Folio Alcove</h2></div>
+    <p class="desc">Broad prototypes, dangerous mechanics, competing hypotheses, soft working bodies, failed joins.</p>
   </div>
-  <div class="marker">15</div>
+  <div class="room-body">
+    <div class="section-title">Folios</div>
+    <div class="list">
+      <div class="item"><strong>MCR 879</strong><small>working body · many hands</small></div>
+      <a class="item" href="/experiments/workshop-view/two-families/"><strong>Two Families, One Robert</strong><small>feature film · enter folio →</small></a>
+      <div class="item"><strong>Reverend Robert Bell hand / Chickasaw archival return</strong><small>source + relationship body</small></div>
+      <div class="item"><strong>Workshop architecture</strong><small>recovery · drawing · inhabitation</small></div>
+      <div class="item"><strong>Perceptual machines</strong><small>instrument family · research through design</small></div>
+    </div>
+    <div class="section-title" style="margin-top:2rem">Other bodies in 15</div>
+    <div class="list">
+      <div class="item"><strong>Working Folio</strong><small>live instrument specification</small></div>
+      <div class="item"><strong>Real Folios</strong><small>durable relationship · custody · hospitality</small></div>
+      <div class="item"><strong>Form as Instrument</strong><small>perceptual state · documentary physics</small></div>
+      <div class="item"><strong>What Became Visible</strong><small>conversion layer · inheritance</small></div>
+      <div class="item"><strong>The Missing People Machine</strong><small>working machine body</small></div>
+      <div class="item"><strong>No particular bargain</strong><small>live research seam</small></div>
+    </div>
+  </div>
 </section>
 
-<section class="ground" id="ground-17" data-ground="17">
-  <div class="deck" data-deck>
-    <section class="face title-face grid" data-face="title">
-      <div class="number">17</div>
-      <h2 class="name">Outward Ground</h2>
-      <div class="kind">crossing outward</div>
-      <p class="desc">Work that is preparing to cross, return, be shared, or become public without losing its Workshop footing.</p>
-      <div class="hint">swipe left for what is here → · scroll up to return ↑</div>
-    </section>
-    <section class="face contents" data-face="contents">
-      <header><div class="eyebrow">17 · Outward Ground</div><h2>Current doors</h2></header>
-      <div class="list">
-        <a class="item" href="https://docs.google.com/document/d/1ZskKHU7QPGUDfk54ygqcFOCTThJwDsMHKig35cGTEEo/edit"><strong>Outward Ground — front door</strong><small>current standing body</small></a>
-        <a class="item" href="/experiments/folio-17-safe/"><strong>Economic Independence Instrument</strong><small>accepted-for-use Folio specimen</small></a>
-      </div>
-      <div class="hint">← swipe right to stand at 17 again</div>
-    </section>
+<section class="room" id="ground-17">
+  <div class="room-head">
+    <div class="number">17</div>
+    <div><div class="eyebrow">Workshop ground</div><h2>Outward Ground</h2></div>
+    <p class="desc">Work preparing to cross, return, be shared, or become public without losing its Workshop footing.</p>
   </div>
-  <div class="marker">17</div>
+  <div class="room-body">
+    <div class="section-title">Current doors</div>
+    <div class="list">
+      <a class="item" href="https://docs.google.com/document/d/1ZskKHU7QPGUDfk54ygqcFOCTThJwDsMHKig35cGTEEo/edit"><strong>Outward Ground — front door</strong><small>current standing body</small></a>
+      <a class="item" href="/experiments/folio-17-safe/"><strong>Economic Independence Instrument</strong><small>accepted-for-use Folio specimen</small></a>
+    </div>
+  </div>
 </section>
 
 <script>
-const grounds=[...document.querySelectorAll('[data-ground]')];
-function deckFor(g){return g.querySelector('[data-deck]')}
-function goFace(deck,i,behavior='smooth'){deck.scrollTo({left:i*deck.clientWidth,behavior})}
-function face(deck){return Math.round(deck.scrollLeft/Math.max(1,deck.clientWidth))}
-function targetGround(){
-  const h=location.hash.replace('#ground-','');
-  return grounds.find(g=>g.dataset.ground===h)||grounds[0];
-}
-function applyInitial(){
-  const g=targetGround();
-  g.scrollIntoView({behavior:'auto'});
-  const q=new URLSearchParams(location.search).get('face');
-  const d=deckFor(g);
-  requestAnimationFrame(()=>goFace(d,q==='contents'?1:0,'auto'));
-}
-requestAnimationFrame(applyInitial);
-
+const deck=document.getElementById('home-deck');
 document.addEventListener('keydown',e=>{
-  const g=grounds.reduce((best,x)=>Math.abs(x.getBoundingClientRect().top)<Math.abs(best.getBoundingClientRect().top)?x:best,grounds[0]);
-  const d=deckFor(g),i=grounds.indexOf(g);
-  if(e.key==='ArrowRight')goFace(d,Math.min(1,face(d)+1));
-  if(e.key==='ArrowLeft')goFace(d,Math.max(0,face(d)-1));
-  if(e.key==='ArrowDown'&&i<grounds.length-1)grounds[i+1].scrollIntoView({behavior:'smooth'});
-  if(e.key==='ArrowUp'&&i>0)grounds[i-1].scrollIntoView({behavior:'smooth'});
+  if(e.key==='ArrowRight')deck.scrollTo({left:deck.clientWidth,behavior:'smooth'});
+  if(e.key==='ArrowLeft')deck.scrollTo({left:0,behavior:'smooth'});
 });
+if(location.hash){
+  const target=document.querySelector(location.hash);
+  if(target)requestAnimationFrame(()=>target.scrollIntoView({behavior:'auto'}));
+}
 </script>
 </body>
 </html>
