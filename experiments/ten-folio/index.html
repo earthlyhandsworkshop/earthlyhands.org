@@ -201,6 +201,7 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 </header>
 
 <section class="panel active" data-panel="now"><div class="inner">
+ <div id="live-ground-card" class="notice" hidden></div>
  <div id="current-work-card" class="notice" hidden></div>
  <div class="notice"><p><strong>Workshop folio specimen · landed snapshot</strong></p><p>This surface is a carried Workshop view, not the live change stream. Live Workshop is now a standing door above when you want current movement; Shared Country is always one touch away. Game Folio carriage updates locally as you keep things in Shared Country.</p><p class="bearing">snapshot state · live Workshop inheritance is not yet the same thing as this folio</p></div>
  <div class="pulse">
@@ -342,12 +343,29 @@ function renderCurrentWork(){
  const host=document.getElementById("current-work-card");if(!host)return;
  const x=currentWork();if(!x||!x.url||!x.title){host.hidden=true;host.innerHTML="";return;}
  host.hidden=false;
- const when=x.updated_at?new Date(x.updated_at).toLocaleString():"recent";
+ const stamp=x.updated_at?new Date(x.updated_at):null;
+ const age=stamp&&Number.isFinite(stamp.getTime())?Date.now()-stamp.getTime():0;
+ const stale=age>2*60*60*1000;
+ const when=stamp?stamp.toLocaleString():"recent";
  const a=document.createElement("a");a.className="open";a.href=x.url;a.textContent="Return to "+x.title;
- const p=document.createElement("p");p.innerHTML="<strong>Current work-attached Folio</strong><br>"+(x.question||"Return to the work where you left it.");
- const meta=document.createElement("p");meta.className="bearing";meta.textContent="last entered · "+when;
+ const p=document.createElement("p");
+ p.innerHTML="<strong>"+(stale?"Last work-attached Folio":"Current work-attached Folio")+"</strong><br>"+(x.question||"Return to the work where you left it.");
+ const meta=document.createElement("p");meta.className="bearing";meta.textContent=(stale?"last entered · not current · ":"last entered · ")+when;
  host.replaceChildren(p,meta,a);
 }
+async function renderLiveGround(){
+ const host=document.getElementById("live-ground-card");if(!host)return;
+ try{
+  const r=await fetch("/data/workshop/line-commons.live.json",{cache:"no-store"});if(!r.ok)throw new Error();
+  const d=await r.json(),items=Array.isArray(d.items)?d.items:[];
+  host.hidden=false;
+  const p=document.createElement("p");p.innerHTML="<strong>Live Workshop ground · Line Commons</strong><br>"+items.length+" live "+(items.length===1?"piece is":"pieces are")+" in the ground now.";
+  const meta=document.createElement("p");meta.className="bearing";meta.textContent="live ground state · "+(d.updated_at?new Date(d.updated_at).toLocaleString():"current manifest");
+  const a=document.createElement("a");a.className="open";a.href="/grounds/line-commons/";a.textContent="Enter Line Commons";
+  host.replaceChildren(p,meta,a);
+ }catch(_){host.hidden=true;host.innerHTML="";}
+}
+renderLiveGround();
 renderCurrentWork();
 const GAME_FOLIO_KEY="earthly-hands-shared-country-folio-v1";
 function gameItems(){try{const x=JSON.parse(localStorage.getItem(GAME_FOLIO_KEY)||"[]");return Array.isArray(x)?x:[]}catch(_){return[]}}
