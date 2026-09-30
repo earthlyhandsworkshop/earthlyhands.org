@@ -2,29 +2,50 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#eee8dc">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#21394e">
 <title>Line Commons — Earthly Hands Workshop</title>
 <style>
-:root{--paper:#eee8dc;--ink:#1d1b17;--muted:#70695f;--rule:rgba(29,27,23,.22);--blue:#21394e;--rust:#875b3d;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
-*{box-sizing:border-box}html{background:var(--paper);scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:1rem/1.45 var(--serif)}
-a{color:inherit}.shell{width:min(94rem,calc(100% - .75rem));margin:auto}
-.top{min-height:2.8rem;display:flex;justify-content:space-between;align-items:center;gap:.8rem;border-bottom:1px solid var(--rule);font:.5rem/1.15 var(--mono);letter-spacing:.075em;text-transform:uppercase}
-.top nav{display:flex;gap:.35rem;flex-wrap:wrap}.top a{padding:.38rem .48rem;border:1px solid var(--rule);text-decoration:none}
-.threshold{min-height:72svh;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(2rem,7vw,6rem) clamp(.25rem,3vw,2rem) 2rem;border-bottom:1px solid var(--rule)}
-.k{font:.5rem/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-h1{font-weight:400;font-size:clamp(4rem,13vw,10rem);line-height:.77;letter-spacing:-.065em;margin:.3rem 0 1.2rem}
-.threshold p{max-width:46rem;font-size:clamp(1.15rem,2.3vw,1.55rem);line-height:1.45;margin:.2rem 0}.bearing{margin-top:1.1rem;font:.47rem/1.35 var(--mono);color:var(--muted)}
-.reach{min-height:72svh;display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr);border-bottom:1px solid var(--rule);position:relative}
-.reach-mark{padding:clamp(1.5rem,4vw,3rem);display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--rule)}
-.num{font:clamp(4rem,10vw,8rem)/.8 var(--serif);color:rgba(29,27,23,.16)}.meta{font:.48rem/1.4 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
-.reach-body{padding:clamp(2rem,6vw,5rem);display:flex;flex-direction:column;justify-content:center;min-width:0}
-.reach-body h2{font-weight:400;font-size:clamp(2.6rem,6vw,5.7rem);line-height:.88;letter-spacing:-.05em;margin:0 0 1.2rem;max-width:12ch}
-.reach-body p{max-width:42rem;font-size:1.08rem;margin:0 0 1.4rem}.doors{display:flex;gap:.5rem;flex-wrap:wrap}.doors a{font:.54rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--ink);padding:.2rem 0;margin-right:1rem}
-.glimpse{position:absolute;right:2.5%;bottom:3%;width:min(28vw,22rem);height:18%;opacity:.13;overflow:hidden;pointer-events:none}.glimpse img{width:100%;height:100%;object-fit:cover;filter:grayscale(.2)}
-.after{min-height:45svh;padding:clamp(2rem,6vw,5rem);display:flex;align-items:flex-end;justify-content:space-between;gap:2rem}
-.after p{max-width:38rem;font-size:clamp(1.35rem,3vw,2rem);margin:0}.after a{font:.5rem/1.2 var(--mono);text-transform:uppercase;text-decoration:none;border-bottom:1px solid}
-@media(max-width:48rem){.top{align-items:flex-start;flex-direction:column;padding:.55rem 0}.top nav{width:100%}.top a{flex:1;text-align:center}.threshold{min-height:60svh}.reach{min-height:72svh;display:block}.reach-mark{border-right:0;border-bottom:1px solid var(--rule);padding:1rem}.num{font-size:3rem}.reach-body{padding:2rem 1rem 5rem}.reach-body h2{font-size:clamp(2.8rem,13vw,4.5rem)}.glimpse{width:55vw;height:14%;right:1rem}.after{display:block}.after a{display:inline-block;margin-top:2rem}}
+:root{
+  --blue:#21394e;--blue-deep:#192f42;--blue-frame:#1c3347;--white:#eee9dd;--muted:#aebbc4;
+  --line:rgba(238,233,221,.16);--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif
+}
+*{box-sizing:border-box}
+html{background:var(--blue);scroll-behavior:smooth}
+body{margin:0;background:
+  linear-gradient(rgba(238,233,221,.035) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(238,233,221,.035) 1px,transparent 1px),
+  var(--blue);
+  background-size:3.25rem 3.25rem;color:var(--white);font:1rem/1.45 var(--serif)
+}
+a{color:inherit}
+.shell{width:min(96rem,calc(100% - .8rem));margin:auto}
+.top{position:sticky;top:0;z-index:20;min-height:3rem;display:flex;justify-content:space-between;align-items:center;gap:.8rem;padding:.45rem .1rem;border-bottom:1px solid var(--line);background:rgba(33,57,78,.92);backdrop-filter:blur(8px);font:.5rem/1.15 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.top nav{display:flex;gap:.35rem;flex-wrap:wrap}.top a{padding:.4rem .52rem;border:1px solid var(--line);text-decoration:none}
+.threshold{min-height:76svh;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(2.2rem,7vw,6.5rem) clamp(.3rem,3vw,2rem) 2.5rem;border-bottom:1px solid var(--line)}
+.k{font:.5rem/1.25 var(--mono);letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+h1{margin:.35rem 0 1rem;font-weight:400;font-size:clamp(4.6rem,15vw,11rem);line-height:.73;letter-spacing:-.07em}
+.threshold p{max-width:36rem;margin:.15rem 0;font-size:clamp(1.2rem,2.6vw,1.65rem);line-height:1.38}
+.bearing{margin-top:1.15rem;font:.46rem/1.3 var(--mono);color:var(--muted)}
+.reach{position:relative;min-height:74svh;padding:clamp(2rem,6vw,5rem);border-bottom:1px solid var(--line);display:flex;align-items:center;overflow:hidden}
+.frame{position:absolute;inset:8% 5%;border:1px solid rgba(238,233,221,.10);background:rgba(25,47,66,.18);box-shadow:0 0 0 1.2rem rgba(25,47,66,.13);pointer-events:none}
+.preview{position:absolute;right:6%;bottom:8%;width:min(32vw,29rem);height:29%;opacity:.13;overflow:hidden;border:1px solid rgba(238,233,221,.12)}
+.preview img{width:100%;height:100%;object-fit:cover;filter:saturate(.8)}
+.content{position:relative;z-index:2;max-width:56rem}
+.num{font:clamp(5rem,12vw,9rem)/.75 var(--serif);color:rgba(238,233,221,.09)}
+.meta{margin-top:1rem;font:.48rem/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h2{margin:.7rem 0 1rem;font-weight:400;font-size:clamp(3.2rem,7vw,6.3rem);line-height:.86;letter-spacing:-.055em;max-width:12ch}
+.summary{max-width:37rem;font-size:1.08rem;color:#ddd8ce}
+.enter{display:inline-block;margin-top:1.25rem;padding:.55rem .72rem;border:1px solid rgba(238,233,221,.30);text-decoration:none;font:.54rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;background:rgba(25,47,66,.26)}
+.after{min-height:46svh;display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;padding:clamp(2rem,6vw,5rem)}
+.after p{max-width:36rem;margin:0;font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.35}.after a{font:.5rem/1.2 var(--mono);text-transform:uppercase;text-decoration:none;border-bottom:1px solid}
+@media(max-width:48rem){
+ .top{align-items:flex-start;flex-direction:column;padding:.55rem 0}.top nav{width:100%}.top a{flex:1;text-align:center}
+ .threshold{min-height:62svh}.reach{min-height:72svh;padding:2rem 1rem 5rem}
+ .frame{inset:6% 3%}.preview{width:56vw;height:18%;right:1rem;bottom:3rem}
+ h2{font-size:clamp(3rem,13vw,4.8rem)}.after{display:block}.after a{display:inline-block;margin-top:2rem}
+}
 </style>
 </head>
 <body>
@@ -33,41 +54,33 @@ h1{font-weight:400;font-size:clamp(4rem,13vw,10rem);line-height:.77;letter-spaci
 <section class="threshold">
   <div class="k">Workshop ground · live</div>
   <h1>Line<br>Commons</h1>
-  <p>Come in and look around. Nothing here needs to become a map of the room in order to be somewhere.</p>
-  <p>The pieces are real. The roads back to them are real. Wander until one catches.</p>
+  <p>Wander. Open a piece when it catches.</p>
   <div class="bearing" id="bearing">receiving what is here…</div>
 </section>
 <main id="field" aria-live="polite"></main>
-<section class="after">
-  <p>You can leave a piece without exhausting it. You can come back without starting over.</p>
-  <a href="/experiments/ten-folio/">Return to Folio</a>
-</section>
+<section class="after"><p>You can leave a piece without exhausting it. You can come back without starting over.</p><a href="/experiments/ten-folio/">Return to Folio</a></section>
 </div>
 <script>
 (async()=>{
  const host=document.getElementById('field'),bearing=document.getElementById('bearing');
  try{
-  const r=await fetch('/data/workshop/line-commons.live.json',{cache:'no-store'});
-  if(!r.ok)throw new Error();
-  const d=await r.json(),items=Array.isArray(d.items)?d.items:[];
-  bearing.textContent=items.length+' '+(items.length===1?'live piece':'live pieces')+' are here';
-  items.forEach((item,index)=>{
-   const section=document.createElement('section');section.className='reach';
-   const mark=document.createElement('aside');mark.className='reach-mark';
-   const num=document.createElement('div');num.className='num';num.textContent=String(index+1).padStart(2,'0');
-   const meta=document.createElement('div');meta.className='meta';meta.textContent=[item.hand,item.kind].filter(Boolean).join(' · ');
-   mark.append(num,meta);
-   const body=document.createElement('div');body.className='reach-body';
-   const h=document.createElement('h2');h.textContent=item.title||'Untitled';
-   const p=document.createElement('p');p.textContent=item.summary||'';
-   const doors=document.createElement('div');doors.className='doors';
-   const pic=document.createElement('a');pic.href=(item.href||'#')+'#picture';pic.textContent='Picture';
-   const jacket=document.createElement('a');jacket.href=(item.href||'#')+'#jacket';jacket.textContent='Jacket';
-   doors.append(pic,jacket);body.append(h,p,doors);
-   const glimpse=document.createElement('div');glimpse.className='glimpse';
-   const img=document.createElement('img');img.src=item.image||'';img.alt='';glimpse.append(img);
-   section.append(mark,body,glimpse);host.append(section);
-  });
+   const r=await fetch('/data/workshop/line-commons.live.json',{cache:'no-store'});if(!r.ok)throw new Error();
+   const d=await r.json(),items=Array.isArray(d.items)?d.items:[];
+   bearing.textContent=items.length+' '+(items.length===1?'live piece':'live pieces')+' are here';
+   items.forEach((item,index)=>{
+     const section=document.createElement('section');section.className='reach';
+     const frame=document.createElement('div');frame.className='frame';
+     const content=document.createElement('div');content.className='content';
+     const num=document.createElement('div');num.className='num';num.textContent=String(index+1).padStart(2,'0');
+     const meta=document.createElement('div');meta.className='meta';meta.textContent=[item.hand,item.kind].filter(Boolean).join(' · ');
+     const h=document.createElement('h2');h.textContent=item.title||'Untitled';
+     const p=document.createElement('p');p.className='summary';p.textContent=item.summary||'';
+     const a=document.createElement('a');a.className='enter';a.href=item.href||'#';a.textContent='Picture / Jacket';
+     content.append(num,meta,h,p,a);
+     const preview=document.createElement('div');preview.className='preview';
+     const img=document.createElement('img');img.src=item.image||'';img.alt='';preview.append(img);
+     section.append(frame,content,preview);host.append(section);
+   });
  }catch(_){bearing.textContent='the ground is here · current pieces could not be read this turn';}
 })();
 </script>
