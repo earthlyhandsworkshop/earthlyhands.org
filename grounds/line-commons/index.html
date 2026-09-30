@@ -7,10 +7,8 @@
 <title>Line Commons — Earthly Hands Workshop</title>
 <style>
 :root{
-  --blue:#21394e;--blue-deep:#192f42;--white:#eee9dd;--muted:#aebbc4;
-  --line:rgba(238,233,221,.32);--faint:rgba(238,233,221,.10);
-  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif
+  --blue:#21394e;--blue-deep:#192f42;--white:#eee9dd;--muted:#aebbc4;--line:rgba(238,233,221,.32);--faint:rgba(238,233,221,.10);
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif
 }
 *{box-sizing:border-box}
 html{background:var(--blue);scroll-behavior:smooth}
@@ -26,7 +24,6 @@ a{color:inherit}
 h1{margin:.35rem 0 1rem;font-weight:400;font-size:clamp(4.6rem,15vw,11rem);line-height:.73;letter-spacing:-.07em}
 .threshold p{max-width:36rem;margin:.15rem 0;font-size:clamp(1.2rem,2.6vw,1.65rem);line-height:1.38}
 .bearing{margin-top:1.15rem;font:.46rem/1.3 var(--mono);color:var(--muted)}
-
 .field{position:relative;padding:clamp(2rem,6vw,5rem) 0}
 .commons-line{position:absolute;left:clamp(1.1rem,5vw,4.8rem);top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent 0,var(--line) 4rem,var(--line) calc(100% - 4rem),transparent 100%)}
 .reach{position:relative;min-height:68svh;padding:clamp(3.5rem,8vw,7rem) clamp(1rem,6vw,6rem) clamp(3.5rem,8vw,7rem) clamp(4rem,12vw,11rem);display:flex;align-items:center}
@@ -39,19 +36,23 @@ h2{margin:.7rem 0 1rem;font-weight:400;font-size:clamp(3.2rem,7vw,6.3rem);line-h
 .summary{max-width:39rem;font-size:1.08rem;color:#ddd8ce}
 .enter{display:inline-block;margin-top:1.5rem;text-decoration:none;font:.54rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase;padding-bottom:.22rem;border-bottom:1px solid var(--white)}
 .enter:hover,.enter:focus-visible{border-bottom-width:2px}
-.after{min-height:46svh;display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;padding:clamp(2rem,6vw,5rem)}
-.after p{max-width:36rem;margin:0;font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.35}
-.after a{font:.5rem/1.2 var(--mono);text-transform:uppercase;text-decoration:none;border-bottom:1px solid}
-
+.after{min-height:38svh;display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;padding:clamp(2rem,6vw,5rem)}
+.after p{max-width:36rem;margin:0;font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.35}.after a{font:.5rem/1.2 var(--mono);text-transform:uppercase;text-decoration:none;border-bottom:1px solid}
+.periphery{padding:clamp(2rem,6vw,5rem);margin-bottom:2rem}
+.periphery-head{display:flex;gap:1rem;align-items:baseline;justify-content:space-between;margin-bottom:1.4rem}
+.periphery h2{margin:0;max-width:none;font-size:clamp(1.4rem,3vw,2.3rem);letter-spacing:-.035em}
+.periphery .note{font:.46rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.horizon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--faint);border-bottom:1px solid var(--faint)}
+.horizon>*{min-height:6rem;padding:1rem .9rem 1rem 0;text-decoration:none}
+.horizon>*+*{padding-left:.9rem;border-left:1px solid var(--faint)}
+.horizon strong{display:block;font-weight:400;font-size:1.05rem}
+.horizon small{display:block;margin-top:.45rem;font:.43rem/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.horizon .not-door{opacity:.62}
 @media(max-width:48rem){
  .top{align-items:flex-start;flex-direction:column;padding:.55rem 0}.top nav{width:100%}.top a{flex:1;text-align:center}
- .threshold{min-height:62svh}
- .field{padding:1rem 0}
- .commons-line{left:.85rem}
- .reach{min-height:68svh;padding:3.5rem 1rem 4rem 3.5rem}
- .join{left:.85rem;width:1.6rem}
- h2{font-size:clamp(3rem,13vw,4.8rem)}
- .after{display:block}.after a{display:inline-block;margin-top:2rem}
+ .threshold{min-height:62svh}.field{padding:1rem 0}.commons-line{left:.85rem}.reach{min-height:68svh;padding:3.5rem 1rem 4rem 3.5rem}.join{left:.85rem;width:1.6rem}
+ h2{font-size:clamp(3rem,13vw,4.8rem)}.after{display:block}.after a{display:inline-block;margin-top:2rem}
+ .periphery h2{font-size:1.55rem}.horizon{grid-template-columns:1fr 1fr}.horizon>*:nth-child(3){border-left:0;border-top:1px solid var(--faint)}.horizon>*:nth-child(4){border-top:1px solid var(--faint)}
 }
 </style>
 </head>
@@ -74,6 +75,19 @@ h2{margin:.7rem 0 1rem;font-weight:400;font-size:clamp(3.2rem,7vw,6.3rem);line-h
   <p>You can leave a piece without exhausting it. You can come back without starting over.</p>
   <a href="/experiments/ten-folio/">Return to Folio</a>
 </section>
+
+<section class="periphery" aria-labelledby="periphery-title">
+  <div class="periphery-head">
+    <h2 id="periphery-title">Beyond this ground</h2>
+    <span class="note">peripheral, not a map</span>
+  </div>
+  <div class="horizon">
+    <a href="/grounds/public-lands/"><strong>Public Lands</strong><small>door open</small></a>
+    <a href="/listening/"><strong>Listening</strong><small>door open</small></a>
+    <span class="not-door"><strong>Mapping Grounds</strong><small>elsewhere · no door from here yet</small></span>
+    <span class="not-door"><strong>Rough Edge</strong><small>elsewhere · no door from here yet</small></span>
+  </div>
+</section>
 </div>
 <script>
 (async()=>{
@@ -91,10 +105,9 @@ h2{margin:.7rem 0 1rem;font-weight:400;font-size:clamp(3.2rem,7vw,6.3rem);line-h
      const h=document.createElement('h2');h.textContent=item.title||'Untitled';
      const p=document.createElement('p');p.className='summary';p.textContent=item.summary||'';
      const a=document.createElement('a');a.className='enter';a.href=item.href||'#';a.textContent='Open piece';
-     content.append(num,meta,h,p,a);
-     section.append(join,content);host.append(section);
+     content.append(num,meta,h,p,a);section.append(join,content);host.append(section);
    });
- }catch(_){bearing.textContent='the ground is here · current pieces could not be read this turn';}
+ }catch(_){bearing.textContent='the ground is here · current pieces could not be read this turn'}
 })();
 </script>
 </body>
