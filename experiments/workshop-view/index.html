@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1f3040">
+<title>Workshop View — 15</title>
+<style>
+:root{
+  --ink:#f0eadf;
+  --muted:#b8c1c8;
+  --blue:#20384b;
+  --blue2:#182d3d;
+  --line:rgba(240,234,223,.15);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-snap-type:y mandatory;background:#152635}
+body{margin:0;background:#152635;color:var(--ink);font-family:var(--serif);overflow-x:hidden}
+.ground{
+  min-height:100svh;
+  scroll-snap-align:start;
+  scroll-snap-stop:always;
+  position:relative;
+}
+.deck{
+  width:100vw;height:100svh;
+  display:flex;overflow-x:auto;overflow-y:hidden;
+  scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  -webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;
+}
+.face{
+  flex:0 0 100vw;width:100vw;height:100svh;
+  scroll-snap-align:start;scroll-snap-stop:always;
+  overflow-y:auto;position:relative;
+}
+.title-face{
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:max(1.2rem,env(safe-area-inset-top)) 1rem max(2.3rem,env(safe-area-inset-bottom));
+  background:
+    linear-gradient(rgba(240,234,223,.034) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(240,234,223,.034) 1px,transparent 1px),
+    var(--blue);
+  background-size:3.4rem 3.4rem;
+}
+.number{
+  font-size:clamp(8rem,34vw,19rem);
+  line-height:.68;letter-spacing:-.075em;font-weight:400;
+  color:rgba(240,234,223,.95);margin:0 0 1rem;
+}
+.name{
+  margin:0;font-size:clamp(3.1rem,12vw,7rem);
+  line-height:.86;letter-spacing:-.055em;font-weight:400;max-width:8ch;
+}
+.kind{
+  margin:.9rem 0 0;font: .62rem/1.3 var(--mono);
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted)
+}
+.desc{
+  max-width:42rem;margin:1.3rem 0 0;font-size:clamp(1.1rem,3.5vw,1.65rem);line-height:1.4
+}
+.hint{
+  margin-top:2.2rem;font:.5rem/1.3 var(--mono);
+  letter-spacing:.08em;text-transform:uppercase;color:var(--muted)
+}
+.contents{
+  background:
+    linear-gradient(rgba(240,234,223,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(240,234,223,.025) 1px,transparent 1px),
+    var(--blue2);
+  background-size:3.4rem 3.4rem;
+  padding:max(4.5rem,env(safe-area-inset-top)) 1rem max(5rem,env(safe-area-inset-bottom));
+}
+.contents header{
+  position:sticky;top:0;margin:-1.2rem -1rem 1.5rem;padding:1.2rem 1rem .9rem;
+  background:linear-gradient(rgba(24,45,61,.96),rgba(24,45,61,.90));
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:3
+}
+.eyebrow{font:.5rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.contents h2{font-weight:400;font-size:clamp(2.4rem,8vw,4.2rem);line-height:.95;letter-spacing:-.04em;margin:.35rem 0 0}
+.section-title{
+  margin:2.1rem 0 .6rem;font:.52rem/1.2 var(--mono);
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted)
+}
+.list{border-top:1px solid var(--line)}
+.item{
+  display:block;padding:1rem .1rem 1.15rem;border-bottom:1px solid var(--line);
+  color:inherit;text-decoration:none
+}
+.item strong{display:block;font-weight:400;font-size:1.35rem;line-height:1.12}
+.item small{display:block;margin-top:.4rem;font:.48rem/1.35 var(--mono);letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+.note{margin-top:2rem;max-width:36rem;color:#d9d2c7;line-height:1.55}
+.pill{
+  position:fixed;z-index:20;left:50%;bottom:max(.7rem,env(safe-area-inset-bottom));
+  transform:translateX(-50%);padding:.55rem .85rem;border:1px solid var(--line);
+  background:rgba(17,34,47,.88);color:var(--ink);font:.48rem/1 var(--mono);
+  letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(9px)
+}
+.next{
+  display:flex;align-items:flex-end;min-height:100svh;padding:2rem 1rem 3rem;
+  background:#142536;border-top:1px solid var(--line)
+}
+.next .number{font-size:clamp(7rem,28vw,15rem);color:rgba(240,234,223,.18)}
+.next .name{color:rgba(240,234,223,.56)}
+.next .desc{color:rgba(240,234,223,.48)}
+@media(min-width:850px){
+  .title-face,.contents,.next{padding-left:clamp(2rem,6vw,7rem);padding-right:clamp(2rem,6vw,7rem)}
+  .contents header{margin-left:calc(-1 * clamp(2rem,6vw,7rem));margin-right:calc(-1 * clamp(2rem,6vw,7rem));padding-left:clamp(2rem,6vw,7rem)}
+}
+</style>
+</head>
+<body>
+<section class="ground" id="ground-15">
+  <div class="deck" id="deck15">
+    <section class="face title-face" id="title15">
+      <div class="number">15</div>
+      <h1 class="name">Folio Alcove</h1>
+      <div class="kind">soft bodies</div>
+      <p class="desc">Broad prototypes, dangerous mechanics, competing hypotheses, soft working bodies, failed joins.</p>
+      <div class="hint">swipe left for what is here →</div>
+    </section>
+    <section class="face contents" id="contents15">
+      <header>
+        <div class="eyebrow">15 · Folio Alcove</div>
+        <h2>What is here</h2>
+      </header>
+
+      <div class="section-title">Folios</div>
+      <div class="list">
+        <div class="item"><strong>MCR 879</strong><small>working body · many hands</small></div>
+        <div class="item"><strong>Two Families, One Robert</strong><small>feature film · working body</small></div>
+        <div class="item"><strong>Reverend Robert Bell hand / Chickasaw archival return</strong><small>source + relationship body</small></div>
+        <div class="item"><strong>Workshop architecture</strong><small>recovery · drawing · inhabitation</small></div>
+        <div class="item"><strong>Perceptual machines</strong><small>instrument family · research through design</small></div>
+      </div>
+
+      <div class="section-title">Other bodies in 15</div>
+      <div class="list">
+        <div class="item"><strong>Working Folio</strong><small>live instrument specification</small></div>
+        <div class="item"><strong>Real Folios</strong><small>durable relationship · custody · hospitality</small></div>
+        <div class="item"><strong>Form as Instrument</strong><small>perceptual state · documentary physics</small></div>
+        <div class="item"><strong>What Became Visible</strong><small>conversion layer · inheritance</small></div>
+        <div class="item"><strong>The Missing People Machine</strong><small>working machine body</small></div>
+        <div class="item"><strong>No particular bargain</strong><small>live research seam</small></div>
+      </div>
+
+      <p class="note">This public prototype shows the viewing grammar only. Private Workshop roads are deliberately not exposed here. In the actual Workshop view, each row can open the real body.</p>
+      <div class="hint">← swipe right to stand at 15 again</div>
+    </section>
+  </div>
+</section>
+
+<section class="ground next" id="ground-10" aria-label="Next known Workshop ground">
+  <div>
+    <div class="number">10</div>
+    <h2 class="name">Shared Marks</h2>
+    <div class="kind">known ground · contents not loaded in this prototype</div>
+    <p class="desc">A later pass can give every numbered ground the same title face and contents face without inventing the missing numbers in between.</p>
+  </div>
+</section>
+
+<button class="pill" id="toggle15" type="button">15 · face / list</button>
+
+<script>
+const deck=document.getElementById('deck15');
+const toggle=document.getElementById('toggle15');
+function face(){ return Math.round(deck.scrollLeft / Math.max(1,deck.clientWidth)); }
+function goFace(i){ deck.scrollTo({left:i*deck.clientWidth,behavior:'smooth'}); }
+toggle.addEventListener('click',()=>goFace(face()?0:1));
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight') goFace(1);
+  if(e.key==='ArrowLeft') goFace(0);
+  if(e.key==='ArrowDown') document.getElementById('ground-10').scrollIntoView({behavior:'smooth'});
+  if(e.key==='ArrowUp') document.getElementById('ground-15').scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>
