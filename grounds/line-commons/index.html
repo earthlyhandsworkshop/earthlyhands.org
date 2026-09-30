@@ -3,132 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#d9d0bf">
+<meta name="theme-color" content="#eee8dc">
 <title>Line Commons — Earthly Hands Workshop</title>
 <style>
-:root{
-  --plaster:#ddd4c4;--plaster2:#d4c9b7;--floor:#b6a892;--ink:#1d1b17;--muted:#6f665a;
-  --rule:rgba(29,27,23,.26);--shadow:rgba(35,29,22,.19);--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif
-}
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:#c8bda9;color:var(--ink)}
-body{font:1rem/1.4 var(--serif);overflow-x:hidden}
-a{color:inherit}
-.room-shell{min-height:100svh;display:grid;grid-template-rows:auto minmax(0,1fr)}
-.threshold{
-  position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:.8rem;
-  min-height:3.1rem;padding:.48rem .7rem;border-bottom:1px solid var(--rule);
-  background:rgba(224,215,199,.94);backdrop-filter:blur(7px);
-  font:.5rem/1.15 var(--mono);letter-spacing:.075em;text-transform:uppercase
-}
-.threshold strong{font-size:.58rem}.threshold nav{display:flex;gap:.34rem;flex-wrap:wrap}
-.threshold a{padding:.38rem .48rem;border:1px solid var(--rule);text-decoration:none;background:rgba(255,255,255,.12)}
-.room{
-  position:relative;min-height:calc(100svh - 3.1rem);overflow:hidden;perspective:1100px;
-  background:linear-gradient(to bottom,var(--plaster) 0 64%,var(--floor) 64% 100%);
-}
-.ceiling{
-  position:absolute;left:0;right:0;top:0;height:12%;
-  background:linear-gradient(to bottom,#cfc3b0,var(--plaster));
-  clip-path:polygon(0 0,100% 0,88% 100%,12% 100%);
-  border-bottom:1px solid rgba(29,27,23,.12)
-}
-.left-wall,.right-wall{
-  position:absolute;top:0;bottom:36%;width:14%;background:var(--plaster2);opacity:.72
-}
-.left-wall{left:0;clip-path:polygon(0 0,100% 12%,100% 100%,0 100%)}
-.right-wall{right:0;clip-path:polygon(0 12%,100% 0,100% 100%,0 100%)}
-.floor-lines{position:absolute;left:0;right:0;bottom:0;height:36%;pointer-events:none}
-.floor-lines::before,.floor-lines::after{content:"";position:absolute;left:50%;top:0;width:1px;height:100%;background:rgba(29,27,23,.12);transform-origin:top}
-.floor-lines::before{transform:rotate(24deg)}.floor-lines::after{transform:rotate(-24deg)}
-.room-title{
-  position:absolute;z-index:5;top:7.5%;left:50%;transform:translateX(-50%);text-align:center;width:min(38rem,80vw)
-}
-.room-title .k{font:.46rem/1.2 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
-.room-title h1{margin:.2rem 0 0;font-weight:400;font-size:clamp(2.4rem,6vw,5rem);line-height:.9;letter-spacing:-.05em}
-.room-title .bearing{margin-top:.5rem;font:.44rem/1.3 var(--mono);color:var(--muted)}
-.wall-object{
-  position:absolute;z-index:7;text-decoration:none;display:block;transform-style:preserve-3d;
-  filter:drop-shadow(0 14px 14px var(--shadow));transition:transform .22s ease,filter .22s ease
-}
-.wall-object:hover,.wall-object:focus-visible{filter:drop-shadow(0 18px 18px rgba(35,29,22,.27))}
-.frame{background:#eee7da;border:8px solid #403b34;padding:5px;box-shadow:inset 0 0 0 1px #9d9487}
-.frame img{display:block;width:100%;height:100%;object-fit:contain;background:#eee8dc}
-.placard{margin-top:.5rem;padding:.3rem .4rem;background:rgba(232,224,210,.92);border:1px solid var(--rule);font:.42rem/1.25 var(--mono);letter-spacing:.045em;text-transform:uppercase}
-.placard strong{display:block;font-weight:600}.placard span{display:block;color:var(--muted);margin-top:.14rem}
-.slot-0{left:8%;top:24%;width:min(40vw,32rem);transform:rotateY(8deg) rotateZ(-.25deg)}
-.slot-1{right:8%;top:27%;width:min(38vw,30rem);transform:rotateY(-8deg) rotateZ(.2deg)}
-.slot-0:hover,.slot-0:focus-visible{transform:rotateY(5deg) translateY(-4px)}
-.slot-1:hover,.slot-1:focus-visible{transform:rotateY(-5deg) translateY(-4px)}
-.bench{
-  position:absolute;z-index:3;left:50%;bottom:10%;transform:translateX(-50%);
-  width:min(31rem,45vw);height:2.2rem;border-top:6px solid #6e6252;border-left:5px solid #716555;border-right:5px solid #716555;
-  opacity:.5
-}
-.door-note{
-  position:absolute;left:50%;bottom:2.4%;transform:translateX(-50%);z-index:6;text-align:center;
-  font:.43rem/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:#5e554a
-}
-.empty{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);font:1rem var(--serif)}
-@media(max-width:46rem){
-  .threshold{align-items:flex-start;flex-direction:column;padding:.55rem .6rem}.threshold nav{width:100%}.threshold a{flex:1;text-align:center}
-  .room{min-height:calc(100svh - 5.7rem);background:linear-gradient(to bottom,var(--plaster) 0 69%,var(--floor) 69% 100%)}
-  .ceiling{height:9%}.left-wall,.right-wall{width:8%;bottom:31%}
-  .room-title{top:4%;width:86vw}.room-title h1{font-size:2.5rem}
-  .slot-0{left:7%;top:22%;width:67vw;transform:rotateY(7deg) rotateZ(-.3deg)}
-  .slot-1{right:6%;top:54%;width:62vw;transform:rotateY(-7deg) rotateZ(.25deg)}
-  .frame{border-width:5px;padding:3px}
-  .placard{font-size:.38rem;background:rgba(232,224,210,.95)}
-  .bench{display:none}.door-note{display:none}
-}
-@media(max-width:28rem){
-  .room-title h1{font-size:2.1rem}
-  .slot-0{top:20%;width:72vw}.slot-1{top:53%;width:68vw}
-}
+:root{--paper:#eee8dc;--ink:#1d1b17;--muted:#70695f;--rule:rgba(29,27,23,.22);--blue:#21394e;--rust:#875b3d;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+*{box-sizing:border-box}html{background:var(--paper);scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:1rem/1.45 var(--serif)}
+a{color:inherit}.shell{width:min(94rem,calc(100% - .75rem));margin:auto}
+.top{min-height:2.8rem;display:flex;justify-content:space-between;align-items:center;gap:.8rem;border-bottom:1px solid var(--rule);font:.5rem/1.15 var(--mono);letter-spacing:.075em;text-transform:uppercase}
+.top nav{display:flex;gap:.35rem;flex-wrap:wrap}.top a{padding:.38rem .48rem;border:1px solid var(--rule);text-decoration:none}
+.threshold{min-height:72svh;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(2rem,7vw,6rem) clamp(.25rem,3vw,2rem) 2rem;border-bottom:1px solid var(--rule)}
+.k{font:.5rem/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+h1{font-weight:400;font-size:clamp(4rem,13vw,10rem);line-height:.77;letter-spacing:-.065em;margin:.3rem 0 1.2rem}
+.threshold p{max-width:46rem;font-size:clamp(1.15rem,2.3vw,1.55rem);line-height:1.45;margin:.2rem 0}.bearing{margin-top:1.1rem;font:.47rem/1.35 var(--mono);color:var(--muted)}
+.reach{min-height:72svh;display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr);border-bottom:1px solid var(--rule);position:relative}
+.reach-mark{padding:clamp(1.5rem,4vw,3rem);display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--rule)}
+.num{font:clamp(4rem,10vw,8rem)/.8 var(--serif);color:rgba(29,27,23,.16)}.meta{font:.48rem/1.4 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.reach-body{padding:clamp(2rem,6vw,5rem);display:flex;flex-direction:column;justify-content:center;min-width:0}
+.reach-body h2{font-weight:400;font-size:clamp(2.6rem,6vw,5.7rem);line-height:.88;letter-spacing:-.05em;margin:0 0 1.2rem;max-width:12ch}
+.reach-body p{max-width:42rem;font-size:1.08rem;margin:0 0 1.4rem}.doors{display:flex;gap:.5rem;flex-wrap:wrap}.doors a{font:.54rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--ink);padding:.2rem 0;margin-right:1rem}
+.glimpse{position:absolute;right:2.5%;bottom:3%;width:min(28vw,22rem);height:18%;opacity:.13;overflow:hidden;pointer-events:none}.glimpse img{width:100%;height:100%;object-fit:cover;filter:grayscale(.2)}
+.after{min-height:45svh;padding:clamp(2rem,6vw,5rem);display:flex;align-items:flex-end;justify-content:space-between;gap:2rem}
+.after p{max-width:38rem;font-size:clamp(1.35rem,3vw,2rem);margin:0}.after a{font:.5rem/1.2 var(--mono);text-transform:uppercase;text-decoration:none;border-bottom:1px solid}
+@media(max-width:48rem){.top{align-items:flex-start;flex-direction:column;padding:.55rem 0}.top nav{width:100%}.top a{flex:1;text-align:center}.threshold{min-height:60svh}.reach{min-height:72svh;display:block}.reach-mark{border-right:0;border-bottom:1px solid var(--rule);padding:1rem}.num{font-size:3rem}.reach-body{padding:2rem 1rem 5rem}.reach-body h2{font-size:clamp(2.8rem,13vw,4.5rem)}.glimpse{width:55vw;height:14%;right:1rem}.after{display:block}.after a{display:inline-block;margin-top:2rem}}
 </style>
 </head>
 <body>
-<div class="room-shell">
-<header class="threshold">
-  <strong>Earthly Hands Workshop · Line Commons</strong>
-  <nav><a href="/experiments/ten-folio/">Folio</a><a href="/experiments/shared-country/">Shared Country</a></nav>
-</header>
-<main class="room" id="room" aria-live="polite">
-  <div class="ceiling" aria-hidden="true"></div>
-  <div class="left-wall" aria-hidden="true"></div><div class="right-wall" aria-hidden="true"></div>
-  <div class="floor-lines" aria-hidden="true"></div>
-  <header class="room-title">
-    <div class="k">you are in Line Commons</div>
-    <h1>Line Commons</h1>
-    <div class="bearing" id="bearing">receiving the room…</div>
-  </header>
-  <div class="bench" aria-hidden="true"></div>
-  <div class="door-note">stand with a piece · tap it to enter fully</div>
-</main>
+<div class="shell">
+<header class="top"><strong>Earthly Hands Workshop · Line Commons</strong><nav><a href="/experiments/ten-folio/">Folio</a><a href="/experiments/shared-country/">Shared Country</a></nav></header>
+<section class="threshold">
+  <div class="k">Workshop ground · live</div>
+  <h1>Line<br>Commons</h1>
+  <p>Come in and look around. Nothing here needs to become a map of the room in order to be somewhere.</p>
+  <p>The pieces are real. The roads back to them are real. Wander until one catches.</p>
+  <div class="bearing" id="bearing">receiving what is here…</div>
+</section>
+<main id="field" aria-live="polite"></main>
+<section class="after">
+  <p>You can leave a piece without exhausting it. You can come back without starting over.</p>
+  <a href="/experiments/ten-folio/">Return to Folio</a>
+</section>
 </div>
 <script>
 (async()=>{
- const room=document.getElementById('room'),bearing=document.getElementById('bearing');
+ const host=document.getElementById('field'),bearing=document.getElementById('bearing');
  try{
-   const r=await fetch('/data/workshop/line-commons.live.json',{cache:'no-store'});
-   if(!r.ok) throw new Error('manifest unavailable');
-   const d=await r.json(),items=Array.isArray(d.items)?d.items:[];
-   bearing.textContent=items.length+' '+(items.length===1?'live specimen':'live specimens')+' in the room';
-   if(!items.length){const e=document.createElement('p');e.className='empty';e.textContent='[crickets]';room.append(e);return;}
-   items.slice(0,4).forEach((item,index)=>{
-     const a=document.createElement('a');a.className='wall-object slot-'+index;a.href=item.href||'#';
-     a.setAttribute('aria-label','Enter '+(item.title||'Line Commons specimen'));
-     const frame=document.createElement('div');frame.className='frame';
-     const img=document.createElement('img');img.src=item.image||'';img.alt=item.title||'Line Commons specimen';frame.append(img);
-     const p=document.createElement('div');p.className='placard';
-     const strong=document.createElement('strong');strong.textContent=item.title||'Untitled';
-     const small=document.createElement('span');small.textContent=[item.hand,item.kind].filter(Boolean).join(' · ');
-     p.append(strong,small);a.append(frame,p);room.append(a);
-   });
- }catch(_){
-   bearing.textContent='the room is here · current objects could not be read this turn';
- }
+  const r=await fetch('/data/workshop/line-commons.live.json',{cache:'no-store'});
+  if(!r.ok)throw new Error();
+  const d=await r.json(),items=Array.isArray(d.items)?d.items:[];
+  bearing.textContent=items.length+' '+(items.length===1?'live piece':'live pieces')+' are here';
+  items.forEach((item,index)=>{
+   const section=document.createElement('section');section.className='reach';
+   const mark=document.createElement('aside');mark.className='reach-mark';
+   const num=document.createElement('div');num.className='num';num.textContent=String(index+1).padStart(2,'0');
+   const meta=document.createElement('div');meta.className='meta';meta.textContent=[item.hand,item.kind].filter(Boolean).join(' · ');
+   mark.append(num,meta);
+   const body=document.createElement('div');body.className='reach-body';
+   const h=document.createElement('h2');h.textContent=item.title||'Untitled';
+   const p=document.createElement('p');p.textContent=item.summary||'';
+   const doors=document.createElement('div');doors.className='doors';
+   const pic=document.createElement('a');pic.href=(item.href||'#')+'#picture';pic.textContent='Picture';
+   const jacket=document.createElement('a');jacket.href=(item.href||'#')+'#jacket';jacket.textContent='Jacket';
+   doors.append(pic,jacket);body.append(h,p,doors);
+   const glimpse=document.createElement('div');glimpse.className='glimpse';
+   const img=document.createElement('img');img.src=item.image||'';img.alt='';glimpse.append(img);
+   section.append(mark,body,glimpse);host.append(section);
+  });
+ }catch(_){bearing.textContent='the ground is here · current pieces could not be read this turn';}
 })();
 </script>
 </body>
