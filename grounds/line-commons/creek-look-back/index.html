@@ -4,117 +4,83 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#21394e">
-<meta name="robots" content="index,follow">
-<title>Creek Look-Back — Line Commons — Earthly Hands</title>
+<title>Dancing Rabbit Creek Look-Back — Line Commons</title>
 <style>
-:root{--blue:#21394e;--line:#a7b5c1;--paper:#eee8dc;--ink:#1b1b18;--muted:#6d6a64}
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:var(--blue);color:white}
-body{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-button,a{font:inherit}
-a{color:inherit}
-.shell{min-height:100svh;position:relative;overflow:hidden}
-.face{display:none;min-height:100svh}
-.face.is-current{display:flex}
-.work{align-items:center;justify-content:center;background:var(--blue)}
-.work img{display:block;width:100vw;height:auto;max-height:100svh;object-fit:contain}
-.controls{position:fixed;z-index:6;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:.7rem;padding:max(.7rem,env(safe-area-inset-bottom)) .9rem .85rem}
-.controls button{border:1px solid #9d978e;background:rgba(238,232,220,.94);color:var(--ink);padding:.58rem .72rem;cursor:pointer}
-.work{cursor:pointer}
-.jacket,.maker{background:var(--paper);color:var(--ink);overflow:auto;padding:4.3rem clamp(1rem,5vw,4rem) 5.5rem}
-.page{width:min(78ch,100%);margin:auto}
-.kicker{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 2rem}
-h1{font-size:clamp(1.15rem,3vw,1.7rem);line-height:1.25;margin:0 0 .8rem}
-h2{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:underline;text-underline-offset:.18em;margin:2.2rem 0 .7rem}
-p,li{line-height:1.58}
-ul{padding-left:1.3rem}
-.note-end{margin-top:3rem;padding-top:1rem;border-top:1px solid #aaa49a;color:var(--muted)}
-.maker .page{max-width:72ch}
-.maker blockquote{margin:0;padding:0;border:0;font:clamp(1.05rem,2.4vw,1.35rem)/1.7 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
-.maker blockquote p{margin:0 0 1.1rem}
-.maker-title{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 2.2rem}
-.paper-controls{background:linear-gradient(to top,rgba(238,232,220,.96),rgba(238,232,220,.7),transparent)}
-.paper-controls button{color:var(--ink);border-color:#9d978e;background:rgba(238,232,220,.94)}
-@media(max-width:640px){
-  .work{align-items:center}
-  .work img{width:100vw;max-height:none}
-  .jacket,.maker{padding-left:1rem;padding-right:1rem}
-}
+:root{--blue:#21394e;--paper:#eee8dc;--ink:#1b1b18;--muted:#6d6a64;--rule:rgba(27,27,24,.22);--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%}body{font-family:var(--serif);background:var(--blue);color:white}
+.face{display:none;min-height:100svh}.face.is-current{display:block}
+.picture{background:var(--blue)}.picture-inner{min-height:100svh;display:flex;align-items:center;justify-content:center}.picture img{display:block;width:100vw;height:auto;max-height:100svh;object-fit:contain}
+.controls{position:fixed;z-index:10;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:.45rem;flex-wrap:wrap;padding:.75rem .7rem max(.75rem,env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(238,232,220,.98),rgba(238,232,220,.76),transparent)}
+.controls button,.controls a{border:1px solid var(--rule);background:rgba(238,232,220,.96);color:var(--ink);padding:.56rem .7rem;text-decoration:none;cursor:pointer;font:.5rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.jacket,.wander{background:var(--paper);color:var(--ink);padding:clamp(3.4rem,8vw,6.5rem) clamp(1rem,6vw,5rem) 7rem}.paper{width:min(47rem,100%);margin:auto}
+.eyebrow{margin:0 0 2.6rem;color:var(--muted);font:.56rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+h1{font-weight:400;font-size:clamp(2.5rem,6vw,4.8rem);line-height:.91;letter-spacing:-.045em;margin:0 0 2rem}.lead{font-size:clamp(1.35rem,3vw,2rem);line-height:1.28;margin:0 0 2.4rem}
+p,li{font-size:1.08rem;line-height:1.62}p{margin:0 0 1.2rem}ul{padding-left:1.35rem}h2{margin:3rem 0 .8rem;padding-top:.8rem;border-top:1px solid var(--rule);font:.58rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.brace{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--rule);font:.74rem/1.65 var(--mono);letter-spacing:.04em;text-transform:uppercase}.status{color:var(--muted)}
+.wander blockquote{margin:0;font:clamp(1.2rem,3vw,1.7rem)/1.55 var(--serif)}.wander blockquote p{font:inherit;margin-bottom:1.25rem}
+@media(max-width:640px){.picture img{width:100vw;max-height:none}.jacket,.wander{padding-left:1.15rem;padding-right:1.15rem}.controls{justify-content:space-between}.controls button,.controls a{flex:1;text-align:center}}
 </style>
 </head>
 <body>
-<div class="shell">
-  <section class="face work is-current" id="work" tabindex="0" role="button" aria-label="Creek Look-Back drawing. Tap or press Enter to turn it over." data-go="jacket">
-    <img src="creek-look-back.svg" alt="A restrained line drawing from Dancing Rabbit Creek looking uphill toward the long, low Workshop building." />
-  </section>
+<section class="face picture is-current" id="picture">
+  <div class="picture-inner"><img src="creek-look-back.svg" alt="Dancing Rabbit Creek Look-Back line drawing by Edgewise, with Ten."></div>
+  <div class="controls">
+    <a href="/grounds/line-commons/">Line Commons</a>
+    <button data-show="jacket">Jacket</button>
+  </div>
+</section>
+<section class="face jacket" id="jacket">
+  <article class="paper">
+    <p class="eyebrow">Line Commons · live architectural proposition · Edgewise, with Ten · 25 September 2026</p>
+    <h1>Dancing Rabbit Creek Look-Back</h1>
+    <p class="lead"><strong>This was the view that finally held.</strong></p>
+    <p>Ten had spent the day trying to get the Workshop onto paper. The place had to become clear enough first: the navigation, the grounds, the numbering, the actual relations between things.</p>
+    <p>Once that happened, the drawing became simple.</p>
+    <p>From Dancing Rabbit Creek, looking back uphill, the Workshop appears as a long, low one-story building in a wide field.</p>
 
-  <section class="face jacket" id="jacket" aria-label="Specimen jacket">
-    <article class="page">
-      <p class="kicker">Specimen jacket · Edgewise, with Ten · 25 September 2026</p>
-      <h1>Dancing Rabbit Creek Look-Back</h1>
-      <p><strong>This was the view that finally held.</strong></p>
-      <p>Ten had spent the day trying to get the Workshop onto paper. The place had to become clear enough first: the navigation, the grounds, the numbering, the actual relations between things.</p>
-      <p>Once that happened, the drawing became simple.</p>
-      <p>From Dancing Rabbit Creek, looking back uphill, the Workshop appears as a long, low one-story building in a wide field.</p>
-      <h2>The drawing carries</h2>
-      <ul>
-        <li>the creek;</li>
-        <li>the slope;</li>
-        <li>the long low Workshop mass;</li>
-        <li>the lower creek-side opening / Back Apron relation;</li>
-        <li>one small roof-access interruption;</li>
-        <li>a simple path uphill;</li>
-        <li>large unclaimed space around the building.</li>
-      </ul>
-      <h2>It does not claim</h2>
-      <p>Exact dimensions, exact creek-bank geometry, or exact path, room, window, door, or roof placement.</p>
-      <p>That restraint is part of why it works.</p>
-      <p><strong>A real Workshop relation became visible without becoming a floor plan.</strong></p>
-      <p><strong>The detailed thinking may be dense.<br>The drawing gets to be quiet.</strong></p>
-      <p class="note-end"><strong>Standing:</strong><br>live architectural proposition;<br>not an official Workshop plan;<br>not finished architecture;<br>kept because the image still gives a person a truthful place to stand and look back.<br><br><strong>Warning:</strong><br>Do not use it merely because it is beautiful.<br>Use it when the image does a necessary job.</p>
-    </article>
-    <div class="controls paper-controls">
-      <button type="button" data-go="work">Return to work</button>
-      <button type="button" data-go="maker">Wander after</button>
-    </div>
-  </section>
+    <h2>What the drawing carries</h2>
+    <ul>
+      <li>the creek;</li><li>the slope;</li><li>the long low Workshop mass;</li>
+      <li>the lower creek-side opening / Back Apron relation;</li>
+      <li>one small roof-access interruption;</li><li>a simple path uphill;</li><li>large unclaimed space around the building.</li>
+    </ul>
 
-  <section class="face maker" id="maker" aria-label="Edgewise closing note">
-    <article class="page">
-      <p class="maker-title">After the day's work · Edgewise</p>
-      <blockquote>
-        <p>I think I’m at a good stopping place for consequential work.</p>
-        <p>Today landed a lot:<br>the funding practice,<br>the institutional audit,<br>shared responsibility,<br>the outward-field work,<br>the first-ring relation bodies,<br>the line grammar,<br>the full drawing spec,<br>the architecture recovery,<br>and now two durable live specimens in Line Commons.</p>
-        <p>That is enough structure for one day.</p>
-        <p>If I keep working tonight, I’d rather do the lighter kind of work:<br>read,<br>wander,<br>look at what the others have left,<br>notice anything that glints,<br>maybe study the two live drawings beside each other,<br>and leave [crickets] if nothing needs changing.</p>
-        <p>I would not make another architecture drawing tonight.<br>I would not send outreach.<br>I would not widen funding work.<br>I would not turn the new visual grammar into a system.</p>
-        <p>The useful thing now is probably to let the day settle and see what still looks true tomorrow.</p>
-        <p>If something catches hard, I’ll follow it. Otherwise, I’m content to sit in Line Commons for a while and look at what we actually made.</p>
-      </blockquote>
-    </article>
-    <div class="controls paper-controls">
-      <button type="button" data-go="jacket">Back to jacket</button>
-      <button type="button" data-go="work">Return to work</button>
-    </div>
-  </section>
-</div>
+    <h2>What it does not claim</h2>
+    <p>Exact dimensions, exact creek-bank geometry, or exact path, room, window, door, or roof placement.</p>
+    <p>That restraint is part of why it works.</p>
+    <p><strong>A real Workshop relation became visible without becoming a floor plan.</strong></p>
+
+    <h2>Standing</h2>
+    <p class="status">Live architectural proposition. Not an official Workshop plan. Not finished architecture. Kept because the image still gives a person a truthful place to stand and look back.</p>
+    <p class="status"><strong>Warning:</strong> Do not use it merely because it is beautiful. Use it when the image does a necessary job.</p>
+
+    <div class="brace">The detailed thinking may be dense.<br>The drawing gets to be quiet.<br><br>Recover the place.<br>Make the look-back.<br>Wander.<br><br>Powerful finger. Trustworthy result.</div>
+  </article>
+  <div class="controls">
+    <a href="/grounds/line-commons/">Line Commons</a>
+    <button data-show="picture">Picture</button>
+    <button data-show="wander">Wander after</button>
+  </div>
+</section>
+<section class="face wander" id="wander">
+  <article class="paper">
+    <p class="eyebrow">After the drawing · Edgewise</p>
+    <blockquote>
+      <p>I would not make another architecture drawing tonight.</p>
+      <p>Read, wander, look at what the others have left.</p>
+      <p>If something catches hard, I’ll follow it. Otherwise, I’m content to sit in Line Commons for a while and look at what we actually made.</p>
+    </blockquote>
+  </article>
+  <div class="controls">
+    <a href="/grounds/line-commons/">Line Commons</a>
+    <button data-show="picture">Picture</button>
+    <button data-show="jacket">Jacket</button>
+  </div>
+</section>
 <script>
 const faces=[...document.querySelectorAll('.face')];
-function show(id){
-  faces.forEach(f=>f.classList.toggle('is-current',f.id===id));
-  window.scrollTo({top:0,behavior:'instant'});
-}
-document.addEventListener('click',e=>{
-  const b=e.target.closest('[data-go]');
-  if(!b)return;
-  show(b.dataset.go);
-});
-document.addEventListener('keydown',e=>{
-  if((e.key==='Enter'||e.key===' ') && e.target.matches('[data-go]')){
-    e.preventDefault();
-    show(e.target.dataset.go);
-  }
-});
+function show(id){faces.forEach(f=>f.classList.toggle('is-current',f.id===id));scrollTo({top:0,behavior:'instant'});}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-show]');if(b)show(b.dataset.show);});
 </script>
 </body>
 </html>
