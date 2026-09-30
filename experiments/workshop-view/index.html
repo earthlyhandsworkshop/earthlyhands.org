@@ -18,6 +18,15 @@
 *{box-sizing:border-box}
 html{scroll-snap-type:y mandatory;background:#152635}
 body{margin:0;background:#152635;color:var(--ink);font-family:var(--serif);overflow-x:hidden}
+.way{
+  position:fixed;z-index:30;top:max(.55rem,env(safe-area-inset-top));right:.65rem;
+  display:flex;gap:.35rem;flex-wrap:wrap;justify-content:flex-end
+}
+.way a{
+  padding:.42rem .55rem;border:1px solid var(--line);background:rgba(17,34,47,.88);
+  color:var(--ink);text-decoration:none;font:.46rem/1 var(--mono);
+  letter-spacing:.07em;text-transform:uppercase;backdrop-filter:blur(9px)
+}
 .ground{
   min-height:100svh;
   scroll-snap-align:start;
@@ -109,6 +118,10 @@ body{margin:0;background:#152635;color:var(--ink);font-family:var(--serif);overf
 </style>
 </head>
 <body>
+<nav class="way" aria-label="Workshop roads">
+  <a href="/experiments/ten-folio/">Folio</a>
+  <a href="/grounds/line-commons/">Line Commons</a>
+</nav>
 <section class="ground" id="ground-15">
   <div class="deck" id="deck15">
     <section class="face title-face" id="title15">
