@@ -44,7 +44,22 @@ a{color:inherit}
 .block h2{font-size:clamp(2.1rem,7vw,4rem);line-height:.95;font-weight:400;letter-spacing:-.035em;margin:.4rem 0 1.4rem;max-width:12ch}
 .intro{font-size:1.15rem;line-height:1.5;max-width:46rem;color:#d7d1c7}
 .pieces{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line)}
-.piece{padding:1.25rem .1rem 1.4rem;border-bottom:1px solid var(--line)}
+.piece{padding:1.25rem .1rem 1.4rem;border-bottom:1px solid var(--line);cursor:pointer;position:relative}
+.piece:hover,.piece:focus-visible{background:rgba(255,255,255,.028);outline:none}
+.piece:after{content:"open →";position:absolute;right:.1rem;top:1.35rem;font:.43rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.detail-room{position:fixed;inset:0;z-index:60;background:var(--paper2);color:var(--ink);transform:translateX(102%);transition:transform .24s ease;overflow-y:auto;overscroll-behavior:contain}
+.detail-room.open{transform:translateX(0)}
+.detail-top{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;gap:1rem;padding:.8rem 1rem;border-bottom:1px solid var(--line);background:rgba(20,22,24,.94);backdrop-filter:blur(12px);font:.5rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.detail-top button{border:0;border-bottom:1px solid var(--warm);background:transparent;color:var(--ink);font:inherit;padding:0;cursor:pointer}
+.detail-body{max-width:68rem;margin:auto;padding:clamp(4rem,9vw,7rem) 1rem 5rem}
+.detail-no{font:.52rem/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.detail-body h2{font-size:clamp(3rem,10vw,6.5rem);line-height:.86;letter-spacing:-.05em;font-weight:400;margin:.35rem 0 2rem;max-width:10ch}
+.detail-section{border-top:1px solid var(--line);padding:1.3rem 0}
+.detail-section b{display:block;font:.5rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--warm);margin-bottom:.45rem}
+.detail-section p{font-size:clamp(1.05rem,2.8vw,1.45rem);line-height:1.5;max-width:48rem;margin:0}
+.detail-road{display:inline-block;margin-top:1.1rem;text-decoration:none;border-bottom:1px solid var(--warm);font:.53rem/1.4 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+.detail-nav{display:flex;justify-content:space-between;gap:1rem;margin-top:2.4rem;padding-top:1rem;border-top:1px solid var(--line)}
+.detail-nav button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:.65rem .75rem;font:.48rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
 .piece .no{font:.48rem/1.3 var(--mono);letter-spacing:.1em;color:var(--muted)}
 .piece h3{font-size:1.55rem;font-weight:400;margin:.25rem 0 .45rem}
 .piece p{margin:.35rem 0;line-height:1.48;max-width:53rem}
@@ -93,18 +108,18 @@ a{color:inherit}
     <p class="intro">This is a viewing surface, not the source body. It carries the present film-facing shape and roads back to the deeper Folio.</p>
 
     <div class="pieces">
-      <article class="piece"><div class="no">01</div><h3>Mary arrives</h3><p>A person arrives before a case theory does. The Commission narrows; Mary keeps restoring the limits of what she knows.</p><p class="change">The audience learns the human rule before it learns the machine.</p></article>
-      <article class="piece"><div class="no">02</div><h3>The family does not become one witness</h3><p>Different family witnesses carry direct memory, report, supposition, correction, land memory, language, uncertainty, and remembered papers.</p><p class="change">“The family says” becomes impossible.</p></article>
-      <article class="piece"><div class="no">03</div><h3>The law enters the room</h3><p>Article Fourteen language is supplied inside the proceeding. Family history is asked to pass through a legal category introduced by the examiner.</p><p class="change">Person → supplied category → paper.</p></article>
-      <article class="piece"><div class="no">04</div><h3>The book is physical</h3><p>The registration book has a material life: loose leaves, handling, damage, weather, repair, use.</p><p class="change">“The record” can no longer sound like an immaculate abstract object.</p></article>
-      <article class="piece"><div class="no">05</div><h3>Field work / no particular bargain</h3><p>Robert carries treaty-time place knowledge. Blackwell works with survey marks and land description. Compensation and interest remain separate questions.</p><p class="change">The production of evidence becomes visible as work.</p></article>
-      <article class="piece"><div class="no">06</div><h3>Robert recurrence</h3><p>Robert and David appear across different documentary populations. Recurrence becomes visible without solving identity.</p><p class="change">ROBERT RECURRENCE ≠ ROBERT CONTINUITY.</p></article>
-      <article class="piece"><div class="no">07–08</div><h3>Land / administrative Robert</h3><p>Receiving patterns, patents, tables, testimony, maps, copies, and later summaries make a Robert Bell increasingly operational.</p><p class="change">A comparator can become durable before historical identity becomes simple.</p></article>
-      <article class="piece"><div class="no">09</div><h3>NOT SAME</h3><p>The first family meets the comparator inside an administrative identity operation.</p><p class="change">The record has become strong enough to separate a living family from its historical Robert.</p></article>
-      <article class="piece"><div class="no">10–12</div><h3>The other family / SAME</h3><p>A different family body approaches overlapping Robert Bell material. Robin / Robert remains a seam. A later administrative act performs SAME / IDENTICAL where the source earns it.</p><p class="change">The audience holds opposite federal identity acts around overlapping historical material.</p></article>
-      <article class="piece"><div class="no">13</div><h3>Status travels</h3><p>Schedules, notices, cards, rolls, files, and later correspondence let administrative state travel beyond the room that produced it.</p><p class="change">The human question does not have to travel with the state.</p></article>
-      <article class="piece"><div class="no">14–15</div><h3>The first family returns</h3><p>The motion travels. Procedure narrows the doorway. The underlying merits body does not necessarily travel with it.</p><p class="change">The record gets larger while the doorway gets smaller.</p></article>
-      <article class="piece"><div class="no">ENDING</div><h3>Denied pro forma → Statehood</h3><p>The late administrative state is not the opening refusal repeated. The audience has now lived through the machinery that makes a refusal durable.</p><p class="change">Do not explain the adjacency with a thesis card.</p></article>
+      <article class="piece" data-piece="mary" tabindex="0" role="button"><div class="no">01</div><h3>Mary arrives</h3><p>A person arrives before a case theory does. The Commission narrows; Mary keeps restoring the limits of what she knows.</p><p class="change">The audience learns the human rule before it learns the machine.</p></article>
+      <article class="piece" data-piece="family" tabindex="0" role="button"><div class="no">02</div><h3>The family does not become one witness</h3><p>Different family witnesses carry direct memory, report, supposition, correction, land memory, language, uncertainty, and remembered papers.</p><p class="change">“The family says” becomes impossible.</p></article>
+      <article class="piece" data-piece="law" tabindex="0" role="button"><div class="no">03</div><h3>The law enters the room</h3><p>Article Fourteen language is supplied inside the proceeding. Family history is asked to pass through a legal category introduced by the examiner.</p><p class="change">Person → supplied category → paper.</p></article>
+      <article class="piece" data-piece="book" tabindex="0" role="button"><div class="no">04</div><h3>The book is physical</h3><p>The registration book has a material life: loose leaves, handling, damage, weather, repair, use.</p><p class="change">“The record” can no longer sound like an immaculate abstract object.</p></article>
+      <article class="piece" data-piece="field" tabindex="0" role="button"><div class="no">05</div><h3>Field work / no particular bargain</h3><p>Robert carries treaty-time place knowledge. Blackwell works with survey marks and land description. Compensation and interest remain separate questions.</p><p class="change">The production of evidence becomes visible as work.</p></article>
+      <article class="piece" data-piece="recurrence" tabindex="0" role="button"><div class="no">06</div><h3>Robert recurrence</h3><p>Robert and David appear across different documentary populations. Recurrence becomes visible without solving identity.</p><p class="change">ROBERT RECURRENCE ≠ ROBERT CONTINUITY.</p></article>
+      <article class="piece" data-piece="land" tabindex="0" role="button"><div class="no">07–08</div><h3>Land / administrative Robert</h3><p>Receiving patterns, patents, tables, testimony, maps, copies, and later summaries make a Robert Bell increasingly operational.</p><p class="change">A comparator can become durable before historical identity becomes simple.</p></article>
+      <article class="piece" data-piece="notsame" tabindex="0" role="button"><div class="no">09</div><h3>NOT SAME</h3><p>The first family meets the comparator inside an administrative identity operation.</p><p class="change">The record has become strong enough to separate a living family from its historical Robert.</p></article>
+      <article class="piece" data-piece="same" tabindex="0" role="button"><div class="no">10–12</div><h3>The other family / SAME</h3><p>A different family body approaches overlapping Robert Bell material. Robin / Robert remains a seam. A later administrative act performs SAME / IDENTICAL where the source earns it.</p><p class="change">The audience holds opposite federal identity acts around overlapping historical material.</p></article>
+      <article class="piece" data-piece="status" tabindex="0" role="button"><div class="no">13</div><h3>Status travels</h3><p>Schedules, notices, cards, rolls, files, and later correspondence let administrative state travel beyond the room that produced it.</p><p class="change">The human question does not have to travel with the state.</p></article>
+      <article class="piece" data-piece="return" tabindex="0" role="button"><div class="no">14–15</div><h3>The first family returns</h3><p>The motion travels. Procedure narrows the doorway. The underlying merits body does not necessarily travel with it.</p><p class="change">The record gets larger while the doorway gets smaller.</p></article>
+      <article class="piece" data-piece="ending" tabindex="0" role="button"><div class="no">ENDING</div><h3>Denied pro forma → Statehood</h3><p>The late administrative state is not the opening refusal repeated. The audience has now lived through the machinery that makes a refusal durable.</p><p class="change">Do not explain the adjacency with a thesis card.</p></article>
     </div>
   </section>
 
@@ -145,22 +160,100 @@ a{color:inherit}
     <a class="return" href="/experiments/workshop-view/?face=contents#ground-15">← Return to 15</a>
   </section>
 </main>
+
+<section class="detail-room" id="detail-room" aria-hidden="true">
+  <header class="detail-top">
+    <span>Two Families, One Robert · piece</span>
+    <button type="button" id="detail-close">Return to film</button>
+  </header>
+  <div class="detail-body">
+    <div class="detail-no" id="detail-no"></div>
+    <h2 id="detail-title"></h2>
+    <div class="detail-section"><b>Held</b><p id="detail-held"></p></div>
+    <div class="detail-section"><b>What happens</b><p id="detail-happens"></p></div>
+    <div class="detail-section"><b>What changes</b><p id="detail-changes"></p></div>
+    <div class="detail-section"><b>Brake / pressure</b><p id="detail-brake"></p></div>
+    <div class="detail-section"><b>Road deeper</b><p id="detail-road-note"></p><a class="detail-road" id="detail-road" href="#" target="_self">Open working body</a></div>
+    <div class="detail-nav"><button type="button" id="detail-prev">← Previous piece</button><button type="button" id="detail-next">Next piece →</button></div>
+  </div>
+</section>
+
 <script>
-let touchX=null,touchY=null;
+const pieceOrder=['mary','family','law','book','field','recurrence','land','notsame','same','status','return','ending'];
+const assembly='https://docs.google.com/document/d/1aUbCnB2_hbtbaK763OBJBrrxKtBnb5P1FvrGEyg4fWM/edit';
+const board='https://docs.google.com/document/d/1pqIXWcQE7f41OTkWIV66VcncINo78oSUcXlHTBx85NM/edit';
+const pieces={
+ mary:{no:'01',title:'Mary arrives',held:'Mary Caroline Atkinson · Muskogee · 1900.',happens:'A person arrives before a case theory does. Question and answer gradually narrow toward treaty, roll, land, and documentary proof. Mary repeatedly restores the boundary of what she actually knows.',changes:'The audience learns the first human rule before it learns the administrative machine: a witness may refuse to become more certain merely because a proceeding wants a legal proposition.',brake:'Let Mary arrive as a person. Do not explain the whole refusal before the room has happened. Door → black → REFUSED remains a possible exit.',road:'https://docs.google.com/document/d/1oRSuFPOW-wKUvqFePkJUHv5WnirWqv6W61C47na2R68/edit',roadNote:'Scene One production jacket.'},
+ family:{no:'02',title:'The family does not become one witness',held:'William, Elizabeth, Emma, Hugh, Thrace, Mary, and other MCR 879 family witnesses.',happens:'Repeated Commission questions produce different kinds of knowledge: direct memory, family report, supposition, correction, land memory, language, uncertainty, and papers remembered but not always present.',changes:'“The family says” becomes impossible. The family body develops internal source structure.',brake:'Do not summarize all sixteen into one voice. Choose only witnesses whose different knowledge state changes the film.',road:assembly,roadNote:'Feature-assembly Folio.'},
+ law:{no:'03',title:'The law enters the room',held:'Hugh and neighboring examinations; Article Fourteen language supplied inside the proceeding.',happens:'The proceeding gives the legal category, then asks the witness to understand family history through it. Older Robert Bell material is offered as potentially material. Papers become important.',changes:'The audience sees that the legal question is not simply waiting inside family memory.',brake:'Keep the direction of pressure visible: person → supplied category → paper.',road:assembly,roadNote:'Feature-assembly Folio.'},
+ book:{no:'04',title:'The book is physical',held:'Holderness, Howell, Byrn, and Ward registration-book testimony.',happens:'The registration book has a material life: sewing comes apart, leaves fall, pages are handled, damaged, wet, frozen, thawed, and used.',changes:'Later demands to prove a person against “the record” can no longer sound like demands against an immaculate object.',brake:'Each physical act stays in its own witness voice. Damage does not prove motive. A missing entry does not prove which damage caused it.',road:assembly,roadNote:'Feature-assembly Folio.'},
+ field:{no:'05',title:'Field work / no particular bargain',held:'Blackwell, Robert Bell, David, Gordon, local place knowledge, survey marks, land-number work, and the compensation seam.',happens:'Robert carries treaty-time place knowledge. Blackwell communicates with him in Choctaw and converts pointed ground through survey marks into township / section / range description. Payment, promise, interest, and bargain remain separate questions.',changes:'The audience can see both the work of evidence-making and an economy around that work without the film announcing an economic thesis.',brake:'INTEREST IN THE LAND / CLAIM ≠ COMPENSATION FOR THE WORK. Do not explain the asymmetry before the field work makes it visible.',road:'/experiments/lamplight-beef-bargain/bargain.html',roadNote:'Lamplight field-work / bargain room.'},
+ recurrence:{no:'06',title:'Robert recurrence',held:'Robert / David occurrences across Public Lands, Ward, Article XIV, Cobb-company, and later administrative bodies.',happens:'Names recur across different documentary populations. David is nearby in some bodies. Names disappear. A Robert appears again.',changes:'The audience begins to feel recurrence without being given the comfort of solved identity.',brake:'ROBERT RECURRENCE ≠ ROBERT CONTINUITY. “Somebody came back” may be safer than “Robert returned.”',road:assembly,roadNote:'Feature-assembly Folio.'},
+ land:{no:'07–08',title:'Land / administrative Robert',held:'Patents, receiving pairs, purchaser parties, Murray–Vroom tables, adjudicative bodies, maps, copies, and later federal summaries.',happens:'Robert Bell begins to exhibit repeatable legal and administrative behavior across carriers. No single document contains the whole historical Robert, yet the record-body becomes increasingly usable.',changes:'A comparator can become operational and durable before historical identity becomes simple.',brake:'No identity conclusion by recurrence alone. No partnership or causal bridge beyond what the instruments actually state.',road:assembly,roadNote:'Feature-assembly Folio.'},
+ notsame:{no:'09',title:'NOT SAME',held:'MCR 879 comparison, decision, Office review, and later Interior action.',happens:'Family testimony and inherited historical material meet inside an administrative identity operation. The Commission can preserve the family’s testimony and still perform a NOT-SAME act.',changes:'Record durability becomes consequential. The comparator has become strong enough to exclude a living family.',brake:'Keep NOT SAME attached to maker and proceeding. Do not convert a proceeding-specific administrative identity finding into Workshop historical truth.',road:'https://docs.google.com/document/d/12-HYQMmbiFo6lz3mlmIBXVqUTVoiLQeWEKqnwcC6LAM/edit',roadNote:'MCR 879 Folio.'},
+ same:{no:'10–12',title:'The other family / SAME',held:'Wash, Jane, Sallie, Robin / Robert, Susie, MCR 5156, patent carriers, and later Commission identity work.',happens:'A second family approaches overlapping Robert Bell material through its own chronology. Jane says Robin. Federal carriers and certified patent representations enter later. The Commission eventually performs SAME / IDENTICAL where the source earns it.',changes:'The audience now holds opposite administrative identity acts around overlapping historical material.',brake:'Do not solve ROBIN / ROBERT for the audience. Do not merge family carriers merely because the later record normalizes them.',road:board,roadNote:'Whole-feature movement board.'},
+ status:{no:'13',title:'Status travels',held:'Cards, schedules, notices, rolls, settlement files, patent / land files, and later correspondence.',happens:'An administrative state becomes portable. It can move farther than the room, witness, or human question that produced it.',changes:'The audience sees how decision-state can outlive and outrun the encounter that made it.',brake:'Keep verbs exact: IDENTIFIED ≠ ENROLLED. ENROLLED ≠ PATENTED. RECOGNIZED ≠ PROVED FOR ALL PURPOSES.',road:board,roadNote:'Whole-feature movement board.'},
+ return:{no:'14–15',title:'The first family returns',held:'The 1907 rehearing sequence: motion, Office treatment, record custody, procedural gate, Interior denial.',happens:'The family returns after the historical record has grown more complicated. The motion travels; the full underlying record does not necessarily travel with it. Procedure can decide what needs to be reopened.',changes:'The human question remains large while the administrative doorway becomes very small.',brake:'Do not invent the missing motion text or what the family knew about later SAME material. Source order matters.',road:board,roadNote:'Whole-feature movement board.'},
+ ending:{no:'ENDING',title:'Denied pro forma → Statehood',held:'The late administrative closure and the next historical condition.',happens:'The audience reaches DENIED PRO FORMA only after living through people, testimony, translation, books, maps, land numbers, identity acts, office review, and return.',changes:'The opening refusal and the ending denial no longer mean the same thing. The administrative state has hardened.',brake:'Do not explain the adjacency with a thesis card. Statehood is a next historical condition, not an automatic moral conclusion.',road:assembly,roadNote:'Feature-assembly Folio.'}
+};
+
+const room=document.getElementById('detail-room');
+const fields={
+ no:document.getElementById('detail-no'),title:document.getElementById('detail-title'),
+ held:document.getElementById('detail-held'),happens:document.getElementById('detail-happens'),
+ changes:document.getElementById('detail-changes'),brake:document.getElementById('detail-brake'),
+ road:document.getElementById('detail-road'),roadNote:document.getElementById('detail-road-note')
+};
+let currentPiece=null,lastPieceEl=null;
+function openPiece(id,el=null){
+  const p=pieces[id]; if(!p)return;
+  currentPiece=id;if(el)lastPieceEl=el;
+  fields.no.textContent=p.no;fields.title.textContent=p.title;fields.held.textContent=p.held;
+  fields.happens.textContent=p.happens;fields.changes.textContent=p.changes;fields.brake.textContent=p.brake;
+  fields.road.href=p.road;fields.roadNote.textContent=p.roadNote;
+  room.classList.add('open');room.setAttribute('aria-hidden','false');room.scrollTop=0;
+  history.replaceState(null,'','#piece-'+id);
+}
+function closePiece(){
+  room.classList.remove('open');room.setAttribute('aria-hidden','true');
+  history.replaceState(null,'',location.pathname+location.search);
+  setTimeout(()=>lastPieceEl&&lastPieceEl.focus({preventScroll:true}),220);
+}
+function stepPiece(delta){
+  const i=pieceOrder.indexOf(currentPiece);
+  const next=pieceOrder[Math.max(0,Math.min(pieceOrder.length-1,i+delta))];
+  openPiece(next);
+}
+document.querySelectorAll('[data-piece]').forEach(el=>{
+  el.addEventListener('click',()=>openPiece(el.dataset.piece,el));
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openPiece(el.dataset.piece,el)}});
+});
+document.getElementById('detail-close').addEventListener('click',closePiece);
+document.getElementById('detail-prev').addEventListener('click',()=>stepPiece(-1));
+document.getElementById('detail-next').addEventListener('click',()=>stepPiece(1));
+
+const initial=location.hash.startsWith('#piece-')?location.hash.slice(7):null;
+if(initial&&pieces[initial]) openPiece(initial);
+
+let touchX=null,touchY=null,touchInside=false;
 document.addEventListener('touchstart',e=>{
   const t=e.changedTouches&&e.changedTouches[0];
   if(!t)return;
-  touchX=t.clientX; touchY=t.clientY;
+  touchX=t.clientX;touchY=t.clientY;touchInside=room.classList.contains('open');
 },{passive:true});
 document.addEventListener('touchend',e=>{
   const t=e.changedTouches&&e.changedTouches[0];
   if(!t||touchX===null)return;
   const dx=t.clientX-touchX,dy=t.clientY-touchY;
   touchX=null;touchY=null;
-  if(dx>85 && Math.abs(dx)>Math.abs(dy)*1.25){
-    location.href='/experiments/workshop-view/?face=contents#ground-15';
+  if(dx>85&&Math.abs(dx)>Math.abs(dy)*1.25){
+    if(touchInside) closePiece();
+    else location.href='/experiments/workshop-view/?face=contents#ground-15';
   }
 },{passive:true});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&room.classList.contains('open')) closePiece();
+});
 </script>
 </body>
 </html>
