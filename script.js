@@ -827,12 +827,10 @@
 
       if (button.dataset.dawsonView === "ground") {
         const heldPlace = heldGroundNameFor(currentId);
-        const depthView = next === "sources" || next === "jacket" || next === "folio";
-        button.textContent = depthView ? `Return to ${heldPlace}` : "Ground";
-        button.setAttribute(
-          "aria-label",
-          depthView ? `Return to ${heldPlace} without moving the story` : "Ground"
-        );
+        const awayFromGround = next !== "ground";
+        button.hidden = !awayFromGround;
+        button.textContent = `Return to ${heldPlace}`;
+        button.setAttribute("aria-label", `Return to ${heldPlace} without moving the story`);
       }
     });
 
@@ -2094,7 +2092,12 @@
     showScene(target, direction);
   });
 
+  const requestedToolView = new URLSearchParams(window.location.search).get("view");
   let initialId = "night";
+
+  if (requestedToolView === "map" || requestedToolView === "people") {
+    discoveryOpen = true;
+  }
 
   if (discoveryOpen) {
     const hashId = window.location.hash.slice(1);
@@ -2119,6 +2122,9 @@
   showScene(sceneById.get(initialId), "forward");
   document.body.dataset.thought = thresholdThoughtGiven ? "given" : "none";
   syncDiscoveryChrome();
+  if (requestedToolView === "map" || requestedToolView === "people") {
+    setDawsonView(requestedToolView);
+  }
   scheduleGroundHint();
 
   const specimenIndex = document.querySelector(".specimen-index");
