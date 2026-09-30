@@ -776,7 +776,7 @@
       sourcesButton.hidden = !discoveryOpen || !(hasSourceDepth || jacketReachSet().size > 0);
     }
     if (jacketButton) jacketButton.hidden = !discoveryOpen || !jacketIsEarned();
-    if (folioButton) folioButton.hidden = !folioHasItems();
+    if (folioButton) folioButton.hidden = false;
 
     syncGroundCarry();
     document.body.dataset.discovery = discoveryOpen ? "open" : "closed";
