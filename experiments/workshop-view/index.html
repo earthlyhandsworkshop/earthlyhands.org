@@ -124,12 +124,19 @@ body{margin:0;background:#152635;color:var(--ink);font-family:var(--serif);overf
 </nav>
 <section class="ground" id="ground-15">
   <div class="deck" id="deck15">
+    <section class="face title-face" id="viewer15">
+      <div class="kind">viewer · road home</div>
+      <h1 class="name">Earthly Hands</h1>
+      <p class="desc">The larger carried viewer. Swipe left to stand at 15.</p>
+      <a class="enter" href="/experiments/ten-folio/">Open viewer</a>
+      <div class="hint">15 · Folio Alcove →</div>
+    </section>
     <section class="face title-face" id="title15">
       <div class="number">15</div>
       <h1 class="name">Folio Alcove</h1>
       <div class="kind">soft bodies</div>
       <p class="desc">Broad prototypes, dangerous mechanics, competing hypotheses, soft working bodies, failed joins. Sandbox.</p>
-      <div class="hint">swipe left for what is here →</div>
+      <div class="hint">← viewer · swipe left for what is here →</div>
     </section>
     <section class="face contents" id="contents15">
       <header>
@@ -169,17 +176,24 @@ body{margin:0;background:#152635;color:var(--ink);font-family:var(--serif);overf
   </div>
 </section>
 
-<button class="pill" id="toggle15" type="button">15 · face / list</button>
+<button class="pill" id="toggle15" type="button">15 · face / contents</button>
 
 <script>
 const deck=document.getElementById('deck15');
 const toggle=document.getElementById('toggle15');
 function face(){ return Math.round(deck.scrollLeft / Math.max(1,deck.clientWidth)); }
-function goFace(i){ deck.scrollTo({left:i*deck.clientWidth,behavior:'smooth'}); }
-toggle.addEventListener('click',()=>goFace(face()?0:1));
+function goFace(i,behavior='smooth'){ deck.scrollTo({left:i*deck.clientWidth,behavior}); }
+function requestedFace(){
+  const q=new URLSearchParams(location.search).get('face');
+  if(q==='viewer') return 0;
+  if(q==='contents') return 2;
+  return 1;
+}
+requestAnimationFrame(()=>goFace(requestedFace(),'auto'));
+toggle.addEventListener('click',()=>goFace(face()===2?1:2));
 document.addEventListener('keydown',e=>{
-  if(e.key==='ArrowRight') goFace(1);
-  if(e.key==='ArrowLeft') goFace(0);
+  if(e.key==='ArrowRight') goFace(Math.min(2,face()+1));
+  if(e.key==='ArrowLeft') goFace(Math.max(0,face()-1));
   if(e.key==='ArrowDown') document.getElementById('ground-10').scrollIntoView({behavior:'smooth'});
   if(e.key==='ArrowUp') document.getElementById('ground-15').scrollIntoView({behavior:'smooth'});
 });
