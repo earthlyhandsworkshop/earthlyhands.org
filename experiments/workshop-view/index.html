@@ -92,6 +92,21 @@ a{color:inherit}
   </div>
 </section>
 
+<section class="room" id="ground-12">
+  <div class="room-head">
+    <div class="number">12</div>
+    <div><div class="eyebrow">Workshop ground · live</div><h2>Line Commons</h2></div>
+    <p class="desc">Line, drawing, visual communication, and small arguments that become clearer because a line knows its job.</p>
+  </div>
+  <div class="room-body">
+    <div class="section-title">In the room now</div>
+    <div class="list" id="line-commons-live">
+      <a class="item" href="/grounds/line-commons/"><strong>Enter Line Commons</strong><small>12 · live ground</small></a>
+    </div>
+    <p class="room-note" id="line-commons-bearing">Receiving the live pieces held in Line Commons…</p>
+  </div>
+</section>
+
 <section class="room" id="ground-15">
   <div class="room-head">
     <div class="number">15</div>
@@ -144,6 +159,32 @@ if(location.hash){
   const target=document.querySelector(location.hash);
   if(target)requestAnimationFrame(()=>target.scrollIntoView({behavior:'auto'}));
 }
+
+(async()=>{
+  const host=document.getElementById('line-commons-live');
+  const bearing=document.getElementById('line-commons-bearing');
+  if(!host||!bearing)return;
+  try{
+    const r=await fetch('/data/workshop/line-commons.live.json',{cache:'no-store'});
+    if(!r.ok)throw new Error();
+    const d=await r.json();
+    const items=Array.isArray(d.items)?d.items:[];
+    items.forEach(item=>{
+      const a=document.createElement('a');
+      a.className='item';
+      a.href=item.href||'/grounds/line-commons/';
+      const strong=document.createElement('strong');
+      strong.textContent=item.title||'Untitled';
+      const small=document.createElement('small');
+      small.textContent=[item.hand,item.kind].filter(Boolean).join(' · ')||'live piece';
+      a.append(strong,small);
+      host.append(a);
+    });
+    bearing.textContent=items.length?items.length+' '+(items.length===1?'live piece':'live pieces')+' inherited from Line Commons.':'The room is here; no live pieces are being carried in this feed.';
+  }catch(_){
+    bearing.textContent='Line Commons is here. The live-piece feed could not be read this turn.';
+  }
+})();
 </script>
 </body>
 </html>
