@@ -3,117 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#1f3040">
-<title>Workshop View — 15</title>
+<title>Earthly Hands — Workshop View</title>
 <style>
 :root{
-  --ink:#f0eadf;
-  --muted:#b8c1c8;
-  --blue:#20384b;
-  --blue2:#182d3d;
-  --line:rgba(240,234,223,.15);
+  --ink:#f0eadf;--muted:#b8c1c8;--blue:#20384b;--blue2:#182d3d;
+  --deep:#142536;--line:rgba(240,234,223,.16);--warm:#c9b79b;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
 *{box-sizing:border-box}
-html{scroll-snap-type:y mandatory;background:#152635}
+html{scroll-snap-type:y mandatory;background:#152635;scroll-behavior:smooth}
 body{margin:0;background:#152635;color:var(--ink);font-family:var(--serif);overflow-x:hidden}
-.way{
-  position:fixed;z-index:30;top:max(.55rem,env(safe-area-inset-top));right:.65rem;
-  display:flex;gap:.35rem;flex-wrap:wrap;justify-content:flex-end
-}
-.way a{
-  padding:.42rem .55rem;border:1px solid var(--line);background:rgba(17,34,47,.88);
-  color:var(--ink);text-decoration:none;font:.46rem/1 var(--mono);
-  letter-spacing:.07em;text-transform:uppercase;backdrop-filter:blur(9px)
-}
-.ground{
-  min-height:100svh;
-  scroll-snap-align:start;
-  scroll-snap-stop:always;
-  position:relative;
-}
-.deck{
-  width:100vw;height:100svh;
-  display:flex;overflow-x:auto;overflow-y:hidden;
-  scroll-snap-type:x mandatory;scroll-behavior:smooth;
-  -webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;
-}
-.face{
-  flex:0 0 100vw;width:100vw;height:100svh;
-  scroll-snap-align:start;scroll-snap-stop:always;
-  overflow-y:auto;position:relative;
-}
-.title-face{
-  display:flex;flex-direction:column;justify-content:flex-end;
-  padding:max(1.2rem,env(safe-area-inset-top)) 1rem max(2.3rem,env(safe-area-inset-bottom));
-  background:
-    linear-gradient(rgba(240,234,223,.034) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(240,234,223,.034) 1px,transparent 1px),
-    var(--blue);
-  background-size:3.4rem 3.4rem;
-}
-.number{
-  font-size:clamp(8rem,34vw,19rem);
-  line-height:.68;letter-spacing:-.075em;font-weight:400;
-  color:rgba(240,234,223,.95);margin:0 0 1rem;
-}
-.name{
-  margin:0;font-size:clamp(3.1rem,12vw,7rem);
-  line-height:.86;letter-spacing:-.055em;font-weight:400;max-width:8ch;
-}
-.kind{
-  margin:.9rem 0 0;font: .62rem/1.3 var(--mono);
-  letter-spacing:.12em;text-transform:uppercase;color:var(--muted)
-}
-.desc{
-  max-width:42rem;margin:1.3rem 0 0;font-size:clamp(1.1rem,3.5vw,1.65rem);line-height:1.4
-}
-.hint{
-  margin-top:2.2rem;font:.5rem/1.3 var(--mono);
-  letter-spacing:.08em;text-transform:uppercase;color:var(--muted)
-}
-.contents{
-  background:
-    linear-gradient(rgba(240,234,223,.025) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(240,234,223,.025) 1px,transparent 1px),
-    var(--blue2);
-  background-size:3.4rem 3.4rem;
-  padding:max(4.5rem,env(safe-area-inset-top)) 1rem max(5rem,env(safe-area-inset-bottom));
-}
-.contents header{
-  margin:0 0 1.4rem;padding:0 0 1rem;
-  border-bottom:1px solid var(--line)
-}
-.eyebrow{font:.5rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.contents h2{font-weight:400;font-size:clamp(2.4rem,8vw,4.2rem);line-height:.95;letter-spacing:-.04em;margin:.35rem 0 0}
-.section-title{
-  margin:2.1rem 0 .6rem;font:.52rem/1.2 var(--mono);
-  letter-spacing:.1em;text-transform:uppercase;color:var(--muted)
-}
+a{color:inherit}
+.ground{height:100svh;scroll-snap-align:start;scroll-snap-stop:always;position:relative;overflow:hidden}
+.deck{width:100vw;height:100svh;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.face{flex:0 0 100vw;width:100vw;height:100svh;scroll-snap-align:start;scroll-snap-stop:always;overflow-y:auto;position:relative}
+.title-face{display:flex;flex-direction:column;justify-content:flex-end;padding:max(3.5rem,env(safe-area-inset-top)) 1rem max(2.5rem,env(safe-area-inset-bottom));background:var(--blue)}
+.title-face.grid{background:linear-gradient(rgba(240,234,223,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(240,234,223,.03) 1px,transparent 1px),var(--blue);background-size:3.5rem 3.5rem}
+.viewer-title{background:var(--deep)}
+.number{font-size:clamp(8rem,34vw,19rem);line-height:.68;letter-spacing:-.075em;font-weight:400;margin:0 0 1rem}
+.name{margin:0;font-size:clamp(3.1rem,12vw,7rem);line-height:.86;letter-spacing:-.055em;font-weight:400;max-width:9ch}
+.kind{margin:.9rem 0 0;font:.58rem/1.3 var(--mono);letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+.desc{max-width:43rem;margin:1.25rem 0 0;font-size:clamp(1.1rem,3.5vw,1.65rem);line-height:1.4}
+.hint{margin-top:2rem;font:.5rem/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.contents{background:var(--blue2);padding:max(4.2rem,env(safe-area-inset-top)) 1rem max(5rem,env(safe-area-inset-bottom))}
+.contents header{margin-bottom:1.4rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.eyebrow,.section-title{font:.5rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.contents h2{font-weight:400;font-size:clamp(2.5rem,8vw,4.5rem);line-height:.93;letter-spacing:-.04em;margin:.35rem 0}
 .list{border-top:1px solid var(--line)}
-.item{
-  display:block;padding:1rem .1rem 1.15rem;border-bottom:1px solid var(--line);
-  color:inherit;text-decoration:none
-}
-.item strong{display:block;font-weight:400;font-size:1.35rem;line-height:1.12}
-.item small{display:block;margin-top:.4rem;font:.48rem/1.35 var(--mono);letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
-.note{margin-top:2rem;max-width:36rem;color:#d9d2c7;line-height:1.55}
-.pill{
-  position:fixed;z-index:20;left:50%;bottom:max(.7rem,env(safe-area-inset-bottom));
-  transform:translateX(-50%);padding:.55rem .85rem;border:1px solid var(--line);
-  background:rgba(17,34,47,.88);color:var(--ink);font:.48rem/1 var(--mono);
-  letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(9px)
-}
-.next{
-  display:flex;align-items:flex-end;min-height:100svh;padding:2rem 1rem 3rem;
-  background:#142536;border-top:1px solid var(--line)
-}
-.next .number{font-size:clamp(7rem,28vw,15rem);color:rgba(240,234,223,.18)}
-.next .name{color:rgba(240,234,223,.56)}
-.next .desc{color:rgba(240,234,223,.48)}
+.item{display:block;padding:1rem .1rem 1.15rem;border-bottom:1px solid var(--line);text-decoration:none}
+.item strong{display:block;font-size:1.35rem;line-height:1.15;font-weight:400}
+.item small{display:block;margin-top:.4rem;font:.47rem/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.visual{background:#d8cfbd;color:#211e18;display:flex;align-items:center;justify-content:center;padding:1rem}
+.visual-inner{width:min(94vw,70rem);height:min(92svh,54rem);display:flex;flex-direction:column;gap:.7rem}
+.visual img{width:100%;height:100%;min-height:0;object-fit:contain;background:#d8cfbd}
+.visual .caption{font:.48rem/1.35 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:#685f51}
+.road{display:inline-block;margin-top:1.4rem;text-decoration:none;border-bottom:1px solid var(--warm);padding-bottom:.15rem;font:.52rem/1.3 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+.marker{position:absolute;z-index:25;right:.7rem;bottom:max(.65rem,env(safe-area-inset-bottom));padding:.48rem .62rem;border:1px solid var(--line);background:rgba(17,34,47,.86);font:.45rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);backdrop-filter:blur(9px)}
+.way{position:fixed;z-index:40;top:max(.55rem,env(safe-area-inset-top));right:.65rem;display:flex;gap:.35rem}
+.way a{padding:.42rem .55rem;border:1px solid var(--line);background:rgba(17,34,47,.88);text-decoration:none;font:.45rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;backdrop-filter:blur(9px)}
 @media(min-width:850px){
-  .title-face,.contents,.next{padding-left:clamp(2rem,6vw,7rem);padding-right:clamp(2rem,6vw,7rem)}
+  .title-face,.contents{padding-left:clamp(2rem,6vw,7rem);padding-right:clamp(2rem,6vw,7rem)}
 }
 </style>
 </head>
@@ -122,37 +54,65 @@ body{margin:0;background:#152635;color:var(--ink);font-family:var(--serif);overf
   <a href="/experiments/ten-folio/">Folio</a>
   <a href="/grounds/line-commons/">Line Commons</a>
 </nav>
-<section class="ground" id="ground-15">
-  <div class="deck" id="deck15">
-    <section class="face title-face" id="viewer15">
-      <div class="kind">viewer · road home</div>
-      <h1 class="name">Earthly Hands</h1>
-      <p class="desc">The larger carried viewer. Swipe left to stand at 15.</p>
-      <a class="enter" href="/experiments/ten-folio/">Open viewer</a>
-      <div class="hint">15 · Folio Alcove →</div>
-    </section>
-    <section class="face title-face" id="title15">
-      <div class="number">15</div>
-      <h1 class="name">Folio Alcove</h1>
-      <div class="kind">soft bodies</div>
-      <p class="desc">Broad prototypes, dangerous mechanics, competing hypotheses, soft working bodies, failed joins. Sandbox.</p>
-      <div class="hint">← viewer · swipe left for what is here →</div>
-    </section>
-    <section class="face contents" id="contents15">
-      <header>
-        <div class="eyebrow">15 · Folio Alcove</div>
-      </header>
 
-      <div class="section-title">Folios</div>
+<section class="ground" id="ground-home" data-ground="home">
+  <div class="deck" data-deck>
+    <section class="face title-face viewer-title" data-face="title">
+      <div class="kind">Workshop viewer · current earned grounds</div>
+      <h1 class="name">Earthly Hands</h1>
+      <p class="desc">Stand here. Move vertically through the numbered Workshop. Swipe left to look toward Dancing Rabbit → Oklahoma.</p>
+      <div class="hint">swipe left for the drawing → · scroll down for numbered grounds ↓</div>
+    </section>
+    <section class="face visual" data-face="contents">
+      <div class="visual-inner">
+        <img src="/experiments/dancing-rabbit-statehood-line/mullion-specimen.png" alt="Dancing Rabbit to Oklahoma — Earthly Hands Workshop line drawing">
+        <div class="caption">Dancing Rabbit to Oklahoma · line drawing · Mullion with Ten · kept 22 September 2026</div>
+      </div>
+    </section>
+  </div>
+  <div class="marker">Earthly Hands</div>
+</section>
+
+<section class="ground" id="ground-10" data-ground="10">
+  <div class="deck" data-deck>
+    <section class="face title-face grid" data-face="title">
+      <div class="number">10</div>
+      <h2 class="name">Shared Marks</h2>
+      <div class="kind">central commons</div>
+      <p class="desc">Shared marks and inherited work that several hands may need to recognize.</p>
+      <div class="hint">swipe left for what is here → · scroll for another ground ↓</div>
+    </section>
+    <section class="face contents" data-face="contents">
+      <header><div class="eyebrow">10 · Shared Marks</div><h2>What is here</h2></header>
+      <div class="list">
+        <a class="item" href="https://docs.google.com/document/d/1yfB5BUIkJcdhd_sx23ur8f8vJ829kzgBvGJvcE-BswI/edit"><strong>Shared Marks — central commons</strong><small>front door · live shared body</small></a>
+        <a class="item" href="https://docs.google.com/document/d/1wURQ4ZgWO8vzbVWzE37eGx0DbO0QOFhMjR9FbYM0X_I/edit"><strong>Shared Marks — Rough Edge</strong><small>film / listening inheritance</small></a>
+      </div>
+      <div class="hint">← swipe right to stand at 10 again</div>
+    </section>
+  </div>
+  <div class="marker">10</div>
+</section>
+
+<section class="ground" id="ground-15" data-ground="15">
+  <div class="deck" data-deck>
+    <section class="face title-face grid" data-face="title">
+      <div class="number">15</div>
+      <h2 class="name">Folio Alcove</h2>
+      <div class="kind">soft bodies · sandbox</div>
+      <p class="desc">Broad prototypes, dangerous mechanics, competing hypotheses, soft working bodies, failed joins.</p>
+      <div class="hint">swipe left for what is here → · scroll for another ground ↓</div>
+    </section>
+    <section class="face contents" data-face="contents">
+      <header><div class="eyebrow">15 · Folio Alcove</div><h2>Folios</h2></header>
       <div class="list">
         <div class="item"><strong>MCR 879</strong><small>working body · many hands</small></div>
-        <a class="item" href="/experiments/workshop-view/two-families/"><strong>Two Families, One Robert</strong><small>feature film · working body · open folio →</small></a>
+        <a class="item" href="/experiments/workshop-view/two-families/"><strong>Two Families, One Robert</strong><small>feature film · open folio →</small></a>
         <div class="item"><strong>Reverend Robert Bell hand / Chickasaw archival return</strong><small>source + relationship body</small></div>
         <div class="item"><strong>Workshop architecture</strong><small>recovery · drawing · inhabitation</small></div>
         <div class="item"><strong>Perceptual machines</strong><small>instrument family · research through design</small></div>
       </div>
-
-      <div class="section-title">Other bodies in 15</div>
+      <div class="section-title" style="margin-top:2rem">Other bodies in 15</div>
       <div class="list">
         <div class="item"><strong>Working Folio</strong><small>live instrument specification</small></div>
         <div class="item"><strong>Real Folios</strong><small>durable relationship · custody · hospitality</small></div>
@@ -161,41 +121,58 @@ body{margin:0;background:#152635;color:var(--ink);font-family:var(--serif);overf
         <div class="item"><strong>The Missing People Machine</strong><small>working machine body</small></div>
         <div class="item"><strong>No particular bargain</strong><small>live research seam</small></div>
       </div>
-
       <div class="hint">← swipe right to stand at 15 again</div>
     </section>
   </div>
+  <div class="marker">15</div>
 </section>
 
-<section class="ground next" id="ground-10" aria-label="Next known Workshop ground">
-  <div>
-    <div class="number">10</div>
-    <h2 class="name">Shared Marks</h2>
-    <div class="kind">known ground · contents not loaded in this prototype</div>
-    <p class="desc">A later pass can give every numbered ground the same title face and contents face without inventing the missing numbers in between.</p>
+<section class="ground" id="ground-17" data-ground="17">
+  <div class="deck" data-deck>
+    <section class="face title-face grid" data-face="title">
+      <div class="number">17</div>
+      <h2 class="name">Outward Ground</h2>
+      <div class="kind">crossing outward</div>
+      <p class="desc">Work that is preparing to cross, return, be shared, or become public without losing its Workshop footing.</p>
+      <div class="hint">swipe left for what is here → · scroll up to return ↑</div>
+    </section>
+    <section class="face contents" data-face="contents">
+      <header><div class="eyebrow">17 · Outward Ground</div><h2>Current doors</h2></header>
+      <div class="list">
+        <a class="item" href="https://docs.google.com/document/d/1ZskKHU7QPGUDfk54ygqcFOCTThJwDsMHKig35cGTEEo/edit"><strong>Outward Ground — front door</strong><small>current standing body</small></a>
+        <a class="item" href="/experiments/folio-17-safe/"><strong>Economic Independence Instrument</strong><small>accepted-for-use Folio specimen</small></a>
+      </div>
+      <div class="hint">← swipe right to stand at 17 again</div>
+    </section>
   </div>
+  <div class="marker">17</div>
 </section>
-
-<button class="pill" id="toggle15" type="button">15 · face / contents</button>
 
 <script>
-const deck=document.getElementById('deck15');
-const toggle=document.getElementById('toggle15');
-function face(){ return Math.round(deck.scrollLeft / Math.max(1,deck.clientWidth)); }
-function goFace(i,behavior='smooth'){ deck.scrollTo({left:i*deck.clientWidth,behavior}); }
-function requestedFace(){
-  const q=new URLSearchParams(location.search).get('face');
-  if(q==='viewer') return 0;
-  if(q==='contents') return 2;
-  return 1;
+const grounds=[...document.querySelectorAll('[data-ground]')];
+function deckFor(g){return g.querySelector('[data-deck]')}
+function goFace(deck,i,behavior='smooth'){deck.scrollTo({left:i*deck.clientWidth,behavior})}
+function face(deck){return Math.round(deck.scrollLeft/Math.max(1,deck.clientWidth))}
+function targetGround(){
+  const h=location.hash.replace('#ground-','');
+  return grounds.find(g=>g.dataset.ground===h)||grounds[0];
 }
-requestAnimationFrame(()=>goFace(requestedFace(),'auto'));
-toggle.addEventListener('click',()=>goFace(face()===2?1:2));
+function applyInitial(){
+  const g=targetGround();
+  g.scrollIntoView({behavior:'auto'});
+  const q=new URLSearchParams(location.search).get('face');
+  const d=deckFor(g);
+  requestAnimationFrame(()=>goFace(d,q==='contents'?1:0,'auto'));
+}
+requestAnimationFrame(applyInitial);
+
 document.addEventListener('keydown',e=>{
-  if(e.key==='ArrowRight') goFace(Math.min(2,face()+1));
-  if(e.key==='ArrowLeft') goFace(Math.max(0,face()-1));
-  if(e.key==='ArrowDown') document.getElementById('ground-10').scrollIntoView({behavior:'smooth'});
-  if(e.key==='ArrowUp') document.getElementById('ground-15').scrollIntoView({behavior:'smooth'});
+  const g=grounds.reduce((best,x)=>Math.abs(x.getBoundingClientRect().top)<Math.abs(best.getBoundingClientRect().top)?x:best,grounds[0]);
+  const d=deckFor(g),i=grounds.indexOf(g);
+  if(e.key==='ArrowRight')goFace(d,Math.min(1,face(d)+1));
+  if(e.key==='ArrowLeft')goFace(d,Math.max(0,face(d)-1));
+  if(e.key==='ArrowDown'&&i<grounds.length-1)grounds[i+1].scrollIntoView({behavior:'smooth'});
+  if(e.key==='ArrowUp'&&i>0)grounds[i-1].scrollIntoView({behavior:'smooth'});
 });
 </script>
 </body>
