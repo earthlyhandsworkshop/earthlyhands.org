@@ -102,7 +102,7 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 .fullfocus #focus-title{margin:.28rem 0 .85rem;font-family:var(--serif);font-size:clamp(2rem,5vw,3.8rem);line-height:.94;text-transform:none;overflow-wrap:anywhere}
 .fullfocus #focus-body{max-width:46rem;font-family:var(--serif);font-size:1.08rem!important;line-height:1.55!important;text-transform:none;white-space:normal;overflow-wrap:anywhere}
 
-.aperture-switch{display:flex;gap:.35rem;align-items:center;margin-top:.55rem}
+.aperture-switch{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;margin-top:.55rem;max-width:100%}
 .aperture-switch button,.aperture-switch a{border:1px solid var(--hair);background:transparent;padding:.3rem .45rem;cursor:pointer;font:.46rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:inherit;text-decoration:none}
 .aperture-switch button[aria-pressed="true"]{border-color:var(--rust);background:rgba(135,87,58,.07)}
 .game-empty{color:var(--muted);max-width:40rem}
@@ -116,6 +116,8 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 
 @media(max-width:58rem){
  html,body{max-width:100%;overflow-x:hidden}
+ .aperture-switch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+ .aperture-switch button,.aperture-switch a{width:100%;min-width:0;text-align:center;white-space:normal;overflow-wrap:anywhere}
  .shell{width:calc(100% - .35rem);max-width:100%}
  .box{grid-template-columns:5.35rem minmax(0,1fr);min-height:calc(100vh - 3rem);max-width:100%;overflow:hidden}
  .stage{min-width:0;max-width:100%;overflow:hidden}
