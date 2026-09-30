@@ -30,10 +30,7 @@ h1{margin:.35rem 0 1rem;font-weight:400;font-size:clamp(4.6rem,15vw,11rem);line-
 .bearing{margin-top:1.15rem;font:.46rem/1.3 var(--mono);color:var(--muted)}
 .reach{position:relative;min-height:74svh;padding:clamp(2rem,6vw,5rem);border-bottom:1px solid var(--line);display:flex;align-items:center;overflow:hidden}
 .frame{position:absolute;inset:8% 5%;border:1px solid rgba(238,233,221,.10);background:rgba(25,47,66,.18);box-shadow:0 0 0 1.2rem rgba(25,47,66,.13);pointer-events:none}
-.aperture{position:absolute;right:6%;bottom:8%;width:min(32vw,22rem);aspect-ratio:4/3;border:1px solid rgba(238,233,221,.16);background:rgba(25,47,66,.28);display:grid;place-items:center;text-decoration:none}
-.aperture::before{content:"";position:absolute;inset:.6rem;border:1px solid rgba(238,233,221,.08)}
-.aperture span{position:relative;z-index:1;max-width:10rem;text-align:center;color:var(--muted);font:.46rem/1.45 var(--mono);letter-spacing:.07em;text-transform:uppercase}
-.aperture strong{display:block;margin-top:.32rem;color:var(--white);font-weight:500}
+
 .content{position:relative;z-index:2;max-width:56rem}
 .num{font:clamp(5rem,12vw,9rem)/.75 var(--serif);color:rgba(238,233,221,.09)}
 .meta{margin-top:1rem;font:.48rem/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
@@ -45,7 +42,7 @@ h2{margin:.7rem 0 1rem;font-weight:400;font-size:clamp(3.2rem,7vw,6.3rem);line-h
 @media(max-width:48rem){
  .top{align-items:flex-start;flex-direction:column;padding:.55rem 0}.top nav{width:100%}.top a{flex:1;text-align:center}
  .threshold{min-height:62svh}.reach{min-height:72svh;padding:2rem 1rem 5rem}
- .frame{inset:6% 3%}.aperture{width:48vw;right:1rem;bottom:3rem}
+ .frame{inset:6% 3%}
  h2{font-size:clamp(3rem,13vw,4.8rem)}.after{display:block}.after a{display:inline-block;margin-top:2rem}
 }
 </style>
@@ -79,10 +76,7 @@ h2{margin:.7rem 0 1rem;font-weight:400;font-size:clamp(3.2rem,7vw,6.3rem);line-h
      const p=document.createElement('p');p.className='summary';p.textContent=item.summary||'';
      const a=document.createElement('a');a.className='enter';a.href=item.href||'#';a.textContent='Picture / Jacket';
      content.append(num,meta,h,p,a);
-     const aperture=document.createElement('a');aperture.className='aperture';aperture.href=item.href||'#';aperture.setAttribute('aria-label','Open '+(item.title||'piece'));
-     const label=document.createElement('span');label.textContent='full specimen';
-     const strong=document.createElement('strong');strong.textContent='open the real thing →';label.append(strong);aperture.append(label);
-     section.append(frame,content,aperture);host.append(section);
+     section.append(frame,content);host.append(section);
    });
  }catch(_){bearing.textContent='the ground is here · current pieces could not be read this turn';}
 })();
