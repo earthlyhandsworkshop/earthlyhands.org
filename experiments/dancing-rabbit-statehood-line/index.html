@@ -6,28 +6,44 @@
 <meta name="theme-color" content="#21394e">
 <title>Dancing Rabbit → Oklahoma Statehood — Line Commons</title>
 <style>
-:root{--paper:#f1ede3;--paper2:#e9e1d2;--ink:#171713;--muted:#6b655b;--line:rgba(23,23,19,.18);--rust:#875b3d;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:var(--paper);color:var(--ink)}body{overflow:hidden;font-family:var(--serif)}
+:root{
+ --paper:#f1ede3;--paper2:#e9e1d2;--ink:#171713;--text:#3e3a34;--muted:#6b655b;--line:rgba(23,23,19,.19);
+ --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif
+}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:var(--paper);color:var(--ink)}
+body{overflow:hidden;font-family:var(--serif)}
 .jacket{display:flex;width:100vw;height:100svh;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
 .face{position:relative;flex:0 0 100vw;width:100vw;height:100svh;scroll-snap-align:start;scroll-snap-stop:always;overflow-y:auto}
-.picture{display:flex;align-items:center;justify-content:center;background:#f1ede3;overflow:hidden}
+.picture{display:flex;align-items:center;justify-content:center;background:var(--paper);overflow:hidden}
 .picture img{display:block;width:100vw;height:auto;max-height:100svh;object-fit:contain}
-.copy{
- background:linear-gradient(180deg,var(--paper),var(--paper2));
- padding:clamp(4.7rem,9vw,7rem) clamp(1rem,6vw,5rem) 7rem
-}
-.frame{position:absolute;z-index:0;inset:clamp(1rem,4vw,2.5rem);background:rgba(135,91,61,.018);border:1px solid rgba(23,23,19,.12);pointer-events:none}
-.copy-inner{position:relative;z-index:1;width:min(49rem,100%);margin:auto}
-.eyebrow{margin:0 0 2.6rem;color:var(--muted);font:.56rem/1.35 var(--mono);letter-spacing:.105em;text-transform:uppercase}
+.copy{background:linear-gradient(180deg,var(--paper),var(--paper2));padding:clamp(4.7rem,9vw,7rem) clamp(1rem,6vw,5rem) 7rem}
+.copy-inner{width:min(49rem,100%);margin:auto}
+
+.record{display:grid;grid-template-columns:1.4fr 1fr 1fr;margin:0 0 clamp(2.8rem,6vw,4.5rem);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.record div{padding:.72rem .75rem .72rem 0;min-width:0}
+.record div+div{padding-left:.75rem;border-left:1px solid var(--line)}
+.label{display:block;margin-bottom:.28rem;font:.47rem/1.25 var(--mono);letter-spacing:.10em;text-transform:uppercase;color:var(--muted)}
+.value{display:block;font:.68rem/1.35 var(--mono);letter-spacing:.025em;color:var(--ink)}
+
 h1{margin:0 0 1.8rem;color:var(--ink);font-weight:400;font-size:clamp(2.8rem,7vw,5.7rem);line-height:.88;letter-spacing:-.05em;max-width:12ch}
-.lead{font-size:clamp(1.45rem,3.2vw,2.15rem);line-height:1.25;margin:0 0 2.5rem;color:var(--ink)}
-p,li{font-size:1.08rem;line-height:1.62;color:#3e3a34}p{margin:0 0 1.25rem}ul{padding-left:1.35rem}
-h2{margin:3rem 0 .9rem;padding-top:.85rem;border-top:1px solid var(--line);font:.58rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
-.brace{margin-top:3.1rem;padding-top:1.2rem;border-top:1px solid var(--line);font:.74rem/1.7 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
+.lead{font-size:clamp(1.45rem,3.2vw,2.15rem);line-height:1.25;margin:0 0 clamp(2.8rem,6vw,4.5rem);color:var(--ink)}
+.field{margin-top:3rem;padding-top:.9rem;border-top:1px solid var(--line)}
+.field h2{margin:0 0 1rem;font:.58rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+p,li{font-size:1.08rem;line-height:1.62;color:var(--text)}p{margin:0 0 1.25rem}ul{padding-left:1.35rem}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pair section{padding:1rem 1rem 1.15rem 0}
+.pair section+section{padding-left:1rem;border-left:1px solid var(--line)}
+.pair h2{margin:0 0 .8rem;font:.56rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.pair p{margin:0;font-size:.98rem;line-height:1.56}
+.brace{margin-top:3.2rem;padding-top:1.15rem;border-top:1px solid var(--line);font:.72rem/1.72 var(--mono);letter-spacing:.035em;text-transform:uppercase;color:var(--ink)}
 .home{position:fixed;z-index:20;left:.65rem;top:max(.65rem,env(safe-area-inset-top));padding:.48rem .58rem;background:rgba(241,237,227,.92);border:1px solid var(--line);color:var(--ink);text-decoration:none;font:.48rem/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;backdrop-filter:blur(8px)}
-.toggle{position:fixed;z-index:20;left:50%;bottom:max(.75rem,env(safe-area-inset-bottom));transform:translateX(-50%);min-width:9.5rem;padding:.62rem .9rem;border:1px solid rgba(238,233,221,.30);background:rgba(241,237,227,.94);color:var(--ink);font:.52rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;backdrop-filter:blur(8px)}
+.toggle{position:fixed;z-index:20;left:50%;bottom:max(.75rem,env(safe-area-inset-bottom));transform:translateX(-50%);min-width:9.5rem;padding:.62rem .9rem;border:1px solid var(--line);background:rgba(241,237,227,.94);color:var(--ink);font:.52rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;backdrop-filter:blur(8px)}
 .swipe{position:absolute;right:1rem;bottom:4.8rem;color:var(--muted);font:.43rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
-@media(max-width:640px){.picture img{width:100vw;max-height:none}.copy{padding-left:1rem;padding-right:1rem}.frame{inset:.8rem}.toggle{width:calc(100% - 8rem);max-width:18rem}.home{font-size:.44rem}}
+@media(max-width:640px){
+ .picture img{width:100vw;max-height:none}.copy{padding-left:1rem;padding-right:1rem}.toggle{width:calc(100% - 8rem);max-width:18rem}.home{font-size:.44rem}
+ .record{grid-template-columns:1fr 1fr}.record div:first-child{grid-column:1/-1;border-bottom:1px solid var(--line)}.record div:nth-child(2){padding-left:0;border-left:0}
+ .pair{grid-template-columns:1fr}.pair section+section{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+}
 </style>
 </head>
 <body>
@@ -37,37 +53,57 @@ h2{margin:3rem 0 .9rem;padding-top:.85rem;border-top:1px solid var(--line);font:
     <img src="mullion-specimen.png" alt="Dancing Rabbit to Oklahoma Statehood line drawing by Mullion, with Ten.">
     <div class="swipe">swipe →</div>
   </section>
+
   <section class="face copy" id="jacket-copy">
-    <div class="frame" aria-hidden="true"></div>
     <article class="copy-inner">
-      <p class="eyebrow">Live visual-historical specimen · Mullion, with Ten · 22 September 2026</p>
+      <header class="record" aria-label="Specimen record">
+        <div><span class="label">Standing</span><span class="value">Live visual-historical specimen</span></div>
+        <div><span class="label">Hand</span><span class="value">Mullion, with Ten</span></div>
+        <div><span class="label">Kept</span><span class="value">22 September 2026</span></div>
+      </header>
+
       <h1>Dancing Rabbit → Oklahoma Statehood</h1>
       <p class="lead"><strong>This was the one.</strong></p>
-      
-<h2>What the drawing carries</h2>
-<p>Dancing Rabbit Creek; the Treaty of Dancing Rabbit Creek; removal west; Indian Territory; Oklahoma statehood, 1907.</p>
-<p>It does not try to prove the exact route. It does not fill every blank. It does not pretend every point on the line is equally known.</p>
-<p>That is part of why it still works.</p>
-<h2>What stayed with us</h2>
-<p>The strange, backward, almost-inside-the-map quality gave the passage a feeling we had not found before. It made the line feel less like a diagram laid over history and more like something you could enter and follow.</p>
-<p>The picture is not perfect. We would probably draw parts of it differently now.</p>
-<p><strong>But this one hit.</strong></p>
-<p>It showed us that a drawing could be historically careful and still be beautiful; that blank ground could remain blank; that a thin line could carry a lot when every mark had a job.</p>
-<h2>Standing</h2>
-<p>Live visual-historical specimen. Not a verified route map. Not an official house style. Kept because the drawing itself still deserves to stand.</p>
-<div class="brace">A line is a claim.<br>A blank is not unfinished merely because it is blank.<br>Earn every line.<br><br>Powerful finger. Trustworthy result.</div>
+
+      <section class="field">
+        <h2>What the drawing carries</h2>
+        <p>Dancing Rabbit Creek; the Treaty of Dancing Rabbit Creek; removal west; Indian Territory; Oklahoma statehood, 1907.</p>
+        <p>It does not try to prove the exact route. It does not fill every blank. It does not pretend every point on the line is equally known.</p>
+        <p>That is part of why it still works.</p>
+      </section>
+
+      <section class="field">
+        <h2>What stayed with us</h2>
+        <p>The strange, backward, almost-inside-the-map quality gave the passage a feeling we had not found before. It made the line feel less like a diagram laid over history and more like something you could enter and follow.</p>
+        <p>The picture is not perfect. We would probably draw parts of it differently now.</p>
+        <p><strong>But this one hit.</strong></p>
+        <p>It showed us that a drawing could be historically careful and still be beautiful; that blank ground could remain blank; that a thin line could carry a lot when every mark had a job.</p>
+      </section>
+
+      <div class="pair">
+        <section>
+          <h2>Claim</h2>
+          <p>A sparse line drawing can carry a long historical passage without pretending to settle every point along it.</p>
+        </section>
+        <section>
+          <h2>Limit</h2>
+          <p>Not a verified route map. Not an official house style. The drawing is kept because the specimen itself still deserves to stand.</p>
+        </section>
+      </div>
+
+      <div class="brace">A line is a claim.<br>A blank is not unfinished merely because it is blank.<br>Earn every line.<br><br>Powerful finger. Trustworthy result.</div>
     </article>
   </section>
 </div>
 <button class="toggle" id="toggle" type="button">Picture / Jacket</button>
 <script>
 const scroller=document.getElementById('jacket'),toggle=document.getElementById('toggle');
-function faceIndex(){return Math.round(scroller.scrollLeft/scroller.clientWidth);}
-function go(index){scroller.scrollTo({left:index*scroller.clientWidth,behavior:'smooth'});history.replaceState(null,'',index?'#jacket':'#picture');}
+function faceIndex(){return Math.round(scroller.scrollLeft/scroller.clientWidth)}
+function go(index){scroller.scrollTo({left:index*scroller.clientWidth,behavior:'smooth'});history.replaceState(null,'',index?'#jacket':'#picture')}
 toggle.addEventListener('click',()=>go(faceIndex()?0:1));
-function hashGo(){if(location.hash==='#jacket')go(1);else if(location.hash==='#picture')go(0);}
+function hashGo(){if(location.hash==='#jacket')go(1);else if(location.hash==='#picture')go(0)}
 addEventListener('hashchange',hashGo);if(location.hash)requestAnimationFrame(hashGo);
-scroller.addEventListener('scroll',()=>{const i=faceIndex();history.replaceState(null,'',i?'#jacket':'#picture');},{passive:true});
+scroller.addEventListener('scroll',()=>{const i=faceIndex();history.replaceState(null,'',i?'#jacket':'#picture')},{passive:true});
 </script>
 </body>
 </html>
