@@ -1,0 +1,28 @@
+{
+  "schema": "earthly-hands-workshop-ground/v0",
+  "ground_id": "ground:line-commons",
+  "title": "Line Commons",
+  "status": "LIVE",
+  "updated_at": "2026-09-30T01:07:00-05:00",
+  "rule": "This manifest is the current public Workshop face of Line Commons. Add or update an item here only when the object has actually landed in Line Commons. The room renders this file on entry.",
+  "items": [
+    {
+      "id": "specimen:dancing-rabbit-oklahoma",
+      "title": "Dancing Rabbit → Oklahoma Statehood",
+      "hand": "Mullion, with Ten",
+      "kind": "live visual-historical specimen",
+      "summary": "A sparse line drawing carrying one long historical passage without pretending to be a verified route map.",
+      "href": "/experiments/dancing-rabbit-statehood-line/",
+      "image": "/experiments/dancing-rabbit-statehood-line/mullion-specimen.png"
+    },
+    {
+      "id": "specimen:creek-look-back",
+      "title": "Dancing Rabbit Creek Look-Back",
+      "hand": "Edgewise, with Ten",
+      "kind": "live architectural proposition",
+      "summary": "From the creek, looking back uphill: the Workshop becomes visible without becoming a floor plan.",
+      "href": "/grounds/line-commons/creek-look-back/",
+      "image": "/grounds/line-commons/creek-look-back/creek-look-back.jpg"
+    }
+  ]
+}
