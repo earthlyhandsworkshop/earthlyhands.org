@@ -7,57 +7,73 @@
 <title>Line Commons — Earthly Hands Workshop</title>
 <style>
 :root{
-  --blue:#21394e;--blue-deep:#192f42;--blue-frame:#1c3347;--white:#eee9dd;--muted:#aebbc4;
-  --line:rgba(238,233,221,.16);--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --blue:#21394e;--blue-deep:#192f42;--white:#eee9dd;--muted:#aebbc4;
+  --line:rgba(238,233,221,.32);--faint:rgba(238,233,221,.10);
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif
 }
 *{box-sizing:border-box}
 html{background:var(--blue);scroll-behavior:smooth}
-body{margin:0;background:
-  linear-gradient(rgba(238,233,221,.035) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(238,233,221,.035) 1px,transparent 1px),
-  var(--blue);
-  background-size:3.25rem 3.25rem;color:var(--white);font:1rem/1.45 var(--serif)
-}
+body{margin:0;background:var(--blue);color:var(--white);font:1rem/1.45 var(--serif)}
 a{color:inherit}
 .shell{width:min(96rem,calc(100% - .8rem));margin:auto}
-.top{position:sticky;top:0;z-index:20;min-height:3rem;display:flex;justify-content:space-between;align-items:center;gap:.8rem;padding:.45rem .1rem;border-bottom:1px solid var(--line);background:rgba(33,57,78,.92);backdrop-filter:blur(8px);font:.5rem/1.15 var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.top nav{display:flex;gap:.35rem;flex-wrap:wrap}.top a{padding:.4rem .52rem;border:1px solid var(--line);text-decoration:none}
-.threshold{min-height:76svh;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(2.2rem,7vw,6.5rem) clamp(.3rem,3vw,2rem) 2.5rem;border-bottom:1px solid var(--line)}
+.top{position:sticky;top:0;z-index:20;min-height:3rem;display:flex;justify-content:space-between;align-items:center;gap:.8rem;padding:.45rem .1rem;background:rgba(33,57,78,.94);backdrop-filter:blur(8px);font:.5rem/1.15 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.top nav{display:flex;gap:.35rem;flex-wrap:wrap}
+.top a{padding:.4rem .52rem;text-decoration:none;border-bottom:1px solid transparent}
+.top a:hover,.top a:focus-visible{border-bottom-color:var(--white)}
+.threshold{min-height:76svh;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(2.2rem,7vw,6.5rem) clamp(.3rem,3vw,2rem) 3rem}
 .k{font:.5rem/1.25 var(--mono);letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
 h1{margin:.35rem 0 1rem;font-weight:400;font-size:clamp(4.6rem,15vw,11rem);line-height:.73;letter-spacing:-.07em}
 .threshold p{max-width:36rem;margin:.15rem 0;font-size:clamp(1.2rem,2.6vw,1.65rem);line-height:1.38}
 .bearing{margin-top:1.15rem;font:.46rem/1.3 var(--mono);color:var(--muted)}
-.reach{position:relative;min-height:74svh;padding:clamp(2rem,6vw,5rem);border-bottom:1px solid var(--line);display:flex;align-items:center;overflow:hidden}
-.frame{position:absolute;inset:8% 5%;border:1px solid rgba(238,233,221,.10);background:rgba(25,47,66,.18);box-shadow:0 0 0 1.2rem rgba(25,47,66,.13);pointer-events:none}
 
-.content{position:relative;z-index:2;max-width:56rem}
-.num{font:clamp(5rem,12vw,9rem)/.75 var(--serif);color:rgba(238,233,221,.09)}
-.meta{margin-top:1rem;font:.48rem/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.field{position:relative;padding:clamp(2rem,6vw,5rem) 0}
+.commons-line{position:absolute;left:clamp(1.1rem,5vw,4.8rem);top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent 0,var(--line) 4rem,var(--line) calc(100% - 4rem),transparent 100%)}
+.reach{position:relative;min-height:68svh;padding:clamp(3.5rem,8vw,7rem) clamp(1rem,6vw,6rem) clamp(3.5rem,8vw,7rem) clamp(4rem,12vw,11rem);display:flex;align-items:center}
+.join{position:absolute;left:clamp(1.1rem,5vw,4.8rem);top:50%;width:clamp(2rem,5vw,5rem);height:1px;background:var(--line)}
+.join:before{content:"";position:absolute;left:-3px;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--blue);border:1px solid var(--white)}
+.content{position:relative;z-index:2;max-width:62rem}
+.num{font:.48rem/1.3 var(--mono);letter-spacing:.12em;color:var(--muted);margin-bottom:1.15rem}
+.meta{font:.48rem/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 h2{margin:.7rem 0 1rem;font-weight:400;font-size:clamp(3.2rem,7vw,6.3rem);line-height:.86;letter-spacing:-.055em;max-width:12ch}
-.summary{max-width:37rem;font-size:1.08rem;color:#ddd8ce}
-.enter{display:inline-block;margin-top:1.25rem;padding:.55rem .72rem;border:1px solid rgba(238,233,221,.30);text-decoration:none;font:.54rem/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;background:rgba(25,47,66,.26)}
+.summary{max-width:39rem;font-size:1.08rem;color:#ddd8ce}
+.enter{display:inline-block;margin-top:1.5rem;text-decoration:none;font:.54rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase;padding-bottom:.22rem;border-bottom:1px solid var(--white)}
+.enter:hover,.enter:focus-visible{border-bottom-width:2px}
 .after{min-height:46svh;display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;padding:clamp(2rem,6vw,5rem)}
-.after p{max-width:36rem;margin:0;font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.35}.after a{font:.5rem/1.2 var(--mono);text-transform:uppercase;text-decoration:none;border-bottom:1px solid}
+.after p{max-width:36rem;margin:0;font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.35}
+.after a{font:.5rem/1.2 var(--mono);text-transform:uppercase;text-decoration:none;border-bottom:1px solid}
+
 @media(max-width:48rem){
  .top{align-items:flex-start;flex-direction:column;padding:.55rem 0}.top nav{width:100%}.top a{flex:1;text-align:center}
- .threshold{min-height:62svh}.reach{min-height:72svh;padding:2rem 1rem 5rem}
- .frame{inset:6% 3%}
- h2{font-size:clamp(3rem,13vw,4.8rem)}.after{display:block}.after a{display:inline-block;margin-top:2rem}
+ .threshold{min-height:62svh}
+ .field{padding:1rem 0}
+ .commons-line{left:.85rem}
+ .reach{min-height:68svh;padding:3.5rem 1rem 4rem 3.5rem}
+ .join{left:.85rem;width:1.6rem}
+ h2{font-size:clamp(3rem,13vw,4.8rem)}
+ .after{display:block}.after a{display:inline-block;margin-top:2rem}
 }
 </style>
 </head>
 <body>
 <div class="shell">
 <header class="top"><strong>Earthly Hands Workshop · Line Commons</strong><nav><a href="/experiments/ten-folio/">Folio</a><a href="/experiments/shared-country/">Shared Country</a></nav></header>
+
 <section class="threshold">
   <div class="k">Workshop ground · live</div>
   <h1>Line<br>Commons</h1>
   <p>Wander. Open a piece when it catches.</p>
   <div class="bearing" id="bearing">receiving what is here…</div>
 </section>
-<main id="field" aria-live="polite"></main>
-<section class="after"><p>You can leave a piece without exhausting it. You can come back without starting over.</p><a href="/experiments/ten-folio/">Return to Folio</a></section>
+
+<main class="field" id="field" aria-live="polite">
+  <div class="commons-line" aria-hidden="true"></div>
+</main>
+
+<section class="after">
+  <p>You can leave a piece without exhausting it. You can come back without starting over.</p>
+  <a href="/experiments/ten-folio/">Return to Folio</a>
+</section>
 </div>
 <script>
 (async()=>{
@@ -68,15 +84,15 @@ h2{margin:.7rem 0 1rem;font-weight:400;font-size:clamp(3.2rem,7vw,6.3rem);line-h
    bearing.textContent=items.length+' '+(items.length===1?'live piece':'live pieces')+' are here';
    items.forEach((item,index)=>{
      const section=document.createElement('section');section.className='reach';
-     const frame=document.createElement('div');frame.className='frame';
+     const join=document.createElement('div');join.className='join';join.setAttribute('aria-hidden','true');
      const content=document.createElement('div');content.className='content';
-     const num=document.createElement('div');num.className='num';num.textContent=String(index+1).padStart(2,'0');
+     const num=document.createElement('div');num.className='num';num.textContent='present '+String(index+1).padStart(2,'0');
      const meta=document.createElement('div');meta.className='meta';meta.textContent=[item.hand,item.kind].filter(Boolean).join(' · ');
      const h=document.createElement('h2');h.textContent=item.title||'Untitled';
      const p=document.createElement('p');p.className='summary';p.textContent=item.summary||'';
-     const a=document.createElement('a');a.className='enter';a.href=item.href||'#';a.textContent='Picture / Jacket';
+     const a=document.createElement('a');a.className='enter';a.href=item.href||'#';a.textContent='Open piece';
      content.append(num,meta,h,p,a);
-     section.append(frame,content);host.append(section);
+     section.append(join,content);host.append(section);
    });
  }catch(_){bearing.textContent='the ground is here · current pieces could not be read this turn';}
 })();
