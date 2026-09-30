@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1448 1086" role="img" aria-labelledby="t d">
+<title id="t">Dancing Rabbit Creek Look-Back</title>
+<desc id="d">A restrained line drawing from Dancing Rabbit Creek looking uphill toward the long, low Earthly Hands Workshop.</desc>
+<defs>
+  <radialGradient id="bg" cx="48%" cy="44%" r="80%">
+    <stop offset="0" stop-color="#29465f"/>
+    <stop offset=".58" stop-color="#263f56"/>
+    <stop offset="1" stop-color="#21384d"/>
+  </radialGradient>
+</defs>
+<rect width="1448" height="1086" fill="url(#bg)"/>
+<g fill="none" stroke="#9eafbd" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" opacity=".9">
+  <!-- far slope / building ground -->
+  <path d="M0 511 C58 519 109 522 166 511 C278 489 389 467 494 441 C520 435 541 430 559 430
+           C641 430 720 432 817 432 C925 431 1034 427 1146 419 C1251 412 1350 407 1448 407"/>
+  <!-- workshop -->
+  <path d="M515 430 L515 381 L981 356 L1113 350 L1251 377 L1251 420"/>
+  <path d="M559 429 L559 398 L733 398 L733 431"/>
+  <path d="M905 431 L905 385 L949 385 L949 430"/>
+  <path d="M1113 350 L1113 419"/>
+  <path d="M978 355 L978 346 L1009 346 L1009 353"/>
+  <!-- back apron / lower opening -->
+  <path d="M636 449 L841 449 L841 499 L638 499 Z"/>
+  <path d="M668 449 L668 500"/>
+  <path d="M811 449 L811 495"/>
+  <!-- path uphill -->
+  <path d="M557 680 C633 639 736 607 827 570 C894 543 951 519 959 509
+           C969 496 919 486 842 470"/>
+  <!-- foreground creek bank -->
+  <path d="M0 700 C73 704 117 699 166 708 C255 726 347 719 441 724
+           C512 728 563 722 625 738 C731 763 842 760 954 764
+           C1075 768 1182 768 1274 774 C1320 777 1377 779 1448 781"/>
+  <!-- water lines -->
+  <path d="M89 768 L329 771"/>
+  <path d="M126 783 L474 786"/>
+  <path d="M454 797 L744 805"/>
+  <path d="M701 816 L926 825"/>
+  <path d="M852 841 L1086 851"/>
+  <path d="M1050 867 L1315 884"/>
+  <path d="M1217 899 L1448 910"/>
+  <!-- lower left bank -->
+  <path d="M0 890 C20 895 40 907 51 922 C67 944 73 958 91 958
+           C114 958 123 937 147 929 C184 915 224 929 251 949
+           C276 968 282 998 307 1002 C327 1005 334 989 354 988
+           C384 985 398 966 431 963 C466 960 493 976 514 995"/>
+  <!-- rock / right bank -->
+  <path d="M1171 764 C1191 743 1219 727 1249 728 C1269 729 1275 744 1288 757
+           C1298 768 1317 770 1330 766"/>
+  <!-- left trees -->
+  <path d="M52 516 L54 78"/>
+  <path d="M54 145 L35 96 M54 199 L28 143 M54 257 L18 188 M54 323 L21 259
+           M56 238 L93 154 M56 300 L114 217 M55 369 L145 261"/>
+  <path d="M167 515 L169 291 M169 359 L146 330 M170 407 L204 345 M170 441 L212 405"/>
+  <!-- right trees -->
+  <path d="M1354 408 L1356 255 M1355 313 L1339 283 M1355 333 L1375 298 M1356 368 L1391 326"/>
+  <path d="M1308 772 L1310 603 M1310 655 L1289 624 M1310 686 L1331 638 M1310 718 L1342 674"/>
+  <!-- small foreground grasses -->
+  <path d="M55 957 L58 858 M58 912 L40 883 M58 930 L77 894"/>
+</g>
+<text x="267" y="870" fill="#9eafbd" opacity=".82"
+      font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      font-size="11" letter-spacing="4">DANCING RABBIT CREEK</text>
+</svg>
