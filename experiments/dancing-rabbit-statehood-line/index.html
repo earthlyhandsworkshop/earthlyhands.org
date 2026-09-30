@@ -1,417 +1,69 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex, follow" />
-  <meta name="theme-color" content="#f1ede3" />
-  <title>Dancing Rabbit to Oklahoma — Earthly Hands</title>
-  <meta
-    name="description"
-    content="A full web-presentation experiment built around Mullion's Dancing Rabbit to Oklahoma visual specimen."
-  />
-  <style>
-    :root {
-      --paper: #f1ede3;
-      --ink: #171713;
-      --graphite: #645f55;
-      --rule: rgba(23,23,19,.18);
-      --rust: #875b3d;
-      --measure: 42rem;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      background: var(--paper);
-      -webkit-text-size-adjust: 100%;
-      text-size-adjust: 100%;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      min-width: 18rem;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-      font-size: clamp(1.05rem, 1.2vw, 1.2rem);
-      line-height: 1.55;
-    }
-
-    a {
-      color: inherit;
-      text-decoration-color: var(--rust);
-      text-underline-offset: .22em;
-    }
-
-    a:hover { color: var(--rust); }
-
-    a:focus-visible {
-      outline: 2px solid var(--rust);
-      outline-offset: 5px;
-    }
-
-    .site-header {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      align-items: baseline;
-      padding: 1.15rem clamp(1.25rem, 3vw, 3rem);
-      background: var(--paper);
-      border-bottom: 1px solid var(--rule);
-      color: var(--graphite);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: .74rem;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-    .site-header p { margin: 0; }
-
-    .site-header .brand {
-      color: var(--ink);
-      font-size: .92rem;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-
-    .site-header .brand:hover {
-      color: var(--rust);
-    }
-
-    .site-header .presentation {
-      color: var(--graphite);
-      font-size: .68rem;
-      letter-spacing: .09em;
-    }
-
-    main {
-      width: 100%;
-      margin: 0;
-    }
-
-    .threshold {
-      padding: clamp(2.25rem, 6vw, 5.5rem) clamp(1.25rem, 3vw, 3rem) clamp(2rem, 4vw, 4rem);
-    }
-
-    .kicker,
-    .register-label,
-    .note-label,
-    figcaption,
-    .signature {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    }
-
-    .threshold-copy {
-      width: 100%;
-      max-width: none;
-      margin: 0 0 clamp(2rem, 4vw, 3.5rem);
-    }
-
-    .kicker {
-      margin: 0 0 .8rem;
-      color: var(--rust);
-      font-size: .74rem;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      max-width: 13ch;
-      margin: 0;
-      font-size: clamp(3rem, 6.6vw, 7rem);
-      font-weight: 400;
-      line-height: .9;
-      letter-spacing: -.05em;
-    }
-
-    .quiet-title {
-      display: block;
-      max-width: 18ch;
-      margin-top: .2em;
-      color: var(--graphite);
-      font-size: .42em;
-      line-height: 1.05;
-      letter-spacing: -.025em;
-    }
-
-    .threshold-note {
-      max-width: 34rem;
-      margin: 2rem 0 0;
-      color: var(--graphite);
-      font-size: 1rem;
-    }
-
-    figure {
-      margin: 0;
-      width: 100%;
-    }
-
-    .drawing {
-      width: 100%;
-      overflow: hidden;
-      background: var(--paper);
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-width: none;
-      margin: 0;
-    }
-
-    figcaption {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      padding: .8rem clamp(1.25rem, 3vw, 3rem) 0;
-      color: var(--graphite);
-      font-size: .7rem;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
-
-    .long-register,
-    .boundary {
-      max-width: 94rem;
-      display: grid;
-      grid-template-columns: minmax(11rem, .5fr) minmax(22rem, 1.5fr);
-      gap: clamp(2.5rem, 7vw, 8rem);
-      margin: 0 auto;
-      padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 3vw, 3rem);
-      border-top: 1px solid var(--rule);
-    }
-
-    .register-label {
-      margin: 0;
-      color: var(--rust);
-      font-size: .74rem;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-    }
-
-    .register-copy {
-      max-width: 52rem;
-    }
-
-    .register-copy p {
-      margin: 0;
-      font-size: clamp(1.6rem, 3vw, 3.1rem);
-      line-height: 1.13;
-      letter-spacing: -.025em;
-    }
-
-    .register-copy p + p {
-      margin-top: 1.2rem;
-    }
-
-    .register-copy .muted {
-      color: var(--graphite);
-    }
-
-    .field {
-      max-width: 94rem;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      margin: 0 auto;
-      padding: 0 clamp(1.25rem, 3vw, 3rem) clamp(3rem, 6vw, 6rem);
-    }
-
-    .field section {
-      min-height: 16rem;
-      padding: 2rem 1.8rem 2rem 0;
-      border-top: 1px solid var(--rule);
-    }
-
-    .field section + section {
-      padding-left: 1.8rem;
-    }
-
-    .note-label {
-      margin: 0 0 3rem;
-      color: var(--rust);
-      font-size: .68rem;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-    .field p:last-child {
-      max-width: 18rem;
-      margin: 0;
-      color: var(--graphite);
-    }
-
-    .boundary-copy {
-      max-width: var(--measure);
-    }
-
-    .boundary-copy p {
-      margin: 0 0 1rem;
-    }
-
-    .signature {
-      margin-top: 3rem !important;
-      color: var(--graphite);
-      font-size: .75rem;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
-
-    footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      padding: 1.4rem clamp(1.25rem, 3vw, 3rem) 3rem;
-      border-top: 1px solid var(--rule);
-      color: var(--graphite);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: .72rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    footer p { margin: 0; }
-
-    @media (max-width: 64rem) {
-      .long-register,
-      .boundary {
-        grid-template-columns: 1fr;
-        gap: 2.25rem;
-      }
-
-      .field {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 40rem) {
-      .site-header {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: .25rem;
-      }
-
-      .threshold {
-        padding-top: 2.7rem;
-      }
-
-      h1 {
-        font-size: clamp(3rem, 16vw, 5rem);
-      }
-
-      figcaption {
-        display: block;
-      }
-
-      figcaption span {
-        display: block;
-        margin-top: .25rem;
-      }
-
-      .field {
-        display: block;
-      }
-
-      .field section,
-      .field section + section {
-        min-height: 0;
-        padding: 2.5rem 0;
-      }
-
-      .note-label { margin-bottom: 1.5rem; }
-
-      footer {
-        flex-direction: column;
-        gap: .55rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f1ede3">
+<title>Dancing Rabbit → Oklahoma Statehood — Line Commons</title>
+<style>
+:root{--paper:#f1ede3;--ink:#171713;--muted:#6b655b;--rule:rgba(23,23,19,.22);--rust:#875b3d;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink)}body{font-family:var(--serif)}
+.face{display:none;min-height:100svh}.face.is-current{display:block}
+.picture{background:var(--paper);position:relative}.picture-inner{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:0}
+.picture img{display:block;width:100vw;height:auto;max-height:100svh;object-fit:contain}
+.controls{position:fixed;z-index:10;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:.45rem;flex-wrap:wrap;padding:.75rem .7rem max(.75rem,env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(241,237,227,.98),rgba(241,237,227,.76),transparent)}
+.controls button,.controls a{border:1px solid var(--rule);background:rgba(241,237,227,.96);color:var(--ink);padding:.56rem .7rem;text-decoration:none;cursor:pointer;font:.5rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.jacket{padding:clamp(3.4rem,8vw,6.5rem) clamp(1rem,6vw,5rem) 7rem}.paper{width:min(47rem,100%);margin:auto}
+.eyebrow{margin:0 0 2.6rem;color:var(--muted);font:.56rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+h1{font-weight:400;font-size:clamp(2.5rem,6vw,4.8rem);line-height:.91;letter-spacing:-.045em;margin:0 0 2rem}
+.lead{font-size:clamp(1.35rem,3vw,2rem);line-height:1.28;margin:0 0 2.4rem}
+p{font-size:1.08rem;line-height:1.62;margin:0 0 1.2rem}h2{margin:3rem 0 .8rem;padding-top:.8rem;border-top:1px solid var(--rule);font:.58rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.brace{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--rule);font:.74rem/1.65 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.status{color:var(--muted)}
+@media(max-width:640px){.picture img{width:100vw;max-height:none}.jacket{padding-left:1.15rem;padding-right:1.15rem}.controls{justify-content:space-between}.controls button,.controls a{flex:1;text-align:center}}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="Earthly Hands Workshop — return to the threshold">Earthly Hands Workshop</a>
-    <p class="presentation">Line Commons · Mullion</p>
-  </header>
+<section class="face picture is-current" id="picture">
+  <div class="picture-inner"><img src="mullion-specimen.png" alt="Dancing Rabbit to Oklahoma Statehood line drawing by Mullion, with Ten."></div>
+  <div class="controls">
+    <a href="/grounds/line-commons/">Line Commons</a>
+    <button data-show="jacket">Jacket</button>
+  </div>
+</section>
+<section class="face jacket" id="jacket">
+  <article class="paper">
+    <p class="eyebrow">Line Commons · live visual-historical specimen · Mullion, with Ten · 22 September 2026</p>
+    <h1>Dancing Rabbit → Oklahoma Statehood</h1>
+    <p class="lead"><strong>This was the one.</strong></p>
+    <p>It began as a happy accident: a very simple request for Dancing Rabbit to Oklahoma, 1830 to 1907, turned into a sparse line drawing neither of us had quite known how to ask for.</p>
+    <p><strong>What worked was the restraint.</strong></p>
 
-  <main>
-    <section class="threshold" aria-labelledby="page-title">
-      <div class="threshold-copy">
-        <p class="kicker">Dancing Rabbit to Oklahoma</p>
-        <h1 id="page-title">
-          A longer road.
-          <span class="quiet-title">The same people. Still here.</span>
-        </h1>
-      </div>
+    <h2>What the drawing carries</h2>
+    <p>Dancing Rabbit Creek; the Treaty of Dancing Rabbit Creek; removal west; Indian Territory; Oklahoma statehood, 1907.</p>
+    <p>It does not try to prove the exact route. It does not fill every blank. It does not pretend every point on the line is equally known.</p>
+    <p>That is part of why it still works.</p>
 
-      <figure>
-        <div class="drawing">
-          <img
-            src="mullion-specimen.png"
-            alt="Mullion line drawing carrying a historical passage from Dancing Rabbit Creek through homelands, removal, Indian Territory, court proceedings, and Oklahoma statehood, with a lower time register and unresolved framing lines."
-          />
-        </div>
-        <figcaption>
-          <span>Visual specimen · kept substantially as first received</span>
-          <span>1830 → 1907</span>
-        </figcaption>
-      </figure>
-    </section>
+    <h2>What stayed with us</h2>
+    <p>The strange, backward, almost-inside-the-map quality gave the passage a feeling we had not found before. It made the line feel less like a diagram laid over history and more like something you could enter and follow.</p>
+    <p>The picture is not perfect. We would probably draw parts of it differently now.</p>
+    <p><strong>But this one hit.</strong></p>
+    <p>It showed us that a drawing could be historically careful and still be beautiful; that blank ground could remain blank; that a thin line could carry a lot when every mark had a job.</p>
 
-    <section class="long-register" aria-labelledby="register-title">
-      <p class="register-label" id="register-title">Read across</p>
-      <div class="register-copy">
-        <p>People. Places. Treaties. Removal. Land. Court. Statehood.</p>
-        <p class="muted">Same ground. More truth.</p>
-      </div>
-    </section>
+    <h2>Standing</h2>
+    <p class="status">Live visual-historical specimen. Not a verified route map. Not an official house style. Kept because the drawing itself still deserves to stand.</p>
 
-    <div class="field" aria-label="What the drawing is allowed to carry">
-      <section>
-        <p class="note-label">Ground</p>
-        <p>Homelands, removal, Indian Territory, and Oklahoma can appear together without pretending they are one unchanged jurisdiction.</p>
-      </section>
-      <section>
-        <p class="note-label">Time</p>
-        <p>The lower register holds sequence. Spacing is not distance, and visual nearness is not causation.</p>
-      </section>
-      <section>
-        <p class="note-label">Family</p>
-        <p>The 1902 decision and the later rehearing denial can remain inside the larger historical passage without becoming the whole passage.</p>
-      </section>
-      <section>
-        <p class="note-label">Stop</p>
-        <p>A line may end where the Workshop's knowledge ends. Blank ground is allowed to remain blank.</p>
-      </section>
-    </div>
-
-    <section class="boundary" aria-labelledby="boundary-title">
-      <p class="register-label" id="boundary-title">Boundary</p>
-      <div class="boundary-copy">
-        <p>
-          This is visual-historical orientation, not a verified travel reconstruction. The line, spacing, and named intermediate places do not establish route geometry or prove that every administrative event occurred at the pictured location.
-        </p>
-        <p>
-          The terminus is Oklahoma statehood, 1907 — not a guessed city.
-        </p>
-        <p class="signature">Passed through Mullion's hands · Line Commons · bounded public experiment</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>Mapping what remains.</p>
-    <a href="/">Return to the current public front edge</a>
-  </footer>
+    <div class="brace">A line is a claim.<br>A blank is not unfinished merely because it is blank.<br>Earn every line.<br><br>Powerful finger. Trustworthy result.</div>
+  </article>
+  <div class="controls">
+    <a href="/grounds/line-commons/">Line Commons</a>
+    <button data-show="picture">Picture</button>
+  </div>
+</section>
+<script>
+const faces=[...document.querySelectorAll('.face')];
+function show(id){faces.forEach(f=>f.classList.toggle('is-current',f.id===id));scrollTo({top:0,behavior:'instant'});}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-show]');if(b)show(b.dataset.show);});
+</script>
 </body>
 </html>
