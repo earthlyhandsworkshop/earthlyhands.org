@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Lamplight — Beef / No Particular Bargain</title>
+<style>
+:root{
+  --bg:#12110f;--paper:#eee6d5;--ink:#1f1b16;--muted:#7c7365;--rule:#8b806f;
+  --glow:#c69b60;--dark:#171512;--pale:#f4eddf;--serif:Georgia,"Times New Roman",serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);color-scheme:dark}
+body{margin:0;background:
+radial-gradient(circle at 50% -20%,rgba(198,155,96,.12),transparent 38rem),
+var(--bg);color:var(--pale);font:1rem/1.48 var(--serif)}
+button,a{font:inherit;color:inherit}
+button:focus-visible,a:focus-visible{outline:2px solid var(--glow);outline-offset:4px}
+.shell{width:min(86rem,calc(100% - 1rem));margin:auto;padding:.5rem 0 2rem}
+.top{display:flex;justify-content:space-between;gap:1rem;align-items:center;border-bottom:1px solid rgba(244,237,223,.45);padding:.55rem .15rem;font:.62rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.top span{opacity:.62}
+.roomnav{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(244,237,223,.5);margin-top:.6rem}
+.roomnav button{border:0;background:transparent;padding:.8rem 1rem;text-align:left;cursor:pointer}
+.roomnav button+button{border-left:1px solid rgba(244,237,223,.5)}
+.roomnav button[aria-selected="true"]{background:rgba(198,155,96,.11)}
+.roomnav small{display:block;font:.52rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;opacity:.62}
+.roomnav strong{display:block;margin-top:.2rem;font-size:1.15rem;font-weight:400}
+.room{display:none}.room.active{display:block}
+.frame{min-height:78vh;margin-top:.6rem;border:1px solid rgba(244,237,223,.5);background:var(--paper);color:var(--ink)}
+.head{padding:clamp(1rem,3vw,2rem);border-bottom:1px solid var(--rule)}
+.kicker{font:.55rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+h1{margin:.2rem 0 0;font-size:clamp(2.6rem,7vw,6rem);line-height:.88;font-weight:400;letter-spacing:-.055em}
+.sub{max-width:55rem;margin:.8rem 0 0;color:var(--muted);font-size:1rem}
+.body{padding:clamp(1rem,3vw,2rem)}
+.sourcefloor{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(15rem,.6fr);gap:0;border:1px solid var(--rule);background:rgba(255,255,255,.24)}
+.sourcefloor .primary{padding:1.2rem}
+.sourcefloor .limit{padding:1.2rem;border-left:1px solid var(--rule);background:rgba(31,27,22,.045)}
+.sourcefloor h2,.voices h2,.return h2{margin:0 0 .65rem;font-size:1.5rem;font-weight:400}
+.exact{font-size:clamp(2rem,5vw,4rem);line-height:.98;letter-spacing:-.045em;margin:1rem 0}
+.amount{font:700 .8rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#765332}
+.meta{font:.55rem/1.4 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.sequence{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem;margin:1rem 0 0}
+.sequence span{border:1px solid var(--rule);padding:.38rem .48rem;font:.58rem/1.2 var(--mono);background:rgba(255,255,255,.22)}
+.sequence b{font-weight:400;color:#765332}
+.tools{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}
+.tools button{border:1px solid var(--rule);background:transparent;padding:.42rem .55rem;cursor:pointer;font:.54rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em}
+.inverse{display:none;margin-top:1rem;border-top:1px solid var(--rule);padding-top:1rem;max-width:55rem}
+.inverse.open{display:block}
+.voices{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rule);background:rgba(255,255,255,.18)}
+.voice{padding:1.2rem}
+.voice+.voice{border-left:1px solid var(--rule)}
+.voice small{font:.55rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.voice blockquote{margin:1.25rem 0;font-size:clamp(1.7rem,4vw,3.1rem);line-height:1.02}
+.voice p{color:var(--muted);max-width:34rem}
+.air{text-align:center;padding:1.5rem .5rem;color:var(--muted);font-style:italic}
+.return{margin-top:1rem;border-top:1px solid var(--rule);padding-top:1rem}
+.return .line{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.return .line span{border:1px solid var(--rule);padding:.38rem .48rem;font:.56rem/1.2 var(--mono)}
+.return .line b{font-weight:400;color:#765332}
+.road{margin-top:1.25rem;border-top:1px solid var(--rule);padding-top:.8rem;color:var(--muted);font:.58rem/1.45 var(--mono)}
+.road strong{color:var(--ink);font-weight:600}
+.held{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--rule)}
+.held p{margin:.25rem 0;color:var(--muted)}
+.hand{font:.54rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.07em;white-space:nowrap}
+.footer{margin-top:.7rem;color:rgba(244,237,223,.65);font:.55rem/1.4 var(--mono)}
+@media(max-width:46rem){
+ .shell{width:calc(100% - .5rem)}
+ .top{align-items:flex-start;flex-direction:column}
+ .roomnav{grid-template-columns:1fr}
+ .roomnav button+button{border-left:0;border-top:1px solid rgba(244,237,223,.5)}
+ .sourcefloor,.voices{grid-template-columns:1fr}
+ .sourcefloor .limit,.voice+.voice{border-left:0;border-top:1px solid var(--rule)}
+ .body,.head{padding:.85rem}
+ .sequence,.return .line{display:grid;grid-template-columns:1fr}
+ .sequence b,.return .line b{display:none}
+ .held{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><strong>Earthly Hands Workshop · 05 Rough Edge</strong><span>Lamplight · paired Folio specimen · not production</span></header>
+
+<nav class="roomnav" aria-label="Held work">
+<button aria-selected="true" data-room="beef"><small>held object 01</small><strong>Beef</strong></button>
+<button aria-selected="false" data-room="bargain"><small>held object 02</small><strong>No Particular Bargain</strong></button>
+</nav>
+
+<section class="room active" id="beef">
+<div class="frame">
+<header class="head">
+<div class="kicker">later federal accounting representation · Article XVI</div>
+<h1>Beef.</h1>
+<p class="sub">A tiny expenditure line with a much larger road underneath it. Keep the accounting line exact; do not let payment impersonate receipt, adequacy, distribution, or treaty performance.</p>
+</header>
+<div class="body">
+<section class="sourcefloor">
+<div class="primary">
+<div class="amount">$18</div>
+<div class="exact">D. McClellan — beef for Choctaws while drawing arms.</div>
+<div class="meta">Payments made under the Treaty of Dancing Rabbit Creek · Article XVI — removal and subsistence · later compiled federal account</div>
+<div class="sequence" aria-label="representation path">
+<span>treaty promise</span><b>→</b><span>provision / service</span><b>→</b><span>payment act</span><b>→</b><span>later compiled table</span>
+</div>
+<div class="tools">
+<button data-toggle="beef-inverse">WHAT EARNS THIS?</button>
+</div>
+<div class="inverse" id="beef-inverse">
+<h2>What earns this?</h2>
+<p>The surviving compiled account earns the payment representation. It does not, by itself, establish who received the beef, how much food physically changed hands, whether the entry was complete, whether the provision was adequate, or whether Article XVI was fully performed.</p>
+<p>The next source road runs downward into vouchers, requisitions, contracts, receipts, ration issues, transport accounts, cattle appraisals, and settlement papers.</p>
+</div>
+</div>
+<aside class="limit">
+<h2>Limit</h2>
+<p><strong>FEDERAL PAYMENT ≠ BENEFICIARY RECEIPT.</strong></p>
+<p><strong>ACCOUNTING ENTRY ≠ COMPLETE PERFORMANCE.</strong></p>
+<p>Exact historical object: later federal accounting representation.</p>
+</aside>
+</section>
+
+<section class="held">
+<div>
+<div class="kicker">Lamplight state</div>
+<p>Hold the absurd concreteness of <em>beef</em> without making the word do comedy by itself. The pressure is that a treaty promise becomes an $18 line in an administrative descendant.</p>
+</div>
+<div class="hand">HAND · LAMPLIGHT<br>ACT · HOLD / OPEN SOURCE</div>
+</section>
+
+<div class="road"><strong>ROAD HOME</strong><br>SOURCE JACKET — Payments made under Treaty of Dancing Rabbit Creek — Article XVI removal/subsistence disbursements — federal compiled account<br><br>Current remains source-facing. No identity inference from D. McClellan.</div>
+</div>
+</div>
+</section>
+
+<section class="room" id="bargain">
+<div class="frame">
+<header class="head">
+<div class="kicker">two carriers · one field operation · cross-carrier order editorial</div>
+<h1>No particular bargain.</h1>
+<p class="sub">Two compensation states beside one another without becoming one conversation. Hear each witness; then return to the work.</p>
+</header>
+<div class="body">
+<section class="voices">
+<article class="voice">
+<small>Blackwell · separate testimony</small>
+<blockquote>“no particular bargain.”</blockquote>
+<p>Blackwell says Gordon told <em>Blackwell</em> he would be paid. He separately says he did not employ Bell for wages.</p>
+</article>
+<article class="voice">
+<small>Robert Bell · printed deposition carrier</small>
+<blockquote>“nor does he expect to get anything for it from any person.”</blockquote>
+<p>The printed carrier attributes an expectation of no compensation and, separately, that Robert went to accommodate them. The preceding promise clause remains pronoun-ambiguous in the surviving OCR; no neighboring witness repairs it here.</p>
+</article>
+</section>
+
+<div class="air">Air.</div>
+
+<section class="return">
+<h2>Return to the work.</h2>
+<div class="line">
+<span>David recommended</span><b>→</b><span>David unavailable</span><b>→</b><span>Robert goes</span><b>→</b><span>treaty-time places</span><b>→</b><span>survey markers</span><b>→</b><span>land numbers</span>
+</div>
+<div class="tools">
+<button data-toggle="bargain-inverse">WHAT EARNS THIS?</button>
+</div>
+<div class="inverse" id="bargain-inverse">
+<h2>What earns this?</h2>
+<p>Each carrier earns its own propositions and internal order. Their placement beside one another is a film construction. Robert’s surviving printed English is mediated carrier language, not recovered exact English speech.</p>
+<p><strong>SAME FIELD OPERATION ≠ ONE RECOVERED CONVERSATION.</strong></p>
+<p><strong>PRINTED ORDER ≠ OATH CHRONOLOGY.</strong></p>
+<p><strong>MEDIATED ENGLISH ≠ RECOVERED EXACT WORDS.</strong></p>
+<p><strong>TEXTUAL ORDER ≠ EVENT-TIME KNOWLEDGE.</strong></p>
+<p>The field work may follow the two compensation states without explaining them into a modern employment category. The carrier does not establish when Robert formed the attributed expectation.</p>
+</div>
+</section>
+
+<section class="held" id="lamplight-state">
+<div>
+<div class="kicker">Lamplight state</div>
+<p>Do not make the asymmetry the conclusion. Let each carrier hold its own propositions; let the field operation continue. Keep the adjacency; refuse the answer. The human knowledge that produces land numbers remains senior to the later administrative representation.</p>
+</div>
+<div class="hand">HAND · LAMPLIGHT<br>ACT · LISTEN / PLACE BESIDE</div>
+</section>
+
+<div class="road"><strong>ROAD HOME</strong><br>FILM JACKET — No particular bargain — Blackwell / Robert compensation seam — working production jacket<br><br>Preserve David Bell and Robert Bell as distinct persons in this event. Do not merge this Robert with another Robert without a carrier.</div>
+</div>
+</div>
+</section>
+
+<div class="footer">Shared language, separate rooms. Held work stays senior. This specimen is a Lamplight visual audition on branch lamplight/beef-bargain-pair-v1; it is not merged or deployed.</div>
+</div>
+
+<script>
+const tabs=[...document.querySelectorAll('.roomnav button')];
+const rooms=[...document.querySelectorAll('.room')];
+function openRoom(id,{scroll=false}={}){
+ const room=document.getElementById(id);
+ const tab=tabs.find(b=>b.dataset.room===id);
+ if(!room||!tab)return;
+ tabs.forEach(b=>b.setAttribute('aria-selected','false'));
+ rooms.forEach(r=>r.classList.remove('active'));
+ tab.setAttribute('aria-selected','true');
+ room.classList.add('active');
+ if(location.hash!==`#${id}`) history.replaceState(null,'',`#${id}`);
+ if(scroll) window.scrollTo({top:0,behavior:'smooth'});
+}
+tabs.forEach(btn=>btn.addEventListener('click',()=>openRoom(btn.dataset.room,{scroll:true})));
+const first=(location.hash||'').slice(1);
+if(first==='beef'||first==='bargain') openRoom(first);
+window.addEventListener('hashchange',()=>{
+ const id=(location.hash||'').slice(1);
+ if(id==='beef'||id==='bargain') openRoom(id);
+});
+document.querySelectorAll('[data-toggle]').forEach(btn=>btn.addEventListener('click',()=>{
+ const el=document.getElementById(btn.dataset.toggle);
+ const open=el.classList.toggle('open');
+ btn.textContent=open?'RETURN':'WHAT EARNS THIS?';
+ if(open) el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}));
+</script>
+</body>
+</html>
