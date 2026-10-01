@@ -35,7 +35,8 @@ const candidates = changedFiles()
   .filter(x => x.publicPath);
 
 const results = [];
-let landed = true;
+let cacheBustedLanded = true;
+let ordinaryFresh = true;
 
 for (const target of candidates) {
   let local;
@@ -46,10 +47,34 @@ for (const target of candidates) {
   }
 
   const localHash = sha256(local);
-  let final = null;
+
+  let ordinaryStatus = null;
+  let ordinaryBody = "";
+  let ordinaryError = null;
+  try {
+    const ordinaryResponse = await fetch(base + target.publicPath, {
+      redirect: "follow",
+      headers: {
+        "user-agent": "Earthly-Hands-Fast-Public-Witness/1.1"
+      }
+    });
+    ordinaryStatus = ordinaryResponse.status;
+    ordinaryBody = await ordinaryResponse.text();
+  } catch (err) {
+    ordinaryError = String(err);
+  }
+
+  const ordinaryHash = ordinaryBody ? sha256(ordinaryBody) : null;
+  const ordinaryMatches = ordinaryStatus === 200 && ordinaryHash === localHash;
+  if (!ordinaryMatches) ordinaryFresh = false;
+
+  let busted = null;
 
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-    let status = null, body = "", error = null;
+    let status = null;
+    let body = "";
+    let error = null;
+
     try {
       const join = target.publicPath.includes("?") ? "&" : "?";
       const response = await fetch(base + target.publicPath + join + "ehwitness=" + encodeURIComponent(head), {
@@ -58,7 +83,7 @@ for (const target of candidates) {
         headers: {
           "cache-control": "no-cache",
           "pragma": "no-cache",
-          "user-agent": "Earthly-Hands-Fast-Public-Witness/1.0"
+          "user-agent": "Earthly-Hands-Fast-Public-Witness/1.1"
         }
       });
       status = response.status;
@@ -69,15 +94,42 @@ for (const target of candidates) {
 
     const publicHash = body ? sha256(body) : null;
     const matches = status === 200 && publicHash === localHash;
-    final = {attempt, status, matches, local_sha256:localHash, public_sha256:publicHash, error};
+
+    busted = {
+      attempt,
+      status,
+      matches,
+      public_sha256: publicHash,
+      error
+    };
 
     if (matches) break;
     if (attempt < maxAttempts) await sleep(delayMs);
   }
 
-  if (!final?.matches) landed = false;
-  results.push({local_path:target.path, public_path:target.publicPath, ...final});
+  if (!busted?.matches) cacheBustedLanded = false;
+
+  results.push({
+    local_path: target.path,
+    public_path: target.publicPath,
+    local_sha256: localHash,
+    ordinary: {
+      status: ordinaryStatus,
+      matches: ordinaryMatches,
+      public_sha256: ordinaryHash,
+      error: ordinaryError
+    },
+    cache_busted: busted
+  });
 }
+
+const result = candidates.length === 0
+  ? "NO_PUBLIC_FILES"
+  : !cacheBustedLanded
+    ? "STALE"
+    : ordinaryFresh
+      ? "LANDED"
+      : "ORIGIN_CURRENT_ORDINARY_STALE";
 
 const observation = {
   observed_at: new Date().toISOString(),
@@ -85,7 +137,7 @@ const observation = {
   before,
   public_base_url: base,
   changed_public_files: candidates.map(x=>x.path),
-  result: candidates.length === 0 ? "NO_PUBLIC_FILES" : landed ? "LANDED" : "STALE",
+  result,
   files: results
 };
 
@@ -95,16 +147,31 @@ await fs.writeFile("fast-public-observation/observation.json", JSON.stringify(ob
 const lines = [
   "# Fast public witness",
   "",
-  `Result: **${observation.result}**`,
-  `Commit: \`${head}\``,
-  `Observed: ${observation.observed_at}`,
+  "Result: **" + observation.result + "**",
+  "Commit: `" + head + "`",
+  "Observed: " + observation.observed_at,
   "",
   ...(results.length ? [
-    "| Public path | HTTP | Match | Attempts |",
-    "|---|---:|:---:|---:|",
-    ...results.map(r => `| \`${r.public_path}\` | ${r.status ?? "—"} | ${r.matches ? "yes" : "no"} | ${r.attempt ?? "—"} |`)
+    "| Public path | Ordinary HTTP | Ordinary match | Cache-busted HTTP | Cache-busted match | Attempts |",
+    "|---|---:|:---:|---:|:---:|---:|",
+    ...results.map(r =>
+      "| `" + r.public_path + "` | " +
+      (r.ordinary.status ?? "—") + " | " +
+      (r.ordinary.matches ? "yes" : "no") + " | " +
+      (r.cache_busted?.status ?? "—") + " | " +
+      (r.cache_busted?.matches ? "yes" : "no") + " | " +
+      (r.cache_busted?.attempt ?? "—") + " |"
+    )
   ] : ["No public files changed in this commit."])
 ];
+
+if (observation.result === "ORIGIN_CURRENT_ORDINARY_STALE") {
+  lines.push(
+    "",
+    "The cache-busted public response matches source, but the ordinary public URL does not.",
+    "Interpretation: the current deployment is reachable while ordinary delivery remains stale."
+  );
+}
 
 if (process.env.GITHUB_STEP_SUMMARY) {
   await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, lines.join("\n")+"\n");
