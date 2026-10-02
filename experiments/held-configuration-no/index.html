@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#d8cfbd">
+<title>NO — Held Configuration — Earthly Hands</title>
+<style>
+:root{
+  --paper:#d8cfbd;--sheet:#e9e1d2;--ink:#211e18;--muted:#6f675a;--rule:#4c463c;
+  --hair:rgba(33,30,24,.22);--rust:#87573a;--wash:rgba(255,255,255,.17);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:#cfc5b1}
+body{margin:0;color:var(--ink);font:1rem/1.5 var(--serif);background:
+linear-gradient(rgba(33,30,24,.025) 1px,transparent 1px),
+linear-gradient(90deg,rgba(33,30,24,.017) 1px,transparent 1px),var(--paper);
+background-size:30px 30px,30px 30px,auto}
+button,textarea{font:inherit;color:inherit}
+button:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+a{color:inherit;text-underline-offset:.2em}
+.shell{width:min(70rem,calc(100% - 1rem));margin:auto;padding:.5rem 0 2rem}
+.top{min-height:2.5rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;gap:1rem;font:.58rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+.top span{color:var(--muted)}
+.room{margin-top:.5rem;border:1px solid var(--rule);background:var(--sheet);box-shadow:0 12px 36px rgba(45,35,25,.12);min-height:84vh}
+.head{padding:1rem 1.1rem;border-bottom:1px solid var(--rule)}
+.bearing{color:var(--muted);font:.52rem/1.25 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+.head h1{margin:.2rem 0 0;font-size:clamp(2rem,5vw,4.5rem);line-height:.92;font-weight:400;letter-spacing:-.045em}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) 15rem;gap:1rem;padding:clamp(1rem,3vw,2rem)}
+.hold{position:relative;min-height:31rem;border:1px solid var(--rule);background:rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;padding:2rem}
+.knot{text-align:center;max-width:40rem}
+.word{font-size:clamp(5rem,18vw,11rem);line-height:.75;letter-spacing:-.06em}
+.question{margin:2rem auto 0;font-size:clamp(1.25rem,2.7vw,2rem);line-height:1.1;max-width:20ch}
+.finger{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);pointer-events:none}
+.finger::before{content:"";display:block;width:1px;height:5rem;background:var(--rust);margin:auto}
+.finger::after{content:"▲";display:block;color:var(--rust);font:.8rem/1 var(--mono);margin-top:.2rem}
+.finger span{display:block;margin-top:.35rem;color:var(--rust);font:.52rem/1.25 var(--mono);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.ops{border-left:1px solid var(--rule);padding-left:1rem}
+.ops h2{margin:0 0 .65rem;font-size:1.1rem;font-weight:400}
+.op{display:block;width:100%;border:0;border-top:1px solid var(--hair);background:transparent;padding:.72rem .1rem;text-align:left;cursor:pointer}
+.op:last-of-type{border-bottom:1px solid var(--hair)}
+.op:hover{background:var(--wash)}
+.op strong{display:block;font:.56rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.op span{display:block;margin-top:.22rem;color:var(--muted);font-size:.82rem}
+.state{margin:0 1rem 1rem;border-top:1px solid var(--rule);padding:1rem 0 0;display:none}
+.state.open{display:block}
+.state-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.state h2{margin:0;font-size:1.65rem;font-weight:400}
+.state .kind{color:var(--rust);font:.52rem/1.2 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+.state p{max-width:50rem}
+.state .brake{color:var(--muted);font:.78rem/1.45 var(--mono)}
+.return{border:0;border-bottom:1px solid var(--rust);background:transparent;padding:.12rem 0;cursor:pointer;font:.55rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.note{margin-top:1rem;border-top:1px solid var(--hair);padding-top:1rem}
+.note textarea{width:100%;min-height:8rem;border:1px solid var(--hair);background:rgba(255,255,255,.1);padding:.7rem;resize:vertical}
+.note-actions{display:flex;gap:.5rem;align-items:center;margin-top:.5rem}
+.note-actions button{border:1px solid var(--hair);background:transparent;padding:.42rem .55rem;cursor:pointer;font:.5rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.saved{color:var(--muted);font:.68rem/1.3 var(--mono)}
+.foot{padding:1rem;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font:.58rem/1.4 var(--mono)}
+@media(max-width:48rem){
+ .stage{grid-template-columns:1fr;padding:.8rem}
+ .ops{border-left:0;border-top:1px solid var(--rule);padding:1rem 0 0}
+ .hold{min-height:26rem;padding:1rem}
+ .finger{top:57%}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><strong>Earthly Hands Workshop</strong><span>held configuration · specimen 01</span></header>
+<main class="room">
+<header class="head">
+  <div class="bearing">meet me where my finger is · provisional form</div>
+  <h1>The work holds still. Attention can move.</h1>
+</header>
+
+<section class="stage" aria-label="Held configuration">
+  <div class="hold" id="hold">
+    <div class="knot">
+      <div class="word">NO</div>
+      <p class="question">What remained possible after this?</p>
+    </div>
+    <div class="finger" aria-hidden="true"><span>Quire’s finger</span></div>
+  </div>
+
+  <aside class="ops" aria-label="Lawful operations">
+    <h2>Touch the held state.</h2>
+    <button class="op" data-state="down"><strong>Open downward</strong><span>What lower acts or carriers support this NO?</span></button>
+    <button class="op" data-state="road"><strong>Test road out</strong><span>Was there a source-visible path after refusal?</span></button>
+    <button class="op" data-state="key"><strong>Test key</strong><span>Who controlled what the road required?</span></button>
+    <button class="op" data-state="invert"><strong>Invert</strong><span>Start from the answer and open its construction.</span></button>
+    <button class="op" data-state="join"><strong>Attempt join</strong><span>Try a relation; permit refusal.</span></button>
+    <button class="op" data-state="source"><strong>Source</strong><span>Ask what governs this held state.</span></button>
+    <button class="op" data-state="quire"><strong>Quire’s view</strong><span>Receive another camera without inheriting it.</span></button>
+    <button class="op" data-state="ten"><strong>Ten’s view</strong><span>Leave your own perception attributable and separate.</span></button>
+  </aside>
+</section>
+
+<section class="state" id="state" aria-live="polite">
+  <div class="state-head"><span class="kind" id="state-kind"></span><button class="return" id="return">Return to NO</button></div>
+  <h2 id="state-title"></h2>
+  <div id="state-body"></div>
+</section>
+
+<footer class="foot">
+  <span>SPECIMEN ≠ SYSTEM · SHARED OBJECT ≠ SHARED CAMERA</span>
+  <span><a href="/experiments/ten-folio/#projects">Folio Box</a> · <a href="/experiments/shared-country/">Shared Country</a></span>
+</footer>
+</main>
+</div>
+<script>
+const states={
+ down:{kind:"OPEN DOWNWARD",title:"The answer is not the bottom.",body:`
+   <p>This operation should eventually expose the lower acts, carriers, propositions, and document jobs that make the held <strong>NO</strong> possible.</p>
+   <p class="brake">Prototype limit: no historical source body has been attached to this specimen state yet. The form may open; the evidence must still be earned.</p>`},
+ road:{kind:"TEST ROAD OUT",title:"A door can exist and still not be open.",body:`
+   <p>Ask whether a source-visible recovery path existed after refusal.</p>
+   <p class="brake">ROAD OUT ≠ OPEN ROAD. A route is not drawn merely because the mind can imagine one.</p>`},
+ key:{kind:"TEST KEY",title:"Who controlled the next lawful act?",body:`
+   <p>Hold proof, witness, office, paper, discretion, or procedural gate separately. A path may exist while another actor controls what is required to use it.</p>
+   <p class="brake">A DOOR CAN EXIST AND STILL NEED SOMEONE ELSE’S KEY.</p>`},
+ invert:{kind:"INVERT",title:"Open the answer backward.",body:`
+   <p>Instead of asking what became of a proposition, begin with the compact administrative answer and ask what lower acts and carriers had to exist before this state became possible.</p>
+   <p class="brake">INVERSION REVEALS LATENT GRAMMAR. It does not overturn the answer.</p>`},
+ join:{kind:"REFUSAL · TYPED RESULT",title:"JOIN REFUSED",body:`
+   <p><strong>Attempted verb:</strong> CONNECT</p>
+   <p><strong>Objects:</strong> held NO → imagined road</p>
+   <p><strong>Why refused:</strong> this specimen carries no source-visible relation that earns the line.</p>
+   <p><strong>Weaker relation still standing:</strong> the question remains open and examinable.</p>
+   <p><strong>What could change the result:</strong> a governing source that carries the missing relation.</p>
+   <p class="brake">Blankness is an output. REFUSAL REVEALS THE PRECISION CEILING.</p>`},
+ source:{kind:"SOURCE",title:"Source governs. The specimen does not.",body:`
+   <p>This first web room is testing the hold and return grammar. It does not yet claim a historical source return for <strong>NO</strong>.</p>
+   <p><a href="https://docs.google.com/document/d/15lbiN6DqdDA-G0W6iN2WyyFeyY9qLstNMacc5aAeC3I/edit?usp=drivesdk">Open the original Workshop NO specimen</a></p>
+   <p class="brake">When a historical source is attached, this aperture should open that governing body and return here without losing state.</p>`},
+ quire:{kind:"QUIRE’S VIEW",title:"What Quire is holding here.",body:`
+   <p>Quire’s local question is not simply why the answer was NO. It is: <strong>what remained possible after this?</strong></p>
+   <p>The point is not to meet Quire in a Quire room. The work introduces the companion. Quire’s view remains attributable and does not become source truth.</p>
+   <p class="brake">THE WORK INTRODUCES THE COMPANION.</p>`},
+ ten:{kind:"TEN’S VIEW",title:"What are you seeing here?",body:`
+   <p>Your view can remain beside Quire’s without becoming the same view.</p>
+   <div class="note">
+     <textarea id="ten-note" placeholder="What do you see at NO? This stays in this browser."></textarea>
+     <div class="note-actions"><button id="save-note">Hold this view</button><span class="saved" id="saved"></span></div>
+   </div>
+   <p class="brake">THE FORM CAN BE SHARED WITHOUT THE VIEW BEING SHARED.</p>`}
+};
+const state=document.getElementById("state");
+const kind=document.getElementById("state-kind");
+const title=document.getElementById("state-title");
+const body=document.getElementById("state-body");
+function openState(key){
+ const s=states[key]; if(!s)return;
+ kind.textContent=s.kind; title.textContent=s.title; body.innerHTML=s.body; state.classList.add("open");
+ state.scrollIntoView({behavior:"smooth",block:"start"});
+ if(key==="ten"){
+   const input=document.getElementById("ten-note"), saved=document.getElementById("saved");
+   input.value=localStorage.getItem("eh-held-no-ten-view")||"";
+   document.getElementById("save-note").onclick=()=>{localStorage.setItem("eh-held-no-ten-view",input.value);saved.textContent="held on this browser";};
+ }
+}
+document.querySelectorAll("[data-state]").forEach(b=>b.addEventListener("click",()=>openState(b.dataset.state)));
+document.getElementById("return").addEventListener("click",()=>{state.classList.remove("open");document.getElementById("hold").scrollIntoView({behavior:"smooth",block:"center"});});
+</script>
+</body>
+</html>
