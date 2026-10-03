@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">\n<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">\n<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Follow the Total — Charity Hall account</title>
+<style>
+:root{--paper:#f2eee4;--ink:#171713;--quiet:#6c675c;--line:#c8c0af;--card:#fffdf7;--mark:#ded5c3;--dark:#24231f}
+*{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.45}
+button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #b35b24;outline-offset:3px}
+main{max-width:1180px;margin:0 auto;padding:28px 18px 72px} .top{display:grid;grid-template-columns:1.5fr .8fr;gap:28px;align-items:end;margin-bottom:22px}
+h1{font-size:clamp(38px,7vw,86px);line-height:.9;margin:0;letter-spacing:-.035em;font-weight:500} .dek{font-size:18px;max-width:34rem;margin:0;color:var(--quiet)}
+.rule{border-top:1px solid var(--ink);margin:22px 0} .object-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:24px;align-items:start}
+.viewer{background:#161512;padding:12px;border-radius:4px;position:sticky;top:12px} .viewer img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;background:#111;cursor:zoom-in}
+.viewer img.zoom{max-height:none;cursor:zoom-out} .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px} button{font:inherit;border:1px solid #6f6b62;background:#f8f4e9;color:#191814;padding:9px 12px;border-radius:999px;cursor:pointer} button.active{background:#22211d;color:#fff;border-color:#22211d}
+.caption{color:#cbc5b9;font-size:13px;margin:9px 2px 0} .panel{background:rgba(255,255,255,.35);border-top:1px solid var(--ink);padding-top:14px}
+.kicker{text-transform:uppercase;letter-spacing:.13em;font-size:11px;color:var(--quiet)} h2{font-size:34px;font-weight:500;line-height:1.03;margin:6px 0 15px} h3{font-size:20px;font-weight:500;margin:22px 0 7px}
+.total{font-size:42px;letter-spacing:-.02em;margin:6px 0 12px} .step-controls{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 12px}.step-controls button{font-size:13px;padding:7px 10px}.route{border-top:1px solid var(--line);padding:14px 0} .route strong{font-size:21px;font-weight:500} .math{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:16px;line-height:1.55;margin-top:8px;white-space:normal;overflow-wrap:anywhere}
+.delta{background:var(--card);border:1px solid var(--line);padding:14px;margin:14px 0} .delta p{margin:0 0 8px} .delta p:last-child{margin-bottom:0}
+.note{font-size:15px;color:#36332c} .open{border-left:3px solid var(--ink);padding-left:13px;margin:18px 0} details{border-top:1px solid var(--line);padding:12px 0} summary{cursor:pointer;font-weight:600}
+.comprehension{border:1px solid var(--ink);background:var(--card);margin:24px 0 4px;padding:16px}.comprehension h3{margin-top:0}.choices{display:grid;gap:8px}.choices button{border-radius:4px;text-align:left}.choices button.correct{background:#203c28;color:#fff;border-color:#203c28}.choices button.wrong{background:#704039;color:#fff;border-color:#704039}.feedback{min-height:3em;margin:12px 0 0;font-size:15px}
+.roads{border-top:1px solid var(--ink);margin-top:22px;padding-top:14px}.roads ul{margin:8px 0 0;padding-left:20px}.roads a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:3px}
+.footer{margin-top:48px;border-top:1px solid var(--ink);padding-top:13px;display:grid;grid-template-columns:1fr 1fr;gap:20px;font-size:13px;color:var(--quiet)}
+@media(max-width:800px){.top,.object-grid,.footer{grid-template-columns:1fr} .viewer{position:relative;top:0} h1{font-size:52px}.controls button,.step-controls button,.choices button{flex:1 1 auto;min-height:44px;touch-action:manipulation}.math{font-size:15px}}
+@media print{body{background:#fff} button{display:none} .viewer{position:relative;background:#fff} .viewer img{max-height:none} .caption{color:#333}}
+</style>
+</head>
+<body>
+<main>
+<section class="top">
+<div><div class="kicker">Private working return · not for publication</div><h1>Follow the total.</h1></div>
+<p class="dek">One folded Charity Hall account reaches the same carried figure by two different accounting routes. This view lets the paper show the change before interpretation.</p>
+</section>
+<div class="rule"></div>
+<section class="object-grid">
+<div class="viewer">
+<img id="sourceImage" src="source-1.png" alt="Back face of folded Charity Hall contribution account">
+<div class="controls">
+<button type="button" data-face="front" aria-controls="sourceImage" aria-pressed="false">Front</button><button type="button" class="active" data-face="back" aria-controls="sourceImage" aria-pressed="true">Back</button><button type="button" data-face="detail" aria-controls="sourceImage" aria-pressed="false">Close-up</button><button type="button" id="zoom" aria-controls="sourceImage" aria-pressed="false">Zoom</button>
+</div>
+<p id="caption" class="caption">Back face — the two routes to 142,12 1/2 live here.</p>
+</div>
+<div class="panel">
+<div class="kicker">First operation</div>
+<h2>Hold one total. Watch the categories move underneath it.</h2>
+<div class="step-controls" aria-label="Follow the total steps"><button type="button" data-step="held">Hold total</button><button type="button" data-step="route-a">Route A</button><button type="button" data-step="route-b">Route B</button><button type="button" data-step="changed">What moved?</button></div>
+<div class="total" id="held">142,12 1/2</div>
+<p class="note">Source-facing monetary notation retained. The historical accounting labels are not modernized here.</p>
+<div class="route" id="route-a"><strong>Route A</strong><div class="math">107,50 + 34,62 1/2 = 142,12 1/2</div><p class="note">The added amount sits on a meeting-labeled line. The exact meeting wording is not yet secure.</p></div>
+<div class="route" id="route-b"><strong>Route B</strong><div class="math">107,15 + 31,81 1/4 + 3,16 1/4 = 142,12 1/2</div><p class="note"><em>Tennessee</em>, <em>Illinois</em>, and <em>M.</em> are visible on the sheet; their accounting roles are not settled.</p></div>
+<div class="delta" id="changed">
+<p><strong>What changed?</strong></p>
+<p>The base drops from <strong>107,50</strong> to <strong>107,15</strong>: a difference of <strong>0,35</strong>.</p>
+<p>The added grouping increases by that same <strong>0,35</strong>.</p>
+<p><strong>The total does not move. The classification does.</strong></p>
+</div>
+<div class="open">
+<h3>The paper supplies a bridge.</h3>
+<p>The lower block begins with a source-facing reading approximately “Of the Above 107, 2/4.” A following line reads strongly as “Value Communicated M. $107-15.” Because 2/4 equals one-half, the paper itself places <strong>107,50</strong> beside <strong>107,15</strong>.</p>
+</div>
+<details open><summary>So what does Tennessee mean? What does Illinois mean?</summary><p>They are visibly separate accounting labels in Route B. Their exact institutional job is still open. This prototype does not turn them into geography, donor origin, or jurisdiction without another source earning that move.</p></details>
+<details><summary>What is “M.”?</summary><p>It recurs immediately before dollar amounts and belongs to the accounting notation. Its expansion remains open.</p></details>
+<details><summary>Why show the front face at all?</summary><p>The front carries an accounting-method note beginning “When I made out this report…” and appears to say that the value of a collect-/collection category was handled separately. That may explain the reclassification visible on the back, but the exact wording is not secure enough to close the question. Use the Front and Close-up buttons to inspect it.</p></details>
+<details><summary>Why is the front note transcribed cautiously?</summary><p>An earlier reading treated it as “made a mistake.” Enlargement did not support that wording, so it was withdrawn. The present reading keeps the secure beginning and leaves the remaining words open.</p></details>
+<details><summary>What can a person do next?</summary><p>Return to the image. Find the carried total, then find the two bases. Ask what category moved, what stayed fixed, and which words on the sheet could explain that movement. Only then open neighboring sources.</p></details>
+<section class="comprehension" aria-labelledby="comprehension-title">
+<h3 id="comprehension-title">Before you leave the sheet</h3>
+<p>Which statement is supported by what you just saw?</p>
+<div class="choices" role="group" aria-label="Comprehension check">
+<button type="button" data-answer="wrong-total" aria-controls="answerFeedback" aria-pressed="false">The total changed.</button>
+<button type="button" data-answer="right" aria-controls="answerFeedback" aria-pressed="false">The categories changed; the total stayed fixed.</button>
+<button type="button" data-answer="wrong-meaning" aria-controls="answerFeedback" aria-pressed="false">Tennessee and Illinois are now fully explained.</button>
+</div>
+<p id="answerFeedback" class="feedback" aria-live="polite"></p>
+</section>
+<section class="roads">
+<h3>Where each claim comes from</h3>
+<p class="note">The images above are embedded so the core return travels as one file. These links return to the held source representations and the notes governing the reading.</p>
+<ul>
+<li><a href="https://drive.google.com/file/d/1CHrXenvSfIPSn3qNkdiasiunIXm7CxKB/view">Front source capture</a></li>
+<li><a href="https://drive.google.com/file/d/13IGczfGA3kykG2hEPOIEsG4BT0rfu9WV/view">Back source capture</a></li>
+<li><a href="https://drive.google.com/file/d/1O-v8Go8F-V05MHTO33CInfdhtRKDCS8n/view">Front close-up source capture</a></li>
+<li><a href="https://drive.google.com/file/d/1df-MvojoYGNGrZiooE68DIaWuo8mwSg-XUlg87SkJfo/view">Governing source jacket</a></li>
+<li><a href="https://drive.google.com/file/d/1tgGq95rwju_uNcaJjhRXzF7H7hFA0tVx/view">Follow the Total working instrument</a></li>
+</ul>
+</section>
+</div>
+</section>
+<footer class="footer">
+<div><strong>Standing</strong><br>Private working return. Not publication authority. The historical sheet is the evidence; this interface is a guide.</div>
+<div><strong>Custody / limit</strong><br>Historical source material associated with Chickasaw Nation archival custody. This prototype does not claim authorship of the folded account and does not imply public-release permission.</div>
+</footer>
+</main>
+<script>
+const imgs={front:'source-2.png',back:'source-1.png',detail:'source-3.png'};
+const caps={front:'Front face — contributions, cloth notation, subtotal, and the accounting-method note.',back:'Back face — the two routes to 142,12 1/2 live here.',detail:'Close-up — higher-resolution region of the front face, crossing the fold; not a separate leaf.'};
+const image=document.getElementById('sourceImage'), caption=document.getElementById('caption');
+document.querySelectorAll('[data-face]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-face]').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});b.classList.add('active');b.setAttribute('aria-pressed','true');image.src=imgs[b.dataset.face];caption.textContent=caps[b.dataset.face];image.alt=caps[b.dataset.face];}));
+const zoomButton=document.getElementById('zoom');
+function toggleZoom(){image.classList.toggle('zoom');zoomButton.setAttribute('aria-pressed',image.classList.contains('zoom')?'true':'false')}
+zoomButton.addEventListener('click',toggleZoom); image.addEventListener('click',toggleZoom);
+document.querySelectorAll('[data-step]').forEach(b=>b.addEventListener('click',()=>document.getElementById(b.dataset.step).scrollIntoView({block:'start'})));
+const answerFeedback=document.getElementById('answerFeedback');
+const answerText={
+  right:'Yes. Both routes end at 142,12 1/2. The sheet shows a change in classification, not a change in total.',
+  'wrong-total':'Look again at the last number in both routes. Each ends at 142,12 1/2.',
+  'wrong-meaning':'Not yet. Those labels are visible, but their historical accounting roles remain unresolved.'
+};
+document.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('[data-answer]').forEach(x=>{x.classList.remove('correct','wrong');x.setAttribute('aria-pressed','false')});
+  b.classList.add(b.dataset.answer==='right'?'correct':'wrong');
+  b.setAttribute('aria-pressed','true');
+  answerFeedback.textContent=answerText[b.dataset.answer];
+}));
+</script>
+</body></html>
