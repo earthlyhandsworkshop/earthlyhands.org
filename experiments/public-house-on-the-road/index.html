@@ -189,7 +189,7 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     const nextSourceOpen = !document.getElementById('next-source').hidden;
     const compareOpen = !document.getElementById('compare').hidden;
     if(transactionOpen && whereOpen) compareReady = true;
-    if(transactionOpen || whereOpen || nextSourceOpen || compareOpen) handReady = true;
+    if(whereOpen || nextSourceOpen || compareOpen) handReady = true;
     nextSourceButton.hidden = !whereOpen && !nextSourceOpen;
     compareButton.hidden = !compareReady;
     ravelButton.hidden = !handReady;
