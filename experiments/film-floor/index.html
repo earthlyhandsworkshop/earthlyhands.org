@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#151616">
+<title>Two Families, One Robert — Film Floor</title>
+<style>
+:root{
+ --bg:#151616;--panel:#1d1e1d;--ink:#f0ece2;--muted:#aaa69e;--rule:#454743;--warm:#cbb99c;
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg);scroll-behavior:auto}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.4 var(--serif)}
+a{color:inherit}
+.shell{width:min(76rem,calc(100% - 1rem));margin:auto;padding:max(.55rem,env(safe-area-inset-top)) 0 max(2rem,env(safe-area-inset-bottom))}
+.top{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:.6rem 0 .8rem;border-bottom:1px solid var(--rule);font:.66rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.top a{text-underline-offset:.2em}
+.intro{padding:1.45rem 0 1rem}
+.kicker{margin:0 0 .35rem;color:var(--warm);font:.63rem/1.25 var(--mono);letter-spacing:.09em;text-transform:uppercase}
+h1{margin:0;max-width:48rem;font-size:clamp(3rem,12vw,7rem);font-weight:400;line-height:.82;letter-spacing:-.055em}
+.lede{max-width:48rem;margin:1rem 0 .55rem;font-size:1.05rem;color:var(--muted)}
+.brake{margin:.9rem 0 0;padding:.65rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);font:.62rem/1.35 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.floor-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;margin:1.25rem 0 .55rem}
+.floor-head h2{margin:0;font-size:1.8rem;font-weight:400}
+.floor-head p{margin:0;color:var(--muted);font:.62rem/1.35 var(--mono);text-align:right;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.52rem}
+.card{min-height:10.25rem;border:1px solid var(--rule);text-decoration:none;background:var(--panel);display:grid;grid-template-columns:6.2rem minmax(0,1fr);position:relative;overflow:hidden}
+.card:focus-visible{outline:2px solid var(--warm);outline-offset:2px}
+.card:hover{border-color:#77796f}
+.thumb{position:relative;border-right:1px solid var(--rule);min-height:100%;overflow:hidden;background:#111}
+.copy{padding:.72rem .7rem .68rem;display:flex;flex-direction:column;min-width:0}
+.no{font:.58rem/1.1 var(--mono);letter-spacing:.08em;color:var(--warm)}
+.state{margin-top:.22rem;font:.52rem/1.2 var(--mono);letter-spacing:.055em;text-transform:uppercase;color:var(--muted)}
+.card h3{margin:.42rem 0 .2rem;font-size:1.18rem;font-weight:400;line-height:1.03}
+.card p{margin:.2rem 0 0;color:var(--muted);font-size:.83rem;line-height:1.28}
+.enter{margin-top:auto;padding-top:.55rem;font:.55rem/1.1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--warm)}
+/* abstract film handles: production graphics, not source images */
+.lines:before,.lines:after{content:"";position:absolute;left:13%;right:13%;height:1px;background:#6c6e68;top:25%;box-shadow:0 1.15rem 0 #6c6e68,0 2.3rem 0 #6c6e68,0 3.45rem 0 #6c6e68,0 4.6rem 0 #6c6e68}
+.lines:after{left:25%;right:24%;top:33%;opacity:.55}
+.refused:after{content:"REFUSED";position:absolute;left:50%;top:58%;transform:translate(-50%,-50%) rotate(-8deg);border:2px solid #8a8b83;padding:.2rem .32rem;font:700 .75rem/1 var(--mono);letter-spacing:.06em;color:#b9b8af}
+.name:before{content:"ROBIN";position:absolute;left:10%;top:27%;font:1rem/1 var(--mono);color:#d9d4c8}
+.name:after{content:"ROBERT";position:absolute;right:8%;bottom:25%;font:.82rem/1 var(--mono);color:#777a73;text-decoration:line-through}
+.look:before{content:"I HAVE\A NEVER\A LOOKED";white-space:pre;position:absolute;left:12%;top:15%;font:1rem/1.05 var(--serif);color:#ded9ce}
+.article:after{content:"XIV";position:absolute;inset:0;display:grid;place-items:center;font:4rem/1 var(--serif);color:#bbb5a8}
+.ancestor:before{content:"?";position:absolute;inset:0;display:grid;place-items:center;font:5rem/1 var(--serif);color:#aaa69e}
+.field:before{content:"";position:absolute;left:15%;right:15%;top:20%;bottom:20%;border:1px solid #5d605a;transform:skew(-8deg)}
+.field:after{content:"NO PARTICULAR\A BARGAIN";white-space:pre;position:absolute;left:17%;bottom:20%;font:.65rem/1.05 var(--mono);letter-spacing:.04em;color:#c9c2b4}
+.book:before{content:"";position:absolute;left:18%;right:18%;top:19%;bottom:18%;border:1px solid #787a73;background:#1b1c1b;box-shadow:8px 8px 0 #101110}
+.book:after{content:"";position:absolute;left:50%;top:19%;bottom:18%;border-left:1px solid #5e615b;box-shadow:-1.9rem 3rem 0 -1px #a7a297,2.2rem 4.4rem 0 -1px #a7a297}
+.interrupt:before{content:"Q / A\A Q / A\A ————\A COMMISSION";white-space:pre;position:absolute;left:14%;top:18%;font:.74rem/1.4 var(--mono);color:#bbb7ac}
+.notSame:after{content:"NOT SAME";position:absolute;inset:0;display:grid;place-items:center;font:700 .82rem/1 var(--mono);letter-spacing:.08em;color:#c3bbaa;transform:rotate(-8deg)}
+.same:after{content:"SAME";position:absolute;inset:0;display:grid;place-items:center;font:700 1rem/1 var(--mono);letter-spacing:.11em;color:#c3bbaa;transform:rotate(6deg)}
+.motion:before{content:"MOTION →";position:absolute;left:10%;top:25%;font:.72rem/1 var(--mono);color:#c9c2b4}
+.motion:after{content:"RECORD ǁ";position:absolute;right:10%;bottom:28%;font:.72rem/1 var(--mono);color:#878982}
+.hold{margin-top:1.2rem;border-top:1px solid var(--rule);padding-top:.8rem;color:var(--muted);font:.62rem/1.4 var(--mono);text-transform:uppercase;letter-spacing:.04em}
+@media(max-width:48rem){
+ .shell{width:min(100% - .7rem,76rem)}
+ .intro{padding-top:1rem}
+ h1{font-size:clamp(2.7rem,14vw,4.7rem)}
+ .floor-head{align-items:start}
+ .floor-head p{max-width:12rem}
+ .grid{grid-template-columns:1fr}
+ .card{min-height:8.6rem;grid-template-columns:5.4rem minmax(0,1fr)}
+ .card h3{font-size:1.12rem}
+}
+@media(max-width:25rem){
+ .top{font-size:.58rem}
+ .card{grid-template-columns:4.8rem minmax(0,1fr)}
+ .card p{font-size:.78rem}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><strong>Earthly Hands · Film</strong><a href="/experiments/ten-folio/">Folio</a></header>
+<section class="intro">
+<p class="kicker">Two Families, One Robert · feature in assembly</p>
+<h1>See the film.<br>Touch a scene.</h1>
+<p class="lede">This is the working film floor: a phone-sized view of the feature as it exists now. Tap any body to go deeper, then return here without having to remember the Workshop around it.</p>
+<p class="brake">Working editorial order — not historical chronology · adjacency is not a historical relation · source voice and administrative voice stay attached to their makers.</p>
+</section>
+
+<div class="floor-head"><h2>Working order</h2><p>unfinished on purpose<br>breadth before gloss</p></div>
+<main class="grid" id="film-grid">
+<a class="card remember" href="/experiments/ten-folio/#mary"><div class="thumb lines refused" aria-hidden="true"></div><div class="copy"><span class="no">01</span><span class="state">hearing · witness</span><h3>Mary Caroline Atkinson</h3><p>A person enters before the administrative machine closes around her.</p><span class="enter">Enter scene</span></div></a>
+<a class="card remember" href="/experiments/william-never-looked/"><div class="thumb look" aria-hidden="true"></div><div class="copy"><span class="no">02</span><span class="state">hearing · witness</span><h3>William D. Bell</h3><p>The questions separate what he has seen, what he has heard, and what he does not know.</p><span class="enter">Enter scene</span></div></a>
+<a class="card remember" href="/experiments/hugh-article-fourteen-enters/"><div class="thumb article" aria-hidden="true"></div><div class="copy"><span class="no">03</span><span class="state">hearing · claim frame</span><h3>Hugh G. Bell</h3><p>Article Fourteen enters through Commission language; Hugh's own knowledge remains bounded.</p><span class="enter">Enter scene</span></div></a>
+<a class="card remember" href="/experiments/jane-before-father-name/"><div class="thumb name" aria-hidden="true"></div><div class="copy"><span class="no">04</span><span class="state">hearing · witness</span><h3>Jane Bell</h3><p>Jane arrives as a person. Then the father-name question reaches Robin / Robert.</p><span class="enter">Enter scene</span></div></a>
+<a class="card remember" href="/experiments/sarah-nearest-ancestor/"><div class="thumb ancestor" aria-hidden="true"></div><div class="copy"><span class="no">05</span><span class="state">hearing · witness</span><h3>Sarah Carroll</h3><p>A nearest-ancestor problem appears inside the examination and remains unresolved.</p><span class="enter">Enter scene</span></div></a>
+<a class="card remember" href="/experiments/lamplight-beef-bargain/bargain.html"><div class="thumb field" aria-hidden="true"></div><div class="copy"><span class="no">06</span><span class="state">field operation · testimony</span><h3>No particular bargain</h3><p>Blackwell and Robert carry different compensation states while the land work continues.</p><span class="enter">Enter room</span></div></a>
+<a class="card remember" href="/experiments/the-book-is-physical/"><div class="thumb book" aria-hidden="true"></div><div class="copy"><span class="no">07</span><span class="state">object · three witness accounts</span><h3>The book is physical</h3><p>Paper, stitching, handling, weather, and custody make “the record” materially vulnerable.</p><span class="enter">Enter board</span></div></a>
+<a class="card remember" href="/experiments/dibbin-marris-paper-interrupts/"><div class="thumb interrupt" aria-hidden="true"></div><div class="copy"><span class="no">08</span><span class="state">hearing · interruption</span><h3>Dibbin Marris</h3><p>Question and answer are interrupted by a Commission statement and a described paper.</p><span class="enter">Enter scene</span></div></a>
+<a class="card remember" href="/experiments/1902-not-identical/"><div class="thumb notSame" aria-hidden="true"></div><div class="copy"><span class="no">09</span><span class="state">administrative act · 1902</span><h3>“not the identical Robert Bell”</h3><p>The Commission makes an identity exclusion in MCR 879. The verb stays with the Commission.</p><span class="enter">Enter act</span></div></a>
+<a class="card remember" href="/experiments/1904-identical/"><div class="thumb same" aria-hidden="true"></div><div class="copy"><span class="no">10</span><span class="state">administrative act · 1904</span><h3>“identical”</h3><p>A different Commission proceeding makes an identity finding. Comparison is not identity merger.</p><span class="enter">Enter act</span></div></a>
+<a class="card remember" href="/experiments/1907-paper-circulation/"><div class="thumb motion" aria-hidden="true"></div><div class="copy"><span class="no">11</span><span class="state">administrative circulation · closing movement</span><h3>The motion travels. The record does not.</h3><p>Rehearing motion, withheld record, returned papers, and named notice enclosures stay distinct.</p><span class="enter">Enter movement</span></div></a>
+</main>
+<p class="hold">STAND WHERE I STOOD · this page remembers your last floor position in this browser tab. The order is for editorial testing and can move without changing the historical record.</p>
+</div>
+<script>
+(()=> {
+ const KEY="earthly-hands-film-floor-y-v1";
+ const restore=()=>{const y=Number(sessionStorage.getItem(KEY)||0);if(Number.isFinite(y)&&y>0)requestAnimationFrame(()=>scrollTo(0,y));};
+ document.querySelectorAll(".remember").forEach(a=>a.addEventListener("click",()=>sessionStorage.setItem(KEY,String(scrollY))));
+ addEventListener("pagehide",()=>sessionStorage.setItem(KEY,String(scrollY)));
+ addEventListener("pageshow",restore,{once:true});
+})();
+</script>
+</body>
+</html>
