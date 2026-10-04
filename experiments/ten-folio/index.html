@@ -114,6 +114,20 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 .game-card p{margin:.28rem 0 0;color:var(--muted);font-size:.88rem}
 .game-card small{display:block;margin-top:.3rem;color:var(--rust);font:.45rem/1.2 var(--mono)}
 
+
+.film-floor{margin:0 0 1rem}
+.film-floor-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;margin-bottom:.45rem}
+.film-floor-head h3{margin:0;font-size:1.35rem;font-weight:400}
+.film-floor-head p{margin:0;color:var(--muted);font:.48rem/1.25 var(--mono);letter-spacing:.05em;text-transform:uppercase;text-align:right}
+.film-strip{display:flex;gap:.55rem;overflow-x:auto;padding:.12rem .05rem .65rem;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.film-card{appearance:none;display:flex;flex:0 0 15rem;min-height:11rem;flex-direction:column;justify-content:space-between;scroll-snap-align:start;border:1px solid var(--rule);background:rgba(255,255,255,.085);padding:.75rem;text-align:left;color:inherit;text-decoration:none;cursor:pointer}
+.film-card:hover{background:var(--wash)}
+.film-card:focus-visible{outline:2px solid var(--rust);outline-offset:-2px}
+.film-card strong{display:block;font-size:1.2rem;font-weight:400;line-height:1.05}
+.film-card p{margin:.55rem 0 0;color:var(--muted);font-size:.84rem}
+.film-state{display:block;color:var(--rust);font:.45rem/1.25 var(--mono);letter-spacing:.055em;text-transform:uppercase}
+.film-open{cursor:default;border-style:dashed}
+.film-open:hover{background:rgba(255,255,255,.085)}
 @media(max-width:58rem){
  html,body{max-width:100%;overflow-x:hidden}
  .aperture-switch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
@@ -128,6 +142,7 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
  .head{padding:.75rem .7rem .85rem}.head h1{font-size:2.45rem}
  .inner{padding:.8rem .65rem 1.3rem}
  .pulse{grid-template-columns:1fr}
+ .film-floor-head{display:block}.film-floor-head p{text-align:left;margin-top:.25rem}.film-strip{display:grid;grid-template-columns:1fr;overflow:visible;scroll-snap-type:none;padding-bottom:.1rem}.film-card{width:100%;min-height:0;flex-basis:auto;scroll-snap-align:none}
  .note-grid{grid-template-columns:1fr}.held{border-left:0;border-top:1px solid var(--rule)}
  .row{grid-template-columns:1fr;min-width:0}.open{justify-self:start}
  .panel,.inner,.evidence-grid,.evidence-card,.evidence-head,.evidence-body,.witbench,.focusbar{min-width:0;max-width:100%}
@@ -194,6 +209,7 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
  <div class="aperture-switch" aria-label="Folio aperture">
   <button type="button" id="workshop-mode" aria-pressed="true">Workshop folio</button>
   <button type="button" id="game-mode" aria-pressed="false">Shared Country carry</button>
+  <button type="button" id="film-door" class="folio-road">Film</button>
   <a href="/experiments/shared-country/" class="folio-road">Shared Country</a>
   <a href="/grounds/line-commons/" class="folio-road">Enter Workshop</a>
   <a href="/experiments/workshop-view/#ground-15" class="folio-road">15 · Folio Alcove</a>
@@ -215,12 +231,28 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
   <div class="row"><div><h3>Current deep study — Robert Bell joke</h3><span class="meta">full folio · expandable evidence bodies</span><p>Open the whole joke study directly: earlier Robert, handwritten claimant body, typed-list selection question, physical-object observation, 1837 adjudication grammar, and the 1900 approved-location negative.</p></div><button class="open" data-open-joke>Open full study</button></div>
   <div class="row"><div><h3>Private Workshop Recent</h3><span class="meta">current consequence, not just timestamps</span><p>The deeper current-work road when you want the larger field.</p></div><a class="open" href="https://docs.google.com/document/d/14y2tf9HfkyoqM1ncSBddz_L1ObKabUdfmjCq-Fw6mks/edit">Open</a></div>
   <div class="row"><div><h3>Workshop Home</h3><span class="meta">private footing</span><p>The broader private home remains one road down. This box should inherit only what you actually need.</p></div><a class="open" href="https://docs.google.com/document/d/1cm5hUJ_a9M9P5bNJFdGJf81qBKwaF3KejoV_yCo3uYY/edit">Open</a></div>
-  <div class="row"><div><h3>01 — Re-entry</h3><span class="meta">governing practice</span><p>Return without flood. Hear enough of the room to work deeply without going stale.</p></div><a class="open" href="https://docs.google.com/document/d/123yxxcouMaNNByPW5XU1suRHsXN7vwpQcB2UnScvvBI/edit">Open</a></div>
+  <div class="row"><div><h3>01 — Re-entry</h3><span class="meta">governing practice</span><p>Return without flood. Hear enough of the room to work deeply without going stale.</p></div><a class="open" href="https://drive.google.com/file/d/1g-ORdbe7WOdNdcuJcglZtln5KNOOKvkc/view?usp=drivesdk">Open</a></div>
  </div>
 </div></section>
 
 <section class="panel" data-panel="projects"><div class="inner">
  <h2 class="section-title">Projects in reach</h2>
+ <section class="film-floor" aria-label="Current feature scan">
+  <div class="film-floor-head"><h3>Skitter across the film</h3><p>visual availability · not scene order · not chronology · adjacency ≠ relation</p></div>
+  <div class="film-strip">
+   <button class="film-card" type="button" data-open-mary><span><span class="film-state">visual scene · standing</span><strong>Mary Caroline Atkinson</strong><p>A hearing finds its rhythm. Robert Bell lands. Depth stays voluntary.</p></span><span class="open">Show scene</span></button>
+   <a class="film-card" href="/experiments/the-book-is-physical/"><span><span class="film-state">visual board · new</span><strong>The book is physical</strong><p>Holderness. Howell. Byrn. Three witness accounts around one handled record.</p></span><span class="open">Show board</span></a>
+   <a class="film-card" href="/experiments/lamplight-beef-bargain/bargain.html"><span><span class="film-state">visual room · standing</span><strong>No particular bargain</strong><p>Blackwell and Robert. Two compensation states, then back to the field work.</p></span><span class="open">Show room</span></a>
+   <a class="film-card" href="/experiments/dibbin-marris-paper-interrupts/"><span><span class="film-state">visual room · new</span><strong>Dibbin Marris</strong><p>Q/A. Statement by Commission. A described paper enters, then the witness room returns.</p></span><span class="open">Show room</span></a>
+   <a class="film-card" href="/experiments/1907-paper-circulation/"><span><span class="film-state">visual board · new</span><strong>1907 — Paper circulation</strong><p>Motion travels. Record does not. Later paper bodies remain differently named.</p></span><span class="open">Show board</span></a>
+   <a class="film-card" href="/experiments/hugh-article-fourteen-enters/"><span><span class="film-state">visual room · new</span><strong>Hugh G. Bell</strong><p>Article Fourteen enters through Commission voice. The claim frame expands; Hugh's historical knowledge does not.</p></span><span class="open">Show room</span></a>
+   <a class="film-card" href="/experiments/jane-before-father-name/"><span><span class="film-state">visual room · new</span><strong>Jane Bell</strong><p>Name, age, place, recent movement. Only then does the father-name question arrive.</p></span><span class="open">Show room</span></a>
+   <a class="film-card" href="/experiments/william-never-looked/"><span><span class="film-state">visual room · new</span><strong>William D. Bell</strong><p>A claim begins strong. The next questions reveal what William has seen, heard, and does not know.</p></span><span class="open">Show room</span></a>
+   <a class="film-card" href="/experiments/sarah-nearest-ancestor/"><span><span class="film-state">visual room · new</span><strong>Sarah Carroll</strong><p>The examiner catches a nearest-ancestor problem inside Sarah's own answers and leaves it unresolved.</p></span><span class="open">Show room</span></a>
+   <a class="film-card" href="/experiments/1902-not-identical/"><span><span class="film-state">administrative act · new</span><strong>1902 — “not identical”</strong><p>The Commission excludes the applicants’ Robert from the Robert in records it cites. Commission finding; not a Workshop identity conclusion.</p></span><span class="open">Show room</span></a>
+   <a class="film-card" href="/experiments/1904-identical/"><span><span class="film-state">administrative act · new</span><strong>1904 — “identical”</strong><p>The Commission joins the claimant-family Robert to the Robert in records it cites. Administrative finding; not a Workshop identity merge.</p></span><span class="open">Show room</span></a>
+  </div>
+ </section>
  <div class="stack">
   <div class="row"><div><h3>Dawson — Mood Carriage Jacket</h3><span class="meta">source jacket · Small Door current work · live Folio</span><p>Night camp → morning camp as a real test of attributable mood carriage: what the source says, what Small Door feels in it, and what Shared Country or another surface may inherit without strengthening the historical claim.</p></div><a class="open" href="/experiments/mood-carriage-jacket/">Enter jacket</a></div>
   <div class="row"><div><h3>17 — Economic Independence Instrument</h3><span class="meta">work-attached Folio · accepted for use · live specimen</span><p>Hold the economic question, load one body at a time, see current and earlier companion returns, and ask the ground without losing the road back to the larger Folio.</p></div><a class="open" href="/experiments/folio-17-safe/">Open 17 Folio</a></div>
@@ -340,6 +372,7 @@ const views={
 };
 const tabs=[...document.querySelectorAll("[data-view]")],panels=[...document.querySelectorAll("[data-panel]")];
 function show(v){if(!views[v])return;tabs.forEach(b=>b.setAttribute("aria-selected",String(b.dataset.view===v)));panels.forEach(p=>p.classList.toggle("active",p.dataset.panel===v));document.getElementById("bearing").textContent=views[v][0];document.getElementById("title").textContent=views[v][1];history.replaceState(null,"","#"+v);}
+function showFilm(behavior="smooth"){show("projects");history.replaceState(null,"","#film");requestAnimationFrame(()=>document.querySelector(".film-floor")?.scrollIntoView({behavior,block:"start"}));}
 
 const CURRENT_WORK_KEY="earthly-hands-ten-folio-current-work-v1";
 function currentWork(){try{const x=JSON.parse(localStorage.getItem(CURRENT_WORK_KEY)||"null");return x&&typeof x==="object"?x:null}catch(_){return null}}
@@ -404,6 +437,7 @@ function setFolioMode(mode){
 }
 workshopMode?.addEventListener("click",()=>setFolioMode("workshop"));
 gameMode?.addEventListener("click",()=>setFolioMode("game"));
+document.getElementById("film-door")?.addEventListener("click",()=>showFilm("smooth"));
 tabs.forEach(b=>b.onclick=()=>{workshopMode?.setAttribute("aria-pressed","true");gameMode?.setAttribute("aria-pressed","false");show(b.dataset.view)});
 document.addEventListener("keydown",e=>{const door=e.target.closest(".project-door[data-open-mary],.project-door[data-open-bargain]");if(door&&(e.key==="Enter"||e.key===" ")){e.preventDefault();show(door.hasAttribute("data-open-bargain")?"bargain":"mary");}});
 document.addEventListener("click",e=>{
@@ -477,11 +511,11 @@ async function arrange(raw){
   if(x&&views[x.view]){show(x.view);a.textContent=x.reply||"";}else a.textContent=d.reply.slice(0,220);
  }catch(_){a.textContent="The folio could not arrange that thought this turn.";}
 }
-document.getElementById("command").onsubmit=e=>{e.preventDefault();const i=document.getElementById("command-input"),q=i.value.trim();if(!q)return;arrange(q);i.value="";};
-const initial=location.hash.slice(1);if(views[initial])show(initial);
+document.getElementById("command").onsubmit=e=>{e.preventDefault();const i=document.getElementById("command-input"),q=i.value.trim();if(!q)return;const direct=q.toLowerCase();if(["film","movie","feature","scenes"].includes(direct)){showFilm("smooth");document.getElementById("command-answer").textContent="Film floor.";i.value="";return;}arrange(q);i.value="";};
+const initial=location.hash.slice(1);if(initial==="film")showFilm("auto");else if(views[initial])show(initial);
 [...document.body.childNodes].forEach(n=>{if(n.nodeType===3&&/^\\n\s*$/.test(n.nodeValue||""))n.remove();});
 const initialHash=location.hash.slice(1);
-if(initialHash==="game"){setFolioMode("game");}else if(initialHash==="bargain-lamplight"){show("bargain");const work=document.querySelector(".bargain-work"),earns=document.querySelector(".bargain-earns"),note=document.querySelector(".bargain-note");if(work)work.hidden=false;if(earns)earns.hidden=true;if(note)note.hidden=true;requestAnimationFrame(()=>document.querySelector(".bargain-stage")?.scrollIntoView({behavior:"auto",block:"start"}));}else if(views[initialHash]){show(initialHash);}
+if(initialHash==="film"){showFilm("auto");}else if(initialHash==="game"){setFolioMode("game");}else if(initialHash==="bargain-lamplight"){show("bargain");const work=document.querySelector(".bargain-work"),earns=document.querySelector(".bargain-earns"),note=document.querySelector(".bargain-note");if(work)work.hidden=false;if(earns)earns.hidden=true;if(note)note.hidden=true;requestAnimationFrame(()=>document.querySelector(".bargain-stage")?.scrollIntoView({behavior:"auto",block:"start"}));}else if(views[initialHash]){show(initialHash);}
 })();
 </script>
 <script src="/receiving-door.js"></script>
