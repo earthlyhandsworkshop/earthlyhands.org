@@ -209,6 +209,7 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
  <div class="aperture-switch" aria-label="Folio aperture">
   <button type="button" id="workshop-mode" aria-pressed="true">Workshop folio</button>
   <button type="button" id="game-mode" aria-pressed="false">Shared Country carry</button>
+  <button type="button" id="film-door" class="folio-road">Film</button>
   <a href="/experiments/shared-country/" class="folio-road">Shared Country</a>
   <a href="/grounds/line-commons/" class="folio-road">Enter Workshop</a>
   <a href="/experiments/workshop-view/#ground-15" class="folio-road">15 · Folio Alcove</a>
@@ -366,6 +367,7 @@ const views={
 };
 const tabs=[...document.querySelectorAll("[data-view]")],panels=[...document.querySelectorAll("[data-panel]")];
 function show(v){if(!views[v])return;tabs.forEach(b=>b.setAttribute("aria-selected",String(b.dataset.view===v)));panels.forEach(p=>p.classList.toggle("active",p.dataset.panel===v));document.getElementById("bearing").textContent=views[v][0];document.getElementById("title").textContent=views[v][1];history.replaceState(null,"","#"+v);}
+function showFilm(behavior="smooth"){show("projects");history.replaceState(null,"","#film");requestAnimationFrame(()=>document.querySelector(".film-floor")?.scrollIntoView({behavior,block:"start"}));}
 
 const CURRENT_WORK_KEY="earthly-hands-ten-folio-current-work-v1";
 function currentWork(){try{const x=JSON.parse(localStorage.getItem(CURRENT_WORK_KEY)||"null");return x&&typeof x==="object"?x:null}catch(_){return null}}
@@ -430,6 +432,7 @@ function setFolioMode(mode){
 }
 workshopMode?.addEventListener("click",()=>setFolioMode("workshop"));
 gameMode?.addEventListener("click",()=>setFolioMode("game"));
+document.getElementById("film-door")?.addEventListener("click",()=>showFilm("smooth"));
 tabs.forEach(b=>b.onclick=()=>{workshopMode?.setAttribute("aria-pressed","true");gameMode?.setAttribute("aria-pressed","false");show(b.dataset.view)});
 document.addEventListener("keydown",e=>{const door=e.target.closest(".project-door[data-open-mary],.project-door[data-open-bargain]");if(door&&(e.key==="Enter"||e.key===" ")){e.preventDefault();show(door.hasAttribute("data-open-bargain")?"bargain":"mary");}});
 document.addEventListener("click",e=>{
@@ -503,11 +506,11 @@ async function arrange(raw){
   if(x&&views[x.view]){show(x.view);a.textContent=x.reply||"";}else a.textContent=d.reply.slice(0,220);
  }catch(_){a.textContent="The folio could not arrange that thought this turn.";}
 }
-document.getElementById("command").onsubmit=e=>{e.preventDefault();const i=document.getElementById("command-input"),q=i.value.trim();if(!q)return;arrange(q);i.value="";};
-const initial=location.hash.slice(1);if(views[initial])show(initial);
+document.getElementById("command").onsubmit=e=>{e.preventDefault();const i=document.getElementById("command-input"),q=i.value.trim();if(!q)return;const direct=q.toLowerCase();if(["film","movie","feature","scenes"].includes(direct)){showFilm("smooth");document.getElementById("command-answer").textContent="Film floor.";i.value="";return;}arrange(q);i.value="";};
+const initial=location.hash.slice(1);if(initial==="film")showFilm("auto");else if(views[initial])show(initial);
 [...document.body.childNodes].forEach(n=>{if(n.nodeType===3&&/^\\n\s*$/.test(n.nodeValue||""))n.remove();});
 const initialHash=location.hash.slice(1);
-if(initialHash==="game"){setFolioMode("game");}else if(initialHash==="bargain-lamplight"){show("bargain");const work=document.querySelector(".bargain-work"),earns=document.querySelector(".bargain-earns"),note=document.querySelector(".bargain-note");if(work)work.hidden=false;if(earns)earns.hidden=true;if(note)note.hidden=true;requestAnimationFrame(()=>document.querySelector(".bargain-stage")?.scrollIntoView({behavior:"auto",block:"start"}));}else if(views[initialHash]){show(initialHash);}
+if(initialHash==="film"){showFilm("auto");}else if(initialHash==="game"){setFolioMode("game");}else if(initialHash==="bargain-lamplight"){show("bargain");const work=document.querySelector(".bargain-work"),earns=document.querySelector(".bargain-earns"),note=document.querySelector(".bargain-note");if(work)work.hidden=false;if(earns)earns.hidden=true;if(note)note.hidden=true;requestAnimationFrame(()=>document.querySelector(".bargain-stage")?.scrollIntoView({behavior:"auto",block:"start"}));}else if(views[initialHash]){show(initialHash);}
 })();
 </script>
 <script src="/receiving-door.js"></script>
