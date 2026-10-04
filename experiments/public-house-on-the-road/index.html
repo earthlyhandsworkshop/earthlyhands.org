@@ -146,7 +146,7 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
 </section>
 
 <div class="return">
-  <span>Source occurrence → optional depth → exact return.<br>Available depth is not displayed depth.<br><button type="button" id="hold-state" hidden>Hold this configuration</button> <span id="hold-note" aria-live="polite"></span></span>
+  <span>Source occurrence → optional depth → exact return.<br>Available depth is not displayed depth.<br><button type="button" id="copy-state" hidden>Copy this configuration link</button> <span id="copy-note" aria-live="polite"></span></span>
   <span><a href="/experiments/holderness-ground/?return=public-house">Return to Holderness Ground →</a><br><a href="/experiments/ten-folio/">Earthly Hands Folio →</a></span>
 </div>
 
@@ -172,8 +172,8 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
   const compareButton = document.getElementById('compare-action');
   const ravelButton = document.getElementById('ravel-action');
   const passageLink = document.getElementById('ward-passage');
-  const holdState = document.getElementById('hold-state');
-  const holdNote = document.getElementById('hold-note');
+  const copyState = document.getElementById('copy-state');
+  const copyNote = document.getElementById('copy-note');
   let compareReady = false;
   let handReady = false;
 
@@ -206,8 +206,8 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     if(ready.length) params.set('ready', ready.join(','));
     const exactState = location.pathname + (params.toString() ? '?' + params.toString() : '');
     history.replaceState(null,'',exactState);
-    holdState.hidden = open.length === 0;
-    holdState.dataset.url = location.origin + exactState;
+    copyState.hidden = open.length === 0;
+    copyState.dataset.url = location.origin + exactState;
     if(passageLink){
       const passageParams = new URLSearchParams({from:'public-house',return:exactState});
       passageLink.href = '/experiments/ward-room/?' + passageParams.toString();
@@ -232,14 +232,14 @@ footer{padding:1.2rem 1.25rem 2rem;color:var(--ash);font:10px/1.45 system-ui,san
     sync();
   }));
 
-  holdState.addEventListener('click', async () => {
-    const held = holdState.dataset.url || location.href;
+  copyState.addEventListener('click', async () => {
+    const configurationUrl = copyState.dataset.url || location.href;
     try{
-      await navigator.clipboard.writeText(held);
-      holdNote.textContent = 'Held link copied — same configuration, not the same interpretation.';
-      emit('configuration_hold',{route_created:false});
+      await navigator.clipboard.writeText(configurationUrl);
+      copyNote.textContent = 'Configuration link copied — same view state, not the same encounter or interpretation.';
+      emit('configuration_copy',{route_created:false});
     }catch{
-      holdNote.textContent = 'This address now holds the configuration; copy it from the address bar.';
+      copyNote.textContent = 'Copy this configuration from the address bar.';
     }
   });
 
