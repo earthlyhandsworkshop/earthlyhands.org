@@ -414,6 +414,7 @@ const views={
 const tabs=[...document.querySelectorAll("[data-view]")],panels=[...document.querySelectorAll("[data-panel]")];
 function show(v){if(!views[v])return;document.body.classList.remove("film-focus");tabs.forEach(b=>b.setAttribute("aria-selected",String(b.dataset.view===v)));panels.forEach(p=>p.classList.toggle("active",p.dataset.panel===v));document.getElementById("bearing").textContent=views[v][0];document.getElementById("title").textContent=views[v][1];history.replaceState(null,"","#"+v);}
 const FILM_RETURN_KEY="earthly-hands-film-floor-return-v1";
+const FILM_DETAIL_ORIGIN_KEY="earthly-hands-film-detail-origin-v1";
 function showFilm(behavior="smooth"){show("projects");document.body.classList.add("film-focus");history.replaceState(null,"","#film");requestAnimationFrame(()=>{const key=sessionStorage.getItem(FILM_RETURN_KEY),target=key&&document.getElementById(key);(target||document.querySelector(".film-floor"))?.scrollIntoView({behavior,block:target?"center":"start"});});}
 
 const CURRENT_WORK_KEY="earthly-hands-ten-folio-current-work-v1";
@@ -481,9 +482,9 @@ workshopMode?.addEventListener("click",()=>setFolioMode("workshop"));
 gameMode?.addEventListener("click",()=>setFolioMode("game"));
 document.getElementById("film-door")?.addEventListener("click",()=>showFilm("smooth"));
 document.querySelector("[data-film-exit]")?.addEventListener("click",()=>show("projects"));
-document.querySelector(".film-strip")?.addEventListener("click",e=>{const card=e.target.closest(".film-card[data-film-key]");if(card)sessionStorage.setItem(FILM_RETURN_KEY,card.dataset.filmKey);});
+document.querySelector(".film-strip")?.addEventListener("click",e=>{const card=e.target.closest(".film-card[data-film-key]");if(card){sessionStorage.setItem(FILM_RETURN_KEY,card.dataset.filmKey);if(card.matches("[data-open-mary]"))sessionStorage.setItem(FILM_DETAIL_ORIGIN_KEY,"film");}});
 tabs.forEach(b=>b.onclick=()=>{workshopMode?.setAttribute("aria-pressed","true");gameMode?.setAttribute("aria-pressed","false");show(b.dataset.view)});
-document.addEventListener("keydown",e=>{const door=e.target.closest(".project-door[data-open-mary],.project-door[data-open-bargain]");if(door&&(e.key==="Enter"||e.key===" ")){e.preventDefault();show(door.hasAttribute("data-open-bargain")?"bargain":"mary");}});
+document.addEventListener("keydown",e=>{const door=e.target.closest(".project-door[data-open-mary],.project-door[data-open-bargain]");if(door&&(e.key==="Enter"||e.key===" ")){e.preventDefault();if(door.hasAttribute("data-open-mary")){sessionStorage.removeItem(FILM_DETAIL_ORIGIN_KEY);const back=document.querySelector('[data-panel="mary"] [data-back-projects]');if(back)back.textContent="Back to projects";}show(door.hasAttribute("data-open-bargain")?"bargain":"mary");}});
 document.addEventListener("click",e=>{
  const sl=e.target.closest("[data-stand-lamplight]");if(sl){e.preventDefault();show("bargain");const work=document.querySelector(".bargain-work"),earns=document.querySelector(".bargain-earns"),note=document.querySelector(".bargain-note");if(work)work.hidden=false;if(earns)earns.hidden=true;if(note)note.hidden=true;history.replaceState(null,"","#bargain-lamplight");requestAnimationFrame(()=>document.querySelector(".bargain-stage")?.scrollIntoView({behavior:"smooth",block:"start"}));return;}
  const b=e.target.closest("[data-open-bargain]");if(b){show("bargain");return;}
@@ -492,12 +493,12 @@ document.addEventListener("click",e=>{
  const bw=e.target.closest("[data-bargain-work]");if(bw){const target=document.querySelector(".bargain-work");target.hidden=false;requestAnimationFrame(()=>target.scrollIntoView({behavior:"smooth",block:"center"}));return;}
  const be=e.target.closest("[data-bargain-earns]");if(be){const target=document.querySelector(".bargain-earns");target.hidden=false;requestAnimationFrame(()=>target.scrollIntoView({behavior:"smooth",block:"start"}));return;}
  const br=e.target.closest("[data-bargain-return]");if(br){document.querySelector(".bargain-earns").hidden=true;document.querySelector(".bargain-stage").scrollIntoView({behavior:"smooth",block:"start"});return;}
- const m=e.target.closest("[data-open-mary]");if(m){show("mary");return;}
+ const m=e.target.closest("[data-open-mary]");if(m){const fromFilm=!!m.closest(".film-strip");if(fromFilm)sessionStorage.setItem(FILM_DETAIL_ORIGIN_KEY,"film");else sessionStorage.removeItem(FILM_DETAIL_ORIGIN_KEY);const back=document.querySelector('[data-panel="mary"] [data-back-projects]');if(back)back.textContent=fromFilm?"Back to film floor":"Back to projects";show("mary");return;}
  const me=e.target.closest("[data-mary-earns]");if(me){const target=document.querySelector(".mary-inverse");target.hidden=false;document.querySelector(".mary-note").hidden=true;requestAnimationFrame(()=>target.scrollIntoView({behavior:"smooth",block:"start"}));return;}
  const mr=e.target.closest("[data-mary-return]");if(mr){document.querySelector(".mary-inverse").hidden=true;return;}
  const mn=e.target.closest("[data-mary-note]");if(mn){const target=document.querySelector(".mary-note");target.hidden=false;document.querySelector(".mary-inverse").hidden=true;requestAnimationFrame(()=>target.scrollIntoView({behavior:"smooth",block:"start"}));return;}
  const j=e.target.closest("[data-open-joke]");if(j){show("joke");return;}
- const bp=e.target.closest("[data-back-projects]");if(bp){show("projects");return;}
+ const bp=e.target.closest("[data-back-projects]");if(bp){if(bp.closest('[data-panel="mary"]')&&sessionStorage.getItem(FILM_DETAIL_ORIGIN_KEY)==="film"){sessionStorage.removeItem(FILM_DETAIL_ORIGIN_KEY);showFilm("smooth");}else show("projects");return;}
  const xp=e.target.closest("[data-expand-piece]");if(xp){const card=xp.closest(".evidence-card"),title=card.querySelector("h3")?.textContent||"Evidence body",body=card.querySelector(".evidence-body")?.innerHTML||"";openFocusHTML(title,body);return;}
  const ta=e.target.closest("[data-toggle-all]");if(ta){const cards=[...document.querySelectorAll('[data-panel="joke"] .evidence-card')],opening=cards.some(x=>!x.classList.contains("open"));cards.forEach(x=>x.classList.toggle("open",opening));ta.textContent=opening?"Close all pieces":"Open all pieces";return;}
  const ec=e.target.closest(".evidence-head");if(ec){ec.parentElement.classList.toggle("open");return;}
