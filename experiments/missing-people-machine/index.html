@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Missing People Machine — Hancock refusal test</title>
+  <style>
+    :root { color-scheme: light; --paper:#f2eee3; --ink:#201f1a; --dim:#6b685d; --line:#b9b09c; --rust:#8a3f2e; --green:#355548; --card:rgba(255,253,246,.88); }
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;background:linear-gradient(rgba(65,55,36,.035) 1px,transparent 1px) 0 0/100% 2rem,var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+    button,a{font:inherit} main{width:min(1040px,calc(100% - 2rem));margin:0 auto;padding:3.5rem 0 5rem}
+    header{max-width:780px;border-top:6px solid var(--ink);padding-top:1rem}.eyebrow,.label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase}.eyebrow{color:var(--dim);font-size:.75rem}
+    h1{font-size:clamp(2.2rem,6vw,5.2rem);line-height:.92;font-weight:500;margin:.5rem 0 1.25rem}.premise{font-size:clamp(1.05rem,2vw,1.35rem);line-height:1.45;max-width:650px}.rule{display:inline-block;margin-top:1rem;color:var(--green);border-bottom:2px solid var(--green);font-weight:700}
+    .machine{display:grid;grid-template-columns:minmax(230px,.8fr) minmax(0,1.6fr);gap:1.25rem;margin-top:3rem}.card{background:var(--card);border:1px solid var(--line);padding:1.25rem;box-shadow:0 7px 20px rgba(50,42,28,.05)}.subject{position:sticky;top:1rem;align-self:start;border-top:5px solid var(--green)}
+    .label{color:var(--dim);font-size:.7rem}.person-name{font-size:2rem;margin:1rem 0 .35rem}.person-state{color:var(--green);font-weight:700}.instrument{border-top:5px solid var(--ink)} h2{margin:.25rem 0 1rem;font-weight:500;font-size:1.55rem}
+    .unsafe{width:100%;margin-top:1rem;padding:1rem;border:1px solid var(--rust);background:transparent;color:var(--rust);cursor:pointer;text-align:left}.unsafe:hover,.unsafe:focus-visible{background:#efe1d9;outline:3px solid rgba(138,63,46,.18)}
+    .refusal{display:none;margin-top:1rem;border-left:5px solid var(--rust);background:#efe1d9;padding:1rem 1.1rem}.refusal[aria-hidden="false"]{display:block}.refusal strong{color:var(--rust);display:block;margin-bottom:.4rem}
+    .choices{display:none;gap:.7rem;grid-template-columns:repeat(3,1fr);margin-top:1rem}.choices.visible{display:grid}.choice{padding:.85rem;min-height:5rem;background:#fbf8ef;border:1px solid var(--line);cursor:pointer;text-align:left}.choice:hover,.choice:focus-visible{border-color:var(--green);outline:3px solid rgba(53,85,72,.14)}
+    .result{display:none;margin-top:1rem}.result.visible{display:block}.result:focus-visible{outline:3px solid rgba(53,85,72,.28);outline-offset:3px}.host{border-top:4px solid var(--green)}.host blockquote,.host .source-statement{font-size:1.25rem;line-height:1.45;margin:1rem 0}
+    dl{display:grid;grid-template-columns:10rem 1fr;gap:.55rem 1rem;margin:1.3rem 0 0}dt{color:var(--dim)}dd{margin:0}.brace{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line);font-weight:700}.return{margin-top:1rem;padding:.7rem 0;border:0;border-bottom:1px solid var(--ink);background:transparent;cursor:pointer}
+    footer{max-width:780px;margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--dim);font-size:.88rem;line-height:1.5}footer a{color:inherit}
+    @media(max-width:760px){.machine{grid-template-columns:1fr}.subject{position:static}.choices{grid-template-columns:1fr}dl{grid-template-columns:1fr;gap:.15rem}dd{margin-bottom:.7rem}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">Earthly Hands Workshop · prototype · Hancock control</div>
+      <h1>The person does not move.</h1>
+      <p class="premise">Try the forbidden operation. The instrument will refuse it, then ask which documentary body can lawfully host the negative.</p>
+      <p class="rule">PERSON STAYS. DOCUMENTARY STATE MOVES.</p>
+    </header>
+    <section class="machine" aria-label="Hancock refusal test">
+      <aside class="card subject" aria-label="Human subject stays fixed">
+        <div class="label">Human subject under examination</div>
+        <p class="person-name">Jubal B. Hancock</p>
+        <p class="person-state" id="person-state">STAYS</p>
+        <p>No interface state may turn this person into an absence.</p>
+      </aside>
+      <div class="card instrument">
+        <div class="label">Test the machine</div>
+        <h2>Attempt an unhosted negative</h2>
+        <p>The control specimen contains more than one documentary statement. The negative must say which body is speaking.</p>
+        <button class="unsafe" id="unsafe" type="button">MOVE PERSON TO “ABSENT”</button>
+        <div class="refusal" id="refusal" aria-hidden="true" role="alert">
+          <strong>REFUSED — ABSENT requires a documentary host.</strong>
+          Jubal B. Hancock remains the human subject. Choose the source-bounded object whose state you mean.
+        </div>
+        <div class="choices" id="choices" aria-label="Source-lawful actions">
+          <button class="choice" type="button" data-result="returned">Open the returned list</button>
+          <button class="choice" type="button" data-result="transition">Open the reported transition</button>
+          <button class="choice" type="button" data-result="open">Keep the mechanism open</button>
+        </div>
+        <article class="card host result" id="returned" aria-label="Returned-list host" tabindex="-1">
+          <div class="label">Documentary host · committee report carrying a departmental answer</div>
+          <p class="source-statement">The 1836 committee report says that on 1 January 1832 the Secretary of War answered Hancock: “the name of J. B. Hancock is not upon the list of Choctaws entitled to reservations returned by the agent.”</p>
+          <dl><dt>What is negative</dt><dd>Name occurrence in the returned-list population named by that answer</dd><dt>What remains fixed</dt><dd>Jubal B. Hancock</dd><dt>Scope</dt><dd>This list, not every prior record population</dd><dt>Verb earned here</dt><dd>The report quotes the answer: “not upon”</dd></dl>
+          <p class="brace">ABSENCE FROM ONE POPULATION ≠ HISTORICAL NONEXISTENCE.</p>
+        </article>
+        <article class="card host result" id="transition" aria-label="Reported transition host" tabindex="-1">
+          <div class="label">Documentary host · reported carrier transition</div>
+          <p class="source-statement">The Committee found that Hancock timely signified his intention and that his name had been entered in the agent’s register, but “by accident or mistake, was not returned to the War Department.”</p>
+          <dl><dt>Earlier state</dt><dd>Committee finding: name entered in the agent’s register</dd><dt>Later state</dt><dd>Reported non-return to the War Department</dd><dt>Person state</dt><dd>Not assigned</dd><dt>Causal account</dt><dd>Report says “by accident or mistake”; which one remains unresolved here</dd></dl>
+          <p class="brace">ENTRY ≠ RETURN. THE MIDDLE IS THE WORK.</p>
+        </article>
+        <article class="card host result" id="open" aria-label="Open mechanism" tabindex="-1">
+          <div class="label">No stronger move is earned</div>
+          <h2>The mechanism remains open.</h2>
+          <p>The source controls the two reported states and the Committee’s limited causal phrase, “by accident or mistake.” It does not choose between those alternatives, reconstruct the lost-leaf path, establish motive, or join identities across unrelated bodies.</p>
+          <p class="brace">FAILED RECONCILIATION IS A RESULT.</p>
+        </article>
+        <button class="return" id="return" type="button" hidden>Return exactly to the attempted operation</button>
+      </div>
+    </section>
+    <footer><strong>Standing:</strong> bounded executable prototype, not a finished historical account. The wording is bounded to the current Workshop-held reading of H. Rep. 430 (21 March 1836). Exact quotation is kept distinct from interface synthesis. It neither explains a Bell–McKinney absence nor joins identities.</footer>
+  </main>
+  <script>
+    const unsafe=document.querySelector('#unsafe'),refusal=document.querySelector('#refusal'),choices=document.querySelector('#choices'),returnButton=document.querySelector('#return'),results=[...document.querySelectorAll('.result')];
+    function reset(){refusal.setAttribute('aria-hidden','true');choices.classList.remove('visible');results.forEach(r=>r.classList.remove('visible'));returnButton.hidden=true;document.querySelector('#person-state').textContent='STAYS';unsafe.focus();}
+    unsafe.addEventListener('click',()=>{refusal.setAttribute('aria-hidden','false');choices.classList.add('visible');unsafe.textContent='OPERATION REFUSED';choices.querySelector('button').focus();});
+    choices.addEventListener('click',event=>{const id=event.target.dataset.result;if(!id)return;results.forEach(r=>r.classList.toggle('visible',r.id===id));returnButton.hidden=false;const destination=document.querySelector('#'+id);destination.focus({preventScroll:true});destination.scrollIntoView({behavior:'smooth',block:'nearest'});});
+    returnButton.addEventListener('click',()=>{unsafe.textContent='MOVE PERSON TO “ABSENT”';reset();});
+  </script>
+</body>
+</html>
