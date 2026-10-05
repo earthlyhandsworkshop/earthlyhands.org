@@ -121,6 +121,12 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 .film-floor-head p{margin:.2rem 0 0;color:var(--muted);font:.46rem/1.3 var(--mono);letter-spacing:.055em;text-transform:uppercase}
 .film-floor-actions{display:flex;gap:.35rem;align-items:center}
 .film-floor-actions button{border:1px solid var(--hair);background:transparent;padding:.4rem .5rem;color:inherit;cursor:pointer;font:.44rem/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.film-spine{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin:0 0 .55rem;background:rgba(255,255,255,.035)}
+.film-spine>div{min-width:0;min-height:3.3rem;padding:.38rem .42rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;flex-direction:column;justify-content:space-between}
+.film-spine span{font:.42rem/1.1 var(--mono);letter-spacing:.06em;color:var(--rust)}
+.film-spine b{font:400 .68rem/1.08 var(--serif)}
+.film-spine .gap{border-bottom-style:dashed;background:rgba(33,30,24,.018)}
+.film-spine .gap b{color:var(--muted);font-size:.6rem}
 .film-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.45rem}
 .film-card{appearance:none;display:grid;grid-template-rows:1fr auto;min-width:0;min-height:10.4rem;border:1px solid var(--rule);background:rgba(255,255,255,.06);padding:0;text-align:left;color:inherit;text-decoration:none;cursor:pointer;overflow:hidden}
 .film-card:hover{background:var(--wash)}
@@ -161,7 +167,7 @@ body.film-focus .film-floor{margin:0}
  .head{padding:.75rem .7rem .85rem}.head h1{font-size:2.45rem}
  .inner{padding:.8rem .65rem 1.3rem}
  .pulse{grid-template-columns:1fr}
- .film-floor-head{display:block}.film-floor-head p{text-align:left}.film-floor-actions{margin-top:.45rem}.film-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:.35rem}.film-card{min-height:8.2rem}.film-thumb{min-height:5.15rem;padding:.5rem}.film-thumb b{font-size:.88rem}.film-card-copy{padding:.42rem .45rem .48rem}.film-card strong{font-size:.78rem}
+ .film-floor-head{display:block}.film-floor-head p{text-align:left}.film-floor-actions{margin-top:.45rem}.film-spine{display:flex;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}.film-spine>div{flex:0 0 5.4rem;scroll-snap-align:start}.film-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:.35rem}.film-card{min-height:8.2rem}.film-thumb{min-height:5.15rem;padding:.5rem}.film-thumb b{font-size:.88rem}.film-card-copy{padding:.42rem .45rem .48rem}.film-card strong{font-size:.78rem}
  .note-grid{grid-template-columns:1fr}.held{border-left:0;border-top:1px solid var(--rule)}
  .row{grid-template-columns:1fr;min-width:0}.open{justify-self:start}
  .panel,.inner,.evidence-grid,.evidence-card,.evidence-head,.evidence-body,.witbench,.focusbar{min-width:0;max-width:100%}
@@ -262,6 +268,16 @@ body.film-focus .film-floor{margin:0}
   <div class="film-floor-head">
    <div><h3>The film floor</h3><p>11 live pieces · working assembly · order soft · adjacency ≠ historical relation · preview ≠ locked image</p></div>
    <div class="film-floor-actions"><button type="button" data-film-exit>Back to Folio</button></div>
+  </div>
+  <div class="film-spine" aria-label="1900 to 1907 live spine">
+   <div><span>1900</span><b>Mary · hearing</b></div>
+   <div><span>1901</span><b>Hugh + Sarah</b></div>
+   <div><span>1902</span><b>not identical</b></div>
+   <div><span>1903</span><b>Jane</b></div>
+   <div><span>1904</span><b>identical</b></div>
+   <div class="gap"><span>1905</span><b>no floor piece yet</b></div>
+   <div class="gap"><span>1906</span><b>no floor piece yet</b></div>
+   <div><span>1907</span><b>paper movement</b></div>
   </div>
   <div class="film-strip">
    <button class="film-card" id="film-mary" data-film-key="film-mary" data-kind="human" type="button" data-open-mary><span class="film-thumb"><small>hearing · 1900</small><b>“Robert Bell.”</b></span><span class="film-card-copy"><span class="film-state">scene · standing</span><strong>Mary Caroline Atkinson</strong></span></button>
