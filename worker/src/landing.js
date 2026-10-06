@@ -269,6 +269,11 @@ export async function handleLanding(request, env, ctx, url = new URL(request.url
       private: true,
       auth: "cloudflare-access",
       drive_oauth_configured: configuredGoogle(env),
+      drive_oauth_parts: {
+        client_id: Boolean(String(env?.GOOGLE_OAUTH_CLIENT_ID || "").trim()),
+        client_secret: Boolean(String(env?.GOOGLE_OAUTH_CLIENT_SECRET || "").trim()),
+        refresh_token: Boolean(String(env?.GOOGLE_OAUTH_REFRESH_TOKEN || "").trim())
+      },
       destinations: aliases,
       verbs: ["read", "create", "update"]
     });
