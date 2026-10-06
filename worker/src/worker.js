@@ -760,7 +760,7 @@ export default {
     const url = new URL(request.url);
     const requestId = crypto.randomUUID();
 
-    if ((request.method === "GET" && (url.pathname === "/landing/health" || url.pathname === "/landing/markdown")) ||
+    if ((request.method === "GET" && (url.pathname === "/landing/health" || url.pathname === "/landing/markdown" || url.pathname === "/landing/test")) ||
         (request.method === "POST" && url.pathname === "/landing/markdown")) {
       return handleLanding(request, env, ctx, url);
     }
