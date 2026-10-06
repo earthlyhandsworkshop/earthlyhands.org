@@ -41,7 +41,7 @@ button.addEventListener("click", async () => {
     operation: "create",
     destination: "15",
     name: "TEST — Landing Desk — " + stamp + ".md",
-    body: "# Landing Desk live crossing\n\nCreated through the authenticated Landing Desk. A successful receipt means Google Drive accepted the raw Markdown body and Landing Desk read it back and verified its SHA-256.\n"
+    body: "# Landing Desk live crossing\\n\\nCreated through the authenticated Landing Desk. A successful receipt means Google Drive accepted the raw Markdown body and Landing Desk read it back and verified its SHA-256.\\n"
   };
   try {
     const response = await fetch("/landing/markdown", {
