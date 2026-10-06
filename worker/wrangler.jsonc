@@ -10,6 +10,13 @@
   "r2_buckets": [{ "binding": "RECEIVING_FILES", "bucket_name": "earthly-hands-receiving" }],
   "d1_databases": [{ "binding": "RECEIVING_DB", "database_name": "earthly-hands-receiving", "database_id": "6ff9b646-3d36-43af-89b1-1d5773e0abd7" }],
   "secrets": {
-    "required": ["OPENAI_API_KEY"]
+    "required": [
+      "OPENAI_API_KEY",
+      "LANDING_ALLOWED_EMAILS",
+      "GOOGLE_OAUTH_CLIENT_ID",
+      "GOOGLE_OAUTH_CLIENT_SECRET",
+      "GOOGLE_OAUTH_REFRESH_TOKEN",
+      "WORKSHOP_DRIVE_DESTINATIONS_JSON"
+    ]
   }
 }
