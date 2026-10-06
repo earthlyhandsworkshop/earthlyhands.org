@@ -12,6 +12,64 @@ function reply(body, status = 200) {
   });
 }
 
+function landingTestPage() {
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Landing Desk Test</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;max-width:760px;margin:48px auto;padding:0 20px}
+button{font:inherit;padding:10px 14px;cursor:pointer}
+pre{white-space:pre-wrap;word-break:break-word;background:#f4f4f4;padding:16px;border-radius:8px}
+</style>
+</head>
+<body>
+<h1>Landing Desk live crossing</h1>
+<p>This creates one small Markdown test file in destination 15 through the real Landing Desk write route, then shows the verified Drive readback receipt.</p>
+<button id="run">Create verified test file</button>
+<pre id="out">No write yet.</pre>
+<script>
+const button = document.getElementById("run");
+const out = document.getElementById("out");
+button.addEventListener("click", async () => {
+  button.disabled = true;
+  out.textContent = "Crossing…";
+  const stamp = new Date().toISOString().replace(/[:.]/g, "-");
+  const payload = {
+    operation: "create",
+    destination: "15",
+    name: "TEST — Landing Desk — " + stamp + ".md",
+    body: "# Landing Desk live crossing\n\nCreated through the authenticated Landing Desk. A successful receipt means Google Drive accepted the raw Markdown body and Landing Desk read it back and verified its SHA-256.\n"
+  };
+  try {
+    const response = await fetch("/landing/markdown", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(payload)
+    });
+    const data = await response.json();
+    out.textContent = JSON.stringify(data, null, 2);
+  } catch (error) {
+    out.textContent = String(error);
+  } finally {
+    button.disabled = false;
+  }
+});
+</script>
+</body>
+</html>`;
+  return new Response(html, {
+    status: 200,
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "no-store",
+      "X-Robots-Tag": "noindex, nofollow"
+    }
+  });
+}
+
 function cleanEmail(value) {
   return String(value || "").trim().toLowerCase();
 }
@@ -277,6 +335,10 @@ export async function handleLanding(request, env, ctx, url = new URL(request.url
       destinations: aliases,
       verbs: ["read", "create", "update"]
     });
+  }
+
+  if (request.method === "GET" && url.pathname === "/landing/test") {
+    return landingTestPage();
   }
 
   if (!configuredGoogle(env)) {
