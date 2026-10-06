@@ -1,3 +1,5 @@
+import { handleLanding } from "./landing.js";
+
 const WORKER_VERSION = "public-ground-v5-luna-closed";
 const MODEL = "gpt-5.6-luna";
 
@@ -757,6 +759,11 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const requestId = crypto.randomUUID();
+
+    if ((request.method === "GET" && (url.pathname === "/landing/health" || url.pathname === "/landing/markdown")) ||
+        (request.method === "POST" && url.pathname === "/landing/markdown")) {
+      return handleLanding(request, env, ctx, url);
+    }
 
     if ((request.method === "GET" && (url.pathname === "/folio" || url.pathname === "/folio/" || url.pathname === "/folio/health")) ||
         (request.method === "POST" && (url.pathname === "/folio/seen" || url.pathname === "/folio/note" || url.pathname === "/folio/offer-action" || url.pathname === "/folio/seed-proof"))) {
