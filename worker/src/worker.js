@@ -573,22 +573,18 @@ function folioRelationshipFor(identity, env) {
   if (!email) return null;
 
   const raw = String(env.FOLIO_RELATIONSHIPS_JSON || "").trim();
-  if (raw) {
-    try {
-      const parsed = JSON.parse(raw);
-      const entry = parsed?.[email];
-      if (entry && typeof entry === "object") {
-        const id = String(entry.id || "").trim().toLowerCase().replace(/[^a-z0-9:_-]+/g, "-").slice(0, 80);
-        const name = String(entry.name || entry.id || "").trim().slice(0, 120);
-        if (id && name) return { id, name };
-      }
-    } catch {
-      return null;
-    }
-  }
+  if (!raw) return null;
 
-  if (folioEmailAllowed(identity, env)) {
-    return { id:"ten", name:"Ten" };
+  try {
+    const parsed = JSON.parse(raw);
+    const entry = parsed?.[email];
+    if (entry && typeof entry === "object") {
+      const id = String(entry.id || "").trim().toLowerCase().replace(/[^a-z0-9:_-]+/g, "-").slice(0, 80);
+      const name = String(entry.name || entry.id || "").trim().slice(0, 120);
+      if (id && name) return { id, name };
+    }
+  } catch {
+    return null;
   }
 
   return null;
@@ -634,7 +630,7 @@ async function authenticatedFolio(request, env, ctx, url) {
   ).bind(relationshipId,relationshipName,"working",now,now).run();
   await env.RECEIVING_DB.prepare(
     "INSERT INTO folio_memberships (relationship_id,subject_hash,role,active,created_at) VALUES (?,?,?,?,?) " +
-    "ON CONFLICT(relationship_id,subject_hash) DO UPDATE SET active=1"
+    "ON CONFLICT(relationship_id,subject_hash) DO NOTHING"
   ).bind(relationshipId,subjectHash,"holder",1,now).run();
 
   const member = await env.RECEIVING_DB.prepare(
