@@ -210,6 +210,65 @@ body.film-focus .film-spine{position:sticky;top:max(0px,env(safe-area-inset-top)
  .fullfocus #focus-title{font-size:1.85rem}
  .fullfocus #focus-body{font-size:.98rem!important}
 }
+
+/* Phone film floor: one vertical frame at a time, neighboring frames in view.
+   Ordinary page scrolling remains in control; no automatic movement. */
+@media(max-width:46rem){
+ body.film-focus .film-strip{
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   gap:.65rem;
+   padding:0 .2rem 2rem;
+ }
+ body.film-focus .film-card{
+   position:relative;
+   display:grid;
+   flex:none;
+   width:min(100%,22rem);
+   min-height:0;
+   aspect-ratio:35 / 47;
+   grid-template-rows:minmax(0,1fr) auto;
+   border:0;
+   border-radius:.12rem;
+   background:#2a2723;
+   padding:.56rem 1.05rem;
+   color:var(--paper);
+   overflow:hidden;
+ }
+ body.film-focus .film-card::before,
+ body.film-focus .film-card::after{
+   content:"";
+   position:absolute;
+   z-index:2;
+   top:.4rem;
+   bottom:.4rem;
+   width:.34rem;
+   background:repeating-linear-gradient(to bottom,transparent 0 .42rem,var(--paper) .42rem .72rem,transparent .72rem 1.14rem);
+   opacity:.78;
+   pointer-events:none;
+ }
+ body.film-focus .film-card::before{left:.29rem}
+ body.film-focus .film-card::after{right:.29rem}
+ body.film-focus .film-thumb{
+   min-height:0;
+   padding:1rem .75rem;
+   border:1px solid rgba(236,229,216,.32);
+   background:#d8c7ad;
+   color:#211e18;
+ }
+ body.film-focus .film-thumb b{
+   font-size:clamp(1.4rem,6vw,2.1rem);
+   max-width:none;
+ }
+ body.film-focus .film-card-copy{
+   padding:.6rem .75rem .35rem;
+ }
+ body.film-focus .film-card strong{font-size:1rem;color:var(--paper)}
+ body.film-focus .film-card .film-state{color:#d4c9b7}
+ body.film-focus .film-card:focus-visible{outline:3px solid var(--rust);outline-offset:2px}
+ body.film-focus .film-open{border:1px dashed var(--rust)}
+}
 </style>
 </head>
 <body data-receiving-target="Earthly Hands folio box" data-receiving-object="folio:earthly-hands">
