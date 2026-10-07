@@ -135,6 +135,11 @@ textarea{width:100%;min-height:9rem;resize:vertical;border:1px solid var(--hair)
 .film-thumb:after{content:"";position:absolute;inset:.45rem;border:1px solid rgba(33,30,24,.10);pointer-events:none}
 .film-thumb small{position:relative;z-index:1;font:.4rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--rust)}
 .film-thumb b{position:relative;z-index:1;font:400 1.05rem/1.02 var(--serif);letter-spacing:-.02em;max-width:12rem}
+.film-thumb.has-image{padding:0;overflow:hidden;background:#cbbda6}
+.film-thumb.has-image:after{inset:.36rem;border-color:rgba(33,30,24,.2);z-index:2}
+.film-thumb.has-image img{display:block;width:100%;height:100%;min-height:6.4rem;object-fit:cover;object-position:center 8%;filter:saturate(.82) contrast(.98)}
+.film-card[data-film-key="film-mary"] .film-card-copy{background:rgba(135,87,58,.045)}
+.film-card[data-film-key="film-mary"] .film-state{color:var(--rust)}
 .film-card[data-kind="paper"] .film-thumb{background:repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 16px,rgba(33,30,24,.035) 17px 18px)}
 .film-card[data-kind="administrative"] .film-thumb{background:linear-gradient(180deg,rgba(33,30,24,.025),rgba(135,87,58,.08))}
 .film-card[data-kind="field"] .film-thumb{background:linear-gradient(145deg,rgba(135,87,58,.06),rgba(255,255,255,.04))}
@@ -294,7 +299,7 @@ body.film-focus .film-spine{position:sticky;top:max(0px,env(safe-area-inset-top)
    <div><span>1907</span><b>paper movement</b></div>
   </div>
   <div class="film-strip">
-   <a class="film-card" id="film-mary" data-film-key="film-mary" data-kind="human" href="/experiments/mary-caroline-atkinson/"><span class="film-thumb"><small>hearing · 1900</small><b>“Robert Bell.”</b></span><span class="film-card-copy"><span class="film-state">scene · standing</span><strong>Mary Caroline Atkinson</strong></span></a>
+   <a class="film-card" id="film-mary" data-film-key="film-mary" data-kind="human" href="/experiments/mary-caroline-atkinson/" aria-label="Open Scene One — Mary Caroline Atkinson"><span class="film-thumb has-image"><img src="/experiments/mary-caroline-atkinson/visual-specimen-01.jpg" alt="Interpretive sepia storyboard for Scene One: Mary Caroline Atkinson before the Commission, the Robert Bell record conflict, and the refusal beat"></span><span class="film-card-copy"><span class="film-state">scene one · standing · visual specimen</span><strong>Mary Caroline Atkinson</strong></span></a>
    <a class="film-card" id="film-book" data-film-key="film-book" data-kind="paper" href="/experiments/the-book-is-physical/"><span class="film-thumb"><small>record as object</small><b>Leaves. Hands. Weather.</b></span><span class="film-card-copy"><span class="film-state">visual board · soft</span><strong>The book is physical</strong></span></a>
    <a class="film-card" id="film-bargain" data-film-key="film-bargain" data-kind="field" href="/experiments/lamplight-beef-bargain/bargain.html"><span class="film-thumb"><small>field operation</small><b>“No particular bargain.”</b></span><span class="film-card-copy"><span class="film-state">scene · standing</span><strong>Blackwell + Robert</strong></span></a>
    <a class="film-card" id="film-hugh" data-film-key="film-hugh" data-kind="human" href="/experiments/hugh-article-fourteen-enters/"><span class="film-thumb"><small>claim frame</small><b>Article Fourteen enters.</b></span><span class="film-card-copy"><span class="film-state">scene · soft</span><strong>Hugh G. Bell</strong></span></a>

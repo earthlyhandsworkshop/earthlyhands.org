@@ -20,6 +20,23 @@ h1{font-size:clamp(3.2rem,13vw,6.5rem);line-height:.88;font-weight:400;letter-sp
 .depth summary{cursor:pointer;font:.64rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--rust)}
 .source{margin-top:2.5rem;border-top:1px solid var(--rule);padding-top:1rem;color:var(--muted);font-size:.92rem}
 .source a{color:inherit}
+.visual-specimen{margin:0 0 2.8rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:1rem 0 1.4rem}
+.specimen-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(12rem,20rem);gap:1.5rem;align-items:end;margin-bottom:1rem}
+.specimen-head h2{margin:.15rem 0 0;font-size:clamp(1.9rem,5vw,3.3rem);line-height:.95;font-weight:400;letter-spacing:-.035em}
+.specimen-boundary{margin:0;color:var(--muted);font:.7rem/1.45 var(--mono);text-transform:uppercase;letter-spacing:.055em}
+.visual-specimen figure{margin:0}.visual-specimen img{display:block;width:100%;height:auto;border:1px solid var(--rule);background:#cbbda6}
+.visual-specimen figcaption{margin-top:.55rem;color:var(--muted);font:.72rem/1.4 var(--mono)}
+.specimen-open{display:inline-block;margin-top:.75rem;font:.64rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border-bottom:1px solid var(--rust)}
+.scene-logic{margin:1.5rem 0 2.8rem;border-top:1px solid var(--rule);padding-top:1rem}
+.scene-logic h2{margin:.15rem 0 1rem;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1;font-weight:400;letter-spacing:-.03em}
+.scene-logic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid rgba(98,92,81,.45)}
+.scene-logic article{padding:1rem 1rem 1rem 0;border-bottom:1px solid rgba(98,92,81,.45)}
+.scene-logic article:nth-child(odd){border-right:1px solid rgba(98,92,81,.45)}
+.scene-logic article:nth-child(even){padding-left:1rem}
+.scene-logic h3{margin:0 0 .35rem;color:var(--rust);font:.66rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.075em}
+.scene-logic p{margin:0;color:var(--ink);font-size:.98rem;line-height:1.5}
+.scene-logic .boundary{grid-column:1/-1;border-right:0!important;padding-left:0!important;color:var(--muted)}
+@media(max-width:40rem){.specimen-head,.scene-logic-grid{grid-template-columns:1fr}.scene-logic article:nth-child(odd){border-right:0}.scene-logic article:nth-child(even){padding-left:0}}
 @media(max-width:34rem){body{font-size:17px}h1{font-size:clamp(3rem,17vw,4.8rem)}}
 
 .dialogue{margin:1.25rem 0}.speaker{display:block;font:.66rem/1.2 var(--mono);letter-spacing:.07em}.speech{display:block;white-space:pre-line;margin-top:.18rem}.direction{color:var(--muted)}.card-beat{text-align:center;letter-spacing:.1em;font:600 1.45rem/1.25 var(--mono);padding:2rem 0;margin:1.5rem 0!important}.card-beat:last-of-type{font-size:1.1rem}.scene .dialogue+.dialogue{margin-top:1rem}
@@ -40,6 +57,30 @@ h1{font-size:clamp(3.2rem,13vw,6.5rem);line-height:.88;font-weight:400;letter-sp
 <a class="back" href="/experiments/ten-folio/#film">Back to film floor</a>
 <div class="kicker">Rough Edge · True North’s durable working scene · 23 Oct 1900</div>
 <h1>Mary Caroline Atkinson</h1>
+<section class="visual-specimen" aria-labelledby="visual-specimen-title">
+  <div class="specimen-head">
+    <div><div class="kicker">Visual specimen 01 · interpretive</div><h2 id="visual-specimen-title">One possible arrangement</h2></div>
+    <p class="specimen-boundary">Storyboard / film thinking. Not a source reconstruction of the room, people, clothing, gesture, or acoustics.</p>
+  </div>
+  <figure>
+    <img src="visual-specimen-01.jpg" alt="Interpretive sepia storyboard for Scene One showing Mary Caroline Atkinson before the Commission, Robert Bell entering the record, Article Fourteen pressure, Mary's knowledge limit, her departure, and the refused card">
+    <figcaption>The picture is allowed to propose a film. The source controls the words, identities, and evidentiary limits.</figcaption>
+  </figure>
+  <a class="specimen-open" href="visual-specimen-01.jpg">Open visual full frame</a>
+</section>
+<section class="scene-logic" aria-labelledby="scene-logic-title">
+  <div class="kicker">Why this scene works</div>
+  <h2 id="scene-logic-title">Mary first. The machinery arrives around her.</h2>
+  <div class="scene-logic-grid">
+    <article><h3>Enter mid-hearing</h3><p>No historical lecture opens the film. Question and answer establish the room before the audience is told what the case is supposed to mean.</p></article>
+    <article><h3>Let the name land</h3><p>“Robert Bell” arrives as Mary’s father before it becomes a disputed administrative object. The person precedes the government’s file.</p></article>
+    <article><h3>Keep knowledge honest</h3><p>Mary’s limits are not weakness to repair. Her refusal to say more than she knows is part of her authority in the scene.</p></article>
+    <article><h3>Article Fourteen is pressure</h3><p>The legal category enters through the Commission’s narrowing questions. The film does not need a narrator to explain the treaty before Mary encounters its administrative use.</p></article>
+    <article><h3>The correction matters</h3><p>When the Commission strengthens “not that I know of” into “never received,” Mary stops the move. That tiny correction lets the audience hear the difference between testimony and characterization.</p></article>
+    <article><h3>Leave ordinarily</h3><p>The hearing ends as ordinary procedure. The door / BOOM / REFUSED sequence is film grammar, not a claim that the surviving record preserves the literal sound of her exit.</p></article>
+    <article class="boundary"><h3>Source brake</h3><p>The surviving transcript does not name the individual examiner. The storyboard is interpretive. No drawing, blocking choice, or dramatic beat earns historical identity, room layout, clothing, gesture, motive, or acoustics.</p></article>
+  </div>
+</section>
 <div class="scene">
 <p class="place">Muskogee, Indian Territory — October 23, 1900</p>
 <p class="direction">A hearing already in progress.</p>
