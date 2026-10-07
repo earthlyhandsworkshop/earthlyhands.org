@@ -43,8 +43,45 @@
     </script>
     <script>document.documentElement.className = "js";</script>
     <link rel="stylesheet" href="../../style.css?v=folio2" />
+    <style>
+      .shared-country-welcome{
+        width:min(980px,calc(100% - 2rem));
+        margin:0 auto;
+        padding:clamp(4.5rem,10vw,8rem) 0 clamp(2rem,5vw,4rem);
+        color:#efe9dc;
+      }
+      .shared-country-welcome .welcome-kicker{
+        margin:0 0 1rem;
+        font:600 .72rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;
+        letter-spacing:.1em;
+        text-transform:uppercase;
+        color:#aaa28f;
+      }
+      .shared-country-welcome h1{
+        max-width:13ch;
+        margin:0;
+        font:400 clamp(3rem,9vw,7rem)/.92 Georgia,"Times New Roman",serif;
+        letter-spacing:-.035em;
+      }
+      .shared-country-welcome .welcome-lead{
+        max-width:42rem;
+        margin:1.6rem 0 0;
+        font:400 clamp(1.08rem,2.2vw,1.42rem)/1.55 Georgia,"Times New Roman",serif;
+        color:#ddd5c6;
+      }
+      .shared-country-welcome .welcome-bearing{
+        max-width:42rem;
+        margin:1rem 0 0;
+        color:#aaa28f;
+        font:.82rem/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;
+      }
+      .shared-country-welcome a{color:#efe9dc;text-underline-offset:.22em}
+      @media(max-width:640px){
+        .shared-country-welcome{padding-top:5rem}
+      }
+    </style>
   </head>
-  <body data-lamp="lit" data-ground="night" data-discovery="closed" data-thought="none">
+  <body data-lamp="lit" data-ground="night" data-discovery="open" data-thought="none">
     <a class="skip-link" href="#threshold">Skip to the ground</a>
 
     <header class="site-header">
@@ -54,6 +91,13 @@
     </header>
 
     <main>
+      <section class="shared-country-welcome" aria-labelledby="shared-country-title">
+        <p class="welcome-kicker">Earthly Hands Workshop · public ground</p>
+        <h1 id="shared-country-title">Shared Country</h1>
+        <p class="welcome-lead">Welcome. This ground grows as the Workshop discovers real relations among people, places, records, questions, and things we have made. There is no required path.</p>
+        <p class="welcome-bearing">Enter anywhere. Ask the ground. Follow a relation when it earns one. Some paths will deepen; some will remain open. <a href="/">Return to Earthly Hands</a> whenever you like.</p>
+      </section>
+
       <section class="threshold" id="threshold" data-place="Front edge">
         <div class="experience-shell" id="experience-shell">
           <div class="experience-viewbar" aria-label="Shared Country views">
@@ -328,6 +372,10 @@
     <noscript>
       <div class="noscript-note">The whole passage is visible because JavaScript is unavailable.</div>
     </noscript>
+    <script>
+      // Shared Country is no longer the Workshop latch. Arrive with the ground already open.
+      try { window.localStorage.setItem("earthly-hands-discovery-open-v3", "1"); } catch (_) {}
+    </script>
     <script src="../../config.js?v=64aae42b52b2"></script>
     <script src="../../public-listening.js?v=1"></script>
     <script src="../../public-wayfinding.js?v=930ebdb27274"></script>
