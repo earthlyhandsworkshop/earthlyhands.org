@@ -87,6 +87,76 @@ jobs:
             npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="390,844" "https://earthlyhands.org/experiments/one-proposition-many-carriers/?carrier=$carrier" "public-observation/one-proposition-many-carriers-carrier-$carrier-mobile.png"
           done
 
+      - name: Capture every public HTML page
+        if: always()
+        run: |
+          mkdir -p public-observation/site-desktop public-observation/site-mobile
+
+          node - <<'NODE'
+          const fs = require("fs");
+          const path = require("path");
+
+          const skipRoots = new Set([".git", ".github", "node_modules", "public-observation"]);
+          const pages = [];
+
+          function walk(dir) {
+            for (const entry of fs.readdirSync(dir, {withFileTypes:true})) {
+              if (entry.isDirectory() && skipRoots.has(entry.name)) continue;
+              const full = path.join(dir, entry.name);
+              if (entry.isDirectory()) walk(full);
+              else if (entry.isFile() && entry.name.endsWith(".html")) pages.push(full.replace(/^\.\//, ""));
+            }
+          }
+          walk(".");
+
+          const rows = pages.sort().map(file => {
+            let urlPath;
+            if (file === "index.html") urlPath = "/";
+            else if (file.endsWith("/index.html")) urlPath = "/" + file.slice(0, -10);
+            else urlPath = "/" + file;
+
+            const slug = file
+              .replace(/\/index\.html$/, "")
+              .replace(/\.html$/, "")
+              .replace(/^index$/, "front-door")
+              .replace(/[^a-zA-Z0-9._-]+/g, "--");
+
+            return {file, url: "https://earthlyhands.org" + urlPath, slug};
+          });
+
+          fs.writeFileSync("public-observation/site-pages.json", JSON.stringify({
+            generated_at: new Date().toISOString(),
+            count: rows.length,
+            pages: rows
+          }, null, 2));
+
+          fs.writeFileSync("/tmp/site-pages.tsv", rows.map(r => [r.slug, r.url].join("\t")).join("\n") + "\n");
+          console.log("Public HTML pages discovered:", rows.length);
+          NODE
+
+          failures=0
+          while IFS=        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-observation-${{ github.sha }}
+          path: public-observation/
+          if-no-files-found: error
+          retention-days: 30
+\t' read -r slug url; do
+            [ -z "$slug" ] && continue
+            echo "Witnessing $url"
+            if ! npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="1280,900" "$url" "public-observation/site-desktop/$slug.png"; then
+              echo "DESKTOP FAIL $url" >> public-observation/site-capture-failures.txt
+              failures=$((failures+1))
+            fi
+            if ! npx --yes playwright@1.55.0 screenshot --browser=chromium --full-page --viewport-size="390,844" "$url" "public-observation/site-mobile/$slug.png"; then
+              echo "MOBILE FAIL $url" >> public-observation/site-capture-failures.txt
+              failures=$((failures+1))
+            fi
+          done < /tmp/site-pages.tsv
+
+          echo "$failures" > public-observation/site-capture-failure-count.txt
+
       - name: Upload public observation
         if: always()
         uses: actions/upload-artifact@v4
