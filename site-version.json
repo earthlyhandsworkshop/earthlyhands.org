@@ -1,0 +1,7 @@
+{
+  "site": "Earthly Hands Workshop",
+  "front_door_commit": "57da4000291a6b8fd00baf79b81d169aa0449305",
+  "repository_head_at_marker_update": "c6951d724487a2bb161ee45448e9e49bbf3bcf69",
+  "front_door_opened": "2026-10-07",
+  "note": "If the homepage you fetched still redirects immediately to Shared Country, you are seeing stale public state."
+}
