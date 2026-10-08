@@ -52,6 +52,14 @@ h1{font-size:clamp(3.2rem,13vw,6.5rem);line-height:.88;font-weight:400;letter-sp
 .scene .direction{max-width:31rem;margin:1.25rem auto;padding:0 1rem;color:var(--muted);font-style:italic;font-size:.94rem;line-height:1.55}
 .scene .card-beat{margin:2.2rem auto!important;padding:2rem .5rem;font:600 clamp(1.5rem,7vw,2.6rem)/1.2 var(--mono);letter-spacing:.12em}
 .scene .card-beat:nth-last-child(2){font-size:clamp(1.5rem,7vw,2.8rem)}
+.opening-cards{margin:3.2rem calc(50% - 50vw) 0;background:#050505;color:#f1ede4;padding:clamp(3rem,10vw,7rem) max(1rem,calc((100vw - 43rem)/2));min-height:72vh;display:flex;flex-direction:column;justify-content:center}
+.opening-cards .direction{color:#aaa49a!important;font-style:normal!important;text-align:center;max-width:38rem!important}
+.opening-cards .card-beat{color:#f1ede4;margin:1.8rem auto!important}
+.opening-cards .refused{font-size:clamp(2.8rem,12vw,6.8rem)!important;letter-spacing:.16em!important}
+.opening-cards .feature-title{font-size:clamp(2rem,9vw,5rem)!important;line-height:1.05!important;letter-spacing:.09em!important;margin-top:4rem!important}
+.opening-cards .date-card{font-size:clamp(1.2rem,5vw,2.2rem)!important;color:#cfc8bb!important}
+.opening-cards .boom{font-size:clamp(2rem,7vw,3.8rem)!important}
+@media(max-width:46rem){.opening-cards{margin-left:-1rem;margin-right:-1rem;padding-left:1rem;padding-right:1rem;min-height:78svh}}
 @media(max-width:34rem){.cue{padding:.75rem .8rem}.cue.mary{margin-left:1.1rem}.cue.commission{margin-right:.4rem}.scene .direction{padding:0 .7rem}}
 </style>
 <a class="back" href="/experiments/ten-folio/#film">Back to film floor</a>
@@ -230,19 +238,18 @@ h1{font-size:clamp(3.2rem,13vw,6.5rem);line-height:.88;font-weight:400;letter-sp
 <p class="direction">The door opens.</p>
 <p class="direction">Mary passes through.</p>
 <p class="direction">The door closes.</p>
-<p class="card-beat">BOOM.</p>
-<p class="card-beat">BLACK.</p>
-<p class="direction">Silence.</p>
-<p class="direction">Then—</p>
-<p class="direction">A date appears against the black.</p>
-<p class="card-beat">APRIL 15 1902</p>
-<p class="direction">Then—</p>
-<p class="card-beat">REFUSED.</p>
-<p class="direction">Hold it only long enough to read.</p>
-<p class="direction">Gone.</p>
-<p class="card-beat">BLACK.</p>
-<p class="direction">Then:</p>
-<p class="card-beat">TWO FAMILIES, ONE ROBERT</p>
+<div class="opening-cards" aria-label="Opening title sequence">
+  <p class="card-beat boom">BOOM.</p>
+  <p class="card-beat">BLACK.</p>
+  <p class="direction">Silence.</p>
+  <p class="direction">A date appears against the black.</p>
+  <p class="card-beat date-card">APRIL 15 1902</p>
+  <p class="card-beat refused">REFUSED.</p>
+  <p class="direction">Hold it only long enough to read.</p>
+  <p class="direction">Gone.</p>
+  <p class="card-beat">BLACK.</p>
+  <p class="card-beat feature-title">TWO FAMILIES,<br>ONE ROBERT</p>
+</div>
 </div>
 <div class="source">
 <strong>Source road</strong><br>
