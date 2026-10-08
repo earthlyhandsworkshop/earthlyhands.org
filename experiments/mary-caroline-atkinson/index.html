@@ -61,34 +61,24 @@ h1{font-size:clamp(3.2rem,13vw,6.5rem);line-height:.88;font-weight:400;letter-sp
 .opening-cards .boom{font-size:clamp(2rem,7vw,3.8rem)!important}
 @media(max-width:46rem){.opening-cards{margin-left:-1rem;margin-right:-1rem;padding-left:1rem;padding-right:1rem;min-height:78svh}}
 @media(max-width:34rem){.cue{padding:.75rem .8rem}.cue.mary{margin-left:1.1rem}.cue.commission{margin-right:.4rem}.scene .direction{padding:0 .7rem}}
+
+.scene-views{display:flex;align-items:center;flex-wrap:wrap;gap:.6rem 1rem;margin:1.1rem 0 1.7rem;padding:.8rem 0;border-block:1px solid rgba(98,92,81,.4);font:.65rem/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.scene-views a{text-underline-offset:.25em}.scene-views [aria-current]{font-weight:700;color:var(--rust)}
+.optional-views{margin:2rem 0 1rem}
+.optional-views details{border-top:1px solid var(--rule);scroll-margin-top:1rem}
+.optional-views details:last-child{border-bottom:1px solid var(--rule)}
+.optional-views summary{cursor:pointer;list-style:none;padding:1.1rem 0;font:600 .78rem/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+.optional-views summary::-webkit-details-marker{display:none}
+.optional-views summary::after{content:" +";float:right;font-size:1rem}
+.optional-views details[open] summary::after{content:" −"}
+.optional-views summary span{display:block;margin-top:.25rem;color:var(--muted);font-weight:400;font-size:.6rem}
+.optional-views .visual-specimen{margin:0;border-top:0}
+.optional-views .scene-logic{margin:0 0 1.5rem;border-top:0}
 </style>
 <a class="back" href="/experiments/ten-folio/#film">Back to film floor</a>
 <div class="kicker">Rough Edge · True North’s durable working scene · 23 Oct 1900</div>
 <h1>Mary Caroline Atkinson</h1>
-<section class="visual-specimen" aria-labelledby="visual-specimen-title">
-  <div class="specimen-head">
-    <div><div class="kicker">Visual specimen 01 · interpretive</div><h2 id="visual-specimen-title">One possible arrangement</h2></div>
-    <p class="specimen-boundary">Storyboard / film thinking. Not a source reconstruction of the room, people, clothing, gesture, or acoustics.</p>
-  </div>
-  <figure>
-    <img src="visual-specimen-01.jpg?v=58bdde86e603" alt="Interpretive sepia storyboard for Scene One showing Mary Caroline Atkinson before the Commission, Robert Bell entering the record, Article Fourteen pressure, Mary's knowledge limit, her departure, and the refused card">
-    <figcaption>The picture is allowed to propose a film. The source controls the words, identities, and evidentiary limits.</figcaption>
-  </figure>
-  <a class="specimen-open" href="visual-specimen-01.jpg?v=58bdde86e603">Open visual full frame</a>
-</section>
-<section class="scene-logic" aria-labelledby="scene-logic-title">
-  <div class="kicker">Why this scene works</div>
-  <h2 id="scene-logic-title">Mary first. The machinery arrives around her.</h2>
-  <div class="scene-logic-grid">
-    <article><h3>Enter mid-hearing</h3><p>No historical lecture opens the film. Question and answer establish the room before the audience is told what the case is supposed to mean.</p></article>
-    <article><h3>Let the name land</h3><p>“Robert Bell” arrives as Mary’s father before it becomes a disputed administrative object. The person precedes the government’s file.</p></article>
-    <article><h3>Keep knowledge honest</h3><p>Mary’s limits are not weakness to repair. Her refusal to say more than she knows is part of her authority in the scene.</p></article>
-    <article><h3>Article Fourteen is pressure</h3><p>The legal category enters through the Commission’s narrowing questions. The film does not need a narrator to explain the treaty before Mary encounters its administrative use.</p></article>
-    <article><h3>The correction matters</h3><p>When the Commission strengthens “not that I know of” into “never received,” Mary stops the move. That tiny correction lets the audience hear the difference between testimony and characterization.</p></article>
-    <article><h3>Leave ordinarily</h3><p>The hearing ends as ordinary procedure. The door / BOOM / REFUSED sequence is film grammar, not a claim that the surviving record preserves the literal sound of her exit.</p></article>
-    <article class="boundary"><h3>Source brake</h3><p>The surviving transcript does not name the individual examiner. The storyboard is interpretive. No drawing, blocking choice, or dramatic beat earns historical identity, room layout, clothing, gesture, motive, or acoustics.</p></article>
-  </div>
-</section>
+<nav class="scene-views" aria-label="Scene views"><span aria-current="page">Screenplay</span><a href="#visual-study">View artwork</a><a href="#production-notes">Production notes</a></nav>
 <div class="scene">
 <p class="place">Muskogee, Indian Territory — October 23, 1900</p>
 <p class="direction">A hearing already in progress.</p>
@@ -206,9 +196,11 @@ h1{font-size:clamp(3.2rem,13vw,6.5rem);line-height:.88;font-weight:400;letter-sp
 <div class="cue commission"><span class="speaker">COMMISSION</span><p class="speech">And the Commission is unable to identify your father, whom you claim to have been on the 1830 roll in Mississippi as being there, and I want to know if you make your claim on any other treaty stipulations?</p></div>
 <div class="cue mary"><span class="speaker">MARY</span><p class="speech">I don’t know much about the treaties. I have never read anything about them and of course I don’t know very much about it only what I have heard my ancestors say.</p></div>
 <div class="cue commission"><span class="speaker">COMMISSION</span><p class="speech">Is there anything further you want to say in regard to your claim? Any material facts that you want to present to the Commission?</p></div>
-<div class="cue mary"><span class="speaker">MARY</span><p class="speech">Nothing more only that my father was a part Choctaw. That is all the grounds I have.</p></div>
-<p class="direction">There may be a whole lot more but I don’t know what it is.</p>
-<p class="direction">Of course I don’t want to say anything only what I know to be so.</p>
+<div class="cue mary"><span class="speaker">MARY</span><p class="speech">Nothing more only that my father was a part Choctaw. That is all the grounds I have.
+
+There may be a whole lot more but I don’t know what it is.
+
+Of course I don’t want to say anything only what I know to be so.</p></div>
 <div class="cue commission"><span class="speaker">COMMISSION</span><p class="speech">Are you married?</p></div>
 <div class="cue mary"><span class="speaker">MARY</span><p class="speech">Yes sir.</p></div>
 <div class="cue commission"><span class="speaker">COMMISSION</span><p class="speech">What is your husband’s name?</p></div>
@@ -251,6 +243,31 @@ h1{font-size:clamp(3.2rem,13vw,6.5rem);line-height:.88;font-weight:400;letter-sp
   <p class="card-beat feature-title">TWO FAMILIES,<br>ONE ROBERT</p>
 </div>
 </div>
+<div class="optional-views"><details id="visual-study"><summary>View full artwork <span>Visual specimen 01</span></summary><section class="visual-specimen" aria-labelledby="visual-specimen-title">
+  <div class="specimen-head">
+    <div><div class="kicker">Visual specimen 01 · interpretive</div><h2 id="visual-specimen-title">One possible arrangement</h2></div>
+    <p class="specimen-boundary">Storyboard / film thinking. Not a source reconstruction of the room, people, clothing, gesture, or acoustics.</p>
+  </div>
+  <figure>
+    <img src="visual-specimen-01.jpg?v=58bdde86e603" alt="Interpretive sepia storyboard for Scene One showing Mary Caroline Atkinson before the Commission, Robert Bell entering the record, Article Fourteen pressure, Mary's knowledge limit, her departure, and the refused card">
+    <figcaption>The picture is allowed to propose a film. The source controls the words, identities, and evidentiary limits.</figcaption>
+  </figure>
+  <a class="specimen-open" href="visual-specimen-01.jpg?v=58bdde86e603">Open visual full frame</a>
+</section>
+</details><details id="production-notes"><summary>Production notes <span>Why this scene works · source boundaries</span></summary><section class="scene-logic" aria-labelledby="scene-logic-title">
+  <div class="kicker">Why this scene works</div>
+  <h2 id="scene-logic-title">Mary first. The machinery arrives around her.</h2>
+  <div class="scene-logic-grid">
+    <article><h3>Enter mid-hearing</h3><p>No historical lecture opens the film. Question and answer establish the room before the audience is told what the case is supposed to mean.</p></article>
+    <article><h3>Let the name land</h3><p>“Robert Bell” arrives as Mary’s father before it becomes a disputed administrative object. The person precedes the government’s file.</p></article>
+    <article><h3>Keep knowledge honest</h3><p>Mary’s limits are not weakness to repair. Her refusal to say more than she knows is part of her authority in the scene.</p></article>
+    <article><h3>Article Fourteen is pressure</h3><p>The legal category enters through the Commission’s narrowing questions. The film does not need a narrator to explain the treaty before Mary encounters its administrative use.</p></article>
+    <article><h3>The correction matters</h3><p>When the Commission strengthens “not that I know of” into “never received,” Mary stops the move. That tiny correction lets the audience hear the difference between testimony and characterization.</p></article>
+    <article><h3>Leave ordinarily</h3><p>The hearing ends as ordinary procedure. The door / BOOM / REFUSED sequence is film grammar, not a claim that the surviving record preserves the literal sound of her exit.</p></article>
+    <article class="boundary"><h3>Source brake</h3><p>The surviving transcript does not name the individual examiner. The storyboard is interpretive. No drawing, blocking choice, or dramatic beat earns historical identity, room layout, clothing, gesture, motive, or acoustics.</p></article>
+  </div>
+</section>
+</details></div>
 <div class="source">
 <strong>Source road</strong><br>
 MCR 872 examination of Mary Caroline Atkinson, Muskogee, 23 Oct 1900.<br>
