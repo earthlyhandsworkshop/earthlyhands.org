@@ -44,93 +44,70 @@
     <script>document.documentElement.className = "js";</script>
     <link rel="stylesheet" href="../../style.css?v=folio2" />
     <style>
-      /* The adventure comes first; the site mark remains a small signature.
-         Dark ink on warm paper makes the welcome readable in daylight/mobile. */
-      .shared-country-welcome{
-        width:min(980px,calc(100% - 2rem));
-        margin:0 auto;
-        padding:clamp(1.75rem,4vw,3.5rem) 0 clamp(1.5rem,3.5vw,2.5rem);
+      /* Shared Country is the encounter; its introduction is optional. */
+      .site-header.shared-country-bar{
+        min-height:3.2rem;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:.7rem;
+        flex-wrap:wrap;
+        padding:.35rem clamp(.7rem,2.5vw,1.5rem);
+      }
+      .shared-country-location{
+        display:flex;align-items:center;gap:.65rem;min-width:0;
+        font:600 .78rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;
         color:#26231e;
       }
-      .shared-country-welcome .welcome-kicker{
-        margin:0 0 .7rem;
-        font:600 .72rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;
-        letter-spacing:.1em;
-        text-transform:uppercase;
-        color:#615a4e;
+      .shared-country-location .location-divider{opacity:.45}
+      .shared-country-location strong{font-weight:600}
+      .shared-country-about{position:relative;margin-left:auto;color:#26231e}
+      .shared-country-about summary{
+        cursor:pointer;list-style:none;
+        border:1px solid currentColor;border-radius:.15rem;
+        padding:.32rem .55rem;font:.72rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;
       }
-      .shared-country-welcome h1{
-        max-width:13ch;
-        margin:0;
-        font:400 clamp(3rem,9vw,7rem)/.96 Georgia,"Times New Roman",serif;
-        letter-spacing:-.035em;
+      .shared-country-about summary::-webkit-details-marker{display:none}
+      .shared-country-about summary:focus-visible{outline:2px solid #855b40;outline-offset:3px}
+      .shared-country-about[open] summary{background:#d9cdb9}
+      .shared-country-about .about-copy{
+        position:absolute;right:0;top:calc(100% + .45rem);
+        z-index:15;width:min(30rem,calc(100vw - 1.25rem));
+        padding:1rem;background:#ece2d1;border:1px solid #6f6251;
+        box-shadow:0 9px 22px rgba(0,0,0,.16);
         color:#26231e;
       }
-      .shared-country-welcome .welcome-lead{
-        max-width:42rem;
-        margin:1.2rem 0 0;
-        font:400 clamp(1.08rem,2.2vw,1.42rem)/1.5 Georgia,"Times New Roman",serif;
-        color:#38332c;
-      }
-      .shared-country-welcome .welcome-bearing{
-        max-width:42rem;
-        margin:.9rem 0 0;
-        color:#51493e;
-        font:.82rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
-      }
-      .shared-country-welcome a{
-        color:#29251f;
-        text-decoration-color:#855b40;
-        text-underline-offset:.22em;
-      }
+      .shared-country-about .about-copy p{margin:0 0 .7rem;line-height:1.5}
+      .shared-country-about .about-copy p:last-child{margin-bottom:0}
+      .shared-country-about .about-copy a{color:inherit;text-underline-offset:.2em}
       @media(max-width:640px){
-        .site-header{min-height:2.9rem}
-        .site-header .identity{
-          font-size:.76rem;
-          line-height:1.2;
-          letter-spacing:.045em;
-        }
-        .shared-country-welcome{
-          padding-top:1.15rem;
-          padding-bottom:1.2rem;
-        }
-        /* The header already says whose ground this is. */
-        .shared-country-welcome .welcome-kicker{display:none}
-        .shared-country-welcome h1{
-          max-width:none;
-          font-size:clamp(2.5rem,9vw,3.45rem);
-          line-height:1;
-        }
-        .shared-country-welcome .welcome-lead{
-          margin-top:.8rem;
-          font-size:1.07rem;
-          line-height:1.43;
-        }
-        .shared-country-welcome .welcome-bearing{
-          margin-top:.7rem;
-          font-size:.82rem;
-          line-height:1.45;
-        }
+        .site-header.shared-country-bar{min-height:2.65rem;padding:.3rem .6rem;gap:.4rem}
+        .site-header.shared-country-bar .identity{font-size:.72rem;letter-spacing:.02em}
+        .shared-country-location{gap:.35rem;font-size:.7rem}
+        .shared-country-about summary{font-size:.68rem;padding:.27rem .42rem}
       }
     </style>
   </head>
   <body data-lamp="lit" data-ground="night" data-discovery="open" data-thought="none">
     <a class="skip-link" href="#threshold">Skip to the ground</a>
 
-    <header class="site-header">
-      <a class="identity" href="/" aria-label="Earthly Hands Workshop">
-        <span>Earthly Hands Workshop</span>
-      </a>
+    <header class="site-header shared-country-bar">
+      <div class="shared-country-location">
+        <a class="identity" href="/" aria-label="Earthly Hands Workshop"><span>Earthly Hands Workshop</span></a>
+        <span class="location-divider" aria-hidden="true">/</span>
+        <strong id="shared-country-title">Shared Country</strong>
+      </div>
+      <details class="shared-country-about">
+        <summary>About Shared Country</summary>
+        <div class="about-copy">
+          <p>Welcome. This ground grows as the Workshop discovers real relations among people, places, records, questions, and things we have made. There is no required path.</p>
+          <p>Enter anywhere. Ask the ground. Follow a relation when it earns one. Some paths will deepen; some will remain open. <a href="/">Return to Earthly Hands</a> whenever you like.</p>
+          <p>We hope this can become a shared place to explore together. That multiplayer possibility is a direction, not a feature we claim to have finished.</p>
+        </div>
+      </details>
     </header>
 
     <main>
-      <section class="shared-country-welcome" aria-labelledby="shared-country-title">
-        <p class="welcome-kicker">Earthly Hands Workshop · public ground</p>
-        <h1 id="shared-country-title">Shared Country</h1>
-        <p class="welcome-lead">Welcome. This ground grows as the Workshop discovers real relations among people, places, records, questions, and things we have made. There is no required path.</p>
-        <p class="welcome-bearing">Enter anywhere. Ask the ground. Follow a relation when it earns one. Some paths will deepen; some will remain open. <a href="/">Return to Earthly Hands</a> whenever you like.</p>
-      </section>
-
       <section class="threshold" id="threshold" data-place="Front edge">
         <div class="experience-shell" id="experience-shell">
           <div class="experience-viewbar" aria-label="Shared Country views">
