@@ -44,40 +44,73 @@
     <script>document.documentElement.className = "js";</script>
     <link rel="stylesheet" href="../../style.css?v=folio2" />
     <style>
+      /* The adventure comes first; the site mark remains a small signature.
+         Dark ink on warm paper makes the welcome readable in daylight/mobile. */
       .shared-country-welcome{
         width:min(980px,calc(100% - 2rem));
         margin:0 auto;
-        padding:clamp(4.5rem,10vw,8rem) 0 clamp(2rem,5vw,4rem);
-        color:#efe9dc;
+        padding:clamp(1.75rem,4vw,3.5rem) 0 clamp(1.5rem,3.5vw,2.5rem);
+        color:#26231e;
       }
       .shared-country-welcome .welcome-kicker{
-        margin:0 0 1rem;
+        margin:0 0 .7rem;
         font:600 .72rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;
         letter-spacing:.1em;
         text-transform:uppercase;
-        color:#aaa28f;
+        color:#615a4e;
       }
       .shared-country-welcome h1{
         max-width:13ch;
         margin:0;
-        font:400 clamp(3rem,9vw,7rem)/.92 Georgia,"Times New Roman",serif;
+        font:400 clamp(3rem,9vw,7rem)/.96 Georgia,"Times New Roman",serif;
         letter-spacing:-.035em;
+        color:#26231e;
       }
       .shared-country-welcome .welcome-lead{
         max-width:42rem;
-        margin:1.6rem 0 0;
-        font:400 clamp(1.08rem,2.2vw,1.42rem)/1.55 Georgia,"Times New Roman",serif;
-        color:#ddd5c6;
+        margin:1.2rem 0 0;
+        font:400 clamp(1.08rem,2.2vw,1.42rem)/1.5 Georgia,"Times New Roman",serif;
+        color:#38332c;
       }
       .shared-country-welcome .welcome-bearing{
         max-width:42rem;
-        margin:1rem 0 0;
-        color:#aaa28f;
-        font:.82rem/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;
+        margin:.9rem 0 0;
+        color:#51493e;
+        font:.82rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
       }
-      .shared-country-welcome a{color:#efe9dc;text-underline-offset:.22em}
+      .shared-country-welcome a{
+        color:#29251f;
+        text-decoration-color:#855b40;
+        text-underline-offset:.22em;
+      }
       @media(max-width:640px){
-        .shared-country-welcome{padding-top:5rem}
+        .site-header{min-height:2.9rem}
+        .site-header .identity{
+          font-size:.76rem;
+          line-height:1.2;
+          letter-spacing:.045em;
+        }
+        .shared-country-welcome{
+          padding-top:1.15rem;
+          padding-bottom:1.2rem;
+        }
+        /* The header already says whose ground this is. */
+        .shared-country-welcome .welcome-kicker{display:none}
+        .shared-country-welcome h1{
+          max-width:none;
+          font-size:clamp(2.5rem,9vw,3.45rem);
+          line-height:1;
+        }
+        .shared-country-welcome .welcome-lead{
+          margin-top:.8rem;
+          font-size:1.07rem;
+          line-height:1.43;
+        }
+        .shared-country-welcome .welcome-bearing{
+          margin-top:.7rem;
+          font-size:.82rem;
+          line-height:1.45;
+        }
       }
     </style>
   </head>
