@@ -12,7 +12,7 @@
 *{box-sizing:border-box}html{background:var(--paper)}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.45 Georgia,serif}
 a{color:inherit;text-underline-offset:.2em}.wrap{width:min(82rem,calc(100% - 2rem));margin:auto}
 header,footer{display:flex;justify-content:space-between;gap:1rem;align-items:center;min-height:3.2rem;border-bottom:1px solid var(--ink);font:11px/1 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
-nav{display:flex;gap:1rem;flex-wrap:wrap}nav a{text-decoration:none}
+.home-mark{color:inherit;text-decoration:none}.home-mark:focus-visible{outline:2px solid var(--accent);outline-offset:3px}nav{display:flex;gap:1rem;flex-wrap:wrap}nav a{text-decoration:none}
 .hero{padding:12vh 0 9vh;border-bottom:1px solid var(--ink)}
 .hero small,.kind{color:var(--muted);font:11px/1.2 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
 h1{font-size:clamp(4.5rem,13vw,9rem);font-weight:400;line-height:.8;letter-spacing:-.065em;margin:.6rem 0 1.8rem}
@@ -30,7 +30,7 @@ footer{border-bottom:0;color:var(--muted)}
 <body>
 <div class="wrap">
 <header>
-<strong>Earthly Hands Workshop</strong>
+<a class="home-mark" href="/" aria-label="Earthly Hands Workshop — home"><strong>Earthly Hands Workshop</strong></a>
 <nav><a href="/experiments/">Explore</a><a href="/experiments/shared-country/">Shared Country</a><a href="mailto:workshop@earthlyhands.org">Contact</a></nav>
 </header>
 <main>
