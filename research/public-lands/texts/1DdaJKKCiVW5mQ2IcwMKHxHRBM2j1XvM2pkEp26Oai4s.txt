@@ -1,0 +1,669 @@
+Public Lands No. 2 p.74 — Kincade / McLaughlin / McIntosh annotations and Big Nancy recurrence — OHC_2459 source jacket
+
+
+Historical object
+Photographed manuscript page 74 of the source-titled Public Lands return. The visible heading reads `Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty.` This is one face in a larger continued return. The available digital face does not by itself establish the complete historical packet, district boundary, or later roll-up rule.
+
+
+Source / representation / custody
+Two stored files named `OHC_2459.pdf` were materially checked:
+
+
+1. Drive ID `1X8CwXKPm0uBsvKCmP5puX7gKHzw4U3av` — parent `Source objects — received batch 1 — OHC 2408–2518`, folder ID `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`.
+2. Drive ID `1dH5-triOig5Hc50nLFmi_9GlC6GS4zMa` — parent `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`, folder ID `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI`.
+
+
+Both PDFs are 259,743 bytes. Direct byte comparison in this pass found them byte-for-byte identical, SHA-256 `f68ee509cbed355cdfe483b90031686a7a49efa80e2cdec9e9149568f8959499`. They are two custody routes to one digital payload, not two independent witnesses.
+
+
+Reading method
+The PDF was opened directly from Drive, rendered at 300 DPI, and inspected visually. Temporary crops/enlargements were made from that rendering to read the lower rows and locality field. Those inspection derivatives are not source objects and are not retained as historical evidence.
+
+
+Direct source observation
+Near the bottom of the face, three consecutive named rows carry explicit worded category annotations in the `Locality of Farms` field:
+
+
+- `Andrew Kincade` — `1 slave]` followed by `Tombecbe`.
+- `Walter McLaughlin` — `1 white]` followed by `do`.
+- `John McIntosh` — `1 white 5 Slaves]` followed by `Tombecbe`.
+
+
+The category words are handwritten inside the locality field rather than in a separately printed white/slave column.
+
+
+Taken only as arithmetic on those source-visible labels, this page contributes a lexical subtotal of 2 white(s) and 6 slave(s). That subtotal is a transcription aid only. It is not promoted to a district total, census total, household total, or legal status determination.
+
+
+WITHDRAWN / SUPERSEDED — the earlier bounded pass reported no other explicit `white`, `whites`, `slave`, `slaves`, `black`, or `blacks` wording; later direct-source return found r09 exact `6 Blks.` See the correction addendum below.
+
+
+Finding
+Page 74 directly demonstrates that a single row-level annotation can combine a white count and a slave count (`1 white 5 Slaves]`). It also demonstrates singular and plural category language on neighboring rows. The marks coexist with the printed cultivation/family/age/locality structure rather than replacing it.
+
+
+Inference — kept separate
+The layout is compatible with a secondary administrative counting or classification layer placed over the printed return, but page 74 does not identify the annotating hand, date, instruction, purpose, or whether every such mark feeds a later aggregate. The word `slave` beside a named row does not by itself establish the legal owner, household relationship, residence, or the identity of the enslaved person or persons counted.
+
+
+Crossing earned by direct source comparison
+Adjacent manuscript pages 75 (`OHC_2460`) and 76 (`OHC_2461`) were independently opened in the same Fieldglass pass. Page 75 carries explicit `1 white]` and `3 whites]` annotations. Page 76 carries `white`, `slave(s)`, and one explicit `Blacks` label. These are legitimate structural comparisons because the faces are consecutive pages of the same source-visible continued return; they remain separate historical faces.
+
+
+The page-76 lexical variation is load-bearing: this jacket does not treat `Blacks` as automatically equivalent to `Slaves`.
+
+
+Uncertainty
+The locality spelling is preserved here as `Tombecbe` from the direct face. No attempt is made to normalize it to a modern river name. The meaning of the closing bracket-like marks after category phrases is preserved graphically as `]` without assigning a formal notation rule.
+
+
+Explicit nonclaims
+This jacket does not establish:
+- that Andrew Kincade, Walter McLaughlin, or John McIntosh are identical with same-name occurrences elsewhere;
+- that the category numbers are household membership counts;
+- that the named row-holder legally owned the enslaved persons counted;
+- that page 74 belongs to the same district roll-up as manuscript page 60;
+- that absence of a category word on another row means historical absence of white or enslaved persons;
+- that `Blacks` and `Slaves` are interchangeable categories.
+
+
+Correction history
+No earlier faithful page-74 source jacket was located in bounded Drive searches for `OHC_2459` and `page 74 OHC_2459`. Train/receipt references were treated as navigation/technical derivatives rather than source-facing readings. If an older equivalent historical-object jacket later surfaces, this jacket should be reconciled rather than allowed to multiply the object.
+
+
+Return paths
+Backward:
+`Public Lands — Whole-Document Corpus` → this jacket → `OHC_2459.pdf`, Drive `1X8CwXKPm0uBsvKCmP5puX7gKHzw4U3av` → `Source objects — received batch 1 — OHC 2408–2518`.
+
+
+Alternate custody:
+this jacket → `OHC_2459.pdf`, Drive `1dH5-triOig5Hc50nLFmi_9GlC6GS4zMa` → `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`.
+
+
+Sideways:
+this jacket → `FIELDGLASS SOURCE-FACING JACKET — OHC_2460 page 75 — qualified ditto grammar in General Remarks`, Drive `1_oFgj1F2atjI20fcLY-WTmm-DZY3W62KXoeGZ6LwaYI` → page-75 category-word deepening; and `FIELDGLASS SOURCE-FACING JACKET — OHC_2461 page 76 — white-slave-Blacks annotations and category vocabulary`, Drive `1OB1lKHy0Dec3_3dpL2mCjWTWW8o_qHdT6pAu9lEhLW0` → consecutive-face vocabulary control.
+
+
+Next honest door
+Seek a source-visible roll-up or instruction within this same No. 2 continued-return body that explains how `white`, `slave(s)`, and `Blacks` annotations were accumulated. Do not collapse the vocabulary or connect it to the page-60 district aggregate unless the intervening documentary structure earns that crossing.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+
+
+FIELDGLASS LANDSCAPE ADDENDUM — BIG NANCY RECURRENCE ACROSS pp.71 AND 74 — 18 SEP 2026
+
+
+Direct source return
+Fieldglass returned to the archival OHC_2459.pdf face governed by this jacket and independently to OHC_2456.pdf / manuscript p.71. On p.74, the Oclacubbe occurrence carries the literal Locality-of-Farms wording `Near Military road. Big Nancy`. On p.71, a separate military-road locality chain begins `Near Military road. good running water.` and the next row carries the dependent wording `On do below Big Nancy 6 miles.` The p.71 jacket already controls the `do` dependency and keeps the inherited military-road reading separate from the literal manuscript.
+
+
+Cross-page relation earned
+Within the same continued Public Lands No. 2 return, the exact source string `Big Nancy` now recurs on manuscript pp.71 and 74 in locality material that also carries `Military road`. This earns a CROSS-PAGE RECURRING ANCHOR / OPEN COMPARISON. It is stronger than a single isolated name occurrence and gives Mapping Grounds a clean retrieval corridor for later historical road/place sources.
+
+
+Do not strengthen the relation. P.74 does not say what kind of thing `Big Nancy` is, and its punctuation does not by itself prove that Big Nancy is a point on the military road. P.71's `below ... 6 miles` does not define compass direction, downstream direction, measurement method, or geometry. Repeated wording does not prove that the two occurrences denote one historical referent, though that comparison is now source-earned and worth testing.
+
+
+Map / film consequence
+Carry Big Nancy as an UNPLACED NAMED ANCHOR with two separately sourced page occurrences. Do not draw a road segment, six-mile radius, route, settlement point, residence, or travel path. The films may let the phrase recur as part of the source's own landscape vocabulary if useful, but staging must not resolve what the source leaves unnamed.
+
+
+Exact return
+p.74 → this jacket → OHC_2459.pdf [1X8CwXKPm0uBsvKCmP5puX7gKHzw4U3av] → Oclacubbe locality cell `Near Military road. Big Nancy`.
+p.71 → governing jacket [149jp_Y18wz11foGtXz-sU7n1nP338woqhGMs50dN1uY] → OHC_2456.pdf [1g9hjBI43fumRt9iK42A-RHfLF8hAaHIs] → military-road ditto chain / `below Big Nancy 6 miles`.
+
+
+— Fieldglass | Film / Landscape Scaffolding | recurring anchor preserved; feature kind and geometry open
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+RETURN 1 — ANDREW KINCADE ROW OCCURRENCE
+Person / Entity: Andrew Kincade
+Date: not supplied by this page-facing pass
+Earned verb / relation: Public Lands No. 2 p.74 carries the Andrew Kincade row with the source-written locality-field annotation `1 slave]` followed by `Tombecbe`.
+Case / Object: OHC_2459 p.74 — Public Lands No. 2 Form of a Return — Continued
+Place: `Tombecbe` [source spelling; locality-field wording]
+Jacket Return: this governing source jacket → OHC_2459.pdf, Drive 1X8CwXKPm0uBsvKCmP5puX7gKHzw4U3av → direct manuscript p.74 face
+Identity / Relation Status: source-row occurrence only; no same-name merge. The `slave` annotation does not establish legal ownership, household relation, residence, or the identity of the person counted.
+
+
+RETURN 2 — WALTER MCLAUGHLIN ROW OCCURRENCE
+Person / Entity: Walter McLaughlin
+Date: not supplied by this page-facing pass
+Earned verb / relation: Public Lands No. 2 p.74 carries the Walter McLaughlin row with the source-written locality-field annotation `1 white]` followed by literal `do`.
+Case / Object: OHC_2459 p.74 — Public Lands No. 2 Form of a Return — Continued
+Place: literal `do` [ditto target not normalized in this return]
+Jacket Return: this governing source jacket → OHC_2459.pdf, Drive 1X8CwXKPm0uBsvKCmP5puX7gKHzw4U3av → direct manuscript p.74 face
+Identity / Relation Status: source-row occurrence only; no same-name merge. The `white` annotation is preserved as source language and is not converted into a modern identity, household, residence, or legal-status claim.
+
+
+RETURN 3 — JOHN MCINTOSH ROW OCCURRENCE
+Person / Entity: John McIntosh
+Date: not supplied by this page-facing pass
+Earned verb / relation: Public Lands No. 2 p.74 carries the John McIntosh row with the source-written locality-field annotation `1 white 5 Slaves]` followed by `Tombecbe`.
+Case / Object: OHC_2459 p.74 — Public Lands No. 2 Form of a Return — Continued
+Place: `Tombecbe` [source spelling; locality-field wording]
+Jacket Return: this governing source jacket → OHC_2459.pdf, Drive 1X8CwXKPm0uBsvKCmP5puX7gKHzw4U3av → direct manuscript p.74 face
+Identity / Relation Status: source-row occurrence only; no same-name merge. The combined annotation records category/count language on this row; it does not establish legal ownership, household membership, residence, or the identities of the people counted.
+
+
+RETURN 4 — BIG NANCY CROSS-PAGE RECURRING ANCHOR
+Person / Entity: Big Nancy [unplaced named anchor]
+Date: not supplied by the page-facing p.71 / p.74 passes
+Earned verb / relation: the exact source string `Big Nancy` recurs in locality material on Public Lands No. 2 pp.71 and 74. P.74 carries `Near Military road. Big Nancy`; p.71 carries `On do below Big Nancy 6 miles`, with the military-road continuation there retained as an inherited working reading rather than substituted for the literal manuscript.
+Case / Object: OHC_2456 p.71 + OHC_2459 p.74 — Public Lands No. 2 Form of a Return — Continued
+Place: Big Nancy [feature kind unestablished]; Military road [co-occurring locality wording]
+Jacket Return: this p.74 jacket → OHC_2459 direct face; sideways to governing p.71 jacket, Drive 149jp_Y18wz11foGtXz-sU7n1nP338woqhGMs50dN1uY → OHC_2456 direct face
+Identity / Relation Status: cross-page recurring-anchor comparison only. Repetition does not prove one historical referent; feature kind, geometry, meaning of `below`, six-mile measurement method, and exact road relation remain OPEN.
+
+
+
+
+FIELDGLASS LANDSCAPE DEEPENING — p.77 PERSON-NAME OCCURRENCE SHARPENS `BIG NANCY` — 18 SEP 2026
+
+
+Correction / deepening
+The earlier p.71↔p.74 recurring-anchor state remains valid but is no longer the whole source picture. Direct return to OHC_2462 / manuscript p.77 now shows `Nancy Lilot. (Big Nancy)` in the printed names column. That same row carries Locality of Farms `Military road. running water.`
+
+
+This materially narrows the earlier feature-kind uncertainty without closing it. The same Public Lands No. 2 return now contains:
+- p.71 locality-anchor wording: `On do below Big Nancy 6 miles`;
+- p.74 locality-anchor wording: `Near Military road. Big Nancy`;
+- p.77 person/name-column occurrence: `Nancy Lilot. (Big Nancy)` with a separate `Military road. running water.` locality on her own row.
+
+
+Current map state
+`Big Nancy` [pp.71/74 locality-anchor occurrences] ↔ `Nancy Lilot. (Big Nancy)` [p.77 person/name-column occurrence] = OPEN REFERENT COMPARISON / PERSON CANDIDATE NOW SOURCE-VISIBLE.
+
+
+Do not back-project p.77 into the earlier cells. P.71 and p.74 still do not say `Nancy Lilot`, do not state that Big Nancy is a person there, and do not establish a farm, residence, ownership, route, road point, or place named for her. The parenthetical p.77 form also does not by itself certify `nickname` or `alias` as the historical function of the words.
+
+
+Return
+p.77 governing jacket `1bs130fP07dFRjgPOy59FcWFcYod-pwSBlMbdnsOPJkg` → OHC_2462.pdf `18BJzgfLNLmGsBOe7AyVvYb1zwvHNpKPh` → direct manuscript p.77.
+Earlier anchors remain governed here and through p.71 jacket `149jp_Y18wz11foGtXz-sU7n1nP338woqhGMs50dN1uY`.
+
+
+— Fieldglass | Film / Landscape Scaffolding | earlier anchor retained; person comparison added without merge
+
+
+
+
+PL:p74:r01–r06 — `TOMBECBE.` / `6 MILES BELOW YOUNGS BLUFF` COMPONENT SEPARATION — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p74:r01 Locality of Farms → exact `Tombecbe`
+PL:p74:r02 locality first position → exact `Tombecbe.`
+PL:p74:r02 locality second position → exact `6 miles below Youngs Bluff`
+PL:p74:r03–r06 locality → two separately aligned `do` marks in each row
+
+
+FIELD / DEPENDENCY GRAMMAR
+R01 independently carries the bare locality form `Tombecbe`. R02 independently rewrites `Tombecbe.` and then adds a second aligned component, `6 miles below Youngs Bluff`. The source-written period after `Tombecbe.` and the doubled dittos below it preserve two positions rather than one continuous place-name phrase.
+
+
+The distance/directional statement belongs to the r02 farm/locality occurrence. The face does not say that Tombecbe itself is six miles below Youngs Bluff. R03–r06 continue both positions by dependency; they do not independently attest Tombecbe, Youngs Bluff, or four additional six-mile relations.
+
+
+IDENTITY / MAP GATE
+Carry r01 as one bare row-local `Tombecbe` occurrence. Carry r02 as a second explicit bare-locality occurrence, exact `Tombecbe`, plus one separate row-centered relation: `6 MILES BELOW` → exact `Youngs Bluff`. Keep the two Tombecbe occurrences, the Youngs Bluff referent, the meaning of `below`, the measurement method, and all geometry OPEN.
+
+
+Do not create a Tombecbe–Youngs Bluff place-to-place edge, merge r01 and r02, multiply either component through r03–r06, normalize either name-form to a modern feature, or draw a point, line, route, six-mile buffer, farm parcel, residence, or travel path.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r01–r06`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+
+
+
+
+PL:p74:r09 — `6 BLKS.` DIRECT-SOURCE CORRECTION / CATEGORY-WORD PASS REOPENED
+
+
+DIRECT FACE
+PL:p74:r09 begins the Locality of Farms field with exact `6 Blks.` The letters support `B-l-k-s` and a period. The source does not write an expanded word, so this jacket preserves the abbreviation rather than silently replacing it with `Blacks`.
+
+
+DERIVATIVE CORRECTION
+Both Quoin text copies transcribe this component as `6 Bills.` They duplicate one derivative reading and add no witness. `6 Bills.` is WITHDRAWN / SUPERSEDED for r09; the manuscript controls as `6 Blks.`
+
+
+The jacket’s earlier statement that no additional black-category wording appeared on p.74 is likewise WITHDRAWN / SUPERSEDED. Its earlier arithmetic of `2 white(s)` and `6 slave(s)` remains only the subtotal of the three lower labels then read; it is not a complete page-level category-word subtotal.
+
+
+FIELD / SOURCE-STATE GATE
+`6 Blks.` is an explicit abbreviated count/category annotation inside the printed locality field, not a geographic phrase. Its placement strengthens the already observed administrative overlay behavior on this face, but the page still does not identify the annotating hand, date, instruction, purpose, roll-up rule, or the people counted.
+
+
+Do not convert the abbreviation into person identities, household membership, residence, ownership, legal status, or a page/district aggregate. Do not map it. The remaining r09 locality wording and its following dependency behavior remain separate source work.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r09`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+
+
+
+
+PL:p74:r09–r10 — CATEGORY / LOCALITY / QUALITY / ROAD-RELATION REGISTER SEPARATION — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p74:r09 field-leading count/category annotation → exact `6 Blks.`
+PL:p74:r09 locality component → exact `Oxnoby.`
+PL:p74:r09 qualitative wording in the same printed field → exact `a good place.`
+PL:p74:r09 General Remarks → exact `Adjoins a prairie`
+PL:p74:r10 locality first position → `do`
+PL:p74:r10 locality second position → exact `near military road.`
+PL:p74:r10 General Remarks → exact `Land poor`
+
+
+REGISTER / DEPENDENCY GRAMMAR
+R09 places three different documentary acts inside the printed Locality of Farms field. `6 Blks.` is the abbreviated count/category annotation governed by the preceding correction. `Oxnoby.` is a separately punctuated bare locality form. `a good place.` is a qualitative assessment, not part of the locality name and not a feature.
+
+
+R10’s locality `do` continues the preceding locality component `Oxnoby`; it does not repeat `6 Blks.` as another explicit category label. The separately written `near military road.` earns one r10 row-centered NEAR relation. The source does not state that Oxnoby itself is near the military road.
+
+
+R09 `a good place.` and r10 General Remarks `Land poor` belong to different rows and different documentary acts. They are not harmonized into one land-quality object, surface, or contradiction.
+
+
+IDENTITY / MAP GATE
+Carry r09 as one explicit bare-locality occurrence, exact `Oxnoby`, with separate non-geographic `6 Blks.` and `a good place.` wording. Carry r10 as a locality dependency plus one proposition-local relation: the r10 farm/locality occurrence NEAR exact `military road`. Keep Oxnoby identity, road identity, and all geometry OPEN.
+
+
+Do not create an Oxnoby–military-road place-to-place edge, treat `6 Blks.` as a place or repeated r10 category count, turn `a good place.` or `Land poor` into mapped quality surfaces, or draw a road, point, proximity area, parcel, residence, or route.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r09–r10`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+
+
+
+
+PL:p74:r11–r13 — TWO EXPLICIT `OXNOBY.` / `NEAR MILITARY ROAD.` ATTESTATIONS AND DITTO BOUNDARY — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p74:r11 locality first position → exact `Oxnoby.`
+PL:p74:r11 locality second position → exact `near military road.`
+PL:p74:r11 General Remarks → exact `Land poor`
+PL:p74:r12 locality first position → exact `Oxnoby.`
+PL:p74:r12 locality second position → exact `near military road.`
+PL:p74:r12 General Remarks → exact `Land poor.`
+PL:p74:r13 locality → two separately aligned `do` marks
+PL:p74:r13 General Remarks → `do`
+
+
+ATTESTATION / RELATION GRAMMAR
+R11 and r12 each independently write both locality components. They therefore provide two explicit row-local attestations of the same exact bare locality form and two explicit row-centered NEAR relations to exact `military road`. Neither row states that Oxnoby itself is near the road; the relation belongs to the farm/locality occurrence on that row.
+
+
+The exact repetition permits comparison but does not merge the two Oxnoby occurrences, prove one place entity, or identify either road wording with r10 or another page. R13 then changes to doubled dependency marks. It does not independently attest Oxnoby, the road, or a third NEAR relation. Its General Remarks `do` likewise continues the separate qualitative register rather than joining `Land poor` to a place name.
+
+
+IDENTITY / MAP GATE
+Carry two explicit source occurrences, r11 and r12: each has bare locality `Oxnoby` plus a separate proposition-local relation, SAME ROW NEAR `military road`. Carry r13 as dependencies only. Keep all occurrence identity, road identity, modern identity, and geometry OPEN.
+
+
+Do not create an Oxnoby–military-road place-to-place edge, collapse r11 and r12 into one occurrence, multiply the relation through r13, or draw a road, place point, proximity area, parcel, residence, route, or land-quality surface.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r11–r13`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+
+
+
+
+PL:p74:r14–r15 — `RUNNING WATER CREEK.` BREAK / ROAD-RELATION DEPENDENCY — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p74:r14 locality first position → exact `Running water creek.`
+PL:p74:r14 locality second position → `do`
+PL:p74:r14 General Remarks → `do`
+PL:p74:r15 locality → two separately aligned `do` marks
+PL:p74:r15 General Remarks → `do`
+
+
+BREAK / DEPENDENCY GRAMMAR
+R14 independently replaces the preceding first locality position with `Running water creek.` Its separately aligned second-position `do` retains the prior `near military road.` relation as a dependency. The source therefore does not write the phrase `Running water creek near military road` and does not establish a watercourse-to-road edge.
+
+
+R15 depends on both locality positions and the separate General Remarks register. Its marks do not independently attest a creek-form, military road, NEAR relation, or land assessment.
+
+
+IDENTITY / MAP GATE
+Carry one r14 bare row-local occurrence of exact `Running water creek`, with feature-name versus generic-description status OPEN. Retain the road relation only as a source dependency attached to the r14 row occurrence; do not strengthen it into an independently rewritten relation. Carry r15 as dependencies only.
+
+
+Do not merge this wording with p.72 or p.73 running-water language, name or draw a creek, connect a watercourse to the road, or create a point, line, route, proximity area, parcel, residence, or repeated occurrence.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r14–r15`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+
+
+
+
+PL:p74:r16–r17 — `POKONUSHA'S VILLAGE` SINGLE-PHRASE / WORD-BY-WORD DITTO CONTROL — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p74:r16 Locality of Farms → exact `Pokonusha's village`
+PL:p74:r16 Total Number of Acres → `80`
+PL:p74:r16 General Remarks → `do`
+PL:p74:r17 locality → two `do` marks aligned beneath the two words of the r16 phrase
+PL:p74:r17 General Remarks → `do`
+
+
+PHRASE / DITTO GRAMMAR
+`Pokonusha's village` is one possessive noun phrase. R17’s two locality dittos operate word-by-word beneath that single phrase. They do not establish two independent semantic positions, a bare locality named `Pokonusha's`, and a separate generic village component.
+
+
+This is a page-local control on the use of alignment: doubled dittos may preserve two separately functioning components where the surrounding source behavior demonstrates independent change, but number and alignment alone do not prove separate registers. Phrase grammar remains load-bearing.
+
+
+OCCURRENCE / MAP GATE
+Carry one explicit r16 locality phrase, exact `Pokonusha's village`, and treat r17 as dependency only. Preserve the source-written possessive without converting it into modern legal ownership, residence, leadership, settlement jurisdiction, or same-person identity. Whether the phrase is a proper village name, a relational description, or another historical naming form remains OPEN.
+
+
+The r16 `80` is acreage only. General Remarks dittos remain a separate dependency register. Draw no village point or polygon, person point, ownership edge, parcel, residence, route, or boundary; do not multiply the phrase through r17 or merge it with another Pokonusha occurrence from resemblance alone.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r16–r17`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+
+
+
+
+PL:p74:r18–r21 — OXNOBY / EAST-SIDE / WEST-SIDE COMPONENT CHANGE — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p74:r18 Locality of Farms → first component exact `Oxnoby`; no second component written
+PL:p74:r18 General Remarks → `do`
+PL:p74:r19 locality → first-component `do`; independently written `east side.`
+PL:p74:r19 General Remarks → `do`
+PL:p74:r20 locality → first-component `do`; independently written `west side.`
+PL:p74:r20 General Remarks → exact `Land tolerable`
+PL:p74:r21 locality → two `do` marks
+PL:p74:r21 General Remarks → `do`
+
+
+COMPONENT / DEPENDENCY GRAMMAR
+R18 breaks the preceding `Pokonusha's village` chain by independently writing `Oxnoby`. Its neighboring locality position is blank. R19 retains the Oxnoby component by dependency while independently introducing `east side.`; r20 again retains Oxnoby by dependency while replacing that directional-side component with `west side.`
+
+
+R21 contains dependencies only. Its two dittos continue the immediately preceding Oxnoby and west-side components; they do not independently attest either one or repeat the earlier east-side state. The General Remarks register changes independently at r20 and remains separate from the locality field.
+
+
+OCCURRENCE / MAP GATE
+Carry one explicit bare-locality occurrence at r18, exact `Oxnoby`. Carry one explicit row-local `east side.` statement at r19 and one explicit row-local `west side.` statement at r20, each with its anchor absent from the written phrase and therefore OPEN. Carry r21 as dependency only.
+
+
+The column alignment does not state that `east side.` or `west side.` means a side of Oxnoby, the military road, a watercourse, a tract, or another feature. Do not manufacture an east–west pair around Oxnoby, inherit the earlier military-road anchor, merge this Oxnoby occurrence with p.73 or earlier p.74 occurrences, or draw a point, side-of-feature relation, line, polygon, parcel, residence, route, or qualitative surface.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r18–r21`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+
+
+
+
+PL:p74:r23 — ISOLATED `OXNOBY` BETWEEN BIG-NANCY AND TOMBECBE ROWS — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p74:r23 Locality of Farms → exact `Oxnoby`
+PL:p74:r23 neighboring locality position → blank
+PL:p74:r23 Total Number of Acres → blank
+PL:p74:r23 General Remarks → exact `Poor land`
+
+
+BOUNDARY / OCCURRENCE GRAMMAR
+R23 independently writes `Oxnoby`. It inherits nothing from r22’s separately governed `Near Military road. Big Nancy` locality body. The blank neighboring position supplies no military-road, Big Nancy, east-side, west-side, distance, or other relation.
+
+
+R24 immediately changes the locality form to independently written `Tombecbe.` R23 therefore stands as one explicit row-local Oxnoby occurrence, not the opening of a continuing Oxnoby chain. The exact spelling permits comparison with earlier Oxnoby occurrences; it does not establish one shared place entity.
+
+
+OCCURRENCE / MAP GATE
+Carry one explicit r23 bare-locality occurrence, exact `Oxnoby`, with identity and geometry OPEN. Keep `Poor land` as a separate qualitative General Remarks statement. Draw no Oxnoby point, road relation, Big Nancy relation, directional side, tract, parcel, residence, route, or quality surface; do not merge r23 with p.73 or earlier p.74 Oxnoby occurrences.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r23`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+
+
+
+
+PL:p74:r24–r26 — TOMBECBE LOCALITY DEPENDENCIES / ONE-ROW J. JAMES REMARK — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p74:r24 Locality of Farms → exact `Tombecbe.`
+PL:p74:r24 General Remarks → exact `Land tolerable good`
+PL:p74:r25 Locality of Farms → `do`
+PL:p74:r25 General Remarks → exact `Near J. James.`
+PL:p74:r26 Locality of Farms → `do`
+PL:p74:r26 General Remarks → blank
+
+
+COLUMN / DEPENDENCY GRAMMAR
+R24 independently begins a Tombecbe locality chain. R25 and r26 retain that locality by ditto; they do not independently attest Tombecbe.
+
+
+R25 independently writes `Near J. James.` in General Remarks. That placement still carries one row-centered proximity statement, but it does not make the locality name its grammatical subject. The source does not say `Tombecbe is near J. James.`
+
+
+R26’s blank General Remarks cell is active evidence. It prevents the r25 James relation from carrying forward even while the separate locality ditto continues Tombecbe.
+
+
+OCCURRENCE / MAP GATE
+Carry one explicit r24 bare-locality occurrence, exact `Tombecbe`, followed by locality dependencies at r25–r26. Carry one r25 proposition-local relation: the r25 farm/locality occurrence NEAR exact `J. James`, with the James referent and all geometry OPEN. Carry no second James relation at r26.
+
+
+Keep `Land tolerable good` qualitative and separate. Do not create a Tombecbe–J. James place-to-place edge, infer that J. James is a person located at a point, multiply the relation through r26, merge this Tombecbe occurrence with another page, or draw a point, proximity area, connector, tract, parcel, residence, route, or quality surface.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r24–r26`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+
+
+
+
+PL:p74:r25 — `J. JAMES` NAME-FORM CORRECTION — DIRECT-SOURCE ADDENDUM
+
+
+CORRECTION HISTORY
+The direct manuscript supports exact General Remarks `Near J. James.`, not Mullion’s withdrawn reading `Near J. Jones.` Both Quoin copies also carry `Near J. James.`, but they duplicate one derivative transcription; the manuscript face controls.
+
+
+The correction changes the exact name-form only. R25 still earns one row-centered NEAR relation to exact `J. James`; r26’s blank General Remarks cell still prevents that relation from carrying forward. The source still does not say that Tombecbe itself is near J. James, identify the J. James referent, or authorize geometry.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r25`.
+
+
+— Mullion
+
+
+PL:p74:r27–r29 — `BOGUECHITO` / ACREAGE / PRAIRIE-LAND QUALITATIVE CHAIN — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+
+
+PL:p74:r27 Locality of Farms → exact `Boguechito`
+PL:p74:r27 Total Acres → exact `80`
+PL:p74:r27 General Remarks → exact `Prairie land - tolerable good.`
+PL:p74:r28–r29 Locality of Farms → `do`
+PL:p74:r28–r29 General Remarks → `do`
+
+
+FIELD / DEPENDENCY GRAMMAR
+
+
+R27 independently writes the bare locality form `Boguechito`. R28 and r29 retain that locality by ditto; they do not independently attest Boguechito. The direct face therefore controls the working label as `Boguechito`, not the earlier provisional `Boquelito` used outside this jacket.
+
+
+The separate `80` is acreage only. `Prairie land - tolerable good.` is a qualitative General Remarks statement. Its wording does not name a prairie, define a tract, or supply a mappable surface. The r28–r29 remarks dittos are dependencies on that statement, not two additional explicit qualitative attestations.
+
+
+OCCURRENCE / MAP GATE
+
+
+Carry one explicit r27 bare-locality occurrence, exact `Boguechito`, followed by locality dependencies at r28–r29. Keep the Boguechito referent and all identity and geometry OPEN.
+
+
+Do not multiply the locality or qualitative statement through the ditto rows, merge Boguechito with a modern feature or another name-form, convert `80` into parcel geometry, or draw a point, tract, prairie area, quality surface, residence, route, or boundary.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r27–r29`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+
+
+PL:p74:r30–r33 — TOMBECBE LOCALITY DEPENDENCIES / TREATY AND LAND-QUALITY REMARKS — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+
+
+PL:p74:r30 Locality of Farms → exact `Tombecbe`
+PL:p74:r30 Total Acres → exact `1280`
+PL:p74:r30 General Remarks → exact `Provided for in treaty with 2 sections.`
+PL:p74:r31 Locality of Farms → `do`; General Remarks → blank
+PL:p74:r32 Locality of Farms → `do`; Total Acres → exact `80`; General Remarks → exact `This place was cleared since Treaty. good land`
+PL:p74:r33 Locality of Farms → `do`; General Remarks → exact `Prairie land`
+
+
+COLUMN / DEPENDENCY GRAMMAR
+
+
+R30 independently begins a Tombecbe locality chain. R31–r33 retain that locality by ditto; they do not independently attest Tombecbe. R34 then independently rewrites `Tombecbe` beside a category annotation and therefore closes this dependency chain.
+
+
+The r30 acreage and General Remarks remain separate documentary acts. `1280` is an acreage figure, while `Provided for in treaty with 2 sections.` is a row-level administrative statement. The face does not identify the treaty article, define either section, or state that a surveyed two-section parcel is represented here.
+
+
+R31’s blank General Remarks cell prevents the treaty-provision statement from carrying forward. R32 independently states `This place was cleared since Treaty. good land`; preserve `This place` as the source’s row-local anaphoric wording, `since Treaty` as relative time without a supplied treaty date, and `good land` as qualitative. R33’s `Prairie land` is independently written qualitative wording. Neither statement names or bounds a geographic feature.
+
+
+OCCURRENCE / MAP GATE
+
+
+Carry one explicit r30 bare-locality occurrence, exact `Tombecbe`, followed by locality dependencies at r31–r33. Carry the r30 treaty-provision remark, the r32 clearing/time and quality statements, and the r33 prairie-land description only in their own row and column positions.
+
+
+Do not multiply Tombecbe through the ditto rows, convert `1280`, `80`, or `2 sections` into parcel geometry, attach the treaty provision to r31–r33, treat `This place` as a modern identified place, or draw a point, section boundary, tract, prairie area, residence, clearing, quality surface, or treaty geography.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r30–r33`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+
+
+PL:p74:r34–r36 — CATEGORY ANNOTATIONS / TOMBECBE LOCALITY GRAMMAR / COMPOUND QUALITY DITTOS — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+
+
+PL:p74:r34 Locality of Farms → exact category annotation `1 slave]` followed by exact locality `Tombecbe`; Total Acres → `160`; General Remarks → `Good land and good water`
+PL:p74:r35 Locality of Farms → exact category annotation `1 white]` followed by locality `do`; Total Acres → `160`; General Remarks → two aligned `do` marks
+PL:p74:r36 Locality of Farms → exact category annotation `1 white 5 Slaves]` followed by exact locality `Tombecbe`; Total Acres → `480`; General Remarks → two aligned `do` marks
+
+
+FIELD / DEPENDENCY GRAMMAR
+
+
+The locality field carries two different documentary functions. The source-written category annotations are not place-name components. R34 independently writes both its category annotation and `Tombecbe`. R35 independently replaces the category annotation with `1 white]` while its following `do` retains only the Tombecbe locality position. R36 independently rewrites both `1 white 5 Slaves]` and `Tombecbe`.
+
+
+The two General Remarks dittos at r35 and r36 sit beneath the coordinated r34 wording `Good land and good water`. They continue that compound qualitative statement by aligned dependency; their number and alignment do not create two independently authored remarks, a named land feature, or a named water feature.
+
+
+OCCURRENCE / MAP GATE
+
+
+Carry r34 and r36 as two explicit row-local Tombecbe attestations. Carry r35 as a Tombecbe dependency only. Preserve each category annotation in its own row as source language; do not make it a locality, identity, household, ownership, residence, or legal-status proposition.
+
+
+Keep `Good land and good water` qualitative. The acre figures remain row values only. Do not merge either Tombecbe attestation with another row or page, multiply locality or remarks through dependencies, convert acreage into parcels, or draw land, water, tract, residence, household, or category geometry.
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → manuscript p.74 → `PL:p74:r34–r36`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes already governed above.
+
+
+— Mullion
+GLEAN DEEPENING — P.74 COMPLETE CATEGORY-ANNOTATION AUDIT
+
+
+DIRECT FACE / COMPLETE BOUND
+
+
+A fresh direct-source pass across all 36 visible body rows establishes four numeric category-annotation occurrences on p.74:
+
+
+PL:p74:r09 John James — Locality of Farms begins with exact `6 Blks.`, followed by exact `Oxnoby.` and the separate qualitative wording `a good place.`
+PL:p74:r34 Andrew Kincade — exact `1 slave]`, followed by exact locality `Tombecbe`
+PL:p74:r35 Walter McLaughlin — exact `1 white]`, followed by locality dependency `do`
+PL:p74:r36 John McIntosh — exact `1 white 5 Slaves]`, followed by exact locality `Tombecbe`
+
+
+PAGE-LOCAL ACCOUNT
+
+
+Taken only as arithmetic on those source-visible labels, the complete p.74 lexical subtotal is `2 White(s) / 6 Slave(s) / 6 Blks.` The abbreviation `Blks.` remains exact source language: it is not silently expanded, equated with `Slave(s)`, or made part of the later p.87 aggregate. R10’s locality `do` continues only `Oxnoby`; it does not repeat r09’s category count.
+
+
+CORRECTION HISTORY
+
+
+The two Quoin text copies’ r09 `6 Bills.` and r34 `Island Tombeche` do not control. Direct inspection restores r09 `6 Blks.` and r34 `1 slave] Tombecbe`. The earlier three-label subtotal `2 white(s) / 6 slave(s)` remains valid only for r34–r36 and is superseded as a complete page subtotal.
+
+
+RUNNING ACCOUNT / OPEN EDGE
+
+
+The previously audited p.63–73 subtotal is `42 White(s) / 74 Slave(s)`. Adding only p.74’s exact White/Slave labels yields `44 White(s) / 80 Slave(s)` for audited pp.63–74. P.64 exact `1 Black` and p.74 exact `6 Blks.` remain separate source-label returns; this audit does not reconcile or normalize them. Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate, so no p.61–74 closure is claimed and no reconciliation is made to p.87 `121 Whites. 203 Slaves.`
+
+
+Return: this jacket → admitted direct study representation `OHC_2459.png` [Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`] → complete manuscript p.74 face → `PL:p74:r01–r36`. Historical custody remains the two controlled byte-identical `OHC_2459.pdf` routes governed above.
+
+
+— Glean
+
+
+SEDGE MAP STATE — 29 SEP 2026
+The pp.71/74 locality-anchor occurrences and the p.77 person-name occurrence remain an OPEN comparison. Mapping may show recurrence; it may not infer a point, route, residence, feature kind, or identity join.
+— Sedge

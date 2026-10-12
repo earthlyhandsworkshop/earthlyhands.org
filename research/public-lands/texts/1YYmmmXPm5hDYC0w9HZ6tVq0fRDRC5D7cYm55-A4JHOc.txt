@@ -1,0 +1,262 @@
+GLEAN SOURCE-FACING JACKET — OHC_2465 page 80 — Capt Walatah unnamed son-in-law relation and 79→80→81 seam
+
+
+Historical object
+
+
+Photographed manuscript page 80 of the source-titled Public Lands return. The visible heading reads `Public Lands — No 2. Form of a Return — Continued — Location under the Choctaw Treaty`. This jacket is bounded to one source-facing row occurrence and the immediately earned page seams. It does not attempt a full diplomatic transcription of page 80 or a corpus-level theory.
+
+
+Method footing
+
+
+Worked from `EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md` and current workshop practice: source before synthesis; one historical object rather than one jacket per file format; source/representation/transcription/interpretation kept distinct; duplicate custody preserved without double-counting; exact return paths retained; uncertainty and nonclaims explicit; opaque machine IDs kept inside provenance rather than used as spoken workshop names.
+
+
+Source and representation footing
+
+
+Directly inspected study representation:
+- `OHC_2465.png`
+- Google Drive file ID: `1xND1bfUbZG7flC0Hn6moTlZucBW02M_w`
+- current parent: `76 Distinct Study Surfaces`
+- parent ID: `11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh`
+- fetched size: 1,365,093 bytes
+- representation role: study PNG of the manuscript face; not a second historical witness
+
+
+Archival PDF custody objects:
+1. `OHC_2465.pdf`
+   - Drive ID: `1bP0JSfffnOg_XxdJ-VeN4MHgNhIQ2bjd`
+   - parent: `Source objects — received batch 1 — OHC 2408–2518`
+   - parent ID: `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`
+   - size: 251,940 bytes
+2. `OHC_2465.pdf`
+   - Drive ID: `13bUC1kF-nyE8JOZA9g3VSdMeHq6svceG`
+   - parent: `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`
+   - parent ID: `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI`
+   - size: 251,940 bytes
+
+
+Both PDF payloads were fetched independently in this pass and each computed SHA-256 `0576f4646d10d531aa8894f63e30f2d36547967126991fc1577d79c34694bbbd`, matching the existing preparation receipt. They remain two custody objects and two return paths carrying one identical PDF payload / one manuscript witness. They are not silently merged, moved, renamed, deleted, or counted as corroborating historical witnesses.
+
+
+Derivative boundary
+
+
+A bounded Drive search for `OHC_2465`, page-80 jacket language, and Quoin-related `OHC_2465` material did not surface a page-80 transcription used by this pass. The reading below therefore comes from direct inspection of the admitted PNG representation. This does not claim that no derivative exists elsewhere; it records only that no derivative was relied on here.
+
+
+Stable local occurrence
+
+
+Rows are counted top-to-bottom from the first visible name line below the printed headers. The occurrence addressed here is `PL:p80:r21`.
+
+
+Name-cell reading: `Capt Walatah.`
+
+
+The same ruled row directly carries:
+- cultivated acres: `5`
+- entire number of the family: `22`
+- males over 16 years: `8`
+- males and females under 10 years: `10`
+- locality: `Alligator creek. His son-in-law lives with him.`
+- total number of acres: `320`
+- General Remarks: `Poor lands.`
+
+
+The row alignment is direct on the manuscript face. `Capt Walatah.` is retained as the source-written name-form including title; no cross-source identity or office continuity is inferred from the title.
+
+
+Finding
+
+
+Page 80 introduces an unnamed person relation inside the locality field. The row names `Capt Walatah.` in the name column, then separately states `His son-in-law lives with him.` The son-in-law is therefore a source-mentioned person occurrence and an explicitly source-stated relationship/residential relation, even though the person is not named in the name column.
+
+
+This is useful for the Public Lands name-and-column work because it shows, on this occurrence, that the name column does not exhaust the people represented by a row. A relational person can enter through locality prose. The source also keeps the relationship statement separate from the printed family total and acreage fields.
+
+
+Inference boundary
+
+
+The source does not name the son-in-law. It does not state that the son-in-law is included within the printed family total of `22`, that he owns or cultivates any of the recorded acreage, that `Alligator creek` is his independent residence, or that the `320` acres are partly or wholly his. `Lives with him` is preserved as the recorder's phrase rather than expanded into a household definition, property relation, legal dependency, or permanent residence claim.
+
+
+The phrase `son-in-law` establishes only the relationship as the source states it; this jacket does not identify which child or spouse creates that relationship, nor does it supply a name from neighboring rows or another source. No neighboring occurrence is merged with the unnamed son-in-law.
+
+
+Name/identity nonclaims
+
+
+- `Capt Walatah.` is one source name-form occurrence on page 80.
+- No same or similar name elsewhere is merged with this occurrence.
+- The source-written `Capt` title is preserved but does not establish office dates, jurisdiction, rank continuity, or identity with another titled occurrence.
+- The unnamed son-in-law remains an unnamed source occurrence.
+- Adjacency to `PL:p80:r20` or `PL:p80:r22` does not identify the son-in-law, establish kinship with those rows, or assign shared acreage.
+- The family total `22` is not silently decomposed into named or unnamed people beyond what this row explicitly states.
+
+
+Unresolved questions
+
+
+- whether another source or continuation names Capt Walatah's son-in-law;
+- whether the son-in-law appears elsewhere in Public Lands under his own name;
+- whether the printed family total of `22` includes the son-in-law;
+- whether similar relationship phrases elsewhere in the locality field introduce additional unnamed people;
+- whether a later full-page diplomatic transcription changes the neutral row numbering used here.
+
+
+Backward seam
+
+
+The existing Glean page-79 jacket directly established `OHC_2465.png` as the next manuscript face after page 79. Direct inspection here confirms manuscript page `80` in the same visible No. 2 continued return. This earns the bounded `79→80` pagination/form seam. It does not merge page-level findings or prove uninterrupted administrative authorship beyond the visible sequence.
+
+
+Forward seam
+
+
+`OHC_2466.png`, Drive ID `1tfyi1ykLOWcWHPndfYmK-pPz3ShAmmAS`, was opened only far enough to establish a distinct manuscript face visibly numbered `81` with the same `Public Lands — No 2. Form of a Return — Continued — Location under the Choctaw Treaty` form. This earns only the bounded `80→81` pagination/form seam. Page-81 rows were not worked in this pass and no page-81 jacket is created here.
+
+
+Return strings
+
+
+Human-facing backward:
+`Public Lands → page 80 jacket → PL:p80:r21 → OHC_2465 manuscript face`
+
+
+Exact machine return paths retained backstage:
+- this jacket → `OHC_2465.png` Drive `1xND1bfUbZG7flC0Hn6moTlZucBW02M_w` → `76 Distinct Study Surfaces`
+- this jacket → `OHC_2465.pdf` Drive `1bP0JSfffnOg_XxdJ-VeN4MHgNhIQ2bjd` → `Source objects — received batch 1 — OHC 2408–2518`
+- this jacket → `OHC_2465.pdf` Drive `13bUC1kF-nyE8JOZA9g3VSdMeHq6svceG` → `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`
+
+
+Forward:
+`page 80 jacket → OHC_2466.png → manuscript page 81, row work held`
+
+
+Population state
+
+
+- source-facing row finding: complete for the bounded occurrence above
+- duplicate custody relation: controlled
+- full-page diplomatic transcription: not claimed
+- independent review: not requested
+- corpus-wide person/locality grammar: not claimed
+- page 81 row work: held
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+TRUE NORTH CUSTODY QA ADDENDUM
+Object-control correction: the phrase `Photographed manuscript page 80` above is custody shorthand, not an assertion that the photograph is the historical object. The governing historical object is manuscript page 80 of the source-titled Public Lands return; `OHC_2465.png` and the two byte-identical `OHC_2465.pdf` custody copies are derivative access/study representations of that one witness.
+Representation classes: primary = the manuscript page as created in the historical return; near-primary = unresolved here, because this jacket does not establish whether the surviving/imaged manuscript is the first executed return leaf, a contemporaneous fair copy, or another archival-generation manuscript; derivative = the held PNG/PDF representations and any later transcription or machine-readable extraction; synthesis = this jacket's row numbering, comparison language, seam description, inference controls, and custody prose. None of those synthesis elements is an independent historical witness.
+Jacket return identity: Google Doc Drive ID `1YYmmmXPm5hDYC0w9HZ6tVq0fRDRC5D7cYm55-A4JHOc`.
+Correction history: this addendum clarifies object/representation terminology and adds explicit representation classes only. It changes no source reading, row occurrence, relationship statement, page seam, identity claim, nonclaim, or companion-owned research conclusion.
+
+
+
+
+FIELDGLASS CATEGORY-SUBTRACK AUDIT — 2026-09-09
+
+
+Direct archival-face reinspection of OHC_2465 / manuscript p.80 at high visual scale found no safely readable numeric Locality-of-Farms phrase using `white(s)`, `slave(s)`, or `Black(s)` across the whole visible face. Ordinary locality/ditto writing, family/age figures, and prose descriptors remain present; none is converted into category arithmetic.
+
+
+Active state is `no category phrase observed at present visual reach`, not zero Whites, zero Slaves, or zero Blacks. This negative observation is page-local and representation-bounded; it does not establish that no such notation ever existed, was never intended, or is absent from another representation.
+
+
+Source return: OHC_2465.pdf — Drive ID 1bP0JSfffnOg_XxdJ-VeN4MHgNhIQ2bjd (directly inspected this pass). Sideways control: p.79 is likewise a directly audited no-category-phrase face; p.81 is separately audited below its own jacket. No cross-page arithmetic is inferred here.
+
+
+— Fieldglass
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — 2026-09-10
+
+
+Direct source return
+
+
+This pass reopened and visually inspected `OHC_2465.png` (Drive `1xND1bfUbZG7flC0Hn6moTlZucBW02M_w`) as the admitted study representation of manuscript p.80. The later Quoin page-80 reading was consulted only after direct inspection as a readable derivative check; it is not promoted into a second witness or substituted for the manuscript face.
+
+
+Alligator Creek settlement relation
+
+
+The Locality of Farms column carries a source-visible Alligator Creek run. `PL:p80:r21` / Capt Walatah reads `Alligator creek. His son-in-law lives with him.` A following occurrence again writes `Alligator creek`; subsequent locality dittos carry the prose `village of three houses` and `five women lived here who had children`; a later ditto occurrence carries `A blind woman here.`
+
+
+For Historical Landscape Mapping, this earns an unplaced Alligator Creek locality/settlement cluster and, within that cluster, one explicit source description of a `village of three houses`. The social prose remains source prose inside the locality field. It is not converted into a population total, household decomposition, ownership relation, parcel relation, or proof that every person mentioned occupies one building or one legal farm. The ditto run supports continued locality grammar on this face; it does not supply a creek course, village center, residence point, acreage polygon, or modern-place identity.
+
+
+Leflore-line / headwater edge
+
+
+At the lower edge of the same face, one locality occurrence reads `Palechilok. near Leflore's line`. The next locality reads `Head waters of Sickenatcha`; following ditto structure carries `of Chickasawhay` and a final `adjoins` relation. These are preserved as row-local source relations rather than collapsed into one sentence or one geometry.
+
+
+Map consequence: `Palechilok --[near]--> Leflore's line` may enter as an unplaced boundary-relative relation, while `Head waters of Sickenatcha` and the Chickasawhay/adjoins language may enter as separate unplaced hydrologic/topological constraints. `Leflore's line` is not equated here with the p.78–79 `three districts` line, a treaty boundary, a survey line, or any modern jurisdictional line. `Sickenatcha` is not silently normalized to p.78 `Sukenatcha` or p.75–76 `Suckanatcha`; those spelling/feature relations remain open. The target of `adjoins` is not made more specific than the face safely carries.
+
+
+Cross-face relation boundary
+
+
+Pages 78–80 now show recurring headwater, district/line, Petikfa, and Sickenatcha/Sukenatcha/Suckanatcha-shaped language close enough to justify a future historical-reference-layer test. Recurrence does not itself earn feature identity, route continuity, watershed geometry, district identity, or a modern-name crosswalk. Greater precision requires a new source crossing, not a tighter drawing.
+
+
+Exact way home
+
+
+`Marauder's Map / Historical Landscape Map → this p.80 Glean jacket [1YYmmmXPm5hDYC0w9HZ6tVq0fRDRC5D7cYm55-A4JHOc] → FIELDGLASS MAPPING ADDENDUM — 2026-09-10 → OHC_2465.png [1xND1bfUbZG7flC0Hn6moTlZucBW02M_w] → manuscript p.80, Locality of Farms column.`
+
+
+Readable derivative check only: `OHC_2465 form of return Choctaw Treaty farms page 80 — Quoin.md` [1WENBePRPPAsozPy0xlx-y61T6dTn3oTM].
+
+
+Sideways controls remain separate: p.79 Glean jacket [1Ramug1yq6UIM2RYTvBoLuENLlzCPShZqryTOc9n0L0Y] and p.81 Glean jacket [1pN0L3vbhE1ulKQfZCcM6BHvWjg42eTpeMydbEodkWIs].
+
+
+No identity merge, residence claim, creek geometry, line geometry, district equivalence, ownership, parcel adjacency, or category conversion is made.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+
+
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+Return 1 — Capt Walatah / unnamed son-in-law
+PERSON / ENTITY: Capt Walatah [Public Lands p.80 farm-row occurrence] / unnamed son-in-law
+DATE / RANGE: not supplied by this page-facing return
+EARNED VERB / RELATION: Manuscript p.80 STATES `His son-in-law lives with him.` on the Capt Walatah row. The same Locality of Farms field begins `Alligator creek.`
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2465 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.80 / PL:p80:r21; `Alligator creek` [source form; exact historical and modern identity / geometry OPEN]; Public Lands / Choctaw treaty-land administration
+RETURN: Public Lands No. 2 p.80 — Capt Walatah son-in-law lives-with relation and Alligator Creek / Leflore-line locality grammar — OHC_2465 source jacket
+IDENTITY / RELATION STATUS: direct source-stated son-in-law relation plus source-stated `lives with him` wording; son-in-law remains unnamed and is not merged with any neighboring or same-/similar-name occurrence. `Lives with him` is not expanded into a legal household, dependency, ownership, acreage, permanent-residence, or property relation. `Alligator creek` does not establish an independent residence point for the son-in-law. The printed family total `22` is not decomposed to include or exclude him.
+COMPILE NOTE: one proposition-local relation only; page-level Alligator Creek settlement prose, category-silence observation, and Leflore-line / Sickenatcha–Chickasawhay map grammar remain rich jacket prose rather than duplicate thin-index rows.
+GLEAN WHOLE-FACE AUDIT AND SIDEWAYS CORRECTION
+
+
+Direct 600-dpi inspection of admitted OHC_2465.pdf / manuscript p.80 stabilizes 34 visible name-bearing rows. No row carries a safely readable numeric Locality-of-Farms phrase using `white(s)`, `slave(s)`, or `Black(s)`. The active page state remains `no numeric category phrase observed`, not an arithmetic zero.
+
+
+The Quoin derivative’s 34-name list agrees with the direct row count after source inspection. It remains a readable derivative of the same representation, not a second witness.
+
+
+The earlier sideways statement that p.79 was likewise category-negative is superseded. The governing p.79 correction now carries John Beaty r04 `1 white]`; p.80 remains the next category-negative face. With direct audits completed through p.80, the p.63–80 corridor remains `61 White(s) | 152 Slave(s)`. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate, and no reconciliation with the p.87 aggregate is authorized.
+
+
+The existing Capt Walatah / unnamed son-in-law Name Web return remains unaffected; a page-negative category audit does not create another person relation.
+
+
+— Glean

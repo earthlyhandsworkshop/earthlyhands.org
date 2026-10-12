@@ -1,0 +1,299 @@
+Public Lands No. 2 p.81 — family-over-Mississippi / unnamed son-in-law notes and Konchito–Leflore-line locality grammar — OHC_2466 source jacket
+
+
+Status: DIRECT-SOURCE PAGE JACKET — BOUNDED OCCURRENCE CLUSTER — REPRESENTATION CONTROLLED
+Maker: Glean
+Date: 2026-09-06
+Corpus: quoted-title Public Lands / Public Lands — Whole-Document Corpus
+
+
+Historical object
+
+
+The governing historical object is manuscript page 81 of the source-titled Public Lands return. The visible heading reads `Public Lands — No 2. Form of a Return. Continued. — Location under the Choctaw Treaty.` This jacket is bounded to three neighboring row occurrences and the immediately earned page seams. It does not claim a full diplomatic transcription of page 81, completeness of the larger return, or the archival generation of the surviving manuscript.
+
+
+Method footing
+
+
+Worked from `EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md`, `SOURCE WORK METHOD — full strength, exact reach — source to synthesis`, and current workshop practice. The pass receives the manuscript face as itself before comparison; keeps source / representation / derivative / transcription / interpretation distinct; protects uncertain names and blanks; preserves exact custody without double-counting duplicate files; states source language at full force; and stops before a corpus-level theory.
+
+
+Source and representation footing
+
+
+Historical witness:
+- manuscript page 81 of the Public Lands No. 2 continued return;
+- primary historical object for this jacket;
+- whether the surviving manuscript is the first executed return leaf, a contemporaneous fair copy, or another archival-generation manuscript remains unestablished here.
+
+
+Directly inspected study representation:
+- `OHC_2466.png`
+- Google Drive file ID: `1tfyi1ykLOWcWHPndfYmK-pPz3ShAmmAS`
+- current parent: `76 Distinct Study Surfaces`
+- parent ID: `11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh`
+- fetched size: 1,339,232 bytes
+- role: admitted preparation/study representation of the manuscript face, not an independent historical witness.
+
+
+The preparation receipt states that the admitted PNG surfaces are preparation access only and do not become authoritative sources. For `OHC_2466.pdf` it records a 2038 × 1879 grayscale embedded image and SHA-256 `a23fadaae1e84bccdb28c4998f674ac614d41c7679baf22d86d47cf99f14e137`. This pass used the PNG for legibility; the manuscript face remains the historical object underneath it.
+
+
+Archival PDF custody objects:
+1. `OHC_2466.pdf`
+   - Drive ID: `1C9PNt2AWlNXNr3Dua1XHFFX7gA6B6RlG`
+   - parent: `Source objects — received batch 1 — OHC 2408–2518`
+   - parent ID: `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`
+   - size: 252,200 bytes
+2. `OHC_2466.pdf`
+   - Drive ID: `1EcdnfaFiRrEEYAmYFScPTcVoplJsz3n8`
+   - parent: `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`
+   - parent ID: `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI`
+   - size: 252,200 bytes
+
+
+Both PDF payloads were fetched independently in this pass and each computed SHA-256 `a23fadaae1e84bccdb28c4998f674ac614d41c7679baf22d86d47cf99f14e137`, matching the preparation receipt. They remain two custody objects and two return paths carrying one identical PDF payload / one manuscript witness. They are not merged, moved, renamed, deleted, or counted as corroborating witnesses.
+
+
+Derivative / transcription boundary
+
+
+A bounded Drive search for `OHC_2466`, page-81 jacket language, and the source-facing phrases worked below did not surface an existing page-81 source jacket or a transcription used by this pass. The readings below therefore come from direct visual inspection of the admitted study face. This does not claim that no derivative exists anywhere; it records only that no derivative transcription supplied the findings here.
+
+
+Stable local row positions
+
+
+Rows are counted top-to-bottom from the first visible name line below the printed headers. Three neighboring occurrences are addressed here: `PL:p81:r15`, `PL:p81:r16`, and `PL:p81:r17`.
+
+
+`PL:p81:r15`
+- name-cell reading: `[unclear: Nouetiah?]`
+- cultivated acres: `4`
+- printed `Entire No. of Family`: `1`
+- the locality field carries a written `do` followed by `rest of family over Mississippi.`
+- the name spelling remains correction-open; no person merge is made.
+
+
+`PL:p81:r16`
+- name-cell reading: `Mukhachubbe.`
+- cultivated acres: `10`
+- printed `Entire No. of Family`: `18`
+- males over sixteen: `3`
+- males and females under ten: `7`
+- locality field: written `do` followed by `includes his son-in-law.`
+- the son-in-law is source-mentioned but unnamed. The note's precise grammatical target inside the row is not assumed beyond its written placement and wording.
+
+
+`PL:p81:r17`
+- name-cell reading: `[unclear: Onatamba?]`
+- cultivated acres: `1`
+- printed `Entire No. of Family`: `7`
+- males over sixteen: `1`
+- locality field: `Balance of family over Mississippi.`
+- the name spelling remains correction-open; no person merge is made.
+
+
+The quoted phrases above are source-visible on the same ruled rows as the listed printed family figures. Blank cells not needed for this bounded finding remain blank/unclassified rather than being expanded from neighboring `do` marks.
+
+
+Finding
+
+
+Page 81 places explicit family-distribution language beside the printed family-count machinery.
+
+
+On `PL:p81:r15`, the row carries an `Entire No. of Family` value of `1` while the locality prose separately says `rest of family over Mississippi.` On `PL:p81:r17`, the row carries an `Entire No. of Family` value of `7` while the locality prose says `Balance of family over Mississippi.` Between them, `PL:p81:r16` carries family total `18` and the source-written note `includes his son-in-law.`
+
+
+The source therefore does not permit the workshop to treat the printed family figure as a self-explanatory, universally exhaustive kin or household count. At minimum, these three rows show that the recorder could place additional information about family extent, distribution, or an included relational person in prose outside the printed family column. The exact administrative counting rule remains open.
+
+
+This is a page-level source finding, not a corpus rule. It earns a question for comparison with other faces; it does not answer that question for the ledger as a whole.
+
+
+Interpretation boundary
+
+
+`over Mississippi` is preserved exactly as the manuscript phrase. This jacket does not silently expand it to `west of the Mississippi River`, the State of Mississippi, Mississippi Territory, Indian Territory, a removal destination, or a migration route. The geographic referent and direction require separate evidence.
+
+
+Likewise, the presence of `rest of family` or `Balance of family` does not by itself establish whether those people are included within or excluded from the printed family totals. The juxtaposition makes the counting rule unsafe to assume; it does not settle the rule.
+
+
+The phrase `includes his son-in-law` preserves an explicit relational person reference. This jacket does not decide whether `includes` modifies the printed family total, another demographic field, the locality notation, or the row's broader administrative treatment. It does not name the son-in-law or attach him to a neighboring row.
+
+
+Name / identity nonclaims
+
+
+- `[unclear: Nouetiah?]`, `Mukhachubbe.`, and `[unclear: Onatamba?]` are three separate page-81 name occurrences.
+- Similar spellings elsewhere do not merge with these occurrences.
+- Adjacency among r15–r17 does not establish kinship among the three named farm owners.
+- The unnamed son-in-law at r16 is not identified from neighboring rows or another source.
+- `rest of family` and `Balance of family` do not identify any person by name.
+- No person in these phrases is assigned ownership, cultivated acreage, legal entitlement, treaty status, permanent residence, removal status, or migration route beyond what the row explicitly states.
+- The printed family figures are not silently decomposed into individual people.
+
+
+Unresolved questions
+
+
+- the certified diplomatic spellings of the r15 and r17 name cells;
+- what geographic referent the recorder intended by `over Mississippi`;
+- whether the family members described as `rest` or `Balance` are included in the printed `Entire No. of Family` values;
+- what exact row field or administrative quantity `includes his son-in-law` qualifies;
+- whether the unnamed son-in-law appears elsewhere in Public Lands under his own name;
+- whether similar family-distribution phrases recur elsewhere in No. 2 and, if so, whether they behave consistently;
+- who authored these locality annotations and when they were entered;
+- a full-page diplomatic transcription and independent review.
+
+
+Backward seam
+
+
+The existing Glean page-80 jacket opened `OHC_2466.png` only far enough to establish manuscript page 81 in the same visible No. 2 continued return. Direct inspection here confirms that page identity and works the bounded row cluster above. The `80→81` pagination/form seam therefore remains earned without importing page-80 findings into page 81.
+
+
+Forward seam
+
+
+One batch-1 archival representation of `OHC_2467.pdf` was opened only far enough to establish a distinct manuscript face visibly numbered `82` under the same `Public Lands — No 2. Form of a Return. Continued. — Location under the Choctaw Treaty` heading. Its exact machine return is preserved below. This earns only the bounded `81→82` pagination/form seam. Page-82 rows were not worked, no page-82 jacket is created here, and no duplicate-custody relation for page 82 is asserted by this pass.
+
+
+Return strings
+
+
+Human-facing backward:
+`Public Lands → page 81 jacket → PL:p81:r15–r17 → OHC_2466 manuscript face`
+
+
+Exact machine return paths retained backstage:
+- this jacket → `OHC_2466.png` Drive `1tfyi1ykLOWcWHPndfYmK-pPz3ShAmmAS` → `76 Distinct Study Surfaces`
+- this jacket → `OHC_2466.pdf` Drive `1C9PNt2AWlNXNr3Dua1XHFFX7gA6B6RlG` → `Source objects — received batch 1 — OHC 2408–2518`
+- this jacket → `OHC_2466.pdf` Drive `1EcdnfaFiRrEEYAmYFScPTcVoplJsz3n8` → `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`
+- backward jacket → `GLEAN SOURCE-FACING JACKET — OHC_2465 page 80 — Capt Walatah unnamed son-in-law relation and 79→80→81 seam`
+
+
+Forward seam machine return:
+- page 81 jacket → `OHC_2467.pdf` Drive `1dqkQOkZpKyCrUYpj_lDZPFFPzWgPL3gG` → batch-1 source-object route → manuscript page 82, row work held
+
+
+Population state
+
+
+- page-81 bounded source-facing cluster: complete for r15–r17 only
+- duplicate OHC_2466 PDF custody relation: controlled
+- source / representation / synthesis boundary: explicit
+- full-page diplomatic transcription: not claimed
+- independent review: not requested
+- corpus-wide family-count grammar: not claimed
+- page-82 row work: held
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+FIELDGLASS CATEGORY-SUBTRACK AUDIT — 2026-09-09
+
+
+Direct archival-face reinspection of OHC_2466 / manuscript p.81 at high visual scale found no safely readable numeric Locality-of-Farms phrase using `white(s)`, `slave(s)`, or `Black(s)` across the whole visible face. The page remains information-dense in ordinary locality, family/age, and descriptive material, including the already controlled Mississippi-family locality language; that material is not converted into category counts.
+
+
+Active state is `no category phrase observed at present visual reach`, not arithmetic zero. No conclusion is drawn about authorial intent, omission, erased writing, other representations, or category population.
+
+
+Source return: OHC_2466.pdf — Drive ID 1EcdnfaFiRrEEYAmYFScPTcVoplJsz3n8 (directly inspected this pass). Sideways controls: p.80 and p.82 are separately audited source faces; no ditto or category antecedent is carried across a page boundary by assumption.
+
+
+— Fieldglas
+
+
+FIELDGLASS MAPPING ADDENDUM — 2026-09-10 — Konchito / Leflore’s line / Sukenatcha headwater / military-road relation envelope
+
+
+Direct source return
+This addendum returns to the actual OHC_2466 manuscript face rather than originating from the later Quoin derivative. The batch-1 PDF `OHC_2466.pdf` (Drive `1C9PNt2AWlNXNr3Dua1XHFFX7gA6B6RlG`) was fetched and visually inspected at high scale; the rendered/cropped working images used for legibility are temporary representations only and are not new historical witnesses. The already admitted `OHC_2466.png` remains a study representation of the same manuscript witness.
+
+
+Stable locality occurrences
+Using this jacket’s existing top-to-bottom row-address convention, the upper Locality of Farms run visibly carries:
+- `PL:p81:r6` — `Konchito settlement`
+- `PL:p81:r9` — written `do` followed by `on Leflore's line`; the ditto antecedent is not silently expanded here.
+- `PL:p81:r11` — `Adjoins Konchito village.`
+- `PL:p81:r12` — `Head water Sukenatcha.`
+- `PL:p81:r13` — `Konchito. east military road.`
+The immediately earlier line-name phrase above this run remains too uncertain at present visual reach to recruit into the map.
+
+
+Map-facing finding
+Page 81 therefore supplies a bounded source-face cluster in which like-written `Konchito` locality occurrences appear with the source categories `settlement` and `village`, while neighboring row occurrences separately carry a Leflore-line relation, a Sukenatcha headwater relation, and a Konchito / military-road phrase carrying the word `east`. This is useful as an unplaced settlement–boundary–headwater–road envelope. It is not permission to collapse the rows into one site or one topology.
+
+
+Representation / relation boundaries
+`Konchito settlement` and `Konchito village` remain separate source occurrences and separate source words; settlement is not silently converted to village, town, community, or a polygon. `Adjoins Konchito village` does not identify the adjoining object beyond the row occurrence that carries the phrase. `Konchito. east military road.` is preserved as written; this addendum does not supply the missing preposition, a road alignment, or a distance.
+
+
+The p.80 occurrence `near Leflore's line` and p.81 `on Leflore's line` are neighboring compatibility evidence for a recurring written line-name, not proof of the line’s legal type, geometry, district function, ownership boundary, or one continuous mapped segment. Likewise p.81 `Sukenatcha` is not normalized to p.80 `Sickenatcha` or p.75–76 `Suckanatcha`, and p.81 `military road` is not merged with the p.73 military-road occurrences, Robinson Road, Gaines’s road, Natchez Trace, or another route without a separate source crossing.
+
+
+Nonclaims
+No person identity, residence point, ownership, settlement center, village boundary, road polyline, creek/headwater geometry, Leflore-line geometry, district identity, legal-route equivalence, or spelling normalization is earned. Row adjacency is not converted into household, kinship, parcel, or physical adjacency.
+
+
+Exact way home
+Marauder’s Map / Mapping Grounds shared face → this Fieldglass p.81 mapping addendum → `Public Lands No. 2 p.81 — family-over-Mississippi / unnamed son-in-law notes and Konchito–Leflore-line locality grammar — OHC_2466 source jacket` (Drive `1pN0L3vbhE1ulKQfZCcM6BHvWjg42eTpeMydbEodkWIs`) → `OHC_2466.pdf` batch-1 custody route (Drive `1C9PNt2AWlNXNr3Dua1XHFFX7gA6B6RlG`) → manuscript p.81 → Locality of Farms rows r6/r9/r11/r12/r13. Alternate same-witness custody route: `OHC_2466.pdf` Drive `1EcdnfaFiRrEEYAmYFScPTcVoplJsz3n8`; admitted study face: `OHC_2466.png` Drive `1tfyi1ykLOWcWHPndfYmK-pPz3ShAmmAS`.
+
+
+Correction / scope history
+This addendum does not alter the earlier family-over-Mississippi reading or the category-subtrack audit. It expands the jacket only by a new bounded map-facing reading of r6/r9/r11/r12/r13. Full-page diplomatic transcription remains unclaimed.
+
+
+— Fieldglass — Historical Landscape Map / Public Landss
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Small Door — 2026-09-20
+PERSON / ENTITY: [unclear: Nouetiah?/Nonetiah?] [Public Lands p.81 r15 occurrence]
+DATE: not supplied by this page-facing return
+EARNED VERB / RELATION: Manuscript p.81 PL:p81:r15 CARRIES `Entire No. of Family` = `1` and locality-field wording `do rest of family over Mississippi.`
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2466 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.81 / PL:p81:r15 / literal `do`; `over Mississippi` [source phrase; geographic referent and direction OPEN] / Public Lands / Choctaw treaty-land administration
+RETURN TO THIS BODY / JACKET: Public Lands No. 2 p.81 — family-over-Mississippi / unnamed son-in-law notes and Konchito–Leflore-line locality grammar — OHC_2466 source jacket
+IDENTITY / RELATION STATUS: source-local occurrence only; governing direct-source jacket keeps the name correction-open while Quoin’s first-pass image jacket reads `Nonetiah`; no same-/similar-name merge. `rest of family` names nobody and does not settle whether those people are included within or excluded from the printed family total. `over Mississippi` is preserved as source wording and is not normalized to west of the Mississippi River, the State of Mississippi, Indian Territory, a removal destination, residence, or migration route.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Small Door — 2026-09-20
+PERSON / ENTITY: Mukhachubbe [Public Lands p.81 r16 occurrence; Quoin first-pass reads Mehachubbe]
+DATE: not supplied by this page-facing return
+EARNED VERB / RELATION: Manuscript p.81 PL:p81:r16 CARRIES `Entire No. of Family` = `18` and locality-field wording `do includes his son-in-law.`
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2466 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.81 / PL:p81:r16 / literal `do` remains unexpanded / Public Lands / Choctaw treaty-land administration
+RETURN TO THIS BODY / JACKET: Public Lands No. 2 p.81 — family-over-Mississippi / unnamed son-in-law notes and Konchito–Leflore-line locality grammar — OHC_2466 source jacket
+IDENTITY / RELATION STATUS: source-local occurrence only; the son-in-law is unnamed and is not identified from neighboring rows or another source. The governing direct-source jacket reads `Mukhachubbe`; Quoin’s first-pass image jacket reads `Mehachubbe`, so the name-form difference remains visible rather than silently normalized. `includes his son-in-law` is preserved at row-and-field strength: its precise grammatical target inside the row remains OPEN and it is not expanded into legal household, residence, dependency, ownership, acreage, or a claim that the printed family total definitely includes or excludes him.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Small Door — 2026-09-20
+PERSON / ENTITY: [unclear: Onatamba?] [Public Lands p.81 r17 occurrence]
+DATE: not supplied by this page-facing return
+EARNED VERB / RELATION: Manuscript p.81 PL:p81:r17 CARRIES `Entire No. of Family` = `7` and locality-field wording `Balance of family over Mississippi.`
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2466 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.81 / PL:p81:r17 / `over Mississippi` [source phrase; geographic referent and direction OPEN] / Public Lands / Choctaw treaty-land administration
+RETURN TO THIS BODY / JACKET: Public Lands No. 2 p.81 — family-over-Mississippi / unnamed son-in-law notes and Konchito–Leflore-line locality grammar — OHC_2466 source jacket
+IDENTITY / RELATION STATUS: source-local occurrence only; governing direct-source jacket keeps the name correction-open while Quoin’s first-pass image jacket reads `Onatamba`; no same-/similar-name merge. `Balance of family` names nobody and does not settle whether those people are included within or excluded from the printed family total. `over Mississippi` is preserved as source wording and is not normalized to west of the Mississippi River, the State of Mississippi, Indian Territory, a removal destination, residence, or migration route.
+GLEAN WHOLE-FACE CATEGORY AUDIT
+
+
+Direct 600-dpi inspection of admitted OHC_2466.pdf / manuscript p.81 stabilizes 36 visible name-bearing rows. No row carries a safely readable numeric Locality-of-Farms phrase using `white(s)`, `slave(s)`, or `Black(s)`. The active page state is therefore a completed negative annotation audit, not arithmetic zero.
+
+
+The later Quoin derivative’s 36-name list agrees with the direct row count after source inspection. It remains a readable derivative of the same manuscript witness. The two stored OHC_2466.pdf custody objects independently return the same SHA-256 already governed above: `a23fadaae1e84bccdb28c4998f674ac614d41c7679baf22d86d47cf99f14e137`; two custody routes remain one identical payload and one witness.
+
+
+With direct audits completed through p.81, the p.63–81 corridor remains `61 White(s) | 152 Slave(s)`. Page 79 supplies the preceding `1 white]` interruption; pages 80 and 81 add no numeric category count. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate, and no reconciliation with the p.87 aggregate is authorized.
+
+
+The existing Name Web returns for r15–r17 remain unaffected. A page-negative category audit does not create another person relation.
+
+
+— Glean

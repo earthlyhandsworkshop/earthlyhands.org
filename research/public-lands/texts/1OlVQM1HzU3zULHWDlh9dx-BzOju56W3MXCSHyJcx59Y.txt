@@ -1,0 +1,211 @@
+Public Lands No. 2 p.82 — Capt Amos King lives-with-father relation and Mukashoowah reported-captain statement — OHC_2467 source jacket
+
+
+Status
+Source-facing jacket made from direct inspection of the archival PDF. No pre-existing faithful OHC_2467/page-82 jacket was found in the bounded duplicate checks. This pass keeps source, local render, transcription, interpretation, and later comparison distinct.
+
+
+Source identity and custody
+Historical object: one manuscript ledger face visibly numbered 82 in quoted-title Public Lands — No. 2 — Form of a Return — Continued — Location under the Choctaw Treaty.
+
+
+Archival custody object A:
+- filename: OHC_2467.pdf
+- Google Drive file ID: 1dqkQOkZpKyCrUYpj_lDZPFFPzWgPL3gG
+- current parent: Source objects — received batch 1 — OHC 2408–2518
+- parent ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- size: 246,718 bytes
+
+
+Archival custody object B:
+- filename: OHC_2467.pdf
+- Google Drive file ID: 1sPK7aH6B5kg9nU1jEVmfqjFmcm6bTPc-
+- current parent: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+- parent ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- size: 246,718 bytes
+
+
+Complete-payload comparison in this pass:
+- SHA-256 for each object: 36f89229a7b822486d2e993b6b0a5cd6578fe776da69ac83d39528b55670b18c
+- byte-for-byte comparison: equal
+
+
+Custody consequence: two Drive objects, two return paths, one identical PDF payload, one manuscript witness. Neither object was moved, renamed, merged, deleted, or treated as a second witness.
+
+
+Direct reading method
+The archival PDF was rendered locally at 220 dpi and again at 400 dpi solely to inspect handwriting and row alignment. Those local renders are working derivatives and were not admitted to Drive or treated as new source objects. No OCR or inherited transcription supplied the readings below.
+
+
+Visible form boundary
+- manuscript page number: 82
+- visible body: Public Lands — No. 2 — Form of a Return — Continued — Location under the Choctaw Treaty
+- the right edge of the available capture cuts off the ends of several General Remarks lines; the missing continuations are not reconstructed here
+- exact diplomatic reading of the upper-right date notation is not certified in this pass
+
+
+Stable local row addresses used here
+Rows are counted top-to-bottom from the first visible name line below the headers. This pass stabilizes only the two row positions needed for the finding; it does not claim a complete diplomatic transcription of page 82.
+
+
+PL:p82:r09
+Name field: `Capt Amos King.`
+General Remarks begins: `Lives with his father [unclear: Moshulatubbe/Mushulatubbe]. and [capture-clipped]`
+Total acres: `640`.
+Boundary: `Capt` is part of the source-written name form on this row. The named father relation is source-written in General Remarks, but the continuation after `and` is lost beyond the available right edge.
+
+
+PL:p82:r11
+Name field: `[unclear: Mukashoowah?]`
+Cultivated acres: `3`.
+Entire number of family: `4`.
+Males over 16 years: `2`.
+Males and females under 10 years: `1`.
+Locality: written `do`, carrying the immediately preceding explicit `Shukulluk.` locality unless a later diplomatic chain review corrects that reading.
+Total acres: `80`.
+General Remarks: `Says he is Captain in place of [capture-clipped]`
+Boundary: the source name cell does not visibly carry `Capt`; the captain statement is separately written in General Remarks and is phrased as a reported claim (`Says he is`). The object or person following `of` is not recoverable from this capture.
+
+
+Material finding
+Page 82 itself preserves two different documentary treatments of captain language:
+1. `Capt Amos King.` carries the title directly in the name field.
+2. PL:p82:r11 carries a name without a visible title while General Remarks separately states `Says he is Captain in place of ...`.
+
+
+That difference is source-facing and useful for later name-column work. A title-bearing name form and a reported status statement must remain distinct data. This page does not authorize normalizing PL:p82:r11 to `Capt [name]`, nor does it authorize stripping `Capt` from Amos King’s written name form.
+
+
+A second source-facing relation is also preserved: Amos King’s row explicitly says he `Lives with his father ...`. That is a source-stated father/co-residence relation on this row, not a corpus-wide identity bridge.
+
+
+Interpretation earned for testing
+The page demonstrates locally that office/status information can occur in different fields and with different evidentiary force. The name field can present a title as part of the written name form, while General Remarks can report a claim about status or succession. Later Name Web or column views should be able to preserve that distinction rather than collapsing both into one normalized title field.
+
+
+This is a page-level structural observation only. It is not yet a rule for all Public Lands returns, captains, compilers, or periods.
+
+
+Unresolved questions
+- exact diplomatic spelling of the PL:p82:r11 name
+- exact diplomatic spelling of the father name in PL:p82:r09
+- the clipped continuation after `and` in Amos King’s General Remark
+- the clipped person, office, or other referent after `Says he is Captain in place of`
+- whether another representation preserves more of the missing right edge
+- what administrative force `Says he is Captain` had in this return
+- whether `in place of` records succession, substitution, disputed status, or another procedure
+- exact upper-right date notation
+
+
+Explicit nonclaims
+- no claim that the father named on Amos King’s row is identical with any Moshulatubbe/Mushulatubbee occurrence elsewhere
+- no claim that Amos King’s `Capt` title proves office continuity, treaty-time status, rank, entitlement, or acreage causation
+- no claim that PL:p82:r11 should be normalized with a `Capt` title
+- no claim that the reported captaincy was accepted, rejected, contemporaneous, permanent, hereditary, or legally operative
+- no claim about the identity of the person or office clipped after `in place of`
+- no claim that the two PDF custody objects are independent witnesses
+- no claim that filename adjacency alone establishes page order
+
+
+Backward seam
+The existing Glean page-81 jacket directly opened OHC_2467 and established a distinct manuscript face visibly numbered 82 in the same continued No. 2 form. This pass now works that face rather than merely previewing it.
+
+
+Backward human return:
+`Public Lands No. 2 p.81 — family-over-Mississippi / unnamed son-in-law notes and Konchito–Leflore-line locality grammar — OHC_2466 source jacket → OHC_2466 / manuscript page 81`
+
+
+Backward machine return:
+page-81 jacket Google Drive file ID `1pN0L3vbhE1ulKQfZCcM6BHvWjg42eTpeMydbEodkWIs`.
+
+
+Forward seam
+The archival OHC_2468.pdf was opened directly only far enough to establish a distinct manuscript face visibly numbered 83 under the same Public Lands — No. 2 — Form of a Return — Continued — Location under the Choctaw Treaty body. OHC_2468 already has its own source-facing leaf jacket centered on an explicit `or McKinney` alias row, so no duplicate page-83 jacket was created here.
+
+
+Forward human return:
+`page 82 jacket → OHC_2468 / manuscript page 83 → existing LEAF JACKET — OHC_2468 — Public Lands No. 2 Form of a Return — [uncertain Choctaw name] or McKinney`
+
+
+Forward machine return:
+- primary page-83 archival source OHC_2468.pdf Google Drive file ID `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q`
+- existing OHC_2468 leaf jacket Google Drive file ID `19ai1qMP4y8AB1yjHN8tWtAIXjOe-ne_abXvrg_H-6TM`
+
+
+Seam consequence
+`81 → 82 → 83` is directly source-supported at the pagination/form level. This jacket does not convert that local seam into a corpus-wide sequence theory or claim that every adjacent OHC identifier is historically sequential.
+
+
+Return paths
+Human source return:
+`Public Lands — Whole-Document Corpus → Source objects — received batch 1 — OHC 2408–2518 → OHC_2467.pdf → manuscript page 82`
+
+
+Alternate custody return:
+`Public Lands — Whole-Document Corpus → Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces → OHC_2467.pdf → same manuscript page 82`
+
+
+Exact machine identifiers are retained above for custody and duplicate control. They are not the spoken workshop names of these objects.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+FIELDGLASS CATEGORY-SUBTRACK AUDIT — 2026-09-09
+
+
+Direct archival-face reinspection of OHC_2467 / manuscript p.82 at high visual scale found no safely readable numeric Locality-of-Farms phrase using `white(s)`, `slave(s)`, or `Black(s)` across the whole visible face. Source-written role/status descriptors elsewhere on the page remain occurrence-level prose and are not converted into count categories.
+
+
+Active state: `no category phrase observed at present visual reach`; this is not zero and not an absence claim beyond this representation and pass.
+
+
+Source return: OHC_2467.pdf — Drive ID 1sPK7aH6B5kg9nU1jEVmfqjFmcm6bTPc- (directly inspected this pass). Page 83 is separately audited in its existing jacket; no cross-page category inheritance is supplied here.
+
+
+— Fieldglass
+
+
+
+
+SMALL DOOR NAME WEB REREAD — 2026-09-20
+Direct-source control: the governing jacket, Quoin first-pass image body, and held OHC_2467.png were reread together. The page image supports the governing jacket’s `Capt Amos King.` reading at PL:p82:r09; Quoin’s first-pass `Capt. James King.` remains useful derivative/correction history but does not govern the source name. The r11 name remains correction-open as `[unclear: Mukashoowah?]`; Quoin’s first-pass `Hukalhoomah.` reading is retained as a competing derivative reading rather than silently normalized. Neither difference creates another witness or an outward identity merge.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT 1
+PERSON / ENTITY: Capt Amos King [Public Lands p.82 r09] / [unclear father: Moshulatubbe/Mushulatubbe]
+DATE: not assigned by this page-facing return; upper-right `1834` is not treated as this row’s date
+EARNED VERB / RELATION: Manuscript p.82 General Remarks STATES `Lives with his father [unclear: Moshulatubbe/Mushulatubbe]. and [capture-clipped]` on the `Capt Amos King.` row.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2467 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.82 / PL:p82:r09 / Public Lands–Choctaw treaty-land administration
+RETURN: this governing source jacket
+IDENTITY / RELATION STATUS: source-local father relation plus source-stated `lives with` wording only; father spelling remains correction-open and is not merged with any same/similar Moshulatubbe occurrence elsewhere; clipped continuation after `and` remains unrecovered; `Capt` is preserved as source-written name form and is not expanded into office continuity, rank, entitlement, residence law, household law, ownership, or acreage causation. Quoin’s `James King` reading remains derivative correction history; direct source-facing reread controls `Amos King` here.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT 2
+PERSON / ENTITY: [unclear: Mukashoowah?] [Public Lands p.82 r11 occurrence]
+DATE: not assigned by this page-facing return; upper-right `1834` is not treated as this row’s date
+EARNED VERB / RELATION: Manuscript p.82 General Remarks CARRIES the source-written reported claim `Says he is Captain in place of [capture-clipped]` on this row.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2467 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.82 / PL:p82:r11 / Public Lands–Choctaw treaty-land administration
+RETURN: this governing source jacket
+IDENTITY / RELATION STATUS: source-local reported-status proposition only; the source name cell does not visibly carry `Capt`; `Says he is` remains source attribution rather than workshop confirmation; the clipped referent after `in place of` is unidentified, so no appointment, succession, substitution, dispute, hereditary office, company membership, office duration, land entitlement, patent, or later-recognition relation is inferred. Governing jacket keeps `[unclear: Mukashoowah?]`; Quoin’s first-pass `Hukalhoomah.` remains a competing derivative reading and does not authorize a merge.
+
+
+— Small Door | Mapping Grounds / Name Web crossing
+
+
+GLEAN CATEGORY-SUBTRACK AUDIT — page-82 completion
+
+
+Direct 600-dpi inspection of the byte-identical OHC_2467 PDF payload stabilizes 35 visible name-bearing rows. The two stored PDFs are separate custody objects but one representation and one manuscript witness; SHA-256: `36f89229a7b822486d2e993b6b0a5cd6578fe776da69ac83d39528b55670b18c`.
+
+
+Across all 35 rows, Locality of Farms carries place wording, ditto chains, and a field-status note (`no field`); Total No. of Acres carries acreage numerals; General Remarks carries land-quality, title/status, kin, and disability wording. Direct inspection finds no numeric White / Slave / Black(s) category phrase at the held visual reach. This is a completed negative annotation audit, not arithmetic zero.
+
+
+Page 82 contributes no category count to the audited p.63–82 corridor. The active corridor therefore remains `61 White(s) | 152 Slave(s)`, while p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate; the terminal p.87 line remains `121 Whites. 203 Slaves.` and is not reconciled here.
+
+
+— Glean

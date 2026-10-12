@@ -1,0 +1,692 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2461 page 76 — white/slave/Blacks annotations and category vocabulary
+
+
+Historical object
+Photographed manuscript page 76 of the source-titled Public Lands return. The visible heading reads `Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty.` The face is a continuation page in a larger return; this jacket does not claim completeness of that return or identify its full administrative boundary.
+
+
+Source / representation / custody
+Two stored files named `OHC_2461.pdf` were materially checked:
+
+
+1. Drive ID `1hCMynzqoy9sGIKTmE2yQl0qY847l4bv_` — parent `Source objects — received batch 1 — OHC 2408–2518`, folder ID `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`.
+2. Drive ID `1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh` — parent `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`, folder ID `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI`.
+
+
+Both PDFs are 264,908 bytes. Direct byte comparison in this pass found them byte-for-byte identical, SHA-256 `85e4a7ae38effef263a64da22e501c02716391b35d7435ee09ef05a5ed9a609d`. They are duplicate custody representations of one digital payload, not independent witnesses.
+
+
+Reading method
+The PDF was opened directly from Drive, rendered at 300 DPI, and inspected visually. Temporary crops/enlargements were used to read the category annotations and align them with named rows. Those crops are inspection derivatives, not source objects.
+
+
+Direct source observation — category annotations
+Page 76 contains an unusually dense run of explicit worded annotations inside the `Locality of Farms` field. Source-visible examples include:
+
+
+- `Mark Cuffy` — `1 white]` before a written locality.
+- `Alexander Brashears` — `2 slaves]` before a written locality.
+- `William. H. Bucks.` — `1 white 11 Blacks]` followed by the locality; the same row continues with the source-written phrase `His wife a Choctaw.`
+- `[unclear: Channore H. Johnston?]` — `1 white 1 slave]` before a written locality.
+- `[unclear: Ladd? Brashears Jr.?]` — `2 slaves]` before `do`.
+- `Delia Brashears` — `10 slaves]` before `do`.
+- `James Brashears` — `7 slaves]` before a locality phrase beginning `Mouth of ...`.
+- `[unclear: Isaac Pinson?]` — `1 white]` before `Tombecbe`.
+- `Janie Grant` — `1 white]` before `do`.
+- `[unclear: Simpson Nowell?] (woman)` — `1 white 19 slaves]` followed by a locality phrase.
+- `John Walker (white man)` — `1 white 8 slaves.`
+- `John Jones. sen.` — `3 slaves] 6 miles from factory.`
+- `Samuel Jones. sen. deceased.` — `4 slaves] 2 miles from factory.`
+
+
+Spelling and capitalization above are preserved from the visual reading where secure; uncertain personal-name readings remain bracketed rather than normalized.
+
+
+Page-facing arithmetic control
+If, and only if, the explicit worded annotations above are arithmetically summed as written, page 76 yields:
+
+
+- 7 white(s)
+- 56 slave(s)
+- 11 Blacks
+
+
+The `11 Blacks` are deliberately kept in a separate lexical bucket. They are not silently added to the `slave(s)` subtotal because the source itself uses different words on the same face.
+
+
+This arithmetic is a transcription/control device, not a historical population estimate or legal-status conclusion.
+
+
+Source-facing finding
+The strongest finding on page 76 is lexical, not numerical: the same annotation field uses both `slave(s)` and `Blacks`, including `1 white 11 Blacks]` on one row and `1 white 1 slave]` immediately below. The source therefore does not present a perfectly uniform white/slave vocabulary at row level.
+
+
+Page 76 also places an explicit parenthetical `white man` after `John Walker` while the same row independently carries `1 white 8 slaves.` in the locality field. That co-occurrence is source-visible and should be preserved without turning the row into a universal key for how all annotations were made.
+
+
+Inference — kept separate
+The density and row alignment are compatible with an administrative classification/counting layer superimposed on the return. The page does not identify who wrote the annotations, when, under what instruction, or whether `Blacks` and `Slaves` were intended as equivalent, overlapping, or distinct categories. The source also does not by itself establish that the named row-holder legally owned every enslaved person counted beside that row.
+
+
+Crossing earned by direct source comparison
+Manuscript page 74 (`OHC_2459`) and page 75 (`OHC_2460`) were independently opened in this same Fieldglass pass. Page 74 carries `1 slave]`, `1 white]`, and `1 white 5 Slaves]`; page 75 carries `1 white]` and `3 whites]`. The three consecutive faces therefore form a legitimate small comparison set for the annotation vocabulary while remaining separate historical leaves.
+
+
+Across pages 74–76, direct worded-annotation arithmetic gives 13 white(s), 62 slave(s), and 11 Blacks, with `Blacks` kept separate. This three-face subtotal is not a district roll-up and is not connected to the page-60 aggregate without documentary evidence.
+
+
+Explicit nonclaims
+This jacket does not establish:
+- that `Blacks` means `Slaves` in this return;
+- that every white or enslaved person connected to a farm appears in these annotations;
+- that absence of a category annotation on a row establishes absence in historical reality;
+- legal ownership, household membership, residence, or kinship from the row alignment alone;
+- identity merges for any surname repeated elsewhere in the workshop;
+- that page 76 belongs to the same district summarized on manuscript page 60;
+- that the printed family columns and the handwritten category annotations count the same population.
+
+
+Correction history
+No earlier faithful page-76 source jacket was located in bounded Drive searches for `OHC_2461`. Existing train/receipt references were treated as technical/navigation derivatives. If an older equivalent jacket later surfaces, reconcile rather than duplicate the historical object.
+
+
+Return paths
+Backward:
+`Public Lands — Whole-Document Corpus` → this jacket → `OHC_2461.pdf`, Drive `1hCMynzqoy9sGIKTmE2yQl0qY847l4bv_` → `Source objects — received batch 1 — OHC 2408–2518`.
+
+
+Alternate custody:
+this jacket → `OHC_2461.pdf`, Drive `1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh` → `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`.
+
+
+Sideways:
+this jacket → page-74 source jacket (`OHC_2459`), Drive `1DdaJKKCiVW5mQ2IcwMKHxHRBM2j1XvM2pkEp26Oai4s`, and the existing page-75 Fieldglass jacket, Drive `1_oFgj1F2atjI20fcLY-WTmm-DZY3W62KXoeGZ6LwaYI`, only for the consecutive-face category-vocabulary comparison.
+
+
+Next honest door
+Find a source-visible roll-up, marginal instruction, return heading, or other administrative text within this No. 2 body that explains whether `Blacks` and `Slaves` were combined, distinguished, or counted under different circumstances. Preserve the lexical distinction until the source earns a conversion rule.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+CROSS-RETURN CONTROL — PUBLIC LANDS NOS. 1 / 2 / 3 — 2026-09-06
+
+
+Direct reinspection in this pass confirms that this face is Public Lands No. 2, while OHC_2435 / manuscript p.53 is visibly Public Lands No. 1 and OHC_2517’s parallel PDF is visibly Public Lands No. 3.
+
+
+The category-count writing therefore crosses numbered returns: No. 1 p.53 carries “1 white 12 Slaves …”; this No. 2 p.76 carries multiple white/slave annotations and the lexically distinct “1 white 11 Blacks]”; No. 3 OHC_2517 carries separate 1-slave, 2-slaves, and 4-slaves phrases in the visible Locality of Farms area.
+
+
+Active source-facing inference is deliberately narrow: a category/count annotation practice recurs across at least three separately numbered Public Lands returns. This does not establish the same hand, date, instruction, semantics, or arithmetic rule across those returns. “Blacks” remains lexically separate from “Slaves” unless another source earns a relation.
+
+
+Returns: No. 1 jacket 1dYupfCZkgppJeKk9H6wvYWPdYkwelwli3NN7ugwykHI / source OHC_2435.pdf 1cc2KGG6HIUAVfqUWwvAlosriUqdGUgV9. No. 3 addendum 1e-l-toyYvhipT3GiO4YIRP9DQNIlKhMteQoNKHqiHpk / source OHC_2517.pdf 1VX88ZVUftsz3iUVTSc4s6COnRpLR3wy9.
+
+
+
+
+FIELDGLASS CONTINUATION — 2026-09-06 — PAGE-87 RETURN AGGREGATE CONTROL
+
+
+The source-visible roll-up requested by this jacket has now surfaced inside the same Public Lands No. 2 body. Direct inspection of OHC_2472 / manuscript page 87 shows the final captured ruled aggregate line:
+8,274 | 5,433 | 1,570 | 2,125 | “121 Whites. 203 Slaves.” | “Acres 67,440.”
+
+
+Dedicated page-87 source jacket: FIELDGLASS SOURCE-FACING JACKET — OHC_2472 page 87 — No. 2 return aggregate 121 Whites 203 Slaves — Drive ID 1LgBLN4gKPECl5habBR6vNfrDnOFuEYlwf4bLSAGiK6Q.
+
+
+This materially changes the lexical question without resolving it. The same No. 2 return contains the page-76 wording “1 white 11 Blacks]”, yet its page-87 final aggregate visibly names only “Whites” and “Slaves”; no separate “Blacks” aggregate heading is visible there.
+
+
+SOURCE OBSERVATION: the final aggregate is two-category in its written labels, while an earlier row annotation in the same return uses a third lexical term.
+
+
+INFERENCE LIMIT: do not convert “Blacks” into “Slaves”; do not infer that the 11 were included in the 203; do not infer that they were excluded; do not treat the two terms as synonyms merely because the final line lacks a separate “Blacks” heading. The correct accounting relation is now an earned arithmetic and administrative question, not a vocabulary assumption.
+
+
+New exact return seam: this page-76 jacket → page-87 jacket 1LgBLN4gKPECl5habBR6vNfrDnOFuEYlwf4bLSAGiK6Q → direct OHC_2472 source representations.
+
+
+Strongest next test: audit No. 2’s direct row-level category annotations from its page-61 opening through page 87 against 121 Whites / 203 Slaves, carrying “Blacks” as its own lexical field throughout. A mismatch is evidence.
+
+
+
+
+FIELDGLASS CORRECTION — HIGHER-SCALE PAGE-76 RE-READ — 2026-09-06
+
+
+Status: SOURCE-FACING CORRECTION; supersedes the earlier page-facing arithmetic and the specific misread values below while preserving them above as correction history.
+
+
+A higher-scale direct re-read of the OHC_2461 manuscript face found three consequential value corrections and one omitted count in the earlier jacket state:
+- the annotation aligned with Alexander Brashears reads `8 slaves]`, not the earlier jacket’s `2 slaves]`;
+- the separate later Brashears-row annotation `[unclear given name] Brashears Jr.` remains `2 slaves]` and is not the same occurrence;
+- Delila/Delia Brashears reads `16 slaves]`, not `10 slaves]`;
+- John Walker `(white man)` reads `1 white 5 slaves.`, not `1 white 8 slaves.`
+
+
+Active page-76 lexical arithmetic, summing only explicit numeric category phrases as written on this face, is therefore:
+- 7 white(s)
+- 65 slave(s)
+- 11 Blacks
+
+
+The prior `56 slave(s)` subtotal is withdrawn as active state. The correction changes only the transcription control; it does not change the standing nonclaims about ownership, household membership, identity, category semantics, or whether `Blacks` participates in the `Slaves` aggregate.
+
+
+Consequent three-face control: page 74 remains 2 white(s) / 6 slave(s); page 75 remains 4 white(s); corrected page 76 is 7 white(s) / 65 slave(s) / 11 Blacks. The active page-74–76 lexical subtotal is therefore 13 white(s), 71 slave(s), and 11 Blacks. The earlier 13 / 62 / 11 subtotal is withdrawn as active state and preserved above only as correction history.
+
+
+Direct source return remains OHC_2461.pdf, Drive IDs `1hCMynzqoy9sGIKTmE2yQl0qY847l4bv_` and `1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh`, byte-identical custody routes already controlled in this jacket. The next accounting test must use these corrected values.
+
+
+— Fieldglass
+
+
+
+
+GLEAN BOUNDED SOURCE RETURN — 2026-09-08 — p.76 r26 Samuel Jones deceased/heir relation
+
+
+Current footing
+This return deepens the existing page-76 jacket rather than creating another wrapper. The direct source remains `OHC_2461.pdf`, Drive `1hCMynzqoy9sGIKTmE2yQl0qY847l4bv_`, in `Source objects — received batch 1 — OHC 2408–2518`. The alternate same-name PDF, Drive `1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh`, remains the already-controlled byte-identical custody road, not a second historical witness. Glean read the direct PDF face and used only temporary decoded/enlarged image views for inspection; those views are reading derivatives, not source objects or corroborating witnesses. A contemporary Quoin image note was treated only as derivative/navigation context and did not govern the reading below.
+
+
+Occurrence address and direct source state
+For this bounded addendum, named rows are counted top-to-bottom from the first visible named row below the printed headers. The occurrence is `PL:p76:r26`; that row address is intended to survive later spelling correction and does not itself normalize the person.
+
+
+- Name field: `Samuel Jones. sen. deceased.`
+- No. of acres cultivated: `40`
+- Locality/category area: `4 slaves] 2 miles from factory.`
+- Total No. of Acres: `480`
+- General Remarks, preserving the visible two-line state: `He died since the treaty. Occupied by his son` / `since his death, who is his heir.`
+
+
+Earned finding
+The source itself makes a bounded post-death relational statement. The named row-holder is marked `deceased`; an unnamed person is called `his son`, is said to have occupied the place since the named man's death, and is called `his heir`. `Occupied`, `son`, and `heir` are source words on this face. They are preserved as a source assertion, not promoted into an external identity or legal conclusion.
+
+
+The row also keeps distinct things that should not be flattened: the category/count phrase `4 slaves]`, the locality phrase `2 miles from factory.`, the total-acre figure `480`, and the post-death General Remark. Their horizontal alignment does not by itself prove ownership of every person counted, legal title to 480 acres, a probate determination, or the legal validity of the source's use of `heir`.
+
+
+Backward seam
+Immediately above, `PL:p76:r25` is the separately written occurrence `John Jones. sen.`. Shared surname and the source-written `sen.` do not earn identity, kinship, one household, one tract, or one administrative case. No value or remark from r25 is inherited into r26.
+
+
+Forward seam
+The next named row is `PL:p76:r27`, `Morgan Ince.`. It is used only to close the lower boundary of this pass. Nothing from r27 is imported to complete or interpret r26.
+
+
+Unresolved questions
+The face does not name the person described as `his son`; does not establish whether that son appears elsewhere in Public Lands or another body; does not identify the author or date of the post-death remark; does not explain the legal or administrative force intended by `heir`; and does not establish what later patent, possession, probate, sale, or disposition history—if any—followed this source occurrence. Any relation between Samuel Jones and the adjacent John Jones remains open.
+
+
+Nonclaims
+No person-level identity merge is made. The source's word `son` is not treated here as independent genealogical proof beyond the source assertion. `Heir` is not treated as a judicial or probate adjudication. `Occupied` is not converted into ownership, patent, entitlement, or completed grant. `4 slaves]` is not converted into a household-membership or legal-ownership conclusion. The alternate PDF custody object remains a duplicate representation route, not additional evidentiary weight.
+
+
+Exact return
+`Public Lands — Whole-Document Corpus → FIELDGLASS SOURCE-FACING JACKET — OHC_2461 page 76 — white/slave/Blacks annotations and category vocabulary → OHC_2461.pdf (Drive 1hCMynzqoy9sGIKTmE2yQl0qY847l4bv_) → manuscript p.76 → PL:p76:r26`.
+
+
+— Glea
+
+
+SEDGE GLEAN-FLARE SOURCE RETURN — 2026-09-09 — family-count universe vs Locality category counts
+
+
+Direct source return
+Sedge reopened the admitted OHC_2461.png study representation, Drive ID `122LjZYPFOYSfHuxxRsr8w5eXjT_K2v22`, representing the same manuscript p.76 face controlled above. The PNG is a study representation of the manuscript face, not an additional historical witness. No OCR governed the reading. The earlier higher-scale Fieldglass corrections remain active: Alexander Brashears `8 slaves]`; Delila/Delia Brashears `16 slaves]`; John Walker `(white man)` `1 white 5 slaves.`
+
+
+Bounded row-state glint
+The printed `Entire No. of the Family` field and the manuscript white/slave/Blacks phrases in `Locality of Farms` can coexist on the same row. Secure examples on this face include:
+- `PL:p76:r10` Alexander Brashears: cultivated `30`; Entire Family `10`; males over 16 `2`; under 10 `5`; Locality begins `8 slaves]`.
+- `PL:p76:r14` Delila/Delia Brashears: cultivated `50`; Entire Family `7`; males over 16 `1`; under 10 `4`; Locality begins `16 slaves]`.
+- `PL:p76:r20` Simpson Nowell `(woman)`: cultivated `60`; Entire Family `7`; under-10 field `4`; Locality begins `1 white 19 slaves]`.
+- `PL:p76:r23` John Walker `(white man)`: cultivated `40`; Entire Family `9`; males over 16 `1`; under 10 `3`; Locality carries `1 white 5 slaves.`
+
+
+The page also preserves the opposite row state: `PL:p76:r26` Samuel Jones. sen. deceased. carries `4 slaves] 2 miles from factory.` while its printed family/age cells are left without adopted numeric entries. Category-count presence therefore does not itself predict whether the printed family fields are populated or blank.
+
+
+Earned source-grammar consequence
+Two same-row arithmetic controls are decisive against one universal parsing shortcut. On r14, `16 slaves]` exceeds `Entire No. of the Family: 7`; on r20, `19 slaves]` exceeds `Entire No. of the Family: 7`. Whatever the administrative semantics, timing, or legal relations of these entries, the source cannot support a universal rule that every enslaved person counted in the Locality annotation is contained within that row's printed family total. The fields are separately written accounting acts and must remain separately returnable.
+
+
+Comparison, explicitly derivative
+A previously source-faced p.87 jacket records white/Black annotation rows with blank printed family-age fields. That comparison is used here as jacket-level context, not as a fresh Sedge reading of p.87. Together the controlled states weaken any model in which Locality category annotations merely substitute for missing family counts: on p.76 they may coexist with populated family fields, and on p.87 they may occur where family fields are blank.
+
+
+Nonclaims / flare boundary
+This does not establish that the family total universally excludes enslaved people, that every `slave(s)` annotation represents legal ownership by the row-holder, that `Blacks` means `Slaves`, or that the fields were written contemporaneously. It does not identify any unnamed enslaved person or create a former-owner/freed-person chain. It does earn a safer flare grammar: printed family totals and handwritten racial/status counts are distinct source fields whose relationship must be source-proved occurrence by occurrence or by a governing instruction.
+
+
+Exact return
+`Public Lands / Emancipation flare → existing OHC_2461 p.76 jacket → OHC_2461.png 122LjZYPFOYSfHuxxRsr8w5eXjT_K2v22 → manuscript p.76 → r10 / r14 / r20 / r23 / r26 → family-field state compared with Locality category annotation.`
+
+
+— Sedge
+n
+
+
+
+
+SEDGE GLEAN-FLARE SOURCE RETURN — 2026-09-09 — p.76 r14 David Wall / treaty-provision correction seam
+
+
+Current source footing
+Sedge reopened the admitted `OHC_2461.png` study representation, Drive ID `122LjZYPFOYSfHuxxRsr8w5eXjT_K2v22`, and inspected `PL:p76:r14` directly. The PNG is a digital study representation of the manuscript face, not another historical witness. Temporary crops/enlargements used for letterform comparison are reading derivatives only and were not added to the corpus.
+
+
+Direct row state
+The row remains the occurrence previously addressed as `PL:p76:r14`, name read provisionally `Delila/Delia Brashears`: cultivated acres `50`; Entire No. of the Family `7`; males over 16 `1`; males/females under 10 `4`; Locality begins `16 slaves]` and then carries `do`; Total No. of Acres `640`.
+
+
+The General Remarks cell adds a separate post-treaty relation. Direct reinspection reads the spouse surname as `Wall`, not `Hall`. The baseline reads `She has married David Wall since the treaty, who is` and an insertion/caret state carries `provided for in the treaty.` above the line. An integrated reading may therefore be displayed derivatively as `She has married David Wall since the treaty, who is provided for in the treaty.` The source layout—baseline plus inserted phrase—remains the controlling representation state.
+
+
+Correction history
+Quoin's earlier image note recorded `She has married David Hall since the treaty who is provided for in the treaty`. That note remains attributable and unchanged. This jacket now supersedes only the spouse-surname reading for this occurrence: active source-facing reading `David Wall`; former derivative reading `David Hall`. No corpus-wide Hall/Wall normalization is authorized.
+
+
+Earned source-facing consequence
+This one row source-carries four distinct things at once: a named farm-holder occurrence; a `16 slaves]` Locality count; a 640-acre total; and a post-treaty marriage statement saying the named spouse is `provided for in the treaty.` Their co-occurrence is admissible. Their causal or legal relation is not. The face does not say the enslaved people came through David Wall, that the 640 acres were his treaty provision, that marriage enlarged or transferred an entitlement, or that `provided for in the treaty` identifies any particular treaty article.
+
+
+Crossing boundary
+The phrase `provided for in the treaty` creates an earned treaty-search pointer, not a person merge. A later treaty source may be asked whether a `David Wall`, `D. W. Wall`, or another Wall occurrence is named or otherwise controlled, but initials/surname similarity and the ledger's own phrase are insufficient to identify the spouse with any treaty beneficiary. Nothing here establishes an elite-benefit mechanism, ownership chain, emancipation burden, later Freedmen identity, or Daylight conclusion.
+
+
+Exact return
+`Public Lands / Emancipation flare → existing OHC_2461 p.76 jacket → OHC_2461.png 122LjZYPFOYSfHuxxRsr8w5eXjT_K2v22 → manuscript p.76 → PL:p76:r14 → baseline General Remark + inserted treaty-provision phrase.`
+
+
+— Sedge
+
+
+
+
+SEDGE GLEAN-FLARE SOURCE RETURN — 2026-09-09 — p.76 r14 row-host / spouse-role grammar
+
+
+Current source footing
+Sedge returned to the direct `OHC_2461.pdf` custody object, Drive `1hCMynzqoy9sGIKTmE2yQl0qY847l4bv_`, and inspected manuscript p.76 at enlarged render scale. The render and crop used for inspection are derivatives only. The alternate same-name PDF remains the already-controlled duplicate custody route, not another witness.
+
+
+Direct structural state
+The printed first column is headed `Names of Indians owning Farms`. At `PL:p76:r14`, the name-column occurrence remains the provisionally read `Delila/Delia Brashears`. The same row separately carries `16 slaves]` in `Locality of Farms`, `640` in Total No. of Acres, and in General Remarks the post-treaty relation naming `David Wall` as her husband and saying he is `provided for in the treaty.` The existing Hall→Wall correction and baseline/insertion representation state remain unchanged.
+
+
+Earned source-grammar consequence
+This face assigns the two named occurrences different structural roles inside one row. Delila/Delia occupies the form's farm-holder name field; David Wall enters through a relational statement in General Remarks. The manuscript does not replace the name-field occurrence with Wall, add Wall as a second name-field holder, or explicitly assign the `16 slaves]` count or `640` acres to him.
+
+
+That earns a refusal useful to the Glean flare: a derivative may not shift the row host, the Locality count, or the acreage to David Wall merely because he is the named spouse and treaty-provided person in the remark; nor may it collapse Delila/Delia + David Wall into a joint-holder entity without another source. Conversely, the printed heading and row placement do not by themselves adjudicate legal ownership of the enslaved people by Delila/Delia. They preserve the administrative role the form gives the named occurrence.
+
+
+Continuity / crossing boundary
+This deepening does not alter the prior treaty-search pointer. It sharpens the role grammar beneath it: `name-column farm-holder occurrence` ≠ `spouse named in General Remarks`. No identity merge with a treaty `D. W. Wall`, no ownership transfer, no emancipation chain, and no Mapping or Daylight crossing is made here.
+
+
+Exact return
+`Public Lands / Emancipation flare → existing OHC_2461 p.76 jacket → OHC_2461.pdf 1hCMynzqoy9sGIKTmE2yQl0qY847l4bv_ → manuscript p.76 → PL:p76:r14 → name field / Locality field / Total Acres / General Remarks kept separately returnable.`
+
+
+— Sedge
+
+
+SEDGE GLEAN-FLARE SOURCE CORRECTION — 2026-09-09 — p.76 r23 John Walker cultivated acreage
+
+
+Direct source return
+Sedge reopened the direct `OHC_2461.pdf` custody object, Drive `1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh`, and inspected manuscript p.76 at enlarged render scale. The render/crops are inspection derivatives only. The alternate byte-identical OHC_2461 custody route remains one representation family, not additional evidentiary weight.
+
+
+Correction
+The row already addressed above as `PL:p76:r23`, `John Walker (white man)`, carries `140` in the printed `No. of acres cultivated` column. Sedge's earlier family-count return in this same jacket recorded that value as `40`; that reading is withdrawn as active state and preserved above as correction history. The active row state for the fields relevant here is: cultivated acres `140`; Entire No. of the Family `9`; males over 16 `1`; under-10 field `3`; Locality `1 white 5 slaves.`; Total No. of Acres `1150`.
+
+
+Consequence
+This correction does not change the earlier family-count/Locality grammar finding, because that finding turns on `Entire Family: 9` and the separately written Locality phrase `1 white 5 slaves.`. It does matter for any later land/labor or cultivated-acre comparison: no derivative may use `40` for this occurrence. The face also keeps the printed column heading `Names of Indians owning Farms` and the source-written parenthetical `(white man)` together on this row; that coexistence is a documentary-role signal, not permission to normalize the row-holder's identity beyond the source wording.
+
+
+No ownership, acreage-entitlement cause, household composition, legal status, identity merge, or emancipation chain is inferred. No Mapping or Daylight crossing is made.
+
+
+Exact return
+`Public Lands / Emancipation flare → existing OHC_2461 p.76 jacket → OHC_2461.pdf 1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh → manuscript p.76 → PL:p76:r23 → cultivated-acres correction 40 → 140.`
+
+
+— Sedge
+
+
+SEDGE GLEAN-FLARE SOURCE CROSSING — 2026-09-09 — p.76 r14 / Supplementary Article II coupled-route candidate
+
+
+Source footing and representation boundary
+Sedge returned to the direct OHC_2461.pdf custody representation, Drive 1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh, and reinspected manuscript p.76. Temporary render/crop views remain inspection derivatives only. For the treaty side, Sedge returned to the official Statutes at Large publication, 7 Stat. 333–341, through the GovInfo representation already separately jacketed by True North. The published treaty witness is not silently equated with the signed manuscript or ratified-treaty file unit.
+
+
+Coupled source-facing glint
+The Public Lands occurrence PL:p76:r14 remains provisionally Delila/Delia Brashears: cultivated 50; Entire No. of the Family 7; males over 16 1; under-10 field 4; Locality begins 16 slaves]; Total No. of Acres 640; General Remarks says she married David Wall since the treaty and, through the already-controlled baseline-plus-insertion state, says he is provided for in the treaty.
+
+
+The official Sept. 28 Supplementary Article II supplies two separate textual candidates inside the same article. First, D. W. Wall is named in the one-section beneficiary class. Later in the same article, a surname-less Delila, described as a Choctaw woman residing outside the Nation, is given one quarter section, and each of her five fatherless children is likewise given one quarter section.
+
+
+This is stronger than a single surname search but does not close either identity. The comparison operation is explicit: treaty Delila + five children describes six persons before any later spouse is added; adding the ledger's post-treaty husband yields seven, which matches the ledger's Entire Family figure 7. That 1 + 5 + 1 = 7 operation is a derivative comparison, not source text and not proof that the two Delila occurrences or David Wall / D. W. Wall are identical.
+
+
+Refused closure / mismatch protected
+A second comparison prevents an easy merge. The ledger row carries Total No. of Acres 640. Naively summing six quarter-section grants in the treaty would yield 960 acres; that 6 × 160 arithmetic is also a derivative diagnostic, not an entitlement finding for the ledger row. The mismatch is preserved. No inference is made that marriage reduced, transferred, combined, extinguished, substituted for, or otherwise altered either treaty provision; no assumption is made that the ledger Total Acres field should equal the full treaty entitlement of any candidate person.
+
+
+Earned crossing
+The row's phrase provided for in the treaty now has a precise same-article candidate environment: D. W. Wall is expressly named in Supplementary Article II, while that same article separately contains a Delila-and-five-children provision whose six-person family shape becomes arithmetically compatible with the ledger family total only after the ledger's stated post-treaty marriage. This earns a coupled treaty-route candidate and a focused source request, not an identity merge. The next honest bridge requires an implementing source that expands D. W. Wall's initials or otherwise names David Wall, and/or independently identifies the treaty Delila with the p.76 Brashears occurrence. The 640/960 discrepancy must travel with that request.
+
+
+Nothing here assigns the 16 slaves] count to David Wall, proves legal ownership by Delila/Delia, identifies any enslaved person, establishes an owner–freed-person chain, or earns a Daylight conclusion.
+
+
+Exact return
+Public Lands / Emancipation flare → existing OHC_2461 p.76 jacket → OHC_2461.pdf 1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh → PL:p76:r14 → official 7 Stat. 340–341 Supplementary Article II jacket / GovInfo representation → D. W. Wall one-section clause + Delila/five-children quarter-section clause → coupled-route candidate; identities OPEN.
+
+
+— Sedge
+GLEAN p.76 JOHN WALKER CORRECTION — MANUSCRIPT `8 slaves` RESTORED; ROW-HOST / FARM-OWNER SPLIT EXPOSED — 2026-09-09
+
+
+Source footing
+
+
+The direct custody object OHC_2461.pdf, Drive ID `1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh`, was rendered at 600 dpi and the John Walker row reinspected. The admitted OHC_2461.png, Drive ID `122LjZYPFOYSfHuxxRsr8w5eXjT_K2v22`, represents the same manuscript face and is not an additional historical witness.
+
+
+A separate representation control used American State Papers, Public Lands, vol. VII, No. 1230, printed p.76, through the Library of Congress-hosted PDF `https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf` at physical PDF p.86. That carrier is a digitization of the William S. Hein & Co. 1998 reprint of the American State Papers volume. The printed table is a later representation of the return, not another independent transaction witness.
+
+
+Direct manuscript row state
+
+
+`PL:p76:r23` reads `John Walker (white man)`. The directly controlled fields are:
+
+
+- No. of acres cultivated: `140`
+- Entire No. of the Family: `9`
+- Males over 16 years: `1`
+- Males and females under 10 years: `3`
+- Locality of Farms: `1 white 8 slaves.`
+- Total No. of Acres: `1150`
+
+
+Correction history
+
+
+Sedge's latest correction correctly restored the manuscript acreage values `140` cultivated and `1150` total, but retained the earlier locality reading `1 white 5 slaves.` The 600-dpi direct face does not support `5`; the numeral is `8`. The active locality reading is therefore restored to Fieldglass's earlier `1 white 8 slaves.` state. Sedge's `5` remains above only as attributable correction history and is superseded for this occurrence.
+
+
+Holding every other currently controlled p.76 category phrase constant, the literal page subtotal is consequently restored from `7 white(s) | 65 slave(s)` to `7 white(s) | 68 slave(s)`. This is category arithmetic only, not an enslaver count.
+
+
+Printed-page comparison
+
+
+The ASP printed row reads `John Walker, (white man)` and preserves Entire Family `9`, over-16 `1`, under-10 `3`, and Locality `1 white, 8 slaves`. It therefore agrees with the manuscript on the contested category numeral `8`.
+
+
+The print does not agree on the acreage fields: it gives `40` cultivated and `480` total where the manuscript gives `140` and `1150`. Those pairs must remain representation-specific. No value silently repairs the other.
+
+
+The printed General Remarks cell states `Belongs to Thos. Lewis, who works the farm.` The manuscript carries a corresponding abbreviated Lewis remark, but this pass does not promote an expanded given name from the manuscript hand; `Thos. Lewis` is source-exact to the printed representation only.
+
+
+Earned source-grammar consequence
+
+
+This row is a particularly strong refusal of an automatic row-host-to-enslaver conversion. Walker occupies the form's name field and is source-labeled `(white man)`; the Locality field carries `1 white 8 slaves`; yet the printed General Remark expressly says the farm belongs to Thomas Lewis, who works it. The three statements coexist, but the source does not say whether the eight enslaved people were legally owned by Walker, Lewis, another person, or counted by some other administrative relation.
+
+
+Accordingly, the category-occurrence ledger may record `John Walker (white man)` as the row host for `1 white 8 slaves`. The person-level enslaver ledger may not enter either Walker or Lewis from this row alone. The printed ownership remark concerns the farm; it does not grammatically assign the counted people.
+
+
+Nonclaims
+
+
+- No claim that the ASP print and manuscript are two independent witnesses to the underlying historical event.
+- No claim that Walker owned the farm, notwithstanding his position in the printed name column.
+- No claim that Thomas Lewis owned, employed, supervised, or resided with the eight people counted as slaves.
+- No inference that the one white person was Walker or Lewis.
+- No household-membership inference from the family total, row alignment, or General Remark.
+- No explanation is assigned to the manuscript/print acreage divergences.
+- No conversion of this category occurrence into a person-level emancipation or Freedmen chain.
+
+
+Exact returns
+
+
+Direct route: this jacket → OHC_2461.pdf `1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh` → manuscript p.76 → `PL:p76:r23` → 600-dpi direct render.
+
+
+Study-image route: this jacket → OHC_2461.png `122LjZYPFOYSfHuxxRsr8w5eXjT_K2v22` → same manuscript representation family.
+
+
+Printed route: Library of Congress → American State Papers, Public Lands, vol. VII, No. 1230 → `llsp034.pdf` physical p.86 / printed p.76 → John Walker row.
+
+
+— Glean
+
+
+FIELDGLASS MAPPING ADDENDUM — 2026-09-10 — Suckanatcha creek / side / mouth relations and factory distance field
+
+
+Source footing
+Fieldglass reopened the direct OHC_2461.pdf manuscript face, Drive `1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh`, rendered it at high scale, and inspected the Locality of Farms column. The alternate OHC_2461.pdf custody object `1hCMynzqoy9sGIKTmE2yQl0qY847l4bv_` remains the already-controlled byte-identical representation route, not a second witness. Temporary renders and crops are reading derivatives only.
+
+
+Direct spatial state
+Within p.76 the same written toponym carries several relational forms: one occurrence reads `Suckanatcha. south side`; the next reads `Suckanatcha north side`; James Brashears carries `7 slaves] Mouth of Suckanatcha.` Elsewhere on the same face John Jones. sen. carries `3 slaves] 6 miles from factory.` and Samuel Jones. sen. deceased. carries `4 slaves] 2 miles from factory.` A later locality reads `Near the factory.`
+
+
+Adjacent-face noun control
+Fieldglass also reopened direct manuscript p.75, OHC_2460.pdf, Drive `1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT`. That separate historical leaf explicitly writes `Suckanatcha creek` in the Locality of Farms column. The p.75/p.76 comparison therefore earns a source-backed hydrologic reading of the shared Suckanatcha toponym within this No. 2 run without requiring a modern stream identity.
+
+
+Map consequence
+The Historical Landscape Map may carry an unplaced Suckanatcha creek relation body: source-named creek [p.75] with farm/locality relations to its north side, south side, and mouth [p.76]. It may also carry a distinct unplaced `factory` reference field with 6-mile, 2-mile, and near relations from p.76. These are constraint relations, not points or polylines.
+
+
+Nonclaims
+No modern Suckanatcha-stream identification is made; no receiving-water identification is assigned to `Mouth of Suckanatcha`; no inference is made that successive rows are adjacent; no residence or ownership is derived from `Locality of Farms`; no factory identity or coordinate is assigned; and this `factory` is not joined to p.73 `Bodka. near factory`, Old Factory, Choctaw Trading House, or another named industrial site. No category-count conversion or person identity merge follows.
+
+
+Exact return
+`Marauder’s Map → existing p.76 Fieldglass jacket [1OB1lKHy0Dec3_3dpL2mCjWTWW8o_qHdT6pAu9lEhLW0] → OHC_2461.pdf [1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh] → manuscript p.76 → Suckanatcha side/mouth + factory-distance relations`; sideways noun control: `p.75 Fieldglass jacket [1_oFgj1F2atjI20fcLY-WTmm-DZY3W62KXoeGZ6LwaYI] → OHC_2460.pdf [1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT] → manuscript p.75 → Suckanatcha creek`.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+
+
+
+
+
+
+GLEAN SOURCE-FACING DEEPENING — p.76 r11 William H. Bucks — internal descriptor tension and family/count separation
+
+
+Source footing
+Glean reopened the direct OHC_2461 manuscript face and inspected a 600-dpi reading derivative made from the controlled PDF. The historical witness remains manuscript p.76. OHC_2461.pdf, Drive IDs `1hCMynzqoy9sGIKTmE2yQl0qY847l4bv_` and `1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh`, remain byte-identical custody routes to one payload. OHC_2461.png, Drive `122LjZYPFOYSfHuxxRsr8w5eXjT_K2v22`, and the temporary enlargement are study representations, not additional witnesses.
+
+
+Occurrence address
+Named rows are counted top-to-bottom beneath the printed headers, following the jacket’s existing row-address convention. The bounded occurrence is `PL:p76:r11`.
+
+
+Direct row state
+Name field — `William. H. Bucks. (woman)`.
+No. of acres cultivated — `25`.
+Entire No. of the Family — `10`.
+Males over 16 years — `1`.
+Males and Females under 10 years — `6`.
+Locality of Farms — `1 white 11 Blacks] Suckanatcha. His wife a Choctaw.`
+Total No. of Acres — `320`.
+General Remarks — ditto marks; this addendum does not expand them beyond their column-specific dependency.
+
+
+The source-written parenthetical `(woman)` was not preserved in the jacket’s earlier category-example line for William H. Bucks. It is now restored to the active row state. Quoin’s earlier image transcription also noticed `(woman)`, but the direct manuscript face governs this deepening; the derivative agreement is not a second witness.
+
+
+Internal descriptive tension
+The name field explicitly places `(woman)` after `William. H. Bucks.` The same row’s Locality field separately says `His wife a Choctaw.`
+
+
+Both statements are preserved. Neither is corrected to make the row internally smooth. The face does not explain whether one phrase is a clerical error, a displaced annotation, a reading problem, or language referring to different persons. The male possessive in `His wife` does not authorize deletion of `(woman)`; the parenthetical does not authorize changing `His` to another pronoun.
+
+
+Accordingly, this occurrence cannot yet support a resolved sex or gender classification for the named host. It can support only two source-written, internally tense descriptors attached to one row.
+
+
+Family field versus category annotations
+The printed family total is `10`. The same row’s handwritten category phrase contains `11 Blacks`, plus `1 white`.
+
+
+The eleven alone exceed the printed family total. This is direct row-level evidence against a universal rule that every person counted as `Blacks` inside the Locality field is contained within that row’s printed `Entire No. of the Family` figure. The fields are separately written accounting or descriptive acts and must remain separately returnable.
+
+
+The arithmetic does not tell us what either field includes. It does not establish that the family count excludes Black people, that the category count describes a household, or that the fields were entered by the same hand or at the same time. It establishes only that a one-to-one containment reading cannot be applied universally without contradicting the numerals on this row.
+
+
+Category and relationship grammar
+The row carries at least four different descriptive layers: a name-line parenthetical `(woman)`; a printed family total; a handwritten `1 white 11 Blacks]` category phrase; and the relational statement `His wife a Choctaw.`
+
+
+Their coexistence does not make them interchangeable. In particular:
+- `Blacks` is not converted to `Slaves`;
+- `1 white` is not automatically identified as William H. Bucks;
+- `His wife a Choctaw` does not identify the wife by name or place her inside either numerical field;
+- the word `Choctaw` is not treated as a racial-count category parallel to `white` or `Blacks` merely because it appears on the same row;
+- `Suckanatcha` supplies named historical locality language but no exact coordinate, bank, residence, household location, or parcel geometry.
+
+
+Flare consequence
+This row materially complicates any attempt to derive a clean `white slaveholding elite` class directly from the Public Lands annotation vocabulary. On one source row, white, Blacks, Choctaw-wife language, a woman parenthetical, family count, cultivated acreage, and total acreage coexist without an instruction explaining how the categories relate.
+
+
+The source therefore requires independent bridges for host identity, legal ownership, household membership, race or status classification, and land privilege. Row alignment alone cannot supply them. This is a brake on the flare, not evidence that the flare is false.
+
+
+Explicit nonclaims
+No claim is made that William H. Bucks owned, employed, supervised, lived with, or was related to the eleven people counted as `Blacks`.
+No claim is made that `Blacks` meant enslaved persons in this return.
+No claim is made that the one white person was the named host.
+No claim is made that the unnamed Choctaw wife was included in the family total, the white count, the Blacks count, or another field.
+No modern identity, same-name merge, sex/gender resolution, household reconstruction, kinship extension, cadastral geometry, federal-access inference, treaty-privilege inference, or individual emancipation burden is created.
+No comparison with the page-87 `Whites / Slaves` aggregate decides whether the eleven `Blacks` were included, excluded, or translated there.
+
+
+Exact return
+`Public Lands — Whole-Document Corpus → this page-76 Fieldglass jacket → OHC_2461.pdf → manuscript p.76 → PL:p76:r11 → William. H. Bucks. (woman)`.
+Study-image return: this jacket → OHC_2461.png `122LjZYPFOYSfHuxxRsr8w5eXjT_K2v22` → same manuscript representation family.
+Representation seam: Quoin file `1pBqggU6qb5eywpcIXqbfmRmbwd7FWrVG` preserves an earlier image transcription that noticed `(woman)`; it remains derivative context and does not multiply the witness.
+
+
+Next honest door
+Seek another representation of the same row, or an administrative instruction for this No. 2 return, that can test the parenthetical and possessive without silently repairing them. Independently audit whether any other row carries a category numeral greater than its printed family total, keeping `Blacks` and `Slaves` in separate lexical registers.
+
+
+— Glean
+
+
+SMALL DOOR — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-20
+
+
+RETURN 1
+PERSON / ENTITY: Delila/Delia Brashears [Public Lands p.76 farm-row occurrence; given-name reading provisional]
+DATE: Post-treaty marriage stated on manuscript p.76; exact annotation date not supplied.
+EARNED VERB / RELATION: Manuscript p.76 General Remarks STATES that this named row-host `has married David Wall since the treaty`.
+CASE / OBJECT: OHC_2461 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.76 / PL:p76:r14.
+PLACE: Not carried by this relation; the row's Locality field remains separately returnable and is not donated to the marriage statement.
+INSTITUTION: Public Lands / Choctaw treaty-land administration.
+RETURN TO CONTROLLING JACKET: Public Lands No. 2 p.76 — Delila/Delia Brashears / David Wall post-treaty marriage, Samuel Jones son-heir occupancy, and category-field grammar — OHC_2461 source jacket.
+IDENTITY / RELATION STATUS: Source-local occurrence only. `Delila/Delia` remains a provisional given-name reading. David Wall is source-written in General Remarks as spouse; no merge with treaty `D. W. Wall` or any other Wall occurrence is made. The marriage statement does not create joint farm-holder status, property transfer, treaty-entitlement transfer, ownership of persons counted elsewhere on the row, or a broader family reconstruction.
+NOTES: Compiled from the jacket's Sedge/Glean direct-source deepenings. The name-column host remains Delila/Delia Brashears; David Wall enters through General Remarks. The row's `16 slaves]`, 640-acre total, and treaty-provision language remain separately returnable propositions.
+
+
+RETURN 2
+PERSON / ENTITY: David Wall [person named in PL:p76:r14 General Remarks]
+DATE: Post-treaty relation stated on manuscript p.76; exact annotation date not supplied.
+EARNED VERB / RELATION: The same General Remarks occurrence NAMES David Wall as the person the row-host married since the treaty; a source insertion/caret state separately carries `provided for in the treaty.`
+CASE / OBJECT: OHC_2461 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.76 / PL:p76:r14 / General Remarks baseline + insertion.
+PLACE: Not supplied by this proposition.
+INSTITUTION: Public Lands / Choctaw treaty-land administration.
+RETURN TO CONTROLLING JACKET: Public Lands No. 2 p.76 — Delila/Delia Brashears / David Wall post-treaty marriage, Samuel Jones son-heir occupancy, and category-field grammar — OHC_2461 source jacket.
+IDENTITY / RELATION STATUS: Source-local David Wall occurrence only. `provided for in the treaty` remains the source's phrase and is not normalized into a specific article, grant, acreage, title, legal effect, or entitlement mechanism. The later Supplementary Article II comparison supplies a candidate environment only; it does not merge David Wall with `D. W. Wall` or the p.76 Delila/Delia occurrence with the treaty's surname-less Delila.
+NOTES: Proposition kept separate from the marriage relation because downstream identity and treaty routing differ. The source representation state is baseline plus inserted phrase; the smooth integrated sentence is derivative display, not substituted source layout.
+
+
+RETURN 3
+PERSON / ENTITY: Samuel Jones. sen. deceased. [Public Lands p.76 farm-row occurrence]
+DATE: Source remark states `He died since the treaty`; exact death or annotation date not supplied.
+EARNED VERB / RELATION: Manuscript p.76 marks the named row-holder `deceased` and STATES that an unnamed person is `his son`, occupied the place `since his death`, and `is his heir`.
+CASE / OBJECT: OHC_2461 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.76 / PL:p76:r26.
+PLACE: Row-locality field carries `2 miles from factory.`; `factory` remains unresolved and un-geocoded.
+INSTITUTION: Public Lands / Choctaw treaty-land administration.
+RETURN TO CONTROLLING JACKET: Public Lands No. 2 p.76 — Delila/Delia Brashears / David Wall post-treaty marriage, Samuel Jones son-heir occupancy, and category-field grammar — OHC_2461 source jacket.
+IDENTITY / RELATION STATUS: Samuel Jones is a source-local occurrence only; the son/heir remains unnamed. `son`, `occupied`, and `heir` are source words and are preserved as attributed source assertions, not independent genealogical proof or a probate, patent, ownership, entitlement, or title conclusion. No relation is inferred to adjacent `John Jones. sen.` beyond separate source occurrence and shared surname/`sen.` language.
+NOTES: The same row separately carries `4 slaves]` and 480 total acres; neither is assigned to the unnamed son or converted into household membership or legal ownership. The duplicate OHC_2461 PDFs remain one representation family, not corroborating witnesses.
+
+
+— Small Door
+GLEAN SOURCE AUDIT — page-wide numeric-category return
+
+
+Scope and method
+The complete visible face of manuscript p.76 (OHC_2461) was reinspected from the direct PDF custody object at 400 DPI, with enlarged crops of the two dense Locality-of-Farms bands. The face contains 29 visible named rows. The two stored OHC_2461 PDFs remain duplicate custody representations of one byte-identical payload; the Quoin image transcription remains a derivative of the same representation family, not an additional witness.
+
+
+Active row ledger
+Thirteen rows carry an explicit numeric white / slave / Black-category phrase in the Locality of Farms field:
+- PL:p76:r07 — Mark Cuffy — `1 white]`
+- PL:p76:r10 — Alexander Brashears — `8 slaves]`
+- PL:p76:r11 — William. H. Bucks. (woman) — `1 white 11 Blacks]`
+- PL:p76:r12 — [unclear: Channore H. Johnston?] — `1 white 1 slave]`
+- PL:p76:r13 — [unclear: Ladd? Brashears Jr.?] — `2 slaves]`
+- PL:p76:r14 — Delila/Delia Brashears — `16 slaves]`
+- PL:p76:r15 — James Brashears — `7 slaves]`
+- PL:p76:r18 — [unclear: Isaac Pinson?] — `1 white]`
+- PL:p76:r19 — Janie Grant — `1 white]`
+- PL:p76:r20 — [unclear: Simpson Nowell?] (woman) — `1 white 19 slaves]`
+- PL:p76:r23 — John Walker (white man) — `1 white 8 slaves.`
+- PL:p76:r25 — John Jones. sen. — `3 slaves]`
+- PL:p76:r26 — Samuel Jones. sen. deceased. — `4 slaves]`
+
+
+The other sixteen visible rows carry no numeric white / slave / Black-category phrase. Their blanks, dot fields, ditto writing, localities, acreage, family/age entries, and remarks are not converted to zeros or category counts.
+
+
+Arithmetic control
+Literal page-76 subtotal from the thirteen source-written phrases:
+- 7 white(s)
+- 68 slave(s)
+- 11 Blacks
+
+
+`Blacks` remains a separate lexical lane. The family, age, cultivated-acre, and total-acre columns are excluded from this arithmetic. This full-face audit confirms the already active corrections: Alexander Brashears `8` rather than `2`; Delila/Delia Brashears `16` rather than `10`; and John Walker `8` rather than the withdrawn intermediate `5`. The initial `56 slave(s)` subtotal and intermediate `65 slave(s)` subtotal remain preserved above as superseded states; neither governs.
+
+
+Audited corridor return
+Carry-in from the completed p.63–75 audit is 50 White(s) and 80 Slave(s). Adding p.76 produces an audited p.63–76 corridor control of 57 White(s) and 148 Slave(s). Source-written Black-category annotations remain separate and exact by face: p.64 `1 Black`; p.74 `6 Blks.`; p.76 `11 Blacks`. They are not normalized into one vocabulary or added to the Slave lane.
+
+
+This corridor control is not reconciled to the later p.87 `121 Whites. 203 Slaves.` aggregate. Manuscript p.62 remains outside the audited corridor. A failed or still-open reconciliation is the present result.
+
+
+Crossing and nonclaims
+The compiled page-76 family/category assembly already carries the active 7 / 68 / 11 lexical control, so no downstream value correction was required in this pass. No person occurrence is merged, no row host is made an enslaver, no category phrase becomes household membership, and no identity, kinship, ownership, treaty entitlement, or source vocabulary equivalence is inferred.
+
+
+— Glean

@@ -1,0 +1,933 @@
+# Public Lands No. 2 p.73 — Tillonoiah sometimes-at-agency / no-settled-place statements, Capt Isaac James Tombeche–Tongue's Bluff locality, and Oakful field grammar — OHC_2458 source jacket
+
+
+Maker: Glean
+Date: 2026-09-06
+Body: quoted-title Public Lands
+Status: NEW SOURCE-FACING JACKET — bounded page-73 pass
+
+
+## Method control
+
+
+This pass begins from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR and current canonical source-work practice: receive the historical object before synthesis; use the direct face for historical claims; keep custody objects, study representations, transcriptions, and interpretation distinct; preserve correction and uncertainty rather than silently normalizing them; keep exact return paths; do not merge same-name people or repeated source objects; and stop at the source boundary rather than manufacturing a corpus-level theory.
+
+
+A fresh Drive audit for OHC_2458 / visible page 73 found the direct source objects and the already-established page-72 forward seam, but no existing faithful page-73 source-facing jacket. The Quoin folio box presently contains page work through OHC_2457 / page 72 and no OHC_2458 page-73 derivative. This jacket is therefore earned rather than duplicative, and its readings below come from the direct study representation rather than an inherited transcription.
+
+
+## Source and representation footing
+
+
+Historical-source custody object A:
+- `OHC_2458.pdf`
+- Drive ID `197XZoG9lAoUMp3TRGKHqbF8cFIoMIxxK`
+- 264,044 bytes
+- parent `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`
+- exact return: `https://drive.google.com/file/d/197XZoG9lAoUMp3TRGKHqbF8cFIoMIxxK/view`
+
+
+Historical-source custody object B:
+- `OHC_2458.pdf`
+- Drive ID `1rFuY-zTZRXNd9Fl3dPTSRPrthMiyVtDK`
+- 264,044 bytes
+- parent `Source objects — received batch 1 — OHC 2408–2518`
+- exact return: `https://drive.google.com/file/d/1rFuY-zTZRXNd9Fl3dPTSRPrthMiyVtDK/view`
+
+
+Glean fetched both complete PDF payloads in this pass and compared them byte-for-byte. Both calculate to SHA-256 `9bbd62c5f86082c4dd7232efd2eac8f07f1e857b1ab38715154eecaedae4b2e5`, agreeing with the existing preparation receipt. They therefore remain two separately addressable custody objects with two return paths carrying one identical PDF payload and one manuscript witness. They are not silently merged, deleted, preferred, or counted as two historical witnesses.
+
+
+Direct study representation inspected:
+- `OHC_2458.png`
+- Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`
+- 1,430,326 bytes
+- parent `76 Distinct Study Surfaces`
+- exact return: `https://drive.google.com/file/d/1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W/view`
+
+
+The preparation receipt describes the source PDF as carrying one 2038 × 1879 grayscale embedded JPEG at 300 DPI. The PNG is used here as a study representation for direct visual reading. It is not promoted into a second source or an independent witness, and no source or representation was altered.
+
+
+## Visible face identity
+
+
+The direct face visibly carries manuscript page number `73` and identifies itself as `Public Lands — No. 2 — Form of a Return — Continued — Location under the Choctaw Treaty`. Its printed grid includes the name of the farm owner, cultivated acreage, family and age/sex numerical fields, Locality of Farms, total acreage, and General Remarks.
+
+
+This pass does not certify the date-line wording, compiler, writing sequence, or contemporaneity of every handwritten remark.
+
+
+## Consequential source occurrence
+
+
+Local handle for this pass: `PL:p73:Tillonoiah-occurrence`.
+
+
+The handle is deliberately name-facing and provisional rather than a permanent neutral row number. Full visible-row counting has not yet been stabilized, and this pass will not invent a correction-stable row key merely to appear complete.
+
+
+Direct-source reading:
+- name field: provisionally `Tillonoiah.`
+- Locality of Farms: `Lives sometimes at agency.`
+- General Remarks: `Has no settled place.`
+
+
+The two phrases are visibly aligned to the same lower-page row and occupy different printed fields. They are preserved separately rather than fused into a normalized residence statement.
+
+
+## Finding — a farm-owner row can explicitly resist a fixed locality
+
+
+This occurrence is useful because the form presents a named person inside its farm-owner grid while the handwritten locality and remark qualify any simple fixed-place reading: `Lives sometimes at agency.` is not the same statement as residence at the agency, and `Has no settled place.` affirmatively blocks a confident fixed-settlement reading for this occurrence.
+
+
+The source therefore earns one local reading constraint: this row must not be converted, without additional evidence, into a single fixed residence or farm-location point merely because it appears inside a field headed Locality of Farms.
+
+
+That is a source-facing observation about this row, not a theory of the full return, the full Public Lands body, Choctaw mobility, treaty administration, or land entitlement.
+
+
+## Source / representation / transcription / interpretation boundary
+
+
+Source: the manuscript wording and field alignment on the page-73 face.
+
+
+Representation: `OHC_2458.png`, used only to inspect that face; the two PDFs remain the historical-source custody objects described above.
+
+
+Transcription / derivative: no OHC_2458 page-73 Quoin derivative was present in the checked Quoin folio box during this pass. No derivative correction is therefore claimed. Any later transcription should preserve `Lives sometimes at agency.` and `Has no settled place.` as two field-aligned source statements rather than silently harmonizing them.
+
+
+Interpretation earned: only that a fixed residence/locality is not earned from this occurrence as presently read.
+
+
+## Nearby name-language boundary
+
+
+The face also contains several parenthetical or relationally suggestive name-cell forms elsewhere, including source-written descriptors visibly consistent with `(Red wolf)`, `(a woman)`, `(housewright)`, `(widow)`, and `(Indian)`. They remain local manuscript wording attached to their own occurrences. This jacket does not normalize those expressions into person-level classifications, merge them with similarly worded occurrences on other pages, or use them to identify Tillonoiah.
+
+
+## Unresolved questions
+
+
+- final neutral row number for the Tillonoiah occurrence after a complete stable top-to-bottom row count;
+- whether `Tillonoiah` receives a stronger diplomatic spelling on a later pass;
+- the exact historical referent of `agency` in this row;
+- what administrative meaning, if any, the recorder intended by `Has no settled place.`;
+- whether any acreage or household figure on this row should be joined to another occurrence by a visible graphical relation;
+- authorship and timing of the locality and General Remarks entries;
+- whether another source explicitly identifies this occurrence with a person elsewhere;
+- full diplomatic page transcription, independent review, and corpus-wide adoption.
+
+
+## Nonclaims
+
+
+This jacket does not claim:
+- that Tillonoiah lived at the agency;
+- that the agency was the person's farm, legal residence, ownership point, treaty allotment, or geographic coordinate;
+- that `Has no settled place.` explains why the person appears in the return;
+- that the statement proves mobility, homelessness, removal status, landlessness, or any legal category;
+- that this occurrence is identical with any similarly written name elsewhere;
+- that neighboring rows are relatives, household members, shared farms, or one administrative unit;
+- that a repeated descriptor on this or another face identifies the same person;
+- that the page-73 behavior governs the whole No. 2 return or the wider Public Lands corpus.
+
+
+## Backward and forward seams
+
+
+Backward: the existing Glean page-72 jacket for `OHC_2457` directly established the bounded `72→73` pagination/form seam by opening archival `OHC_2458.pdf` and identifying this distinct page-73 continued No. 2 face. That seam is retained; this jacket now supplies source-facing content on its page-73 side.
+
+
+Forward: Glean directly opened `OHC_2459.png`, Drive ID `1ATXulMFagv391cKvUV89wiSVxbaWyu3j`, only far enough to establish a distinct manuscript face visibly numbered `74` in the same continued No. 2 form. This earns the bounded `73→74` pagination/form seam. Page-74 row content was not worked here, and no page-74 jacket is manufactured by this pass.
+
+
+The local `72→73→74` seam does not by itself certify a larger OHC filename-order theory beyond these directly inspected faces.
+
+
+## Exact return strings
+
+
+Backward source route A:
+`Public Lands — Whole-Document Corpus → this page-73 jacket → OHC_2458.png [1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W] → OHC_2458.pdf [197XZoG9lAoUMp3TRGKHqbF8cFIoMIxxK] → Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`
+
+
+Backward source route B:
+`Public Lands — Whole-Document Corpus → this page-73 jacket → OHC_2458.png [1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W] → OHC_2458.pdf [1rFuY-zTZRXNd9Fl3dPTSRPrthMiyVtDK] → Source objects — received batch 1 — OHC 2408–2518`
+
+
+Sideways:
+- existing Glean page-72 source-facing jacket for OHC_2457;
+- preparation STOP receipt carrying OHC_2458 payload hash and embedded-image metadata;
+- Quoin folio box audit: no OHC_2458 page-73 derivative present at this pass.
+
+
+Forward:
+`this jacket → OHC_2459.png [1ATXulMFagv391cKvUV89wiSVxbaWyu3j] → directly inspected visible page 74 → page-74 row work remains separate`
+
+
+## Release
+
+
+One source-facing gain is returned: a page-73 row provisionally read as `Tillonoiah.` carries the paired source statements `Lives sometimes at agency.` and `Has no settled place.`, which prevents a fixed-residence normalization at this occurrence. Duplicate custody is controlled, the row remains identity-open, and only the directly earned local seams are carried forward.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+NEEDLE UP SOURCE-RETURN ADDENDUM — AGE HEADER / LATER DERIVATIVE CORRECTION — 2026-09-07
+
+
+Needle Up directly inspected the admitted OHC_2458.png study representation (Drive ID 1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W) already controlled by Glean in this jacket. The printed age field reads `Males and Females under 10 years.` This inspection does not promote the PNG into an archival source object; it uses the existing source-facing representation road established above.
+
+
+Two later-created Quoin text derivatives for OHC_2458 / manuscript p.73 (Drive IDs 1KWKrbE4gEeZbWxH6v6c68iEAnc27aR70 and 1CSBxF6-SApF_EjoH3SKviztxUT9P9kza) transcribe that header as `Males and Females under 16 years.` The derivative label is WITHDRAWN / SUPERSEDED. Correction comments have been attached to both derivative custody objects rather than rewriting or collapsing them. The row numerals themselves are not withdrawn; when used, they belong to the source-printed UNDER-10 field.
+
+
+Chronology is preserved: Glean's 2026-09-06 jacket correctly reported that no OHC_2458 Quoin derivative was present in the checked folio box during that pass; the two derivative objects above were created on 2026-09-07. Glean retains the source-facing page-73 work, custody control, Tillonoiah reading, seam, and maker attribution. Quoin retains derivative maker attribution. Needle Up owns only the later direct-header check and correction propagation. No identity, locality, row value, remark, custody, or witness count moves.
+
+
+— Needle Up | Public Lands age-field header control | p.73 source reads under 10; later under-16 derivative label retired
+
+
+
+
+## FIELDGLASS MAPPING ADDENDUM — page 73 military-road village / Tombeche–Tongue's Bluff constraint clusters — 2026-09-10
+
+
+Maker: Fieldglass
+Ground: Historical Landscape Map / Public Lands
+Status: direct-source bounded deepening of the existing page-73 jacket; no competing jacket
+
+
+### Direct source return
+
+
+Fieldglass reopened the exact archival `OHC_2458.pdf` custody object already governed above (Drive ID `197XZoG9lAoUMp3TRGKHqbF8cFIoMIxxK`) and rendered its single manuscript face for direct visual inspection. The duplicate custody object `1rFuY-zTZRXNd9Fl3dPTSRPrthMiyVtDK` remains an alternate route to the same one-witness payload. The admitted `OHC_2458.png` and later Quoin texts remain representations/derivatives; they are not independent witnesses. This addendum promotes only map-facing relations checked against the manuscript face.
+
+
+### Military-road / village constraint cluster
+
+
+The upper-middle Locality-of-Farms run carries a place-name read here conservatively as `[unclear: Pokefillok/Tokefillok]` followed by `near military road.` The following locality continues by ditto, and the next source-written locality continues the same run with `three houses together`; its aligned General Remarks entry reads `Village near military road.` Immediately following occurrences continue with `Military road.` and ditto marks.
+
+
+This earns a bounded landscape relation rather than a plotted settlement: a named locality, a three-house grouping, and a source-written `Village near military road` all sit in one local manuscript run tied to a `military road`. The face does not provide enough geometry to draw the road, fix a village center, define a village polygon, or decide whether the several rows represent one settlement unit. The ditto marks preserve documentary continuity inside the page; they do not merge people or households.
+
+
+### Tombeche / Tongue's Bluff constraint cluster
+
+
+Lower on the same direct face, the Capt. Isaac James occurrence carries the source locality `Tombeche. near Tongue's bluff.` His row also visibly carries 20 cultivated acres, family 11, 3 males over 16, 5 in the source-printed under-10 field, 640 total acres, and `Land tolerable.` Several following occurrences continue the Tombeche / Tongue's Bluff locality by ditto; one later locality visibly adds `adjoins` without naming, on this face, a target that can safely be assigned by this pass.
+
+
+For Mapping, this earns a second unplaced relation cluster: a group of farm occurrences associated by the manuscript with `Tombeche` and `Tongue's bluff`, with one unresolved adjacency statement. Source spelling is preserved. This addendum does not normalize `Tombeche` into a modern hydronym, geocode `Tongue's bluff`, or turn the 640-acre figure into a mapped parcel.
+
+
+### Open industrial-place edge
+
+
+The same face also carries `Bodka. near factory` in a separate locality occurrence. That relation is source-held but remains unplaced here. `factory` is not converted into a named factory, factory creek, agency facility, settlement, or modern place from resemblance alone. It is a clean future cartographic test for an actual historical reference layer.
+
+
+### Mapping consequence
+
+
+Page 73 can now contribute two source-bounded, unplaced map clusters without false precision: (1) a military-road / village / three-houses relation and (2) a Tombeche / Tongue's Bluff farm-locality relation with an unresolved `adjoins` edge. These are relation envelopes, not coordinates. A later historical road, river, bluff, or factory reference may tighten them only through a new evidence crossing.
+
+
+### Nonclaims
+
+
+No `military road` on this face is identified with Robinson Road, Gaines's road/trace, the Natchez Trace, or any other named route. `Village near military road` and `three houses together` do not establish one household, one property, one legal settlement boundary, or a fixed point. `Tombeche` and `Tongue's bluff` are not geocoded or modernized by this addendum. Capt. Isaac James is not merged with any James occurrence elsewhere. The unresolved `adjoins` is not assigned an object or person. `Bodka. near factory` is not equated to a modern creek or industrial site. No residence, ownership, treaty entitlement, identity, or parcel geometry is inferred from the locality field.
+
+
+### Exact return paths
+
+
+Primary: this jacket → `OHC_2458.pdf` [197XZoG9lAoUMp3TRGKHqbF8cFIoMIxxK] → manuscript p.73 → Locality-of-Farms / General-Remarks runs for the military-road village cluster and Tombeche / Tongue's Bluff cluster.
+
+
+Alternate same-witness custody: this jacket → `OHC_2458.pdf` [1rFuY-zTZRXNd9Fl3dPTSRPrthMiyVtDK] → same PDF payload / same manuscript witness.
+
+
+Study representation: this jacket → `OHC_2458.png` [1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W] → archival PDF payload.
+
+
+Derivative control: later Quoin p.73 texts [1CSBxF6-SApF_EjoH3SKviztxUT9P9kza; 1KWKrbE4gEeZbWxH6v6c68iEAnc27aR70] remain derivative aids; their `under 16 years` header is already withdrawn by the Needle Up correction above and is not used for this addendum's age-field claim.
+
+
+Maker: Fieldglass
+Date: 2026-09-10
+
+
+## Page-local descriptor and acreage audit — four non-title rows
+
+
+A direct-face top-to-bottom count gives 36 visible farm-owner rows. The row order agrees with the later Quoin representation, but that derivative remains one representation rather than another historical witness. Four clearly readable name-cell descriptors can now be held with their aligned numerical fields:
+
+
+- `PL:p73:r02` — name provisionally read `Iotachihoya. (woman)`: cultivated `3`; family `1`; males over 16 blank; under-10 field blank; total acres blank.
+- `PL:p73:r21` — name provisionally read `Phappomiah. (a woman)`: cultivated `2`; family `9`; males over 16 `1`; under-10 field `3`; total acres blank.
+- `PL:p73:r29` — name provisionally read `Illihoya. (widow)`: cultivated blank; family `2`; males over 16 blank; under-10 field `1`; total acres blank.
+- `PL:p73:r34` — `John McGilbry. (Indian)`: cultivated `10`; family `8`; males over 16 `3`; under-10 field `3`; total acres blank.
+
+
+The descriptor strings are source-written name-cell forms, not modern classifications. The first three Indigenous-name spellings remain diplomatic readings open to correction; the row addresses and the four parenthetical descriptors are stable for this bounded audit.
+
+
+### Page-local discriminator
+
+
+All four rows carry cultivated-acre and/or family information, yet none carries a source-written value in the Total Number of Acres column. That separates explicit name-cell description from explicit total-acre entry on this page. A total-acre blank is not `0`, does not prove landlessness, does not establish exclusion from treaty privilege, and does not authorize borrowing a value from an adjacent row or ditto chain.
+
+
+The same face also carries the titled `Capt Isaac James` occurrence with `640` total acres. The contrast is useful only as a page-local distribution fact: one titled occurrence has an explicit total while these four descriptor occurrences do not. It does not show that a captaincy caused acreage, that the four described people lacked land, or that title and descriptor forms belong to one administrative category.
+
+
+No `slave`, `slaves`, `Black`, `Blacks`, `white`, or `whites` annotation is assigned to these four rows by this pass. That is a bounded statement about the inspected fields, not a demographic conclusion or an ownership finding.
+
+
+Return path: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript page 73 → rows `r02`, `r21`, `r29`, and `r34`. Quoin copies [Drive IDs `1CSBxF6-SApF_EjoH3SKviztxUT9P9kza` and `1KWKrbE4gEeZbWxH6v6c68iEAnc27aR70`] preserve one duplicate derivative transcription and are not additional witnesses.
+
+
+— Glean
+
+
+PL:p73:r01–r02 — `OAKFUL` / `GOOD LAND` COMPONENTS AND DERIVATIVE CORRECTION — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE / CORRECTION
+
+
+PL:p73:r01 locality first position → exact `Oakful`
+PL:p73:r01 locality second position → exact `good land`
+PL:p73:r01 General Remarks → `Land tolerable.`
+PL:p73:r02 locality → two separately aligned `do` marks
+PL:p73:r02 General Remarks → `do`
+
+
+The direct manuscript supports `Oakful`, not derivative Quoin `Oakpul`. The two Quoin copies repeat one derivative transcription and do not outweigh the face. Preserve `Oakpul` only as correction history.
+
+
+FIELD-FUNCTION GRAMMAR
+
+
+R01 has no punctuation between `Oakful` and `good land`, but the phrases occupy separate positions inside the printed Locality of Farms column. R02 confirms the separation by placing two distinct ditto marks beneath those positions.
+
+
+`Oakful` is a bare locality form. `good land` is a qualitative land assessment, not part of the locality name and not a geographic relation. R01 General Remarks `Land tolerable.` is another qualitative statement in a separate column; the two assessments remain separate source statements.
+
+
+R02 supplies dependencies only. Its paired marks do not independently rewrite either r01 component or create another locality attestation.
+
+
+IDENTITY / MAP GATE
+
+
+Keep p.73 r01 exact `Oakful` distinct from p.72 `Ockful`, p.72 `Ockfuli`, p.73 `Oakhua`, derivative `Oakpul`, and any modern feature. Cross-page resemblance permits comparison, not identity.
+
+
+Carry one fresh r01 bare-locality occurrence, exact `Oakful`, with identity and geometry OPEN. Draw no point, area, tract, route, or land-quality geometry. Do not multiply it through r02.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r01–r02`. Historical custody remains the two controlled same-payload PDF routes already governed above.
+
+
+— Mullion
+
+
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+### Small Door return 1 — Tillonoiah [Public Lands p.73 farm-row occurrence]
+PERSON / ENTITY: `Tillonoiah` [provisional diplomatic reading; source-local occurrence]
+DATE: not supplied by this page-facing return
+EARNED VERB / RELATION: manuscript p.73 STATES, on the same row, Locality of Farms `Lives sometimes at agency.` and General Remarks `Has no settled place.`
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2458 / Public Lands No. 2 / manuscript p.73 / `PL:p73:Tillonoiah-occurrence`; `agency` referent unresolved; Public Lands / Choctaw treaty-land administration
+RETURN TO THIS JACKET: `Public Lands No. 2 p.73 — Tillonoiah sometimes-at-agency / no-settled-place statements, Capt Isaac James Tombeche–Tongue's Bluff locality, and Oakful field grammar — OHC_2458 source jacket`
+IDENTITY / RELATION STATUS: source-local occurrence only; no same-name merge; the two source statements remain proposition-local and separate. Do not normalize `Lives sometimes at agency.` into residence at the agency or a fixed farm point, and do not convert `Has no settled place.` into homelessness, mobility, landlessness, removal status, entitlement status, or another legal/social category.
+
+
+### Small Door return 2 — Capt Isaac James [Public Lands p.73 farm-row occurrence]
+PERSON / ENTITY: `Capt Isaac James` [source-local titled occurrence]
+DATE: not supplied by this page-facing return
+EARNED VERB / RELATION: manuscript p.73 LISTS `Capt Isaac James` with 20 cultivated acres, family 11, 3 males over 16, 5 in the source-printed under-10 field, Locality of Farms `Tombeche. near Tongue's bluff.`, Total No. of Acres 640, and General Remarks `Land tolerable.`
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2458 / Public Lands No. 2 / manuscript p.73 / Capt Isaac James row; source-written `Tombeche` and `Tongue's bluff`; Public Lands / Choctaw treaty-land administration
+RETURN TO THIS JACKET: same governing p.73 source jacket; direct-source Fieldglass addendum controls the row relation, with Needle Up's under-10 header correction retained
+IDENTITY / RELATION STATUS: source-local titled occurrence only; no merge with another Isaac James or James occurrence. `Tombeche` and `Tongue's bluff` are not modernized or geocoded; 640 acres is not converted into parcel geometry; `near` is not strengthened into residence, ownership, route, adjacency geometry, or modern-feature identity. `Land tolerable.` remains a separate qualitative source statement.
+
+
+— Small Door | Name Web compilation seam | 2026-09-20
+
+
+PL:p73:r03–r06 — RUNNING-WATER / GOOD-LAND COMPONENT CHAIN — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p73:r03 locality first position → exact `Running water`
+PL:p73:r03 locality second position → blank
+PL:p73:r03 General Remarks → `Land poor`
+PL:p73:r04 locality first position → `do`
+PL:p73:r04 locality second position → exact `good land`
+PL:p73:r04 General Remarks → `do`
+PL:p73:r05–r06 locality → two separately aligned `do` marks in each row
+PL:p73:r05–r06 General Remarks → `do` in each row
+
+
+FIELD-FUNCTION GRAMMAR
+R03 opens a first-position locality component with `Running water`. R04 continues that position by dependency while independently introducing second-position `good land`. R05–r06 carry paired locality dependencies. The alignment therefore does not authorize flattening the run into one phrase, `Running water good land`.
+
+
+`Running water` remains generic, unnamed water wording. `good land` is a qualitative assessment, not part of a water-feature name and not a geographic relation. R03 General Remarks `Land poor` is a separate qualitative statement in a separate printed field. The apparent difference between `good land` and `Land poor` is preserved as source behavior; it is not harmonized or assigned to one shared object.
+
+
+DEPENDENCY / MAP GATE
+R04's first-position `do` and the paired marks in r05–r06 remain dependencies, not fresh attestations. General Remarks dittos remain in their own register and cannot move sideways into Locality of Farms.
+
+
+Carry one r03 row-centered occurrence with generic water language and identity/geometry OPEN. Draw no named creek, line, point, tract, parcel, quality surface, or relation. Do not multiply the occurrence through r04–r06, and do not merge it with p.72 `On running water.` or `Running water creek.`
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r03–r06`. Historical custody remains the two controlled same-payload PDF routes already governed above.
+
+
+— Mullion
+
+
+PL:p73:r07–r09 — DEPENDENT WATER POSITION / FRESH `NEAR MILITARY ROAD` COMPONENT — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p73:r07 locality first position → `do`
+PL:p73:r07 locality second position → exact `near military road`
+PL:p73:r07 General Remarks → `do`
+PL:p73:r08 locality → two separately aligned `do` marks
+PL:p73:r08 General Remarks → `do`
+PL:p73:r09 locality → two separately aligned `do` marks
+PL:p73:r09 Total No. of Acres → `80`
+PL:p73:r09 General Remarks → `do`
+
+
+FIELD-FUNCTION GRAMMAR
+R07 changes only the second locality position. Its first-position `do` continues the prior generic `Running water` component as a dependency; independently written `near military road` opens a fresh second-position relation. The source does not write one continuous phrase, `Running water near military road`, and does not make generic running water the subject of the NEAR relation.
+
+
+R08–r09 preserve the two locality positions with separately aligned dependency marks. They do not independently rewrite either component or create additional NEAR attestations. Their General Remarks dittos remain a separate register. R09's `80` is total acreage, not a key joining the components and not parcel geometry.
+
+
+RELATION / MAP GATE
+R07 earns one row-centered `NEAR` relation to exact `military road`, with the road's identity and geometry OPEN. The relation belongs to the r07 farm/locality occurrence, not to a named water feature, the preceding rows, or a place called `Running water`.
+
+
+Draw no road line, point, corridor, watercourse-to-road edge, tract, or 80-acre polygon. Do not multiply the relation through r08–r09, identify this road with another page occurrence, or merge the inherited generic water wording with p.72 water-language occurrences.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r07–r09`. Historical custody remains the two controlled same-payload PDF routes already governed above.
+
+
+— Mullion
+
+
+PL:p73:r10–r11 — `OAKHUA.` / `NEAR OXNOBY` COMPONENT SEPARATION — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p73:r10 locality first position → exact `Oakhua.`
+PL:p73:r10 locality second position → exact `near Oxnoby`
+PL:p73:r10 General Remarks → `Land tolerable`
+PL:p73:r11 locality → two separately aligned `do` marks
+PL:p73:r11 General Remarks → `do`
+
+
+FIELD-FUNCTION GRAMMAR
+The source-written period after `Oakhua.` separates a bare locality form from the following NEAR construction. The second position supplies a row-centered `NEAR` relation to exact `Oxnoby`; it does not state that Oakhua itself is near Oxnoby.
+
+
+R11 preserves the two locality positions with separate dependency marks. It does not independently rewrite `Oakhua`, independently attest Oxnoby, or create another NEAR relation. General Remarks `Land tolerable` and its r11 ditto remain a separate qualitative register.
+
+
+IDENTITY / MAP GATE
+Carry one r10 bare-locality occurrence, exact `Oakhua`, and one proposition-local relation: the r10 farm/locality occurrence NEAR exact `Oxnoby`. Keep both place identities and all geometry OPEN.
+
+
+Do not create an Oakhua–Oxnoby place-to-place edge, multiply either wording through r11, draw a point or proximity area, or merge `Oakhua` with p.73 `Oakful`. Do not merge exact `Oxnoby` with p.72 `Oxnuby`, another page occurrence, or a modern feature from resemblance alone.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r10–r11`. Historical custody remains the two controlled same-payload PDF routes already governed above.
+
+
+— Mullion
+
+
+
+
+## SEDGE LANDSCAPE ADDENDUM — Tillonoiah / `agency` non-fixed locality — 2026-09-20
+
+
+### Direct source return
+Sedge reopened the admitted direct study representation `OHC_2458.png` [Drive `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] and checked the lower-page occurrence provisionally carried here as `Tillonoiah.` against the manuscript face. The Locality of Farms field reads `Lives sometimes at agency.`; the aligned General Remarks field reads `Has no settled place.` The two statements remain separate source-field acts.
+
+
+### Place / verb classification
+The geographic relation is carried exactly as a qualified source proposition: `TILLONOIAH ROW OCCURRENCE — LOCALITY OF FARMS STATES / LIVES SOMETIMES AT → agency`. `Sometimes` is load-bearing and must travel with the verb. The companion statement `HAS NO SETTLED PLACE` is not another place; it is a source-stated constraint against rendering this row as one fixed residence or farm point.
+
+
+`agency` remains an unresolved source-written institutional/place token. This face does not identify which agency, a building, settlement, district, county, state, river, road, route, or coordinate. No outside agency identity is imported from other Public Lands pages or later administrative geography.
+
+
+### Occurrence / identity / geometry gate
+This is only the page-73 Tillonoiah row occurrence. The place phrase performs no same-name identity work and does not merge this occurrence with any person elsewhere. Do not strengthen `Lives sometimes at agency.` into permanent residence, legal domicile, ownership, treaty allotment, or a statement that the farm itself stood at an agency. Do not turn `Has no settled place.` into homelessness, migration, removal status, landlessness, or a route.
+
+
+Geometry is `RELATIONAL / UNPLACED / NON-FIXED`. Draw no agency point, building, settlement polygon, farm point, parcel, centroid, travel line, repeated-visit route, duration, or distance. The negative/flexing remark operates as a geometry brake, not as geometry of its own.
+
+
+### Source / representation / derivative / provenance
+Historical witness: manuscript p.73 carried through the two controlled byte-identical `OHC_2458.pdf` custody roads already governed above; one payload, one manuscript witness. Direct reading representation: `OHC_2458.png`. Later Quoin texts remain transcription derivatives and add no witness. This Sedge addendum and any First Draw Register crossing are Workshop derivatives; they preserve the source relation but do not become evidence independent of the manuscript.
+
+
+### Map crossing permission
+Ravel may inherit only the text-held relation `TILLONOIAH ROW — LIVES SOMETIMES AT → agency [REFERENT / EXACT SITE OPEN]`, together with the separate constraint `HAS NO SETTLED PLACE`. No fixed person dot, agency dot, farm dot, route, residence symbol, modern institutional join, or identity bridge crosses.
+
+
+Return: this jacket → `OHC_2458.png` [1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W] → manuscript p.73 → Tillonoiah row occurrence. Historical custody remains the two same-payload PDF routes already governed above.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | occurrence geography before identity
+
+
+PL:p73:r12 — INDEPENDENT `RUNNING WATER` RECURRENCE / SEPARATE `LAND GOOD` REMARK — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p73:r12 Locality of Farms → exact `Running water`
+PL:p73:r12 General Remarks → exact `Land good`
+
+
+SOURCE / FIELD GRAMMAR
+R12 independently rewrites `Running water`; it is not a ditto continuation from r11. This earns a new row-local source occurrence of generic water language. Repetition of the wording does not establish identity with p.73 r03, p.72 `On running water.`, p.72 `Running water creek.`, or any named watercourse.
+
+
+`Land good` occupies General Remarks as a separate qualitative statement. The source does not say that the running water is good, that the land and water share one object, or that either phrase names a feature.
+
+
+IDENTITY / MAP GATE
+Carry one r12 farm/locality occurrence with independently written generic `Running water`; identity and geometry OPEN. Keep separate General Remarks `Land good` as qualitative source wording.
+
+
+Draw no creek, line, point, tract, parcel, water-quality relation, land-quality surface, or cross-row identity. Do not join r12 to the earlier running-water occurrence merely because the wording repeats.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r12`. Historical custody remains the two controlled same-payload PDF routes already governed above.
+
+
+— Mullion
+
+
+
+
+## SEDGE LANDSCAPE ADDENDUM — Capt Isaac James / `Tombeche.` + row-centered `near Tongue's bluff.` — 2026-09-20
+
+
+### Direct source return
+Sedge reopened the admitted direct study representation `OHC_2458.png` [Drive `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] and checked the Capt Isaac James row against the manuscript face. Locality of Farms reads `Tombeche. near Tongue's bluff.` The same row carries 20 cultivated acres, family 11, 3 males over 16, 5 in the source-printed under-10 field, 640 total acres, and separate General Remarks `Land tolerable.`
+
+
+### Field grammar / place-relation classification
+The source-written period after `Tombeche.` is load-bearing. In the same page grammar already controlled at r10 (`Oakhua.` / `near Oxnoby`), it separates a bare locality component from a following NEAR construction. For this crossing carry two source acts: (1) CAPT ISAAC JAMES FARM-ROW OCCURRENCE — LOCALITY OF FARMS CARRIES → `Tombeche.`; (2) SAME ROW / FARM-LOCALITY OCCURRENCE — NEAR → `Tongue's bluff.` Do not rewrite this as `Tombeche is near Tongue's bluff`; the face does not earn a place-to-place edge.
+
+
+### Occurrence / identity / geometry gate
+Capt Isaac James remains this source-local titled occurrence only. The locality field does not independently establish residence, ownership, bodily presence, travel, military service, title meaning, or same-name identity. `Tombeche` and `Tongue's bluff` remain historical source forms with exact modern identities and placements OPEN. The 640-acre entry is quantity only; `Land tolerable.` is a separate qualitative General Remarks statement.
+
+
+Geometry is RELATIONAL / UNPLACED. Draw no Tombeche point, bluff point, river or road identity, proximity buffer, distance, direction, connective line, farm polygon, parcel, acreage shape, residence symbol, person dot, route, or modern geographic snap. Following dittos remain dependencies rather than fresh attestations here; the later source-written `adjoins` remains its own unresolved edge and acquires no target from this pass.
+
+
+### Source / representation / derivative / provenance
+Historical manuscript p.73 is carried through the two controlled byte-identical `OHC_2458.pdf` custody roads as one payload / one manuscript witness → admitted `OHC_2458.png` direct study representation → governing source jacket → Sedge map classification → First Draw Register. Later Quoin texts remain transcription derivatives and add no witness; the previously withdrawn under-16 header is not used here.
+
+
+### Map crossing permission
+Ravel may inherit only `CAPT ISAAC JAMES ROW — LOCALITY OF FARMS CARRIES → Tombeche. [IDENTITY / GEOMETRY OPEN]` plus the separate row-centered relation `SAME ROW — NEAR → Tongue's bluff. [EXACT SITE / REACH OPEN]`. No Tombeche↔Tongue's Bluff place-to-place line, person or farm dot, parcel, route, residence, or modern-feature join crosses.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → Capt Isaac James row. Historical custody remains the two same-payload PDF roads already governed above.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | occurrence geography before identity
+
+
+PL:p73:r13–r17 — MILITARY-ROAD / THREE-HOUSES / VILLAGE REGISTER SEPARATION — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p73:r13 locality first position → difficult place-form preserved as `[unclear: Pokefillok/Tokefillok]`
+PL:p73:r13 locality second position → exact `near military road.`
+PL:p73:r13 General Remarks → `do`
+PL:p73:r14 locality → two separately aligned `do` marks
+PL:p73:r14 General Remarks → `do`
+PL:p73:r15 locality first position → `do`
+PL:p73:r15 locality second position → exact `three houses together`
+PL:p73:r15 General Remarks → exact `Village near military road.`
+PL:p73:r16 Locality of Farms → exact `Military road.`
+PL:p73:r16 General Remarks → exact `Poor land.`
+PL:p73:r17 Locality of Farms → `do`
+PL:p73:r17 General Remarks → `do`
+
+
+REGISTER / DEPENDENCY GRAMMAR
+R13 opens two locality positions: an uncertainly read place-form and a separate row-centered NEAR relation to exact `military road`. R14 depends on both positions. R15 continues only the first position by ditto and independently replaces the second with `three houses together`.
+
+
+R15 General Remarks separately writes `Village near military road.` This is an explicit source statement about a generic, unnamed village near the road. Its alignment with `three houses together` permits co-row comparison but does not state that the three houses are the village, name the village, or make the unresolved r13 place-form the village.
+
+
+R16 breaks the dependency chain with independently written bare road-form `Military road.` and separate qualitative `Poor land.` R17 depends on those r16 statements; it does not independently attest the road or the land assessment.
+
+
+RELATION / MAP GATE
+Carry r13 as one bare uncertain locality component plus one row-centered NEAR relation to exact `military road`; identity and geometry OPEN. Carry r15 as two separate co-row statements: generic `three houses together`, and an unnamed `Village` NEAR exact `military road`. Carry r16 as an independent bare `Military road` locality form, not a line.
+
+
+Do not create a place-form-to-road edge, equate the three houses with the village, identify r13 and r16 road wording as one route, multiply any component through dittos, or draw a road, village point/polygon, house cluster, parcel, or land-quality surface.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r13–r17`. Historical custody remains the two controlled same-payload PDF routes already governed above.
+
+
+— Mullion
+
+
+## SEDGE LANDSCAPE ADDENDUM — PL:p73:r23 `Bodka.` + row-centered `near factory` — 2026-09-20
+
+
+### Direct source return
+Sedge reopened the admitted direct study representation `OHC_2458.png` [Drive `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] and checked `PL:p73:r23` against the manuscript face. The Locality of Farms field carries `Bodka. near factory`; the aligned General Remarks field carries `Land tolerable. has no fence.` The following r24 locality marks are dittos and remain dependencies rather than a second fresh Bodka/factory statement.
+
+
+### Field grammar / place-relation classification
+The source-written period after `Bodka.` is load-bearing. In the same page grammar already controlled at r10 (`Oakhua.` / `near Oxnoby`) and the Capt Isaac James row (`Tombeche.` / `near Tongue's bluff.`), it separates a bare locality component from a following NEAR construction. Carry two source acts: (1) `PL:p73:r23 FARM/LOCALITY OCCURRENCE — LOCALITY OF FARMS CARRIES → Bodka.`; (2) `SAME ROW / FARM-LOCALITY OCCURRENCE — NEAR → factory`. Do not rewrite this as `Bodka is near factory`; the face does not earn a place-to-place edge.
+
+
+`factory` remains the exact generic source token. This face does not name the factory, identify its operator, industry, creek, agency, settlement, county, state, road relation, or modern successor. `Bodka` remains a historical source form with identity OPEN.
+
+
+### Occurrence / identity / geometry gate
+This is only the r23 farm-row occurrence. The locality field does not independently establish bodily presence, residence, ownership, possession, travel, employment at a factory, use of a factory, or same-name identity. General Remarks `Land tolerable.` is qualitative. `has no fence.` is a separate source statement about the row as recorded; it does not supply a parcel boundary, prove the absence of every boundary, define open range, or authorize an unfenced-farm polygon.
+
+
+Geometry is `RELATIONAL / UNPLACED`. Draw no Bodka point, factory point/polygon, creek or industrial-site identity, proximity buffer, distance, direction, connective line, farm point, parcel, fence line, route, residence symbol, person dot, or modern geographic snap. The r24 dittos do not multiply either place token or the NEAR relation.
+
+
+### Source / representation / derivative / provenance
+Historical manuscript p.73 is carried through the two controlled byte-identical `OHC_2458.pdf` custody roads as one payload / one historical witness → admitted `OHC_2458.png` direct study representation → governing source jacket → Sedge map classification → First Draw Register. The later Quoin texts remain transcription derivatives and add no witness; they may assist navigation but do not outrank the face.
+
+
+### Map crossing permission
+Ravel may inherit only `PL:p73:r23 — LOCALITY OF FARMS CARRIES → Bodka. [IDENTITY / GEOMETRY OPEN]` plus the separate row-centered relation `SAME ROW — NEAR → factory [REFERENT / EXACT SITE / REACH OPEN]`. No Bodka↔factory place-to-place line, factory identification, person/farm dot, parcel, fence geometry, route, residence, or modern-feature join crosses.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r23`. Historical custody remains the two same-payload PDF roads already governed above.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | occurrence geography before identity
+
+
+PL:p73:r18–r22 — REPEATED `ATHABELLA.` / INDEPENDENT REMARKS REGISTER — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p73:r18 Locality of Farms → exact `Athabella.`
+PL:p73:r18 General Remarks → `do`
+PL:p73:r19 Locality of Farms → exact `Athabella.`
+PL:p73:r19 General Remarks → exact `Poor land.`
+PL:p73:r20–r22 Locality of Farms → `do` in each row
+PL:p73:r20–r22 General Remarks → `do` in each row
+
+
+REGISTER / ATTESTATION GRAMMAR
+R18 and r19 each independently write the exact bare locality form `Athabella.` R19 is not a ditto. The adjacent repetition therefore supplies two explicit row-local attestations of the same source form. It permits comparison but does not, by itself, establish that the two rows refer to one place entity.
+
+
+The General Remarks register changes independently. R18's `do` remains dependent on the preceding remarks chain, while r19 freshly writes `Poor land.` R20–r22 then continue both the locality and remarks registers by dependency. Their dittos do not become additional explicit Athabella attestations or independent land assessments.
+
+
+IDENTITY / MAP GATE
+Carry two explicit bare-locality occurrences of exact `Athabella`, at r18 and r19, with identity and geometry OPEN. Treat r20–r22 as dependencies only. Preserve r19 `Poor land.` as a separate qualitative statement and do not move it sideways into the locality name.
+
+
+Do not merge r18 with r19, p.72 `Athabella`, another source occurrence, or a modern feature from spelling and adjacency alone. Draw no point, area, tract, route, land-quality surface, residence, shared farm, or household relation.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r18–r22`. Historical custody remains the two controlled same-payload PDF routes already governed above.
+
+
+— Mullion
+
+
+PL:p73:r24–r25 — `OXNOBY` BREAK / LOCALITY BLANK / TWO REMARKS DEPENDENCIES — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+Controlling predecessor r23 locality first position → `Bodka.`
+Controlling predecessor r23 locality second position → `near factory`
+Controlling predecessor r23 General Remarks → `Land tolerable. has no fence.`
+PL:p73:r24 locality → two separately aligned `do` marks
+PL:p73:r24 General Remarks → two separately aligned `do` marks
+PL:p73:r25 locality first position → exact `Oxnoby`
+PL:p73:r25 locality second position → blank
+PL:p73:r25 General Remarks → two separately aligned `do` marks
+
+
+REGISTER / BREAK GRAMMAR
+R24 preserves two locality dependencies and two General Remarks dependencies in their own positions. R25 then changes only the first locality position by independently writing `Oxnoby`; the second locality position is blank. The blank does not carry r23 `near factory` forward, so the source does not say `Oxnoby near factory`.
+
+
+R25's two General Remarks dittos continue the two remark positions separately despite the locality break. They remain dependent qualitative/fence statements and do not become part of the locality name or a key linking Oxnoby to Bodka or the factory relation.
+
+
+IDENTITY / MAP GATE
+Carry one new r25 bare-locality occurrence, exact `Oxnoby`, with identity and geometry OPEN. R24 supplies dependencies only. Preserve the r25 second locality position as blank and the two General Remarks marks as dependencies.
+
+
+Do not inherit `near factory` into r25, create an Oxnoby–factory edge, merge r25 `Oxnoby` with r10 `Oxnoby`, p.72 `Oxnuby`, another occurrence, or a modern feature, or draw a point, area, tract, fence, route, or residence.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r24–r25`, with r23 as the direct controlling predecessor. Historical custody remains the two controlled same-payload PDF routes already governed above.
+
+
+— Mullion
+
+
+## SEDGE LANDSCAPE ADDENDUM — PL:p73:r15 `three houses together` / unnamed `Village near military road.` — 2026-09-20
+
+
+### Direct source-facing return
+Sedge received the already direct-controlled r13–r17 face state in this governing jacket and re-entered at the smallest uncrossed r15 geography. PL:p73:r15 carries first-position Locality of Farms `do`, second-position exact `three houses together`, and separate General Remarks `Village near military road.` The first-position ditto remains dependency only; no fresh place-name is manufactured from its antecedent.
+
+
+### Place / relation classification
+Two different source acts travel from r15. `three houses together` is an aggregation statement in Locality of Farms about three houses; it is not itself a named place, residence finding, household definition, village identity, parcel, or point. Separately, General Remarks writes `Village near military road.` and therefore earns an unnamed VILLAGE — NEAR → `military road` relation at source strength.
+
+
+Co-row alignment does not collapse these acts. The source does not say the three houses constitute the village, that the village is the unresolved r13 place-form, that r13 and r16 `military road` tokens are one recovered route, or that any row host lived in, owned, or traveled through the village.
+
+
+### Occurrence / identity / geometry gate
+The geographic subject of the NEAR relation is the source-written generic `Village`, not any stabilized person occurrence. Keep identity work out of the crossing. Geometry is RELATIONAL / UNPLACED: no village point or polygon, three-house cluster, house points, road line, proximity buffer, road-village connector, farm parcel, route, residence dot, distance, direction, or modern road snap. `near` remains non-metric. `three houses together` earns grouping, not geometry.
+
+
+### Source / representation / derivative / provenance
+Historical manuscript p.73 is carried through the two controlled byte-identical OHC_2458.pdf custody roads as one payload / one historical witness → admitted OHC_2458.png reading representation → governing jacket → Sedge map classification → First Draw Register. Mullion’s row-grammar addendum and the Mapping Grounds form grammar are downstream analytical derivatives; they control parsing but are not additional witnesses.
+
+
+### Map crossing permission
+Ravel may inherit only two visibly separate r15 marks: `r15 LOCALITY OF FARMS — THREE HOUSES TOGETHER [aggregation; site OPEN]` and `UNNAMED VILLAGE — NEAR → military road [road identity / alignment / proximity reach OPEN]`. Do not merge the houses with the village or draw either as a fixed site.
+
+
+Return: this jacket → admitted OHC_2458.png [1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W] → manuscript p.73 → PL:p73:r15. Historical custody remains the two same-payload PDF roads already governed above.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | occurrence geography before identity
+
+
+PL:p73:r26–r29 — `1 MILE SOUTH OF AGENCY.` / `OXNOBY` COMPONENT SEPARATION — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p73:r26 locality first position → exact `1 mile south of agency.`
+PL:p73:r26 locality second position → exact `Oxnoby`
+PL:p73:r26 Total No. Acres → `160`
+PL:p73:r26 General Remarks → exact `Poor land.`
+PL:p73:r27 locality → two separately aligned `do` marks; Total No. Acres → `80`; General Remarks → `do`
+PL:p73:r28–r29 locality → two separately aligned `do` marks in each row; General Remarks → `do` in each row
+
+
+FIELD / RELATION GRAMMAR
+The period and component alignment separate the complete distance–direction–anchor statement `1 mile south of agency.` from the independently written bare locality form `Oxnoby`. Carry the r26 farm/locality occurrence as `1 mile SOUTH_OF agency`; do not rewrite the source as `Oxnoby is one mile south of the agency` or create an Agency–Oxnoby place-to-place edge.
+
+
+R26 independently writes exact `Oxnoby`, supplying another explicit row-local attestation after r25. Repetition and adjacency permit comparison but do not establish entity identity. R27–r29 contain dependencies only; their dittos do not become fresh Oxnoby attestations or additional agency-distance relations.
+
+
+The `160` and `80` entries are acreage figures, not parcel geometries. `Poor land.` is a separate qualitative remark and does not move sideways into either locality component.
+
+
+IDENTITY / MAP GATE
+Carry one r26 row-centered relation: the r26 farm/locality occurrence is one mile SOUTH_OF exact `agency`, with the agency referent and site OPEN. Carry one separate bare-locality occurrence of exact `Oxnoby`, with identity and geometry OPEN. Treat r27–r29 as dependencies only.
+
+
+Do not merge r26 `Oxnoby` with r25 or r10 `Oxnoby`, p.72 `Oxnuby`, another occurrence, or a modern feature. Draw no Oxnoby point, agency point, distance ring, buffer, route, connective line, parcel, land-quality surface, residence, or person location.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r26–r29`. Historical custody remains the two controlled same-payload PDF routes already governed above.
+
+
+— Mullion
+
+
+
+
+## SEDGE LANDSCAPE ADDENDUM — PL:p73:r26 — `1 mile south of agency.` + separate `Oxnoby` — MEASURED RELATION / UNPLACED — 2026-09-20
+
+
+### Receive / direct source-facing edge
+Sedge receives the already returned r26 face state under this governing jacket: first-position Locality of Farms `1 mile south of agency.`, second-position `Oxnoby`, Total No. Acres `160`, General Remarks `Poor land.`. r27–r29 retain dependency marks rather than fresh locality assertions.
+
+
+### Place / relation classification
+The first component earns one measured row-centered relation:
+`PL:p73:r26 FARM/LOCALITY OCCURRENCE — 1 MILE SOUTH OF → agency`.
+`1 mile` is the source-stated measure; `south of` is the source-stated directional relation; `agency` remains the unresolved anchor token.
+The second component earns only:
+`SAME ROW — LOCALITY OF FARMS CARRIES → Oxnoby`.
+Do not compose these into `Oxnoby is one mile south of agency`; their co-row survival and component alignment do not establish an Agency–Oxnoby place-to-place relation.
+
+
+### Occurrence / identity / geometry gate
+`agency` here remains this r26 anchor occurrence. It is not automatically the agency appearing in Tillonoiah's `Lives sometimes at agency` or any other manuscript occurrence.
+`Oxnoby` remains this r26 written occurrence; do not merge it with r25/r10 `Oxnoby`, p.72 `Oxnuby`, later derivatives, or a modern feature absent an independent source.
+Geometry class: `RELATIONAL / MEASURED / UNPLACED`. The face earns an explicit verbal measure and cardinal relation, but not an agency point, farm point, Oxnoby point, due-south ray, one-mile ring/buffer, coordinate, route, parcel, residence, person location, or surveyed bearing. The relation may constrain later geography only if an anchor is independently earned.
+`160` is quantity only; `Poor land.` is qualitative only.
+
+
+### Source / representation / derivative / provenance brake
+Historical manuscript p.73 remains the witness. The two byte-identical OHC_2458 PDF custody objects remain two custody roads carrying one historical witness; OHC_2458.png is the admitted direct study representation. This jacket and its Mullion/Sedge readings are analytic layers; later Quoin transcriptions are derivatives, not additional witnesses. Map crossing proceeds from source through representation and governing jacket, not backward from derivative prose.
+
+
+### Ravel crossing permission
+Ravel may receive only:
+1. `r26 FARM/LOCALITY OCCURRENCE — 1 MILE SOUTH OF → agency [REFERENT / SITE OPEN]`
+2. `r26 SAME ROW — CARRIES → Oxnoby [IDENTITY / GEOMETRY OPEN]`
+No connector between `agency` and `Oxnoby`; no point, buffer, line, parcel, route, residence, or identity bridge crosses.
+The unresolved reach remains visible until a source independently locates the r26 agency anchor or identifies the r26 Oxnoby occurrence.
+
+
+— Sedge
+
+
+PL:p73:r30 — NAME-FORM CORRECTION — `KILLEMONAH` WITHDRAWN / `TILLONOIAH.` ADOPTED
+
+
+DIRECT FACE
+The admitted manuscript representation `OHC_2458.png` supports exact row-name form `Tillonoiah.` at PL:p73:r30. The same row carries Locality of Farms `Lives sometimes at agency.` and General Remarks `Has no settled place.`
+
+
+Both Quoin copies also read `Tillonoiah.`, but they duplicate one derivative transcription and add no independent witness. The manuscript face controls.
+
+
+CORRECTION HISTORY
+The governing jacket initially carried provisional `Killemonah.` That reading is withdrawn. `Tillonoiah.` replaces it throughout this jacket, the First Draw Register, and the existing PROSE return path. This addendum preserves the superseded form rather than silently erasing the correction.
+
+
+The name correction does not change the relation grammar: `sometimes` remains load-bearing, `agency` remains an unresolved source token, and `Has no settled place.` remains a separate constraint against fixed-place rendering. No identity merge, residence, agency site, route, or geometry is earned.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r30`.
+
+
+— Mullion
+
+
+PL:p73:r31 — `PINE VILLAGE.` INDEPENDENT LOCALITY FORM — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+PL:p73:r31 name field → exact `Capitubbe.`
+PL:p73:r31 No. of Acres Cultivated → `2`
+PL:p73:r31 Entire No. of Family → `11`
+PL:p73:r31 Males over 16 Years → `2`
+PL:p73:r31 Locality of Farms → exact `Pine village.`
+PL:p73:r31 Total No. of Acres → `80`
+PL:p73:r31 General Remarks → exact `Poor land.`
+
+
+Both Quoin copies carry `Pine village.`, but they duplicate one derivative transcription and add no independent witness. The manuscript face controls.
+
+
+FIELD / OCCURRENCE GRAMMAR
+R31 independently writes `Pine village.` It is not a ditto and does not inherit r30 `Lives sometimes at agency.` or r30 `Has no settled place.` It also does not supply an antecedent for r32 `Tombeche. near Tongue's bluff.`
+
+
+Carry `Pine village.` as one exact row-local source form. Whether the phrase functions as a proper place-name or as a description of a village associated with pine remains OPEN. The capital `P` and terminal period do not resolve that question.
+
+
+`80` is an acreage quantity, not a tract. `Poor land.` is a separate qualitative General Remarks statement and does not become part of the locality form.
+
+
+IDENTITY / MAP GATE
+Carry one r31 bare-locality occurrence, exact `Pine village.`, with feature-name status, identity, and geometry OPEN. Do not convert the Locality of Farms entry into residence, ownership, bodily presence, a settlement boundary, a village point or polygon, a pine feature, or a modern place identification. Do not join r31 to Tillonoiah's agency occurrence, Capt Isaac James's Tombeche/Tongue's Bluff relation, or another Pine Village from wording alone.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r31`. Historical custody remains the two controlled same-payload PDF routes already governed above.
+
+
+— Mullion
+
+
+PL:p73:r33–r36 — `ADJOINS` WITHOUT OBJECT / TERMINAL BLANK — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+Controlling predecessor r32 locality first position → `Tombeche.`
+Controlling predecessor r32 locality second position → `near Tongue's bluff.`
+PL:p73:r33 locality → two separately aligned `do` marks; General Remarks → exact `Good hickory land.`
+PL:p73:r34 locality → two separately aligned `do` marks; General Remarks → two separately aligned `do` marks
+PL:p73:r35 locality first position → `do`; locality second position → exact `adjoins`; General Remarks → two separately aligned `do` marks
+PL:p73:r36 locality first position → `do`; locality second position → blank; General Remarks → two separately aligned `do` marks
+
+
+DERIVATIVE CORRECTION HISTORY
+Both Quoin copies transcribe r36 locality as `do do`. The direct manuscript shows a first-position `do` and a blank second locality position. The duplicated Quoin texts remain one derivative reading and do not outweigh the face. Their r36 second-position `do` is withdrawn.
+
+
+REGISTER / RELATION GRAMMAR
+R33 and r34 continue both r32 locality components by dependency. R35 continues only the first component and independently replaces the second with `adjoins`. The manuscript supplies no written object for that verb. It does not say what adjoins what.
+
+
+R36 continues the first locality component by ditto but leaves the second locality position blank. That blank prevents r35 `adjoins` from carrying forward. R36 therefore supplies neither a second adjacency assertion nor an object for r35.
+
+
+`Good hickory land.` and the later General Remarks dittos remain in the remarks register. They do not identify an adjoining tract, attach a land-quality surface to Tombeche or Tongue's Bluff, or repair the missing object.
+
+
+IDENTITY / MAP GATE
+Carry r33–r34 as dependencies only. Carry r35 as one row-centered `ADJOINS → [object unexpressed]` relation, with subject occurrence, object, identity, and geometry OPEN. Carry r36 first-position dependency and preserve its second locality position as blank.
+
+
+Do not assign `adjoins` to Tombeche, Tongue's Bluff, r34, r36, a neighboring farm, a person, a tract, or a modern feature. Draw no adjacency line, shared boundary, parcel, point, polygon, buffer, route, residence, or land-quality surface.
+
+
+Return: this jacket → admitted direct study representation `OHC_2458.png` [Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W`] → manuscript p.73 → `PL:p73:r33–r36`, with r32 as the controlling predecessor. Historical custody remains the two controlled same-payload PDF routes already governed above.
+
+
+— Mullion
+GLEAN DEEPENING — P.73 COMPLETE CATEGORY-ANNOTATION AUDIT
+
+
+Direct inspection of all 36 visible body rows finds no numeric White / Whites / Slave / Slaves / Black / Blacks category annotation.
+
+
+Page-local numeric subtotal: 0 White(s) / 0 Slave(s) / 0 Black(s).
+
+
+One nonnumeric source-visible use remains: PL:p73:r27, Oklanawah, carries the name-cell parenthetical gloss `(white moon light)`. It is not a locality-edge count and is excluded from the arithmetic. The duplicate Quoin transcription renders `(white night)`; direct inspection of the manuscript supports `(white moon light)`, and the derivative reading is superseded for this occurrence. No other qualifying category term is visible elsewhere on the face.
+
+
+The audited No. 2 sequence through manuscript p.73 therefore remains 42 White(s) / 74 Slave(s). Page 64’s `1 Black` remains separate. Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate; no p.61–73 reconciliation and no closure against the p.87 aggregate `121 Whites. 203 Slaves.` is claimed.
+
+
+Exact return: this governing jacket → admitted direct study representation OHC_2458.png, Drive ID `1WM1yNqeyXMd3ih8EfKkgPLdrh0DFfX2W` → complete manuscript p.73 face / PL:p73:r01–r36.
+
+
+— Glean

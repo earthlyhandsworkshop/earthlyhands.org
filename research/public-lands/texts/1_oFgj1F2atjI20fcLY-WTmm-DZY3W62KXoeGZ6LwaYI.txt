@@ -1,0 +1,475 @@
+Public Lands No. 2 p.75 — Lewis Robinson / Rigdon Edwards source-written white-count annotations and qualified-ditto grammar — OHC_2460 source jacket
+
+
+Historical object
+Photographed manuscript page 75 of the source-titled Public Lands return. The visible heading reads “Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty.” This jacket is page-facing and does not claim completeness of the larger volume.
+
+
+Source / representation / custody
+Two stored files named OHC_2460.pdf were materially checked in this pass:
+
+
+1. Drive ID 1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT — current parent: “Source objects — received batch 1 — OHC 2408–2518,” folder ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+2. Drive ID 1c4ue2AKWP8Tbqrq3f0HZ-05GutFfUAix — current parent: “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces,” folder ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Both PDFs are 262,371 bytes. A direct byte comparison in this pass found them byte-for-byte identical, SHA-256 0cf8896f95413258b9feffb2a254ed42431ceea1441969a7f7bdf79ce189ea68. They are therefore two custody routes to one digital payload, not two independent historical witnesses.
+
+
+Reading method
+The source-batch PDF was opened and rendered directly for visual inspection. Temporary local crops/enlargements were made from that PDF rendering only to inspect the heading and the General Remarks column. Those crops are inspection derivatives, not source objects and not retained as evidence.
+
+
+Direct source observation — bounded General Remarks pass
+The page visibly uses several different written forms in the General Remarks column. In a middle run, the source writes, on successive rows:
+
+
+“Good land”
+“do”
+“do and good water.”
+“do prairie”
+“do     do”
+then further plain “do” entries, followed by “do no water.” and additional “do     do” forms.
+
+
+Lower on the same face, explicit wording resets the column again, including source-visible phrases best read as:
+
+
+“Land tolerable good.”
+“Good land. and good water.”
+“Land poor.”
+
+
+This jacket preserves the written marks diplomatically. It does not replace any written “do” with an inferred antecedent.
+
+
+Source-facing finding
+Page 75 directly demonstrates that the recorder could write a ditto token and separately add a qualifier or a second ditto-like token in the same General Remarks cell. On this face, “do,” “do and good water.,” “do prairie,” “do no water.,” and “do     do” are visibly distinct written forms.
+
+
+Inference — kept separate
+This page can be used as a structural control when reading other pages in the same return. It strengthens the discipline that an unqualified written “do” should remain diplomatically just “do” unless the source itself writes an additional modifier. It does not by itself establish the semantic expansion of every ditto mark, prove a universal recorder rule, or determine what antecedent a plain “do” inherits on another page.
+
+
+Crossing earned by the source
+Lintel’s existing OHC_2425 / manuscript page 45 jacket records the direct sequence “do and good water.” → “do” → “Land tolerable.” and explicitly leaves the second mark’s inherited expansion unresolved. Page 75 is a legitimate comparison because it is a separate face in the same Public Lands return and independently displays qualified and unqualified ditto forms. The comparison is structural only; the two pages remain separate source objects and neither rewrites the other.
+
+
+Uncertainty
+The upper-right administrative numerals on page 75 were not resolved in this pass. No row-name transcription was required for the bounded General Remarks question, so difficult personal-name spellings remain untouched rather than normalized from other lists. Punctuation above is preserved only where the visual reading is strong enough to carry.
+
+
+Nonclaims
+This jacket does not establish the legal, agricultural, hydrological, or administrative meaning of “Good land,” “Prairie,” “good water,” “no water,” or “Land poor.” It does not establish that every “do” has the same antecedent or function. It does not merge any named persons on page 75 with occurrences elsewhere. It does not convert repeated digital custody into corroboration. It does not resolve page 45’s r23 semantic expansion absolutely.
+
+
+Correction history
+No earlier source-facing OHC_2460 jacket was located in bounded Drive searches for “OHC 2460 page 75” and “OHC_2460 source jacket.” Existing train/receipt references were treated as derivative/navigation surfaces, not substitutes for this source-facing read. If an older equivalent jacket later surfaces, this document should be reconciled as an addendum or duplicate-control rather than allowed to multiply the historical object.
+
+
+Return paths
+Backward:
+Public Lands — Whole-Document Corpus → this jacket → OHC_2460.pdf, Drive 1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT → Source objects — received batch 1 — OHC 2408–2518.
+
+
+Alternate custody:
+this jacket → OHC_2460.pdf, Drive 1c4ue2AKWP8Tbqrq3f0HZ-05GutFfUAix → Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.
+
+
+Sideways:
+this jacket → OHC_2425 page-45 inheritance-grammar jacket, Drive 1n09Zhq90eKf8R2KnP98iy22mcMdizwJw, only for the qualified-ditto comparison described above.
+
+
+Next honest door
+A second qualified-ditto sequence on another independently opened face may test whether this structural behavior recurs. No corpus-wide grammar is promoted from page 75 alone.
+
+
+Category-word deepening — later Fieldglass pass
+A later direct visual pass on the same OHC_2460 page-75 PDF found two explicit worded category annotations in the Locality of Farms field that the original General-Remarks-focused pass had not transcribed:
+
+
+Lewis Robinson — `1 white]` immediately before a written `do` locality mark.
+Rigdon Edwards — `3 whites]` immediately before the written locality `Suckanatcha`.
+
+
+Taken only as arithmetic on the source-visible worded annotations, page 75 therefore carries a page-facing subtotal of 4 whites. No `slave`, `slaves`, `black`, or `blacks` worded annotation was found in this bounded category-word pass. This is not a population total and does not replace the printed family or age columns.
+
+
+The comparison to manuscript pages 74 and 76 is now source-earned because those adjacent continued-return faces were independently opened. Page 74 carries `white` / `slave` annotations; page 76 carries `white`, `slave(s)`, and one explicit `Blacks` label. The lexical distinction on page 76 means this jacket does not silently treat `Blacks` as equivalent to `Slaves` for arithmetic or interpretation.
+
+
+Correction / deepening history
+The first page-75 jacket pass intentionally stated that row-name transcription was not required for its bounded ditto question. The later category-word pass adds these row-level observations without withdrawing the earlier ditto findings. It corrects an omission of scope, not an earlier contrary reading.
+
+
+New nonclaims
+The word `white` beside Lewis Robinson and Rigdon Edwards does not by itself establish citizenship, legal status, household relation, residence, or the administrative rule behind the annotation. Adjacency of the category annotation to a row is preserved as source layout; the annotating hand, date, and accounting instruction remain unresolved.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Lewis Robinson [Public Lands p.75 farm-row occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Public Lands No. 2 manuscript p.75 CARRIES source-written `1 white]` immediately before a written `do` locality mark on the Lewis Robinson row.
+Case / Object: OHC_2460 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.75 / Lewis Robinson row
+Place: literal `do` [antecedent not expanded in this return]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 2 p.75 — Lewis Robinson / Rigdon Edwards source-written white-count annotations and qualified-ditto grammar — OHC_2460 source jacket
+Identity / Relation Status: source-local Lewis Robinson occurrence only; no same-name merge; `white` is attributed historical source language and is not converted into a modern racial, ethnic, citizenship, tribal-status, household, residence, ownership, or legal-status claim; the counted person's identity and relation to the named row-holder or printed family columns remain OPEN; literal `do` remains diplomatically unexpanded.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Rigdon Edwards [Public Lands p.75 farm-row occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Public Lands No. 2 manuscript p.75 CARRIES source-written `3 whites]` immediately before the written locality `Suckanatcha` on the Rigdon Edwards row.
+Case / Object: OHC_2460 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.75 / Rigdon Edwards row
+Place: `Suckanatcha` [source spelling; modern identity and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 2 p.75 — Lewis Robinson / Rigdon Edwards source-written white-count annotations and qualified-ditto grammar — OHC_2460 source jacket
+Identity / Relation Status: source-local Rigdon Edwards occurrence only; no same-name merge; `whites` is attributed historical source language and is not converted into a modern racial, ethnic, citizenship, tribal-status, household, residence, ownership, or legal-status claim; the three counted persons are not individually identified and their relation to the named row-holder or printed family columns remains OPEN; `Suckanatcha` is not modernized or geocoded.
+
+
+Name Web return: Small Door — 2026-09-20
+
+
+
+
+PL:p75:r01–r06 — `NO FIELD.` / TOMBECBE POSITIONAL SEPARATION — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+
+
+PL:p75:r01 Locality of Farms → exact `No field. Tombecbe`
+PL:p75:r02 Locality of Farms → exact `Tombecbe`
+PL:p75:r03–r06 Locality of Farms → one `do` mark per row, aligned beneath the Tombecbe position
+
+
+FIELD / DEPENDENCY GRAMMAR
+
+
+R01’s locality cell performs two acts: `No field.` states a non-place condition, then `Tombecbe` supplies a bare locality form. The period and spacing separate the condition from the locality; the source does not write a compound place-name `No field Tombecbe`.
+
+
+R02 independently rewrites `Tombecbe` without repeating `No field.` R03–r06 each place a single ditto beneath the Tombecbe position. Those marks retain only the locality component opened at r02. They do not carry r01’s `No field.` condition forward and do not independently attest Tombecbe.
+
+
+OCCURRENCE / MAP GATE
+
+
+Carry r01 as one explicit bare-locality occurrence, exact `Tombecbe`, with separate row-local condition `NO FIELD`. Carry r02 as a second explicit bare-locality occurrence, exact `Tombecbe`, followed by locality dependencies at r03–r06.
+
+
+Keep the two explicit Tombecbe rows distinct from one another and from occurrences on p.74 or elsewhere. Do not turn `No field` into a place, field boundary, tract, absence across dependent rows, residence statement, or geometry. Do not multiply Tombecbe through the ditto rows or normalize it to a modern feature.
+
+
+Return: this jacket → `OHC_2460.pdf`, Drive `1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT` → manuscript p.75 → `PL:p75:r01–r06`. Alternate byte-identical custody remains Drive `1c4ue2AKWP8Tbqrq3f0HZ-05GutFfUAix`; it is not a second witness.
+
+
+— Mullion
+
+
+
+
+PL:p75:r07–r08 — `ONASTLY.` / `EAST SIDE.` POSITIONAL CHAIN — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+
+
+PL:p75:r07 Locality of Farms first position → exact `Onastly.`
+PL:p75:r07 Locality of Farms second position → exact `east side.`
+PL:p75:r07 Total Number of Acres → exact `80`
+PL:p75:r07 General Remarks → exact `Poor land -`
+PL:p75:r08 Locality of Farms → two separately aligned `do` marks
+PL:p75:r08 General Remarks → `do`
+
+
+FIELD / DEPENDENCY GRAMMAR
+
+
+The period after `Onastly.` separates a bare locality form from the following directional phrase. The source does not write `Onastly east side` as one continuous name. It also does not name what `east side.` is the side of. Adjacency inside the broad locality field is not enough to convert the phrase into an Onastly-centered relation.
+
+
+R08’s two locality dittos retain the two r07 positions separately. They create no fresh Onastly attestation and no independently written east-side statement. Its General Remarks ditto remains a separate dependency on r07’s qualitative `Poor land -` wording.
+
+
+OCCURRENCE / MAP GATE
+
+
+Carry one explicit r07 bare-locality occurrence, exact `Onastly`, plus one row-centered directional condition, exact `east side`, with its anchor unresolved. Carry r08 only as dependencies on those two locality positions and the separate remarks statement.
+
+
+Keep `80` as acreage and `Poor land -` as qualitative. Do not identify the side as belonging to Onastly, a road, stream, tract, or other feature; do not merge Onastly with another name-form; and do not draw a point, side-of-place relation, parcel, boundary, quality surface, or other geometry.
+
+
+Return: this jacket → `OHC_2460.pdf`, Drive `1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT` → manuscript p.75 → `PL:p75:r07–r08`. Alternate byte-identical custody remains Drive `1c4ue2AKWP8Tbqrq3f0HZ-05GutFfUAix`; it is not a second witness.
+
+
+— Mullion
+
+
+PL:p75:r09–r10 — `TOMBEEKE.` / `IN A RICH PRAIRIE.` EXPLICIT ROW AND SINGLE-DITTO SCOPE GATE — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+
+
+PL:p75:r09 Locality of Farms → exact `Tombeeke. in a rich prairie.`
+PL:p75:r09 Total Number of Acres → exact `160`
+PL:p75:r09 General Remarks → exact `Good land`
+PL:p75:r10 Locality of Farms → one written `do`
+PL:p75:r10 Total Number of Acres → exact `160`
+PL:p75:r10 General Remarks → an independently written school/Kentucky statement followed by land-quality wording; this locality pass does not use it to expand the r10 `do`
+
+
+FIELD / RELATION GRAMMAR
+
+
+R09 independently writes the bare locality form `Tombeeke.` and then a separate indefinite locative phrase, `in a rich prairie.` Carry the latter as a relation of the r09 farm/locality occurrence: `IN` → exact source phrase `a rich prairie`. The source does not say that Tombeeke itself is a prairie or that Tombeeke as a place is in the prairie.
+
+
+R10 writes only one `do` in the broad locality field. Unlike r07–r08, the face does not supply two aligned dittos that would preserve two visibly separate positions. The mark therefore remains a literal dependency whose semantic reach across the preceding cell is unresolved. It is not a fresh Tombeeke attestation or an independently written prairie relation.
+
+
+OCCURRENCE / MAP GATE
+
+
+Carry one explicit r09 bare-locality occurrence, exact `Tombeeke`, plus one proposition-local `IN` relation from the r09 farm/locality occurrence to indefinite exact anchor phrase `a rich prairie`. Feature identity, extent, precision, and geometry remain OPEN. Keep r09 `Good land` as a separate qualitative General Remarks statement; it does not make the prairie itself good.
+
+
+Do not merge Tombeeke with Tombecbe, Tombecbe/Tombeeke forms elsewhere, or a modern feature. Do not expand r10’s single `do`, multiply either r09 component, or draw a point, prairie polygon, tract, parcel, residence, boundary, or quality surface.
+
+
+Return: this jacket → `OHC_2460.pdf`, Drive `1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT` → manuscript p.75 → `PL:p75:r09–r10`. Alternate byte-identical custody remains Drive `1c4ue2AKWP8Tbqrq3f0HZ-05GutFfUAix`; it is not a second witness.
+
+
+— Mullion
+
+
+PL:p75:r11 — LEWIS ROBINSON `1 WHITE]` / LOCALITY `DO` REGISTER SEPARATION — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+
+
+PL:p75:r11 row host → Lewis Robinson
+PL:p75:r11 Locality of Farms field-leading category annotation → exact `1 white]`
+PL:p75:r11 locality position → exact `do`
+PL:p75:r11 Total Number of Acres → blank
+PL:p75:r11 General Remarks → exact `Tolerable good land.`
+
+
+REGISTER / DEPENDENCY GRAMMAR
+
+
+The broad printed locality field carries two documentary jobs on this row. `1 white]` is a freshly written count/category annotation. The following `do` is a separate locality dependency. The category annotation is not part of a place-name and does not alter the locality antecedent.
+
+
+R10’s single locality `do` was already held at unresolved semantic scope across r09’s `Tombeeke. in a rich prairie.` cell. R11’s further locality `do` continues that dependency state but does not resolve it. It is not a fresh Tombeeke attestation and does not independently write or inherit a certifiable prairie relation.
+
+
+OCCURRENCE / MAP GATE
+
+
+Preserve `1 white]` as source-written category/count language on the Lewis Robinson row and `Tolerable good land.` as a separate qualitative General Remarks statement. Carry the locality token literally as `do` with antecedent expansion OPEN.
+
+
+Do not map the category annotation; convert it into modern identity, citizenship, household, residence, ownership, or legal-status language; infer a person count beyond the exact source wording; attach Lewis Robinson to Tombeeke or a prairie; or draw a point, parcel, residence, prairie, tract, or quality surface.
+
+
+Return: this jacket → `OHC_2460.pdf`, Drive `1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT` → manuscript p.75 → `PL:p75:r11`. Alternate byte-identical custody remains Drive `1c4ue2AKWP8Tbqrq3f0HZ-05GutFfUAix`; it is not a second witness.
+
+
+— Mullion
+
+
+PL:p75:r12 — HENRY RIDGWORTH CATEGORY-LABEL DITTO / LOCALITY DITTO SEPARATION — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+
+
+PL:p75:r12 row host → Henry Ridgworth
+PL:p75:r12 Locality of Farms category track → exact `1 do`
+PL:p75:r12 locality track → separate exact `do`
+PL:p75:r12 Total Number of Acres → exact `160`
+PL:p75:r12 General Remarks → exact `Good land`
+
+
+REGISTER / DEPENDENCY GRAMMAR
+
+
+R12 freshly writes the numeral `1` and places a ditto beneath r11’s category-label position. Preserve the resulting category-track wording diplomatically as `1 do`: the count is explicit on r12, while the category label is dependent on the preceding `white` position. The separate second `do` sits in the locality track.
+
+
+The two marks therefore do different work inside one printed field. The category-label dependency does not become a locality, and the locality dependency does not become category language. Because r11’s locality state was already unresolved, r12’s locality `do` continues that unresolved state without certifying Tombeeke or a prairie relation.
+
+
+OCCURRENCE / MAP GATE
+
+
+Carry Henry Ridgworth’s r12 category annotation as exact source structure: explicit count `1` + dependent category label beneath r11 `white`. Keep the separate locality token literal as `do` with antecedent expansion OPEN. `160` remains acreage; `Good land` remains qualitative General Remarks.
+
+
+Do not silently rewrite the diplomatic category form, map either ditto, attach Ridgworth to Tombeeke or a prairie, infer household membership, identity, citizenship, residence, ownership, or legal status, or draw a point, parcel, tract, prairie, residence, or quality surface.
+
+
+Return: this jacket → `OHC_2460.pdf`, Drive `1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT` → manuscript p.75 → `PL:p75:r12`. Alternate byte-identical custody remains Drive `1c4ue2AKWP8Tbqrq3f0HZ-05GutFfUAix`; it is not a second witness.
+
+
+— Mullion
+
+
+PL:p75:r13 — NUKATSCHA CATEGORY BLANK / LOCALITY AND REMARKS DITTOS — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+
+
+PL:p75:r13 row host → exact `Nukatscha. (wife of Ridgworth)`
+PL:p75:r13 Locality of Farms category track → blank
+PL:p75:r13 locality track → exact `do`
+PL:p75:r13 Total Number of Acres → blank
+PL:p75:r13 General Remarks → exact `do`
+
+
+COLUMN / DEPENDENCY GRAMMAR
+
+
+The blank category track is active evidence. R12’s explicit count-plus-category-label structure `1 do` does not carry into r13, even though r13 separately writes a locality ditto and a General Remarks ditto. The printed field therefore permits one documentary track to stop while neighboring tracks continue.
+
+
+R13’s locality `do` retains the already unresolved locality dependency state; it does not certify Tombeeke or a prairie relation. The General Remarks `do` depends separately on r12’s `Good land` wording. It is not an independently written land-quality statement.
+
+
+OCCURRENCE / MAP GATE
+
+
+Preserve the source-written parenthetical `wife of Ridgworth` as a row-local relational label. It does not transfer Henry Ridgworth’s r12 category annotation, acreage, locality, residence, ownership, or household geography to Nukatscha.
+
+
+Carry no category annotation for r13. Do not treat the blank as a zero or as evidence of historical absence; expand the locality beyond literal `do`; create a fresh land-quality attestation; or draw a person point, shared residence, household, parcel, tract, prairie, or quality surface.
+
+
+Return: this jacket → `OHC_2460.pdf`, Drive `1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT` → manuscript p.75 → `PL:p75:r13`. Alternate byte-identical custody remains Drive `1c4ue2AKWP8Tbqrq3f0HZ-05GutFfUAix`; it is not a second witness.
+
+
+— Mullion
+
+
+PL:p75:r14 — CORNELIUS McCANN REMARKS DITTO + FRESH WATER CLAUSE — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+
+
+PL:p75:r14 row host → exact `Cornelius McCann (Indian)`
+PL:p75:r14 Locality of Farms category track → blank
+PL:p75:r14 locality track → exact `do`
+PL:p75:r14 Total Number of Acres → exact `320`
+PL:p75:r14 General Remarks → exact `do and good water.`
+
+
+DEPENDENCY / QUALIFICATION GRAMMAR
+
+
+R14’s locality `do` continues the already unresolved locality dependency state. It does not certify Tombeeke, a prairie relation, or a fresh locality attestation.
+
+
+The General Remarks cell performs two acts. Its opening `do` depends through r13 on r12’s `Good land`; the following `and good water.` is freshly written on r14. Preserve the diplomatic cell as `do and good water.` A resolved reading may state that r14 carries forward the preceding good-land assessment and adds good-water wording, but only the water clause is explicit on this row.
+
+
+OCCURRENCE / MAP GATE
+
+
+Preserve `(Indian)` as source-written row-host wording. It does not authorize a modern identity, citizenship, residence, ownership, or legal-status claim. Keep `320` as acreage without parcel geometry.
+
+
+`good water` is a qualitative assessment, not a named watercourse, spring, well, or other water feature. Do not draw water geometry, a person point, residence, parcel, tract, prairie, or quality surface.
+
+
+Return: this jacket → `OHC_2460.pdf`, Drive `1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT` → manuscript p.75 → `PL:p75:r14`. Alternate byte-identical custody remains Drive `1c4ue2AKWP8Tbqrq3f0HZ-05GutFfUAix`; it is not a second witness.
+
+
+— Mullion
+
+
+PL:p75:r15 — ASHAKTA REMARKS DITTO + FRESH PRAIRIE COMPONENT — DIRECT-SOURCE ADDENDUM
+
+
+DIRECT FACE
+
+
+PL:p75:r15 row host → exact `Ashakta. (resident)`
+PL:p75:r15 Locality of Farms category track → blank
+PL:p75:r15 locality track → exact `do`
+PL:p75:r15 Total Number of Acres → exact `80`
+PL:p75:r15 General Remarks → exact `do prairie`
+
+
+COMPONENT / DEPENDENCY GRAMMAR
+
+
+R15’s locality `do` continues the already unresolved locality dependency state. It is not a fresh Tombeeke attestation and does not certify a prairie relation from the locality field.
+
+
+In General Remarks, the first-position `do` aligns with r14’s opening remarks ditto and continues the good-land assessment carried from r12 through r14. The second-position `prairie` is freshly written on r15, replacing r14’s good-water component rather than inheriting it. Preserve the diplomatic cell as `do prairie`; do not rewrite it as the source phrase “good land prairie.”
+
+
+OCCURRENCE / MAP GATE
+
+
+The source-written parenthetical `(resident)` supplies no place object and therefore does not locate Ashakta. `80` remains acreage without parcel geometry.
+
+
+Carry `prairie` as a row-local qualitative or terrain-form descriptor in General Remarks. It is not a named prairie, a continuation of r09’s `a rich prairie`, or a mappable surface. Do not draw a person point, residence, parcel, tract, prairie, water feature, or quality geometry.
+
+
+Return: this jacket → `OHC_2460.pdf`, Drive `1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT` → manuscript p.75 → `PL:p75:r15`. Alternate byte-identical custody remains Drive `1c4ue2AKWP8Tbqrq3f0HZ-05GutFfUAix`; it is not a second witness.
+
+
+— Mullion
+GLEAN CORRECTION / COMPLETE CATEGORY-ANNOTATION AUDIT — P.75
+
+
+DIRECT FACE / COMPLETE BOUND
+
+
+A direct-source audit across all 35 visible body rows establishes two worded numeric category annotations:
+
+
+PL:p75:r11 Lewis Robinson — Locality of Farms begins with exact `1 white]`, followed by the separately written locality dependency `do`.
+PL:p75:r31 Rigdon Edwards — Locality of Farms begins with exact `5 whites]`, followed by exact locality `Suckanatcha`.
+
+
+No other source-written `white`, `whites`, `slave`, `slaves`, `Black`, `Blacks`, or `Blks.` numeric annotation is visible on the face. Taken only as arithmetic on the two exact labels, the complete page subtotal is `6 White(s) / 0 Slave(s) / 0 Black(s)`.
+
+
+CORRECTION HISTORY
+
+
+WITHDRAWN / SUPERSEDED — the earlier category-word pass read Rigdon Edwards’s numeral as `3` and gave a page subtotal of `4 whites`. An enlarged direct-source return, checked against the writer’s visible `3` and `5` forms on this face, resolves the annotation as `5 whites]`. The earlier text remains in this jacket as correction history; it no longer controls. The compiled Name Web input carrying `3 whites]` and “three counted persons” requires the same proposition-local correction, without changing the occurrence’s identity or locality status.
+
+
+RUNNING ACCOUNT / OPEN EDGE
+
+
+The audited p.63–74 subtotal is `44 White(s) / 80 Slave(s)`. Adding only p.75’s exact labels yields `50 White(s) / 80 Slave(s)` for audited pp.63–75. P.64 exact `1 Black` and p.74 exact `6 Blks.` remain separate source-label returns and are not normalized into either running lane. Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate, so no p.61–75 closure is claimed and no reconciliation is made to p.87 `121 Whites. 203 Slaves.`
+
+
+Return: this jacket → `OHC_2460.pdf`, Drive `1wCpC9qTPwLSVc2JouEET-R_wg21JQTVT` → complete manuscript p.75 face → `PL:p75:r01–r35`. Alternate byte-identical custody remains Drive `1c4ue2AKWP8Tbqrq3f0HZ-05GutFfUAix`; it is not a second witness.
+
+
+— Glea
+PROPAGATION RETURN
+
+
+Name Web `Relations` row 362 now carries exact `5 whites]` and “five counted persons.” Its Notes cell preserves the superseded `3 whites]` reading and points responsibility back to this governing correction. No identity, locality, or relation type was widened.
+
+
+— Glean
+n

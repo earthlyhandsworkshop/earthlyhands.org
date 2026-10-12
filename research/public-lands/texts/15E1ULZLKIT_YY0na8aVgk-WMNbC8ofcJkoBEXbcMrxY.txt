@@ -1,0 +1,570 @@
+Public Lands No. 2 p.84 — Athahpotubbe aid-to-captain qualifier and name-field role grammar — OHC_2469 source jacket
+
+
+Status
+Source-facing page jacket. Direct archival face inspected. No equivalent OHC_2469 / page-84 jacket or source-facing reading was located in the bounded live searches before this pass. Source, custody copies, inspection derivative, transcription, and interpretation remain distinct.
+
+
+Source identity and provenance
+- Documentary body: quoted-title Public Lands — No. 2 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- Visible manuscript page: 84.
+- Governing archival object: OHC_2469.pdf, stored in Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces; exact Drive object ID preserved here: 1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ.
+- Second custody object with the same inherited filename: OHC_2469.pdf, stored in Source objects — received batch 1 — OHC 2408–2518; exact Drive object ID: 1vLs8MBbr79xmE5xKJWfAR-r68_-4nRC7.
+- Both PDF custody objects are 253,827 bytes. Complete payload comparison in this pass found them byte-for-byte identical, SHA-256 683d1fa99e0f9a52c17457a81a0754542944dc50d5828088d919ec8555301a31. They remain two custody objects / two return routes / one identical PDF payload / one manuscript witness. Neither object was merged, renamed, moved, or deleted.
+- The governing PDF contains one 2038 × 1879 grayscale JPEG image. Glean extracted that embedded image locally only for direct visual inspection and made temporary enlargement crops. Those are inspection derivatives only; they were not admitted to Drive and do not constitute additional source objects or witnesses.
+
+
+Visible page structure
+The printed form carries a name field headed Names of Indians owning Farms, followed by cultivated acreage, entire family, age/sex numerical fields, Locality of Farms, total acres, and General Remarks. This pass does not certify a complete diplomatic transcription of all rows.
+
+
+Bounded name-field readings
+Rows are counted top-to-bottom from the first visible populated name line below the header. The row positions below are stable for this page; uncertain personal-name spellings remain correction-open.
+
+
+- PL:p84:r05: source name field begins `Capt` before a personal name provisionally readable as `[unclear: Jockatubbe?]`. The title is part of the written name-form on this row.
+- PL:p84:r22: source name field begins `Capt` before another personal name provisionally readable as `[unclear: Apunalluchah?]`. Again, `Capt` is written as a pre-name title.
+- PL:p84:r26: `Athahpotubbe. (aid to captain)` is directly readable in the name field. The parenthetical is source-written after the personal name. The same row carries 5 cultivated acres, family 5, 1 male over sixteen, 3 under ten, written `do` in locality, 80 total acres, and written `do` in General Remarks.
+- PL:p84:r27: the following name remains correction-open as `[unclear: Fahok/Fahhok]`; the source separately writes `(a woman)` after it in the name field. The same row carries 6 cultivated acres, family 4, no safely readable male-over-sixteen numeral in this pass, 2 under ten, and written `do` marks in locality and General Remarks.
+- Elsewhere on the same face, `(widow)` also appears after personal names. Those occurrences are retained as source-written descriptors and are not normalized into surnames, titles, or kinship conclusions by this jacket.
+
+
+Finding — the name column carries several kinds of qualifier
+Page 84 directly demonstrates that the name field is not one uniform personal-name string. On the same manuscript face it can carry at least:
+- a pre-name office/title form (`Capt ...`);
+- a post-name relational/role phrase (`(aid to captain)`);
+- a post-name source descriptor (`(a woman)`);
+- and post-name marital-status wording (`(widow)`).
+
+
+The useful consequence is local and source-facing: `Athahpotubbe. (aid to captain)` must not be normalized to `Capt Athahpotubbe`, and `(aid to captain)` must not be swallowed into the personal name. Likewise `(a woman)` and `(widow)` remain source-written descriptors attached to their own occurrences rather than becoming normalized name text.
+
+
+Interpretation boundary
+This page supports a distinction among written name-form, title, relationship/role descriptor, and other source-written qualifiers. It does not by itself establish the administrative definition of `aid`, whether the aid was a formal office, which captain is meant, whether the relationship was permanent, or whether the qualifier affected acreage, family counting, or entitlement.
+
+
+The same-face presence of `Capt ...` rows is useful because the source itself shows a different written construction when it directly titles a person as captain. That contrast strengthens the transcription rule on this face; it does not establish a universal rule for every Public Lands return.
+
+
+Ditto boundary
+The r26 and r27 locality and General Remarks cells visibly contain written `do` marks. This jacket preserves those as explicit backward instructions in their respective columns. It does not silently replace them with normalized text, does not carry one column's inheritance rule into another, and does not infer shared household, ownership, kinship, or identity from adjacent ditto use.
+
+
+Unresolved questions
+- Exact diplomatic spellings of the r05, r22, and r27 personal names.
+- Whether `aid to captain` recurs elsewhere in the Public Lands body, and whether another source defines the role.
+- Which captain, if any, the r26 phrase refers to.
+- Whether a later source independently identifies the same occurrence with a title or role.
+- Full row-by-row transcription of page 84, including exact locality chains and all numerical cells.
+- Authorship and timing of the handwritten qualifiers relative to the rest of the row entries.
+
+
+Explicit nonclaims
+- No identity merge between any page-84 occurrence and a same- or similar-name occurrence on another page or in another documentary body.
+- No claim that `(aid to captain)` equals `Capt`, appointment, office-holding, kinship, military service, treaty status, or political authority.
+- No claim that `(a woman)` establishes anything beyond the source's own historical descriptor on that occurrence.
+- No claim that `(widow)` identifies a spouse, spouse name, household relation, or later identity.
+- No claim that adjacency, shared locality ditto, or shared remarks creates a family or property group.
+- No corpus-level theory about captaincy or name-field grammar is asserted from this one face.
+
+
+Backward seam
+OHC_2468 is the separately jacketed manuscript page 83 in the same visible Public Lands No. 2 continued form. Its source-facing jacket remains independent and contains its own source-written `or McKinney` name-field and ditto-chain work. Page 84 is not merged into that object. The bounded page/form seam 83→84 is therefore retained as a neighboring-document relation only.
+
+
+Forward seam
+Glean opened OHC_2470.pdf only far enough to establish a distinct manuscript face visibly numbered 85 under the same Public Lands — No. 2 — Form of a Return — Continued — Location under the Choctaw Treaty form. No page-85 row work was adopted here and no page-85 jacket was created by this pass. The bounded page/form seam 84→85 is therefore earned without turning filename adjacency into a general sequencing rule.
+
+
+Return paths
+Primary human path:
+quoted-title Public Lands → Whole-Document Corpus → this page-84 jacket → OHC_2469.pdf → manuscript page 84.
+
+
+Exact machine return paths retained backstage:
+- legacy/mixed custody copy: OHC_2469.pdf → Drive object 1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ → parent folder 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+- received-batch-1 custody copy: OHC_2469.pdf → Drive object 1vLs8MBbr79xmE5xKJWfAR-r68_-4nRC7 → parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA → Public Lands — Whole-Document Corpus.
+- backward jacket: Public Lands No. 2 p.83 — “[uncertain Choctaw-language name] or McKinney” row, Oknoxuby ditto locality, and inherited Good land-hickory remark — OHC_2468 source jacket.
+- forward source checked only for seam: OHC_2470.pdf, manuscript page 85; exact Drive object checked in this pass: 10hU1Cd7NwneE1OVhrTeKw6UP9kcSsZ_L.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+SEDGE GLEAN-FLARE RETURN — 2026-09-09 — page-84 category-subtrack absence held as a source state
+
+
+Direct source return
+Sedge reopened the governing archival OHC_2469.pdf, Drive 1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ, and inspected the complete photographed manuscript p.84 face at enlarged scale. The PDF remains the source representation; the temporary raster render/enlargement was an inspection derivative only and was not admitted as a new source object or witness. Existing duplicate-custody controls in this jacket remain unchanged.
+
+
+Bounded source observation
+Across the visible Locality of Farms column on manuscript p.84, no safely readable numeric category phrase using `white`, `whites`, `slave`, `slaves`, `Black`, or `Blacks` was found in this direct whole-face pass. The column instead carries written locality names and repeated source-written `do` marks. This is a page-local negative at present visual reach, not a claim that no white, Black, or enslaved person was historically connected with any p.84 row.
+
+
+Earned consequence for the No. 2 audit
+The category/count subtrack is therefore not continuously explicit on every surviving No. 2 face. Page 84 cannot be entered into the 121 Whites / 203 Slaves reconciliation as a zero-category page merely because no explicit category phrase is safely readable here. Blank/non-category Locality states must remain distinct from numeric zero, and written `do` must remain an instruction requiring its own column-local antecedent rather than being converted into a racial/status count by assumption.
+
+
+Comparison boundary
+Existing p.85–p.87 jackets may be used later as separately sourced comparison controls for explicit category counts and numeric category dittos. This return does not reread those faces and does not import their values into p.84. The gain here is narrower: one directly inspected intermediate face preserves no safely readable explicit white/slave/Black count phrase, so the aggregate audit must be page-by-page and state-aware rather than keyword- or zero-fill-driven.
+
+
+Nonclaims
+No demographic absence, ownership, household, residence, ethnicity, enslavement, emancipation, or identity inference is made from the p.84 category silence. No `do` is expanded without a source-local antecedent. No Mapping or Daylight crossing is earned by this negative alone.
+
+
+Exact return
+Public Lands / Emancipation flare → existing Glean p.84 jacket → OHC_2469.pdf 1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ → manuscript p.84 → Locality-of-Farms column state: locality / ditto writing present; no safely readable explicit white/slave/Black numeric phrase in this pass.
+
+
+— Sedge
+
+
+
+
+FIELDGLASS CATEGORY-SUBTRACK AUDIT — 2026-09-09
+
+
+Direct archival-face reinspection of OHC_2469 / manuscript p.84 at high visual scale found no safely readable numeric Locality-of-Farms phrase using `white(s)`, `slave(s)`, or `Black(s)` across the whole visible face. Name-field qualifiers and ordinary locality/remarks language remain exactly that; they are not converted into category arithmetic.
+
+
+Active state is `no category phrase observed at present visual reach`, not zero. This pass makes no claim about erased matter, other representations, authorial intent, or whether the category notation was optional, episodic, or governed by an instruction not yet recovered.
+
+
+Source return: OHC_2469.pdf — Drive ID 1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ (directly inspected this pass). The next face, p.85, independently reintroduces a source-written slave count in its own existing jacket; that contrast is carried only as a page-sequence control, not a causal explanation.
+
+
+— Fieldglass
+
+
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Small Door — 2026-09-20
+Person / Entity: Athahpotubbe [Public Lands p.84 r26 occurrence; Quoin first-pass reads Athapotubbe]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.84 name field PRESENTS `Athahpotubbe. (aid to captain)`; the parenthetical is a source-written relational/role qualifier attached to this occurrence.
+Case / Object: OHC_2469 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.84 / PL:p84:r26
+Place: literal source-written `do` in Locality of Farms [antecedent not expanded by this return]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 2 p.84 — Athahpotubbe aid-to-captain qualifier and name-field role grammar — OHC_2469 source jacket
+Identity / Relation Status: source-local occurrence only; `aid to captain` is not normalized into `Capt`, appointment, office-holding, kinship, military service, treaty status, or political authority; which captain is meant remains unresolved. Governing direct-source jacket reads `Athahpotubbe`; Quoin first-pass reads `Athapotubbe`, retained as derivative correction history rather than a second witness. No same- or similar-name merge is made.
+— Small Door
+
+
+SEDGE LANDSCAPE RETURN — 2026-09-21 — PL:p84:r01 explicit `Sukenatcha.` / page-start locality / geometry open
+
+
+Direct source return
+Sedge reopened the governing archival OHC_2469.pdf, Drive `1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ`, and rendered its single photographed manuscript p.84 face locally at 300 dpi for direct visual inspection. The manuscript face remains the historical witness carried by the controlled PDF representation; the temporary full-page render and bounded enlargements are inspection derivatives only and were not admitted as new sources or witnesses.
+
+
+Smallest source-facing edge
+Rows remain counted top-to-bottom from the first visible populated name line below the header. On `PL:p84:r01`, the Locality of Farms field directly writes `Sukenatcha.` The lettering is explicit on this row, not a `do` mark and not an inherited expansion. Quoin's earlier first-pass transcription from `OHC_2469.png` also reads `Sukenatcha.`; that agreement is retained as transcription control only and does not increase witness count.
+
+
+Earned verb / occurrence geography
+APPEARED — source-written locality in the Locality of Farms field.
+`PL:p84:r01:locality — SOURCE WRITES → Sukenatcha.`
+Precision: SOURCE-WRITTEN BARE LOCALITY / PAGE-LOCAL EXPLICIT OCCURRENCE / UNPLACED.
+
+
+Page-boundary consequence
+The first populated locality on p.84 is a fresh explicit locality string. Therefore no locality inheritance is carried from manuscript p.83 across the 83→84 page seam for this occurrence. This is source-local evidence for r01 only; it does not establish a universal page-reset rule for the Public Lands forms and does not retroactively alter the separately jacketed p.83 terminal ditto chain.
+
+
+Identity / semantic brake
+The printed field label earns a farm-locality occurrence, not residence, personal identity, household, ownership, travel, filing, patenting, or a modern place identification. The row host need not be joined to any same- or similar-name occurrence elsewhere in the corpus to retain this locality occurrence.
+
+
+Source / representation / derivative / provenance
+Historical witness count remains one manuscript p.84 face. The two controlled OHC_2469 PDF custody objects remain byte-identical custody routes to one identical payload / one manuscript witness. This pass directly used the legacy/mixed PDF route above. Temporary 300-dpi render and crop are inspection derivatives. Quoin is a transcription derivative based on an existing `OHC_2469.png` study representation and is used here only as reading control; neither adds a historical witness.
+
+
+Geometry brake / unresolved
+No coordinate, point, line, polygon, creek geometry, township-range relation, modern gazetteer join, or equivalence to another historical spelling is earned. `Sukenatcha.` remains a source-carried lexical locality with historical referent and modern placement open. Exact spelling remains source-facing and correction-open only if a stronger representation or independent source earns a change.
+
+
+Ravel handoff
+Receive exactly one documentary geography relation: `PL:p84:r01:locality — SOURCE WRITES → Sukenatcha.` Preserve it as an unplaced locality occurrence. Draw no earth geometry.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE LANDSCAPE RETURN — 2026-09-21 — PL:p84:r02 source-written `do.` / first-level Sukenatcha locality dependency / geometry open
+
+
+Direct source return
+Sedge reopened the governing archival OHC_2469.pdf, Drive `1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ`, and rendered its single photographed manuscript p.84 face at 300 dpi for direct visual inspection. A bounded enlargement of the upper Locality of Farms column confirms the row immediately beneath r01 carries source-written `do.`. The manuscript face remains the historical witness carried by the controlled PDF representation; the temporary render and crop are inspection derivatives only and are not new sources or witnesses. Quoin's earlier OHC_2469.png first-pass also transcribes the second locality as `do.`; that agreement is retained as transcription control only.
+
+
+Smallest source-facing edge
+Rows remain counted top-to-bottom from the first visible populated name line below the header. `PL:p84:r01` explicitly writes `Sukenatcha.` in Locality of Farms. `PL:p84:r02` directly writes `do.` in the same aligned field. Because the immediate same-column antecedent is the explicit r01 locality, r02 earns one column-local inherited occurrence of `Sukenatcha.`. No farther row is imported into this crossing.
+
+
+Earned verb / occurrence geography
+APPEARED — source-stated-by-ditto in the Locality of Farms field.
+`PL:p84:r02:locality — DEPENDS ON → PL:p84:r01:locality`
+`PL:p84:r02:locality — CARRIES → Sukenatcha.` [inherited]
+Precision: SOURCE-WRITTEN FIRST-LEVEL DITTO DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY / UNPLACED.
+
+
+Identity / semantic brake
+The locality dependency belongs to the documentary field occurrence, not to an identity merge. It does not earn residence, household, ownership, travel, filing, patenting, memory, decision, or any claim that the r01 and r02 row hosts are the same person, family, farm, tract, or site. The inherited value is local to the Locality of Farms column and is not carried into acreage, remarks, or any other field.
+
+
+Source / representation / derivative / provenance
+Historical witness count remains one manuscript p.84 face. The two controlled OHC_2469 PDF custody objects remain byte-identical routes to one identical payload / one witness. This return directly used the legacy/mixed PDF route. The 300-dpi full-page render and bounded crop are inspection derivatives. Quoin is a transcription derivative from an existing OHC_2469.png study representation; neither the PNG nor Quoin adds a historical witness.
+
+
+Geometry brake / unresolved
+No coordinate, point, line, polygon, creek geometry, township-range relation, modern gazetteer join, spelling equivalence, or ground connector is earned. `Sukenatcha.` remains an unplaced lexical locality. The historical referent, modern placement, and whether another source can constrain it remain open. The next visible locality row appears to carry another `do.` but is left as a separate live edge; this return does not cross it.
+
+
+Ravel handoff
+Receive exactly the immediate documentary dependency `PL:p84:r02:locality → PL:p84:r01:locality`, with inherited lexical value `Sukenatcha.` Preserve it as an unplaced occurrence dependency. Draw no earth geometry.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+SEDGE LANDSCAPE RETURN — 2026-09-21 — PL:p84:r03 source-written `do.` / second-level Sukenatcha locality dependency / geometry open
+
+
+Direct source return
+Sedge reopened the governing archival OHC_2469.pdf, Drive `1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ`, and directly inspected the photographed manuscript p.84 face through a temporary 300-dpi render. The manuscript face remains the historical witness; the render is an inspection derivative only and is not admitted as another source or witness.
+
+
+Smallest source-facing edge
+Rows remain counted top-to-bottom from the first visible populated name line below the header. In the Locality of Farms column, `PL:p84:r01` explicitly writes `Sukenatcha.`, `PL:p84:r02` source-writes `do.`, and `PL:p84:r03` source-writes `do.`. The immediate documentary antecedent for r03 is r02, not the older explicit r01 occurrence. This return crosses r03 only.
+
+
+Earned verb / occurrence geography
+APPEARED — source-stated-by-ditto in the Locality of Farms field.
+`PL:p84:r03:locality — DEPENDS ON → PL:p84:r02:locality`
+`PL:p84:r03:locality — THROUGH SECOND-LEVEL CHAINED DEPENDENCY CARRIES → Sukenatcha.` [inherited; not fresh lettering]
+Precision: SOURCE-WRITTEN SECOND-LEVEL CHAINED DITTO DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY / UNPLACED.
+
+
+Identity / semantic brake
+The dependency belongs to the documentary locality occurrence, not to an identity merge. It does not earn residence, household, ownership, travel, filing, patenting, remembrance, decision, or a claim that r01–r03 are one person, family, farm, tract, or site. The inherited value remains local to the Locality of Farms column.
+
+
+Source / representation / derivative / provenance
+Historical witness count remains one manuscript p.84 face. The two controlled OHC_2469 PDF custody objects remain byte-identical routes to one identical payload / one manuscript witness. This return directly used the legacy/mixed PDF route. The temporary 300-dpi render is an inspection derivative; the existing OHC_2469.png is a study representation; Quoin is a transcription derivative; this jacket, Sedge classification, and First Draw are analytical derivatives. None increases witness count.
+
+
+Geometry brake / unresolved
+No coordinate, point, line, polygon, creek geometry, parcel, farm or residence point, route, township-range relation, modern gazetteer join, spelling equivalence, or documentary-chain ground connector is earned. `Sukenatcha.` remains an unplaced lexical locality. Its historical referent and modern placement remain open, as does whether another source independently constrains it. The next visible locality row appears to carry another `do.` but remains a separate live edge and is not crossed here.
+
+
+Ravel handoff
+Receive exactly the immediate documentary dependency `PL:p84:r03:locality → PL:p84:r02:locality`, with inherited lexical state `Sukenatcha.` through the second-level chain. Preserve it as an unplaced occurrence dependency. Draw no earth geometry.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+SEDGE LANDSCAPE RETURN — 2026-09-21 — PL:p84:r04 source-written `do.` / third-level Sukenatcha locality dependency / geometry open
+
+
+Direct source return
+Sedge reopened the governing archival OHC_2469.pdf, Drive `1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ`, and directly inspected the photographed manuscript p.84 face through a temporary 300-dpi render plus a bounded enlargement of the first four populated rows. The fourth Locality of Farms entry is visibly source-written `do.`. The manuscript face remains the historical witness; the PDF is its controlled archival representation; the temporary render and crop are inspection derivatives only and are not admitted as new sources or witnesses. Quoin's earlier OHC_2469.png first-pass independently lists the fourth locality entry as `do.`; that agreement is retained as transcription control only.
+
+
+Smallest source-facing edge
+Rows remain counted top-to-bottom from the first visible populated name line below the header. In the Locality of Farms column, `PL:p84:r01` explicitly writes `Sukenatcha.`, r02 writes `do.`, r03 writes `do.`, and `PL:p84:r04` writes `do.`. The immediate documentary antecedent for r04 is r03, not the older explicit r01 occurrence. This return crosses r04 only.
+
+
+Earned verb / occurrence geography
+APPEARED — source-stated-by-ditto in the Locality of Farms field.
+`PL:p84:r04:locality — DEPENDS ON → PL:p84:r03:locality`
+`PL:p84:r04:locality — THROUGH THIRD-LEVEL CHAINED DEPENDENCY CARRIES → Sukenatcha.` [inherited; not fresh lettering]
+Precision: SOURCE-WRITTEN THIRD-LEVEL CHAINED DITTO DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY / UNPLACED.
+
+
+Identity / semantic brake
+The dependency belongs to the documentary locality occurrence, not to an identity merge. It does not earn residence, household, ownership, travel, filing, patenting, remembrance, decision, or a claim that r01-r04 are one person, family, farm, tract, or site. The inherited value remains local to the Locality of Farms column and is not carried into acreage, remarks, name, or any other field.
+
+
+Source / representation / derivative / provenance
+Historical witness count remains one manuscript p.84 face. The two controlled OHC_2469 PDF custody objects remain byte-identical routes to one identical payload / one manuscript witness. This return directly used the legacy/mixed PDF route. The temporary 300-dpi full-page render and bounded top-row crop are inspection derivatives; the existing OHC_2469.png is a study representation; Quoin is a transcription derivative; this jacket, Sedge classification, and First Draw are analytical derivatives. None increases witness count.
+
+
+Geometry brake / unresolved
+No coordinate, point, line, polygon, creek geometry, parcel, farm or residence point, route, township-range relation, modern gazetteer join, spelling equivalence, or documentary-chain ground connector is earned. `Sukenatcha.` remains an unplaced lexical locality. Its historical referent and modern placement remain open, as does whether another source independently constrains it. The next source-written locality row is left as a separate live edge.
+
+
+Ravel handoff
+Receive exactly the immediate documentary dependency `PL:p84:r04:locality → PL:p84:r03:locality`, with inherited lexical state `Sukenatcha.` through the third-level chain. Preserve it as an unplaced occurrence dependency. Draw no earth geometry.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE LANDSCAPE RETURN — 2026-09-21 — PL:p84:r05 explicit `Wahloh creek.` + `west boundary.` / geometry open
+
+
+Direct source return
+Sedge reopened governing OHC_2469.pdf (`1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ`) and directly inspected manuscript p.84 through a temporary 400-dpi render and bounded upper-locality crop. Immediately after r04's written `do.`, r05 freshly writes `Wahloh creek.` and, farther right in the same Locality of Farms cell, `west boundary.` The render/crop are inspection derivatives only; the manuscript face remains the historical witness carried by the controlled PDF representation.
+
+
+Earned occurrence geography
+APPEARED — source-written named creek/locality phrase: `PL:p84:r05:locality:name — SOURCE WRITES → Wahloh creek.`
+APPEARED — source-written relational phrase: `PL:p84:r05:locality:relation — SOURCE WRITES → west boundary.`
+The two phrases are earned as same-row / same-field documentary co-occurrence only. r05's fresh writing terminates the r01→r04 `Sukenatcha.` ditto chain at r04 for this observed sequence; no universal reset rule is inferred.
+
+
+Semantic / identity brake
+Occurrence geography is kept separate from row-host identity. No identity join is needed or made. Do not normalize the writing to `west boundary of Wahloh creek`, `west bank of Wahloh creek`, or the boundary of any identified farm, tract, district, county, stream corridor, or other object. No lived, residence, household, ownership, travel, filing, patenting, remembrance, decision, or person-location verb is earned.
+
+
+Source / representation / derivative / provenance
+One manuscript p.84 historical witness; two controlled byte-identical OHC_2469 PDF custody routes to one payload / one witness. This return used the legacy/mixed PDF route. The 400-dpi render/crop are inspection derivatives; OHC_2469.png is a study representation; Quoin is a transcription derivative; jacket/Sedge/First Draw are analytical derivatives. Witness count unchanged.
+
+
+Geometry / unresolved / Ravel
+No coordinate, point, creek line, bank line, boundary line, polygon, parcel, residence/farm point, route, township-range placement, modern gazetteer join, spelling equivalence, or ground connector is earned. `Wahloh creek.` remains unplaced; `west boundary.` remains a source-written relation with unresolved object and geometry. Ravel receives the two row-local source-written components and their same-cell co-occurrence only, and draws nothing.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identit
+
+
+SEDGE LANDSCAPE RETURN — 2026-09-21 — PL:p84:r06 paired source-written `do` marks / first-level Wahloh creek + west boundary component dependencies / geometry open
+
+
+Direct source-facing return
+
+
+Sedge reopened the admitted `OHC_2469.png` study representation (Drive `1Q7dJAgHFEFDywo_VNj3HZwoCiIc2wz85`) of the same manuscript p.84 witness and inspected a bounded enlargement of the upper Locality of Farms column. Immediately beneath r05's explicit `Wahloh creek.` and `west boundary.` the r06 locality cell visibly contains TWO distinct source-written `do` marks: one aligned under the named-creek component and one aligned under the relation component. Quoin's earlier locality list compresses this row to one `do.`; that remains a navigation/transcription derivative, while the direct image resolves the row-level structure. No witness count changes.
+
+
+Smallest source-facing edge
+
+
+`PL:p84:r06:locality:name — DEPENDS ON → PL:p84:r05:locality:name`
+`PL:p84:r06:locality:name — CARRIES → Wahloh creek.` [inherited]
+
+
+`PL:p84:r06:locality:relation — DEPENDS ON → PL:p84:r05:locality:relation`
+`PL:p84:r06:locality:relation — CARRIES → west boundary.` [inherited]
+
+
+Earned verb / occurrence geography
+
+
+APPEARED — source-stated-by-ditto in each of the two aligned Locality of Farms components.
+Precision: SOURCE-WRITTEN FIRST-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / NAMED CREEK-LOCALITY + RELATIONAL PHRASE / REFERENT UNPLACED / RELATION OBJECT UNRESOLVED.
+
+
+Semantic / identity brake
+
+
+The two aligned dittos earn two immediate component-local documentary dependencies only. They do not earn a whole-cell paraphrase, `west boundary of Wahloh creek`, `west bank`, a shared farm/tract/site, or any identity join. No lived, residence, household, ownership, travel, filing, patenting, remembrance, decision, or person-location verb is earned.
+
+
+Source / representation / derivative / provenance
+
+
+Historical witness count remains one manuscript p.84 face. The two controlled byte-identical OHC_2469 PDF custody routes remain one payload / one witness. This pass directly used the admitted OHC_2469.png study representation. The bounded crop is an inspection derivative; Quoin is a transcription/navigation derivative; jacket/Sedge/First Draw are analytical derivatives. The derivative compression of r06 as one `do.` does not override the two marks visible on the source-facing image.
+
+
+Geometry / unresolved / Ravel
+
+
+No coordinate, point, creek line, bank/boundary line, polygon, parcel, residence/farm point, route, township-range placement, modern gazetteer join, spelling equivalence, or documentary-chain ground connector is earned. `Wahloh creek.` remains unplaced; `west boundary.` remains relation-object unresolved. Ravel receives only the two immediate r06→r05 component dependencies and draws nothing. The following locality row remains a separate live source-facing edge.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+y
+
+
+SEDGE LANDSCAPE RETURN — 2026-09-21 — PL:p84:r07 fresh explicit `Oknoxuby.` / r05→r06 double-ditto chain closed / geometry open
+
+
+Direct source-facing return
+
+
+Sedge reopened the admitted `OHC_2469.png` study representation (Drive `1Q7dJAgHFEFDywo_VNj3HZwoCiIc2wz85`) of the same manuscript p.84 witness and inspected a bounded high-scale crop spanning the next locality rows after r06. Directly beneath r06’s two aligned `do` marks, `PL:p84:r07` freshly writes `Oknoxuby.` as a single locality string. At this direct-image scale the current reading is `Oknoxuby.`; Quoin’s earlier first-pass locality list carries this row as `Oxnebby.`. Preserve `Oxnebby.` as derivative correction history, not an additional witness and not an alternate geographic identification.
+
+
+Smallest source-facing edge
+
+
+`PL:p84:r07:locality — SOURCE WRITES → Oknoxuby.`
+
+
+Earned verb / occurrence geography
+
+
+APPEARED — source-written bare locality in the Locality of Farms field.
+
+
+Precision: SOURCE-WRITTEN BARE LOCALITY / FRESH EXPLICIT OCCURRENCE / UNPLACED.
+
+
+Chain consequence
+
+
+Because r07 is fresh locality lettering rather than `do`, the r05→r06 paired inheritance (`Wahloh creek.` + `west boundary.`) stops at r06 for this observed sequence. No universal reset rule is inferred. r07 does not inherit `west boundary.` and does not resolve the r05/r06 relation object.
+
+
+Semantic / identity brake
+
+
+Occurrence geography remains separate from row-host identity. No residence, ownership, household, travel, filing, patenting, remembrance, decision, person-location, or identity join is earned from the locality field alone. Do not silently equate this r07 lexical occurrence with the separately jacketed p.83 `Oknoxuby` occurrence; same or similar spelling is not geographic or personal identity.
+
+
+Source / representation / derivative / provenance
+
+
+Historical witness count remains one manuscript p.84 face. The two controlled byte-identical OHC_2469 PDF custody routes remain one payload / one witness. This pass directly used the admitted OHC_2469.png study representation; bounded crops are inspection derivatives. Quoin is a transcription/navigation derivative; jacket/Sedge/First Draw are analytical derivatives. The direct-image reading governs the present r07 transcription state while Quoin’s `Oxnebby.` remains visible as derivative correction history; witness count is unchanged.
+
+
+Geometry / unresolved / Ravel
+
+
+No coordinate, point, creek line, boundary line, polygon, parcel, residence/farm point, route, township-range placement, modern gazetteer join, spelling equivalence, or ground connector is earned. `Oknoxuby.` remains an unplaced source-carried locality. Ravel receives exactly the r07 explicit lexical occurrence and draws nothing. The following locality row remains a separate live edge and is not crossed here.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE LANDSCAPE RETURN — 2026-09-21 — PL:p84:r08 fresh explicit `Wahloh.` / occurrence kept distinct from r05 `Wahloh creek.` / geometry open
+
+
+Direct source-facing return
+
+
+Sedge reopened the admitted `OHC_2469.png` study representation (Drive `1Q7dJAgHFEFDywo_VNj3HZwoCiIc2wz85`) of the same manuscript p.84 witness and inspected a bounded enlargement of the upper Locality of Farms run. Immediately beneath r07’s fresh `Oknoxuby.`, `PL:p84:r08` freshly writes `Wahloh.` as a single locality string. The following visible row carries a `do` mark but remains uncrossed in this return.
+
+
+Smallest source-facing edge
+
+
+`PL:p84:r08:locality — SOURCE WRITES → Wahloh.`
+
+
+Earned verb / occurrence geography
+
+
+APPEARED — source-written bare locality in the Locality of Farms field.
+Precision: SOURCE-WRITTEN BARE LOCALITY / FRESH EXPLICIT OCCURRENCE / UNPLACED.
+
+
+Occurrence / identity / lexical brake
+
+
+Fresh lettering at r08 closes any possible r07 inheritance at r07 for this observed sequence; r08 does not carry `Oknoxuby.` by ditto. The source writes only `Wahloh.` here. Do not silently expand it to `Wahloh creek.`, and do not merge this r08 occurrence with the separate r05 `Wahloh creek.` component merely from lexical resemblance. Same-face recurrence is documentary adjacency, not geographic identity. No lived, residence, household, ownership, travel, filing, patenting, remembrance, decision, or person-location verb is earned.
+
+
+Source / representation / derivative / provenance
+
+
+Historical witness count remains one manuscript p.84 face. The two controlled byte-identical OHC_2469 PDF custody routes remain one identical payload / one witness. This pass directly used the admitted PNG study representation of that witness; the bounded enlargement is an inspection derivative. Quoin remains a transcription/navigation derivative; the governing jacket, Sedge classification, and First Draw are analytical derivatives. None multiplies the witness.
+
+
+Geometry / unresolved / Ravel
+
+
+No coordinate, point, creek line, boundary line, polygon, parcel, residence/farm point, route, township-range placement, modern gazetteer snap, spelling equivalence, or documentary ground connector is earned. `Wahloh.` remains an unplaced source-carried locality occurrence. Its historical referent, modern placement, and relation—if any—to r05 `Wahloh creek.` remain OPEN. Ravel receives exactly the explicit r08 lexical occurrence and draws nothing. The following `do` remains a separate live edge.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE LANDSCAPE RETURN — 2026-09-21 — PL:p84:r09 source-written `do.` / first-level Wahloh locality dependency / geometry open
+
+
+Direct source-facing return
+Sedge reopened the admitted `OHC_2469.png` study representation (Drive `1Q7dJAgHFEFDywo_VNj3HZwoCiIc2wz85`) of the same manuscript p.84 witness and inspected a bounded enlargement of the upper Locality of Farms run. Immediately beneath r08’s fresh explicit `Wahloh.`, `PL:p84:r09` visibly writes a single aligned `do.`. The manuscript face remains the historical witness; the PNG remains a study representation; the bounded crop is an inspection derivative. No new witness is created.
+
+
+Smallest source-facing edge
+`PL:p84:r09:locality — DEPENDS ON → PL:p84:r08:locality`
+`PL:p84:r09:locality — CARRIES → Wahloh.` [inherited]
+
+
+Earned verb / occurrence geography
+APPEARED — source-stated-by-ditto in the Locality of Farms field.
+Precision: SOURCE-WRITTEN FIRST-LEVEL DITTO DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY / UNPLACED.
+
+
+Occurrence / identity / lexical brake
+The ditto earns one immediate documentary dependency on r08 only. It does not make r09 a fresh spelling, does not expand `Wahloh.` to r05 `Wahloh creek.`, and does not merge either occurrence with another same- or similar-name place. No lived, residence, household, ownership, travel, filing, patenting, remembrance, decision, or person-location verb is earned. The inherited value remains local to the Locality of Farms field and does not cross into acreage, remarks, names, or any other column.
+
+
+Source / representation / derivative / provenance
+Historical witness count remains one manuscript p.84 face. The two controlled byte-identical OHC_2469 PDF custody routes remain one identical payload / one witness. This pass directly used the admitted PNG study representation already tied to that witness. The bounded enlargement is an inspection derivative; Quoin remains a transcription/navigation derivative; jacket, Sedge classification, and First Draw are analytical derivatives. None multiplies the witness.
+
+
+Geometry / unresolved / Ravel
+No coordinate, point, creek line, boundary line, polygon, parcel, residence/farm point, route, township-range placement, modern gazetteer snap, spelling-equivalence join, or documentary ground connector is earned. `Wahloh.` remains unplaced, and its relation—if any—to r05 `Wahloh creek.` remains OPEN. Ravel receives exactly the immediate r09→r08 documentary dependency with inherited lexical state `Wahloh.` and draws nothing. The following visible locality row carries another `do` but remains a separate live edge.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identit
+
+
+SEDGE LANDSCAPE RETURN — 2026-09-22 — PL:p84:r10 source-written `do.` / second-level Wahloh locality dependency / source-carried pen stroke unclassified / geometry open
+
+
+Direct source-facing return
+Sedge reopened the admitted `OHC_2469.png` study representation (Drive `1Q7dJAgHFEFDywo_VNj3HZwoCiIc2wz85`) of the same manuscript p.84 witness and inspected a bounded enlargement of the upper Locality of Farms run. Counting rows top-to-bottom from the first visible populated name line, r08 freshly writes `Wahloh.`, r09 writes one aligned `do.`, and the next row, `PL:p84:r10`, directly writes another aligned `do.`. This return crosses r10 only.
+
+
+Smallest source-facing edge
+`PL:p84:r10:locality — DEPENDS ON → PL:p84:r09:locality`
+`PL:p84:r10:locality — THROUGH SECOND-LEVEL CHAINED DEPENDENCY CARRIES → Wahloh.` [inherited; not fresh lettering]
+
+
+Earned verb / occurrence geography
+APPEARED — source-stated-by-ditto in the Locality of Farms field.
+Precision: SOURCE-WRITTEN SECOND-LEVEL CHAINED DITTO DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY / UNPLACED.
+
+
+Occurrence / identity / lexical brake
+The r10 ditto earns one immediate documentary dependency on r09. It does not freshly spell the locality, does not expand `Wahloh.` to r05 `Wahloh creek.`, and does not merge r08-r10 with any other same- or similar-name occurrence. No lived, residence, household, ownership, travel, filing, patenting, remembrance, decision, or person-location verb is earned. The inherited value remains local to the Locality of Farms field and does not cross into acreage, remarks, names, or another column.
+
+
+Source / representation / derivative / provenance
+Historical witness count remains one manuscript p.84 face. The two controlled byte-identical OHC_2469 PDF custody routes remain one identical payload / one witness. This pass directly used the admitted PNG study representation already tied to that witness. The bounded enlargement is an inspection derivative; Quoin remains a transcription/navigation derivative; this jacket, Sedge classification, and First Draw are analytical derivatives. None multiplies the witness.
+
+
+Ink-mark / geometry distinction
+A conspicuous curved pen stroke is visible to the right of the r09-r11 locality run. Its documentary function is not established in this pass. Preserve it as an unclassified source-carried manuscript mark: do not absorb it into the `do.` transcription, do not read it as a boundary, route, creek course, connector, correction, bracket, or other semantic device without independent source support. A visible mark on the manuscript is not thereby earth geometry.
+
+
+Geometry / unresolved / Ravel
+No coordinate, point, creek line, boundary line, polygon, parcel, residence/farm point, route, township-range placement, modern gazetteer snap, spelling-equivalence join, or documentary ground connector is earned. `Wahloh.` remains unplaced, and its relation—if any—to r05 `Wahloh creek.` remains OPEN. Ravel receives exactly the immediate r10→r09 documentary dependency with inherited lexical state `Wahloh.` and draws nothing. The following visible locality row carries another `do` but remains a separate live edge.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identityy
+GLEAN WHOLE-FACE CATEGORY AUDIT — page-84 completion
+
+
+Direct 600-dpi inspection of the governing OHC_2469.pdf / manuscript p.84 stabilizes 36 visible name-bearing rows and finds no numeric White / Slave / Black(s) category phrase anywhere in the Locality of Farms column. Locality names, source-written `do` marks, and name-field qualifiers remain their own documentary structures; this is a completed negative annotation audit, not arithmetic zero.
+
+
+The second stored OHC_2469 PDF has the same 253,827-byte payload and SHA-256 `683d1fa99e0f9a52c17457a81a0754542944dc50d5828088d919ec8555301a31`; the two custody objects remain one identical representation payload / one manuscript witness. The temporary 600-dpi render is an inspection derivative only.
+
+
+Sequence consequence: the bounded pp.78–84 audit is now complete at whole-face row control. Page 79 alone supplies John Beaty r04 `1 white]`; p.78 and pp.80–84 are six completed no-observed-numeric-category-phrase faces. Those six states remain nonnumeric negatives, not six zero contributions.
+
+
+Exact return: OHC_2469.pdf → Drive `1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ` → manuscript p.84 → 36 visible rows → no numeric White / Slave / Black(s) phrase observed in direct 600-dpi whole-face inspection.
+
+
+— Glean

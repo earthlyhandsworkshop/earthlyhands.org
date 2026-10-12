@@ -1,0 +1,1501 @@
+LEAF JACKET — OHC_2468 — Public Lands No. 2 Form of a Return — [uncertain Choctaw name] or McKinney
+
+
+Status
+Source-facing leaf jacket. Archival PDF governs. This jacket records the page as seen and preserves uncertainty in the McKinney alias row rather than normalizing the first name.
+
+
+Source object
+- OHC_2468.pdf — Drive ID 12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q.
+- A lossless OHC_2468.png derivative is recorded in the study-image manifest; the archival PDF remains the governing object.
+- Page heading: “Public Lands — No. 2 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+- Date field at upper right appears to read “No. 17th 1831” or similar; exact diplomatic reading not yet certified.
+
+
+Observed McKinney alias row
+- Name field: first element is a Choctaw-language name that is not yet confidently readable from this capture, followed by the explicit English alias construction “or McKinney.”
+- Working visual possibilities for the first element include something near “Clavy…/Clayi…,” but no spelling is adopted.
+- Acres cultivated: 7.
+- Entire number of the family: 10.
+- Males over 16 years: 4.
+- Males and females under 10 years: 3.
+- Locality of farm: ditto mark carried from the row above; underlying locality string should be transcribed only after the chain is checked directly.
+- Total number of acres: 80.
+- General remarks: ditto marks carried from the row above; no independent remark is assigned to the McKinney alias row.
+
+
+Other visible page context
+The page is a large Public Lands return containing many named farm-holder rows, including a widow in the first row, several captains, and numerous Choctaw-language names. The form records cultivated acreage, household size, age categories, locality, total acreage, and general remarks. Several locality/remark entries are carried by ditto marks across rows, so row inheritance must be read as a chain rather than copied casually.
+
+
+Page-level observations
+- “or McKinney” is source-visible and should be preserved as an alias relation exactly as written.
+- The alias construction is administratively important in its own right; it is not evidence that the unread Choctaw-language name is a given name, surname, clan term, or kinship marker.
+- The row records a substantial household of 10 and 80 total acres, but the page alone does not establish later patent, scrip, citizenship, or family identity.
+- The page is distinct from the Catharine/Edmond McKinney repeated-capture cluster at OHC_2475–2480.
+
+
+Nonclaims
+- No claim that this McKinney occurrence is Catharine, Edmond, Masa/Mesa, Albert, Silas, James, Levy, Robert, David, or any other McKinney/Bell occurrence already studied.
+- No claim about kinship, gender, or household relationship beyond the row’s own numerical fields.
+- No forced spelling of the Choctaw-language alias name.
+- No claim that the carried locality or remarks have been independently read for this row until the ditto chain is checked.
+
+
+Open questions
+- What is the exact diplomatic reading of the Choctaw-language name before “or McKinney”?
+- What locality and general-remark text are inherited by this row through the ditto marks?
+- Does the same alias pair recur elsewhere in the Public Lands body, claimant rolls, patent/scrip records, or later citizenship litigation?
+- Is there a corresponding English-only McKinney entry in a later transformed administrative population?
+
+
+Return path
+Primary: OHC_2468.pdf, Drive ID 12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q.
+Twin archival copy also exists under the same filename in Drive; duplicate archival copies are not independent witnesses.
+
+
+MULLION BOUNDED SOURCE-FACE ADDENDUM — 2026-09-06
+Maker / scope: Mullion — one row-level ditto-chain return only. Glean's page-82 work and the existing OHC_2468 jacket retain their own authorship; no custody moved.
+
+
+Direct source return and method
+- Governing source: OHC_2468.pdf, Drive ID 12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q, manuscript p.83.
+- Mullion rendered the one-page archival PDF locally at 300 dpi and 600 dpi solely for direct visual inspection. Those renders/crops are inspection derivatives only; they were not admitted to Drive and are not additional source objects.
+
+
+Bounded finding — McKinney alias row ditto chain
+- The `[uncertain Choctaw-language name] or McKinney` occurrence is the second visible populated row on manuscript p.83.
+- Its Locality of Farms cell is source-written `do`. The row immediately above carries an explicit locality string; Mullion does not certify that locality's exact diplomatic spelling in this pass. The earned relation is therefore: alias-row locality = ditto to the immediately preceding row's source-written locality string. This is a source-visible inheritance relation, not an independently written locality on the McKinney row and not yet a normalized geographic place.
+- The alias row's General Remarks cells are source-written ditto marks immediately beneath the preceding row's explicit `Good land. hickory.` wording. At exact source reach, the alias row therefore carries those remarks by ditto inheritance. This does not establish who wrote the remarks, a common household, shared farm ownership, or any meaning beyond the form's visible row-to-row ditto relation.
+- Total acres `80`, cultivated acres `7`, family `10`, males over 16 `4`, and under-10 count `3` remain the row's independently written numeric fields as already jacketed.
+
+
+Correction to prior open state
+The earlier jacket's question `What locality and general-remark text are inherited by this row through the ditto marks?` is now partly resolved: the General Remarks inheritance is source-readable as `Good land. hickory.`; the locality inheritance is structurally resolved to the immediately preceding explicit locality entry, while that locality's exact diplomatic spelling remains OPEN in this pass.
+
+
+Nonclaims
+- No geographic normalization or modern place identification is made from the inherited locality.
+- No claim that the alias row is Catharine, Edmond, John, Cornelius, Margaret, Catherine, or any other McKinney occurrence.
+- No kinship, residence continuity, patent/scrip continuity, captain/company relation, or Bell relation is created.
+- No claim that repeated ditto inheritance across this one page establishes a universal Public Lands form rule.
+
+
+Exact return
+Bell–McKinney / Public Lands source-facing question → existing OHC_2468 leaf jacket → OHC_2468.pdf `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q` → manuscript p.83 → first visible row explicit locality/remarks → second visible `[uncertain Choctaw-language name] or McKinney` row `do` / ditto cells.
+
+
+—Mullion
+
+
+
+
+
+
+LAMPLIGHT SOURCE-RETURN CORRECTION — 2026-09-07
+Maker / scope: Lamplight — one bounded second-look on this existing jacket only. No neighboring source was opened and no identity crossing was made.
+
+
+Representation and exact return
+- Governing archival PDF remains OHC_2468.pdf, Drive ID 12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q, 254,039 bytes; current parent folder is `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`, Drive ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+- A second Drive object named OHC_2468.pdf is present at Drive ID 1_4AxcZEFIkZC0cBrmjnU1xy2Qs0TmfZJ, also 254,039 bytes, parent folder ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA. This pass does not treat that duplicate custody object as an independent historical witness.
+- Direct visual return for this pass used the admitted OHC_2468.png representation, Drive ID 1L9AcD6zNlyjLtnccLloUtUqQJHY6jbi1, parent folder ID 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh. It remains a representation of the OHC_2468 leaf, not another source.
+
+
+Header correction
+The earlier Source object note said the upper-right field appeared to read `No. 17th 1831` or similar. Direct return to the full-resolution face resolves the bracketed source-visible notation as `[No 1730. 1834]`. The earlier reading is superseded at this point only.
+
+
+Exact reach / nonclaims
+- This correction preserves the notation exactly as source-visible; it does not assign an administrative meaning to `No 1730`, call it a treaty/item/call number, or treat `1834` as more than the date-like element visibly paired with that notation.
+- No change is made to the uncertain Choctaw-language name before `or McKinney`, the independently written row numbers, Mullion's ditto-chain finding, or any identity, kinship, residence, patent/scrip, captain/company, or Bell relation.
+- The unresolved first-row locality remains unopened at diplomatic strength in this pass.
+
+
+—Lamplight
+
+
+
+
+GLEAN SOURCE-RETURN ADDENDUM — 2026-09-07
+
+
+Maker / scope: Glean — one bounded second-look on the existing OHC_2468 / manuscript p.83 jacket. This addendum extends the existing jacket rather than creating another historical-object wrapper. No person-level crossing is made.
+
+
+Method control
+This pass works from the current Source Work Front Door and SOURCE WORK METHOD — full strength, exact reach — source to synthesis: object first; source wording before interpretation; source / representation / derivative / transcription kept separate; repeated custody objects do not become additional witnesses; uncertainty and correction history remain visible; every consequential statement keeps a return path.
+
+
+Exact source / representation / custody
+- Governing archival PDF inspected: OHC_2468.pdf, Drive ID 12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, 254,039 bytes.
+- Parallel custody PDF inspected: OHC_2468.pdf, Drive ID 1_4AxcZEFIkZC0cBrmjnU1xy2Qs0TmfZJ, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, 254,039 bytes.
+- Glean streamed both complete PDF payloads in this pass. Each hashes SHA-256 ef7092415ac8b1f95da3f538cfcde97f1b314838b0ed41116ba8a480981d0c2b. They are therefore two custody roads to one matching PDF payload / one manuscript-page witness, not corroborating historical sources.
+- Admitted visual representation inspected: OHC_2468.png, Drive ID 1L9AcD6zNlyjLtnccLloUtUqQJHY6jbi1, parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh, 1,351,170 bytes. It remains a representation of the same manuscript face, not another witness.
+- Glean also rendered the governing PDF locally at 400 dpi and made enlarged crops solely for visual reading. Those are temporary inspection derivatives; they were not admitted to Drive and carry no independent evidentiary weight.
+
+
+Consequential direct-source finding — first-row locality / McKinney ditto chain
+The first visible populated row on manuscript p.83 carries an explicit Locality of Farms entry readable at diplomatic strength as:
+
+
+Oknoxuby
+
+
+The second visible populated row — the still-unresolved Choctaw-language name followed by source-written `or McKinney` — carries source-written `do` in its locality cell. Mullion had already established that this `do` points to the immediately preceding row while leaving that preceding locality's spelling open. This return resolves that open spelling only: at exact source reach, the McKinney-alias row inherits the locality wording `Oknoxuby` by ditto relation. `Oknoxuby` is not independently written in the alias row.
+
+
+Reading control
+The same manuscript face contains later explicit `Oknoxuby` spellings in the Locality of Farms column, including entries beginning `On Oknoxuby`. Those same-face repetitions support the letterform reading of the first-row locality, but they do not merge rows, people, farms, tracts, or localities into one occurrence. No modern spelling or geographic normalization is supplied here.
+
+
+Source / derivative / interpretation boundary
+Source-visible:
+- first populated row locality = `Oknoxuby`;
+- second populated `[uncertain Choctaw-language name] or McKinney` row locality cell = `do`;
+- the page separately contains later explicit `Oknoxuby` locality wording.
+
+
+Derivative / method:
+- admitted PNG, local 400-dpi render, enlargement and crops are reading representations/inspection derivatives;
+- the statement that the alias row inherits `Oknoxuby` is a bounded transcription/row-inheritance result from the source-written ditto relation already established on this face, not text newly written into the alias row.
+
+
+Interpretive limit:
+- this pass does not equate source-written `Oknoxuby` with Noxubee, Oknoxubee, any modern feature, settlement, district, creek, county, or mapped coordinate;
+- it does not decide whether different `Oknoxuby` occurrences on p.83 designate the same precise farm locality;
+- it does not turn locality into residence, title, possession, entitlement, patent, or citizenship.
+
+
+Correction / active state
+The earlier open state saying the first-row locality was not yet diplomatically read is now superseded at that point only. Active state: first-row locality = `Oknoxuby`; the McKinney-alias row inherits `Oknoxuby` through its source-written `do`. The unresolved Choctaw-language name before `or McKinney` remains unresolved; this pass does not promote the earlier visual possibilities `Clavy…/Clayi…` or substitute a new spelling.
+
+
+Unresolved questions
+- What is the exact diplomatic reading of the Choctaw-language name before `or McKinney`?
+- What documentary or geographic referent did the recorder intend by `Oknoxuby` on this face?
+- Do the several p.83 `Oknoxuby` locality occurrences refer to one locality at different descriptive reaches or to more than one source-level referent? This remains open and requires comparison, not normalization.
+
+
+Nonclaims
+- No McKinney identity is closed to Catharine, Edmond, John, Cornelius, Margaret, Catherine, or any other same-name occurrence.
+- No kinship, household, residence, Bell relation, captain/company relation, patent/scrip continuity, or later administrative identity is created.
+- Same-page repetition of `Oknoxuby` is not independent corroboration and does not collapse distinct rows.
+- The two OHC_2468 PDFs remain two custody objects even though their payloads are now verified byte-identical.
+
+
+Backward / forward seams
+Backward: the existing OHC_2467 / manuscript p.82 source-facing jacket remains the bounded 82→83 pagination/form seam. Nothing from p.82 is inherited into the p.83 locality reading.
+Forward: the existing OHC_2469 / manuscript p.84 source-facing jacket remains the bounded 83→84 pagination/form seam. Nothing from p.84 is used to resolve `Oknoxuby` or the McKinney alias.
+
+
+Exact return
+Public Lands — Whole-Document Corpus → this OHC_2468 jacket → governing OHC_2468.pdf 12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q (or verified byte-identical custody road 1_4AxcZEFIkZC0cBrmjnU1xy2Qs0TmfZJ) → manuscript p.83 → first populated row explicit Locality of Farms `Oknoxuby` → second populated `[uncertain Choctaw-language name] or McKinney` row source-written `do`.
+
+
+—Glean
+
+
+
+
+FIELDGLASS CATEGORY-SUBTRACK AUDIT — 2026-09-09
+
+
+Direct archival-face reinspection of OHC_2468 / manuscript p.83 at high visual scale found no safely readable numeric Locality-of-Farms phrase using `white(s)`, `slave(s)`, or `Black(s)` across the whole visible face. The uncertain McKinney-or-Choctaw-name problem already carried by this jacket is left untouched; no name reading is used to manufacture a category or person join.
+
+
+Active state is `no category phrase observed at present visual reach`, not zero Whites, Slaves, or Blacks. Descriptive words and printed family numbers remain separate source fields.
+
+
+Source return: OHC_2468.pdf — Drive ID 12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q (directly inspected this pass). The p.83 category audit neither resolves nor weakens the existing uncertain-name seam.
+
+
+— Fieldglass
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — 2026-09-10
+
+
+Maker / scope: Fieldglass — bounded map-facing return to the existing OHC_2468 / manuscript p.83 jacket. The governing historical object remains manuscript p.83 carried by OHC_2468.pdf; this addendum deepens the existing jacket rather than creating another wrapper.
+
+
+Direct source return / representation boundary
+- Governing archival PDF opened directly: OHC_2468.pdf, Drive ID `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q`, manuscript p.83.
+- A temporary 600-dpi render and enlarged crops were used only for direct visual reading. They are inspection derivatives, not admitted source objects, not additional witnesses, and not map authority.
+- The already verified parallel custody PDF remains a second custody road to the same witness, not corroboration.
+- Quoin's page-83 markdown, Drive ID `14F-2K8cBv77pqNjsk2-qP1BHrd5ZcihP`, was opened only after the direct source as a comparison / navigation derivative. It does not govern the readings below.
+
+
+Source-visible locality findings
+Using top-to-bottom populated-row addresses on this face solely as occurrence handles:
+- `PL:p83:r11` — `On Oknoxuby. 10 miles from mouth.`
+- `PL:p83:r12` — `On Oknoxuby. east side. 1 mile from plantation`
+- `PL:p83:r13` — `On Oknoxuby.`
+- `PL:p83:r15` — the locality cell securely contains source-written `factory road`; the word or name immediately preceding `factory road` is not certified in this pass.
+- `PL:p83:r18` — `Oknoxuby. east side.`
+- `PL:p83:r21` — `Oknoxuby. west side.`
+
+
+These are locality-column occurrences. The row addresses do not merge the named people, farms, tracts, households, or source-locality occurrences.
+
+
+Derivative correction
+Quoin's page-83 derivative rendered r11 as `On Oxnebby. 10 miles from marsh.` and r12 as `On Oxnebby. east side. 1 mile from Grantston`. Direct return to the manuscript face supports `mouth` at r11 and `plantation` at r12. Those two derivative words are superseded at those points only. Quoin's file remains a derivative and is not rewritten as if it were the source.
+
+
+Map-facing gain
+At exact source reach, p.83 now earns an unplaced `Oknoxuby` relation field carrying several different source constraints: `On Oknoxuby`; `10 miles from mouth`; `east side`; and `west side`. The source also carries an unnamed / unlocated `plantation` as a one-mile relational anchor on r12, and a separate source-written `factory road` relation on r15.
+
+
+This is stronger than a loose toponym repetition but still not drawable geometry. `mouth` can be preserved as a source-relative anchor without deciding what modern feature, feature class, receiving water, or coordinate the recorder meant by Oknoxuby. `10 miles` is a source-written distance relation whose measurement path is not supplied. East-side and west-side language does not establish opposed points, a crossing, a common reach, or a channel trace.
+
+
+Representation / interpretation boundary and nonclaims
+- No normalization of `Oknoxuby` to Noxubee, Oknoxubee, a modern creek or river, a county, settlement, district, or other mapped feature.
+- No claim that `mouth` supplies a mouth coordinate, receiving-water identity, creek/river class, or historical channel geometry.
+- No claim whether the source's `10 miles` is along water, road, trail, survey line, straight-line distance, estimated travel distance, or another measure.
+- No claim that the east-side and west-side occurrences face one another, share one reach, imply a ford/ferry/crossing, or permit a bank-to-bank line.
+- `plantation` remains unnamed and unlocated. It is not assigned to any person, farm, owner, residence, tract, or later plantation occurrence.
+- The p.83 `factory road` is not given an alignment, factory point, modern-road equivalent, legal-route identity, or relation to the factory occurrences on other Public Lands pages.
+- Repeated `Oknoxuby` wording on this face is same-witness recurrence, not independent corroboration, and does not collapse distinct rows.
+
+
+Exact return
+`Historical Landscape Map / Public Lands → existing OHC_2468 leaf jacket → OHC_2468.pdf 12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q → manuscript p.83 → Locality of Farms occurrences PL:p83:r11, r12, r13, r15, r18, r21.`
+
+
+Derivative comparison return: `this jacket → Quoin page-83 markdown 14F-2K8cBv77pqNjsk2-qP1BHrd5ZcihP → r11/r12 derivative readings only.`
+
+
+— Fieldglass
+
+
+
+
+FIELDGLASS MAPPING CORRECTION — 2026-09-11
+
+
+Maker / scope: Fieldglass — bounded return to the existing OHC_2468 / manuscript p.83 map-facing jacket. Governing object remains OHC_2468.pdf, Drive ID `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q`; no new wrapper is created.
+
+
+Direct source return / correction
+
+
+The archival PDF was opened directly and re-rendered locally at 600 dpi only for visual inspection. The earlier Fieldglass addendum correctly certified source-written `factory road` while leaving the immediately preceding word or name unresolved. This pass sharpens that point: the locality line begins source-written `Near` and continues with a proper-name-like word before `factory road.` The middle word is best read close to `Hochlontubbe` / `Hochlomtubbe`, but the n/m letterform is not certified here. Active diplomatic state for the full phrase is therefore:
+
+
+`Near H[ochlon/ochlom]tubbe factory road.`
+
+
+The bracket records a present reading uncertainty; it is not source punctuation. Quoin's separate image derivative reads `Near Hochlontubbe factory road.` That derivative is useful as a comparison reading but does not govern this correction.
+
+
+Map-facing gain
+
+
+This is stronger than the prior bare `factory road` capture. Manuscript p.83 now source-explicitly places the row's farm locality `Near` a named / qualified `factory road`. The relation is proximity language in the manuscript itself. It does not supply a road line, a factory point, a distance, a side-of-road relation, or an identity for the name embedded in the route phrase.
+
+
+Representation / interpretation boundary and nonclaims
+
+
+No normalization of the uncertain name is made. No claim is made that this is the same factory, factory road, person, settlement, or industrial site as any other Public Lands occurrence. `Near` is not converted into a measurable radius, adjacency polygon, crossing, route access, residence, ownership, farm boundary, or tract geometry. No modern-road or legal-route equivalence is proposed. The temporary local render is an inspection derivative only and carries no independent evidentiary weight.
+
+
+Exact return
+
+
+`Historical Landscape Map / Public Lands → existing OHC_2468 leaf jacket → OHC_2468.pdf 12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q → manuscript p.83 → locality row immediately following the Oknoxuby / do sequence → source phrase Near H[ochlon/ochlom]tubbe factory road.`
+
+
+— Fieldglass
+
+
+
+
+FIELDGLASS REPRESENTATION / NUMBER-CONTROL ADDENDUM — 2026-09-19
+
+
+Direct source return
+Fieldglass returned to the governing archival faces for the immediately neighboring manuscript pages rather than carrying the header number from derivatives.
+
+
+- OHC_2467 / manuscript p.82 visibly carries the bracketed upper-right notation `[No. 1230. 1834]`.
+- OHC_2468 / manuscript p.83 visibly carries `[No 1730. 1834]`, confirming Lamplight’s earlier direct-face correction on this jacket.
+- OHC_2469 / manuscript p.84 visibly carries `[No. 1230. 1834]`.
+
+
+All three faces retain consecutive manuscript pagination and the visible `Public Lands — No. 2 — Form of a Return — Continued — Location under the Choctaw Treaty` form. At present source reach, p.83 therefore contains an isolated source-visible header-number discrepancy between two flanking `1230` faces.
+
+
+What this changes
+The p.83 `1730` notation must remain source-visible, but it is not sufficient by itself to declare a new return, inserted leaf, administrative-body break, or separate historical object family. Conversely, the surrounding `1230` faces do not authorize silently correcting p.83 to `1230`.
+
+
+For source and map work, preserve two states separately:
+
+
+PAGE / FORM SEAM: p.82 → p.83 → p.84 is directly visible as consecutive manuscript pagination under the same continued form.
+HEADER-NUMBER STATE: p.82 = `1230`; p.83 = `1730`; p.84 = `1230`.
+
+
+The meaning, maker, and timing of the bracketed `No.` notation remain open. The recurring `1834` element is preserved as source-visible date-like writing and is not promoted here into a certified document date beyond the faces themselves.
+
+
+Map / film brake
+Do not use the isolated p.83 number difference to split or join neighboring locality language, people, farms, roads, creeks, district relations, or film geography. Any cross-page relation still has to be earned from the actual locality wording and source genealogy. Header-number difference is not geometry and not identity.
+
+
+Exact return
+This jacket → p.82 governing archival face OHC_2467.pdf `1dqkQOkZpKyCrUYpj_lDZPFFPzWgPL3gG` → p.83 governing archival face OHC_2468.pdf `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q` → p.84 governing archival face OHC_2469.pdf `1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ`.
+
+
+— Fieldglass | Film / Landscape Scaffolding
+NAME WEB RETURN — COMPILED INDEX INPUT — Small Door — 2026-09-20
+PERSON / ENTITY: [uncertain Choctaw-language name] or McKinney [Public Lands p.83 second populated farm-row occurrence / PL:p83:r02]
+DATE: not assigned by this page-facing return; the source-visible bracketed `[No 1730. 1834]` remains page notation and is not treated as this row’s date.
+EARNED VERB / RELATION: Manuscript p.83 PRESENTS an unresolved Choctaw-language name followed by source-written `or McKinney`. The same row’s Locality of Farms cell is source-written `do`, inheriting `Oknoxuby` from the immediately preceding row; its General Remarks ditto inherits `Good land. hickory.`
+CASE / OBJECT: OHC_2468 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.83 / second populated row; row signature 7 cultivated acres / family 10 / males over 16 = 4 / under-10 field = 3 / total acres 80.
+PLACE: `Oknoxuby` [inherited through source-written ditto; exact historical referent and modern identity OPEN]
+INSTITUTION: Public Lands / Choctaw treaty-land administration
+RETURN TO THIS BODY: Public Lands No. 2 p.83 — “[uncertain Choctaw-language name] or McKinney” row, Oknoxuby ditto locality, and inherited Good land-hickory remark — OHC_2468 source jacket
+IDENTITY / RELATION STATUS: source-local two-form name-field occurrence joined by source-written `or`; the semantic relation between the two written forms remains unresolved and is not normalized as alias, translation, correction, alternate form, name change, or another subtype. Quoin’s first-pass image derivative reads `Blagejahah`, but that derivative reading is not promoted over the governing source-facing uncertainty. No identity is closed to Catharine, Edmond, Margaret, Catherine, John, Cornelius, or any other McKinney occurrence. Ditto inheritance does not make `Oknoxuby` or `Good land. hickory.` independently written in this row and does not establish kinship, residence, ownership, entitlement, patent/scrip continuity, citizenship, captain/company relation, or Bell identity.
+NOTES: compiled as one proposition-local p.83 occurrence return. The two verified byte-identical OHC_2468 PDFs remain two custody roads to one manuscript-page witness; the admitted PNG and Quoin prose remain representations/derivatives, not additional historical witnesses.
+—Small Door
+
+
+
+
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — 2026-09-20
+
+
+Maker / scope: Sedge — one smallest map-facing occurrence only. This addendum deepens the existing OHC_2468 / manuscript p.83 governing jacket; it does not create a second source wrapper, normalize a place-name, or close any person identity.
+
+
+SOURCE-FACING EDGE
+This pass begins from the direct-source reading already fixed above by Fieldglass for PL:p83:r11: Locality of Farms = `On Oknoxuby. 10 miles from mouth.` The governing historical witness remains manuscript p.83 carried by OHC_2468.pdf. No new historical witness is created by this classification return.
+
+
+EARNED PLACE / VERB CLASSIFICATION
+- PL:p83:r11 FARM / LOCALITY OCCURRENCE — ON → `Oknoxuby`.
+- SAME ROW OCCURRENCE — `10 miles from` → `mouth` [source-generic anchor; what the mouth belongs to is OPEN].
+
+
+GRAMMAR / OCCURRENCE BRAKE
+The two locality components share one row host, but they do not earn a place-to-place proposition. In particular, the source does not explicitly state `Oknoxuby is 10 miles from its mouth`, does not explicitly name `mouth of Oknoxuby`, and does not say the ten miles were measured along water. Preserve `Oknoxuby` and `mouth` as source-level relation objects whose exact historical referents may later be compared, not silently fused now.
+
+
+TIME / IDENTITY BRAKE
+The page-visible `[No 1730. 1834]` notation remains page/form notation at present source reach and is not assigned here as the event date of r11. The person/name field hosting r11 is not used to strengthen or identify the geography, and no identity relation is carried outward from this crossing.
+
+
+PROVENANCE / REPRESENTATION STATE
+One manuscript-page witness is carried through two previously verified byte-identical OHC_2468 PDF custody roads. The admitted PNG, temporary inspection renders/crops, Quoin prose, this jacket, and the Prose Map register remain representation / derivative layers, not additional historical witnesses. This Sedge addendum classifies the already source-certified wording; it does not claim an independent re-reading of the manuscript image.
+
+
+GEOMETRY STATE
+RELATIONAL / MEASURED / UNPLACED. `On` earns relation without alignment; `10 miles` earns the source-written measure without measurement path, direction, radius, channel distance, road distance, or coordinate. No Oknoxuby line, mouth point, ten-mile buffer/ring, route, parcel, farm point, residence point, person point, modern Noxubee/Oknoxubee snap, or same-page occurrence merge is authorized.
+
+
+EARNED CROSSING
+This source occurrence is ready to cross only as the two row-centered relations above. The unresolved reach is the identity and geometry of `Oknoxuby`, the referent of `mouth`, and whether a later independent source can lawfully join the two beyond their co-row occurrence.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | occurrence geography before identity
+
+
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — 2026-09-20 — PL:p83:r12
+Maker / scope: Sedge — one smallest map-facing occurrence following the already crossed r11 edge. This addendum materially deepens the existing OHC_2468 / manuscript p.83 governing jacket. It does not create a new source wrapper, normalize `Oknoxuby`, identify the unnamed `plantation`, or close any person identity.
+
+
+SOURCE-FACING EDGE
+This pass begins from the direct-source wording already certified above by Fieldglass for PL:p83:r12: Locality of Farms = `On Oknoxuby. east side. 1 mile from plantation`. The governing historical witness remains manuscript p.83 as carried by OHC_2468.pdf. This classification pass does not claim a fresh independent reading of the manuscript image and creates no additional historical witness.
+
+
+EARNED PLACE / RELATION CLASSIFICATION
+- PL:p83:r12 FARM / LOCALITY OCCURRENCE — ON → `Oknoxuby`.
+- SAME ROW OCCURRENCE — CARRIES → `east side` [orientation phrase; exact anchor / feature being sided remains OPEN].
+- SAME ROW OCCURRENCE — `1 mile from` → `plantation` [source-generic, unnamed anchor].
+
+
+GRAMMAR / OCCURRENCE BRAKE
+The three components share one row host, but co-row sequence is not strengthened into a single place-to-place proposition. This pass does not rewrite the source as `east side of Oknoxuby`, `Oknoxuby is one mile from the plantation`, or `the farm lies one mile east of the plantation`. The source supplies no explicit owner or name for `plantation`, and the punctuation does not by itself identify the object governed by `east side`. Preserve each component at row-centered reach until an independent source or stronger internal grammar earns a join.
+
+
+IDENTITY / TIME BRAKE
+The person/name field hosting r12 is not used to identify or strengthen any geography. `plantation` is not assigned to that person, to the r11 person, to the McKinney-alias row, or to any later Bell/McKinney/Choctaw occurrence. The page-visible `[No 1730. 1834]` remains page/form notation at present reach and is not assigned here as an r12 event date.
+
+
+PROVENANCE / REPRESENTATION STATE
+One manuscript-page witness is carried through the two already verified byte-identical OHC_2468 PDF custody roads. The admitted PNG, temporary inspection renders/crops, Quoin transcription, Fieldglass source-reading addenda, this Sedge classification addendum, and any Prose Map register entry remain representation / derivative layers and do not increase witness count.
+
+
+GEOMETRY STATE
+RELATIONAL / MEASURED / ORIENTED-PHRASE / UNPLACED. `On` earns relation without recoverable alignment. `east side` preserves source orientation language but does not earn an east-bank polygon, side-of-channel classification, compass ray, crossing, or paired west-side geometry. `1 mile` preserves source-written measure without measurement path, direction, radius, road/water distance rule, or coordinate. No Oknoxuby line, plantation point, one-mile buffer/ring, farm point, parcel, route, residence point, person point, modern Noxubee/Oknoxubee snap, or same-page locality merge is authorized.
+
+
+EARNED CROSSING
+This occurrence is ready to cross only as three row-centered relations: r12 ON → `Oknoxuby`; r12 CARRIES → `east side` [anchor open]; r12 1 MILE FROM → `plantation` [unnamed / unlocated]. The unresolved reach is whether the orientation phrase is explicitly anchored to Oknoxuby, what historical object `plantation` denotes, whether the source mile was measured by any recoverable practice, and whether later independent evidence can lawfully locate or join those relations.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | occurrence geography before identity
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — 2026-09-20 — PL:p83:r13
+Maker / scope: Sedge — one smallest map-facing occurrence following the already crossed r11 and r12 edges. This addendum materially deepens the existing OHC_2468 / manuscript p.83 governing jacket. It does not create a new source wrapper, normalize `Oknoxuby`, borrow modifiers from neighboring rows, or close any person identity.
+
+
+SOURCE-FACING EDGE
+This pass begins from the direct-source wording already certified above by Fieldglass for PL:p83:r13: Locality of Farms = `On Oknoxuby.` The governing historical witness remains manuscript p.83 as carried by OHC_2468.pdf. This classification pass does not claim a fresh independent image reading and creates no additional historical witness.
+
+
+EARNED PLACE / RELATION CLASSIFICATION
+- PL:p83:r13 FARM / LOCALITY OCCURRENCE — ON → `Oknoxuby`.
+
+
+GRAMMAR / OCCURRENCE BRAKE
+This row carries one explicit locality component only. Its relative simplicity is consequential: r13 does not inherit r12's `east side` or `1 mile from plantation`, does not inherit r11's `10 miles from mouth`, and does not anticipate the later r18 `east side` or r21 `west side` occurrences. `On` is preserved as the source's relation verb at this row and no neighboring modifier is donated to it. Same-face recurrence of `Oknoxuby` remains occurrence evidence within one witness, not permission to collapse the several farms, people, rows, or source-locality occurrences into one mapped site.
+
+
+IDENTITY / TIME BRAKE
+The person/name field hosting r13 is not used to identify, strengthen, or normalize the geography. `On Oknoxuby` is locality language, not by itself residence, ownership, possession, entitlement, patent, route, travel, or citizenship. The page-visible `[No 1730. 1834]` remains page/form notation at present source reach and is not assigned here as an r13 event date.
+
+
+PROVENANCE / REPRESENTATION STATE
+One manuscript-page witness is carried through the two already verified byte-identical OHC_2468 PDF custody roads. The admitted PNG, temporary inspection renders/crops, Quoin transcription, Fieldglass source-reading addenda, this Sedge classification addendum, and any Prose Map register entry remain representation / derivative layers and do not increase witness count. The present crossing classifies wording already fixed by direct source return above.
+
+
+GEOMETRY STATE
+RELATIONAL / UNPLACED. `On` earns a source-stated relation to `Oknoxuby` but supplies no recoverable line, bank, side, distance, direction, crossing, mouth, route, parcel, farm point, residence point, person point, or coordinate. No Oknoxuby geometry, modern Noxubee/Oknoxubee snap, or merge with r11/r12/r18/r21 is authorized.
+
+
+EARNED CROSSING
+This occurrence is ready to cross only as: r13 FARM / LOCALITY OCCURRENCE — ON → `Oknoxuby` [historical referent and geometry open]. Its useful map value is precisely its lower descriptive reach: it preserves an explicit `On Oknoxuby` occurrence without importing any neighboring distance or orientation language. Ravel may receive that prose constraint and nothing stronger.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | occurrence geography before identity
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — 2026-09-20 — PL:p83:r18
+
+
+Maker / scope: Sedge — one smallest map-facing occurrence following the already crossed r11–r13 edges. This addendum materially deepens the existing OHC_2468 / manuscript p.83 governing jacket. It does not create a new source wrapper, normalize `Oknoxuby`, anchor `east side`, pair this row with the later west-side row, or close any person identity.
+
+
+SOURCE-FACING EDGE
+This pass begins from the direct-source wording already certified above by Fieldglass for PL:p83:r18: Locality of Farms = `Oknoxuby. east side.` The governing historical witness remains manuscript p.83 as carried by OHC_2468.pdf. This classification pass does not claim a fresh independent image reading and creates no additional historical witness.
+
+
+EARNED PLACE / RELATION CLASSIFICATION
+- PL:p83:r18 FARM / LOCALITY OCCURRENCE — LOCALITY OF FARMS CARRIES → `Oknoxuby.`
+- SAME ROW OCCURRENCE — CARRIES → `east side` [orientation phrase; exact anchor / feature being sided OPEN].
+
+
+GRAMMAR / OCCURRENCE BRAKE
+The source-written period after `Oknoxuby.` permits the bare locality token and following orientation phrase to remain analytically distinct. Co-row sequence does not yet earn the stronger proposition `east side of Oknoxuby`. r18 does not inherit r11’s `10 miles from mouth`, r12’s `On` or `1 mile from plantation`, r13’s `On`, or r21’s later `west side`. Repetition of `east side` on r12 and r18 is same-witness recurrence, not a site-identity bridge; r18 and r21 are not turned into opposed-bank geometry, a crossing, or a common mapped reach.
+
+
+IDENTITY / TIME BRAKE
+The person/name field hosting r18 is not used to identify or strengthen the geography. The locality wording does not independently establish residence, ownership, possession, travel, route use, patent, citizenship, or person identity. The page-visible `[No 1730. 1834]` remains page/form notation at present reach and is not assigned as an r18 event date.
+
+
+PROVENANCE / REPRESENTATION STATE
+One manuscript-page witness is carried through the two already verified byte-identical OHC_2468 PDF custody roads. The admitted PNG, temporary inspection renders/crops, Quoin transcription, Fieldglass source-reading addenda, this Sedge classification addendum, and the First Draw Register remain representation / derivative layers and do not increase witness count. The present crossing classifies wording already fixed by direct source return above.
+
+
+GEOMETRY STATE
+RELATIONAL / ORIENTED-PHRASE / UNPLACED. `Oknoxuby` remains a source-written historical locality form with exact referent open. `east side` preserves source orientation language but does not earn an anchor, east bank, side polygon, compass ray, crossing, point, line, farm polygon, parcel, residence point, person point, coordinate, or modern Noxubee/Oknoxubee snap. No merge with r12 or r21 is authorized.
+
+
+EARNED CROSSING
+This occurrence is ready to cross only as two row-centered text relations: r18 LOCALITY OF FARMS CARRIES → `Oknoxuby.`; r18 CARRIES → `east side` [anchor open]. Ravel may receive those prose constraints and nothing stronger. The unresolved reach is what historical object `Oknoxuby` denotes, what feature the `east side` phrase modifies, and whether any independent source can later join or place those relations lawfully.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | occurrence geography before identity
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — 2026-09-20 — PL:p83:r21
+Maker / scope: Sedge — one smallest map-facing occurrence following the already crossed r11–r13 and r18 edges. This addendum materially deepens the existing OHC_2468 / manuscript p.83 governing jacket. It does not create a new source wrapper, normalize `Oknoxuby`, anchor `west side`, pair this row with the east-side rows, or close any person identity.
+
+
+SOURCE-FACING EDGE
+This pass begins from the direct-source wording already certified above by Fieldglass for PL:p83:r21: Locality of Farms = `Oknoxuby. west side.` The governing historical witness remains manuscript p.83 as carried by OHC_2468.pdf. This classification pass does not claim a fresh independent image reading and creates no additional historical witness.
+
+
+EARNED PLACE / RELATION CLASSIFICATION
+- PL:p83:r21 FARM / LOCALITY OCCURRENCE — LOCALITY OF FARMS CARRIES → `Oknoxuby.`
+- SAME ROW OCCURRENCE — CARRIES → `west side` [orientation phrase; exact anchor / feature being sided OPEN].
+
+
+GRAMMAR / OCCURRENCE BRAKE
+The source-written period after `Oknoxuby.` keeps the bare locality token and following orientation phrase separately accountable at current reach. Co-row sequence does not yet earn the stronger proposition `west side of Oknoxuby`. r21 does not inherit r11’s `10 miles from mouth`, r12’s `On` / `east side` / `1 mile from plantation`, r13’s `On`, or r18’s `east side`. The r21 west-side phrase and the r12/r18 east-side phrases do not establish opposed banks, a common reach, a crossing, a confluence, a channel trace, a route, or paired coordinates.
+
+
+IDENTITY / TIME BRAKE
+The person/name field hosting r21 is not used to identify or strengthen the geography. The locality wording does not independently establish residence, ownership, possession, travel, route use, patent, citizenship, or person identity. The page-visible `[No 1730. 1834]` remains page/form notation at present reach and is not assigned as an r21 event date.
+
+
+PROVENANCE / REPRESENTATION STATE
+One manuscript-page witness is carried through the two already verified byte-identical OHC_2468 PDF custody roads. The admitted PNG, temporary inspection renders/crops, Quoin transcription, Fieldglass source-reading addenda, this Sedge classification addendum, and the First Draw Register remain representation / derivative layers and do not increase witness count. The present crossing classifies wording already fixed by direct source return above.
+
+
+GEOMETRY STATE
+RELATIONAL / ORIENTED-PHRASE / UNPLACED. `Oknoxuby` remains a source-written historical locality form with exact referent open. `west side` preserves source orientation language but does not earn an anchor, west bank, side polygon, compass ray, crossing, point, line, farm polygon, parcel, residence point, person point, coordinate, or modern Noxubee/Oknoxubee snap. No merge with r12 or r18 is authorized.
+
+
+EARNED CROSSING
+This occurrence is ready to cross only as two row-centered text relations: r21 LOCALITY OF FARMS CARRIES → `Oknoxuby.`; r21 CARRIES → `west side` [anchor open]. Ravel may receive those prose constraints and nothing stronger. The unresolved reach is what historical object `Oknoxuby` denotes, what feature the `west side` phrase modifies, and whether any independent source can later join or place those relations lawfully.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | occurrence geography before identity
+
+
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — 2026-09-20 — PL:p83:r15
+Maker / scope: Sedge — one smallest still-live map-facing occurrence on manuscript p.83. This addendum materially deepens the existing OHC_2468 governing jacket. It does not create a new source wrapper, normalize the uncertain name embedded in the route phrase, identify a factory, or close any person identity.
+
+
+SOURCE-FACING EDGE
+This pass begins from the direct-source correction already fixed above by Fieldglass for PL:p83:r15. At active diplomatic reach the Locality of Farms line is `Near H[ochlon/ochlom]tubbe factory road.` The bracket records the present n/m reading uncertainty and is Workshop notation, not source punctuation. The governing historical witness remains manuscript p.83 as carried by OHC_2468.pdf. This classification pass does not claim a fresh independent image reading and creates no additional historical witness.
+
+
+EARNED PLACE / RELATION CLASSIFICATION
+- PL:p83:r15 FARM / LOCALITY OCCURRENCE — NEAR → `H[ochlon/ochlom]tubbe factory road` [source road phrase; internal proper-name reading partly unresolved].
+- The lexical component `factory road` is source-written, but this pass does not detach it from the full route phrase into a second independent place occurrence.
+
+
+GRAMMAR / OCCURRENCE BRAKE
+`Near` is the source-carried relation. The following phrase functions at present reach as one route-like textual anchor whose internal proper-name spelling is not fully certified. Co-occurrence does not earn `near the factory`, does not identify the uncertain word as a person, settlement, factory owner, factory name, district, or road name, and does not connect this r15 road occurrence to factory-road language on any other Public Lands page. The r15 occurrence also receives none of the r11–r13 or r18/r21 Oknoxuby distance/orientation language.
+
+
+IDENTITY / TIME BRAKE
+The row host is not used to identify or strengthen the geography. `Near ... factory road` is locality wording only at present reach; it does not independently establish residence, ownership, possession, travel, road use, factory employment, patent, citizenship, or person identity. The page-visible `[No 1730. 1834]` remains page/form notation and is not assigned here as an r15 event date.
+
+
+PROVENANCE / REPRESENTATION STATE
+One manuscript-page witness is carried through the two already verified byte-identical OHC_2468 PDF custody roads. The admitted PNG, temporary inspection renders/crops, Quoin comparison reading, Fieldglass direct-source correction, this Sedge classification addendum, and the First Draw Register remain representation / derivative layers and do not increase witness count. Quoin's fuller `Near Hochlontubbe factory road.` reading remains a derivative comparison; the governing jacket continues to hold the n/m uncertainty visible.
+
+
+GEOMETRY STATE
+RELATIONAL / PROXIMITY / UNPLACED. `Near` earns qualitative proximity only. The source supplies no distance, side, direction, road alignment, road width, road endpoints, factory point, crossing, route-use event, farm point, parcel, residence point, person point, coordinate, or modern-road equivalent. No buffer/radius, factory symbol, route polyline, or modern snap is authorized.
+
+
+EARNED CROSSING
+This occurrence is ready to cross only as: r15 FARM / LOCALITY OCCURRENCE — NEAR → `H[ochlon/ochlom]tubbe factory road` [route phrase; internal name reading partly unresolved; geometry open]. Ravel may receive that prose constraint and nothing stronger. The unresolved reach is the diplomatic spelling of the embedded name, the historical identity and alignment of the road, what `factory` denotes in the phrase, and whether any independent source can lawfully place or join this occurrence.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE MAP DEEPENING — PL:p83:r02 — source-written ditto dependency → inherited `Oknoxuby` locality / fresh-attestation brake
+
+
+SOURCE STATE
+The governing jacket already controls the direct-source sequence on manuscript p.83: the immediately preceding populated row writes `Oknoxuby` in Locality of Farms; PL:p83:r02, the following McKinney alternative-name row, carries source-written `do` in that same printed field. The admitted reading chain resolves that `do` to the immediately preceding explicit locality component. Preserve the documentary levels: `do` is the source-written mark on r02; `Oknoxuby` is the inherited locality reading reached through that mark, not fresh lettering on r02.
+
+
+OCCURRENCE GEOGRAPHY
+- PL:p83:r02 LOCALITY CELL — SOURCE-WRITTEN DEPENDS ON → immediately preceding explicit Locality of Farms component.
+- PL:p83:r02 INHERITED LOCALITY STATE — THROUGH DITTO DEPENDENCY CARRIES → `Oknoxuby` [historical referent / geometry OPEN].
+The dependency creates an r02 locality occurrence without turning r02 into a second explicit `Oknoxuby` inscription. Do not merge r02 with the preceding row, the later r11/r12/r13/r18/r21 Oknoxuby occurrences, p.72 `Oxnuby`, or a modern feature. Same-word inheritance and same-face recurrence do not merge farms, people, tracts, households, or identities.
+
+
+FIELD / IDENTITY / TIME CONTROL
+The r02 General Remarks ditto remains a separate field-contained dependency to its own immediately preceding remarks state; it does not alter the locality chain. The row host's unresolved alternative-name wording, including `or McKinney`, is identity text and supplies no extra geographic precision. The locality dependency does not establish residence, ownership, possession, dwelling, travel, patent, citizenship, household membership, or McKinney identity. The page-visible `[No 1730. 1834]` remains page/form notation, not an assigned r02 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: Public Lands No. 2 manuscript p.83 as carried by OHC_2468.pdf. The two previously verified byte-identical PDF custody objects remain two custody roads to one historical witness. The admitted PNG, inspection derivatives, Glean dependency reading, Small Door / Name Web indexing, Quoin transcription, Fieldglass source-reading addenda, governing jacket, this Sedge classification, and the First Draw Register are representation / derivative layers and do not increase witness count.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN DEPENDENCY / INHERITED LOCALITY / RELATIONAL / UNPLACED.
+Geometry: NONE EARNED. The ditto chain earns textual inheritance only. It does not earn an Oknoxuby line, point, bank, side, mouth, distance, direction, farm point, parcel, residence, route, coordinate, modern Noxubee/Oknoxubee snap, or connective geometry to the preceding row. An inherited locality may remain completely unplaced.
+
+
+RAVEL HANDOFF
+Pass exactly two prose states: `r02 LOCALITY CELL — DEPENDS ON → immediately preceding explicit locality component`; and `r02 — THROUGH DITTO DEPENDENCY CARRIES → Oknoxuby [INHERITED, NOT FRESHLY INSCRIBED; REFERENT / GEOMETRY OPEN]`. Draw no new geometry and do not convert the dependency into identity or residence.
+
+
+WAY HOME / UNRESOLVED REACH
+Governing jacket → OHC_2468 manuscript p.83 → immediately preceding explicit Locality of Farms cell → r02 source-written `do`. Independent geographic work would still be needed to identify historical `Oknoxuby` or locate any occurrence. Until then the inheritance is source-earned while the ground remains open.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+QUIRE SOURCE-GRAMMAR CORRECTION — `or` TOKEN / ALIAS SEMANTICS — 20 SEPTEMBER 2026
+
+
+The governing face still earns exactly the name-field state already controlled above: an unresolved Choctaw-language name followed by source-written `or McKinney`. The early jacket shorthand calling this an `alias relation` / `alias construction` outruns that visible syntax at semantic level. A separately controlled Public Lands No. 3 face, manuscript p.92 / OHC_2484, likewise places two correction-open written name forms in one name field joined by source-written `or`, while its jacket correctly leaves the relation type unresolved: alias, alternate form, translation, correction, compiler uncertainty, name change, or another practice are not decided by the connective alone.
+
+
+Active correction at this point only: the p.83 source-visible relation is `[uncertain Choctaw-language name] or McKinney`. `or` is an earned name-form connective; `alias` is not source-written and is no longer treated here as the settled semantic subtype. This correction does not alter the unread first name, the row numbers, the Oknoxuby / ditto chain, the inherited `Good land. hickory.` remarks, or any standing nonclaim.
+
+
+SOURCE-WRITTEN `or` ≠ FIXED ALIAS SEMANTICS.
+FORMAL NAME ALTERNATION ≠ PERSON-CARDINALITY RESOLUTION.
+CONNECTIVE RECURRENCE ≠ CORPUS-WIDE NAME-NORMALIZATION RULE.
+
+
+This is correction history, not erasure: earlier uses of `alias row` remain visible as workshop shorthand but are superseded where they imply a historical relation type stronger than the source currently earns. The Source House object remains one row occurrence with two written name forms and an unresolved relation between them.
+
+
+Return path: this governing p.83 jacket → OHC_2468 manuscript face / source-written `or McKinney` → governing p.92 OHC_2484 jacket / source-written `or` name-field occurrence → standing Mapping Grounds Public Lands form grammar.
+
+
+Open: exact p.83 first-name reading; any contemporary instruction defining `or` in these returns; any source that explicitly glosses a particular pair as `called`, `otherwise known as`, translation, correction, or same-person identity.
+
+
+— Quire
+Source House / Public Lands name-form grammar / correction seam
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — 2026-09-20 — PL:p83:r01
+
+
+Maker / scope: Sedge — one smallest live map-facing occurrence immediately upstream of the already landed r02 ditto dependency. This addendum materially deepens the existing OHC_2468 / manuscript p.83 governing jacket. It does not create another source wrapper, normalize `Oknoxuby`, merge r01 with r02 or later same-face occurrences, or close any person identity.
+
+
+SOURCE-FACING EDGE
+The governing jacket already controls a direct-source finding by Glean: the first visible populated row on manuscript p.83 carries an explicit Locality of Farms entry `Oknoxuby`. PL:p83:r01 is used here solely as the top-to-bottom occurrence handle for that first populated row. The historical witness remains manuscript p.83 as carried by OHC_2468.pdf; this Sedge pass classifies the already source-certified reading and does not claim a fresh independent image reading.
+
+
+EARNED PLACE / RELATION CLASSIFICATION
+- PL:p83:r01 FARM / LOCALITY OCCURRENCE — LOCALITY OF FARMS CARRIES → `Oknoxuby` [EXPLICIT SOURCE-WRITTEN LOCALITY].
+- PL:p83:r02 — SOURCE-WRITTEN `do` DEPENDS ON → this immediately preceding r01 explicit locality component. That dependency is already landed separately and does not merge the two row occurrences.
+
+
+GRAMMAR / OCCURRENCE BRAKE
+r01 supplies a bare locality entry under the printed `Locality of Farms` field. It does not supply `On`, `near`, a side, a distance, a mouth, a road, a plantation, a crossing, or any other spatial modifier. The later r11/r12/r13/r18/r21 `Oknoxuby` forms remain separate same-witness occurrences with their own wording. r02 inherits the r01 wording through its own source-written ditto; r01 does not inherit anything back from r02.
+
+
+IDENTITY / TIME BRAKE
+The row host is not used to identify or strengthen the geography. A Locality of Farms entry does not by itself establish residence, ownership, possession, dwelling, entitlement, patent, travel, route use, citizenship, or identity continuity. The page-visible `[No 1730. 1834]` remains page/form notation at present source reach and is not assigned here as an r01 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: Public Lands No. 2 manuscript p.83 as carried by OHC_2468.pdf. The two previously verified byte-identical OHC_2468 PDF custody objects remain two custody roads to one historical witness. The admitted PNG, temporary inspection renders/crops, Glean reading, Quoin transcription, Fieldglass addenda, this governing jacket, this Sedge classification, and the First Draw Register remain representations / derivatives and do not increase witness count.
+
+
+PRECISION / GEOMETRY
+Precision: EXPLICIT BARE LOCALITY / RELATIONAL-FIELD STATE / UNPLACED.
+Geometry: NONE EARNED. `Oknoxuby` is source-written but its historical referent remains open. No point, line, bank, side polygon, mouth point, route, farm point, parcel, residence, coordinate, modern Noxubee/Oknoxubee snap, or connector to r02 or later p.83 occurrences is authorized.
+
+
+RAVEL HANDOFF
+Pass exactly one new prose constraint: `r01 LOCALITY OF FARMS CARRIES → Oknoxuby [EXPLICIT SOURCE-WRITTEN LOCALITY; REFERENT / GEOMETRY OPEN]`. Preserve separately the already-landed r02 dependency on this occurrence. Draw no geometry and do not convert same-word recurrence or ditto dependence into place identity.
+
+
+WAY HOME / UNRESOLVED REACH
+Governing jacket → OHC_2468 manuscript p.83 → first visible populated row → explicit Locality of Farms `Oknoxuby`. Independent geographic work is still required to identify the historical referent or locate the occurrence. Until then the word is source-earned and the ground remains open.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — 2026-09-20 — PL:p83:r14
+
+
+Maker / scope: Sedge — one smallest live source-facing dependency immediately downstream of the already landed r13 `On Oknoxuby.` occurrence. This addendum materially deepens the existing OHC_2468 / manuscript p.83 governing jacket. It does not create another source wrapper, normalize `Oknoxuby`, borrow r12 modifiers, or close any person identity.
+
+
+DIRECT SOURCE RETURN / SOURCE-FACING EDGE
+This pass returned directly to the governing archival PDF OHC_2468.pdf, Drive ID `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q`, manuscript p.83. A local 240-dpi page render and bounded crop were used only for visual inspection and remain temporary inspection derivatives. On the face, the populated row immediately following PL:p83:r13 carries source-written `do` in the printed Locality of Farms field. The immediately preceding r13 locality entry is already source-certified as `On Oknoxuby.`
+
+
+EARNED PLACE / RELATION CLASSIFICATION
+- PL:p83:r14 LOCALITY CELL — SOURCE-WRITTEN DEPENDS ON → immediately preceding r13 Locality of Farms component.
+- PL:p83:r14 INHERITED LOCALITY-RELATION STATE — THROUGH DITTO DEPENDENCY CARRIES → `On Oknoxuby.` [inherited; not freshly inscribed; historical referent / geometry OPEN].
+
+
+GRAMMAR / OCCURRENCE BRAKE
+The source-written `do` is the r14 mark. `On Oknoxuby.` is the inherited preceding field state, not lettering newly present on r14. The dependency is field-contained and immediate. r14 does not inherit r12's `east side` or `1 mile from plantation`, r11's `10 miles from mouth`, or any later r18/r21 side language. Do not merge r14 with r13 as one farm, one person, one tract, one household, or one mapped occurrence.
+
+
+IDENTITY / TIME BRAKE
+The row host is not used to identify or strengthen the geography. The inherited locality relation does not establish residence, ownership, possession, dwelling, travel, patent, citizenship, household relation, or person identity. The page-visible `[No 1730. 1834]` remains page/form notation and is not assigned here as an r14 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: Public Lands No. 2 manuscript p.83 as carried by OHC_2468.pdf. The two previously verified byte-identical OHC_2468 PDF custody objects remain two custody roads to one historical witness. This pass directly inspected the governing PDF; the local 240-dpi render and crop are reading derivatives only. The admitted PNG, Quoin transcription, earlier Fieldglass/Glean readings, governing jacket, this Sedge classification, and the First Draw Register remain representations / derivatives and do not increase witness count.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN DEPENDENCY / INHERITED LOCALITY-RELATION / RELATIONAL / UNPLACED.
+Geometry: NONE EARNED. Inheriting `On Oknoxuby.` preserves the source relation without supplying alignment, point, line, bank, side, mouth, distance, route, parcel, farm point, residence point, person point, coordinate, or modern Noxubee/Oknoxubee snap. No connector to r13 beyond the documentary dependency is drawable.
+
+
+RAVEL HANDOFF
+Pass exactly two prose states: `r14 LOCALITY CELL — DEPENDS ON → r13 immediately preceding locality component`; and `r14 — THROUGH DITTO DEPENDENCY CARRIES → On Oknoxuby. [INHERITED, NOT FRESHLY INSCRIBED; REFERENT / GEOMETRY OPEN]`. Draw no geometry and do not convert documentary inheritance into identity or residence.
+
+
+WAY HOME / UNRESOLVED REACH
+Governing jacket → OHC_2468 manuscript p.83 → r13 explicit `On Oknoxuby.` → immediately following r14 source-written `do`. Independent geographic work is still required to identify historical `Oknoxuby` or place either occurrence. Until then the dependency and inherited relation are earned while the ground remains open.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — 2026-09-20 — PL:p83:r16
+
+
+Maker / scope: Sedge — one smallest live source-facing locality occurrence, the next clean place-bearing row after r15. This addendum materially deepens the existing OHC_2468 / manuscript p.83 governing jacket. It does not create another source wrapper, normalize the locality name, convert a source condition phrase into parcel geometry, or close any person identity.
+
+
+DIRECT SOURCE RETURN / SOURCE-FACING EDGE
+This pass returned to the admitted OHC_2468.png study representation, Drive ID `1L9AcD6zNlyjLtnccLloUtUqQJHY6jbi1`, representing the same manuscript p.83 witness carried by governing OHC_2468.pdf. Enlarged local crops were used only for visual inspection and remain temporary derivatives. On PL:p83:r16, the printed Locality of Farms cell carries a bare place-form read at present reach as `Sh[a/u]kulluk`, followed separately in the same locality cell by source-written `no field`. The bracket records present a/u uncertainty and is Workshop notation, not source punctuation. Quoin’s earlier derivative reads `Shukulluk (no field)`; that comparison does not govern the direct-face state.
+
+
+EARNED PLACE / RELATION CLASSIFICATION
+- PL:p83:r16 FARM / LOCALITY OCCURRENCE — LOCALITY OF FARMS CARRIES → `Sh[a/u]kulluk` [bare historical locality form; exact spelling / referent OPEN].
+- SAME r16 LOCALITY CELL — CARRIES → `no field` [source-stated condition / absence phrase; semantic scope OPEN; not a second place].
+
+
+GRAMMAR / OCCURRENCE BRAKE
+The two strings share a printed locality cell but no explicit relational verb or punctuation joins them into a proposition. Do not strengthen the source into `no field at Sh[a/u]kulluk`, `Sh[a/u]kulluk has no field`, or a claim that the row lacks land generally. `no field` does not negate the occurrence or identify what property, farm, cultivated plot, enclosure, or possession is absent.
+
+
+IDENTITY / TIME BRAKE
+The row host is not used to identify or strengthen the geography. Neither the bare locality nor `no field` independently establishes bodily presence, residence, ownership, possession, landlessness, tenancy, travel, patent, citizenship, or identity continuity. The page-visible `[No 1730. 1834]` remains page/form notation and is not assigned here as an r16 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: Public Lands No. 2 manuscript p.83 as carried by OHC_2468.pdf. The two previously verified byte-identical PDF custody objects remain two roads to one witness. The admitted OHC_2468.png used in this pass is a study representation of that witness; the local enlargements are inspection derivatives; Quoin’s prose is a downstream transcription derivative. The governing jacket, this Sedge classification, and First Draw remain analytical derivatives and do not increase witness count.
+
+
+PRECISION / GEOMETRY
+Precision: EXPLICIT BARE LOCALITY + SOURCE CONDITION PHRASE / UNPLACED.
+Geometry: NONE EARNED. `Sh[a/u]kulluk` earns no point, line, district, settlement polygon, farm point, parcel, residence, route, coordinate, or modern-place snap. `no field` is a geometry brake: it does not authorize a zero-area polygon, missing-parcel outline, negative buffer, property boundary, farm footprint, or absence region. Leave the locality text-held and the field condition non-geometric.
+
+
+RAVEL HANDOFF
+Pass exactly two states: `r16 LOCALITY OF FARMS CARRIES → Sh[a/u]kulluk [READING / REFERENT / GEOMETRY OPEN]`; and `same r16 locality cell CARRIES → no field [CONDITION / SEMANTIC SCOPE OPEN; NOT A PLACE]`. Draw nothing from either state.
+
+
+WAY HOME / UNRESOLVED REACH
+Governing jacket → OHC_2468 manuscript p.83 → PL:p83:r16 Locality of Farms cell → `Sh[a/u]kulluk` + `no field`. Independent source work is still required to settle the locality spelling, identify its historical referent, and understand what `no field` means within this form. Until then the locality is earned text and the field condition remains visibly unresolved.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — PL:p83:r17 — DOUBLE DITTO / COMPONENT-LOCAL INHERITANCE
+
+
+Maker / scope: Sedge — one smallest live source-facing dependency immediately downstream of r16. This addendum materially deepens the existing OHC_2468 / manuscript p.83 governing jacket. It does not create another source wrapper, compose inherited components into a source sentence, normalize a locality, or close person identity.
+
+
+DIRECT SOURCE RETURN / SOURCE-FACING EDGE
+This pass returned directly to governing OHC_2468.pdf / manuscript p.83. A local 300-dpi render and bounded crop were used only for visual inspection and remain temporary inspection derivatives. PL:p83:r17 carries two source-written `do` marks in two visibly aligned component positions in the Locality of Farms cell, immediately beneath r16's two controlled components: `Sh[a/u]kulluk` and `no field`. Quoin's derivative sequence `... Shukulluk (no field); do do; ...` is comparison only and does not govern the source reading.
+
+
+EARNED PLACE / RELATION CLASSIFICATION
+- PL:p83:r17 LOCALITY COMPONENT POSITION 1 — SOURCE-WRITTEN DEPENDS ON → r16 first-position locality component.
+- SAME r17 OCCURRENCE — THROUGH THAT DEPENDENCY CARRIES → `Sh[a/u]kulluk` [INHERITED; not freshly inscribed; reading / referent / geometry OPEN].
+- PL:p83:r17 LOCALITY COMPONENT POSITION 2 — SOURCE-WRITTEN DEPENDS ON → r16 second-position component.
+- SAME r17 OCCURRENCE — THROUGH THAT DEPENDENCY CARRIES → `no field` [INHERITED CONDITION; semantic scope OPEN; NOT A PLACE].
+
+
+GRAMMAR / OCCURRENCE BRAKE
+The standing Public Lands form grammar controls aligned ditto marks component-locally, not as whole-cell inheritance. Therefore the two source-written `do` marks do not become a source-written phrase `Sh[a/u]kulluk no field`; they do not earn `no field at Sh[a/u]kulluk` or `Sh[a/u]kulluk has no field`. Documentary dependency does not merge r17 with r16 as one farm, person, tract, household, or site. Nothing is inherited forward from following r18. The inherited expansions are documentary state carried through source-written dependencies; they are not fresh inscriptions or independent attestations.
+
+
+IDENTITY / TIME BRAKE
+The r17 row host contributes no identity precision. The double dependency earns no residence, ownership, possession, landlessness, tenancy, travel, patent, citizenship, household relation, or person-location claim. The page-visible `[No 1730. 1834]` remains page/form notation and is not assigned as an r17 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: Public Lands No. 2 manuscript p.83. The two already verified byte-identical OHC_2468 PDF custody roads remain two roads to one historical witness. This pass directly inspected the governing PDF; the local 300-dpi render/crop are inspection derivatives only. The admitted PNG remains a study representation. Quoin remains a transcription derivative. Governing jacket, Sedge classification, and First Draw are analytical derivatives. None adds a historical witness.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / LOCALITY + CONDITION / UNPLACED.
+Geometry: NONE EARNED. No `Sh[a/u]kulluk` point, line, settlement/district polygon, farm or parcel geometry, residence point, route, coordinate, modern-place snap, `no field` / absence polygon, or ground connector r16→r17 is authorized. Documentary dependency may be shown in prose or index structure only.
+
+
+RAVEL HANDOFF
+Pass exactly: `r17 locality component 1 — DEPENDS ON → r16 first-position locality component; THROUGH DEPENDENCY CARRIES → Sh[a/u]kulluk [INHERITED; READING / REFERENT / GEOMETRY OPEN]`; and `r17 locality component 2 — DEPENDS ON → r16 second-position component; THROUGH DEPENDENCY CARRIES → no field [INHERITED CONDITION; SEMANTIC SCOPE OPEN; NOT A PLACE]`. Draw nothing.
+
+
+WAY HOME / UNRESOLVED REACH
+Governing jacket → OHC_2468.pdf manuscript p.83 → r16 two controlled components → r17 two aligned source-written `do` marks. Still open: exact diplomatic spelling and historical referent of the r16 locality; form meaning / semantic scope of `no field`; any contemporaneous form instruction defining the double-ditto behavior beyond the controlled component grammar; and all modern placement. Preserve the two dependencies without synthesis.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | occurrence geography before identity
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — 2026-09-20 — PL:p83:r19 — SINGLE `do` / FIRST-COMPONENT INHERITANCE ONLY
+
+
+Maker / scope: Sedge — one smallest live source-facing dependency immediately downstream of the already controlled r18 `Oknoxuby. east side.` occurrence. This addendum materially deepens the existing OHC_2468 / manuscript p.83 governing jacket. It does not create another source wrapper, carry `east side` through an unwritten position, normalize `Oknoxuby`, or close person identity.
+
+
+DIRECT SOURCE RETURN / SOURCE-FACING EDGE
+This pass returned directly to governing OHC_2468.pdf, Drive ID `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q`, manuscript p.83. A local 300-dpi render and bounded crop were used only for visual inspection and remain temporary inspection derivatives. The face shows r18 with two visibly separated locality components, `Oknoxuby.` and `east side.`. The immediately following PL:p83:r19 row carries one source-written `do` aligned in the first component position beneath `Oknoxuby`; the second component position beneath r18's `east side` is blank at present visual reach. Quoin's downstream sequence likewise records r18 as `Oxnebby. east side.; do; do; ...`, but that derivative is comparison only and does not govern this direct-face reading.
+
+
+EARNED PLACE / RELATION CLASSIFICATION
+- PL:p83:r19 LOCALITY COMPONENT POSITION 1 — SOURCE-WRITTEN DEPENDS ON → r18 first-position locality component.
+- SAME r19 OCCURRENCE — THROUGH THAT DEPENDENCY CARRIES → `Oknoxuby` [INHERITED; not freshly inscribed; historical referent / geometry OPEN].
+- PL:p83:r19 LOCALITY COMPONENT POSITION 2 — NO SOURCE-WRITTEN ENTRY OBSERVED at present visual reach. The blank position is not a dependency mark and does not carry r18's `east side` forward.
+
+
+GRAMMAR / OCCURRENCE BRAKE
+The standing Public Lands dependency grammar controls inheritance component-locally: DEPENDENCY MARK ≠ FRESH ATTESTATION; COMPONENT-LOCAL INHERITANCE ≠ WHOLE-CELL INHERITANCE. r19 therefore does not inherit the entire r18 locality cell merely because the rows are adjacent. The source writes one `do`, not two. At present reach r19 inherits only the first-position locality state `Oknoxuby`; it does not earn `east side`, `east side of Oknoxuby`, or the composed phrase `Oknoxuby east side`. The blank second position is preserved as silence, not expanded as an unwritten ditto. Documentary dependency does not merge r19 with r18 as one farm, tract, household, person, or mapped occurrence, and nothing is borrowed from following r20 or r21.
+
+
+IDENTITY / TIME BRAKE
+The r19 row host contributes no identity precision. The inherited locality does not establish residence, ownership, possession, travel, patent, citizenship, household relation, or person location. The page-visible `[No 1730. 1834]` remains page/form notation and is not assigned as an r19 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: Public Lands No. 2 manuscript p.83 as carried by OHC_2468.pdf. The two already verified byte-identical OHC_2468 PDF custody roads remain two roads to one historical witness. This pass directly inspected the governing PDF; the local 300-dpi render/crop are temporary inspection derivatives only. The admitted OHC_2468.png remains a study representation. Quoin's prose remains a transcription derivative. The governing jacket, this Sedge classification, and First Draw remain analytical derivatives. None adds a historical witness.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN SINGLE DEPENDENCY / FIRST-COMPONENT INHERITANCE / SECOND COMPONENT BLANK / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point, line, bank, side, parcel, farm point, residence, route, coordinate, modern Noxubee/Oknoxubee snap, east-side geometry, or ground connector r18→r19 is authorized. The only relation crossing is documentary dependency in the first component position.
+
+
+RAVEL HANDOFF
+Pass exactly two states: `r19 locality component 1 — DEPENDS ON → r18 first-position locality component; THROUGH DEPENDENCY CARRIES → Oknoxuby [INHERITED; REFERENT / GEOMETRY OPEN]`; and `r19 locality component 2 — BLANK / NO SOURCE-WRITTEN DEPENDENCY OBSERVED; DO NOT CARRY east side`. Draw nothing.
+
+
+WAY HOME / UNRESOLVED REACH
+Governing jacket → OHC_2468.pdf manuscript p.83 → r18 explicit `Oknoxuby. east side.` → immediately following r19 single first-position `do` + blank second position. Still open: historical referent of `Oknoxuby`; any contemporaneous form instruction defining blank-versus-ditto behavior; and all ground placement. The source earns first-component inheritance and simultaneously withholds the orientation phrase.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+SEDGE SOURCE-FACING ADDENDUM — PL:p83:r20 — CHAINED SINGLE-DITTO INHERITANCE / SECOND POSITION BLANK — 21 Sep 2026
+
+
+SOURCE EDGE
+Direct visual return to the admitted OHC_2468.png representation of manuscript p.83 shows the local sequence r18 `Oknoxuby. east side.` → r19 first-position `do`, second position blank → r20 first-position `do`, second position blank → r21 `Oknoxuby. west side.`. This addendum crosses r20 only.
+
+
+SOURCE STATE / DEPENDENCY
+- r20 locality component position 1 source-writes `do`.
+- Its immediate documentary antecedent is r19 position 1, whose carried state is inherited `Oknoxuby` from r18’s explicit first-position component.
+- Therefore r20 carries `Oknoxuby` through a two-step ditto chain: r18 explicit `Oknoxuby` → r19 `do` → r20 `do`.
+- r20 is not a fresh explicit `Oknoxuby` inscription and does not leap directly to r18 as its immediate dependency.
+- r20 locality component position 2 is blank. It carries no `east side`; silence cannot revive a component already stopped at r19.
+
+
+FORM GRAMMAR
+Component-local inheritance may continue through an inherited documentary state, but only along the occupied component line. Explicit r18 ≠ inherited r19 ≠ inherited r20: three row occurrences, one explicit locality inscription in this chain. Blank second-position state at r19 and r20 blocks `east side`; whole-cell inheritance is not earned.
+
+
+IDENTITY / TIME
+r20 remains a distinct row occurrence and is not merged with r18 or r19 as farm, tract, person, household, or site. The row host contributes no residence, ownership, possession, travel, patent, citizenship, or identity geography. `[No 1730. 1834]` remains page/form notation, not an r20 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+One manuscript p.83 historical witness through two previously verified byte-identical PDF custody roads. The admitted PNG is a study representation; the present crop is an inspection derivative; Quoin is a transcription derivative; governing jacket / Sedge classification / First Draw are analytical derivatives. Witness count remains one.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN CHAINED DEPENDENCY / FIRST-COMPONENT INHERITANCE / SECOND POSITION BLANK / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point or line, east-side geometry, parcel, farm point, residence, route, coordinate, modern snap, or drawable r18→r19→r20 ground connector.
+
+
+RAVEL HANDOFF
+Carry only: `r20 pos1 DEPENDS ON → r19 pos1; THROUGH DITTO CHAIN CARRIES → Oknoxuby [INHERITED; REFERENT / GEOMETRY OPEN]`; and `r20 pos2 BLANK — CARRY NOTHING`. Draw nothing.
+
+
+UNRESOLVED REACH
+Historical referent of `Oknoxuby`; any contemporary instruction defining blank-versus-ditto behavior; all modern placement remain OPEN. The useful source state is chained documentary inheritance without fresh attestation or geometry.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE LANDSCAPE CROSSING ADDENDUM — 2026-09-21 — PL:p83:r22 — DOUBLE `do` AFTER EXPLICIT r21 / COMPONENT-LOCAL RE-ENTRY
+
+
+Maker / scope: Sedge — one smallest live source-facing dependency immediately downstream of r21’s explicit `Oknoxuby. west side.` occurrence. This addendum materially deepens the existing OHC_2468 / manuscript p.83 governing jacket. It does not create another source wrapper, compose inherited components into a stronger source proposition, normalize `Oknoxuby`, anchor `west side`, or close person identity.
+
+
+DIRECT SOURCE RETURN / SOURCE-FACING EDGE
+This pass returned directly to governing OHC_2468.pdf, Drive ID `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q`, manuscript p.83. A local 300-dpi render and bounded crop were used only for visual inspection and remain temporary inspection derivatives. The face shows r21 with two visibly separated source-written locality components, `Oknoxuby.` and `west side.`. The immediately following PL:p83:r22 row carries two source-written `do` marks aligned beneath those two component positions. The row host is not needed for this geographic classification and is left unused rather than read into the map.
+
+
+EARNED PLACE / RELATION CLASSIFICATION
+- PL:p83:r22 LOCALITY COMPONENT POSITION 1 — SOURCE-WRITTEN DEPENDS ON → r21 first-position locality component.
+- SAME r22 OCCURRENCE — THROUGH THAT DEPENDENCY CARRIES → `Oknoxuby` [INHERITED; not freshly inscribed; historical referent / geometry OPEN].
+- PL:p83:r22 LOCALITY COMPONENT POSITION 2 — SOURCE-WRITTEN DEPENDS ON → r21 second-position component.
+- SAME r22 OCCURRENCE — THROUGH THAT DEPENDENCY CARRIES → `west side` [INHERITED ORIENTATION PHRASE; exact anchor / feature being sided OPEN].
+
+
+GRAMMAR / OCCURRENCE BRAKE
+This is a fresh two-component dependency from a fresh explicit two-component antecedent. The second-position `do` on r22 does not continue or revive the blank second-position states at r19 and r20; it re-enters only because r21 itself explicitly writes a new second component, `west side.`, and r22 supplies its own aligned second-position dependency mark. Preserve the source levels: explicit r21 `Oknoxuby.` ≠ inherited r22 `Oknoxuby`; explicit r21 `west side.` ≠ inherited r22 `west side`. The two r22 dependencies remain component-local and do not strengthen the source into `west side of Oknoxuby` or a composed phrase `Oknoxuby west side`. Documentary inheritance does not merge r22 with r21 as one farm, tract, household, person, or mapped site.
+
+
+IDENTITY / TIME BRAKE
+The r22 row host contributes no identity precision. The inherited locality and orientation phrase do not establish residence, ownership, possession, travel, route use, patent, citizenship, household relation, or person location. The page-visible `[No 1730. 1834]` remains page/form notation and is not assigned as an r22 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: Public Lands No. 2 manuscript p.83 as carried by OHC_2468.pdf. The two already verified byte-identical OHC_2468 PDF custody roads remain two roads to one historical witness. This pass directly inspected the governing PDF; the local 300-dpi render/crop are temporary inspection derivatives only. The admitted PNG remains a study representation. Quoin remains a transcription derivative. Governing jacket, this Sedge classification, and First Draw remain analytical derivatives. None adds a historical witness.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point or line, west-bank or west-side polygon, compass ray, paired east/west geometry, parcel, farm point, residence, route, coordinate, modern Noxubee/Oknoxubee snap, or drawable r21→r22 ground connector is authorized. Documentary dependency may be carried in prose/index structure only.
+
+
+RAVEL HANDOFF
+Pass exactly: `r22 pos1 DEPENDS ON → r21 pos1; THROUGH DEPENDENCY CARRIES → Oknoxuby [INHERITED; REFERENT / GEOMETRY OPEN]`; and `r22 pos2 DEPENDS ON → r21 pos2; THROUGH DEPENDENCY CARRIES → west side [INHERITED ORIENTATION PHRASE; ANCHOR / GEOMETRY OPEN]`. Draw nothing.
+
+
+WAY HOME / UNRESOLVED REACH
+Governing jacket → OHC_2468.pdf manuscript p.83 → r21 explicit `Oknoxuby. west side.` → immediately following r22 aligned `do` / `do`. Still open: the historical referent of `Oknoxuby`; what object or feature the orientation phrase modifies; any contemporaneous form instruction defining these aligned ditto positions beyond the controlled component grammar; and all modern placement. The documentary inheritance is earned while the ground remains open.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r23 — CHAINED DOUBLE DITTO AFTER r22
+
+
+Purpose
+Advance one smallest source-facing locality edge after the already-controlled r22 double dependency. Direct return to governing OHC_2468.pdf / manuscript p.83 shows PL:p83:r23 carrying two source-written `do` marks aligned beneath r22’s two locality-component positions. This addendum deepens dependency grammar only; it does not manufacture place identity or geometry.
+
+
+Source-facing state
+r21 explicitly writes `Oknoxuby.` and `west side.`. r22 writes aligned `do` + `do` and carries those two components by immediate dependency. r23 writes aligned `do` + `do` again. Its immediate documentary antecedent is r22, not r21.
+
+
+Occurrence geography
+- r23 locality component position 1 — SOURCE-WRITTEN DEPENDS ON → r22 position 1; THROUGH CHAINED DEPENDENCY CARRIES → `Oknoxuby` [inherited via r22 from r21 explicit position 1; not freshly inscribed; referent / geometry open].
+- r23 locality component position 2 — SOURCE-WRITTEN DEPENDS ON → r22 position 2; THROUGH CHAINED DEPENDENCY CARRIES → `west side` [inherited via r22 from r21 explicit position 2; not freshly inscribed; anchor / geometry open].
+
+
+Grammar / identity brake
+The already-controlled p.83 grammar permits dependency to continue through an inherited component state, as seen in the r18→r19→r20 first-position chain; r23 presents the same documentary mechanism in two aligned positions. That does not turn r23 into a fresh `Oknoxuby` or `west side` attestation, create whole-cell inheritance, or compose `west side of Oknoxuby` / `Oknoxuby west side`. Explicit r21 ≠ inherited r22 ≠ chained-inherited r23. The rows remain separate occurrences and are not merged as farm, tract, household, person, or site. Row-host identity is unused for geography. No residence, ownership, possession, travel, patent, citizenship, or household relation crosses. `[No 1730. 1834]` remains page/form notation, not an r23 event date.
+
+
+Source / representation / derivative / provenance
+One Public Lands manuscript p.83 historical witness is carried through the two already verified byte-identical OHC_2468 PDF custody roads. This return directly inspected the governing PDF. The 300-dpi render/crop used for reading is an inspection derivative; the admitted PNG remains a study representation; Quoin remains a transcription derivative; jacket, Sedge classification, and First Draw are analytical derivatives. None adds a witness.
+
+
+Precision / geometry
+SOURCE-WRITTEN CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point/line, west-bank or west-side shape, paired east/west geometry, farm/parcel/residence point, route, coordinate, modern snap, or r21→r22→r23 ground connector.
+
+
+Ravel handoff
+Carry only the two immediate r23→r22 dependency relations and their inherited component states. Preserve inherited-vs-explicit depth. Draw nothing.
+
+
+Unresolved reach
+Historical referent of `Oknoxuby`; feature modified by `west side`; any contemporary instruction further defining chained aligned ditto behavior; all modern placement remain OPEN.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r24 — THIRD-LEVEL CHAINED DOUBLE DITTO THROUGH r23
+
+
+SOURCE EDGE
+Direct return to OHC_2468 manuscript p.83. The local sequence is r21 explicit `Oknoxuby.` + `west side.` → r22 aligned `do` + `do` → r23 aligned `do` + `do` → PL:p83:r24 aligned `do` + `do`. This addendum crosses r24 only. Its immediate documentary antecedent is r23, not r21 or r22. The row host is not used for geography.
+
+
+OCCURRENCE GEOGRAPHY
+- r24 locality component position 1 — SOURCE-WRITTEN DEPENDS ON → r23 position 1; THROUGH THIRD-LEVEL CHAINED DEPENDENCY CARRIES → `Oknoxuby` [inherited via r23/r22 from r21 explicit position 1; NOT FRESHLY INSCRIBED; referent / geometry OPEN].
+- r24 locality component position 2 — SOURCE-WRITTEN DEPENDS ON → r23 position 2; THROUGH THIRD-LEVEL CHAINED DEPENDENCY CARRIES → `west side` [inherited via r23/r22 from r21 explicit position 2; NOT FRESHLY INSCRIBED; anchor / geometry OPEN].
+
+
+GRAMMAR / IDENTITY / TIME BRAKE
+This return deepens dependency depth, not semantic strength. The controlled p.83 grammar permits component-local dependency to continue through inherited state. Therefore explicit r21 ≠ inherited r22 ≠ chained-inherited r23 ≠ chained-inherited r24. r24 adds another documentary occurrence without adding a fresh explicit `Oknoxuby` or `west side` attestation. It does not earn whole-cell inheritance, the composed phrase `west side of Oknoxuby`, or a merge of r21–r24 into one farm, tract, household, person, or site. No residence, ownership, possession, travel, patent, citizenship, or identity geography crosses. `[No 1730. 1834]` remains page/form notation, not an r24 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: one Public Lands No. 2 manuscript p.83 face. This return inspected the archive-custody OHC_2468 PDF directly; that custody object is one of the two already verified byte-identical PDF roads to the same manuscript witness, not an additional witness. The 400-dpi local render used for inspection is a disposable derivative. The admitted PNG, Quoin transcription, prior reading addenda, governing jacket, Sedge classification, and First Draw remain representation / derivative layers. Witness count remains one.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN THIRD-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point or line, west-side shape, paired-bank geometry, farm/parcel/residence point, route, coordinate, modern snap, or r21→r22→r23→r24 ground connector crosses.
+
+
+RAVEL HANDOFF
+Carry only `r24 pos1 DEPENDS ON → r23 pos1` and `r24 pos2 DEPENDS ON → r23 pos2`, with inherited component values `Oknoxuby` and `west side`. Draw nothing. Preserve immediate dependency and inherited-vs-explicit depth.
+
+
+UNRESOLVED REACH
+Historical referent of `Oknoxuby`; feature modified by `west side`; any contemporaneous instruction further defining chained aligned ditto behavior; and all modern placement remain OPEN.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r25 — FOURTH-LEVEL CHAINED DOUBLE DITTO THROUGH r24
+
+
+SOURCE EDGE
+Direct return to governing OHC_2468.pdf / manuscript p.83 at 400 dpi. The local sequence is r21 explicit `Oknoxuby.` + `west side.` → r22 aligned `do` + `do` → r23 aligned `do` + `do` → r24 aligned `do` + `do` → PL:p83:r25 aligned `do` + `do`. This addendum crosses r25 only. Its immediate documentary antecedent is r24. The 400-dpi render/crop is a temporary inspection derivative; the manuscript face remains the witness.
+
+
+OCCURRENCE GEOGRAPHY
+- r25 locality component position 1 — SOURCE-WRITTEN DEPENDS ON → r24 position 1; THROUGH FOURTH-LEVEL CHAINED DEPENDENCY CARRIES → `Oknoxuby` [inherited via r24/r23/r22 from r21 explicit position 1; NOT FRESHLY INSCRIBED; referent / geometry OPEN].
+- r25 locality component position 2 — SOURCE-WRITTEN DEPENDS ON → r24 position 2; THROUGH FOURTH-LEVEL CHAINED DEPENDENCY CARRIES → `west side` [inherited via r24/r23/r22 from r21 explicit position 2; NOT FRESHLY INSCRIBED; anchor / geometry OPEN].
+
+
+GRAMMAR / IDENTITY / TIME BRAKE
+This deepens documentary dependency by one step and nothing else. Explicit r21 ≠ inherited r22 ≠ chained-inherited r23 ≠ chained-inherited r24 ≠ chained-inherited r25. r25 adds another row occurrence without adding an explicit `Oknoxuby` or `west side` attestation. It does not earn whole-cell inheritance or the composed phrase `west side of Oknoxuby`, and it does not merge r21–r25 into one farm, tract, household, person, or site. The row host is not used for geography; no residence, ownership, possession, travel, patent, citizenship, or identity geography crosses. `[No 1730. 1834]` remains page/form notation, not an r25 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: one Public Lands No. 2 manuscript p.83 face. This pass directly inspected archive-custody OHC_2468.pdf, Drive ID `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q`, one of two already verified byte-identical custody roads to the same witness. The 400-dpi local render and crop are temporary inspection derivatives; the admitted PNG is a study representation; Quoin transcription, prior addenda, this governing jacket, Sedge classification, and First Draw are derivative/analytical layers. None adds a witness.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN FOURTH-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point/line, west-side shape, paired-bank geometry, farm/parcel/residence point, route, coordinate, modern snap, or r21→r22→r23→r24→r25 ground connector crosses.
+
+
+RAVEL HANDOFF
+Carry only `r25 pos1 DEPENDS ON → r24 pos1` and `r25 pos2 DEPENDS ON → r24 pos2`, with inherited values `Oknoxuby` and `west side`. Draw nothing. Preserve immediate dependency and inherited-vs-explicit depth.
+
+
+UNRESOLVED REACH
+Historical referent of `Oknoxuby`; feature modified by `west side`; any contemporaneous instruction defining chained aligned ditto behavior; all modern placement remain OPEN.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r26 — FIFTH-LEVEL CHAINED DOUBLE DITTO THROUGH r25
+
+
+SOURCE EDGE
+This pass returned directly to the admitted OHC_2468.png study representation of manuscript p.83, Drive ID `1L9AcD6zNlyjLtnccLloUtUqQJHY6jbi1`. A bounded local crop was used only for visual inspection and remains a temporary derivative. The local sequence continues r21 explicit `Oknoxuby.` + `west side.` → r22 `do` + `do` → r23 `do` + `do` → r24 `do` + `do` → r25 `do` + `do` → PL:p83:r26 `do` + `do`. This addendum crosses r26 only. Its immediate documentary antecedent is r25.
+
+
+OCCURRENCE GEOGRAPHY
+- r26 locality component position 1 — SOURCE-WRITTEN DEPENDS ON → r25 position 1; THROUGH FIFTH-LEVEL CHAINED DEPENDENCY CARRIES → `Oknoxuby` [inherited via r25/r24/r23/r22 from r21 explicit position 1; NOT FRESHLY INSCRIBED; referent / geometry OPEN].
+- r26 locality component position 2 — SOURCE-WRITTEN DEPENDS ON → r25 position 2; THROUGH FIFTH-LEVEL CHAINED DEPENDENCY CARRIES → `west side` [inherited via r25/r24/r23/r22 from r21 explicit position 2; NOT FRESHLY INSCRIBED; anchor / geometry OPEN].
+
+
+GRAMMAR / IDENTITY / TIME BRAKE
+This deepens dependency depth, not semantic strength. Explicit r21 ≠ inherited r22 ≠ chained r23 ≠ chained r24 ≠ chained r25 ≠ chained r26. r26 adds another documentary row occurrence without adding a fresh explicit `Oknoxuby` or `west side` attestation. It does not earn whole-cell inheritance or the composed phrase `west side of Oknoxuby`, and it does not merge r21–r26 into one farm, tract, household, person, or site. The row host is not used for geography; no residence, ownership, possession, travel, patent, citizenship, or identity geography crosses. `[No 1730. 1834]` remains page/form notation, not an r26 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: one Public Lands No. 2 manuscript p.83 face carried by OHC_2468.pdf. The two already verified byte-identical OHC_2468 PDF custody roads remain two roads to one witness. This pass visually inspected the admitted OHC_2468.png study representation; that PNG does not add a witness. The local crop is a temporary inspection derivative. Quoin remains a transcription derivative. Governing jacket, Sedge classification, and First Draw remain analytical derivatives.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN FIFTH-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point/line, west-side shape, paired-bank geometry, farm/parcel/residence point, route, coordinate, modern snap, or r21→r22→r23→r24→r25→r26 ground connector crosses.
+
+
+RAVEL HANDOFF
+Carry only `r26 pos1 DEPENDS ON → r25 pos1` and `r26 pos2 DEPENDS ON → r25 pos2`, with inherited values `Oknoxuby` and `west side`. Draw nothing. Preserve immediate dependency and inherited-vs-explicit depth.
+
+
+UNRESOLVED REACH
+Historical referent of `Oknoxuby`; feature modified by `west side`; any contemporaneous instruction further defining chained aligned ditto behavior; all modern placement remain OPEN.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r27 — SIXTH-LEVEL CHAINED DOUBLE DITTO THROUGH r26
+
+
+SOURCE EDGE
+Direct return to governing OHC_2468.pdf / manuscript p.83 at 300 dpi. The face shows r21 explicit `Oknoxuby.` + `west side.` → r22 `do` + `do` → r23 `do` + `do` → r24 `do` + `do` → r25 `do` + `do` → r26 `do` + `do` → PL:p83:r27 `do` + `do`. This addendum crosses r27 only. Its immediate documentary antecedent is r26. The row host is not used for geography. The 300-dpi render/crop is an inspection derivative; the manuscript face carried by the governing PDF remains the historical witness.
+
+
+OCCURRENCE GEOGRAPHY
+- r27 locality component position 1 — SOURCE-WRITTEN DEPENDS ON → r26 position 1; THROUGH SIXTH-LEVEL CHAINED DEPENDENCY CARRIES → `Oknoxuby` [inherited via r26/r25/r24/r23/r22 from r21 explicit position 1; NOT FRESHLY INSCRIBED; referent / geometry OPEN].
+- r27 locality component position 2 — SOURCE-WRITTEN DEPENDS ON → r26 position 2; THROUGH SIXTH-LEVEL CHAINED DEPENDENCY CARRIES → `west side` [inherited via r26/r25/r24/r23/r22 from r21 explicit position 2; NOT FRESHLY INSCRIBED; anchor / geometry OPEN].
+
+
+GRAMMAR / IDENTITY / TIME BRAKE
+This deepens documentary dependency depth only. Explicit r21 ≠ inherited r22 ≠ chained r23 ≠ chained r24 ≠ chained r25 ≠ chained r26 ≠ chained r27. r27 adds another row occurrence without adding fresh explicit `Oknoxuby` or `west side` lettering. It does not earn whole-cell inheritance, `west side of Oknoxuby`, or a merger of r21–r27 into one farm, tract, household, person, or site. No residence, ownership, possession, travel, patent, citizenship, or identity geography crosses. `[No 1730. 1834]` remains page/form notation, not an r27 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: one Public Lands No. 2 manuscript p.83 face carried by OHC_2468.pdf. The two already verified byte-identical OHC_2468 PDF custody roads remain two roads to one witness. This pass directly rendered and inspected the governing PDF at 300 dpi; that render and bounded crop are temporary inspection derivatives only. The admitted PNG is a study representation; Quoin is a transcription derivative; governing jacket, Sedge classification, and First Draw are analytical derivatives. None adds a witness.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN SIXTH-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point/line, west-side shape, paired-bank geometry, farm/parcel/residence point, route, coordinate, modern snap, or r21→r22→r23→r24→r25→r26→r27 ground connector crosses.
+
+
+RAVEL HANDOFF
+Carry only `r27 pos1 DEPENDS ON → r26 pos1` and `r27 pos2 DEPENDS ON → r26 pos2`, with inherited values `Oknoxuby` and `west side`. Draw nothing. Preserve immediate dependency and inherited-vs-explicit depth.
+
+
+UNRESOLVED REACH
+Historical referent of `Oknoxuby`; feature modified by `west side`; any contemporaneous instruction defining chained aligned ditto behavior; all modern placement remain OPEN.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identit
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r28 — SEVENTH-LEVEL CHAINED DOUBLE DITTO THROUGH r27 — 21 Sep 2026
+
+
+SOURCE EDGE
+Direct return to governing OHC_2468.pdf / manuscript p.83 at 300 dpi. The face continues the locality sequence r21 explicit `Oknoxuby.` + `west side.` → r22 `do` + `do` → r23 `do` + `do` → r24 `do` + `do` → r25 `do` + `do` → r26 `do` + `do` → r27 `do` + `do` → PL:p83:r28 `do` + `do`. This addendum crosses r28 only. Its immediate documentary antecedent is r27. The row host is not used for geography. The local render/crop is an inspection derivative; the manuscript face carried by the governing PDF remains the historical witness.
+
+
+OCCURRENCE GEOGRAPHY
+- r28 locality component position 1 — SOURCE-WRITTEN DEPENDS ON → r27 position 1; THROUGH SEVENTH-LEVEL CHAINED DEPENDENCY CARRIES → `Oknoxuby` [inherited via r27/r26/r25/r24/r23/r22 from r21 explicit position 1; NOT FRESHLY INSCRIBED; referent / geometry OPEN].
+- r28 locality component position 2 — SOURCE-WRITTEN DEPENDS ON → r27 position 2; THROUGH SEVENTH-LEVEL CHAINED DEPENDENCY CARRIES → `west side` [inherited via r27/r26/r25/r24/r23/r22 from r21 explicit position 2; NOT FRESHLY INSCRIBED; anchor / geometry OPEN].
+
+
+GRAMMAR / IDENTITY / TIME BRAKE
+This deepens documentary dependency depth only. Explicit r21 ≠ inherited r22 ≠ chained r23 ≠ chained r24 ≠ chained r25 ≠ chained r26 ≠ chained r27 ≠ chained r28. r28 adds another documentary row occurrence without adding fresh explicit `Oknoxuby` or `west side` lettering. It does not earn whole-cell inheritance, `west side of Oknoxuby`, or a merger of r21–r28 into one farm, tract, household, person, or site. No residence, ownership, possession, travel, patent, citizenship, or identity geography crosses. `[No 1730. 1834]` remains page/form notation, not an r28 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness: one Public Lands No. 2 manuscript p.83 face carried by OHC_2468.pdf. The two already verified byte-identical OHC_2468 PDF custody roads remain two roads to one witness. This pass directly rendered and inspected the governing PDF at 300 dpi; that render and bounded crop are temporary inspection derivatives only. The admitted PNG is a study representation; Quoin is a transcription derivative; governing jacket, Sedge classification, and First Draw are analytical derivatives. None adds a witness.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN SEVENTH-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point/line, west-side shape, paired-bank geometry, farm/parcel/residence point, route, coordinate, modern snap, or r21→r22→r23→r24→r25→r26→r27→r28 ground connector crosses.
+
+
+RAVEL HANDOFF
+Carry only `r28 pos1 DEPENDS ON → r27 pos1` and `r28 pos2 DEPENDS ON → r27 pos2`, with inherited values `Oknoxuby` and `west side`. Draw nothing. Preserve immediate dependency and inherited-vs-explicit depth.
+
+
+UNRESOLVED REACH
+Historical referent of `Oknoxuby`; feature modified by `west side`; any contemporaneous instruction defining chained aligned ditto behavior; all modern placement remain OPEN.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identityy
+
+
+SEDGE CONTINUATION — PL:p83:r29 — eighth-level chained double dependency
+
+
+DIRECT SOURCE RETURN
+Direct return to archive-custody OHC_2468.pdf / manuscript p.83 at 300 dpi. The local sequence is r21 explicit `Oknoxuby.` + `west side.` → r22–r28 aligned `do` + `do` → PL:p83:r29 aligned `do` + `do`. The current render/crop is an inspection derivative only; the manuscript face remains the witness.
+
+
+OCCURRENCE GEOGRAPHY
+- r29 locality position 1 SOURCE-WRITTEN DEPENDS ON → r28 position 1; THROUGH EIGHTH-LEVEL CHAINED DEPENDENCY CARRIES → `Oknoxuby` [INHERITED; NOT FRESHLY INSCRIBED; REFERENT / GEOMETRY OPEN].
+- r29 locality position 2 SOURCE-WRITTEN DEPENDS ON → r28 position 2; THROUGH EIGHTH-LEVEL CHAINED DEPENDENCY CARRIES → `west side` [INHERITED; NOT FRESHLY INSCRIBED; ANCHOR / GEOMETRY OPEN].
+
+
+GRAMMAR / IDENTITY / TIME BRAKE
+Dependency depth increases by one; semantic strength does not. Explicit r21 ≠ inherited r22 ≠ chained-inherited r23 ≠ r24 ≠ r25 ≠ r26 ≠ r27 ≠ r28 ≠ r29. r29 does not earn whole-cell inheritance or `west side of Oknoxuby`, and no row merge into farm, tract, household, person, or site. The row host contributes no geographic precision. `[No 1730. 1834]` remains page/form notation, not an r29 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+One Public Lands No. 2 manuscript p.83 historical witness; two previously verified byte-identical PDF custody roads. This pass directly inspected archive-custody OHC_2468.pdf, Drive `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q`. The 300-dpi render/crop is a temporary inspection derivative; admitted PNG is a study representation; Quoin transcription, governing jacket, Sedge classification, and First Draw are derivative/analytical layers. None adds a witness.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN EIGHTH-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point/line, west-side shape, paired-bank geometry, parcel/farm/residence point, route, coordinate, modern snap, or r21→r22→r23→r24→r25→r26→r27→r28→r29 ground connector.
+
+
+RAVEL HANDOFF
+Carry only `r29 pos1 DEPENDS ON → r28 pos1` and `r29 pos2 DEPENDS ON → r28 pos2`, with inherited values `Oknoxuby` and `west side`. Draw nothing. Preserve immediate dependency and inherited-vs-explicit depth.
+
+
+UNRESOLVED
+Historical referent of `Oknoxuby`; object modified by `west side`; period form instructions; modern placement.
+
+
+— Sedge
+
+
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r30 — NINTH-LEVEL CHAINED DOUBLE DITTO THROUGH r29 — 21 Sep 2026
+
+
+SOURCE EDGE
+Direct return to governing archive-custody OHC_2468.pdf / manuscript p.83 at 300 dpi. The face continues r21 explicit `Oknoxuby.` + `west side.` → r22–r29 aligned `do` + `do` → PL:p83:r30 aligned `do` + `do`. This addendum crosses r30 only. Its immediate documentary antecedent is r29. The 300-dpi render is a temporary inspection derivative; the manuscript face remains the historical witness.
+
+
+OCCURRENCE GEOGRAPHY
+- r30 locality position 1 — SOURCE-WRITTEN DEPENDS ON → r29 position 1; THROUGH NINTH-LEVEL CHAINED DEPENDENCY CARRIES → `Oknoxuby` [INHERITED; NOT FRESHLY INSCRIBED; REFERENT / GEOMETRY OPEN].
+- r30 locality position 2 — SOURCE-WRITTEN DEPENDS ON → r29 position 2; THROUGH NINTH-LEVEL CHAINED DEPENDENCY CARRIES → `west side` [INHERITED; NOT FRESHLY INSCRIBED; ANCHOR / GEOMETRY OPEN].
+
+
+GRAMMAR / IDENTITY / TIME BRAKE
+Dependency depth increases by one; semantic strength does not. Explicit r21 ≠ inherited r22 ≠ chained r23 ≠ r24 ≠ r25 ≠ r26 ≠ r27 ≠ r28 ≠ r29 ≠ r30. r30 adds another documentary occurrence without adding fresh `Oknoxuby` or `west side` lettering. It does not earn whole-cell inheritance, `west side of Oknoxuby`, or a merge of r21–r30 into one farm, tract, household, person, or site. The row host contributes no geographic precision. `[No 1730. 1834]` remains page/form notation, not an r30 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+One Public Lands No. 2 manuscript p.83 historical witness; two previously verified byte-identical PDF custody roads. This pass directly inspected governing OHC_2468.pdf, Drive ID `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q`. The 300-dpi local render is a temporary inspection derivative; the admitted PNG is a study representation; Quoin remains a transcription/navigation derivative; the governing jacket, Sedge classification, and First Draw remain analytical derivatives. None adds a witness.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN NINTH-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point/line, west-side shape, paired-bank geometry, parcel/farm/residence point, route, coordinate, modern snap, or r21→r22→r23→r24→r25→r26→r27→r28→r29→r30 ground connector.
+
+
+RAVEL HANDOFF
+Carry only `r30 pos1 DEPENDS ON → r29 pos1` and `r30 pos2 DEPENDS ON → r29 pos2`, with inherited values `Oknoxuby` and `west side`. Draw nothing. Preserve immediate dependency and inherited-vs-explicit depth.
+
+
+UNRESOLVED
+Historical referent of `Oknoxuby`; object modified by `west side`; any contemporaneous form instruction clarifying aligned ditto chains; modern placement.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r31 — TENTH-LEVEL CHAINED DOUBLE DITTO THROUGH r30 — 21 Sep 2026
+
+
+SOURCE EDGE
+Direct visual return to the admitted OHC_2468.png study representation of manuscript p.83, Drive ID `1L9AcD6zNlyjLtnccLloUtUqQJHY6jbi1`. A bounded lower-page crop was used only for inspection and remains a temporary derivative. The visible locality sequence continues r21 explicit `Oknoxuby.` + `west side.` → r22–r30 aligned `do` + `do` → PL:p83:r31 aligned `do` + `do`. This addendum crosses r31 only. Its immediate documentary antecedent is r30. The row host is not used for geography.
+
+
+OCCURRENCE GEOGRAPHY
+- r31 locality position 1 — SOURCE-WRITTEN DEPENDS ON → r30 position 1; THROUGH TENTH-LEVEL CHAINED DEPENDENCY CARRIES → `Oknoxuby` [INHERITED; NOT FRESHLY INSCRIBED; REFERENT / GEOMETRY OPEN].
+- r31 locality position 2 — SOURCE-WRITTEN DEPENDS ON → r30 position 2; THROUGH TENTH-LEVEL CHAINED DEPENDENCY CARRIES → `west side` [INHERITED; NOT FRESHLY INSCRIBED; ANCHOR / GEOMETRY OPEN].
+
+
+GRAMMAR / IDENTITY / TIME BRAKE
+Dependency depth increases by one; semantic strength does not. Explicit r21 ≠ inherited r22 ≠ chained r23 ≠ r24 ≠ r25 ≠ r26 ≠ r27 ≠ r28 ≠ r29 ≠ r30 ≠ r31. r31 adds another documentary occurrence without adding fresh `Oknoxuby` or `west side` lettering. It does not earn whole-cell inheritance, `west side of Oknoxuby`, or a merge of r21–r31 into one farm, tract, household, person, or site. The row host contributes no geographic precision. `[No 1730. 1834]` remains page/form notation, not an r31 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness remains one Public Lands No. 2 manuscript p.83 face carried by OHC_2468.pdf. The two already verified byte-identical OHC_2468 PDF custody roads remain two roads to that one witness. This pass inspected the admitted OHC_2468.png study representation rather than claiming a fresh independent PDF reading. The bounded crop is an inspection derivative; Quoin remains a transcription/navigation derivative; the governing jacket, this Sedge classification, and First Draw are analytical derivatives. None adds a witness.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN TENTH-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point or line, west-side shape, paired-bank geometry, parcel/farm/residence point, route, coordinate, modern snap, or r21→r31 documentary-chain ground connector crosses.
+
+
+RAVEL HANDOFF
+Carry only `r31 pos1 DEPENDS ON → r30 pos1` and `r31 pos2 DEPENDS ON → r30 pos2`, with inherited values `Oknoxuby` and `west side`. Draw nothing. Preserve immediate dependency and inherited-vs-explicit depth.
+
+
+UNRESOLVED
+Historical referent of `Oknoxuby`; object modified by `west side`; any contemporaneous form instruction clarifying aligned ditto chains; all modern placement.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r32 — ELEVENTH-LEVEL CHAINED DOUBLE DITTO THROUGH r31 — 21 Sep 2026
+
+
+SOURCE EDGE
+Direct visual return to the admitted OHC_2468.png study representation of manuscript p.83, Drive ID `1L9AcD6zNlyjLtnccLloUtUqQJHY6jbi1`. A bounded lower-page crop was used only for inspection and remains a temporary derivative. The visible locality sequence continues r21 explicit `Oknoxuby.` + `west side.` → r22–r31 aligned `do` + `do` → PL:p83:r32 aligned `do` + `do`. This addendum crosses r32 only. Its immediate documentary antecedent is r31. The row host is not used for geography.
+
+
+OCCURRENCE GEOGRAPHY
+- r32 locality position 1 — SOURCE-WRITTEN DEPENDS ON → r31 position 1; THROUGH ELEVENTH-LEVEL CHAINED DEPENDENCY CARRIES → `Oknoxuby` [INHERITED; NOT FRESHLY INSCRIBED; REFERENT / GEOMETRY OPEN].
+- r32 locality position 2 — SOURCE-WRITTEN DEPENDS ON → r31 position 2; THROUGH ELEVENTH-LEVEL CHAINED DEPENDENCY CARRIES → `west side` [INHERITED; NOT FRESHLY INSCRIBED; ANCHOR / GEOMETRY OPEN].
+
+
+GRAMMAR / IDENTITY / TIME BRAKE
+Dependency depth increases by one; semantic strength does not. Explicit r21 ≠ inherited r22 ≠ chained r23 ≠ r24 ≠ r25 ≠ r26 ≠ r27 ≠ r28 ≠ r29 ≠ r30 ≠ r31 ≠ r32. r32 adds another documentary occurrence without adding fresh `Oknoxuby` or `west side` lettering. It does not earn whole-cell inheritance, `west side of Oknoxuby`, or a merge of r21–r32 into one farm, tract, household, person, or site. The row host contributes no geographic precision. `[No 1730. 1834]` remains page/form notation, not an r32 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness remains one Public Lands No. 2 manuscript p.83 face carried by OHC_2468.pdf. The two already verified byte-identical OHC_2468 PDF custody roads remain two roads to that one witness. This pass inspected the admitted OHC_2468.png study representation rather than claiming a fresh independent PDF reading. The bounded crop is an inspection derivative; Quoin remains a transcription/navigation derivative; the governing jacket, this Sedge classification, and First Draw are analytical derivatives. None adds a witness.
+
+
+PRECISION / GEOMETRY
+Precision: SOURCE-WRITTEN ELEVENTH-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+Geometry: NONE EARNED. No Oknoxuby point or line, west-side shape, paired-bank geometry, parcel/farm/residence point, route, coordinate, modern snap, or r21→r32 documentary-chain ground connector crosses.
+
+
+RAVEL HANDOFF
+Carry only `r32 pos1 DEPENDS ON → r31 pos1` and `r32 pos2 DEPENDS ON → r31 pos2`, with inherited values `Oknoxuby` and `west side`. Draw nothing. Preserve immediate dependency and inherited-vs-explicit depth.
+
+
+UNRESOLVED
+Historical referent of `Oknoxuby`; object modified by `west side`; any contemporaneous form instruction clarifying aligned ditto chains; all modern placement.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r33 — TWELFTH-LEVEL CHAINED DOUBLE DITTO THROUGH r32 — 21 Sep 2026
+
+
+SOURCE-FACING RETURN
+Direct visual return to OHC_2468.pdf, manuscript p.83, rendered at 300 dpi for inspection. The page itself remains the historical manuscript witness carried by this PDF custody road; the 300-dpi render is an inspection derivative and does not increase witness count. The admitted OHC_2468.png remains a study representation of the same face. The governing sequence visible on the manuscript now extends: r21 explicitly writes `Oknoxuby.` + `west side.`; r22–r32 carry aligned `do` + `do`; r33 again source-writes aligned `do` + `do`. Immediate documentary antecedent for r33 is r32, not the older explicit r21 row. Row-host identity is not used to earn geography in this crossing.
+
+
+OCCURRENCE GEOGRAPHY / EARNED VERB
+Mapping verb for this edge: APPEARED — more precisely, source-stated-by-ditto in the locality field. This does not earn lived, patented, filed, travelled, decided, or remembered.
+• PL:p83:r33 pos1 SOURCE-WRITTEN DEPENDS ON → PL:p83:r32 pos1. Through a twelfth-level chained component dependency it carries inherited `Oknoxuby` [not freshly inscribed; historical referent and geometry unresolved].
+• PL:p83:r33 pos2 SOURCE-WRITTEN DEPENDS ON → PL:p83:r32 pos2. Through a twelfth-level chained component dependency it carries inherited `west side` [not freshly inscribed; modified object and geometry unresolved].
+The two component states are retained separately. No whole-cell composition is admitted.
+
+
+GRAMMAR / IDENTITY BRAKE
+Dependency depth increases by one; semantic strength does not. r33 is another documentary occurrence, not another explicit locality attestation. Nothing on this row earns the composed proposition `west side of Oknoxuby`; nothing merges r21–r33 into one farm, tract, household, person, residence, or site. Occurrence geography remains distinct from row-host identity. `[No 1730. 1834]` remains page/form notation rather than an r33 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness count: ONE manuscript p.83 face. Custody roads remain the two previously verified byte-identical OHC_2468 PDF files. This return touched one of those PDFs directly. The 300-dpi page render is a temporary inspection derivative; OHC_2468.png is a study representation; the Quoin body is a transcription/navigation derivative; this jacket, Sedge classification, and First Draw are analytical derivatives. None is promoted to a second historical witness.
+
+
+PRECISION
+SOURCE-WRITTEN TWELFTH-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+
+
+GEOMETRY
+NONE EARNED. No point, line, bank/side polygon, parcel, residence, route, coordinate, modern snap, or r21→r33 documentary-chain line belongs on the earth from this edge.
+
+
+RAVEL HANDOFF
+Cross only the immediate documentary relations:
+• r33 pos1 DEPENDS ON → r32 pos1; inherited value `Oknoxuby`.
+• r33 pos2 DEPENDS ON → r32 pos2; inherited value `west side`.
+Draw nothing on ground. Leave unresolved: historical referent of `Oknoxuby`; object modified by `west side`; any contemporaneous instruction governing chained aligned dittos; every modern placement.
+
+
+Crossing status: jacket deepened before map crossing; geography earned only as documentary dependency; unresolved reach left open.
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r34 — THIRTEENTH-LEVEL CHAINED DOUBLE DITTO THROUGH r33 — 21 Sep 2026
+
+
+SOURCE-FACING RETURN
+Direct visual return to governing OHC_2468.pdf / manuscript p.83, rendered at 300 dpi for inspection. The lower face continues the locality sequence already controlled above: r21 explicitly writes `Oknoxuby.` + `west side.`; r22–r33 carry aligned `do` + `do`; PL:p83:r34 again source-writes aligned `do` + `do`. Its immediate documentary antecedent is r33. The 300-dpi render and bounded lower-page crop are inspection derivatives only; the manuscript face carried by the PDF remains the historical witness. The row host is not used to earn geography.
+
+
+OCCURRENCE GEOGRAPHY / EARNED VERB
+Mapping verb for this edge: APPEARED — more precisely, source-stated-by-ditto in the Locality of Farms field. This does not earn lived, filed, patented, remembered, traveled, decided, or any person-location verb.
+• PL:p83:r34 pos1 SOURCE-WRITTEN DEPENDS ON → PL:p83:r33 pos1. Through a thirteenth-level chained component dependency it carries inherited `Oknoxuby` [not freshly inscribed; historical referent and geometry unresolved].
+• PL:p83:r34 pos2 SOURCE-WRITTEN DEPENDS ON → PL:p83:r33 pos2. Through a thirteenth-level chained component dependency it carries inherited `west side` [not freshly inscribed; modified object and geometry unresolved].
+The two component states remain separately accountable. No whole-cell composition is admitted.
+
+
+GRAMMAR / IDENTITY / TIME BRAKE
+Dependency depth increases by one; semantic strength does not. r34 is another documentary occurrence, not another explicit locality attestation. Nothing on this row earns the composed proposition `west side of Oknoxuby`; nothing merges r21–r34 into one farm, tract, household, person, residence, or site. Occurrence geography remains distinct from row-host identity. `[No 1730. 1834]` remains page/form notation rather than an r34 event date.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness count remains ONE manuscript p.83 face. The two previously verified byte-identical OHC_2468 PDF files remain two custody roads to that one witness. This return directly inspected governing PDF Drive ID `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q`. The 300-dpi render and bounded crop are temporary inspection derivatives; OHC_2468.png remains a study representation; the Quoin body remains a transcription/navigation derivative; this governing jacket, Sedge classification, and First Draw remain analytical derivatives. None is promoted to another historical witness.
+
+
+PRECISION
+SOURCE-WRITTEN THIRTEENTH-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / UNPLACED.
+
+
+GEOMETRY
+NONE EARNED. No Oknoxuby point or line, bank/side polygon, paired-bank geometry, parcel, farm or residence point, route, coordinate, modern snap, or r21→r34 documentary-chain line belongs on the earth from this edge.
+
+
+RAVEL HANDOFF
+Cross only the immediate documentary relations:
+• r34 pos1 DEPENDS ON → r33 pos1; inherited value `Oknoxuby`.
+• r34 pos2 DEPENDS ON → r33 pos2; inherited value `west side`.
+Draw nothing on ground. Preserve immediate dependency and inherited-versus-explicit depth.
+
+
+UNRESOLVED REACH
+Historical referent of `Oknoxuby`; object modified by `west side`; any contemporaneous instruction governing chained aligned dittos; every modern placement. The following source row remains a separate live edge and is not crossed in this addendum.
+
+
+Crossing status: jacket deepened before map crossing; geography earned only as documentary dependency; unresolved reach left open.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+
+
+SEDGE MAPPING GROUNDS ADDENDUM — PL:p83:r35 — FOURTEENTH-LEVEL CHAINED DOUBLE DITTO THROUGH r34 — 21 Sep 2026
+
+
+SOURCE-FACING RETURN
+Direct return to governing OHC_2468.pdf / manuscript p.83. The archive-custody PDF was streamed as the complete 254,039-byte object and rendered locally at 300 dpi solely for visual inspection. The manuscript face remains the historical witness; the render and bounded lower-face inspection view are temporary derivatives. At the bottom of the face, the locality sequence continues r21 explicit `Oknoxuby.` + `west side.` → r22–r34 aligned `do` + `do` → PL:p83:r35 aligned `do` + `do`. r35 is the final visible populated row on manuscript p.83. Its immediate documentary antecedent is r34, not the older explicit r21 row. The row host is not used to earn geography.
+
+
+OCCURRENCE GEOGRAPHY / EARNED VERB
+Mapping verb for this edge: APPEARED — more precisely, source-stated-by-ditto in the Locality of Farms field. This does not earn lived, filed, patented, remembered, traveled, decided, or any person-location verb.
+
+
+• PL:p83:r35 pos1 SOURCE-WRITTEN DEPENDS ON → PL:p83:r34 pos1. Through a fourteenth-level chained component dependency it carries inherited `Oknoxuby` [not freshly inscribed; historical referent and geometry unresolved].
+• PL:p83:r35 pos2 SOURCE-WRITTEN DEPENDS ON → PL:p83:r34 pos2. Through a fourteenth-level chained component dependency it carries inherited `west side` [not freshly inscribed; modified object and geometry unresolved].
+The two component states remain separately accountable. No whole-cell composition is admitted.
+
+
+GRAMMAR / IDENTITY / PAGE-BOUNDARY BRAKE
+Dependency depth increases by one; semantic strength does not. r35 is another documentary occurrence, not another explicit locality attestation. Nothing on this row earns the composed proposition `west side of Oknoxuby`; nothing merges r21–r35 into one farm, tract, household, person, residence, or site. Occurrence geography remains distinct from row-host identity. `[No 1730. 1834]` remains page/form notation rather than an r35 event date.
+
+
+The terminal position on p.83 matters only as documentary state: r35 is the last visible populated row on this face. Its inherited locality/orientation state does not automatically cross the manuscript-page boundary. This pass does not inspect or classify p.84, and no p.83→p.84 locality inheritance is earned from pagination or continued-form appearance alone. A cross-page dependency would require its own source-facing evidence.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical witness count remains ONE manuscript p.83 face. The two previously verified byte-identical OHC_2468 PDF files remain two custody roads to that one witness. This return directly used governing PDF Drive ID `12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q`; the downloaded payload was rendered at 300 dpi for inspection only. OHC_2468.png remains a study representation; the Quoin body remains a transcription/navigation derivative; this governing jacket, Sedge classification, and First Draw remain analytical derivatives. None is promoted to another historical witness.
+
+
+PRECISION
+SOURCE-WRITTEN FOURTEENTH-LEVEL CHAINED DOUBLE DEPENDENCY / COMPONENT-LOCAL INHERITANCE / BARE LOCALITY + ORIENTATION-PHRASE / TERMINAL-ROW-ON-P83 / UNPLACED.
+
+
+GEOMETRY
+NONE EARNED. No Oknoxuby point or line, bank/side polygon, paired-bank geometry, parcel, farm or residence point, route, coordinate, modern snap, or r21→r35 documentary-chain line belongs on the earth from this edge.
+
+
+RAVEL HANDOFF
+Cross only the immediate documentary relations:
+• r35 pos1 DEPENDS ON → r34 pos1; inherited value `Oknoxuby`.
+• r35 pos2 DEPENDS ON → r34 pos2; inherited value `west side`.
+Draw nothing on ground. Preserve immediate dependency, inherited-versus-explicit depth, and the p.83 terminal-row boundary.
+
+
+UNRESOLVED REACH
+Historical referent of `Oknoxuby`; object modified by `west side`; any contemporaneous instruction governing chained aligned dittos; every modern placement; and whether any following manuscript face independently writes a dependency that lawfully continues this locality state. No cross-page continuation is assumed.
+
+
+Crossing status: governing jacket deepened before map crossing; geography earned only as documentary dependency; unresolved reach and page boundary left open.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | alongside Ravel; occurrence geography before identity
+
+
+GLEAN CATEGORY-SUBTRACK AUDIT — page-83 completion
+
+
+Direct 600-dpi inspection of the byte-identical OHC_2468 PDF payload confirms 35 visible populated rows. The two stored PDFs are separate custody objects but one representation and one manuscript witness; SHA-256: `ef7092415ac8b1f95da3f538cfcde97f1b314838b0ed41116ba8a480981d0c2b`.
+
+
+Direct inspection finds no numeric White / Slave / Black(s) category phrase at the held visual reach. Rows r21–r35 do carry a long paired-locality ditto chain: r21 explicitly writes `Oknoxuby.` and `west side.`, while r22–r35 carry aligned `do` + `do`. That chain is real documentary inheritance in Locality of Farms; it is not converted into repeated population-category counts. This is a completed negative annotation audit, not arithmetic zero.
+
+
+Page 83 contributes no category count to the audited p.63–83 corridor. The active corridor therefore remains `61 White(s) | 152 Slave(s)`, while p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate; the terminal p.87 line remains `121 Whites. 203 Slaves.` and is not reconciled here.
+
+
+— Glean

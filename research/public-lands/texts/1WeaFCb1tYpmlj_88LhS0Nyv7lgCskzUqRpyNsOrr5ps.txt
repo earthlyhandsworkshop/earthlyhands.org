@@ -1,0 +1,296 @@
+Public Lands No. 2 p.78 — Tushka Homa chief-given captain statement and three-district / headwater locality grammar — OHC_2463 source jacket
+
+
+Historical object
+
+
+Photographed manuscript page 78 of the source-titled Public Lands return. The visible heading reads `Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty.` This jacket is bounded to one source-facing occurrence and the immediately earned page seams; it does not attempt a full diplomatic transcription of page 78 or a corpus-level interpretation.
+
+
+Method footing
+
+
+This pass follows the current Source Work Front Door and canonical source-work practice: receive the exact historical object before synthesis; distinguish source, digital representation, transcription/derivative, and interpretation; preserve correction history and return paths; do not create a second jacket for a second file-format or custody arrival of the same witness; and do not merge same-name people unless a source independently earns the join.
+
+
+Source / representation / custody
+
+
+Directly inspected study representation:
+- `OHC_2463.png` — Drive ID `1tGgZwHLJ1RIXeoP2arz31As_bMxJ8UbM` — parent folder `76 Distinct Study Surfaces`, folder ID `11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh`.
+- representation size as fetched in this pass: 1,377,569 bytes.
+
+
+Two separately stored files named `OHC_2463.pdf` were materially checked:
+1. Drive ID `1eWB9XEQq5Ax0H0F0S9y6klHzgT3tv2He` — parent `Source objects — received batch 1 — OHC 2408–2518`, folder ID `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`.
+2. Drive ID `1iA9yXGeTne2z07T_2JU_nLH_eeCCGmga` — parent `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`, folder ID `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI`.
+
+
+Both PDFs are 255,256 bytes. Direct full-payload comparison in this pass found them byte-for-byte identical, SHA-256 `95bce8a92e0fe5acbaae4d491cd936f46731f286e7358f62766d3b5d493f3216`. They therefore remain two custody objects / two return routes carrying one identical PDF payload / one manuscript witness. Neither object was merged, moved, renamed, or deleted.
+
+
+Reading method
+
+
+The admitted PNG was inspected directly at native resolution. Temporary local enlargements were used only to test row alignment and difficult handwriting. Those inspection crops are derivatives of the study representation, were not admitted as source objects, and carry no independent evidentiary weight.
+
+
+Direct source observation — Tushka Homa occurrence
+
+
+In the middle-lower portion of page 78, one name-field occurrence is directly readable as:
+
+
+`Tushka Homa.`
+
+
+The same ruled row carries `Same village.` in the Locality of Farms field and `320` in the Total No. of Acres field. In General Remarks, the row carries a short bracket-like / title-like notation at the left edge whose exact letters are not certified here, followed by the clearly readable sentence:
+
+
+`This man was given in by the Chief as a captain.`
+
+
+The sentence is preserved as source wording. The phrase `the Chief` is not resolved to a named individual in this jacket. The opening small notation is preserved as unresolved rather than normalized to `Capt.` merely because the sentence concerns a captain.
+
+
+Finding
+
+
+Page 78 directly records a captain-status statement in the General Remarks column while the name field itself remains `Tushka Homa.` rather than carrying an adopted `Capt.` title in the reading certified by this pass.
+
+
+That local structure is consequential for name-facing work: title/status language can be stated relationally in a remarks field rather than appearing as part of the source name-form. A later Name Web or column view must therefore preserve the distinction between:
+- the written name occurrence `Tushka Homa.`;
+- the source-stated event/claim that `This man was given in by the Chief as a captain.`;
+- any later decision, if independently earned, to treat a captain title as a stable name-form or office relation.
+
+
+Inference — kept separate
+
+
+The wording is compatible with the recorder describing an act of recognition, nomination, presentation, or appointment by a person identified only as `the Chief`. This jacket does not choose among those administrative meanings. It does not establish the date of the act, the identity of the Chief, the legal authority involved, whether the status preceded the page, how long it lasted, or whether another source uses `Capt. Tushka Homa` as a name-form.
+
+
+Derivative boundary
+
+
+No faithful page-78 source-facing jacket was found in bounded Drive searches for `OHC_2463` and `page 78 Public Lands`. The surviving `09 — Phase B Train 01 — OHC_2437–2466` object is retained as a technical/production derivative and was not used to supply this reading. This jacket therefore records a direct-source reading rather than a correction imported from a machine transcription.
+
+
+Unresolved questions
+
+
+- exact diplomatic reading of the small notation immediately before the General Remarks sentence;
+- exact row number within a fully stabilized top-to-bottom page-78 row count;
+- identity of `the Chief`;
+- whether another face or source explicitly writes this occurrence with a captain title;
+- administrative meaning and timing of `was given in`;
+- authorship and contemporaneity of the remark;
+- whether the `Same village.` locality inherits an antecedent place on this page and, if so, the exact antecedent after a full locality-chain transcription;
+- relationship, if any, between the 320-acre figure and the captain-status remark.
+
+
+Explicit nonclaims
+
+
+This jacket does not establish:
+- identity between `Tushka Homa.` and any same- or similar-name occurrence elsewhere;
+- that `Tushka Homa.` was already a captain at treaty time;
+- that `the Chief` was any particular named chief;
+- kinship, faction, military command, political alliance, entitlement, ownership, or residence from the captain remark;
+- that the 320-acre figure was caused by or awarded because of captain status;
+- that every captain in Public Lands is recorded by the same remarks-field grammar;
+- that the unresolved left-edge notation is definitively `Capt.`;
+- that the page sequence alone supplies a district or corpus-level theory.
+
+
+Backward seam
+
+
+The immediately preceding source-facing jacket is `FIELDGLASS SOURCE-FACING JACKET — OHC_2462 page 77 — white/slave counts and mulatto/negro relational annotations`, Drive ID `1bs130fP07dFRjgPOy59FcWFcYod-pwSBlMbdnsOPJkg`. Direct inspection of OHC_2463 shows manuscript page 78 in the same visible No. 2 continued-return form. This earns a bounded 77→78 pagination/form seam only; it does not merge the page-level findings.
+
+
+Forward seam
+
+
+`OHC_2464.png`, Drive ID `1jMgKJX219HNwo5P71C7mIZPdvSojEiYt`, was opened only far enough to establish a distinct manuscript face visibly numbered 79 in the same No. 2 continued-return body. This earns the bounded 78→79 pagination/form seam. Page-79 row content was not worked and no page-79 jacket was created in this pass.
+
+
+Return paths
+
+
+Backward source route:
+`Public Lands — Whole-Document Corpus` → this jacket → `OHC_2463.png` Drive `1tGgZwHLJ1RIXeoP2arz31As_bMxJ8UbM` → `76 Distinct Study Surfaces`.
+
+
+Primary custody route:
+this jacket → `OHC_2463.pdf` Drive `1eWB9XEQq5Ax0H0F0S9y6klHzgT3tv2He` → `Source objects — received batch 1 — OHC 2408–2518`.
+
+
+Alternate custody route:
+this jacket → `OHC_2463.pdf` Drive `1iA9yXGeTne2z07T_2JU_nLH_eeCCGmga` → `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`.
+
+
+Sideways:
+this jacket → page-77 Fieldglass jacket, Drive `1bs130fP07dFRjgPOy59FcWFcYod-pwSBlMbdnsOPJkg`.
+
+
+Forward:
+this jacket → `OHC_2464.png` Drive `1jMgKJX219HNwo5P71C7mIZPdvSojEiYt` → manuscript page 79, row work held.
+
+
+Next honest door
+
+
+A later pass may stabilize page 78's complete row numbering and locality-ditto chain, then test whether another source-facing occurrence writes Tushka Homa with an explicit captain title. Until then, keep the name occurrence and the captain-status sentence separate.
+
+
+Maker: Glean
+Date: 2026-09-0
+
+
+FIELDGLASS GLEAN-FLARE NEGATIVE CONTROL — 2026-09-09 — FULL PAGE-78 CATEGORY-SUBTRACK AUDIT
+
+
+Direct source return
+Fieldglass reopened archival OHC_2463.pdf, Drive ID `1eWB9XEQq5Ax0H0F0S9y6klHzgT3tv2He`, parent `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`, and rendered the complete manuscript face at 600 dpi solely for direct visual inspection. The render and locality-field crop were temporary inspection derivatives and are not source objects or additional witnesses. Existing duplicate-custody controls above remain unchanged.
+
+
+Page-local audit result
+A full visual sweep of manuscript p.78 at present image reach found no safely readable numeric category phrase using `white`, `whites`, `slave`, `slaves`, `Black`, or `Blacks` anywhere in the `Locality of Farms` field. The field instead carries ordinary source locality language and ditto continuations across the visible body, including settlement, creek, village, road, and directional wording. The printed `Entire No. of the Family`, `Males over 16 years`, and `Males and Females under 10 years` columns are regularly populated across the same face.
+
+
+This is a direct negative control, not a zero count. It does not prove that no white, enslaved, or Black person was associated with any p.78 row; it proves only that this face does not presently supply a safely readable numeric category annotation of the kind controlled on pp.76–77 and pp.85–87.
+
+
+Flare consequence
+The No. 2 white/slave/Black annotation practice is therefore not a universal extra count written on every farm row or every continued-return page. Page 78 shows that the ordinary printed family/age schema can carry the visible row accounting while the Locality field remains locality prose. This strengthens the audit rule that an unannotated face is `no category phrase observed at present reach`, never an arithmetic zero and never evidence of absence.
+
+
+Nonclaims
+- No blank or locality-only row is converted to zero whites, zero slaves, or zero Blacks.
+- No inference is made that printed family counts include or exclude racial/status annotations on other pages.
+- No claim is made that the same hand, date, or administrative purpose governs all pages.
+- Tushka Homa's captain-status finding above is unchanged and not made part of this arithmetic control.
+
+
+Exact return
+Public Lands / Emancipation flare → this existing p.78 jacket → OHC_2463.pdf `1eWB9XEQq5Ax0H0F0S9y6klHzgT3tv2He` → manuscript p.78 → full `Locality of Farms` field audit.
+
+
+— Fieldglass
+6
+
+
+
+
+FIELDGLASS MAP DEEPENING — 2026-09-10 — THREE-DISTRICT / HEADWATER AND CREEK-TOPOLOGY CONTROL
+
+
+Direct source return
+
+
+Fieldglass reopened the admitted study representation `OHC_2463.png`, Drive ID `1tGgZwHLJ1RIXeoP2arz31As_bMxJ8UbM`, and inspected the manuscript face directly. Temporary crops/enlargements were used only for visual reading and are not source objects or independent witnesses. Existing PDF-custody and duplicate controls in this jacket remain unchanged.
+
+
+Source-visible map-bearing language
+
+
+The `Locality of Farms` column on manuscript p.78 directly carries, among other locality phrases:
+- `Head of Big Black.`
+- `Petikfa: enters in Sukenatcha`
+- `Near factory.`
+- `Near Alligator creek.`
+- `Head Sukenatcha.`
+- `Alligator creek.`
+- `Konchito settlement`
+- `Same village.`
+- `Konchito village`
+- `1 mile from Konchito village`
+
+
+Lower on the same face, one locality row reads `Konshabulikta. Head waters of Chickasaw` at present visual reach. Above that line, in the same locality cell/row area, the source carries a smaller inserted phrase readable as `in the corner of the three districts.` The terminal treatment after `Chickasaw` is not expanded or modernized here.
+
+
+Adjacent-face control
+
+
+Fieldglass also directly reopened the next study face, `OHC_2464.png`, Drive ID `1jMgKJX219HNwo5P71C7mIZPdvSojEiYt`, manuscript p.79. That face independently carries `Kunchalicta. near the line of the 3 district` and, several rows lower, `Head water of Chickasawhay`. It also writes `Petikfa creek` on a separate row.
+
+
+Map consequence
+
+
+Page 78 now earns an unplaced district/hydrology constraint: one locality occurrence is source-situated `in the corner of the three districts` and at the `Head waters of Chickasaw` as written. Page 79 independently supplies a nearby documentary recurrence of three-district-line language and explicitly writes `Head water of Chickasawhay`. This is strong enough for the Historical Landscape Map to carry a **three-district / headwater envelope** as a source relation, but not strong enough to assign a coordinate, name the three districts from this face, draw their boundaries, or silently complete p.78 `Chickasaw` to `Chickasawhay`.
+
+
+The p.78 phrase `Petikfa: enters in Sukenatcha`, read beside p.79 `Petikfa creek`, also creates a source-backed hydrologic test: `Petikfa` is explicitly a creek-name occurrence on p.79, while p.78 gives an entering relation to `Sukenatcha`. The map may preserve that relation as an **unplaced confluence/topology candidate**. It must not yet merge the two Petikfa occurrences as one geographic feature, normalize `Sukenatcha` to the `Suckanatcha` spelling carried on earlier pages, or draw a confluence line without another source control.
+
+
+Representation and spelling boundary
+
+
+These readings belong to two adjacent photographed manuscript faces in one continued-return body. Similar spellings across pages are evidence-based retrieval/crossing doors, not automatic geographic identity. `Konshabulikta` and `Kunchalicta`, `Chickasaw` and `Chickasawhay`, and `Sukenatcha` and earlier `Suckanatcha` remain separately source-written forms until another source earns normalization or feature identity.
+
+
+Explicit nonclaims
+
+
+- No modern river, creek, district-line, town, or factory coordinate is assigned.
+- No district names are supplied from outside this source and projected backward onto `the three districts`.
+- No row locality is converted into residence, ownership, household location, or parcel geometry.
+- No same- or similar-name locality across p.78/p.79 is merged by spelling resemblance alone.
+- No p.78 `Chickasaw` reading is silently repaired to p.79 `Chickasawhay`.
+- No `Petikfa: enters in Sukenatcha` relation is drawn as a modern mapped confluence yet.
+
+
+Earned next retrieval target
+
+
+A period map, survey, agency return, or district-boundary description that independently identifies the `corner of the three districts` and the relevant Chickasawhay headwaters would be the next object capable of converting this envelope into historical placement. A separate hydrologic source should test Petikfa/Sukenatcha feature identity before any polyline is drawn.
+
+
+Exact return
+
+
+`Marauder’s Map / Historical Landscape Map → existing p.78 Glean jacket [1WeaFCb1tYpmlj_88LhS0Nyv7lgCskzUqRpyNsOrr5ps] → OHC_2463.png [1tGgZwHLJ1RIXeoP2arz31As_bMxJ8UbM] → manuscript p.78 locality column → adjacent control OHC_2464.png [1jMgKJX219HNwo5P71C7mIZPdvSojEiYt] → manuscript p.79 locality column → existing p.79 Glean jacket [1Ramug1yq6UIM2RYTvBoLuENLlzCPShZqryTOc9n0L0Y].`
+
+
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Small Door — 2026-09-20
+
+
+Person / Entity: Tushka Homa [Public Lands p.78 name-field occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.78 PRESENTS the name-field occurrence `Tushka Homa.`; on the same ruled row General Remarks STATES `This man was given in by the Chief as a captain.` The row also carries Locality of Farms `Same village.` and Total No. of Acres `320`, which remain separate row propositions.
+Case / Object: OHC_2463 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.78 / Tushka Homa row
+Place: `Same village.` [antecedent place unresolved by this return]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 2 p.78 — Tushka Homa chief-given captain statement and three-district / headwater locality grammar — OHC_2463 source jacket
+Identity / Relation Status: source-local Tushka Homa occurrence only; no same-name or similar-name merge; `the Chief` is unidentified; source wording `given in by the Chief as a captain` is preserved and is not normalized into appointment, election, hereditary office, military command, company membership, office duration, land entitlement, patent, or later recognition; the unresolved small notation preceding the sentence is not promoted to `Capt.`; `Same village.` is not expanded into a named place, residence, parcel, or modern coordinate.
+Notes: jacket-owned Small Door return compiled at proposition-local strength after rereading Glean’s direct source-facing body and later Fieldglass deepenings; the p.78 three-district/headwater and Petikfa/Sukenatcha map grammar remains rich prose and is not duplicated as a second person relation.
+
+
+Maker: Fieldglass
+Date: 2026-09-10
+GLEAN WHOLE-FACE COMPLETION — 34-row category / lexical control
+
+
+Direct 600-dpi reinspection of the admitted OHC_2463 PDF stabilizes 34 visible name-bearing rows on manuscript p.78. Tushka Homa is r22 in that page-local sequence. The row number is an occurrence locator only; it does not strengthen the captain statement, locality, acreage, or any identity relation.
+
+
+Across all 34 rows, no numeric White / Slave / Black(s) category phrase appears. The page therefore adds no term to the active audited corridor carried from pp.63–77; that account remains `60 White(s) | 152 Slave(s)`. This is a negative annotation audit, not an arithmetic zero.
+
+
+One exact nonnumeric use must remain visible: r05 Locality of Farms reads `Head of Big Black.` Here `Black` is part of a source-written locality phrase, not a counted category. Printed family, age, cultivated-acre, and total-acre fields remain separate accounting tracks. Rows r30–r34 retain uncertain personal-name readings at present image reach; the uncertainty does not erase the visible rows or authorize a normalized name.
+
+
+Crossing consequence
+
+
+The seven-face pp.78–84 assembly remains a category-silence interval, but it is not a lexical-silence interval. Its p.78 return now states the `Head of Big Black.` exception explicitly. No Name Web identity or relation changes are earned by this completion.
+
+
+— Glean

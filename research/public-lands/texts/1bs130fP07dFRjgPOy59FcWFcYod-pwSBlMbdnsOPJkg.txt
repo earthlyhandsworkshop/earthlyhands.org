@@ -1,0 +1,313 @@
+Public Lands No. 2 p.77 — Sally Tom category-field control, Nancy Lilot (Big Nancy), and Curtis Collins row-attribution warning — OHC_2462 source jacket
+
+
+Status: DIRECT-SOURCE PAGE JACKET — ONE MANUSCRIPT FACE — DUPLICATE CUSTODY CONTROLLED
+Maker: Fieldglass
+Date: 2026-09-06
+Corpus: quoted-title Public Lands / Choctaw Treaty farm return
+Visible manuscript page: 77
+
+
+METHOD CONTROL
+
+
+Worked from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md — Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF. Direct source pixels govern; temporary inspection renders do not become source objects. Source observation, inference, uncertain personal-name readings, correction history, nonclaims, and return paths remain separate.
+
+
+HISTORICAL-OBJECT BOUNDARY
+
+
+OHC_2462 is one manuscript face visibly numbered 77. Its heading reads `Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty.` It is a continuation face within Return No. 2, not a complete historical return by itself.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+
+
+PDF custody object A:
+- OHC_2462.pdf
+- Drive ID `18BJzgfLNLmGsBOe7AyVvYb1zwvHNpKPh`
+- parent folder ID `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI`
+- 254,084 bytes
+
+
+PDF custody object B:
+- OHC_2462.pdf
+- Drive ID `1BL0ggHmdVvTOypm9W0l5DhzQefP_6UUK`
+- parent folder ID `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`
+- 254,084 bytes
+
+
+Each PDF was separately streamed in this pass and hashed from its fetched payload. Both produced SHA-256 `7026518c68dd25f55907acbf4d8759bd9177c44271a3a769b66900f8c715878b`. They are two custody routes to one identical PDF payload / one manuscript-page witness, not corroborating historical witnesses.
+
+
+Direct inspection used a rendered view of the fetched PDF and temporary enlarged crops. Those derivatives were used only to inspect handwriting and row alignment and were not admitted as additional source representations.
+
+
+DIRECT SOURCE OBSERVATION — CATEGORY VOCABULARY IN LOCALITY OF FARMS
+
+
+Page 77 does more than repeat numeric white/slave counts. Within the same `Locality of Farms` field, successive rows carry source-written racial/status wording in several different forms.
+
+
+Safely readable phrases include:
+- `1 white]` followed by prose stating that the person is married to Sally Tom’s daughter and lives with Sally Tom; the exact row-holder name and every connective word of the wrapped prose are not certified here.
+- `A mulatto` followed by a similar marriage/living-with-Sally-Tom statement; the personal name is not normalized here.
+- `A mulatto. half Indian and half negro.`
+- `A negro man; had an Indian wife; lives below the factory.`
+
+
+These are source-historical words on this occurrence. This jacket does not translate them into a modern race taxonomy or infer legal status beyond what the manuscript literally says.
+
+
+JOHN COLEMAN ROW — ATTRIBUTION CONTROL
+
+
+The row whose name is clearly written `John Coleman` carries a smaller numeric annotation beginning `1 white 3 slaves]` and then continues with locality/prose substantially readable as:
+`Tombecbe: Curtis Collins (a white man & his family) cultivates this place. Collins has moved since the treaty to some other place.`
+
+
+This is unusually important for attribution discipline. SOURCE OBSERVATION: the numeric category phrase is graphically aligned to the John Coleman row, while the same row’s prose explicitly names Curtis Collins, described as `a white man`, and his family as cultivating the place.
+
+
+INFERENCE LIMIT: row alignment alone therefore does not license attributing every counted person as John Coleman’s household, property, kin, or legal responsibility. Nor does the prose establish that the `1 white` is Curtis Collins, that the `3 slaves` belonged to Coleman or Collins, or that the numeric note and prose were entered at the same time. The source itself gives a reason to keep graphic row association distinct from person-level attribution.
+
+
+BOUNDED PAGE-FACING ARITHMETIC
+
+
+The two safely observed explicit numeric white/slave phrases used in this pass are `1 white]` on an upper relational-annotation row and `1 white 3 slaves]` on the John Coleman row. Added only as a transcription control, they yield at least 2 whites and 3 slaves on the bounded observations recorded here.
+
+
+This is deliberately `at least`, not a full-page subtotal: this pass was aimed at the mixed category/prose structure rather than certifying every possible small mark on all page-77 rows.
+
+
+RELATION TO THE NO. 2 ACCOUNTING QUESTION
+
+
+Page 77 materially broadens the administrative vocabulary between the page-76 dense count face and the page-87 aggregate. The manuscript can place numeric category counts, prose racial descriptors (`mulatto`, `negro`, `white man`), Indigenous relational wording, marriage statements, and cultivation/relocation prose in the same broad Locality of Farms field.
+
+
+That makes a simple modern normalized `race-count column` reconstruction unsafe. It also strengthens the need for a governing instruction or source-level arithmetic audit rather than deriving a rule from layout alone.
+
+
+NONCLAIMS
+
+
+This jacket does not establish:
+- that `mulatto`, `negro`, `white`, `slave`, or `Indian` were mutually exclusive categories in the recorder’s administrative practice;
+- that any one of those words has a stable meaning across all numbered returns;
+- that a numeric count aligned to a named farm row is household composition, ownership, kinship, residence, or legal responsibility of the row-holder;
+- that Curtis Collins is the `1 white` in the John Coleman annotation;
+- that the `3 slaves` are attributable to Coleman, Collins, or another named person;
+- identity continuity for Sally Tom, John Coleman, Curtis Collins, or any similarly named person elsewhere;
+- completeness of page 77’s category annotations or the larger Return No. 2.
+
+
+RETURN PATHS
+
+
+Corpus home: Public Lands — Whole-Document Corpus — Drive ID `1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl`.
+Direct source custody A: OHC_2462.pdf — `18BJzgfLNLmGsBOe7AyVvYb1zwvHNpKPh` — parent `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI`.
+Direct source custody B: byte-identical OHC_2462.pdf — `1BL0ggHmdVvTOypm9W0l5DhzQefP_6UUK` — parent `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`.
+Backward lexical control: OHC_2461 / page-76 Fieldglass jacket — `1OB1lKHy0Dec3_3dpL2mCjWTWW8o_qHdT6pAu9lEhLW0`.
+Forward aggregate control: OHC_2472 / page-87 Fieldglass jacket — `1LgBLN4gKPECl5habBR6vNfrDnOFuEYlwf4bLSAGiK6Q`.
+
+
+STRONGEST EARNED NEXT DOOR
+
+
+Use page 77 as an attribution warning while continuing the No. 2 arithmetic. The strongest source-facing question is not merely whether row numbers add to 121 / 203, but what documentary rule allowed mixed numeric counts and descriptive racial/relational prose to occupy this field, and whether that rule explains the terminal aggregation without flattening `Blacks`, `Slaves`, `white`, `mulatto`, or `negro` into one invented scheme.
+
+
+— Fieldglass
+
+
+
+
+FIELDGLASS GLEAN-FLARE CORRECTION — 2026-09-09 — SALLY TOM `1 slave]` / PAGE-77 FULL CATEGORY AUDIT
+
+
+Direct source return
+Fieldglass reopened the governing OHC_2462.pdf, Drive ID `18BJzgfLNLmGsBOe7AyVvYb1zwvHNpKPh`, parent `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI`, and rendered the complete one-page source at 600 dpi for direct visual inspection. The render and enlarged crops were temporary inspection derivatives only. The existing byte-identical second PDF custody route `1BL0ggHmdVvTOypm9W0l5DhzQefP_6UUK` remains controlled above; this return does not create another witness or alter custody.
+
+
+Material source correction
+The earlier bounded arithmetic missed one explicit numeric category phrase near the top of the Locality of Farms field. The row whose name field writes `Sally Tom` followed by the source descriptor `a free woman` carries, in its Locality of Farms cell, the directly readable phrase:
+
+
+`1 slave] 2 miles from factory`
+
+
+The exact source relation is row alignment only. The phrase does not establish that Sally Tom owned the enslaved person, that the person lived in her household, that the count describes Sally Tom's own legal or racial status, or that the annotation and the name-field descriptor were written at the same time. The source-visible juxtaposition is nevertheless important: a row explicitly describing its named holder as `a free woman` can also carry a numeric `slave` annotation in the separate locality/count subtrack. That is direct evidence against treating every category phrase as a simple classification of the row-holder.
+
+
+Full-page numeric category audit at present visual reach
+A complete 600-dpi pass over the page-77 Locality of Farms field found three safely readable numeric white/slave phrases:
+- Sally Tom row: `1 slave] 2 miles from factory`;
+- the previously jacketed upper relational row: `1 white]` followed by the Sally-Tom marriage/living-with prose;
+- John Coleman row: `1 white 3 slaves]` followed by the Tombecbe / Curtis Collins prose.
+
+
+No additional safely readable numeric phrase using `white`, `whites`, `slave`, `slaves`, `Black`, or `Blacks` was found elsewhere on this face in this whole-page pass. The nonnumeric source phrases `A mulatto`, `A mulatto. half Indian and half negro.`, `A negro man; had an Indian wife; lives below the factory.`, and the prose description of Curtis Collins as `a white man` remain descriptive text and are not arithmetically converted into category counts.
+
+
+Correction history / active arithmetic state
+The earlier jacket's bounded statement `at least 2 whites and 3 slaves` remains above as correction history and is superseded for page-77 direct numeric-category arithmetic. Active page-77 transcription control at present visual reach is:
+
+
+`2 whites | 4 slaves | no numeric Blacks phrase safely read`
+
+
+This is a page-local source subtotal only. It is not a demographic table, ownership count, household reconstruction, or proof that these phrases were the exact inputs used for the Return No. 2 terminal aggregate.
+
+
+Flare consequence
+For the No. 2 reconciliation, page 77 now supplies a stronger structural warning than the original two-phrase pass: numeric category annotations coexist with row-holder status wording and with prose naming other people. A later emancipation/freed-person chain therefore cannot begin by automatically converting `row holder + slave count` into `named enslaver + enslaved person`. The count belongs first to the source row/field occurrence; person-level legal attribution still requires another source.
+
+
+Exact return
+Public Lands / Emancipation flare → this existing OHC_2462 page-77 jacket → OHC_2462.pdf `18BJzgfLNLmGsBOe7AyVvYb1zwvHNpKPh` → manuscript p.77 → Sally Tom row `a free woman` / Locality of Farms `1 slave] 2 miles from factory` → revised page subtotal above.
+
+
+— Fieldglass
+
+
+
+
+GLEAN SOURCE-GRAMMAR CONTROL — SALLY TOM ROW
+
+
+Direct source face
+Reopened the governing OHC_2462.pdf, Drive ID `18BJzgfLNLmGsBOe7AyVvYb1zwvHNpKPh`, and inspected the complete manuscript face plus a 600-dpi crop. This note deepens the existing jacket; it does not create a new source witness.
+
+
+Bounded transcription / field placement
+The printed leftmost heading is `Names of Indians owning Farms.` In that column the row writes `Sally Tom` followed by `a free woman`. The same ruled row carries `10` under `No of Acres Cultivated`, `1` under `Entire No of the Family`, no adopted numeric entries in the two printed age columns at present visual reach, and `1 slave] 2 miles from factory` in the separate `Locality of Farms` field.
+
+
+Source-grammar finding
+The only source-written ownership language in this bounded face is the form heading’s `owning Farms`; the Sally Tom row does not write `owned one slave`, `her slave`, or another person-level possession relation. The safe structured record is therefore: row host Sally Tom; source descriptor `a free woman`; cultivated acres 10; printed family count 1; locality-field category phrase `1 slave]`; person legally responsible for or possessing the counted person unresolved.
+
+
+This is more than a general caution about uncertainty. It supplies a direct negative control against converting every Public Lands formula `named row + slave count` into a volume-wide list of named enslavers. Row association is source evidence. Enslaver attribution is a separate proposition and needs a source-written relation or an independently earned bridge. Esther Butler’s later answer naming Peter Pitchlynn as her old master is that stronger kind of relation; this row is not.
+
+
+Flare consequence
+A Public Lands audit can safely count explicit `slave(s)` phrases and their row hosts, but it must maintain at least two different outputs: a category-occurrence ledger and a person-level enslaver ledger. The first may be built from this form; the second cannot inherit names automatically from graphic alignment. This control remains useful if the larger emancipation flare fails because it governs any reconstruction of the return’s population and property grammar.
+
+
+Nonclaims
+- No claim that Sally Tom did own the counted enslaved person.
+- No claim that Sally Tom did not own the counted enslaved person.
+- No conversion of `a free woman` into a modern racial, citizenship, household, or legal-status conclusion beyond the source wording.
+- No claim that the printed family count includes or excludes the locality-field `1 slave]`.
+- No identity crossing for Sally Tom to another source occurrence.
+
+
+Exact return
+Public Lands / Emancipation flare → existing page-77 jacket → OHC_2462.pdf `18BJzgfLNLmGsBOe7AyVvYb1zwvHNpKPh` → manuscript p.77 → Sally Tom row: `a free woman` / 10 cultivated acres / family 1 / Locality `1 slave] 2 miles from factory` → person-level ownership unresolved.
+
+
+— Glean
+
+
+
+
+FIELDGLASS LANDSCAPE ADDENDUM — NANCY LILOT / `BIG NANCY` PERSON-NAME OCCURRENCE — 18 SEP 2026
+
+
+Direct source return
+Fieldglass reopened the governing OHC_2462.pdf, Drive `18BJzgfLNLmGsBOe7AyVvYb1zwvHNpKPh`, and rendered the full manuscript face at 600 dpi for direct visual inspection. The render and crop were temporary inspection derivatives only; the PDF remains the source representation.
+
+
+Direct source observation
+In the printed `Names of Indians owning Farms` column, one ruled row writes `Nancy Lilot. (Big Nancy)`. The same row carries `14` cultivated acres, family `9`, `4` in the printed males-over-16 column, `2` in the printed males-and-females-under-10 column, Locality of Farms `Military road. running water.`, total acres `160`, and General Remarks `Tolerable. good land.`
+
+
+The consequential point is field placement: on p.77, `Big Nancy` is not written only as locality language. It appears parenthetically beside a named row-holder in the names column, while that row independently carries military-road locality wording.
+
+
+Cross-page relation
+The same continued Public Lands No. 2 return already carries `Big Nancy` in locality material on p.71 (`On do below Big Nancy 6 miles`) and p.74 (`Near Military road. Big Nancy`). P.77 therefore adds a PERSON-NAME OCCURRENCE / OPEN REFERENT COMPARISON to the earlier recurring-anchor state.
+
+
+Do not close the join. This face does not prove that either p.71 or p.74 uses `Big Nancy` to mean Nancy Lilot herself rather than a place, farm, landmark, or other referent associated with that name. It does not establish residence, ownership, a farm point, route, direction, road geometry, or identity with another Nancy occurrence. Parenthetical placement is carried as source form; `nickname`, `alias`, and place-name derivation remain interpretations unless another source earns them.
+
+
+Map / film consequence
+Mapping Grounds may now preserve two typed states instead of one ambiguous anchor: `Nancy Lilot. (Big Nancy)` [p.77 person/name-column occurrence; own row locality = Military road / running water] and `Big Nancy` [pp.71/74 locality-anchor occurrences]. The relation between them is OPEN but materially sharper than string recurrence alone. Either film may let the source forms recur; staging must not turn the comparison into one person standing at one mapped place.
+
+
+Exact return
+p.77 → this governing jacket → OHC_2462.pdf `18BJzgfLNLmGsBOe7AyVvYb1zwvHNpKPh` → manuscript p.77 → `Nancy Lilot. (Big Nancy)` row / `Military road. running water.`.
+Sideways → p.74 governing jacket `1DdaJKKCiVW5mQ2IcwMKHxHRBM2j1XvM2pkEp26Oai4s` → OHC_2459 direct face; p.71 governing jacket `149jp_Y18wz11foGtXz-sU7n1nP338woqhGMs50dN1uY` → OHC_2456 direct face.
+
+
+— Fieldglass | Film / Landscape Scaffolding | person-name occurrence added; locality referent still open
+
+
+SMALL DOOR — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-20
+
+
+RETURN 1
+PERSON / ENTITY: Sally Tom [Public Lands p.77 farm-row occurrence; source descriptor `a free woman`]
+DATE: Not supplied by this page-facing return.
+EARNED VERB / RELATION: Manuscript p.77 name field LISTS `Sally Tom` followed by source-written `a free woman`; the same ruled row carries 10 cultivated acres, Entire No. of the Family 1, and Locality of Farms `1 slave] 2 miles from factory`.
+CASE / OBJECT: OHC_2462 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.77 / Sally Tom row.
+PLACE: `2 miles from factory.`; `factory` remains unresolved and un-geocoded.
+INSTITUTION: Public Lands / Choctaw treaty-land administration.
+RETURN TO CONTROLLING JACKET: Public Lands No. 2 p.77 — Sally Tom category-field control, Nancy Lilot (Big Nancy), and Curtis Collins row-attribution warning — OHC_2462 source jacket.
+IDENTITY / RELATION STATUS: Source-local occurrence only. `a free woman` and `1 slave]` remain separately source-written fields on the same row; the counted person's identity and legal relation to Sally Tom remain unresolved. No ownership, household, residence, modern racial/citizenship/legal-status normalization, or cross-source Sally Tom identity is inferred.
+NOTES: Compile only as a row/field association. The jacket's source-grammar control remains decisive: graphic row alignment does not convert the named row-holder into a person-level enslaver. The two OHC_2462 PDFs remain duplicate custody routes to one representation family, not corroborating witnesses.
+
+
+RETURN 2
+PERSON / ENTITY: Nancy Lilot. (Big Nancy) [Public Lands p.77 person/name-column occurrence]
+DATE: Not supplied by this page-facing return.
+EARNED VERB / RELATION: Manuscript p.77 name field PRESENTS `Nancy Lilot. (Big Nancy)`; the same row carries 14 cultivated acres, Entire No. of the Family 9, 4 males over 16, 2 in the printed under-10 field, Locality of Farms `Military road. running water.`, Total No. of Acres 160, and General Remarks `Tolerable. good land.`
+CASE / OBJECT: OHC_2462 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.77 / Nancy Lilot row.
+PLACE: `Military road. running water.` [source wording; exact historical geometry and modern identity OPEN].
+INSTITUTION: Public Lands / Choctaw treaty-land administration.
+RETURN TO CONTROLLING JACKET: Public Lands No. 2 p.77 — Sally Tom category-field control, Nancy Lilot (Big Nancy), and Curtis Collins row-attribution warning — OHC_2462 source jacket.
+IDENTITY / RELATION STATUS: Source-local p.77 person/name-column occurrence only. Parenthetical `Big Nancy` is preserved as source form and is not normalized into `nickname` or `alias`. The relation to separate `Big Nancy` locality-anchor occurrences on pp.71 and 74 remains OPEN; no person/place identity, residence, farm point, ownership, route geometry, or cross-source Nancy identity is inferred.
+NOTES: Compile as a separate p.77 person occurrence rather than altering the existing pp.71/74 `Big Nancy` locality-anchor relation. The later p.77 face sharpens the comparison but does not close it.
+
+
+— Small Door
+GLEAN FULL-FACE CATEGORY AUDIT — James Loring correction
+
+
+Scope
+The complete page-77 face was reinspected from the direct OHC_2462 PDF custody object at 400 DPI, with enlarged views of the full Locality of Farms field. All 29 visible named rows were checked for numeric `white / whites / slave / slaves / Black / Blacks` phrases. Duplicate PDFs remain two custody routes to one byte-identical payload; Quoin remains a derivative of the same representation family.
+
+
+Active numeric-category rows
+Four rows, not three, carry qualifying numeric phrases:
+- PL:p77:r02 — Sally Tom `a free woman` — Locality of Farms `1 slave] 2 miles from factory`.
+- PL:p77:r05 — personal-name reading not promoted in this audit — Locality begins `1 white]` and continues with the Sally-Tom marriage/living-with prose.
+- PL:p77:r12 — John Coleman — Locality begins `1 white 3 slaves]` and continues with the Tombecbe / Curtis Collins cultivation and relocation prose already controlled above.
+- PL:p77:r18 — James Loring `(white man)` — Locality `1 white] 3½ miles from agency`.
+
+
+Correction
+The preceding whole-face audit incorrectly stated that no additional numeric phrase appeared beyond the first three. James Loring's r18 `1 white]` is direct and secure. The active page-77 transcription control is therefore:
+
+
+`3 White(s) | 4 Slave(s) | 0 numeric Black(s) phrases`
+
+
+The earlier `2 whites | 4 slaves` state remains above as superseded correction history and no longer governs. Nonnumeric source wording—`a free woman`, `A mulatto`, `half Indian and half negro`, `A negro man`, and the prose descriptor `a white man`—remains outside the arithmetic. The printed family, age, cultivated-acre, and total-acre columns also remain separate.
+
+
+Audited corridor return
+The completed p.63–76 carry-in is 57 White(s) / 148 Slave(s). Adding corrected p.77 produces an audited p.63–77 corridor control of 60 White(s) / 152 Slave(s). Source-written Black-category lanes remain separate and exact: p.64 `1 Black`; p.74 `6 Blks.`; p.76 `11 Blacks`.
+
+
+Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate. No reconciliation is made to the later p.87 `121 Whites. 203 Slaves.` line, and the source does not earn equivalence among `Black`, `Blks.`, `Blacks`, and `Slaves`.
+
+
+Crossing and nonclaims
+The correction travels only to downstream surfaces that explicitly carried the superseded p.77 subtotal. Existing Name Web Sally Tom and Nancy Lilot rows are unaffected; no compiled page-subtotal row exists there. James Loring remains a source-local occurrence: the parenthetical `white man` and the separate `1 white]` phrase are preserved without assuming that the count identifies him or supplies household, ownership, kinship, residence, or legal-status relations.
+
+
+— Glean

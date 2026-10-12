@@ -1,0 +1,316 @@
+Public Lands No. 2 p.79 — Poyubbe/Poymubbe two-families-together row and district-line / Chickasawhay-headwater grammar — OHC_2464 source jacket
+
+
+Historical object
+
+
+Photographed manuscript page 79 of the source-titled Public Lands return. The visible heading reads `Public Lands — No 2. Form of a Return — Continued — Location under the Choctaw Treaty`. This jacket is bounded to one source-facing row occurrence and the immediately earned page seams. It does not attempt a full diplomatic transcription of page 79 or a corpus-level interpretation.
+
+
+Method footing
+
+
+Worked from `EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md` and current workshop practice: source before synthesis; one historical object rather than one jacket per file format; source/representation/transcription/interpretation kept distinct; duplicate custody preserved without double-counting; uncertainty and nonclaims explicit; exact machine addresses kept inside provenance rather than used as spoken workshop names.
+
+
+Source and representation footing
+
+
+Directly inspected study representation:
+- `OHC_2464.png`
+- Google Drive file ID: `1jMgKJX219HNwo5P71C7mIZPdvSojEiYt`
+- current parent: `76 Distinct Study Surfaces`
+- parent ID: `11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh`
+- fetched size: 1,360,608 bytes
+- representation role: study PNG of the manuscript face; not a second historical witness
+
+
+Archival PDF custody objects:
+1. `OHC_2464.pdf`
+   - Drive ID: `1BFLmf-h3W3KjUOeWGtNo8noGo_pEMpN0`
+   - parent: `Source objects — received batch 1 — OHC 2408–2518`
+   - parent ID: `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`
+   - size: 257,627 bytes
+2. `OHC_2464.pdf`
+   - Drive ID: `14S-RhpLlKQkTCd_guWSqzGG-l71bWKr8`
+   - parent: `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`
+   - parent ID: `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI`
+   - size: 257,627 bytes
+
+
+Both PDF payloads were fetched independently in this pass and each computed SHA-256 `f34836a34155964e4bf1631ea0ad6f29b36953d7cf6b2be0918794cedc416844`, matching the existing Load 1 preparation receipt. They remain two custody objects and two return paths carrying one identical PDF payload / one manuscript witness. They are not silently merged, moved, renamed, deleted, or counted as corroborating historical witnesses.
+
+
+Derivative boundary
+
+
+A bounded Drive search for `OHC_2464`, `OHC_2464 page 79`, and Quoin-related page-79 text did not surface a page-79 transcription used by this pass. The reading below therefore comes from direct inspection of the admitted PNG representation. This does not claim that no derivative exists elsewhere; it records only that no derivative was relied on here.
+
+
+Stable local occurrence
+
+
+Rows are counted top-to-bottom from the first visible name line below the printed headers. The occurrence addressed here is `PL:p79:r07`.
+
+
+Name-cell reading: `[unclear: Poyubbe/Poymubbe].`
+
+
+The row directly carries:
+- cultivated acres: `4`
+- entire number of the family: `19`
+- males over 16 years: `3`
+- males and females under 10 years: `9`
+- locality: `Peliglah. 1 mile from Military road` [locality spelling remains correction-open]
+- total number of acres: `80`
+- General Remarks: `Two families together. Poor land.`
+
+
+The numerical fields and General Remarks align on the same ruled row. The name and locality spellings remain open to later letterform correction; no normalized spelling is promoted by this jacket.
+
+
+Finding
+
+
+Page 79 explicitly places the phrase `Two families together.` beside an `Entire No. of the Family` value of `19` on one farm-owner row. That is source evidence that the printed family-total column cannot automatically be assumed to represent one indivisible family or household unit in every row. On this occurrence, the record itself warns that the numerical family total is associated with two families together.
+
+
+This is a row-level structural finding only. It is useful for future column work because it protects later analysis from silently treating every `Entire No. of the Family` number as a single-family household count.
+
+
+Inference boundary
+
+
+The source does not state how the nineteen people divide between the two families, whether the families are related, whether they share one dwelling, whether they cultivate jointly, why they were recorded together, or whether the `80` acres belongs administratively to one or both families. `Together` is preserved as the source's word; its legal, kinship, residential, agricultural, and administrative meaning remains unresolved.
+
+
+The page does not establish that the same aggregation practice occurs elsewhere in Public Lands. One occurrence is not a corpus rule.
+
+
+Name/identity nonclaims
+
+
+- `[unclear: Poyubbe/Poymubbe]` is one source name-form occurrence only.
+- No same-name occurrence on another page or source is merged with it.
+- The two families are not assigned names from neighboring rows.
+- Adjacency to `PL:p79:r06` or `PL:p79:r08` does not establish kinship, shared farm, or shared acreage.
+- The phrase `Two families together.` does not by itself establish a household definition.
+
+
+Unresolved questions
+
+
+- exact diplomatic spelling of the row name;
+- exact diplomatic spelling of the locality `Peliglah`;
+- whether another source or continuation explains why the two families are combined;
+- whether other Public Lands rows explicitly distinguish multiple families inside one printed family total;
+- whether `Together` describes residence, cultivation, enumeration practice, administrative grouping, or another relation;
+- whether a later full-page transcription changes the neutral row numbering used here.
+
+
+Backward seam
+
+
+The existing Glean page-78 jacket directly established `OHC_2464.png` as the next manuscript face after page 78. Direct inspection here confirms manuscript page `79` in the same visible No. 2 continued return. This earns the bounded `78→79` pagination/form seam. It does not merge page-level findings or prove uninterrupted administrative authorship beyond the visible sequence.
+
+
+Forward seam
+
+
+`OHC_2465.png`, Drive ID `1xND1bfUbZG7flC0Hn6moTlZucBW02M_w`, was opened only far enough to establish a distinct manuscript face visibly numbered `80` with the same `Public Lands — No 2. Form of a Return — Continued — Location under the Choctaw Treaty` form. This earns only the bounded `79→80` pagination/form seam. Page-80 rows were not worked in this pass and no page-80 jacket is created here.
+
+
+Return strings
+
+
+Human-facing backward:
+`Public Lands → page 79 jacket → PL:p79:r07 → OHC_2464 manuscript face`
+
+
+Exact machine return paths retained backstage:
+- this jacket → `OHC_2464.png` Drive `1jMgKJX219HNwo5P71C7mIZPdvSojEiYt` → study representation
+- this jacket → `OHC_2464.pdf` Drive `1BFLmf-h3W3KjUOeWGtNo8noGo_pEMpN0` → `Source objects — received batch 1 — OHC 2408–2518`
+- this jacket → `OHC_2464.pdf` Drive `14S-RhpLlKQkTCd_guWSqzGG-l71bWKr8` → `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`
+
+
+Forward:
+`page 79 jacket → OHC_2465.png → manuscript page 80, row work held`
+
+
+Population state
+
+
+- source-facing row finding: complete for the bounded occurrence above
+- duplicate custody relation: controlled
+- full-page diplomatic transcription: not claimed
+- independent review: not requested
+- corpus-wide family grammar: not claimed
+- page 80 row work: held
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+NEEDLE UP UPWARD QUANTITATIVE NOTE — DERIVED REMAINDER IS NOT A DEMOGRAPHIC CLASS — 2026-09-07
+
+
+This note preserves Glean's direct p.79 reading unchanged: `Entire No. of the Family` = `19`, `Males over 16 years` = `3`, `Males and Females under 10 years` = `9`, and General Remarks = `Two families together. Poor land.`
+
+
+The arithmetic `19 - 3 - 9 = 7` is permitted only as a derivative calculation if needed for checking. The source does not name that seven-person remainder, and the printed age-sex fields are not exhaustive demographic bins. The seven therefore cannot be relabeled as women, older children, adolescents, dependents, adults, household remainder, or assigned between the two source-mentioned families. `Two families together.` makes that allocation especially unearned.
+
+
+Propagated upward to 03 — DOCUMENTARY BODIES and 09 — ADMINISTRATIVE ATTRITION. Glean retains source-facing maker attribution, row reading, uncertainty, custody, and seams. Needle Up owns only the derivative-count grammar. No source count or social relation moved
+
+
+FIELDGLASS GLEAN-FLARE NEGATIVE CONTROL — 2026-09-09 — FULL PAGE-79 CATEGORY-SUBTRACK AUDIT
+
+
+Direct source return
+Fieldglass reopened archival OHC_2464.pdf, Drive ID `1BFLmf-h3W3KjUOeWGtNo8noGo_pEMpN0`, parent `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`, and rendered the complete manuscript face at 600 dpi solely for direct visual inspection. The render and locality-field crop were temporary inspection derivatives and are not source objects or additional witnesses. Existing duplicate-custody controls above remain unchanged.
+
+
+Page-local audit result
+A full visual sweep of manuscript p.79 at present image reach found no safely readable numeric category phrase using `white`, `whites`, `slave`, `slaves`, `Black`, or `Blacks` anywhere in the `Locality of Farms` field. The field instead carries ordinary source locality wording and ditto continuations, while the printed `Entire No. of the Family`, `Males over 16 years`, and `Males and Females under 10 years` columns carry regular numeric entries across the face.
+
+
+This is a direct negative control, not a zero count. It does not establish that no white, enslaved, or Black person was associated with any p.79 row; it records only that this directly audited face supplies no safely readable numeric category annotation of the kind controlled on pp.76–77 and pp.85–87 at present visual reach.
+
+
+Flare consequence
+Page 79 independently reinforces the p.78 negative control: the No. 2 white/slave/Black annotation practice is not visibly imposed as a universal extra count on every continued-return page or every farm row. An audited face without such a phrase must therefore remain `no category phrase observed at present reach`, not an arithmetic zero and not evidence of absence.
+
+
+The existing p.79 `Two families together.` finding remains wholly separate. That source phrase warns against treating each printed family total as one indivisible family or household, but it does not supply a bridge between the printed family columns and the separate racial/status annotations found on other pages.
+
+
+Nonclaims
+- No blank or locality-only row is converted to zero whites, zero slaves, or zero Blacks.
+- No inference is made that printed family counts include or exclude racial/status annotations appearing elsewhere in Return No. 2.
+- No common author, date, or administrative purpose is assigned across pages from this negative control.
+- The `Two families together.` occurrence is not used to manufacture a racial/status accounting rule.
+
+
+Exact return
+Public Lands / Emancipation flare → this existing p.79 jacket → OHC_2464.pdf `1BFLmf-h3W3KjUOeWGtNo8noGo_pEMpN0` → manuscript p.79 → full `Locality of Farms` field audit.
+
+
+— Fieldglass
+.
+
+
+
+
+FIELDGLASS MAP CROSSING — 2026-09-10 — THREE-DISTRICT LINE / CHICKASAWHAY HEADWATER CONTROL
+
+
+Direct source return
+
+
+Fieldglass reopened `OHC_2464.png`, Drive ID `1jMgKJX219HNwo5P71C7mIZPdvSojEiYt`, and directly inspected manuscript p.79. Temporary crops/enlargements used for visual reading are inspection derivatives only and are not additional source objects.
+
+
+Source-visible map-bearing language
+
+
+The upper locality run directly carries:
+- `Kunchalicta. near the line of the 3 district`
+- `Head water of Chickasawhay`
+- `Peliglah. 1 mile from Military road`
+- `Near Pigeon Roost`
+- `Petikfa creek`
+
+
+The first two phrases are independently useful beside the immediately preceding manuscript face, p.78, which carries `in the corner of the three districts` in the same row area as `Head waters of Chickasaw` at present visual reach.
+
+
+Map consequence
+
+
+Page 79 independently strengthens a source-defined **district-line / Chickasawhay-headwater** landscape without locating it. The map may preserve the written relations `near the line of the 3 district` and `Head water of Chickasawhay` as an unplaced constraint field. Their proximity on the same face does not, without row-level alignment beyond what is certified here, mean that one phrase describes the other or that they share one point.
+
+
+Page 79 also supplies noun control for `Petikfa` as `Petikfa creek`. That can be crossed cautiously to p.78 `Petikfa: enters in Sukenatcha` as a hydrologic test, not as an automatic same-feature merge.
+
+
+Nonclaims
+
+
+- No modern Chickasawhay River coordinate or headwater point is assigned.
+- `the 3 district` is not expanded to named districts from outside this source.
+- No district boundary line is drawn from this wording alone.
+- No `Petikfa` occurrence is merged across pages merely because the spelling matches.
+- `Peliglah`, `Pigeon Roost`, Military road, and Petikfa creek remain locality relations, not geocoded points or routes.
+
+
+Crossing / return
+
+
+Detailed two-face synthesis is preserved in the existing p.78 Glean jacket, Drive `1WeaFCb1tYpmlj_88LhS0Nyv7lgCskzUqRpyNsOrr5ps`.
+
+
+Exact return: `Marauder’s Map / Historical Landscape Map → this p.79 Glean jacket [1Ramug1yq6UIM2RYTvBoLuENLlzCPShZqryTOc9n0L0Y] → OHC_2464.png [1jMgKJX219HNwo5P71C7mIZPdvSojEiYt] → manuscript p.79 locality column → backward control p.78 jacket [1WeaFCb1tYpmlj_88LhS0Nyv7lgCskzUqRpyNsOrr5ps].`
+
+
+Maker: Fieldglass
+Date: 2026-09-10
+
+
+
+
+SMALL DOOR NAME WEB CROSSING — 2026-09-20
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Poyubbe/Poymubbe [Public Lands p.79 farm-row occurrence; exact name reading correction-open]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.79 occurrence PL:p79:r07 CARRIES `Entire No. of the Family` = `19` and General Remarks `Two families together. Poor land.` The same row carries locality `Peliglah. 1 mile from Military road` [locality spelling correction-open].
+Case / Object: OHC_2464 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.79 / PL:p79:r07
+Place: `Peliglah. 1 mile from Military road` [source-local spelling; exact historical and modern geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 2 p.79 — Poyubbe/Poymubbe two-families-together row and district-line / Chickasawhay-headwater grammar — OHC_2464 source jacket
+Identity / Relation Status: source-local occurrence only; controlling Glean reading remains `[unclear: Poyubbe/Poymubbe]` while Quoin's first-pass image jacket reads `Poyubbe`; this does not close the letterform question or merge any same/similar-name person elsewhere. `Two families together.` is preserved as source wording and does not identify the two families, divide the nineteen people between them, establish kinship, one household, shared dwelling, joint cultivation, acreage allocation, or a corpus-wide family-count rule.
+Notes: compiled from the governing jacket's direct source-facing row return after rereading adjacent Quoin prose. The arithmetic remainder from 19 - 3 - 9 is not a source demographic category. Page-level category-negative control and district-line / Chickasawhay-headwater / Petikfa map grammar remain rich jacket prose rather than duplicate person relations.
+
+
+— Small Door
+GLEAN CORRECTION — John Beaty r04 category phrase and whole-face control
+
+
+Direct 600-dpi reinspection of admitted OHC_2464 / manuscript p.79 stabilizes 33 visible name-bearing rows. The John Beaty occurrence is `PL:p79:r04`; the name cell reads `John Beaty. (white man)`.
+
+
+At the leading edge of the same row’s Locality of Farms cell, the manuscript directly writes:
+
+
+`1 white]`
+
+
+The adjoining house / Military-road clause remains diplomatic-reading-open in this correction. The category phrase itself is secure. The earlier Fieldglass negative control stating that p.79 supplied no safely readable numeric category annotation is superseded and remains above as correction history.
+
+
+Active page state
+
+
+Page-local category subtotal: `1 White(s) | 0 Slave(s) | 0 numeric Black(s) phrases`.
+
+
+The parenthetical `(white man)` and numeric `1 white]` are separate source-field writings. Their alignment does not prove that the counted person is John Beaty or that the annotation supplies household, residence, ownership, citizenship, ethnicity, or legal-status relations.
+
+
+Audited corridor return
+
+
+The completed p.63–77 account is `60 White(s) | 152 Slave(s)`. Page 78 adds no numeric category phrase; corrected page 79 produces `61 White(s) | 152 Slave(s)` through p.79. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate, and no residual subtraction from the p.87 aggregate is authorized.
+
+
+Crossing consequence
+
+
+This correction breaks the former pp.78–84 “seven-face category-silence interval.” The active sequence is: p.78 no numeric category phrase; p.79 John Beaty r04 `1 white]`; pp.80–84 retain five directly audited no-observed-phrase faces. A separate Name Web row may carry only this p.79 source occurrence and must not merge it with the same-written John Beaty occurrence on Public Lands No. 3 p.117.
+
+
+— Glean
