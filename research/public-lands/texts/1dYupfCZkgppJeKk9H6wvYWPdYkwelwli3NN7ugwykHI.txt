@@ -1,0 +1,329 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2435 page 53 — brace control, Allen Yates layered annotations, and Quoin corrections
+
+
+Status: DIRECT-SOURCE PAGE PASS — ONE MANUSCRIPT PAGE — DUPLICATE CUSTODY COPIES CONTROLLED
+Maker: Fieldglass
+Date: 2026-09-05
+Corpus: quoted-title Public Lands / Choctaw Treaty farm return
+Visible manuscript page: 53
+Historical-object boundary: one manuscript page within a continued multi-page return; this jacket does not claim the larger return is complete.
+
+
+METHOD CONTROL
+
+
+Worked from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md. The source face governs. Duplicate digital custody copies are not independent witnesses. Quoin text is retained as rough derivative history and navigation, not promoted over the handwritten page. Source observation, inference, uncertainty, correction history, and nonclaims remain separate.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+
+
+Archival/source custody object A:
+- filename: OHC_2435.pdf
+- Drive ID: 1Cixr1gAzEGijYc7uvFlkSDrjMsHaeN3J
+- parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- size: 266,589 bytes
+
+
+Separately stored same-name custody object B:
+- filename: OHC_2435.pdf
+- Drive ID: 1cc2KGG6HIUAVfqUWwvAlosriUqdGUgV9
+- parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- size: 266,589 bytes
+
+
+Both PDFs were streamed and compared in this pass. Each produced SHA-256:
+2559d1566e60119379caad7e210b8131676e3d67f6a9f8a158c297e95afba0a7
+A byte-for-byte comparison returned identical. They are two custody routes to the same digital PDF payload and one manuscript-page witness, not corroborating evidence.
+
+
+Direct visual reading used the image embedded in the PDF itself. The embedded source image is 2038 × 1879 pixels, grayscale. No OCR reading was allowed to override the face.
+
+
+Existing Quoin derivative representations:
+- OHC_2435 form of return Choctaw Treaty farms page 53 — Quoin.md — Drive ID 1SscaY5LwiegCOea9u3w11JY-sL7aGWtD — parent folder ID 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+- same-title duplicate derivative — Drive ID 1lRZGcKkT-gic6KcXeMpLYHSoMBpm_dae — parent folder ID 1komb4v11M9baULEpk3w3owolFF99m2-F
+Their connector-readable text is identical. They remain duplicate derivative objects, not two transcriptions and not two witnesses.
+
+
+SOURCE FACE — PAGE IDENTITY AND 52→53 SEAM
+
+
+The face visibly carries manuscript page number 53 at upper left and the heading sequence “Public Lands — No 1 — Form of a Return — Continued — Location under the Choctaw Treaty,” with the right-side 1230 / 1834 notation visible on the same ruled-table form.
+
+
+The immediately prior Glean jacket for OHC_2433/OHC_2434 established manuscript page 52 and explicitly left OHC_2435 / page 53 unopened. OHC_2435 now closes the page-52→page-53 seam at pagination-and-form level only. Consecutive pages do not by themselves establish continuity of any named person, household, tract, ownership, kinship, or locality across the turn.
+
+
+DOCUMENTARY CONTENT — FULL-FACE STRUCTURAL PASS
+
+
+The page carries the same principal columns visible in the surrounding return: name of Indians owning farms; acres cultivated; entire number of the family; males over 16 years; males and females under 10 years; locality of farms; total number of acres; and general remarks.
+
+
+Thirty-four visible body rows are present on this face. Row addresses below are page-local working addresses from top to bottom. Difficult Indigenous-name spellings remain occurrence-level readings only and are not normalized to persons elsewhere.
+
+
+Load-bearing page observations:
+
+
+1. The locality column repeatedly uses literal “do” while separately adding directional language such as east side, west side, north side, or south side. The ditto is preserved as written; this jacket does not silently expand it into a reconstructed full locality string.
+
+
+2. A widow parenthetical is visibly present on row 11. The direct name reading is difficult; the Quoin derivative’s “Nopius (widow)” is not treated as settled. Active reading: [unclear: Nopho/Nopius] (widow).
+
+
+3. Row 12 carries 30 cultivated acres, family 6, males over 16 = 3, under 10 = 2; locality uses “do” with a separately written “east side”; total acres 480.
+
+
+4. Rows 22–23 contain a source-drawn brace in the cultivated-acres column spanning the two adjacent name rows conventionally read in the Quoin derivative as Hoyopahoma and Okchanokahoma. A single numeral 7 sits with that braced field. The face therefore preserves a paired/braced cultivated-acre notation across two rows. It does not safely assign “7 cultivated acres” to row 22 alone.
+
+
+5. Row 25, Capt Mintubba, visibly carries 7 cultivated acres, family 4, males over 16 = 1, under 10 = 1; locality “Buckatunna creek. west side”; General Remarks “Poor land. well timbered.”
+
+
+6. Row 26, Allen Yates, is especially information-dense. Directly legible row values are:
+- name: Allen Yates
+- acres cultivated: 140
+- entire family: 19
+- males over 16: dotted/blank state; no zero adopted
+- males and females under 10: 3
+- principal locality line: “Buckatunna creek. west side”
+- total acres: 1280
+- General Remarks: “Provided for in supplement; two sections.”
+
+
+The locality area on the Allen Yates row also contains smaller layered writing rather than one simple locality phrase. Directly secure pieces are:
+- an interlinear phrase: “from white settlements.”
+- a lower annotation beginning “1 white 12 Slaves”
+- the same lower annotation ends with “1/2 a mile.”
+The wording between “12 Slaves” and “1/2 a mile” remains difficult and is not normalized here. The source does not itself explain the classificatory meaning, authorship, timing, or relationship of these smaller annotations to the principal locality line.
+
+
+7. Lower-page rows include George May, William Fields, Thomas Conga, a following Conga occurrence whose given name remains [unclear: Lewis/Lawi], and Daniel Crabgrave. William Fields and Thomas Conga each have a visible 160 in the total-acre column. No identity merge is made from surname recurrence.
+
+
+SOURCE / DERIVATIVE CORRECTION HISTORY
+
+
+Correction A — paired cultivated-acre brace:
+The Quoin derivative flattens the rows as “Hoyopahoma } 7 …” followed by “Okchanokahoma } …”, which visually encourages the 7 to be read as belonging to the first row. Direct inspection shows a brace spanning both rows inside the cultivated-acres field with one 7 associated with the braced pair. Active source-facing state: one paired/braced 7 across rows 22–23; allocation between the two rows is unresolved.
+
+
+Correction B — Allen Yates layered locality annotation:
+The Quoin derivative compresses the row to “[white 12 slaves] Pachuta four creek 1/4 a mile.” The source face is more complex. It separately shows the principal line “Buckatunna creek. west side,” an interlinear “from white settlements.”, and a lower annotation beginning “1 white 12 Slaves” and ending “1/2 a mile.” The derivative’s “1/4 a mile” is not supported by the direct face; the direct numeral reads 1/2. The middle wording after “12 Slaves” remains unresolved rather than being repaired to “Pachuta four creek.”
+
+
+Correction C — widow-name certainty:
+The Quoin derivative gives “Nopius (widow).” Direct handwriting does not justify that spelling at high confidence. The widow parenthetical is secure; the name is retained as [unclear: Nopho/Nopius] pending a better comparative hand or adjacent occurrence.
+
+
+FINDINGS
+
+
+- OHC_2435 is manuscript page 53 of the same continued Public Lands / Choctaw Treaty return form, closing the pagination seam after page 52.
+- The two OHC_2435 PDFs are byte-identical custody copies of one digital payload.
+- The two Quoin files carry duplicate derivative text and do not add evidentiary weight by repetition.
+- The page contains at least one deliberate multi-row brace that must be preserved structurally rather than flattened into a single-row value.
+- Allen Yates’s row visibly records 140 cultivated acres, family 19, under-10 count 3, 1280 total acres, “Buckatunna creek. west side,” “Provided for in supplement; two sections,” and layered smaller writing including “from white settlements.” and “1 white 12 Slaves … 1/2 a mile.”
+
+
+INFERENCE
+
+
+The Allen Yates smaller writing appears physically subordinate/interlinear to the principal locality entry and may represent later qualification or added descriptive detail, but its authorship and timing are not established by this face alone. The bracket-like close after “Slaves” may mark a grouping or note boundary; this jacket does not assign a meaning to it.
+
+
+UNRESOLVED QUESTIONS
+
+
+- exact diplomatic spellings of several Indigenous row-holder names;
+- exact name on the widow row;
+- whether the single cultivated-acre 7 on rows 22–23 is a joint total, a grouped notation of another kind, or something else;
+- exact wording between “1 white 12 Slaves” and “1/2 a mile” on Allen Yates’s row;
+- authorship and timing of Allen Yates’s smaller locality annotations;
+- what “Provided for in supplement; two sections.” points to in the underlying administrative record;
+- whether a directly corresponding supplement survives elsewhere in this corpus;
+- what manuscript page 54 adds; not opened in this pass.
+
+
+NONCLAIMS
+
+
+- The word “Slaves” on Allen Yates’s row is source-visible language; this jacket does not infer identities, names, ages, legal status details beyond the source wording, family relationships, residence, ownership mechanics, or later history of the people counted.
+- “1 white 12 Slaves” is not silently converted into a household composition formula or reconciled arithmetically with family 19.
+- “Provided for in supplement; two sections.” does not by itself identify the supplement, establish a patent, prove residence, or prove later land ownership.
+- A brace does not establish kinship or shared household.
+- Repeated surnames do not establish same person or family.
+- Literal “do” is not expanded beyond what the source face earns.
+- Consecutive manuscript pages do not merge people or tracts across the page turn.
+- Duplicate PDFs and duplicate Quoin derivatives are not corroborating witnesses.
+
+
+SEAMS AND EXACT RETURN PATHS
+
+
+Backward seam:
+quoted-title Public Lands → GLEAN SOURCE-FACING JACKET — OHC_2433/OHC_2434 page 52 — Drive ID 1AsaO25PT_kCI47u2QLsqy3elS7QEcXEMrzKWt4ZpNNc → its open forward seam to OHC_2435 / page 53 → this jacket.
+
+
+Source return:
+this jacket → OHC_2435.pdf, Drive ID 1Cixr1gAzEGijYc7uvFlkSDrjMsHaeN3J, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA; or byte-identical custody copy OHC_2435.pdf, Drive ID 1cc2KGG6HIUAVfqUWwvAlosriUqdGUgV9, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Derivative return:
+this jacket → Quoin derivative Drive ID 1SscaY5LwiegCOea9u3w11JY-sL7aGWtD or duplicate-text derivative Drive ID 1lRZGcKkT-gic6KcXeMpLYHSoMBpm_dae → disputed readings return to the OHC_2435 source face before adoption.
+
+
+Forward seam:
+The strongest earned next door is the source-named “supplement” behind Allen Yates’s General Remark, because the page itself says “Provided for in supplement; two sections.” Manuscript page 54 is also a valid pagination continuation but is not opened merely to keep moving.
+
+
+Maker: Fieldglass
+Date: 2026-09-05
+
+
+CONTINUATION — PAGE-54 COMPARATIVE CONTROL — 2026-09-05
+
+
+Status: SOURCE-FACING CONTEXT DEEPENING — EXISTING OHC_2435 JACKET EXTENDED, NOT DUPLICATED
+Maker: Fieldglass
+
+
+The earlier unresolved state “what manuscript page 54 adds; not opened in this pass” is retained above as correction history and is now superseded at that exact edge by direct inspection of OHC_2436 / manuscript page 54.
+
+
+Page 54 independently preserves another smaller source-visible slave-count annotation in the locality field. On the first row, J. W. Nail, the page reads “8 Slaves]” as a smaller left-set notation beside the principal locality “Buckatunna creek, west side,” with “waters of Bigbee.” written interlinearly above. This is direct same-form contextual evidence that the page-53 Allen Yates reading “1 white 12 Slaves” belongs to a real annotation pattern present on the manuscript, rather than being an isolated derivative artifact.
+
+
+Exact-reach limit: page 54 does not resolve the still-unclear words between “12 Slaves” and “1/2 a mile” on Allen Yates’s page-53 row. It does not establish the same annotator, same date, same administrative purpose, same accounting rule, household composition, ownership mechanism, or any identity relation between Allen Yates and J. W. Nail. The administrative meaning of these smaller annotations remains open.
+
+
+New forward return:
+this OHC_2435 jacket → FIELDGLASS SOURCE-FACING JACKET — OHC_2436 page 54 — J. W. Nail slave annotation, locality layering, and Quoin corrections — Drive ID 1ciEMmh53avagLEF2WVRRDe7WvaMHxieRXmNIAiaEiEo → direct OHC_2436 source face.
+
+
+The strongest shared retrieval target is now a surviving instruction, supplement, or parallel direct return that explicitly explains the smaller white/slave annotations rather than inferring their meaning from layout alone.
+
+
+
+
+
+
+CONTINUATION — PAGE-56 COMPARATIVE CONTROL — 2026-09-05
+
+
+Maker: Fieldglass
+Status: SOURCE-FACING CONTEXT DEEPENING — EXISTING OHC_2435 JACKET EXTENDED, NOT DUPLICATED
+
+
+OHC_2438 / manuscript page 56 now independently preserves another smaller locality-area category/count annotation. On the George Clark row, direct inspection shows “1 White]” immediately before the principal ditto/locality material and a separately written “south side.” The duplicate Quoin derivative renders only “[White]” and omits the source-visible numeral 1. Active page-56 source-facing state is therefore “1 White]”; the bracket-like closing stroke is preserved without inventing its scope.
+
+
+This materially strengthens the page-53 Allen Yates reading “1 white 12 Slaves” at the level of word-and-numeral recognition: a separate later face in the same continued return independently uses “1 White]” as a smaller annotation, while page 54 independently uses “8 Slaves]”. The three-face recurrence supports a real annotation practice in the manuscript rather than an isolated transcription artifact.
+
+
+Exact-reach limit: page 56 still does not explain the administrative purpose, authorship, date, bracket scope, household arithmetic, ownership mechanics, or identity of the people counted. It does not justify reconciling Allen Yates’s “1 white 12 Slaves” with family 19, and it does not establish any relationship among Allen Yates, J. W. Nail, and George Clark.
+
+
+New return:
+this OHC_2435 jacket → FIELDGLASS SOURCE-FACING JACKET — OHC_2438 page 56 — George Clark 1 White annotation and page-53/54 control — Drive ID 1qQ3i-PdJKRxWQhKX5GEZ9_JwcJmnTIFd-1IwjYyXsLI → direct OHC_2438 source face.
+
+
+The strongest shared retrieval target remains a surviving instruction, supplement, cover, or parallel direct return that explicitly explains these smaller white/slave annotations.
+
+
+CROSS-RETURN CONTROL — PUBLIC LANDS NOS. 1 / 2 / 3 — 2026-09-06
+
+
+Fieldglass directly reopened three source faces in this pass rather than relying on derivative labels: OHC_2435 / manuscript p.53 visibly heads itself “Public Lands — No 1”; OHC_2461 / manuscript p.76 visibly heads itself “Public Lands — No 2”; and the parallel one-page OHC_2517 PDF visibly heads itself “Public Lands — No 3 — Form of a Return — Continued.”
+
+
+The smaller category-count writing is therefore no longer only a same-return recurrence inside No. 1. No. 1 p.53 directly carries Allen Yates’s smaller “1 white 12 Slaves …” notation in the Locality of Farms area. No. 2 p.76 directly carries multiple smaller white/slave notations and also the lexically distinct form “1 white 11 Blacks]” on the William H. Bucks row. No. 3 OHC_2517 directly carries several smaller slave-count phrases in the visible Locality of Farms area, including 1 slave, 2 slaves, and 4 slaves on separate rows.
+
+
+Source-facing gain: some form of category/count annotation practice recurs across at least three separately numbered Public Lands returns. This makes an isolated page-level accident less plausible. It does NOT establish one annotator, one date, one accounting instruction, identical category semantics, or a rule that every return/page must carry such marks. “Blacks” is not silently normalized to “Slaves,” and no count is converted into ownership, household composition, legal status beyond the source wording, or district arithmetic without an independent governing instruction.
+
+
+Cross-return returns: No. 2 control — OHC_2461.pdf, Drive ID 1TF7fbOIMR5aAVSIW7-2-a5G975awB0qh; No. 2 jacket — Drive ID 1OB1lKHy0Dec3_3dpL2mCjWTWW8o_qHdT6pAu9lEhLW0. No. 3 control — OHC_2517.pdf, Drive ID 1VX88ZVUftsz3iUVTSc4s6COnRpLR3wy9; existing Glean OHC_2517 addendum — Drive ID 1e-l-toyYvhipT3GiO4YIRP9DQNIlKhMteQoNKHqiHpk.
+
+
+The strongest next source remains an instruction, cover, register, marginal key, or roll-up that actually explains why these annotations were made.
+
+
+GLEAN SOURCE RETURN — 2026-09-08 — p.53 r11 widow-name promotion
+
+
+Status: DIRECT-SOURCE CORRECTION / DEEPENING — EXISTING FIELDGLASS JACKET EXTENDED IN PLACE; NO DUPLICATE JACKET CREATED
+
+
+Maker: Glean
+
+
+Current source-work footing: the direct source face governs; correction history remains visible; custody copies, digital representations, inspection derivatives, transcription, interpretation, findings, unresolved questions, crossings, and nonclaims remain distinct. This return does not convert repeated digital custody or derivative text into additional historical witnesses.
+
+
+Exact source and representation footing: Glean reopened OHC_2435.pdf, Drive ID 1Cixr1gAzEGijYc7uvFlkSDrjMsHaeN3J, parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, 266,589 bytes. The already-controlled second same-name PDF, Drive ID 1cc2KGG6HIUAVfqUWwvAlosriUqdGUgV9, remains a byte-identical custody object for the same PDF payload and was not treated as corroborative evidence. For legibility only, the exact PDF was rendered at 400 DPI and locally enlarged. Those raster views were temporary inspection derivatives, not source objects or corpus additions; no OCR supplied the reading.
+
+
+Source-facing correction — PL:p53:r11: the earlier active state [unclear: Nopho/Nopius] (widow) is now superseded at this occurrence by the present direct reading Nopho. (widow). The source face shows N-o-p-h-o with the descending p, following h-shaped ascender, terminal o, and a period before the separately parenthesized widow descriptor. The two Quoin derivative copies retain Nopius (widow); that form remains useful correction history but no longer governs the source-facing transcription.
+
+
+Row-local state: the same r11 line carries 3 cultivated acres, entire family 5, males over 16 = 1, males and females under 10 = 1, and a literal locality do. The ditto is preserved as source writing and is not silently expanded here. These values are attached only to this manuscript row and do not acquire meaning from neighboring rows.
+
+
+Finding: one previously unresolved personal-name occurrence can now be promoted at the source-facing layer without promoting a person identity. The manuscript occurrence is Nopho. (widow); widow is a source-written descriptor on the same row, while Nopho remains an occurrence-level name-form whose external identity is unestablished.
+
+
+Backward / forward seams: the preceding named row remains a separate occurrence and contributes no identity, relationship, numbers, acreage, or locality to r11. The following r12 occurrence remains separately governed by its own 30 cultivated acres / family 6 / males over 16 = 3 / under 10 = 2 / locality do with separately written east side / 480 total acres. Nothing in r12 is inherited backward into Nopho's row, and the widow descriptor is not carried forward.
+
+
+Unresolved questions: who the source occurrence Nopho represents outside this face; whether another independently controlled source supplies a fuller or alternate name-form; what administrative meaning, if any, the parenthetical widow carried in this return; who wrote that descriptor and when; whether any same- or similar-name occurrence elsewhere is the same person. The still-difficult middle wording in Allen Yates's smaller locality annotation remains unresolved and was not repaired by analogy in this pass.
+
+
+Nonclaims: (widow) does not identify a spouse, establish probate or legal widow status outside the source assertion, prove household composition, entitlement, patent, possession, residence, removal status, or later land outcome. Similar names elsewhere are not merged. The two PDFs remain two custody roads to one digital payload and one manuscript witness; the two Quoin files remain duplicate derivative text rather than independent transcriptions or witnesses. No supplement, category-count, or corpus-level theory is inferred from this correction.
+
+
+Exact return path: quoted-title Public Lands → FIELDGLASS SOURCE-FACING JACKET — OHC_2435 page 53 — Drive ID 1dYupfCZkgppJeKk9H6wvYWPdYkwelwli3NN7ugwykHI → OHC_2435.pdf, Drive ID 1Cixr1gAzEGijYc7uvFlkSDrjMsHaeN3J → manuscript p.53 → PL:p53:r11 → Nopho. (widow). Derivative return remains this jacket → Quoin Drive IDs 1SscaY5LwiegCOea9u3w11JY-sL7aGWtD / 1lRZGcKkT-gic6KcXeMpLYHSoMBpm_dae → disputed spellings return to the direct OHC_2435 face before adoption.
+
+
+Next honest seam: an independently discriminating occurrence or administrative record for Nopho, not another enlargement of the same derivative spelling and not a name-only merge.
+
+
+— Glean | quoted-title Public Lands | OHC_2435 / manuscript p.53 | r11 Nopho. (widow) promoted | Quoin Nopius retained as derivative history | locality do unexpanded | identities and representations unmerged
+
+
+GLEAN SOURCE-FACING CONTINUATION — PAGE-53 CATEGORY-WORD INVENTORY
+
+
+DIRECT SOURCE RETURN
+
+
+OHC_2435.pdf, Drive 1cc2KGG6HIUAVfqUWwvAlosriUqdGUgV9, was reopened and rendered at high resolution for a full-face target-word pass. The existing duplicate-custody and representation controls remain unchanged; no additional historical witness is created.
+
+
+EXACT OBSERVED OCCURRENCE
+
+
+Across the surviving visible category-bearing area of manuscript page 53, exactly one explicit target-word count phrase was observed: PL:p53:r26, Allen Yates, whose Locality of Farms field carries `1 white 12 Slaves]` beneath the principal `Buckatunna creek. west side` entry. The closing bracket-like stroke is source-visible. The difficult locality wording following the bracket remains unresolved and is not needed to read the two category numerals.
+
+
+No second white / White / Whites / slave / Slave / Slaves / Black / Blacks count phrase was observed elsewhere on the surviving visible face.
+
+
+ARITHMETIC REACH
+
+
+At the present representation reach, page 53 contributes 1 observed white and 12 observed Slaves to the page-39–60 audit. Combined with the already controlled surviving counts through page 52, the observed subtotal through page 53 is 10 Whites and 15 Slaves.
+
+
+This is a surviving-annotation subtotal, not a reconciliation. It does not repair page 41's lower-edge loss or page 50's right-edge loss, does not substitute printed family counts, and does not establish the rule by which the page-60 aggregate was formed.
+
+
+NONCLAIMS / RETURN
+
+
+The row host does not identify the counted people or establish their relation to Allen Yates, the printed family total, the farm, residence, ownership, labor, or any status beyond the source wording. Return: this governing jacket → OHC_2435.pdf above → manuscript page 53 → PL:p53:r26 → `1 white 12 Slaves]`.
+
+
+— Glean

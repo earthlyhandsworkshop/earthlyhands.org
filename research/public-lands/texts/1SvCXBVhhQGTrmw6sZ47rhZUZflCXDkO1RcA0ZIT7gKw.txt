@@ -1,0 +1,849 @@
+# Public Lands p.72 — Hartwell Hardaway Indian-wife relation, Capt Oklenowa Military-road adjacency, and Tuskahajah / unresolved Lucas anchor — OHC_2457 source jacket
+
+
+Maker: Glean
+Date: 2026-09-06
+Body: quoted-title Public Lands
+Status: NEW SOURCE-FACING JACKET — bounded page-72 pass
+
+
+## Method control
+
+
+This pass begins from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md (Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF), SOURCE WORK METHOD — full strength, exact reach — source to synthesis (Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc), and WORKSHOP PRACTICE AMENDMENT — source force, attribution, and exact reach (Drive ID 1X8tHZw7km3cgXvloDTB_S7Ary8vj6Kqe0S0whZABaNg).
+
+
+Operative controls: receive the object as itself; direct source face before derivative repair; keep source / representation / transcription / interpretation distinct; preserve protected blanks and correction history; do not count repeated representations or repeated derivative files as independent witnesses; do not merge same-name people; preserve exact return paths; stop at the source boundary rather than forcing a larger corpus theory.
+
+
+A fresh Drive search for OHC_2457 / page 72 found the direct source objects and two duplicate Quoin derivative transcriptions but no faithful source-facing page-72 jacket. This jacket is therefore earned rather than duplicative.
+
+
+## Historical object and custody
+
+
+Documentary face: one manuscript ledger face visibly numbered 72 and headed `Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty`, with the bracketed source notation `[No 1230. 1834]`. It is a ruled farm-return table. This pass stabilizes three consequential wording corrections and the local page seam; it does not claim a complete diplomatic transcription of page 72.
+
+
+PDF custody route A:
+- `OHC_2457.pdf`
+- Drive ID: `1Wd6zaUoBdjo6JkZC1L4_vtEf69dDYGcW`
+- size: 253,220 bytes
+- parent: `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI` — `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces`
+
+
+PDF custody route B:
+- `OHC_2457.pdf`
+- Drive ID: `185-en4K16byBfsYenHHo3qFcwx4EfW72`
+- size: 253,220 bytes
+- parent: `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA` — `Source objects — received batch 1 — OHC 2408–2518`
+
+
+Glean downloaded and compared the complete PDF payloads in this pass. They are byte-identical and both hash SHA-256 `d6e25cdf28201c9e711a5bd269bab9769233890861349dbc38be66f95044a066`. They remain two custody objects / two return routes carrying one identical PDF payload and one manuscript-page witness, not two historical witnesses.
+
+
+Admitted study representation:
+- `OHC_2457.png`
+- Drive ID: `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_`
+- size: 1,365,492 bytes
+- parent: `11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh` — `76 Distinct Study Surfaces`
+- role: direct reading representation of the page-72 manuscript face; not an independent historical witness
+
+
+Derivative transcriptions used for comparison:
+- `OHC_2457 form of return Choctaw Treaty farms page 72 — Quoin.md` — Drive ID `1xDKCvOil3r6BvuD-shZ3HFQJjM5Sz_fQ` — parent `1komb4v11M9baULEpk3w3owolFF99m2-F` (Quoin folio box)
+- same-title Quoin object — Drive ID `1q8CRtls37E8iljtZ3l00RoeehQ0dFqsx` — parent `1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl` (Public Lands — Whole-Document Corpus)
+
+
+The two Quoin objects carry identical derivative text. They are repeated storage of one derivative reading, not corroborating witnesses.
+
+
+## Stable occurrence addressing
+
+
+Rows are counted top-to-bottom from the first visible farm-owner entry below the headers. Direct inspection and the derivative row order agree on 36 visible rows. This jacket uses correction-stable occurrence keys only where needed for the bounded repair.
+
+
+### `PL:p72:r04` — Christian Spring. `(white man)`
+
+
+Direct source state needed for this correction:
+- cultivated acres: `20`
+- entire family: `4`
+- printed age-count fields following family: blank / blank
+- small source-written annotation at the leading edge of locality: `1 white]` (opening punctuation/bracket not further stabilized here)
+- locality: `Ashshukwa (a Blacksmith)`
+- total acres: `320`
+- General Remarks: `Land tolerable`
+
+
+Both Quoin derivatives instead give `Ashshukwa (a halfbreed)`. Direct inspection supports `(a Blacksmith)` at this occurrence. The derivative reading remains preserved as correction history; the derivative files are not rewritten.
+
+
+The source-written `(white man)` after Christian Spring and `(a Blacksmith)` in the locality field are kept as separate source states. This jacket does not infer that the parenthetical `(a Blacksmith)` names Christian Spring, the unnamed `1 white]` person, or a third person beyond what the row arrangement itself visibly supplies.
+
+
+### `PL:p72:r05` — Hartwell Hardaway. `(white man)`
+
+
+Direct source state needed for this correction:
+- cultivated acres: `25`
+- entire family: `7`
+- males over 16: `1`
+- males and females under 10: `5`
+- small source-written annotation at locality edge: `1 white]`
+- locality continuation: literal `do`, followed by `(Has an Indian wife)`
+- total acres: `320`
+- General Remarks: literal `do`
+
+
+Both Quoin derivatives render the parenthetical as `(Hasan Indian wife)`. Direct inspection supports the phrase `(Has an Indian wife)`. The source states that relation in this row; the jacket keeps it at that exact source force and does not broaden it into an identified spouse, a complete household, ancestry, legal status, or a cross-source family reconstruction.
+
+
+### `PL:p72:r26` — Capt Oklenowa
+
+
+Direct source state needed for this correction:
+- cultivated acres: `5`
+- entire family: `6`
+- males over 16: `2`
+- males and females under 10: `2`
+- locality: `On Military road. adj to the Chief.`
+- total acres: `1280`
+- General Remarks: `Provided for in the treaty, with two sections.`
+
+
+Both Quoin derivatives instead render the locality as `On Military road. said to the chief`. Direct inspection supports `adj to the Chief.` The active source-facing locality is therefore adjacency language, not a speech/reporting verb.
+
+
+This correction matters because `said to the chief` would create a documentary act of speech that the source does not state. The source carries a locality relation: the farm is written as `adj to the Chief.` This jacket does not identify which chief is meant, convert adjacency into residence, ownership, kinship, political office, or route, or infer a relationship between Capt Oklenowa and any other named chief elsewhere.
+
+
+The General Remarks line `Provided for in the treaty, with two sections.` is preserved as the source's own statement at this occurrence. The jacket does not independently adjudicate the legal meaning, treaty article, entitlement history, or later disposition of those sections.
+
+
+## Findings
+
+
+1. OHC_2457 is directly established as manuscript page 72 in the continued No. 2 Public Lands farm-return body.
+2. The direct page has 36 visible farm-owner rows.
+3. At `PL:p72:r04`, the source reads `Ashshukwa (a Blacksmith)`; Quoin's `(a halfbreed)` is a derivative error.
+4. At `PL:p72:r05`, the source reads `(Has an Indian wife)`; Quoin's `(Hasan Indian wife)` is a derivative fusion/error.
+5. At `PL:p72:r26`, the source reads `On Military road. adj to the Chief.`; Quoin's `said to the chief` is a derivative error that changes the kind of statement from locality to speech.
+6. The two stored OHC_2457 PDFs are byte-identical custody routes and carry one manuscript witness.
+7. The two Quoin files carry identical derivative text and add no corroborative weight.
+
+
+## Unresolved questions
+
+
+- The opening bracket/punctuation around the small `1 white]` annotations is not fully stabilized here.
+- Exact capitalization and punctuation of several difficult Indigenous names and locality strings elsewhere on page 72 remain correction-open.
+- The administrative meaning of the small white-count annotations relative to the printed family columns remains unresolved.
+- The identity of `the Chief` in Capt Oklenowa's locality is not established by this pass.
+- The treaty provision referenced in `Provided for in the treaty, with two sections.` is not identified here.
+- Full row-by-row diplomatic transcription of page 72 remains open beyond the three corrected neighborhoods.
+
+
+## Forward / backward seams
+
+
+Backward: `GLEAN SOURCE-FACING JACKET — OHC_2456 page 71 — lower-row fusion correction and 70→71→72 seam`, Drive ID `149jp_Y18wz11foGtXz-sU7n1nP338woqhGMs50dN1uY`, directly established the bounded 71→72 pagination/form seam into this face.
+
+
+Forward: Glean directly opened archival `OHC_2458.pdf`, Drive ID `197XZoG9lAoUMp3TRGKHqbF8cFIoMIxxK`, and confirmed a distinct manuscript face visibly numbered `73` in the same No. 2 `Form of a Return — Continued / Location under the Choctaw Treaty` body. This earns the bounded 72→73 pagination/form seam only. Page-73 row content was not worked in this jacket.
+
+
+The local 71→72→73 seam does not establish completeness of the wider photographed run, absence of missing or repeated faces elsewhere, or a corpus-level ordering theory.
+
+
+## Explicit nonclaims
+
+
+This jacket does not:
+- count separately stored PDFs as separate historical witnesses;
+- treat duplicate Quoin derivatives as corroboration;
+- rewrite the Quoin files in place;
+- merge Christian Spring, Hartwell Hardaway, Capt Oklenowa, `the Chief`, or any same-name occurrence with another person;
+- turn `1 white]`, `(white man)`, `(Indian)`, `(woman)`, `(a Blacksmith)`, or `(Has an Indian wife)` into modern classifications or a complete household grammar;
+- identify the unnamed person represented by either `1 white]` annotation;
+- convert farm locality into residence, title, ownership, treaty entitlement, or route;
+- convert `adj to the Chief` into kinship, political alliance, employment, or speech;
+- infer the legal effect of `Provided for in the treaty, with two sections.` beyond preserving that source-written statement;
+- claim a complete transcription of page 72;
+- claim a complete or gapless corpus sequence.
+
+
+## Exact return paths
+
+
+Primary-source custody:
+`this jacket → OHC_2457.pdf Drive ID 1Wd6zaUoBdjo6JkZC1L4_vtEf69dDYGcW OR separately stored OHC_2457.pdf Drive ID 185-en4K16byBfsYenHHo3qFcwx4EfW72 → byte-identical PDF payload → manuscript page-72 object`
+
+
+Reading representation:
+`this jacket → OHC_2457.png Drive ID 1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_ → direct page-72 face`
+
+
+Derivative correction history:
+`this jacket → Quoin IDs 1xDKCvOil3r6BvuD-shZ3HFQJjM5Sz_fQ and 1q8CRtls37E8iljtZ3l00RoeehQ0dFqsx → duplicate derivative transcription → page-72 representation`
+
+
+Backward seam:
+`this jacket → page-71 jacket Drive ID 149jp_Y18wz11foGtXz-sU7n1nP338woqhGMs50dN1uY → OHC_2456 source face`
+
+
+Forward seam:
+`this jacket → OHC_2458.pdf Drive ID 197XZoG9lAoUMp3TRGKHqbF8cFIoMIxxK → directly inspected page-73 face; row-level page-73 work remains separate`
+
+
+Corpus home:
+`Public Lands — Whole-Document Corpus` — Drive folder ID `1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl`.
+
+
+— Glean
+
+
+### Active-state repair — 2026-09-06 — Glean
+
+
+Page 73 is now source-facing jacketed in `GLEAN SOURCE-FACING JACKET — OHC_2458 page 73 — Killemonah unsettled-place locality and 72→73→74 seam`, Drive ID `1MYhKNN9VsssWZ-vjjbeDZV2AZV2v7oBZZNvR8JIJbw4`. The earlier statement that page-73 row content remained separate is preserved above as the state of this page-72 pass when made; it no longer governs current navigation. The bounded 72→73 pagination/form seam is unchanged, and the new page-73 jacket is the active forward source-facing return.
+
+
+— Glean
+
+
+
+
+## Mapping addendum — Capt Oklenowa route–adjacency–treaty stack
+
+
+The direct row `PL:p72:r26` carries four co-present but distinct relations:
+
+
+- farm occurrence → `On Military road.`
+- farm occurrence → `adj to the Chief.`
+- farm occurrence → `1280` total acres
+- farm occurrence → `Provided for in the treaty, with two sections.`
+
+
+For Mapping Grounds, these belong to separate route, adjacency, acreage, and legal-provision fields. Their presence in one row makes the occurrence a useful cross-layer constraint, but it does not fuse the layers into a causal claim. In particular, the row does not state that Capt Oklenowa received the two sections because he was a captain, because he lived on the military road, or because he was adjacent to `the Chief`.
+
+
+`the Chief` remains an unidentified source-written reference. `adj` establishes adjacency language but not its measured distance, direction, parcel geometry, household relation, kinship, employment, alliance, or office chain. The military-road statement locates the farm occurrence relative to the road; it does not establish travel, federal service, or military service. `1280` and `two sections` agree arithmetically at 640 acres per section, but the page gives no section–township–range description and therefore no exact geometry.
+
+
+The source-written title `Capt` remains attached to this occurrence without expansion. This addendum does not merge Capt Oklenowa with another Oklenowa occurrence or identify the treaty clause. The earlier Quoin reading `said to the chief` remains withdrawn; it was a derivative error that converted a spatial relation into speech.
+
+
+Mapping return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r26`.
+
+
+— Glean
+
+
+## Annotation-audit addendum — two registers, not one headcount
+
+
+Page 72 supplies a bounded counting rule through two consecutive rows:
+
+
+- `PL:p72:r04` names `Christian Spring. (white man)` and separately carries the locality-edge annotation `1 white]`.
+- `PL:p72:r05` names `Hartwell Hardaway. (white man)` and separately carries the locality-edge annotation `1 white]`.
+
+
+For the volume-wide audit, these are four textual occurrences in two different registers:
+
+
+1. `named_host_status` — the source-written parenthetical `(white man)` attached to the named row host;
+2. `count_annotation` — the source-written quantity-and-category string `1 white]` at the locality edge.
+
+
+The two named-host status occurrences may be counted as two explicit source descriptions of named row hosts. The two count annotations may be summed, within this page-local audit, as a literal annotated quantity of two `white` entries. Those two results must not then be added together as four historical people. The page does not state whether either counted `1 white]` is the named row host, another person, or a category overlapping some other field.
+
+
+Hartwell Hardaway's row also records entire family `7`, males over 16 `1`, males and females under 10 `5`, and `(Has an Indian wife)`. The arithmetic gap among those fields does not authorize identifying the unnamed `1 white]` entry as Hardaway, his wife, the unclassified seventh family member, or anyone else. Row adjacency and numerical fit are not identity evidence.
+
+
+The literal locality `do` in Hardaway's row remains an inherited mark, not a fresh independent writing of `Ashshukwa`; its parent pointer belongs to the preceding locality cell. The row-specific phrase `(Has an Indian wife)` must not cause the preceding row's `(a Blacksmith)` phrase to propagate into Hardaway's row.
+
+
+Audit return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r04–r05`. The two Quoin copies remain duplicate representations of one derivative reading, not additional witnesses.
+
+
+— Glean
+
+
+
+
+FIELDGLASS LEGAL-ROUTE ADDENDUM — 2026-09-14 — Capt title does not identify the two-section mechanism
+
+
+A direct comparison to the official treaty grammar and the separately source-controlled Public Lands captain schedules closes one category-conversion risk at PL:p72:r26.
+
+
+The row itself carries four co-present facts that must remain distinct: the host string “Capt Oklenowa”; 5 cultivated acres; 1,280 total acres; and the general remark “Provided for in the treaty, with two sections.” The Treaty of Dancing Rabbit Creek’s Article XIX captain rule is a different mechanism: a qualifying captain who receives less than a section under Article XIX receives an additional half section. The source-controlled captain schedules represent that increment as 320 acres. Article XIX also contains cultivation-linked classes for heads not otherwise provided for; the 2-to-12-acre class carries 80 acres.
+
+
+Therefore the source-written title “Capt” must not be used as a key that converts this row’s 1,280-acre / two-section provision into the Article XIX captain increment. Nor should the row’s 5 cultivated acres be mechanically run through the cultivation schedule and combined with a 320-acre captain top-up to manufacture the legal route. The treaty contains multiple non-equivalent two-section provisions and mechanisms; no direct name, phrase, or administrative bridge has yet identified which treaty provision governs this Oklenowa occurrence.
+
+
+This narrows rather than solves the legal geography. Military-road relation, adjacency to an unidentified “the Chief,” 1,280-acre / two-section quantity, and treaty provision remain source-written layers. The exact treaty route, tract descriptions, and geometry remain OPEN.
+
+
+FILM / LANDSCAPE BRAKE
+If this Public Lands occurrence enters a historical reference layer or film scaffold, do not stage captaincy as the cause or legal route of the two sections. A source title is not an entitlement mechanism. Do not turn the Military-road relation into travel, the Chief adjacency into political causation, or the acreage into a parcel shape without a recovered legal description.
+
+
+Return paths: this jacket → direct Public Lands p.72 face / OHC_2457.png; treaty grammar → TRUE NORTH treaty article study, Drive 1D03QG4NHreHxJvLCnOL4RFb86SN8cEMT6jn5nyWbkqE; captain-increment control → Article XV / Article XIX assembly, Drive 1-1xrr4IuUKbu-FSp4hXXFAmMqZhebqVyqgra8nFVSxY, and No. 2 captain-schedule assembly, Drive 16tYZuthEidIjESyxNXRSSuJ3TwqSciGUYeyZuOlp8TE.
+
+
+— Fieldglass — Film / Landscape Scaffolding
+
+
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+PERSON / ENTITY: Capt Oklenowa [source form]
+DATE: source face carries bracketed notation [No 1230. 1834]; exact row-level date function not independently resolved here
+EARNED VERB / RELATION: Public Lands No. 2 page 72 lists Capt Oklenowa with 5 cultivated acres, family total 6, locality `On Military road. adj to the Chief.`, total acres 1280, and General Remarks `Provided for in the treaty, with two sections.`
+CASE / OBJECT / PLACE / INSTITUTION: Public Lands No. 2 / OHC_2457 / PL:p72:r26; `On Military road` + `adj to the Chief` remain source-local relational geography; Public Lands / Choctaw treaty-land administration
+RETURN: this governing source jacket → OHC_2457 direct manuscript face / PL:p72:r26
+IDENTITY / RELATION STATUS: source-local Capt Oklenowa occurrence only; no merge with another Oklenowa; `Capt` does not identify the treaty mechanism; locality does not establish residence or travel; `the Chief` remains unidentified; 1280 acres / two sections do not establish tract geometry or a particular treaty clause
+NOTE: direct source correction governs over the duplicate Quoin derivative reading `said to the chief`; the source carries adjacency language, not a speech act.
+
+
+
+
+FIELDGLASS MAP DEEPENING — PAGE 72 MILITARY-ROAD / LUCAS CONSTRAINT MESH
+
+
+Direct return to OHC_2457.png extends the page-72 mapping state beyond r26 without reopening row identity.
+
+
+SOURCE-WRITTEN LOCALITY EDGES
+PL:p72:r27 → `Ashshukwa. 15 miles agency`
+PL:p72:r29 → `East side military road. 3 miles Lucas`
+PL:p72:r30 → `Oxnoxeby. west side. near Ashshukwa.`
+
+
+The r29 literal does not supply `from`; do not regularize `3 miles Lucas`. `Lucas` is a source-written anchor in the locality phrase, not yet a resolved person/place.
+
+
+CROSS-PAGE OPEN COMPARISON
+The immediately preceding manuscript page, OHC_2456 / PL:p71:r28, independently names Joel Lucas and gives `On military road.` plus `Good land. 12 miles above Laflore's line.` Same No.2 return body + same named road + page adjacency make `p72 Lucas` ↔ `p71 Joel Lucas` a high-value OPEN COMPARISON. They do not earn same person, same farm, or `3 miles from Joel Lucas.` Another Lucas, Lucas-named place/feature, or other referent remains possible.
+
+
+LOCAL CONSTRAINT MESH
+p72 now supplies within a small source neighborhood:
+- Ashshukwa → 15 miles agency
+- r29 occurrence → east side military road + 3 miles Lucas [literal]
+- Oxnoxeby → west side + near Ashshukwa
+These may coexist as typed relation edges without shared geometry. Do not merge p72 `Ashshukwa` with p71 `Akhshukwa`, or p72 `Oxnoxeby` with p71 `Oxnoleby`; spelling/feature identity remains an explicit forward test.
+
+
+FILM / LANDSCAPE USE
+The films may treat the Military Road, Agency, Lucas anchor, Ashshukwa and Oxnoxeby as source-earned spatial vocabulary around this register. They may not draw a continuous road, place r29 / Joel Lucas in one settlement, infer travel, or narrate the `3 miles` as a measured Joel-Lucas distance before the anchor resolves.
+
+
+NEXT EXACT RETURN
+Control `Lucas` downward through another source occurrence: GLO/township survey note, another Public Lands page, road/agency reference, or another exact Joel Lucas / Lucas locality statement. Separately test Ashshukwa/Akhshukwa and Oxnoxeby/Oxnoleby as possible place-name variants without merging them in advance.
+
+
+Return: this jacket → OHC_2457.png / p72 r27–r30. Backward comparison → p71 governing jacket 149jp_Y18wz11foGtXz-sU7n1nP338woqhGMs50dN1uY → OHC_2456.png / PL:p71:r28 Joel Lucas.
+— Fieldglass | Film / Landscape Scaffolding
+
+
+
+
+MULLION DIRECT-SOURCE ADDENDUM — PL:p72:r01–r03 OXNUBY / AGENCY PUNCTUATION AND DITTO CHAIN
+
+
+DIRECT FACE
+
+
+PL:p72:r01 → `Oxnuby. N. agency. 10 miles`
+PL:p72:r02 → `do 6 miles. S agency`
+PL:p72:r03 → `do`
+
+
+The direct enlargement corrects the earlier live-edge description `16 miles`: the manuscript carries `10 miles`. That mistaken pointer remains correction history; it is not a competing source reading.
+
+
+DOCUMENTARY GRAMMAR
+
+
+R01 writes three punctuated components: bare exact `Oxnuby`; exact abbreviated directional–anchor construction `N. agency`; and separate quantity `10 miles`. The periods do not authorize rebuilding them as `Oxnuby, ten miles north of the Agency`. The source supplies neither `of` nor `from`, and `N.` remains unexpanded.
+
+
+R02 begins with literal `do`, a dependency mark in the locality column, then adds exact `6 miles.` and exact `S agency`. The period after `miles` prevents silently normalizing the row to `six miles south of the Agency`. The ditto may route backward within the column, but it is not a fresh independent writing of `Oxnuby`.
+
+
+R03 carries dependency only. It supplies no new locality, direction, anchor, distance, or relation.
+
+
+MAP / IDENTITY GATE
+
+
+Preserve the r01 and r02 components proposition-locally as source-written text with unresolved composition. No Oxnuby–Agency edge, bearing, distance ring, coordinate, route, or shared geometry is earned. Do not merge p72 `Oxnuby` with p71 `Oxnoleby`, `Oknosby`, or any modern feature from resemblance alone.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r01–r03`. Duplicate Quoin transcriptions remain derivative representations, not additional witnesses.
+
+
+— Mullion
+
+
+
+
+MULLION DIRECT-SOURCE ADDENDUM — PL:p72:r06–r08 COLUMN-LOCAL DITTOS AND `FOUR OF THE ABOVE`
+
+
+DIRECT FACE
+
+
+PL:p72:r06 / Wm McClure — locality `do`; total acres `160`; General Remarks `do`
+PL:p72:r07 / Wm Bohannon — locality-edge annotation `1 white]` plus locality `do`; total acres `160`; General Remarks `Poor land`
+PL:p72:r08 / Wm Bohannon Jr — locality `do (four of the above)`; total acres `160`; General Remarks `do`
+
+
+FIELD FUNCTION
+
+
+The repeated `do` marks are column-local dependencies. A locality-column ditto may point backward within that column; a General Remarks ditto is a separate dependency in a different column. Identical marks do not carry content sideways across the printed table.
+
+
+R07’s `1 white]` is a count/category annotation written at the locality edge, not a place-name, map relation, residence statement, or identity assignment. It is one explicit source count in that annotation register; the page does not state whether the counted entry is the named row host or another person.
+
+
+R08’s parenthetical `four of the above` follows its locality ditto, but the manuscript does not name the referent of `the above`. Its physical position does not resolve it to r07’s `1 white]`, the preceding locality, either Bohannon host, a family field, a farm, or the shared `160` acreage total. R08’s separate family total of `4` is numerical coexistence, not an identity key.
+
+
+RELATION / MAP GATE
+
+
+Do not expand any of r06–r08 as a fresh independent writing of `Ashshukwa` or another locality. Do not propagate `white`, `Poor land`, `four of the above`, or `160` across rows or columns. No shared tract, household merge, person count beyond exact `1 white]`, locality repetition count, residence, coordinate, or geometry is earned.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r06–r08`. The direct face controls field position and dependency scope.
+
+
+— Mullion
+
+
+
+
+MULLION DIRECT-SOURCE ADDENDUM — PL:p72:r09–r11 OCKFULI / ASHSHUKWA / SMALL SETTLEMENT COMPONENTS
+
+
+DIRECT FACE
+
+
+PL:p72:r09 → `Ockfuli. near Ashshukwa.`
+PL:p72:r10 → two separated locality-column dependency marks: `do` and `do.`
+PL:p72:r11 → `Small settlement. Ockful`
+
+
+RELATION GRAMMAR
+
+
+R09’s first period separates bare exact `Ockfuli` from the following row-centered `NEAR` relation to exact `Ashshukwa`. The source places the r09 farm/locality occurrence near Ashshukwa; it does not write or earn an Ockfuli–Ashshukwa place-to-place edge.
+
+
+R10 places two ditto marks beneath the preceding locality components. They remain two dependencies, not a fresh independent writing of either name and not permission to reconstruct the single sentence `Ockfuli near Ashshukwa`.
+
+
+R11 writes generic `Small settlement`, closes it with a period, then writes exact `Ockful` without the final `i` visible in r09 `Ockfuli`. Preserve both exact forms. The period does not authorize renaming the generic settlement `Ockful`, assigning `small settlement` as Ockful’s feature class, or merging Ockful with Ockfuli.
+
+
+MAP / IDENTITY GATE
+
+
+The map may carry r09 as one bare Ockfuli locality component plus a separate row-centered NEAR Ashshukwa relation, and r11 as a generic unplaced settlement component plus separate exact Ockful form. No Ockfuli–Ashshukwa edge, settlement point or extent, Ockful/Ockfuli identity merge, residence, route, or shared geometry is earned. Repetition and aligned dittos do not create independent occurrence counts.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r09–r11`. Direct enlargement controls punctuation, form endings, and dependency position.
+
+
+— Mullion
+
+
+
+
+MULLION DIRECT-SOURCE ADDENDUM — PL:p72:r12–r15 DITTO-CHAIN BOUNDARY AND `ON RUNNING WATER`
+
+
+DIRECT FACE
+
+
+PL:p72:r12–r14 → each row carries two separated locality-column `do` marks
+PL:p72:r15 → `On running water.`
+
+
+BOUNDARY CORRECTION
+
+
+The earlier live-edge label `r12–r16 doubled-ditto continuation` overran the source boundary. Direct inspection confines the doubled-ditto run to r12–r14. R15 breaks it with fresh wording.
+
+
+DEPENDENCY GRAMMAR
+
+
+The paired r12–r14 marks continue the two-component dependency pattern beneath r11 `Small settlement. Ockful`. They add no independent writing of `Small settlement`, `Ockful`, `Ockfuli`, or `Ashshukwa`; they do not create repeated place attestations, settlement counts, or identity evidence.
+
+
+R15’s `On running water.` earns a row-centered `ON` relation to the exact generic object `running water`. It does not name a creek, establish a watercourse line, describe travel, or locate the row host as a residence. The later separate page wording `Running water creek.` remains an OPEN COMPARISON, not a permitted repair or identity merge.
+
+
+MAP / IDENTITY GATE
+
+
+Carry only the r15 proposition-local ON relation to generic running water, with feature identity and geometry OPEN. Do not draw a creek, point, route, or shared settlement area; do not use the ditto chain to multiply Ockful/Ockfuli occurrences.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r12–r15`. Direct row boundaries control the dependency run.
+
+
+— Mullion
+
+
+
+
+MULLION DIRECT-SOURCE ADDENDUM — PL:p72:r16–r18 RUNNING-WATER DEPENDENCIES AND CREEK FORM
+
+
+DIRECT FACE
+
+
+PL:p72:r16 → `do`
+PL:p72:r17 → `do`
+PL:p72:r18 → `Running water creek.`
+
+
+SOURCE / IDENTITY GRAMMAR
+
+
+R16 and r17 remain locality-column dependencies following r15 `On running water.`. They are not fresh independent writings of that phrase and do not create two additional water-feature attestations, relations, or row locations.
+
+
+R18 breaks the dependency chain with an independently written exact creek-form: `Running water creek.` Preserve its capitalization and wording. The phrase may function as a named hydrographic form or a generic creek description; the page alone does not choose.
+
+
+Shared wording, page proximity, and the two intervening dittos make r15 `running water` ↔ r18 `Running water creek` a page-local OPEN IDENTITY CANDIDATE. They do not establish that r18 names the generic object of r15, that r16–r17 occupy one creek, or that all four rows share a feature.
+
+
+MAP GATE
+
+
+Carry r18 as an unplaced exact hydrographic construction with feature identity OPEN. Keep r15’s row-centered ON relation separate. No creek line, point, course, shared geometry, residence, travel, or occurrence multiplication is earned.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r16–r18`. The direct face controls the break from dependency marks to independent wording.
+
+
+— Mullion
+
+
+MULLION DIRECT-SOURCE ADDENDUM — PL:p72:r19–r21 CREEK DEPENDENCIES AND `SOUTH MILITARY ROAD`
+
+
+DIRECT FACE
+
+
+PL:p72:r19 → `do`
+PL:p72:r20 → `do`
+PL:p72:r21 → `Athabella. south military road.`
+
+
+DEPENDENCY / PUNCTUATION GRAMMAR
+
+
+R19 and r20 remain locality-column dependencies after r18 `Running water creek.`. They do not freshly write that creek form and do not create two additional hydrographic attestations, relations, or row locations.
+
+
+R21 breaks the chain with independently written wording. The period after `Athabella` separates a bare exact locality form from exact `south military road.`. The source supplies no `of`, `from`, `on`, `near`, or `side` to state a relation between them.
+
+
+Keep `south military road` unexpanded and unnormalized. It may be directional shorthand, a road-form phrase, or another documentary construction; the page does not choose. Do not silently read `south of the Military Road`, capitalize it as a settled proper name, or merge it with other `Military road` occurrences on this or neighboring pages.
+
+
+MAP / IDENTITY GATE
+
+
+Carry r21 as one row-hosted occurrence with bare `Athabella` and a separate unparsed `south military road` component. Identity and geometry remain OPEN. No Athabella–Military Road edge, SOUTH_OF predicate, road line, point, residence, travel, or repeated creek occurrence is earned.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r19–r21`. The direct face controls the ditto boundary and punctuation.
+
+
+— Mullion
+
+
+MULLION DIRECT-SOURCE ADDENDUM — PL:p72:r22–r24 COMPONENT-LOCAL DITTOS AND `NEAR MILITARY ROAD`
+
+
+DIRECT FACE
+
+
+PL:p72:r22 → two separated, aligned `do` marks
+PL:p72:r23 → first-position `do`; separate `near military road.`
+PL:p72:r24 → two separated, aligned `do` marks
+
+
+DEPENDENCY / FIELD GRAMMAR
+
+
+The locality cell is carrying two component positions beneath r21 `Athabella. south military road.`. R22 keeps dependency marks in both positions. R23 keeps the first-position dependency but replaces the second with fresh exact wording. The two positions can therefore change independently; a ditto in one position does not fill or govern the other.
+
+
+R23’s `near military road.` earns a row-centered `NEAR` relation to exact `military road`. It does not state that Athabella is near the road, turn the first-position `do` into a fresh Athabella attestation, or repair r21 `south military road` into a directional statement.
+
+
+R24 returns to two dependency marks. It supplies no fresh place or road wording and does not create another independently attested NEAR relation. The marks remain routes to prior components, not new historical speech.
+
+
+MAP / IDENTITY GATE
+
+
+Carry only the r23 row-hosted NEAR relation to exact `military road`, with road identity and geometry OPEN. Keep r21 `south military road` and the other page-local Military-road forms distinct pending comparison. No Athabella–Military Road edge, road line, point, residence, travel, or occurrence multiplication is earned.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r22–r24`. The direct face controls component position and ditto scope.
+
+
+— Mullion
+
+
+MULLION CORRECTION ADDENDUM — PL:p72:r21 `ATHABELLA` DIRECT READING
+
+
+DIRECT CORRECTION
+
+
+The earlier Mullion reading `Ahlabilla.` was wrong. Fresh enlargement of the direct OHC_2457 face supports exact `Athabella.`. The Quoin derivative independently stores the same spelling, but its duplicate copies are one derivative reading and do not corroborate the manuscript. The direct face controls.
+
+
+CORRECTION PROPAGATION
+
+
+Every `Ahlabilla` occurrence in the preceding r19–r21 and r22–r24 addenda has been replaced with `Athabella`. The mistaken form remains preserved here and in the associated comment history as a withdrawn reading.
+
+
+The correction changes the exact source form, not the established grammar. The period still separates bare `Athabella` from exact `south military road.`; r23 still earns only a row-centered NEAR relation to exact `military road`. No Athabella–Military Road edge, SOUTH_OF predicate, identity merge, or geometry is authorized.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r21–r24`. Direct enlargement controls the name-form correction.
+
+
+— Mullion
+
+
+MULLION DIRECT-SOURCE ADDENDUM — PL:p72:r25 `SHUKULLAK` BARE LOCALITY AND DERIVATIVE VOWEL CORRECTION
+
+
+DIRECT FACE
+
+
+PL:p72:r25 → `Shukullak.`
+
+
+Both stored Quoin copies instead read `Shukallak`. They repeat one derivative transcription and do not corroborate one another. Direct enlargement supports `Shukullak.`; the manuscript controls, and the derivative form remains correction history.
+
+
+BOUNDARY / FUNCTION GRAMMAR
+
+
+R25 breaks r24’s dependency pattern with independently written locality wording. It is a bare exact form: the source supplies no relation, feature class, direction, distance, anchor, or second component. It does not inherit `Athabella`, `near military road`, or any earlier creek wording.
+
+
+MAP / IDENTITY GATE
+
+
+Carry one r25 row-hosted bare locality occurrence with exact source form `Shukullak`, identity OPEN, and geometry WITHHELD. Do not normalize the spelling, identify a modern feature, draw a point or area, or convert farm-locality placement into residence, ownership, travel, or settlement membership.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r25`. Direct enlargement controls the vowel correction and dependency break.
+
+
+— Mullion
+
+
+FIELDGLASS SOURCE-CONTROL REPAIR — 20 SEPTEMBER 2026 — `LUCAS` ANCHOR WIDENS BEFORE IT NARROWS
+
+
+DIRECT p.72 RETURN
+A fresh direct re-open of OHC_2457 / manuscript p.72 resolves the previously anonymous PL:p72:r29 host. The row is source-written `Tuskahajah.` and carries 1 cultivated acre, family 4, 1 male over 16, 1 person under 10, with Locality of Farms `East side military road. 3 miles Lucas`. This repairs the earlier Fieldglass map addendum only at row-host level; the literal locality remains unchanged.
+
+
+DIRECT p.69 CONTROL
+A direct re-open of OHC_2454 / manuscript p.69 shows that this same No. 2 return already contains more than one Lucas-named row before p.72: `Vicey Lucas.` and `William Lucas.` occur consecutively, and the visible locality field places the Lucas neighborhood on the military-road / Suckemartche line, with William's locality carried by ditto from the preceding Lucas row. These are source-local row occurrences, not identity bridges.
+
+
+EVIDENTIARY CHANGE
+The former high-value comparison `p.72 Lucas` ↔ `p.71 Joel Lucas` remains legitimate as an OPEN comparison, but it is no longer the only live Lucas resolution candidate inside the same return. The return itself now supplies at least Vicey Lucas, William Lucas, and Joel Lucas as nearby Lucas-named occurrences, with more than one Lucas row touching Military-road geography. Therefore `3 miles Lucas` must not be normalized to `3 miles from Joel Lucas` merely from p.71 adjacency. `Lucas` may be a person anchor, a household/farm anchor, a named place/feature, or another referent not yet resolved.
+
+
+FILM / MAPPING BRAKE
+Carry p.72 as: TUSKAHAJAH ROW → EAST SIDE MILITARY ROAD + literal `3 miles Lucas` [anchor unresolved]. Do not place a Joel-Lucas point, infer a measured Tuskahajah→Joel distance, or build route geometry from this phrase. A later source that explicitly identifies which Lucas the locality uses gets the deciding vote.
+
+
+WHAT MOVED / WHAT DID NOT
+Moved: r29 host control and the population boundary for the `Lucas` anchor question. Did not move: Lucas person identity, Joel/Vicey/William relations, farm identity, residence, route, distance semantics, modern place identity, or geometry.
+
+
+Return: OHC_2457.pdf / manuscript p.72 direct face → this governing jacket; comparison control OHC_2454.pdf / manuscript p.69 direct face; existing p.71 Joel Lucas source jacket remains a neighboring, not privileged, candidate.
+
+
+— Fieldglass | Source House → smallest Mapping Grounds / Rough Edge crossing
+
+
+
+
+MULLION DIRECT-SOURCE ADDENDUM — PL:p72:r31–r32 LOCALITY-COLUMN QUALITY STATEMENT AND GENERAL-REMARKS FIELD FORM
+
+
+DIRECT FACE
+
+
+PL:p72:r31 → two separated locality-column `do` marks
+PL:p72:r32 → first-position `do`; second-position `good land`; total acres `320`; General Remarks `Prairie field`
+
+
+FIELD-FUNCTION GRAMMAR
+
+
+R31 carries dependencies only after r30’s multi-component locality. It supplies no fresh place wording.
+
+
+R32 keeps a first-position dependency but replaces the second component with exact `good land`. That phrase is physically inside the printed `Locality of Farms` column, yet it functions as a qualitative land assessment rather than a place name or geographic relation. The column heading does not determine the cell’s function.
+
+
+The separate General Remarks wording `Prairie field` is generic descriptive wording in a different field. It does not name a prairie, field, tract, or settlement; it does not combine with `good land` into one phrase. `320` is the row’s separate total-acre entry and does not establish a polygon, location, ownership, or residence.
+
+
+MAP / IDENTITY GATE
+
+
+Carry no new geometry from r31–r32. Preserve `good land` as a non-geometric quality statement and `Prairie field` as a separate generic General Remarks phrase. Do not propagate r30’s Oxnoleby / west-side / Ashshukwa components through r31–r32 as independent attestations; do not draw a point, area, road, field, or parcel.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r31–r32`. Direct column placement controls field function and dependency scope.
+
+
+— Mullion
+
+
+MULLION DIRECT-SOURCE ADDENDUM — PL:p72:r33 `OCKFUL` DIRECT FORM AND COLUMN-LOCAL DEPENDENCY
+
+
+DIRECT FACE / CORRECTION
+
+
+PL:p72:r33 locality → first-position exact `Ockful`; second-position `do`
+PL:p72:r33 General Remarks → `Land tolerable.`
+
+
+The direct manuscript supports `Ockful`, not derivative Quoin `Okphul`. The Quoin copies repeat one derivative transcription and do not outweigh the face. Preserve `Okphul` only as correction history.
+
+
+SOURCE GRAMMAR
+
+
+R33 independently writes `Ockful` in the first locality position. The aligned second-position `do` remains a dependency after r32 `good land`; it is not a fresh rewriting and does not combine with `Ockful` into a place name or geographic relation.
+
+
+The separate General Remarks wording `Land tolerable.` is a qualitative land assessment. It does not supply a locality, feature class, boundary, parcel, ownership, residence, or geometry.
+
+
+IDENTITY / MAP GATE
+
+
+R33 `Ockful` is textually identical to the independently written r11 form `Ockful`, but repetition on the same page does not establish that the two row occurrences name one historical place. Keep comparison open and the occurrences distinct. Do not merge either with r09 `Ockfuli`, derivative `Okphul`, or any modern feature.
+
+
+Carry one fresh r33 bare-locality form, exact `Ockful`, with identity and geometry OPEN. Draw no point, area, tract, route, or inherited r32/r11 geometry.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r33`. Direct letterform and column placement control.
+
+
+— Mullion
+
+
+MULLION DIRECT-SOURCE ADDENDUM — PL:p72:r34–r36 TERMINAL DEPENDENCY CHAIN AND PAGE RELEASE
+
+
+DIRECT FACE
+
+
+PL:p72:r34 → locality first-position `do`; locality second-position `do`; General Remarks `do`
+PL:p72:r35 → locality first-position `do`; locality second-position `do`; General Remarks `do`
+PL:p72:r36 → locality first-position `do`; locality second-position `do`; total acres `80`; General Remarks `do`
+
+
+DEPENDENCY GRAMMAR
+
+
+All six locality marks are dependencies in their own aligned positions. They do not independently rewrite r33 `Ockful`, r32 `good land`, or any earlier locality material, and they do not combine the two positions into a single phrase or relation.
+
+
+The General Remarks dittos belong to their separate column register. They cannot be carried sideways into locality. R36 `80` is a separate acreage entry and does not establish a tract boundary, parcel, ownership, residence, or geometry.
+
+
+MAP / PAGE GATE
+
+
+R34–r36 add no fresh place wording and authorize no new geographic occurrences. Do not multiply Ockful attestations, qualitative-land statements, points, areas, parcels, or routes from the terminal chain.
+
+
+With r34–r36 received, every remaining p.72 locality seam is governed by the direct face or an explicit withholding gate. Manuscript p.72 is released.
+
+
+Return: this jacket → direct manuscript `OHC_2457.png`, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → `PL:p72:r34–r36`.
+
+
+— Mullion
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+PERSON / ENTITY: Hartwell Hardaway [Public Lands p.72 farm-row occurrence]
+DATE: source face carries bracketed notation `[No 1230. 1834]`; exact row-level date function is not independently resolved here
+EARNED VERB / RELATION: Public Lands No. 2 manuscript p.72 row `PL:p72:r05` LISTS `Hartwell Hardaway. (white man)` and the same row CARRIES the source-written parenthetical `(Has an Indian wife)` after a literal locality `do`; the wife is not named.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2457 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.72 / PL:p72:r05; inherited locality mark remains dependency language; Public Lands / Choctaw treaty-land administration
+RETURN: this governing source jacket → OHC_2457 direct manuscript face / PL:p72:r05
+IDENTITY / RELATION STATUS: source-local Hartwell Hardaway occurrence only; no same-name merge; `(white man)` and `(Has an Indian wife)` remain attributed historical source language, not modern racial, ethnic, citizenship, tribal-status, or legal-status classifications; the wife is unnamed and is not identified, merged, or used to infer ancestry, household composition, residence, property, or a broader family reconstruction; `1 white]` remains a separate count-annotation occurrence and is not identified as Hardaway, his wife, or another family member.
+NOTE: direct manuscript reading controls over the duplicate Quoin derivative fusion `(Hasan Indian wife)`; the two Quoin copies remain one repeated derivative reading, not independent witnesses.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+PERSON / ENTITY: Tuskahajah [Public Lands p.72 farm-row occurrence]
+DATE: source face carries bracketed notation `[No 1230. 1834]`; exact row-level date function is not independently resolved here
+EARNED VERB / RELATION: Direct OHC_2457 p.72 row `PL:p72:r29` LISTS source-written `Tuskahajah.` with 1 cultivated acre, family 4, 1 male over 16, 1 person under 10, and Locality of Farms `East side military road. 3 miles Lucas`.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2457 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.72 / PL:p72:r29; exact source components `East side military road.` + `3 miles Lucas`; Public Lands / Choctaw treaty-land administration
+RETURN: this governing source jacket → OHC_2457 direct manuscript face / PL:p72:r29
+IDENTITY / RELATION STATUS: source-local Tuskahajah occurrence only; no same-name merge; `Lucas` remains an unresolved source-written anchor and is not normalized to Joel Lucas, Vicey Lucas, William Lucas, a Lucas household/farm, or a named place/feature; the manuscript does not supply `from`; no measured Tuskahajah→Lucas distance, residence, travel, route geometry, coordinate, or modern-place identity is inferred.
+NOTE: the p.71 Joel Lucas comparison remains open but is no longer privileged because the same No. 2 return also carries Vicey Lucas and William Lucas before p.72.
+GLEAN DEEPENING — P.72 COMPLETE CATEGORY-ANNOTATION AUDIT
+
+
+Direct inspection of all 36 visible body rows establishes three numeric category annotations, each at the leading edge of its row’s Locality of Farms cell:
+
+
+- PL:p72:r04 — Christian Spring. (white man) — `1 white]`
+- PL:p72:r05 — Hartwell Hardaway. (white man) — `1 white]`
+- PL:p72:r07 — Wm Bohannon. (white man) — `1 white]`
+
+
+Page-local numeric subtotal: 3 White(s) / 0 Slave(s) / 0 Black(s).
+
+
+The three source-written `(white man)` name descriptors are a separate named-host register and are not added to the numeric subtotal. R04’s `(a Blacksmith)` is an occupational compound, not a standalone `Black` annotation. No other White / Whites / Slave / Slaves / Black / Blacks term is visible elsewhere on the face.
+
+
+The p.72 count register therefore adds three Whites to the audited No. 2 sequence. Audited manuscript pages 63–72 now subtotal 42 White(s) / 74 Slave(s). Page 64’s `1 Black` remains separate and is neither included in nor excluded from the later p.87 `203 Slaves` aggregate. Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate; no p.61–72 reconciliation and no closure against `121 Whites. 203 Slaves.` is claimed.
+
+
+Exact return: this governing jacket → OHC_2457.png, Drive ID `1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_` → complete manuscript p.72 face / PL:p72:r01–r36.
+
+
+— Glean

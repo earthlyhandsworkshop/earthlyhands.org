@@ -1,0 +1,406 @@
+# GLEAN SOURCE-FACING JACKET — OHC_2454 page 69 — Pisohamba cultivated-acre correction and John McKinney occurrence
+
+
+Maker: Glean
+Date: 2026-09-06
+Body: quoted-title Public Lands
+Status: NEW SOURCE-FACING JACKET — bounded page-69 pass
+
+
+## Method control
+
+
+This pass begins from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md (Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF), SOURCE WORK METHOD — full strength, exact reach — source to synthesis (Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc), and the source-force / exact-reach amendment.
+
+
+Operative controls: receive the object as itself; read the source face before repairing it with derivative text; one historical object rather than one jacket per representation; preserve blanks, difficult wording, and correction history; name derivative operations; repeated representations do not become independent witnesses; do not silently merge same-name people; keep every consequential statement able to walk home.
+
+
+## Historical object and custody
+
+
+Documentary face: one manuscript ledger face visibly numbered 69, headed Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty. It is a ruled farm-return table. The right-hand header notation is not diplomatically stabilized in this pass; Quoin renders it as “No 1230. 1834,” which remains derivative navigation unless separately secured from the face.
+
+
+PDF custody route A:
+- OHC_2454.pdf
+- Drive ID: 1nW47cowdBswWpwIyyYrPQGoshthIEjMw
+- size: 275,882 bytes
+- parent: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+
+
+PDF custody route B:
+- OHC_2454.pdf
+- Drive ID: 188ejWT8Q7HCd4HzYTHDJnGjRhe-jLA4m
+- size: 275,882 bytes
+- parent: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — Source objects — received batch 1 — OHC 2408–2518
+
+
+Glean compared the complete PDF payloads byte-for-byte. Both hash to SHA-256 385c21c4624bab9c03ae7fb4aa94ffe70c6ee1ae64cf1dc9b329f96aef0d2170 and compare equal. They remain two custody objects / two return routes carrying one identical PDF payload and one manuscript-page witness. They are not two historical witnesses.
+
+
+Admitted study representation:
+- OHC_2454.png
+- Drive ID: 1r94xyrf9W5kPCvXeinbx7E9doe90TjRP
+- size: 1,469,849 bytes
+- parent: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh — 76 Distinct Study Surfaces
+- role: reading representation of the same manuscript face; not an independent historical witness
+
+
+Derivative transcriptions used for comparison:
+- OHC_2454 form of return Choctaw Treaty farms page 69 — Quoin.md — Drive ID 1Ybet5ECYdzl9PrCppH8N8djq71ifFQcm — parent 1komb4v11M9baULEpk3w3owolFF99m2-F (Quoin folio box)
+- same-title Quoin object — Drive ID 1-8yCzVPyiIvWrgJAFCg8ySn4cr0MUAUV — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl (Public Lands — Whole-Document Corpus)
+
+
+The connector-readable texts of those two Quoin objects are identical in this pass. They are duplicate derivative text, not corroborating witnesses.
+
+
+## Stable occurrence and source-facing correction
+
+
+Rows are counted top-to-bottom from the first visible farm-owner entry below the headers. This jacket stabilizes only the occurrences directly needed for this pass and does not claim a full diplomatic transcription of page 69.
+
+
+### PL:p69:r33 — Pisohamba.
+
+
+Direct face, by visible column:
+- No of Acres Cultivated: 12
+- Entire No of the Family: 13
+- Males over 16 years: 4
+- Males and Females under 10 years: 5
+- Locality of Farms: 4 miles from McKinney's
+- Total No of Acres: 160
+- General Remarks: literal do
+
+
+Both Quoin derivatives transcribe this row as “Pisohamba. 14 13 4 5 4 miles from McKinney's 160 do.” Direct inspection of the manuscript representation shows 12, not 14, in the cultivated-acre column. Active source-facing state: PL:p69:r33 cultivated acres = 12. Quoin 14 remains visible as superseded derivative history; the derivative files are not silently rewritten.
+
+
+This is a numerical transcription correction only. It does not establish title, entitlement, residence, household composition, kinship, or a rule connecting cultivated acres to total acres.
+
+
+## Source occurrence preserved without identity merge
+
+
+### PL:p69:r28 — John McKinney (half breed)
+
+
+The manuscript name field directly writes “John McKinney (half breed)”. The parenthetical is preserved as historical source wording on this occurrence; it is not silently modernized or converted into a workshop identity category.
+
+
+Direct face, by visible column:
+- No of Acres Cultivated: 30
+- Entire No of the Family: 5
+- Males over 16 years: 3
+- Males and Females under 10 years: blank
+- small source-written annotation at the leading edge of the locality area: “2 slaves]”
+- Locality of Farms: On Robinson road. 15 miles from agency
+- Total No of Acres: 640
+- General Remarks: Poor land water good. Keeps a stand:
+
+
+Quoin reproduces this row substantially the same way. That agreement does not make Quoin an independent witness; the active state above comes from direct inspection of the source face.
+
+
+This occurrence is not merged with any other John McKinney in Public Lands, MCR material, patents, family testimony, or other workshop bodies. Same name is permission to compare later, not identity. The source-written “2 slaves]” annotation is preserved at exact row level and is not broadened into a complete household census, a legal-status theory, or an ownership theory beyond what the manuscript wording itself carries.
+
+
+## Findings
+
+
+1. OHC_2454 is directly established as manuscript page 69 in the continued No. 2 Public Lands farm-return body.
+2. PL:p69:r33 Pisohamba has 12 cultivated acres on the manuscript face; both duplicate Quoin derivatives give 14.
+3. PL:p69:r28 directly records a John McKinney occurrence with the source-written parenthetical “(half breed),” the small annotation “2 slaves],” locality “On Robinson road. 15 miles from agency,” total acres 640, and the remark “Poor land water good. Keeps a stand:”.
+4. The two stored OHC_2454 PDFs are byte-identical custody objects and remain one manuscript witness, not two.
+5. The two Quoin files carry identical derivative text and add no corroborative weight.
+
+
+## Unresolved questions
+
+
+- Full row-by-row diplomatic transcription of page 69 remains open.
+- Exact spelling and punctuation of difficult Indigenous names and locality strings remain correction-open except where specifically stabilized above.
+- The right-hand header notation after the treaty heading is not diplomatically stabilized here; Quoin’s “No 1230. 1834” remains derivative until directly secured.
+- The administrative meaning of the printed family, cultivated-acre, and total-acre fields, and the legal significance of the remarks, are not established by this pass.
+- The manuscript does not explain in this face how the small “1 white” / “2 slaves]” annotations relate administratively to the printed family columns.
+- The historical identity of PL:p69:r28 John McKinney relative to same-name occurrences elsewhere remains open.
+
+
+## Forward / backward seams
+
+
+Backward: GLEAN SOURCE-FACING JACKET — OHC_2453 page 68 — James McClure over-16 correction and 67→68→69 seam, Drive ID 1RwdzpfbRGLf102pjwItwARWcHHquJSP727_4bpFKCik, already directly establishes page 68 and the bounded 68→69 pagination/form seam into this face.
+
+
+Forward: Glean opened OHC_2455.png, Drive ID 1L_BpKp5UmShnQDx-WdL5phGTAFrhjYTU, only far enough to establish a distinct manuscript face visibly numbered 70 in the same No. 2 Form of a Return — Continued / Location under the Choctaw Treaty body. This earns the bounded 69→70 pagination/form seam. Page-70 row content was not worked and no page-70 jacket is created here.
+
+
+The local 68→69→70 seam does not establish completeness of the wider photographed run, absence of missing or repeated faces elsewhere, or a corpus-level ordering theory.
+
+
+## Explicit nonclaims
+
+
+This jacket does not:
+- merge the two OHC_2454 PDF custody objects into two witnesses;
+- treat duplicate Quoin transcriptions as corroboration;
+- merge PL:p69:r28 John McKinney with any same-name person elsewhere;
+- convert the source-written parenthetical “(half breed)” into a modern identity classification;
+- infer kinship from family counts;
+- infer residence merely from a farm locality line;
+- infer title, treaty entitlement, or legal outcome from acreage figures;
+- expand “2 slaves]” into a complete census or a relationship not stated by the source;
+- expand literal “do” marks into wording not actually written on the row;
+- claim a complete transcription of page 69;
+- claim a complete or gapless corpus sequence.
+
+
+## Exact return paths
+
+
+Primary source:
+this jacket → OHC_2454.pdf Drive ID 1nW47cowdBswWpwIyyYrPQGoshthIEjMw OR separately stored byte-identical custody object 188ejWT8Q7HCd4HzYTHDJnGjRhe-jLA4m → manuscript page-69 face.
+
+
+Reading representation:
+this jacket → OHC_2454.png Drive ID 1r94xyrf9W5kPCvXeinbx7E9doe90TjRP → same manuscript page-69 face / PDF payload.
+
+
+Derivative history:
+this jacket → Quoin IDs 1Ybet5ECYdzl9PrCppH8N8djq71ifFQcm and 1-8yCzVPyiIvWrgJAFCg8ySn4cr0MUAUV → duplicate derivative row transcription → admitted page-69 representation.
+
+
+Backward seam:
+this jacket → page-68 jacket Drive ID 1RwdzpfbRGLf102pjwItwARWcHHquJSP727_4bpFKCik → OHC_2453 source face.
+
+
+Forward seam:
+this jacket → OHC_2455.png Drive ID 1L_BpKp5UmShnQDx-WdL5phGTAFrhjYTU → directly inspected page-70 face; row-level page-70 work remains separate.
+
+
+Corpus home:
+Public Lands — Whole-Document Corpus — Drive folder ID 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+
+
+— Glean
+
+
+
+
+## Glean forward-seam repair — 2026-09-06
+
+
+The earlier forward-seam statement above remains preserved as encounter history but is now superseded as active footing. OHC_2455 page 70 has since received a source-facing jacket: GLEAN SOURCE-FACING JACKET — OHC_2455 page 70 — Nathaniel Folsom 1 white annotation and 69→70→71 seam, Drive ID 1T3vyGtWnFk4i01Thtfu-DOEOZ_sYFGbtjKgbMLH-7nU. Direct page-70 work stabilizes PL:p70:r04 “Nathaniel Folsom.” with the source-written “1 white]” annotation before “New Robinson road. father of Col Folsom” and records the duplicate Quoin “1 mile” reading as superseded derivative history. OHC_2456.png, Drive ID 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW, is directly established as page 71, earning the bounded 70→71 seam. The wider corpus remains correction-open; this repair does not claim gapless sequence beyond the local 69→70→71 faces.
+
+
+— Glean
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — 2026-09-11 — ROBINSON-ROAD / `KEEPS A STAND` OCCURRENCE
+
+
+Maker: Fieldglass
+Ground: Historical Landscape Map / Public Lands
+Status: DIRECT-SOURCE MAP-FACING DEEPENING — EXISTING PAGE-69 JACKET; NO NEW HISTORICAL OBJECT OR JACKET
+
+
+Direct source return
+Fieldglass reopened the admitted OHC_2454.png study representation — Drive ID 1r94xyrf9W5kPCvXeinbx7E9doe90TjRP — and directly inspected manuscript p.69, PL:p69:r28. The source row carries Locality of Farms `On Robinson road. 15 miles from agency`, Total No. of Acres `640`, and a General Remarks phrase including `Keeps a stand`. The row’s other source-written status/count language remains preserved in the governing jacket but is not converted into a map category here.
+
+
+Map consequence
+This earns an OPEN ROAD-LOCALIZED STAND OCCURRENCE / SITE-FUNCTION NOTE attached only to PL:p69:r28: the same source row relates its farm locality to Robinson road, gives `15 miles from agency`, and separately says `Keeps a stand`. `Stand` remains a literal source term. This pass does not convert it into an inn, tavern, store, trading post, stage stop, ferry, post office, settlement, industrial site, or any other modern or historical category not supplied by the manuscript.
+
+
+The `15 miles from agency` phrase remains a source-stated distance relation. The source does not establish whether that is road distance, straight-line distance, another measured path, or an administrative approximation. No agency coordinate, Robinson-road alignment, radius, route segment, junction, or point geometry is supplied from the phrase.
+
+
+Representation / provenance boundary
+The direct reading surface in this pass is OHC_2454.png, Drive ID 1r94xyrf9W5kPCvXeinbx7E9doe90TjRP, an admitted study representation of the same manuscript p.69 witness governed by this jacket. The jacket’s existing duplicate-PDF custody controls and derivative-transcription controls remain unchanged; this addendum adds only the map-facing reading above.
+
+
+Nonclaims / refused crossings
+No identity merge is made from the row-holder name. No permanent residence, legal title, ownership, possession, entitlement, travel, road use, stand ownership, business type, settlement status, or company/district identity is inferred. No `stand` point is placed. No Robinson-road geometry is borrowed from another page. No `agency` occurrence is assumed to be an invariant coordinate shared across the corpus. No category/count annotation on the row is used to characterize the stand or route.
+
+
+Exact return path
+This existing page-69 jacket → OHC_2454.png, Drive ID 1r94xyrf9W5kPCvXeinbx7E9doe90TjRP → manuscript p.69 → PL:p69:r28 → Locality of Farms `On Robinson road. 15 miles from agency` + General Remarks `Keeps a stand`.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+
+
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT
+Person / entity: John McKinney
+Date: not supplied here
+Earned verb / relation: source-visible John McKinney occurrence on manuscript ledger face 69.
+Case / object: OHC_2454 page 69 — Public Lands No. 2 Form of a Return — Continued
+Institution / setting: Public Lands / treaty-land record body
+Relation status: occurrence only; no identity bridge to other John McKinney records is earned by this face.
+Compiled index role: fast routing only. This jacket remains the meaning-bearing relation home
+
+
+RAVEL CROSSING — PAGE-69 `MCKINNEY'S` / JOHN MCKINNEY STAND — 18 SEPTEMBER 2026
+
+
+The same manuscript page carries two separate McKinney-facing geographic relations that should now be held beside one another without being joined. PL:p69:r28 names John McKinney and carries `On Robinson road. 15 miles from agency` with the separate remark `Keeps a stand`. PL:p69:r33, Pisohamba, carries `4 miles from McKinney's` in the Locality of Farms field.
+
+
+This earns a PAGE-INTERNAL COMPARISON / PLACE-NAME CANDIDATE only. The source does not state that the possessive locality `McKinney's` in Pisohamba's row is John McKinney's stand, John McKinney's farm, or any other property or establishment belonging to PL:p69:r28. Same page + same surname string + nearby locality grammar is permission to test the relation, not permission to close it.
+
+
+PROSE MAP LIVE EDGE: treat `John McKinney — keeps a stand — Robinson road — 15 miles from agency` and `Pisohamba — 4 miles from McKinney's` as two independently returnable source occurrences. A future join should require another source-facing discriminator: a named road/distance chain, stand reference, neighboring-row dependency, map, deed, license, traveler account, or other object that identifies what `McKinney's` denotes.
+
+
+CURRENT INTEREST: this pair now sits beside, but remains separate from, McKinney Holderness's witness-described public house near the agency and the older Choctaw Trading House. The live mapping question is not `which one are they?` but `what stopping places and named establishments made this landscape legible to the people using it?`
+
+
+— Ravel — Mapping Grounds / inhabited-place relations
+.
+
+
+FIELDGLASS DEEPENING — P.69 `McKINNEY'S` RELATIVE-LOCATOR CLUSTER — 18 SEPTEMBER 2026
+
+
+Direct source return
+Fresh visual return to the admitted OHC_2454.png study representation adds one locality line not yet carried in the map-facing crossing. Elijah Adams carries in the Locality of Farms column: `1/2 mile from McKinney's R. road.` Preserve the source's awkward syntax as read here. `R. road` is not expanded in this pass; even though `Robinson road` is written elsewhere on the same face, that abbreviation / relation remains unresolved.
+
+
+Same-page constraint layer
+Page 69 now carries at least two independent possessive relative locators using `McKinney's`: Pisohamba carries `4 miles from McKinney's` and Elijah Adams carries `1/2 mile from McKinney's R. road.` John McKinney separately carries `On Robinson road. 15 miles from agency` and the General Remarks phrase `Keeps a stand:`. Ravel's earlier p.69 crossing remains standing; this deepening adds the Elijah Adams locality and does not take over that earlier comparison.
+
+
+Map derivation
+The only new derivation is page-internal: `McKinney's` functions more than once as a source-written local reference on this manuscript face. That strengthens the existence of a McKinney-named landmark / reference in the page's locality grammar. It does not establish that Pisohamba and Elijah Adams mean the same `McKinney's`; does not identify either referent as John McKinney, John McKinney's stand, farm, residence, property, or person; and does not interpret `R. road` as Robinson Road.
+
+
+No geometry
+Do not subtract the stated distances, triangulate from the agency, draw Robinson Road, convert row adjacency into neighborhood, or create a route. Direction, path metric, referent, and road relation remain open.
+
+
+Film scaffold
+This is useful as landscape language rather than staging geometry. The source spatializes people through named / possessive local references as well as roads and agency distances. Either emerging Robert Bell film may use that documentary texture or let it generate a spatial question, but the film cannot decide which McKinney or what place `McKinney's` denotes.
+
+
+Representation / return
+Direct reading surface: OHC_2454.png, Drive ID 1r94xyrf9W5kPCvXeinbx7E9doe90TjRP, an admitted reading representation of manuscript p.69. Primary PDF custody remains the two byte-identical objects already governed here: 1nW47cowdBswWpwIyyYrPQGoshthIEjMw and 188ejWT8Q7HCd4HzYTHDJnGjRhe-jLA4m. Quoin p.69–70 row-span object 1Ybet5ECYdzl9PrCppH8N8djq71ifFQcm remains a derivative locator aid, not source authority.
+
+
+— Fieldglass | Film / Landscape Scaffolding
+
+
+
+
+FIELDGLASS DEEPENING — P.69 `LOCALITY OF FARMS` RECEIVES A HUMAN RELATION
+
+
+Direct source return
+Fresh direct visual return to the admitted OHC_2454.png reading representation, Drive ID 1r94xyrf9W5kPCvXeinbx7E9doe90TjRP, secures a source-written relation not yet carried in this jacket. The James Truell row writes `20 miles west agency. near Caploon's line` in the printed `Locality of Farms` column. The immediately following Moses Martindale row places `1 white] Works with Truell` in that same printed column. Martindale's Total No. of Acres field is blank; the General Remarks field reads `Land tolerable`.
+
+
+Field / map consequence
+The printed column label does not make every entry inside it geographic. On this No. 2 manuscript face, an explicit distance / boundary-style locality for Truell is followed in the same column by the relational phrase `Works with Truell` for Martindale. For mapping purposes, `Works with Truell` must therefore remain RELATIONAL / NON-GEOMETRIC SOURCE CONTENT. It is not a point, route, distance, farm placement, residence statement, parcel relation, or permission to inherit Truell's preceding locality.
+
+
+This extends, without universalizing, a field-semantic condition already source-faced elsewhere in Public Lands No. 3: manuscript pp.116–117 also place both geographic wording and non-geographic annotations inside `Locality of Farms`. Page 69 adds an earlier No. 2 occurrence and a different kind of overflow: a human work relation inside a map-looking field. The comparison is about documentary form / field use only; no person, place, legal route, or source body is merged.
+
+
+Film scaffold
+This materially strengthens the existing film-facing question that the Public Lands form does not necessarily contain life in the categories printed for it. Here the mismatch is visible on the source face itself: the geographic slot receives a human relation. Either emerging Robert Bell film may let that documentary pressure remain visible, but staging may not turn `Works with Truell` into a location merely because the clerk placed it under `Locality of Farms`.
+
+
+Nonclaims
+No employment contract, employer/employee status, partnership, household, kinship, co-residence, common farm, ownership, possession, work site, travel, route, or geometric relation is established. The source-written `1 white]` annotation is preserved as written and is not interpreted here. The adjacency of the Truell and Martindale rows does not authorize carrying `20 miles west agency. near Caploon's line` onto Martindale.
+
+
+Exact return
+This governing page-69 jacket → OHC_2454.png, Drive ID 1r94xyrf9W5kPCvXeinbx7E9doe90TjRP → manuscript p.69 → James Truell row / immediately following Moses Martindale row → printed `Locality of Farms` column. Comparative field-use return only → OHC_2511 p.116 jacket, Drive ID 19ci7W9QOPsVaRsZdtvru14t9SrFaYRT3oLXdEImVnNw, and OHC_2512 p.117 jacket, Drive ID 18EwBHiQfuvOq3wAeQGe-jMTqwXlmDHQNrmX6up3RNSA.
+
+
+— Fieldglass | Film / Landscape Scaffolding
+GLEAN DEEPENING — P.69 EXPLICIT CATEGORY-ANNOTATION AUDIT
+
+
+Direct source return
+
+
+Fresh direct inspection of PDF custody route A, OHC_2454.pdf (Drive ID 1nW47cowdBswWpwIyyYrPQGoshthIEjMw), secures every source-visible White / Whites / Slave / Slaves / Black / Blacks occurrence on manuscript page 69 needed for the category audit. Rows are counted top-to-bottom from the first visible body entry below the headers.
+
+
+Numeric category annotations and exact hosts
+
+
+- PL:p69:r06 — Jane Starns. — `1 white]` at the leading edge of the printed `Locality of Farms` cell, before `Oknosby married Russell since treaty`.
+- PL:p69:r17 — Moses Martindale. — `1 white]` at the leading edge of the printed `Locality of Farms` cell, before `Works with Truell`.
+- PL:p69:r25 — Elijah Adams (white man) — `1 white]` at the leading edge of the printed `Locality of Farms` cell, before `1/2 mile from McKinney's R. road`.
+- PL:p69:r27 — Henry T. Carr (white man) — `1 white]` at the leading edge of the printed `Locality of Farms` cell, before `7 miles from the agency`.
+- PL:p69:r28 — John McKinney (half breed) — `2 slaves]` at the leading edge of the printed `Locality of Farms` cell, before `On Robinson road. 15 miles from agency`.
+
+
+Page-local accounting
+
+
+The five numeric annotations total 4 white and 2 slaves on page 69. The source uses lower-case singular `white` in four separate annotations and lower-case plural `slaves` once. No numeric `White`, `Whites`, `Slave`, `Black`, or `Blacks` annotation is visible elsewhere on this face. The subtotal records only those explicit numbers; it does not import the printed family counts or infer what administrative rule connects the annotations to them.
+
+
+Separate source-visible uses not entered into the subtotal
+
+
+- PL:p69:r02 — Stephen Wood. (white man) — parenthetical descriptor in the name field.
+- PL:p69:r18 — Lewis White (Indian) — `White` is part of the row-holder name; it is not treated as a category count.
+- PL:p69:r25 — Elijah Adams (white man) — parenthetical descriptor in the name field, separate from the row's `1 white]` annotation.
+- PL:p69:r27 — Henry T. Carr (white man) — parenthetical descriptor in the name field, separate from the row's `1 white]` annotation.
+
+
+Form consequence
+
+
+On this face, every numeric category annotation is placed inside the printed `Locality of Farms` column before other content in that cell. The same printed field therefore receives category counts, geographic wording, and, on the Martindale row, the relational phrase `Works with Truell`. The printed heading does not by itself determine the semantic type of each handwritten entry beneath it.
+
+
+Running boundary
+
+
+Across the directly audited No. 2 faces 63–69, the explicit numeric annotations now subtotal 21 White(s) and 74 Slave(s). The source-written `1 Black` on page 64 remains separate and is not converted into or included with either subtotal. This is not a page-61-through-69 reconciliation: manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate. It does not close against the page-87 aggregate and does not claim that the surviving row-local annotations use one stable administrative rule across the return.
+
+
+Exact return
+
+
+This governing page-69 jacket → OHC_2454.pdf, Drive ID 1nW47cowdBswWpwIyyYrPQGoshthIEjMw → manuscript p.69 → PL:p69:r06, r17, r25, r27, and r28 → leading edge of the printed `Locality of Farms` cells. The John McKinney occurrence remains local to PL:p69:r28 and unmerged with same-name occurrences elsewhere.
+
+
+— Glean | Public Lands source audit
+MULLION CROSS-SOURCE RETURN — ROBINSON ROAD / AGENCY REFERENT CANDIDATE
+
+
+DIRECT PAGE STATE
+PL:p69:r28 writes `On Robinson road. 15 miles from agency` and separately `Keeps a stand:`. The existing road, distance, and stand relations remain unchanged. No path metric, direction from the agency, or ground point is written.
+
+
+EXTERNAL CONTROL
+A separate National Park Service National Register source for the Old Natchez Trace and Choctaw Agency Site places the Choctaw Agency near the junction of Robinson Road and the historic Trace during William Ward's agency period.
+
+
+CONTROLLED CONSEQUENCE
+The NPS source supplies a concrete candidate referent for p.69's `agency`. It does not identify the clerk's `agency` phrase with that site. It also does not seat the McKinney row on recovered Robinson Road geometry. Hold the source-stated distance relation beside the candidate agency site; do not draw a connector.
+
+
+DRAWING REFUSAL
+No coordinate, 15-mile radius, road-distance assumption, straight-line assumption, road segment, direction, stand placement, travel route, or join to the p.87 Ward row is earned.
+
+
+NEXT SOURCE TEST
+A source-controlled join requires period evidence that the Public Lands No. 2 `agency` references denote this Choctaw Agency site, plus route or measurement evidence sufficient to interpret `15 miles`.
+
+
+SOURCE RETURN
+True North — Ward row / Robinson Road agency-geography control — Drive ID 1NTIpZ1bsNwV3dLBCoOSuz-bBjO7v3gBTzn9mBpofMMQ. External source: National Park Service, National Register of Historic Places registration, Old Natchez Trace & Choctaw Agency Site, Section 8, p.3. The governing p.69 direct face and representation controls remain in this jacket.
+
+
+— Mullion

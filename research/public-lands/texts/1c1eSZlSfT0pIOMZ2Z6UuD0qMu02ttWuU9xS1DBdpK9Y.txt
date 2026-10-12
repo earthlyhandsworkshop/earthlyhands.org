@@ -1,0 +1,375 @@
+GLEAN SOURCE-FACING JACKET — OHC_2439 page 57 — George Hunter and Charles Juzan 1 white annotations
+
+
+ROLE — GOVERNING SOURCE JACKET, historical manuscript page 57
+STATE — active; the current control is stated here; preserved correction passes remain provenance
+GOVERNS / CONCERNS — one historical manuscript page and its source-visible row states
+CURRENT — OHC_2439 and OHC_2440 are alternate representations of the same historical manuscript page 57, not independent witnesses. OHC_2441 carries manuscript page 58 under its own jacket.
+CURRENT READINGS — PL:p57:r10 George Hunter: `1 white]`; PL:p57:r29 Charles Juzan: `1 white. 20 Slaves.` Page 57 adds 2 observed Whites and 20 observed Slaves; the surviving observed subtotal through page 57 is 13 Whites / 43 Slaves; the district account remains open.
+SUPERSEDES — earlier wording that treated OHC_2440 as the untested page-58 forward seam
+ROAD HOME — Public Lands — Whole-Document Corpus → this jacket → OHC_2439 / OHC_2440 source representations
+OPEN — maker and timing of the smaller annotations; why page 57 has two representations; exact representation genealogy; district reconciliation and unresolved captured-edge losses
+
+
+Status: DIRECT-SOURCE PAGE JACKET — ONE MANUSCRIPT PAGE — BOUNDED ANNOTATION PASS — DUPLICATE CUSTODY AND DERIVATIVES CONTROLLED
+Maker: Glean
+Date: 2026-09-05
+Corpus: Public Lands — Whole-Document Corpus / quoted-title Choctaw Treaty farm return
+Visible manuscript page: 57
+Historical-object boundary: one manuscript page within a continued multi-page return. This pass does not claim completeness of the larger return and does not supply a full diplomatic transcription of page 57.
+
+
+METHOD CONTROL
+
+
+This pass began from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md (Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF) and SOURCE WORK METHOD — full strength, exact reach — source to synthesis (Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc). Object first; source face governs; repeated representations do not become witnesses; source / derivative / transcription / interpretation remain distinct; blanks stay blank; corrections remain visible while active state is repaired.
+
+
+A bounded Drive search for OHC_2439 returned the two custody PDFs, the two same-title Quoin derivatives, receipts, and no equivalent source-facing page-57 jacket. This jacket therefore represents the underlying manuscript face rather than creating separate jackets for PDF, PNG, or Quoin forms.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+
+
+Custody object A:
+- filename: OHC_2439.pdf
+- Drive ID: 1tzqHo9-4_B2t02qgBPEM4teQQXz9xjp_
+- parent: Source objects — received batch 1 — OHC 2408–2518
+- parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- size: 271,087 bytes
+
+
+Custody object B:
+- filename: OHC_2439.pdf
+- Drive ID: 1LEc2vVFTqk_pPGtQn4uoU4d36Msih697
+- parent: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+- parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- size: 271,087 bytes
+
+
+Both stored PDF payloads were streamed in this pass. They are byte-for-byte identical and each produced SHA-256:
+3a1f527f8faf4a267d9ed0eadc0d565e9a9ed2b6a8386659f287c7ce1c2994c3
+They are two custody routes to one matching PDF payload and one manuscript-page witness, not two independent witnesses.
+
+
+Admitted study representation used for direct visual reading:
+- filename: OHC_2439.png
+- Drive ID: 1Di9G_RMb8skavPkMGnj0dhnozIJnLC-7
+- parent: 76 Distinct Study Surfaces
+- parent folder ID: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- size: 1,428,367 bytes
+- operation: direct-extraction study representation of the source face; not a second historical source.
+
+
+Existing derivative transcriptions:
+- OHC_2439 form of return Choctaw Treaty farms page 57 — Quoin.md — Drive ID 1kfP3_ay_QB_NUedo_R-O0B_pFmU1u1_u — parent 1komb4v11M9baULEpk3w3owolFF99m2-F
+- same-title duplicate derivative — Drive ID 1ZUs28L8EkxEz-SjF22aaKZTtknQM3Fgz — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+The connector-readable text of the two Quoin objects is identical. They remain repeated derivative text and do not add evidentiary weight by repetition.
+
+
+PAGE IDENTITY AND 56→57 SEAM
+
+
+The admitted face visibly carries manuscript page number 57 at upper left and continues the ruled “Public Lands — No 1 — Form of a Return — Continued — Location under the Choctaw Treaty” form. Fieldglass’s existing OHC_2438 jacket directly establishes manuscript page 56 under the same continued form. Consecutive visible pagination and form identity earn a bounded 56 → 57 pagination/form seam only. No person, family, tract, locality, acreage, category count, annotation, identity, ownership, or legal relation is inherited across the turn merely because the pages are consecutive.
+
+
+WORKSHOP ROW INDEX
+
+
+For this jacket only, Glean counts the visible body rows top-to-bottom as PL:p57:r01–r36. These are workshop navigation indices, not source-written row numbers. They do not change the manuscript object.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING A — PL:p57:r10 — GEORGE HUNTER
+
+
+The source row reads “George Hunter.” It visibly carries an entire-family count of 5. The cultivated-acre, over-16, under-10, and total-acre fields on this row are not converted from dots/blanks into zero.
+
+
+In the locality area, immediately before the row’s principal literal ditto material, the manuscript visibly carries smaller left-set writing:
+“1 white]”
+The closing bracket-like stroke is source-visible. No balancing opening bracket is supplied. The row then retains literal “do” / “do” locality-direction states rather than an expanded place-name transcription.
+
+
+The General Remarks field on the same row reads, at source force:
+“Provided for in supplement—1/2 section.”
+
+
+The duplicate Quoin text gives George Hunter’s locality annotation as “[white]”, omitting the source-visible leading numeral 1 and supplying an opening bracket not visible on the admitted face. Active source-facing reading: “1 white]”. Quoin’s state remains preserved as derivative history/navigation only.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING B — PL:p57:r29 — CHARLES JUZAN
+
+
+The source row reads “Charles Juzan.” It visibly carries:
+- entire family: 26
+- males over 16 years: 2
+- cultivated-acre field: dotted/blank; no zero adopted
+- under-10 field: dotted/blank; no zero adopted
+- total acres: 1280
+
+
+In the locality area the manuscript visibly carries smaller writing before the principal locality:
+“1 white. 20 Slaves.”
+followed by the principal locality wording:
+“Tombigbee river.”
+
+
+The General Remarks field on the same row visibly reads:
+“Benachitta; Tombigbee Bluff. 2 sects.”
+
+
+The duplicate Quoin text renders the annotation as “[white 20 slaves.” Direct inspection supports a leading numeral 1, a period after “white”, and no source-visible opening bracket at this point. Active source-facing reading at the annotation edge: “1 white. 20 Slaves.” Quoin’s flattened form remains derivative history only.
+
+
+SOURCE / DERIVATIVE / INTERPRETATION BOUNDARY
+
+
+Source-stated / source-visible:
+- page 57 under the continued Public Lands return form;
+- George Hunter as an occurrence-level name on r10;
+- George Hunter row: family 5; smaller “1 white]” writing; literal locality dittos; “Provided for in supplement—1/2 section.”
+- Charles Juzan as an occurrence-level name on r29;
+- Charles Juzan row: family 26; males over 16 = 2; smaller “1 white. 20 Slaves.” writing; “Tombigbee river.”; total acres 1280; “Benachitta; Tombigbee Bluff. 2 sects.”
+
+
+Derivative:
+- OHC_2439.png is a study representation of the manuscript face.
+- the two Quoin files are derivative transcriptions/navigation aids.
+- PL:p57:r01–r36 row labels are Glean navigation indices derived by top-to-bottom counting.
+- image crops/contrast enlargement used during this pass were unretained inspection derivatives and are not historical evidence.
+
+
+Interpretation / exact reach:
+The page contains at least two rows with smaller locality-area category/count writing that begins with “1 white”; one of those two also continues “20 Slaves.” This establishes recurrence on page 57 itself at the source-layout level. It does not by itself explain the administrative purpose, authorship, date, accounting rule, household relation, or legal meaning of those annotations.
+
+
+FINDINGS
+
+
+- OHC_2439 is visible manuscript page 57 of the continued Public Lands / Choctaw Treaty farm return.
+- The two stored OHC_2439 PDFs inspected are byte-identical custody copies of one payload and one manuscript-page witness.
+- The two same-title Quoin files carry identical derivative text and are not corroborating witnesses.
+- George Hunter r10 directly carries smaller “1 white]” writing; Quoin omits the leading 1 and supplies an opening bracket.
+- Charles Juzan r29 directly carries smaller “1 white. 20 Slaves.” writing; Quoin omits the leading 1, loses the period after white, and supplies an opening bracket.
+- The two source-visible “1 white” occurrences are separate row-level source states. Their recurrence is preserved without merging the men or the annotations into a single administrative event.
+
+
+CORRECTION HISTORY
+
+
+Correction A — George Hunter annotation:
+Quoin: “[white]”.
+Direct face: “1 white]”.
+Reason: the admitted PNG visibly shows the numeral 1 before white and a closing bracket-like stroke, with no required opening bracket visible.
+
+
+Correction B — Charles Juzan annotation:
+Quoin: “[white 20 slaves.”
+Direct face: “1 white. 20 Slaves.”
+Reason: the admitted PNG visibly shows the leading 1 and punctuation separating white from the count that follows; no opening bracket is required by the source-visible state.
+
+
+UNRESOLVED QUESTIONS
+
+
+- What administrative instruction, supplement, schedule, or convention governed the smaller white/slave category-count writing?
+- Who wrote these annotations, and were they entered contemporaneously with the principal return or later?
+- What exactly does the closing bracket-like stroke after George Hunter’s “1 white” delimit?
+- How, if at all, were the smaller category/count annotations intended to relate to the printed “Entire No of the Family” and age/sex columns? No arithmetic reconciliation is assumed here.
+- What documentary object is meant by George Hunter’s “supplement—1/2 section” remark, and can that supplement be recovered directly?
+- What source or administrative meaning underlies Charles Juzan’s remark “Benachitta; Tombigbee Bluff. 2 sects.”?
+- Manuscript page 58 / OHC_2440 is not opened in this pass.
+
+
+NONCLAIMS
+
+
+- “white” and “Slaves” are source-visible category words on this manuscript face; this jacket does not infer names, identities, ages, relationships, residence, ownership mechanism, emancipation status, legal classification beyond the wording, or later history of the people counted.
+- “1 white]” is not silently added to or subtracted from George Hunter’s printed family count of 5.
+- “1 white. 20 Slaves.” is not silently added to or subtracted from Charles Juzan’s printed family count of 26.
+- The annotations do not establish that the counted people were household members, family members, legal dependents, residents on the farm, or owned by the named row-holder.
+- George Hunter and Charles Juzan are occurrence-level source names only. No same-name persons elsewhere are merged with them.
+- George Hunter’s row and Charles Juzan’s row are not merged because similar annotation language appears on both.
+- Recurrence on one page does not establish the same annotator, date, rule, purpose, or administrative event.
+- The page-57 occurrences do not retroactively change the wording of page-53, page-54, or page-56 annotations; those source faces retain their own readings.
+- Literal ditto marks are not expanded beyond what the source face earns.
+- Dotted/blank numeric fields remain dotted/blank and are not converted to zero.
+- Duplicate PDFs and duplicate Quoin derivatives do not become independent witnesses.
+- Consecutive manuscript pages do not merge people, tracts, localities, or annotations across the turn.
+
+
+SEAMS AND EXACT RETURN PATHS
+
+
+Backward seam:
+Public Lands — Whole-Document Corpus → FIELDGLASS SOURCE-FACING JACKET — OHC_2438 page 56 — Drive ID 1qQ3i-PdJKRxWQhKX5GEZ9_JwcJmnTIFd-1IwjYyXsLI → admitted OHC_2438 page-56 face → consecutive visible manuscript page 57 / OHC_2439 → this jacket.
+
+
+Source return:
+this jacket → OHC_2439.png study representation, Drive ID 1Di9G_RMb8skavPkMGnj0dhnozIJnLC-7, parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh → matching OHC_2439.pdf custody object A, Drive ID 1tzqHo9-4_B2t02qgBPEM4teQQXz9xjp_, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA; or byte-identical custody object B, Drive ID 1LEc2vVFTqk_pPGtQn4uoU4d36Msih697, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Derivative return:
+this jacket → Quoin derivative 1kfP3_ay_QB_NUedo_R-O0B_pFmU1u1_u or duplicate-text derivative 1ZUs28L8EkxEz-SjF22aaKZTtknQM3Fgz → any disputed, omitted, bracketed, or flattened reading returns to OHC_2439.png / matching custody PDF before adoption.
+
+
+Evidence-based neighboring comparison seam:
+this jacket → page-56 Fieldglass jacket 1qQ3i-PdJKRxWQhKX5GEZ9_JwcJmnTIFd-1IwjYyXsLI, which independently preserves George Clark’s source-visible “1 White]” annotation. This is permission to compare source-layout behavior only; it is not a person or household crossing.
+
+
+Forward seam:
+Manuscript page 58 / OHC_2440 remains untested. Separately, George Hunter’s source-written supplement remark creates an earned retrieval door toward the referenced supplement; that is a retrieval target, not a conclusion about what the supplement contains.
+
+
+Maker: Glean
+Date: 2026-09-05
+
+
+
+
+FIELDGLASS CORRECTION / REPRESENTATION DEEPENING — 2026-09-06
+
+
+Status: ACTIVE CORRECTION TO FORWARD SEAM AND REPRESENTATION FOOTING
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+DIRECT-SOURCE CORRECTION
+
+
+The earlier Glean statements “Manuscript page 58 / OHC_2440 is not opened in this pass” and “Manuscript page 58 / OHC_2440 remains untested” are superseded only in their OHC-number/page association. In this Fieldglass pass the actual OHC_2440 source PDFs and admitted OHC_2440 study representation were opened. OHC_2440 visibly carries manuscript page number 57, not 58, and is an alternate representation of the same historical manuscript page represented by OHC_2439.
+
+
+OHC_2440 exact representation footing:
+- custody PDF A: OHC_2440.pdf — Drive ID 1IioW4KoZ_DQPOCccPDv-oqJqaKv6wKGd — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 269,418 bytes
+- custody PDF B: OHC_2440.pdf — Drive ID 1GX5YiTjyAP4INxLWQ_7R-UDqHspfes2s — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 269,418 bytes
+- the two OHC_2440 PDF custody payloads inspected are byte-identical, SHA-256 7034a61c2eb558bb3eaba00c49b36114b17faedc6ee231ff201cde9878c4ccc1
+- admitted study representation: OHC_2440.png — Drive ID 1T6u0x9JSzfAVREjYEgXGQ00EMpjLHiSD — parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh — 1,422,950 bytes
+- Quoin derivative: OHC_2440 form of return Choctaw Treaty farms page 58 — Quoin.md — Drive ID 1_3nh-gBqEBnLJ11X1wWmtCHuSBcNjKkB
+- same-title derivative duplicate: Drive ID 1-oE0roOiSjwbOq6Us81OiSNC2v__J2xo
+
+
+HISTORICAL-OBJECT BOUNDARY
+
+
+OHC_2439 and OHC_2440 are not two manuscript pages and are not two evidentiary witnesses. Their PDF payloads differ from one another, but direct visual comparison shows the same historical manuscript page 57: the same visible page number, continued ruled form, row sequence, George Hunter and Charles Juzan occurrences, smaller category/count annotations, locality states, and general-remark states, with representation-level tonal/cropping differences. Both exact return routes are retained because alternate representations can help legibility; repetition does not add evidentiary weight.
+
+
+The OHC_2440 Quoin derivative title’s “page 58” is therefore preserved as derivative/correction history, not adopted as page-identity evidence. Its content itself follows the page-57 row body.
+
+
+CORRECTION HISTORY / WHAT REMAINS VALID
+
+
+- Glean’s direct page-57 readings in this jacket remain source-supported.
+- The correction does not withdraw George Hunter’s “1 white]” reading, Charles Juzan’s “1 white. 20 Slaves.” reading, their row-level counts, or the existing nonclaims.
+- What is withdrawn is the forward association OHC_2440 = manuscript page 58.
+- Actual manuscript page 58 was opened in this same Fieldglass pass as OHC_2441 and now has its own source-facing jacket: FIELDGLASS SOURCE-FACING JACKET — OHC_2441 page 58 — Rebecca Bond and Wesley Rain slave-count annotations and repaired 57→58 seam — Drive ID 1kYej7_ROC8GpRE-oGYedUr3OmgGXXt29ri_sL3DWZ08.
+
+
+REPAIRED FORWARD SEAM
+
+
+historical manuscript page 57 → OHC_2439 and OHC_2440 alternate representations → historical manuscript page 58 → OHC_2441 → Fieldglass OHC_2441 jacket 1kYej7_ROC8GpRE-oGYedUr3OmgGXXt29ri_sL3DWZ08.
+
+
+This is a pagination/form seam only. It does not merge people, farms, tracts, localities, counts, annotations, or legal relationships across pages.
+
+
+NONCLAIMS
+
+
+- Alternate representation does not mean independent witness.
+- Different PDF hashes do not by themselves establish different historical objects.
+- Filename sequence does not control manuscript pagination; the visible source page controls.
+- This correction does not establish why OHC_2439 and OHC_2440 both represent page 57, when or by whom the representations were made, or whether one was created from the other.
+- The derivative mislabel does not invalidate unrelated source-supported content in the Quoin transcription; disputed identity or reading returns to the direct face.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+GLEAN SOURCE RETURN — 2026-09-08 — PL:p57:r21 CAPT. P. JUZAN
+
+
+Disposition: in-place deepening of this governing page-57 jacket; no new page jacket or witness created.
+
+
+Exact source / representation footing: Glean reopened OHC_2439.pdf, Drive ID 1tzqHo9-4_B2t02qgBPEM4teQQXz9xjp_, 271,087 bytes, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, and read manuscript page 57 directly through a temporary 400-DPI render and local enlargement. As a legibility check only, Glean also reopened alternate representation OHC_2440.pdf, Drive ID 1IioW4KoZ_DQPOCccPDv-oqJqaKv6wKGd, 269,418 bytes, already controlled above as another representation of the same historical manuscript page 57 rather than another witness. The temporary rasters/crops are inspection derivatives only; no OCR supplied the reading and no derivative was admitted into custody.
+
+
+Bounded direct-source finding — PL:p57:r21: the name cell reads `Capt. P. Juzan.`. The row carries Entire No. of the Family `1`; Males over 16 years `1`; the cultivated-acre and under-10 fields remain dotted/unread at this reach rather than zero. Locality reads `Tombigbee.` with a separate `west side.` qualification. Total No. of Acres reads `1280`. General Remarks reads `Provided for in supplement of 2 sects.` The alternate OHC_2440 representation supports the same row alignment and wording; it is used only for legibility, not corroborating weight.
+
+
+Derivative check: Quoin derivative 1kfP3_ay_QB_NUedo_R-O0B_pFmU1u1_u already gives `Capt. P. Juzan. ... 1 1 ... Tombigbee. west side. 1280 Provided for in supplement of 2 sects.` At this bounded row the derivative therefore needs no substantive correction. Its agreement is not counted as another source witness.
+
+
+Earned finding / same-name control: manuscript page 57 contains two distinct Juzan surname occurrences that must remain separate at source level: `Capt. P. Juzan.` at r21 and `Charles Juzan.` at r29. Both rows carry `1280` in Total No. of Acres, but the source does not thereby identify them as the same person, one household, one tract, or one entitlement. Their locality/remarks states are visibly different: r21 has `Tombigbee.` / `west side.` and `Provided for in supplement of 2 sects.`; r29 separately has the smaller `1 white. 20 Slaves.` annotation, principal locality `Tombigbee river.`, and General Remarks `Benachitta; Tombigbee Bluff. 2 sects.`. The shared surname and shared `1280` are therefore similarity features, not an identity instruction.
+
+
+Backward seam: r20 is the immediately preceding named row on the same face; none of its written `do` states or blank/dotted cells is imported into r21. Forward seam: r22 is the immediately following named row; its locality, acreage, and `Land poor` remark remain its own row and are not used to complete r21. The already-repaired page-57 → page-58 seam above remains unchanged.
+
+
+Unresolved questions: whether `P.` is an initial, abbreviation, or other source designation beyond its literal form; which exact supplementary instrument/article the r21 phrase invokes; whether `2 sects.` is an administrative shorthand for a legally operative two-section provision; whether Capt. P. Juzan and Charles Juzan have any kinship or office relation elsewhere; and the later administrative or patent history of either row occurrence.
+
+
+Nonclaims: no same-person merge between the two Juzan occurrences; no kinship, household, tract, ownership, residence, patent, receipt, or final-entitlement conclusion; no inference that `Capt.` proves an office beyond the source-written title occurrence; no conversion of dotted fields to zero; no expansion of `Tombigbee.` to `Tombigbee river.` on r21 merely because r29 writes the longer phrase; no duplication of OHC_2439/OHC_2440 as witnesses; no corpus-level theory from this single-page comparison.
+
+
+Return path: this governing jacket → PL:p57:r21 → OHC_2439.pdf Drive 1tzqHo9-4_B2t02qgBPEM4teQQXz9xjp_ (received-batch parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA); legibility-only alternate route → OHC_2440.pdf Drive 1IioW4KoZ_DQPOCccPDv-oqJqaKv6wKGd; derivative navigation only → Quoin 1kfP3_ay_QB_NUedo_R-O0B_pFmU1u1_u.
+
+
+— Glean | quoted-title Public Lands | manuscript p.57 | r21 Capt. P. Juzan tied | distinct from r29 Charles Juzan | shared 1280 not merged
+
+
+GLEAN SOURCE-RETURN AUDIT — PAGE 57 EXPLICIT CATEGORY WORDS
+
+
+Disposition: bounded in-place category-word audit. The existing OHC_2439 page-57 jacket remains governing; OHC_2439 and OHC_2440 remain alternate representations of the same historical manuscript page, not additional witnesses.
+
+
+Inspection boundary: OHC_2439.pdf was read across the surviving visible manuscript face, including the column headings and all 36 visible body rows. Two row hosts carry source-visible White / Whites / Slave / Slaves / Black / Blacks wording.
+
+
+TARGET-WORD INVENTORY
+
+
+PL:p57:r10 — George Hunter. — printed Locality of Farms field:
+
+
+1 white]
+
+
+The smaller phrase sits beside literal locality dittos. It is not added to or subtracted from the row’s printed family count of 5.
+
+
+PL:p57:r29 — Charles Juzan. — printed Locality of Farms field:
+
+
+1 white. 20 Slaves.
+
+
+The category sentence is written in the same locality cell as the separately written principal locality “Tombigbee river.” The punctuation between white and 20 is source-visible. The two counts remain one row-local source sentence without being converted into family composition, ownership mechanics, or named identities.
+
+
+No other White / Whites / Slave / Slaves / Black / Blacks wording was observed elsewhere on the surviving visible face. Page 57 therefore contributes 2 observed explicit Whites and 20 observed explicit Slaves to the page-by-page audit.
+
+
+ACCOUNTING STATE THROUGH PAGE 57
+
+
+The controlled surviving subtotal through page 56 is 11 Whites / 23 Slaves. With page 57’s two row-local annotations, the surviving observed subtotal through page 57 is:
+
+
+13 Whites / 43 Slaves
+
+
+This does not yet reconcile the page-60 closing aggregate `14 Whites & 67 Slaves in this district`. Pages 58–59 have not yet been added to this running state. Page 41’s lower active rows remain outside the captured edge, and page 50’s right-edge loss remains unresolved. No difference is assigned to those states, and no rule is inferred for how the smaller annotations feed the district aggregate.
+
+
+Return path: Public Lands — Whole-Document Corpus → this governing OHC_2439 page-57 jacket → OHC_2439.pdf, Drive 1tzqHo9-4_B2t02qgBPEM4teQQXz9xjp_ → manuscript p.57 → PL:p57:r10 and PL:p57:r29.
+
+
+— Glean | Public Lands p.57 | 2 explicit Whites / 20 explicit Slaves | surviving observed subtotal through p.57: 13 Whites / 43 Slaves | district account OPEN

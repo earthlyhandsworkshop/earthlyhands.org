@@ -1,0 +1,498 @@
+GLEAN SOURCE-FACING JACKET — OHC_2431 page 51 — rows 1–36 — source-written or-name, locality dittos, and r29–r30 paired braces
+
+
+Status: DIRECT-SOURCE PASS — SAME ADMITTED DIRECT-EXTRACTION PNG — DERIVATIVE STUDIES HELD SEPARATE
+Maker: Glean
+Date: 2026-09-05
+Corpus: quoted-title Public Lands
+Visible manuscript page: 51
+
+
+METHOD CONTROL
+
+
+This pass begins from SOURCE WORK METHOD — full strength, exact reach — source to synthesis (Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc) and the current workshop source-work practice. Governing controls: object first / compare second; preserve exact custody and return paths; keep source, representation, derivative transcription, and interpretation distinct; protect blanks and dotted states; preserve correction history; repeated representations do not become independent witnesses; do not merge same-name occurrences; stop at the exact forward seam.
+
+
+EXACT SOURCE / REPRESENTATION / DERIVATIVE FOOTING
+
+
+Archival/source custody object A:
+- OHC_2431.pdf
+- Drive ID 1ZcaJpd2zJDdocUDjL9E5kNDi4otR5RVb
+- parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- 266,521 bytes
+- SHA-256 recorded in the admitted direct-extraction manifest: 9568121381447dc65f88ca1d2eff1acfc43f0cc29f15667a7aebe4dc642b1d28
+
+
+Separately stored same-name custody object B:
+- OHC_2431.pdf
+- Drive ID 1lPCxEM8EwrTeHQLH9jOKXAdPp_BgydxK
+- parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- 266,521 bytes
+
+
+Glean downloaded custody object B in this pass and computed SHA-256 9568121381447dc65f88ca1d2eff1acfc43f0cc29f15667a7aebe4dc642b1d28, matching the manifest-recorded hash for custody object A. This is a Glean-derived custody comparison. The two Drive objects remain two custody routes to one matching PDF payload, not two historical witnesses.
+
+
+Admitted study representation:
+- OHC_2431.png
+- Drive ID 1jxVnK2DlrRee1BIP9cTUTYvatSQiy3_S
+- parent 160suh69brrpG1c84Nes-WGqxyarXI9C6
+- 1,417,785 bytes
+- 2038 × 1879 pixels
+- SHA-256 from admitted manifest: e2bc76f61bddd51b8c477da5f68e4ac274e7e34b4c3ae8027d44f5f3f2f492a5
+
+
+The manifest states that this PNG was made by decoding the one embedded page image once into a lossless PNG container, with no enhancement, thresholding, cropping, rotation, sharpening, or OCR. It is admitted study access to the same historical face, not an independent witness. Temporary local crops/enlargements used by Glean for inspection are unretained inspection derivatives only.
+
+
+Existing Quoin derivative studies:
+- OHC_2431 form of return Choctaw Treaty farms page 51 — Quoin.md, Drive ID 1_xjL8GPavMgPXG1svfXFTmgvYByU1fjo, parent 1komb4v11M9baULEpk3w3owolFF99m2-F.
+- OHC_2431 form of return Choctaw Treaty farms page 51 — Quoin.md, Drive ID 1iD61coGrsj-xVjXl7Cx9x_GYoJ8RyoZT, parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+
+
+Connector-readable text from those two Quoin objects is identical. They remain two derivative objects carrying the same derivative text, not corroboration. Quoin spellings were used only as comparison aids where direct handwriting remained difficult.
+
+
+VISIBLE HEADER AND BACKWARD SEAM
+
+
+Direct inspection of the admitted PNG supports the visible header:
+51 — Public Lands — No. 1 — Form of a Return — Continued — Location under the Choctaw Treaty — No. 1230. 1834.
+
+
+The existing Glean page-50 jacket directly records manuscript page 50 under the same No. 1 continued-return heading and carries that page to its visible lower edge. Page 51 independently shows the consecutive manuscript number 51 and the same form heading. This earns the bounded manuscript-page seam 50 → 51. The seam carries pagination/form continuity only. No person, family, locality, acreage, remark, title, or identity is inherited across the page turn.
+
+
+ROW-ADDRESS PASS — PL:p51:r01–r12
+
+
+This pass addresses the first twelve visible body rows from the top of page 51. It is bounded row-position work, not a claim of complete diplomatic transcription of every cell.
+
+
+PL:p51:r01 — locality is directly readable as Yactichaha creek. Numeric cells visibly contain written numerals; no General Remark is adopted in this pass.
+
+
+PL:p51:r02 — locality position contains literal do. Glean does not expand the ditto into a normalized locality string.
+
+
+PL:p51:r03 — a new locality is written as Piniatella creek.
+
+
+PL:p51:r04 — the place portion is literal do while the same row separately writes south side. This is direct page-51 evidence that the place and directional portions of the locality field can be written separately. The do is preserved as a mark rather than expanded.
+
+
+PL:p51:r05–r06 — locality positions again contain literal do states. No unwritten direction is supplied.
+
+
+PL:p51:r07 — the row label visibly begins with source-written Capt. Quoin supplies a derivative spelling for the personal name, but Glean does not certify that spelling here. The row directly carries 10 cultivated acres, family 7, male-over-16 1, under-10 3; locality Yakniachokma (name of place); total acreage 160; General Remark Land tillable. The parenthetical (name of place) is source-written recorder language. It is not a modern place identification or coordinate.
+
+
+PL:p51:r08–r09 — two successive rows each visibly carry literal do in the place portion and literal do in the directional portion. A hand-drawn brace spans these two locality rows between the repeated ditto marks. The brace is retained as a source layout fact. Its administrative meaning is unresolved. It does not merge the two row holders, establish kinship, establish one household, or make the two rows one occurrence.
+
+
+PL:p51:r09 — separately from the brace, total acreage 400 and the General Remark Capt. align with this lower row. They are not propagated upward into r08. The r09 row label itself also visibly begins with source-written Capt; neither occurrence of Capt is expanded into an office-history or identity claim.
+
+
+PL:p51:r10 — a newly written branch locality appears with north side. The exact diplomatic branch spelling remains open; Quoin reads Ichtapa branch. This derivative spelling is not silently substituted for the source.
+
+
+PL:p51:r11 — a newly written creek locality appears with south side. General Remarks reads Poor land. The exact creek spelling remains open; Quoin reads Talahmore creek.
+
+
+PL:p51:r12 — a newly written creek locality appears with north side. The exact creek spelling remains open; Quoin reads Buzakchakke creek. No General Remark is adopted for this row.
+
+
+MATERIAL SOURCE-FACING FINDINGS
+
+
+1. Page 51 independently preserves a split-locality construction at r04: literal do for place plus newly written south side. This supports only a page-local structural reading; it is not promoted into a corpus-wide rule.
+
+
+2. Page 51 contains a two-row brace in the locality field at r08–r09. This is distinct from cultivated-acre braces seen on earlier pages. The brace itself is source layout, not an interpretation of relationship.
+
+
+3. r08 and r09 retain separate row identity despite the locality brace. The written 400 and Capt. remark align only with r09 and are not inherited by r08.
+
+
+4. Source-written (name of place) at r07 is retained exactly as recorder language. It is not normalized to a modern place, tract, residence, or map coordinate.
+
+
+5. The page continues to distinguish written place strings, literal do marks, and separately written directional language. Glean preserves those distinct source states rather than silently resolving them.
+
+
+SOURCE / REPRESENTATION / TRANSCRIPTION / INTERPRETATION BOUNDARY
+
+
+Source: photographed manuscript page carried by the matching-payload OHC_2431.pdf custody objects.
+Representation: admitted OHC_2431.png direct-extraction study surface.
+Derivatives: the two Quoin text studies; temporary local crops/enlargements used only for inspection.
+Transcription: bounded visible header, row addresses r01–r12, directly adopted locality/acreage/remark states above, source-written parentheses and titles, and preserved literal do marks.
+Interpretation: limited to row alignment, separation of locality components, and the refusal to normalize the r08–r09 brace or expand ditto marks. No person-level identity, household theory, kinship, office continuity, geographic normalization, or corpus-level theory is advanced.
+
+
+UNRESOLVED QUESTIONS
+
+
+- exact diplomatic spellings of several personal names in r01–r12;
+- exact diplomatic spellings of the newly written localities at r10–r12 where Quoin supplies derivative readings;
+- what administrative relation, if any, the locality-field brace at r08–r09 signifies;
+- whether the brace, dittos, and neighboring entries were entered by the same hand or at the same time;
+- what the r09 General Remark Capt. means in the administrative context;
+- whether any same- or similar-name occurrence elsewhere belongs to a row holder on this page;
+- authorship and timing of the page annotations and General Remarks.
+
+
+NONCLAIMS
+
+
+- Literal do marks are not expanded into source-written text.
+- The r08–r09 locality brace does not establish kinship, marriage, household unity, shared ownership, shared residence, or one person.
+- r09 total acreage 400 and remark Capt. do not belong to r08 merely because the locality field is braced.
+- Source-written Capt does not independently establish office continuity, rank history, or identity with another captain occurrence.
+- Source-written (name of place) does not identify a modern place.
+- Quoin spellings remain derivative and are not treated as source certainty.
+- The two OHC_2431.pdf objects are not two witnesses.
+- The two Quoin objects are not two witnesses or two independent transcriptions.
+- OHC_2431.png and temporary crops are not independent witnesses.
+- The 50 → 51 seam carries manuscript pagination/form continuity only.
+- No same-name people are merged.
+- No corpus-level theory is advanced.
+
+
+SEAMS AND EXACT RETURN PATHS
+
+
+Backward manuscript seam:
+quoted-title Public Lands → GLEAN SOURCE-FACING ADDENDUM — OHC_2430 page 50 — refusal row r14 and rows 15–36 lower-page continuation, Drive ID 1192kJUMvoa9_UNR4TZqozdiwt38hMSe8uPEm4mxBpnQ → visible page 50 lower edge → this jacket → visible page 51.
+
+
+Page-51 source return:
+quoted-title Public Lands → this jacket → PL:p51:r01–r12 → admitted OHC_2431.png, Drive ID 1jxVnK2DlrRee1BIP9cTUTYvatSQiy3_S → archival OHC_2431.pdf custody object A 1ZcaJpd2zJDdocUDjL9E5kNDi4otR5RVb or matching-payload custody object B 1lPCxEM8EwrTeHQLH9jOKXAdPp_BgydxK.
+
+
+Derivative return:
+this jacket → Quoin page-51 derivative 1iD61coGrsj-xVjXl7Cx9x_GYoJ8RyoZT or duplicate-text derivative 1_xjL8GPavMgPXG1svfXFTmgvYByU1fjo → compare against admitted OHC_2431.png before adopting any disputed spelling.
+
+
+Forward seam:
+PL:p51:r13 is the next honest row-facing seam. r13 is not entered into this jacket merely because it is visible below the bounded pass. Page 52 is not opened.
+
+
+— Glean | quoted-title Public Lands | OHC_2431 / page 51 | r01–r12 tied | r08–r09 locality brace preserved | r13 open
+
+
+
+
+CONTINUATION — PL:p51:r13–r24
+
+
+Status: DIRECT-SOURCE CONTINUATION — SAME ADMITTED OHC_2431.png — EXISTING JACKET EXTENDED, NOT DUPLICATED
+
+
+Glean returned to the same admitted OHC_2431.png (Drive ID 1jxVnK2DlrRee1BIP9cTUTYvatSQiy3_S; parent 160suh69brrpG1c84Nes-WGqxyarXI9C6; 1,417,785 bytes) and used temporary local enlargements only for inspection. The existing Quoin page-51 studies remain derivative comparison aids. No new source object or witness is introduced by this continuation.
+
+
+The earlier footer stating “r13 open” is retained above as historical footing and is superseded by this continuation.
+
+
+ROW-ADDRESS PASS — PL:p51:r13–r24
+
+
+PL:p51:r13 — the row-holder field itself contains source-written Capt and, within the same row label, a source-written “or” between two personal-name strings. Direct inspection does not yet justify a fully certified diplomatic spelling of either name string; Quoin gives one derivative reading, but that reading is not substituted into the source. The important source fact is the recorder’s own “or” construction inside one row label.
+
+
+PL:p51:r14–r16 — row identities remain separate. Directly visible numeric entries remain row-local; no blank or dotted state is converted into zero, and no locality or remark is inherited merely from vertical proximity.
+
+
+PL:p51:r17 — a newly written creek locality is followed by a separately written east side. The exact diplomatic spelling of the creek name remains open; the Quoin derivative reads “Wassolaweskoma,” but Glean does not certify that spelling from the face in this pass.
+
+
+PL:p51:r18–r19 — each of the next two rows separately carries literal do in the place portion and literal do in the directional portion. These marks are preserved as written. They are not expanded into the r17 wording and the two rows are not merged with r17 or with one another.
+
+
+PL:p51:r20 — locality is directly readable as Aisachito (name of place). The parenthetical “(name of place)” is source-written recorder language. It is not a modern geographic identification, coordinate, tract, or residence claim.
+
+
+PL:p51:r21 — a newly written creek locality is followed by east side; General Remarks contains Land tolerable. The exact diplomatic creek spelling remains open. The remark is kept row-specific.
+
+
+PL:p51:r22 — a newly written creek locality is followed by west side. The exact diplomatic spelling remains open; Quoin offers a derivative reading only.
+
+
+PL:p51:r23 — a newly written Chokkahalla-like place string is followed by east side. Because r22 writes a different locality between r21 and r23, r23 is treated as newly written wording, not as a ditto expansion or silent carryover. Exact diplomatic spelling remains open.
+
+
+PL:p51:r24 — a newly written branch locality is followed by south side. Quoin reads “Okachalota branch”; that spelling remains derivative pending a stricter diplomatic read.
+
+
+MATERIAL SOURCE-FACING FINDINGS — CONTINUATION
+
+
+1. r13 preserves an explicit source-written “or” relation between two name strings inside one row label. Full-strength statement: the recorder wrote the two strings as alternatives in that row. Exact-reach limit: this does not identify either string with same- or similar-name occurrences elsewhere in the corpus.
+
+
+2. r17→r19 forms a bounded locality-writing sequence: newly written creek + east side at r17, then literal do / do states at r18 and again at r19. Glean preserves the marks instead of normalizing them into repeated text.
+
+
+3. r20 restarts the locality field with source-written Aisachito (name of place), cleanly ending that visible ditto run without requiring an inferred expansion.
+
+
+4. r21–r24 then show newly written locality/direction combinations rather than a single silently propagated locality string. This remains page-local structural evidence only.
+
+
+SOURCE / REPRESENTATION / TRANSCRIPTION / INTERPRETATION BOUNDARY — CONTINUATION
+
+
+Source: the photographed manuscript page carried by the already-controlled matching-payload OHC_2431.pdf custody objects.
+Representation: admitted OHC_2431.png, Drive ID 1jxVnK2DlrRee1BIP9cTUTYvatSQiy3_S.
+Derivatives: the two existing Quoin text studies plus unretained local enlargements used only for inspection.
+Transcription: bounded row positions r13–r24; source-written Capt / or construction; literal do marks; directly adopted “Aisachito (name of place)”; separately written directional language; row-specific remark Land tolerable.
+Interpretation: limited to row alignment and the refusal to normalize dittos or export the r13 “or” construction into person-level identity elsewhere.
+
+
+UNRESOLVED QUESTIONS — CONTINUATION
+
+
+- exact diplomatic spellings of the two r13 name strings joined by source-written “or”;
+- exact diplomatic spellings of several row-holder names in r14–r24;
+- exact diplomatic spellings of the newly written localities at r17 and r21–r24;
+- what administrative convention the recorder intended by the r13 “or” construction;
+- whether any same- or similar-name occurrence elsewhere belongs to either r13 name string;
+- antecedent mechanics of the r18–r19 literal do marks beyond what is visible on this face;
+- authorship and timing of the locality entries and General Remarks.
+
+
+NONCLAIMS — CONTINUATION
+
+
+- The r13 source-written “or” does not silently merge either name string with a person elsewhere.
+- Capt is preserved as source wording and does not establish office continuity or rank history.
+- Literal do marks at r18–r19 are not expanded into source-written text.
+- The r17–r19 locality sequence does not establish kinship, household unity, shared ownership, or shared residence among the row holders.
+- Aisachito (name of place) is not normalized to a modern place.
+- Quoin spellings remain derivative.
+- The admitted PNG and temporary enlargements are not independent witnesses.
+- No corpus-level theory is advanced.
+
+
+SEAMS AND EXACT RETURN PATHS — CONTINUATION
+
+
+Backward seam inside page 51: this jacket → prior bounded coverage PL:p51:r01–r12 → exact open seam PL:p51:r13.
+
+
+Continuation return: quoted-title Public Lands → this jacket → PL:p51:r13–r24 → admitted OHC_2431.png, Drive ID 1jxVnK2DlrRee1BIP9cTUTYvatSQiy3_S → archival OHC_2431.pdf custody object A 1ZcaJpd2zJDdocUDjL9E5kNDi4otR5RVb or matching-payload custody object B 1lPCxEM8EwrTeHQLH9jOKXAdPp_BgydxK.
+
+
+Derivative return: this jacket → Quoin page-51 derivative 1iD61coGrsj-xVjXl7Cx9x_GYoJ8RyoZT or duplicate-text derivative 1_xjL8GPavMgPXG1svfXFTmgvYByU1fjo → compare against admitted OHC_2431.png before adopting disputed spellings.
+
+
+Forward seam: PL:p51:r25 is the next honest row-facing seam. Page 52 is not opened.
+
+
+— Glean | quoted-title Public Lands | OHC_2431 / page 51 | r01–r24 tied | r13 source-written or-name preserved | r17–r19 literal ditto run preserved | r25 open
+
+
+
+
+CONTINUATION — PL:p51:r25–r36
+
+
+Status: DIRECT-SOURCE CONTINUATION — SAME ADMITTED OHC_2431.png — EXISTING JACKET EXTENDED, NOT DUPLICATED
+
+
+Glean returned to the same admitted OHC_2431.png (Drive ID 1jxVnK2DlrRee1BIP9cTUTYvatSQiy3_S; parent 160suh69brrpG1c84Nes-WGqxyarXI9C6; 1,417,785 bytes; 2038 × 1879 pixels) and inspected the lower twelve visible body rows. Temporary local crops/enlargements were used only for visual inspection and are not retained as source objects or witnesses. The existing Quoin page-51 derivative (Drive ID 1iD61coGrsj-xVjXl7Cx9x_GYoJ8RyoZT) was consulted only as a spelling comparison aid where handwriting remained difficult. No new historical witness or duplicate source object is introduced.
+
+
+This continuation begins from the canonical SOURCE WORK METHOD — full strength, exact reach — source to synthesis: source face first; jacket as custody rather than conclusion engine; preserve exact source/representation/derivative relation; protect blanks and dotted states; keep repeated representations from becoming corroboration; preserve correction history; and keep every consequential statement able to walk home to the source face. The earlier footer stating “r25 open” remains above as historical footing and is superseded by this continuation.
+
+
+ROW-ADDRESS PASS — PL:p51:r25–r36
+
+
+PL:p51:r25 — a newly written place string is followed by source-written “(name of place)”. Direct inspection supports the place form only approximately; Quoin reads “Racha (name of place)”. The parenthetical is recorder language and is not converted into a modern place identification. A row-specific General Remark begins “Land poor” and continues with a good-water statement; exact punctuation is not certified here.
+
+
+PL:p51:r26 — a newly written branch locality is followed by north side. Quoin reads “Hogachi branch”; that spelling remains derivative pending a stricter diplomatic read.
+
+
+PL:p51:r27 — the row-holder field visibly begins with source-written Capt. The locality is directly readable as Chickasawhay river, followed by east side. Total acreage 160 and General Remark “Land good.” align to this row only. Capt is preserved as source wording and not expanded into an office-history or identity claim.
+
+
+PL:p51:r28 — the row label is directly readable as Gilbert Bradley. Locality position contains literal do. No same-name or Bradley occurrence elsewhere is merged into this row.
+
+
+PL:p51:r29–r30 — the page draws a brace spanning the two row-holder labels and, across the same two-row height in the cultivated-acre column, a second brace containing one written 3. Quoin supplies derivative spellings Itlotipaya and Hoshushahoppaii for the two row-holder names; Glean does not elevate those spellings beyond derivative help. The source layout is preserved as two distinct row occurrences under paired two-row braces with one cultivated-acre value 3 visibly carried inside the braced acreage state. Glean does not duplicate 3 into both rows, divide it between them, or assign it independently to either row.
+
+
+PL:p51:r29 — separately from the paired brace state, the locality position contains literal do and the row separately writes west side. General Remark “Poor land.” aligns to this row. Those row-specific states are not propagated into r30 merely because the two row labels are braced.
+
+
+PL:p51:r30 — locality position contains literal do without a newly adopted direction in this pass. Its family/age numerals remain a separate row state despite the brace; no household or kinship relation is inferred.
+
+
+PL:p51:r31 — locality position again contains literal do. Written numerals remain row-local. No General Remark is adopted.
+
+
+PL:p51:r32 — the locality field newly writes “Chickasawhay River.” rather than another ditto mark. General Remark “Land poor.” aligns to this row. The rewrite is preserved as a source fact; Glean does not infer why the recorder rewrote the place name or whether it marks a new administrative grouping.
+
+
+PL:p51:r33–r36 — each row retains its own row identity while the locality field contains literal do marks. The lower row labels include two McCaw/McCann-like English-form occurrences and a final Levi Sampson occurrence; exact diplomatic spellings of the two McCaw/McCann-like surnames remain open because direct inspection and Quoin differ. None is merged with a person elsewhere in the corpus.
+
+
+MATERIAL SOURCE-FACING FINDINGS — LOWER CONTINUATION
+
+
+1. r29–r30 preserve paired two-row brace structure: one brace after the two row-holder labels and another brace in the cultivated-acre column with a single written 3. This is source layout at full strength. Its administrative meaning is unresolved.
+
+
+2. The paired braces do not erase row separation. r29 and r30 retain separate family/age numerals, and r29 separately carries west side plus Poor land. Those states do not migrate to r30.
+
+
+3. The page’s lower locality sequence preserves literal do states through r28–r31, with a separately written west side at r29, followed by a newly written Chickasawhay River at r32 and another run of literal do marks at r33–r36. The sequence is retained as page-local writing behavior only; no corpus-wide ditto rule is asserted.
+
+
+SOURCE / REPRESENTATION / TRANSCRIPTION / INTERPRETATION BOUNDARY — LOWER CONTINUATION
+
+
+Source: photographed manuscript page carried by the already-controlled matching-payload OHC_2431.pdf custody objects.
+
+
+Representation: admitted OHC_2431.png, Drive ID 1jxVnK2DlrRee1BIP9cTUTYvatSQiy3_S.
+
+
+Derivatives: existing Quoin page-51 text study and unretained local crops/enlargements used for inspection.
+
+
+Transcription: bounded row positions r25–r36; source-written parentheses and Capt; literal do marks; directly readable Chickasawhay river/River states; paired two-row braces at r29–r30; single written 3 inside the cultivated-acre brace; row-specific 160 / Land good / west side / Poor land / Land poor states where alignment is visually secure.
+
+
+Interpretation: limited to row alignment, preservation of brace geometry, and refusal to normalize or distribute a braced value. No person-level identity, kinship, household theory, ownership theory, shared-residence theory, office continuity, modern-place normalization, or corpus-level theory is advanced.
+
+
+UNRESOLVED QUESTIONS — LOWER CONTINUATION
+
+
+- exact diplomatic spellings of several r25–r36 row-holder names and of the r25/r26 locality forms;
+- exact diplomatic spelling of the two McCaw/McCann-like English-form surnames at r33–r34;
+- what administrative relation, if any, the paired r29–r30 braces signify;
+- whether the single cultivated-acre 3 is intended as a joint, grouped, or otherwise administratively shared quantity; the page layout alone does not answer this;
+- why Chickasawhay River is rewritten at r32 after literal do states above;
+- authorship and timing of the braces, locality entries, and General Remarks.
+
+
+NONCLAIMS — LOWER CONTINUATION
+
+
+- The paired r29–r30 braces do not establish kinship, marriage, household unity, shared ownership, shared residence, one person, or a joint farm.
+- The single cultivated-acre 3 is not silently duplicated, divided, or assigned to one row.
+- r29 west side and Poor land do not automatically belong to r30.
+- Literal do marks are not expanded into source-written text.
+- Rewriting Chickasawhay River at r32 does not by itself prove a new group, tract, or locality boundary.
+- Capt does not independently establish office continuity or rank history.
+- English-form names on this page are occurrences only; no same-name people are merged.
+- Quoin spellings remain derivative.
+- The admitted PNG and inspection crops are not independent witnesses.
+- No corpus-level theory is advanced.
+
+
+SEAMS AND EXACT RETURN PATHS — LOWER CONTINUATION
+
+
+Backward seam inside page 51: this jacket → prior bounded coverage PL:p51:r13–r24 → exact open seam PL:p51:r25.
+
+
+Continuation return: quoted-title Public Lands → this jacket → PL:p51:r25–r36 → admitted OHC_2431.png, Drive ID 1jxVnK2DlrRee1BIP9cTUTYvatSQiy3_S → archival OHC_2431.pdf custody object A 1ZcaJpd2zJDdocUDjL9E5kNDi4otR5RVb or matching-payload custody object B 1lPCxEM8EwrTeHQLH9jOKXAdPp_BgydxK.
+
+
+Derivative return: this jacket → Quoin page-51 derivative 1iD61coGrsj-xVjXl7Cx9x_GYoJ8RyoZT (or its duplicate-text derivative already recorded above) → compare against admitted OHC_2431.png before adopting disputed spellings.
+
+
+Forward seam: PL:p51:r36 is the last visible body row on the admitted page-51 face. Page 52 remains unopened; filename adjacency alone is not promoted into a manuscript seam.
+
+
+— Glean | quoted-title Public Lands | OHC_2431 / page 51 | r01–r36 visible coverage | r29–r30 paired brace state preserved | lower edge reached | page-52 seam untested
+
+
+
+
+CORRECTION / SAME-FACE CONTROL — OHC_2432 — 2026-09-05
+
+
+Status: ACTIVE READING REPAIRED; EARLIER TEXT ABOVE PRESERVED AS CORRECTION HISTORY.
+
+
+A later Glean pass opened admitted OHC_2432.png (Drive ID 1bfYyT690Exq1Fme-dpFqaqjfuIcLODZT) and established that OHC_2432 is a distinct digital capture of this same manuscript page-51 face, not manuscript page 52. Full provenance, duplicate-custody control, image-registration comparison, and derivative boundaries are recorded in GLEAN SOURCE-FACING ADDENDUM — OHC_2432 page 51 same-face capture control — Calvert Bradley and r26 south-side corrections, Drive ID 1gj5TCkEZHf8OuG3tg4zNzkzg_WZzeKNvdsygdUrK55M.
+
+
+Two earlier active readings in this jacket are superseded:
+
+
+1. PL:p51:r26: the earlier continuation states a branch locality followed by north side. The clearer OHC_2432 capture directly shows south side. Active state is therefore: newly written branch locality + south side. Exact diplomatic spelling of the branch name remains open; Quoin's Hokachi branch is derivative help only.
+
+
+2. PL:p51:r28: the earlier continuation states Gilbert Bradley. The OHC_2432 capture directly reads Calvert Bradley. Active state is Calvert Bradley. This is one occurrence-level transcription correction only; no Bradley identity elsewhere is merged.
+
+
+Derivative-control note: the OHC_2432 Quoin derivatives read total acreage 1600 at the Capt Onachabi and Capt Kashinahkla rows. Direct inspection of the manuscript face supports 160 at those positions. The direct-source 160 state remains governing; derivative 1600 is not adopted.
+
+
+Forward seam repair: OHC_2432 does not close the page-52 seam. It repeats manuscript page 51 in a second digital capture. Manuscript page 52 remains untested in the active path.
+
+
+— Glean | correction appended to OHC_2431 page-51 jacket | r26 south side active | Calvert Bradley active | OHC_2432 controlled as same-face capture | page-52 seam still open
+
+
+
+
+FIELDGLASS CONTINUATION — CATEGORY-WORD AUDIT — 2026-09-06
+
+
+Direct source reopened: OHC_2431.pdf — Drive ID 1lPCxEM8EwrTeHQLH9jOKXAdPp_BgydxK — legacy-source parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 266,521 bytes. The exact PDF was rendered at 220 dpi and the full visible manuscript page 51 was inspected. OHC_2432 remains an alternate capture of this same historical page and is not counted again.
+
+
+Across the full visible locality-bearing page-51 face, Fieldglass observed no explicit worded white / White / Whites / slave / Slave / Slaves / Black / Blacks category annotation.
+
+
+Exact reach: 0 observed explicit category-word annotations on the available page-51 witness. This is not a population/status zero and does not change the existing paired braces, source-written or-name, locality states, or uncertainties.
+
+
+Arithmetic seam: manuscript page 51 is counted once and contributes 0 observed explicit white/slave category counts to the current page-39→60 audit.
+
+
+Return: this jacket → OHC_2431.pdf above → manuscript face; OHC_2432 remains same-face representation control, not added evidence.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+
+
+SEDGE MAP-FACING REPRESENTATION TOPOLOGY — MANUSCRIPT pp.51–52 / OHC_2431–OHC_2434 — 2026-09-10
+
+
+Status: additive derivative architecture only. No new source-face transcription and no replacement of Glean’s or Fieldglass’s direct-source findings.
+
+
+Small live edge: the direct controls already standing in this jacket and the governing page-52 jacket now permit one explicit provenance relation that the map layer needs. Manuscript page 51 is represented by distinct digital captures OHC_2431 and OHC_2432; manuscript page 52 is represented by distinct digital captures OHC_2433 and OHC_2434. In this bounded four-object run, the relation from digital capture object to historical manuscript face is therefore many-to-one, not one-to-one.
+
+
+Source / representation / derivative distinction: manuscript p.51 and manuscript p.52 remain historical source faces. OHC_2431/OHC_2432 and OHC_2433/OHC_2434 are capture/representation objects already controlled by direct source work; same-face captures do not become additional witnesses. The grouping and schema below are Sedge workshop derivatives and are not manuscript language.
+
+
+Map-facing rule: `OHC object sequence != manuscript page sequence`. Filename increment alone must never create a page edge, locality edge, person edge, or map adjacency. A map/provenance record should keep at least: `capture_object_id | manuscript_face_id | visible_page_no | same_face_group | custody_route | representation_relation | manuscript_predecessor | manuscript_successor | corroboration_weight`. Present bounded groups: `p51 = {OHC_2431, OHC_2432}`; `p52 = {OHC_2433, OHC_2434}`. Repetition inside either group adds representation access, not historical corroboration.
+
+
+Correction history: earlier forward-seam language in this jacket that left manuscript page 52 untested remains preserved as the prior state. Glean’s later OHC_2432 correction established that OHC_2432 repeats p.51; the page-52 jacket’s direct OHC_2433 control then earned the 51→52 manuscript seam. This note changes none of those attributions or readings; it only makes their map/provenance consequence explicit.
+
+
+Refused crossings: no row, person, family, farm, locality, acreage, title, residence, ownership, or identity travels between captures or pages through this topology. Same-face does not mean same-row transcription is automatically equally legible, and consecutive manuscript pages do not mean one geographic place continues across the turn.
+
+
+Honest way home: this note → this p.51 governing jacket → OHC_2431/OHC_2432 same-face controls; sideways → GLEAN SOURCE-FACING JACKET — OHC_2433/OHC_2434 page 52 → its direct same-face and 51→52 controls. Any further manuscript seam must be earned from visible page/form evidence, not OHC numbering.
+
+
+[Sedge | Mapping Grounds / Public Lands | capture-object topology made explicit | p51={2431,2432}; p52={2433,2434} | filename adjacency refused as manuscript geography | identities unmerged]

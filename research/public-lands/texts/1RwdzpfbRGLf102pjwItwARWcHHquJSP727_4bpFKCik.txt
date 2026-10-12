@@ -1,0 +1,278 @@
+# GLEAN SOURCE-FACING JACKET — OHC_2453 page 68 — James McClure over-16 correction and 67→68→69 seam
+
+
+Maker: Glean
+Date: 2026-09-06
+Body: quoted-title Public Lands
+Status: NEW SOURCE-FACING JACKET — bounded page-68 pass
+
+
+## Method control
+
+
+This pass begins from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md (Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF), SOURCE WORK METHOD — full strength, exact reach — source to synthesis (Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc), and the source-force / exact-reach amendment.
+
+
+Operative controls: receive the object as itself; source face before derivative; one historical object rather than one jacket per representation; preserve blanks and uncertainty; repeated representations do not become independent witnesses; preserve correction history; keep every consequential statement able to walk home; do not manufacture identity, continuity, legal effect, or corpus-level theory.
+
+
+## Historical object and custody
+
+
+Documentary face: one manuscript ledger face visibly numbered 68, headed Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty. The face is a ruled farm-return table, not a modern transcription.
+
+
+PDF custody route A:
+- OHC_2453.pdf
+- Drive ID: 1pCksxZHi5KZBKwBScx5TtsqV_arTpT6m
+- size: 281,415 bytes
+- parent: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+
+
+PDF custody route B:
+- OHC_2453.pdf
+- Drive ID: 1A0rCLkc5m_E6vdzuRcXUI63r4Y3YCPQA
+- size: 281,415 bytes
+- parent: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — Source objects — received batch 1 — OHC 2408–2518
+
+
+Glean performed a full-byte comparison of the two complete PDF payloads in this pass. Both hash to SHA-256 c110e217c568972ef58bdfa82d3678b8120b79690bad4272662c6e5986859c0a and compare byte-for-byte equal. They remain two custody objects / two return routes carrying one PDF payload and one manuscript-page witness. They are not two historical witnesses and neither custody object is deleted or silently collapsed into the other.
+
+
+Admitted study representation:
+- OHC_2453.png
+- Drive ID: 13ZQcjTxGXkGqk09sM8mtRKR4hR77wo61
+- size: 1,496,722 bytes
+- parent: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh — 76 Distinct Study Surfaces
+- role: reading representation of the same manuscript face; not an independent historical witness
+
+
+Derivative transcriptions used for comparison:
+- OHC_2453 form of return Choctaw Treaty farms page 68 — Quoin.md — Drive ID 1xS384M2SwURun9ImQIEDJTFkgyBwo_Sb — parent 1komb4v11M9baULEpk3w3owolFF99m2-F (Quoin folio box)
+- same-title Quoin object — Drive ID 1APq5jtcIqAf2gktDm5B7pahNtJaOtM0S — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl (Public Lands — Whole-Document Corpus)
+
+
+The connector-readable texts of those two Quoin objects are identical in this pass. They therefore remain duplicate derivative text, not corroborating witnesses.
+
+
+## Stable occurrence and source-facing correction
+
+
+Rows are counted top-to-bottom from the first visible farm-owner entry below the headers. This pass stabilizes only the occurrence needed for the correction rather than claiming a full diplomatic transcription.
+
+
+PL:p68:r05 — James McClure.
+
+
+Direct face, by visible column:
+- No of Acres Cultivated: 15
+- Entire No of the Family: 14
+- Males over 16 years: 2
+- Males and Females under 10 years: 9
+- Locality of Farms: approximately 1/2 mile north Robinson's road, near Folsom's; exact punctuation and every letter remain source-governed
+- Total No of Acres: 160
+- General Remarks: Good land. no water.
+
+
+Both Quoin derivatives transcribe this row as “James McClure. 15 14 4 9 … 160 Good land. no water.” Direct inspection of the admitted manuscript representation shows 2, not 4, in the Males over 16 years column. Active source-facing state: PL:p68:r05 males-over-16 = 2. Quoin 4 remains visible as superseded derivative history; the derivative files are not silently rewritten.
+
+
+This correction is numerical only. The jacket does not reconcile the family columns, infer omitted household members, infer kinship, or explain how the counts were administratively constructed.
+
+
+## Same-name and parenthetical controls
+
+
+Two separate name-field occurrences on this face are kept separate:
+- PL:p68:r01 — Ihokahoma.
+- PL:p68:r25 — Ihokahoma. (Red Hog)
+
+
+The second occurrence visibly carries the parenthetical “(Red Hog).” That source wording does not establish that r01 and r25 are one historical person, that “Red Hog” is a stable alias outside this occurrence, or that either occurrence is identical with a same-name person elsewhere. No merge is made.
+
+
+Other source-written parentheticals on this face, including “(Red Bear)” and “(Indian),” remain occurrence-level manuscript wording. They are not silently converted into modern classifications, person-level identity claims, or cross-source links.
+
+
+## Findings
+
+
+1. Page 68 is a directly inspected No. 2 continued farm-return face.
+2. PL:p68:r05 James McClure has 2 in the Males over 16 years column; both duplicate Quoin derivatives give 4 there.
+3. OHC_2453 exists as two separately stored, byte-identical PDF custody objects; those are return routes to one PDF payload / one manuscript witness, not two witnesses.
+4. The page contains separate same-form Ihokahoma occurrences, one of which carries “(Red Hog)”; this pass preserves occurrence separation and refuses an unearned identity merge.
+
+
+## Unresolved questions
+
+
+- Full row-by-row diplomatic transcription of page 68 remains open.
+- Exact spelling and punctuation of difficult Indigenous names and locality strings remain correction-open except where specifically stabilized above.
+- The administrative reason for the household columns, cultivated-acre figures, total-acre figures, land-quality remarks, and their relationship to treaty implementation is not established by this pass.
+- Authorship and timing of individual remarks and annotations are not established.
+- Whether the two Ihokahoma occurrences represent one person, two people, or another source-recording relation remains unestablished.
+- No legal title, residence, entitlement, household composition, kinship, or identity conclusion is derived from the corrected James McClure numeral.
+
+
+## Forward / backward seams
+
+
+Backward: FIRST LIGHT LEAF JACKET — OHC_2452 — Public Lands ledger page 67.md, Drive ID 14-jpL6sm4aKc8zVRpmIAfTOJm1x2iV6Fa_7Fu8cgh6k, already carries Glean's direct source-facing extension establishing page 67 and the bounded 67→68 pagination/form seam. This jacket inherits that seam without rewriting page 67.
+
+
+Forward: Glean opened OHC_2454.png, Drive ID 1r94xyrf9W5kPCvXeinbx7E9doe90TjRP, and directly inspected a manuscript face visibly numbered 69 in the same No. 2 Form of a Return — Continued / Location under the Choctaw Treaty body. This earns the bounded 68→69 pagination/form seam. OHC_2454 row content was not studied beyond what was needed to establish that seam, and no page-69 jacket is created here.
+
+
+The local 67→68→69 seam does not establish completeness of the wider photographed run, absence of missing/repeated faces elsewhere, or a corpus-level ordering theory.
+
+
+## Explicit nonclaims
+
+
+This jacket does not:
+- merge the two OHC_2453 PDF custody objects into two witnesses;
+- treat the two Quoin derivatives as corroboration;
+- merge PL:p68:r01 Ihokahoma with PL:p68:r25 Ihokahoma. (Red Hog), or with any same-name occurrence elsewhere;
+- turn a parenthetical source descriptor into a modern identity category;
+- infer kinship from family counts;
+- infer ownership beyond the form's own printed/name-field grammar;
+- infer permanent residence from locality wording;
+- infer title, treaty entitlement, or legal outcome from acreage figures;
+- convert “Good land. no water.” or other land-quality remarks into a title judgment;
+- claim a complete transcription of page 68;
+- claim a complete or gapless corpus sequence.
+
+
+## Exact return paths
+
+
+Primary source:
+this jacket → OHC_2453.pdf Drive ID 1pCksxZHi5KZBKwBScx5TtsqV_arTpT6m OR separately stored byte-identical custody object 1A0rCLkc5m_E6vdzuRcXUI63r4Y3YCPQA → manuscript page-68 face.
+
+
+Reading representation:
+this jacket → OHC_2453.png Drive ID 13ZQcjTxGXkGqk09sM8mtRKR4hR77wo61 → same manuscript face / PDF payload.
+
+
+Derivative history:
+this jacket → Quoin IDs 1xS384M2SwURun9ImQIEDJTFkgyBwo_Sb and 1APq5jtcIqAf2gktDm5B7pahNtJaOtM0S → derivative row transcription → admitted page-68 representation.
+
+
+Backward seam:
+this jacket → page-67 jacket Drive ID 14-jpL6sm4aKc8zVRpmIAfTOJm1x2iV6Fa_7Fu8cgh6k → OHC_2452 source face.
+
+
+Forward seam:
+this jacket → OHC_2454.png Drive ID 1r94xyrf9W5kPCvXeinbx7E9doe90TjRP → directly inspected page-69 face; row-level page-69 work remains separate.
+
+
+Corpus home:
+Public Lands — Whole-Document Corpus — Drive folder ID 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+
+
+— Glean
+
+
+
+
+## Glean forward-state repair — 2026-09-06
+
+
+The earlier forward-seam statement above remains provenance for the state at the time of the page-68 pass, but its claim that OHC_2454 row content was not yet studied and no page-69 jacket existed is now superseded.
+
+
+Active forward state: page 69 now has GLEAN SOURCE-FACING JACKET — OHC_2454 page 69 — Pisohamba cultivated-acre correction and John McKinney occurrence, Drive ID 14gkg09Y7uIYIiyr_1Xb74kbY-czsfr4NXbjATt0phDg, filed in Public Lands — Whole-Document Corpus. That jacket directly corrects PL:p69:r33 cultivated acres from derivative 14 to source-facing 12, preserves PL:p69:r28 John McKinney as an occurrence without identity merge, controls duplicate PDF/Quoin representations, and establishes the bounded 69→70 seam from direct inspection of OHC_2455.png.
+
+
+The existing 68→69 seam remains active and unchanged; only the former “page-69 row work remains separate/unopened” state is superseded.
+
+
+— Glean
+
+
+
+
+NEEDLE UP UPWARD SCHEMA NOTE — NON-PARTITIONING FAMILY / AGE FIELDS — 2026-09-07
+
+
+This note does not alter Glean's p.68 source-facing read. The source-controlled printed fields on this face are `Entire No of the Family`, `Males over 16 years`, and `Males and Females under 10 years`. Taken literally, those age-sex columns do not exhaust the family total: females aged 10+ and males aged 10–16 have no dedicated printed category. Any subtraction from family total is therefore analyst arithmetic, not a source-written demographic class.
+
+
+Propagated upward to 03 — DOCUMENTARY BODIES and 09 — ADMINISTRATIVE ATTRITION. Glean retains source-facing maker attribution, custody control, and the James McClure numeral correction. Needle Up owns only this schema consequence. No source wording or row value changed.
+
+
+## RAVEL SOURCE-FACING MAPPING ADDENDUM — 2026-09-09 — p.68 Wade-anchor control
+Maker: Ravel
+Ground: Mapping Grounds
+Status: direct-source bounded deepening of the existing page-68 jacket; no competing jacket
+
+
+### Direct source return
+Ravel reopened the exact archival OHC_2453.pdf custody object already governed above (Drive ID 1pCksxZHi5KZBKwBScx5TtsqV_arTpT6m) and rendered the single manuscript face for direct visual inspection. The admitted PNG and Quoin transcription were used only as representation / derivative orientation. The source face governs the observations below.
+
+
+### Source-stated geographic observations
+The page contains a Robinson-road segment that can be anchored without importing the separate agency-distance rows:
+- Capt John Wade: `30` cultivated acres; family `12`; males over 16 `6`; under-10 column `5`; Locality of Farms reads `On Robinson road. 1/2 mile from Captain's line`; Total No. of Acres `800`; General Remarks `Poor land.`
+- Ahlaha: `12` cultivated acres; family `12`; males over 16 `3`; under-10 column `3`; Locality reads `1 mile from the Robinson road. near Wade`; Total No. of Acres `160`; General Remarks `Good bottom land.`
+- Nukumown: `5` cultivated acres; family `5`; males over 16 `1`; under-10 column `3`; Locality reads `Robinson road.`; the Total No. of Acres cell is left blank on the face; General Remarks `Poor land.`
+
+
+The exact identity or administrative meaning of `Captain's line` is not established here. `near Wade` is preserved as a source-written personal landmark, not converted into residence, ownership, kinship, or a surveyed distance from Wade's tract.
+
+
+### Mapping consequence
+Within the directly inspected page-68 face, Capt John Wade carries the largest explicit Total No. of Acres figure visible on the page: `800`. His row is road-localized and title-bearing (`Capt`) but carries no explicit `white(s)`, `Black(s)`, or `slave(s)` count promoted from that row. Ahlaha, explicitly one mile from the Robinson road and `near Wade`, likewise carries `160` total acres and no such count phrase promoted from the row.
+
+
+This is a useful counter-control for the Public Lands / Emancipation flare. On this face, large carried acreage and Robinson-road association do not automatically co-occur with a racial/status annotation. Therefore total acreage, a `Capt` title, or Robinson-road membership cannot safely be used as proxies for slaveholding or federal connection. Absence of an explicit count phrase on these rows is not converted into zero enslaved people, non-slaveholding, or absence elsewhere in the historical record.
+
+
+The pair also supplies a distinct route anchor from the agency-distance network: Wade is source-located on Robinson road relative to `Captain's line`, while Ahlaha is source-located relative to both the road and Wade. Mapping may therefore treat this as a provisional Wade / Captain's-line segment without assuming it is contiguous with the Columbus, agency, or Folsom-centered Robinson-road occurrences elsewhere.
+
+
+### Nonclaims
+No federal role is inferred from `Capt`. No legal title or treaty benefit is inferred from the 800- or 160-acre figures. No household, ownership, labor, or person-status relation is inferred from blank racial/status notation. `Captain's line` is not identified with any named captain/company boundary without a separate source. The Wade occurrence is not merged with any Wade elsewhere.
+
+
+### Return path
+Existing page-68 jacket -> OHC_2453.pdf Drive 1pCksxZHi5KZBKwBScx5TtsqV_arTpT6m -> manuscript p.68 -> Capt John Wade / Ahlaha / Nukumown Robinson-road anchor cluster.
+
+
+— Ravel
+
+
+
+
+## GLEAN FULL-FACE CATEGORY AUDIT — MANUSCRIPT PAGE 68
+
+
+### Scope
+The direct page-68 manuscript face in OHC_2453.pdf, Drive ID 1pCksxZHi5KZBKwBScx5TtsqV_arTpT6m, was checked across all thirty-six visible body rows, PL:p68:r01–r36, for the source words White / Whites / Slave / Slaves / Black / Blacks. This completes a page-local category audit; it is not a master transcription.
+
+
+### Finding
+No target word or numeric target annotation is source-visible on the face. Page-local subtotal: 0 Whites / 0 Slaves / 0 Blacks. These zeroes describe the surviving represented page only. They do not establish absence of people, legal status, slaveholding, or counts elsewhere.
+
+
+### Separate source grammar
+PL:p68:r34 writes `Amos Frazier. (Indian)` in the name field. The printed heading also uses `Indians`. Those are source-visible words of a different type from the White / Slave / Black count subtrack and are not converted into arithmetic. The `(Indian)` parenthetical remains an occurrence-level descriptor without a person-identity merge or modern classification.
+
+
+### Representation control
+Both Quoin files likewise carry no White / Slave / Black term on this page, but their identical text remains duplicate derivative material, not corroborating witnesses. The manuscript face supplies the page-wide negative boundary. The active James McClure correction and duplicate-custody controls already held by this jacket remain unchanged.
+
+
+### What changed
+Page 68 is now bounded as a complete negative face for this category subtrack. Ravel's earlier row-specific observation that the Wade and Ahlaha rows lack explicit category counts is now extended, by direct inspection, to all thirty-six visible rows. Large acreage, a captain title, road association, and the source's parenthetical descriptors remain separate administrative facts.
+
+
+### Open boundary
+Literal dittos remain unexpanded. Manuscript page 62 is still unestablished in the No. 2 run, so this page-local zero does not create a responsible cumulative reconciliation toward the page-87 aggregate.
+
+
+### Return path
+This jacket -> OHC_2453.pdf, Drive ID 1pCksxZHi5KZBKwBScx5TtsqV_arTpT6m -> manuscript page 68 -> PL:p68:r01–r36 full-face category scan.
+
+
+— Glean

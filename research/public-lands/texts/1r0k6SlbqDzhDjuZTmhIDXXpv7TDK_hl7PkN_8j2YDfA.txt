@@ -1,0 +1,753 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2443 page 60 — district white/slave roll-up and Quoin total correction
+
+
+Status: DIRECT-SOURCE PAGE JACKET — ONE MANUSCRIPT PAGE — REPRESENTATION CONTROLLED
+Maker: Fieldglass
+Date: 2026-09-06
+Corpus: Public Lands — Whole-Document Corpus / quoted-title Choctaw Treaty farm return
+Visible manuscript page: 60
+Historical-object boundary: one manuscript page within a continued multi-page return. This jacket does not claim completeness of the larger return and does not supply a full diplomatic transcription of page 60.
+
+
+METHOD CONTROL
+
+
+This pass works from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md, Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF. The direct source face governs; repeated representations do not become witnesses; source observation, derivative transcription, and inference remain distinct; uncertainty and correction history stay visible.
+
+
+A bounded Drive search returned two OHC_2443 custody PDFs, one admitted OHC_2443 PNG study representation, two same-text Quoin derivatives, and no equivalent source-facing OHC_2443/page-60 jacket. This jacket therefore represents the underlying manuscript face rather than creating separate jackets for PDF, PNG, or derivative forms.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+
+
+Custody object A:
+- filename: OHC_2443.pdf
+- Drive ID: 1fz9nSpKlRLMGqKVS2C6id82uwuVv-a9f
+- parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- established parent name in this corpus: Source objects — received batch 1 — OHC 2408–2518
+- size: 216,736 bytes
+
+
+Custody object B:
+- filename: OHC_2443.pdf
+- Drive ID: 1OacztTU47o7iTvx1tjQpoJnLVtK8rwfL
+- parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- established parent name in this corpus: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+- size: 216,736 bytes
+
+
+The two stored OHC_2443 PDF payloads inspected in this pass are byte-identical custody copies of one payload, with SHA-256:
+c8cd4e8835d06edcc34cd0f315fa405e73a5169ec9492c899d03bf947408a2f3
+They are two custody routes to one manuscript-page witness, not two independent witnesses.
+
+
+Admitted study representation used for direct visual reading:
+- filename: OHC_2443.png
+- Drive ID: 14bx2heBsCAxvOfBrFK2ZihG4IEXCfX7W
+- parent folder ID: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- established parent name: 76 Distinct Study Surfaces
+- size: 1,069,613 bytes
+- operation: study representation of the source face; not a second historical source.
+
+
+Existing derivative transcriptions:
+- OHC_2443 form of return Choctaw Treaty farms page 60 — Quoin.md — Drive ID 1QsnL2UcVuSWBJP_THHvFh2lN6s23j-kE — parent 1komb4v11M9baULEpk3w3owolFF99m2-F
+- same-title duplicate derivative — Drive ID 1AB6vjSIbUe-waid4B4E3UiQAMnY8YeFP — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+The connector-readable text of these two Quoin objects is identical. They remain repeated derivative text and do not add evidentiary weight by repetition.
+
+
+PAGE IDENTITY
+
+
+The direct OHC_2443 face visibly carries manuscript page number 60 at upper left and continues the ruled “Public Lands — No 1 — Form of a Return — Continued — Location under the Choctaw Treaty” form. The right side of the surviving sheet is physically lost/torn through portions of the total-acre and remarks area. Missing paper is not treated as a blank entry.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING A — DISTRICT AGGREGATE LINE
+
+
+At the bottom of the surviving ruled body, beneath the first four printed numeric columns, the direct face reads:
+- 3,690
+- 5,112
+- 1,359
+- 1,582
+
+
+In the locality-area continuation of that same aggregate line, the source visibly reads:
+“14 Whites & 67 Slaves in this district”
+
+
+The Quoin derivative gives the first aggregate as “3,090”. Direct inspection supports “3,690”. Active source-facing reading is therefore 3,690; Quoin’s 3,090 remains preserved as superseded derivative history.
+
+
+This aggregate line is the first direct face in the current Fieldglass annotation thread that explicitly names “Whites” and “Slaves” as district-level counted categories. It materially narrows, but does not finish, the earlier question about the purpose of the smaller row-level white/slave annotations.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING B — [UNCLEAR: TO?] BRETHEARS, SEN.
+
+
+A late row is read conservatively as:
+“[unclear: To?] Brethears. sen.”
+
+
+The visible printed numeric fields on that row include:
+- cultivated acres: 50
+- entire family: 21
+- males over 16: dotted/blank on the surviving face; no zero adopted
+- males and females under 10: 1
+- total acres: 640
+
+
+At the left side of the locality field, in smaller writing, the direct face visibly carries two stacked category counts:
+“1 white”
+“14 Slaves”
+
+
+A separate principal locality follows:
+“Blk Bluff Tombigbee.”
+
+
+The exact expansion of “Blk” is not supplied here. The smaller category counts are preserved as source-visible writing rather than silently folded into the printed family columns.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING C — NITTACHACHI
+
+
+The last surviving named row reads:
+“Nittachachi. Chief of southern Dist”
+
+
+The visible printed numeric fields include:
+- cultivated acres: 35
+- entire family: 19
+- males over 16: 5
+- males and females under 10: 6
+
+
+At the left side of the locality field the direct face carries smaller writing:
+“1 white]”
+
+
+A separate locality follows and is read conservatively as:
+“[unclear: Pathachi?] creek. east side.”
+
+
+The total-acre / remarks area at far right is damaged by loss of the sheet. No missing value is reconstructed.
+
+
+SOURCE / DERIVATIVE / INTERPRETATION BOUNDARY
+
+
+Source-stated / source-visible:
+- manuscript page 60 under the continued Public Lands return form;
+- a district aggregate line reading 3,690 / 5,112 / 1,359 / 1,582 and “14 Whites & 67 Slaves in this district”;
+- [unclear: To?] Brethears. sen. as one source occurrence, with family 21, a smaller “1 white” and “14 Slaves” pair, “Blk Bluff Tombigbee.”, and 640 total acres;
+- Nittachachi as one source occurrence, with source-written role “Chief of southern Dist”, family 19, smaller “1 white]” writing, and an east-side creek locality whose creek name remains uncertain here;
+- physical loss of the right edge through parts of the final columns.
+
+
+Derivative:
+- OHC_2443.png is a study representation of the manuscript face.
+- the two Quoin files are derivative transcriptions/navigation aids.
+- any crops/enlargements used during direct inspection are unretained inspection derivatives and are not historical evidence.
+
+
+Interpretation / exact reach:
+The manuscript itself demonstrates that “Whites” and “Slaves” were being counted at a district aggregate level somewhere in the administrative logic of this return, in addition to the printed family/age columns. The same page also contains row-level smaller “white” / “Slaves” counts in the locality field. That makes a contribution-to-roll-up relationship between the row annotations and the district total a strong live inference. It is not yet treated as proved because this pass did not arithmetic-check every row-level annotation across the full district span or establish where that district begins.
+
+
+FINDINGS
+
+
+- OHC_2443 is a direct representation of visible manuscript page 60 in the continued Public Lands / Choctaw Treaty farm return.
+- The two stored OHC_2443 PDFs inspected are byte-identical custody copies of one payload and one manuscript-page witness.
+- The two same-title Quoin files carry identical derivative text and are not corroborating witnesses.
+- The direct aggregate is 3,690, not Quoin’s 3,090.
+- The source itself reads “14 Whites & 67 Slaves in this district.”
+- The same face contains row-level smaller counts “1 white / 14 Slaves” and “1 white]”.
+- This directly establishes category continuity between row-level white/slave annotations and a district-level white/slave total, while leaving the exact accounting rule unresolved.
+
+
+CORRECTION HISTORY
+
+
+Correction A — first aggregate:
+Quoin: 3,090.
+Direct face: 3,690.
+Reason: enlarged direct inspection of the surviving aggregate line supports a 6 in the hundreds place. The derivative reading remains preserved as superseded navigation history.
+
+
+Correction B — administrative-purpose question:
+Earlier Fieldglass jackets on pages 53–58 correctly left the purpose of smaller white/slave annotations unresolved. Page 60 does not supply an instruction or legend, so that uncertainty is not erased. It does, however, add direct source evidence that the same categories were totaled as “14 Whites & 67 Slaves in this district.” The active question is therefore narrowed from “are these recurring category counts part of the return’s accounting?” to “how exactly were the row-level counts accumulated, bounded, and related to the printed family columns?”
+
+
+UNRESOLVED QUESTIONS
+
+
+- Where does the district summarized by “14 Whites & 67 Slaves in this district” begin in the surviving return?
+- Do all surviving row-level white/slave annotations across that district arithmetic-sum to 14 and 67?
+- Are row-level counts entered contemporaneously with the principal return, or by a later annotator?
+- What exactly do the closing bracket-like strokes after some row counts delimit?
+- How, if at all, do white/slave category counts relate to the printed “Entire No of the Family” and age/sex columns?
+- What is the secure reading of the first element in “[unclear: To?] Brethears. sen.” and of “[unclear: Pathachi?] creek”?
+- Does a surviving instruction, cover, supplement, schedule, or neighboring section explicitly explain the category accounting?
+
+
+NONCLAIMS
+
+
+- “Whites” and “Slaves” are source-visible historical categories on this manuscript face. This jacket does not infer the names, identities, ages, legal statuses beyond the wording used, relationships, residences, ownership mechanisms, or later histories of the people counted.
+- “14 Whites & 67 Slaves in this district” does not by itself prove that all 81 counted people occur on page 60; the line is treated as an aggregate for a larger district span whose bounds remain to be established.
+- The row-level “1 white / 14 Slaves” and “1 white]” are not silently added to or subtracted from the printed family counts.
+- Similar category wording does not prove the same writer, date, bracket rule, or administrative event across pages.
+- Nittachachi’s source-written title “Chief of southern Dist” is preserved as an occurrence-level role statement and is not used here to merge this occurrence with any same-name person elsewhere.
+- The two PDFs and the PNG are representations of one historical manuscript page; repeated representation is not repeated evidence.
+- Duplicate Quoin derivatives are not independent witnesses.
+- Consecutive manuscript pages do not merge people, farms, localities, or administrative events across page turns.
+
+
+SEAMS AND EXACT RETURN PATHS
+
+
+Backward seam:
+GLEAN SOURCE-FACING JACKET — OHC_2442 page 59 — Drive ID 1dYORP4tjWHrIdcIcXjHHwbAbb-apSLUkXKFcBFkpB8c → its explicit forward door to unopened direct OHC_2443/page 60 → this direct-source jacket.
+This is pagination/form navigation only and does not carry identity or family claims across the turn.
+
+
+Source return:
+this jacket → OHC_2443.png study representation, Drive ID 14bx2heBsCAxvOfBrFK2ZihG4IEXCfX7W, parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh → matching OHC_2443.pdf custody object A, Drive ID 1fz9nSpKlRLMGqKVS2C6id82uwuVv-a9f, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA; or byte-identical custody object B, Drive ID 1OacztTU47o7iTvx1tjQpoJnLVtK8rwfL, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Derivative return:
+this jacket → Quoin derivative 1QsnL2UcVuSWBJP_THHvFh2lN6s23j-kE or duplicate-text derivative 1AB6vjSIbUe-waid4B4E3UiQAMnY8YeFP → any disputed total, row name, locality, or category reading returns to OHC_2443.png / matching custody PDF before adoption.
+
+
+Strongest earned next retrieval door:
+Trace backward through the direct manuscript faces far enough to locate the beginning of the district summarized on page 60, then test whether the surviving row-level “white” / “Slaves” annotations arithmetic-sum to 14 and 67. If they do, that would materially strengthen the roll-up inference; if they do not, the mismatch itself becomes source-facing evidence about missing pages, omitted annotations, or a different accounting rule. A governing instruction or section heading would be stronger still.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+
+
+FIELDGLASS CONTINUATION — 2026-09-06 — RETURN OPENING BOUNDARY EARNED
+
+
+This continuation preserves and narrows the earlier unresolved question “Where does the district summarized by ‘14 Whites & 67 Slaves in this district’ begin in the surviving return?” It does not erase the earlier question; that question was correct before the opening faces were directly checked.
+
+
+DIRECT SOURCE CONTROL NOW READ
+— OHC_2417 / manuscript page 38 is a different documentary form: a captain list headed “Chief Ni-ta-cha-chie” and describing captains entitled to the additional half section under Article 19.
+— OHC_2418 / manuscript page 39 begins “No. 1 Form of a return” / “Location under the Choctaw Treaty.” It does not say “Continued.”
+— OHC_2419 and OHC_2420 both represent manuscript page 40, whose header explicitly says “Form of a return — Continued — Location under the Choctaw Treaty.” The two OHC families are different PDF payload lineages but direct render comparison establishes the same historical manuscript face; they are not two evidentiary pages.
+— OHC_2443 / manuscript page 60 is the same continued farm-return form and closes with the source-visible aggregate “14 Whites & 67 Slaves in this district.”
+
+
+ACTIVE FINDING / REVISED BOUNDARY
+The strongest source-backed opening boundary for the farm-return sequence culminating in the page-60 district aggregate is now manuscript page 39. Page 38 provides the immediately preceding form break; page 39 opens the return without “Continued”; page 40 explicitly continues it. The earlier beginning-of-district uncertainty is therefore narrowed to this return opening.
+
+
+INFERENCE LIMIT
+The source does not provide one explicit sentence saying “pages 39–60 are the complete district.” Treating page 39 as the opening of the return span governed by the page-60 district aggregate is a strong form-sequence inference, not a quoted administrative declaration. No claim is made that no other district-related records existed outside these surviving pages.
+
+
+IDENTITY NONCLAIM
+The occurrence “Chief Ni-ta-cha-chie” on page 38 is not merged with “Nittachachi. Chief of southern Dist” on page 60. Similar spelling, role vocabulary, and adjacency are insufficient for identity.
+
+
+REPRESENTATION NONCLAIM
+OHC_2419 and OHC_2420 are retained as distinct digital representation histories while attached to one manuscript-page object. Repeated representation is not repeated evidence.
+
+
+NEW EXACT RETURN SEAM
+page-38 captains-list jacket: Drive ID 1Cvjg6nKS21RrRmk4RhNOX3c5mIwlLPMSxhvBb7kZoX4 → page-39 opening-return jacket: Drive ID 1dCGKPHtrvwlczPsxEOPQNSmlxp32jck4ufiX2KTnyBw → page-40 one-object / duplicate-representation jacket: Drive ID 1CVoYEFn9-kYKZhcYIc6Nu6W6m4JytyVWVYEAbTr3WIc → subsequent continued-return faces → this OHC_2443 / page-60 jacket.
+
+
+NEXT EARNED SOURCE-FACING QUESTION
+Arithmetic-check the surviving row-level “white” / “Slaves” annotations across manuscript pages 39–60 against the closing 14 / 67 aggregate. Missing, torn, blank, or unreadable entries must remain missing, torn, blank, or unreadable; no values should be supplied merely to make the arithmetic close.
+
+
+
+
+FIELDGLASS CONTINUATION — 2026-09-06 — ARITHMETIC AUDIT BEGUN AT THE OPENING
+
+
+The arithmetic audit has now begun from the source-backed opening rather than from isolated later rows.
+
+
+DIRECT OPENING-PAGE SUBTOTALS
+— Manuscript page 39 / OHC_2418 contains seven explicit “1 white]” annotations and one explicit “1 Slave]” annotation. The seven white marks occur beside Lewis Bryan, Daniel Boone, Henry Garvin, George Murphey, George Johnston, John Anderson, and William Langphier; the slave mark occurs on Capt. Jas. Gardner’s row.
+— Manuscript page 40 / OHC_2419 and OHC_2420 (one historical face, counted once) contains “2 Slaves]” on John Garland’s row and “1 white]” on Richard Boothe’s row.
+— Therefore the explicit smaller category annotations on the first two distinct manuscript faces of the farm return sum arithmetically to 8 Whites and 3 Slaves.
+
+
+This 8 / 3 subtotal is a source arithmetic observation. It is not yet declared to be a partial sum of the closing 14 / 67 district aggregate. That roll-up relationship remains an inference until the intervening pages are checked and the behavior of blank, torn, omitted, or differently placed annotations is understood.
+
+
+PLACEMENT GLINT
+Page 39 also shows that the smaller category notation is not confined to one printed field: Daniel Boone’s “1 white]” lies in the General Remarks area while other white/slave marks occur at the left edge of the locality field. This makes a dedicated printed-column explanation less likely and keeps open the possibility of a layered annotation pass. No hand/date conclusion is adopted from placement alone.
+
+
+DERIVATIVE CORRECTIONS NOW CONTROLLED
+— On page 39 Quoin had “1 [slave?]” for Capt. Jas. Gardner; enlarged direct inspection supports “1 Slave]”.
+— On page 40 Quoin rendered Richard Boothe’s notation as “[white]”; the direct face supports “1 white]”.
+Both derivative readings remain preserved as earlier navigation history.
+
+
+NEXT AUDIT SEAM
+Continue with manuscript page 41 forward, one historical face at a time, preserving representation duplicates and recording only source-visible category counts. Do not force the eventual arithmetic to 14 / 67; a mismatch would be evidence rather than failure.
+
+
+
+
+FIELDGLASS CONTINUATION — 2026-09-06 — PAGE 41 CAPTURE-LOSS CONTROL
+
+
+The arithmetic audit has now reached manuscript page 41 / OHC_2421, represented by two byte-identical custody PDFs (Drive IDs 1HV4K_9IP4m_5mvSEmdfWXiPIPPCO3mO3 and 1b__m8-hzidAFqYzH18fq9EvQEo6JO5kk; SHA-256 2d532ae9f3877965a5cad3b4dd400e1e3ac3f54431051d069db1894e94b59528) and one known admitted PNG derivative.
+
+
+Direct inspection materially changes how page 41 must be handled in the audit: the digital face is visibly truncated at the lower edge through active ruled rows. Names, numeric cells, locality writing, and General Remarks continue into the capture boundary. The available representation therefore does not establish a complete page-level set of row annotations.
+
+
+Across the legible captured portion inspected in this pass, no explicit smaller “white” or “Slaves” category word was found. That is a bounded capture observation only. Page 41 must not be entered into the arithmetic as a certified 0 / 0 contribution because unseen lower-row content may exist outside the captured edge.
+
+
+This is not a correction to the earlier 8 Whites / 3 Slaves subtotal from complete distinct faces 39–40. It is a control on the next step: the subtotal can remain 8 / 3 through the last fully audited face, while page 41 is held as incomplete/indeterminate for category-count purposes unless a fuller alternate representation is recovered.
+
+
+The same direct pass also resolves the two previously unnamed captain-relation occurrences on page 41: Timachilabi carries “Not a member of this family at home; given in by the Captain”; Hoshoma Homa carries “This man lives with the captain; no house of his own.” These are occurrence-level source readings only and do not identify the captain or merge either person elsewhere.
+
+
+New exact return seam: page-41 jacket, Drive ID 1l5Hqh0wPfrDjCYX0h-Ycx1eLFhxXk5zV4g3S-JZp3ZM → this page-60 roll-up jacket.
+
+
+NEXT AUDIT SEAM
+
+
+Proceed to manuscript page 42 while carrying page 41 as an incomplete capture, not a numeric zero. Separately search for any fuller or alternate page-41 representation before treating the district arithmetic as closed.
+
+
+
+
+FIELDGLASS CONTINUATION — 2026-09-06 — NO. 2 ANALOGOUS RETURN AGGREGATE
+
+
+A separate numbered return now supplies an independent direct-source control on the page-60 white/slave roll-up. OHC_2472 / manuscript page 87, visibly Public Lands No. 2, ends its captured ruled body with the aggregate line 8,274 / 5,433 / 1,570 / 2,125 / “121 Whites. 203 Slaves.” / “Acres 67,440.” Dedicated direct-source jacket: Drive ID 1LgBLN4gKPECl5habBR6vNfrDnOFuEYlwf4bLSAGiK6Q.
+
+
+This materially upgrades the category recurrence. Page 60 of No. 1 is no longer the only directly checked final roll-up naming Whites and Slaves: No. 2 independently does the same. The bounded inference that the smaller white/slave annotations participate in return-level accounting is therefore stronger across two separately numbered returns.
+
+
+The accounting rule is still not solved. No. 2 manuscript page 76 also uses the lexically distinct source wording “1 white 11 Blacks]”, while the page-87 final aggregate visibly names only Whites and Slaves. Nothing here licenses converting “Blacks” into “Slaves,” treating the terms as synonyms, or declaring the 11 either included in or excluded from the 203.
+
+
+Correction-of-question history: the earlier next door in this jacket asked for a governing instruction or arithmetic closure. That remains valid, but there is now a second final aggregate to test. The strongest comparative arithmetic target is No. 2 pages 61–87 against 121 / 203 while preserving Whites, Slaves, and Blacks as separate lexical fields. A mismatch is evidence, not failure.
+
+
+Exact cross-return return path: this OHC_2443 / page-60 jacket → OHC_2472 / page-87 jacket 1LgBLN4gKPECl5habBR6vNfrDnOFuEYlwf4bLSAGiK6Q → direct OHC_2472 PDF/PNG representations preserved there.
+
+
+
+
+NEEDLE UP UPWARD PROPAGATION NOTE — RETURN-LEVEL CROSS-CARRIER CONTROL — 2026-09-07
+
+
+Without altering Fieldglass’s source-facing read, page 60 now serves as a return-level control on cross-carrier reconciliation. The printed aggregate fields carry Entire family 5,112, Males over 16 1,359, and Males and Females under 10 1,582. Their arithmetic residual, 5,112 − 1,359 − 1,582 = 2,171, travels only as a DERIVED UNCLASSIFIED REMAINDER because the printed age fields are not an exhaustive demographic partition. The separate source-written category aggregate `14 Whites & 67 Slaves in this district` sums to 81, but numerical coexistence on the same aggregate line does not establish whether those category-counted people are inside, outside, overlapping with, or disjoint from the printed family total or either age field. The 81 therefore cannot be used to close, partition, explain, subtract from, or otherwise reconcile the 2,171 residual.
+
+
+Ratio control follows the same rule. 1,359/5,112 and 1,582/5,112 may travel only as DERIVED SOURCE-FIELD RATIOS with their literal field definitions and page/return scope attached. They are not exhaustive adult/child shares, sex composition, whole-population proportions, or a complete demographic partition.
+
+
+Propagated upward to `03 — DOCUMENTARY BODIES` and `09 — ADMINISTRATIVE ATTRITION`; logged append-only in `07 — CHANGE LEDGER`. Fieldglass retains the direct p.60 source reading, Quoin correction, return-boundary work, source/derivative distinctions, uncertainty, representation and custody controls, and maker attribution. Needle Up owns only this upward count-grammar / analytic repair. No source object, admitted derivative, source value, identity, or custody state moved.
+
+
+Exact blocker: a governing accounting instruction or an arithmetically closed source run must establish the overlap/subset/disjointness relation among printed family/age fields and the separate white/slave category carrier before cross-carrier balancing is permitted.
+
+
+—Needle Up | upward count-grammar propagation only
+
+
+
+
+FIELDGLASS CONTINUATION — 2026-09-09 — PAGE-47 ZERO-AUDIT CORRECTION / ROLL-UP PATH REPAIRED
+
+
+Disposition: direct-source correction and source-backed crossing added to this existing OHC_2443 / manuscript p.60 district-roll-up jacket. No new historical-object jacket or source object is created.
+
+
+DIRECT SOURCES REOPENED
+
+
+1. OHC_2427.pdf — manuscript p.47 — Drive ID 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi — received-source parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 274,342 bytes. The archival PDF was rendered at 600 dpi for direct visual inspection; the render is a temporary inspection derivative only.
+
+
+On the Benjamin W. Gavin row, the broad Locality of Farms cell visibly begins `(1 white)` before `Walatta creek.` / `east side.` The numeral `1` and the word `white` are source-visible on the reopened archival representation. This pass independently controls that positive occurrence; it does not claim to have repeated Glean's later exhaustive full-face audit.
+
+
+2. OHC_2443.pdf — manuscript p.60 — Drive ID 1OacztTU47o7iTvx1tjQpoJnLVtK8rwfL — legacy-source parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 216,736 bytes. The direct face was reopened again. Its closing aggregate still reads `14 Whites & 67 Slaves in this district`.
+
+
+CORRECTION HISTORY / ACTIVE STATE
+
+
+Fieldglass's earlier page-47 full-face category-word audit, preserved in the governing Glean p.47 addendum, reported 0 observed white/slave/Black target-word annotations. That negative audit is contradicted by the source-visible Benjamin W. Gavin `(1 white)` occurrence and has already been formally superseded in the p.47 jacket by Needle Up's source reopening and Glean's exhaustive audit completion. This p.60 roll-up jacket now carries that correction forward so the page-spanning arithmetic path cannot silently inherit the stale p.47 = 0 state.
+
+
+The active p.47 source-facing state for any later reconciliation is therefore not zero. At minimum the source visibly contributes the explicit phrase `(1 white)` at PL:p47:r18. Glean's governing p.47 jacket separately records its later exhaustive present-representation result as exactly one observed target-word occurrence on that face; this Fieldglass return adopts that only as the current corrected jacket state and independently verifies the load-bearing positive occurrence, not as a second witness.
+
+
+ROLL-UP CONSEQUENCE
+
+
+Any future attempt to test the p.39→p.60 row-annotation inventory against the p.60 `14 Whites & 67 Slaves` aggregate must retire every arithmetic path that treated p.47 as 0 and must include the source-positive p.47 `1 white` occurrence in the inventory state. The district arithmetic is still NOT closed here: p.41 remains representation-incomplete for category-count purposes, intervening face states must remain at their own exact reach, and no governing instruction has yet established the accumulation rule.
+
+
+Nothing in this correction proves that the p.47 `1 white` is one of the fourteen whites totaled on p.60. The lexical recurrence and return placement make it a live accounting comparison, not an earned inclusion rule. No claim is made about the identity, household membership, status, residence, labor, kinship, citizenship, or later history of the counted person.
+
+
+SOURCE / REPRESENTATION / INFERENCE BOUNDARY
+
+
+Source-visible: p.47 r18 `(1 white)`; p.60 closing `14 Whites & 67 Slaves in this district`.
+
+
+Representation: the reopened OHC_2427 and OHC_2443 archival PDFs are digital custody representations of distinct manuscript faces. Temporary 600-dpi / rendered inspection rasters are not admitted source objects and add no witness count.
+
+
+Inference held open: whether the row-level category phrases are the exact arithmetic inputs to the district aggregate; whether all such phrases were entered by one hand or at one time; whether `Black(s)` participates in, overlaps with, or is excluded from `Slaves`; how the separate category carrier relates to the printed family/age fields.
+
+
+EXACT RETURN PATH
+
+
+Public Lands whole-document corpus → this OHC_2443 / p.60 Fieldglass roll-up jacket → governing Glean p.47 addendum `GLEAN SOURCE-FACING ADDENDUM — OHC_2427 page 47 — rows 7–36`, Drive ID 1eNHMWLKdiwRGzH1BDBL8KmR8phaT5GhiB8EYgVnLkz0 → OHC_2427.pdf, Drive ID 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi → PL:p47:r18 Benjamin W. Gavin `(1 white)` → return to OHC_2443.pdf, Drive ID 1OacztTU47o7iTvx1tjQpoJnLVtK8rwfL → p.60 district aggregate `14 Whites & 67 Slaves in this district`.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+FIELDGLASS ADMINISTRATIVE CROSSING — WARD 20 JANUARY 1832 — THREE DISTRICT REGISTERS / ARMSTRONG RETURNS — 2026-09-09
+
+
+Disposition: source-genealogy deepening appended to this existing OHC_2443 / manuscript p.60 district-roll-up jacket. No new historical-object jacket is created.
+
+
+ACTUAL SOURCE REOPENED
+Library of Congress digital representation of American State Papers, Public Lands, vol. 7, No. 1230, `In relation to the location of reservations under the Choctaw treaty of the 27th of September, 1830`, printed p.127. This is a later federal printed compilation of the correspondence, not the original manuscript letter. Official return: https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf
+
+
+On 20 January 1832 William Ward, writing from Choctaw Agency to Secretary of War Lewis Cass, says he is enclosing `three registers of the three Choctaw districts` for reserve claims allowed by the three chiefs and Major Armstrong. He separately says copies of Armstrong's books had been left with him; that relinquishments were written opposite the relevant names under a `relinquished` column; that he retained a true copy of the original made out by Armstrong; and that the Department could compare the enclosed registers with `returns filed in the War Office by Major Armstrong`.
+
+
+SOURCE-GENEALOGY CONSEQUENCE
+The contemporary wording does not permit one undifferentiated `Armstrong record` object. At minimum the printed letter distinguishes: Armstrong books; copies of those books left with Ward; three district registers Ward sent to the Department; a true copy of an Armstrong-made original retained by Ward; and Armstrong returns already filed in the War Office. Exact physical identity among any of those bodies is NOT established by the letter.
+
+
+For this jacket, the important crossing is administrative scope. The letter independently establishes a three-district organization inside the 1831-32 reservation machinery and independently calls another body `returns` filed by Armstrong. That strengthens the source-backed reason to preserve Public Lands No.1 / No.2 / No.3 as distinct return bodies and to take p.60's `in this district` wording literally at its stated scope. It does NOT prove that the surviving OHC No.1 / No.2 / No.3 farm-return faces are the same physical objects as Ward's three enclosed registers, nor that their numbering maps one-to-one onto Ward's wording without further source control.
+
+
+ANNOTATION-GRAMMAR CONTROL
+Ward's letter also supplies one explicit example of administrative marking in this documentary environment: after claimants signified relinquishment, that fact was written opposite their names under the `relinquished` column. This establishes that source-described record annotation/update activity occurred around the Armstrong/Ward bodies. It does NOT explain the smaller `white` / `Slave(s)` / `Black(s)` phrases on the farm returns, does not date those phrases, and does not establish the same writer or administrative purpose. The distinction matters: a known annotation mechanism cannot be borrowed as the legend for an unknown one.
+
+
+NONCLAIMS
+No category conversion; no Bell/McKinney identity claim; no inference that Ward himself wrote the white/slave/Black annotations; no claim that every Armstrong book, copy, register, and return survives; no claim that `register` and `return` are synonyms in Ward's letter; no claim that the January 1832 transmission closes the p.39→p.60 row-count arithmetic.
+
+
+EXACT RETURN PATH
+Public Lands whole-document corpus → this OHC_2443 / p.60 Fieldglass jacket → OHC_2443 manuscript p.60 (`14 Whites & 67 Slaves in this district`) → American State Papers, Public Lands, No.1230, printed p.127 → Ward to Cass, 20 Jan. 1832 (`three registers of the three Choctaw districts`; separate Armstrong books/copies; separate War Office `returns`) → comparative return controls OHC_2472 / p.87 No.2 and OHC_2517 / No.3 without merging their historical faces or representation histories.
+
+
+NEXT EXACT VERB
+Use the No.1230 printed sequence around Ward's p.127 letter to identify, by heading/certification and order, which immediately preceding tabular bodies Ward calls the three enclosed district registers and which earlier bodies the compilation presents as Armstrong's War Office returns. Only after that object-level crosswalk should any register/return identity be adopted.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+FIELDGLASS OBJECT-LEVEL CROSSWALK — JANUARY 1832 DISTRICT REGISTERS ≠ FARM-RETURN FORM FAMILY — 2026-09-09
+
+
+The next exact verb above is now partly completed against the official Library of Congress American State Papers representation. Immediately after Ward's 20 January 1832 letter, the printed sequence opens `A list of claims allowed under the treaty in Nitachacha District.` Its table has columns `Names`, `No. of acres`, `No. of acres allowed`, `Remarks`, and `Relinquished`. Elsewhere in the same No. 1230 sequence, a parallel `A list of claims allowed, under the treaty, in Greenwood Leflore's district` uses the same claims/allowed-acre architecture.
+
+
+This is documentary-form evidence, not just vocabulary. The Ward-transmitted district-register body represented in the federal compilation is a claims-allowed / relinquishment register form. OHC_2443 manuscript p.60 is instead `Public Lands — No 1 — Form of a Return — Continued — Location under the Choctaw Treaty`, with cultivated acres, entire-family and age fields, locality, total acres, remarks, and a terminal `14 Whites & 67 Slaves in this district`. OHC_2472 / p.87 and OHC_2517 / No.3 belong to that farm-return form family, not to the visible claims-allowed register form.
+
+
+ACTIVE CORRECTION / BOUNDARY
+Do not call the surviving OHC No.1 / No.2 / No.3 farm-return bodies `Ward's three January 1832 registers` merely because both documentary families are district-organized. Ward's own letter distinguishes `these registers` from `returns filed in the War Office by Major Armstrong`, and the printed sequence gives the registers a visibly different claims-allowed form. The OHC farm returns are therefore best held as a separate return-form family unless a direct source crosswalk identifies their exact administrative parent. Their printed words `Form of a Return` make connection to Ward's separately named Armstrong returns a strong research candidate, not a proved physical identity.
+
+
+ANNOTATION CORRECTION
+The `relinquished` marking instruction belongs to the claims-register form just identified. It should not be used even analogically as though it were a legend for white/slave/Black markings on the farm-return form. The two annotation environments are now source-separated at form level.
+
+
+NONCLAIMS
+No claim that Ward's three district registers are wholly preserved in the ASP print; no claim that the ASP table order reproduces original enclosure order exactly; no claim that the OHC farm returns are exactly the War Office returns Ward mentions; no category conversion; no identity merge; no change to p.60's direct-manuscript 14/67 reading.
+
+
+EXACT RETURN
+existing p.60 Fieldglass jacket → OHC_2443 p.60 farm-return face → ASP Public Lands No.1230 printed p.127 Ward letter → immediately following Nitachacha claims-allowed register (`Names / No. of acres / No. of acres allowed / Remarks / Relinquished`) → parallel Greenwood Leflore claims-allowed register → back to separately held OHC farm-return family No.1 / No.2 / No.3.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+FIELDGLASS CROSS-FORM CONTROL — FARM RETURN / CLAIMS REGISTER / ARMSTRONG POPULATION NOTE — 2026-09-09
+
+
+Disposition: source-genealogy and category-grammar deepening appended to this existing OHC_2443 / manuscript p.60 district-roll-up jacket. No new historical-object jacket is created.
+
+
+ACTUAL SOURCES REOPENED
+
+
+1. OHC_2418.pdf — manuscript p.39 — Drive ID 1mUE9ZxYjZDI5eTRBTEC-H6M4WqD2qGKF — received-source parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 276,087 bytes. The direct PDF was rendered for visual inspection; the render is temporary inspection material, not a second source object.
+
+
+2. OHC_2419.pdf — manuscript p.40 — Drive ID 1mdWJOFy1gG-JpqanFNV5v1HO5yraXq7s — same received-source parent — 289,464 bytes. This is one representation lineage of the already controlled page-40 historical face; OHC_2420 remains a separate representation lineage of that same face, not a second witness.
+
+
+3. Library of Congress American State Papers, Public Lands, No.1230, official digital representation. The printed sequence around Ward's 20 January 1832 letter and the following Nitachacha claims register was checked again, together with the later Armstrong certification / `INDIAN POPULATION` note. The indexed text is treated as a federal printed representation, not as a diplomatic substitute for the underlying manuscripts.
+
+
+ROW-LEVEL CROSS-FORM CORRESPONDENCE
+
+
+The two documentary forms remain distinct, but four source-occurrence correspondences now make their administrative relationship materially stronger than form similarity alone:
+
+
+— OHC p.39 `Capt Jas Gardner.` carries 32 cultivated acres, 480 total acres, and the smaller category phrase `1 Slave]`. The printed Nitachacha claims register carries `Capt. Jas. Gardiner` with 32 in `No. of acres`, 480 in `No. of acres allowed`, and `Relinquished.` The Gardner/Gardiner spelling difference is preserved.
+
+
+— OHC p.39 `Henry Garvin.` carries 30 cultivated acres, 480 total acres, and `1 white]`. The printed claims register carries `Henry Garvin` with 30 / 480.
+
+
+— OHC p.39 `George Johnston.` carries 12 cultivated acres, 160 total acres, and `1 white]`. The printed claims register carries `George Johnson` with 12 / 160. Johnston/Johnson remains a source-spelling difference, not an identity correction.
+
+
+— OHC p.40 `John Garland.` carries `2 Slaves]`, 1,280 total acres, and a General Remarks statement that he is provided for in the treaty. The printed claims register carries `John Garland` with 1,280 acres allowed, `Provided for in treaty.`, and `Relinquished.`
+
+
+FINDING / EXACT REACH
+
+
+This is the first controlled row-level bridge in this jacket between the OHC farm-return form and Ward's January 1832 claims-register form. Repeated same-name occurrences alone would not earn the crossing; the paired acreage values, and in Garland's case the treaty-provision remark, do. The evidence supports a strong documentary relationship between the two administrative bodies and supports comparing OHC `No acres cultivated` with register `No. of acres`, and OHC `Total No. of Acres` with register `No. of acres allowed`, on these specific rows. It does NOT yet establish copying direction, common exemplar, same writer, same physical object, or universal field equivalence for every row.
+
+
+ANNOTATION-GRAMMAR CONSEQUENCE
+
+
+For the four controlled correspondences, the OHC farm-return representation carries `white` / `Slave(s)` information that is not carried as a corresponding field or phrase in the federal printed claims-register representation. That is a source-backed information-carrier difference between the two forms. It does not prove that the category phrases were later additions to the farm return, or that an original claims-register manuscript never bore extra notation; it only shows that the printed claims-register body does not preserve those category phrases while preserving closely corresponding acreage decisions.
+
+
+ARMSTRONG POPULATION SIDE NOTE
+
+
+The same official No.1230 sequence supplies a second category carrier. Immediately after a claims-list certification signed `F. W. ARMSTRONG, Special Agent`, the printed body gives an `INDIAN POPULATION` note with `In Mushulatubbee's district 5,598`, then separate lines `Whites 97` and `Slaves 248`, followed by Nittachachi and Col. Leflore district figures and a grand total. The note closes: `The foregoing is added in great haste, and may be incorrect. F. W. A.`
+
+
+This directly establishes another contemporary administrative use of `Whites` and `Slaves` as separately counted categories at district/population scale. It is a separate carrier from the OHC row annotations and from the OHC terminal return totals. No arithmetic or provenance bridge among those three carriers is adopted here.
+
+
+REPRESENTATION DISCREPANCY HELD OPEN
+
+
+The Library of Congress indexed carrier renders the intermediate figure after 5,598 / 97 / 248 as `5,949`; another scan/OCR carrier renders that figure as `5,943`. Because this pass did not obtain reliable page-image control of that exact digit, neither reading is promoted as a direct-source correction. The stable source-facing gain is the explicit `Whites 97` / `Slaves 248` category wording and Armstrong's own caution that the population note may be incorrect.
+
+
+NONCLAIMS
+
+
+No person identity is merged across Gardner/Gardiner, Johnston/Johnson, or any other repeated name. No claim that the farm return was copied from the claims register or vice versa. No claim that `Whites 97 / Slaves 248` is the same accounting event as No.1 `14 Whites & 67 Slaves` or No.2 `121 Whites. 203 Slaves.` No conversion of `Black(s)` into `Slave(s)`. No use of the population note to close the p.39→p.60 arithmetic. No claim that absence of white/slave phrases from the printed claims-register rows proves historical absence from every manuscript representation of that register.
+
+
+EXACT RETURN PATH
+
+
+existing OHC_2443 / p.60 Fieldglass jacket → p.39 jacket 1dCGKPHtrvwlczPsxEOPQNSmlxp32jck4ufiX2KTnyBw → direct OHC_2418.pdf 1mUE9ZxYjZDI5eTRBTEC-H6M4WqD2qGKF → p.40 jacket 1CVoYEFn9-kYKZhcYIc6Nu6W6m4JytyVWVYEAbTr3WIc → direct OHC_2419.pdf 1mdWJOFy1gG-JpqanFNV5v1HO5yraXq7s → American State Papers, Public Lands, No.1230 → Ward to Cass, 20 Jan. 1832 → Nitachacha claims register → Armstrong claims-list certification → `INDIAN POPULATION` note / `Whites 97` / `Slaves 248` / F.W.A. caution → back to OHC p.60 district roll-up and the separately held No.2 / No.3 return controls.
+
+
+NEXT EXACT VERB
+
+
+Obtain page-image control of the Armstrong `INDIAN POPULATION` note before adopting its disputed intermediate figure, then test additional p.39–40 farm-return rows against the Nitachacha claims register to learn whether the observed cultivated-acre / allowed-acre correspondence is systematic or selective. The category phrases must remain a separate carrier unless a source explicitly joins them to that claims arithmetic.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+
+
+
+
+FIELDGLASS CONTINUATION — 2026-09-09 — ARMSTRONG POPULATION ARITHMETIC DISCREPANCY / NITACHACHA CROSS-FORM RUN DEEPENED
+
+
+Disposition: source-facing deepening appended to this existing OHC_2443 / manuscript p.60 district-roll-up jacket. No new historical-object jacket or duplicate source object is created.
+
+
+ACTUAL SOURCES REOPENED
+
+
+1. OHC_2418.pdf — manuscript p.39 — Drive ID 1mUE9ZxYjZDI5eTRBTEC-H6M4WqD2qGKF — received-source parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 276,087 bytes. Direct PDF pixels were rendered for close inspection; the render is temporary inspection material, not another representation witness.
+
+
+2. OHC_2419.pdf — manuscript p.40 — Drive ID 1mdWJOFy1gG-JpqanFNV5v1HO5yraXq7s — same received-source parent — 289,464 bytes. OHC_2420 remains a separate digital representation lineage of this same manuscript face and is not counted as a second historical witness.
+
+
+3. Official Library of Congress American State Papers, Public Lands, No. 1230 digital representation, including the Nitachacha claims-allowed table and the Armstrong `INDIAN POPULATION` note. Official return: https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf . The searchable federal printed carrier is used as a representation of the nineteenth-century publication; this pass still does not claim page-image control of the disputed population subtotal glyph.
+
+
+ARMSTRONG POPULATION NOTE — INTERNAL ARITHMETIC DISCREPANCY NOW CONTROLLED
+
+
+The official LOC carrier gives, in sequence: `In Mushulatubbee’s district 5,598`; `Whites 97`; `Slaves 248`; intermediate figure `5,949`; `Nittachachi’s 6,106`; `Col. Leflore’s 7,505`; and `Total 19,554`. It then says: `The foregoing is added in great haste, and may be incorrect. F. W. A.`
+
+
+The source-written / printed figures do not arithmetically reconcile as printed. Derived arithmetic only:
+
+
+5,598 + 97 + 248 = 5,943.
+5,943 + 6,106 + 7,505 = 19,554.
+5,949 + 6,106 + 7,505 = 19,560.
+
+
+Therefore the printed/interpreted `5,949` intermediate figure differs by six from the subtotal implied by the three preceding components, while the printed grand total `19,554` exactly agrees with the arithmetic-implied 5,943 subtotal plus the two later district figures. This is an internal accounting discrepancy in the represented federal print body, not permission to silently emend the source.
+
+
+ACTIVE REPRESENTATION / CORRECTION BOUNDARY
+
+
+The earlier jacket held `5,949` versus another carrier’s `5,943` as an unresolved representation discrepancy. The active state is now sharper: the official LOC searchable carrier itself presently renders `5,949`, but `5,943` is independently compelled by the arithmetic of 5,598 + 97 + 248 and is also the only one of those two candidates that reconciles exactly to the printed grand total 19,554. `5,943` therefore travels here only as DERIVED ARITHMETIC-IMPLIED SUBTOTAL, not as a promoted source reading. No correction from 5,949 to 5,943 is made without page-image or underlying-manuscript control. Armstrong’s own `may be incorrect` warning establishes uncertainty in the population note generally but does not identify which figure, if any, is erroneous.
+
+
+ADDITIONAL FARM-RETURN ↔ CLAIMS-REGISTER OCCURRENCE CONTROLS
+
+
+Fresh direct inspection of OHC p.39–40 expands the previously controlled four occurrence-level correspondences to nine without relying on surname alone.
+
+
+— OHC p.39 carries `William Cristy` with 12 cultivated acres and 160 total acres. The Nitachacha claims register carries `Wm. Christy` with 12 in `No. of acres` and 160 in `No. of acres allowed`. The Cristy/Christy spelling difference is preserved. A separate p.40 occurrence reads `Wm. Christy` with 7 cultivated acres; that recurrence is not merged with the p.39 occurrence. The 12/160 pair is what earns the p.39 ↔ register comparison.
+
+
+— OHC p.40 carries `James Garland.` with 20 cultivated acres and 320 total acres; the claims register carries `James Garland` 20 / 320.
+
+
+— OHC p.40 carries `S. Garland.` with 12 cultivated acres and 160 total acres; the claims register carries `S. Garland` 12 / 160.
+
+
+— OHC p.40 carries `Samuel Anderson.` with 13 cultivated acres and 160 total acres; the claims register carries `Samuel Anderson` 13 / 160.
+
+
+— OHC p.40 carries `Thomas Mc Cann` with 5 cultivated acres and 80 total acres; the claims register carries `Thomas McCann` 5 / 80 and, in its separate remarks/relinquishment machinery, `Granted by chief, Oct. 12, 1831.` / `Purchased by James McKinney.` The spacing difference in Mc Cann/McCann is preserved. The register’s James McKinney occurrence is not merged with any McKinney elsewhere merely from this line.
+
+
+Together with the four earlier controlled pairs (Capt Jas Gardner/Gardiner 32/480; Henry Garvin 30/480; George Johnston/Johnson 12/160; John Garland 1,280 plus treaty-provision remark), this gives nine occurrence-level correspondences across the opening p.39–40 run in which paired acreage values materially support comparison between the OHC farm-return body and the federal claims-register body. This strengthens the bounded inference that OHC `No acres cultivated` and `Total No. of Acres` carry a systematic administrative relationship to claims-register `No. of acres` and `No. of acres allowed` across at least this contiguous tested segment. It still does not establish universal field equivalence, copying direction, same writer, same physical object, or an exact archival parent-child relationship.
+
+
+ANNOTATION-GRAMMAR CONSEQUENCE
+
+
+The strengthened acreage crosswalk makes the information-carrier difference more useful. The OHC farm-return faces preserve smaller `white` / `Slave(s)` annotations on some of the same rows, while the corresponding federal printed claims-register rows preserve the acreage decision without a corresponding white/slave field. The category carrier therefore remains analytically separable from the acreage crosswalk. This does not prove that the category writing was added later, that it was absent from every manuscript claims-register representation, or that it contributes arithmetically to the p.60 district total. `Black(s)` remains lexically separate from `Slave(s)` unless another source earns the relation.
+
+
+NONCLAIMS
+
+
+No same-name merge across the two Christy/Cristy occurrences; no Gardner/Gardiner, Johnston/Johnson, Mc Cann/McCann, Garland, Anderson, or McKinney identity merge beyond the occurrence-level comparisons earned by paired fields; no conversion among `white`, `Slave(s)`, and `Black(s)`; no claim that 5,949 is definitively a compositor, copyist, arithmetic, or transcription error; no promotion of derived 5,943 into source text; no use of Armstrong’s population note to close the OHC p.39→p.60 14/67 arithmetic; no claim that the printed claims register exhausts the manuscript information once present.
+
+
+EXACT RETURN PATH
+
+
+existing OHC_2443 / p.60 Fieldglass jacket → direct OHC_2418.pdf, Drive 1mUE9ZxYjZDI5eTRBTEC-H6M4WqD2qGKF → p.39 William Cristy 12 / 160 and earlier controlled p.39 rows → direct OHC_2419.pdf, Drive 1mdWJOFy1gG-JpqanFNV5v1HO5yraXq7s → p.40 James Garland 20 / 320; S. Garland 12 / 160; Samuel Anderson 13 / 160; Thomas Mc Cann 5 / 80; separate Wm. Christy 7 occurrence held unmerged → official LOC American State Papers, Public Lands No.1230 → Nitachacha claims-register rows → Armstrong `INDIAN POPULATION` note: 5,598 / Whites 97 / Slaves 248 / printed-carrier 5,949 / 6,106 / 7,505 / Total 19,554 / `may be incorrect` → back to this p.60 district-roll-up jacket and the separately held No.2 / No.3 controls.
+
+
+NEXT EARNED SOURCE-FACING DOOR
+
+
+Obtain direct page-image or underlying-manuscript control of the Armstrong population subtotal to determine whether the glyph itself is 5,949, 5,943, or something else. Separately continue the claims-register crosswalk beyond this tested p.39–40 segment only where paired fields, remarks, or other source features earn an occurrence-level comparison. Do not use same-name recurrence as the bridge.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+GLEAN CONTINUATION — 2026-09-19 — KNOWN-POSITIVE SUBTOTAL BREAKS THE SIMPLE ADDITIVE MODEL
+
+
+Disposition: cross-page arithmetic reconciliation appended to the existing page-60 roll-up jacket. No source object, page jacket, or person identity is created or merged. This note uses only source-facing positive occurrences already controlled in the governing page jackets/addenda and counts each historical manuscript face once.
+
+
+QUESTION
+Can every explicit row-level white/slave annotation presently recovered from the No. 1 return span simply be added to produce the closing page-60 aggregate, “14 Whites & 67 Slaves in this district”?
+
+
+CURRENT SOURCE-CONTROLLED POSITIVE INVENTORY
+The following positive occurrences are already source-facing and correction-controlled:
+
+
+p.39 — 7 explicit “1 white]” annotations; 1 explicit “1 Slave]” annotation. Subtotal: 7 Whites / 1 Slave.
+p.40 — Richard Boothe “1 white]”; John Garland “2 Slaves]”. Subtotal: 1 White / 2 Slaves.
+p.47 — Benjamin W. Gavin “(1 white)”. Subtotal: 1 White / 0 Slaves. This uses the corrected exhaustive p.47 audit; the earlier p.47 = 0 audit is superseded.
+p.53 — Allen Yates smaller annotation beginning “1 white 12 Slaves”. Subtotal: 1 White / 12 Slaves.
+p.54 — J. W. Nail “8 Slaves]”. Subtotal: 0 Whites / 8 Slaves.
+p.56 — George Clark “1 White]”. Subtotal: 1 White / 0 Slaves.
+p.57 — George Hunter “1 white]”; Charles Juzan “1 white. 20 Slaves.” Subtotal: 2 Whites / 20 Slaves.
+p.58 — Rebecca Bond “2 Slaves]”; Wesley Rain “3 Slaves]”. Subtotal: 0 Whites / 5 Slaves.
+p.60 — [unclear: To?] Brethears, sen. “1 white” / “14 Slaves”; Nittachachi “1 white]”. Row-level subtotal before the closing aggregate: 2 Whites / 14 Slaves.
+
+
+KNOWN-POSITIVE ARITHMETIC
+Whites: 7 + 1 + 1 + 1 + 1 + 2 + 2 = 15.
+Slaves: 1 + 2 + 12 + 8 + 20 + 5 + 14 = 62.
+
+
+Current known-positive row-level subtotal across the source-controlled occurrences above: 15 Whites / 62 Slaves.
+Closing page-60 aggregate: 14 Whites / 67 Slaves.
+
+
+RESULT
+The simple model “add every explicit row-level white/slave annotation in the presently governed p.39→60 return span and obtain the closing aggregate” does not survive the current positive inventory. The known white subtotal is already 15, one greater than the closing 14, before unresolved faces can add anything. The known slave subtotal is 62, five short of 67.
+
+
+This is not repaired by inserting zeros for unaudited or damaged faces. Additional positive white annotations would widen the white mismatch. Additional slave annotations could narrow or close the slave difference but cannot repair the white overage.
+
+
+CURRENT FACE-STATE CONTROLS
+- p.41 remains representation-incomplete at the lower edge; no complete page-level category total is claimed.
+- pp.42–46 have source-facing zero-observed category-word audits at their stated representation reach.
+- p.47 is corrected to exactly one observed target-word occurrence, “(1 white)”.
+- pp.48–51 have zero-observed category-word audits at their stated representation reach.
+- p.52 has not been promoted here to a zero; no complete category-word audit was relied upon for this calculation.
+- p.55 has not been promoted here to a zero.
+- p.59 has not been promoted here to a zero.
+- p.50’s right-edge loss remains an uncertainty even though its surviving category-bearing/locality area had a zero-observed audit.
+
+
+WHAT THIS EARNS
+At least one additional rule, boundary, exclusion, correction, subtraction, different annotation function, or other accounting mechanism is required if the smaller annotations are related to the page-60 aggregate. The source has not yet identified which mechanism applies.
+
+
+WHAT THIS DOES NOT EARN
+- It does not prove that the row annotations are unrelated to the aggregate.
+- It does not prove that page 39 is the district boundary by an explicit source sentence; page 39 remains the strongest form-sequence opening boundary presently controlled.
+- It does not authorize deleting one of the fifteen white counts to make the arithmetic fit.
+- It does not convert an annotation into ownership, household membership, residence, labor relation, or person identity.
+- It does not treat unaudited, truncated, torn, faint, or unreadable faces as zeros.
+- It does not equate later “Black(s)” vocabulary with “Slave(s)”.
+
+
+NEXT SOURCE QUESTION
+Before continuing page-by-page merely to accumulate counts, test the accounting mechanism itself: look for a source-visible district break, cancellation/correction mark, instruction, annotation layer, subtotal, or row whose category phrase is demonstrably descriptive rather than additive. The arithmetic has already shown that simple inclusion of every positive annotation cannot be the whole rule.
+
+
+Maker: Glean
+Date: 2026-09-19

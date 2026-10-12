@@ -1,0 +1,427 @@
+GLEAN SOURCE-FACING JACKET — OHC_2429 page 49 — rows 1–36 — brace, split locality, and literal Head of do
+
+
+Status: DIRECT-SOURCE PASS — EXISTING QUOIN STUDY PRESERVED AS DERIVATIVE — DUPLICATE CUSTODY CONTROLLED — ROW COVERAGE BOUNDED THROUGH R12
+Maker: Glean
+Date: 2026-09-05
+Corpus: quoted-title Public Lands
+Visible manuscript page: 49
+
+
+METHOD CONTROL
+
+
+This pass begins from the current workshop amendment and canonical SOURCE WORK METHOD — full strength, exact reach — source to synthesis. The governing controls used here are object first / compare second; keep the source verb and name who earned it; protect blanks; name derivative operations; preserve correction history; repeated representations do not become independent witnesses; and every consequential sentence keeps a road home.
+
+
+Canonical method: SOURCE WORK METHOD — full strength, exact reach — source to synthesis, Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc.
+Workshop practice amendment: WORKSHOP PRACTICE AMENDMENT — source force, attribution, and exact reach, Drive ID 1X8tHZw7km3cgXvloDTB_S7Ary8vj6Kqe0S0whZABaNg.
+
+
+WHY THIS JACKET EXISTS
+
+
+The existing Quoin page-49 study is useful as a broad reading aid but it linearizes a ruled source face. Direct visual inspection of OHC_2429 shows a row-spanning brace in the cultivated-acre column that cannot be safely represented as a single-row value. That structural fact is consequential enough to earn a source-facing jacket rather than another loose study.
+
+
+EXACT SOURCE / REPRESENTATION / DERIVATIVE FOOTING
+
+
+Archival/source custody object A:
+- OHC_2429.pdf
+- Drive ID 11feRKUZ6A-LiN2YIWLDdh0ibAP-vwcJk
+- parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- 264,721 bytes
+
+
+Separately stored same-name custody object B:
+- OHC_2429.pdf
+- Drive ID 160xSjMEGVWO1n2RrnyunmgA-d86tNFKE
+- parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- 264,721 bytes
+
+
+Glean downloaded both PDF objects and performed a byte-for-byte comparison in the working container. Both produced SHA-256 efb45e4ff47aa2acfba80fe2197e8707b41fdbce9df0f90a4cce0dbe557f9162 and compared identical. This is a Glean-derived custody comparison, not a source-stated fact. The two Drive objects remain two custody routes to one PDF payload, not two historical witnesses.
+
+
+Existing Quoin derivative study object C:
+- OHC_2429 form of return Choctaw Treaty farms page 49 — Quoin.md
+- Drive ID 1f4eVkKmat4WryyY6Pcf7CeyMXT3X28T_
+- parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+
+
+Separately stored same-title Quoin derivative study object D:
+- OHC_2429 form of return Choctaw Treaty farms page 49 — Quoin.md
+- Drive ID 1J4KaMUjxepFZHyO_y0TdPDTFotmiWpfc
+- parent 1komb4v11M9baULEpk3w3owolFF99m2-F
+
+
+The connector-readable text of C and D is identical in this pass. They remain two derivative study objects, not independent corroboration and not source faces.
+
+
+Inspection operation:
+- Glean rendered custody object B at high resolution and used temporary local crops/enlargements to inspect ruling, brace geometry, letterforms, and horizontal alignment.
+- Those local images are inspection derivatives only; they are not admitted to the corpus and are not treated as witnesses.
+
+
+VISIBLE HEADER
+
+
+Direct inspection supports the visible manuscript header:
+49 — Public Lands — No. 1 — Form of a Return — Continued — Location under the Choctaw Treaty. No. 1230. 1834
+
+
+This pass treats that as a source-face transcription of the visible heading only. It does not assign an administrative meaning to No. 1 or No. 1230.
+
+
+BACKWARD MANUSCRIPT SEAM — PAGE 48 TO PAGE 49
+
+
+The existing Glean page-48 jacket records manuscript page 48 under the same Public Lands — No. 1 — Form of a Return — Continued — Location under the Choctaw Treaty heading and preserves its direct return path to OHC_2428.
+
+
+This pass directly establishes manuscript page 49 under that same heading. The comparison therefore earns the bounded manuscript-page seam 48 → 49. It does not carry a person, row, family, locality, acreage, remark, title, or identity across the page turn.
+
+
+STABLE SOURCE-FACING COVERAGE — PL:p49:r01 THROUGH PL:p49:r12
+
+
+Row addresses below are top-to-bottom visual positions on the admitted page face. A blank or no-readable-entry state is not converted to zero, ditto, refusal, absence, or inherited text. Name spellings remain occurrence-level and are not normalized to people elsewhere.
+
+
+PL:p49:r01 — row label: Captain Laxta.; cultivated acres 8; entire family 5; males over 16: 1; males & females under 10: 2; locality: Bokhoma branch. / east side.; total acres 400; General Remarks visibly begins “Capt The chief gave this man in as capta…” and is clipped at the captured right edge. The Quoin derivative supplies the completion “captain,” but this jacket does not silently promote that derivative completion into the direct-face transcription.
+
+
+PL:p49:r02 — row label: Neakataube.; cultivated acres 9; family 9; males over 16: 1; under 10: 5; locality: written do / written do; total acres 80; General Remarks: Good land.
+
+
+PL:p49:r03 — row label: Capt Neshahi.; cultivated acres 6; family 5; males over 16: 1; under 10: 2; locality: Chickasawhay river. / written do; total acres: no readable entry; General Remarks: Poor land.
+
+
+PL:p49:r04 — row label: Ishtonakemiko.; cultivated acres 8; family 10; males over 16: 3; under 10: 3; locality: [S/H]obatta creek. with the initial consonant not certified in this pass; direction: no separately readable direction; total acres: no readable entry; General Remarks: no readable remark. The Quoin derivative gives Hobatta creek.; that derivative reading is preserved but not used to erase the direct-face uncertainty.
+
+
+PL:p49:r05 — row label: Nolitahona.; cultivated acres 3; family 6; males over 16: 2; under 10: 3; locality: Chickasawhay river. / east side.; total acres: no readable entry; General Remarks: literal source wording do prairie. The internal meaning of do prairie. is not expanded here.
+
+
+PL:p49:r06 — row label: Mingohoyofa.; cultivated acres 10; family 7; males over 16: 2; under 10: 2; locality: Shepiki creek. / north side.; total acres: no readable entry; General Remarks: Land tolerable.
+
+
+PL:p49:r07 — row label: Pafinishtayabi.; cultivated-acres state: part of one visible brace spanning r07–r09 with a single 12 written inside the braced area; family 10; males over 16: 1; under 10: 4; locality: Pactochutto creek.; direction: no separately readable direction; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r08 — row label: NoHowahoma.; cultivated-acres state: same r07–r09 brace, not an independently assigned row value; family 4; males over 16: 1; under 10: 2; locality: written do; total acres 160; General Remarks: no readable remark.
+
+
+PL:p49:r09 — row label: Polly. (woman); cultivated-acres state: same r07–r09 brace, not an independently assigned row value; family 6; males over 16: no readable numeral; under 10: 2; locality: written do; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r10 — row label: Ishayahoma.; cultivated acres 1; family 5; males over 16: 1; under 10: 3; locality: written do; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r11 — row label: Chaminataha.; cultivated acres 2; family 6; males over 16: 1; under 10: no readable numeral; locality: Chickasawhay river. / east side.; total acres: no readable entry; General Remarks: Poor land.
+
+
+PL:p49:r12 — row label: Minhykoya. (wid of Okilichy); cultivated acres 5; family 5; males over 16: 1; under 10: 1; locality: written do; total acres: no readable entry; General Remarks: no readable remark.
+
+
+MATERIAL SOURCE-FACING FINDINGS
+
+
+1. The cultivated-acre column is not safely reducible to one row / one value on this face. A visible brace spans PL:p49:r07–r09 with a single 12 written inside the braced area. The source does not assign that 12 independently to r07, r08, or r09 in a way this pass can certify. A normalized row table that places 12 on one row would add structure the source face does not earn.
+
+
+2. The brace does not establish what relation joins r07–r09. It may be administrative grouping, shared acreage notation, or something else; this pass does not choose among those possibilities. In particular it does not establish kinship, marriage, household unity, shared ownership, shared residence, or a shared farm.
+
+
+3. General Remarks remain independently written states. Good land., Poor land., do prairie., and Land tolerable. occur on particular rows and are not inherited into neighboring blank remark cells.
+
+
+4. Source face and derivative can legitimately disagree in precision. At r04 the Quoin derivative gives Hobatta creek., while the direct face leaves the first consonant uncertain in this pass. At r01 the direct capture clips the end of the captain remark, while the Quoin derivative supplies a full word. The derivative remains useful, but it does not overwrite the source-facing uncertainty.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY
+
+
+Source: the photographed manuscript face carried by the two OHC_2429.pdf custody objects.
+Duplicate-custody comparison: Glean byte comparison showing the two PDFs carry one payload.
+Derivative studies: the two Quoin page-49 text objects; useful reading aids, not source faces and not independent witnesses.
+Temporary inspection derivatives: local render and crops used for visual reading only; not retained as corpus source objects.
+Transcription: only the bounded header, row positions, numerals, literal do marks, visible locality phrases, selected row labels, brace geometry, and remarks recorded above.
+Interpretation: limited to structural observations about the table and the refusal to force the brace into single-row values. No person-level, household, property, treaty-status, residence, or rank theory is advanced.
+
+
+UNRESOLVED QUESTIONS
+
+
+- exact first consonant in the r04 creek name;
+- the source-face completion of the clipped r01 captain remark beyond the captured right edge;
+- the administrative meaning of the r07–r09 brace and its single 12;
+- whether the r07–r09 grouping has any relation beyond table notation;
+- the intended antecedent and semantic force of literal do marks in locality and in the r05 remark do prairie.;
+- diplomatic spelling of difficult personal names beyond the bounded readings adopted here;
+- whether any faint dots or marks in cells reported as no readable entry were intentional entries;
+- authorship and timing of the General Remarks;
+- any identity relation between these page-49 occurrences and same- or similar-name people elsewhere in Public Lands or another body.
+
+
+NONCLAIMS
+
+
+- The r07–r09 brace is not a household finding.
+- The value 12 is not assigned independently to any one of r07, r08, or r09.
+- Polly. (woman) and Minhykoya. (wid of Okilichy) are source-written row occurrences only; this pass does not merge them with people elsewhere or infer additional family relations.
+- Captain / Capt in a row label or remark is source wording. This jacket does not independently validate rank, office, appointment, or continuity with any same-name captain elsewhere.
+- A locality phrase is not a modern coordinate and does not by itself establish residence, title, possession, or ownership beyond what the table wording itself states.
+- Acreage figures are source entries; they do not by themselves prove modern tract identity or legal title.
+- Written do marks remain literal source marks unless their expansion is separately earned.
+- The two PDF custody objects are not two witnesses.
+- The two Quoin derivative text objects are not two witnesses.
+- The page-48 → page-49 seam is manuscript pagination/form continuity only; it does not merge rows or people across the turn.
+- No corpus-level theory is advanced from this page.
+
+
+SEAMS AND EXACT RETURN PATH
+
+
+Backward manuscript seam: quoted-title Public Lands → GLEAN SOURCE-FACING ADDENDUM — OHC_2428 page 48 — form-number correction and rows 7–36, Drive ID 1DXveFwzbjT_h9NcK9owINNdhG_DG905K1gyCLhPnP64 → source-backed visible page 48 / same No. 1 continued-return form → this jacket → visible page 49.
+
+
+Exact page-49 return: quoted-title Public Lands → this jacket, Drive ID 1JkATyDlS9UO7Z1564Cx9j2qyc1HY4Nu3kg_OXQdL5WM → PL:p49 row address → OHC_2429.pdf custody object A 11feRKUZ6A-LiN2YIWLDdh0ibAP-vwcJk or custody object B 160xSjMEGVWO1n2RrnyunmgA-d86tNFKE.
+
+
+Derivative return: this jacket → Quoin derivative C 1f4eVkKmat4WryyY6Pcf7CeyMXT3X28T_ and duplicate derivative D 1J4KaMUjxepFZHyO_y0TdPDTFotmiWpfc. These are comparison aids only.
+
+
+Forward seam: PL:p49:r13 is the next honest row on this face. No page-50 seam was opened in this pass.
+
+
+— Glean | quoted-title Public Lands | OHC_2429 / page 49 | r01–r12 tied | r07–r09 three-row cultivated-acre brace preserved | r13 open
+
+
+CONTINUATION PASS — PL:p49:r13 THROUGH PL:p49:r24
+
+
+Status: DIRECT-SOURCE CONTINUATION — SAME CUSTODY OBJECT — SAME JACKET — PRIOR R13-OPEN FOOTING SUPERSEDED
+Maker: Glean
+Date: 2026-09-05
+
+
+INSPECTION FOOTING
+
+
+Glean returned to archival/source custody object B, OHC_2429.pdf, Drive ID 160xSjMEGVWO1n2RrnyunmgA-d86tNFKE, and rendered that exact payload again at higher resolution for a bounded visual reading of the next rows. The higher-resolution render and crops are temporary inspection derivatives only; they are not admitted source objects and are not independent witnesses. The existing Quoin page-49 study, Drive ID 1f4eVkKmat4WryyY6Pcf7CeyMXT3X28T_, was used only as a spelling/comparison aid. Where the face and derivative differ in certainty, the source-facing reading remains controlling.
+
+
+STABLE SOURCE-FACING COVERAGE — PL:p49:r13 THROUGH PL:p49:r24
+
+
+PL:p49:r13 — row label: Parntohle.; cultivated acres 2; family 3; males over 16: 1; under 10: 1; locality: written do; no separately readable direction; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r14 — row label: Ishtonabi.; cultivated acres 4; family 9; males over 16: 3; under 10: 3; locality: written do; no separately readable direction; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r15 — row label: Koshahoma.; cultivated acres 1; family 3; males over 16: 1; under 10: 1; locality: written do; no separately readable direction; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r16 — row label: Poshitola.; cultivated acres 3; family 6; males over 16: 2; under 10: 2; locality: written do; no separately readable direction; total acres 50; General Remarks: no readable remark.
+
+
+PL:p49:r17 — row label: Chillatahoma.; cultivated acres 10; family 11; males over 16: 3; under 10: 4; locality: written do; no separately readable direction; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r18 — row label: Capt Ihtotahoma.; cultivated acres 4; family 7; males over 16: 2; under 10: 4; locality: Attihana creek. / east side.; total acres 400; General Remarks: Land poor.
+
+
+PL:p49:r19 — row label: Chillitayabi.; cultivated acres 2; family 4; males over 16: 1; under 10: 1; locality: Nottolaha creek. / south side.; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r20 — row label: Ihima. (woman); cultivated acres: no readable entry; family 3; males over 16: no readable numeral; under 10: 1; locality: Boktolokshi branch. / written do; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r21 — row label: Imayaska.; cultivated acres 2; family 2; males over 16: 1; under 10: no readable numeral; locality: written do / written do; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r22 — row label: Chilitabe.; cultivated acres 2; family 6; males over 16: 1; under 10: 2; locality: Attihana creek. / west side.; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r23 — row label: Tikobella.; cultivated acres 1; family 4; males over 16: 2; under 10: 1; locality: written do / east side.; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p49:r24 — row label: Ahtkucha.; cultivated acres 2; family 6; males over 16: 2; under 10: 2; locality: written do / south side.; total acres: no readable entry; General Remarks: no readable remark.
+
+
+MATERIAL SOURCE-FACING FINDINGS — CONTINUATION
+
+
+5. The lower-middle locality field again shows separately writable place and directional components. At r22 the source writes Attihana creek. / west side.; r23 then writes literal do for the place while newly writing east side.; r24 again writes literal do for the place while newly writing south side. The source therefore does not support collapsing locality into one inherited text string. This is a page-49 structural observation only, not a corpus-wide rule.
+
+
+6. The preceding r13–r17 run contains single written do marks in the locality field without separately readable directional entries in this pass. Those marks are preserved as marks; they are not expanded to Chickasawhay river, east side, or any other antecedent without a separately earned relation.
+
+
+7. r18 independently combines a newly written place, newly written direction, total acreage 400, and General Remark Land poor. r19 then writes a different creek and direction but no readable acreage or remark. The acreage and remark at r18 are therefore not propagated to r19 or any later row.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY — CONTINUATION
+
+
+Source: same photographed manuscript face carried by OHC_2429.pdf custody objects already controlled above.
+Temporary inspection derivative: higher-resolution local render/crops made from custody object B for this pass only; not admitted to the corpus.
+Derivative comparison aid: Quoin page-49 text object C; useful for spelling comparison only and not promoted over the direct face.
+Transcription: bounded to r13–r24 row positions, numerals, literal do marks, visible locality phrases, selected row labels, total-acre entries, and General Remarks recorded above.
+Interpretation: limited to table-structure observations about independently writable locality components and refusal to propagate values across rows.
+
+
+UNRESOLVED QUESTIONS — CONTINUATION
+
+
+- diplomatic certainty of difficult row-label spellings, including Parntohle, Poshitola, Chillatahoma, Ihtotahoma, Chilitabe, Tikobella, and Ahtkucha;
+- exact antecedents and semantic force of the r13–r17 single do marks;
+- whether the r20 directional do has a securely recoverable antecedent from the visible sequence;
+- whether any faint dots in cells recorded as no readable entry are intentional marks;
+- authorship and timing of Land poor. at r18;
+- any identity relation between these row occurrences and same- or similar-name people elsewhere.
+
+
+NONCLAIMS — CONTINUATION
+
+
+- No r13–r24 row is merged with a same- or similar-name person elsewhere.
+- Capt at r18 is source wording only and does not independently validate rank, office, or continuity with another captain.
+- Ihima. (woman) is an occurrence-level source label only; no additional sex, kinship, household, or identity claim is added.
+- Literal do marks are not silently expanded.
+- r18 total acreage 400 and Land poor. belong only to r18 in this transcription and are not inherited to r19 or later rows.
+- The r22→r24 locality pattern does not by itself establish residence, ownership, movement, or one continuous tract.
+- No corpus-level theory is advanced from this continuation.
+
+
+SEAMS AND EXACT RETURN PATH — CONTINUATION
+
+
+Backward seam for this continuation: this same jacket → prior stable coverage through PL:p49:r12 → PL:p49:r13.
+Exact return remains: quoted-title Public Lands → this jacket, Drive ID 1JkATyDlS9UO7Z1564Cx9j2qyc1HY4Nu3kg_OXQdL5WM → PL:p49 row address → OHC_2429.pdf custody object A 11feRKUZ6A-LiN2YIWLDdh0ibAP-vwcJk or custody object B 160xSjMEGVWO1n2RrnyunmgA-d86tNFKE.
+Derivative return remains: this jacket → Quoin derivative C 1f4eVkKmat4WryyY6Pcf7CeyMXT3X28T_ and duplicate derivative D 1J4KaMUjxepFZHyO_y0TdPDTFotmiWpfc.
+Forward seam: PL:p49:r25 is now the next honest row on this face. The earlier footer naming r13 as open is preserved above as historical footing and is superseded by this continuation. No page-50 seam was opened.
+
+
+— Glean | quoted-title Public Lands | OHC_2429 / page 49 | r01–r24 tied | r07–r09 brace preserved | r22→r24 split locality components preserved | r25 open
+n
+
+
+CONTINUATION PASS — PL:p49:r25 THROUGH PL:p49:r36
+Status: DIRECT-REPRESENTATION CONTINUATION — SAME HISTORICAL FACE — EXISTING JACKET EXTENDED — VISIBLE PAGE COVERAGE REACHES LOWER EDGE
+Maker: Glean
+Date: 2026-09-05
+
+
+CURRENT METHOD CONTROL
+This continuation was made under the current SOURCE WORK METHOD — full strength, exact reach — source to synthesis: receive the object as itself; preserve source/representation/derivative distinctions; protect blanks; name derivative operations; keep repeated representations from becoming extra witnesses; preserve corrections while repairing active state; and keep every consequential statement able to walk home.
+
+
+INSPECTION FOOTING AND PROVENANCE ADDENDUM
+For this pass Glean inspected the existing direct-extraction representation OHC_2429.png, Drive ID 1S09AvueF0n0RK75nvS_nORJ97crywYo_, 1,411,089 bytes, parent folder Direct Extraction — OHC_2423–OHC_2432 — Round Two, Drive ID 160suh69brrpG1c84Nes-WGqxyarXI9C6. This PNG is a workshop representation of the photographed manuscript face, not an additional historical witness. The archival/source custody PDFs already controlled above remain the custody anchors. Temporary enlarged crops used in this pass were inspection derivatives only and were not admitted to the corpus.
+
+
+The existing Quoin page-49 study, Drive ID 1f4eVkKmat4WryyY6Pcf7CeyMXT3X28T_, remained a derivative spelling/comparison aid. Where a difficult name could not be certified directly from the face, the derivative reading is not silently promoted.
+
+
+STABLE SOURCE-FACING COVERAGE — PL:p49:r25 THROUGH PL:p49:r36
+PL:p49:r25 — row label: Imisalona. (woman); cultivated acres 2; family 4; males over 16: 1; under 10: no readable numeral; locality: written do / written do; total acres: no readable entry; General Remarks: no readable remark.
+PL:p49:r26 — row label: Isakatenabi.; cultivated acres: no readable numeral; family 3; males over 16: 1; under 10: 1; locality: written do / north side.; total acres: no readable entry; General Remarks: no readable remark.
+PL:p49:r27 — row label: Ihtorawa.; cultivated acres 4; family 9; males over 16: 2; under 10: 3; locality: Oktanchito creek.; no separately readable direction; total acres: no readable entry; General Remarks: no readable remark.
+PL:p49:r28 — row label: Pomakkas. with source-written widow parenthetical; cultivated acres 2; family 3; males over 16: no readable numeral; under 10: 1; locality: written do; no separately readable direction; total acres: no readable entry; General Remarks: no readable remark. The name inside the widow parenthetical remains uncertified in this pass; the Quoin derivative offers Panepishtika as a reading aid only.
+PL:p49:r29 — row label: Ilatahhoma.; cultivated acres 2; family 9; males over 16: 2; under 10: 4; locality: written do; no separately readable direction; total acres: no readable entry; General Remarks: Land poor. oak and pine.
+PL:p49:r30 — row label: Imtinowa.; cultivated acres 2; family 6; males over 16: 2; under 10: 1; locality: Nottolaha creek.; no separately readable direction; total acres: no readable entry; General Remarks: no readable remark.
+PL:p49:r31 — row label: Hoktitabe.; cultivated acres: no readable numeral; family 5; males over 16: 1; under 10: 2; locality: written do; no separately readable direction; total acres: no readable entry; General Remarks: no readable remark.
+PL:p49:r32 — row label: Nohia.; cultivated acres 2; family 6; males over 16: 2; under 10: 2; locality visibly reads Head of do; total acres 80; General Remarks: no readable remark.
+PL:p49:r33 — row label: Naholloimastabi.; cultivated acres 3; family 7; males over 16: 3; under 10: 1; locality: written do; total acres: no readable entry; General Remarks: no readable remark.
+PL:p49:r34 — row label: Imachahabi.; cultivated acres: no readable numeral; family 4; males over 16: 1; under 10: 2; locality: Falahanosi creek. / south side.; total acres: no readable entry; General Remarks: no readable remark. Diplomatic spelling of the creek remains open at letter level; Falahanosi is retained as the present working transcription rather than a normalized modern place name.
+PL:p49:r35 — row label: Capt Chikopalakna.; cultivated acres 1; family 13; males over 16: 3; under 10: 6; locality: Chokeleea creek. / east side.; total acres: no readable entry; General Remarks: Poor land. pine and oak.
+PL:p49:r36 — row label: Ihtochahabi.; cultivated acres 3; family 9; males over 16: a visible numeral is present but not certified in this pass; under 10: 1; locality: written do / west side.; total acres 400; General Remarks visibly begins Capt The Chief says this man is a capt… and is clipped at the captured right edge. The Quoin derivative supplies the completion captain; that completion remains derivative rather than silently replacing the clipped source-face state.
+
+
+MATERIAL SOURCE-FACING FINDINGS — LOWER PAGE
+8. r25→r27 gives another bounded split-locality sequence on page 49. r25 writes do / do; r26 keeps written do in the place position while newly writing north side.; r27 then writes a new creek name. The marks are preserved literally and are not expanded to an antecedent not separately earned.
+
+
+9. r32 is especially useful because the locality cell visibly writes Head of do. That is not transcribed as a completed place name. The source face combines newly written words Head of with a literal do mark inside one locality entry. This pass therefore preserves Head of do as source wording and leaves the antecedent and semantic expansion unresolved.
+
+
+10. r29 and r35 carry related-looking but textually different General Remarks: Land poor. oak and pine. versus Poor land. pine and oak. They are kept as distinct row-specific source phrases rather than normalized into one stock remark or propagated to adjacent blank remark cells.
+
+
+11. r36 repeats the clipped-right-edge problem seen at r01. The source face visibly carries the beginning of a captain remark but not its full terminal word inside the captured edge; the Quoin derivative supplies a completion. The derivative is useful but does not turn the clipped source face into a complete direct transcription.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY — LOWER PAGE
+Source face: the photographed manuscript face carried by the controlled OHC_2429.pdf custody objects.
+Direct-extraction representation inspected here: OHC_2429.png, Drive ID 1S09AvueF0n0RK75nvS_nORJ97crywYo_; representation of the same historical face, not another witness.
+Temporary inspection derivatives: enlarged local crops from the PNG; not retained as corpus objects.
+Derivative comparison aid: Quoin page-49 text object C, Drive ID 1f4eVkKmat4WryyY6Pcf7CeyMXT3X28T_; spelling/comparison aid only.
+Transcription: bounded to r25–r36 row positions, visible numerals, literal do marks, source-written relational labels, locality phrases, row-specific General Remarks, and clipping states recorded above.
+Interpretation: limited to table-structure observations and refusal to expand ditto marks, normalize differing remarks, or complete clipped source text from a derivative without attribution.
+
+
+UNRESOLVED QUESTIONS — LOWER PAGE
+- exact diplomatic certainty of difficult row-label spellings, especially Imisalona, Isakatenabi, Ihtorawa, Ilatahhoma, Naholloimastabi, Chikopalakna, and Ihtochahabi;
+- exact source reading of the person named inside the r28 widow parenthetical;
+- exact diplomatic spelling of the r34 creek name;
+- the antecedent and administrative force of Head of do at r32;
+- the unexpanded antecedents of the lower-page do marks;
+- the uncertified visible numeral in r36 males-over-16;
+- the source-face completion of the clipped r36 captain remark beyond the captured right edge;
+- authorship and timing of the General Remarks;
+- any identity relation between these occurrences and same- or similar-name people elsewhere.
+
+
+NONCLAIMS — LOWER PAGE
+- No lower-page occurrence is merged with a same- or similar-name person elsewhere.
+- The r28 widow parenthetical is preserved as source wording and does not establish any relation beyond the relation literally stated there; the named person inside remains uncertified here.
+- Head of do at r32 is not silently expanded into a creek, branch, modern feature, residence, tract, or coordinate.
+- The r29 and r35 remarks are not treated as interchangeable merely because their vocabulary overlaps.
+- Capt at r35 and the captain remark at r36 are source wording only; this pass does not independently validate rank, office, appointment, or continuity with another captain.
+- The r36 derivative completion captain is not source-face text recovered from beyond the captured edge.
+- The PNG is not a second historical witness.
+- No page-50 seam is inferred from filename adjacency.
+- No corpus-level theory is advanced from the completion of page 49.
+
+
+SEAMS AND EXACT RETURN PATH — LOWER PAGE
+Backward seam: this same jacket → stable coverage through PL:p49:r24 → PL:p49:r25.
+Exact source return: quoted-title Public Lands → this jacket, Drive ID 1JkATyDlS9UO7Z1564Cx9j2qyc1HY4Nu3kg_OXQdL5WM → PL:p49 row address → OHC_2429.pdf custody object A 11feRKUZ6A-LiN2YIWLDdh0ibAP-vwcJk or custody object B 160xSjMEGVWO1n2RrnyunmgA-d86tNFKE.
+Representation return for this pass: this jacket → OHC_2429.png, Drive ID 1S09AvueF0n0RK75nvS_nORJ97crywYo_ → parent Direct Extraction — OHC_2423–OHC_2432 — Round Two, Drive ID 160suh69brrpG1c84Nes-WGqxyarXI9C6.
+Derivative return: this jacket → Quoin derivative C 1f4eVkKmat4WryyY6Pcf7CeyMXT3X28T_ and separately stored derivative D 1J4KaMUjxepFZHyO_y0TdPDTFotmiWpfc; comparison aids only.
+Forward seam: visible row-position coverage now reaches PL:p49:r36, the lower edge of the captured page face. The next manuscript-page seam has not been tested; page 50 was not opened.
+
+
+ACTIVE FOOTING
+Visible row-position coverage for OHC_2429 / manuscript page 49 now runs PL:p49:r01–r36. This is not a claim of a certified diplomatic transcription of every name, faint mark, or clipped phrase. The earlier r13-open and r25-open footers remain above as historical footing and are superseded by this continuation.
+
+
+— Glean | quoted-title Public Lands | OHC_2429 / page 49 | r01–r36 visible row coverage | r32 literal Head of do preserved | lower-edge coverage complete | page-50 seam untested
+
+
+
+
+FIELDGLASS CONTINUATION — CATEGORY-WORD AUDIT — 2026-09-06
+
+
+Direct source reopened: OHC_2429.pdf — Drive ID 160xSjMEGVWO1n2RrnyunmgA-d86tNFKE — legacy-source parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 264,721 bytes. The exact PDF was rendered at 220 dpi and the full visible manuscript page 49 was inspected. The render was temporary inspection access only.
+
+
+Across the full visible locality-bearing face, Fieldglass observed no explicit worded white / White / Whites / slave / Slave / Slaves / Black / Blacks category annotation.
+
+
+Exact reach: 0 observed explicit category-word annotations on the available page-49 representation. This is not a historical population/status zero and does not convert braces, dittos, faint marks, or blanks into category evidence.
+
+
+Arithmetic seam: page 49 contributes 0 observed explicit white/slave category counts to the current page-39→60 audit. All existing brace geometry, row assignments, and uncertainties remain intact.
+
+
+Return: this jacket → OHC_2429.pdf above → manuscript face.
+
+
+Maker: Fieldglass
+Date: 2026-09-06

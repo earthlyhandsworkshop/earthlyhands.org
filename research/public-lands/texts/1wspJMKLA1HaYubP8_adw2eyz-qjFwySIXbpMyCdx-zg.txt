@@ -1,0 +1,392 @@
+GLEAN SOURCE-FACING JACKET — OHC_2444 page 61 — Mushulatubbee captains list and repeated-page seam
+
+
+Status: DIRECT-SOURCE LIST JACKET — ONE MANUSCRIPT FACE — REPRESENTATION CONTROLLED
+Maker: Glean
+Date: 2026-09-06
+Corpus: quoted-title Public Lands — Whole-Document Corpus
+Visible manuscript page: 61
+
+
+HISTORICAL-OBJECT BOUNDARY
+
+
+OHC_2444 is one manuscript face headed “1831 Location under the Choctaw Treaty. 61”, followed by “No 2.”, “Mushulatubbee.”, and “A List of the captains entitled to the additional half section under …”. The surviving right edge is physically lost through the end of the heading and much of a right-margin note. Missing paper is not a blank.
+
+
+This face is not silently treated as a continuation of OHC_2443’s page-60 No. 1 farm-return body. It is a distinct list/form state. It is also not merged with OHC_2445 merely because OHC_2445 visibly carries page number 61 too.
+
+
+METHOD CONTROL
+
+
+This pass works from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md, Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF, and the workshop practice amendment “source force, attribution, and exact reach”, Drive ID 1X8tHZw7km3cgXvloDTB_S7Ary8vj6Kqe0S0whZABaNg. The direct source face governs; repeated representations do not become independent witnesses; source, representation, transcription, derived operation, and interpretation remain distinct; blanks and torn loss stay protected; correction history and exact return paths remain visible.
+
+
+A bounded Drive search for an OHC_2444 / Mushulatubbee source-facing jacket returned no equivalent jacket. This jacket therefore represents the underlying manuscript face rather than creating one jacket per PDF, PNG, or derivative transcription.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+
+
+Custody object A:
+- filename: OHC_2444.pdf
+- Drive ID: 1kIzKYjIdz9i_lc80wqQBnoq6mj7b2FfV
+- parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- size: 186,699 bytes
+
+
+Custody object B:
+- filename: OHC_2444.pdf
+- Drive ID: 1616LKL0AAOPjxjiYBanYdBNf2JPdwgOe
+- parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- size: 186,699 bytes
+
+
+Both PDF payloads were streamed and hashed in this pass. They are byte-identical, SHA-256:
+2b1b99028da15410c74caf0fc423306b160b8664c8ccd9a367b4466511eae93a
+
+
+They remain two custody routes to one payload / one manuscript-face witness, not two historical witnesses.
+
+
+Admitted study representation used for direct visual reading:
+- filename: OHC_2444.png
+- Drive ID: 1EQcUJQwm-6vJx4hMKeNauSEbkqyWsZ6I
+- parent folder ID: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- relation: study representation of the manuscript face; not another historical object.
+
+
+Existing derivative transcriptions:
+- OHC_2444 captains list Mushulatubbee additional half section — Quoin.md — Drive ID 1Cdca-JHkqcLVI15h2JYLRUNMr9ZRXFTc — parent 1komb4v11M9baULEpk3w3owolFF99m2-F
+- same-title duplicate derivative — Drive ID 1C2qOY2Dig042R_33WEdyJIUVtsQ5pEzB — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+
+
+The connector-readable contents of the two Quoin objects are identical. They are repeated derivative text, not corroborating witnesses.
+
+
+SOURCE-FACE STRUCTURE
+
+
+Visible column headings are:
+- Names.
+- Number of acres Cultivated.
+- Entitled as Captains.
+- Total Number of Acres.
+
+
+The visible list contains thirty row occurrences. This jacket does not certify every difficult name spelling diplomatically; Quoin remains navigation aid where direct handwriting is uncertain.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING A — BODY BREAK AT OHC_2443 → OHC_2444
+
+
+OHC_2443 is manuscript page 60 in a continued “Public Lands — No 1 — Form of a Return” farm-return body. OHC_2444 visibly changes documentary state: page 61, “No 2.”, “Mushulatubbee.”, and a captains/additional-half-section list with a different four-column table.
+
+
+The earned seam is therefore a source-body break, not a simple continuation merely because the archive filenames and manuscript numbers are consecutive. No person, farm, locality, district total, or accounting category is carried from page 60 into this list without separate evidence.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING B — TWO SEPARATE HOCHOMA OCCURRENCES
+
+
+The source writes “Hochoma.” twice in separate rows of the same list.
+
+
+Occurrence PL:p61-captains:r07:
+- name string: Hochoma.
+- cultivated acres: 14
+- entitled as Captains: 320
+- total number of acres: 480
+
+
+Occurrence PL:p61-captains:r11:
+- name string: Hochoma.
+- cultivated acres: 12
+- entitled as Captains: 320
+- total number of acres: 480
+
+
+These are two source occurrences. The identical written name does not earn a same-person merge and does not by itself prove two distinct historical people. Both occurrence states remain separate until discriminating evidence exists.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING C — SOURCE-WRITTEN “OR” NAME STATE
+
+
+At PL:p61-captains:r04 the source writes “Tuba or Horse.” in one name cell, with cultivated acres 9, captain entitlement 320, and total acres 320.
+
+
+The literal “or” is preserved as source wording. This jacket does not decide whether the two strings are aliases, translations, alternatives, a correction, two people, or any broader identity relation outside this occurrence.
+
+
+DERIVED TABLE CHECK — NOT SOURCE-STATED RULE
+
+
+Glean performed a bounded arithmetic comparison on the row values transcribed by Quoin and spot-checked against the direct face. The “Entitled as Captains” column is 320 throughout the visible rows. Subtracting 320 from the transcribed total-acre values produces only 0, 160, 320, or 480 in this visible list. The cultivated-acre values cluster with those differences: 3–10 appear with 0; 12–15 with 160; 20–22 with 320; 30 with 480.
+
+
+This is a Glean-derived table pattern, not language stated by the manuscript and not a legal rule. No treaty provision, instruction, or governing schedule was opened in this pass. In particular, the two rows with 10 cultivated acres and 320 total prevent a careless “every ten cultivated acres adds 160” formula. The exact administrative rule remains unresolved.
+
+
+TORN RIGHT-MARGIN NOTE
+
+
+The right-margin note is physically interrupted by the missing edge of the sheet. Directly visible fragments include portions resembling “I do…”, “…were cap…”, “…at Danc…”, and later fragments ending near “…treaty.” and “Done”. Quoin proposes a fuller reading including “Danc[ing Rabbit Creek?]”, but the direct surviving face does not earn silent completion of the missing words or initials. The note remains unresolved rather than reconstructed.
+
+
+SOURCE / DERIVATIVE / INTERPRETATION BOUNDARY
+
+
+Source-stated/source-visible:
+- manuscript page number 61;
+- “No 2.” and “Mushulatubbee.”;
+- a captains/additional-half-section list with the four visible column headings;
+- two separate “Hochoma.” row occurrences with different cultivated-acre values;
+- one “Tuba or Horse.” row with literal “or”;
+- physical loss of the right edge and a fragmentary marginal note.
+
+
+Representation:
+- OHC_2444.png is a study representation used for visual reading;
+- the two PDFs are byte-identical custody copies of one payload / one manuscript-face witness.
+
+
+Derivative transcription:
+- the two Quoin files are identical derivative transcriptions/navigation aids;
+- any crops, enlargements, or PDF renders used during inspection are unretained inspection derivatives and are not historical evidence.
+
+
+Glean-derived operation:
+- the arithmetic comparison between the 320 captain-entitlement column and total-acre values.
+
+
+Interpretation / exact reach:
+- the form change from OHC_2443 to OHC_2444 is sufficient to refuse automatic body continuity;
+- the arithmetic pattern is sufficient to open a question about an acreage-allocation rule, but not sufficient to state that rule or its legal basis.
+
+
+UNRESOLVED QUESTIONS
+
+
+- What exact words continue the heading after “under” on the lost right edge?
+- What is the full, responsible reading of the torn right-margin note?
+- What source instruction or treaty provision governs the relation among cultivated acres, the 320 captain entitlement, and total acreage?
+- Are the two Hochoma occurrences one person repeated, two historical people with the same written name, or something else? No merge is presently earned.
+- What documentary relationship, if any, explains two distinct surviving faces labeled page 61 at OHC_2444 and OHC_2445?
+- Which difficult Indigenous-language name spellings on this page can be strengthened by a later direct paleographic pass without laundering derivative certainty into the source?
+
+
+NONCLAIMS
+
+
+- Same written name does not establish same person. The two Hochoma rows remain separate occurrences.
+- Two Hochoma rows do not by themselves establish two distinct historical people either.
+- “Tuba or Horse.” does not establish an identity relation beyond the literal source-written alternative in that row.
+- The repeated 320 does not by itself state the legal authority, formula, or treaty article for the entitlement.
+- The Glean arithmetic pattern is not a source statement and is not promoted to a corpus-level theory.
+- Torn paper is not a blank field and is not filled from Quoin or workshop expectation.
+- Duplicate PDFs and duplicate Quoin files do not multiply witnesses.
+- Page-number equality does not establish document identity or sequence.
+- Filename adjacency does not establish documentary continuity.
+
+
+SEAMS AND EXACT RETURN PATHS
+
+
+Backward seam:
+FIELDGLASS SOURCE-FACING JACKET — OHC_2443 page 60 — district white/slave roll-up and Quoin total correction — Drive ID 1r0k6SlbqDzhDjuZTmhIDXXpv7TDK_hl7PkN_8j2YDfA → OHC_2443 page-60 No. 1 continued farm-return body → OHC_2444 page-61 No. 2 Mushulatubbee captains list.
+
+
+Earned relation: archive/manuscript adjacency plus a visible documentary-state change. This is a discontinuity/control seam, not a person/family/farm merge.
+
+
+Source return:
+this jacket → OHC_2444.png, Drive ID 1EQcUJQwm-6vJx4hMKeNauSEbkqyWsZ6I, parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh → OHC_2444.pdf custody object A, Drive ID 1kIzKYjIdz9i_lc80wqQBnoq6mj7b2FfV, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI; or byte-identical custody object B, Drive ID 1616LKL0AAOPjxjiYBanYdBNf2JPdwgOe, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+
+
+Derivative return:
+this jacket → Quoin derivative 1Cdca-JHkqcLVI15h2JYLRUNMr9ZRXFTc or duplicate-text derivative 1C2qOY2Dig042R_33WEdyJIUVtsQ5pEzB → any disputed name, numeral, heading, or marginal-note reading returns to OHC_2444.png / matching custody PDF before adoption.
+
+
+Forward seam control:
+OHC_2445.png, Drive ID 1y4-BCHRgHf5WnnUCkL64due2timOFR2L, was opened only to test the boundary. It too visibly carries page number 61, but it is a different face headed “Public Lands — No 2. Form of a Return. — Location under the Choctaw Treaty” with the farm-return table. It is not merged with OHC_2444. Its own source-facing reading remains a separate future object unless already received elsewhere.
+
+
+Strongest earned next retrieval door:
+Find the governing source language for the “additional half section” entitlement or a neighboring source that explains the acreage columns, and independently source-jacket OHC_2445 if it remains unreceived. Neither door is a conclusion.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+GLEAN SOURCE-FACING DEEPENING — 2026-09-08 — PAGE-61 / PAGE-88 CAPTAIN-LIST STRUCTURAL SEAM
+
+
+Disposition: consequential in-place deepening of this existing OHC_2444 jacket. No new wrapper or source object created.
+
+
+Direct sources reopened
+
+
+- OHC_2444.pdf — Drive ID 1kIzKYjIdz9i_lc80wqQBnoq6mj7b2FfV — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 186,699 bytes; manuscript p.61, No. 2, Mushulatubbee.
+- OHC_2444.png — Drive ID 1EQcUJQwm-6vJx4hMKeNauSEbkqyWsZ6I — parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh; study representation of the same p.61 face, not another historical witness.
+- OHC_2474.pdf — Drive ID 1YZIon5Y1XVBDsm4zKllinDLenYSYwOtj — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 263,972 bytes; distinct manuscript p.88 face, Public Lands / Unreserved / No. 3 / Leflore.
+
+
+Temporary 400-DPI renders, contrast adjustments, and crops were inspection derivatives only. They were not retained as corpus source objects and do not add witnesses. No OCR supplied the readings below.
+
+
+Source-facing comparison
+
+
+OHC_2444 / p.61 remains exactly as previously held at its damaged right edge. Its visible title runs: “A list of the captains entitled to the additional half section under” and then the surviving paper ends. Its four visible columns remain Names / Number of acres Cultivated / Entitled as Captains / Total Number of Acres. The torn right-margin certification still yields only fragments safely visible on this face, including the sequence “I do …”, “… were cap…”, “… at Danc…”, “… and tha…”, a later initial/name fragment that is not safely transcribed here, “…ing the …”, “…treaty.”, and “Done…”. These fragments are not normalized into a complete sentence.
+
+
+OHC_2474 / p.88 is a distinct, later source face with materially parallel structure. It is labeled “Unreserved. No 3. Leflore.” and its title directly reads, at present source-facing strength, “A list of the captains entitled to the additional half section under the nineteenth article of treaty.” It uses the same four-part captain-list architecture: Names / cultivated acres / Entitled as Captain / Total Number of Acres. Its accompanying Greenwood Leflore certification directly states that the above-named persons were captains in his district at the time of the treaty made at Dancing Rabbit Creek; it further states that a list of their names had been furnished by him; a later source-visible occurrence reads “Armstrong,” while the connective wording immediately before that occurrence is lost at the photographed edge; the next secure wording includes “when called on, for the purpose of allowing additional half section as provided for in the treaty.” The photographed right edge still interrupts some connective wording before Armstrong, so that connective is not supplied here. The closing source date remains “Done at the agency on the 7th September, 1831.”
+
+
+Earned finding
+
+
+The p.88 source supplies an independently surviving administrative analogue for the damaged p.61 object: a district-labeled captain list, the same additional-half-section table architecture, and a certification looking backward to captain status at the time of the Dancing Rabbit Creek treaty for the purpose of allowing the treaty benefit. This materially strengthens the documentary-family relation between the two faces without repairing either face from the other.
+
+
+In particular, p.88 makes “under the nineteenth article of treaty” a source-attested parallel formula elsewhere in this same quoted-title Public Lands body. It does NOT authorize filling p.61’s torn heading with those words. Likewise, the fuller p.88 certification provides a structural analogue for p.61’s surviving “I do … / were cap… / at Danc… / …treaty. / Done…” fragments, but it does NOT authorize reconstructing p.61’s lost words, date, signer, district title, recipient formula, or damaged name/recipient wording.
+
+
+Seams
+
+
+Backward p.61 seam remains unchanged: OHC_2443 / manuscript p.60 is the No. 1 continued farm-return body; OHC_2444 / p.61 is a distinct No. 2 Mushulatubbee captain-list state.
+
+
+Local p.61 forward control remains unchanged: OHC_2445 is a different manuscript face also numbered 61, carrying the No. 2 ordinary farm-return form; equal page number does not merge the objects.
+
+
+New structural crossing: OHC_2444 / p.61 Mushulatubbee captain list → OHC_2474 / p.88 Leflore captain list/certification. The relation earned is shared administrative form/function vocabulary inside the Public Lands corpus, not manuscript adjacency, one enclosure, one compiler, one list population, or one uninterrupted documentary sequence.
+
+
+Unresolved questions
+
+
+- Does a complete or alternate capture survive for the torn right edge of OHC_2444 / p.61?
+- Does another source explicitly tie the Mushulatubbee p.61 list to Article XIX, rather than requiring reconstruction from the p.88 analogue?
+- Who authored/signed the p.61 certification, on what date, and what exact wording survives in the p.61 initial/name fragment?
+- Are there comparable captain-list/certification faces for the third district, and if so, what documentary sequence and numbering do they preserve?
+- What office or administrative process received the district chiefs’ lists and converted the captain-status certification into location, allowance, survey, or later title action?
+
+
+Nonclaims
+
+
+- OHC_2444 and OHC_2474 are not duplicate source objects and are not merged merely because their list structures resemble one another.
+- No person on the Mushulatubbee list is identified with any person on the Leflore list by this pass; same or similar names remain separate occurrences.
+- The p.88 wording “nineteenth article of treaty” is not silently inserted into the torn p.61 heading.
+- The p.88 Greenwood Leflore certification is not attributed to p.61, and its date, signer, district, or complete wording are not transferred backward.
+- Shared 320 captain-entitlement entries do not by themselves establish completed allowance, patent, possession, receipt, sale, or final legal disposition.
+- This structural relation does not establish archival completeness, original leaf adjacency, one compiler, or a corpus-level theory of every Public Lands captain entry.
+
+
+Exact return roads
+
+
+This jacket → OHC_2444.pdf 1kIzKYjIdz9i_lc80wqQBnoq6mj7b2FfV / OHC_2444.png 1EQcUJQwm-6vJx4hMKeNauSEbkqyWsZ6I → manuscript p.61 No. 2 Mushulatubbee captain list and torn certification.
+
+
+Parallel-source road: this jacket → True Bearing / Fieldglass OHC_2474 governing jacket, Drive ID 1YywkkcgKXNcWuWjFH718PxVcXBx03KtBDYuyWVyfG0s → OHC_2474.pdf 1YZIon5Y1XVBDsm4zKllinDLenYSYwOtj → manuscript p.88 No. 3 Leflore captain list and certification.
+
+
+— Glean | quoted-title Public Lands | p.61 captain-list jacket deepened | p.88 parallel source tied without reconstruction | identities and representations unmerge
+
+
+FIELDGLASS THREE-RETURN ARCHITECTURE CONTROL — 2026-09-09 — the third district captain face is now source-opened
+
+
+Direct source return
+
+
+The open question above asking whether a comparable captain-list/certification face survives for the third district can now be answered at documentary-form level. Fieldglass directly reopened OHC_2416.pdf, Drive `1U9eFtUcmlVYjmCd2sX4n-Mv1RETeAhZ4`, a more complete framing of the manuscript p.38 historical face already governed by the Fieldglass OHC_2417 p.38 jacket `1Cvjg6nKS21RrRmk4RhNOX3c5mIwlLPMSxhvBb7kZoX4`. OHC_2416/OHC_2417 remain distinct representations of one historical face, not two witnesses.
+
+
+P.38 is visibly Public Lands / No. 1 / Chief Ni-ta-cha-chie and carries the same dedicated captain-list architecture seen here on No. 2 p.61 and on No. 3 p.88: a heading for captains entitled to the additional half section under the nineteenth article; Names; cultivated acres; a 320-acre `Entitled as Captain` column; and Total Number of Acres. Its more complete certification says, at direct-source strength, that the listed persons were captains in the chief's district at treaty time and that a list of their names was furnished to Armstrong when called on for the purpose of allowing the additional half section as provided for in the treaty. It carries a W. Ward / Agent C.N. notation and a separate interpreter notation. This p.38 text is not used to reconstruct the torn words on the No. 2 p.61 face or the cut connective on No. 3 p.88.
+
+
+Three-return finding
+
+
+The held corpus now supplies a dedicated captain-entitlement schedule at the front boundary of each separately numbered Public Lands district body:
+
+
+No. 1: manuscript p.38 captain list / certification → p.39 ordinary `No. 1 Form of a return` opening → continued farm-return body → p.60 terminal district aggregate already controlled as `14 Whites & 67 Slaves in this district`.
+
+
+No. 2: manuscript p.61 Mushulatubbee captain-list face (this jacket) → separate same-numbered p.61 ordinary `No. 2 Form of a Return` opening → continued farm-return body → p.87 terminal aggregate `121 Whites. 203 Slaves.`.
+
+
+No. 3: manuscript p.88 Leflore captain list / certification → p.89 ordinary `No. 3 Form of a Return Continued` face → later No. 3 farm-return body; a terminal No. 3 white/slave aggregate remains unrecovered at present source reach.
+
+
+This is stronger than a two-face analogy. Across all three numbered Public Lands district bodies presently held, the source architecture separates a treaty-benefit captain schedule from the ordinary farm-return table. In Nos. 1 and 2, the ordinary farm-return sequence later closes with a district-level white/slave aggregate. That recurrence is source-backed corpus structure, not a conclusion about the people inside any row.
+
+
+Administrative consequence / limit
+
+
+The corpus therefore gives us one explicit administrative grammar whose function is stated: captains, cultivation, a fixed 320-acre captain increment, chief certification of treaty-time status, and transmission/call language tied to allowing the additional half section. It still does NOT give the governing grammar for the separate manuscript `white(s)` / `slave(s)` / `Black(s)` annotations on ordinary farm-return faces. No source opened here states that those category counts were collected by the same instruction, by the same hand, from the captain lists, or for the same legal purpose.
+
+
+This distinction matters for the flare. The district roll-ups at No. 1 p.60 and No. 2 p.87 now sit inside a more securely bounded return architecture, but their relationship to the episodic row-level category subtrack remains unresolved. `Black(s)` is not converted to `Slaves`; captain status is not converted to slaveholding; captain-list acreage is not imported into family or category arithmetic; and no identity travels across district lists by similar name.
+
+
+Correction / unresolved-state change
+
+
+The earlier question `Are there comparable captain-list/certification faces for the third district?` is now CLOSED at the form-family level by the directly opened No. 1 p.38 face. It remains OPEN at finer levels: whether the three certifications were produced under one written instruction, whether their list-generation dates and recipients were identical in every district, and what administrative source—if any—explains the white/slave/Black count subtrack and its terminal roll-ups.
+
+
+Exact return roads
+
+
+No. 1: p.38 governing jacket `1Cvjg6nKS21RrRmk4RhNOX3c5mIwlLPMSxhvBb7kZoX4` → OHC_2416.pdf `1U9eFtUcmlVYjmCd2sX4n-Mv1RETeAhZ4` / OHC_2417 representation family → manuscript p.38 → p.39 farm-return opening → p.60 aggregate jacket `1r0k6SlbqDzhDjuZTmhIDXXpv7TDK_hl7PkN_8j2YDfA`.
+
+
+No. 2: this jacket → OHC_2444.pdf `1kIzKYjIdz9i_lc80wqQBnoq6mj7b2FfV` → manuscript p.61 captain list → separate p.61 farm-return opening → p.87 aggregate jacket `1LgBLN4gKPECl5habBR6vNfrDnOFuEYlwf4bLSAGiK6Q`.
+
+
+No. 3: p.88 governing jacket `1YywkkcgKXNcWuWjFH718PxVcXBx03KtBDYuyWVyfG0s` → OHC_2473.pdf `15moWDZMz1vTTdsN1fQn5mzL-QMI4lQ75` / OHC_2474 representation family → manuscript p.88 → OHC_2475 p.89 ordinary continued farm return.
+
+
+— Fieldglassd
+
+
+GLEAN TARGET-WORD CHECK — 2026-09-26
+
+
+A full reread of the surviving OHC_2444 face found no readable occurrence of `White`, `Whites`, `Slave`, `Slaves`, `Black`, or `Blacks`. This negative is local to what survives and remains readable; the torn right edge is not treated as blank, and no claim is made about lost text.
+
+
+The result keeps this captain-entitlement schedule outside the ordinary farm-return category subtrack. It does not show that such categories were absent from the district, nor that the captain schedule and farm-return opening were produced under one counting instruction.
+
+
+Maker: Glean
+Date: 2026-09-26
+
+
+
+
+GLEAN REPEATED-PAGE RESOLUTION — MANUSCRIPT 61 / 61, PRINT 61 / 62
+
+
+The documentary relation between the two surviving manuscript faces numbered 61 is now source-controlled at representation level. This OHC_2444 captain schedule appears as ASP printed p.61. The distinct OHC_2445 farm-return opening—the second manuscript face visibly numbered 61—appears as ASP printed p.62, with the same thirty-five-row sequence from Captain Matabbe/Matubbe through Niminte/Timinter. Printed p.63 then aligns with the OHC_2446/OHC_2447 manuscript p.63 face.
+
+
+The two manuscript objects remain distinct: captain schedule is not farm-return opening, and shared manuscript numeral 61 does not merge them. What closes is the former content-gap question: the intervening return content survives. What remains open is why the manuscript repeats 61 and the print assigns 62; no compositor, editor, compiler, or archival explanation is inferred.
+
+
+Return: this captain-schedule jacket → OHC_2445 jacket 1aPWhIqYppORRvX6hT7KJgYMvPbKR2_bqdeVGkmY5e3g → ASP printed-p.62 jacket 16mxKkqZ37jPsseYxsyPcCN77ykRqvMZEcCuhisY-KuQ.
+
+
+Maker: Glean

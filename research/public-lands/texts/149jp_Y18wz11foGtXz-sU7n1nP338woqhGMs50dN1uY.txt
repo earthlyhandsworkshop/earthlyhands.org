@@ -1,0 +1,758 @@
+Public Lands No. 2 p.71 — lower-row fusion correction, Oxnoleby cluster, and military-road / Big Nancy relations — OHC_2456 source jacket
+
+
+Maker: Glean
+Date: 2026-09-06
+Body: quoted-title Public Lands
+Status: NEW SOURCE-FACING JACKET — bounded page-71 pass
+
+
+## Method control
+
+
+This pass begins from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md (Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF), SOURCE WORK METHOD — full strength, exact reach — source to synthesis (Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc), and WORKSHOP PRACTICE AMENDMENT — source force, attribution, and exact reach (Drive ID 1X8tHZw7km3cgXvloDTB_S7Ary8vj6Kqe0S0whZABaNg).
+
+
+Operative controls: receive the object as itself; source face before derivative repair; preserve protected blanks and clipped/uncertain name forms; one historical object rather than one jacket per representation; name derivative operations; preserve correction history; repeated representations do not become independent witnesses; row adjacency and same-name resemblance do not merge people; every consequential statement keeps a road home.
+
+
+A fresh Drive search for OHC_2456 / page 71 found the source objects and two duplicate Quoin derivatives but no existing faithful source-facing page-71 jacket. This jacket is therefore earned rather than duplicative.
+
+
+## Historical object and custody
+
+
+Documentary face: one manuscript ledger face visibly numbered 71 and headed Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty. It is a ruled farm-return table. This pass reads the direct face and stabilizes the lower-row structure needed for the correction; it does not claim a complete diplomatic transcription of page 71.
+
+
+PDF custody route A:
+- OHC_2456.pdf
+- Drive ID: 1SJov1Yel9DB9hYQIm4Uesdp69VlimEke
+- size: 271,424 bytes
+- parent: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+
+
+PDF custody route B:
+- OHC_2456.pdf
+- Drive ID: 1g9hjBI43fumRt9iK42A-RHfLF8hAaHIs
+- size: 271,424 bytes
+- parent: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — Source objects — received batch 1 — OHC 2408–2518
+
+
+Glean downloaded and compared the complete payloads in this pass. They are byte-identical and both hash SHA-256 1039bba5f9486e3dca6ac6ce99197883fa7eee3122cfdbae1019189ce27f4ce4. They remain two custody objects / two return routes carrying one identical PDF payload and one manuscript-page witness, not two historical witnesses.
+
+
+Admitted study representation:
+- OHC_2456.png
+- Drive ID: 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW
+- size: 1,448,673 bytes
+- parent: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh — 76 Distinct Study Surfaces
+- role: direct reading representation of the page-71 manuscript face; not an independent historical witness
+
+
+Derivative transcriptions used for comparison:
+- OHC_2456 form of return Choctaw Treaty farms page 71 — Quoin.md — Drive ID 11N53v6yocSj-E4FkSL-Q4hJYBVSXJpQF — parent 1komb4v11M9baULEpk3w3owolFF99m2-F (Quoin folio box)
+- same-title Quoin object — Drive ID 1SBpC98d7frP-EJSLxcGeN7y2lSRDs136 — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl (Public Lands — Whole-Document Corpus)
+
+
+The two Quoin objects carry identical derivative text and are one derivative reading repeated in two storage locations, not corroborating witnesses.
+
+
+## Stable lower-page occurrence structure
+
+
+Rows are counted top-to-bottom from the first visible farm-owner entry below the headers. Direct inspection establishes 35 visible rows on page 71. The Quoin derivative supplies only 34 because it fuses material across the lower-page rows described below.
+
+
+The available page-71 captures darken/crop the extreme left edge of the lower name column. That clipping is preserved rather than repaired from expectation. Where the source does not fully expose a first name or initial, this jacket does not supply one from another source.
+
+
+### PL:p71:r30 — Levi Pickens / Pickins occurrence
+
+
+This row immediately precedes the correction neighborhood. The surname vowel is not stabilized here beyond the source-visible Pickins/Pickens ambiguity. No identity work is performed from this occurrence.
+
+
+### PL:p71:r31 — source-visible ending “…mes Cobb” with “(white man)”
+
+
+Direct face, by visible field:
+- Name field: left edge partly obscured; source-visible ending “…mes Cobb”; the following source label reads “(white man)”. Quoin expands the name as “James Cobb”.
+- No of Acres Cultivated: blank
+- Entire No of the Family: blank
+- Males over 16 years: blank
+- Males and Females under 10 years: blank
+- small source-written annotation at the leading edge of the locality field: “7 whites]” (opening bracket/mark not diplomatically stabilized)
+- locality / adjoining source wording: “Works as Levi [unclear: Pickins/Pickens] and family.”
+- Total No of Acres: blank
+- General Remarks: literal “do”
+
+
+Active source-facing state: the printed numerical fields and total-acre field on r31 are blank. They are protected blanks. This pass does not fill them from the neighboring row or from Quoin.
+
+
+### PL:p71:r32 — [left-edge obscured] Jones. (Indian)
+
+
+This is a distinct source row immediately below the Cobb occurrence and immediately above Abner Morris. The available capture obscures the leading name/initial, so the source-facing name remains “[left-edge obscured] Jones.” The source itself writes “(Indian)” after the name occurrence.
+
+
+Direct face, by visible field:
+- No of Acres Cultivated: 2
+- Entire No of the Family: 5
+- Males over 16 years: 1
+- Males and Females under 10 years: 3
+- Locality of Farms: “Oxnoleby. adjoins a large prairie.”
+- Total No of Acres: 80
+- General Remarks: “Good spring, and land tolerable.”
+
+
+This row is absent as a separate occurrence from both Quoin derivatives.
+
+
+### PL:p71:r33 — Abner Morris. (white man)
+
+
+Direct face, bounded fields needed for the correction:
+- No of Acres Cultivated: 16
+- Entire No of the Family: 2
+- Males over 16 years: blank
+- Males and Females under 10 years: blank
+- small source-written annotation: “6 whites]” (punctuation/bracket not further stabilized here)
+- locality area continues with literal “do” and “A white man. Indian wife.”
+- Total No of Acres: 160
+- General Remarks: “Land tolerable.”
+
+
+The source-written phrases “white man”, “Indian”, “whites”, and “Indian wife” are preserved as historical source wording at their exact occurrences. They are not converted here into modern classifications, person identities, household definitions, legal-status conclusions, or ownership claims.
+
+
+## Consequential derivative correction — lower-row fusion
+
+
+Both Quoin derivatives transcribe one combined row:
+“James Cobb (white man) 2 5 1 3 7 whites Works as Levi Pickens and family. 80 do”
+
+
+Direct inspection shows that this derivative line fuses two distinct manuscript rows:
+- the Cobb occurrence contributes the name/label, the “7 whites]” annotation, “Works as Levi [Pickins/Pickens] and family.”, and the General Remarks “do”;
+- the following distinct Jones occurrence contributes 2 / 5 / 1 / 3 and total acres 80.
+
+
+Quoin therefore assigns the Jones row’s printed counts and total acreage backward onto the Cobb row and omits the Jones occurrence as a distinct row. The Jones locality “Oxnoleby. adjoins a large prairie.” is also absent from the derivative.
+
+
+A second dependent shift occurs in the Quoin Abner Morris line. Quoin gives Abner Morris the General Remarks “Good spring and land tolerable”; direct row alignment shows “Good spring, and land tolerable.” belongs to the omitted Jones row, while Abner Morris’s own General Remarks reads “Land tolerable.”
+
+
+Active source-facing state:
+- r31 Cobb occurrence: printed numeric fields blank; total acres blank; “7 whites] Works as Levi [Pickins/Pickens] and family.”; General Remarks “do”.
+- r32 [left-edge obscured] Jones (Indian): 2 / 5 / 1 / 3; “Oxnoleby. adjoins a large prairie.”; total 80; “Good spring, and land tolerable.”
+- r33 Abner Morris (white man): 16 / 2 / blank / blank; “6 whites]”; “do A white man. Indian wife.”; total 160; “Land tolerable.”
+
+
+The Quoin fusion remains visible as derivative correction history. The derivative files themselves are not rewritten.
+
+
+## Findings
+
+
+1. OHC_2456 is directly established as manuscript page 71 in the continued No. 2 Public Lands farm-return body.
+2. The page carries 35 visible farm-owner rows in the direct face; the duplicate Quoin derivative has 34 because it omits one lower-page row as a separate occurrence.
+3. PL:p71:r31 has blank printed numerical fields and blank total acreage; its source-written “7 whites]” annotation and “Works as Levi [Pickins/Pickens] and family.” are not numerical values for those printed fields.
+4. PL:p71:r32 is a distinct “[left-edge obscured] Jones. (Indian)” occurrence carrying 2 / 5 / 1 / 3, locality “Oxnoleby. adjoins a large prairie.”, total 80, and “Good spring, and land tolerable.”
+5. Both Quoin derivatives fuse the r32 numerical fields and total into r31 and omit r32 as a distinct row.
+6. The Quoin Abner Morris line also inherits the omitted Jones row’s “Good spring and land tolerable” remark; direct source alignment gives Abner Morris “Land tolerable.”
+7. The two stored OHC_2456 PDFs are byte-identical custody routes and carry one manuscript witness.
+8. The two Quoin files carry identical derivative text and add no corroborative weight.
+
+
+## Unresolved questions
+
+
+- The leading first name or initial on PL:p71:r32 is obscured by the available capture edge and remains unresolved. No other source is used here to complete it.
+- The fully diplomatic spelling of Pickins/Pickens in r30/r31 remains correction-open.
+- Bracket/punctuation form around the small “7 whites]” and “6 whites]” annotations is not fully stabilized in this pass.
+- Full row-by-row diplomatic transcription of page 71 remains open beyond the stabilized lower-page correction neighborhood.
+- Exact spelling and punctuation of difficult Indigenous names and locality strings elsewhere on the page remain correction-open.
+- The administrative meaning of the small white-count annotations relative to the printed family columns remains unresolved.
+- No household, kinship, employment, ownership, residence, or legal-status theory is inferred from row adjacency or these annotations.
+
+
+## Forward / backward seams
+
+
+Backward: GLEAN SOURCE-FACING JACKET — OHC_2455 page 70 — Nathaniel Folsom 1 white annotation and 69→70→71 seam, Drive ID 1T3vyGtWnFk4i01Thtfu-DOEOZ_sYFGbtjKgbMLH-7nU, directly established the bounded 70→71 pagination/form seam into this face.
+
+
+Forward: Glean directly opened OHC_2457.png, Drive ID 1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_, and confirmed a distinct manuscript face visibly numbered 72 in the same No 2 Form of a Return — Continued / Location under the Choctaw Treaty body. This earns the bounded 71→72 pagination/form seam only. Page-72 row content was not worked in this jacket.
+
+
+The local 70→71→72 seam does not establish completeness of the wider photographed run, absence of missing/repeated faces elsewhere, or a corpus-level ordering theory.
+
+
+## Explicit nonclaims
+
+
+This jacket does not:
+- count separately stored PDFs as separate historical witnesses;
+- treat duplicate Quoin derivatives as corroboration;
+- fill r31 printed blanks with r32 values;
+- silently erase the omitted r32 source occurrence;
+- supply a first name or initial for the clipped Jones occurrence;
+- merge the Jones occurrence with any other Jones;
+- merge Cobb, Jones, Morris, Pickens/Pickins, or any adjacent rows into a household or family unit;
+- translate source-written “white man”, “Indian”, “whites”, or “Indian wife” into a modern classification or legal conclusion;
+- infer residence merely from locality wording;
+- infer title, treaty entitlement, ownership, or legal outcome from acreage/locality fields;
+- claim a complete transcription of page 71;
+- claim a complete or gapless corpus sequence.
+
+
+## Exact return paths
+
+
+Primary-source custody:
+this jacket → OHC_2456.pdf Drive ID 1SJov1Yel9DB9hYQIm4Uesdp69VlimEke OR separately stored OHC_2456.pdf Drive ID 1g9hjBI43fumRt9iK42A-RHfLF8hAaHIs → byte-identical PDF payload → manuscript page-71 object.
+
+
+Reading representation:
+this jacket → OHC_2456.png Drive ID 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW → direct page-71 face.
+
+
+Derivative history:
+this jacket → Quoin IDs 11N53v6yocSj-E4FkSL-Q4hJYBVSXJpQF and 1SBpC98d7frP-EJSLxcGeN7y2lSRDs136 → duplicate derivative row transcription → page-71 representation.
+
+
+Backward seam:
+this jacket → page-70 jacket Drive ID 1T3vyGtWnFk4i01Thtfu-DOEOZ_sYFGbtjKgbMLH-7nU → OHC_2455 source face.
+
+
+Forward seam:
+this jacket → OHC_2457.png Drive ID 1KNvzNxp50Pq3VAEA6CXXvWOtQQCnYci_ → directly inspected page-72 face; row-level page-72 work remains separate.
+
+
+Corpus home:
+Public Lands — Whole-Document Corpus — Drive folder ID 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+
+
+— Glean
+## Active-state repair — Glean — 2026-09-06
+
+
+The earlier forward-seam statement remains valid as pass history, but its clause that page-72 row content had not been worked no longer governs the active path. Glean has now created `GLEAN SOURCE-FACING JACKET — OHC_2457 page 72 — blacksmith, Indian-wife, and Capt Oklenowa locality corrections`, Drive ID `1SvCXBVhhQGTrmw6sZ47rhZUZflCXDkO1RcA0ZIT7gKw`, from direct OHC_2457 source inspection.
+
+
+Current forward footing: this page-71 jacket → page-72 jacket Drive ID `1SvCXBVhhQGTrmw6sZ47rhZUZflCXDkO1RcA0ZIT7gKw` → `OHC_2457` source face. The page-72 jacket also directly establishes a bounded 72→73 pagination/form seam to `OHC_2458.pdf`; page-73 row content remains a separate source-facing task.
+
+
+## Lamplight second-look correction — 2026-09-06
+Direct return to the admitted `OHC_2456.png` face (Drive ID `1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW`) shows the PL:p71:r31 locality wording as `7 whites] Works at Levi [Pickins/Pickens] and family.` The jacket’s earlier `Works as Levi [Pickins/Pickens] and family.` is superseded at this occurrence: the connective is `at`, not `as`. The surname uncertainty remains unchanged.
+
+
+This is a transcription/locality-wording correction only. It does not identify the clipped Cobb occurrence beyond the source-visible name state, define the employment or household relation implied by the phrase, or merge Cobb with Levi Pickins/Pickens or any family member. The protected numeric blanks and all other page-71 findings/nonclaims remain unchanged.
+
+
+Exact return: this jacket → `OHC_2456.png`, Drive ID `1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW` → direct page-71 face.
+
+
+— Lamplight
+
+
+## Mapping addendum — PL:p71:r27 Geo Victor occurrence
+
+
+Direct return to the admitted OHC_2456.png face stabilizes a map-significant row that the earlier jacket had not yet worked:
+
+
+- Name field: `Geo Victor. (Indian)`. The source-visible `Geo` is preserved as written and is not expanded to George.
+- No of Acres Cultivated: 12.
+- Entire No of the Family: 7.
+- Males over 16 years: 1.
+- Males and Females under 10 years: 5.
+- small source-written annotation at the leading edge of the locality field: `4 whites]` (opening mark not diplomatically stabilized here).
+- Locality of Farms: `Akhshukwa. this place is worked.`
+- Total No of Acres: 160.
+- General Remarks: `By R. Smith. Victor is now on the river.`
+
+
+### Map grammar earned by this row
+
+
+The row separates at least three propositions that must not be collapsed into one dot:
+
+
+1. the farm occurrence is source-located at Akhshukwa;
+2. `this place is worked` by R. Smith;
+3. Victor is described, with the source-written temporal marker `now`, as `on the river`.
+
+
+For Mapping Grounds, these should remain distinct relation edges: farm → at Akhshukwa; place → worked by R. Smith; Victor → now on an unnamed river. The last edge is temporally relative to the return and spatially underdetermined. It does not name the river or prove a surveyed position. The row therefore directly demonstrates that the named farm-owner occurrence, the person working the place, and the named person’s stated present locality may differ inside one administrative row.
+
+
+### Derivative correction history
+
+
+The duplicate Quoin derivative begins this row as `Victor. (Indian)`, omitting the source-visible `Geo`. It preserves most of the remaining row text but flattens the separate printed fields and remarks into one line. The active source-facing name state is therefore `Geo Victor. (Indian)`, while the derivative omission remains visible as representation history.
+
+
+### Explicit nonclaims
+
+
+This addendum does not expand `Geo`, merge this occurrence with another Victor, identify R. Smith beyond this row, infer ownership or tenancy from `worked`, assign the `4 whites]` annotation to a household or ownership relation, identify the unnamed river, or treat Akhshukwa and `on the river` as the same place.
+
+
+Exact return: this jacket → OHC_2456.png, Drive ID 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW → direct page-71 face. Derivative comparison → Quoin IDs 11N53v6yocSj-E4FkSL-Q4hJYBVSXJpQF and 1SBpC98d7frP-EJSLxcGeN7y2lSRDs136 → duplicate derivative text, not independent witnesses.
+
+
+— Glean
+## Mapping addendum — PL:p71:r28 Joel Lucas two-constraint occurrence
+
+
+Direct return to the admitted OHC_2456.png face stabilizes the row immediately below Geo Victor:
+
+
+- Name field: `Joel Lucas.`
+- No of Acres Cultivated: 18.
+- Entire No of the Family: 7.
+- Males over 16 years: 2.
+- Males and Females under 10 years: 3.
+- Locality of Farms: `On military road.`
+- Total No of Acres: 160.
+- General Remarks: `Good land. 12 miles above Laflore's line.`
+
+
+### Map grammar earned by this row
+
+
+The row gives one farm occurrence two source-written spatial constraints: it is `On military road`, and it is `12 miles above Laflore's line.` This is stronger than a road-name occurrence alone because the line supplies a second reference relation. It remains a constraint pair rather than a coordinate.
+
+
+For Mapping Grounds, retain the two edges independently: farm → on military road; farm → 12 miles above Laflore's line. The source gives neither a compass bearing for `above` nor a method for the twelve-mile measure. The distance is the clerk's statement, not a modern straight-line calculation. The line's historical geometry and its identity relative to any later mapped LeFlore boundary remain to be independently earned before an intersection or corridor is drawn strongly.
+
+
+### Derivative correction history
+
+
+The duplicate Quoin derivative transcribes the name as `Louis Lucas.` Direct inspection reads `Joel Lucas.` The active source-facing row name is therefore `Joel Lucas.`, while `Louis Lucas` remains preserved as a derivative reading, not a second person or witness.
+
+
+### Explicit nonclaims
+
+
+This addendum does not merge Joel Lucas with another Lucas, infer that he traveled the military road, convert `above` into north/upstream/inside/outside, identify Laflore's line with a later boundary without an independent bridge, infer a precise farm point, or treat the row's acreage as a patent or completed legal title.
+
+
+Exact return: this jacket → OHC_2456.png, Drive ID 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW → direct page-71 face. Derivative comparison → Quoin IDs 11N53v6yocSj-E4FkSL-Q4hJYBVSXJpQF and 1SBpC98d7frP-EJSLxcGeN7y2lSRDs136 → duplicate derivative text, not independent witnesses.
+
+
+— Glean
+## Mapping addendum — page-71 Oxnoleby relation cluster
+
+
+This is a locality-only audit of six direct manuscript occurrences. It does not reopen their complete row transcriptions or use the duplicate Quoin derivative as a witness.
+
+
+Direct source wording:
+
+
+- PL:p71:r4: `Waters Oxnoleby. six miles south agency`. [Direct-face correction: duplicate Quoin derivatives read `2½`.]
+- PL:p71:r7: `Pearl creek. west side Oxnoleby`. [Direct-face correction: manuscript stop restored after `creek`.]
+- PL:p71:r26: `Oxnoleby. adjoins the prairie.`
+- PL:p71:r29: `Oxnoleby. east side.`
+- PL:p71:r30: `Oxnoleby. adjoins prairie.`
+- PL:p71:r32: `Oxnoleby. adjoins a large prairie.`
+
+
+### Map grammar earned by the cluster
+
+
+On this one manuscript face, Oxnoleby recurs in several distinct locality constructions: exact `Waters Oxnoleby`; a separate six-mile / south / agency phrase in the same row; exact `west side Oxnoleby` after a preceding manuscript stop; east-side wording; and prairie adjacency. The recurrence earns an identity-open comparison cluster, not a single relation hub, point, or settled feature type.
+
+
+The cluster must preserve proposition boundaries. R4 carries exact `Waters Oxnoleby` with relation grammar open, plus a separate unresolved six-mile / south / agency constraint; the absent `of` or `from` is not supplied. R7 carries a bare named-creek locality reference, `Pearl creek`, then a separate unresolved `west side Oxnoleby` construction; the manuscript period forbids a Pearl-Creek-to-Oxnoleby edge. The east-side and three prairie-adjacency occurrences remain separate row-level constructions. No occurrence is compressed into a shared coordinate.
+
+
+The three prairie phrases remain separate unnamed-feature occurrences: `the prairie`, `prairie`, and `a large prairie`. Their closeness on the page and shared Oxnoleby anchor do not independently prove that all three denote one physical prairie. Likewise, `Waters Oxnoleby` does not by itself classify Oxnoleby as a creek, river, drainage, settlement, or district.
+
+
+### Explicit nonclaims
+
+
+This addendum does not turn page order into geographic order, expand ditto marks, merge the three prairie references, infer a modern Oxnoleby identity, convert `east side` or `west side` into coordinates, or relate Pearl Creek to Oxnoleby. It does not supply absent `of`/`from`, make Pearl Creek and Oxnoleby the same watercourse, merge row hosts, or infer household, kinship, ownership, or residence from adjacency.
+
+
+Exact return: this jacket → OHC_2456.png, Drive ID 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW → direct page-71 face. Derivative comparison remains available through Quoin IDs 11N53v6yocSj-E4FkSL-Q4hJYBVSXJpQF and 1SBpC98d7frP-EJSLxcGeN7y2lSRDs136, which carry duplicate derivative text and add no witness count.
+
+
+— Glean
+## Mapping addendum — page-71 military-road ditto dependency chain
+
+
+Direct source wording in four consecutive locality cells:
+
+
+- PL:p71:r14: `New Military road. good running water.` [Direct-face correction: `New`, not derivative `Near`.]
+- PL:p71:r15: `On do below Big Nancy 6 miles.`
+- PL:p71:r16: `Near do north side.`
+- PL:p71:r17: `do do`.
+
+
+### Source and normalization layers
+
+
+The manuscript gives r14 the exact, unparsed road form `New Military road`; it does not write a proximity predicate. The period then separates `good running water` as generic feature-quality wording. It does not make the water a property of the road or relate road and water. The next three rows depend partly or wholly on clerkly `do` marks. The literal layer must therefore remain exactly as written. Any expanded map language belongs in a separate normalization layer with a pointer to the row from which the wording is inherited.
+
+
+A bounded working resolution is available for r15: its `On do` points backward into r14's road-form position, with exact `New Military road` as the candidate antecedent, while `below Big Nancy 6 miles` supplies a second named-anchor relation. The road wording is inherited, not independently written in r15, and must not be substituted silently for the manuscript text.
+
+
+R16's `Near do north side` probably continues the military-road anchor, but the attachment of `north side` is not fully explicit. R17's double `do` is still less determinate and should not be expanded into a strong map edge without a controlled ditto-scope pass.
+
+
+### Map grammar earned by the chain
+
+
+This page supplies a practical data requirement for Mapping Grounds: every normalized ditto relation needs at least `literal_text`, `inherits_from`, `normalized_candidate`, and `certainty` fields. Otherwise a later map could display `on New Military road` as if those words had been independently written in every row.
+
+
+Big Nancy is separately source-earned as a named anchor in r15, joined to that occurrence by the exact relation `below ... 6 miles`. The source does not state what kind of place or person Big Nancy denotes, what direction `below` means, or how the distance was measured.
+
+
+### Explicit nonclaims
+
+
+This addendum does not treat ditto expansions as independent source wording, count the four rows as four explicit military-road mentions, turn r14 `New` into `Near`, supply a proximity predicate, attach `good running water` to the road, convert `below` into a compass or downstream direction, identify Big Nancy, attach `north side` to a specific object, or expand r17's double ditto. It does not infer travel, residence, ownership, household relation, continuous road geometry, water geometry, or a road–water relation from the row sequence.
+
+
+Exact return: this jacket → OHC_2456.png, Drive ID 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW → direct page-71 face. Derivative comparison remains downstream and adds no witness count.
+
+
+— Glean
+
+
+## Mapping addendum — PL:p71:r8 compounded-ditto boundary
+
+
+Direct source face:
+
+
+- Host occurrence: PL:p71:r8.
+- Locality field: `do 10 miles agency do`.
+- The first and final `do` are source-written dependency marks; neither is a new place-name or relation attestation.
+- The only new locality material in the row is exact `10 miles agency`.
+
+
+The dittos bracket the explicit quantity-anchor phrase. Their visual alignment makes the preceding row’s separated locality components the documentary antecedent field, but it does not settle whether either mark inherits a whole component, only its final name, or some other span. Because PL:p71:r7 itself reads `Pearl creek. west side Oxnoleby`, the preceding row is not one phrase available for silent expansion.
+
+
+Map grammar: preserve two unresolved ditto dependencies plus one explicit distance–anchor construction. Do not reconstruct `Pearl creek 10 miles agency west side Oxnoleby`, expand either ditto to `Pearl creek` or `west side Oxnoleby`, or supply `from`, `of`, a direction, or a predicate. The row earns no Agency–Pearl Creek edge, Agency–Oxnoleby edge, Pearl Creek–Oxnoleby edge, distance ring, bearing, point, watercourse geometry, or identity merge.
+
+
+Exact return: this jacket → OHC_2456.png, Drive ID 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW → direct page-71 face. Duplicate Quoin copies remain derivative comparison surfaces, not additional witnesses.
+
+
+— Mullion
+19 Sep 2026
+
+
+## Mapping addendum — PL:p71:r09–r13 Akhshukwa dependency chain
+
+
+Direct source sequence:
+
+
+- PL:p71:r09: `Akhshukwa` — one explicit, bare locality occurrence.
+- PL:p71:r10: `do` — wholly dependent; no new name or predicate.
+- PL:p71:r11: `do 2 miles from Musholatubbe.` — dependent locality mark plus explicit `DISTANCE_FROM` exact `Musholatubbe`, two miles.
+- PL:p71:r12: `do adjoins` — dependent locality mark plus an explicit adjacency predicate whose object and scope remain unresolved.
+- PL:p71:r13: `do do` — two dependency marks; no new name, quantity, anchor, or predicate.
+
+
+Map grammar: r11’s two-mile relation is centered on its farm-row occurrence, not on Akhshukwa. R12 writes `adjoins` but does not identify what adjoins what; the preceding chain cannot silently supply a tract, person, place, or Musholatubbe as its object. R13 transmits dependencies without adding an attestation.
+
+
+Do not draw an Akhshukwa–Musholatubbe edge, make Akhshukwa two miles from Musholatubbe, expand any ditto into source-unwritten text, convert `adjoins` into parcel geometry, or merge this r09 Akhshukwa occurrence with the separately written PL:p71:r27 occurrence or another similar-name form.
+
+
+Exact return: this jacket → OHC_2456.png, Drive ID 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW → direct page-71 face. Duplicate Quoin copies remain derivative comparison surfaces, not additional witnesses.
+
+
+— Mullion
+19 Sep 2026
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT
+Person / entity: Oxnoleby — source-written place-name occurrence cluster on OHC_2456 page 71
+Date: not supplied by this page-facing pass
+Earned verb / relation: occurs as an exact source-written anchor across separately preserved locality relations on the same manuscript face, including `Waters Oxnoleby`, west/east-side wording, and prairie-adjacency wording.
+Case / object / place: OHC_2456 page 71 — Public Lands No. 2 Form of a Return — Continued; Oxnoleby locality cluster
+Return to this body: this jacket → OHC_2456.png, Drive ID 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW → direct manuscript page-71 face
+Identity / relation status: recurrence cluster only. Feature kind, shared geometry, modern identity, and identity with Oknosby or other similar-name occurrences remain OPEN. Separate prairie phrases remain separate unnamed-feature occurrences.
+Compiled index role: fast routing only. The jacket remains the rich meaning-bearing home for literal wording, ditto dependency, map grammar, provenance, and nonclaims.
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT — GEO VICTOR FARM LOCALITY
+Person / Entity: Geo Victor [PL:p71:r27 farm-row occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: PL:p71:r27 Locality of Farms STATES `Akhshukwa. this place is worked.`
+Case / Object: OHC_2456 p.71 — Public Lands No. 2 Form of a Return — Continued / PL:p71:r27
+Place: Akhshukwa [source spelling; farm-locality field]
+Jacket Return: Public Lands No. 2 p.71 — lower-row fusion correction, Oxnoleby cluster, and military-road / Big Nancy relations — OHC_2456 source jacket
+Identity / Relation Status: farm-locality relation only; source-visible `Geo` is not expanded to George; not a residence, bodily-presence, ownership, or same-name identity claim.
+Notes: source writes `Geo Victor. (Indian)`; the parenthetical is retained as historical source wording only. The row’s separate R. Smith and `Victor is now on the river` propositions remain separate returns.
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT — GEO VICTOR PRESENT-LOCALITY STATEMENT
+Person / Entity: Geo Victor [PL:p71:r27 occurrence]
+Date: not supplied by this page-facing pass; source uses relative `now`
+Earned verb / relation: PL:p71:r27 General Remarks STATES `Victor is now on the river.`
+Case / Object: OHC_2456 p.71 — Public Lands No. 2 Form of a Return — Continued / PL:p71:r27
+Place: unnamed river [source does not identify the river]
+Jacket Return: Public Lands No. 2 p.71 — lower-row fusion correction, Oxnoleby cluster, and military-road / Big Nancy relations — OHC_2456 source jacket
+Identity / Relation Status: source-local present-locality statement only; `now` remains relative to the return body; river identity and precise location remain OPEN; not merged with the Akhshukwa farm locality or another Victor occurrence.
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT — R. SMITH WORK-RELATION OCCURRENCE
+Person / Entity: R. Smith [PL:p71:r27 occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: the row CARRIES `Akhshukwa. this place is worked.` and, in General Remarks, `By R. Smith.`; the governing jacket preserves the relation place → worked by R. Smith.
+Case / Object: OHC_2456 p.71 — Public Lands No. 2 Form of a Return — Continued / PL:p71:r27
+Place: Akhshukwa [source spelling; row-local place relation]
+Jacket Return: Public Lands No. 2 p.71 — lower-row fusion correction, Oxnoleby cluster, and military-road / Big Nancy relations — OHC_2456 source jacket
+Identity / Relation Status: source-local work relation only; R. Smith identity beyond this row OPEN; no ownership, tenancy, residence, kinship, or same-name merge is inferred.
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT — JOEL LUCAS MILITARY-ROAD CONSTRAINT
+Person / Entity: Joel Lucas [PL:p71:r28 farm-row occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: PL:p71:r28 Locality of Farms STATES `On military road.`
+Case / Object: OHC_2456 p.71 — Public Lands No. 2 Form of a Return — Continued / PL:p71:r28
+Place: Military road [source wording; exact road identity and geometry OPEN]
+Jacket Return: Public Lands No. 2 p.71 — lower-row fusion correction, Oxnoleby cluster, and military-road / Big Nancy relations — OHC_2456 source jacket
+Identity / Relation Status: farm-locality constraint only; direct source reads `Joel Lucas`, superseding the duplicate Quoin derivative’s `Louis Lucas`; no residence, travel, precise point, title, or same-name merge is inferred.
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT — JOEL LUCAS LAFLORE-LINE CONSTRAINT
+Person / Entity: Joel Lucas [PL:p71:r28 farm-row occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: PL:p71:r28 General Remarks STATES `12 miles above Laflore's line.`
+Case / Object: OHC_2456 p.71 — Public Lands No. 2 Form of a Return — Continued / PL:p71:r28
+Place: Laflore's line [source spelling; twelve-mile relative constraint]
+Jacket Return: Public Lands No. 2 p.71 — lower-row fusion correction, Oxnoleby cluster, and military-road / Big Nancy relations — OHC_2456 source jacket
+Identity / Relation Status: source-local relative-location constraint only; meaning of `above`, measurement method, historical geometry, and identity with any later LeFlore boundary remain OPEN; not a coordinate, residence, travel, title, or same-name identity claim.
+
+
+— Small Door
+Mapping Grounds / Name Web compile pass
+19 Sep 2026
+
+
+## Mullion direct-source addendum — PL:p71:r18–r24 field-function seam
+
+
+Direct return to admitted study representation `OHC_2456.png` (Drive ID `1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW`) opens the previously unstabilized middle-page run without using the duplicate Quoin text as authority.
+
+
+Source-visible locality states in this bounded run:
+- PL:p71:r18, Capt. Howatubbe: `Okofalama.` Total acres `320`; General Remarks `Poor land`.
+- PL:p71:r19, Pachitfoiah: a difficult locality form beginning `Oktib...` followed by exact visible wording `head waters Pearl river.` Total acres `160`; General Remarks `Land tolerable`. The exact diplomatic spelling of the first locality word remains OPEN in this pass.
+- PL:p71:r20, Ahkoba huma: `Work with the above` in the printed Locality of Farms column. No new total-acre numeral is visible; General Remarks uses literal `do`.
+- PL:p71:r21, Istopyonny: literal `do` in Locality of Farms; General Remarks literal `do`.
+- PL:p71:r22, Cheletah: `Okofalama` in Locality of Farms; total acres `80`; General Remarks `Poor land`.
+- PL:p71:r23, Emicha: literal `do` in Locality of Farms; General Remarks literal `do`.
+- PL:p71:r24, Matallah: literal `do` in Locality of Farms; General Remarks literal `do`.
+
+
+### Field-function result
+
+
+R20 is the consequential object lesson: the column headed `Locality of Farms` is not functioning as a purely geographic field. In this row it carries `Work with the above`, a relational/work statement whose object is only source-written as `the above`. The field heading therefore cannot authorize conversion of every entry beneath it into place data.
+
+
+For source grammar, preserve r20 as a non-geometric relational occurrence. Do not silently replace `the above` with Pachitfoiah, Pachitfoiah's farm, the r19 locality form, Pearl River, or any modern place. Row adjacency makes those possible referents worth later inspection; it does not choose among them.
+
+
+R19 separately carries a named/namelike locality occurrence plus `head waters Pearl river.` The absent preposition is not supplied here, and no drainage geometry, point, river-head location, or identity with another similarly spelled creek/place is drawn from this wording alone. R18 and r22 are separate `Okofalama` attestations on the same face; repetition does not merge their farm occurrences or establish one geometry.
+
+
+### Derivative correction boundary
+
+
+The duplicate Quoin transcription renders r19 as `Oktibbeha. head waters Pearl river.` and r20 as `Work with the above`. Quoin is useful here as derivative comparison only. Because the direct face does not support a confident full diplomatic stabilization of r19's first locality word at this enlargement, this jacket does not adopt Quoin's expanded spelling as source text.
+
+
+### Map permission / refusal
+
+
+Earned: proposition-local non-geometric `WORK_WITH_ABOVE` state at PL:p71:r20; bare source-local `Okofalama` occurrences at r18 and r22; unresolved r19 locality/head-waters wording retained for later source-controlled comparison.
+
+
+Withheld: r20 place point or place edge; automatic inheritance of r19 geography into r20–r21; Pearl River headwaters geometry; `Oktib...` identity merge; Okofalama geometry or cross-row identity; residence, ownership, travel, tract, or household conclusions.
+
+
+Return: this governing jacket → `OHC_2456.png` `1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW` → manuscript p.71 r18–r24. Duplicate Quoin derivatives `11N53v6yocSj-E4FkSL-Q4hJYBVSXJpQF` / `1SBpC98d7frP-EJSLxcGeN7y2lSRDs136` remain derivative comparison surfaces only.
+
+
+
+
+## Mullion direct-source addendum — PL:p71:r25 activity / proximity / date-role seam
+
+
+Direct locality-cell wording:
+
+
+`Cultivates a field. Near agency 5 miles. 1830.`
+
+
+### Field-function result
+
+
+The cell performs three jobs. `Cultivates a field.` is an activity statement with a generic object, not a named place or tract. `Near agency 5 miles.` explicitly supplies a row-centered `NEAR` relation to exact `agency`, carrying a five-mile quantity; the source does not write `from`, so this is not silently recast as `DISTANCE_FROM`. `1830.` is a source-written year-form whose documentary role remains unresolved because no connective wording attaches it to the cultivation, field, distance, person, or return as a whole.
+
+
+This row is further direct evidence that the printed heading `Locality of Farms` does not define every cell as a single geographic datum. One cell can carry activity, relational geography, quantity, and date-like metadata while leaving their internal attachments partly open.
+
+
+### Map permission / refusal
+
+
+Earned: one non-geometric `CULTIVATES` statement with exact generic object `a field`; one row-centered `NEAR` constraint to exact `agency` with five-mile quantity; one separately preserved year-form `1830` with date role OPEN.
+
+
+Withheld: a named field feature, tract polygon, farm point, five-mile ring, bearing, supplied `from`, residence, bodily presence, an Agency coordinate or identity merge, and any claim that `1830` dates the cultivation, farm establishment, acreage, observation, or entire manuscript page.
+
+
+Return: this governing jacket → `OHC_2456.png` `1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW` → manuscript p.71 r25. Duplicate Quoin derivatives `11N53v6yocSj-E4FkSL-Q4hJYBVSXJpQF` / `1SBpC98d7frP-EJSLxcGeN7y2lSRDs136` remain derivative comparison surfaces only.
+— Mullino
+
+
+## SEDGE MAP-FACING DEEPENING — PL:p71:r27 occurrence / place-worker-person split — 19 Sep 2026
+
+
+SOURCE EDGE
+Direct source face OHC_2456 / manuscript p.71 row r27 carries `Geo Victor. (Indian)`; Locality of Farms `Akhshukwa. this place is worked.`; and General Remarks `By R. Smith. Victor is now on the river.`
+
+
+PLACE / RELATION CLASSIFICATION
+- FARM-ROW OCCURRENCE — LOCALITY OF FARMS → `AKHSHUKWA`.
+- `THIS PLACE` [anaphoric to the Akhshukwa farm occurrence at this source reach] — WORKED BY → R. SMITH occurrence.
+- GEO VICTOR occurrence — `NOW ON` → `THE RIVER` [unnamed hydrologic referent; temporally relative `now`; exact place OPEN].
+
+
+The administrative row host, farm locality, worker relation, and stated present person-locality are separate source states. The row does not say Victor is bodily at Akhshukwa when `now on the river` is written, does not say R. Smith resides at Akhshukwa, and does not identify the river.
+
+
+GEOMETRY
+Akhshukwa remains a source-written locality token / farm-place anchor without an earned modern identity or coordinate. `the river` remains unnamed and unplaced. No Akhshukwa↔river line, route, displacement, distance, river segment, farm polygon, acreage-derived parcel, worker point, or person point is earned. `160` acres is source-stated quantity only and must not be converted into shape or position.
+
+
+OCCURRENCE / IDENTITY BRAKE
+`Geo Victor` is the direct source-local name state; do not expand `Geo` to George or merge this occurrence with another Victor. R. Smith remains clause-local. The source-written `(Indian)` stays historical wording attached to the host occurrence and performs no modern identity classification. Do not infer ownership, tenancy, absence, relocation, travel, or family relation from the row.
+
+
+REPRESENTATION / PROVENANCE
+Historical manuscript p.71 → byte-identical held OHC_2456 PDF custody routes / admitted OHC_2456.png reading representation → this governing jacket → Sedge First Draw Register. The duplicate Quoin text is a derivative; its omission of source-visible `Geo` remains correction history, not another witness or another occurrence.
+
+
+RAVEL HANDOFF
+Receive three typed edges only: FARM → LOCALITY `Akhshukwa`; PLACE → WORKED BY R. Smith; Victor → NOW ON unnamed river. Keep the physical relation between Akhshukwa and the river, Victor’s movement, and all exact geometry visibly OPEN.
+
+
+NEXT HONEST DOOR
+Independent source that identifies `the river`, defines Akhshukwa, or independently places Victor / Smith relative to either feature. Do not solve by resemblance to p.72 `Ashshukwa` or by modern hydrography.
+
+
+— Sedge — Mapping Grounds / whole documentary landscap
+
+
+## SEDGE MAP-FACING DEEPENING — PL:p71:r28 Joel Lucas / military-road + Laflore-line constraints — 20 Sep 2026
+
+
+SOURCE EDGE
+Direct source face OHC_2456 / manuscript p.71 row r28 carries `Joel Lucas.`; Locality of Farms `On military road.`; General Remarks `Good land. 12 miles above Laflore's line.`; Total No. of Acres `160`.
+
+
+PLACE / RELATION CLASSIFICATION
+- FARM-ROW OCCURRENCE — ON → `military road`.
+- SAME FARM-ROW OCCURRENCE — SOURCE-STATED RELATIVE CONSTRAINT → `12 miles above Laflore's line.`
+`On` is source-written placement relative to an unnamed military-road referent. `12 miles above` is a second, separately earned distance/directional construction tied to the row occurrence, not to the road unless another source says so. The source does not authorize the stronger proposition `the military road is 12 miles above Laflore's line`, nor does it say the farm reached an intersection of the two referents.
+
+
+GEOMETRY
+Both constraints remain relational / unplaced. No road alignment, Laflore-line geometry, compass bearing, upstream/downstream reading, side, intersection, crossing, corridor, 12-mile ring, straight-line radius, farm point, parcel, acreage polygon, route, residence, or modern feature snap is earned. `160` is quantity only. The clerk's `12 miles` is source-stated measure without technique or geodetic model.
+
+
+OCCURRENCE / IDENTITY BRAKE
+`Joel Lucas` is the source-local row host only. Direct source supersedes duplicate Quoin derivative `Louis Lucas` at this occurrence; that derivative reading remains correction history and does not create a second person. The locality field does not independently establish residence, ownership, bodily presence, travel on the road, military service, title, or same-name identity. Do not merge the source-form road or `Laflore's line` with another military road / LeFlore line occurrence by resemblance.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE / PROVENANCE
+Historical manuscript p.71 → two byte-identical OHC_2456 PDF custody roads carrying one payload / one manuscript witness + admitted OHC_2456.png reading representation → governing source jacket → Sedge map classification → First Draw Register. Duplicate Quoin texts remain the same derivative reading and add no witness.
+
+
+RAVEL HANDOFF
+Receive only two row-centered constraints: `PL:p71:r28 FARM — ON → military road [identity / alignment OPEN]` and `SAME FARM — 12 MILES ABOVE → Laflore's line [meaning of above / measurement method / line geometry OPEN]`. Do not draw a road-line, boundary-line, 12-mile buffer, intersection, farm dot, route, or person point.
+
+
+OPEN NEXT
+Independent historical road/boundary source that identifies the military road or Laflore's line at compatible scale; otherwise another smallest source-carried place/verb edge.
+
+
+— Sedge — Mapping Grounds / whole documentary landscapee
+
+
+
+
+
+
+GLEAN DEEPENING — P.71 COMPLETE CATEGORY-ANNOTATION AUDIT
+
+
+Direct source return
+
+
+Fresh inspection of the complete surviving face secures the White / Whites / Slave / Slaves / Black / Blacks audit across all 35 visible body rows. Three numeric annotations are present, each at the leading edge of the printed `Locality of Farms` cell:
+
+
+- PL:p71:r27 — `Geo Victor. (Indian)` — `4 whites]` before `Akhshukwa. this place is worked.`
+- PL:p71:r31 — source-visible ending `…mes Cobb` followed by `(white man)` — `7 whites]` before `Works at Levi [Pickins/Pickens] and family.`
+- PL:p71:r33 — `Abner Morris. (white man)` — `6 whites]` before literal `do` and `A white man. Indian wife.`
+
+
+Page-local accounting
+
+
+The three numeric annotations total 17 Whites, 0 Slaves, and 0 Blacks. The subtotal uses only the explicit numbers joined to `whites`; it does not import the printed family columns or turn adjacent relational wording into arithmetic.
+
+
+Separate source-visible uses not entered into the subtotal
+
+
+- PL:p71:r06 — Daniel Nail — General Remarks states `By G. Gainscomb a white man - rented from Nail.`
+- PL:p71:r31 — `(white man)` is a name-field descriptor attached to the Cobb occurrence, separate from `7 whites]`.
+- PL:p71:r33 — `(white man)` in the name field and `A white man. Indian wife.` in the locality area remain descriptive/relational wording, separate from `6 whites]`.
+
+
+No `Slave`, `Slaves`, `Black`, or `Blacks` occurrence is visible elsewhere on the face. The category subtotal does not assign household membership, kinship, ownership, employment, legal status, or identity from the annotations or row adjacency.
+
+
+Derivative control
+
+
+The existing lower-row correction governs this audit. The Cobb occurrence is r31 with blank printed numerical fields and `7 whites]`. The following r32 `[left-edge obscured] Jones. (Indian)` is a separate row carrying 2 / 5 / 1 / 3 and total acres 80. Quoin fuses those rows and omits Jones as a distinct occurrence; its fused line is not used to host or enlarge the category count.
+
+
+Running boundary
+
+
+Across the directly audited No. 2 faces 63–71, the explicit numeric annotations now subtotal 39 White(s) and 74 Slave(s). The source-written `1 Black` on page 64 remains separate. This is not a page-61-through-71 reconciliation: manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate. It does not close against the page-87 aggregate and does not establish one stable administrative rule for the annotations.
+
+
+Exact return
+
+
+This governing page-71 jacket → OHC_2456.pdf, Drive ID 1SJov1Yel9DB9hYQIm4Uesdp69VlimEke → manuscript p.71 → PL:p71:r27, r31, and r33 → leading edge of the printed `Locality of Farms` cells.
+
+
+— Glean | Public Lands source audit

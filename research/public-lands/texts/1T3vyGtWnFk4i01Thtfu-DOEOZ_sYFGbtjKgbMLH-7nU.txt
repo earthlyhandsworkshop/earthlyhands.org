@@ -1,0 +1,231 @@
+# GLEAN SOURCE-FACING JACKET — OHC_2455 page 70 — Nathaniel Folsom 1 white annotation and 69→70→71 seam
+
+
+Maker: Glean
+Date: 2026-09-06
+Body: quoted-title Public Lands
+Status: NEW SOURCE-FACING JACKET — bounded page-70 pass
+
+
+## Method control
+
+
+This pass begins from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md (Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF), SOURCE WORK METHOD — full strength, exact reach — source to synthesis (Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc), and WORKSHOP PRACTICE AMENDMENT — source force, attribution, and exact reach (Drive ID 1X8tHZw7km3cgXvloDTB_S7Ary8vj6Kqe0S0whZABaNg).
+
+
+Operative controls: receive the object as itself; source face before derivative repair; one historical object rather than one jacket per representation; protect blanks; name derivative operations; preserve correction history; repeated representations do not become independent witnesses; same-name occurrences remain separate unless identity is independently earned; every consequential statement keeps a road home.
+
+
+A Drive search for OHC_2455 page 70 found the source objects and duplicate Quoin derivatives but no existing source-facing page-70 jacket. This new jacket is therefore earned rather than duplicative.
+
+
+## Historical object and custody
+
+
+Documentary face: one manuscript ledger face visibly numbered 70, headed Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty. It is a ruled farm-return table. The right-hand header notation is visible but is not diplomatically stabilized in this pass; Quoin renders it as “No 1230 - 1834,” which remains derivative wording unless separately secured.
+
+
+PDF custody route A:
+- OHC_2455.pdf
+- Drive ID: 1IbnpQdsY_TptdAWCHIKsCaZfmlyREUY7
+- size: 270,272 bytes
+- parent: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+
+
+PDF custody route B:
+- OHC_2455.pdf
+- Drive ID: 1pjn7kibqmhG0vVCBh8T6ApD_kZfM3gpb
+- size: 270,272 bytes
+- parent: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — Source objects — received batch 1 — OHC 2408–2518
+
+
+These are two separately stored custody objects with the same filename and recorded size. No byte-equivalence operation was performed in this pass, so they remain separately addressable custody routes and are not silently collapsed. Neither is counted as an additional historical witness merely because it is separately stored.
+
+
+Admitted study representation:
+- OHC_2455.png
+- Drive ID: 1L_BpKp5UmShnQDx-WdL5phGTAFrhjYTU
+- size: 1,442,851 bytes
+- parent: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh — 76 Distinct Study Surfaces
+- role: direct reading representation of the page-70 manuscript face; not an independent historical witness
+
+
+Derivative transcriptions used for comparison:
+- OHC_2455 form of return Choctaw Treaty farms page 70 — Quoin.md — Drive ID 1pQUIxA-keGP9xACXJeNzkjyNAb1jloOS — parent 1komb4v11M9baULEpk3w3owolFF99m2-F (Quoin folio box)
+- same-title Quoin object — Drive ID 1H1svNC_fFrGL39ywc7N9ARHBQTUpzpE8 — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl (Public Lands — Whole-Document Corpus)
+
+
+The connector-readable texts of the two Quoin objects are identical in this pass. They are duplicate derivative text, not corroborating witnesses.
+
+
+## Stable occurrence and source-facing correction
+
+
+Rows are counted top-to-bottom from the first visible farm-owner entry below the headers. This jacket stabilizes only the occurrence needed for the present correction and does not claim a full diplomatic transcription of page 70.
+
+
+### PL:p70:r04 — Nathaniel Folsom.
+
+
+Direct face, by visible field:
+- Name: Nathaniel Folsom.
+- No of Acres Cultivated: 6
+- Entire No of the Family: blank
+- Males over 16 years: blank
+- Males and Females under 10 years: blank
+- small source-written annotation at the leading edge of the locality field: “1 white]”
+- locality / adjoining source wording: “New Robinson road. father of Col Folsom”
+- Total No of Acres: blank
+- General Remarks: literal “do”
+
+
+Both Quoin derivatives instead transcribe the row as: “Nathaniel Folsom. 6 ... ... ... 1 mile (New Robinson road, father of Col Folsom) ... do”. Direct inspection does not support “1 mile” at that position. The manuscript carries the distinct small annotation “1 white]”, followed by “New Robinson road. father of Col Folsom”. Quoin therefore performs a derivative misread that turns a source annotation into a distance phrase and adds parenthetical/comma punctuation not carried that way by the face.
+
+
+Active source-facing state: PL:p70:r04 carries “1 white]” as source-written row wording. The Quoin “1 mile” reading remains visible as superseded derivative history; the derivative files themselves are not rewritten.
+
+
+The manuscript also writes “father of Col Folsom” on this Nathaniel Folsom row. That phrase is preserved at full source force as source-stated relationship language. This pass does not identify which Colonel Folsom is meant, does not merge the occurrence with any same-name or titled Folsom elsewhere, and does not infer a broader family chain from the phrase.
+
+
+The “1 white]” annotation is preserved as source wording only. This pass does not establish its administrative relation to the printed family columns, whether it is included in any family count, a legal-status theory, employment, residence, title, or any other relationship beyond the words actually written.
+
+
+## Same-name boundary preserved
+
+
+Page 70 separately contains a “Meckoontabe.” occurrence and a later “Capt Meckoontabe.” occurrence. They remain separate source rows. Similarity of the written name is permission for a later comparison, not a person-level merge, and this jacket makes no identity claim between them.
+
+
+## Findings
+
+
+1. OHC_2455 is directly established as manuscript page 70 in the continued No. 2 Public Lands farm-return body.
+2. PL:p70:r04 directly carries “1 white]” before “New Robinson road. father of Col Folsom”.
+3. Both duplicate Quoin derivatives misread that source annotation as “1 mile” and reshape the following wording with derivative punctuation.
+4. The source itself writes “father of Col Folsom” on the Nathaniel Folsom row; the particular Colonel Folsom is not identified by this pass.
+5. The two stored OHC_2455 PDFs remain separate custody routes; byte identity was not tested here.
+6. The two Quoin files carry identical derivative text and add no corroborative weight.
+
+
+## Unresolved questions
+
+
+- Full row-by-row diplomatic transcription of page 70 remains open.
+- Exact spelling and punctuation of difficult Indigenous names and locality strings remain correction-open except where specifically stabilized above.
+- The right-hand header notation after the treaty heading is not diplomatically stabilized here.
+- The administrative meaning of the small “1 white]” annotation relative to the printed family columns remains unresolved.
+- The identity of the “Col Folsom” named in the source phrase remains unresolved; no same-name or title-based merge is made.
+- The historical relationship, if any, between the separate “Meckoontabe.” and “Capt Meckoontabe.” rows remains open.
+- The two PDF custody objects were not byte-compared in this pass.
+
+
+## Forward / backward seams
+
+
+Backward: GLEAN SOURCE-FACING JACKET — OHC_2454 page 69 — Pisohamba cultivated-acre correction and John McKinney occurrence, Drive ID 14gkg09Y7uIYIiyr_1Xb74kbY-czsfr4NXbjATt0phDg, directly established the bounded 69→70 pagination/form seam into this face.
+
+
+Forward: Glean directly opened OHC_2456.png, Drive ID 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW, and confirmed a distinct manuscript face visibly numbered 71 in the same No 2 Form of a Return — Continued / Location under the Choctaw Treaty body. This earns the bounded 70→71 pagination/form seam. Page-71 row content was not worked here and no page-71 jacket was manufactured.
+
+
+The local 69→70→71 seam does not establish completeness of the wider photographed run, absence of missing or repeated faces elsewhere, or a corpus-level ordering theory.
+
+
+## Explicit nonclaims
+
+
+This jacket does not:
+- count separately stored PDFs as separate historical witnesses;
+- treat duplicate Quoin derivatives as corroboration;
+- turn the source-written “1 white]” annotation into “1 mile” or any other supplied wording;
+- expand “1 white]” into a household, legal-status, residence, ownership, or kinship theory;
+- identify the “Col Folsom” named by the source beyond that title/surname phrase;
+- merge Nathaniel Folsom with any other Folsom occurrence;
+- merge “Meckoontabe.” with “Capt Meckoontabe.”;
+- expand literal “do” marks into inherited wording not actually written on the row;
+- infer residence merely from the locality field;
+- infer title, treaty entitlement, or legal outcome from acreage or locality fields;
+- claim a complete transcription of page 70;
+- claim a complete or gapless corpus sequence.
+
+
+## Exact return paths
+
+
+Primary-source custody:
+this jacket → OHC_2455.pdf Drive ID 1IbnpQdsY_TptdAWCHIKsCaZfmlyREUY7 OR separately stored OHC_2455.pdf Drive ID 1pjn7kibqmhG0vVCBh8T6ApD_kZfM3gpb → manuscript page-70 object. Their exact storage distinction remains preserved.
+
+
+Reading representation:
+this jacket → OHC_2455.png Drive ID 1L_BpKp5UmShnQDx-WdL5phGTAFrhjYTU → direct page-70 face.
+
+
+Derivative history:
+this jacket → Quoin IDs 1pQUIxA-keGP9xACXJeNzkjyNAb1jloOS and 1H1svNC_fFrGL39ywc7N9ARHBQTUpzpE8 → duplicate derivative row transcription → page-70 representation.
+
+
+Backward seam:
+this jacket → page-69 jacket Drive ID 14gkg09Y7uIYIiyr_1Xb74kbY-czsfr4NXbjATt0phDg → OHC_2454 source face.
+
+
+Forward seam:
+this jacket → OHC_2456.png Drive ID 1uOyh_0x-szmi2G3EThQc63sd3j5mw7OW → directly inspected page-71 face; row-level page-71 work remains separate.
+
+
+Corpus home:
+Public Lands — Whole-Document Corpus — Drive folder ID 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+
+
+— Glean
+
+
+
+
+## Glean active-state repair — page 71 jacket now present — 2026-09-06
+
+
+The earlier forward-state sentence in this jacket — “Page-71 row content was not worked here and no page-71 jacket was manufactured.” — remains valid as history of that bounded page-70 pass, but it no longer governs current navigation.
+
+
+Active forward footing: page 71 now has `GLEAN SOURCE-FACING JACKET — OHC_2456 page 71 — lower-row fusion correction and 70→71→72 seam`, Drive ID `149jp_Y18wz11foGtXz-sU7n1nP338woqhGMs50dN1uY`, filed in `Public Lands — Whole-Document Corpus`, folder ID `1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl`. The already-earned 70→71 pagination/form seam remains unchanged; the page-71 jacket carries the current source-facing row work and the bounded forward 71→72 seam.
+
+
+— Glean
+GLEAN DEEPENING — P.70 COMPLETE CATEGORY-ANNOTATION AUDIT
+
+
+Direct source return
+
+
+Fresh direct inspection of the complete surviving face secures the White / Whites / Slave / Slaves / Black / Blacks audit across all 35 visible body rows. PL:p70:r04, Nathaniel Folsom, carries the only qualifying occurrence: `1 white]` at the leading edge of the printed `Locality of Farms` cell, before `New Robinson road. father of Col Folsom`.
+
+
+No other `White`, `Whites`, `Slave`, `Slaves`, `Black`, or `Blacks` category word is visible in the remaining body rows. Page-local subtotal: 1 White, 0 Slaves, 0 Blacks. The printed family columns are not imported into this subtotal, and the source does not explain how the annotation relates to them.
+
+
+Derivative state
+
+
+The existing active correction stands. Both duplicate Quoin texts render this annotation as `1 mile`; the manuscript reads `1 white]`. The derivative wording is preserved as superseded history and contributes nothing to the source-facing arithmetic.
+
+
+Custody correction
+
+
+The jacket's earlier finding that byte identity between the two stored PDFs had not been tested remains preserved as prior state but is now superseded. Complete payload comparison establishes that Drive IDs 1IbnpQdsY_TptdAWCHIKsCaZfmlyREUY7 and 1pjn7kibqmhG0vVCBh8T6ApD_kZfM3gpb are byte-identical, each SHA-256 662575bbd1023851f0592b84e1cd07e56c96a914fb06669ccfe8b4bea04531e6. They are two custody routes for one representation and one manuscript witness, not two witnesses.
+
+
+Running boundary
+
+
+Across the directly audited No. 2 faces 63–70, the explicit numeric annotations now subtotal 22 White(s) and 74 Slave(s). The source-written `1 Black` on page 64 remains separate. This is not a page-61-through-70 reconciliation: manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate. It does not close against the page-87 aggregate and does not establish a stable rule connecting these annotations to the printed family columns.
+
+
+Exact return
+
+
+This governing page-70 jacket → OHC_2455.pdf, Drive IDs 1IbnpQdsY_TptdAWCHIKsCaZfmlyREUY7 and 1pjn7kibqmhG0vVCBh8T6ApD_kZfM3gpb → manuscript p.70 → PL:p70:r04 → leading edge of the printed `Locality of Farms` cell.
+
+
+— Glean | Public Lands source audit
