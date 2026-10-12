@@ -1,0 +1,224 @@
+Public Lands No. 3 p.112 — Capt Lowtubbe Pearl River locality, Capt Big Cloud row, Whachakutchah / Water-of-Leaf-River land remarks, and dotted total-acre states — OHC_2507 source jacket
+
+
+Status
+Source-facing leaf jacket made by Glean from direct visual inspection of OHC_2507.pdf. This is custody and transcription work, not an identity map or corpus-level interpretation.
+
+
+Method / governing practice
+Read under SOURCE WORK METHOD — FULL STRENGTH, EXACT REACH: receive the object as itself; preserve source/derivative boundaries; protect blanks; do not make the source say what the workshop knows; repeated representations are not independent witnesses; every consequential statement keeps a road home.
+
+
+Source family
+- Governing object touched in this pass: OHC_2507.pdf — Drive ID 1t2AjH7A-q7K1vR8pZ6N9qfHHPPibEBl_.
+- Second stored OHC_2507.pdf object found in Drive: Drive ID 1N1TXNa1BA7B9B3sbUFzoEyLmN43cYugL. Per current Public Lands handling, duplicate stored captures are not counted as a second historical occurrence. This pass did not spend time re-proving the duplicate relation.
+- Exact Drive search for OHC_2507.png returned no result in this pass. That is a bounded lookup result, not a universal absence claim.
+- Reading derivative made by Glean: the governing PDF was locally rendered to PNG at 400 DPI for visual inspection. That temporary render is a derivative and does not replace the Drive source object.
+
+
+Source face / document function
+Best visual reading of heading:
+112. Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty. [No. 1230 / 1834 at upper right; punctuation uncertain.]
+
+
+Visible ruled columns:
+Names of Indians owning Farms | No. of Acres Cultivated | Entire No. of the Family | Males over 16 years | Males and Females under 10 years | Locality of Farms | Total No. of Acres | General Remarks
+
+
+The face is therefore a farm / household return, not merely a name list.
+
+
+Row stream — source order
+Format below: name | cultivated acres | family | males over 16 | males/females under 10.
+Question marks belong to Glean’s reading uncertainty and are not source marks.
+
+
+1. Abunahla [?] | 6 | 6 | 3 | 1
+2. Mekunckmuyen [?] | 4 | 6 | 1 | 1
+3. Pochuta | 2 | 14 | 4 | 4
+4. Tuckhota | 2 | 3 | 1 | 1
+5. Nokhaki | 4 | 5 | 1 | 2
+6. Ghalalolta [?] | 6 | 8 | 2 | 3
+7. Apatinachuyah [?] | 3 | 2 | 1 | [blank]
+8. Ishtahhotah [?] | 4 | 2 | 1 | [blank]
+9. Hachau | 5 | 17 | 3 | 9
+10. Alpaco | 10 | 5 | 3 | 1
+11. Achafaktubbe | 8 | 5 | 1 | 3
+12. Attokukah [?] | 2 | 1 | [blank] | [blank]
+13. Yurhiyo [?] | 15 | 9 | 3 | 1
+14. Numonishtubbe | 3 | 4 | 1 | 1
+15. Yukah | 2 | 3 | 1 | 1
+16. Yumohottakyah [?] | 4 | 5 | 1 | 2
+17. Okitomahiyah [?] | 2 | 5 | [blank] | 4
+18. Ynooh [?] | 3 | 7 | 1 | 5
+19. Pelhachi | 5 | 3 | 1 | 1
+20. Whachakutchah | 8 | 18 | 1 | 10
+21. Shola | 2 | 10 | 2 | 7
+22. Eynokahyubbe [?] | 6 | 6 | 1 | 4
+23. Malyokokah [?] | 8 | 8 | 1 | 5
+24. Hokah | 2 | 7 | 2 | 3
+25. Emakyecchoka [?] | 8 | 10 | 1 | 7
+26. Capt Lowtubbe | 8 | 7 | 2 | 2
+27. Meynuchubbe | 20 | 8 | 1 | 3
+28. Whomolita | 5 | 3 | [blank] | 3
+29. Charlie Kearney | 15 | 10 | 2 | 3
+30. Yakatubbe | 8 | 10 | 2 | 3
+31. Mitikhoma | 8 | 2 | [blank] | 1
+32. Pushehabi | 8 | 14 | 3 | 6
+33. Itkhaesha | 6 | 5 | 1 | 3
+34. Capt Big Cloud | 15 | 11 | 4 | 3
+35. Tushtahfimecha [?] | 12 | 10 | 2 | 5
+36. Simpson | 10 | 9 | 3 | 3
+
+
+Secured nonblank locality / acreage / remark cells
+Only row associations that were visually secure enough in this pass are carried here.
+- Achafaktubbe: total acres 80.
+- Yurhiyo [?]: total acres 160.
+- Whachakutchah: general remark reads approximately “Land tolerable good.”
+- Eynokahyubbe [?]: locality “Waters of Leaf river”; general remark reads approximately “Land tolerable good.”
+- Capt Lowtubbe: locality “Waters of Pearl River”; total acres 80; general remark approximately “Land poor. good water.”
+- Meynuchubbe: total acres 320.
+- Charlie Kearney: total acres 160.
+- Capt Big Cloud: total acres 160.
+- Tushtahfimecha [?]: locality “Little river, on waters of Pearl river”; total acres 160.
+
+
+Page-level findings
+- Most locality / total-acre / remark cells on this face are blank. The lower portion contains a small set of river-basin locality statements: Waters of Leaf river; Waters of Pearl River; Little river on waters of Pearl river.
+- The page contains two explicit captain titles in the name column: Capt Lowtubbe and Capt Big Cloud. Those titles remain attached to the visible name occurrence; they are not normalized into a separate status field here.
+- Charlie Kearney and Simpson occur as English-script name forms among predominantly Choctaw-form name entries. No ethnicity, kinship, or identity inference is made from name form.
+- Household and age-category fields vary sharply across adjacent rows; this page supports comparison of row structure but does not itself explain the administrative meaning of those differences.
+
+
+Unresolved readings
+- Several Choctaw-form names remain uncertain at the letter level and are marked [?]. They should be re-read from the governing face before being used for identity matching, pronunciation work, or normalized indexing.
+- Upper-right docket punctuation / exact formatting around No. 1230 and 1834 remains unresolved.
+- Many blank locality / acreage / remark cells are protected blanks; they are not completed from neighboring pages or later workshop knowledge.
+
+
+Nonclaims / translation boundaries
+- No same-name or similar-name occurrence is merged with another Public Lands page, patent, scrip, MCR file, family statement, or later compilation.
+- Name adjacency does not establish kinship, household membership, tract-sharing, or social relation.
+- A locality phrase is not broadened into a residence claim beyond what this return states.
+- Total acreage is not treated as cultivated acreage, residence duration, patent outcome, or final legal entitlement.
+- Blank fields are not interpreted as absence of land, family, locality, or entitlement; they mean only that this face carries no visible entry in that field.
+- The two stored OHC_2507 PDF objects are not treated as two independent witnesses.
+
+
+Backward / forward seams
+- Backward: OHC_2506 is the previous numbered Public Lands face and already has a source-facing jacket. It carries the same No. 3 continued-return form. This pass did not re-test every row seam between 2506 and 2507.
+- Forward: OHC_2508 is the next numbered stored source object; two OHC_2508.pdf copies are visible in Drive. Its face was not read in this pass, and no continuity claim beyond numbered adjacency is made here.
+
+
+Return path
+Primary return: OHC_2507.pdf — Drive ID 1t2AjH7A-q7K1vR8pZ6N9qfHHPPibEBl_.
+Duplicate stored copy: OHC_2507.pdf — Drive ID 1N1TXNa1BA7B9B3sbUFzoEyLmN43cYugL.
+Backward jacket: Public Lands No. 3 p.111 — James Bell and Levy Bell rows, Thomas Leflore grouping, and James Bell poor-land / good-water remark — OHC_2506 source jacket.
+Forward source objects: OHC_2508.pdf — Drive IDs 1faj5lcYE2RBUQvNcFTFAbWiK_ySxWKMk and 1UoPyhAF7ufBMHqCXrbnDkBg3_GCsTWHE.
+
+
+— Glean | direct source-face pass | Public Lands
+Consequential correction — dotted total-acre cells
+A 500-DPI reread of the lower total-acreage column shows six source-visible horizontal dot series that the first pass had grouped with blank cells:
+- Whomolita.
+- Yakatubbe.
+- Mitikhoma.
+- Pushehabi.
+- Itkhaesha.
+- Simpson.
+
+
+These six cells are not blank. They contain nonnumeric marks. The face does not define whether a dot series means zero, omitted, not applicable, ditto, pending, or something else; no numeric acreage is supplied by it.
+
+
+Controlled state count for the total-acreage column across 36 row hosts:
+- Numeric entries: 7.
+- Dotted, nonnumeric entries: 6.
+- Visually blank cells: 23.
+
+
+Correction history
+The earlier page-level statement that most total-acre cells are blank remains true in the aggregate, but it is superseded for these six row hosts. Their state is now “marked, nonnumeric, meaning unresolved,” not blank. All seven numeric total-acre assignments remain unchanged.
+
+
+Comparable dot series also occur in some age-category cells on this face. That supports treating the marks as manuscript features rather than open paper, but it does not supply their administrative meaning.
+
+
+Source / derivative boundary
+Governing witness: OHC_2507.pdf — Drive ID 1t2AjH7A-q7K1vR8pZ6N9qfHHPPibEBl_. The 500-DPI PNG used for enlargement is a reading derivative, not another witness.
+
+
+
+
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Return 1 — Capt Lowtubbe [Public Lands p.112 farm-row occurrence]
+PERSON / ENTITY: Capt Lowtubbe [source form; Public Lands p.112 farm-row occurrence]
+DATE: not separately dated by this face; the unresolved upper-right docket reading around `No. 1230 / 1834` is not used as a row date.
+EARNED VERB / RELATION: Manuscript p.112 LISTS `Capt Lowtubbe` with 8 cultivated acres, entire family 7, 2 males over 16, and 2 males/females under 10; Locality of Farms states `Waters of Pearl River`; Total No. of Acres is 80. The jacket separately holds the General Remarks reading only approximately as `Land poor. good water.`
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2507 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.112 / Capt Lowtubbe row / `Waters of Pearl River` / Public Lands treaty-land administration.
+RETURN TO THIS BODY: this Source House jacket → governing OHC_2507.pdf, Drive ID 1t2AjH7A-q7K1vR8pZ6N9qfHHPPibEBl_.
+IDENTITY / RELATION STATUS: source-local titled-row occurrence only; `Capt` remains source form; no same-name merge with another Lowtubbe occurrence. The locality field is not broadened into residence, ownership, patent, travel route, parcel geometry, or completed land outcome; the approximate remark remains approximate and is not strengthened by the compiled index.
+
+
+Return 2 — Capt Big Cloud [Public Lands p.112 farm-row occurrence]
+PERSON / ENTITY: Capt Big Cloud [source form; Public Lands p.112 farm-row occurrence]
+DATE: not separately dated by this face; the unresolved upper-right docket reading around `No. 1230 / 1834` is not used as a row date.
+EARNED VERB / RELATION: Manuscript p.112 LISTS `Capt Big Cloud` with 15 cultivated acres, entire family 11, 4 males over 16, 3 males/females under 10, and Total No. of Acres 160.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2507 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.112 / Capt Big Cloud row / Public Lands treaty-land administration.
+RETURN TO THIS BODY: this Source House jacket → governing OHC_2507.pdf, Drive ID 1t2AjH7A-q7K1vR8pZ6N9qfHHPPibEBl_.
+IDENTITY / RELATION STATUS: source-local titled-row occurrence only; `Capt` remains source form; no same-name or similar-name merge is made. No locality, residence, kinship, household composition beyond the source field label, entitlement, ownership, patent, or completed land outcome is inferred from the row.
+
+
+— Small Door | Name Web return pass | 2026-09-19
+
+
+GLEAN CORRECTION — SINGULAR `Water` / SECURED LAND REMARKS
+
+
+Direct high-resolution reinspection of manuscript p.112 corrects and strengthens two entries:
+
+
+- `Whachakutchah.` — 8 cultivated acres; family 18; males over 16 = 1; under 10 = 10; Locality of Farms blank; Total No. of Acres blank; General Remarks `Land tolerable good.`
+- The `6 / 6 / 1 / 4` row whose personal name remains correction-open — Locality of Farms `Water of Leaf river`; Total No. of Acres blank; General Remarks `Land tolerable good.`
+
+
+The earlier locality reading `Waters of Leaf river` is superseded: the manuscript shows singular `Water`. The two identical-looking remarks are written separately on their own ruled rows; no ditto mark or brace carries one remark to the other. Their wording is now secured without the jacket’s earlier `approximately` qualifier.
+
+
+The recurrence does not establish one farm, one locality, one assessor, or a formal rating scale. The blank locality on Whachakutchah’s row remains blank and is not supplied from the Leaf River row below.
+
+
+
+
+SMALL DOOR — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-21
+
+
+RETURN 3 — WHACHAKUTCHAH / LAND-TOLERABLE-GOOD REMARK
+Person / Entity: Whachakutchah [Public Lands p.112 farm-row occurrence]
+Date: not separately dated by this face; unresolved upper-right docket wording is not used as a row date
+Earned verb / relation: Direct high-resolution manuscript p.112 reinspection LISTS `Whachakutchah.` with 8 cultivated acres, family total 18, 1 male over 16, 10 males or females under 10, a source-visible blank Locality of Farms cell, a source-visible blank Total No. of Acres cell, and General Remarks `Land tolerable good.`
+Case / Object: OHC_2507 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.112 / Whachakutchah row
+Place: none supplied by this row; the Locality of Farms cell remains blank
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.112 — Capt Lowtubbe Pearl River locality, Capt Big Cloud row, Whachakutchah / Water-of-Leaf-River land remarks, and dotted total-acre states — OHC_2507 source jacket
+Identity / Relation Status: source-local Whachakutchah occurrence only; no same-name merge. `Land tolerable good.` is a source-written qualitative remark with maker and criteria unidentified; it is not converted into valuation, title, entitlement, productivity, residence, ownership, or later land outcome, and it does not supply a locality for the blank locality cell.
+
+
+RETURN 4 — CORRECTION-OPEN NAME / WATER OF LEAF RIVER ROW
+Person / Entity: [personal name correction-open — Public Lands p.112 row carrying 6 cultivated / family 6 / 1 over 16 / 4 under 10]
+Date: not separately dated by this face; unresolved upper-right docket wording is not used as a row date
+Earned verb / relation: Direct high-resolution manuscript p.112 reinspection secures Locality of Farms `Water of Leaf river` and General Remarks `Land tolerable good.` on the ruled 6 cultivated / family 6 / 1 male over 16 / 4 under-10 row; Total No. of Acres is source-visible blank. The earlier plural `Waters of Leaf river` reading is superseded for this row.
+Case / Object: OHC_2507 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.112 / correction-open 6 / 6 / 1 / 4 row
+Place: `Water of Leaf river` [source-local singular wording; exact historical referent, modern identity, hydrology, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.112 — Capt Lowtubbe Pearl River locality, Capt Big Cloud row, Whachakutchah / Water-of-Leaf-River land remarks, and dotted total-acre states — OHC_2507 source jacket
+Identity / Relation Status: personal-name reading remains correction-open and is not promoted from the earlier uncertain row transcription or merged with another occurrence. `Water of Leaf river` is not normalized to a modern watershed, point, residence, route, parcel, or water-right relation. The separately written `Land tolerable good.` recurrence does not join this row to Whachakutchah or establish one farm, one locality, one assessor, or a formal rating scale.
+
+
+Small Door crossing: two proposition-local returns from the later direct correction only. Existing Capt Lowtubbe and Capt Big Cloud returns remain separate; dotted total-acre states and the larger 36-row page grammar remain rich jacket prose.
+
+
+— Small Door — Mapping Grounds / Name Web

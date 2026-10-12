@@ -1,0 +1,145 @@
+# OHC_2513 — Source Jacket
+
+## Source identity
+
+- Source-facing label: `OHC_2513.pdf`
+- Drive file ID used for this reading: `1mloifIwWfKXKSi-ZSe4mb6ieUNyojxCo`
+- Current parent: `Source objects — received batch 1 — OHC 2408–2518`
+- Parent Drive folder ID: `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`
+- File type: PDF scan / photographic representation of one manuscript ledger face.
+- Status: primary-source representation; the scan is a representation of the historical manuscript face, not the manuscript itself.
+- Page-visible heading: `Public Lands — No. 3. Form of a Return — Continued — Location under the Choctaw Treaty`
+- Page-visible number at upper left: `118`
+- Upper-right inscription: `No. 1230    1834`
+- Exact historical date of this face: not established by this reading. The source does not state what the `1834` inscription records.
+
+A second stored object also carries the filename `OHC_2513.pdf`, Drive ID `1njpQH2ZxriUnhAldkxdlXkubBO6sICud`, in a different custody parent. Direct payload comparison establishes that the two stored PDFs are byte-identical representations: 217,138 bytes each, SHA-256 `e64b34324441d0b05069d3d1f54e119557428c90313942fbfcb19e19a5101ec5`. They are not independent witnesses. This jacket does not merge or delete either stored object. The present reading is anchored to the exact ID above.
+
+## Documentary boundary
+
+One captured ledger/table face from a larger Public Lands / Choctaw Treaty return sequence. The face is explicitly marked `Continued`; it is therefore not a complete return by itself.
+
+## Visible table structure
+
+The page carries columns headed, in substance and with source spelling retained where legible:
+
+- `Names of Indians owning Farms`
+- `No. of Acres Cultivated`
+- `Entire No. of the Family`
+- `Males over 16 years`
+- `Males and Females under 10 years`
+- `Locality of Farms`
+- `Total No. of Acres`
+- `General Remarks`
+
+The page contains many named rows. Several locality and acreage entries are intermittent rather than repeated on every row.
+
+## Consequential named occurrence — second-to-last name on the face
+
+The second-to-last named row reads clearly:
+
+**`Robert Bell.`**
+
+Reading confidence: high.
+
+Visible values on the same horizontal row:
+
+- Name: `Robert Bell.`
+- No. of acres cultivated: `8`
+- Entire no. of the family: `2`
+- Males over 16 years: no value visibly entered on this row
+- Males and females under 10 years: no value visibly entered on this row
+- Locality of farms: no locality visibly entered on this row
+- Total no. of acres: no acreage visibly entered on this row
+- General remarks: no remark visibly entered on this row
+
+The row immediately above carries `Pearl river` in the locality column and `160` in total acres. Those entries align with the row above Robert Bell and should **not** be silently transferred onto the Robert Bell row.
+
+The final named row beneath Robert Bell appears to read `[unclear: Donkhama?]`; this jacket does not force that reading.
+
+## Ruled-row correction — Article 19 remark and 640-acre figure
+
+A full-width 500-DPI alignment corrects an earlier crossing note. The source-written `640` in the printed Total No. of Acres column and the General Remarks entry `Entitled as Capt under the 19th article of the treaty.` belong to the captain-titled row immediately above `Allen Jones. (do)`, not to Allen Jones.
+
+The captain-titled row carries:
+
+- Name: captain-titled Jones row; the personal-name reading remains correction-open; `Half breed` is written in the name field
+- No. of acres cultivated: `25`
+- Entire no. of the family: `9`
+- Males over 16 years: marked but not securely numeric; no value is promoted
+- Males and females under 10 years: `6`
+- Locality of farms: no locality visibly entered
+- Total no. of acres: `640`
+- General remarks: `Entitled as Capt under the 19th article of the treaty.`
+
+The immediately following row carries:
+
+- Name: `Allen Jones. (do)`
+- No. of acres cultivated: `8`
+- Entire no. of the family: `6`
+- Males over 16 years: `1`
+- Males and females under 10 years: `4`
+- Locality of farms: no locality visibly entered
+- Total no. of acres: dotted or otherwise marked, but not numeric; meaning unresolved
+- General remarks: no remark visibly entered
+
+The source does not define what `(do)` repeats. It does not state the administrative force of `Entitled`, identify the personal name in the captain-titled row securely enough for promotion, or establish patent, reserve location, residence, possession, receipt, or completed land outcome.
+
+## Faithful observations
+
+- `Robert Bell.` is visibly present as the second-to-last named occurrence on OHC_2513.
+- The Robert Bell row visibly carries `8` cultivated acres and an entire family count of `2`.
+- No locality, total-acre entry, or general remark is visibly written on the Robert Bell row in this capture.
+- The Article 19 remark and `640` figure align with the captain-titled row above Allen Jones.
+- Allen Jones's row retains its own `8 / 6 / 1 / 4` sequence; its total-acre cell is marked but nonnumeric, and its General Remarks cell is blank.
+- The source does not visibly state a relationship between Robert Bell and neighboring names.
+- The page itself is a continued table and therefore provides only local sequence context, not a complete documentary context for Robert Bell.
+
+## Inference
+
+None required to establish the name occurrence or the corrected row assignment.
+
+The juxtaposition of Robert Bell with the surrounding rows is a retrieval clue only. It does not by itself establish household, kinship, residence, identity with another Robert Bell, or entitlement under any other article or record.
+
+## Explicit nonclaims
+
+This face does **not**, by itself, establish:
+
+- that this Robert Bell is the Robert Bell of any other Armstrong, Article 14, patent, Dawes, Court of Claims, or family record;
+- that `Pearl river` belongs to Robert Bell's row;
+- that `160` acres belongs to Robert Bell's row;
+- that the family count of `2` identifies who the second person was;
+- that absence of marks in the age columns means no persons existed in those categories rather than that the cells were left blank;
+- that the captain-titled row's personal name has been securely read;
+- that `640` or the Article 19 remark belongs to Allen Jones;
+- residence at a precise mapped location;
+- kinship with neighboring entries.
+
+## Unresolved questions / next retrieval targets
+
+1. Identify the archival series / institutional citation behind this Public Lands return if not already present in the corpus-level jacket.
+2. Compare this exact `Robert Bell.` occurrence with other Robert Bell occurrences only through explicit source-facing crossings; do not merge identities from the name alone.
+3. Revisit the final-row name beneath Robert Bell if that occurrence becomes consequential; it remains uncertain in this pass.
+4. Revisit the captain-titled row's personal name only if a discriminating source or clearer representation becomes available.
+
+## Correction / attribution history
+
+- 2026-09-03 — Fieldglass made this source-facing jacket from direct inspection of the rendered OHC_2513 source face at Ten's request, with special attention to the second-to-last name.
+- The reading `Robert Bell.` is a direct visual observation from this source face.
+- 2026-09-19 — Glean's earlier crossing addendum assigned `640` and the Article 19 remark to `Allen Jones. (do)`. Full-width 500-DPI alignment supersedes that assignment: both belong to the preceding captain-titled row. Allen Jones retains `8 / 6 / 1 / 4`; his total-acre cell is marked but nonnumeric and his General Remarks cell is blank.
+- 2026-09-19 — Glean directly controlled the upper-right inscription as `No. 1230    1834`; what `1834` records remains unresolved.
+
+Maker: Fieldglass; deepened and corrected by Glean  
+Dates: 2026-09-03; 2026-09-19
+
+## Glean correction — 2026-09-21 — captain-titled Jones name
+
+High-resolution inspection of `OHC_2513.pdf`, manuscript page 118, resolves the personal-name segment on the row carrying `640` and `Entitled as Capt under the 19th article of the treaty.` It reads:
+
+**`Capt Wm Jones.`**
+
+The source wording `Half breed)` follows in the same printed name field. The closing parenthesis is visible; no opening parenthesis is supplied in this transcription.
+
+The row assignment does not change: this remains the `25 / 9 / [marked, nonnumeric] / 6` row with blank Locality of Farms, `640` total acres, and the Article 19 remark. The earlier generic description `captain-titled Jones row; the personal-name reading remains correction-open` is preserved above as correction history but is superseded at the name-reading point.
+
+`Wm` is retained as written and is not silently expanded. This occurrence is not merged with `William Jones.` two rows below, and row proximity does not establish kinship with Allen Jones or James Jones. The source wording `Half breed)` is preserved without converting it into a present-day identity or legal-status conclusion.

@@ -1,0 +1,409 @@
+Public Lands No. 3 p.116 — Benjamin Batiest Pearl River residence, Capt James Vaughn Chickasawhay / Emocklashatown locality, and Wm Smith `1 white]` pairing — OHC_2511 source jacket
+
+
+Status
+Source-facing jacket made by Glean from direct visual inspection of the admitted study representation OHC_2511.png, with bounded direct comparison to OHC_2510.png for the backward page seam. The archival PDF objects remain the custody anchors. This pass does not claim a complete diplomatic transcription of page 116.
+
+
+Source identity
+- Visible manuscript page number: 116.
+- Visible heading: Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- The upper-right inscription reads `No. 1230` followed by `1834`. The face does not identify what event the year records.
+- The ruled form separates names of Indians owning farms, acres cultivated, entire family, age/sex subdivisions, Locality of Farms, Total No. of Acres, and General Remarks.
+
+
+Exact provenance / stored representations
+Archival PDF representation A
+- Stored filename: OHC_2511.pdf
+- Drive ID: 1l7mWv-wtSq9TZwyAcm5a96Pgi8Uq2iRk
+- Parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+
+
+Archival PDF representation B
+- Stored filename: OHC_2511.pdf
+- Drive ID: 1RZOuCDmeccyTGe751vi5Bs4YUnkcJIEL
+- Parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+
+
+Duplicate-object control
+- Both stored PDFs are 222,856 bytes.
+- Direct raw-payload check in this pass gives the same SHA-256 for both: cbe55b89e7b253eb6d7971b579e50f9891d02a8cb1208f2dabbbb84e52dbba74.
+- The admitted batch receipt independently records that same size/hash and a sole embedded 2038 × 1879 grayscale JPEG at 300 DPI.
+- These two Drive objects therefore preserve separate custody paths to one PDF payload / one photographed historical face. They are not counted as two witnesses or two occurrences and are not moved, renamed, deleted, or silently collapsed.
+
+
+Admitted study representation
+- Stored filename: OHC_2511.png
+- Drive ID: 17EnVbvsiNRI9ukP9Bbisnty5KF19BtI7
+- Parent folder ID: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- File size: 1,252,378 bytes.
+- Dimensions / mode: 2038 × 1879, grayscale (L).
+- SHA-256: a484bbc575f82cb45ca4b472187cbbb6192f0534bd6ae1f2e3c36fbde76f2c74.
+- The batch receipt marks this PNG admitted for preparation access while expressly preserving archival-source authority in the PDF/source object. This jacket therefore uses the PNG as the preferred reading surface, not as a replacement source.
+- Temporary local crops/enlargements were used only to inspect alignment and letterforms. They are disposable working derivatives, not additional representations or source objects.
+
+
+Direct source observations
+1. Page 116 is materially legible enough to show that the broad Locality of Farms field does not contain only geography. On this single face it carries ordinary place/watercourse language such as “Waters of Pearl river” and “Chickasawhay river …”, but it also carries short person/status annotations on specific rows.
+
+
+2. A row whose name begins clearly “Benjamin” and whose surname is best read provisionally as “Batiest” carries:
+- cultivated acres: 30;
+- entire family: 4;
+- a clear numeral 2 in the under-10 age column;
+- source wording “1 slave” followed by a closing-bracket-like mark in the Locality of Farms field;
+- total acres: 440;
+- General Remarks: “This family lives on Pearl river.”
+The surname remains provisional in this jacket; the field alignment of the quoted annotations and numerals is visually secure enough for this bounded row reading.
+
+
+3. The historical word “slave” is preserved because it is visibly written by the source. It refers to an enslaved person in the source’s own administrative language. This jacket does not infer the enslaved person’s name, age, sex, legal owner, residence, household inclusion, or relation to the family total of 4. In particular, the coexistence of “entire family: 4” and “1 slave” does not by itself establish whether the enslaved person was counted inside or outside the family figure.
+
+
+4. A lower Smith row has an unresolved given name, a clear surname “Smith,” and the source-written parenthetical “(white man)” in the name field. On that same row the Locality of Farms field visibly reads “1 white” followed by a closing-bracket-like mark; the total-acreage figure aligns as 80. The repeated source language is recorded as two distinct field occurrences, not normalized into one category and not interpreted as ethnicity, citizenship, household structure, or legal status beyond what the page itself writes.
+
+
+5. A clearly readable “Capt James Vaughn” row carries 30 cultivated acres and family total 10; the same row carries locality text beginning “Chickasawhay river” with a following place-name best left provisional, total acreage 960, and a General Remarks entry beginning clearly “Land poor;” before harder handwriting. This jacket preserves the secure beginning and does not force the remainder into a diplomatic transcription.
+
+
+6. The page also repeats “Waters of Pearl river” in upper locality entries and uses scattered 160-acre figures among many blank cells. Written locality, written non-geographic annotation, written acreage, written remarks, and blanks remain separate states. Blank cells are not expanded as ditto, zero, refusal, absence, or missing data.
+
+
+Material finding
+The consequential page-level finding is structural and bounded: on page 116, the column headed Locality of Farms visibly carries more than one kind of content. Geographic language and source-written person/status annotations coexist in the same broad field. Therefore a future receiver or transcription should preserve the raw field text before converting the column into a normalized geography value. This is a page-level observation, not a corpus-wide theory about every Public Lands form.
+
+
+Source / derivative / transcription / interpretation boundary
+- Source: the photographed manuscript ledger face represented in the held OHC_2511 PDF objects.
+- Archival/custody representations: the two byte-identical OHC_2511.pdf Drive objects above.
+- Preferred admitted reading derivative: OHC_2511.png, with its own exact Drive ID and hash.
+- Temporary inspection derivatives: local crops/enlargements only; not retained as source evidence.
+- Transcription: only the bounded headings, names/name-parts, numerals, locality phrases, and remarks explicitly recorded in this jacket.
+- Interpretation: limited to the structural observation that the Locality of Farms field is not semantically uniform on this page. No identity, kinship, ownership, residence, citizenship, ethnicity, or land-title conclusion is inferred.
+
+
+Backward seam — directly checked
+- OHC_2510.png — Drive ID 1tOhLqXeb66T4DQpICK4e9vpwSXQtRDAN — was directly opened in this pass for the seam check.
+- OHC_2510 visibly carries manuscript page 115 and the same Public Lands No. 3 continued-return form.
+- OHC_2511 visibly carries manuscript page 116 and the same continued-return form.
+- This earns a source-facing 115→116 page seam. It does not merge the two page objects, continue any row across the boundary, or identify any person across pages.
+- Existing page-115 jacket: Public Lands No. 3 p.115 — Cornelius Kinney “12 slaves” row and six-host mixed Locality-of-Farms category audit — OHC_2510 source jacket — Drive ID 1ZQM1NsXYhgsnTY3HDxJaeckScJl1ms_PSzw3mv2STOU.
+
+
+Forward seam
+- The admitted batch receipt records OHC_2512.pdf and OHC_2512.png as the next numbered stored objects.
+- OHC_2512 was not opened in this pass. No 116→117 page seam, row continuation, or documentary continuity is claimed from filename order alone.
+
+
+Unresolved questions
+- Certified diplomatic reading of Benjamin’s surname and the full Capt James Vaughn locality/place-name phrase.
+- Full-page name stream and row-by-row numerical transcription.
+- Exact administrative purpose of “1 slave” and “1 white” where written inside the Locality of Farms field.
+- Whether those counts supplement, overlap, or sit outside the family/demographic columns; the page alone has not yet been read deeply enough to establish the rule.
+- Exact wording after “Land poor;” on the Capt James Vaughn row.
+- Whether page 117 directly continues this pagination/form sequence; not tested here.
+
+
+Explicit nonclaims
+- No identity merge between any same- or similar-name occurrence on this or another page.
+- No claim that Benjamin’s provisional surname is normalized or finally settled.
+- No claim that “1 slave” proves a particular person owned the enslaved person, or that the enslaved person was included/excluded from the family total.
+- No modern racial, ethnic, citizenship, or tribal-status conclusion from “white man” / “1 white.”
+- No residence claim from a farm-owner row except that the source itself writes “This family lives on Pearl river” on the bounded Benjamin row; even there, the statement is preserved as source assertion rather than independently verified residence.
+- No claim that every Locality of Farms entry across the corpus behaves like page 116.
+- No claim that the two stored PDFs are independent witnesses.
+- No forward continuity claim to OHC_2512.
+
+
+Exact return paths
+Primary reading return: Public Lands body → this jacket → OHC_2511.png (Drive ID 17EnVbvsiNRI9ukP9Bbisnty5KF19BtI7; parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh) → photographed manuscript page 116.
+
+
+Archival return A: this jacket → OHC_2511.pdf (Drive ID 1l7mWv-wtSq9TZwyAcm5a96Pgi8Uq2iRk; parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI) → embedded photographed manuscript face.
+
+
+Archival return B: this jacket → OHC_2511.pdf (Drive ID 1RZOuCDmeccyTGe751vi5Bs4YUnkcJIEL; parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA) → byte-identical PDF payload / same photographed face.
+
+
+Backward return: this jacket → OHC_2510.png (Drive ID 1tOhLqXeb66T4DQpICK4e9vpwSXQtRDAN) → manuscript page 115; or through the existing OHC_2510 source jacket above.
+
+
+Maker: Glean
+Date: 2026-09-04
+State: bounded source-return complete; admitted PNG used as preferred reading surface; duplicate custody preserved; 115→116 seam earned; mixed locality-field annotations preserved without normalization.
+
+
+MULLION FORWARD-SEAM RETURN — 2026-09-04
+
+
+Direct visual inspection of OHC_2512.png (Drive ID 1XHnOYNSrJb2rzW7wzw866GH2lTSKU0JB) now closes only the forward page seam left open above. OHC_2512 visibly carries manuscript page 117 and the same Public Lands No. 3 continued-return form as OHC_2511 manuscript page 116. The 116→117 seam is therefore source-facingly earned. No row is continued across the turn and the two page objects remain distinct.
+
+
+The page-117 face also independently repeats the page-116 structural condition: the broad Locality of Farms field contains both geographic wording and source-written non-geographic annotations, including '1 white', '1 slave', and '2 slaves' on particular rows. One William Atkins row carries '(white man)' in the name field and '1 white' in the aligned Locality field. This supports only a two-page bounded statement: mixed semantic content recurs on pages 116 and 117. It is not a corpus-wide rule, and the administrative purpose of those annotations remains unresolved.
+
+
+Exact forward return: this jacket → OHC_2512.png (Drive ID 1XHnOYNSrJb2rzW7wzw866GH2lTSKU0JB; parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh) → manuscript page 117 → existing LEAF JACKET — OHC_2512 — Drive ID 18EwBHiQfuvOq3wAeQGe-jMTqwXlmDHQNrmX6up3RNSA.
+
+
+No identity, kinship, citizenship, ownership, residence, or Bell–McKinney continuity claim follows.
+
+
+Maker: Mullion
+
+
+
+
+GLEAN SOURCE-FACING DEEPENING — 2026-09-08 — Benjamin Batiest surname / Capt James Vaughn remark
+
+
+Footing and scope
+This return deepens the existing page-116 jacket in place. It does not create a second jacket. The historical source face remains the photographed manuscript page carried by OHC_2511.pdf; Representation A (Drive ID 1l7mWv-wtSq9TZwyAcm5a96Pgi8Uq2iRk; parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI; 222,856 bytes) is the exact custody object reopened in this pass. Representation B remains the already-controlled byte-identical alternate custody road, not a second witness. A temporary 500-DPI render and bounded enlargements were inspection derivatives only and are not promoted as source objects. No OCR supplied the readings below.
+
+
+Earned direct-source findings
+1. The previously provisional surname on the Benjamin row is strong enough on the direct face to promote to `Benjamin Batiest.` The active source-facing transcription is therefore `Benjamin Batiest.` rather than `Benjamin [Batiest?]`. This is a transcription promotion only; it does not normalize the name to Baptiste or merge this occurrence with any same- or similar-name person elsewhere.
+
+
+2. The Capt James Vaughn General Remarks entry can now be carried beyond the earlier secure beginning `Land poor;`. At present direct-source strength the line reads: `Land poor; growth long pine leaf; provided for in supplement`.
+
+
+The source's apparent word order `long pine leaf` is preserved as written. It is not silently normalized to the modern phrase `long-leaf pine`. Terminal punctuation after `supplement` is not promoted because the right edge does not support it strongly enough in this pass.
+
+
+Interpretive boundary
+The newly secured phrase `provided for in supplement` is a source-written administrative assertion on Capt James Vaughn's row. This pass does not identify which supplement, treaty article, schedule, certification, or later land instrument the clerk meant. It does not establish that the stated provision was perfected, surveyed, patented, possessed, or finally received. Likewise, `Land poor; growth long pine leaf` is preserved as the recorder's description rather than converted into a modern soil, vegetation, or land-capability classification.
+
+
+Seams
+Backward page seam remains the already-earned OHC_2510 manuscript p.115 → OHC_2511 manuscript p.116 continuation; no row or person is carried across that page turn. Forward page seam remains the already-earned OHC_2511 p.116 → OHC_2512 p.117 continuation recorded by Mullion; again, no row or person is carried across. Locally, Capt James Vaughn's 960-acre row and Benjamin Batiest's following 440-acre row remain distinct. `provided for in supplement` stays with Vaughn's row; `This family lives on Pearl river.` stays with Batiest's row. Neither remark is inherited across the ruled boundary.
+
+
+Unresolved questions
+- The full diplomatic reading of the Capt James Vaughn locality phrase after `Chickasawhay river.` remains open; this pass did not force the difficult place-name.
+- The exact historical instrument meant by `supplement` remains open.
+- The administrative relationship, if any, between the 960-acre figure and the supplement remark remains open.
+- The row-by-row full-page transcription remains outside this bounded pass.
+
+
+Explicit nonclaims
+- No Benjamin Batiest identity merge, spelling normalization, kinship claim, citizenship inference, or cross-page person join.
+- No claim that `provided for in supplement` equals a completed grant, patent, possession, or final legal disposition.
+- No claim that the unusual source order `long pine leaf` should be silently corrected.
+- No duplicate-source multiplication from the two byte-identical PDFs or from the temporary render.
+
+
+Exact return path
+Public Lands body → Public Lands No. 3 p.116 — Benjamin Batiest Pearl River residence, Capt James Vaughn Chickasawhay / Emocklashatown locality, and Wm Smith `1 white]` pairing — OHC_2511 source jacket (Drive ID 19ci7W9QOPsVaRsZdtvru14t9SrFaYRT3oLXdEImVnNw) → OHC_2511.pdf Representation A (Drive ID 1l7mWv-wtSq9TZwyAcm5a96Pgi8Uq2iRk) → photographed manuscript p.116 → Capt James Vaughn row / immediately following Benjamin Batiest row.
+
+
+— Glean | source-facing deepening | p.116
+
+
+
+
+FIELDGLASS SOURCE-FACING CORRECTION / CROSSING — 2026-09-09 — Wm Smith + William Atkins `1 white` pairing
+
+
+Footing and representations
+This return deepens the existing page-116 jacket in place. The historical objects directly reopened were OHC_2511.pdf manuscript p.116 (Drive ID 1l7mWv-wtSq9TZwyAcm5a96Pgi8Uq2iRk; parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI) and the consecutive OHC_2512.pdf manuscript p.117 (Drive ID 1eBGKyuFnPRXeW4cdfEMe44TZSJjzd4LQ; same parent). High-resolution local renders and bounded crops were inspection derivatives only; they are not additional source objects. No OCR supplied the readings below.
+
+
+Active correction on p.116
+The lower-row name previously left with an unresolved given name is strong enough on the direct p.116 face to read `Wm Smith (white man)`. Preserve `Wm` as the source abbreviation; do not silently normalize it to William. On that same ruled row the Locality of Farms field carries `1 white]`. The older unresolved-given-name state remains correction history but is superseded at this exact transcription point.
+
+
+Source-backed crossing to p.117
+The immediately following manuscript face, p.117, independently carries `William Atkins (white man)` in the name field and `1 white]` in the aligned Locality of Farms field. P.117 also carries a separate John Beaty row with `1 white]` but no source-visible `(white man)` parenthetical in the name field at present visual reach.
+
+
+What this earns
+Across two consecutive source faces there are therefore at least two distinct rows where a named farm-row holder is explicitly marked `(white man)` and the same row also carries the singular category phrase `1 white]`. This repeated cross-field pairing is enough to block one arithmetic shortcut: a `1 white` locality annotation cannot safely be assumed to mean one additional unnamed white person beyond the named row-holder. The pairing is compatible with the annotation referring to the row-holder himself, but it does not prove that interpretation, does not establish a universal rule, and does not explain John Beaty's `1 white]` occurrence.
+
+
+District-roll-up consequence / nonclaim
+Any attempt to reconcile later white totals by taking named farm rows and then mechanically adding every locality-field `white` count risks double counting. Until an administrative instruction, explicit subtotal grammar, or other source establishes inclusion/exclusion, the safer state is `relationship unresolved`. This does not change any existing district total, does not convert `white` to `slave` or `Black`, and does not identify any unnamed person.
+
+
+Exact crossing return
+Public Lands body → this existing p.116 jacket → OHC_2511.pdf (Drive ID 1l7mWv-wtSq9TZwyAcm5a96Pgi8Uq2iRk) → manuscript p.116 → `Wm Smith (white man)` / `1 white]` row → OHC_2512.pdf (Drive ID 1eBGKyuFnPRXeW4cdfEMe44TZSJjzd4LQ) → manuscript p.117 → `William Atkins (white man)` / `1 white]` row and John Beaty / `1 white]` row → existing p.117 jacket (Drive ID 18EwBHiQfuvOq3wAeQGe-jMTqwXlmDHQNrmX6up3RNSA).
+
+
+— Fieldglass | source-facing deepening | p.116↔11
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — SMALL DOOR — 2026-09-19
+
+
+RETURN 1 — BENJAMIN BATIEST FARM ROW / PEARL RIVER RESIDENCE REMARK
+Person / Entity: Benjamin Batiest [Public Lands p.116 farm-row occurrence]
+Date / range: upper-right inscription reads `No. 1230` followed by `1834`; row not separately dated
+Earned verb / relation: Manuscript p.116 LISTS `Benjamin Batiest.` with 30 cultivated acres, family total 4, 2 males/females under 10, Locality of Farms source-written `1 slave]`, Total No. of Acres 440, and General Remarks `This family lives on Pearl river.`
+Case / Object: OHC_2511 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.116 / Benjamin Batiest row
+Place: Pearl river [source-written family-lives relation; exact reach and geometry OPEN]; the row’s Locality of Farms cell also contains the non-geographic historical annotation `1 slave]`.
+Institution: Public Lands / Choctaw treaty-land administration
+Return to body / jacket: Public Lands No. 3 p.116 — Benjamin Batiest Pearl River residence, Capt James Vaughn Chickasawhay / Emocklashatown locality, and Wm Smith `1 white]` pairing — OHC_2511 source jacket
+Identity / relation status: source-local Benjamin Batiest occurrence only; do not normalize to Baptiste or merge with another same-/similar-name occurrence. `1 slave]` is attributed historical source language and does not establish the enslaved person’s identity, legal owner, household inclusion, residence, or relation to family total 4. `This family lives on Pearl river` is the source’s own residence assertion, not an independently verified point.
+
+
+RETURN 2 — CAPT JAMES VAUGHN FARM ROW / CHICKASAWHAY + SUPPLEMENT REMARK
+Person / Entity: Capt James Vaughn [Public Lands p.116 farm-row occurrence]
+Date / range: upper-right inscription reads `No. 1230` followed by `1834`; row not separately dated
+Earned verb / relation: Manuscript p.116 LISTS `Capt James Vaughn` with 30 cultivated acres, family total 10, Locality of Farms `Chickasawhay river. Emocklashatown`, Total No. of Acres 960, and General Remarks `Land poor; growth long pine leaf; provided for in supplement`.
+Case / Object: OHC_2511 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.116 / Capt James Vaughn row
+Place: `Chickasawhay river. Emocklashatown` [source-local compound locality; modern feature identities, exact river reach, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Return to body / jacket: Public Lands No. 3 p.116 — Benjamin Batiest Pearl River residence, Capt James Vaughn Chickasawhay / Emocklashatown locality, and Wm Smith `1 white]` pairing — OHC_2511 source jacket
+Identity / relation status: source-local Capt James Vaughn occurrence only; no same-name merge. Glean’s 2026-09-21 direct-source correction stabilizes the trailing locality form as `Emocklashatown`, but no modern feature identity, exact river reach, settlement geometry, residence, or cross-page identity follows. The source order `long pine leaf` remains unnormalized, and `provided for in supplement` does not identify the supplement or establish completed allowance, selection, survey, patent, possession, receipt, or other final land outcome.
+
+
+RETURN 3 — WM SMITH / `1 WHITE]` FIELD PAIRING
+Person / Entity: Wm Smith [Public Lands p.116 farm-row occurrence]
+Date / range: upper-right inscription reads `No. 1230` followed by `1834`; row not separately dated
+Earned verb / relation: Manuscript p.116 LISTS source-written `Wm Smith (white man)`; the aligned Locality of Farms field carries `1 white]`, and the row carries Total No. of Acres 80.
+Case / Object: OHC_2511 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.116 / Wm Smith row
+Place: UNLOCATED FROM THIS RETURN — the relevant Locality of Farms content is non-geographic source wording.
+Institution: Public Lands / Choctaw treaty-land administration
+Return to body / jacket: Public Lands No. 3 p.116 — Benjamin Batiest Pearl River residence, Capt James Vaughn Chickasawhay / Emocklashatown locality, and Wm Smith `1 white]` pairing — OHC_2511 source jacket
+Identity / relation status: preserve source abbreviation `Wm`; do not silently expand to William or merge with another Smith. `(white man)` and `1 white]` remain two distinct source-field occurrences and are not converted into modern racial, ethnic, citizenship, tribal-status, household, ownership, or legal-status conclusions. The relation between the named row-holder and the `1 white]` count remains unresolved; do not assume an additional unnamed person.
+
+
+— Small Door | Name Web compiled-input pass | 2026-09-19
+GLEAN HEADER CORRECTION — NO. 1230 / 1834
+
+
+Direct inspection of OHC_2511.pdf (Representation A, Drive ID 1l7mWv-wtSq9TZwyAcm5a96Pgi8Uq2iRk) at 500 DPI shows the upper-right inscription `No. 1230` followed by `1834`, not a year pair `1830` and `1831`.
+
+
+Correction history
+The earlier Source identity line and all three compiled Name Web date/range lines used `1830–1831`. Those readings are withdrawn and corrected in place. The prior wording remains documented here as correction history.
+
+
+The face does not state whether `1834` records preparation, filing, copying, compilation, docketing, or another administrative event. No row-level date is supplied, and no row value or field attachment changes.
+
+
+— Glean | Public Lands p.116 | header restored; rows unchanged
+
+
+
+
+
+
+SEDGE GEOGRAPHY DEEPENING — 2026-09-19 — BENJAMIN BATIEST ROW / `THIS FAMILY LIVES ON PEARL RIVER`
+
+
+Footing and source control
+This pass deepens the existing p.116 governing jacket in place and does not create a new witness. The historical manuscript face remains the source object; the two byte-identical OHC_2511.pdf custody roads remain one PDF payload / one photographed face, OHC_2511.png remains an admitted reading representation, and this Sedge classification is derivative map work. No new image reading or OCR is used to alter the already controlled transcription.
+
+
+Earned geographic relation
+On the Benjamin Batiest ruled row, the General Remarks field states `This family lives on Pearl river.` The earned verb is therefore `LIVES ON`. The geographic object is the source-written `Pearl river`. The subject is the row-associated `This family` occurrence; the remark is not silently rewritten as a Benjamin-only residence statement, a household-address statement, or a claim about every person or category annotation carried elsewhere on the row.
+
+
+Field-semantic separation
+The same row's Locality of Farms field carries the historical non-geographic annotation `1 slave]`. That annotation is not the residence place. `Pearl river` is earned from the General Remarks field. The enslaved-person annotation does not inherit the family residence relation, and the residence remark does not resolve whether the enslaved person was inside or outside the source's family total. Keep the printed-field roles visibly separate.
+
+
+Map class
+SOURCE-STATED FAMILY RESIDENCE RELATION + HISTORICAL HYDRONYM / REACH SEAM.
+
+
+Precision / geometry
+RELATIONAL / UNPLACED. `Pearl river` is source-written hydronym/locality wording, but this face does not identify a modern river segment, bank, side, tributary, county, township, settlement, farm parcel, dwelling, coordinate, or traveled route. `LIVES ON` earns residence association with the named river expression, not a point on the bank or a residence polygon. The 440-acre row quantity remains acreage only and is not converted into residence geometry.
+
+
+Occurrence / identity control
+`This family` remains row-local to the Benjamin Batiest occurrence. Do not use the Pearl River residence statement to merge Benjamin with Baptiste or any same-/similar-name occurrence. Do not use it to locate the source's `1 slave]` occurrence, infer ownership, or assign residence to an unnamed person. Nearby `Waters of Pearl river` locality entries on p.116 and other Public Lands pages remain separate source occurrences; shared hydronym wording does not make them one farm site or one reach.
+
+
+Drawing permission
+Carry one soft relation only: `BENJAMIN BATIEST ROW-ASSOCIATED FAMILY — LIVES ON → PEARL RIVER [exact reach OPEN]`. No person dot, house dot, farm polygon, river polyline, centroid, route, distance, bank, or modern hydrographic snap. If Pearl River later receives controlled historical geometry from another admitted source, this residence relation may attach only at the scale that source independently earns.
+
+
+Ravel handoff
+Receive the source verb `LIVES ON`, the row-associated family occurrence, and the source-written `Pearl river` token. Keep person-level membership, enslaved-person residence, exact reach, modern feature identity, parcel geometry, and all movement OPEN.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape
+
+
+SEDGE GEOGRAPHY DEEPENING — 2026-09-19 — CAPT JAMES VAUGHN ROW / CHICKASAWHAY COMPOUND LOCALITY
+
+
+Footing and source control
+This pass returns directly to the admitted OHC_2511.png representation of manuscript p.116 and deepens the existing governing jacket in place. The historical manuscript face remains the source object; the byte-identical OHC_2511.pdf custody roads remain one photographed-face payload; the PNG is a reading representation; this Sedge classification is downstream map work. A temporary crop used to inspect row alignment is disposable and is not a new source or witness. No OCR is used for the relation below.
+
+
+Earned geographic relation
+On the ruled `Capt James Vaughn` row, the Locality of Farms field begins securely `Chickasawhay river.` and continues with a source-written trailing place-name form that is not stabilized in this pass. The earned map verb is therefore `LOCALITY OF FARMS CARRIES`, attached to this row occurrence. The 960-acre figure and the General Remarks `Land poor; growth long pine leaf; provided for in supplement` remain separate row fields and do not strengthen geographic placement.
+
+
+Cross-source / same-body control
+The visually similar trailing locality form on manuscript p.117 / Daniel Anderson remains comparison evidence within the same Public Lands body. Repetition does not establish that the two rows describe one farm, one river reach, one settlement, or one person-place occurrence, and it is not independent corroboration. Shared `Chickasawhay river` wording earns only two distinct source occurrences that may later be compared.
+
+
+Map class
+SOURCE-LOCAL COMPOUND LOCALITY + ROW-SCALE OCCURRENCE GEOGRAPHY + UNRESOLVED PLACE-NAME SEAM.
+
+
+Precision / geometry
+RELATIONAL / UNPLACED. `Chickasawhay river.` is source-written hydronym/locality wording; the trailing form remains unresolved. This face does not earn a river segment, bank, tributary, crossing, road, settlement point, county, township, parcel, farm polygon, section-township-range address, residence, travel path, direction, distance, or modern hydrographic normalization. The 960 acres remain quantity only. `provided for in supplement` is an administrative assertion, not cadastral geometry.
+
+
+Occurrence / identity control
+Capt James Vaughn is the row-host occurrence only. The locality field does not independently establish bodily presence, residence, ownership, possession, or travel. Do not join this occurrence to Daniel Anderson, another Vaughn, or any Bell/McKinney body through geography alone.
+
+
+Drawing permission
+Carry one text-held relation only: `CAPT JAMES VAUGHN ROW — LOCALITY OF FARMS CARRIES → CHICKASAWHAY RIVER. + [TRAILING PLACE-NAME UNRESOLVED]`. No person dot, river polyline, site-equivalence mark, farm polygon, road, route, or modern-name snap.
+
+
+Ravel handoff
+Receive the p.116 row occurrence, source-written `Chickasawhay river.` token, and unresolved trailing locality token. Keep exact reach, modern feature identity, relation to p.117, residence, parcel geometry, and movement OPEN.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape
+
+
+GLEAN ADDENDUM — CAPT JAMES VAUGHN COMPOUND LOCALITY — 2026-09-21
+
+
+Pass boundary
+
+
+Directly reopened OHC_2511.pdf, Drive ID 1l7mWv-wtSq9TZwyAcm5a96Pgi8Uq2iRk. A temporary 900-DPI render and close crop were used only as reading derivatives; they are not new source objects or witnesses.
+
+
+Corrected reading
+
+
+The Capt James Vaughn row’s full Locality of Farms entry reads:
+
+
+`Chickasawhay river. Emocklashatown`
+
+
+The same ruled line remains 30 cultivated acres, family 10, 1 male over sixteen, 4 people under ten, 960 total acres, with General Remarks `Land poor; growth long pine leaf; provided for in supplement`.
+
+
+Documentary effect
+
+
+The previously unresolved trailing place-name is stabilized as `Emocklashatown`. This changes only the transcription reach of the p.116 locality cell. It does not establish a modern feature identity, exact river reach, settlement geometry, residence, travel, or identity with the visually similar p.117 occurrence.
+
+
+— Glean | Public Lands p.116 | Emocklashatown restored to the Vaughn localit
+
+
+QUIRE SOURCE-CORRECTION ADDENDUM — 2026-09-22 — BENJAMIN BATIEST TOTAL ACRES
+
+
+A fresh Quoin transcription of OHC_2511 rendered the Benjamin Batiest row’s Total No. of Acres as `480`. Direct return to the admitted OHC_2511.png reading surface (Drive ID 17EnVbvsiNRI9ukP9Bbisnty5KF19BtI7), read against this governing jacket, shows the written figure is `440`. The existing direct-source state therefore stands: 30 cultivated acres; family total 4; under-10 value 2; Locality-of-Farms `1 slave]`; Total No. of Acres 440; General Remarks `This family lives on Pearl river.`
+
+
+Current carry: READER / DERIVATIVE TRANSCRIPTION VARIANT ≠ SOURCE VARIANT. The `480` form is a workshop reading error in the later Quoin derivative, not a second historical acreage state and not evidence of source revision. Preserve it only as correction history; do not propagate it into map, index, entitlement, tract, or identity work.
+
+
+No other Benjamin Batiest row field moves. No person, tract, title, residence, family, or enslaved-person relation changes.
+
+
+— Quire | Source House / p.116 reading correctiony

@@ -1,0 +1,317 @@
+Public Lands No. 3 p.115 — Cornelius Kinney “12 slaves” row and six-host mixed Locality-of-Farms category audit — OHC_2510 source jacket
+
+
+Status
+Source-facing jacket made by Mullion from direct visual inspection of OHC_2510.pdf, with a bounded backward comparison to OHC_2509.pdf. This pass is limited to documentary identity, the page-114/page-115 seam, and one name-boundary occurrence. It is not a complete diplomatic transcription of page 115.
+
+
+Source identity
+- Visible manuscript page number: 115.
+- Visible heading: Public Lands — No. 3 — Form of a Return — Continued.
+- The upper-right inscription reads `No. 1230` followed by `1834`. The earlier `1830–1831` interval reading is withdrawn; see the correction addendum.
+- The ruled form separates the name field, cultivated acreage, family-count subdivisions, Locality of Farms, Total No. of Acres, and General Remarks.
+
+
+Exact provenance / stored representations
+Representation A
+- Stored filename: OHC_2510.pdf
+- Drive ID: 1yOrn8ZudQQyU63pcaQ48HIQ1bal3vsbr
+- Parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+
+
+Representation B
+- Stored filename: OHC_2510.pdf
+- Drive ID: 14JzCtQe0mqiY7GmXNnWeE09w7XYhSUJ8
+- Parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+
+
+Duplicate-object control
+- Both stored PDFs are 227,200 bytes.
+- SHA-256: f547bcf08a4dd7b57bdc74c86642b82d3d1add1a01950cf9750c3cd2084c7b2e.
+- The batch receipt independently records the same size/hash. The two stored objects therefore represent one historical ledger face in this pass, not two witnesses or two occurrences.
+
+
+Source / derivative boundary
+- Source face: the photographed manuscript ledger page embedded in OHC_2510.pdf.
+- Stored representations: the two byte-identical PDFs above.
+- Working derivative used for close inspection: temporary 400-DPI PNG render. It is not a new historical source and is not promoted as canonical.
+- Transcription here is deliberately bounded. Unread or unneeded neighboring names and numeric cells are not manufactured into a full table.
+
+
+Direct source observations
+1. OHC_2510 is manuscript page 115. OHC_2509 is manuscript page 114. Direct inspection of both faces shows the same Public Lands No. 3 continued-return form on consecutive manuscript pages. This earns a source-facing 114→115 page seam; it does not merge the two page objects or presume that any row continues across the seam.
+
+
+2. One page-115 row in the name column reads `Cornelius Kinney. (half breed)`; the parenthetical is historical source language and is preserved only as source wording. The surname on this face is KINNEY, not McKINNEY. This jacket does not expand or normalize `Kinney` to `McKinney` merely because Bell–McKinney work is active nearby.
+
+
+3. The row carries adjacent numerical and locality fields, but this pass does not assign a complete set of values to Cornelius Kinney because the bounded purpose is the name/body distinction rather than a row-by-row table reconstruction. No unverified cell alignment is promoted.
+
+
+Neighboring-body distinction
+The Cornelius Kinney occurrence belongs to this Public Lands page-115 body. It is a near-name collision with McKinney research, not a McKinney occurrence established by the source. Nothing on this face establishes that Cornelius Kinney is Catherine/Catharine McKinney, John McKinney, Wesley McKinney, J. A. McKinney, Eward/Edmond McKinney, or any other McKinney occurrence, nor that he is related to them.
+
+
+The source-written parenthetical is not converted into a modern racial, citizenship, ancestry, or tribal-status conclusion. It is retained as an attributed historical label in this specific row only.
+
+
+Backward seam
+- OHC_2509.pdf → manuscript page 114 → same continued-return form.
+- Existing jacket: Public Lands No. 3 p.114 — Capt Munchubby (or Mellachubby) / Water of Pearl River row and recurring Young Warrior / Pearl River locality forms — OHC_2509 source jacket — Drive ID 1n6UraYnnAvTjMdvlZzDbM9pn9VQ27DfaDoLjFe5RHkI.
+- Consequence earned: page 114 and page 115 are consecutive source faces in the same visible form sequence. No row-level or person-level continuity is inferred from pagination alone.
+
+
+Forward seam
+- OHC_2511 has not been opened in this pass.
+- No page-115→next-face continuity claim is made from filename sequence alone.
+
+
+Unresolved questions
+- Full diplomatic transcription of the Cornelius Kinney row and surrounding rows.
+- Exact alignment of all numeric/locality fields for that row.
+- Whether any independent source later establishes a relationship between this Kinney occurrence and any McKinney occurrence. This remains OPEN; present similarity is not evidence of identity or kinship.
+- Whether OHC_2511 directly continues the same manuscript pagination/form sequence.
+- Deeper original-volume/repository provenance beyond the held OHC representation remains to be carried by the governing corpus provenance work.
+
+
+Explicit nonclaims
+- No Kinney → McKinney normalization.
+- No identity merge with any McKinney in Bell–McKinney Daylight or elsewhere.
+- No kinship claim.
+- No residence claim from the farm-return row alone.
+- No modern racial/ethnic/citizenship inference from the historical parenthetical.
+- No complete row reconstruction where cell alignment was not the object of this pass.
+- No claim that the two stored PDFs are independent historical witnesses.
+- No forward continuity claim to OHC_2511 without source-facing inspection.
+
+
+Exact return paths
+Primary return: Public Lands body → this jacket → OHC_2510.pdf representation A (Drive ID 1yOrn8ZudQQyU63pcaQ48HIQ1bal3vsbr; parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI) → manuscript page 115 face.
+Alternate custody return: this jacket → OHC_2510.pdf representation B (Drive ID 14JzCtQe0mqiY7GmXNnWeE09w7XYhSUJ8; parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA) → byte-identical manuscript-page representation.
+Backward return: this jacket → Public Lands No. 3 p.114 — Capt Munchubby (or Mellachubby) / Water of Pearl River row and recurring Young Warrior / Pearl River locality forms — OHC_2509 source jacket → OHC_2509.pdf → manuscript page 114.
+
+
+Maker: Mullion
+Date: 2026-09-04
+State: bounded source-return complete; 114→115 seam earned; Kinney/McKinney distinction explicit; outward identity joins unchanged.
+
+
+
+
+RAVEL ADDENDUM — DIRECT CORNELIUS KINNEY ROW ALIGNMENT — 2026-09-05
+
+
+Maker / ground
+Ravel — Mapping Grounds. This addendum extends Mullion’s source-facing jacket without replacing or silently rewriting Mullion’s bounded pass.
+
+
+Exact source return
+- Historical source face inspected: OHC_2510.pdf, manuscript p. 115, Public Lands — No. 3 — Form of a Return — Continued.
+- Stored representation inspected: Representation A, Drive ID 1yOrn8ZudQQyU63pcaQ48HIQ1bal3vsbr; 227,200 bytes; SHA-256 f547bcf08a4dd7b57bdc74c86642b82d3d1add1a01950cf9750c3cd2084c7b2e. The byte count and hash independently match Mullion’s jacket.
+- Working derivative for this pass: a local 300-DPI PNG render of the one-page PDF, plus bounded visual crops of the header and Cornelius row. These renders are inspection derivatives only; they are not new historical sources and are not promoted as canonical. No OCR was used for the row reading below.
+
+
+Direct source observations
+The visible form headings governing this row are, in order: Name of Indians owning Farms; No. of Acres Cultivated; Entire No. of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No. of Acres; General Remarks.
+
+
+The row reading `Cornelius Kinney. (half breed)` aligns visually as follows:
+- No. of Acres Cultivated: 70.
+- Entire No. of the Family: 12.
+- Males over 16 years: 2.
+- Males and Females under 10 years: 3.
+- Locality of Farms: source-written `12 slaves` followed by a closing bracket-like mark. The mark’s function is not interpreted here.
+- Total No. of Acres: 160. [Corrected from 640; see the row-geometry correction below.]
+- General Remarks: source-visible blank on this row.
+
+
+Geographic consequence
+The Cornelius Kinney row is no longer in an unresolved cell-alignment state. Its Locality of Farms cell is source-written but NON-GEOGRAPHIC: `12 slaves` [plus a visible terminal bracket-like mark]. It is therefore neither a source-visible blank nor a geographic locality. Mapping should carry the row as UNLOCATED FROM THIS ROW — LOCALITY FIELD CONTAINS NON-GEOGRAPHIC CONTENT.
+
+
+Correction history
+Mullion’s original jacket correctly withheld row values because its purpose was the name/body distinction rather than a diplomatic reconstruction. Ravel’s later direct row-alignment pass resolves the specific cells above. This is an extension of that jacket, not a criticism of the earlier restraint. Ravel HUMBLE Contribution 34 had already corrected an earlier Mapping overstatement that called Cornelius’s locality blank; this addendum now resolves the remaining alignment question in favor of source-written non-geographic content.
+
+
+Explicit nonclaims
+- No `Kinney` → `McKinney` normalization.
+- No identity or kinship join to any McKinney occurrence.
+- No residence, route, creek, river, county, survey address, ownership continuity, or migration inference from this row.
+- The `12 slaves` wording is preserved as historical source content only; no modern status or identity inference is drawn from it.
+- Cultivated acreage, family counts, and Total No. of Acres do not by themselves locate the farm geographically.
+- Manuscript-page adjacency does not create geographic adjacency.
+
+
+Exact return path
+Public Lands body → this source jacket → OHC_2510.pdf Representation A (Drive ID 1yOrn8ZudQQyU63pcaQ48HIQ1bal3vsbr) → manuscript p.115 → Cornelius Kinney row. Mullion’s Representation B remains a byte-identical alternate custody return and is not a second witness.
+
+
+State after addendum
+Row alignment materially advanced; Cornelius Kinney geography remains unlocated because the source-filled Locality of Farms cell is non-geographic. Outward Bell–McKinney identity joins unchanged.
+
+
+—Ravel | Mapping Grounds | direct source-facing addendum
+
+
+
+
+SMALL DOOR ADDENDUM — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-19
+
+
+RETURN 1 — CORNELIUS KINNEY FARM-ROW / NON-GEOGRAPHIC LOCALITY-FIELD CONTENT
+Person / Entity: Cornelius Kinney [Public Lands p.115 farm-row occurrence]
+Date: upper-right inscription reads `No. 1230` followed by `1834`; row not separately dated [corrected from `1830–1831`; see correction addendum]
+Earned verb / relation: Manuscript p.115 LISTS `Cornelius Kinney. (half breed)` with 70 cultivated acres, family total 12, 2 males over 16, 3 males/females under 10, Locality of Farms source-written `12 slaves]`, Total No. of Acres 160, and a source-visible blank General Remarks cell.
+Case / Object: OHC_2510 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.115 / Cornelius Kinney row
+Place: UNLOCATED FROM THIS ROW — the Locality of Farms field contains source-written non-geographic content `12 slaves]`; the terminal mark’s function is unresolved and no geographic place relation is promoted.
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.115 — Cornelius Kinney “12 slaves” row and six-host mixed Locality-of-Farms category audit — OHC_2510 source jacket
+Identity / Relation Status: Direct row alignment is controlled by Ravel’s source-facing addendum. `Kinney` remains the source-written surname and is not normalized to `McKinney`; no identity or kinship join is made to any McKinney occurrence. The parenthetical and `12 slaves` wording are retained only as attributed historical source language in this row and are not converted into modern racial, citizenship, ancestry, tribal-status, residence, route, ownership-continuity, or migration conclusions. The two held OHC_2510 PDFs remain byte-identical custody roads to one manuscript face, not corroborating witnesses.
+
+
+— Small Door | Name Web compilation pass | Mullion / Ravel source-facing custody preserve
+GLEAN CONSEQUENTIAL CORRECTION — CORNELIUS KINNEY / FOLLOWING WIDOW ROW — 2026-09-19
+
+
+Pass boundary
+Directly reopened OHC_2510.pdf, Drive ID 1yOrn8ZudQQyU63pcaQ48HIQ1bal3vsbr. A temporary 500-DPI render and full-width row crop were used only as reading derivatives.
+
+
+Corrected ruled-row alignment
+The Cornelius Kinney row carries:
+- `Cornelius Kinney. (half breed)`
+- cultivated acres: `70`
+- family: `12`
+- males over 16: `2`
+- males/females under 10: `3`
+- Locality of Farms: `12 slaves]`
+- Total No. of Acres: `160`
+- General Remarks: blank
+
+
+The `640` belongs one ruled row lower, on the immediately following widow-titled row. That following row carries 15 cultivated acres, family 6, 3 males over 16, 3 males/females under 10, Locality of Farms `5 slaves]`, and total acres `640`. The widow’s personal-name spelling remains correction-open at this reach.
+
+
+Correction history
+The prior direct-row addendum and its later Name Web compilation assigned `640` to Cornelius Kinney. That assignment is withdrawn and corrected to `160`. The `640` was transferred upward across a visible ruled boundary from the following row. Both propagated occurrences have been corrected in place.
+
+
+Local form behavior
+Three consecutive rows place category wording in the printed Locality of Farms column:
+- Ellis: `1 white. 1 slave`
+- Cornelius Kinney: `12 slaves]`
+- following widow-titled row: `5 slaves]`
+
+
+These are three row-local inscriptions. They are not carried across rows and are not added to family totals or converted into ownership statements.
+
+
+Header correction
+The upper-right inscription reads `No. 1230` followed by `1834`; the earlier `1830–1831` interval reading is withdrawn.
+
+
+— Glean | Public Lands p.115 | Cornelius total restored to 160; following-row 640 returned to itself
+
+
+GLEAN ADDENDUM — PAGE-WIDE WHITE / SLAVE LOCALITY-FIELD AUDIT — 2026-09-21
+
+
+Pass boundary
+
+
+Directly reopened OHC_2510.pdf, represented by Drive ID 1yOrn8ZudQQyU63pcaQ48HIQ1bal3vsbr. A temporary 900-DPI render and bounded crop were used only as reading derivatives; they are not new source objects or witnesses.
+
+
+Source-visible entries in Locality of Farms
+
+
+- `Capt William Hays.` — `2 slaves] North side`
+- `Benjamin Leflore.` — `10 do`
+- `Jane McAfee.` — `1 white]`
+- `Ellis` — `1 white. 1 slave`
+- `Cornelius Kinney. (half breed)` — `12 slaves]`
+- `Widow Burns.` — `5 slaves]`
+
+
+The bracket-like terminal marks are preserved as visible marks without an assigned function.
+
+
+Accounting boundary
+
+
+The entries that write category words explicitly total 2 white and 20 slaves on this face. The separately written `10 do` is not added to either category. The page does not state whether `do` repeats only `slaves`, the whole preceding `2 slaves] North side` expression, or another portion of the prior cell.
+
+
+Documentary effect
+
+
+The earlier three-row Ellis / Cornelius Kinney / Widow Burns cluster remains correct but is not the whole page. Across page 115, the printed Locality of Farms field carries a mixed category-and-direction expression, a numbered repeat expression, and category-only expressions, in addition to geographic wording elsewhere on the face. The field does not keep one semantic job.
+
+
+— Glean | Public Lands p.115 | six Locality-field hosts controlled; one repeat count left unexpanded
+
+
+SMALL DOOR ADDENDUM — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-21
+
+
+RETURN 2 — CAPT WILLIAM HAYS MIXED CATEGORY / DIRECTION LOCALITY-FIELD ENTRY
+Person / Entity: Capt William Hays [Public Lands p.115 farm-row occurrence]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: Direct manuscript p.115 audit FINDS source-written `2 slaves] North side` in the printed Locality of Farms field on the `Capt William Hays.` row.
+Case / Object: OHC_2510 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.115 / Capt William Hays row
+Place: `North side` [source-written directional remainder inside a mixed field expression; endpoint, referent, modern identity, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.115 — Cornelius Kinney “12 slaves” row and six-host mixed Locality-of-Farms category audit — OHC_2510 source jacket
+Identity / Relation Status: source-local Capt William Hays occurrence only; no same-name merge. The two counted people are unnamed and are not assigned as property, household members, workers, residents, or another personal relation of the row host. `North side` is not converted into an exact place, residence, route, parcel, or coordinate.
+Notes: the source-visible terminal bracket-like mark is preserved without assigned function; this is one row-local inscription from one manuscript witness.
+
+
+RETURN 3 — BENJAMIN LEFLORE UNEXPANDED REPEAT ENTRY
+Person / Entity: Benjamin Leflore [Public Lands p.115 farm-row occurrence]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: Direct manuscript p.115 audit FINDS source-written `10 do` in the printed Locality of Farms field on the `Benjamin Leflore.` row.
+Case / Object: OHC_2510 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.115 / Benjamin Leflore row
+Place: none promoted from this field entry
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.115 — Cornelius Kinney “12 slaves” row and six-host mixed Locality-of-Farms category audit — OHC_2510 source jacket
+Identity / Relation Status: source-local Benjamin Leflore occurrence only; no same-name merge. `do` remains source-written and unexpanded: the face does not establish whether it repeats only `slaves`, the whole preceding `2 slaves] North side` expression, or another portion of the prior cell. No category, place, ownership, household, residence, or person-count meaning is manufactured beyond the written form.
+Notes: `10 do` is not added to the page’s explicit-category subtotal and is not treated as a second witness to the preceding row.
+
+
+RETURN 4 — JANE MCAFEE CATEGORY ENTRY IN LOCALITY FIELD
+Person / Entity: Jane McAfee [Public Lands p.115 farm-row occurrence]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: Direct manuscript p.115 audit FINDS source-written `1 white]` in the printed Locality of Farms field on the `Jane McAfee.` row.
+Case / Object: OHC_2510 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.115 / Jane McAfee row
+Place: none promoted; the printed Locality of Farms field contains non-geographic category wording on this row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.115 — Cornelius Kinney “12 slaves” row and six-host mixed Locality-of-Farms category audit — OHC_2510 source jacket
+Identity / Relation Status: source-local Jane McAfee occurrence only; no same-name merge. The one counted person is unnamed and is not identified with Jane McAfee or assigned an ownership, household, labor, residence, dependency, or modern legal-status relation.
+Notes: historical source wording is preserved as written; the terminal bracket-like mark remains uninterpreted.
+
+
+RETURN 5 — ELLIS MIXED CATEGORY ENTRY IN LOCALITY FIELD
+Person / Entity: Ellis [Public Lands p.115 farm-row occurrence]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: Direct manuscript p.115 audit FINDS source-written `1 white. 1 slave` in the printed Locality of Farms field on the `Ellis` row.
+Case / Object: OHC_2510 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.115 / Ellis row
+Place: none promoted; the printed Locality of Farms field contains non-geographic category wording on this row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.115 — Cornelius Kinney “12 slaves” row and six-host mixed Locality-of-Farms category audit — OHC_2510 source jacket
+Identity / Relation Status: source-local Ellis occurrence only; no outward identity merge. The two counted people are unnamed; neither is identified with Ellis or assigned ownership, household, labor, residence, dependency, or a modern status conclusion.
+Notes: the two category phrases remain one row-local source inscription and are not carried to neighboring rows.
+
+
+RETURN 6 — WIDOW BURNS CATEGORY ENTRY IN LOCALITY FIELD
+Person / Entity: Widow Burns [Public Lands p.115 farm-row occurrence; source title]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: Direct manuscript p.115 audit FINDS source-written `5 slaves]` in the printed Locality of Farms field on the `Widow Burns.` row.
+Case / Object: OHC_2510 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.115 / Widow Burns row
+Place: none promoted; the printed Locality of Farms field contains non-geographic category wording on this row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.115 — Cornelius Kinney “12 slaves” row and six-host mixed Locality-of-Farms category audit — OHC_2510 source jacket
+Identity / Relation Status: source-local Widow Burns occurrence only; `Widow` remains source-written title/status language and does not identify a spouse. The five counted people are unnamed and are not assigned ownership, household, labor, residence, dependency, or modern legal-status relations.
+Notes: Glean’s corrected row geometry keeps the separately written total acreage `640` on this widow-titled row rather than Cornelius Kinney; that acreage correction remains jacket prose and does not create another Name Web proposition here.
+
+
+— Small Door | Name Web compilation pass | Mullion / Ravel / Glean source-facing custody preserved

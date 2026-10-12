@@ -1,0 +1,92 @@
+Public Lands No. 3 p.119 — Nabitochia or Little Leader row / chief-given captain statement — OHC_2514 source jacket
+
+
+Status
+Source-facing jacket from direct inspection of OHC_2514.pdf. Archival PDF governs; this note does not replace the source.
+
+
+Source object
+- OHC_2514.pdf — Drive ID 1FmmVKiwrgwfS9aqn5F_sEjjy2sxYwzvq
+- Page-visible manuscript number: 119.
+- Heading: Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- Upper-right inscription: `No. 1230    1834`. The face does not state what `1834` records.
+
+
+Observed structure
+The same tabular grammar continues from manuscript pages 117–118: named farm holder, cultivated acres, family count, age columns, locality, total acres, general remarks.
+
+
+Page-level observations
+- This face is immediately after manuscript page 118 (OHC_2513), the Robert Bell face.
+- “Waters of Pearl river” appears on multiple explicitly marked rows/sections on this face; locality is not written continuously for every person.
+- General remarks are selective and include `Poor land; good water`, `Good land`, and a captain statement that remains attached to one row.
+- The second named row is best read `[N?]abitocchia or Little Leader.` The source-written `or Little Leader` is clear; the opening letters remain correction-open. The row carries 15 cultivated acres, family 7, one male over 16, three people under 10, a blank Locality cell, and 440 total acres.
+- On the same ruled row, General Remarks reads: `Capt] This man was given in by the Chief as a captain.` The bracket-like mark after `Capt` is source-visible; its function is unresolved.
+- No Bell occurrence was identified on this page in this pass.
+
+
+Nonclaims
+- The repeated appearance of Pearl River on page 119 does not establish that Robert Bell on page 118 had Pearl River locality; his own row remains blank in that field.
+- No inference of kinship or identity is made from neighboring names.
+- The form appears to organize local runs and selective remarks, but the exact rule governing carry-forward locality remains unresolved.
+- `or Little Leader` is not normalized into a translation, alias, rank, or separate person.
+- The captain statement records that a chief gave the man in `as a captain`; it does not identify the chief, explain the procedure, or establish land entitlement, office duration, or later recognition.
+
+
+Return path
+OHC_2512.pdf manuscript page 117 → OHC_2513.pdf manuscript page 118 → OHC_2514.pdf manuscript page 119.
+
+
+Maker: First Light; row-control deepening by Glean
+Date: 2026-09-03
+
+
+
+
+Mullion forward-seam addendum — 2026-09-04
+Direct return through OHC_2515.pdf (Drive ID 1HKc-tK0h11ivtyu-qCzZJEtu9dbqUO5X) confirms the next held manuscript face is page 120 and carries the same Public Lands — No. 3 — Form of a Return — Continued table structure. This earns the 119→120 page/same-form seam only; no row is carried across the turn by assumption. Page 120 again contains intermittent Locality of Farms entries including Pearl River wording, which does not retroactively assign locality to Robert Bell on page 118 or to blank-locality rows on page 119. Exact page-120 jacket: Public Lands No. 3 p.120 — Capt Washington Pearl River / Robinson Road proximity and Etomaitabi Pearl River locality — OHC_2515 source jacket, Drive ID 1byI5nuGzp_exrFcjs0rqtUqLIgT9VJ2HHYEEJzu8UuM.
+
+
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+RETURN 1 — LITTLE LEADER ROW OCCURRENCE
+Person / Entity: `Nabitochia or Little Leader` [Public Lands p.119 farm-row occurrence; source form]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: Public Lands No. 3 manuscript p.119 LISTS `Nabitochia or Little Leader.` with 15 cultivated acres, entire family 7, 1 male over 16, 3 males/females under 10, a source-visible blank Locality of Farms cell, and Total No. of Acres 440.
+Case / Object: OHC_2514 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.119 / second named row
+Place: UNLOCATED FROM THIS ROW — Locality of Farms is source-visible blank
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.119 — Nabitochia or Little Leader row / chief-given captain statement — OHC_2514 source jacket
+Identity / Relation Status: source-local row occurrence only; high-scale direct inspection secures the source form `Nabitochia or Little Leader.` and supersedes the earlier correction-open opening-name transcription. The source-written `or` construction is retained only at this occurrence and does not authorize corpus-wide aliasing, translation, preferred-name normalization, rank normalization, or same-person inheritance into another record; no same-name merge, kinship, residence, tract, or land-outcome relation is inferred; neighboring Pearl River locality wording is not donated into the blank row.
+Notes: compiled once from the direct row-control deepening; the same-row captain statement is kept as a separate proposition-local return rather than folded into the numeric row state.
+
+
+RETURN 2 — CHIEF-GIVEN CAPTAIN STATEMENT
+Person / Entity: `Nabitochia or Little Leader` [Public Lands p.119 same-row occurrence; source form]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: On the same ruled row, General Remarks STATES `Capt] This man was given in by the Chief as a captain.`
+Case / Object: OHC_2514 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.119 / second named row / General Remarks
+Place: 
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.119 — Nabitochia or Little Leader row / chief-given captain statement — OHC_2514 source jacket
+Identity / Relation Status: source-local administrative remark attached to the `Nabitochia or Little Leader.` row; `the Chief` is unidentified and the source wording `given in ... as a captain` is not normalized into appointment, election, hereditary rank, company membership, office duration, land entitlement, patent, or later recognition; the bracket-like mark after `Capt` remains unresolved; no outward person merge is made.
+Notes: same-row attachment is source-facing; the chief is not supplied a name or identity by context, and the proposition remains distinct from the row's acreage/family figures and from nearby Pearl River locality occurrences.
+
+
+GLEAN ADDENDUM — 2026-09-21 — Little Leader row name secured
+
+
+High-scale inspection of OHC_2514.pdf, manuscript page 119, resolves the second named row as `Nabitochia or Little Leader.` The earlier forms `[N?]abitocchia` and `[N?]abitocchia or Little Leader` remain visible above as correction history but are superseded at the name-transcription point; the source does not carry the added second `c`.
+
+
+The row assignment remains unchanged: 15 cultivated acres; family 7; one male over sixteen; three people under ten; blank Locality of Farms; 440 total acres; and `Capt] This man was given in by the Chief as a captain.` in General Remarks.
+
+
+The source-written `or` is preserved on this row only. It is not expanded into a corpus-wide alias, translation, rank, or identity rule.
+
+
+— Glean
+Public Lands · one opening name secured

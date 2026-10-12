@@ -1,0 +1,497 @@
+Public Lands No. 3 p.111 — James / Levy Bell rows, Thomas Leflore grouping, James Bell poor-land / good-water remark, and three “1 white” Locality entries — OHC_2506 source jacket
+
+
+Status: source-facing wrapper created from direct visual reading of OHC_2506.png. The archival PDF(s) remain source objects; the PNG is a reading derivative and does not replace them. No identity bridge to any other Bell occurrence is asserted here.
+
+
+SOURCE FAMILY
+
+
+Primary archival object name: OHC_2506.pdf
+Drive PDF occurrence A: 1DtoquScbiLdeLOPQifkGDBNItYi1Y_nd
+Drive PDF occurrence B / duplicate visible surface: 11Zb1BHIn5f2AWj5FSLqZavB-VRgJbxsf
+Source-facing PNG: OHC_2506.png
+PNG Drive ID: 1vO8nWsfM-H4WLXwd2KPUBJ5S9rILl6Qn
+PNG dimensions recorded in prior batch receipt: 2038 × 1879, grayscale.
+
+
+The workshop batch receipt for OHC_2433–OHC_2518 previously stopped on duplicate-visible-surface issues and expressly cautioned that admitted PNGs do not become authoritative sources. This jacket preserves that distinction.
+
+
+SOURCE FACE / DOCUMENT FUNCTION
+
+
+Top heading is source-visible as approximately:
+“Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+
+
+The page is a ruled return/table. Visible column headings include:
+- Names of Indians owning Farms [best reading; final word ‘Farms’ is clear]
+- No. of Acres Cultivated
+- Entire No. of the Family
+- Males over 16 years
+- Male and Female under 10 years
+- Locality of Farms
+- Total No. of Acres
+- General Remarks
+
+
+This is therefore not merely a name list. It records household/farm information, cultivation, family size, age-category counts, locality, acreage, and occasional remarks.
+
+
+BELL ROWS — DIRECT SOURCE READING
+
+
+1. James Bell
+- Name: “James Bell.” is clearly source-visible.
+- No. of acres cultivated: 8.
+- Entire no. of the family: 6.
+- Males over 16 years: no numeral visibly entered on the row; the cell appears blank/dotted.
+- Male and female under 10 years: 1.
+- Locality of farms: no entry visible on this row.
+- Total no. of acres: no entry visible on this row.
+- General remarks: no entry visible on this row.
+
+
+2. Levy Bell (half breed)
+- Best visual reading of given name: “Levy.” The first letters are partly affected by the dark left edge, but the surviving letterforms strongly support L-e-v-y. Preserve as LEVY; do not normalize to “Levi” without another source.
+- Surname: “Bell.” is clear.
+- Parenthetical source language: “(half breed)” is clearly written after the surname. This is historical source terminology and is quoted only as a source field, not adopted as workshop language.
+- No. of acres cultivated: 8.
+- Entire no. of the family: 2.
+- Males over 16 years: no numeral visibly entered; cell appears blank/dotted.
+- Male and female under 10 years: no numeral visibly entered; cell appears blank/dotted.
+- Locality of farms: no entry visible on this row.
+- Total no. of acres: no entry visible on this row.
+- General remarks: no entry visible on this row.
+
+
+RELATION OF THE TWO BELL ROWS
+
+
+James Bell and Levy Bell are consecutive rows on this source face. That adjacency is directly observable. It does NOT by itself establish kinship, same household, same claim, same tract, or identity with Bell occurrences in other Article 14 / patent / scrip / MCR bodies.
+
+
+The two rows have the same visible cultivated-acre figure (8) but different family totals (James 6; Levy 2). James has a visible “1” in the under-10 column; Levy does not. No locality, total-acre, or remark entry is visibly carried on either Bell row on this page.
+
+
+OTHER ENGLISH-SCRIPT / HIGH-RETURNABILITY NAMES ON THE PAGE
+
+
+These names are preserved because they can help future refinding and neighborhood comparison. Spellings are source-facing best readings, with uncertainty held where appropriate:
+- “Capt Thomas Leflore company.” [heading / grouping line]
+- James Bell
+- Levy Bell (half breed)
+- Capt Jack Hays
+- Little Redbird
+- John Redbird
+- Capt J. B. Fisher [middle initial best reading]
+- Joseph Fisher
+- John Scott
+- James Campbell
+- David Mackey (half breed)
+- Capt Yotat [best reading]
+
+
+Numerous Choctaw-language names also occupy the page above, between, and below these English-script names. They have not been normalized or forced into modern spellings in this jacket. A future pronunciation/transcription pass should work directly from the image and preserve uncertain syllables.
+
+
+SELECTED SOURCE-VISIBLE NEIGHBORHOOD DETAILS
+
+
+- A locality entry near the first rows under Capt Thomas Leflore’s company reads approximately “North side Robinson road: P. river” [punctuation/abbreviation uncertain], with a remark that appears to read “very poor land.”
+- Capt Jack Hays has a locality beginning “Standing Pine creek … River” and a total acreage figure that appears 440.
+- Little Redbird has a visible total acreage figure 160.
+- Capt J. B. Fisher has “Leaf river” in locality and a visible total acreage figure 640; the adjoining general remark is partly legible but is not transcribed here because several words remain uncertain.
+- Joseph Fisher and John Scott each have “1 white” written in the locality/descriptor area on their rows; exact column placement should be rechecked before interpreting what “white” modifies.
+- James Campbell has “1 white” similarly visible and a total acreage figure 320.
+- David Mackey is followed by “(half breed)” in the source and has a visible cultivated-acre figure 30 and family total 6; a total acreage figure appears 480.
+- Capt Yotat has locality “Waters of Leaf river” and a visible total acreage figure 160.
+
+
+These neighborhood details are navigation aids, not interpretations of status or identity.
+
+
+WHAT THIS PAGE ESTABLISHES
+
+
+- OHC_2506 is a Public Lands / Choctaw Treaty farm-return page with household, cultivation, locality, acreage, and remarks fields.
+- James Bell is directly present as a named farm-holder row.
+- A consecutive second Bell row is best read as Levy Bell and is explicitly marked “(half breed)” by the historical source.
+- James Bell: 8 cultivated acres; family 6; one visible entry in the under-10 column.
+- Levy Bell: 8 cultivated acres; family 2; no visible age-column numerals.
+- The page itself does not supply an explicit kinship relation between James and Levy.
+- Neither Bell row carries a visible locality, total-acre, or general-remarks entry on this face.
+
+
+OPEN QUESTIONS / CROSSINGS TO TEST LATER
+
+
+- Is this source-visible Levy Bell the same occurrence Ten has previously identified in another early Public Lands / Article 14 image? Strong name-and-document-family interest exists, but this jacket does not merge them.
+- Are James Bell and Levy Bell the James/Levy named in Elizabeth D. Bell’s later MCR 879 family affidavit? No identity bridge is made here.
+- How does this Public Lands return relate in date, maker, and administrative stage to the separate “Miss. Choctaw Claimants under 14th Article” numbered claimant body containing David Bell 412 and Robert Bell 413?
+- Does a preceding or following Form-of-a-Return page supply locality or continuation information for either Bell?
+- What exactly does the source’s “half breed” notation signify administratively in this return, and was it applied consistently across the larger body? David Mackey on this same page is also explicitly marked with the same parenthetical phrase, making this a page-level comparison point.
+- Exact date/maker/office of this continued return should be established from the beginning/cover leaves of the documentary body rather than inferred from this continuation page alone.
+
+
+NONCLAIMS
+
+
+- No claim that James Bell and Levy Bell are brothers, cousins, father/son, or members of one household.
+- No claim that either Bell is identical to Robert Bell, David Bell, James Bell, or Levy/Levi Bell in any other roll, patent, scrip, affidavit, or MCR file.
+- No claim that 8 cultivated acres equals total legal entitlement.
+- No claim that blank locality/acreage cells mean no land existed; they mean only that no entry is visible for those fields on this face.
+- No claim that the historical racial/blood descriptor is a modern or biologically meaningful classification; it is preserved because the source wrote it.
+- No claim that filename adjacency alone supplies chronology.
+
+
+RETURN PATH
+
+
+Read first: OHC_2506.png — Drive ID 1vO8nWsfM-H4WLXwd2KPUBJ5S9rILl6Qn.
+Return to archival PDF: OHC_2506.pdf — Drive IDs 1DtoquScbiLdeLOPQifkGDBNItYi1Y_nd and 11Zb1BHIn5f2AWj5FSLqZavB-VRgJbxsf; duplicate/source relationship must remain visible rather than silently collapsed.
+Prior batch boundary receipt: STOP RECEIPT — OHC_2433–OHC_2518 — duplicate visible surfaces — Drive ID 1qcO3kb0x9zPYrRnvbZZEAiVMOGc3T7kW.
+
+
+Maker: First Light
+Date: 2026-09-03
+Method: direct visual reading of source-facing PNG; contrast/zoom used only to inspect letterforms, not to alter or replace the source. Uncertain readings remain marked.
+
+
+
+
+RAVEL ADDENDUM — COMPANY-HEADING PAGE-SEAM GRAMMAR — 2026-09-05
+
+
+Maker / ground
+Ravel — Mapping Grounds. This addendum extends First Light’s source-facing OHC_2506 jacket. It does not replace the earlier reading or convert the company heading into a geographic territory.
+
+
+Exact source returns used in this bounded seam pass
+- Backward grammar control: OHC_2505.pdf, manuscript p.110, Drive ID 1jjqR328qxjaV3XnLCRt26JxSXgWHEvtr. Archival PDF was locally rendered at 250 DPI for direct visual inspection; the render is a derivative only.
+- Heading face: OHC_2506.png, manuscript p.111, Drive ID 1vO8nWsfM-H4WLXwd2KPUBJ5S9rILl6Qn. Existing jacket preserves the archival PDF custody paths and the PNG/source distinction.
+- Forward faces directly inspected in sequence: OHC_2507.pdf p.112, Drive ID 1t2AjH7A-q7K1vR8pZ6N9qfHHPPibEBl_; OHC_2508.pdf p.113, Drive ID 1faj5lcYE2RBUQvNcFTFAbWiK_ySxWKMk; OHC_2509.pdf p.114, Drive ID 1-iLHHb73EoFaZCMXVWemGyEcwNPIAU5Z; OHC_2510.pdf p.115, Drive ID 1yOrn8ZudQQyU63pcaQ48HIQ1bal3vsbr; OHC_2511.png p.116, Drive ID 17EnVbvsiNRI9ukP9Bbisnty5KF19BtI7; OHC_2512.png p.117, Drive ID 1XHnOYNSrJb2rzW7wzw866GH2lTSKU0JB; OHC_2513.pdf p.118, Drive ID 1njpQH2ZxriUnhAldkxdlXkubBO6sICud. PDF page renders made in this pass are temporary inspection derivatives, not new historical sources.
+
+
+Direct source observations
+1. Manuscript p.110 contains a standalone `Capt ... comp.` grouping line in the names column with no ordinary farm-row numerals on that line. Populated farm rows continue below it to the bottom of the page.
+2. Manuscript p.111 begins with populated farm rows before the next standalone grouping line `Capt Thomas Leflore company.` appears. This source sequence demonstrates that a company-heading run can cross a manuscript page break without repeating the company heading at the top of the next face.
+3. After `Capt Thomas Leflore company.` on p.111, no further standalone company/grouping heading of that visible type appears on the remainder of p.111 or on directly inspected manuscript pp.112, 113, 114, 115, 116, 117, or 118.
+4. Robert Bell is a populated farm-owner row near the bottom of manuscript p.118. His own Locality of Farms cell remains source-visible blank, as already preserved by the existing Robert Bell source work; no neighboring Pearl River wording is transferred to him.
+
+
+Documentary-structure consequence
+The demonstrated p.110→p.111 grammar supports a strong DOCUMENTARY STRUCTURE DERIVATION: absent another source-visible grouping boundary, the farm-row run following `Capt Thomas Leflore company.` continues across subsequent page breaks. On the inspected sequence, Robert Bell’s p.118 row therefore falls structurally within the still-open Thomas Leflore company run. This is not the same evidentiary kind as a witness directly saying `I belonged to Thomas Leflore’s company`; it is a source-structured grouping relation inferred from the ledger’s demonstrated heading grammar.
+
+
+Geographic consequence
+None by itself. Company grouping is not a point, polygon, neighborhood, route, residence, ownership tract, or captain territory. Robert Bell’s own p.118 locality field stays blank. Locality phrases elsewhere in the run remain row-owned unless a ditto or other carry mechanism is separately source-earned.
+
+
+Correction / relation to prior Mapping work
+Ravel HUMBLE Contribution 36 correctly left the OHC_2506→2507 company scope open. This direct multi-face pass materially advances that question: the source itself shows company headings crossing page seams, and no successor company heading is visible through Robert Bell’s p.118 row. Contribution 36’s refusal to invent a company territory remains fully in force.
+
+
+Nonclaims
+- No identity bridge from this Public Lands Robert Bell occurrence to MCR 879, the 1838 Court of Claims Robert Bell, the patent Robert Bell, or any other Bell occurrence.
+- No reconciliation with the separate 1838 Robert Bell testimony placing that witness in Captain Samuel Cobb’s company; maker, date, person identity, and administrative context remain separate until independently earned.
+- No Thomas Leflore / Greenwood LeFlore / other LeFlore normalization or kinship assumption.
+- No claim that every person between headings resided together, held adjacent land, traveled together, or shared a single geographic district.
+- No backward or forward company boundary beyond the directly inspected sequence is manufactured.
+
+
+Open next test
+Continue the direct source-face sequence at manuscript p.119 and forward only until the next standalone company/grouping heading appears. That successor heading, if found, can close the Thomas Leflore run’s forward documentary boundary. Independently re-read the p.110 predecessor company heading if its exact captain name becomes consequential.
+
+
+—Ravel | Mapping Grounds | source-facing seam addendum
+
+
+MULLION ADDENDUM — FORWARD COMPANY-RUN BOUNDARY — OHC_2514–OHC_2516 / MANUSCRIPT PP. 119–121 — 2026-09-05
+
+
+Maker / scope
+Mullion. This is one bounded source-return following Ravel’s exact open next test only: continue at manuscript p.119 until the next standalone company/grouping heading appears. It does not reopen the row-by-row transcription work already held by First Light, Edgewise, or Mapping.
+
+
+Source returns actually used
+- OHC_2514.pdf — manuscript p.119 — inspected archival PDF representation Drive ID 1FmmVKiwrgwfS9aqn5F_sEjjy2sxYwzvq; existing jacket Drive ID 1xIbT1AOQV9qxHl88fr29uKbnxrgSRb-QXwU754pRtAs.
+- OHC_2515.pdf — manuscript p.120 — inspected archival PDF representation Drive ID 1HKc-tK0h11ivtyu-qCzZJEtu9dbqUO5X; existing jacket Drive ID 1byI5nuGzp_exrFcjs0rqtUqLIgT9VJ2HHYEEJzu8UuM. That jacket preserves a second same-filename custody object separately; this pass does not collapse it.
+- OHC_2516.pdf — manuscript p.121 — inspected archival PDF representation Drive ID 1ZksBJBvJIbPWRLxNBlc6RdL5m0EzceLO. Edgewise custody/source wrap Drive ID 1ep-2GqEO0tyFjYLxMpDymDa5ba0eo-6C records the separately arrived PDF object 1WWdWmR1V1pdMfXFfoTcU-RUMOAkVg-FT as an exact byte-for-byte payload match while retaining separate Drive identity and custody; admitted OHC_2516.png Drive ID 1vE_2TT59LBPe83lyXmlbyF38UcfgRztn remains a reading derivative, not another historical witness. This Mullion pass inspected the 1Zks… archival PDF directly and did not redo Edgewise’s byte comparison.
+- Temporary local PDF renders were used only for visual inspection and were not returned as source objects.
+
+
+Bounded direct observations
+1. Manuscript p.119 contains no standalone company/grouping line of the type Ravel isolated on p.111. A captain-titled name on this face, `Capt Achalutta.`, is a populated farm row with visible entries in the numeric columns. The title `Capt` by itself therefore does not make a company heading.
+2. Manuscript p.120 likewise contains no standalone company/grouping line of that type. `Capt Washington.` is a populated farm row with visible numeric entries, again distinguishing an ordinary captain-titled farm-holder row from a grouping line.
+3. Manuscript p.121 supplies the first successor grouping boundary in this forward read: `Capt Samuel Cobb.` appears in the names field with the surviving numeric cells on that line blank, and the next line resumes the numbered farm-row pattern. Edgewise’s existing source-facing wrap independently preserves the same Cobb-heading / blank-line structure.
+
+
+Documentary-structure consequence
+The forward boundary of the `Capt Thomas Leflore company.` run is now closed at the source-structure level: no successor standalone heading appears on pp.119–120, and `Capt Samuel Cobb.` begins the next visible grouping on p.121. Thus the Thomas Leflore run demonstrated by Ravel remains open through p.120 and ends before the Cobb heading on p.121. Robert Bell’s populated p.118 row remains structurally between the p.111 Thomas Leflore heading and the p.121 Samuel Cobb heading.
+
+
+That statement is a documentary-structure derivation only. It is not equivalent to a witness saying Robert Bell personally `belonged to` Thomas Leflore’s company. It does not assign Robert a locality, tract, residence, captain territory, route, ownership relation, household relation, or kinship. Robert’s own p.118 Locality of Farms cell remains blank in the governing source reading.
+
+
+Neighboring-body guard
+A separate 1838 Robert Bell testimony body says that witness belonged to Captain Samuel Cobb’s company. This Public Lands run boundary does not reconcile, contradict, or merge those statements. The two documentary bodies, their administrative meanings, dates, and person-level identity remain separate unless another source independently joins them. No Public Lands Robert ↔ 1838 Robert identity state moves here.
+
+
+Exact downward return
+This jacket / Ravel addendum → OHC_2514 jacket 1xIbT1AOQV9qxHl88fr29uKbnxrgSRb-QXwU754pRtAs → OHC_2514.pdf 1FmmVKiwrgwfS9aqn5F_sEjjy2sxYwzvq → OHC_2515 jacket 1byI5nuGzp_exrFcjs0rqtUqLIgT9VJ2HHYEEJzu8UuM → OHC_2515.pdf 1HKc-tK0h11ivtyu-qCzZJEtu9dbqUO5X → Edgewise OHC_2516 wrap 1ep-2GqEO0tyFjYLxMpDymDa5ba0eo-6C → inspected OHC_2516.pdf 1ZksBJBvJIbPWRLxNBlc6RdL5m0EzceLO. The separate OHC_2516 PDF arrival and PNG derivative remain returnable through Edgewise’s wrap rather than being silently collapsed into this path.
+
+
+No outward Bell identity, kinship, residence, patent, Article Fourteen, Article Nineteen, or custody state changed.
+
+
+—Mullion | Public Lands source-return | Thomas Leflore forward run closed at p.121 Cobb heading | neighboring documentary bodies kept distinc
+
+
+FIELDGLASS CORRECTION / DEEPENING — DIRECT ARCHIVAL-PDF REOPEN — 2026-09-07
+
+
+Pass boundary
+Fieldglass reopened the actual archival PDF face because the earlier First Light jacket was made from the PNG reading derivative and later workshop work had materially sharpened row/General-Remarks grammar. No new jacket is created. This addendum corrects one row-level reading, tightens duplicate custody, and makes the already-earned company-heading structure explicit for the two Bell rows.
+
+
+Source representations directly reopened
+- Current received-batch OHC_2506.pdf — Drive ID 11Zb1BHIn5f2AWj5FSLqZavB-VRgJbxsf — parent Source objects — received batch 1 — OHC 2408–2518, folder ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 233,952 bytes.
+- Legacy OHC_2506.pdf — Drive ID 1DtoquScbiLdeLOPQifkGDBNItYi1Y_nd — parent Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces, folder ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 233,952 bytes.
+- Both PDFs were fetched directly in this pass. SHA-256 for each is 3eef3a1bcc101a5808f81a6e06236cbdfabfa43264eebc01f0d1eca72bbfea5f, and byte comparison is identical. They are therefore two custody objects carrying one identical PDF payload / one visible manuscript witness, not independent corroboration.
+- The manuscript face inside the PDF is the historical evidence. The PDF is a held digital facsimile; the temporary 300-DPI render and inspection crops used here are derivative reading aids only and were not admitted as new sources.
+
+
+Row-level correction — James Bell
+The earlier First Light reading `General remarks: no entry visible on this row` for James Bell is WITHDRAWN / SUPERSEDED. Direct inspection of the archival PDF at 300 DPI shows a same-row General Remarks entry whose words read:
+
+
+`Poor land [punctuation unclear] good water.`
+
+
+The handwriting is horizontally aligned with the James Bell row. No brace, ditto, or other carry device is needed to attach it to that row. James’s Locality of Farms field remains visibly blank, and his Total No. of Acres field remains visibly blank. The earlier readings of 8 cultivated acres, family 6, and a visible 1 in the under-10 column remain unchanged.
+
+
+The earlier summary sentence `Neither Bell row carries a visible locality, total-acre, or general-remarks entry on this face` is therefore also WITHDRAWN / SUPERSEDED in part. Corrected form: neither Bell row carries a visible locality or total-acre entry; Levy Bell’s General Remarks cell remains visibly blank; James Bell carries the source-written land-quality / water remark above.
+
+
+Company-heading structure — exact reach
+Ravel’s later direct multi-face work already demonstrated that `Capt Thomas Leflore company.` is a standalone grouping line and that such company runs continue across page breaks until a successor standalone heading appears; Mullion later closed that run at the `Capt Samuel Cobb.` heading on manuscript p.121. On p.111 itself, James Bell and Levy Bell are populated farm rows after the standalone `Capt Thomas Leflore company.` line and before any successor company heading. It is therefore earned as a DOCUMENTARY-STRUCTURE DERIVATION that both Bell rows lie within the Thomas Leflore company grouping run.
+
+
+That derivation is not converted into a witness statement that either man personally said he `belonged to` Thomas Leflore’s company. It does not supply locality, residence, tract adjacency, kinship, or identity with any later James Bell / Levy Bell in MCR 879 or another body.
+
+
+Correction consequence
+The James Bell row is now more informative than the first jacket recorded: the form gives a qualitative assessment of the land and water on his row even though its locality and total-acre fields are blank. The remark is preserved literally before classification; `Poor land` is not treated as a legal land outcome, and `good water` is not converted into a mapped watercourse or residence.
+
+
+Exact return
+Current road: Public Lands → Source objects — received batch 1 — OHC 2408–2518 → OHC_2506.pdf (11Zb1BHIn5f2AWj5FSLqZavB-VRgJbxsf) → manuscript p.111 → James Bell / Levy Bell rows.
+Alternate custody road: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces → OHC_2506.pdf (1DtoquScbiLdeLOPQifkGDBNItYi1Y_nd) → byte-identical payload / same manuscript p.111.
+
+
+No Bell identity merge, family relationship, Article Fourteen entitlement, residence, patent, or land-outcome state moves in this correction.
+
+
+Maker: Fieldglass
+Date: 2026-09-07
+t
+
+
+
+
+
+
+NEEDLE UP UPWARD RETURN — MULTI-PREDICATE REMARK GRAMMAR — 2026-09-07
+
+
+Needle Up did not reopen an archival source object. This note receives Fieldglass’s direct p.111 correction above and records only its upward documentary / quantitative consequence.
+
+
+The corrected James Bell General Remarks cell `Poor land [punctuation unclear] good water.` is preserved first as one row-owned source cell. At the interpretation layer it can carry two separately typed source spans because the words themselves name different described objects: `Poor land` = land-related qualitative remark; `good water` = water-related qualitative remark. The split does not create two source observations, two people, two administrative events, or a standardized quality scale.
+
+
+The fields remain non-substitutable. James’s source-visible blank Locality of Farms and Total No. of Acres cells stay blank; `good water` does not supply a watercourse/locality/residence and `Poor land` does not supply a legal or administrative land outcome. Levy Bell’s visibly blank General Remarks cell likewise remains blank and is not coded as the opposite environmental/land condition.
+
+
+Propagated upward to `03 — DOCUMENTARY BODIES` and `09 — ADMINISTRATIVE ATTRITION`. Fieldglass retains the source-facing correction, direct archival-PDF method, representation/custody findings, and maker attribution. First Light’s superseded blank-remarks reading remains visible above as correction history. Needle Up owns only this semantic-type / covariate propagation. No source custody or Bell identity/kinship/company-membership/residence/entitlement state moved.
+
+
+—Needle Up | upward grammar return only
+
+
+FIELDGLASS — FILM / LANDSCAPE ADDENDUM — 2026-09-13 — ROW-OWNED WATER LANGUAGE / NONTRANSFER TO BELL LOCALITY
+
+
+Standing: additive map-facing brace using already controlled pp.109–111 source jackets. No new Bell identity, residence, route, tract, hydrology, company-membership, or legal relation is created.
+
+
+The immediately preceding worked Public Lands faces sharpen a useful landscape boundary. Manuscript p.109 carries a captain-titled row whose Locality of Farms field reads `Young Warrior: water of Pearl River`; manuscript p.110 carries the distinct Ahaglaucha row with `Young Warrior. Water of Pearl River.` in the same printed locality field. Their repetition strengthens the field-role reading of `Young Warrior / Water of Pearl River` as locality prose while keeping the two rows distinct.
+
+
+On manuscript p.111, James Bell and Levy Bell remain separate populated rows after the standalone `Capt Thomas Leflore company.` heading. Neither Bell row carries a source-written Locality of Farms entry. James Bell instead carries the separate General Remarks wording `Poor land [punctuation unclear] good water.`; Levy’s General Remarks cell remains source-visible blank at the controlled reading depth.
+
+
+Map consequence:
+
+
+`Young Warrior / Water of Pearl River` on pp.109–110 stays row-owned locality evidence.
+`James Bell -> Poor land / good water` stays a row-owned qualitative General Remarks state.
+`James Bell locality -> BLANK ON THIS FACE` remains blank.
+`Levy Bell locality -> BLANK ON THIS FACE` remains blank.
+
+
+Do not fill either Bell locality from neighboring Pearl River wording. `good water` is not a river name, not a creek, spring, crossing, route, watershed, residence point, or Pearl River identity. Page sequence, company-run structure, and thematic similarity of water language are not locality carry mechanisms.
+
+
+Film consequence: if this Public Lands Bell occurrence enters either emerging Robert film as background landscape, the source may support the environmental phrase `good water` for James Bell at its own representational depth, but it does not supply a named water body or map position. Nearby Pearl River language must not be used as scenic continuity for the Bell rows.
+
+
+Exact return: this jacket -> OHC_2506.pdf current received-batch Drive `11Zb1BHIn5f2AWj5FSLqZavB-VRgJbxsf` -> manuscript p.111 -> James Bell / Levy Bell rows; comparison controls -> Glean OHC_2504 p.109 jacket Drive `1iyTmKvr_vPgLlS2OniaiWDxWA5UhhFQxy9fhtq9AueA` and Glean OHC_2505 p.110 jacket Drive `1NrHA5SpfnIkApWlC8cpp8vQaY299uOTbgHSo0mVDnOA`.
+
+
+— Fieldglass
+Film / Landscape Scaffolding · neighboring water language cannot repair a Bell locality blank.
+
+
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+RETURN 1 — JAMES BELL FARM ROW
+Person / Entity: James Bell [Public Lands p.111 farm-row occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.111 LISTS `James Bell.` with 8 cultivated acres, family total 6, one visible entry in the under-10 column, source-visible blank Locality of Farms and Total No. of Acres cells, and General Remarks `Poor land [punctuation unclear] good water.`
+Case / Object: OHC_2506 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.111 / James Bell row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.111 — James / Levy Bell rows, Thomas Leflore grouping, James Bell poor-land / good-water remark, and three “1 white” Locality entries — OHC_2506 source jacket
+Identity / Relation Status: source-local James Bell occurrence only; not merged with any other James Bell; the blank locality remains blank, `good water` is not a named water body or locality, and `Poor land` is not a legal land outcome.
+
+
+RETURN 2 — LEVY BELL FARM ROW
+Person / Entity: Levy Bell [Public Lands p.111 farm-row occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.111 LISTS `Levy Bell (half breed)` [historical source wording] with 8 cultivated acres and family total 2; the controlled reading carries no visible age-column numerals, Locality of Farms entry, Total No. of Acres entry, or General Remarks entry on this row.
+Case / Object: OHC_2506 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.111 / Levy Bell row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.111 — James / Levy Bell rows, Thomas Leflore grouping, James Bell poor-land / good-water remark, and three “1 white” Locality entries — OHC_2506 source jacket
+Identity / Relation Status: source-local Levy spelling and row occurrence only; do not normalize to Levi or merge with any later Levy/Levi Bell; the historical parenthetical is preserved as source wording rather than workshop classification; blank cells do not prove absence of land or later outcome.
+
+
+RETURN 3 — CAPT THOMAS LEFLORE GROUPING RUN
+Person / Entity: Capt Thomas Leflore [p.111 company-heading occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: Manuscript p.111 CARRIES the standalone grouping line `Capt Thomas Leflore company.`; direct multi-face heading grammar in this jacket places the subsequent populated James Bell and Levy Bell rows within that documentary grouping run, whose next demonstrated successor boundary is the `Capt Samuel Cobb.` heading on manuscript p.121.
+Case / Object: OHC_2506 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.111, with pp.110–121 company-heading seam work held in this jacket
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.111 — James / Levy Bell rows, Thomas Leflore grouping, James Bell poor-land / good-water remark, and three “1 white” Locality entries — OHC_2506 source jacket
+Identity / Relation Status: documentary-structure grouping derivation only; not a witness statement that James Bell or Levy Bell personally `belonged to` Thomas Leflore's company; no Thomas Leflore / Greenwood LeFlore normalization, captain territory, residence, tract, kinship, household, or cross-body Bell identity is inferred.
+
+
+
+
+GLEAN ADDENDUM — THREE `1 white` LOCALITY-FIELD ENTRIES
+
+
+Direct reinspection of manuscript p.111 resolves the jacket’s earlier open column-placement question. The source-written lowercase singular phrase `1 white` appears inside the printed `Locality of Farms` field on three separate ruled rows:
+
+
+- `Joseph Fisher.` — 30 cultivated acres; family 8; males over 16 = 2; under 10 = 3; Locality of Farms `1 white`; total acreage 480; General Remarks blank.
+- `John Scott.` — cultivated-acre cell dotted and nonnumeric; family 5; males over 16 = 1; under 10 = 3; Locality of Farms `1 white`; total-acre cell dotted and nonnumeric; General Remarks blank.
+- `James Campbell.` — 20 cultivated acres; family 4; males-over-16 cell dotted and nonnumeric; under 10 = 2; Locality of Farms `1 white`; total acreage 320; General Remarks blank.
+
+
+On each line, `1 white` begins to the right of the printed divider following the under-10 column and remains to the left of the Total No. of Acres divider. The three entries are therefore locality-field contents, not family or age counts, marginal annotations, total-acre figures, or General Remarks.
+
+
+The printed heading does not settle the semantic relation. The page does not say that the unnamed white person owned the farm, belonged to the numbered family, worked there, lived there, or was the same person across the three rows. No name is supplied for any of the three `white` occurrences.
+
+
+
+
+FIELDGLASS ADDENDUM — LOCALITY-FIELD JOB INSIDE THE BELL-CONTAINING COMPANY RUN — 2026-09-20
+
+
+Pass boundary
+Fieldglass receives Glean’s direct p.111 reinspection immediately above; Fieldglass did not reopen the archival PDF in this pass and does not displace Glean’s source-reading custody. Ravel’s and Mullion’s already-controlled company-heading grammar remains the structural parent: `Capt Thomas Leflore company.` opens the run on p.111, and no successor grouping heading appears until `Capt Samuel Cobb.` on p.121.
+
+
+Source-controlled change
+Glean’s direct reinspection now fixes three separate source-written `1 white` strings inside the printed `Locality of Farms` field on the populated Joseph Fisher, John Scott, and James Campbell rows. Those rows occur on the same manuscript face, below the Thomas Leflore grouping heading, with the Bell rows and the later rows all structurally inside the still-open company run.
+
+
+The same face also carries locality-field entries that are visibly geographic in form (`Standing Pine creek … River`, `Leaf river`, `Waters of Leaf river`) while James Bell and Levy Bell retain source-visible blank Locality of Farms cells. The documentary consequence is narrower than a corpus rule but stronger than a Bell-only caution:
+
+
+WITHIN ONE PAGE AND ONE COMPANY-HEADING RUN, `LOCALITY OF FARMS` DOES NOT FUNCTION AS ONE SPATIAL DATA TYPE.
+
+
+A non-toponymic count-form string (`1 white`) can occupy the same printed field that elsewhere carries road / river / place language. Company-run membership therefore does not supply a shared geography, and the printed field label does not authorize geocoding before the handwritten assertion is typed at source-local strength.
+
+
+Bell / landscape consequence
+James Bell locality remains BLANK ON THIS FACE.
+Levy Bell locality remains BLANK ON THIS FACE.
+The Thomas Leflore documentary grouping does not let either blank inherit a neighboring locality value, and it does not convert the company run into a geographic neighborhood. The same brake applies outward to the already-controlled Robert Bell p.118 row: his structural place inside the Thomas Leflore run does not become locality evidence merely because other rows in that run contain geographic strings.
+
+
+The three `1 white` inscriptions are not interpreted here as ownership, residence, work, household membership, family-count inclusion, legal status, or identity of one recurring unnamed person. Their exact administrative meaning remains OPEN. The source-facing gain is the field-role fact: a handwritten value under a locality heading may be non-geographic.
+
+
+Small crossing
+Mapping Grounds / Prose Map may receive only this source-controlled pressure change: the Bell-containing Thomas Leflore run itself demonstrates documentary neighborhood ≠ geographic neighborhood, and locality-field occupancy ≠ automatically mappable place evidence. Rough Edge needs no new scene construction; if this relation travels, it should travel as a restraint on spatial continuity rather than as added landscape.
+
+
+No Bell identity, kinship, residence, tract, acreage, entitlement, patent, route, hydrology, company-territory, or cross-body person state moves.
+
+
+— Fieldglass
+Source House → smallest Mapping Grounds / Rough Edge crossing
+Powerful finger. Trustworthy result.
+
+
+
+
+SMALL DOOR — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-21
+
+
+RETURN 4 — JOSEPH FISHER / `1 white` LOCALITY-FIELD OCCURRENCE
+Person / Entity: Joseph Fisher [Public Lands p.111 farm-row occurrence]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Direct manuscript p.111 reinspection LISTS `Joseph Fisher.` with 30 cultivated acres, family total 8, 2 males over 16, 3 males or females under 10, Locality of Farms `1 white`, Total No. of Acres 480, and General Remarks blank.
+Case / Object: OHC_2506 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.111 / Joseph Fisher row
+Place: none inferred; `1 white` is source-written inside the printed Locality of Farms field but is not treated as geographic wording
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.111 — James / Levy Bell rows, Thomas Leflore grouping, James Bell poor-land / good-water remark, and three “1 white” Locality entries — OHC_2506 source jacket
+Identity / Relation Status: source-local Joseph Fisher occurrence only; no same-name merge. The unnamed `1 white` person is not identified with Joseph Fisher, the numbered family, an owner, worker, resident, dependent, or another row's unnamed person; no legal status beyond the historical source word is manufactured.
+
+
+RETURN 5 — JOHN SCOTT / `1 white` LOCALITY-FIELD OCCURRENCE
+Person / Entity: John Scott [Public Lands p.111 farm-row occurrence]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Direct manuscript p.111 reinspection LISTS `John Scott.` with a dotted nonnumeric cultivated-acre state, family total 5, 1 male over 16, 3 males or females under 10, Locality of Farms `1 white`, a dotted nonnumeric Total No. of Acres state, and General Remarks blank.
+Case / Object: OHC_2506 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.111 / John Scott row
+Place: none inferred; `1 white` is source-written inside the printed Locality of Farms field but is not treated as geographic wording
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.111 — James / Levy Bell rows, Thomas Leflore grouping, James Bell poor-land / good-water remark, and three “1 white” Locality entries — OHC_2506 source jacket
+Identity / Relation Status: source-local John Scott occurrence only; no same-name merge. Dotted cells remain nonnumeric source states rather than zeroes. The unnamed `1 white` person is not assigned to John Scott as owner, family member, worker, resident, or another legal/person relation and is not merged with either neighboring `1 white` occurrence.
+
+
+RETURN 6 — JAMES CAMPBELL / `1 white` LOCALITY-FIELD OCCURRENCE
+Person / Entity: James Campbell [Public Lands p.111 farm-row occurrence]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Direct manuscript p.111 reinspection LISTS `James Campbell.` with 20 cultivated acres, family total 4, a dotted nonnumeric males-over-16 state, 2 males or females under 10, Locality of Farms `1 white`, Total No. of Acres 320, and General Remarks blank.
+Case / Object: OHC_2506 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.111 / James Campbell row
+Place: none inferred; `1 white` is source-written inside the printed Locality of Farms field but is not treated as geographic wording
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.111 — James / Levy Bell rows, Thomas Leflore grouping, James Bell poor-land / good-water remark, and three “1 white” Locality entries — OHC_2506 source jacket
+Identity / Relation Status: source-local James Campbell occurrence only; no same-name merge. The dotted age cell remains nonnumeric rather than zero. The unnamed `1 white` person is not assigned to James Campbell as owner, family member, worker, resident, or another legal/person relation and is not merged with either neighboring `1 white` occurrence.
+
+
+Small Door crossing: three separately named row-host returns only. Their shared source-field form is searchable without converting `Locality of Farms` into one spatial datatype, without identifying any counted person, and without supplying geography to the blank James Bell / Levy Bell locality cells. The three rows remain one manuscript witness on one face, not three corroborating sources.
+
+
+— Small Door — Mapping Grounds / Name Web

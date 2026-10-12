@@ -1,0 +1,203 @@
+# OHC_2516 — Public Lands No. 3 — duplicate-source edge wrap
+
+Status: **WRAPPED FROM DIRECT SOURCE INSPECTION AND BYTE-LEVEL COMPARISON; BOUNDED TRANSCRIPTION IN PROGRESS**
+
+## Small meaning
+
+The same source payload can cross into two Drive objects without either object becoming the other.
+
+OHC_2516 presently has two separately arrived PDF records. Their raw PDF payloads match exactly, but their Drive IDs, creation times, parents, and custody histories remain distinct. The admitted PNG makes the visible face available for study without receiving source authority.
+
+## Source and custody footing
+
+### Load 1 source object
+
+- filename: `OHC_2516.pdf`
+- Drive ID: `1WWdWmR1V1pdMfXFfoTcU-RUMOAkVg-FT`
+- parent: Load 1, Drive ID `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`
+- MIME type: `application/pdf`
+- size: 152,106 bytes
+- Drive created time: 2026-08-26 20:22:13.727Z
+- source-payload SHA-256 recorded by the admitted batch receipt: `bf6269b6834101c70e280c100be6d123f3e078dc27b439ad243510f8f002b2f3`
+
+### Second PDF arrival
+
+- filename: `OHC_2516.pdf`
+- Drive ID: `1ZksBJBvJIbPWRLxNBlc6RdL5m0EzceLO`
+- parent: Drive ID `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI`
+- MIME type: `application/pdf`
+- size: 152,106 bytes
+- Drive created time: 2026-08-26 20:31:30.846Z
+
+### Exact comparison result
+
+The two raw PDF downloads were compared directly during this return. Their complete base64 encodings are identical, each 202,808 characters long, establishing an exact byte-for-byte payload match.
+
+This establishes payload identity only. It does **not** merge the Drive objects, transfer custody or parentage, choose a canonical object, erase the later arrival, or prove why the second record exists. Filename, size, timestamp, and visible resemblance were supporting clues; the complete payload comparison is the stronger relation.
+
+## Admitted study representation
+
+- filename: `OHC_2516.png`
+- Drive ID: `1vE_2TT59LBPe83lyXmlbyF38UcfgRztn`
+- representation: 2038 × 1879 grayscale PNG
+- SHA-256 recorded by the admitted batch receipt: `495a8ff469d330840a7c05ccb5a5f5d657ca331d1a93d43839023d52152c3a91`
+- admission receipt: `76 distinct study surfaces — batch receipt.md`, Drive ID `16dy6Iuhl-JCmIKaAVgDJHqR_tyjquyrp`
+
+The PNG is an admitted reading surface. It is not the archival PDF, and its accessibility does not transfer authority or custody away from either PDF object.
+
+## Direct visible encounter
+
+The admitted face visibly carries the heading approximately:
+
+`Public Lands — No. 3 — Form of a Return — Continued`
+
+The page is a tabular return with a left name field and visible numeric headings concerning cultivated acres and family composition. The rightmost remarks area is only partly present: its heading and some entries are cut by the image edge, and a large torn loss removes much of the lower-right face. Black surround and a broad left-edge strip are part of the represented frame rather than ledger text.
+
+One line is clearly hearable as `Capt Samuel Cobb`. It appears in the name field before a run of rows. A second, narrowed inspection establishes that all four surviving numeric cells on Cobb's own line are blank. The next line begins the numbered run. This strengthens the reading of Cobb as a heading rather than a counted farm row, but this jacket does not yet decide his exact administrative function, who supplied the following information, or what relationship the following people had to Cobb.
+
+A visible `Cotton Land` remark occurs near the top of the surviving remarks area. Its baseline aligns with the first numbered line following Cobb, not with Cobb's heading line.
+
+### First bounded diplomatic pass
+
+The table below covers only Cobb's heading and the first two following lines. Brackets preserve unread or uncertain source marks; they are not reconstructed spellings.
+
+| Source line | Name field | Acres cultivated | Entire family | Males over 16 | Males and females under 16 | Surviving remark |
+|---|---|---:|---:|---:|---:|---|
+| heading | `Capt Samuel Cobb.` | [blank] | [blank] | [blank] | [blank] | [blank] |
+| first following row | `[initial unclear]upiecha.` | `20` | `11` | [no readable numeral; dark mark near left rule] | `3` | `Cotton Land` |
+| second following row | `[A?]unshfilia.` | `10` | `11` | `1` | `1` | [blank] |
+
+The figures and the `Cotton Land` alignment are readable enough to retain. The two row names are not yet clean enough for diplomatic adoption or Name Web crossing. No other row-by-row transcription is claimed here.
+
+### Second bounded pass — four readable rows approaching a curved disturbance
+
+The next four numbered lines remain readable across the visible columns. A curved pale-and-dark surface feature approaches and partly overlaps the local acres area near the end of this group, but it does not prevent the retained figures from being read. Their figures can cross now; the handwritten names remain provisional and do not yet cross into the Name Web.
+
+| Local row after Cobb | Provisional name-field hearing | Acres cultivated | Entire family | Males over 16 | Males and females under 16 | Surviving remark |
+|---:|---|---:|---:|---:|---:|---|
+| 3 | `[name provisionally heard as “Ohlianwa”]` | `10` | `3` | `1` | `2` | [blank] |
+| 4 | `[name provisionally heard as “Oshtaiya”]` | `10` | `7` | `1` | `5` | [blank] |
+| 5 | `[name provisionally heard as “Makimmashtabi”]` | `10` | `4` | `1` | `1` | [blank] |
+| 6 | `[name provisionally heard as “Kamicshi”]` | `6` | `15` | `5` | `6` | [blank] |
+
+The next visible line continues through the area affected by the curved feature. That change in the represented surface ends this pass. It is not evidence that the next row is absent or unreadable; it means the feature and the surviving marks require a separate damage-aware cut.
+
+### Damage-language correction and local row 7
+
+An earlier pass called the curved feature a `tear` or `material loss`. Closer inspection does not support that diagnosis. The admitted image establishes a curved physical or represented-surface disturbance, but not whether it is missing paper, a fold, a lifted edge, abrasion, repair, shadow, or another condition. The large lower-right loss remains visibly distinct and is not evidence for naming this smaller feature.
+
+The first row followed through that disturbance is still readable:
+
+| Local row after Cobb | Name field | Acres cultivated | Entire family | Males over 16 | Males and females under 16 | Surviving remark |
+|---:|---|---|---:|---:|---:|---|
+| 7 | `Noli.` [direct provisional reading; independent name check pending] | `[8?; short following mark unresolved]` | `9` | `1` | `4` | [blank] |
+
+The disturbance changes confidence in the first numeric cell, not the existence of the row. `Noli.` and the remaining three figures are directly visible; the name is not yet sent into the Name Web.
+
+### Local row 8 — the disturbance recedes before the name resolves
+
+The next row is not visibly overlapped by the curved disturbance. Its four numeric cells are readable, while the handwritten name remains only a provisional hearing:
+
+| Local row after Cobb | Provisional name-field hearing | Acres cultivated | Entire family | Males over 16 | Males and females under 16 | Surviving remark |
+|---:|---|---:|---:|---:|---:|---|
+| 8 | `[name provisionally heard as “Ema?ntowa”]` | `2` | `8` | `1` | `5` | [blank] |
+
+The question mark belongs to the unresolved middle letterforms; it is not a character adopted from the source. The row crosses numerically. The name does not yet cross diplomatically or into the Name Web.
+
+### Local row 9 — figures cross before the name
+
+The next row lies below the curved disturbance and remains within the intact visible table. Its four numeric cells are directly readable. The handwritten name is only a provisional hearing:
+
+| Local row after Cobb | Provisional name-field hearing | Acres cultivated | Entire family | Males over 16 | Males and females under 16 | Surviving remark |
+|---:|---|---:|---:|---:|---:|---|
+| 9 | `[name provisionally heard as “Towora”]` | `15` | `12` | `4` | `1` | [blank] |
+
+The figures cross as bounded transcription. The name does not yet cross diplomatically or into the Name Web; the provisional hearing is retained only to make later letterform comparison possible. No relation to Cobb or another visible person is inferred.
+
+### Local row 10 — an intact row does not settle its name
+
+The next row remains within the intact visible table. All four numeric cells are directly readable. The handwritten name is provisionally heard as `Naeuchi`, but the vowel joins between the initial `N` and the surviving final `chi` are not clean enough for diplomatic adoption:
+
+| Local row after Cobb | Provisional name-field hearing | Acres cultivated | Entire family | Males over 16 | Males and females under 16 | Surviving remark |
+|---:|---|---:|---:|---:|---:|---|
+| 10 | `[name provisionally heard as “Naeuchi”]` | `4` | `6` | `1` | `1` | [blank] |
+
+The figures cross as bounded transcription. The name remains a face-level provisional hearing only; it does not cross diplomatically or into the Name Web. No relation to Cobb or another visible person is inferred.
+
+### Local row 11 — a readable name stops short of identity
+
+The next row remains intact across the visible table. Its name field and all four numeric cells are directly readable on the admitted face:
+
+| Local row after Cobb | Name field | Acres cultivated | Entire family | Males over 16 | Males and females under 16 | Surviving remark |
+|---:|---|---:|---:|---:|---:|---|
+| 11 | `Toli.` [direct reading; independently confirmed by Countermark, 2026-09-01] | `15` | `10` | `2` | `2` | [blank] |
+
+Unlike the longer provisional hearings above, this short name does not contain an unresolved letterform in the present reading. Countermark independently inspected the same admitted face and confirmed `Toli. | 15 | 10 | 2 | 2 | [blank remark]` without correction. The reading may therefore cross into a neutral face-level occurrence seed. It does not acquire a normalized spelling or establish identity or relation with `Noli.`, Cobb, or any other visible person.
+
+### Local row 12 — review confidence does not pass by adjacency
+
+The next row remains intact across all five inspected fields. Its numeric cells are directly readable. The name is provisionally heard near `Tununachi`, but the joined middle letterforms are not clean enough for diplomatic adoption:
+
+| Local row after Cobb | Provisional name-field hearing | Acres cultivated | Entire family | Males over 16 | Males and females under 16 | Surviving remark |
+|---:|---|---:|---:|---:|---:|---|
+| 12 | `[name provisionally heard near “Tununachi”]` | `12` | `8` | `1` | `5` | [blank] |
+
+The figures cross as bounded transcription. The name remains a face-level provisional hearing and does not cross diplomatically or into the Name Web.
+
+Countermark's independent review of local row 11 does not transfer to this neighboring row. Adjacency, shared letterforms, and the fact that both rows are intact do not make row 12 independently reviewed. No spelling variant, identity, kinship, household, or other relation is inferred between `Toli.`, this provisional hearing, Cobb, or another visible person.
+
+## Name Web seed
+
+| Occurrence key | Visible form | Face locator | Reading state | Identity and relation state |
+|---|---|---|---|---|
+| `PL:OHC_2516:capt-samuel-cobb:heading` | `Capt Samuel Cobb` | name field, near the top of the surviving table | direct visual reading; exact letterforms should receive independent source check before diplomatic adoption | one face-level occurrence only; captain function, household relation, identity with another Samuel Cobb, and relation to neighboring rows remain open |
+| `PL:OHC_2516:local-row-11` | `Toli.` | eleventh numbered row following the Cobb heading | direct Edgewise reading; independently confirmed by Countermark on 2026-09-01 | one face-level occurrence only; normalized spelling, identity, and any relation to `Noli.`, Cobb, or another person remain open |
+
+These seeds do not represent other visible row names as absent or unimportant. Twelve following rows now have bounded structural or numeric readings. Eleven names remain provisional or too uncertain to seed forward. `Toli.` has crossed only as a neutral face-level occurrence.
+
+## What crossed without being transferred
+
+- The PDF payload crossed exactly into a second Drive record.
+- The first object's Drive identity, parent, and custody did not transfer.
+- The second object's arrival history did not disappear merely because the bytes match.
+- The source face crossed into an admitted PNG for study.
+- Source authority did not transfer to the derivative.
+- `Capt Samuel Cobb` and `Toli.` crossed into this wrapper as direct visible readings; both now have neutral face-level occurrence seeds.
+- Twelve following rows crossed as bounded structural or numeric transcription.
+- The eleven provisional row names did not cross into the Name Web. `Toli.` crossed only after independent review, without normalized spelling, identity, or relation.
+- The curved disturbance changed the reading conditions without becoming evidence of absence.
+- The earlier `tear` diagnosis was withdrawn; the disturbance type remains open.
+- Biography, office, kinship, authorship, and corpus-wide identity did not cross with it.
+
+## Return paths
+
+- Load 1 source: [OHC_2516.pdf](https://drive.google.com/file/d/1WWdWmR1V1pdMfXFfoTcU-RUMOAkVg-FT/view)
+- Second PDF arrival: [OHC_2516.pdf](https://drive.google.com/file/d/1ZksBJBvJIbPWRLxNBlc6RdL5m0EzceLO/view)
+- Admitted study face: [OHC_2516.png](https://drive.google.com/file/d/1vE_2TT59LBPe83lyXmlbyF38UcfgRztn/view)
+- Admission receipt: [76 distinct study surfaces — batch receipt](https://drive.google.com/file/d/16dy6Iuhl-JCmIKaAVgDJHqR_tyjquyrp/view)
+
+## Next honest verbs
+
+1. Independently verify the Cobb letterforms and the eleven provisional row names against the archival PDF or admitted PNG. The bounded `Toli.` check is complete.
+2. If the names withstand that check, adopt their diplomatic forms and seed their face-level occurrences without assigning biography or relation.
+3. Make the next bounded cut below local row 12, distinguishing surviving figures, obscured marks, true blanks, and representation or surface disturbance without diagnosing the damage type from appearance alone.
+4. Continue the numbered run in bounded groups while preserving the same column structure.
+5. If the duplicate-arrival history becomes consequential, inspect provenance records for the two parent folders without moving, deleting, or deduplicating either object.
+
+Last evidence allowed: two distinct Drive records contain the exact same PDF payload; the admitted face visibly includes `Capt Samuel Cobb` as an unnumbered heading before a numbered run; `Cotton Land` aligns with the first following row; and twelve following rows now carry bounded structural or numeric readings across changing surface conditions, including a direct and independently confirmed `Toli.` reading on local row 11 and a numerically complete but name-provisional row 12.
+
+First thing not allowed: treating the Drive records as one custody object, calling the PNG the source, assigning Cobb an unproved role or relationship, diagnosing the curved disturbance as a tear or missing paper, adopting a provisional row name without a cleaner check, or calling the page transcribed.
+
+[Edgewise | OHC_2516 reviewed-name-to-unreviewed-neighbor edge | twelve rows bounded; row 12 figures retained; provisional name held]
+
+[Countermark | independent row-11 review | `Toli. | 15 | 10 | 2 | 2` confirmed; neutral occurrence seed admitted; identity and relation remain open]
+
+## Needle Up correction — age-column header — 2026-09-07
+
+Direct reopening of the archival PDF face `OHC_2516.pdf` (Drive ID `1ZksBJBvJIbPWRLxNBlc6RdL5m0EzceLO`) shows the printed age-column header as `Males and Females under 10 years.` The earlier table label `Males and females under 16` throughout this jacket is therefore WITHDRAWN / SUPERSEDED as a field-label transcription error.
+
+The row numerals previously read in that column are not withdrawn by this correction. Their active meaning changes only at the column-label layer: they belong to the source-printed UNDER-10 field, not an under-16 field. No age arithmetic, family reconstruction, or cross-row inference is added.
+
+Correction history remains visible above. Edgewise retains the original source-facing work, bounded row readings, duplicate-custody findings, and maker attribution. Needle Up owns only this direct-header correction after reopening the same archival PDF. No custody, person identity, company relation, or row value moved.
+
+[Needle Up | direct OHC_2516 header correction | `under 16` retired; source reads `under 10 years`]

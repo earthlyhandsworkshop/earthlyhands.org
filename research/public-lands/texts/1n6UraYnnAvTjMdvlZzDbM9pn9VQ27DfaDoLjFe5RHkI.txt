@@ -1,0 +1,284 @@
+Public Lands No. 3 p.114 — Capt Munchubby (or Mellachubby) / Water of Pearl River row and recurring Young Warrior / Pearl River locality forms — OHC_2509 source jacket
+
+
+Status
+Source-facing leaf jacket made by Glean from direct visual inspection of OHC_2509.pdf. This pass is bounded to the visible face, its duplicate-object custody relation, and a few source-visible structural features. It is not a complete diplomatic transcription.
+
+
+Source identity
+- Visible manuscript page number: 114.
+- Visible heading: Public Lands — No. 3 — Form of a Return — Continued.
+- Upper-right inscription: `No. 1230` followed by `1834`. The earlier `1830–1831` interval reading is withdrawn; see the source-state correction below.
+- The ruled form again separates name, cultivated acreage, family total, age/sex subdivisions, Locality of Farms, Total No. of Acres, and General Remarks.
+- Historical-object handling: one visible ledger face represented by two stored OHC_2509.pdf files.
+
+
+Exact provenance / stored representations
+Representation A
+- Drive file ID: 1-iLHHb73EoFaZCMXVWemGyEcwNPIAU5Z
+- Parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- Stored title: OHC_2509.pdf
+
+
+Representation B
+- Drive file ID: 1J6af9UHBZ2-XXj7ZgArGVmK0TY9nhvbn
+- Parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- Stored title: OHC_2509.pdf
+
+
+Duplicate-object test
+Both stored PDFs are 222,403 bytes and have identical SHA-256:
+849e6ec534a90231406dd96fe5b9518b8d27ffad0182a388281f5ea633f3b514
+They are byte-identical stored representations in this pass. They are not counted as two historical witnesses or two name occurrences. Both custody paths remain explicit; neither stored object is silently discarded.
+
+
+Source / derivative / transcription / interpretation boundary
+- Source: the photographed manuscript ledger face embedded in OHC_2509.pdf.
+- Stored representations: the two byte-identical PDFs above.
+- Preferred PNG check: a Drive search did not return OHC_2509.png directly in this pass, although earlier batch receipt metadata records a study PNG for this filename. Because its exact current return path was not established here, it was not silently substituted for the source object.
+- Working derivative used for inspection: temporary 260-DPI PNG render of representation A. It is not a new historical source and is not promoted as canonical.
+- Transcription: only bounded headings, visible phrases, numerals, and one structurally important name-field relation are recorded below.
+- Interpretation: limited to documentary structure. No person merge, kinship claim, residence claim, entitlement claim, or modern geography is inferred.
+
+
+Directly visible findings
+1. Source-visible page sequence now earns an adjacent-face seam with OHC_2508: OHC_2508 is manuscript page 113 and OHC_2509 is manuscript page 114, and both visibly carry the same Public Lands No. 3 continued-return form. This is stronger than filename adjacency alone. The two faces remain separate source objects, and no individual row is presumed to continue across the seam without row-level evidence.
+
+
+2. The name column itself carries more than a single normalized name string. One upper row begins with the title `Capt` and a principal name best read approximately as `Munchubby`; the same name field then contains a parenthetical introduced by `or` and a second written name form whose exact spelling remains unresolved. The structural fact—one row explicitly presenting an alternative name form—is clear. Neither form is normalized or merged with another occurrence elsewhere.
+
+
+3. Multiple Locality of Farms entries visibly reference Pearl River. At least two read as `Waters of Pearl River` or very close variants. Farther down, `Young Warrior` appears in the locality field, and a lower locality line appears to combine a Pearl River phrase with `Young Warrior`. This jacket records the written field behavior but does not decide whether `Young Warrior` is a place, grouping, captain-company reference, or another administrative notation.
+
+
+4. General Remarks is sparsely populated. One visible remark reads `Land tolerable.` A lower remark appears to read `Land tolerable good.` Exact punctuation and row attachment remain open where the ruling and handwriting are faint. Blank remarks cells remain blanks; they are not converted into ditto, approval, refusal, or missing data.
+
+
+5. The Total No. of Acres column contains scattered written values among many blanks. Clearly visible figures include repeated 160s as well as 440, 80, and 50. This pass does not attach every value to a named row where alignment was not independently secure.
+
+
+6. The page contains a substantial name stream, but several spellings remain difficult. No complete name list is manufactured from visual resemblance. A later diplomatic name pass can work directly from the exact source face and preserve uncertainty row by row.
+
+
+Backward seam
+- OHC_2508: manuscript page 113, same Public Lands No. 3 continued-return form.
+- OHC_2509: manuscript page 114.
+- Consequence earned here: adjacent manuscript pagination plus matching visible form establishes a trustworthy backward/forward face seam between 2508 and 2509. It does not merge their source identities, duplicate their row populations, or prove that any named person is the same across pages.
+
+
+Forward seam
+- OHC_2510 has not been opened in this pass.
+- No continuity claim is made from the next filename alone.
+- A future pass may test whether manuscript pagination and visible form continue, but that remains open until the source face is read.
+
+
+Unresolved questions
+- Exact diplomatic transcription of the full name stream.
+- Exact spelling of both written forms in the `Capt ... (or ...)` row.
+- Exact row attachment for each Pearl River / Young Warrior locality phrase.
+- Whether `Young Warrior` functions as locality, grouping, company/captain notation, or something else in this form.
+- Exact row attachment and punctuation of `Land tolerable` and the lower `Land tolerable good` reading.
+- Complete row-by-row acreage alignment.
+- Exact current return path of the study PNG recorded in earlier batch metadata.
+
+
+Nonclaims
+- Same surname, similar name form, or nearby rows do not establish identity or kinship.
+- The parenthetical `or` does not authorize corpus-wide normalization or person merging; it records two source-written forms in one row.
+- A named farm owner is not thereby proved to reside on the farm.
+- A Pearl River phrase does not supply a modern coordinate.
+- `Young Warrior` is not classified beyond what the written field presently supports.
+- Acreage values are not assigned to names unless row alignment is secure.
+- Blank cells are not converted into zero, ditto, missing data, approval, refusal, or absence.
+- The two OHC_2509 PDFs are not separate historical witnesses.
+- No corpus-level theory is advanced from this face.
+
+
+Return path
+Backward: Public Lands body → Public Lands No. 3 p.114 — Capt Munchubby (or Mellachubby) / Water of Pearl River row and recurring Young Warrior / Pearl River locality forms — OHC_2509 source jacket → stored OHC_2509.pdf representation A or B → photographed manuscript face.
+Sideways: OHC_2508 jacket for the now-earned page-113/page-114 seam only; no row or person merge by adjacency.
+Forward: OHC_2510 only after direct source-facing inspection earns a seam.
+
+
+Maker: Glean
+Date: 2026-09-04
+
+
+Mullion addendum — forward seam resolved — 2026-09-04
+Direct source-facing inspection of OHC_2510.pdf now establishes manuscript page 115 with the same Public Lands No. 3 continued-return form. The former forward-seam gap is therefore resolved at the page-sequence/form level: OHC_2509 = manuscript p.114 → OHC_2510 = manuscript p.115. This does not merge the two page objects and does not establish row continuity across the seam.
+
+
+Dedicated page-115 jacket: Public Lands No. 3 p.115 — Cornelius Kinney row and non-geographic Locality-of-Farms entry — OHC_2510 source jacket — Drive ID 1ZQM1NsXYhgsnTY3HDxJaeckScJl1ms_PSzw3mv2STOU.
+
+
+The p.115 face also carries a row reading `Cornelius Kinney. (half breed)`. The surname is preserved as KINNEY on this face and is not normalized to McKINNEY. No identity or kinship join to Bell–McKinney Daylight follows.
+
+
+Maker: Mullion
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — Young Warrior / Pearl River recurrence and Taskalamitta reference-layer test
+
+
+Direct source return: Fieldglass reopened representation A, OHC_2509.pdf (Drive 1-iLHHb73EoFaZCMXVWemGyEcwNPIAU5Z), and inspected manuscript p.114 itself. The Locality of Farms field carries separate populated-row occurrences including `Waters of Pearl River.`, `Young Warrior.`, and a lower `Waters Pearl river. Young Warrior.` occurrence; another Pearl-River occurrence is also visible. Exact punctuation, capitalization, and weak row-owner readings remain correction-open. These are separate row occurrences, not one carried locality.
+
+
+Backward source controls materially sharpen the pattern. Manuscript p.109 directly carries `Young Warrior: water of Pearl River`; p.110 directly carries `Young Warrior. Water of Pearl River.` on the Ahaglaucha row. P.114 also remains structurally inside the Thomas Leflore company run established by the p.111 heading and the next company heading on p.121, but that documentary grouping is given no geographic force.
+
+
+Map consequence: the Public Lands body now earns an OPEN RECURRING LOCALITY / FEATURE-CANDIDATE CLUSTER — `Young Warrior` ↔ `Pearl River` — across independently source-faced manuscript pp.109, 110, and 114. It does not earn a point, settlement polygon, company territory, residence, route, creek line, or modern feature identity.
+
+
+Historical reference-layer test: John Hawkins Napier III's 1992 study of Régis du Roullet's 1732 Pearl River exploration reports Roullet encountering `Bayou Taskalamitta ("Young Warrior")` during his descent of Pearl River. A separately identified 1732 Roullet manuscript map of the Pearl River is cited in modern scholarship as Service historique de la Défense, Recueil 69, Map no. 41. These references create a strong comparison target only. They do not establish that the Public Lands `Young Warrior` occurrences are Taskalamitta/Tuscolameta Creek, do not back-project a modern course, and do not supply geometry to this ledger body.
+
+
+Next honest door: open the 1732 Roullet map itself, or another independently controlled near-period map/survey, and test whether a like-named feature and its Pearl River relation can be matched without borrowing identity from translation or modern gazetteers.
+
+
+Exact return: this jacket → OHC_2509.pdf → manuscript p.114; backward controls: p.109 jacket 1iyTmKvr_vPgLlS2OniaiWDxWA5UhhFQxy9fhtq9AueA; p.110 jacket 1NrHA5SpfnIkApWlC8cpp8vQaY299uOTbgHSo0mVDnOA; company-run control: p.111 jacket 1juDZZddemXFM6nuQQyuADABQ5BbvyxFkU0INL148DTY; external reference layer: Napier 1992 and the catalogued/cited Roullet 1732 Pearl River map.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+
+
+QUIRE ADDENDUM — SOURCE-EXPRESSED NAME ALTERNATION / RESEMBLANCE SPLIT
+
+
+The p.114 name field supplies an occurrence-level relation the Workshop does not have to invent: one row presents a principal written name and a second written name form under an explicit `or` construction. The exact spellings remain partly unresolved, but the relational syntax is source-visible.
+
+
+Neighboring p.115 supplies the useful negative control. `Cornelius Kinney` is source-written as KINNEY while McKinney work is active nearby, but no source verb or syntax joins Kinney to McKinney. Similarity alone therefore earns no name-form edge.
+
+
+Current carry:
+
+
+SOURCE-EXPRESSED ALTERNATION ≠ WORKSHOP NORMALIZATION.
+AN EXPLICIT `or` WITHIN ONE ROW EARNS A NAME-FORM RELATION AT THAT OCCURRENCE; SPELLING RESEMBLANCE OR ADJACENCY DOES NOT.
+
+
+This does not authorize corpus-wide person merging, preferred-name normalization, or identity inheritance into another row or record. The source has earned only that this row presents two written forms as alternatives. Any outward person identity remains separately controlled.
+
+
+The exact second written form on p.114 remains OPEN until a stronger diplomatic read returns. The relation may be stored before the spellings are fully resolved because the visible `or` construction, not our reconstruction of either name, earns the stitch.
+
+
+— Quire
+Source House / Name Web relation grammar
+
+
+GLEAN SOURCE-STATE CORRECTION — HEADER AND LOWER-ROW OBSTRUCTION — 2026-09-19
+
+
+Pass boundary
+Directly reopened OHC_2509.pdf, Drive ID 1-iLHHb73EoFaZCMXVWemGyEcwNPIAU5Z. A temporary 500-DPI render and local crops were used only as reading derivatives.
+
+
+Header correction
+The upper-right inscription reads `No. 1230` followed by `1834`. The earlier jacket reading `1830–1831` is withdrawn. The face does not state what administrative event the `1834` numeral dates.
+
+
+Lower-row source state
+An irregular dark source-visible mark crosses portions of the name field and cultivated-acreage field through at least three ruled rows in the lower part of the face. The affected cells are not blank or absent. They are partly obscured. Several family and age-category numerals remain visible to the right on those same rows, but they do not reconstruct the concealed names or cultivated-acre entries.
+
+
+The mark is not classified here as a tear, missing paper, deletion, or intentional cancellation. Its material cause remains unresolved. The earlier statement that several lower spellings are difficult is therefore deepened: some readings are blocked by the visible state of this representation, not merely by handwriting.
+
+
+Documentary effect
+No row value is newly supplied. No damaged name is normalized from context. Page 114 now preserves `obscured` as a separate cell state alongside numeric, dotted, blank, and unreadable entries.
+
+
+— Glean | Public Lands p.114 | header corrected; obscured rows kept distinct
+
+
+
+
+
+
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+RETURN 1 — SOURCE-WRITTEN `or` / TWO-FORM NAME-FIELD OCCURRENCE
+Person / Entity: Capt Munchubby. (or Mellachubby) [Public Lands p.114 two-form name-field occurrence]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: Public Lands No. 3 manuscript p.114 name field PRESENTS the source-written form `Capt Munchubby. (or Mellachubby)`; source-written `or` occurs between those two written forms in this one name-field occurrence.
+Case / Object: OHC_2509 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.114 / two-form name-field occurrence
+Place: 
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.114 — Capt Munchubby (or Mellachubby) / Water of Pearl River row and recurring Young Warrior / Pearl River locality forms — OHC_2509 source jacket
+Identity / Relation Status: source-local two-form name-field occurrence joined by source-written `or`; the semantic relation between the two written forms remains unresolved and is not normalized as alias, alternate name, translation, correction, name change, preferred form, or another subtype. Both written forms are diplomatically stabilized on this row, but the occurrence does not authorize same-person inheritance into another source, kinship, company membership, residence, or any other outward identity conclusion.
+Notes: repaired to Glean's 2026-09-20 direct 900-DPI transcription. The earlier approximate / unresolved spellings remain in jacket prose as encounter and correction history rather than current index state; lower obscured rows remain unreconstructed.
+
+
+RETURN 2 — ROW-LOCAL PEARL RIVER RELATION
+Person / Entity: Capt Munchubby. (or Mellachubby) [Public Lands p.114 row occurrence]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: Public Lands No. 3 manuscript p.114 SAME RULED ROW LISTS 2 cultivated acres, family 6, a dot series rather than a numeral in the males-over-sixteen cell, 4 people under ten, and Locality of Farms `Water of Pearl River.`
+Case / Object: OHC_2509 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.114 / Capt Munchubby. (or Mellachubby) row
+Place: `Water of Pearl River.` [source-written Locality of Farms phrase; modern feature identity and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.114 — Capt Munchubby (or Mellachubby) / Water of Pearl River row and recurring Young Warrior / Pearl River locality forms — OHC_2509 source jacket
+Identity / Relation Status: same source-row occurrence as Return 1; this is a separate proposition-local locality relation, not an additional witness or person occurrence. `Water of Pearl River.` does not establish residence, ownership, precise geometry, a modern feature identity, or equivalence with other Pearl River / Young Warrior occurrences.
+Notes: compiled separately so the source-written two-form name-field occurrence is not fused with the row-local place proposition. The dot series remains a nonnumeric source state and is not converted into zero, blank, missing data, or a person count.
+
+
+GLEAN ADDENDUM — ALTERNATIVE-NAME ROW TRANSCRIPTION — 2026-09-20
+
+
+Pass boundary
+
+
+Directly reopened OHC_2509.pdf, Drive ID 1-iLHHb73EoFaZCMXVWemGyEcwNPIAU5Z. A temporary 900-DPI render and close crops were used only as reading derivatives; they are not new source objects or witnesses.
+
+
+Corrected reading
+
+
+The full source-written name field reads:
+
+
+`Capt Munchubby. (or Mellachubby)`
+
+
+The same ruled line carries 2 cultivated acres, family 6, a dot series rather than a numeral in the males-over-sixteen cell, 4 people under ten, and Locality of Farms `Water of Pearl River.`
+
+
+Documentary effect
+
+
+The earlier approximate `Munchubby` reading is stabilized, and the previously unresolved second written form is now read `Mellachubby`. The source-written `or` relation remains unchanged. It joins these two written forms on this occurrence only; it does not authorize preferred-name normalization, identity inheritance, or a same-name merge elsewhere.
+
+
+— Glean | Public Lands p.114 | two written forms restored to one row
+
+
+FIELDGLASS SOURCE-GENEALOGY DEEPENING — ROULLET PEARL RIVER MAP FAMILY — 2026-09-20
+
+
+The earlier Fieldglass map-facing addendum correctly left the 1732 Roullet map as an external comparison target rather than using it to identify the Public Lands `Young Warrior` occurrence. A fresh return to the map’s archival-description genealogy materially sharpens that target without opening the map face itself.
+
+
+Current Service historique de la Défense inventory control identifies Recueil 69, map 41 as Régis du Roullet’s 1732 `Carte du cours de la rivière aux Perles, depuis Boukfouka jusqu'à son embouchure, qui est à la passe à Dion vis-à-vis l'isle aux Oyes`, a 50 × 90 cm manuscript color map. The CCFr catalogue places the same object under SH 206 / old shelfmark 4040C and preserves an older box-number history. These are archival-description states for one map object, not independent geographic witnesses.
+
+
+The same current SHD inventory identifies Recueil 69, map 42 as another 1732 Roullet manuscript color map: `Carte de la rivière aux perles, depuis son embouchure jusqu'à Boukfouka, et du chemin qui est depuis le fort de la Mobile jusques au dit Boukfouka`. Recent scholarship on the 1732 hydrographic mission explicitly associates R69-42 with R69-41 and describes it as probably a later but unfinished state. That description is a scholarly source-genealogy proposition, not a workshop inference from visual comparison; the faces still need to be opened and compared before any copying direction, revision relation, or toponym equivalence is promoted.
+
+
+A nineteenth-century catalogue also describes a third Pearl River map in the same historical collection family: a later 1750 reduction of the Pearl River course, said to have been reduced from a map Philippe Buache made in December 1737 from Roullet's journal. Until that object is directly returned, carry it only as a catalogued later derivative candidate, not as another 1732 witness and not as a substitute for R69-41 or R69-42.
+
+
+EARNED CHANGE: the next landscape-source door is no longer one isolated `Roullet map`. It is a controlled map-state family with at least two 1732 SHD objects that require face-to-face comparison, plus a catalogued later derivative branch. This matters because a like-named feature appearing on a later derivative cannot automatically be back-promoted to the same evidentiary state as a mark on R69-41.
+
+
+NEXT EXACT VERB: obtain/view R69-41 and R69-42 at source-image depth; test each separately for a `Taskalamitta` / Young-Warrior-like inscription and its written relation to Pearl River, preserving spelling, placement, legend/cartouche information, and map-state differences. Only after that comparison should the Public Lands 1834 `Young Warrior` cluster be tested against either historical map occurrence. R69-43/later reduction remains a secondary genealogy branch unless directly recovered.
+
+
+NONCLAIMS: no Public Lands `Young Warrior` = Taskalamitta/Tuscolameta identity is promoted; no modern creek course, coordinate, route, village, company territory, or Robert/James/Levy Bell geography moves; no R69-41 → R69-42 copying direction is asserted from catalogue adjacency; no later reduction is treated as independent corroboration of a 1732 map face.
+
+
+— Fieldglass | Source House → Historical Landscape Map | Roullet map-state genealogy

@@ -1,0 +1,167 @@
+Public Lands No. 3 p.120 — Capt Washington Pearl River / Robinson Road proximity and Etomaitabi Pearl River locality — OHC_2515 source jacket
+
+
+Status
+Source-facing jacket from direct inspection of one held OHC_2515 PDF representation. The scan governs this reading; this note does not replace the manuscript or the scan.
+
+
+Source identity and provenance
+- Inspected source representation: OHC_2515.pdf — Drive ID 1HKc-tK0h11ivtyu-qCzZJEtu9dbqUO5X.
+- Parent folder Drive ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+- Stored form: one-page PDF scan / photographic representation of a historical ledger face.
+- File size of inspected representation: 223,270 bytes.
+- Page-visible manuscript number: 120.
+- Page-visible heading: Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- Upper-right inscription: `No. 1230    1834`. The source does not state what `1834` records.
+- A second stored object also carries the filename OHC_2515.pdf — Drive ID 1GbChtuANB4h2a9hd6p55Zu1Oti3Ny-mD. It is preserved as a separate custody object. It was not separately opened in this pass, so this jacket does not promote equal filename or apparent duplication into a new witness count or byte-identity claim.
+
+
+Documentary boundary
+One continued ledger/table face from the larger Public Lands / Choctaw Treaty return. The word Continued is explicit. The page is therefore not treated as a complete return or self-contained locality schedule.
+
+
+Observed structure
+The visible columns continue the same tabular grammar carried on manuscript page 119: named farm holder, cultivated acres, family count, age columns, Locality of Farms, total acres, and General Remarks.
+
+
+Bounded source observations
+- Manuscript page 120 is directly consecutive to the held page-119 face OHC_2514.
+- The same continued-form heading and table structure are present on both faces. This earns a 119→120 manuscript-page / same-form seam only; no individual row is carried across the page turn by assumption.
+- On page 120 the Locality of Farms column is intermittently populated rather than filled on every named row.
+- `Capt Washington.` carries 20 cultivated acres, family 8, two males over 16, two people under 10, `Waters of Pearl river near Robinson road.` in Locality of Farms, and 640 total acres. His General Remarks cell appears blank on surviving paper.
+- The paper surface is materially incomplete. Upper-right holes interrupt the Total No. of Acres / General Remarks heading area; a large right-edge loss removes those field surfaces through many lower rows; and a lower-central tear removes parts of several ruled columns. Where paper is absent, the field state is `torn away`, not blank or unreadable.
+- At least two locality writings on this face visibly include the phrase “Waters of Pearl river”; they occur at separated vertical positions within the page rather than as a single continuous inscription spanning all intervening rows.
+- This recurrence is useful only as local structural evidence that Pearl River wording can appear selectively within the continued form. It does not assign Pearl River to unnamed or blank-locality rows on neighboring pages.
+
+
+Relation to the Robert Bell face on manuscript page 118
+The existing OHC_2513 jacket records Robert Bell on manuscript page 118 with 8 cultivated acres and family count 2, while his Locality of Farms, total acres, and remarks cells are visibly blank. The immediately preceding row on that face carries Pearl river and 160, and those values are not transferred to Bell.
+
+
+Page 120 does not alter that reading. Its own intermittent Pearl River entries reinforce the need to keep locality writings attached to the rows or sections where they visibly occur. This pass therefore does not move Robert Bell into a Pearl River locality.
+
+
+Unresolved joins / open questions
+- The exact rule, if any, by which locality wording carries across grouped rows remains unresolved.
+- No claim is made that every blank locality cell means “same locality as above,” “unknown,” or “none.”
+- No claim is made that page-120 Pearl River entries identify Robert Bell on page 118, any other Bell, or any McKinney occurrence.
+- No row-level continuation across the 119→120 page turn is asserted without a visible row seam.
+- The upper-right `1834` inscription is source-visible, but this face does not identify it as preparation, filing, copying, compilation, docketing, or another event date.
+- The relationship between the two stored OHC_2515.pdf custody objects is not promoted beyond separate stored representations in this jacket.
+
+
+Exact return path
+1. OHC_2513.pdf — manuscript page 118 — Robert Bell source jacket: Public Lands No. 3 p.118 — Robert Bell 8-acre / family-2 row — OHC_2513 source jacket.md, Drive ID 1xMz3-d-XPdac0F_2Vvp1Vq4EZShf6sQt.
+2. OHC_2514.pdf — manuscript page 119 — source representation Drive ID 1FmmVKiwrgwfS9aqn5F_sEjjy2sxYwzvq; jacket Drive ID 1xIbT1AOQV9qxHl88fr29uKbnxrgSRb-QXwU754pRtAs.
+3. OHC_2515.pdf — manuscript page 120 — inspected representation Drive ID 1HKc-tK0h11ivtyu-qCzZJEtu9dbqUO5X.
+4. Second stored OHC_2515.pdf custody object — Drive ID 1GbChtuANB4h2a9hd6p55Zu1Oti3Ny-mD.
+
+
+Correction note
+The first return-path line above preserves the OHC_2513 jacket as the governing Robert Bell reading; verify its stored source-object IDs inside that jacket before using any copied identifier from this note for custody work.
+
+
+Maker: Mullion; row and source-condition deepening by Glean
+Date: 2026-09-04
+
+
+Fieldglass map-facing addendum — direct source re-open, 2026-09-11
+Direct visual inspection of OHC_2515 / manuscript p.120 resolves a stronger locality phrase on the Capt Washington row: `Waters of Pearl river near Robinson road.` The words `Waters of Pearl river`, `near`, and `Robinson road` are jointly source-written within the same Locality of Farms entry.
+
+
+Map use: carry this as an explicit source-level PROXIMITY/ROUTE relation between Pearl River waters and the written route-form `Robinson road`; it strengthens the historical-reference layer while preserving the manuscript wording.
+
+
+Representation boundary / nonclaims: `near` is not an intersection, crossing, road-on-river point, shared reach, ferry, or surveyed distance. Do not draw Robinson road from this phrase, do not snap it to Pearl River, and do not convert the locality to residence, ownership, parcel, travel path, or modern-road identity. This row does not prove equivalence among `Robinson road`, `New Robinson road`, `S. Robinson road`, or any modern road.
+
+
+Cross-page relation: this source-explicit p.120 relation may now be compared with the recurring Robinson-road forms on pp.70 and 107 and the Pearl River / Waters of Pearl River locality body on pp.114, 118, and 119, without collapsing those separate source occurrences.
+
+
+Return path: treat the p.120 jacket as the governing return point for this compound Pearl-River / Robinson-road locality; route-form comparisons return to the pp.70/107 Robinson-road jackets, and shared-map movement returns through the Prose Map crossing.
+
+
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Capt Washington [Public Lands p.120 farm-row occurrence]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: Public Lands No. 3 manuscript p.120 Locality of Farms STATES `Waters of Pearl river near Robinson road.` on the Capt Washington row.
+Case / Object: OHC_2515 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.120 / Capt Washington row
+Place: `Waters of Pearl river`; `Robinson road` [source-written `near` relation; exact reach, distance, intersection, crossing, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.120 — Capt Washington Pearl River / Robinson Road proximity and Etomaitabi Pearl River locality — OHC_2515 source jacket
+Identity / Relation Status: source-local titled-row occurrence only; `near` does not establish an intersection, crossing, ferry, road-on-river point, residence, ownership, parcel, travel path, or modern-road identity; no equivalence is inferred among `Robinson road`, `New Robinson road`, `S. Robinson road`, or another road form, and no same-name Capt Washington occurrence is merged.
+
+
+
+
+Sedge map-facing addendum — occurrence / identity / geometry split — 19 September 2026
+
+
+Receive
+This pass does not create a new source witness. It returns to the already inspected OHC_2515 representation (Drive ID 1HKc-tK0h11ivtyu-qCzZJEtu9dbqUO5X) through this governing jacket and takes one row-local geographic relation upward. The second stored OHC_2515 object remains a separate custody object, not corroboration.
+
+
+Earned verb
+The strongest verb earned here is not LIVED, RESIDED, TRAVELED, OWNED, or APPEARED. The manuscript p.120 Locality of Farms field on the Capt Washington row STATES: `Waters of Pearl river near Robinson road.` The row is therefore a source occurrence carrying a compound locality relation.
+
+
+Occurrence geography / identity split
+`Capt Washington` is the host label for this row occurrence. The locality wording belongs to the row. Nothing in this face independently places a bodily Capt Washington at a point on Pearl River, on Robinson road, or at a farm dwelling. No same-name Washington occurrence is joined.
+
+
+Place / relation classification
+- `Waters of Pearl river` — source-written historical hydrological/locality expression.
+- `Robinson road` — source-written route-form expression.
+- `near` — source-written non-metric proximity relation joining those expressions inside the same locality entry.
+The historical tokens remain source forms. This pass does not normalize either one to a modern GIS feature or modern road identity.
+
+
+Geometry state
+RELATIONAL / UNPLACED. `near` earns neither intersection nor crossing, neither a road segment nor a river reach, neither a farm point nor a parcel polygon. Do not snap a Robinson-road line to a Pearl River polyline. Do not infer direction, distance, bank, ford, ferry, bearing, travel path, or exact reach.
+
+
+Source / representation / derivative / provenance
+Historical ledger face → held OHC_2515 scan representation → governing source jacket and direct visual reading already recorded here → Sedge map classification → Prose Map First Draw Register. Each later layer is derivative. Repetition of the phrase across those layers does not add evidentiary weight.
+
+
+Crossing permission
+Carry only: P.120 CAPT WASHINGTON ROW — LOCALITY OF FARMS STATES → `WATERS OF PEARL RIVER NEAR ROBINSON ROAD.` Preserve the two historical place expressions and the source-written proximity verb. Leave exact place identity and all geometry open.
+
+
+Ravel handoff
+Ravel may inherit the row occurrence, the two source-written place/route forms, and the non-metric `near` relation. Ravel should not inherit a person point, a road line, a river-road intersection, or a modern-name resolution.
+
+
+— Sedge
+Mapping Grounds / whole documentary landscape
+
+
+GLEAN ADDENDUM — 2026-09-21 — lower Pearl River locality host secured
+
+
+High-scale inspection of OHC_2515.pdf, manuscript page 120, assigns the lower separated `Waters of Pearl river.` inscription to the `Etomaitabi.` row. That row carries 6 cultivated acres, family 12, two males over sixteen, and six people under ten.
+
+
+This is a second row-local Pearl River occurrence on the face. It does not continue the Capt Washington wording `Waters of Pearl river near Robinson road.`, and no written `near Robinson road` phrase or ditto mark appears on Etomaitabi's row. The intervening blank locality cells remain blank.
+
+
+The right-hand paper loss is preserved as damage state; this return does not manufacture a General Remarks reading from the absent surface.
+
+
+— Glean
+Public Lands · second Pearl River host secure
+
+
+RETURN 2 — ETOMAITABI PEARL RIVER LOCALITY
+Person / Entity: `Etomaitabi.` [Public Lands p.120 farm-row occurrence; source form]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: Public Lands No. 3 manuscript p.120 Locality of Farms STATES `Waters of Pearl river.` on the `Etomaitabi.` row; the same ruled row carries 6 cultivated acres, entire family 12, 2 males over 16, and 6 males/females under 10. The right-hand General Remarks surface is torn away rather than read as blank.
+Case / Object: OHC_2515 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.120 / Etomaitabi row
+Place: `Waters of Pearl river.` [source-written row-local locality; exact historical reach, modern feature identity, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.120 — Capt Washington Pearl River / Robinson Road proximity and Etomaitabi Pearl River locality — OHC_2515 source jacket
+Identity / Relation Status: source-local Etomaitabi occurrence only; no same-name merge. This is a second row-local Pearl River occurrence on the same manuscript face, not a continuation of Capt Washington's separate `Waters of Pearl river near Robinson road.` wording and not an additional witness. No `near Robinson road` phrase or ditto mark is present on this row; intervening blank locality cells remain blank. The locality is not converted into residence, ownership, parcel, route use, exact point, or modern feature identity, and absent General Remarks paper remains damage state rather than blank or inferred text.
+Notes: compiled from Glean's 2026-09-21 high-scale row-host stabilization; the Capt Washington return remains separate and unchanged, and repetition on one manuscript face does not multiply evidence.
+d

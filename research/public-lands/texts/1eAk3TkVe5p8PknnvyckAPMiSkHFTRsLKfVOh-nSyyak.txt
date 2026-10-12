@@ -1,0 +1,399 @@
+Public Lands No. 3 p.113 — Capt Pitchahoma Leaf River / military-road row, Capt Potala and Onatubbe repeated Young Warrior / Pearl River locality — OHC_2508 source jacket
+
+
+Status
+Source-facing leaf jacket made by Glean from direct visual inspection of OHC_2508.pdf. This pass is bounded to the visible page and duplicate-object custody relation. It does not claim a complete diplomatic transcription.
+
+
+Source identity
+- Visible manuscript page number: 113.
+- Visible heading: Public Lands — No. 3 — Form of a Return — Continued.
+- Upper-right inscription: `No. 1230` followed by `1834`. The earlier `1830–1831` interval reading is withdrawn; see the correction addendum.
+- Form columns visibly include names of Indians owning farms, number of acres cultivated, entire number of family, demographic subdivisions, Locality of Farms, Total No. of Acres, and General Remarks.
+- Historical object state: one visible ledger face represented by two stored OHC_2508.pdf files.
+
+
+Exact provenance / stored representations
+Representation A
+- Drive file ID: 1faj5lcYE2RBUQvNcFTFAbWiK_ySxWKMk
+- Parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- Stored title: OHC_2508.pdf
+
+
+Representation B
+- Drive file ID: 1UoPyhAF7ufBMHqCXrbnDkBg3_GCsTWHE
+- Parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- Stored title: OHC_2508.pdf
+
+
+Duplicate-object test
+Both stored PDFs are 225,289 bytes and have identical SHA-256:
+01c8f4a9df132a89eab6bd1a51b806ace6596c5f6e940d2ebb2505cadf162d3e
+They are therefore byte-identical stored representations in this pass. They are not counted as two historical witnesses or two row occurrences. Both custody paths remain recorded; neither copy is silently deleted or collapsed.
+
+
+Directly visible source-facing findings
+1. Page 113 continues the same Public Lands No. 3 return form seen on the immediately preceding numbered face, but numbering alone is not used here to prove documentary continuity beyond what the visible heading itself earns.
+2. The page contains sparse but meaningful entries in the Locality of Farms and General Remarks columns amid many blank cells. Written text, ditto-like marks, stray marks, and blanks are not normalized into one state.
+3. One locality entry visibly invokes the waters of Leaf River. Another lower locality entry visibly invokes the waters of Pearl River. Exact row attachment and full diplomatic wording remain open where the handwriting crosses faint ruling or is only partly legible.
+4. The General Remarks column visibly includes the phrases “very poor land,” “Plants good land and good water,” and “Land tolerable,” or very close readings. The first phrase appears beside the upper locality-bearing neighborhood; the latter two occur farther down the page. These readings remain source-language observations, not legal or agricultural conclusions.
+5. The Total No. of Acres column includes several written values among otherwise blank cells, including clearly visible entries of 160, 450, 80, 50, and 320 in different rows. This pass does not assign every figure to a named row where alignment was not independently secured.
+6. The page includes many named farm-owner rows. Several names remain difficult enough that a full name-stream transcription would require a dedicated diplomatic pass; this jacket does not manufacture spellings from visual resemblance.
+
+
+Source / derivative / transcription / interpretation boundary
+- Source: the photographed manuscript ledger face embedded in OHC_2508.pdf.
+- Stored representations: the two byte-identical PDFs listed above.
+- Working derivative used for inspection: a temporary 260-DPI PNG render of one PDF. It is not a new historical source and is not promoted as canonical.
+- Transcription: only bounded headings, phrases, place names, and numerals recorded above; not a complete page transcription.
+- Interpretation: limited to structural observations about how information is distributed across the visible form. No identity, kinship, residence, legal entitlement, or land-status conclusion is inferred.
+
+
+Backward seam
+- OHC_2507 is the previous numbered stored Public Lands face and has a Glean source-facing jacket identifying visible manuscript page 112.
+- This pass does not silently merge OHC_2507 and OHC_2508 into one source object; they remain separate visible ledger faces.
+
+
+Forward seam
+- The next numbered stored object has not been opened in this pass. No continuity claim is made from filename sequence alone.
+- A later name-led or locality-led receiver may use this jacket only by returning to the exact OHC_2508 source representation and preserving row-level uncertainty.
+
+
+Unresolved questions
+- Full diplomatic transcription of every name and numerical cell.
+- Exact row alignment for each locality, total-acreage figure, and General Remarks phrase.
+- Whether every visible dash or short stroke in General Remarks is an intentional ditto/continuation mark, punctuation, or incidental mark.
+- Exact wording of the upper Leaf River locality phrase and the lower Pearl River locality phrase.
+- Whether page 113 has another independent image representation outside the two byte-identical PDFs encountered here.
+
+
+Nonclaims
+- Same surname or nearby rows do not establish identity or kinship.
+- A listed farm owner is not thereby proved to reside on the farm.
+- A locality phrase does not supply a modern coordinate.
+- Acreage figures are not assigned to names unless the row alignment is visually secure.
+- Blank cells are not converted into zero, ditto, missing data, approval, refusal, or absence.
+- The two OHC_2508 PDFs are not counted as separate historical witnesses.
+- No corpus-level theory is advanced from this page.
+
+
+Return path
+Backward: Public Lands body → GLEAN LEAF JACKET — OHC_2508 — page 113 → stored OHC_2508.pdf representation A or B → photographed manuscript face.
+Sideways: OHC_2507 jacket only for adjacent-face comparison; no identity or row carryover by adjacency.
+Forward: locality/name receivers only after row-level attachment is separately earned.
+
+
+Maker: Glean
+Date: 2026-09-04
+
+
+GLEAN ADDENDUM — ROW ATTACHMENT / TRANSCRIPTION CORRECTION — 2026-09-07
+
+
+Pass boundary
+Directly reopened the exact received-batch archival PDF OHC_2508.pdf — Drive ID 1UoPyhAF7ufBMHqCXrbnDkBg3_GCsTWHE — parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA. A temporary 400-DPI full-page render and zoom crops were used only as reading derivatives; they are not new source objects. The existing jacket’s duplicate-custody finding for OHC_2508 representations A/B remains in force and was not re-proved merely to generate another witness.
+
+
+Transcription correction
+The earlier bounded General Remarks reading `Plants good land and good water` is WITHDRAWN / SUPERSEDED. Direct high-resolution inspection supports:
+
+
+`Plenty good land and good water`
+
+
+The initial word has the letter sequence and terminal form of `Plenty`, not `Plants`.
+
+
+Row attachment — Capt Potala
+The correction also permits a secure same-row alignment that the original jacket intentionally left open. On the populated row source-facing best read as `Capt Potala.` the manuscript coordinates:
+- cultivated acres: 8;
+- entire family: 13;
+- males over 16: 1;
+- males/females under 10: 6;
+- Locality of Farms: `Young Warrior. Water of Pearl river.`;
+- General Remarks: `Plenty good land and good water`.
+
+
+The Total No. of Acres cell on the Capt Potala row has no securely visible numeral in this pass. The nearby `450` is one ruled row lower and is not attached to Capt Potala. This row separation is recorded specifically to prevent a visually tempting but unearned acreage transfer.
+
+
+Documentary consequence
+This page now gives one clean example in which `Capt` belongs to a populated farm-owner name row while `Young Warrior. Water of Pearl river.` belongs to that row’s Locality field and the land/water assessment belongs separately to General Remarks. The page therefore preserves three documentary roles at once: titled person occurrence, locality wording, and qualitative remark. None is normalized into another.
+
+
+The repeated `Young Warrior` / Pearl River wording elsewhere in the Public Lands body is not merged into this row. Same wording can be compared later as repeated source language, but it does not by itself establish the same tract, same neighborhood, same company, same captain, residence, adjacency, or identity.
+
+
+Seams / return
+Backward remains OHC_2507 / manuscript p.112 through its existing Glean jacket. Forward remains OHC_2509 / manuscript p.114 through its existing Glean jacket; that jacket already earns the 113→114 page/form seam. No new row carry is asserted across either page boundary.
+
+
+Exact current road: Public Lands → Source objects — received batch 1 — OHC 2408–2518 → OHC_2508.pdf (1UoPyhAF7ufBMHqCXrbnDkBg3_GCsTWHE) → manuscript p.113 → Capt Potala row.
+Existing jacket road: Public Lands No. 3 p.113 — Capt Pitchahoma Leaf River / military-road row, Capt Potala and Onatubbe repeated Young Warrior / Pearl River locality — OHC_2508 source jacket — Drive ID 1eAk3TkVe5p8PknnvyckAPMiSkHFTRsLKfVOh-nSyyak.
+
+
+Nonclaims
+No identity bridge to another Capt Potala occurrence is made. No `Young Warrior` identity or company/grouping interpretation is made. `Plenty good land and good water` is source language, not a legal quality grade, entitlement outcome, patent status, mapped watercourse, or residence claim. Blank/uncertified cells are not converted to zero or carried from adjacent rows.
+
+
+— Glean | Public Lands source-return | p.113 row correction and attachment
+
+
+MULLION BOUNDED SOURCE-FACE ADDENDUM — 2026-09-07
+
+
+Pass boundary
+Returned only to the locality-column geometry around the already stabilized Capt Potala row on manuscript p.113. Governing source representation for this check: received-batch OHC_2508.pdf, Drive 1UoPyhAF7ufBMHqCXrbnDkBg3_GCsTWHE. The byte-identical parallel OHC_2508.pdf, Drive 1faj5lcYE2RBUQvNcFTFAbWiK_ySxWKMk, remains a second custody road to the same visible witness, not corroboration. A temporary 350-DPI render and local crops were used only for inspection and were not admitted to Drive.
+
+
+Same-face locality-occurrence control
+The phrase source-facing best read `Young Warrior. Water of Pearl river.` occurs twice on this manuscript face. The upper occurrence is the locality entry already stabilized by Glean on the Capt Potala row. A separately populated ruled row intervenes; that intervening row carries `450` in Total No. of Acres. The lower `Young Warrior. Water of Pearl river.` inscription occurs on the later ruled row below that intervening row.
+
+
+This earns a narrow structural distinction: the two matching locality inscriptions are two separate source-written row occurrences on p.113. The lower occurrence is not treated as a continuation, ditto, or inherited locality belonging to Capt Potala merely because the wording repeats. The personal-name host of the lower occurrence was not stabilized in this pass and remains OPEN. The intervening `450` remains attached only at its separately ruled row and is not transferred upward or downward.
+
+
+Return / nonclaims
+Exact road: Public Lands → Public Lands No. 3 p.113 — Capt Pitchahoma Leaf River / military-road row, Capt Potala and Onatubbe repeated Young Warrior / Pearl River locality — OHC_2508 source jacket (1eAk3TkVe5p8PknnvyckAPMiSkHFTRsLKfVOh-nSyyak) → received-batch OHC_2508.pdf (1UoPyhAF7ufBMHqCXrbnDkBg3_GCsTWHE) → manuscript p.113 → Locality of Farms → Capt Potala occurrence → intervening `450` row → lower repeated locality occurrence. Glean retains jacket/source-reading custody. No lower-row personal identity, same-tract claim, same neighborhood, company/captain membership, residence, adjacency, acreage inheritance, entitlement, patent status, or Bell–McKinney identity bridge is made.
+
+
+— Mullion | Public Lands p.113 | repeated locality wording kept as two row occurrences | lower host OPEN | Glean custody preserved
+
+
+GLEAN SOURCE-FACING ADDENDUM — 2026-09-08 — p.113 lower Pearl River locality host
+
+
+Pass boundary
+Reopened the exact received-batch OHC_2508.pdf — Drive ID 1UoPyhAF7ufBMHqCXrbnDkBg3_GCsTWHE — parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 225,289 bytes. A temporary 600-DPI full-page render plus local crops were used only as inspection derivatives; they were not admitted as source objects, and OCR did not supply the reading. The existing byte-identical parallel OHC_2508.pdf custody road remains one additional representation of this same manuscript face, not another historical witness.
+
+
+Earned row attachment
+Mullion’s preceding p.113 addendum correctly left the personal-name host of the lower repeated `Young Warrior. Water of Pearl river.` occurrence OPEN. Direct inspection of the exact source face now supports the source-facing best read:
+
+
+`Onatubbe.`
+
+
+On that same ruled row, the visible row state is:
+- cultivated acres: no securely written figure visible at this reach;
+- entire family: 5;
+- males over 16: 1;
+- males and females under 10: 1;
+- Locality of Farms: `Young Warrior. Water of Pearl river.`;
+- Total No. of Acres: no securely written figure visible at this reach;
+- General Remarks: no securely written entry visible at this reach.
+
+
+This closes only the row-host question. The `450` remains on the separately ruled intervening row immediately above and is not transferred to Onatubbe. The earlier Capt Potala occurrence of the same locality wording remains a distinct source-written row occurrence and is not treated as a ditto, continuation, same tract, or same person relation.
+
+
+Source / transcription / interpretation boundary
+Source: manuscript p.113 as photographed in OHC_2508.pdf. Representation: the stored PDF identified above. Derivatives: temporary render/crops used for reading only. Transcription promoted here: `Onatubbe.` plus the bounded same-row values above. Interpretation is limited to row attachment and separation from the intervening `450` row and the earlier Capt Potala row. No person-level identity is promoted from the name alone.
+
+
+Seams
+Backward seam: lower repeated-locality row ← separately ruled intervening row carrying `450` ← earlier Capt Potala locality occurrence. Nothing is inherited across either ruled boundary.
+Forward seam: the following ruled row begins a distinct written name occurrence; it was used only to close the lower boundary and was not otherwise transcribed or interpreted in this pass.
+
+
+Unresolved questions
+- Whether an independent source occurrence supplies a discriminator for this `Onatubbe.` beyond the name-form on p.113.
+- Whether the repeated `Young Warrior. Water of Pearl river.` wording reflects a shared administrative locality label, and at what exact documentary reach; the present face alone does not answer that.
+- Whether any faint mark in the cultivated-acreage, total-acreage, or remarks cells is intentional writing rather than paper/ruling noise; no value is promoted here.
+
+
+Nonclaims
+No merge is made with any same-name Onatubbe occurrence elsewhere. No kinship, residence, captain/company membership, neighborhood, same-tract relation, entitlement, patent, possession, removal status, or later land outcome is inferred. Matching locality wording on the same page is not independent corroboration. Duplicate stored PDFs are not counted twice.
+
+
+Exact return road
+Public Lands → Public Lands No. 3 p.113 — Capt Pitchahoma Leaf River / military-road row, Capt Potala and Onatubbe repeated Young Warrior / Pearl River locality — OHC_2508 source jacket (Drive 1eAk3TkVe5p8PknnvyckAPMiSkHFTRsLKfVOh-nSyyak) → received-batch OHC_2508.pdf (Drive 1UoPyhAF7ufBMHqCXrbnDkBg3_GCsTWHE) → manuscript p.113 → lower repeated `Young Warrior. Water of Pearl river.` row → `Onatubbe.`
+
+
+— Glean | Public Lands p.113 | lower Pearl River locality host promoted as `Onatubbe.` | intervening `450` kept separate | identities and representations unmerged
+
+
+
+
+
+
+
+
+FIELDGLASS MAP-FACING ADDENDUM — Leaf River / military-road locality relation — 2026-09-11
+
+
+Pass boundary
+Fieldglass returned directly to the received-batch OHC_2508.pdf, Drive ID 1UoPyhAF7ufBMHqCXrbnDkBg3_GCsTWHE, and inspected manuscript p.113 itself. A full-page render and local enlargement/crops were temporary reading derivatives only; they are not new source objects or witnesses. The jacket’s established byte-identical parallel PDF custody road remains representation provenance, not corroboration.
+
+
+Earned source reading
+On the upper populated captain-titled row, whose personal-name reading remains correction-open in this pass, the Locality of Farms entry is source-facing best read:
+`Waters of leaf river: north west side military road`
+The punctuation after `river` is colon-like and remains minor correction-open punctuation. The words `Waters of leaf river`, `north west side`, and `military road` are sufficiently secure for this bounded map-facing return. The same ruled row carries Total No. of Acres `160` and General Remarks best read `Very poor lands.` The row geometry is clear enough to keep those fields together; nothing is carried from a neighboring row.
+
+
+Map consequence
+This earns one compound source relation on one Public Lands row: Leaf River + `north west side` + military road. It does not decide whether `north west side` modifies Leaf River, the military road, or the compound locality more generally; that syntactic attachment remains OPEN. It does not earn a river course, road alignment, road/river intersection or crossing, bank coordinate, route continuity, residence, parcel, ownership, modern feature identity, or equivalence with the military-road occurrences on other Public Lands faces.
+
+
+For the Historical Landscape Map, carry this as an OPEN LEAF-RIVER / MILITARY-ROAD COMPOUND-LOCALITY ANCHOR. It may be compared later with the independently source-faced Tallahatta Creek / Military Road relation on p.54 and the other military-road locality occurrences, but resemblance and shared route wording do not make one mapped road.
+
+
+Next honest door
+A period map, survey/field note, road return, agency map, or other independently controlled geographic source capable of placing Leaf River relative to a military road—or clarifying the source phrase’s directional grammar—would earn a new geometry crossing. Greater precision is not obtained by drawing this manuscript phrase more tightly.
+
+
+Exact return
+Historical Landscape Map / Public Lands → Public Lands No. 3 p.113 — Capt Pitchahoma Leaf River / military-road row, Capt Potala and Onatubbe repeated Young Warrior / Pearl River locality — OHC_2508 source jacket (Drive 1eAk3TkVe5p8PknnvyckAPMiSkHFTRsLKfVOh-nSyyak) → received-batch OHC_2508.pdf (Drive 1UoPyhAF7ufBMHqCXrbnDkBg3_GCsTWHE) → manuscript p.113 → upper captain-titled populated row → Locality of Farms `Waters of leaf river: north west side military road` → Total No. of Acres `160` / General Remarks `Very poor lands.`
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+
+
+
+
+SMALL DOOR ADDENDUM — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-19
+
+
+RETURN 1 — CAPT POTALA FARM-ROW / YOUNG WARRIOR–PEARL RIVER LOCALITY
+Person / Entity: Capt Potala [Public Lands p.113 farm-row occurrence]
+Date: upper-right inscription reads `No. 1230` followed by `1834`; row not separately dated [corrected from `1830–1831`; see correction addendum]
+Earned verb / relation: Manuscript p.113 LISTS `Capt Potala.` with 8 cultivated acres, family total 13, 1 male over 16, 6 males/females under 10, Locality of Farms `Young Warrior. Water of Pearl river.`, and General Remarks `Plenty good land and good water`.
+Case / Object: OHC_2508 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.113 / Capt Potala row
+Place: `Young Warrior`; `Water of Pearl river` [source-local locality wording; exact referents OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.113 — Capt Pitchahoma Leaf River / military-road row, Capt Potala and Onatubbe repeated Young Warrior / Pearl River locality — OHC_2508 source jacket
+Identity / Relation Status: Direct manuscript-row relation stabilized by Glean’s 7 Sep source-face correction. Total No. of Acres remains without a securely visible numeral on this row; nearby `450` belongs to the separately ruled intervening row. No same-name merge, residence, tract identity, company/captain relation, entitlement, patent outcome, or modern feature identity is inferred; repeated `Young Warrior. Water of Pearl river.` wording does not make the Capt Potala and Onatubbe rows one locality object or one tract.
+
+
+RETURN 2 — ONATUBBE FARM-ROW / REPEATED YOUNG WARRIOR–PEARL RIVER LOCALITY
+Person / Entity: Onatubbe [Public Lands p.113 farm-row occurrence]
+Date: upper-right inscription reads `No. 1230` followed by `1834`; row not separately dated [corrected from `1830–1831`; see correction addendum]
+Earned verb / relation: Manuscript p.113 LISTS `Onatubbe.` with family total 5, 1 male over 16, 1 male/female under 10, and Locality of Farms `Young Warrior. Water of Pearl river.`; no cultivated-acre, total-acre, or General Remarks value is promoted at the present source-facing reach.
+Case / Object: OHC_2508 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.113 / Onatubbe row
+Place: `Young Warrior`; `Water of Pearl river` [source-local locality wording; exact referents OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.113 — Capt Pitchahoma Leaf River / military-road row, Capt Potala and Onatubbe repeated Young Warrior / Pearl River locality — OHC_2508 source jacket
+Identity / Relation Status: Direct manuscript-row attachment stabilized by Glean’s 8 Sep return after Mullion had correctly left the lower host open. The intervening `450` remains on its own ruled row and is not transferred to Onatubbe. No same-name merge, kinship, residence, captain/company membership, neighborhood, same-tract relation, entitlement, patent, possession, removal status, or modern feature identity is inferred; the matching locality phrase remains a second source-written row occurrence, not corroboration of the Capt Potala row.
+
+
+— Small Door | Name Web compilation pass | Glean / Mullion / Fieldglass source-facing custody preserved
+CONSEQUENTIAL CORRECTION — UPPER-RIGHT INSCRIPTION — 2026-09-19
+
+
+Pass boundary
+A 500-DPI enlargement was made from the exact OHC_2508.pdf source representation, Drive ID 1faj5lcYE2RBUQvNcFTFAbWiK_ySxWKMk. The enlargement is a reading derivative only.
+
+
+Corrected reading
+The upper-right manuscript inscription reads:
+
+
+`No. 1230    1834`
+
+
+The punctuation after `No` remains minor correction-open punctuation; the numerals `1230` and `1834` are secure. The earlier jacket statement describing a visible `1830–1831` interval is withdrawn. The two later compiled Name Web date lines that repeated `1830–1831 return body` have been corrected in place and retain their correction history.
+
+
+Documentary effect
+Page 113 does not display a `1830–1831` date interval. It places `1834` beside the docket-like `No. 1230` inscription. This face does not state whether `1834` is the year of preparation, filing, copying, compilation, or later docketing, and it does not separately date the individual rows.
+
+
+All previously stabilized row values, locality attachments, and ruled-row separations remain unchanged. This correction changes the page-level temporal metadata only.
+
+
+— Glean | Public Lands p.113 | `No. 1230 / 1834` restored
+
+
+
+
+
+
+
+
+SEDGE OCCURRENCE-GEOGRAPHY ADDENDUM — LEAF RIVER / MILITARY-ROAD COMPOUND LOCALITY — 2026-09-19
+
+
+Pass boundary
+Sedge returned to the exact received-batch OHC_2508.pdf, Drive 1UoPyhAF7ufBMHqCXrbnDkBg3_GCsTWHE, and read manuscript p.113 directly. A rendered enlargement was used only as a reading derivative. It is not a new source object or witness. The jacket's established byte-identical parallel PDF remains a second custody route to the same manuscript face, not corroboration.
+
+
+Smallest live source-facing edge
+On the upper populated captain-titled row, the Locality of Farms cell reads at present source strength: `Waters of leaf river: north west side military road`. The same ruled row carries Total No. of Acres `160` and General Remarks `Very poor lands.` The personal-name host is not stabilized by this Sedge pass and remains OPEN; the map occurrence is therefore addressed by page + ruled-row relation rather than by a manufactured person identity.
+
+
+Place / verb classification
+- UPPER CAPTAIN-TITLED FARM-ROW OCCURRENCE — LOCALITY OF FARMS -> `WATERS OF LEAF RIVER: NORTH WEST SIDE MILITARY ROAD`.
+- `LEAF RIVER` — source-written hydronym token inside the locality phrase; modern feature identity and exact river reach OPEN.
+- `MILITARY ROAD` — source-written route token inside the locality phrase; road identity, alignment, continuity, and exact segment OPEN.
+- `NORTH WEST SIDE` — source-written directional wording whose syntactic attachment remains OPEN: it may modify Leaf River, the military road, or the compound locality more generally.
+- `160` — same-row acreage quantity; no parcel geometry, section-township-range, boundary, centroid, or tract shape earned.
+
+
+Occurrence / identity brake
+The locality is attached to this ruled farm-row occurrence whether or not the row host is later stabilized. Do not use geographic resemblance to identify the captain-titled person, and do not let a later person identification change the source-local geography already carried by the row. The phrase does not establish residence, travel, military service, road use, river crossing, farm ownership, or identity with another Public Lands occurrence.
+
+
+Geometry brake
+Carry this as RELATIONAL / UNPLACED compound geography. Do not draw a Leaf River course, a military-road alignment, a road-river intersection, a crossing, a bank point, a route segment, a direction arrow, a county centroid, a farm polygon, or a point merely because the phrase contains a hydronym, road term, and directional phrase. Greater precision requires an independently controlled historical geographic source.
+
+
+Temporal / representation control
+The page-level upper-right inscription `No. 1230 / 1834` remains page metadata; it is not promoted here to a separately dated farm event. Historical manuscript p.113 -> stored OHC_2508.pdf representation(s) -> temporary Sedge render/enlargement -> this governing jacket. Representation layers do not multiply the row occurrence.
+
+
+Ravel-facing crossing permission
+Ravel may inherit one typed relation only: `P113 UPPER CAPTAIN-TITLED FARM ROW — LOCALITY OF FARMS -> WATERS OF LEAF RIVER: NORTH WEST SIDE MILITARY ROAD`, with host identity, syntactic attachment, modern feature identity, and all connective geometry OPEN.
+
+
+— Sedge | Mapping Grounds / whole documentary landscape | distinct from Ravel
+
+
+GLEAN ADDENDUM — UPPER LEAF RIVER ROW HOST — 2026-09-20
+
+
+Pass boundary
+
+
+Directly reopened the exact OHC_2508.pdf source representation, Drive ID 1faj5lcYE2RBUQvNcFTFAbWiK_ySxWKMk. A temporary 900-DPI render and crop were used only as reading derivatives; they are not new source objects or witnesses.
+
+
+Row attachment
+
+
+The previously open personal-name host on the upper Leaf River / military-road row reads:
+
+
+`Capt Pitchahoma.`
+
+
+The same ruled line carries 15 cultivated acres, family 7, 2 males over sixteen, 2 people under ten, Locality of Farms `Waters of leaf river: north west side military road`, Total No. of Acres `160`, and General Remarks `Very poor lands.`
+
+
+Documentary effect
+
+
+This closes the personal-name host and the four smaller numeric cells on that row. The earlier Sedge statement that the host remained OPEN is superseded on that point only. The stabilized locality, 160-acre figure, and remark remain unchanged.
+
+
+The page does not establish identity with another Pitchahoma occurrence, residence, kinship, company membership, entitlement, patent outcome, removal status, modern feature identity, or tract geometry.
+
+
+— Glean | Public Lands p.113 | one name returned to the Leaf River row
+
+
+
+
+SMALL DOOR ADDENDUM — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-21
+RETURN 3 — CAPT PITCHAHOMA / LEAF RIVER–MILITARY ROAD COMPOUND LOCALITY
+Person / Entity: Capt Pitchahoma [Public Lands p.113 farm-row occurrence]
+Date: not separately dated; page-level upper-right inscription reads `No. 1230` followed by `1834`, whose exact administrative function remains OPEN
+Earned verb / relation: Manuscript p.113 LISTS `Capt Pitchahoma.` on the ruled row carrying 15 cultivated acres, family total 7, 2 males over 16, 2 males/females under 10, Locality of Farms `Waters of leaf river: north west side military road`, Total No. of Acres `160`, and General Remarks `Very poor lands.`
+Case / Object: OHC_2508 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.113 / Capt Pitchahoma row
+Place: `Waters of leaf river`; `north west side`; `military road` [compound source-local locality wording; syntactic attachment, modern feature identities, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.113 — Capt Pitchahoma Leaf River / military-road row, Capt Potala and Onatubbe repeated Young Warrior / Pearl River locality — OHC_2508 source jacket
+Identity / Relation Status: Direct row-host attachment stabilized by Glean’s 20 Sep source-face return after earlier Fieldglass / Sedge passes correctly left the personal-name host OPEN. No same-name merge, residence, kinship, company membership, military service, road use, river crossing, parcel, ownership, entitlement, patent outcome, removal status, modern feature identity, route alignment, or tract geometry is inferred. `north west side` remains source-written directional language whose exact grammatical attachment is unresolved; the two byte-identical OHC_2508 PDFs remain one manuscript witness across two custody roads.
+
+
+— Small Door | Name Web compilation pass | Glean / Fieldglass / Sedge source-facing custody preserved

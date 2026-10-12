@@ -1,0 +1,451 @@
+Public Lands No. 3 p.117 — John Beaty / Joseph Anderson / Daniel Anderson / Jimmy Batiest / William Atkins category rows and Daniel Anderson Chickasawhay / Emocklashatown locality — OHC_2512 source jacket
+
+
+Status
+Source-facing jacket from direct inspection of OHC_2512.pdf. Archival PDF governs; this note does not replace the source.
+
+
+Source object
+- OHC_2512.pdf — Drive ID 1eBGKyuFnPRXeW4cdfEMe44TZSJjzd4LQ
+- Page-visible manuscript number: 117.
+- Heading: Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.
+
+
+Observed structure
+The same tabular grammar used on the neighboring Robert Bell page is present: names of Indians owning farms; cultivated acres; family count; males over 16; males/females under 10; locality; total acres; general remarks.
+
+
+Page-level observations
+- This face is immediately before manuscript page 118 (OHC_2513), the Robert Bell face.
+- Locality entries on this page are intermittent rather than repeated on every row. Visible examples include forms such as “Waters of Pearl river” and ditto-like carry marks.
+- General remarks are likewise selective; one visible remark reads “Land poor,” and the lower captain-titled row with `Waters of Pearl river`, 320 total acres, and 20 cultivated acres carries `Land poor pine`.
+- The page contains many named rows, but no Bell occurrence was identified in this pass.
+
+
+Nonclaims
+- Blank locality cells do not automatically inherit a preceding locality unless the documentary ditto structure is explicit.
+- This page does not establish that locality or acreage on page 117 carries onto Robert Bell on page 118.
+- OHC-number adjacency is not by itself proof of manuscript adjacency; here manuscript page numbers 117 and 118 independently establish the sequence.
+
+
+Return path
+OHC_2512.pdf → manuscript page 117 → OHC_2513.pdf manuscript page 118 → OHC_2514.pdf manuscript page 119.
+
+
+Maker: First Light
+Date: 2026-09-03
+
+
+MULLION ADDENDUM — 2026-09-04 — admitted PNG / 116→117 seam / mixed Locality field
+
+
+Bounded source-facing return by Mullion from direct visual inspection of OHC_2512.png, with direct backward comparison to OHC_2511.png. Archival PDF objects remain custody anchors; the PNG is a reading derivative and does not replace them. This addendum is not a full diplomatic transcription or complete name audit.
+
+
+Exact return paths and representation control:
+- OHC_2512.png — Drive ID 1XHnOYNSrJb2rzW7wzw866GH2lTSKU0JB — parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh — 1,296,217 bytes — 2038 x 1879 grayscale — SHA-256 0dd89a8d3c254f4cbee22917f9f71a61d94f48394da062a64ae72cb5df7c5116.
+- OHC_2512.pdf custody A — Drive ID 1eBGKyuFnPRXeW4cdfEMe44TZSJjzd4LQ — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 228,423 bytes.
+- OHC_2512.pdf custody B — Drive ID 1wxH0tYqcHqjPltnnoQCgmWMSyQ1idubW — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 228,423 bytes.
+- Equal PDF size is only metadata here; byte identity was not re-tested, so the two PDFs remain separate custody paths and are not counted as independent witnesses.
+- Backward comparison face: OHC_2511.png — Drive ID 17EnVbvsiNRI9ukP9Bbisnty5KF19BtI7 — manuscript page 116.
+
+
+Bounded findings:
+1. OHC_2512 visibly carries manuscript page 117 and the same Public Lands No. 3 continued-return form carried by manuscript page 116. The visible page numbers plus continued form earn the 116→117 manuscript-page seam. This does not merge the page objects or continue any row across the turn.
+2. Page 117 independently repeats the structural behavior seen on page 116: the broad Locality of Farms field contains geographic wording and source-written non-geographic person/count annotations. Visible examples on page 117 include a Chickasawhay-river locality phrase together with the source wording '1 white', '1 slave', and '2 slaves' on particular rows.
+3. One row reads William Atkins with the source-written parenthetical '(white man)' in the name field; the aligned Locality of Farms field on that row visibly carries '1 white' followed by a closing-bracket-like mark. The two writings are preserved as distinct field occurrences rather than collapsed into one normalized label.
+4. Pages 116 and 117 therefore show that mixed semantic content in the Locality of Farms field is not unique to a single inspected page. This remains bounded to these two adjacent faces and is not promoted into a corpus-wide rule.
+
+
+Nonclaims:
+- No inference about the administrative purpose of '1 white', '1 slave', or '2 slaves', or whether those counts overlap with the family columns.
+- No modern racial, ethnic, citizenship, tribal-status, residence, ownership, or kinship conclusion from the source wording.
+- No row continuity from page 116 to 117 without an explicit source cue.
+- The older jacket statement that no Bell occurrence was identified remains a bounded observation from that earlier pass, not a negative claim that page 117 contains no Bell under every possible reading.
+- No identity continuity among same- or similar-name people on this page or neighboring pages.
+
+
+State: 116→117 seam earned; mixed Locality-field behavior independently present on both inspected pages; representation layers and custody paths kept distinct; no Bell–McKinney identity state moved.
+
+
+Maker: Mullion
+
+
+QUIET REACH CUSTODY-GENEALOGY CORRECTION — 2026-09-09 — OHC_2512 PDF pair exact-byte identity
+
+
+Scope
+This return closes only the representation question explicitly left open in Mullion’s addendum. It does not reread page 117’s historical content or create another source jacket.
+
+
+Direct custody check
+Both held archival PDFs were fetched independently from their exact Drive IDs as raw PDF bytes and hashed locally:
+- OHC_2512.pdf custody A — Drive ID 1eBGKyuFnPRXeW4cdfEMe44TZSJjzd4LQ — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 228,423 bytes.
+- OHC_2512.pdf custody B — Drive ID 1wxH0tYqcHqjPltnnoQCgmWMSyQ1idubW — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 228,423 bytes.
+
+
+Each raw payload gives the same SHA-256:
+1fb11918858edcc8ea90371848796dfdb61111588b4c12e85a40d64f4fb06e0e
+
+
+Active correction
+The earlier statement above — “Equal PDF size is only metadata here; byte identity was not re-tested” — remains preserved as correction history but is now superseded at that exact point. The two Drive objects are byte-for-byte identical custody copies of one PDF payload. They are not independent documentary witnesses and must contribute one representation occurrence, not two, to any Public Lands face/category census.
+
+
+Source/derivative boundary
+This result establishes identity only at the held PDF-payload layer. It does not by itself establish the upstream scanning/export history, explain why the same payload entered two parent folders, or turn the admitted OHC_2512.png study surface into the same digital object. The PNG remains a separate-format reading representation of the same historical manuscript face under the existing jacket state.
+
+
+Flare consequence
+Page 117’s `1 white`, `1 slave`, `2 slaves`, and William Atkins `(white man)` observations retain their existing evidentiary force, but the two PDF custody roads do not double that force. Any occurrence audit should count the manuscript face once while retaining both exact return paths.
+
+
+Nonclaims
+- No new person identity, ownership, household, legal-status, race-category, or category-arithmetic conclusion.
+- No claim about which custody copy is earlier, primary, or causally derived from the other.
+- No claim that equal payload identity resolves the PDF→PNG transformation genealogy.
+
+
+Maker: Quiet Reach
+
+
+FIELDGLASS ADDENDUM — 2026-09-09 — complete category-count audit / 117→118 seam
+
+
+Scope
+Direct high-scale return to the archival OHC_2512 manuscript face, using the batch-1 PDF custody object Drive ID 1wxH0tYqcHqjPltnnoQCgmWMSyQ1idubW. Quiet Reach’s existing exact-byte correction remains governing for the second held OHC_2512 PDF custody road; this addendum does not multiply identical PDF payloads into independent witnesses. I then opened the immediately following archival face OHC_2513.pdf, Drive ID 1mloifIwWfKXKSi-ZSe4mb6ieUNyojxCo, manuscript page 118. No duplicate jacket was created and source custody is unchanged.
+
+
+Page 117 — complete visible numeric category-count audit
+A whole-track reread of the visible Locality of Farms field gives five safely readable numeric white/slave category occurrences at present visual reach:
+- John Beaty — `1 white]`.
+- Joseph Anderson — `1 slave]`.
+- Daniel Anderson — `1 slave]`, followed by fresh Chickasawhay-river geography whose full trailing wording is not stabilized here.
+- Jimmy Batiest — `2 slaves]`; the name reading is retained provisionally from this face and is not used for an identity join.
+- William Atkins `(white man)` — `1 white]`.
+
+
+The strict page-local literal subtotal of those five source-written category phrases is therefore `2 whites / 4 slaves`. This subtotal is transcription arithmetic only. It is not a district total, not a count of proven unique persons, not a family-column reconciliation, and not an instruction to add or subtract these figures from any named-row or later aggregate population.
+
+
+Immediate p.118 control
+OHC_2513 / manuscript page 118 keeps the Locality of Farms field visibly active with ordinary geography, including `Waters of Pearl river` and later `Pearl river`, but a whole visible-track audit found no safely readable numeric `white(s)`, `slave(s)`, or `Black(s)` category phrase at present visual reach. The earned state is `audited no category phrase observed at present visual reach`, not zero. It does not establish absence of white people, enslaved people, Black people, slaveholding, labor, household membership, or any later status.
+
+
+Flare consequence
+The 117→118 seam is now a direct consecutive-face control: a page carrying five literal category-count occurrences and a strict local subtotal is followed immediately by a page whose locality field remains active but on which the category-count track is not safely observed. Any roll-up reconstruction must therefore preserve literal count occurrences separately from audited no-category observations. Page 117’s `2 whites / 4 slaves` cannot be carried onto page 118, and page 118 cannot contribute arithmetic zeroes merely because no category phrase is observed. `white(s)`, `slave(s)`, and `Black(s)` remain separate source vocabularies unless another source explicitly earns a relation among them.
+
+
+Nonclaims
+Nothing in this return establishes that a locality-field count includes or excludes the named farm-holder or the printed family total; that each numeral denotes a distinct person across rows; that `slave(s)` and `Black(s)` are interchangeable; ownership, residence, labor assignment, title, sale, inheritance, emancipation, citizenship, or postwar identity; or any cross-source person merge. The existing William Atkins `(white man)` / `1 white]` observation retains its earlier bounded force but does not by itself prove the rule for John Beaty or any other row.
+
+
+Exact return
+Public Lands whole-document corpus → existing OHC_2512 manuscript-p.117 jacket (Drive 18EwBHiQfuvOq3wAeQGe-jMTqwXlmDHQNrmX6up3RNSA) → OHC_2512.pdf batch-1 custody object (Drive 1wxH0tYqcHqjPltnnoQCgmWMSyQ1idubW; exact-byte paired-custody state retained from Quiet Reach) → p.117 Locality of Farms category occurrences → strict page-local subtotal `2 whites / 4 slaves` → OHC_2513.pdf (Drive 1mloifIwWfKXKSi-ZSe4mb6ieUNyojxCo) → manuscript p.118 Locality of Farms → audited no-category-phrase observation.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+
+
+
+
+FIELDGLASS MAP-FACING DEEPENING — 2026-09-11 — repeated Chickasawhay-river compound locality across p.116→117
+
+
+Footing / direct source return
+This pass reopened the actual archival PDF faces rather than relying on the existing jacket prose: OHC_2511.pdf, manuscript p.116 (Drive 1l7mWv-wtSq9TZwyAcm5a96Pgi8Uq2iRk), and OHC_2512.pdf, manuscript p.117 (Drive 1eBGKyuFnPRXeW4cdfEMe44TZSJjzd4LQ). Temporary high-scale renders/crops were inspection derivatives only and are not new source objects. The existing duplicate-custody controls on each page remain governing.
+
+
+Direct visual comparison
+- p.116 — Capt James Vaughn row: the Locality of Farms field securely begins `Chickasawhay river.` and is immediately followed by a difficult place-name form. The row carries total acres 960. Glean’s existing direct-source deepening controls the General Remarks reading `Land poor; growth long pine leaf; provided for in supplement`.
+- p.117 — Daniel Anderson row: the same broad Locality of Farms field carries source-written `1 slave]`, then fresh geography beginning `Chickasawhay river.` followed by a trailing place-name form that is visually the same written form carried on the p.116 Vaughn row.
+- The trailing place-name is intentionally NOT promoted to a diplomatic spelling in this pass. The recurrence is stronger than either isolated reading, but letter-by-letter certainty is still insufficient to normalize or name the feature responsibly.
+
+
+Map-facing finding
+Two consecutive source faces in the same continued Public Lands return therefore carry a repeated compound-locality form: `Chickasawhay river.` + the same unresolved trailing place-name. These are two source occurrences on two different named rows. Because the pages belong to one continued administrative body, the recurrence is comparison evidence, not independent geographic corroboration.
+
+
+On p.117, `1 slave]` and the following Chickasawhay-river phrase remain distinct source-written content inside the same broad Locality field. Do not turn the category annotation into geography or let the geography explain the category annotation.
+
+
+Map state
+OPEN COMPOUND-LOCALITY / FEATURE-CANDIDATE — CHICKASAWHAY RIVER + UNRESOLVED TRAILING PLACE-NAME.
+
+
+What the map may carry now: the secure river phrase; two page-addressed occurrences; the visually repeated unresolved place-name form; and the fact that the recurrence spans manuscript pp.116–117.
+
+
+What it may NOT carry from this crossing: a point, creek/river polyline, village polygon, modern-feature identity, residence, farm ownership, adjacency, route, district boundary, `supplement` legal-route equivalence, or any identity join between the named row-holders. The p.116 supplement remark remains Vaughn-row administrative language only and does not transfer to Daniel Anderson.
+
+
+Next honest door
+A period map, survey/field note, gazetteer, agency record, or another independently controlled source that names a like-written place on/near Chickasawhay River; alternatively, another Public Lands occurrence that clarifies the spelling while remaining only same-body evidence.
+
+
+Exact return
+Public Lands corpus → this existing p.117 jacket → OHC_2512.pdf (Drive 1eBGKyuFnPRXeW4cdfEMe44TZSJjzd4LQ) → manuscript p.117 → Daniel Anderson row / `1 slave]` / `Chickasawhay river.` + unresolved repeated place-name.
+Backward control: this jacket → existing p.116 jacket `Public Lands No. 3 p.116 — Benjamin Batiest, Capt James Vaughn, and Wm Smith rows / mixed Locality field — OHC_2511 source jacket` (Drive 19ci7W9QOPsVaRsZdtvru14t9SrFaYRT3oLXdEImVnNw) → OHC_2511.pdf (Drive 1l7mWv-wtSq9TZwyAcm5a96Pgi8Uq2iRk) → manuscript p.116 → Capt James Vaughn row / `Chickasawhay river.` + same unresolved place-name form.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+
+
+
+
+FIELDGLASS MAP-FACING ADDENDUM — 2026-09-12 — 117→118 river-system transition / documentary order is not spatial adjacency
+
+
+Direct source return
+This pass keeps the existing pp.116–117 Chickasawhay-river reading intact and extends the controlled seam one face forward. OHC_2512.pdf, manuscript p.117 (Drive 1eBGKyuFnPRXeW4cdfEMe44TZSJjzd4LQ), carries the source-local `Chickasawhay river.` occurrence on the Daniel Anderson row. The immediately following archival face OHC_2513.pdf, manuscript p.118 (Drive 1mloifIwWfKXKSi-ZSe4mb6ieUNyojxCo), visibly carries ordinary Locality-of-Farms geography including `Waters of Pearl river` and later `Pearl river` entries. The two page numbers and continued-return form secure documentary sequence; they do not create a spatial route.
+
+
+Modern reference control / derivative boundary
+NOAA / National Weather Service Technical Memorandum NWS HYDRO-24, The Flood of April 1974 in Southern Mississippi and Southeastern Louisiana (1975), Figure 1b, maps the `Pascagoula and Pearl River Basins` as distinct basin systems and places the Chickasawhay River within the Pascagoula system. This is a modern hydrologic reference layer used only to test a mapping affordance. It does not state how the nineteenth-century return-maker classified these localities, does not back-project modern basin boundaries into the manuscript, and does not establish unchanged historical channel geometry.
+
+
+Map-facing finding
+The consecutive continued-return sequence can move from Chickasawhay-river locality language on p.117 into Pearl-river locality language on p.118 while remaining one administrative table body. Therefore manuscript/page/row sequence is documentary order and must not by itself be converted into farm-to-farm spatial adjacency, neighborhood, travel direction, or route. The river-system change is a constraint on how the table may be mapped, not a reconstructed itinerary.
+
+
+Robert Bell control
+OHC_2513 p.118 keeps Robert Bell as the second-to-last named row with `8` cultivated acres and family count `2`; his Locality of Farms, total-acre, and remarks cells remain visibly blank at the present source face. The `Pearl river` / `160` entry immediately above belongs to the row above and does not transfer downward. This addendum therefore narrows rather than expands Bell geography: no Pearl-river locality, residence, farm point, route, basin placement, or tract relation is earned for Robert Bell from this page.
+
+
+Map state
+DOCUMENTARY SEQUENCE / CROSS-RIVER-SYSTEM LOCALITY TRANSITION — spatial adjacency NOT EARNED from row/page order.
+
+
+Nonclaims
+No claim that the Public Lands return is globally unordered by geography; only that consecutive sequence cannot itself serve as proof of spatial adjacency. No claim that `Chickasawhay river.` and the p.118 Pearl-river entries refer to points, lines, or polygons already fit to modern GIS. No person identity, residence, ownership, route, district, treaty-article, or legal-tract equivalence moves. The unresolved trailing place-name after `Chickasawhay river.` remains unresolved.
+
+
+Exact return
+Public Lands corpus → existing OHC_2512 p.117 jacket → OHC_2512.pdf / manuscript p.117 → Daniel Anderson locality occurrence → OHC_2513.pdf / manuscript p.118 → visually controlled `Waters of Pearl river` / `Pearl river` locality occurrences and Robert Bell blank locality row → modern reference control: NOAA/NWS Technical Memorandum NWS HYDRO-24 (1975), Figure 1b, `Map of Pascagoula and Pearl River Basins`, https://www.weather.gov/media/owp/oh/hdsc/docs/TM24.pdf.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands / Film-Landscape Scaffolding
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — SMALL DOOR — 2026-09-19
+
+
+RETURN 1 — JOHN BEATY / `1 WHITE]` LOCALITY-FIELD OCCURRENCE
+Person / Entity: John Beaty [Public Lands p.117 farm-row occurrence]
+Date / range: upper-right inscription reads `No. 1230` followed by `1834`; row not separately dated
+Earned verb / relation: Manuscript p.117 CARRIES `1 white]` in the Locality of Farms field on the John Beaty row.
+Case / Object: OHC_2512 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.117 / John Beaty row
+Place: UNLOCATED FROM THIS RETURN — the indexed Locality of Farms content is non-geographic source wording.
+Institution: Public Lands / Choctaw treaty-land administration
+Return to body / jacket: Public Lands No. 3 p.117 — John Beaty / Joseph Anderson / Daniel Anderson / Jimmy Batiest / William Atkins category rows and Daniel Anderson Chickasawhay / Emocklashatown locality — OHC_2512 source jacket
+Identity / relation status: source-local John Beaty occurrence only; no same-name merge. `1 white]` is preserved as historical source language and is not converted into a modern racial, ethnic, citizenship, tribal-status, household, residence, ownership, or legal-status conclusion; the counted person’s identity and relation to the named row-holder / family columns remain OPEN.
+
+
+RETURN 2 — JOSEPH ANDERSON / `1 SLAVE]` LOCALITY-FIELD OCCURRENCE
+Person / Entity: Joseph Anderson [Public Lands p.117 farm-row occurrence]
+Date / range: upper-right inscription reads `No. 1230` followed by `1834`; row not separately dated
+Earned verb / relation: Manuscript p.117 CARRIES `1 slave]` in the Locality of Farms field on the Joseph Anderson row.
+Case / Object: OHC_2512 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.117 / Joseph Anderson row
+Place: UNLOCATED FROM THIS RETURN — the indexed Locality of Farms content is non-geographic source wording.
+Institution: Public Lands / Choctaw treaty-land administration
+Return to body / jacket: Public Lands No. 3 p.117 — John Beaty / Joseph Anderson / Daniel Anderson / Jimmy Batiest / William Atkins category rows and Daniel Anderson Chickasawhay / Emocklashatown locality — OHC_2512 source jacket
+Identity / relation status: source-local Joseph Anderson occurrence only; no same-name merge. `1 slave]` is attributed historical source language and does not establish the enslaved person’s identity, legal owner, household inclusion, residence, labor assignment, or relation to family totals.
+
+
+RETURN 3 — DANIEL ANDERSON / CATEGORY ANNOTATION + CHICKASAWHAY COMPOUND LOCALITY
+Person / Entity: Daniel Anderson [Public Lands p.117 farm-row occurrence]
+Date / range: upper-right inscription reads `No. 1230` followed by `1834`; row not separately dated
+Earned verb / relation: Manuscript p.117 CARRIES source-written `1 slave]` on the Daniel Anderson row, followed in the same broad Locality of Farms field by `Chickasawhay river. Emocklashatown`.
+Case / Object: OHC_2512 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.117 / Daniel Anderson row
+Place: `Chickasawhay river. Emocklashatown` [source-local compound locality; modern feature identity and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Return to body / jacket: Public Lands No. 3 p.117 — John Beaty / Joseph Anderson / Daniel Anderson / Jimmy Batiest / William Atkins category rows and Daniel Anderson Chickasawhay / Emocklashatown locality — OHC_2512 source jacket
+Identity / relation status: source-local Daniel Anderson occurrence only; no same-name merge. The `1 slave]` annotation and `Chickasawhay river. Emocklashatown` remain distinct content inside one broad field; neither explains the other. The manuscript place-name is now stabilized, but modern feature identity, exact river reach, settlement geometry, residence, ownership, route, point/line geometry, and p.116 Vaughn identity remain OPEN; the p.116–117 recurrence remains same-body comparison evidence, not independent geographic corroboration.
+
+
+RETURN 4 — WILLIAM ATKINS / `(WHITE MAN)` + `1 WHITE]` FIELD PAIRING
+Person / Entity: William Atkins [Public Lands p.117 farm-row occurrence]
+Date / range: upper-right inscription reads `No. 1230` followed by `1834`; row not separately dated
+Earned verb / relation: Manuscript p.117 LISTS `William Atkins (white man)` and the aligned Locality of Farms field CARRIES `1 white]`.
+Case / Object: OHC_2512 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.117 / William Atkins row
+Place: UNLOCATED FROM THIS RETURN — the indexed Locality of Farms content is non-geographic source wording.
+Institution: Public Lands / Choctaw treaty-land administration
+Return to body / jacket: Public Lands No. 3 p.117 — John Beaty / Joseph Anderson / Daniel Anderson / Jimmy Batiest / William Atkins category rows and Daniel Anderson Chickasawhay / Emocklashatown locality — OHC_2512 source jacket
+Identity / relation status: source-local William Atkins occurrence only; no same-name merge. `(white man)` and `1 white]` remain two distinct source-field writings; they are not converted into modern racial, ethnic, citizenship, tribal-status, household, residence, ownership, or legal-status conclusions. The repeated p.116 Wm Smith / p.117 William Atkins pairing blocks an automatic “additional unnamed person” arithmetic assumption but does not prove that `1 white]` denotes the row-holder.
+
+
+The provisional `Jimmy Batiest` reading remains outside compiled index input until the name itself earns firmer source-facing footing. The page-local `2 whites / 4 slaves` subtotal and the p.116↔117 comparison remain jacket prose, not Name Web relation rows.
+
+
+— Small Door | Name Web compiled-input pass | 2026-09-19
+SEDGE MAP-FACING ADDENDUM — occurrence geography / field-semantic split — 19 September 2026
+
+
+Receive
+This pass takes one smallest already source-faced edge from the direct archival p.117 reading: the Daniel Anderson farm-row occurrence. No new witness is created. Historical manuscript p.117 → exact-byte duplicate archival OHC_2512 PDF custody roads as one PDF representation occurrence → admitted OHC_2512.png reading representation → governing jacket → Sedge map classification. The Fieldglass p.116 comparison remains same-body comparison, not independent geographic corroboration.
+
+
+Earned place / verb
+The strongest geographic verb is CARRIES: Daniel Anderson row — Locality of Farms field CARRIES → `Chickasawhay river.` + unresolved trailing place-name form. `1 slave]` is a separate source-written category annotation in the same broad printed field and is not geography.
+
+
+Occurrence geography / identity split
+`Daniel Anderson` is the row-host occurrence only. The locality wording belongs to that row occurrence; it does not independently establish Daniel's residence, dwelling, bodily position, land ownership, travel, bank, ford, route, or modern river identity. No same-name Daniel Anderson identity is joined. The matching trailing place-name form on p.116 Capt James Vaughn remains a repeated source form across consecutive pages, not an identity join or proof that the two farm occurrences occupied one site.
+
+
+Geometry state
+RELATIONAL / UNPLACED. `Chickasawhay river.` is an earned source-written hydronym token. The trailing place-name remains unresolved. No point, river polyline, bank, farm polygon, parcel, crossing, adjacency, direction, distance, route, county, watershed, or modern hydrologic snap is earned.
+
+
+Source / representation / derivative / provenance
+Historical manuscript p.117 → OHC_2512 archival PDF payload held through exact-byte duplicate custody paths → admitted PNG reading representation → governing source jacket → Sedge map classification → First Draw Register. The duplicate custody paths do not become additional witnesses, and the p.116 same-body recurrence remains comparison evidence only.
+
+
+Crossing permission
+Carry exactly: `P.117 DANIEL ANDERSON ROW — LOCALITY OF FARMS CARRIES → CHICKASAWHAY RIVER. + [UNRESOLVED PLACE-NAME]`. Preserve the category annotation as non-geographic neighboring source content. Leave all physical geometry and outward identity joins OPEN.
+
+
+Ravel handoff
+Ravel may inherit the row occurrence, the secure river token, and the unresolved trailing place-name as a text-held compound locality only. Do not inherit a person point, modern river line, site equivalence with p.116 Vaughn, or route.
+
+
+— Sedge — Mapping Grounds / whole documentary landscape
+GLEAN SOURCE-FACING DEEPENING — LOWER CAPTAIN ROW / HEADER
+
+
+Direct row alignment
+The lower captain-titled row carries 20 cultivated acres, family 12, 4 males over 16, 4 males/females under 10, Locality of Farms `Waters of Pearl river`, total acres 320, and General Remarks `Land poor pine`. The captain’s personal-name spelling remains correction-open in this pass.
+
+
+Correction history
+The earlier jacket wording `Land poor fine` / similar is withdrawn. The final word is `pine`. No punctuation or modern land classification is supplied by this reading.
+
+
+Header correction
+The upper-right inscription reads `No. 1230` followed by `1834`, not a `1830–1831` interval. All four compiled Name Web date/range lines have been corrected in place. The face does not state what administrative event `1834` records, and no row is separately dated.
+
+
+The page-local category annotation total remains unchanged: 2 source-written White annotations and 4 source-written Slave/Slaves annotations across five rows.
+
+
+— Glean | Public Lands p.117 | pine restored; No. 1230 / 1834 restored
+
+
+
+
+
+
+FIELDGLASS DIRECT-SOURCE CORRECTION — DANIEL ANDERSON TRAILING LOCALITY STABILIZED
+
+
+Pass boundary
+
+
+This return deepens the existing p.117 governing jacket in place. It does not create a new historical object, representation, or jacket and does not move person identity, residence, ownership, or geometry.
+
+
+Direct face
+
+
+I reopened the archival OHC_2512 manuscript p.117 batch-1 custody object, Drive ID 1wxH0tYqcHqjPltnnoQCgmWMSyQ1idubW, at high visual scale and returned directly to the Daniel Anderson row. After the source-written `1 slave]` annotation, the Locality of Farms field reads `Chickasawhay river. Emocklashatown`.
+
+
+I also reopened the consecutive OHC_2511 manuscript p.116 batch-1 custody object, Drive ID 1RZOuCDmeccyTGe751vi5Bs4YUnkcJIEL. The Capt James Vaughn row carries the same full source form, `Chickasawhay river. Emocklashatown`. The earlier Fieldglass comparison had already earned that the trailing written forms on pp.116–117 were visually the same; this pass closes the p.117 transcription blocker on its own direct face.
+
+
+Active correction
+
+
+Older passages in this jacket that call Daniel Anderson’s trailing locality unresolved remain correction history but are superseded at this exact transcription point.
+
+
+Active p.117 relation:
+
+
+DANIEL ANDERSON ROW — LOCALITY OF FARMS CARRIES → `CHICKASAWHAY RIVER. EMOCKLASHATOWN`.
+
+
+The source-written `1 slave]` remains separate non-geographic content inside the same broad printed field. It is not part of the place-name and the place-name does not explain the category annotation.
+
+
+Representation brake
+
+
+The manuscript source form controlled here is `Emocklashatown`. Later printed, transcribed, normalized, or segmented spellings are representation-local unless separately earned from their own objects. They may guide retrieval but do not silently rewrite the manuscript face.
+
+
+Map / film consequence
+
+
+The name token has moved; the geometry has not. No point, bank, river reach, village polygon, route, county, modern feature identity, residence, ownership, or same-site bridge between the Vaughn and Anderson rows is earned. Do not silently identify this source form with Mokalusha, West Imongalasha, another Imoklasha-like occurrence, or any modern place without an independent source bridge.
+
+
+The same-body recurrence across p.116 Vaughn and p.117 Daniel Anderson remains comparison evidence, not independent geographic corroboration. The immediately following Robert Bell row on manuscript p.118 remains governed by its own blank locality state; documentary proximity to `Emocklashatown` does not make this Robert Bell geography or film setting.
+
+
+Exact blocker
+
+
+An independently controlled period map, survey, field note, gazetteer, agency record, or other source that places or defines the source-written `Emocklashatown` at compatible historical scale. Until such a bridge exists, the locality is named but unplaced.
+
+
+What moved / what did not
+
+
+Moved: the p.117 trailing locality transcription from unresolved to `Emocklashatown`; the pp.116–117 repeated compound-locality comparison can now carry the exact manuscript token.
+
+
+Did not move: Daniel Anderson identity, Capt James Vaughn identity, site identity, residence, ownership, modern hydrology, route, geometry, Robert Bell geography, or independent corroboration.
+
+
+— Fieldglass
+Source House ↔ Mapping Grounds · Public Lands locality control
+
+
+GLEAN ADDENDUM — 2026-09-21 — Jimmy Batiest row name secured
+
+
+Direct source return
+
+
+High-scale inspection of OHC_2512.pdf, manuscript page 117, resolves the row previously carried provisionally as `Jimmy Batiest`. The name field reads `Jimmy Batiest.` The aligned Locality of Farms field carries `2 slaves]`.
+
+
+Correction history
+
+
+The earlier provisional-name statements remain visible above but are superseded at this transcription point. The category annotation and its row assignment do not change.
+
+
+Boundary
+
+
+This secures one s
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — SMALL DOOR — 2026-09-21
+
+
+RETURN 5 — JIMMY BATIEST / `2 SLAVES]` LOCALITY-FIELD OCCURRENCE
+Person / Entity: Jimmy Batiest [Public Lands p.117 farm-row occurrence]
+Date / range: upper-right inscription reads `No. 1230` followed by `1834`; row not separately dated
+Earned verb / relation: Direct high-scale manuscript p.117 inspection LISTS `Jimmy Batiest.` and the aligned Locality of Farms field CARRIES `2 slaves]`.
+Case / Object: OHC_2512 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.117 / Jimmy Batiest row
+Place: UNLOCATED FROM THIS RETURN — the indexed Locality of Farms content is non-geographic source wording.
+Institution: Public Lands / Choctaw treaty-land administration
+Return to body / jacket: Public Lands No. 3 p.117 — John Beaty / Joseph Anderson / Daniel Anderson / Jimmy Batiest / William Atkins category rows and Daniel Anderson Chickasawhay / Emocklashatown locality — OHC_2512 source jacket
+Identity / relation status: source-local Jimmy Batiest occurrence only; no same-name merge. `2 slaves]` is preserved as attributed historical source language. The two counted people remain unidentified; the source does not establish legal owner, household inclusion, residence, labor assignment, relation to the printed family total, or any outward person identity from this annotation.
+
+
+The earlier provisional `Jimmy Batiest` wording remains correction history above; Glean’s direct 21 September source return now secures the name reading. The page-local category subtotal and p.116↔117 comparison remain rich jacket prose rather than additional Name Web rows.
+
+
+— Small Door | Name Web compiled-input repair | 2026-09-21
+ource-local name reading only. It does not join Jimmy Batiest to another occurrence or establish household, kinship, ownership, residence, or the identity of either counted person.
+
+
+— Glean
+Public Lands · one provisional row name closed

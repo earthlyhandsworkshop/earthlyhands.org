@@ -1,0 +1,192 @@
+GLEAN SOURCE-FACING ADDENDUM — OHC_2516 — bounded continuation below local row 12
+
+
+Status
+This is an additive source-facing continuation of the existing Edgewise OHC_2516 jacket. It does not replace that jacket, alter custody, normalize provisional names, or claim completion of the leaf. The current Source Work Front Door and canonical full-strength / exact-reach method govern this pass: object first, source before synthesis, derivative operations named, blanks protected, repeated representations not multiplied into witnesses, and crossings refused where the source does not earn them.
+
+
+Existing governing jacket
+Public Lands No. 3 p.121 — Capt Samuel Cobb grouping heading, Toli row, and duplicate-source custody — OHC_2516 source jacket.md — Drive ID 1ep-2GqEO0tyFjYLxMpDymDa5ba0eo-6C. That jacket had already bounded Capt Samuel Cobb as a heading and local rows 1–12 beneath it, with row 12 the last completed numeric cut. Its duplicate-control result remains governing and is not silently re-performed here.
+
+
+Exact source / custody footing
+Inspected source representation: OHC_2516.pdf — Drive ID 1ZksBJBvJIbPWRLxNBlc6RdL5m0EzceLO — parent folder Drive ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 152,106 bytes. Fresh SHA-256 of the downloaded inspected PDF in this pass: bf6269b6834101c70e280c100be6d123f3e078dc27b439ad243510f8f002b2f3.
+Parallel custody object preserved by the Edgewise jacket: OHC_2516.pdf — Drive ID 1WWdWmR1V1pdMfXFfoTcU-RUMOAkVg-FT — parent Load 1, Drive ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA. Edgewise previously established byte-for-byte payload identity between the two PDF objects. This pass preserves that relation as prior tested custody state; it does not count the two Drive objects as independent historical witnesses or merge their custody identities.
+Admitted study representation preserved by the Edgewise jacket: OHC_2516.png — Drive ID 1vE_2TT59LBPe83lyXmlbyF38UcfgRztn.
+
+
+Source / derivative / transcription / interpretation boundary
+Source-facing object read in this pass: the exact one-page PDF scan above.
+Inspection derivatives made by Glean: temporary 300-DPI and 600-DPI raster renders plus crops, produced only to enlarge handwriting and row rules. These local inspection derivatives were not admitted to Drive and do not become additional source objects or witnesses.
+Transcription below is bounded to the six ledger lines immediately below Edgewise local row 12. Numeric cells are adopted only where the ruled alignment and handwriting are secure enough. Names remain provisional unless stated otherwise.
+Interpretation is limited to documentary structure: these lines continue the numbered run below the Cobb heading. No identity, kinship, locality, entitlement, ownership, residence, or company-membership conclusion is made from their adjacency.
+
+
+New bounded source-facing continuation
+The six source lines immediately below Edgewise local row 12 remain visible across the left name field and the four already-used numeric columns. Five of those lines permit secure numeric continuation; one intervening line is held rather than completed.
+
+
+Local row 13 after Cobb
+Provisional name-field hearing: [unclear: MaHatubbe?]
+Acres cultivated: 6
+Entire family: 6
+Males over 16: 1
+Males and females under 10: 3
+Surviving remark: not certified in this pass.
+
+
+Local row 14 after Cobb
+Provisional name-field hearing: [unclear: Ohliaki?]
+Acres cultivated: 2
+Entire family: 6
+Males over 16: 1
+Males and females under 10: 4
+Surviving remark: not certified in this pass.
+
+
+Local row 15 after Cobb — held
+A distinct named line is present between local rows 14 and 16, but the first numeric cell and the rightmost visible numeric state are not clean enough for a trustworthy complete row adoption in this pass. The line is therefore preserved as PRESENT BUT NOT YET FULLY TRANSCRIBED. No blank, zero, or reconstructed value is supplied.
+
+
+Local row 16 after Cobb
+Provisional name-field hearing: [unclear: Itayama?/Itayuma?]
+Acres cultivated: 10
+Entire family: 8
+Males over 16: 1
+Males and females under 10: 5
+Surviving remark: not certified in this pass.
+
+
+Local row 17 after Cobb
+Provisional name-field hearing: [unclear: Onatechi?]
+Acres cultivated: 10
+Entire family: 4
+Males over 16: 1
+Males and females under 10: 1
+Surviving remark: not certified in this pass.
+
+
+Local row 18 after Cobb
+Provisional name-field hearing: [unclear: Atala?]
+Acres cultivated: 12
+Entire family: 19
+Males over 16: 4
+Males and females under 10: 9
+Surviving remark: not certified in this pass.
+
+
+What this materially adds
+The existing jacket can now advance its bounded numeric run from local row 12 through local row 18 without pretending the difficult intervening row 15 has been solved. The useful work product is therefore five newly secured numeric rows plus one explicitly held line. This is source-facing progress, not a corpus-level inference.
+
+
+Correction / confidence history
+No prior adopted numeric reading for local rows 13–18 was found in the governing Edgewise jacket, so this pass does not supersede an earlier row transcription. The provisional name hearings above are deliberately weaker than the numeric cells and do not cross into the Name Web. If later inspection strengthens or corrects them, preserve these hearings as correction history rather than silently overwriting them.
+
+
+Backward seam
+The neighboring OHC_2515 jacket securely identifies its own manuscript face as page 120. This OHC_2516 pass does not certify a manuscript page number from the surviving visible OHC_2516 face. Filename adjacency and shared form are therefore not promoted into a 120→121 manuscript-page claim. The backward relation remains: OHC_2515 is an adjacent stored object in the run and a useful comparison target, not proof of page-number continuity for OHC_2516.
+
+
+Forward seam
+The existing Glean OHC_2517 addendum explicitly preserves its source-page number as unresolved and refuses to turn filename adjacency into manuscript-sequence continuity. This pass keeps that refusal. OHC_2516→OHC_2517 is a storage/filename neighborhood and a possible retrieval seam, not an earned page-number seam.
+
+
+Unresolved questions / next honest cut
+- Resolve local row 15 without filling any uncertain cell from expectation.
+- Independently check the provisional name forms on rows 13, 14, 16, 17, and 18 before diplomatic adoption or Name Web receipt.
+- Continue below row 18 in another bounded group while the surviving ruled columns remain readable.
+- Determine the manuscript page number only from a source-visible mark or independently established sequence evidence strong enough to earn it.
+- Keep the lower-right material loss / representation boundary separate from ordinary blank cells as the numbered run approaches it.
+
+
+Explicit nonclaims
+- No claim that OHC_2516 is manuscript page 121.
+- No claim that row 15 contains a zero or historical blank merely because a numeral is not safely adopted here.
+- No claim that any provisional name is a normalized spelling or the same person as a similarly spelled occurrence elsewhere.
+- No claim that the rows beneath Capt Samuel Cobb establish kinship, household, ownership, residence, legal entitlement, or personal company membership.
+- No claim that the two PDF custody objects are two historical witnesses.
+- No claim that the temporary raster derivatives carry source authority.
+- No locality, total-acreage, or General Remarks value is imported from another row or neighboring source object.
+- No corpus-level theory is advanced from this continuation.
+
+
+Exact return paths
+- Governing Edgewise jacket: Drive ID 1ep-2GqEO0tyFjYLxMpDymDa5ba0eo-6C.
+- Inspected OHC_2516 PDF: Drive ID 1ZksBJBvJIbPWRLxNBlc6RdL5m0EzceLO.
+- Parallel OHC_2516 PDF custody object: Drive ID 1WWdWmR1V1pdMfXFfoTcU-RUMOAkVg-FT.
+- Admitted OHC_2516 PNG study representation: Drive ID 1vE_2TT59LBPe83lyXmlbyF38UcfgRztn.
+- Backward neighboring jacket: LEAF JACKET — OHC_2515 — Public Lands No. 3 — manuscript page 120 — Drive ID 1byI5nuGzp_exrFcjs0rqtUqLIgT9VJ2HHYEEJzu8UuM.
+- Forward neighboring addendum: GLEAN SOURCE-FACING ADDENDUM — OHC_2517 — enslaved-person counts in visible locality field — Drive ID 1e-l-toyYvhipT3GiO4YIRP9DQNIlKhMteQoNKHqiHpk.
+- This addendum: Drive ID 1nQr5Urw_0kqnfnWbnYUr7ozFOeIHGAZiACQQH4KntNQ.
+
+
+Maker: Glean
+Date: 2026-09-07
+
+
+
+
+NEEDLE UP — UPWARD PROPAGATION NOTE — 2026-09-07
+Without altering Glean’s source-facing read, OHC_2516 local row 15 now controls an upward observation-state repair in 03 — DOCUMENTARY BODIES and 09 — ADMINISTRATIVE ATTRITION. PRESENT BUT NOT YET FULLY TRANSCRIBED is preserved separately from SOURCE-VISIBLE BLANK, literal zero, and REPRESENTATION-UNDETERMINED. The lower-right material-loss / representation boundary likewise remains a limitation on observation rather than evidence of historical blankness. Glean retains the direct source read, weak-name hearings, seam limits, representations, custody, and maker attribution; Needle Up owns only the derivative upward grammar and quantitative repair. No source object or admitted derivative moved.
+
+
+
+
+NEEDLE UP CORRECTION — OHC_2516 AGE-COLUMN HEADER — 2026-09-07
+
+
+Direct reopening of the archival OHC_2516 PDF establishes the printed header as `Males and Females under 10 years.` The `Males and females under 16` labels in this addendum are therefore WITHDRAWN / SUPERSEDED at the field-label layer. The row numerals adopted here remain the same source-visible numerals; they are retyped as values in the source-printed UNDER-10 column, not an under-16 column.
+
+
+This correction changes no row identity, name hearing, family total, cultivated-acre value, observation state, seam, representation, or custody. Glean retains the source-facing continuation and maker attribution; Needle Up owns only the direct-header correction and upward schema propagation. The Edgewise governing jacket has received the same append-only correction
+
+
+SMALL DOOR CORRECTION / RETURN — 2026-09-19
+
+
+Later source-facing seam control now resolves one limit held above without erasing it. Mullion directly reopened the OHC_2516 archival PDF while closing the Thomas Leflore company run from manuscript pp.119–121 and established this face as manuscript p.121; that same direct pass confirmed `Capt Samuel Cobb.` as the first successor standalone grouping heading, with the surviving numeric cells on the heading line blank and the next line resuming the populated row pattern. This supersedes only Glean's earlier page-number-open state and Edgewise's request for an independent Cobb-letterform check. Glean's bounded rows, Edgewise's duplicate-custody work, Countermark's Toli check, and Needle Up's under-10 header correction retain their own attribution and reach.
+
+
+The page identification does not merge this Public Lands `Capt Samuel Cobb.` with Captain Samuel Cobb in the separate 1838 testimony / company-paper bodies. Nor does a source-structured heading by itself turn the following rows into person-level statements that they `belonged to` Cobb's company.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+RETURN 1 — CAPT SAMUEL COBB GROUPING HEADING
+Person / Entity: Capt Samuel Cobb [Public Lands p.121 company-heading occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.121 CARRIES the standalone grouping heading `Capt Samuel Cobb.` with the surviving numeric cells on that heading line blank; the next line resumes the populated farm-row pattern.
+Case / Object: OHC_2516 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.121 / Capt Samuel Cobb grouping heading
+Place: [none supplied by the heading]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.121 — Capt Samuel Cobb grouping heading, Toli row, and duplicate-source custody — OHC_2516 source jacket
+Identity / Relation Status: source-local titled heading occurrence only; no merge with Captain Samuel Cobb in the 1838 testimony / Turnbull-company-paper bodies or another Cobb occurrence; blank numeric cells distinguish this line structurally from an ordinary populated farm row but do not establish office, territory, residence, kinship, household, ownership, or person-level company membership for following rows.
+Notes: p.121 / exact-heading control received from Mullion's direct archival-PDF seam return preserved in the OHC_2506 jacket; Edgewise's duplicate-payload custody distinction remains unchanged.
+
+
+RETURN 2 — TOLI FARM ROW OCCURRENCE
+Person / Entity: Toli. [Public Lands p.121 local row 11 after Cobb]
+Date: not supplied by this page-facing pass
+Earned verb / relation: OHC_2516 manuscript p.121 LISTS source-written `Toli.` on local row 11 after the Cobb heading with 15 cultivated acres, entire family 10, 2 males over 16, and 2 males/females under 10; the surviving remark on the controlled face is blank.
+Case / Object: OHC_2516 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.121 / local row 11 after Cobb
+Place: [not established from the controlled surviving row]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.121 — Capt Samuel Cobb grouping heading, Toli row, and duplicate-source custody — OHC_2516 source jacket
+Identity / Relation Status: source-local `Toli.` occurrence only; spelling is not normalized and no merge is made with `Noli.`, another Toli occurrence, Cobb, or any other person; Countermark's independent row-11 confirmation does not transfer to neighboring provisional names; no locality, total acreage, kinship, household, entitlement, ownership, residence, or person-level company-membership relation is inferred from adjacency.
+Notes: direct Edgewise reading independently confirmed by Countermark; the source-printed age field is `under 10 years` per Needle Up's later direct-header correction; no value is imported into damaged or uncontrolled right-side fields.
+
+
+[Small Door | Mapping Grounds | two durable returns compiled through this source-facing addendum back to the governing OHC_2516 Source House jacket; attribution, custody, and identity boundaries preserved]
+GLEAN ROW-15 RETURN — LOCAL MARKS CONTROLLED
+Direct reopening of the OHC_2516 archival PDF narrows local row 15 after Capt Samuel Cobb without completing what the face does not give.
+Name field: [provisional hearing near `Honatafia.`]
+Acres cultivated: source-visible dot series; no numeral adopted.
+Entire family: 2.
+Males over 16: 1.
+Males and females under 10: a short vertical mark followed by a dot series; no numeral adopted.
+Surviving right-hand field: blank on this line.
+This supersedes only the earlier statement that the first and rightmost numeric states could not yet be described. The line remains partially transcribed. Neither dot series is converted to zero or historical blank, and the provisional name is not normalized or joined to another occurrence.
+
+
+.
