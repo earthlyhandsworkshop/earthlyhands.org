@@ -1,0 +1,222 @@
+SOURCE JACKET — ASP Public Lands No. 1327 — Jacob Thompson Article Fourteen claim packet — 1832–1835
+
+
+STATUS
+Source-facing jacket for the distinct federal printed body American State Papers, Public Lands No. 1327. This wrapper governs the No. 1327 printed compilation/source family used in the present work. It does not convert the printed compilation into the original manuscript petitions, affidavits, letters, plat, or departmental files that it reproduces.
+
+
+SOURCE IDENTITY / PROVENANCE
+Historical printed body: American State Papers, Public Lands, No. 1327, 23d Congress, 2d Session, “Claims to Choctaw Reservations of Land under the Fourteenth Article of the Treaty of 1830.”
+Congressional communication stated by the source: communicated to the House of Representatives February 23, 1835.
+Official digital representation materially used: Library of Congress, American State Papers, Public Lands, 1834–1835.
+Official carrier return: https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf
+Relevant printed run opened through the LOC indexed-text representation: p. 659 and following, especially p. 661 and adjacent packet text.
+
+
+REPRESENTATION BOUNDARY
+The official LOC PDF is approximately 41 MB and exceeded the present page-image fetch limit. The findings below are therefore controlled through the LOC indexed-text representation of the official printed volume, not through diplomatic visual inspection of the printed faces. Exact typography, line breaks, punctuation that matter only at image level, manuscript hands, seals, endorsements, and physical enclosure relationships remain correction-open until page/image or manuscript control is obtained.
+
+
+DOCUMENTARY ARCHITECTURE
+At printed p. 659, a Washington City letter dated March 20, 1834 from F. E. Plummer to Secretary of War Lewis Cass says Jacob Thompson claimed land under Article Fourteen, that George W. Martin could not act because Thompson's name was not found on the register, and that Plummer enclosed the evidence. Plummer enumerates eight supporting papers:
+1. Thompson's application to Martin.
+2. Thompson's affidavit with John T. Hammond's affidavit/certificate.
+3. Patrick Reilly's affidavit.
+4. A certificate of Hon. D. W. Wright.
+5. A petition to Congress by a chief and several captains/head-men of the Choctaw Nation.
+6. Plummer/Ward correspondence.
+7. A plat of Thompson's claimed land.
+8. An abstract and argument in favor of the claim.
+
+
+This list is source-carried packet architecture. It does not prove that the surviving 1835 print reproduces every original enclosure completely or in original physical order.
+
+
+CHRONOLOGY — SOURCE OBSERVATION
+January 19, 1832 — No. 5.
+A petition to the Senate and House from named Choctaw petitioners describes Jacob Thompson as “a native, or quarteroon, of the Choctaw nation” and asks that he receive the privilege allowed others registered under the relevant treaty/cultivation provision. Named petitioners include Isaac Perry, Enos Wade, John Smith, William McCoy, David Oxberry, Greenwood Leflore, Anthony Turnbull, Benjamin Lefore, James Oxberry, Robert Turnbull, and William Turnbull. The description and requested relief belong to the petitioners; they are not silently converted into Fieldglass findings.
+
+
+September 18, 1833 — No. 1 and No. 2.
+Thompson notifies George W. Martin that he claims section 31, the south half of section 30, and the northwest quarter of section 30, township 22, range 3 east, totaling one and three-quarter sections, and asks that the tract be reserved from sale. F. E. Plummer certifies that he presented the notice and accompanying documents and says Martin refused because Thompson's name was not on the Ward register furnished by the War Department.
+
+
+In Thompson's separate sworn affidavit of the same date, he describes himself as Choctaw by birth, says his mother was a native Choctaw, states that he had a wife and five children — Elizabeth, Nancy, Greenwood, Washington, and Benjamin — and says Elizabeth, Nancy, and Greenwood were born before the treaty. He identifies the same tract as containing his dwelling, improvements, cultivated land, and treaty-time residence and says he continued residing there with his family. These are Thompson's sworn statements.
+
+
+John T. Hammond, separately sworn September 18, says he had known Thompson for many years, calls him a native Choctaw, describes him as an actual settler and housekeeper on the tract, and says he was present when Thompson signified his intention to Ward and applied to have his name registered. This is Hammond's testimony, not an independent administrative finding that Ward actually entered Thompson's name.
+
+
+September 24 / October 18, 1833 — No. 6.
+Plummer writes William Ward on September 24 concerning John T. Harlan, Jacob Thompson, and John T. Hammond, asking narrowly whether they timely signified their intentions. Plummer says he understands that only an imperfect copy is in the locating agent's hands and believes their names are absent from Martin's register.
+
+
+Ward replies October 18. Ward remembers a specific reason for refusing Harlan. For Hammond and Thompson, Ward says that if their names are not on the register he has no recollection of the cause why they, if Choctaws, were not registered. Ward says errors could occur amid repeated changes and states that a discovered error ought to be corrected by the locating agent. Ward does not in this letter say that Thompson was registered, that a leaf was lost, that a name was erased, or that any particular physical defect caused Thompson's absence.
+
+
+October 26, 1833 — opening congressional petition.
+No. 1327 also prints an unnumbered petition addressed directly to the Senate and House and signed “Jacob Thompson, Per attorney, S. B. March,” sworn by Thompson before Thomas B. Ives on October 26, 1833. Thompson says he descended from the Choctaws on his mother's side; had a wife and three children living with him in the ceded territory at treaty time; occupied section 31, township 22, range 3 east; and intended to remain. He alleges that he first signified his intention to a Ward described as the brother and deputy of the principal Ward, who refused to register him, and that the principal Ward also refused. These refusal allegations belong to Thompson's sworn petition. They sit in unresolved tension with William Ward's October 18 statement that he did not remember why Thompson would be absent if Choctaw.
+
+
+December 26, 1833 — No. 3.
+Patrick Reilly swears that he heard Thompson apply to Ward within six months after the treaty, says Thompson was a head of family with several children, and states that Thompson descended on his mother's side from the Choctaws and “is a full cousin to Greenwood Leflore.” The kinship statement belongs to Reilly and is a useful identity discriminator; it is not generalized beyond this claimant without further evidence.
+
+
+No. 4 — D. W. Wright certificate, undated on the indexed text.
+Wright says it had been represented to him that Coleman Cole, W. King, and Jacob Thompson had forwarded petitions for congressional action, supported by affidavits and certificates, concerning treaty-secured land, and that Patrick Reilly was one of the affiants. Wright then vouches for Reilly's veracity. The printed source identifies Wright as a judge of Mississippi's high court of errors and appeals.
+
+
+March 20, 1834 — packet terminus ante quem / departmental transmission.
+Plummer's March 20 letter explicitly lists Reilly's affidavit as No. 3 and Wright's certificate as No. 4 among the papers he was then enclosing to Lewis Cass. Therefore the No. 4 certificate, although undated in the printed text presently controlled, existed no later than March 20, 1834 in the packet state Plummer transmitted. This is a terminus ante quem, not an exact creation date.
+
+
+February 23, 1835 — later congressional communication state.
+The No. 1327 printed header says the claim body was communicated to the House on February 23, 1835. The route by which the October 26, 1833 petition itself was initially received, referred, docketed, or acted upon before that 1835 communication remains open.
+
+
+SOURCE OBSERVATION VERSUS INFERENCE
+Source observation: the No. 1327 compilation contains a January 1832 community petition; September 1833 Thompson/Hammond evidence; October 1833 Ward correspondence; an October 26, 1833 Thompson petition addressed to Congress; a December 26, 1833 Reilly affidavit; an undated Wright certificate present in Plummer's packet by March 20, 1834; and a later House communication date of February 23, 1835.
+
+
+Inference, kept bounded: these layers show that No. 1327 is not one contemporaneous evidentiary packet frozen at a single date. It is a later federal printed body bringing together multiple chronological states of Thompson's claim. The October 26 petition is a strong candidate for the later Thompson petition Wright says had been forwarded for congressional action, but the present source does not explicitly say “the petition above is the petition described by Wright.” That equivalence remains open until a receipt/referral or manuscript enclosure chain closes it.
+
+
+RELATION TO H. REP. 40 / ASP NO. 1089 — KEPT SEPARATE
+H. Rep. 40 / ASP No. 1089 is dated January 10, 1833 and identifies Greenwood Leflore and others acting in behalf of Jacob Thompson. No. 1327 then preserves later September–December 1833 evidence and the October 26 petition directly to Congress. These bodies are a strong same-claim-stream candidate because of the recurring claimant, Greenwood Leflore relation, Ward-registration issue, and compatible land/family context. They are not treated as the same physical petition or the same evidentiary state.
+
+
+The October 26, 1833 petition materially corrects the earlier working picture: there is now an actual later congressional petition body in No. 1327, not merely Wright's statement that a petition had been forwarded. What remains missing is the congressional receipt/referral/action history of that October 26 petition and its relation to the January 10 H. Rep. 40 report.
+
+
+NONCLAIMS
+- No final congressional allowance, rejection, private act, patent, or land delivery is established here.
+- No bill number is assigned to H. Rep. 40 or to the October 26, 1833 petition.
+- Wright's certificate is not assigned an exact creation date; only a March 20, 1834 terminus ante quem is earned from Plummer's enclosure list.
+- Thompson's allegation that two Ward-side refusals occurred is not converted into a finding against Ward.
+- Ward's failure to remember the reason for Thompson's absence is not converted into proof that Thompson was registered.
+- No physical identity is asserted among the January 1832 petition, H. Rep. 40, the October 1833 petition, Plummer's 1834 enclosure packet, and the 1835 printed No. 1327 compilation.
+- No identity merge is made with every later Jacob Thompson occurrence or with the later nationally prominent Jacob Thompson.
+- Greenwood Leflore kinship is attributed to Reilly's testimony and is not expanded beyond that source.
+
+
+CORRECTION HISTORY
+Earlier Fieldglass work treated No. 1327 mainly as a later “Jacob Thompson packet” crossing to H. Rep. 40. This return deepens the body and corrects that shorthand: No. 1327 contains multiple dated documentary layers and an actual October 26, 1833 Thompson petition addressed to the Senate and House. The H. Rep. 40 jacket has been separately deepened to preserve this chronology and no longer treats No. 1327 as merely a later carrier of the evidentiary state behind the January 1833 report.
+
+
+DUPLICATE CONTROL
+Before creating this jacket, the wider connected Drive corpus was searched for “No. 1327 Jacob Thompson,” “Claims to Choctaw Reservations Fourteenth Article 1327,” “Plummer William Ward Jacob Thompson,” and related source-jacket terms. No equivalent dedicated No. 1327 wrapper surfaced. The existing H. Rep. 40 / ASP No. 1089 jacket is a separate source wrapper and crossing, not a duplicate of this No. 1327 body.
+
+
+CURRENT CUSTODY / RETURN PATHS
+Jacket Drive ID: 1RvkNTrVksMbpfm_Bv9_DHZsymAqv9YQIkFkG1QfUg28
+Workshop body: Source Intake — current arrivals
+Parent folder Drive ID: 1CRupep9Wvyrq6_wDmJmFLuyREkWhbQTc
+Official source carrier: https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf
+Crossing jacket: H. Rep. 40 / ASP No. 1089 — Drive ID 1QAivCz-CuCs094zGl0RD9mHcMQ-gokmlMdEl-a3rV2c
+
+
+NEXT EXACT VERB
+Trace the October 26, 1833 Jacob Thompson petition into the 23d Congress, 1st Session journals and committee/referral records: recover its actual presentation/receipt date, presenting member if recorded, committee destination, and any report, bill, or return. Keep that route separate from H. Rep. 40 dated January 10, 1833. A second useful return is image-level control of No. 1327 printed pp. 659–662 and eventual recovery of the original manuscript packet or departmental file so that enclosure order and endorsements can be tested rather than inferred from the 1835 print.
+
+
+Maker: Fieldglass
+Date: 2026-09-08
+
+
+FIELDGLASS REMEDIAL-REGISTRATION / TRACT-SHIFT ADDENDUM — 2026-09-08
+
+
+SOURCE REPRESENTATION
+Actual source materially used: Library of Congress digital representation of American State Papers, Public Lands, 1834–1835, No. 1327, indexed text in the printed Choctaw-reservations run. Official carrier return: https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf. The carrier remains too large for image-level control in the present viewer, so this addendum is controlled through the LOC indexed-text representation rather than a diplomatic reading of the printed face. The printed-date tension noted below therefore remains correction-open.
+
+
+SOURCE OBSERVATION — PRESIDENTIAL REMEDIAL CHANNEL
+A War Department letter dated October 30, 1834, signed by Lewis Cass and addressed to F. E. Plummer, says instructions had been given, by order of the President, to George W. Martin concerning claims to reservations under the 1830 Choctaw treaty. Cass explicitly says those instructions embrace the cases of Jacob Thompson, Thomas Stewart, and John R. Contee. This is a source-carried administrative relation; it does not by itself establish final allowance of any of the three claims.
+
+
+SOURCE OBSERVATION — ORIGINAL THOMPSON TRACT AND WAR-DEPARTMENT STATE
+A Chocchuma communication dated December 1, 1834 recapitulates Thompson's original claim as section 31 and portions of section 30, township 22, range 3 east. It says the case had been referred to the War Department because Thompson's name was absent from the Ward register furnished to Martin; says the Secretary of War recognized the case as embraced within the recent presidential instructions; and says the supporting testimony was still on file in the War Department. The communication summarizes Thompson/Hammond/Reilly evidence, but those summarized assertions remain attributed evidence, not Fieldglass findings beyond what the source reports.
+
+
+SOURCE OBSERVATION — WHY THE TRACT CHANGES
+The same printed No. 1327 sequence then gives an explicit reason the later tract differs from Thompson's treaty-time tract. F. E. Plummer says the land claimed by Thompson “has been sold,” says Thompson remained on it until some time after the sale and later removed elsewhere, and asks that other lands of equal quality and value be located for him. Plummer further says portions of the claimed land had sold at twenty, ten, and fifteen dollars per acre. These statements belong to Plummer's communication and should not be generalized into a finding about all Article Fourteen claims.
+
+
+This materially supersedes the earlier open question in this jacket about whether the tract shift might reflect sale or unavailability. For this Thompson claim stream, the No. 1327 printed representation itself attributes the substitution request to sale of the originally claimed land.
+
+
+SOURCE OBSERVATION — DIFFERENT 1¾-SECTION APPLICATION AND MARTIN'S ACT
+Immediately following, the printed body carries an application in Thompson's name, by F. E. Plummer, for a different 1¾-section tract: section 4; the southeast and southwest quarters of section 5; and the northwest quarter of section 3; township 19, range 1 east. The application asks that this tract be reserved from sale and secured under Article Fourteen.
+
+
+Martin's endorsement carries the load-bearing sentence: “Jacob Thompson is registered for the within described tract of land.” Martin then requests the register at Columbus to reserve the land from sale so that the facts and testimony may be laid before the next Congress. The endorsement is signed GEO. W. MARTIN, Locating Agent, and is dated December 1, 1834 in the indexed representation.
+
+
+DOCUMENTARY BOUNDARY — TWO DIFFERENT REGISTRATION VERBS
+Do not retroject Martin's December 1834 phrase “is registered” into Ward's 1831 registration process. The source itself places Martin's act after War Department / presidential remedial instructions and on a different tract from Thompson's treaty-time improvement. This is evidence of a later locating-agent remedial registration/reservation act. It is not proof that Ward registered Thompson in 1831, and it does not erase the unresolved conflict between Thompson/Hammond testimony and Ward's later lack of recollection.
+
+
+The Martin endorsement also does not establish final congressional allowance, completed patent, legal confirmation of the substitute tract, or land delivery. Its own stated purpose is provisional: reserve the tract from sale while facts and testimony go before Congress.
+
+
+PRINTED-DATE TENSION — PRESERVED
+The LOC indexed representation prints Plummer's sale/substitution communication with the date “Chocchuma, December 11, 1834,” while Martin's endorsement on the following Thompson application is dated December 1, 1834. Because this pass lacks page-image control, the apparent ten-day inversion is preserved as a representation-level/date-reading tension rather than silently repaired. It may reflect printing sequence, an OCR/indexing error, or distinct acts not arranged chronologically; the present pass does not choose among those possibilities.
+
+
+INFERENCE — KEPT SEPARATE
+Within No. 1327, the source genealogy is now stronger than a generic “later petition” path: original tract and evidence → War Department referral because of Ward-register absence → October 30 presidential remedial instructions expressly embracing Thompson → source-attributed sale of the original tract → request for other land of equal quality/value → different 1¾-section application → Martin remedial registration/reservation pending congressional review.
+
+
+That chain is source-carried at the administrative level. It does not establish that every step was legally sufficient, that the substitute tract was ultimately awarded, or that later commissioners accepted the same reasoning.
+
+
+NONCLAIMS
+- No final congressional allowance, private act, patent, or completed land delivery is established.
+- Martin's 1834 “registered” wording is not treated as Ward's 1831 registration.
+- No claim is made that the later tract was identical in quality or value to the sold tract merely because Plummer requested equivalence.
+- No claim is made that the apparent December 11 / December 1 inversion has been resolved.
+- No Bell or McKinney inference is drawn from Thompson's remedial path.
+- No broader proposition is made that every absent Ward-register claimant received or qualified for substitute land.
+
+
+CORRECTION HISTORY
+The previous NEXT EXACT VERB prioritized tracing Thompson's October 26, 1833 petition directly into congressional journals because the later administrative state had not yet been read deeply enough. This addendum supersedes that priority. No. 1327 itself now supplies a concrete downstream administrative state in late 1834, including the reason for the tract shift and Martin's provisional registration/reservation act. The congressional route remains important, but it should now be traced from this better-defined remedial state rather than from the October 1833 petition alone.
+
+
+NEXT EXACT VERB — SUPERSEDES PRIORITY
+Recover and control the land-office records showing the sale of Thompson's original section 31 / section 30 tract and the Columbus reservation record for the township 19, range 1 east substitute tract. Those records can test dates, purchasers, tract-by-tract sale status, and Martin's request to reserve the new land without relying on Plummer's summary. Then trace Martin's stated plan to lay “the facts and testimony” before the next Congress into the subsequent congressional or commission disposition. Separately, obtain page-image control of this No. 1327 run to resolve the December 11 / December 1 printed-date tension before normalizing chronology.
+
+
+Maker: Fieldglass
+Date: 2026-09-08
+
+
+FIELDGLASS SERIAL-SET GENEALOGY ADDENDUM — 2026-09-08
+
+
+OFFICIAL FINDING-AID SOURCE
+A separate official GovInfo object was materially used for source genealogy: Index to the Executive Documents, 23d Congress, 2d Session, 1834–1835. The index states that Executive Documents volume 4 contains document Nos. 134–177. Its alphabetical entries identify John T. Harlan, John T. Hammond, Thomas Stewart, and Jacob Thompson as Choctaw-reservation matters in volume 4, document No. 172; the Thompson entry reads in substance that Jacob Thompson sought a reservation of Choctaw land.
+
+
+This independently supplies a Serial Set address for the claimant cluster printed in the later American State Papers No. 1327 body: House Executive Document No. 172, 23d Congress, 2d Session, Executive Documents volume 4. The direct H. Doc. 172 face has not yet been opened in this pass, so textual identity, pagination, enclosure order, and completeness between H. Doc. 172 and ASP No. 1327 are NOT assumed.
+
+
+REPRESENTATION NOTE
+The GovInfo index PDF was text-readable through the official representation. Image screenshot retrieval was attempted but failed with a provider cache miss, so the volume/document mapping is controlled from the official indexed text rather than a visual page reading. The relevant index entries are nevertheless internally consistent: Harlan, Hammond, Stewart, and Thompson all point to volume 4, No. 172.
+
+
+SOURCE-GENEALOGY CONSEQUENCE
+The next older printed return path is now exact rather than generic: H. Doc. 172, 23d Congress, 2d Session, Executive Documents vol. 4. Recovering that object may provide a closer congressional print state than the later ASP compilation and may resolve the apparent December 11 / December 1 date tension or show that the same tension already existed in the Serial Set printing.
+
+
+NONCLAIMS
+- The GovInfo index does not itself prove that H. Doc. 172 and ASP No. 1327 are textually identical.
+- No manuscript-original status is assigned to H. Doc. 172; it remains a congressional printed representation unless its own source genealogy establishes otherwise.
+- No disposition of Thompson's claim is inferred from the index entry.
+
+
+NEXT RETURN PATH — SOURCE GENEALOGY
+Open H. Doc. 172 itself and compare its Jacob Thompson sequence line-for-line against ASP No. 1327, especially the December 1834 sale/substitution communication, Thompson's township 19 range 1 east application, Martin's “is registered” endorsement, and the printed dates. Preserve any divergence as representation history rather than silently harmonizing it.
+
+
+—Fieldglass

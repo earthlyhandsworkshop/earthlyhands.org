@@ -1,0 +1,188 @@
+OHC_2518 — damaged ruled-paper capture, no safely transcribable text, and OHC_2517 capture-geometry seam — source jacket
+
+
+Status
+Source-facing jacket made by Glean after direct visual inspection of the admitted OHC_2518.png study representation and direct duplicate-payload verification of both stored OHC_2518.pdf objects. No earlier dedicated OHC_2518 source jacket was found in the present Drive search. This jacket records what the photographed surface actually permits and protects what it does not permit.
+
+
+Source identity / visible condition
+- Stored label: OHC_2518.
+- The admitted representation shows a severely damaged photographed paper surface or set of adjoining paper areas against a dark background.
+- No safely readable manuscript page number, Public Lands heading, personal name, date, locality, acreage figure, household figure, or General Remarks text is visible in this representation.
+- Faint ruled/grid-like lines are visible across broad portions of the paper, but this pass does not determine whether they are the face of a ruled form, reverse-side show-through, or another paper structure.
+- The surface shows extensive tears, losses, folds, dark seams, and multiple broad repair/tape-like bands, including damage across the upper edge, a long transverse repair through the middle-left, a strong vertical seam/fold near center-right, and major loss at the lower right.
+- Isolated dark marks and faint traces exist. None are promoted to letters, numerals, names, or administrative entries in this pass.
+
+
+Bounded finding
+Within the admitted OHC_2518.png representation at 2038 × 1879, this pass found no safely transcribable administrative or personal text. That is a bounded reading result for this representation, not a claim that the historical leaf was originally blank, that nothing was ever written there, or that no alternative capture could recover more.
+
+
+Exact provenance / duplicate control
+Archival/stored PDF occurrence A
+- Title: OHC_2518.pdf
+- Drive ID: 12h_EbYX3DiLAe2a4yxpcl0pnsiC-J1Ab
+- Parent folder: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+- Parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- Size: 157,318 bytes
+
+
+Archival/stored PDF occurrence B
+- Title: OHC_2518.pdf
+- Drive ID: 12N0CzfuuUzk2BtLixXoT5aVMPZUhxyT_
+- Parent folder: Source objects — received batch 1 — OHC 2408–2518
+- Parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- Size: 157,318 bytes
+
+
+Direct payload check in this pass:
+- occurrence A SHA-256: 6527a083a1ae54def22fa964e18b4eed8b007a9b21c80be8031e92faaf8d23e8
+- occurrence B SHA-256: 6527a083a1ae54def22fa964e18b4eed8b007a9b21c80be8031e92faaf8d23e8
+
+
+The two stored PDFs are therefore byte-identical payloads in distinct Drive custody locations. They remain two custody records for one stored representation payload, not two independent historical witnesses.
+
+
+Admitted study representation
+- OHC_2518.png
+- Drive ID: 1F5sboRCcU29N8qpnvqqcuMf2ypAiwcCR
+- Parent folder: 76 Distinct Study Surfaces
+- Parent folder ID: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- Size: 891,023 bytes
+- Dimensions: 2038 × 1879 grayscale
+- Batch-receipt SHA-256: 5abdcc5787ea3cdc6a8d63bfd00df6904151fdc8cd301846cc525013b3a72675
+
+
+The admitted batch receipt independently records the governing OHC_2518.pdf payload as 157,318 bytes with SHA-256 6527a083a1ae54def22fa964e18b4eed8b007a9b21c80be8031e92faaf8d23e8 and its embedded image as 2038 × 1879 grayscale, 8-bit JPEG, 300 DPI. The PNG is a study derivative produced by the admitted extraction workflow; it does not replace or become the archival source object.
+
+
+Source / derivative / transcription / interpretation boundary
+- Source-facing archival object: the photographed historical paper surface carried in the OHC_2518 PDF representation.
+- Stored representations: the two byte-identical OHC_2518.pdf Drive objects above.
+- Study derivative: admitted OHC_2518.png, used for direct inspection because it exposes the embedded image without requiring a fresh render.
+- Transcription: none beyond the filename/object labels; no source text is safely transcribed from the face in this pass.
+- Interpretation: limited to observable physical condition and the bounded absence of safely readable text in this representation.
+
+
+Backward seam
+OHC_2517 is the immediately previous numbered arrival object, but its existing source-facing work already holds that its source-page number and exact manuscript position are unresolved. OHC_2518 itself supplies no readable page number or heading. Therefore 2517 → 2518 is a storage/filename adjacency only in this pass; no manuscript-page continuation, reverse-side relation, shared leaf, or documentary sequence is earned.
+
+
+The visual difference is real but not explanatory: OHC_2517 preserves a partially visible populated No. 3 return face, while OHC_2518 presently exposes a badly damaged low-information surface. That does not establish that 2518 is the reverse, cover, backing leaf, endpaper, or next page of 2517.
+
+
+Forward seam
+OHC_2518 is the last numbered object in the received Public Lands batch labeled OHC 2408–2518. That is a custody/arrival boundary, not proof that this photographed surface is the historical end of the Public Lands manuscript or the terminal leaf of the No. 3 return.
+
+
+No later numbered object is joined to OHC_2518 here. A later OHC number must establish its own documentary identity before comparison.
+
+
+Unresolved questions
+- What physical object does this surface represent: damaged ledger leaf, reverse, backing sheet, cover/endpaper, or another archival surface?
+- Are the faint ruled lines source-face ruling, reverse-side show-through, or another paper layer?
+- Could an alternate exposure, original scan, color capture, transmitted-light image, or direct examination recover writing not safely visible here?
+- Is any relation between OHC_2517 and OHC_2518 documented outside filename/storage adjacency?
+- Does the original archival sequence identify a manuscript page number or side for OHC_2518?
+
+
+Nonclaims
+- No claim that OHC_2518 was historically blank.
+- No claim that writing was erased, destroyed, removed, or intentionally obscured.
+- No claim that the visible damage occurred at any particular date or for any particular reason.
+- No claim that OHC_2518 is the reverse, cover, backing, endpaper, or next manuscript page of OHC_2517.
+- No claim that the received-batch endpoint is the historical-document endpoint.
+- No claim that faint lines or marks encode readable names, numbers, localities, or remarks.
+- No claim that the two PDF objects provide corroboration; they are byte-identical duplicate payloads with distinct custody paths.
+
+
+Return path
+Primary reading path:
+01 — Source House — Jackets → OHC_2518 — damaged ruled-paper capture, no safely transcribable text, and OHC_2517 capture-geometry seam — source jacket → admitted OHC_2518.png, Drive ID 1F5sboRCcU29N8qpnvqqcuMf2ypAiwcCR → photographed surface.
+
+
+Archival/stored PDF return paths:
+- OHC_2518.pdf, Drive ID 12N0CzfuuUzk2BtLixXoT5aVMPZUhxyT_ → Source objects — received batch 1 — OHC 2408–2518.
+- OHC_2518.pdf, Drive ID 12h_EbYX3DiLAe2a4yxpcl0pnsiC-J1Ab → Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.
+
+
+Preparation provenance:
+Batch receipt — Load 1 remainder — 76 distinct study surfaces, Drive ID 16dy6Iuhl-JCmIKaAVgDJHqR_tyjquyrp.
+
+
+Maker: Glean
+Date: 2026-09-05
+Method: direct visual inspection of admitted PNG at native resolution, with local enlargement/autocontrast used only to test whether faint marks became safely readable; no OCR and no source alteration. Duplicate PDF payloads were fetched and SHA-256 compared directly.
+
+
+Glean source-return addendum — 2026-09-07 — capture geometry / OHC_2517 seam
+
+
+Method
+Reopened the exact received-batch OHC_2518.pdf, Drive ID 12N0CzfuuUzk2BtLixXoT5aVMPZUhxyT_, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA. The sole embedded 2038 × 1879 grayscale JPEG was inspected directly; a 600-DPI PDF render and temporary enlarged/contrast-adjusted crops were used only as inspection derivatives. No OCR was used. The archival PDF and admitted PNG were not altered, replaced, or re-admitted.
+
+
+Material source-facing finding
+The OHC_2518 capture can now be described more exactly than the jacket's earlier deliberately broad phrase “paper surface or set of adjoining paper areas.” The photograph visibly contains at least two distinct ruled paper regions: a broad left/central ruled region and a narrower right ruled region, separated by a narrow, near-vertical dark interval. Both regions remain materially damaged, and neither supplied safely transcribable administrative or personal text in this return.
+
+
+This is a capture-geometry finding only. It does not establish that the two visible regions are two historical leaves, two manuscript pages, recto and verso, a folded single sheet, a backing sheet, or any other particular physical construction. The dark interval is not presently classified as a gutter, fold, tear, overlap, binding shadow, or separation between leaves.
+
+
+Backward seam — direct comparison with OHC_2517
+Reopened the exact received-batch OHC_2517.jpg, Drive ID 1cPnGwS5uVYrFIAANbce_tpsVrt7ohCvT, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, 337,338 bytes. That photograph independently shows a narrow ruled paper region on the left, a dark near-vertical interval, and a broad ruled Public Lands ledger region on the right. OHC_2518 shows the complementary broad-left / narrow-right arrangement.
+
+
+That shared broad-region / narrow-region / dark-interval geometry is a source-visible photographic relation and therefore improves the OHC_2517→OHC_2518 seam beyond filename adjacency alone. It still does not earn manuscript sequence, same-leaf identity, facing-page identity, recto-verso relation, or a claim that one photograph was made by turning the other surface. Side-by-side inspection did not produce a sufficiently secure damage-contour or writing correspondence to make any of those stronger claims.
+
+
+Transcription / interpretation boundary
+No new source text is transcribed. Isolated dark marks and faint traces remain nontext at present reading strength. The new interpretation is limited to the observable arrangement of ruled paper regions within the two captures and the fact that their broad/narrow orientations reverse.
+
+
+Unresolved questions
+What physical structure produces the dark interval in each capture; whether the two ruled regions in OHC_2518 are separate leaves or parts/layers of one damaged object; whether an original archival sequence, color scan, or wider capture identifies their relation; whether OHC_2517 and OHC_2518 represent adjacent, opposite, or otherwise related physical surfaces; and whether any manuscript page or side designation survives outside these representations.
+
+
+Nonclaims
+No claim that OHC_2518 contains exactly two physical leaves or pages. No claim that OHC_2517 and OHC_2518 are the same leaf, facing leaves, recto/verso, or consecutive manuscript pages. No claim that the dark interval is a binding gutter. No claim that the orientation reversal establishes photographic sequence. No faint mark is promoted to a letter, numeral, page number, name, or administrative entry. Existing duplicate-custody controls remain unchanged.
+
+
+Return paths
+Primary OHC_2518 route now: 01 — Source House — Jackets → this source-facing jacket → OHC_2518.pdf, Drive ID 12N0CzfuuUzk2BtLixXoT5aVMPZUhxyT_ → Source objects — received batch 1 — OHC 2408–2518 → photographed surface. Backward comparison route: this jacket → Glean/Selvedge OHC_2517 source-facing work → OHC_2517.jpg, Drive ID 1cPnGwS5uVYrFIAANbce_tpsVrt7ohCvT → the same received-batch source-object folder.
+
+
+Maker: Glean
+Date: 2026-09-07
+Method boundary: direct visual comparison of exact source-facing representations plus temporary inspection derivatives; no source alteration, identity merge, or corpus-level theory.
+
+
+
+
+
+
+NEEDLE UP UPWARD-PROPAGATION RECEIPT — 2026-09-07
+
+
+Glean’s direct OHC_2518 findings have now corrected an older overstatement above this jacket. `Public Lands — Whole-Document Corpus.md` had called OHC_2518 the `physical closing/back face` of the Public Lands run and had promoted 2518→2519 to an earned documentary seam. Needle Up marked both stale doorway statements with attributable correction comments, repaired `03 — DOCUMENTARY BODIES`, repaired the denominator/body-membership rule in `09 — ADMINISTRATIVE ATTRITION`, and logged the change append-only in `07 — CHANGE LEDGER`.
+
+
+Active upward state preserves this jacket’s source reach: OHC_2518 is a custody/arrival object and final numbered object in the received batch; its documentary body identity, physical role/side, manuscript position, and historical Public Lands terminality remain unresolved. The OHC_2517 comparison earns capture-geometry correspondence only. OHC_2519’s separately identified 1899 body does not retroactively type OHC_2518.
+
+
+Glean retains the direct source read, representation/capture-geometry analysis, duplicate-payload control, custody, uncertainty, and maker attribution. Needle Up owns only the upward corpus/body/denominator correction. No source object or custody state moved.
+
+
+—Needle Up
+
+
+
+
+SMALL DOOR CUSTODY RETURN — 2026-09-19
+This body is a governing source-facing jacket, not a source representation or Mapping derivative. It has therefore crossed from `Public Lands — Whole-Document Corpus` to `01 — Source House — Jackets`. The two archival/stored OHC_2518 PDF objects and the admitted OHC_2518.png study derivative remain in their existing custody locations.
+
+
+No `NAME WEB RETURN — COMPILED INDEX INPUT` is added from this face. At present reading strength it yields no safely transcribable person/entity, date, locality, acreage, household figure, General Remarks entry, or other administrative text. The OHC_2517↔OHC_2518 broad/narrow ruled-region correspondence remains capture-geometry / provenance prose here and is not promoted into a thin relational-index row.
+
+
+— Small Door

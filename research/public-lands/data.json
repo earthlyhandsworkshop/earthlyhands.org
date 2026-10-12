@@ -9,7 +9,7 @@
       "objects": [
         "OHC_2413"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1si9U9cfUSHTkvSIi9Vpi7cFJz1ppEHEj.txt"
     },
     {
@@ -19,7 +19,7 @@
       "objects": [
         "OHC_2414"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1OoKxlf2LIZLXBNzUDet2dcHvwecmwBWY.txt"
     },
     {
@@ -30,7 +30,7 @@
         "OHC_2414",
         "OHC_2415"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1ZznL5rQX6YYr-mupPhJ5p3YbclH60qZuN6LAwFOEc1s.txt"
     },
     {
@@ -40,7 +40,7 @@
       "objects": [
         "OHC_2415"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1uDzv__42NFpCqbCVItdfnmG2WNQ6Yn2r.txt"
     },
     {
@@ -50,7 +50,7 @@
       "objects": [
         "OHC_2416"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1SqmXumFrip7aSGn6pkJSnuVSxK87Kt_z.txt"
     },
     {
@@ -60,7 +60,7 @@
       "objects": [
         "OHC_2417"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1Cvjg6nKS21RrRmk4RhNOX3c5mIwlLPMSxhvBb7kZoX4.txt"
     },
     {
@@ -70,7 +70,7 @@
       "objects": [
         "OHC_2417"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/19OLH2uVwCZC3o-aKfI_Xd-jQwyktj2pB.txt"
     },
     {
@@ -80,7 +80,7 @@
       "objects": [
         "OHC_2418"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1dCGKPHtrvwlczPsxEOPQNSmlxp32jck4ufiX2KTnyBw.txt"
     },
     {
@@ -90,7 +90,7 @@
       "objects": [
         "OHC_2418"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1gRJ6IJ2D6PicNVIV1CsSIsjHsUnt1lQh.txt"
     },
     {
@@ -101,7 +101,7 @@
         "OHC_2419",
         "OHC_2420"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1CVoYEFn9-kYKZhcYIc6Nu6W6m4JytyVWVYEAbTr3WIc.txt"
     },
     {
@@ -1679,7 +1679,7 @@
       "objects": [
         "OHC_2517"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1e-l-toyYvhipT3GiO4YIRP9DQNIlKhMteQoNKHqiHpk.txt"
     },
     {
@@ -1690,7 +1690,7 @@
         "OHC_2518",
         "OHC_2517"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1tdvU_cK4ucppnZeaJVnD0z9eJ-Ue6XMafEjPDLWqyVg.txt"
     },
     {
@@ -1698,7 +1698,7 @@
       "title": "ASP Public Lands No. 1327 — Jacob Thompson Article Fourteen claim packet — 1832–1835 — source jacket",
       "kind": "Source-facing jacket",
       "objects": [],
-      "public": false,
+      "public": true,
       "file": "texts/1RvkNTrVksMbpfm_Bv9_DHZsymAqv9YQIkFkG1QfUg28.txt"
     },
     {

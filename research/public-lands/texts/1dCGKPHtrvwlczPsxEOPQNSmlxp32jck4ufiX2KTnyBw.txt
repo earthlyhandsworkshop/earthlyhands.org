@@ -1,0 +1,76 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2418 page 39 — opening face of Choctaw Treaty farm return
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+Practice: SOURCE_WORK.md — source first; observation distinct from inference; one historical object / one jacket.
+
+
+HISTORICAL OBJECT / BOUNDARY
+One manuscript page, visibly numbered 39. The face begins a ruled “No. 1 Form of a return” under “Location under the Choctaw Treaty.” Unlike the next manuscript page, this heading does not say “Continued.” This page is treated as the opening face of the farm-return object, while the immediately preceding manuscript page 38 remains a distinct captains-list form.
+
+
+SOURCE REPRESENTATIONS / CUSTODY
+1. OHC_2418.pdf — Drive ID 18TnaX6SiHo-bja11aqkj0X2xx0LY7HdN — 276,087 bytes — parent folder 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+2. OHC_2418.pdf — Drive ID 1mUE9ZxYjZDI5eTRBTEC-H6M4WqD2qGKF — 276,087 bytes — parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+The two PDF custody copies were compared in this pass and are byte-identical. SHA-256: fc247563616538240691963e0e7d5e711ecb1373d3b6e4a02a3a530ecf689877. They are two return routes to one source representation, not two evidentiary witnesses.
+Known study representation: OHC_2418.png — Drive ID 1YFXHvKYQsAM8nbQrS3VzpVwevQm4RcMj. It is a study representation, not another historical witness.
+Known duplicate derivative representations: “OHC_2418 form of return Choctaw Treaty farms — Quoin.md” — Drive IDs 1fUciKK27aJV3dAAQGgqDFXI6G1NKq0xO and 1gRJ6IJ2D6PicNVIV1CsSIsjHsUnt1lQh. They remain derivative reading aids.
+
+
+DIRECT SOURCE OBSERVATIONS
+The manuscript itself visibly carries page number 39.
+The header reads “No. 1 Form of a return” and “Location under the Choctaw Treaty.” It does not include “Continued.”
+The ruled columns concern names, cultivated acreage, family/count fields, farm locality, total acres, and general remarks.
+The first visible row begins with Capt. Jas. Gardner.
+Smaller white/category notation is visible in the locality area on this opening face. This pass did not establish every count or word securely enough to transcribe them all, so no exact arithmetic is manufactured here.
+The preceding manuscript page 38 is a different captains-list form. The following manuscript page 40 explicitly says “Form of a return — Continued.”
+
+
+FINDING
+Page 39 is the strongest source-visible opening boundary yet found for the farm-return sequence that later culminates on manuscript page 60 with the district aggregate “14 Whites & 67 Slaves in this district.” The boundary is earned from the source form itself: page 39 opens the return without “Continued,” page 40 says “Continued,” and page 38 is a different documentary form.
+
+
+INFERENCE
+It is therefore strongly supported that the return span relevant to the page-60 district total begins on manuscript page 39. This narrows the earlier open question about where the district summarized on page 60 begins.
+
+
+UNCERTAINTY / NONCLAIMS
+— The source does not state in one sentence that “pages 39–60 equal the entire district.” That span is an inference from form opening/continuation and the closing aggregate.
+— This jacket does not claim that all surviving row-level white/slave annotations have yet been read or arithmetically reconciled with 14 and 67.
+— It does not claim that manuscript page 38 is part of this farm-return historical object.
+— It does not infer purpose, authorship, date, household relation, or ownership mechanism for the smaller category annotations merely from their placement.
+
+
+CORRECTION HISTORY
+The page-60 jacket previously left “Where does the district summarized by 14 Whites & 67 Slaves in this district begin?” open. That was appropriate before the opening faces were directly checked. Direct inspection of pages 38–40 now narrows that uncertainty: manuscript page 39 is the source-backed opening face of this farm-return sequence. The prior uncertainty remains preserved as history rather than silently disappearing.
+
+
+RETURN PATHS / NEXT DOORS
+Return to either byte-identical OHC_2418.pdf custody ID above. Backward boundary: OHC_2417 / manuscript page 38, separate captains-list form. Forward continuation: OHC_2419 and OHC_2420 / manuscript page 40, duplicate representations of one continued-return face. Closing aggregate presently under study: OHC_2443 / manuscript page 60.
+Next earned source-facing task: read the row-level white/slave annotations across the page-39-through-page-60 return and test them arithmetically against 14 Whites and 67 Slaves, preserving unreadable or absent annotations rather than forcing a match.
+
+
+
+
+FIELDGLASS CONTINUATION — 2026-09-06 — OPENING-PAGE CATEGORY SUBTOTAL
+
+
+A closer direct-source read of the OHC_2418 face materially deepens the opening page. Page 39 itself contains seven explicit smaller annotations reading “1 white]” and one explicit “1 Slave]”. The seven “1 white]” occurrences align with the rows for Lewis Bryan, Daniel Boone, Henry Garvin, George Murphey, George Johnston, John Anderson, and William Langphier. The “1 Slave]” occurrence is on the Capt. Jas. Gardner row.
+
+
+The placement is not uniform. Lewis Bryan and the five late-page white annotations sit at the left of the locality field; Daniel Boone’s “1 white]” is written farther right in the General Remarks area. This is source-visible evidence that the category notation is not confined to one printed column. It weakens any assumption that the printed form supplied a dedicated white/slave field and strengthens the possibility that these are layered annotations added around the principal return entries. The source still does not establish when, by whom, or under what instruction they were added.
+
+
+CORRECTION TO DERIVATIVE HISTORY
+The Quoin derivative had conservatively rendered Capt. Jas. Gardner’s first-row annotation as “1 [slave?]”. Enlarged direct inspection supports “1 Slave]”. The active source-facing reading is therefore “1 Slave]”; Quoin’s uncertainty remains preserved as earlier derivative history.
+
+
+ARITHMETIC OBSERVATION
+Without yet assuming a relationship to the page-60 district aggregate, the explicit category marks on manuscript page 39 arithmetically subtotal to 7 Whites and 1 Slave. Whether those marks are components of the closing “14 Whites & 67 Slaves in this district” total remains an inference to be tested across the intervening pages.
+
+
+NONCLAIMS
+— The seven white annotations do not identify the people counted beyond the source category wording.
+— Their occurrence beside named farm rows does not establish kinship, residence, ownership mechanism, legal status beyond the manuscript word, or whether the counted person is part of the printed “Entire No of the Family.”
+— The differing column placement does not by itself prove a later hand or later date.

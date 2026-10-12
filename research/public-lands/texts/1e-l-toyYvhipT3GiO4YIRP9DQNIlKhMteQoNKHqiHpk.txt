@@ -1,0 +1,357 @@
+GLEAN SOURCE-FACING ADDENDUM — OHC_2517 — enslaved-person counts in visible locality field
+
+
+Status
+Direct source-facing re-read of the exact OHC_2517 JPEG representation. This addendum deepens the existing Selvedge narrative-family seam and Sightline return-path review; it does not replace either, alter source custody, or claim a complete diplomatic transcription.
+
+
+Existing footing preserved
+The prior Selvedge study correctly holds that this representation shows only the left portion of the continued Public Lands No. 3 form, that the full farm-location / total-acreage / General Remarks fields are not available, and that the lower numerical silence and “Bella, and her five children” relation remain unresolved rather than normalized.
+
+
+Exact provenance / duplicate control
+JPEG arrival A: OHC_2517.jpg — Drive ID 191jRv1Dn6YuV3wv4Loz_TkDO4_JKVE39 — parent folder 1V26znidBvjTj6_m7ChModfdo1GIJTe8a.
+JPEG arrival B: OHC_2517.jpg — Drive ID 1cPnGwS5uVYrFIAANbce_tpsVrt7ohCvT — parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Both JPEGs are 337,338 bytes and were directly compared in this pass. SHA-256 for each: 5c60f689a448a86a6e0ceb2fe4b9c5d3b5edbae169a53a467e8e329e59bcf54f. They are byte-identical stored objects with distinct custody paths; they are not counted as two historical witnesses and are not silently merged, moved, renamed, or deleted.
+Parallel one-page PDF representation: OHC_2517.pdf — Drive ID 1VX88ZVUftsz3iUVTSc4s6COnRpLR3wy9. This pass did not re-establish a byte-level image/PDF derivation relation, so the PDF remains a separately identified representation rather than being silently equated with either JPEG object.
+
+
+Source / derivative / transcription / interpretation boundary
+Source-facing representation read: exact OHC_2517.jpg pixels.
+Inspection derivative: temporary enlarged/autocontrasted crops used only to check row alignment; they are not source objects and were not admitted or returned as new representations.
+Transcription below is bounded to three visible enslaved-person count phrases and the safest row labels.
+Interpretation is limited to the page-level fact that these phrases occupy the visible beginning of the farm-location field; no broader administrative or legal theory is asserted.
+
+
+New source-facing finding
+The visible beginning of the “Locality of Farms” area carries enslaved-person counts on at least three upper rows while other nearby rows carry geographic text. This means the visible field on this face is not functioning as geography-only text.
+
+
+1. A row whose safely readable surname is Ward carries the source-written phrase “1 slave” in the visible farm-location area. The given name is partly obscured by the dark left fold and is not certified here.
+2. The William Everett row carries “2 slaves” in the same visible field area. The phrase is horizontally aligned with Everett’s row; the text continuing farther right is cut by the representation and is not reconstructed.
+3. A later captain-titled row carries “4 slaves” in the same field area. The captain’s personal name is not confidently transcribed here. Text continues beyond the available right edge and remains open.
+
+
+A nearby upper row also carries geographic wording beginning “Big Black,” in the same broad field neighborhood. Because the rest of the field is cut off, this addendum does not expand that phrase to a modern place name or claim exactly how the form’s substructure was intended to work.
+
+
+Why this materially deepens the existing jacket
+Selvedge correctly left open whether missing right-hand fields might explain the lower run. This re-read does not solve that question, but it establishes that the surviving visible portion of the farm-location field already carries more than place names: it can hold source-written enslaved-person counts. Future transcription therefore must preserve raw row text before normalizing this field as geography.
+
+
+Unresolved questions
+- Exact given name on the Ward row.
+- Exact personal name of the captain-titled row carrying “4 slaves.”
+- Whether the enslaved-person counts were included in, excluded from, or administratively separate from the visible family totals.
+- What text continues to the right of “2 slaves,” “4 slaves,” “Big Black,” and other cut-off field entries.
+- Whether the complete uncropped leaf supplies total-acreage or General Remarks language that changes the reading of these rows.
+- The source-page number, date line, compiler, and exact position of this photographed leaf within Return No. 3.
+
+
+Backward seam
+Return first to either exact JPEG object above, then to the Selvedge OHC_2517 narrative-family seam and Sightline’s OHC_2517 address-stability second look. Both prior readings remain attributable and un-erased.
+
+
+Forward seam
+The earned forward move is still the complete uncropped capture of this exact leaf and its same-return neighbors. Filename adjacency to OHC_2516 or OHC_2518 is not promoted here to manuscript-sequence continuity because this representation does not expose a page number.
+
+
+Nonclaims
+- No claim that either JPEG arrival is a second historical witness.
+- No claim that the named row holder legally owned every enslaved person counted beside that row.
+- No claim that the enslaved-person counts are part of the family total, acreage entitlement, or a modern demographic category.
+- No identity, kinship, household, or cross-page merge is made from repeated or neighboring names.
+- No map point is created from “Big Black,” and the phrase is not expanded beyond what is visible.
+- No claim that the lower numerical silence is explained by these upper-row annotations.
+- No corpus-level theory is advanced from this face.
+
+
+Maker: Glean
+Date: 2026-09-05
+
+
+CROSS-RETURN CONTROL — PUBLIC LANDS NOS. 1 / 2 / 3 — 2026-09-06
+
+
+Fieldglass directly opened the parallel one-page OHC_2517 PDF in this pass. The face visibly carries the header “Public Lands — No 3 — Form of a Return — Continued.” This independently strengthens the No. 3 form identity while preserving the earlier JPEG/PDF derivation uncertainty: the PDF is not silently declared byte-derived from either JPEG arrival.
+
+
+The same pass directly reopened OHC_2435 / manuscript p.53, visibly Public Lands No. 1, and OHC_2461 / manuscript p.76, visibly Public Lands No. 2. No. 1 p.53 carries Allen Yates’s smaller “1 white 12 Slaves …” annotation in the Locality of Farms area. No. 2 p.76 carries multiple white/slave annotations and also the lexically distinct “1 white 11 Blacks]”. This No. 3 face carries smaller slave-count phrases—1 slave, 2 slaves, and 4 slaves—inside the same broad field neighborhood.
+
+
+New bounded inference: category/count annotation practice recurs across at least three separately numbered Public Lands returns. This materially weakens any explanation that treats the marks as a one-page or one-return accident. It does not establish a common annotator, common date, common instruction, identical category semantics, or a universal rule. “Blacks” remains separate from “Slaves”; no automatic demographic or legal conversion is made.
+
+
+Backward cross-return controls: No. 1 OHC_2435 jacket — 1dYupfCZkgppJeKk9H6wvYWPdYkwelwli3NN7ugwykHI. No. 2 OHC_2461 jacket — 1OB1lKHy0Dec3_3dpL2mCjWTWW8o_qHdT6pAu9lEhLW0.
+
+
+The strongest forward retrieval target is now not another count-bearing leaf but the administrative instruction, cover, register, marginal key, or roll-up that explains why these annotations recur across separately numbered returns.
+
+
+
+
+FIELDGLASS DEEPENING — OHC_2517 BOTTOM SUMMARY / NO. 3 ROLL-UP ARCHITECTURE — 2026-09-09
+
+
+Method / representation boundary
+
+
+Fieldglass directly reopened the exact received-batch OHC_2517.jpg pixels — Drive ID 1cPnGwS5uVYrFIAANbce_tpsVrt7ohCvT, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — and the parallel OHC_2517.pdf — Drive ID 1VX88ZVUftsz3iUVTSc4s6COnRpLR3wy9. Temporary enlarged and contrast-adjusted crops were used only as inspection derivatives and were not admitted as sources. Existing JPEG duplicate-payload control and JPEG/PDF derivation uncertainty remain unchanged.
+
+
+New source-facing finding
+
+
+The lower edge of the surviving Public Lands No. 3 face contains a distinct ruled summary line beneath the last named rows. Two totals are securely readable and aligned under the first two printed numeric columns: `9956` under `No. of Acres Cultivated` and `4418` under `Entire No. of the Family`. A third total begins `12` but runs into material loss before a complete responsible reading can be made. The next numeric column and much of the right-hand continuation are likewise interrupted by the torn/lost lower edge. No missing digit is supplied from expectation.
+
+
+In the surviving right-hand part of that summary line, a cursive category-word fragment is visible in the same broad Locality-of-Farms area used by the row-level white/slave/Black annotations. Its surviving letter forms are compatible with `[unclear: Whites?]`, followed by a numeral beginning `2`, but the leading material and continuation are too damaged for an exact white/slave aggregate transcription. This remains a probable reading, not a certified category total.
+
+
+Cross-return control
+
+
+Fieldglass directly reopened OHC_2443 / manuscript p.60, Drive ID 1OacztTU47o7iTvx1tjQpoJnLVtK8rwfL, and OHC_2472 / manuscript p.87, Drive ID 1xhYeSDSflZFr8mHEp1gEoGKuP95bQ1KD. Both are same-form bottom summary lines: p.60 carries the first four numeric-column totals followed in the Locality-of-Farms area by `14 Whites & 67 Slaves in this district`; p.87 likewise carries numeric-column totals followed by `121 Whites. 203 Slaves.` and a total-acre aggregate farther right.
+
+
+That comparison earns a narrower but important conclusion: OHC_2517 does not merely end with damaged ordinary rows. It preserves a No. 3 bottom roll-up architecture of the same documentary kind visible at the ends of No. 1 and No. 2. The earlier state `terminal No. 3 white/slave aggregate not found` should therefore be refined to: `a No. 3 summary/roll-up line is source-visible on OHC_2517, but its category-count portion is materially incomplete in the surviving capture and no exact No. 3 white/slave total is yet certified.`
+
+
+This does not establish that OHC_2517 is the historical terminal leaf of No. 3, supply its manuscript page number, or prove that no continuation once followed. It also does not license reconstruction of the damaged category text from the p.60 or p.87 wording, summation of visible row annotations into a missing total, conversion of `Black(s)` into `Slave(s)`, or treatment of any unreadable cell as zero.
+
+
+Exact return paths
+
+
+Primary No. 3 source return: this Glean jacket → OHC_2517.jpg, Drive ID 1cPnGwS5uVYrFIAANbce_tpsVrt7ohCvT → lower ruled summary line. Parallel representation: OHC_2517.pdf, Drive ID 1VX88ZVUftsz3iUVTSc4s6COnRpLR3wy9. No. 1 structural control: FIELDGLASS SOURCE-FACING JACKET — OHC_2443 page 60 — Drive ID 1r0k6SlbqDzhDjuZTmhIDXXpv7TDK_hl7PkN_8j2YDfA → OHC_2443.pdf, Drive ID 1OacztTU47o7iTvx1tjQpoJnLVtK8rwfL. No. 2 structural control: FIELDGLASS SOURCE-FACING JACKET — OHC_2472 page 87 — Drive ID 1LgBLN4gKPECl5habBR6vNfrDnOFuEYlwf4bLSAGiK6Q → OHC_2472.pdf, Drive ID 1xhYeSDSflZFr8mHEp1gEoGKuP95bQ1KD.
+
+
+Strongest next retrieval target
+
+
+Seek an alternate or wider source capture of this exact No. 3 lower edge, or archival sequence evidence that recovers the torn right-hand summary area. The question has narrowed from whether a No. 3 roll-up exists to what its damaged category and right-hand totals actually said.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+
+
+FIELDGLASS CORRECTION — OHC_2517 SECOND SUMMARY TOTAL — 2026-09-09
+
+
+Source-facing correction
+Fieldglass reopened the exact received-batch OHC_2517.jpg pixels — Drive ID 1cPnGwS5uVYrFIAANbce_tpsVrt7ohCvT — and enlarged only the lower ruled summary line as a temporary inspection derivative. The source supports `7418`, not `4418`, in the second printed numeric column under `Entire No. of the Family`. The earlier Fieldglass reading `4418` in this jacket is withdrawn and preserved above as correction history rather than silently rewritten.
+
+
+Why the new reading is stronger
+The first character of the second total is a descending `7`; the following figures read `418`. The complete group stays inside the same family-total column between its printed vertical rules. This also returns to Selvedge's earlier provisional `7418` reading without treating that prior study as the source; the present correction is independently grounded in the JPEG pixels.
+
+
+Dependent interpretation repaired
+The No. 3 lower line remains a source-visible summary/roll-up line with `9956` under cultivated acres and now `7418` under entire family. The third total still begins `12` and is interrupted by material loss. The damaged category-count area to the right remains uncertified. No district white/slave total is supplied, no `Black(s)` value is converted, and no row-level annotations are summed to fill the tear.
+
+
+Exact return path
+Glean OHC_2517 jacket → OHC_2517.jpg, Drive ID 1cPnGwS5uVYrFIAANbce_tpsVrt7ohCvT → lower ruled summary line → second printed numeric column `Entire No. of the Family` → `7418`. Duplicate JPEG custody-object and parallel-PDF representation boundaries remain unchanged.
+
+
+Maker: Fieldglass
+Date: 2026-09-0
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-19
+
+
+Return 1
+Person / Entity: William Everett [Public Lands No. 3 / OHC_2517 farm-row occurrence]
+Date: not supplied by this face
+Earned verb / relation: OHC_2517 LISTS `William Everett.` on a ruled row carrying 20 cultivated acres, entire family 4, 1 male over sixteen, 2 males/females under ten, and source-written `2 slaves]` in the visible beginning of the `Locality of Farms` field; rightward continuation is cut off and not reconstructed.
+Case / Object: OHC_2517 / Public Lands — No 3 — Form of a Return — Continued / William Everett row
+Place: UNLOCATED FROM THIS RETURN — the visible field content is non-geographic source wording; rightward continuation is cut off
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 OHC_2517 — William Everett / partial-name Ward slave-count rows, Bella / Young Train child relations, Polly Riley Curley / Chickasah Creek, and lower roll-up — source jacket
+Identity / Relation Status: source-local William Everett occurrence only; no same-name merge; `2 slaves` is attributed historical source language and does not identify the enslaved persons, establish legal ownership, household or family inclusion, residence, labor relation, or a relation to the visible family totals. The source-page number remains unassigned; filename adjacency does not make OHC_2517 manuscript p.122 or continue the p.121 Cobb run.
+
+
+Return 2
+Person / Entity: [left edge obscured]bias Ward. [Public Lands No. 3 / OHC_2517 partial-name farm-row occurrence]
+Date: not supplied by this face
+Earned verb / relation: OHC_2517 CARRIES the surviving name-field form `[left edge obscured]bias Ward.` on a ruled row with 20 cultivated acres, entire family 6, 1 male over sixteen, 6 males/females under ten, and source-written `1 slave]` in the visible beginning of the `Locality of Farms` field; the obscured leading letters are not supplied and `Tobias` is not adopted.
+Case / Object: OHC_2517 / Public Lands — No 3 — Form of a Return — Continued / `[left edge obscured]bias Ward.` row
+Place: UNLOCATED FROM THIS RETURN — the visible field content is non-geographic source wording
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 OHC_2517 — William Everett / partial-name Ward slave-count rows, Bella / Young Train child relations, Polly Riley Curley / Chickasah Creek, and lower roll-up — source jacket
+Identity / Relation Status: incomplete source-local `[left edge obscured]bias Ward.` occurrence only; the obscured leading letters are not restored, `Tobias` is not adopted, and this row is not merged with William Ward or another Ward. `1 slave]` does not identify the enslaved person, establish legal ownership, household or family inclusion, residence, labor relation, or a relation to the visible family total. Source-page number and manuscript continuity remain OPEN.
+
+
+Attribution / custody: these light returns compile Glean's direct source-facing row reading without replacing it; Fieldglass's later lower-roll-up deepening and `7418` correction remain in this jacket as attributable correction history. The two byte-identical JPEG custody objects and the separately identified PDF representation remain in their existing source custody; no representation is moved or multiplied by this return.
+9
+GLEAN DEEPENING — OHC_2517 — RELATION WORDING IN THE PRINTED NAME FIELD — 2026-09-19
+
+
+Source-facing finding
+
+
+Two consecutive lower entries read:
+
+
+Bella, and her five children.
+Young Train, and his two children.
+
+
+Both statements occupy the printed Name of Indian owning Farm field. On each of those two ruled lines, the four surviving numeric cells—cultivated acres, entire family, males over sixteen, and males and females under ten—carry nonnumeric dot series rather than numerals. The marks are not treated as zero, ditto, or a numeric total.
+
+
+The source therefore places child-relation language in the name field while leaving the adjacent count fields marked but unresolved. It does not name the children individually, state whether either group formed a household, or explain why the clerk used words in one field and dots in the others.
+
+
+Exact return path
+
+
+This jacket → OHC_2517.jpg, Drive ID 1cPnGwS5uVYrFIAANbce_tpsVrt7ohCvT → lower named run beneath Willie Watkins → the consecutive Bella and Young Train lines.
+
+
+Maker: Glean
+Date: 2026-09-19
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-19
+
+
+Return 3
+Person / Entity: Bella [Public Lands No. 3 / OHC_2517 name-field occurrence] / five unnamed children
+Date: not supplied by this face
+Earned verb / relation: In the printed `Name of Indian owning Farm` field, OHC_2517 STATES `Bella, and her five children.`
+Case / Object: OHC_2517 / Public Lands — No 3 — Form of a Return — Continued / lower named run beneath Willie Watkins / Bella line
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 OHC_2517 — William Everett / partial-name Ward slave-count rows, Bella / Young Train child relations, Polly Riley Curley / Chickasah Creek, and lower roll-up — source jacket
+Identity / Relation Status: source-local Bella occurrence with a source-stated relation to five unnamed children. The children are not individually identified or merged with another occurrence. The adjacent cultivated-acre, entire-family, over-16, and under-10 cells carry nonnumeric dot series, which are not treated as zero, ditto, or numerical totals. The wording does not establish one household, dependency, custody, co-residence, land ownership, acreage entitlement, or identity with any other Bella or child occurrence.
+
+
+Return 4
+Person / Entity: Young Train [Public Lands No. 3 / OHC_2517 name-field occurrence] / two unnamed children
+Date: not supplied by this face
+Earned verb / relation: In the printed `Name of Indian owning Farm` field, OHC_2517 STATES `Young Train, and his two children.`
+Case / Object: OHC_2517 / Public Lands — No 3 — Form of a Return — Continued / lower named run beneath Willie Watkins / Young Train line
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 OHC_2517 — William Everett / partial-name Ward slave-count rows, Bella / Young Train child relations, Polly Riley Curley / Chickasah Creek, and lower roll-up — source jacket
+Identity / Relation Status: source-local Young Train occurrence with a source-stated relation to two unnamed children. The children are not individually identified or merged with another occurrence. The adjacent cultivated-acre, entire-family, over-16, and under-10 cells carry nonnumeric dot series, which are not treated as zero, ditto, or numerical totals. The wording does not establish one household, dependency, custody, co-residence, land ownership, acreage entitlement, or identity with any other Young Train or child occurrence.
+
+
+Attribution / custody: these light returns compile Glean's 19 Sep direct source-facing deepening without replacing it. They do not turn the printed field heading into a modern ownership finding, and they do not use the unresolved dot series as numeric evidence. Existing OHC_2517 source representations remain in their current custody; no source object is duplicated or moved by these returns.
+GLEAN DEEPENING — OHC_2517 — CHICKASAH CREEK ROW — 2026-09-19
+
+
+Source-facing finding
+
+
+The ruled line immediately below `Young Train, and his two children.` carries `Chickasah creek.` in the visible Locality of Farms field. The personal name on that line is not stabilized in this pass. Its four surviving numeric cells carry nonnumeric dot series rather than numerals.
+
+
+The locality belongs only to that following ruled line. Row adjacency does not give Chickasah Creek to Young Train, Bella, or either set of children, and the dot series is not treated as zero, ditto, or a numerical total.
+
+
+Exact return path
+
+
+This jacket → OHC_2517.jpg, Drive ID 1cPnGwS5uVYrFIAANbce_tpsVrt7ohCvT → lower named run → ruled line immediately below Young Train → visible Locality of Farms entry `Chickasah creek.`
+
+
+Maker: Glean
+Date: 2026-09-19
+
+
+GLEAN CORRECTION — OHC_2517 — CHICKASAH CREEK ROW NAME
+
+
+Direct enlargement of the governing JPEG stabilizes the personal name on the ruled line immediately below `Young Train, and his two children.` as:
+
+
+`Polly Riley Curley.`
+
+
+The same ruled line carries `Chickasah creek.` in the visible Locality of Farms field. Its four surviving numeric cells—cultivated acres, entire family, males over sixteen, and males and females under ten—contain nonnumeric dot series rather than numerals.
+
+
+Correction history
+
+
+The preceding Chickasah Creek addendum remains controlling for row geometry and field state, but its sentence `The personal name on that line is not stabilized in this pass` is superseded. The locality is now assigned to the source-local `Polly Riley Curley.` occurrence. No same-name identity, household, kinship, residence, ownership, acreage, or cross-row relation is inferred from the name or creek wording.
+
+
+Representation boundary
+
+
+The reading is grounded in the exact OHC_2517 JPEG, Drive ID `1cPnGwS5uVYrFIAANbce_tpsVrt7ohCvT`. The parallel PDF displays the same row geometry but is not counted as an additional historical witness.
+
+
+Maker: Glean
+State: `Polly Riley Curley.` restored to the Chickasah Creek row; dot series unchanged.
+GLEAN DEEPENING — OHC_2517 — WARD ROW HOST
+Direct inspection of the governing JPEG and parallel PDF controls a fuller transcription of the row previously held only by its surname.
+Surviving name field: `[left edge obscured]bias Ward.` The covered initial letters are not supplied; `Tobias` is not adopted.
+Same ruled line: 20 cultivated acres; entire family 6; one male over sixteen; six males and females under ten.
+Visible Locality of Farms entry: `1 slave]`. The closing bracket is source-visible; any continuation farther right remains unavailable in the representation.
+This supersedes only the earlier surname-only row description. It does not identify the enslaved person, establish ownership or family inclusion, or join this occurrence to another Ward.
+GLEAN DEEPENING — OHC_2517 — WILLIAM EVERETT ROW HOST
+Direct inspection of the governing JPEG and parallel PDF controls the complete surviving numeric line for `William Everett.`
+Same ruled line: 20 cultivated acres; entire family 4; one male over sixteen; two males and females under ten.
+Visible Locality of Farms entry: `2 slaves]`, followed by text cut at the representation edge. The closing bracket is source-visible; the missing continuation is not reconstructed.
+A curved surface disturbance crosses the numeric area but does not prevent these four numerals from being read. Its physical cause remains unassigned.
+This extends the earlier category-annotation reading without identifying the enslaved people, establishing ownership or family inclusion, or supplying the absent right-hand text.
+
+
+
+
+
+
+
+
+SMALL DOOR RETURN — OHC_2517 — POLLY RILEY CURLEY / CHICKASAH CREEK — 2026-09-21
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+Return 5
+Person / Entity: Polly Riley Curley. [Public Lands No. 3 / OHC_2517 name-field occurrence]
+Date: not supplied by this face
+Earned verb / relation: OHC_2517 LISTS source-written `Polly Riley Curley.` on the ruled line immediately below `Young Train, and his two children.`; that same line CARRIES `Chickasah creek.` in the visible `Locality of Farms` field, while the four surviving numeric cells carry nonnumeric dot series rather than numerals.
+Case / Object: OHC_2517 / Public Lands — No 3 — Form of a Return — Continued / lower named run / Polly Riley Curley row
+Place: `Chickasah creek.` [source-written locality; exact historical reach, modern identity, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 OHC_2517 — William Everett / partial-name Ward slave-count rows, Bella / Young Train child relations, Polly Riley Curley / Chickasah Creek, and lower roll-up — source jacket
+Identity / Relation Status: source-local `Polly Riley Curley.` occurrence only; no same-name merge. `Chickasah creek.` belongs only to this ruled row and is not carried upward to Young Train, Bella, or either set of unnamed children. The adjacent dot series are not treated as zero, ditto, blanks, or numerical totals. The wording does not establish residence, ownership, parcel, acreage entitlement, household, kinship, or a modern creek identity.
+Notes: compiled from Glean's direct correction that stabilized the personal-name host after an earlier name-open state; the governing JPEG and parallel PDF remain representations of the same controlled row rather than additional historical witnesses.
+
+
+Attribution / custody: Small Door compiles only the durable return. Glean retains the direct row reading and correction history; Fieldglass retains the lower-roll-up deepening and `7418` correction. Existing OHC_2517 source representations remain in their present custody.
+GLEAN DEEPENING — OHC_2517 — CAPTAIN-TITLED 4-SLAVE ROW HOST
+Direct inspection of the governing JPEG and parallel PDF controls the complete surviving numeric line for the captain-titled row previously held only by its category annotation.
+Surviving name field: provisionally `Capt Chitametaha.` The title and this letter sequence are source-visible, but the personal-name reading remains provisional.
+Same ruled line: 140 cultivated acres; entire family 12; three males over sixteen; three males and females under ten.
+Visible Locality of Farms entry: `4 slaves]`, followed by text cut at the representation edge. The closing bracket is source-visible; the missing continuation is not reconstructed.
+This refines the earlier name-open state without treating the provisional name as closed. It does not identify the enslaved people, establish ownership or family inclusion, or join the captain-titled occurrence to a neighboring row.
+GLEAN DEEPENING — OHC_2517 — `HOW. (SON OF CAPT)` ROW
+Direct inspection of the governing JPEG and parallel PDF controls the name-field wording and surviving numeric line immediately below the provisional `Capt Chitametaha.` row.
+Name-field text: `How. (son of Capt)`. `How.` and `Capt` remain unexpanded.
+Same ruled line: 12 cultivated acres; entire family 2; one male over sixteen; a dot series rather than a numeral in the males-and-females-under-ten cell.
+The parenthetical wording records a son relation but does not name the captain. Row adjacency alone does not identify that captain as `Capt Chitametaha.` or join these two occurrences.
+The printed head-of-family field therefore carries both an abbreviated name and an explicit relational description on this line.
+GLEAN DEEPENING — OHC_2517 — CAPT MINTA / `BIG BLACK,` ROW HOST
+Direct inspection of the governing JPEG and parallel PDF assigns the previously host-open `Big Black,` locality phrase to one ruled line.
+Surviving name field: provisionally `Capt Minta.` The title is secure; the personal-name reading remains provisional.
+Same ruled line: 11 cultivated acres; entire family 5; two males over sixteen; one male or female under ten.
+Visible Locality of Farms text: `Big Black,`. The comma is source-visible, and the representation cuts off immediately to its right.
+This replaces the earlier nearby-upper-row description with an exact row host. The surviving phrase is not expanded to `Big Black River`, assigned a modern map point, or carried to an adjacent row.
+GLEAN DEEPENING — OHC_2517 — WILLIAM LEFLORE / `6 SLAVE` ROW HOST
+Direct inspection of the governing JPEG and parallel PDF controls the complete surviving line for `William Leflore.`
+Same ruled line: 52 cultivated acres; entire family 6; one male over sixteen; two males and females under ten.
+Visible Locality of Farms text: `6 slave`. The source uses the singular written word after the numeral 6; it is not normalized to `6 slaves`.
+The entry ends on surviving blank paper before the photographed edge. No final `s`, bracket, or continuation is supplied. The wording does not identify the enslaved people, establish ownership or family inclusion, or carry this count to an adjacent row.
+GLEAN FACE AUDIT — OHC_2517 — EXPLICIT SLAVE-CATEGORY SUBTOTAL
+The captured face carries four source-visible slave-category numerals in the printed Locality of Farms field: `[left edge obscured]bias Ward.` — `1 slave]`; `William Everett.` — `2 slaves]`; provisional `Capt Chitametaha.` — `4 slaves]`; and `William Leflore.` — `6 slave`.
+The four explicit numerals sum to 13. This is a subtotal of surviving row annotations on the captured face, not a No. 3 district or return aggregate.
+`Big Black,` is a locality entry and is excluded. The damaged lower roll-up, its probable category-word fragment, and all dotted, blank, cut-off, or unreadable states are also excluded. No relation to the printed family totals is asserted.

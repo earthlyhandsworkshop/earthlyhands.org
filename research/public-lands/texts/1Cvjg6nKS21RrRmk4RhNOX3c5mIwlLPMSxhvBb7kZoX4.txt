@@ -1,0 +1,109 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2417 page 38 — Ni-ta-cha-chie captains list and form boundary
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+Practice: SOURCE_WORK.md — source first; observation distinct from inference; one historical object / one jacket.
+
+
+HISTORICAL OBJECT / BOUNDARY
+One manuscript page, visibly numbered 38. The face is headed “Public Lands,” “No 1,” and “Chief Ni-ta-cha-chie.” It is a list of captains entitled to the additional half section under the nineteenth article of the treaty. This page is a captains-list form, not the farm-return form that begins on manuscript page 39.
+
+
+SOURCE REPRESENTATIONS / CUSTODY
+1. OHC_2417.pdf — Drive ID 18NOFdB-gDO9Ybr3z0VzPAYvpfNQkXBa0 — 246,310 bytes — parent folder 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+2. OHC_2417.pdf — Drive ID 1_LEdJ4QtGsP-kJIW5Q1KUgafpoapi3Oz — 246,310 bytes — parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+These are two custody routes bearing the same nominal filename and size. Byte identity between the two was not established in this pass, so this jacket does not claim it.
+Known study representation: OHC_2417.png — Drive ID 1XjnIkJ_sgONpuKmkKwpYWeYfReqR6owA. It is a study representation, not another historical witness.
+Known duplicate derivative representations: “OHC_2417 captains list Nitachachie district — Quoin.md” — Drive IDs 1pWC5OpW4-BzKx67pmkQKEp3CvPRmPnUN and 19OLH2uVwCZC3o-aKfI_Xd-jQwyktj2pB. They are derivative reading aids, not source witnesses.
+
+
+DIRECT SOURCE OBSERVATIONS
+The manuscript itself visibly carries page number 38.
+The heading reads “Chief Ni-ta-cha-chie.”
+The main heading states that this is “A list of the captains entitled to the additional half section under the nineteenth article of the treaty.”
+The page contains a numbered captain list and a right-side certification/statement. The surviving capture makes the right edge difficult; only secure wording is carried forward here rather than completing it from expectation.
+The neighboring manuscript page 39, represented by OHC_2418, changes documentary form: it begins “No. 1 Form of a return” / “Location under the Choctaw Treaty” and does not say “Continued.”
+
+
+FINDING
+Page 38 provides a source-visible documentary-form boundary immediately before the farm-return sequence. It should not be silently absorbed into the page-39-and-forward farm return merely because it is adjacent in the digitized run or shares “No 1” / Public Lands context.
+
+
+INFERENCE
+The page-39 form opening, together with the different page-38 captains-list form, strongly supports treating manuscript page 39 as the opening face of the farm-return object that later pages explicitly continue. That inference belongs to the form sequence, not to an identity claim about named people.
+
+
+UNCERTAINTY / NONCLAIMS
+— This jacket does not claim that “Chief Ni-ta-cha-chie” on page 38 is the same person as “Nittachachi. Chief of southern Dist.” on manuscript page 60. Similar spelling and contextual proximity are not enough for an identity merge.
+— It does not claim that page 38 and page 39 are one historical object. The source-visible forms differ.
+— It does not reconstruct text lost or difficult at the right edge of the certification.
+— It does not claim byte identity between the two OHC_2417 PDF custody copies; that comparison remains open.
+
+
+CORRECTION / REPRESENTATION HISTORY
+This jacket makes explicit a boundary that had been easy to blur while following the later district-total thread. No earlier page-38 reading is silently overwritten. Quoin remains a derivative representation and is not elevated to source authority.
+
+
+RETURN PATHS / NEXT DOORS
+Return to the source by either OHC_2417.pdf Drive ID above. For the farm-return opening, cross forward to OHC_2418 / manuscript page 39 and its source-facing jacket. For the district-total closure currently under study, cross forward through the continued return to OHC_2443 / manuscript page 60.
+
+
+
+
+QUIET REACH ADDENDUM — 2026-09-09 — OHC_2416 / OHC_2417 representation-family correction
+
+
+MATERIAL DOCUMENTARY-IDENTITY FINDING
+Direct comparison of the stored source PDFs OHC_2416 and OHC_2417 establishes that the two different OHC identifiers do not identify two different historical manuscript faces here. Both represent the same visible manuscript page 38, headed Public Lands / No. 1 / Chief Ni-ta-cha-chie and carrying the same numbered captain list and certification. The PDF payloads are different, not duplicates by hash: OHC_2416 SHA-256 7aac936e1c8b94e6f1f8368f3c05eb9cd22368a1715407b9f5a7290fde5023bc; OHC_2417 SHA-256 31fa925aee478f893fe7b76f7ddaa19d4f51dd33f8e8be4d934d145923db2309. Both embed 2038 x 1879 grayscale JPEG images at 300 DPI. Image registration of the extracted source images yields a near-identity transform with approximately +319 px horizontal and -88 px vertical displacement; 1,153 of 1,285 conservative ORB matches survive RANSAC (89.7%), and overlapping registered pixels correlate at approximately 0.984. The writing, ruling, defects, and page number therefore belong to one represented historical face, not two evidentiary pages.
+
+
+REPRESENTATION DISTINCTION
+OHC_2416 and OHC_2417 are not the same digital payload and should not be collapsed at the file level. They are two differently framed / positioned digital representations in one historical-face family. The exact upstream cause of the reframing — separate crop, export, scanner framing, or another derivative step — remains unearned. OHC_2416 visibly preserves more of portions of the certification area that are clipped or harder to read in OHC_2417, so the additional representation is useful for legibility even though it contributes no second historical witness.
+
+
+CORRECTION TO ACTIVE JACKET STATE
+The earlier jacket correctly governed OHC_2417 as page 38 and correctly refused to merge the similar Ni-ta-cha-chie / Nittachachi person occurrences. It was incomplete in representation genealogy because OHC_2416 was not yet attached to the same historical-face family. The phrase describing the right edge as difficult should now be understood as representation-specific to the OHC_2417 framing, not as proof that the manuscript face itself lacks the corresponding material in every held representation.
+
+
+EXACT SOURCE RETURNS
+OHC_2416.pdf — Drive ID 1U9eFtUcmlVYjmCd2sX4n-Mv1RETeAhZ4 — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 256,773 bytes.
+OHC_2417.pdf — Drive ID 18NOFdB-gDO9Ybr3z0VzPAYvpfNQkXBa0 — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 246,310 bytes.
+Preparation receipt controlling both source payload hashes and embedded-image dimensions: OHC_2416–OHC_2418 — batch receipt.md — Drive ID 1xN4MG6CR8f0_LWTFfqX_vZknf-4roxEP.
+Derivative control: Quoin produced separate OHC_2416 and OHC_2417 transcriptions whose substantive text is the same apart from the inherited OHC label; those transcriptions remain derivatives and are not the basis of the source-face merge.
+
+
+NONCLAIMS
+— This does not prove OHC_2416 and OHC_2417 came from one exact upstream file or one scanner action; only same historical face / same represented image neighborhood is earned.
+— Different PDF hashes do not imply different witnesses.
+— Same historical face does not make one derivative transcription corroboration of another.
+— This correction does not merge Chief Ni-ta-cha-chie on page 38 with Nittachachi on page 60.
+— No count, acreage, role, or Article 19 conclusion is changed merely by joining the representation family.
+
+
+FLARE CONTROL
+For any Public Lands face census or land-privilege denominator, OHC_2416 and OHC_2417 count once at the historical-face level, while both return paths should be retained because the alternate framing can recover legibility lost in the other.
+
+
+— Quiet Reac
+
+
+FIELDGLASS CROSS-RETURN ADMINISTRATIVE CONTROL — 2026-09-09 — p.38 / No. 3 p.88
+
+
+Direct source comparison of the more legible OHC_2416 representation of this p.38 historical face with the OHC_2473 representation of manuscript p.88 adds one bounded administrative crossing. The p.88 face is governed by `True Bearing — OHC_2474 — treaty-time status certification`, Drive `1YywkkcgKXNcWuWjFH718PxVcXBx03KtBDYuyWVyfG0s`; OHC_2473/OHC_2474 remain two representations of one visible p.88 face rather than two witnesses.
+
+
+Both p.38 and p.88 are distinct captain-list objects carrying materially parallel form grammar: a heading for captains entitled to the additional half section under Article XIX; cultivated-acre figures; a 320-acre `Entitled as Captain` column; total acreage; and a district-chief certification tying the listed captain status back to treaty time and describing a list supplied to Armstrong when called on for the purpose of allowing the additional half section. Both carry W. Ward / Agent C.N. notation. P.38 additionally carries an interpreter notation. The partially lost p.88 recipient/connective wording is not reconstructed from this p.38 parallel.
+
+
+This supports a recurring administrative schedule/certification practice across at least two separately numbered Public Lands district bodies. It does not establish identical compilers or complete instructions, and it does not explain the separate white / slave / Black annotation subtrack on ordinary farm-return faces. The positive control is useful precisely because the source states this Article XIX list-making machinery openly; no comparable source statement has yet been found for the category-count annotations.
+
+
+Form-sequence control remains: this p.38 captain face → p.39 ordinary No. 1 farm-return opening; separately, p.88 captain face → p.89 ordinary No. 3 continued farm-return face. No person, district population, acreage total, or category count crosses between those bodies by adjacency.
+
+
+Exact cross-return path: this jacket → OHC_2416.pdf `1U9eFtUcmlVYjmCd2sX4n-Mv1RETeAhZ4` / OHC_2417 historical-face family → manuscript p.38 → p.88 governing jacket `1YywkkcgKXNcWuWjFH718PxVcXBx03KtBDYuyWVyfG0s` → OHC_2473.pdf `15moWDZMz1vTTdsN1fQn5mzL-QMI4lQ75` / OHC_2474 representation family → manuscript p.88.
+
+
+— Fieldglassh

@@ -1,0 +1,64 @@
+# OHC_2413 stamp 24323 captains face — Quoin
+
+**When:** Wednesday 2 September 2026, evening  
+**Maker:** Quoin  
+**Opened:** `OHC_2413.png` only. File ID `1mpQ_u-xfL8nnKLEOfUdXd7LbW_r0l5Lg`. No PDF this pass.  
+**Kind:** signed first-pass image jacket. Not a new list. Not a merge with OHC_2408’s later contents cover.
+
+## What this face is
+
+Handwritten lined sheet. Stamped **24323**. Date at upper left: **Sep 30th 1830**. Heading, as far as the surviving ink allows: the following are the names of Treaty Captains.
+
+The top and the right edge are eaten. Rows 1–2 and the first heading words are the worst.
+
+This is the same stamped page Holdfast already marked on OHC_2409–2411. OHC_2413 is another capture of that page, not a second list.
+
+OHC_2408 said “thirty Captains.” This face has numbered rows **1–30**. That match is noted. It does not make the later typed cover into this handwritten body.
+
+## Names as read from this image
+
+Uncertain readings stay marked. I do not clean them.
+
+1. heading-line damage; name not safely recovered  
+2. heading-line damage; name not safely recovered  
+3. James Shields  
+4. Offahoomer  
+5. Minla  
+6. James Fletcher  
+7. Okchayer  
+8. Thomas LeFlore  
+9. Lewis Durant  
+10. Ishtimmeleche  
+11. Uttoko  
+12. Pusartubbe  
+13. Holetarhoomer  
+14. Tushkarkimmillar  
+15. Washington  
+16. Mehyarchubbe  
+17. Tikbarhoomer  
+18. Silas D Fisher  
+19. Big Cloud  
+20. Cheleter  
+21. Noyoshkarmer  
+22. Nohakarche  
+23. William Hayes  
+24. Thomas Hayes  
+25. Jack Hayes  
+26. Chache or Bob  
+27. Meshokehoomer  
+28. Kopio Liketene or Little Leader  
+29. Anthony Turnbull  
+30. Nat Jones  
+
+Check marks visible at least on 3, 8, 18, 28. I do not read those marks as approval.
+
+## What I refuse
+
+I do not merge Thomas LeFlore on this face with Col. Greenwood Leflore on OHC_2408.  
+I do not merge row 27 with We-shoc-she-homa on printed 217.  
+I do not treat Ten’s hand work on OHC_2245 or OHC_2280 as this page.  
+I do not wrap 2409–2412 again.
+
+Next free image, if this capture is already enough, is OHC_2414.png.
+
+[Quoin | OHC_2413.png | stamp 24323 recapture | rows 1–2 withheld]

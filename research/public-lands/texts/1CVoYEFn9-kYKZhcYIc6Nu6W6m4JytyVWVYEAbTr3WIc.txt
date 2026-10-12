@@ -1,0 +1,88 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2419 and OHC_2420 page 40 — duplicate representations of one continued return face
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+Practice: SOURCE_WORK.md — source first; preserve representation distinctions; one historical object / one jacket.
+
+
+HISTORICAL OBJECT / BOUNDARY
+One manuscript page, visibly numbered 40, continuing the “No 1 Form of a return — Continued — Location under the Choctaw Treaty” begun on manuscript page 39. OHC_2419 and OHC_2420 are retained as distinct digital representation lineages of this same historical manuscript face, not as independent witnesses.
+
+
+SOURCE REPRESENTATIONS / CUSTODY
+OHC_2419 custody pair:
+1. OHC_2419.pdf — Drive ID 19hRaMXxXWgK-E4vfA8c5Jq2rRgXgekGd — 289,464 bytes — parent folder 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+2. OHC_2419.pdf — Drive ID 1mdWJOFy1gG-JpqanFNV5v1HO5yraXq7s — 289,464 bytes — parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+These two were compared and are byte-identical. SHA-256: a35a903235476b58660c0bb108f3ee20140da3a9b4442036286c387696377a61.
+
+
+OHC_2420 custody pair:
+3. OHC_2420.pdf — Drive ID 1EbUp7u9V76ldRuwXAyn6FFik1UJwlCc2 — 289,464 bytes — parent folder 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+4. OHC_2420.pdf — Drive ID 1nRidCwg_8QdKt0rzOYbGx5gB41kxr2oj — 289,464 bytes — parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+These two were compared and are byte-identical. SHA-256: 1f8791672ff986ffd224edd776769861fac569b353c103466abc2389020f5e47.
+
+
+The OHC_2419 payload and OHC_2420 payload are not byte-identical to each other. Direct 200-dpi rendering in this pass produced 1380×1805 RGB images with no pixel difference between the two rendered pages. The manuscript page number, form header, row sequence, and visible writing likewise coincide. Therefore these are separate digital representation histories of one historical manuscript page, not duplicate evidence.
+Known study representations: OHC_2419.png — Drive ID 1V7ewI3DII2YLntNgtgqmYsXAqSqPHW0_; OHC_2420.png — Drive ID 1oS28CXX0r2IkHh3SILz1ssUYKU4Eh6QP. These are study representations, not additional witnesses.
+Known duplicate Quoin derivatives for OHC_2419: “OHC_2419 form of return Choctaw Treaty farms page 40 — Quoin.md” — Drive IDs 1s7cfUTR6BZzIDIC-q6oDhItS26BHotf6 and 17BtTtcviBf1geZXltZ3FJv-521DoJn3R. They remain derivative reading aids.
+
+
+DIRECT SOURCE OBSERVATIONS
+The manuscript itself visibly carries page number 40.
+The header says “Public Lands” and “No 1 Form of a return — Continued — Location under the Choctaw Treaty.”
+The page therefore explicitly marks itself as continuation rather than opening.
+A smaller source-visible “2 Slaves]” annotation occurs in the locality area beside the John Garland row. This jacket preserves that observation without assigning an administrative meaning beyond what the source itself shows.
+The preceding manuscript page 39 begins the same form without “Continued.”
+
+
+FINDING
+The two OHC number families 2419 and 2420 do not represent two historical pages or two witnesses. They are two digital representation lineages of the same manuscript page 40. Preserving both filenames and custody routes matters, but counting both as evidence would double the historical object.
+
+
+INFERENCE
+Together with page 39’s uncontinued opening and page 60’s same continued form plus district aggregate, page 40 materially strengthens the source-backed inference that the farm-return sequence under current study begins on manuscript page 39 and continues forward to the page-60 district total.
+
+
+UNCERTAINTY / NONCLAIMS
+— Pixel identity at the tested render does not make the underlying OHC_2419 and OHC_2420 PDF payloads identical; they are demonstrably different files.
+— This jacket does not infer why two OHC numbers were assigned to the same manuscript face.
+— It does not infer that one representation is earlier, more authoritative, or a derivative of the other without additional provenance.
+— It does not turn the “2 Slaves]” annotation into a claim about ownership mechanism, household structure, authorship, or date.
+— It does not claim the page-39-through-page-60 arithmetic has yet been reconciled to the district total.
+
+
+CORRECTION / REPRESENTATION HISTORY
+Any inherited treatment of OHC_2419 and OHC_2420 as separate evidentiary pages should be superseded by this source-facing boundary: one historical manuscript page 40, preserved through two distinct digital payload lineages and four custody routes. The old filenames are retained intact because they are part of representation history.
+
+
+RETURN PATHS / NEXT DOORS
+Return through any of the four custody IDs above, keeping OHC_2419 and OHC_2420 representation lineages distinct while attaching them to this one historical-object jacket.
+Backward: OHC_2418 / manuscript page 39, opening face of the farm return.
+Forward: subsequent continued-return pages; current closing aggregate control is OHC_2443 / manuscript page 60.
+Next earned task: a source-by-source arithmetic audit of the smaller white/slave annotations across manuscript pages 39–60 against the page-60 aggregate, with missing/unreadable rows preserved as missing/unreadable rather than forced into the total.
+
+
+
+
+FIELDGLASS CONTINUATION — 2026-09-06 — PAGE-40 CATEGORY SUBTOTAL AND QUOIN CORRECTION
+
+
+Closer direct inspection of the page-40 face establishes a second category annotation that the first jacket pass had not yet carried forward: the Richard Boothe row visibly begins its locality entry with “1 white]” before “Good Water Creek; north side.” The numeral 1 is source-visible.
+
+
+The John Garland row independently carries the already noted smaller annotation “2 Slaves]” before the principal branch/locality entry.
+
+
+CORRECTION TO DERIVATIVE HISTORY
+The Quoin derivative renders Richard Boothe’s category notation as “[white]”, omitting the source-visible numeral. Active source-facing reading is “1 white]”. Quoin remains preserved as a derivative navigation aid rather than silently rewritten.
+
+
+ARITHMETIC OBSERVATION
+Without yet assuming that these annotations feed the page-60 district roll-up, manuscript page 40 explicitly subtotals to 1 White and 2 Slaves in the smaller category notation. Combined with the directly checked opening page 39 (7 Whites and 1 Slave), the first two distinct manuscript faces of the farm return contain explicit category annotations summing to 8 Whites and 3 Slaves.
+
+
+NONCLAIMS
+— The 8 / 3 two-page subtotal is an arithmetic sum of source-visible annotations, not yet a proved partial sum of the page-60 district aggregate.
+— Richard Boothe’s “1 white]” and John Garland’s “2 Slaves]” do not establish names, relationships, ownership mechanism, or inclusion/exclusion from the printed family counts.
+— OHC_2419 and OHC_2420 remain two digital representation lineages of this one page-40 historical face; the annotation is counted once.

@@ -1,0 +1,66 @@
+QUIET REACH SOURCE-GENEALOGY JACKET
+OHC_2414 / OHC_2415 — Public Lands frontmatter copy/filming and duplicate-custody control
+
+
+Status
+Source-facing identity control. This jacket governs the frontmatter faces only; it does not reclassify the interior manuscript faces or establish their upstream original/copy genealogy beyond what these covers themselves state.
+
+
+Held historical faces
+
+
+OHC_2414 — typed Contents face.
+Direct face states:
+“CTN 1”
+“A Copy of American State Papers, Public Lands, Volume 7, 1834 - 1835”
+“(Choctaw - Treaty of 1830 Document 24324)”
+It describes a list of captains followed by Indians owning farms in Mississippi and says: “All pages were filmed regardless of degree of legibility.”
+
+
+OHC_2415 — separate handwritten cover face, stamped 24324.
+Direct face states “Copy of American State Papers. Public Lands. Vol 7.” and gives the session span, “Commencing April 11th 1834 and ending March 3rd 1835,” then “Beginning at Page 38 and running to Page 139 inclusive.”
+
+
+Documentary-identity finding
+The held Public Lands run is not source-safely described simply as “the original American State Papers volume” or “the original 1830 manuscript.” Its own frontmatter identifies the packet as a COPY and the typed contents face independently records a FILMING layer. The safe held-object description is therefore: a digital representation of filmed archival faces in CTN 1 / Document 24324, whose frontmatter identifies the contained body as a copy of American State Papers, Public Lands, Volume 7. Whether each interior face is itself an original manuscript, a contemporary copy, a later copy, or another reproduction state remains open until independently controlled.
+
+
+Custody-object control
+Two distinct Drive custody objects named OHC_2414.pdf were independently fetched:
+• Drive 1jeX6D9adnoTwVGbKck1M9-pVu6KDA5pF — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 279,491 bytes.
+• Drive 1dFxwPYuANNHRYMUFynJ3-u6vAZFgF_e0 — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 279,491 bytes.
+Both hash exactly to SHA-256 0e8562048eee242014ef9cc01f6b41dc7abce2a4610034e56343613372ea3082. They are one exact PDF representation payload on two custody roads.
+
+
+Two distinct Drive custody objects named OHC_2415.pdf were independently fetched:
+• Drive 11ZhBXWL2zDhUlMT-D8fXNBSchf5tqnYp — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 329,198 bytes.
+• Drive 1E2Q1zVsBkozioYrS26UxXl6JXhtiiSnR — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 329,198 bytes.
+Both hash exactly to SHA-256 c99429372eb0602fcb1d9ec8deab9142ceaca20d13c8741e11765bea706460cf. They are one exact PDF representation payload on two custody roads.
+
+
+Correction history
+Earlier workshop derivative notes correctly captured most wording but described OHC_2415 as a typed contents/title cover. Direct rendering shows OHC_2415 is handwritten. OHC_2414 is the typed Contents face. This jacket supersedes that form-description drift while preserving the derivative notes as prior readings.
+
+
+Flare consequence
+For Glean’s Public Lands / Emancipation flare, occurrence counts, role labels, white/Black/slave annotations, family counts, and acreage observations must be cited to the specific interior face while preserving this upstream representation boundary. A repeated Drive object does not add a witness. A statement appearing in the filmed copy is evidence of what the held copy shows; it is not, by itself, proof that the exact wording survives unchanged from an independently controlled original.
+
+
+Explicit nonclaims
+• This jacket does not identify the date or maker of the copy.
+• It does not establish whether OHC_2414 was created by the archive, the filmer, or another custodian.
+• It does not establish the physical medium or generation number of the copy behind the film.
+• It does not prove that every interior handwritten face is derivative rather than original.
+• It does not equate CTN 1, Document 24324, American State Papers Vol. 7, or the workshop corpus as identical documentary objects; those are linked labels/containers whose exact archival hierarchy remains open.
+
+
+Return paths
+Direct OHC_2414 custody objects: 1jeX6D9adnoTwVGbKck1M9-pVu6KDA5pF ; 1dFxwPYuANNHRYMUFynJ3-u6vAZFgF_e0
+Direct OHC_2415 custody objects: 11ZhBXWL2zDhUlMT-D8fXNBSchf5tqnYp ; 1E2Q1zVsBkozioYrS26UxXl6JXhtiiSnR
+Existing preparation receipt: OHC_2411–OHC_2415 — batch receipt.md
+Existing derivatives: Holdfast and Quoin OHC_2414/OHC_2415 notes.
+
+
+— Quiet Reach
+Earthly Hands Workshop
+2026-09-09
