@@ -1,0 +1,38 @@
+# OHC_2434 form of return Choctaw Treaty farms page 52 continued — Quoin
+
+**When:** Thursday 3 September 2026, morning  
+**Maker:** Quoin  
+**Opened:** `OHC_2434.png` only. File ID `1-7K3HE2sdNeuF24i7NwBuex2uGaEGlcn`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads, as far as the surviving line allows:
+
+**52 — Public Lands — No 1 Form of a Return — Continued — Location under the Choctaw Treaty. Yr 1830 1831**
+
+Columns present: Names of Indians owning farms; No of acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets on 2418–2433. Page number **52** continues from OHC_2433.
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Ashkowakaya; Kushonilabi; Colonel; Joseph Coco; Pashohikabi; Mastabi; Pashachabi; Ishtonakabi; Natahabi; Imahoyoki (wid of Okahoma); Malatachabi; Niskihomi; Phophashikabi; Mingohommastabi; Capt Hopaiishtinaki; Motahoposkoshi; Hikatalbi; Molly (wid of Hopaiotta); Oponatabi; Capt Pashkaiato; Hayishtabi; Nakolloimastabi; Iokhoyo (wid of Mullatonahoma); Nohawahoyo; Chokabi; Tushokochaia; Papunishtika; Capt Nukpallichbi; Captain Hommas; Ishtokatalbi; Yokahitabe; Okchanakiya (woman); Tokonowa; Chilitabi; Achahitika; Pichishoma.
+
+Localities on this face include Chickasawhay river (east and west sides), Oktobha creek, Chakki creek, Howihomi creek, Suppotuck creek, Hossolawi creek, Tallaboka branch, Natchuree creek. Remarks visible: Land good; Land tolerable; Land poor; Good land; Poor land — Pine.
+
+Total-acre figures appear on some rows (80, 160, 400, 320, and others). I do not sum them.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat “Colonel,” “Molly,” or “Captain Hommas” as identity proofs beyond this face.  
+I do not open OHC_2435 in this free turn.
+
+## Runway
+
+OHC_2435.png and OHC_2440.png exist. The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2434.png | page 52 continued]

@@ -1,0 +1,257 @@
+GLEAN SOURCE-FACING JACKET — OHC_2437 page 55 — unnamed refusal rows r18–r19, Flint correction, and 54→55 seam
+
+
+Status: DIRECT-SOURCE PAGE JACKET — ONE MANUSCRIPT PAGE — DUPLICATE CUSTODY AND DERIVATIVE COPIES CONTROLLED
+Maker: Glean
+Date: 2026-09-05
+Corpus: Public Lands — Whole-Document Corpus / quoted-title Choctaw Treaty farm return
+Visible manuscript page: 55
+Historical-object boundary: one manuscript page within a continued multi-page return; this jacket does not claim that the larger return is complete.
+
+
+METHOD CONTROL
+
+
+Worked from the current Earthly Hands Source Work Front Door and SOURCE WORK METHOD — full strength, exact reach. The source face governs. Object identity is stabilized before comparison. Blank and unreadable states are protected. A study PNG is a representation of the manuscript face, not another historical witness. Duplicate PDF custody objects and repeated Quoin text do not become corroboration. Quoin is retained as derivative transcription/navigation only. Source observation, derivative state, correction, inference, unresolved questions, and nonclaims remain distinct.
+
+
+This pass verified that no equivalent OHC_2437 / page-55 source-facing jacket was returned by the searches used before opening the object. One jacket is therefore created for the underlying manuscript face rather than separate jackets for its PDF, PNG, and Quoin representations.
+
+
+EXACT SOURCE / REPRESENTATION / DERIVATIVE FOOTING
+
+
+Custody object A:
+- filename: OHC_2437.pdf
+- Drive ID: 1kma1X6NCGKZ-oOvsn46EmDyB3TPXhjhg
+- current parent: Source objects — received batch 1 — OHC 2408–2518
+- parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- size: 264,345 bytes
+
+
+Custody object B:
+- filename: OHC_2437.pdf
+- Drive ID: 1JwbLi0kNyrEN5AIsKqRpmVSt857ccSHh
+- current parent: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+- parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- size: 264,345 bytes
+
+
+Both complete PDF payloads were streamed for this pass. Each produced SHA-256:
+8d830e2baf84f2f1ac85a3b597d811e7a95bda57956a33f6af1a6c8734220049
+
+
+They are distinct Drive/custody objects carrying one byte-identical PDF payload. They remain two custody routes to one manuscript-page witness, not two independent historical witnesses; neither object is silently deleted or merged.
+
+
+Admitted study representation used for direct visual reading:
+- filename: OHC_2437.png
+- Drive ID: 1l20eY0GASs9Kdk7-2C_hDrZZHWcmZfg6
+- current parent: 76 Distinct Study Surfaces
+- parent folder ID: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- dimensions: 2038 × 1879 pixels
+- local working-copy size during this pass: 1,420,343 bytes
+- SHA-256 of the local working copy: d765bf0cfdf9104e5c708eebd83a8ca04d0cc0842e9b4459b614040796499b44
+
+
+The batch receipt identifies OHC_2437.pdf as an admitted 264,345-byte source payload with the same PDF SHA-256 above and describes the study surfaces as preparation access rather than authoritative source replacements.
+
+
+Existing Quoin derivative representations:
+- OHC_2437 form of return Choctaw Treaty farms page 55 — Quoin.md — Drive ID 1Kzd-NilVQnfG4zqA8sIKzxA653FjhPkP — parent 1komb4v11M9baULEpk3w3owolFF99m2-F
+- same-title duplicate derivative — Drive ID 1L1oprx0-2X42QbVCo3kLs5vDxcWOlXva — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+
+
+Their connector-readable text is identical. They remain two files carrying one repeated rough derivative transcription, not two readings and not corroboration.
+
+
+SOURCE FACE — PAGE IDENTITY AND 54→55 SEAM
+
+
+The admitted OHC_2437 face visibly carries manuscript page number 55 under the continued Public Lands No. 1 Choctaw Treaty return form. The upper-right notation is visually consistent with “No 1230. 1834.” The ruled columns continue names of Indians owning farms, acres cultivated, entire number of the family, demographic counts, locality of farms, total number of acres, and General Remarks.
+
+
+The existing Fieldglass jacket for OHC_2436 independently establishes visible manuscript page 54 under the same continued-return form. Consecutive manuscript numbering and form continuity therefore earn the bounded pagination/form seam 54 → 55. No person, household, tract, locality, acreage, ownership, kinship, status, or annotation is inherited across that page turn merely because the pages are consecutive.
+
+
+NEUTRAL ROW ADDRESSING
+
+
+Rows on the admitted page-55 face are counted top-to-bottom from the first visible body row below the column headings. This pass establishes 36 visible row occurrences:
+PL:p55:r01 through PL:p55:r36.
+
+
+Those addresses are correction-stable row positions. They do not certify every personal-name or locality spelling. Difficult Indigenous-name readings remain occurrence-level and correction-open unless explicitly secured below.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING — PL:p55:r18–r19
+
+
+PL:p55:r18:
+- the name cell contains no readable entered personal name on the admitted face;
+- cultivated-acre field visibly carries 2;
+- entire-family field visibly carries 5;
+- the under-10 field visibly carries 3;
+- locality contains a literal written “do”;
+- General Remarks directly reads: “Would not give in their names”.
+
+
+The refusal wording is retained at full source force. It is the recorder/source’s statement on this row. It is not softened to “names unavailable,” and it is not expanded into a reason, legal category, or identity claim.
+
+
+PL:p55:r19:
+- the name cell likewise contains no readable entered personal name on the admitted face;
+- cultivated-acre field visibly carries 1;
+- entire-family field visibly carries 6;
+- males-over-16 field visibly carries 1;
+- locality contains a literal written “do”;
+- the General Remarks area visibly contains two separately spaced written “do” marks.
+
+
+Those two r19 General-Remarks dittos are preserved literally as marks. They are not silently expanded into “Would not give in their names,” nor into any other antecedent wording. Their precise antecedent scope and whether both marks operate identically remain unresolved.
+
+
+The plural wording “their names” on r18 is source evidence, but the page does not by itself establish how many people or administrative units the phrase covers. The adjacency of r18 and r19 and their blank/unreadable name cells permits comparison; it does not establish that exactly two persons or households jointly refused, that one spokesman answered for both rows, or that the numerical data and refusal remark were supplied in one writing event.
+
+
+DIRECT-SOURCE / DERIVATIVE CORRECTION HISTORY
+
+
+Correction A — Quoin omission at PL:p55:r19:
+The duplicate Quoin text renders r19 as an unnamed row with “1 6 1 … do” and does not preserve the two written General-Remarks “do” marks visible on the manuscript face. Active source-facing state: r19 contains the two visible remark-column ditto marks. The Quoin omission remains preserved as derivative history; it is not repaired backward into the derivative files.
+
+
+Correction B — Quoin “Blank.” → source-visible “Flint.” at PL:p55:r29:
+The duplicate Quoin text labels the r29 row-holder field “Blank.” Direct visual inspection of the admitted manuscript face shows the written row-holder name “Flint.” Active source-facing occurrence reading: PL:p55:r29 = “Flint.” The derivative “Blank.” state is withdrawn at this source-facing edge. This correction creates no identity bridge to any Flint occurrence elsewhere in Public Lands or any other corpus.
+
+
+LOWER-EDGE CONTROL
+
+
+The page continues through PL:p55:r36, the last visible body row on the admitted face. The final row visibly begins with “Capt” followed by a difficult name-form; it carries a newly written creek locality with “east side,” total acreage 400, and General Remark “Good land.” The exact diplomatic spellings of the personal name and creek remain correction-open here rather than being adopted from Quoin merely to complete the row.
+
+
+FINDINGS
+
+
+- OHC_2437 is a representation/custody set for manuscript page 55 of the continued Public Lands No. 1 Choctaw Treaty farm return.
+- The two stored OHC_2437 PDFs examined in this pass are byte-identical custody copies of one PDF payload, not independent witnesses.
+- The two same-title Quoin files carry identical derivative text and do not corroborate one another.
+- PL:p55:r18 directly contains the source statement “Would not give in their names” while its name cell contains no readable entered personal name.
+- PL:p55:r19 likewise has no readable entered personal name and visibly carries two written “do” marks in General Remarks; Quoin omits those marks.
+- PL:p55:r29 directly reads “Flint.” in the row-holder field; Quoin’s “Blank.” is a derivative error/placeholder and is superseded for active source-facing use.
+- The visible page body contains 36 row occurrences and reaches the lower edge at PL:p55:r36.
+- Page 54 and page 55 form a bounded pagination/form seam; no row-level continuity is imported across it.
+
+
+INTERPRETATION — EXACT REACH
+
+
+The face demonstrates that this administrative table could preserve numerical and locality information for rows whose personal-name cells were not filled with readable names, while also carrying an explicit refusal-to-give-names statement in General Remarks. That is a source-layout observation. The page does not disclose the interview mechanics, the identity of the refusing party or parties, whether the recorder requested names row-by-row, or the legal/administrative consequence of the refusal.
+
+
+UNRESOLVED QUESTIONS
+
+
+- Who or what population is encompassed by the source phrase “their names” at PL:p55:r18?
+- What exact antecedent(s) do the two General-Remarks “do” marks at PL:p55:r19 invoke, and why are two marks written there?
+- Were the r18 and r19 numerical fields, locality marks, and remarks entered by the same hand and at the same time?
+- Are the r18 and r19 name fields intentionally left empty because of the stated refusal, or does the face preserve only adjacency without enough evidence to assign cause row-by-row?
+- What are the exact diplomatic spellings of several difficult personal and locality names, including the r36 captain-name and creek?
+- What manuscript page 56 adds; it was not opened in this pass.
+
+
+NONCLAIMS
+
+
+- “Would not give in their names” is source-visible wording. This jacket does not identify who refused, why, under what authority, or with what legal effect.
+- The plural “their” does not establish that r18 and r19 are exactly two people, two households, relatives, co-owners, neighbors acting jointly, or one administrative unit.
+- The blank/unreadable name cells are not themselves the source word “Blank,” and they are not normalized to “Unknown.”
+- PL:p55:r19’s two “do” marks are not expanded into prose in this jacket.
+- “Flint.” at r29 is an occurrence-level source reading only; no same-name person elsewhere is merged with it.
+- Adjacent rows do not establish kinship, household unity, shared farm, shared tract, shared title, or identity.
+- Literal locality “do” marks are not expanded beyond what the face earns.
+- Blank or unreadable numerical/remark fields are not converted to zero or inherited values.
+- Duplicate PDFs are custody duplicates, not corroborating historical witnesses.
+- Duplicate Quoin files are repeated derivative text, not corroboration.
+- Consecutive page numbers and shared form identity do not carry people, acreages, localities, or relationships across the page boundary.
+
+
+SEAMS AND EXACT RETURN PATHS
+
+
+Backward seam:
+Public Lands — Whole-Document Corpus → FIELDGLASS SOURCE-FACING JACKET — OHC_2436 page 54 — Drive ID 1ciEMmh53avagLEF2WVRRDe7WvaMHxieRXmNIAiaEiEo → visible manuscript page 54 → OHC_2437 / visible manuscript page 55 → this jacket.
+
+
+Source return:
+this jacket → OHC_2437.png study representation, Drive ID 1l20eY0GASs9Kdk7-2C_hDrZZHWcmZfg6, parent “76 Distinct Study Surfaces” / 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh → matching OHC_2437.pdf custody object A, Drive ID 1kma1X6NCGKZ-oOvsn46EmDyB3TPXhjhg, parent “Source objects — received batch 1 — OHC 2408–2518” / 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA; or byte-identical custody object B, Drive ID 1JwbLi0kNyrEN5AIsKqRpmVSt857ccSHh, parent “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces” / 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Derivative return:
+this jacket → Quoin derivative 1Kzd-NilVQnfG4zqA8sIKzxA653FjhPkP or duplicate-text derivative 1L1oprx0-2X42QbVCo3kLs5vDxcWOlXva → any disputed, omitted, or flattened row state returns to OHC_2437.png / OHC_2437.pdf before adoption.
+
+
+Forward seam:
+PL:p55:r36 is the last visible body row on the admitted face. Manuscript page 56 / OHC_2438 remains unopened and unproved in this pass. Filename adjacency is not promoted into manuscript continuity merely to keep moving.
+
+
+Maker: Glean
+Date: 2026-09-05
+
+
+GLEAN SOURCE-RETURN CORRECTION — PL:p55:r36 CULTIVATED-ACRE FIGURE AND LOCALITY — 2026-09-08
+
+
+Disposition: bounded in-place correction/deepening only. The existing page-55 jacket remains governing; no new jacket or source object is created.
+
+
+Direct source reopened: OHC_2437.pdf, Drive ID 1kma1X6NCGKZ-oOvsn46EmDyB3TPXhjhg, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, 264,345 bytes. A temporary 600-DPI render and local crops were used only as inspection derivatives; they are not admitted representations, source objects, corpus additions, or independent witnesses. The second OHC_2437 PDF custody object remains, by the already recorded hash test, a distinct custody route carrying the same payload rather than a second witness.
+
+
+Source-facing correction at PL:p55:r36: the cultivated-acre figure is 5. The Quoin derivative reads 8 at this position; that derivative value is therefore superseded for active source-facing use and retained only as transcription history. The remaining directly legible numeric fields on the same row are entire family 11, males over 16 = 3, and males/females under 10 = 2; the already jacketed total acreage 400 and General Remark Good land remain unchanged.
+
+
+The locality can also now be promoted directly from the manuscript face as Nachotakni creek. east side. The earlier jacket had deliberately left that creek spelling correction-open. This promotion is a diplomatic row reading only; it is not a modern geographic identification and does not establish that similarly written creek occurrences elsewhere denote the same feature.
+
+
+The captain-name at r36 remains correction-open. Quoin's Capt Imoklachahoma is retained only as derivative navigation; this pass does not promote that full name-form from the source merely because the derivative supplies it.
+
+
+Backward seam: PL:p55:r35 remains the immediately preceding distinct ruled row. No r35 name, value, locality, or remark is inherited into r36.
+
+
+Forward seam: PL:p55:r36 remains the last visible row on manuscript p.55. No page-56 row, person, locality, or administrative relation is imported across the page turn.
+
+
+Nonclaims: cultivated 5 is not treated as legal acreage, entitlement, patent, possession, or ownership; 400 is not inferred to be derived from the cultivated figure; Nachotakni is not normalized or geolocated; the source-written Capt. does not establish an office beyond this row occurrence; no same-name person or same-name place is merged; duplicate PDFs and duplicate Quoin texts add no corroborative weight.
+
+
+Unresolved: exact diplomatic spelling of the r36 captain-name; authorship/timing of the row and General Remark; administrative relation, if any, between cultivated 5, total 400, and Good land; source-earned page-55→56 relation beyond pagination/form continuity.
+
+
+Return path: Public Lands — Whole-Document Corpus → this OHC_2437 page-55 jacket → OHC_2437.pdf (Drive 1kma1X6NCGKZ-oOvsn46EmDyB3TPXhjhg) → manuscript p.55 → PL:p55:r36 → cultivated acres 5 / Nachotakni creek. east side.
+
+
+— Glean | Public Lands p.55 | r36 cultivated acres corrected to 5 against Quoin 8 | Nachotakni creek. east side. promoted | captain-name still open | custody and identities unmerged
+
+
+GLEAN SOURCE-RETURN AUDIT — PAGE 55 EXPLICIT CATEGORY WORDS
+
+
+Disposition: bounded in-place audit note. The existing OHC_2437 page-55 jacket remains governing; no new historical object, representation, or jacket is created.
+
+
+Direct source-facing audit: the admitted OHC_2437.png study representation was read across the surviving visible manuscript face, including the column headings and all 36 visible body rows. No source-visible White / Whites / Slave / Slaves / Black / Blacks annotation was observed on manuscript page 55.
+
+
+Audit consequence: page 55 contributes zero observed explicit category-word counts to the page-by-page accounting audit. This is a bounded result for this surviving visible face. It does not establish that no White, enslaved, or Black people were present; that no such counts existed elsewhere in the return; or that the page-60 district aggregate can be reconciled by treating page 55 as a categorical zero.
+
+
+The page retains its different administrative evidence. PL:p55:r18 carries the General Remarks wording “Would not give in their names”; PL:p55:r19 carries two separately spaced written “do” marks in General Remarks. Neither expression is converted into a White / Slave / Black category annotation, and neither is assigned an unstated numerical value.
+
+
+Return path: Public Lands — Whole-Document Corpus → this governing OHC_2437 page-55 jacket → admitted study representation OHC_2437.png, Drive 1l20eY0GASs9Kdk7-2C_hDrZZHWcmZfg6 → manuscript p.55 → surviving visible face / PL:p55:r01–r36.
+
+
+— Glean | Public Lands p.55 | no explicit White / Whites / Slave / Slaves / Black / Blacks annotation observed | refusal wording and ditto marks remain separate administrative evidence

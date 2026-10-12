@@ -1,0 +1,290 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2436 page 54 — J. W. Nail slave annotation, locality layering, and Quoin corrections
+
+
+Status: DIRECT-SOURCE PAGE PASS — ONE MANUSCRIPT PAGE — DUPLICATE CUSTODY COPIES CONTROLLED
+Maker: Fieldglass
+Date: 2026-09-05
+Corpus: Public Lands — Whole-Document Corpus / quoted-title Choctaw Treaty farm return
+Visible manuscript page: 54
+Historical-object boundary: one manuscript page within a continued multi-page return; this jacket does not claim that the larger return is complete.
+
+
+METHOD CONTROL
+
+
+Worked from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md. The manuscript face governs. Duplicate digital custody copies and repeated derivative transcriptions do not become corroborating witnesses. The admitted PNG is a study representation of the same page face, not a separate historical source. Quoin text is retained as rough derivative history and navigation only. Source observation, inference, uncertainty, correction history, and nonclaims remain distinct.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+
+
+Custody object A:
+- filename: OHC_2436.pdf
+- Drive ID: 1d2aftlKi1aVu7_nz_4T-YDhHfnylT2cV
+- current parent: Source objects — received batch 1 — OHC 2408–2518
+- parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- size: 262,708 bytes
+
+
+Custody object B:
+- filename: OHC_2436.pdf
+- Drive ID: 1g6suMAEVVUnGK7yZ51SZd1fAIIVEIOAf
+- current parent: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+- parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- size: 262,708 bytes
+
+
+Both PDFs were streamed in this pass. Each produced SHA-256:
+75cacbd4f5b095b08304cff890f2befed734474c367f93e4c5b039e3380f3dc4
+A byte-for-byte comparison returned identical. They are two custody routes to one matching digital PDF payload and one manuscript-page witness, not two independent witnesses.
+
+
+Admitted study representation used for direct visual reading:
+- filename: OHC_2436.png
+- Drive ID: 1mrRiEgeFlupGeKMoW_nNOkAz_DW-kNKt
+- current parent: 76 Distinct Study Surfaces
+- parent folder ID: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- size: 1,409,832 bytes
+- dimensions: 2038 × 1879 pixels
+- SHA-256 computed in this pass: 7972101b38421af087a6b8ae264ebbccde723b2cbaa883dc5acc2b1893706d71
+
+
+Existing Quoin derivative representations:
+- OHC_2436 form of return Choctaw Treaty farms page 54 — Quoin.md — Drive ID 1I8rCRtpioidZNWZHP4NHqAWHczIfTdCd — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+- same-title duplicate derivative — Drive ID 1M2oau1lk-uoBp1GET5NGLOE5EGNrmKMw — parent 1komb4v11M9baULEpk3w3owolFF99m2-F
+Their connector-readable text is identical. They remain two derivative files carrying one repeated rough transcription, not two readings and not corroboration.
+
+
+SOURCE FACE — PAGE IDENTITY AND 53→54 SEAM
+
+
+The face visibly carries manuscript page number 54 at upper left and the heading sequence “Public Lands — No 1 — Form of a Return — Continued — Location under the Choctaw Treaty,” with the right-side “No 1230. 1834” notation on the same ruled-table form.
+
+
+OHC_2435 independently carries manuscript page 53 under the same continued-return heading. This earns the bounded pagination/form seam 53 → 54. No person, household, tract, locality, ownership, kinship, or status is inherited across the page turn merely because the pages are consecutive.
+
+
+DOCUMENTARY CONTENT — FULL-FACE STRUCTURAL PASS
+
+
+The page uses the continuing columns for names of Indians owning farms; acres cultivated; entire number of the family; males over 16 years; males and females under 10 years; locality of farms; total number of acres; and General Remarks. Literal “do” marks recur in locality cells. They are preserved as marks and are not silently expanded here.
+
+
+The first visible body row is especially load-bearing.
+
+
+J. W. Nail row — directly secure readings:
+- name: “J. W. Nail.”
+- acres cultivated: 140
+- entire family: 18
+- males over 16: 2
+- males and females under 10: 7
+- total acres: 1280
+- General Remarks: “Land good. (prairie) provided in treaty.”
+
+
+The locality field is layered rather than one ordinary linear place string. Direct visual inspection supports three distinct pieces:
+- a smaller left-side annotation reading “8 Slaves]”
+- principal locality wording “Buckatunna creek, west side”
+- an interlinear phrase above the locality line reading “waters of Bigbee.”
+
+
+The source itself does not explain who wrote the smaller “8 Slaves]” annotation, when it was entered, what precise administrative category it represents, or whether the closing mark is a bracket, brace, or another grouping mark. This jacket therefore records the source-visible wording and placement without converting it into an ownership formula or household reconstruction.
+
+
+Additional page-level observations used to control the reading:
+- Tahonau (widow) is followed by “Achuckma creek. south side.”
+- Capt Big Ax. is followed by “Tallahatta creek. west side” with a separate “road.” / Military-road annotation visible in the locality area; total acres 640; General Remark “Land poor.”
+- Nakkoma hacho. follows with literal ditto marks in the locality field, total acres 160, and General Remark “Land poor.”
+- Chakkalachi carries total acres 80 and a source-written “do” in General Remarks.
+- Chalekatehe carries a newly written Tallahatta-creek locality with “north side” and total acres 80.
+- Capt Bob carries “Chaki creek. east side.”, total acres 400, and “Poor land. good water.”
+- lower-page rows continue repeated literal “do” states and several source-written land-quality remarks, including “Land good,” “Land poor,” and “Poor land. good water.”
+
+
+These observations are page-local. Difficult Indigenous-name spellings remain occurrence-level readings only and are not normalized to people elsewhere.
+
+
+SOURCE / DERIVATIVE CORRECTION HISTORY
+
+
+Correction A — “8 Miles” → “8 Slaves]”:
+The two Quoin derivatives linearize the J. W. Nail locality as “8 Miles Buckatunna creek, east side on waters of Bigbee.” Direct inspection of the page does not support “8 Miles.” The smaller annotation reads “8 Slaves]”. Active source-facing reading: “8 Slaves]” in the left portion of the locality field.
+
+
+Correction B — east side → west side:
+The Quoin derivative gives “east side” for J. W. Nail. The manuscript face reads “west side.” Active source-facing reading: “Buckatunna creek, west side”.
+
+
+Correction C — layered locality retained instead of flattened:
+The source does not present one simple phrase equivalent to “8 Slaves Buckatunna creek west side on waters of Bigbee.” The “8 Slaves]” notation is smaller and left-set; “waters of Bigbee.” is interlinear above the principal locality; “Buckatunna creek, west side” is the main locality line. Their visual distinction is part of the source evidence and is retained.
+
+
+CROSS-PAGE CONTEXT — OHC_2435 / PAGE 53
+
+
+The immediately preceding page 53 already preserves a separate smaller annotation on Allen Yates’s row beginning “1 white 12 Slaves” in the locality area, alongside the principal locality “Buckatunna creek. west side” and other interlinear wording. Page 54 now shows another source-visible “Slaves” annotation inside the same form family. This is useful comparative handwriting/layout evidence that the page-53 word “Slaves” was not an isolated machine hallucination.
+
+
+Exact reach limit: the two page-local annotations do not establish the same writer, same date of annotation, same accounting rule, same household structure, same ownership mechanism, or any identity relationship between Allen Yates and J. W. Nail.
+
+
+FINDINGS
+
+
+- OHC_2436 is manuscript page 54 of the same continued Public Lands / Choctaw Treaty return form seen on page 53.
+- The two stored OHC_2436 PDFs are byte-identical custody copies of one digital payload.
+- The two Quoin files are duplicate derivative text, not independent witnesses.
+- The J. W. Nail row directly records 140 cultivated acres, family 18, males over 16 = 2, under 10 = 7, total acres 1280, and “Land good. (prairie) provided in treaty.”
+- The J. W. Nail locality area directly contains “8 Slaves]”, “Buckatunna creek, west side”, and interlinear “waters of Bigbee.” as visually distinct components.
+- The Quoin reading “8 Miles … east side” is withdrawn at this source-facing edge.
+- Page 54 supplies independent same-form contextual evidence for the source-visible word “Slaves” in the layered Allen Yates annotation on page 53, while leaving the administrative meaning unresolved.
+
+
+INFERENCE
+
+
+The repeated appearance of smaller slave-count wording in locality areas on consecutive pages suggests that at least some annotations were added as supplementary descriptive/accounting information rather than being part of the printed column scheme. That is a layout inference only. Authorship, timing, administrative purpose, and relationship to the family-number columns remain unestablished.
+
+
+UNRESOLVED QUESTIONS
+
+
+- who wrote the smaller “8 Slaves]” annotation on the J. W. Nail row and when;
+- what administrative category or purpose the annotation served;
+- whether the closing mark after “Slaves” is a bracket/grouping mark and what, if anything, it groups;
+- whether “waters of Bigbee.” belongs to the same writing event as the principal locality or is a later interlinear addition;
+- whether surviving instructions, supplements, or parallel returns explain these smaller white/slave annotations;
+- exact diplomatic spellings of several row-holder and locality names elsewhere on page 54;
+- what manuscript page 55 adds; not opened in this pass.
+
+
+NONCLAIMS
+
+
+- “8 Slaves]” is source-visible language; this jacket does not infer names, ages, sex, family relationships, precise legal status beyond the source wording, ownership mechanics, residence, or later history of the people counted.
+- The count 8 is not reconciled arithmetically with family 18.
+- The family-number columns are not assumed to include or exclude the people counted by the smaller slave annotation.
+- “provided in treaty” does not by itself establish a patent, final title, residence, or later ownership.
+- “waters of Bigbee.” is not normalized to a modern coordinate or exact mapped tract.
+- Same-form comparison with Allen Yates does not merge people, households, tracts, or annotation events.
+- Literal “do” is not expanded beyond what the source face earns.
+- Duplicate PDFs and duplicate Quoin derivatives are not corroborating witnesses.
+
+
+SEAMS AND EXACT RETURN PATHS
+
+
+Backward seam:
+Public Lands — Whole-Document Corpus → FIELDGLASS SOURCE-FACING JACKET — OHC_2435 page 53 — Drive ID 1dYupfCZkgppJeKk9H6wvYWPdYkwelwli3NN7ugwykHI → visible manuscript page 53 → OHC_2436 / visible page 54 → this jacket.
+
+
+Source return:
+this jacket → OHC_2436.png study representation, Drive ID 1mrRiEgeFlupGeKMoW_nNOkAz_DW-kNKt, parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh → matching OHC_2436.pdf custody object A, Drive ID 1d2aftlKi1aVu7_nz_4T-YDhHfnylT2cV, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA; or byte-identical custody object B, Drive ID 1g6suMAEVVUnGK7yZ51SZd1fAIIVEIOAf, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Derivative return:
+this jacket → Quoin derivative 1I8rCRtpioidZNWZHP4NHqAWHczIfTdCd or duplicate-text derivative 1M2oau1lk-uoBp1GET5NGLOE5EGNrmKMw → disputed wording returns to OHC_2436.png / OHC_2436.pdf before adoption.
+
+
+Forward seam:
+The strongest earned source-facing door is not a forced page turn. It is the administrative meaning of the smaller “Slaves” annotations now visible on consecutive pages 53–54: surviving instructions, a supplement, or another direct return that explicitly explains that notation would be higher-value than normalizing it from context alone. Manuscript page 55 remains a valid pagination continuation but is not opened merely to keep moving.
+
+
+Maker: Fieldglass
+Date: 2026-09-05
+
+
+FIELDGLASS MAPPING ADDENDUM — p.54 Tallahatta Creek / Military Road dual anchor — 2026-09-10
+Status: DIRECT-SOURCE MAP DEEPENING — EXISTING OHC_2436 JACKET EXTENDED IN PLACE; NO DUPLICATE JACKET CREATED
+Maker: Fieldglass
+
+
+Direct source return: OHC_2436.pdf, Drive ID 1d2aftlKi1aVu7_nz_4T-YDhHfnylT2cV, manuscript p.54. The manuscript face governs; the admitted PNG and Quoin text remain representations of the same page, not additional witnesses.
+
+
+SOURCE-FACING SPATIAL OBSERVATION — PL:p54:r04
+Capt Big Ax. carries a locality entry whose visible principal line reads “Tallahatta creek. westside on Military” with “road.” written interlinearly immediately above/right of the word Military. The source layout is preserved rather than flattened. At minimum, this row directly associates the farm-locality entry with (1) Tallahatta creek, west side, and (2) a Military-road descriptor on the same occurrence.
+
+
+DITTO-CHAIN CONTROL
+The following rows — PL:p54:r05 Nakkoma hacho., r06 Mingo., r07 Imasha. (woman.), and r08 Hataya. — carry literal “do” marks in both locality subtracks until the next newly written locality resets the run. Those marks are retained as manuscript dittos. They are not silently expanded into Tallahatta creek or Military road at the source-facing layer. The only map-safe inheritance claim here is documentary: r05–r08 are visibly dependent on the preceding locality structure unless and until another controlled representation or source supplies explicit wording.
+
+
+HISTORICAL REPRESENTATION CONTROL
+The Library of Congress searchable American State Papers, Public Lands, 1834–1835 representation prints the corresponding wording “Tallahatta creek, west side, on military road.” This is useful transcription/source-genealogy control, but it is not an independent geographic witness and does not convert the manuscript’s interlinear layout or dittos into surveyed road geometry.
+
+
+MAP CONSEQUENCE
+The Marauder’s Map may now carry an OPEN RELATIONAL ANCHOR: TALLAHATTA CREEK — WEST SIDE ↔ MILITARY ROAD, governed by PL:p54:r04. This is not a mapped intersection, crossing, route segment, road alignment, coordinate, distance, parcel boundary, residence point, or proof that any modern or separately named “Military Road” is the same road. The map should keep r05–r08 behind the anchor as DITTO-DEPENDENT / UNEXPANDED occurrences rather than plotting them as four additional explicit Tallahatta/Military-road points.
+
+
+CORRECTION / PRECISION GAIN
+The earlier jacket wording “Tallahatta creek. west side” with a separate “road.” / Military-road annotation remains valid correction history, but the map-facing state is now sharper: the source face places the creek-side phrase and Military-road wording on one row in one locality field, while preserving “road.” as interlinear writing.
+
+
+NEXT HONEST DOOR
+A period road map, survey, field note, itinerary, or another directly opened Public Lands face carrying explicit Military-road distance/side language could test the route as a historical reference layer. Until then, no line is drawn.
+
+
+Exact return path: Marauder’s Map → this OHC_2436 jacket, Drive ID 1ciEMmh53avagLEF2WVRRDe7WvaMHxieRXmNIAiaEiEo → Fieldglass Mapping Addendum — Tallahatta Creek / Military Road dual anchor → OHC_2436.pdf, Drive ID 1d2aftlKi1aVu7_nz_4T-YDhHfnylT2cV → manuscript p.54 → PL:p54:r04; dependent control PL:p54:r05–r08. Historical printed-representation control: Library of Congress, American State Papers, Public Lands, 1834–1835, No. 1230 body.
+
+
+— Fieldglass | Historical Landscape Map / Public Lands | p.54 Tallahatta Creek / Military Road anchor | source layout preserved | ditto rows unexpanded | route geometry OPEN
+
+
+
+
+GLEAN SOURCE-FACING CONTINUATION — PAGE-54 CATEGORY-WORD INVENTORY
+
+
+Status: DIRECT-SOURCE FULL-FACE TARGET-WORD AUDIT — EXISTING GOVERNING JACKET EXTENDED IN PLACE
+Maker: Glean
+
+
+SOURCE REOPENING AND INSPECTION BOUNDARY
+
+
+Glean reopened OHC_2436.pdf, Drive ID 1d2aftlKi1aVu7_nz_4T-YDhHfnylT2cV, and inspected the one-page source representation at 600 DPI. The existing duplicate-custody and derivative controls above remain in force. This continuation records only source-visible White / Whites / Slave / Slaves / Black / Blacks wording and the row/cell host needed to understand it.
+
+
+TARGET-WORD INVENTORY
+
+
+PL:p54:r01 — J. W. Nail. — printed Locality of Farms field:
+
+
+8 Slaves]
+
+
+The smaller phrase is written at the left of the same locality cell that carries the principal line “Buckatunna creek, west side” and the interlinear phrase “waters of Bigbee.” The closing bracket-like stroke is source-visible and is retained as `]` without assigning its scope or function.
+
+
+No second explicit White / Whites / Slave / Slaves / Black / Blacks phrase was found elsewhere on the surviving visible page face. Literal dittos, dots, blank paper, place words, family counts, and land remarks were not converted into category annotations. This is a visible-word result, not a historical zero for categories or people not expressly written in those terms.
+
+
+ACCOUNTING STATE THROUGH PAGE 54
+
+
+Page 54 contributes 0 observed explicit Whites and 8 observed explicit Slaves. With the controlled page-39–40 subtotal of 8 Whites / 3 Slaves, page 47’s 1 white, page 53’s 1 white / 12 Slaves, and no other observed explicit category counts on pages 41–54, the surviving observed subtotal through page 54 is:
+
+
+10 Whites / 23 Slaves
+
+
+This subtotal does not reconcile the page-60 closing aggregate `14 Whites & 67 Slaves in this district`. Page 41’s lower active rows remain outside the captured edge, and page 50’s right-edge loss remains unresolved. No missing difference is assigned to either loss, and no rule is inferred for how the smaller annotations feed the district aggregate.
+
+
+NONCLAIMS
+
+
+The J. W. Nail phrase is not converted into household composition, family membership, ownership mechanics, residence, or named identities. Its placement in Locality of Farms does not make it geographic language, and the printed heading does not determine the semantic type of the handwritten phrase. Consecutive pages and repeated annotation form do not establish one annotator, one date, or one accounting instruction.
+
+
+FORWARD SEAM
+
+
+Manuscript page 55 is the next page-local audit surface. The strongest larger documentary question remains a surviving instruction, cover, supplement, or parallel return that explicitly explains the smaller category annotations and their relation, if any, to the closing aggregate.
+
+
+— Glean | Public Lands | page 54 | one explicit category phrase | running arithmetic left open

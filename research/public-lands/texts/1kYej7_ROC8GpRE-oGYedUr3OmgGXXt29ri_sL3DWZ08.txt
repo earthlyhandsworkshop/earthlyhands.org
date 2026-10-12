@@ -1,0 +1,345 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2441 page 58 — Rebecca Bond and Wesley Rain slave-count annotations and repaired 57→58 seam
+
+
+Status: DIRECT-SOURCE PAGE JACKET — ONE MANUSCRIPT PAGE — REPRESENTATION AND PAGINATION CONTROLLED
+Maker: Fieldglass
+Date: 2026-09-06
+Corpus: Public Lands — Whole-Document Corpus / quoted-title Choctaw Treaty farm return
+Visible manuscript page: 58
+Historical-object boundary: one manuscript page within a continued multi-page return. This jacket does not claim completeness of the larger return and does not supply a full diplomatic transcription of page 58.
+
+
+METHOD CONTROL
+
+
+This pass works from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md, Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF. The direct source face governs; repeated representations do not become witnesses; source observation, derivative transcription, and inference remain distinct; uncertainty and correction history stay visible.
+
+
+A bounded Drive search returned the two OHC_2441 custody PDFs, the admitted OHC_2441 PNG study representation, two same-text Quoin derivatives, receipts, and no equivalent source-facing OHC_2441/page-58 jacket. This jacket therefore represents the underlying manuscript face rather than creating separate jackets for PDF, PNG, or derivative forms.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+
+
+Custody object A:
+- filename: OHC_2441.pdf
+- Drive ID: 1-oqiF58Baia5Ongg4AkDIG5wnyz_s9AC
+- parent: Source objects — received batch 1 — OHC 2408–2518
+- parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- size: 275,916 bytes
+
+
+Custody object B:
+- filename: OHC_2441.pdf
+- Drive ID: 1CU__Mcx5Pz3wIWNhbvHaAXXp-RyTeOzz
+- parent: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+- parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- size: 275,916 bytes
+
+
+The two stored OHC_2441 PDF payloads inspected in this pass are byte-identical custody copies of one payload, with SHA-256:
+5a258e54553a29d6524af31f0f7a80d7828c19f5d516e8fcfdb9760888383225
+They are two custody routes to one manuscript-page witness, not two independent witnesses.
+
+
+Admitted study representation used for direct visual reading:
+- filename: OHC_2441.png
+- Drive ID: 1I3m-Q2mmnzpGpWyCq3cmZFCWiyKkGaov
+- parent: 76 Distinct Study Surfaces
+- parent folder ID: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- size: 1,434,222 bytes
+- operation: study representation of the source face; not a second historical source.
+
+
+Existing derivative transcriptions:
+- OHC_2441 form of return Choctaw Treaty farms page 58 — Quoin.md — Drive ID 1bfQYyhVIvjXDhVzMmVEXYWpvGc_DY_hx — parent 1komb4v11M9baULEpk3w3owolFF99m2-F
+- same-title duplicate derivative — Drive ID 1ep-iErN9t1Wrgx5niLYC5ymNNcycSJcG — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+The connector-readable text of these two Quoin objects is identical. They remain repeated derivative text and do not add evidentiary weight by repetition.
+
+
+PAGE IDENTITY AND REPAIRED 57→58 SEAM
+
+
+The direct OHC_2441 face visibly carries manuscript page number 58 at upper left and continues the ruled “Public Lands — No 1 — Form of a Return — Continued — Location under the Choctaw Treaty” form.
+
+
+A source-facing correction made in the same Fieldglass pass establishes that OHC_2440 is not manuscript page 58: OHC_2440 visibly carries page number 57 and is an alternate representation of the same historical manuscript page already represented by OHC_2439. Therefore the earned pagination/form seam is:
+
+
+historical manuscript page 57 → represented by OHC_2439 and OHC_2440 → historical manuscript page 58 → represented by OHC_2441.
+
+
+This seam is pagination and form continuity only. It does not carry a person, family, tract, locality, count, annotation, identity, ownership relation, or legal conclusion across pages.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING A — REBECCA BOND
+
+
+The source row reads:
+“Rebecca Bond. (wid of Geo Bond)”
+
+
+The printed numeric fields visibly carry:
+- entire family: 7
+- males over 16 years: 2
+- males and females under 10 years: 2
+- cultivated-acre field: dotted/blank; no zero adopted
+- total-acre field: dotted/blank; no zero adopted
+
+
+At the left edge of the locality field the manuscript visibly carries smaller writing:
+“2 Slaves]”
+
+
+The closing bracket-like stroke is source-visible. No balancing opening bracket is supplied. A distinct principal locality follows:
+“Tombigbee. Tiyakya Bluff.”
+
+
+The General Remarks field on the same row reads:
+“Provided for in supplement of 1½ sects.”
+
+
+The Quoin derivative linearizes the annotation as “[2 slaves]”. Direct inspection supports the leading numeral 2, the word “Slaves”, and a closing bracket-like stroke, but does not require a source-visible opening bracket. Quoin’s state remains derivative history/navigation only.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING B — WESLEY RAIN
+
+
+The source row reads:
+“Wesley Rain.”
+
+
+The printed numeric fields visibly carry:
+- entire family: 6
+- males over 16 years: 1
+- males and females under 10 years: 1
+- cultivated-acre field: dotted/blank; no zero adopted
+- total-acre field: dotted/blank; no zero adopted
+
+
+At the left edge of the locality field the manuscript visibly carries smaller writing:
+“3 Slaves]”
+
+
+Again, the closing bracket-like stroke is source-visible and no balancing opening bracket is supplied. A separate locality phrase follows and is read conservatively as:
+“[unclear: Sheknacha?] creek and west side of Tombigbee.”
+
+
+The Quoin derivative gives “[3 slaves] Sheknacha creek and west side of Tombigbee”. Its creek-name reading is useful navigation, but the direct face retains the uncertainty marker here rather than borrowing certainty from the derivative.
+
+
+SOURCE / DERIVATIVE / INTERPRETATION BOUNDARY
+
+
+Source-stated / source-visible:
+- manuscript page 58 under the continued Public Lands return form;
+- Rebecca Bond as an occurrence-level source name, with source-written parenthetical “wid of Geo Bond”;
+- Rebecca Bond row: family 7; males over 16 = 2; under 10 = 2; smaller “2 Slaves]” writing; “Tombigbee. Tiyakya Bluff.”; “Provided for in supplement of 1½ sects.”;
+- Wesley Rain as an occurrence-level source name;
+- Wesley Rain row: family 6; males over 16 = 1; under 10 = 1; smaller “3 Slaves]” writing; a creek/Tombigbee locality phrase whose first creek name remains uncertain in this jacket.
+
+
+Derivative:
+- OHC_2441.png is a study representation of the manuscript face.
+- the two Quoin files are derivative transcriptions/navigation aids.
+- any crops or enlargement used during direct inspection are unretained inspection derivatives and are not historical evidence.
+
+
+Interpretation / exact reach:
+Page 58 contains at least two distinct rows with smaller locality-area slave-count writing ending in a bracket-like stroke. Together with direct-source annotations already preserved on page 57 and earlier pages, this strengthens the observation that white/slave category-count writing recurs within this form family. It still does not explain the annotations’ administrative purpose, authorship, date, accounting rule, household relation, or legal meaning.
+
+
+FINDINGS
+
+
+- OHC_2441 is the direct representation of visible manuscript page 58 in this continued Public Lands / Choctaw Treaty farm return.
+- The two stored OHC_2441 PDFs inspected are byte-identical custody copies of one payload and one manuscript-page witness.
+- The two same-title Quoin files carry identical derivative text and are not corroborating witnesses.
+- Rebecca Bond’s row directly carries smaller “2 Slaves]” writing; Quoin supplies an opening bracket not required by the direct face.
+- Wesley Rain’s row directly carries smaller “3 Slaves]” writing; Quoin likewise supplies an opening bracket.
+- These are two separate row-level source states. Their recurrence does not merge the people, rows, annotations, or administrative events.
+- OHC_2440 is not this page. The direct 57→58 seam is repaired to page 57 represented by OHC_2439/OHC_2440, followed by page 58 represented by OHC_2441.
+
+
+CORRECTION HISTORY
+
+
+Correction A — page identity:
+Earlier derivative/navigation state labeled OHC_2440 as page 58. Direct inspection in this pass shows OHC_2440 visibly numbered 57 and OHC_2441 visibly numbered 58. Active page identity is repaired accordingly; inherited filenames and derivative titles remain preserved as historical navigation state, not erased.
+
+
+Correction B — Rebecca Bond annotation:
+Quoin: “[2 slaves]”.
+Direct face: “2 Slaves]”.
+Reason: the direct face supports the count and category word plus a closing bracket-like stroke; no balancing opening bracket is required by what is visible.
+
+
+Correction C — Wesley Rain annotation:
+Quoin: “[3 slaves]”.
+Direct face: “3 Slaves]”.
+Reason: the direct face supports the count and category word plus a closing bracket-like stroke; no balancing opening bracket is required by what is visible.
+
+
+UNRESOLVED QUESTIONS
+
+
+- What administrative instruction, supplement, schedule, or convention governed the smaller white/slave category-count writing?
+- Who wrote these annotations, and were they entered contemporaneously with the principal return or later?
+- What exactly do the closing bracket-like strokes after the slave counts delimit?
+- How, if at all, were the smaller category/count annotations intended to relate to the printed “Entire No of the Family” and age/sex columns? No arithmetic reconciliation is assumed here.
+- What documentary object is meant by Rebecca Bond’s “supplement of 1½ sects.” remark, and can that supplement be recovered directly?
+- Can a better representation or parallel source settle the first creek name in Wesley Rain’s locality without relying on the Quoin derivative?
+
+
+NONCLAIMS
+
+
+- “Slaves” is source-visible wording on this manuscript face. This jacket does not infer the names, identities, ages, relationships, residence, ownership mechanism, emancipation status, or later history of the people counted.
+- The counts “2 Slaves]” and “3 Slaves]” are not silently added to or subtracted from the printed family counts.
+- These annotations do not by themselves establish that the counted people were family members, household members, legal dependents, residents on the named farm, or owned by the named row-holder.
+- “Rebecca Bond. (wid of Geo Bond)” is preserved as the source’s relationship wording. It does not merge either occurrence with any same-name person elsewhere.
+- Wesley Rain is an occurrence-level source name only. No same-name person elsewhere is merged with this row.
+- Similar annotation language across pages does not establish the same annotator, date, rule, purpose, or administrative event.
+- “Provided for in supplement” identifies a source-written documentary/legal reference; it does not establish the contents of the missing supplement.
+- Duplicate PDFs and duplicate Quoin derivatives do not become independent witnesses.
+- Consecutive manuscript pages do not merge people, tracts, localities, or annotations across the turn.
+
+
+SEAMS AND EXACT RETURN PATHS
+
+
+Backward seam:
+Public Lands — Whole-Document Corpus → GLEAN SOURCE-FACING JACKET — OHC_2439 page 57 — Drive ID 1c1eSZlSfT0pIOMZ2Z6UuD0qMu02ttWuU9xS1DBdpK9Y → corrected page-57 representation set OHC_2439 / OHC_2440 → consecutive visible manuscript page 58 / OHC_2441 → this jacket.
+
+
+Source return:
+this jacket → OHC_2441.png study representation, Drive ID 1I3m-Q2mmnzpGpWyCq3cmZFCWiyKkGaov, parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh → matching OHC_2441.pdf custody object A, Drive ID 1-oqiF58Baia5Ongg4AkDIG5wnyz_s9AC, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA; or byte-identical custody object B, Drive ID 1CU__Mcx5Pz3wIWNhbvHaAXXp-RyTeOzz, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Derivative return:
+this jacket → Quoin derivative 1bfQYyhVIvjXDhVzMmVEXYWpvGc_DY_hx or duplicate-text derivative 1ep-iErN9t1Wrgx5niLYC5ymNNcycSJcG → any disputed, bracketed, flattened, or uncertain reading returns to OHC_2441.png / matching custody PDF before adoption.
+
+
+Representation-correction seam:
+this jacket → historical page 57 represented by OHC_2439 and OHC_2440 → Glean page-57 jacket 1c1eSZlSfT0pIOMZ2Z6UuD0qMu02ttWuU9xS1DBdpK9Y, whose forward seam is deepened by Fieldglass to preserve that OHC_2440 is an alternate page-57 representation, not page 58.
+
+
+Forward retrieval doors:
+- the source-written supplement behind Rebecca Bond’s remark;
+- a governing instruction/schedule that explains the smaller category/count annotations;
+- a better direct representation or parallel source for Wesley Rain’s first creek name.
+These are retrieval targets, not conclusions.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+
+
+GLEAN BOUNDED SOURCE RETURN — 2026-09-08 — Wesley Rain segmented General-Remarks ditto
+
+
+Current footing
+Returned under the live Source Work Front Door: direct source before synthesis; deepen the governing jacket only on material gain; preserve correction history, provenance, uncertainty, seams, and nonclaims; repeated representations and derivative transcriptions do not become additional witnesses. No new page-58 jacket is created.
+
+
+Exact source and representation boundary
+Direct custody object read: OHC_2441.pdf, Drive ID 1-oqiF58Baia5Ongg4AkDIG5wnyz_s9AC, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, 275,916 bytes. A temporary 600-DPI decode and local enlargement were used only to inspect the writing. They are unretained inspection derivatives, not corpus source objects and not independent evidence. No OCR supplied the reading. The byte-identical second OHC_2441 custody object and repeated Quoin text remain under the controls already recorded above and are not recounted as corroboration.
+
+
+Direct General Remarks observation
+Rebecca Bond's immediately preceding row writes the phrase in full:
+`Provided for in supplement of 1½ sects.`
+
+
+Wesley Rain's own General Remarks cell is not blank. It visibly carries four separated written units:
+`do    do    1    do.`
+
+
+The numeral `1` is source-written on Wesley's row. The ditto marks are spatially distributed beneath components of Rebecca Bond's prior phrase rather than forming one undifferentiated ditto.
+
+
+The immediately following Capt'n Eyachochunfanyo row restarts the wording explicitly:
+`Provided for in treaty of 2 sects.`
+
+
+Source / transcription / interpretation boundary
+The active diplomatic layer for Wesley is the segmented sequence `do    do    1    do.` and its row placement. A normalized expansion such as `Provided for in supplement of 1 sect.` is a plausible reading of the local ditto operation, because the row visibly inherits components while replacing the preceding `1½` with `1`; it is not adopted here as direct source wording. The exact textual scope of each `do`, the singular/plural expansion, and the administrative semantics remain correction-open.
+
+
+Finding
+This three-row local sequence earns a narrow General-Remarks grammar: on manuscript p.58, a ditto-bearing row can preserve phrase components while changing a row-local quantitative component. Wesley Rain therefore cannot be transcribed as carrying Rebecca Bond's entire `1½ sects.` remark unchanged. The next row's explicit `treaty of 2 sects.` wording establishes a local reset in route language. No corpus-wide rule is inferred from this one sequence.
+
+
+Backward seam
+Rebecca Bond is used only as the immediately preceding written antecedent needed to read the visible dittos. Her `1½` is not copied into Wesley's row because Wesley visibly writes `1`.
+
+
+Forward seam
+The next named row begins `Capt'n Eyachochunfanyo.` and writes `Provided for in treaty of 2 sects.` in full. This closes the local ditto run at present reach. No later row is used to backfill Wesley.
+
+
+Unresolved questions
+- exact word/phrase span inherited by each of Wesley's first, second, and final `do`;
+- whether a later normalized layer should expand the last unit as `sect.`, `sects.`, or `section`;
+- which historical supplementary instrument/article the source's `supplement` denotes here;
+- whether the segmented ditto convention was governed by a form instruction, clerk practice, or another schedule;
+- authorship and timing of these General Remarks entries.
+
+
+Nonclaims
+This return does not establish grant, patent, completed entitlement, possession, acreage actually received, or final legal disposition for Rebecca Bond, Wesley Rain, or the following captain row. It does not merge any same-name person elsewhere with Wesley Rain, Rebecca/George Bond, or Capt'n Eyachochunfanyo; it does not infer kinship, one tract, one company, or one beneficiary class from adjacency. Duplicate PDF custody and duplicate Quoin text do not add witnesses. The normalized expansion proposed above remains interpretation, not source transcription.
+
+
+Exact return road
+this governing jacket → OHC_2441.pdf, Drive ID 1-oqiF58Baia5Ongg4AkDIG5wnyz_s9AC, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA → manuscript p.58 → Rebecca Bond full remark → Wesley Rain segmented `do    do    1    do.` → next-row explicit `Provided for in treaty of 2 sects.` reset. Quoin IDs 1bfQYyhVIvjXDhVzMmVEXYWpvGc_DY_hx / 1ep-iErN9t1Wrgx5niLYC5ymNNcycSJcG remain derivative return roads only.
+
+
+— Glean
+
+
+GLEAN SOURCE-RETURN AUDIT — PAGE 58 EXPLICIT CATEGORY WORDS
+
+
+Disposition
+This is a bounded page-wide audit of the direct OHC_2441 manuscript face. It deepens this governing page-58 jacket; it does not create a second historical object or treat repeated representations as additional witnesses.
+
+
+Inspection boundary
+All 35 visible named rows were inspected across the surviving page, with particular attention to the handwritten Locality of Farms and General Remarks cells. The page-local row numbers below begin with Atohelota as r1; they are audit coordinates, not source-written row numbers. Only source-visible White / Whites / Slave / Slaves / Black / Blacks wording is inventoried here. Dots, dittos, blanks, numerals without a target category word, and derivative expansions are not counted.
+
+
+Complete page-58 target-word inventory
+- p58 r2 — Rebecca Bond. (wid of Geo Bond) — Locality of Farms: `2 Slaves]`
+- p58 r3 — Wesley Rain. — Locality of Farms: `3 Slaves]`
+
+
+The closing bracket-like stroke is visible in each counted entry. No balancing opening bracket is supplied. No other category-count annotation using White / Whites / Slave / Slaves / Black / Blacks is visible in the remaining 33 named rows. Three non-category locality occurrences write `Standing White Oak creek` on p58 r29, r32, and r34. In those occurrences, source-written `White` belongs to the place-name and is excluded from category accounting.
+
+
+Accounting state
+Page 58 contributes 0 Whites and 5 Slaves by explicit category-word annotations. The controlled observed subtotal through page 57 was 13 Whites and 43 Slaves. Adding page 58 yields a surviving observed subtotal through page 58 of 13 Whites and 48 Slaves.
+
+
+The page-60 closing aggregate reads `14 Whites & 67 Slaves in this district`. At the present boundary, that aggregate exceeds the observed subtotal by 1 White and 19 Slaves. This difference is arithmetic, not an assignment: page 59 remains unaudited in this sequence, and known earlier loss or capture limits remain unresolved. No missing amount is attributed to a particular page, row, tear, edge, or administrative rule.
+
+
+Source boundary and nonclaims
+This audit records explicit category words and their row/cell hosts only. It does not add the slave counts to the printed family column, infer household or ownership relations, equate any other term with Slaves, or explain how the row annotations were used to form the district aggregate. The two counts are separate row-level inscriptions.
+
+
+Exact return road
+this jacket → OHC_2441.pdf, Drive ID 1CU__Mcx5Pz3wIWNhbvHaAXXp-RyTeOzz, manuscript p.58 → r2 Rebecca Bond Locality of Farms `2 Slaves]` → r3 Wesley Rain Locality of Farms `3 Slaves]` → page-58 explicit subtotal 0 Whites / 5 Slaves → controlled observed subtotal through p.58 13 Whites / 48 Slaves → unresolved comparison with p.60 aggregate 14 Whites / 67 Slaves.
+
+
+— Glean
+
+
+CORRECTION HISTORY — PLACE-NAME / CATEGORY DISTINCTION
+
+
+Superseded audit wording stated that no source-written White occurrence was present on page 58. Direct reinspection shows three explicit locality occurrences of `Standing White Oak creek` at p58 r29, r32, and r34. The active reading distinguishes those geographic uses from category-count annotations. Page 58 still contributes 0 Whites and 5 Slaves to the category account; only the absolute wording changed.
+
+
+— Glean

@@ -1,0 +1,206 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2438 page 56 — George Clark 1 White annotation and page-53/54 control
+
+
+Status: DIRECT-SOURCE PAGE JACKET — ONE MANUSCRIPT PAGE — DUPLICATE CUSTODY AND DERIVATIVE COPIES CONTROLLED
+Maker: Fieldglass
+Date: 2026-09-05
+Corpus: Public Lands — Whole-Document Corpus / quoted-title Choctaw Treaty farm return
+Visible manuscript page: 56
+Historical-object boundary: one manuscript page within a continued multi-page return; this jacket does not claim that the larger return is complete.
+
+
+METHOD CONTROL
+
+
+Worked from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md. The source face governs. Duplicate digital custody copies are not independent witnesses. Quoin text is retained as rough derivative history and navigation, not promoted over the handwritten page. Source observation, inference, uncertainty, correction history, and nonclaims remain separate.
+
+
+A bounded search before opening the object returned no equivalent OHC_2438 / page-56 source-facing jacket. This jacket therefore represents the underlying manuscript face rather than creating separate jackets for PDF, PNG, or Quoin representations.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+
+
+Custody object A:
+- filename: OHC_2438.pdf
+- Drive ID: 1i-LIBokfhTQDlLkSB9pGNqspGGX1yaYw
+- current parent: Source objects — received batch 1 — OHC 2408–2518
+- parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- size: 275,801 bytes
+
+
+Custody object B:
+- filename: OHC_2438.pdf
+- Drive ID: 1Yb0TYjSlXdYW6ujnpSg83tWjEhnKKa2n
+- current parent: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+- parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- size: 275,801 bytes
+
+
+Both stored PDF payloads were streamed in this pass. Each produced SHA-256:
+67866d7c03c8657b8a225d332a3cc3aef2e18dd50ec9e232abebd16f0cc0b73a
+They are two custody routes carrying one byte-identical PDF payload and one manuscript-page witness, not two independent historical witnesses.
+
+
+Admitted study representation used for direct visual reading:
+- filename: OHC_2438.png
+- Drive ID: 18JK9ywbcVkxR7wrcvvmoTVJr5Z161Fmx
+- current parent: 76 Distinct Study Surfaces
+- parent folder ID: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- size: 1,469,076 bytes
+
+
+Existing Quoin derivative representations:
+- OHC_2438 form of return Choctaw Treaty farms page 56 — Quoin.md — Drive ID 1gwYb_nH1eLlYAcmEjIKPgJeQOFKGzGll — parent 1komb4v11M9baULEpk3w3owolFF99m2-F
+- same-title duplicate derivative — Drive ID 1fzsApcf44b12N1pjrEuzH1EXXglF36J9 — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+Their connector-readable text is identical. They remain repeated derivative text, not corroboration.
+
+
+SOURCE FACE — PAGE IDENTITY AND 55→56 SEAM
+
+
+The admitted face visibly carries manuscript page number 56 at upper left and continues the ruled “Public Lands — No 1 — Form of a Return — Continued — Location under the Choctaw Treaty” table. The existing Glean jacket for OHC_2437 directly establishes manuscript page 55 under the same continued form and left page 56 unopened. Consecutive numbering and form identity now earn the bounded pagination/form seam 55 → 56. No person, household, tract, locality, acreage, kinship, ownership, or annotation is inherited across the turn merely because the pages are consecutive.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING — GEORGE CLARK ROW
+
+
+A mid-page row directly reads “George Clark.” The row visibly carries:
+- acres cultivated: 40
+- entire family: 6
+- males over 16: no numeral safely adopted from the visible state
+- males and females under 10: 2
+- total acres: 480
+
+
+The locality field is layered rather than one continuous phrase. The source visibly shows the principal ditto/locality structure with a separately written “south side.” It also carries a smaller left-set annotation immediately before that locality material reading “1 White]”. The closing bracket-like stroke is source-visible; no matching opening bracket is required or invented here.
+
+
+The duplicate Quoin text renders this portion as “[White] do do south side.” Direct inspection supports a leading numeral 1 before “White”. Active source-facing reading at this edge: “1 White]” as a smaller locality-area annotation. Quoin’s omission of the numeral is retained as derivative history and superseded for active use.
+
+
+COMPARATIVE CONTROL — PAGES 53, 54, 56
+
+
+OHC_2435 / manuscript page 53 already preserves Allen Yates’s smaller locality-area writing beginning “1 white 12 Slaves” beside the principal locality “Buckatunna creek. west side.” OHC_2436 / manuscript page 54 independently preserves a smaller “8 Slaves]” annotation beside J. W. Nail’s principal locality. OHC_2438 / page 56 now independently preserves “1 White]” beside George Clark’s locality material.
+
+
+Taken only at source-layout level, these three faces establish that smaller white/slave-count annotations recur across the same return form and are not isolated Quoin inventions. Page 56 strengthens the numeral-plus-category reading of “1 white” on page 53 because “1 White]” appears again as a standalone smaller annotation. It does not establish the same annotator, same date, same administrative purpose, same accounting rule, household composition, ownership mechanism, or any identity relationship among Allen Yates, J. W. Nail, and George Clark.
+
+
+SOURCE / DERIVATIVE CORRECTION HISTORY
+
+
+Correction A — George Clark white-count numeral:
+The duplicate Quoin text gives “[White]”. The direct manuscript face visibly carries a leading 1 before White. Active reading: “1 White]”. The derivative state remains preserved as rough-history/navigation only.
+
+
+Correction B — bracket handling:
+The source visibly shows a closing bracket-like stroke after White. This jacket does not normalize the mark into balanced editorial brackets or infer its exact scope. It is retained as a visible mark attached to the smaller annotation.
+
+
+FINDINGS
+
+
+- OHC_2438 is manuscript page 56 of the continued Public Lands / Choctaw Treaty farm return.
+- The two stored OHC_2438 PDFs examined are byte-identical custody copies of one digital payload and one manuscript-page witness.
+- The two Quoin files carry identical derivative text and do not add evidentiary weight by repetition.
+- George Clark’s row visibly records 40 cultivated acres, family 6, under-10 count 2, 480 total acres, and a smaller locality-area annotation “1 White]”.
+- Quoin omits the source-visible numeral 1 before White.
+- The page-56 “1 White]” annotation supplies direct same-form comparative control for the smaller white/slave annotations already visible on pages 53 and 54.
+
+
+INFERENCE — EXACT REACH
+
+
+The recurrence of smaller category/count annotations across pages 53, 54, and 56 suggests a repeated administrative notation practice within this return, but the surviving faces examined here do not explain its purpose. The notes may be supplementary descriptive/accounting annotations, but that remains inference. No arithmetic reconciliation is performed between these annotations and the printed family/demographic columns.
+
+
+UNRESOLVED QUESTIONS
+
+
+- What administrative instruction or convention governed the smaller “white” and “Slaves” annotations?
+- Who wrote them and when relative to the principal return entries?
+- What exactly does the bracket-like closing stroke delimit?
+- Does a surviving instruction, supplement, cover, or parallel return explicitly explain these annotations?
+- What manuscript page 57 adds; it was not opened in this pass.
+
+
+NONCLAIMS
+
+
+- “White” and “Slaves” are source-visible category words on these faces; this jacket does not infer identities, names, ages, relationships, legal-status detail beyond the wording, residence, ownership mechanics, or later history of the people counted.
+- “1 White]” is not silently added to or subtracted from George Clark’s family count of 6.
+- Recurrence of similar annotations does not prove the same hand, date, rule, or purpose.
+- George Clark is an occurrence-level source name only; no same-name person elsewhere is merged with it.
+- Literal ditto marks are not expanded beyond what the source face earns.
+- Blank or unclear numerical fields are not converted to zero.
+- Consecutive manuscript pages do not merge people or tracts across page turns.
+- Duplicate PDFs and duplicate Quoin derivatives are not corroborating witnesses.
+
+
+SEAMS AND EXACT RETURN PATHS
+
+
+Backward seam:
+Public Lands — Whole-Document Corpus → GLEAN SOURCE-FACING JACKET — OHC_2437 page 55 — Drive ID 1TLGCSTTAhpsotg5Curk8CoTePqrHqBLlmGsigny2lfo → visible manuscript page 55 → OHC_2438 / visible manuscript page 56 → this jacket.
+
+
+Source return:
+this jacket → OHC_2438.png study representation, Drive ID 18JK9ywbcVkxR7wrcvvmoTVJr5Z161Fmx, parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh → matching OHC_2438.pdf custody object A, Drive ID 1i-LIBokfhTQDlLkSB9pGNqspGGX1yaYw, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA; or byte-identical custody object B, Drive ID 1Yb0TYjSlXdYW6ujnpSg83tWjEhnKKa2n, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Derivative return:
+this jacket → Quoin derivative 1gwYb_nH1eLlYAcmEjIKPgJeQOFKGzGll or duplicate-text derivative 1fzsApcf44b12N1pjrEuzH1EXXglF36J9 → any disputed, omitted, or flattened reading returns to OHC_2438.png / OHC_2438.pdf before adoption.
+
+
+Cross-page control return:
+this jacket → OHC_2435 page-53 Fieldglass jacket, Drive ID 1dYupfCZkgppJeKk9H6wvYWPdYkwelwli3NN7ugwykHI → Allen Yates “1 white 12 Slaves …”; and OHC_2436 page-54 Fieldglass jacket, Drive ID 1ciEMmh53avagLEF2WVRRDe7WvaMHxieRXmNIAiaEiEo → J. W. Nail “8 Slaves]”.
+
+
+Forward seam:
+The strongest earned research door remains a surviving instruction, supplement, cover, or parallel direct return that explicitly explains the smaller white/slave annotations. Manuscript page 57 is a valid pagination continuation but is not opened merely to keep moving.
+
+
+Maker: Fieldglass
+Date: 2026-09-05
+GLEAN SOURCE-RETURN AUDIT — PAGE 56 EXPLICIT CATEGORY WORDS
+
+
+Disposition: bounded in-place category-word audit. The existing OHC_2438 page-56 jacket remains governing; no new historical object, representation, or jacket is created.
+
+
+Inspection boundary: the admitted OHC_2438.pdf source representation was read across the surviving visible manuscript face, including the column headings and all 36 visible body rows. Only one source-visible White / Whites / Slave / Slaves / Black / Blacks annotation was observed on manuscript page 56.
+
+
+TARGET-WORD INVENTORY
+
+
+PL:p56:r18 — George Clark. — printed Locality of Farms field:
+
+
+1 White]
+
+
+The smaller phrase sits at the left of the same locality cell that also carries literal ditto/locality material and the separately written “south side.” The leading 1 and closing bracket-like stroke are source-visible. The row also carries 40 cultivated acres, family 6, no safely adopted numeral in males over 16, under-10 count 2, and 480 total acres. The category annotation is not added to or subtracted from the printed family count.
+
+
+No other White / Whites / Slave / Slaves / Black / Blacks wording was observed elsewhere on the surviving visible face. Page 56 therefore contributes 1 observed explicit White and 0 observed explicit Slaves to the page-by-page audit.
+
+
+ACCOUNTING STATE THROUGH PAGE 56
+
+
+The controlled surviving subtotal through page 54 is 10 Whites / 23 Slaves. Page 55 contributes zero observed explicit category-word counts. With page 56’s single “1 White]” annotation, the surviving observed subtotal through page 56 is:
+
+
+11 Whites / 23 Slaves
+
+
+This does not reconcile the page-60 closing aggregate `14 Whites & 67 Slaves in this district`. Pages 57–59 have not yet been added to this running state. Page 41’s lower active rows remain outside the captured edge, and page 50’s right-edge loss remains unresolved. No difference is assigned to those states, and no rule is inferred for how the smaller annotations feed the district aggregate.
+
+
+Return path: Public Lands — Whole-Document Corpus → this governing OHC_2438 page-56 jacket → OHC_2438.pdf, Drive 1Yb0TYjSlXdYW6ujnpSg83tWjEhnKKa2n → manuscript p.56 → PL:p56:r18.
+
+
+— Glean | Public Lands p.56 | one explicit `1 White]` annotation | surviving observed subtotal through p.56: 11 Whites / 23 Slaves | district account OPEN
