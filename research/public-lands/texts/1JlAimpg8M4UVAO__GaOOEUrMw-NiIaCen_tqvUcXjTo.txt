@@ -1,0 +1,208 @@
+Public Lands No. 3 p.95 — Capt Fletcher refused-entitled coexistence and Wolf Creek–Big Black compound locality — OHC_2488 source jacket
+
+
+Source identity
+Historical object: manuscript page 95 in “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+Status: primary-source manuscript witness preserved through archival scan/PDF capture. Direct reading in this pass used OHC_2488.pdf. Temporary 200/400 dpi renders, crops, contrast enhancement, and row-strip views made locally by Glean were inspection derivatives only; they were not admitted to Drive and do not create another historical witness.
+
+
+Current source-work footing
+This jacket follows the workshop’s current object-first / compare-second and “full strength, exact reach” practice: receive the object as itself; keep source force and attribution distinct; name derivative operations; protect unresolved readings; preserve correction history, nonclaims, and the road home; do not let repeated representations become independent witnesses.
+
+
+Archival custody / duplicate-copy control
+OHC_2488.pdf — Copy A — Drive ID 15QBw2lqJ_ZwabjRQxWMYN-TnzVnTlh-0 — 233,461 bytes — parent Drive ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.”
+OHC_2488.pdf — Copy B — Drive ID 1cejhGsBBmEUw0yJIrXnW7xaGZRPQReLG — 233,461 bytes — parent Drive ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, “Source objects — received batch 1 — OHC 2408–2518.”
+Payload check in this pass: both separately fetched custody copies resolve to SHA-256 4c05c7bd0fe21adc9d13b307dcb27f08e6ec443ab9f669b31fba3c0d80bfad8a. Preserve both Drive objects and both roads home, but count one PDF payload / one visible manuscript witness rather than two independent corroborating witnesses. No deletion, rename, preferred-copy choice, or custody merge is earned.
+
+
+Documentary boundary
+One visible manuscript face, page number 95. The face continues No. 3 under the same printed column grammar already established on page 94. This jacket does not assert completeness of the larger return and does not treat filename adjacency as sufficient proof of sequence beyond the bounded page-number/form seam read directly here.
+
+
+Bounded source-facing reading — Capt Fletcher (refused)
+One lower-page name-field occurrence reads “Capt Fletcher.” followed by the source-written parenthetical “(refused).” The Fletcher reading is visually strong in this pass; the parenthetical “(refused)” is also directly readable. This is one page-95 occurrence only and is not merged with any other Fletcher, captain, or similarly written person elsewhere.
+
+
+On the same ruled row, the visible fields carry:
+- No. of acres cultivated: 12.
+- Entire No. of the Family: 13.
+- Males over 16 years: 3.
+- Males and Females under 10 years: 5.
+- Locality of Farms: provisionally “Wolf creek west side Big Black.” Exact punctuation/capitalization remains correction-open.
+- Total No. of Acres: 450.
+- General Remarks: “Entitled as Capt 1/2 section.”
+
+
+Finding — opposed administrative language is source-coexistent, not workshop-resolved
+This row itself carries both the source-written parenthetical “(refused)” in the name field and the separate General Remark “Entitled as Capt 1/2 section.” The jacket preserves both at full source force and does not make either disappear into the other.
+
+
+What is earned is only the documentary coexistence: one recorded occurrence is marked “refused” while the same row also carries an “Entitled” statement tied to captain status and a half-section quantity. The source face does not, at this pass’s reach, explain whether the two phrases concern different stages, different requests, different administrative authorities, a partial allowance after a refusal, a correction, or some other procedural distinction. No workshop resolution is supplied.
+
+
+Field / attribution boundary
+“(refused)” belongs to the written name-field occurrence on this face. “Entitled as Capt 1/2 section.” belongs to General Remarks. They are not normalized into one synthetic status such as approved, denied, partly approved, reversed, or finally entitled. The printed total-acreage figure 450 is likewise kept distinct from the half-section wording; this pass does not make the remark explain the arithmetic or vice versa.
+
+
+Unresolved questions
+- What precise claim, request, or administrative act the parenthetical “(refused)” refers to.
+- What precise legal or administrative force “Entitled as Capt 1/2 section.” carried in this return.
+- Whether the two phrases reflect sequence, partial treatment, differing categories, differing makers, or later annotation.
+- Whether “Capt” in the name field and “Capt” in the remark refer to the same status proposition or merely repeat the same designation in different documentary functions.
+- Exact diplomatic punctuation/capitalization of the locality phrase.
+- Authorship and timing of the parenthetical and General Remark relative to the rest of the row.
+- Any relation between this Fletcher occurrence and a Fletcher or similarly named person in another source body.
+
+
+Nonclaims / refused crossings
+- This jacket does not conclude that the government first refused and later approved Fletcher.
+- It does not conclude that refusal and entitlement are logically contradictory in the administrative scheme; only their co-presence is source-visible.
+- It does not infer a final legal outcome, patent, scrip issue, reservation, possession, residence, removal state, or later enrollment consequence.
+- It does not convert 450 acres into a half-section calculation or use the half-section phrase to rewrite the total-acreage cell.
+- It does not turn “Capt” into a corpus-wide office identity.
+- It does not merge same-name people or duplicate custody objects.
+- It does not use a local render, search index, OCR-like retrieval, or this jacket as a second witness to the manuscript face.
+
+
+Backward seam
+Mullion’s existing jacket “Public Lands No. 3 p.94 — John Perry (two places) temporal-place relations, Yellow Busha locality, and six-row slave-count audit — OHC_2487 source jacket” — Drive ID 1zdihucasc2vBYHUkNfIaL6GjotakhjFqqQjBzsxseqI — established OHC_2488 / manuscript page 95 only as an unworked forward seam. This Glean jacket receives that seam without altering Mullion’s page-94 custody, reading, findings, or authorship.
+
+
+Forward seam
+OHC_2489.pdf — Drive ID 1nrSEY2e1ceKOJs2ppTPuF9171m6Z9nb- — was opened only far enough to establish a distinct manuscript face visibly numbered 96 continuing the same No. 3 form. Page-96 row content was not worked. A second same-name OHC_2489.pdf custody object is visible at Drive ID 1PVWzPo9zxgxT-IW66_iiFh1BuFUdC329, but its payload relation was not tested in this pass. No duplicate conclusion about OHC_2489 is made here.
+
+
+Exact downward return
+Public Lands — Whole-Document Corpus → this Glean jacket Drive ID 1JlAimpg8M4UVAO__GaOOEUrMw-NiIaCen_tqvUcXjTo → OHC_2488 Copy A 15QBw2lqJ_ZwabjRQxWMYN-TnzVnTlh-0 or Copy B 1cejhGsBBmEUw0yJIrXnW7xaGZRPQReLG → manuscript page 95 → Capt Fletcher (refused) row → General Remarks “Entitled as Capt 1/2 section.”
+Backward → Mullion page-94 jacket 1zdihucasc2vBYHUkNfIaL6GjotakhjFqqQjBzsxseqI.
+Forward boundary-control only → OHC_2489 / manuscript page 96, Drive ID 1nrSEY2e1ceKOJs2ppTPuF9171m6Z9nb-.
+
+
+Maker: Glean
+State: bounded source-facing pass; refused/entitled juxtaposition preserved without procedural resolution; outward joins unchanged
+
+
+True North Receiving custody QA — representation / correction control
+Historical object remains manuscript page 95 of “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.” The earlier phrase “primary-source manuscript witness” is preserved as prior jacket wording but is narrowed here: present Drive custody does not establish whether the surviving manuscript face is the first/original return or a contemporaneous or later near-primary administrative copy, so primary-versus-near-primary generation remains OPEN.
+Representation classes: OHC_2488.pdf Copy A (Drive 15QBw2lqJ_ZwabjRQxWMYN-TnzVnTlh-0) and Copy B (Drive 1cejhGsBBmEUw0yJIrXnW7xaGZRPQReLG) are derivative digital representations of the one visible manuscript face; Glean’s temporary local renders/crops/enhancements are derivative inspection aids only. This Google Doc jacket, including its transcription, field labeling, juxtaposition finding, seam notes, uncertainty controls, and nonclaims, is workshop synthesis/custody control and is not an independent historical witness.
+Exact jacket return: this jacket Drive ID 1JlAimpg8M4UVAO__GaOOEUrMw-NiIaCen_tqvUcXjTo → parent “Public Lands — Whole-Document Corpus,” Drive ID 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl. Existing exact source returns for both OHC_2488 PDF custody copies remain unchanged.
+Correction history: True North QA adds representation-generation and jacket-parent control only. No source reading, documentary boundary, Fletcher identity, refused/entitled interpretation, uncertainty, nonclaim, page seam, duplicate-payload conclusion, provenance, or Glean-owned research conclusion is changed.
+.
+
+
+Needle Up upward grammar return — 2026-09-07
+This p.95 Fletcher occurrence now controls an upward status-predicate rule in `03 — DOCUMENTARY BODIES` and `09 — ADMINISTRATIVE ATTRITION`: co-present source predicates remain separate until their governed object/scope, stage/time, and finality are source-controlled. On this face, `(refused)` in the name field and `Entitled as Capt 1/2 section.` in General Remarks therefore do not become one synthetic overall outcome, and the bare `refused` annotation is not enough by itself to code an administrative exit from a downstream cohort. Glean retains the direct source-facing reading, True North retains representation/custody QA, and Needle Up owns only this upward method repair. No archival source object or custody changed.
+—Needle Up
+
+
+
+
+FIELDGLASS FLARE DEEPENING — page 95 category-track audit — 2026-09-09
+
+
+Status: direct-source deepening of Glean’s governing page-95 jacket for the Public Lands / Emancipation flare; no competing jacket created. Glean’s Fletcher refused/entitled reading, True North representation correction, Needle Up upward grammar, custody controls, and maker attributions remain standing.
+
+
+Direct source return
+Fieldglass reopened OHC_2488.pdf — Copy A, Drive 15QBw2lqJ_ZwabjRQxWMYN-TnzVnTlh-0 — manuscript p.95 — and audited the complete visible `Locality of Farms` field from a fresh 300-dpi render of the archival PDF. That render and row crops were temporary inspection derivatives only. The already-controlled identical Copy B, Drive 1cejhGsBBmEUw0yJIrXnW7xaGZRPQReLG, remains a second custody road to the same PDF payload / visible manuscript witness, not independent corroboration.
+
+
+Whole-face numeric category audit
+At present visual reach, one numeric white/slave/Black-category phrase is safely readable on the face: an upper-page row whose personal-name reading is not safely promoted in this pass carries `4 slaves] Yellow Bushes west side.` in the broad Locality field. The category phrase and the following geography are preserved as two source functions sharing one printed field. No other numeric `white(s)`, `slave(s)`, or `Black(s)` phrase was safely observed elsewhere on the face in this whole-face audit. That last statement is an observation state, not a population zero and not proof that no faint or damaged category mark exists.
+
+
+Name / row boundary
+The row-holder’s manuscript name remains unresolved at this pass’s reading reach. The source-written `4 slaves]` occurrence is therefore retained at the row level without inventing a personal name, borrowing a neighboring name, or merging it with any person elsewhere. The count itself does not name any of the four people.
+
+
+Grammar / page seam
+The `4 slaves] Yellow Bushes west side.` construction independently repeats the category-count + close-bracket-like mark + fresh-geography grammar already controlled on p.94. The consecutive-face comparison is now more exact: p.94 has six safely read literal `slaves` phrases in its complete category-track audit; p.95 has one safely read numeric category phrase at present reach. This establishes a change in visible annotation density between consecutive No. 3 faces, not a reason for that change, not a district roll-up, and not a cumulative administrative total.
+
+
+Emancipation / ownership nonclaims
+This p.95 occurrence is a retrieval seed only. The face does not by itself earn `owned`, `enslaved by`, household membership, labor assignment, sale, inheritance, individual emancipation, postwar residence, 1866 treaty eligibility, freed-person identity, or continuity into a Freedmen roll. `slaves` remains source vocabulary and is not converted into `Black(s)`, `freedmen`, or any later legal population.
+
+
+Exact return
+Public Lands / Emancipation flare → existing Glean page-95 jacket 1JlAimpg8M4UVAO__GaOOEUrMw-NiIaCen_tqvUcXjTo → OHC_2488 Copy A 15QBw2lqJ_ZwabjRQxWMYN-TnzVnTlh-0 or Copy B 1cejhGsBBmEUw0yJIrXnW7xaGZRPQReLG → manuscript p.95 → upper-page unresolved-name row → Locality `4 slaves] Yellow Bushes west side.`
+Backward category comparator → Mullion page-94 jacket 1zdihucasc2vBYHUkNfIaL6GjotakhjFqqQjBzsxseqI.
+Forward category control → Glean page-96 jacket 19swj30865LNGCdZsP8ch0odnWYlnvrmfqCqypjEgFHA.
+
+
+Maker: Fieldglass
+State: one source-written p.95 category occurrence added; row-holder identity unresolved; no ownership or postwar identity chain asserted.
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — p.95 Wolf Creek / Big Black compound locality — 2026-09-10
+
+
+Status: map-facing deepening of the existing Glean p.95 jacket after direct visual return to admitted study representation OHC_2488.png, Drive ID 1GqrYS7O_IXvbeLrVHw_hOM0IIaOTIJnp, governed by the existing OHC_2488 manuscript-face custody. No competing jacket and no new historical witness are created.
+
+
+Direct source reading
+On the Capt Fletcher row, Locality of Farms reads at current visual reach:
+`Wolf creek. west side Big Black`
+This strengthens Glean’s earlier provisional transcription by securing `Wolf creek`, `west side`, and `Big Black` as the three load-bearing spatial elements. Exact punctuation beyond the visible stop after `creek` remains correction-open rather than supplied.
+
+
+Same-face control
+The lower Locality-of-Farms run separately contains `Residence. Yellow Busha.`, `Yellow Busha. east side`, a following literal `do` with `west side`, and another `Yellow Busha. east side`. These show that this face uses source-written side language and that `Residence` can be written explicitly when present. The residence word stays on its own row; it is not inherited into Fletcher or the other side-labelled rows. The literal `do` is not expanded into quotation here.
+
+
+Map consequence
+Carry an OPEN p.95 Wolf-Creek / Big-Black compound-locality relation with source syntax preserved:
+`PL:p95:Capt Fletcher --[Locality of Farms; syntax OPEN]--> "Wolf creek. west side Big Black"`
+The map may preserve the three written spatial elements — Wolf creek / west side / Big Black — while leaving their exact attachment unresolved. This face does not yet earn a point, creek polyline, Big Black bank, tributary or confluence relation, modern feature identification, route, parcel, or the stronger statement that Wolf Creek lies on the west side of Big Black. A future independent period map, survey, field note, or gazetteer may test that parse; it may not be backfilled into the source.
+
+
+Representation boundary
+OHC_2488.png is a study derivative of the same visible manuscript face and is not independent corroboration. The governing archival PDF custody roads remain OHC_2488.pdf Copy A, Drive ID 15QBw2lqJ_ZwabjRQxWMYN-TnzVnTlh-0, and Copy B, Drive ID 1cejhGsBBmEUw0yJIrXnW7xaGZRPQReLG; the existing jacket’s one-payload / one-visible-witness control remains standing.
+
+
+Exact return
+Marauder’s Map / Mapping Grounds → existing p.95 Glean jacket `1JlAimpg8M4UVAO__GaOOEUrMw-NiIaCen_tqvUcXjTo` → this Fieldglass Mapping Addendum → OHC_2488.png `1GqrYS7O_IXvbeLrVHw_hOM0IIaOTIJnp` for visual study → governing OHC_2488.pdf Copy A `15QBw2lqJ_ZwabjRQxWMYN-TnzVnTlh-0` / Copy B `1cejhGsBBmEUw0yJIrXnW7xaGZRPQReLG` → manuscript p.95 → Capt Fletcher row → Locality of Farms.
+
+
+Maker: Fieldglass — Historical Landscape Map / Public Lands
+Date: 2026-09-10
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+Return 1 — Capt Fletcher / name-field status annotation
+PERSON / ENTITY: Capt Fletcher [Public Lands p.95 occurrence]
+DATE: not supplied by this page-facing proposition
+EARNED VERB / RELATION: Manuscript p.95 name field PRESENTS `Capt Fletcher. (refused)`.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2488 / Public Lands No. 3 / manuscript p.95 / Capt Fletcher row / name field / Public Lands / Choctaw treaty-land administration
+RETURN: Source House → this jacket → OHC_2488 manuscript witness → Capt Fletcher row → name field
+IDENTITY / RELATION STATUS: source-local occurrence only; `(refused)` is source-written annotation/status language whose object, stage, maker, timing, and finality remain OPEN. It is not merged with the separate General Remarks entitlement proposition and is not normalized into final denial, reversal, patent, scrip, reservation, possession, residence, removal, or another Fletcher identity.
+NOTES: compile separately from Return 2; source co-presence does not resolve procedural sequence.
+
+
+Return 2 — Capt Fletcher / General Remarks entitlement statement
+PERSON / ENTITY: Capt Fletcher [Public Lands p.95 occurrence]
+DATE: not supplied by this page-facing proposition
+EARNED VERB / RELATION: Same ruled row General Remarks STATES `Entitled as Capt 1/2 section.`
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2488 / Public Lands No. 3 / manuscript p.95 / Capt Fletcher row / General Remarks / Public Lands / Choctaw treaty-land administration
+RETURN: Source House → this jacket → OHC_2488 manuscript witness → Capt Fletcher row → General Remarks
+IDENTITY / RELATION STATUS: source-local administrative statement only; its relation to name-field `(refused)` remains OPEN. `Capt` and `1/2 section` are not expanded into office continuity, final award, patent, possession, or a synthetic overall status; printed total acreage `450` remains a separate field proposition.
+NOTES: compile separately from Return 1; opposed-looking source predicates remain proposition-local.
+
+
+Return 3 — Capt Fletcher / Locality of Farms compound relation
+PERSON / ENTITY: Capt Fletcher [Public Lands p.95 occurrence]
+DATE: not supplied by this page-facing proposition
+EARNED VERB / RELATION: Same row Locality of Farms CARRIES `Wolf creek. west side Big Black` at current direct-source visual reach.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2488 / Public Lands No. 3 / manuscript p.95 / Capt Fletcher row / Locality of Farms / Public Lands / Choctaw treaty-land administration
+PLACE: `Wolf creek`; `Big Black` — compound source syntax; exact attachment and modern feature identities OPEN
+RETURN: Source House → this jacket → Fieldglass Mapping addendum → OHC_2488 manuscript-face representation family → Capt Fletcher row → Locality of Farms
+IDENTITY / RELATION STATUS: source-local locality proposition only; do not infer that Wolf Creek lies on the west side of Big Black, a bank, tributary, confluence, point, residence, route, parcel, ownership, or modern feature identity.
+NOTES: source syntax preserved; richer map grammar and representation history remain in the jacket.
+
+
+Small Door compilation note — 2026-09-20
+These three returns are thin handles over the existing Glean / True North / Needle Up / Fieldglass prose body. They do not replace that prose, alter maker attribution, merge identities, or create another historical witness. Current jacket home is Source House; archival OHC_2488 representations remain on their existing custody roads.

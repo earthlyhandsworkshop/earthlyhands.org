@@ -1,0 +1,224 @@
+Public Lands No. 3 p.93 — Saml A Allen settlement-preparation / nonresidence / father-in-law relation and Wid Perry / Charlie Gray slave-count grammar — OHC_2485/OHC_2486 source jacket
+
+
+Source identity
+Historical object: manuscript page 93 in “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+Status: primary-source manuscript witness as preserved through archival scan/PDF capture. Direct reading in this pass used the admitted OHC_2485 study image and the source PDF as custody control; the study image remains a derivative representation, not another historical source.
+
+
+Archival object relation
+OHC_2485.pdf and OHC_2486.pdf are distinct archival source objects with distinct received filenames and distinct PDF payloads, but direct rendered comparison shows the same visible manuscript page-93 surface. Preserve both archival identities and both return paths. For source-facing content on this face, they supply one visible manuscript witness rather than two independent corroborating witnesses.
+
+
+Exact custody / roads home
+OHC_2485.pdf — Copy A — Drive ID 1KZ7C8eaov7k9LVgvEZL6ajwPlbDbIaKX — 240,103 bytes — parent “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces” — parent Drive ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+OHC_2485.pdf — Copy B — Drive ID 1nySjHs9FNhkVxWXELvjJkZSVEeywiXeW — 240,103 bytes — parent “Source objects — received batch 1 — OHC 2408–2518” — parent Drive ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Payload check: these two OHC_2485 custody copies are byte-for-byte identical; SHA-256 beba0b8142386fad3c82d2cb14c2982460bc014bb6a42e0c2d33fd74863b1267.
+
+
+OHC_2486.pdf — Copy A — Drive ID 1YlOlCNYi2GbVdECDWoINhAr0TsvHRy3_ — 240,103 bytes — parent “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces” — parent Drive ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+OHC_2486.pdf — Copy B — Drive ID 14p2_Ey4E3yi4_K8nn9gtPTZX-trVDw6H — 240,103 bytes — parent “Source objects — received batch 1 — OHC 2408–2518” — parent Drive ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Payload check: these two OHC_2486 custody copies are byte-for-byte identical; SHA-256 22ca5162696b54e763bc655dd2f420ab8080aaa006f3aa4df7c51c601c585fae.
+
+
+Cross-object representation check
+OHC_2485.pdf and OHC_2486.pdf have different PDF payload hashes and therefore are not silently deduplicated as the same stored file. A direct full-face render comparison in this pass returned no changed pixels. The archival-object distinction remains real; the visible manuscript surface is repeated.
+
+
+Study representation
+OHC_2485.png — Drive ID 1at8v3-V9nWviWZKdJ-wJH3wVvCPW3IQx — 1,329,938 bytes — parent “76 Distinct Study Surfaces” — parent Drive ID 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh.
+Representation status: lossless study derivative / reading surface associated with the archival witness. It does not create another historical witness and does not replace either archival PDF object.
+
+
+Documentary boundary
+One visible manuscript face, page number 93. The face continues No. 3 and carries printed columns for Names of Indians owning Farms, No. of acres cultivated, Entire No. of the Family, Males over 16 years, Males and Females under 10 years, Locality of Farms, Total No. of Acres, and General Remarks. This jacket does not assert completeness of the larger return and does not infer sequence beyond the bounded neighboring-page seam recorded below.
+
+
+Source-facing reading 1 — Saml A Allen: preparation to settle versus residence
+A name-field occurrence reads “Saml A Allen.” This is one source occurrence only; no identity merge with any other Samuel/Saml Allen is made here.
+
+
+On that row the visible numeric fields read:
+- No. of acres cultivated: 5.
+- Entire No. of the Family: 2.
+- Males over 16 years: 1.
+- Males and Females under 10 years: 1.
+- Locality of Farms: no written locality is visible on this row.
+- Total No. of Acres: no written total is visible on this row.
+
+
+The General Remarks contain three securely readable, load-bearing stretches:
+“Was working and preparing to settle his present place at the time of the treaty”
+“but was not living on the place”
+“was living with his father in-law.”
+
+
+The connecting punctuation and any less secure words between these stretches should remain correction-open rather than silently regularized.
+
+
+Finding
+On this one page-93 occurrence, the manuscript itself distinguishes work/preparation to settle a place from actual residence: the same remark says Allen was preparing to settle his present place at treaty time while also saying he was not living on that place and was living with his father-in-law. This is direct source evidence that, at least for this row, farm/cultivation/preparation language cannot safely be collapsed into residence.
+
+
+Interpretation boundary
+The row does not establish when Allen began or completed residence at the “present place,” whether “present” is relative to the return’s compilation date or another documentary moment, who the father-in-law was, where the father-in-law lived, whether Allen owned the place in a modern legal sense, whether the cultivated-acre figure was Allen’s own labor, or whether the family total describes everyone residing with him. The wording is not expanded into a general rule for all Public Lands rows.
+
+
+Source-facing reading 2 — two Mississippi formulations on one face
+Page 93 visibly uses both of these General Remarks formulations on separate rows:
+“Gone west Mississippi.”
+“Gone over Mississippi river.”
+
+
+Finding
+The manuscript preserves two different source phrasings on the same face. Therefore the page-92 wording “Gone West Mississippi.” should not be silently expanded or normalized to “Gone over Mississippi river.” The page-93 occurrence supplies a source-facing caution about transcription and interpretation: preserve the exact formulation each row actually carries.
+
+
+Interpretation boundary
+This page does not by itself prove that the two formulations had different administrative meanings, refer to different destinations, mark different dates or stages of movement, or encode different legal statuses. “Mississippi” is not silently converted into a modern geographic conclusion beyond the words actually present.
+
+
+Unresolved questions
+- Can a later independent second look strengthen the full continuous transcription of the Saml A Allen General Remark without losing the three secure stretches preserved here?
+- What documentary date or administrative moment governs “present place” in the Allen remark?
+- Does the larger No. 3 body use “Gone west Mississippi.” and “Gone over Mississippi river.” consistently in distinguishable contexts, or are they variable clerkly phrasings? This is a retrieval question, not a corpus-level theory.
+- Are there other exact Allen occurrences in this return that independently earn comparison? Similarity of name alone is not enough.
+
+
+Explicit nonclaims
+- “Saml A Allen.” is not merged with any same- or similar-name person elsewhere.
+- The unnamed father-in-law is not assigned an identity.
+- Preparation to settle, cultivated acreage, appearance in an owner/farm return, residence, domicile, possession, and legal title are not treated as synonyms.
+- The two Mississippi formulations are not normalized into one quotation and are not assumed to have either identical or different legal meaning without further evidence.
+- OHC_2485 and OHC_2486 remain distinct archival objects despite their repeated visible surface; neither archival identity is erased.
+- Their duplicate custody copies and the PNG study derivative do not create additional historical witnesses.
+
+
+Backward seam
+The immediately preceding worked manuscript face is page 92, jacketed as “Public Lands No. 3 p.92 — Estongik / Maintutbe west-Mississippi remarks and correction-open or-name occurrence — OHC_2484 source jacket.” That jacket established page 93 only as a bounded forward seam and explicitly left page-93 rows unworked. The present jacket receives and works that seam without duplicating page 92.
+
+
+Forward seam
+OHC_2487.pdf was opened only far enough to establish a distinct manuscript face visibly numbered 94 under the same “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty” body. Page-94 row content was not worked in this pass. This earns only the bounded 93→94 pagination/form seam.
+
+
+Next retrieval target
+If page 94 remains unjacketed at a later return, it is a legitimate neighboring source object. This pass does not assign it, interpret its rows, or infer a wider sequence beyond the 92→93→94 seam.
+
+
+Maker: Glean
+Date: 2026-09-0
+Needle Up upward return — 2026-09-07
+This already-wrapped page-93 source work was used to repair the active Public Lands / Administrative Attrition grammar without changing the source reading: settlement-preparation, actual residence, source-written movement wording, and administrative exit are now separate states. The upward repair also preserves `Gone west Mississippi.` and `Gone over Mississippi river.` as distinct source formulations rather than normalizing either into formal treaty removal or into one another. Destinations: `03 — DOCUMENTARY BODIES — Bell–McKinney daylight` and `09 — ADMINISTRATIVE ATTRITION — Public Lands population to later federal bodies — Bell–McKinney daylight`. Glean retains direct source reading, source/derivative distinctions, archival-object and custody controls, seam work, and maker attribution; Needle Up owns only the upward verb-state/vocabulary repair.
+7
+
+
+
+
+FIELDGLASS FLARE DEEPENING — page 93 category track / inverse ditto control — 2026-09-09
+
+
+Status: direct-source deepening of Glean’s governing page-93 jacket for the Public Lands / Emancipation flare; no competing jacket created. Glean’s source identity, duplicate-representation controls, prior readings, and maker attribution remain standing.
+
+
+Direct source return
+Fieldglass reopened OHC_2485.pdf — Drive 1KZ7C8eaov7k9LVgvEZL6ajwPlbDbIaKX — manuscript p.93 — and inspected the complete face from a fresh rendered archival-PDF image. The local render/crops are temporary inspection derivatives only. The existing OHC_2485/OHC_2486 repeated-surface and custody controls remain unchanged.
+
+
+Whole-face category-track audit
+At present visual reach, exactly two safely readable numeric white/slave/Black-category phrases occur in the Locality of Farms field, both at the top of the face:
+- `Wid Perry` (present direct reading): Entire No. of the Family = 9; Locality begins `4 slaves]` and then carries separate geographic wording.
+- `Charlie Gray` (present direct reading): Entire No. of the Family = 2; Locality begins `2 slaves]` and is followed by a written geographic `do`.
+No additional numeric `white(s)`, `slave(s)`, or `Black(s)` phrase was safely observed across the remainder of the face at current reach. This is an audited observation state, not an arithmetic zero and not a claim of absence of enslaved or free people.
+
+
+Bounded arithmetic
+Literal page-93 category subtotal from the two controlled phrases: 6 source-written `slaves`. No source-written numeric `white(s)` or `Black(s)` phrase is presently controlled on this face. This subtotal is not a district total, not a whole-return total, and is not reconciled to any No. 2 aggregate.
+
+
+New grammar crossing — independent ditto tracks inside one printed field
+The second row gives an inverse structural control to Fieldglass’s already-jacketed page-86 sequence. On p.86, `Col David Wilson.` carries `10 do] Robinson road.`: the ditto sits inside the left-set category/count subtrack while fresh geography is written separately. On p.93, `Charlie Gray` carries literal `2 slaves]` followed by geographic `do`: the category is fresh while the geography is inherited.
+
+
+The two controlled faces therefore show that category/count inheritance and geographic inheritance can operate independently inside the broad printed `Locality of Farms` field. A transcription model that treats every `do` in that field as one undifferentiated locality ditto will lose source structure; likewise, a category audit cannot assume that every ditto belongs to geography. The diplomatic text remains source-written as encountered; no supplied expansion is promoted into quotation.
+
+
+Within-face episodic control
+Page 92 was previously audited with no observed numeric category phrase at current reach. Page 93 reintroduces the category track on its first two rows and then goes quiet again for the rest of the same face. The narrow earned consequence is that category notation can be episodic within a single page as well as across page boundaries. No explanation of authorship, timing, administrative purpose, or selection rule is assigned.
+
+
+Nonclaims
+No row-holder is declared the legal owner of the people counted; no counted person is named; family totals are not equated with or defined against the separate slave counts; `do` is not universally assigned to either category or geography outside a controlled local antecedent; `Black(s)` is not converted to `Slaves`; and no No. 2/No. 3 arithmetic is merged.
+
+
+Exact return
+Public Lands / Emancipation flare → existing Glean page-93 jacket → OHC_2485.pdf 1KZ7C8eaov7k9LVgvEZL6ajwPlbDbIaKX → manuscript p.93 → first two Locality-of-Farms rows; grammar crossing backward → Glean page-86 jacket 1o2dE-FQU4-3cDYIFhON_uJb4HeoTOMxeuUAt2VIV0Hc → Fieldglass `10 do] Robinson road.` continuation.
+
+
+Maker: Fieldglass
+
+
+SMALL DOOR NAME WEB CROSSING — 2026-09-20
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT 1
+Person / Entity: Wid Perry [Public Lands p.93 first farm-row occurrence; Fieldglass direct-source reading; Quoin first-pass reads `Old Perry`]
+Date: not supplied by this page-facing proposition
+Earned verb / relation: Manuscript p.93 Locality-of-Farms category subtrack CARRIES source-written `4 slaves]` on the Wid Perry row; the same row separately carries Entire No. of the Family = 9.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.93 / OHC_2485–OHC_2486 visible manuscript witness
+Place: separate geographic wording follows the category phrase, but no geography is compiled into this proposition
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.93 — Saml A Allen settlement-preparation / nonresidence / father-in-law relation and Wid Perry / Charlie Gray slave-count grammar — OHC_2485/OHC_2486 source jacket
+Identity / Relation Status: source-local row-host occurrence only; counted people are unnamed. `4 slaves]` is preserved as source-written count language and does not by itself earn ownership, household membership, labor assignment, residence, sale, inheritance, emancipation, or identity of any counted person. Fieldglass direct reading controls this return; Quoin’s `Old Perry` remains derivative correction history.
+Notes: one proposition only; family total and slave count remain independently typed source fields.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT 2
+Person / Entity: Charlie Gray [Public Lands p.93 second farm-row occurrence; Fieldglass direct-source reading; Quoin first-pass reads `Charles Gray`]
+Date: not supplied by this page-facing proposition
+Earned verb / relation: Manuscript p.93 Locality-of-Farms category subtrack CARRIES source-written `2 slaves]` on the Charlie Gray row; the same row separately carries Entire No. of the Family = 2, and a geographic `do` follows the fresh category phrase.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.93 / OHC_2485–OHC_2486 visible manuscript witness
+Place: source-written geographic `do` follows `2 slaves]`; its supplied antecedent is not promoted into this thin return
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.93 — Saml A Allen settlement-preparation / nonresidence / father-in-law relation and Wid Perry / Charlie Gray slave-count grammar — OHC_2485/OHC_2486 source jacket
+Identity / Relation Status: source-local row-host occurrence only; counted people are unnamed. `2 slaves]` is not converted into ownership, household membership, labor assignment, residence, sale, inheritance, emancipation, or identity. Fieldglass direct reading controls this return; Quoin’s `Charles Gray` remains derivative correction history.
+Notes: category/count inheritance and geographic inheritance remain separate tracks; the diplomatic `do` stays unexpanded here.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT 3
+Person / Entity: Saml A Allen [Public Lands p.93 name-field occurrence; governing direct-source reading]
+Date: at the time of the treaty [source wording; treaty not normalized to a modern date in this proposition]
+Earned verb / relation: General Remarks STATES that Allen `Was working and preparing to settle his present place at the time of the treaty`.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.93 / OHC_2485–OHC_2486 visible manuscript witness
+Place: `his present place` [source wording; exact place and documentary-time referent of `present` OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.93 — Saml A Allen settlement-preparation / nonresidence / father-in-law relation and Wid Perry / Charlie Gray slave-count grammar — OHC_2485/OHC_2486 source jacket
+Identity / Relation Status: source-local occurrence only; not merged with any Samuel/Saml Allen elsewhere. Working/preparing to settle is not normalized into residence, domicile, possession, ownership, legal title, completed settlement, or a general rule for other rows.
+Notes: compiled separately from the same remark’s nonresidence and father-in-law co-residence propositions because those relations turn differently.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT 4
+Person / Entity: Saml A Allen [Public Lands p.93 name-field occurrence; governing direct-source reading]
+Date: at the time of the treaty [context supplied by the same General Remarks construction; exact documentary dating otherwise OPEN]
+Earned verb / relation: General Remarks separately STATES `but was not living on the place`.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.93 / OHC_2485–OHC_2486 visible manuscript witness
+Place: `the place` [same remark; relation to `his present place` retained within the jacket and not geometrically resolved here]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.93 — Saml A Allen settlement-preparation / nonresidence / father-in-law relation and Wid Perry / Charlie Gray slave-count grammar — OHC_2485/OHC_2486 source jacket
+Identity / Relation Status: source-local negative-residence proposition only; it does not establish where the place was, when Allen later began residence there, ownership, domicile, title, abandonment, removal, or permanent absence.
+Notes: proposition-local companion to Return 3; kept separate so settlement-preparation is not collapsed into residence.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT 5
+Person / Entity: Saml A Allen [Public Lands p.93 name-field occurrence; governing direct-source reading]
+Date: at the time of the treaty [context supplied by the same General Remarks construction; exact documentary dating otherwise OPEN]
+Earned verb / relation: General Remarks separately STATES Allen `was living with his father in-law.`
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.93 / OHC_2485–OHC_2486 visible manuscript witness
+Place: father-in-law’s location not supplied by this proposition
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.93 — Saml A Allen settlement-preparation / nonresidence / father-in-law relation and Wid Perry / Charlie Gray slave-count grammar — OHC_2485/OHC_2486 source jacket
+Identity / Relation Status: source-local living-with / kin-role proposition only. The father-in-law is unnamed and unmerged; `living with` does not by itself establish household headship, dependency, property relation, farm locality, acreage relation, permanent residence, or a completed genealogy.
+Notes: governing direct-source jacket controls `was living with his father in-law.`; Quoin’s first-pass prose has the materially different `nor living with his father in law`, which remains derivative correction history and is not promoted over the direct-source reading.
+
+
+Crossing note: page 94 is now governed by Mullion’s OHC_2487 source-facing jacket; the older forward-seam paragraph above is preserved as its historical reading state. Source PDFs, duplicate custody copies, and the study PNG remain on their existing archival/study roads and do not move with this jacket. Maker attribution and the Glean / Needle Up / Fieldglass contribution boundaries above remain standing.

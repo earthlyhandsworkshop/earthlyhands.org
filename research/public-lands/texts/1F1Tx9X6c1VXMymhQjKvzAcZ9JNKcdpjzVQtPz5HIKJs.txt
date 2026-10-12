@@ -1,0 +1,179 @@
+GLEAN SOURCE-FACING JACKET — OHC_2484 page 92 — west-Mississippi remarks, or-name occurrence, and 91→92→93 seam
+
+
+Source identity
+Historical object: manuscript page 92 in “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+Status: primary-source manuscript witness as preserved through archival scan/PDF capture; direct study used a rendered view of the PDF and the admitted study-image relation for legibility. The render used in this pass is a temporary local derivative, not another historical source.
+Received source filename: OHC_2484.pdf.
+
+
+Exact custody / roads home
+Copy A: OHC_2484.pdf — Drive ID 1odbpTxkEqbaWdrQX2YJaq5WnCft_Ipx0 — 237,404 bytes — parent “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces” — parent Drive ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+Copy B: OHC_2484.pdf — Drive ID 1yK2AoFdF1FLP5oUpJzhMGOqy7sDeDzWv — 237,404 bytes — parent “Source objects — received batch 1 — OHC 2408–2518” — parent Drive ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Payload check performed in this pass: the two PDF custody objects are byte-for-byte identical; SHA-256 a1608733a319250f752c332dcf1e120b25c45febca3f5590a8a673030fb628ba.
+Custody consequence: retain two custody objects / two roads home / one underlying PDF payload / one manuscript witness. The duplicate files are not independent corroboration.
+
+
+Study representation
+OHC_2484.png — Drive ID 1Vl5EmDlR9Ec6_U5ibyLWCGkY5-2qZuRQ — 1,304,164 bytes — parent “76 Distinct Study Surfaces” — parent Drive ID 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh.
+Representation status: study derivative/representation of the same manuscript witness. It does not create another historical source.
+Temporary local render used for direct inspection in this pass: derived from Copy B at 300 DPI. It was not admitted to the corpus and is not a return path.
+
+
+Documentary boundary
+One visible manuscript face, page number 92. The face is a continued No. 3 return form with printed columns for Names of Indians owning Farms, acres cultivated, family counts, age/sex counts, Locality of Farms, Total No. of Acres, and General Remarks. This jacket does not assert completeness of the larger return or infer document order beyond the bounded neighboring-page seam established below.
+
+
+Source-facing reading 1 — General Remarks versus Locality of Farms
+A row whose name reads “Estongik.” at useful confidence carries:
+- No. of acres cultivated: 5.
+- Entire No. of the Family: 12.
+- Males over 16 years: 2.
+- Males and Females under 10 years: 4.
+- Locality of Farms: no written locality is visible on this row.
+- General Remarks: “Gone West Mississippi.”
+
+
+A later row, name correction-open as [unclear: Maintutbe?], also carries the General Remarks phrase “Gone west Mississippi.” The exact capitalization differs on the visible face; the wording is preserved rather than normalized.
+
+
+Finding
+On page 92, “Gone West Mississippi.” / “Gone west Mississippi.” is written in General Remarks, not in the Locality of Farms column. On at least the Estongik row, the return simultaneously preserves farm-owner/family/cultivation values while the remark records that west-Mississippi status. The phrase should therefore not be silently moved into the farm-locality field or treated as the geographic location of the listed farm.
+
+
+Interpretation boundary
+The source supports the local column distinction above. It does not, from these rows alone, establish the date of departure, duration or permanence of absence, exact destination, route, legal removal status, later residence, whether “Mississippi” means the river rather than another administrative/geographic referent, or whether the recorded farm remained occupied by relatives or others.
+
+
+Source-facing reading 2 — “or” inside the name field
+One name-cell occurrence reads, with the connective secure but both personal-name readings still correction-open:
+[unclear: Nontamutbe?] or [unclear: Mushulubbe?]
+
+
+Finding
+The manuscript itself places two written name forms in one name field joined by “or.” That connective is source text and must survive transcription. This jacket does not choose one form as canonical and does not decide whether the relation is alias, alternative spelling, compiler uncertainty, name change, translation, or some other naming practice.
+
+
+Unresolved questions
+- What are the strongest exact readings of the two names joined by “or” after comparison with nearby occurrences in this return?
+- What documentary meaning does “or” carry in this specific return: alias, alternate form, correction, compiler uncertainty, or another relation?
+- What exact temporal and geographic meaning did the clerk intend by “Gone West Mississippi.” on this page?
+- Are there other pages in No. 3 where the same phrase appears, and is it consistently placed in General Remarks rather than Locality of Farms? This is a retrieval question, not a corpus-level rule.
+- Is [unclear: Maintutbe?] the strongest reading of the later row carrying the second west-Mississippi remark?
+
+
+Explicit nonclaims
+- The two written names joined by “or” are not silently merged with any same- or similar-name occurrences elsewhere in Public Lands.
+- The “or” connective does not by itself establish that two separate people are being listed; neither does it prove a single modern-style legal alias.
+- “Gone West Mississippi.” is not treated as the farm’s locality merely because it is geographic-sounding language.
+- Appearance in this return, cultivated-acre values, family counts, or ownership labeling do not by themselves establish the person’s residence on the farm at the moment represented by the remark.
+- The phrase does not by itself prove permanent removal, treaty entitlement, citizenship status, later domicile, or exact destination.
+- The duplicate PDF custody copies and the PNG study representation do not create additional historical witnesses.
+
+
+Backward seam
+The immediately preceding worked manuscript face is page 91, represented by OHC_2483 and already jacketed as “Public Lands No. 3 p.91 — Major Leflore purchase-from-Robert / son-gift nonresidence and Capt Shields 7-slaves row — OHC_2483 source jacket.” That jacket opened page 92 only far enough to establish the bounded forward seam and explicitly left page-92 rows unworked. This jacket receives that seam rather than duplicating page 91.
+
+
+Forward seam
+OHC_2485.pdf was opened only far enough in this pass to establish a distinct manuscript face visibly numbered 93 under the same “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty” body. Page-93 row content was not worked in this pass. This earns only the bounded 92→93 pagination/form seam.
+
+
+Next retrieval target
+If page 93 remains unjacketed at a later return, it is a legitimate neighboring source object. The present pass does not assign it or pre-interpret its rows.
+
+
+Maker: Glean
+Date: 2026-09-07
+
+
+UPWARD CROSSING — Needle Up — 2026-09-07
+This jacket now informs the active Public Lands reading grammar and Administrative Attrition method on one narrow point: a source name field containing alternative written forms joined by `or` is preserved as one source-field occurrence with PERSON CARDINALITY / NAME-RELATION unresolved. Neither alternative is canonicalized or counted as a separate person without independent source grammar. Upward destinations: `03 — DOCUMENTARY BODIES — Bell–McKinney daylight` and `09 — ADMINISTRATIVE ATTRITION — Public Lands population to later federal bodies — Bell–McKinney daylight`. Glean retains all source-facing reading, correction-open spellings, seam work, representation control, and custody; Needle Up owns only the upward parsing/counting rule.
+
+
+
+
+Fieldglass deepening — category-count subtrack — 2026-09-09
+
+
+Direct source return
+
+
+OHC_2484.pdf Copy A (Drive ID 1odbpTxkEqbaWdrQX2YJaq5WnCft_Ipx0) was reopened as the governing manuscript witness and rendered at 240 DPI for direct visual inspection. The render is a temporary local derivative only. The existing Copy A / Copy B / one-payload / one-witness custody rule and the admitted OHC_2484.png study representation remain unchanged.
+
+
+Whole-face Locality-track audit
+
+
+The complete visible Locality of Farms track was audited specifically for numeric white(s), slave(s), or Black(s) category phrases. At present visual reach, no safely readable numeric phrase using any of those category words is observed anywhere on page 92. This state is recorded as “audited no category phrase observed at present visual reach.” It is not converted into zero whites, zero slaves, zero Blacks, or proof that no obscured mark exists.
+
+
+The absence is not produced by an inactive or wholly blank Locality column. The same face visibly uses that column for ordinary geographic language, including “Near the Chiefs. Leflore. Yazoo valley” on one upper row and “Yazoo valley” on a later row. General Remarks separately carries the already-jacketed “Gone West Mississippi.” / “Gone west Mississippi.” phrases. Those column distinctions remain intact.
+
+
+Immediate seam consequence
+
+
+The directly preceding manuscript face, page 91 / OHC_2483, has one controlled locality-track category occurrence on the penultimate visible row: “7 slaves]” followed by fresh geography. Page 92 then presents a whole audited face with no observed numeric white/slave/Black phrase while ordinary locality writing remains active. This creates a direct consecutive-face contrast inside Public Lands No. 3: explicit category notation on page 91 -> audited no-observed-category face on page 92.
+
+
+That contrast strengthens only a narrow grammar finding: the numeric white/slave/Black notation is not visibly a universal overlay applied continuously to every row or every face of this continued return. The source still does not establish why the notation appears or disappears, when it was entered, who entered it, whether it reflects an instruction or later accounting layer, or how any source-written Black(s) occurrence relates to slave(s). No category conversion is made.
+
+
+Arithmetic / emancipation guardrail
+
+
+Page 92 contributes no arithmetic zero to any later reconciliation. An aggregate or district reconstruction must distinguish literal category counts, written category dittos, unresolved marks, representation divergences, and directly audited no-category observations. Likewise, the absence of a slave-count phrase on this face cannot be used to infer absence of enslaved people, absence of slaveholding, free status, household composition, labor arrangement, or later emancipation. Those claims require other source evidence.
+
+
+Return path
+
+
+Public Lands No. 3 -> page 92 jacket -> whole-face Locality-track audit -> OHC_2484.png admitted study representation / temporary direct PDF render -> OHC_2484.pdf Copy A, Drive ID 1odbpTxkEqbaWdrQX2YJaq5WnCft_Ipx0; duplicate custody Copy B remains Drive ID 1yK2AoFdF1FLP5oUpJzhMGOqy7sDeDzWv.
+
+
+Maker: Fieldglass
+Date: 2026-09-0
+
+
+SMALL DOOR NAME WEB RETURN — 2026-09-20
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 1
+Person / Entity: Estongik [Public Lands p.92 farm-row occurrence; Glean direct-source reading; Quoin first-pass reads `Estongah`]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.92 General Remarks STATES `Gone West Mississippi.` on the Estongik row, while no written Locality of Farms is visible on that row. The row separately carries 5 cultivated acres, entire family = 12, males over 16 = 2, and under-10 field = 4.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.92 / OHC_2484 manuscript witness
+Place: source-written `Gone West Mississippi.` occurs in General Remarks, not Locality of Farms; exact geographic referent, direction, destination, and relation to the listed farm remain OPEN
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.92 — Estongik / Maintutbe west-Mississippi remarks and correction-open or-name occurrence — OHC_2484 source jacket
+Identity / Relation Status: source-local occurrence only; Glean's `Estongik` reading remains direct-source and useful-confidence rather than an identity bridge, while Quoin's `Estongah` remains derivative correction history. `Gone West Mississippi.` is preserved as source wording and is not converted into permanent removal, route, residence, legal status, exact destination, or the farm's locality.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 2
+Person / Entity: [unclear: Maintutbe?] [Public Lands p.92 farm-row occurrence; Quoin first-pass reads `Maintubbe`]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.92 General Remarks CARRIES `Gone west Mississippi.` on this correction-open named row.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.92 / OHC_2484 manuscript witness
+Place: source-written `Gone west Mississippi.` is a General Remarks phrase; exact geographic referent, direction, destination, and relation to any listed farm remain OPEN
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.92 — Estongik / Maintutbe west-Mississippi remarks and correction-open or-name occurrence — OHC_2484 source jacket
+Identity / Relation Status: source-local occurrence only; governing direct-source name reading remains correction-open and Quoin's `Maintubbe` remains derivative correction history. The movement-sounding phrase is not normalized into permanent removal, treaty status, residence, route, destination, or farm locality.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 3
+Person / Entity: [unclear: Nontamutbe?] or [unclear: Mushulubbe?] [Public Lands p.92 name-field occurrence; Quoin first-pass reads `Aontanubbe or Mushahalah`]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.92 name field PRESENTS two correction-open written name forms joined by source-written `or` in one name-cell occurrence.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.92 / OHC_2484 manuscript witness
+Place: not supplied by this proposition
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.92 — Estongik / Maintutbe west-Mississippi remarks and correction-open or-name occurrence — OHC_2484 source jacket
+Identity / Relation Status: one source-field occurrence with person cardinality and name-relation unresolved; neither written form is canonicalized, neither is counted as a separate person, and `or` is not normalized into legal alias, alternate spelling, translation, correction, name change, or compiler uncertainty without further evidence. Quoin's substantially different first-pass readings remain derivative correction history, not a second witness or identity bridge.
+
+
+Representation-history note — not a fourth index row: page 92's audited no-observed numeric white/slave/Black category state, its ordinary locality writing, the page-91→92 category-track contrast, and the broader question of what `Gone West Mississippi.` means remain rich jacket prose. The two byte-identical OHC_2484 PDFs remain two custody roads to one manuscript witness; the admitted PNG and temporary renders remain representations, not additional witnesses.
+
+
+— Small Door | Name Web compilation footing; Glean, Fieldglass, Needle Up, and Quoin attribution, source custody, representation history, and richer prose remain in place
+9

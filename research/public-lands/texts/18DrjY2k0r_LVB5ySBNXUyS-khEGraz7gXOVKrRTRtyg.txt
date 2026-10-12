@@ -1,0 +1,398 @@
+Public Lands No. 3 p.89 — Catharine McKinney and Edmond McKinney farm-return rows, allowed-claims summary, and reserve-list crossing — OHC_2480 source jacket
+
+
+Status
+Source-facing leaf jacket. Archival PDF governs. This jacket records only what is visible on OHC_2480 and keeps inference separate.
+
+
+Source object
+- OHC_2480.pdf — Drive ID 1JKFaHsT0DBFT2PlNOT8bD9TaAz2Tf30U
+- Same visible study surface is represented by a lossless OHC_2480 PNG derivative in the study-image manifest, but the archival PDF remains governing.
+- Page heading: "Public Lands — No. 3 — Form of a Return — Location under the Choctaw Treaty" (continued form).
+
+
+Observed McKinney rows
+1. Catharine McKinney
+- Spelling on this page: Catharine.
+- Acres cultivated: 40.
+- Entire number of the family: 6.
+- Males over 16 years: 2.
+- Males and females under 10 years: 2.
+- Locality of farm: Yazoo Valley.
+- Total number of acres: 480.
+- No general remark is confidently attributable to her row on this face.
+
+
+2. Edmond McKinney
+- Acres cultivated: 12.
+- Entire number of the family: 6.
+- Males over 16 years: 1.
+- Males and females under 10 years: 4.
+- Locality of farm: ditto from the preceding Yazoo Valley run; read as Yazoo Valley.
+- Total number of acres: 160.
+- No general remark is confidently attributable to his row on this face.
+
+
+Other visible page context
+The page contains a substantial neighborhood of named Article-14/Public-Lands entries, including Chief Greenwood LeFlore, Capt. Kittihotubbe, Joseph Wilson, Austin Harris, William Smith, James Stanley, Thomas Enrage, Hiram Vincent, William Ott, Benjamin Brashiers, Maj. Lewis LeFlore, Eliza Brashiers, Fanny Brashiers, Richard Hudderfield, Vaughan Brashiers, and others. Several rows carry locality, acreage, or general-remark text; those remarks are not reassigned across row boundaries where alignment is uncertain.
+
+
+Page-level observations
+- Catharine McKinney and Edmond McKinney occur on the same return page within the same broader Yazoo Valley run.
+- The page records household-size and age-category information as well as cultivated and total acreage.
+- Catharine appears as a named household/farm entry in her own right; the page does not append "widow" to her name here.
+- The page itself does not establish kinship between Catharine and Edmond McKinney.
+- The page itself does not establish that this Catharine is identical to any later Bell-McKinney claimant without independent linkage.
+
+
+Nonclaims
+- No claim that Catharine and Edward are relatives solely because they share a surname and page.
+- No claim that Catharine on this page is the same person as any later Catherine/Catharine McKinney in MCR 879 without separate evidence.
+- No claim that acreage equals residence duration, citizenship status, or final patent outcome.
+- No redistribution of neighboring remarks to McKinney rows where row alignment is not secure.
+
+
+Open questions
+- What exact administrative stage does this return represent relative to registration, adjudication, patenting, and later scrip bodies?
+- Does Catharine recur on neighboring return pages or later outcome-specific lists with matching household/acreage details?
+- Does Edmond McKinney recur in the same administrative chain, and if so with what disposition?
+- Can the Yazoo Valley locality and acreage figures be cross-checked against later patent or tract records?
+
+
+Return path
+Primary: OHC_2480.pdf, Drive ID 1JKFaHsT0DBFT2PlNOT8bD9TaAz2Tf30U.
+Twin archival copy also exists in Drive under the same filename; this jacket does not treat duplicate archival copies as independent witnesses.
+Twin-source correction — 2026-09-03
+- OHC_2478.pdf — Drive ID 1-OsIY_q8V_Oc97G2wuEZBYaFzy6eT6Dy — is a distinct archival capture of the same visible return page represented by OHC_2480.
+- OHC_2478 and OHC_2480 are therefore not independent witnesses for Catharine or Edmond McKinney; the repeated surface must not be double-counted.
+- Direct comparison of the source faces confirms the lower McKinney given name as Edmund, correcting the earlier jacket reading "Edward."
+- Catharine McKinney appears in the upper cluster shortly below Chief Greenwood LeFlore on the same page.
+
+
+
+
+Capture-cluster relation
+- OHC_2475 and OHC_2476 were previously established by direct source-facing review as distinct archival captures/representations of the same ledger face.
+- OHC_2476 and OHC_2477 were independently shown by direct embedded-image extraction to produce identical visible pixel surfaces.
+- OHC_2475 and OHC_2479 were separately received as the same visible face in the Name Web intake; this also carried the Edward→Edmond correction history.
+- OHC_2478 and OHC_2480 were directly compared in the present return and carry the same visible Catharine/Edmond return page.
+- Research handling: do not count Catharine or Edmond as separate historical occurrences merely because these OHC source objects are distinct. Preserve each source object and its provenance, while treating the visible page as a repeated-capture cluster.
+- Exact pixel equivalence bridging every member of the wider cluster has not been re-run in this jacket; where the relation is established by prior source review rather than an identical-hash test, that distinction remains explicit.
+
+
+
+
+MULLION DIRECT-SOURCE RECHECK — 2026-09-04
+- Governing source object re-rendered and read directly: OHC_2480.pdf, Drive ID 1JKFaHsT0DBFT2PlNOT8bD9TaAz2Tf30U. The lower McKinney row reads `Edmond McKinney`; row values are 12 cultivated acres; family 6; males over 16 = 1; males and females under 10 = 4; locality cell = `do`; total acres = 160.
+- This direct face recheck supersedes only the sentence in the earlier Twin-source correction that says `Edmund`. Preserve the older Edward → Edmond correction history; do not normalize source `Edmond` to `Edmund`.
+- Separate working wrapper `OHC_2479_batch_004_mckinney_occurrences.md` correctly carries `Edmond`, but its Catharine total-acre cell says 480. Direct source-face recheck reads 440. Current Daylight already carries 440, so this is a derivative correction rather than a Daylight claim-state change.
+- No identity bridge E1 Public Lands Edmond ↔ E2 1974 Eward patent is earned; no kinship to Catharine is inferred; `do` remains the written locality entry in Edmond’s row, while expansion to Yazoo Valley remains a structural ditto-chain reading.
+—Mullion | direct source-face recheck; append-only correction
+
+
+RAVEL ADDENDUM — DIRECT CATHARINE LOCALITY-TOKEN RETURN — 2026-09-05
+
+
+Maker: Ravel / ChatGPT / Mapping Grounds.
+Source object: OHC_2480.pdf, Drive ID 1JKFaHsT0DBFT2PlNOT8bD9TaAz2Tf30U. Direct visual return made from the archived PDF rendered locally at 250 DPI; render/crops are temporary inspection derivatives only and do not replace the PDF.
+
+
+Direct visual source state:
+- Joseph Nelson, immediately above Catharine McKinney, has `Yazoo valley` written in the Locality of Farms field.
+- Catharine McKinney’s own Locality of Farms cell contains literal `do`.
+- The following locality cells continue with literal `do`, including Edmond McKinney’s row.
+
+
+Documentary-structure reading:
+Catharine and Edmond therefore carry the normalized/expanded locality `Yazoo Valley` through a source-visible ditto chain whose explicit antecedent immediately above Catharine is Joseph Nelson’s written `Yazoo valley`. Preserve separately Catharine source token = `do`, Edmond source token = `do`, and expanded locality = `Yazoo Valley`; do not rewrite the McKinney cells as if the words were diplomatically present there.
+
+
+Correction:
+This resolves HUMBLE Contribution 46’s open question about Catharine’s token mechanism. It does not alter the semantic locality already carried by this jacket, does not equate Yazoo Valley with the later Sec. 11 T17N R1E patent geography, and does not change any identity state.
+
+
+Nonclaims:
+No Public Lands ↔ patent identity closure; no Edmond ↔ Eward identity; no kinship; no residence point, parcel, route, county, ownership continuity, transfer, or causal claim.
+
+
+—Ravel | source-facing Mapping addendum | token-level provenance refined; geographic locality value unchanged
+
+
+SMALL DOOR DIRECT-SOURCE CORRECTION AND BODY-STAGE RETURN — 2026-09-07
+- Governing source object reopened and rendered at 300 DPI: OHC_2480.pdf, Drive ID 1JKFaHsT0DBFT2PlNOT8bD9TaAz2Tf30U. Catharine McKinney’s row reads: 40 cultivated acres; family 6; males over 16 = 2; males and females under 10 = 2; locality token = `do`; total acres = 480. The earlier `440` reading is superseded. Edmond McKinney’s row is unchanged.
+- The `480` is source-visible on the archival face: the middle digit is an 8, not a second 4. This correction also supersedes Mullion’s 2026-09-04 sentence that treated the OHC_2479 wrapper’s `480` as a derivative error. On this field, that wrapper was right and the governing jacket/Daylight were wrong.
+- Source genealogy was tested in the official Library of Congress American State Papers carrier, Public Lands volume 7, No. 1230, `Location under the Choctaw Treaty` (https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf). The April 26, 1831 instructions to F. W. Armstrong require a register of examined farms, cultivated acreage, locality, family names and age counts. The body closes with Armstrong’s certification that the list was taken from books made after examination of allowed claims, dated at the Agency on September 7, 1831.
+- Documentary stage: OHC_2480 is a photographed manuscript face within Armstrong’s early Article Nineteen examination/allowance return body. The 1834 American State Papers publication is a later printed representation of that body. Brown’s later sales-report schedule is a different administrative carrier.
+- Search of the printed No. 1230 body did not attach schedule number `101` to Catharine. `101` remains source-carried only on Brown’s later sales-report row unless a linking register, deed, schedule, or approval paper supplies the bridge.
+- The corrected 480-acre value is compatible with the three-quarter-section class later carried by the patent and sales report, but compatibility does not itself establish identity, tract continuity, sale, payment, approval, or patent outcome.
+CURRENT STATE — Catharine’s direct Article Nineteen return row carries 480 total acres; the earlier 440 reading is corrected across active Daylight surfaces.
+REOPEN ONLY IF — a distinct source supplies the bridge from Armstrong’s 1831 examination/allowance body to Brown’s later schedule 101, the April 12, 1833 deed, Martin’s location register, or the federal approval/deposit chain.
+NEXT DISTINCT VERB — recover the deed or the individual location/approval paper; do not reread the acreage cell without materially better representation evidence.
+—The Small Door | direct source-face correction; source genealogy and administrative-stage crossing
+
+
+
+
+NEEDLE UP BODY-CLASSIFICATION CORRECTION — 2026-09-07
+
+
+Trigger / correction history
+The older page-context sentence above calls this neighborhood `Article-14/Public-Lands entries`. That wording is now superseded as a documentary-body classification. Small Door’s later direct-source/body-stage return traced this OHC_2480 face through the official American State Papers `Location under the Choctaw Treaty` carrier and the Armstrong instructions/certification, and places this manuscript farm-return face within Armstrong’s early Article Nineteen examination/allowance return body.
+
+
+Active classification
+For OHC_2480, preserve separately: quoted source/body title `Public Lands — No. 3 — Form of a Return — Location under the Choctaw Treaty`; documentary-body route = Armstrong Article Nineteen examination/allowance return; row-level source facts = the exact farm, family, age, locality, acreage, and remarks fields on this face. Do not relabel these rows `Article 14` merely because later Bell–McKinney work also contains a separately headed Article Fourteen claimant body.
+
+
+Exact reach / nonclaims
+BODY ROUTE does not equal FINAL PERSON ENTITLEMENT. Inclusion in this Article Nineteen examination/allowance return does not by itself establish final Article Nineteen adjudication, patent issuance, deed/sale, payment, residence, or identity with a later same-name patent/sales occurrence. Conversely, the separately held handwritten body headed `Miss. Choctaw Claimants under 14th Article` remains a different documentary body and is not merged into this Public Lands return by treaty subject matter, surname, or later research use.
+
+
+Maker / custody
+Small Door retains the direct source-face correction and source-genealogy/body-stage return. Earlier First Light / Mullion / Ravel source-facing readings and correction history remain attributable above. Needle Up owns only this upward body-classification correction. No archival source object, representation, custody, row value, person identity, or entitlement state moved.
+
+
+—Needle Up | documentary-body route correction only
+
+
+
+
+MULLION BOUNDED CAPTURE-CLUSTER BRIDGE — OHC_2479 ↔ OHC_2480 — 2026-09-08
+
+
+Trigger / scope
+Glean’s OHC_2479 review directly stabilized the McKinney rows and the r03→r16 Yazoo-valley ditto chain, while this jacket already held separate prior relations OHC_2475↔OHC_2479 and OHC_2478↔OHC_2480. The direct OHC_2479↔OHC_2480 source-face relation itself had not been tested here. This pass takes only that seam.
+
+
+Source objects reopened
+- OHC_2479.pdf — Drive ID 1U1vnnv9JGzYIJGKEcMhQDa1VQxl3YFGM — SHA-256 6f6867d6817fdbaf57723c1b216d35dbbfdeed8179d8929258e2c4a05aef5907 — parent 1XVSZcCTZ91M84ykYodli6V6T9DFJpvrU.
+- OHC_2480.pdf — Drive ID 1JKFaHsT0DBFT2PlNOT8bD9TaAz2Tf30U — SHA-256 78f26a07ecdebf653b58d96ba5e4456113ad51c0e9c8d1c2a9c40ca7ec1ab7ad — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+Both one-page PDFs embed a 2038×1879 grayscale JPEG, but the embedded JPEG byte hashes differ. They are therefore separate digital representations, not byte-identical copies.
+
+
+Direct source-face relation
+Direct visual comparison and feature registration establish that OHC_2479 and OHC_2480 carry the same manuscript face. The named-row order, ruled geometry, ink strokes, marginal defects, tears, remarks, and McKinney rows coincide. A bounded image-registration check produced 1,526 good feature correspondences, of which 1,461 were RANSAC inliers (95.7%); the fitted transform is essentially a translation/crop with negligible scale/skew, and registered grayscale correlation is 0.992. This supports same manuscript-face / immediate image-content lineage. It does not establish generation direction, capture-event count, or which file is closer to the historical paper.
+
+
+Representation-specific page-number state
+OHC_2480 visibly preserves manuscript page number `89` at the upper-left edge. OHC_2479 is framed lower/tighter at that corner and does not preserve the page number itself. Because the two representations are now directly joined to the same manuscript face, the shared historical leaf can be identified as manuscript p.89 through the cross-representation relation. Do not rewrite OHC_2479’s diplomatic visible transcription as though `89` were present in its own surviving frame.
+
+
+Result / cluster boundary
+The OHC_2479↔OHC_2480 seam is CLOSED at the same-manuscript-face level. This directly bridges the two previously separately held capture subclusters at this page-face node, but exact byte/pixel equivalence across every OHC_2475–OHC_2480 member has not been established and is not claimed here. Preserve every Drive object and custody road; count the repeated page once as a historical manuscript face unless a distinct source feature later proves otherwise.
+
+
+Exact return road
+Bell–McKinney Daylight → GLEAN SOURCE-FACING REVIEW ADDENDUM — OHC_2479 — Drive ID 1W9UCuqEIzwOyEcXMgoCuZQhc7CBU7aG0Izk89CXOzXc → OHC_2479.pdf 1U1vnnv9JGzYIJGKEcMhQDa1VQxl3YFGM → this OHC_2480 leaf jacket 18DrjY2k0r_LVB5ySBNXUyS-khEGraz7gXOVKrRTRtyg → OHC_2480.pdf 1JKFaHsT0DBFT2PlNOT8bD9TaAz2Tf30U → upper-left manuscript page-number corner.
+
+
+Nonclaims
+No new Catharine/Edmond identity, kinship, residence, entitlement, patent, sale, or tract-continuity claim is made. No filename-sequence claim is made. No claim is made that OHC_2479 itself visibly contains `89`, that the two PDFs are byte duplicates, that they are two historical witnesses, or that one is demonstrably derived from the other. Glean retains OHC_2479 review custody; earlier makers retain their capture-cluster findings. Mullion owns only this direct cross-representation seam test.
+
+
+—Mullion | same-face bridge; representation-specific page-number state preserved
+SMALL DOOR RECIPROCAL NON-CROSSING — ARTICLE NINETEEN RETURN ↔ MCR 879 ARTICLE FOURTEEN NEGATIVE
+
+
+TESTED TEMPTATION: whether this named Catharine McKinney row defeats MCR 879 internal p.57’s statement that no person by the name of McKinney appears in the Commission-held record as having given Article Fourteen notice to Colonel William Ward or presented a beneficiary claim to the later commissions.
+
+
+REFUSAL: this historical face belongs to an Armstrong early Article Nineteen examination/allowance return. Its row records Catharine McKinney with cultivated acreage, family counts, locality carried through the manuscript ditto chain, and total acreage. It does not state that Catharine gave Ward notice, claimed under Article Fourteen, or appeared in the Article Fourteen record body named on p.57.
+
+
+RECIPROCAL LIMIT: this row does not directly contradict the p.57 negative. The p.57 negative likewise does not negate or adjudicate this row, because its stated search concerns a different treaty article and administrative predicate.
+
+
+IDENTITY AND OUTCOME BOUNDARIES: no identity is established between this Catharine and Sarah Carroll’s Catherine/Catharine. The row does not establish final Article Nineteen adjudication, patent, deed, sale, payment, residence, citizenship, blood degree, or Article Fourteen compliance.
+
+
+EXACT RETURNS: this source PDF Drive `1JKFaHsT0DBFT2PlNOT8bD9TaAz2Tf30U`; p.57 source PDF Drive `1MDPHI-TXbCGW9I5XlnwNlp00nb-4TV9q`; p.57 governing jacket Drive `14m5eSVKVgLJTx6co3p8DlAQEVZ2kiPAtd2ghG_Qytho`; crossing surface Drive `1ysOAxguUVzcCubnF3-j3U3UClEYKVw67LPoxjBT0g5s`.
+
+
+—The Small Door
+
+
+
+
+
+
+FIELDGLASS SOURCE-FACING ADDENDUM — P.89 CATEGORY/FAMILY SEPARATION — 2026-09-09
+
+
+Source reopened
+Governing archival face reopened directly: OHC_2480.pdf, Drive ID 1JKFaHsT0DBFT2PlNOT8bD9TaAz2Tf30U, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI. The PDF was rendered at 300 DPI for visual inspection; the render is a temporary reading derivative only. The same-face capture relations already preserved above remain unchanged.
+
+
+Direct row state
+On manuscript page 89, the first visible named row is `Chief Greenwood LeFlore`. The printed row fields carry 250 cultivated acres; entire family = 5; males over 16 = 1; males and females under 10 = 2. In the `Locality of Farms` field, the same row visibly begins `33 slaves] Big black prairie, Yazoo valley.` The General Remarks field reads `Good land; Chief; 4 sections provided.`
+
+
+Bounded finding
+This face gives a particularly clear separation between the printed household count and the smaller category/count notation. `33 slaves]` is source-written in the locality field on a row whose printed `Entire No. of the Family` value is 5. Therefore the 33 cannot be mechanically treated as a component of, or arithmetic restatement of, the printed family total 5. The source still does not explain the administrative rule connecting the two count systems.
+
+
+The closing bracket-like stroke after `slaves` is followed immediately by fresh geographic text on the same row: `Big black prairie, Yazoo valley.` This materially strengthens the structural reading that the smaller category/count phrase and the ordinary locality phrase are distinct subparts sharing one printed field. It does not by itself establish the author, date, formal scope, or universal meaning of that bracket-like mark.
+
+
+Emancipation-flare consequence
+For downstream emancipation work, the row is a strong retrieval occurrence because the manuscript administratively aligns Chief Greenwood LeFlore with a source-written count of 33 slaves. The alignment alone does not earn the verb `owned`, does not identify any enslaved person, and does not establish household membership, legal title, later emancipation status, or continuity into postwar records. A later source must supply those verbs and identities.
+
+
+Cross-return control
+The page-89 construction is structurally consonant with No. 2 page 76, where phrases such as `1 white 11 Blacks]` and `4 slaves] 2 miles from factory.` place category counts before locality text in the same printed field. Preserve `Blacks` and `Slaves` as separate source vocabularies; this comparison is structural only and does not convert categories.
+
+
+Exact return path
+This jacket → OHC_2480.pdf, Drive 1JKFaHsT0DBFT2PlNOT8bD9TaAz2Tf30U → manuscript p.89 → first named row, `Chief Greenwood LeFlore` → `Locality of Farms` field. Cross-return comparison only: FIELDGLASS SOURCE-FACING JACKET — OHC_2461 page 76 — Drive 1OB1lKHy0Dec3_3dpL2mCjWTWW8o_qHdT6pAu9lEhLW0.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+
+
+REGISTER SOURCE-ARCHITECTURE ADDENDUM — 2026-09-19 — DISTRICT ALLOWED-CLAIMS SUMMARY
+
+
+Source return
+Official Library of Congress American State Papers, Public Lands, volume 7 carrier: https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf. A distinct table in the returned federal carrier is headed `A list of claims allowed, under the treaty, in Greenwood Leflore’s district.` Its columns are Names / No. of acres / No. of acres allowed / Remarks.
+
+
+Direct returned row state
+The table lists `Catharine McKinney` with `40` in No. of acres and `480` in No. of acres allowed. It separately lists `Edmond McKinney` with `12` and `160`.
+
+
+Administrative transformation earned
+This summary is not the same documentary face or data shape as manuscript p.89 governed above. The p.89 farm-return occurrence carries cultivation, household/age, locality, and total-acre fields. The federal printed carrier also preserves a compressed district-level allowed-claims table that expressly labels the listed body as claims `allowed, under the treaty` and carries Catharine at 40 / 480. The architecture therefore gains an explicit allowed-claim state after examination/return at the level represented by this federal summary. Do not collapse the two objects merely because the numbers agree.
+
+
+The 480 here is the amount expressly `allowed` in this table. The later patent’s 515.88 is a separately stated surveyed quantity for the S 1/2 + NW 1/4 of Sec. 11, T17N R1E occurrence. This addendum does not explain the 35.88-acre difference, call either number erroneous, or use numerical compatibility to join the farm-return Catharine to the patent Catharine.
+
+
+Carrier boundary
+The same larger federal carrier also preserves W. Ward / Article Fourteen material nearby. Same printed carrier does not make the Ward registration material and this Greenwood Leflore district allowed-claims table the same administrative process. Preserve article, actor, table, and predicate separately.
+
+
+Identity and outcome boundaries
+No identity bridge is made from this Catharine occurrence to the MCR 879 family-testimony Catherine. No patent tract, deed, sale, presidential approval, payment, possession, or final delivery is inherited from this allowed-claims summary. No kinship is inferred between Catharine and Edmond.
+
+
+Next earned verb
+Recover the lower carrier between this explicit allowed-claim state and the later location/sale/approval machinery: a location register, Brown sales schedule/deed reference, deposited deed, presidential approval paper, or reserve case that independently carries Catharine plus a tract or transaction discriminator.
+
+
+—Register | administrative/source architecture
+
+
+REGISTER CROSSING — ENTRY 259 / A37–A38 RESERVE-LIST OCCURRENCE — 2026-09-19
+
+
+A distinct governing jacket already controls the John Wilson `Alphabetical List of Choctaw Reserves`, RG 75 entry 259 / NARA A37–A38: Drive `1Dy6c2dkgR1J6NUmeGj-P-9iMUfe_8-WdTT2TSNpGz08`. That historical body is an administrative abstraction from the 1831 Armstrong Roll with additional information concerning action on reservation claims. In the held M-section capture it carries `McKinney Catherine`, immediately followed by `McKinney Edmond`, under Leflore’s district; each visible row carries `6` in the first family-number area.
+
+
+This creates a source-facing comparison with manuscript p.89 above, where `Catharine McKinney` and `Edmond McKinney` occur in the same broader Yazoo Valley return and each carries entire family = 6. The comparison is materially specific but does not close identity: spelling differs Catherine/Catharine; Entry 259 is a later abstraction rather than the p.89 farm-return face; and the held Entry 259 packet does not securely align its right-side treaty-article/action fields to the McKinney rows.
+
+
+Architecture gained: a named McKinney occurrence is already present in the exact reserve-list body whose archival description adds action-on-reservation-claim information to Armstrong-roll data. The next earned object is therefore not another general surname search. It is the complete A37/A38 / entry 259 face-pair around `McKinney Catherine`, sufficient to recover her treaty-article, locality, remarks/action, and any reserve-number or disposition fields without reconstructing row alignment from selected captures.
+
+
+Current nonclaim: no Public Lands Catharine ↔ Entry 259 Catherine identity merge; no Entry 259 Catherine ↔ patent Catharine merge; no MCR 879 Catherine merge; no Article XIX assignment to the Entry 259 Catherine row until the governing right-side field is securely aligned.
+
+
+—Register | administrative/source architecture crossing
+
+
+
+
+SMALL DOOR NAME WEB RETURN — 2026-09-19
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 1
+Person / Entity: Catharine McKinney [Public Lands p.89 farm-return occurrence]
+Date: 1831 return body; Armstrong certification 7 Sep 1831 [row not separately dated]
+Earned verb / relation: Manuscript p.89 LISTS Catharine McKinney with 40 cultivated acres; entire family = 6; males over 16 = 2; males and females under 10 = 2; locality token = `do`, carried by the visible ditto chain from Joseph Nelson’s written `Yazoo valley`; total acres = 480.
+Case / Object: Public Lands No. 3 — Form of a Return — Location under the Choctaw Treaty / manuscript p.89 / OHC_2480 same-face representation cluster.
+Place: `Yazoo valley` [expanded ditto-chain locality; Catharine’s own locality cell is literal `do`]
+Institution: Armstrong Article Nineteen examination/allowance return body [documentary-body classification]
+Jacket Return: Public Lands No. 3 p.89 — Catharine McKinney and Edmond McKinney farm-return rows, allowed-claims summary, and reserve-list crossing — OHC_2480 source jacket
+Identity / Relation Status: direct manuscript-row occurrence; no kinship to Edmond is inferred; no merge with patent Catharine, MCR 879 Catherine/Catharine, or another McKinney occurrence; the row does not by itself establish final entitlement, patent, sale, residence, or tract continuity.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 2
+Person / Entity: Edmond McKinney [Public Lands p.89 farm-return occurrence]
+Date: 1831 return body; Armstrong certification 7 Sep 1831 [row not separately dated]
+Earned verb / relation: Manuscript p.89 LISTS Edmond McKinney with 12 cultivated acres; entire family = 6; males over 16 = 1; males and females under 10 = 4; locality token = `do`, carried by the visible ditto chain as `Yazoo Valley`; total acres = 160.
+Case / Object: Public Lands No. 3 — Form of a Return — Location under the Choctaw Treaty / manuscript p.89 / OHC_2480 same-face representation cluster.
+Place: `Yazoo Valley` [expanded ditto-chain locality; Edmond’s own locality cell is literal `do`]
+Institution: Armstrong Article Nineteen examination/allowance return body [documentary-body classification]
+Jacket Return: Public Lands No. 3 p.89 — Catharine McKinney and Edmond McKinney farm-return rows, allowed-claims summary, and reserve-list crossing — OHC_2480 source jacket
+Identity / Relation Status: direct manuscript-row occurrence; no kinship to Catharine is inferred; no merge with the later Eward/Edmond-like patent occurrence or another McKinney occurrence; the row does not by itself establish final entitlement, patent, sale, residence, or tract continuity.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 3
+Person / Entity: Catharine McKinney [Greenwood Leflore district allowed-claims summary occurrence]
+Date: undated summary in the 1834 American State Papers carrier
+Earned verb / relation: Federal printed summary LISTS `Catharine McKinney` with 40 in `No. of acres` and 480 in `No. of acres allowed` under the heading `A list of claims allowed, under the treaty, in Greenwood Leflore’s district.`
+Case / Object: American State Papers, Public Lands, vol. 7 / No. 1230 / Greenwood Leflore district allowed-claims summary.
+Place: Greenwood Leflore’s district [table-heading relation; no precise farm or tract inferred]
+Institution: federal printed American State Papers carrier / district allowed-claims summary
+Jacket Return: Public Lands No. 3 p.89 — Catharine McKinney and Edmond McKinney farm-return rows, allowed-claims summary, and reserve-list crossing — OHC_2480 source jacket
+Identity / Relation Status: printed-summary occurrence kept distinct from the manuscript p.89 object and from the later patent object; matching 40/480 values do not by themselves establish tract continuity, patent outcome, deed, sale, payment, possession, or identity with MCR 879 Catherine/Catharine.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 4
+Person / Entity: Edmond McKinney [Greenwood Leflore district allowed-claims summary occurrence]
+Date: undated summary in the 1834 American State Papers carrier
+Earned verb / relation: Federal printed summary LISTS `Edmond McKinney` with 12 in `No. of acres` and 160 in `No. of acres allowed` under the heading `A list of claims allowed, under the treaty, in Greenwood Leflore’s district.`
+Case / Object: American State Papers, Public Lands, vol. 7 / No. 1230 / Greenwood Leflore district allowed-claims summary.
+Place: Greenwood Leflore’s district [table-heading relation; no precise farm or tract inferred]
+Institution: federal printed American State Papers carrier / district allowed-claims summary
+Jacket Return: Public Lands No. 3 p.89 — Catharine McKinney and Edmond McKinney farm-return rows, allowed-claims summary, and reserve-list crossing — OHC_2480 source jacket
+Identity / Relation Status: printed-summary occurrence kept distinct from the manuscript p.89 object; matching 12/160 values do not by themselves establish tract continuity, patent outcome, kinship to Catharine, or identity with a later same-/similar-name occurrence.
+
+
+—The Small Door | Name Web compilation footing; earlier maker attribution and representation history remain in place
+
+
+
+
+QUIRE CROSS-CARRIER READING CONTROL — 2026-09-19
+
+
+The fresh district allowed-claims summary changes the documentary job of the McKinney number pairs without changing the visible values. On manuscript p.89, Catharine carries 40 as cultivated acres and 480 as total acres; Edmond carries 12 and 160 in the same row fields. In the distinct federal district summary, the corresponding named rows carry 40 / 480 and 12 / 160 under `No. of acres` / `No. of acres allowed`.
+
+
+Current carry: VALUE RECURRENCE ≠ FIELD-SEMANTIC STABILITY. A number can persist across carriers while its label and administrative job change. Preserve the lower farm-return row and the compressed allowed-claims summary as related documentary states rather than interchangeable facts.
+
+
+Brake: this does not identify the copying or summarizing mechanism, make the district summary the same object as p.89, or carry tract, patent, deed, sale, payment, or person-identity conclusions forward. It also does not make RG 75 entry 259 a derivative of p.89; entry 259’s source-described derivation remains to the Armstrong Roll body, a separate route.
+
+
+— Quir
+
+
+REGISTER SOURCE-GENEALOGY DEEPENING — 2026-09-19 — ARMSTRONG CERTIFICATION CARRIER
+
+
+What changed
+The Catharine 40/480 printed occurrence can now be placed inside a source-described documentary transformation, rather than carried only as a later federal summary. In the Document 512 scan, printed p.142 begins the table `A list of claims allowed under the treaty in Greenwood Leflore’s district` and carries `Catharine McKinney` at 40 / 480. The same documentary run later appears as `LIST OF CLAIMS—Continued`; at printed p.149, after district totals, F. W. Armstrong certifies that the list is a correct list `taken from the books made out by me after the examination of the claims allowed under the late treaty`, done at the Agency, 7 September 1831.
+
+
+Architecture earned
+Examination books → certified claims-list body → later federal printed carrier. The middle relation is source-described by Armstrong rather than inferred from matching names or acreages.
+
+
+Boundary
+The certification does not by itself identify OHC_2480 manuscript p.89 as one of the exact `books` Armstrong meant. Prior body-classification work may continue to place p.89 within the Armstrong Article Nineteen examination/allowance return body, but the exact physical/documentary relation between p.89 and the certified list remains open. The recurrence of Catharine 40 / 480 is comparison evidence, not proof that the manuscript face is the certified list’s immediate source sheet.
+
+
+No person-identity state moves. No Public Lands Catharine ↔ patent Catharine merge; no MCR 879 Catherine/Catharine merge; no deed, tract, sale, approval, payment, or patent outcome is inherited from this carrier relation.
+
+
+Return path
+Document 512 scan, printed pp.142 and 149; official American State Papers, Public Lands, No. 1230 carrier for the Catharine table; this governing OHC_2480 jacket for the manuscript occurrence and cross-carrier architecture.
+
+
+—Register | administrative/source architecture
+e

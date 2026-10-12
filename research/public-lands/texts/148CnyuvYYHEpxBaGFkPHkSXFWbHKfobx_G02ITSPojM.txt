@@ -1,0 +1,213 @@
+GLEAN SOURCE-FACING JACKET — OHC_2483 page 91 — explicit nonresidence remark and 90→91→92 seam
+
+
+Source identity
+Historical object: manuscript page 91 in “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+Status: primary-source manuscript witness as preserved through archival scan/PDF capture; direct study used the admitted PNG representation.
+Received source filename: OHC_2483.pdf.
+
+
+Exact custody / roads home
+Copy A: OHC_2483.pdf — Drive ID 1th1BP5zrQnNO5Ge24EqlXwcgBlQa-PEX — 247,341 bytes — parent “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces” — parent Drive ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+Copy B: OHC_2483.pdf — Drive ID 1N7Q60lTdWbGEtbjAunk8rwOjCE-UmO8X — 247,341 bytes — parent “Source objects — received batch 1 — OHC 2408–2518” — parent Drive ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Payload check: both PDFs are byte-for-byte identical; SHA-256 bc273995228c28a59767ab6976285838056fb9e2d9417f2e991eca4024baf014.
+Custody consequence: retain two custody objects / two return routes / one underlying PDF payload / one manuscript witness. Do not count the duplicate files as independent corroboration.
+
+
+Study representation
+OHC_2483.png — Drive ID 13mOmcC6DWVkygZPzw485YMMlw-Nd-oSf — 1,359,329 bytes — parent “76 Distinct Study Surfaces” — parent Drive ID 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh.
+Representation status: study derivative/representation of the manuscript witness, used for legibility. It is not an additional historical source.
+
+
+Documentary boundary
+One visible manuscript face, page number 91. This pass does not assert completeness of the larger return or reconstruct missing context beyond the directly visible page and bounded neighboring-face seam.
+
+
+Source-facing reading — Major Leflore row
+Name field: “Major Leflore.”
+No. of acres cultivated: 30.
+Locality of farm: [unclear: Funnagusha?] creek.
+Family-count and total-acre fields on this row are not treated as filled merely because neighboring rows contain values.
+
+
+General Remarks carries a narrative distinct from the printed columns. The following language is directly legible at useful confidence:
+- “Bought by the Major from Robert three years ago”
+- “and given to his son … who now resides with his father.” The son’s written name between “son” and “who” is not responsibly settled in this pass.
+- “none of the family ever resided on the place”
+A small interlinear “in cultivation” appears in the remark; its exact insertion point in the sentence is not settled in this pass and is therefore preserved as an interlinear source feature rather than silently normalized into prose order.
+
+
+Finding
+This row directly separates farm ownership/cultivation from residence. The printed body identifies Major Leflore under “Names of Indians owning Farms,” gives 30 cultivated acres, and names a farm locality, while the General Remarks explicitly says that “none of the family ever resided on the place.” On this row, appearance as a farm owner and evidence of cultivation therefore do not establish residence at the farm.
+
+
+A second useful name boundary is also preserved: “Robert” appears in the purchase narrative without a surname. It is a source occurrence only. This jacket does not identify that Robert with Robert Bell, another Robert in Public Lands, or any other same-given-name person.
+
+
+Interpretation boundary
+The source itself supports the narrow documentary distinction between owning/cultivating and residing. It does not, by this row alone, explain the legal character of the purchase, the administrative reason for listing Major Leflore rather than the son, the exact meaning or placement of the interlinear “in cultivation,” or the residence history of the farm before or after the period described.
+
+
+Unresolved questions
+- What is the exact reading of the son’s written name in the General Remarks?
+- Is [unclear: Funnagusha?] the strongest locality reading after comparison with other occurrences of the creek name in the same return?
+- What exact syntactic position does the interlinear “in cultivation” occupy?
+- Does another page or source identify the single-name “Robert” in this purchase narrative? No identity bridge is created here.
+- Does the larger No. 3 return use similar explicit nonresidence language elsewhere, and if so under what locally comparable circumstances? This is a retrieval question, not a corpus-level conclusion.
+
+
+Explicit nonclaims
+- “Major Leflore” here is not silently merged with Michael Leflore, Govr Leflore, Greenwood Leflore, or any other Leflore occurrence.
+- “Robert” here is not Robert Bell unless another source earns that relation.
+- Farm ownership, cultivation, or appearance in this return does not by itself establish residence.
+- The remark does not establish that the listed 30 cultivated acres were cultivated personally by Major Leflore, by the son, by family members, by enslaved laborers, by tenants, or by any other specifically identified labor force.
+- “Given to his son” is not treated here as proof of a modern deed, patent, fee-simple transfer, inheritance, or other legal category not named by the source.
+- The duplicate PDF custody copies and the PNG study surface do not create additional historical witnesses.
+
+
+Backward seam
+The immediately preceding worked manuscript face is page 90, represented by OHC_2481/OHC_2482 and already jacketed as “Public Lands No. 3 p.90 — Jacob movement-since-treaty, Michael Leflore supplement, and Capt Oakchiah Leflore-testimony remarks — OHC_2481/OHC_2482 source jacket.” That jacket established the forward page-91 face without doing page-91 row work. This jacket receives that seam rather than duplicating page 90.
+
+
+Forward seam
+OHC_2484.pdf was opened only far enough to establish a distinct manuscript face visibly numbered 92 under the same “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty” body. Page-92 row content was not worked in this pass. This earns only the bounded 91→92 pagination/form seam.
+
+
+Next retrieval target
+If page 92 remains unjacketed at a later return, it is a legitimate neighboring source object. The present pass does not assign it or pre-interpret its rows.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+Fieldglass deepening — category-count subtrack — 2026-09-09
+
+
+Direct source return
+OHC_2483.pdf Copy A (Drive ID 1th1BP5zrQnNO5Ge24EqlXwcgBlQa-PEX) was reopened as the governing manuscript witness and read at high visual scale. The existing two-copy / one-payload / one-witness custody rule remains unchanged.
+
+
+Whole-face locality-track audit
+At present visual reach, one safely readable numeric white/slave/Black-category phrase appears on this face. It is on the penultimate visible row. The name field visibly carries “Capt Shields (6 fields)” at useful confidence; “(6 fields)” is preserved as source-written row text and is not normalized into the person-name string.
+
+
+The same row visibly carries:
+- cultivated acres: 21;
+- Entire No. of the Family: 5;
+- males over 16: 2;
+- Locality of Farms: “7 slaves]” followed by fresh locality wording beginning “Four miles from the Chf Greenwood Leflore…”;
+- total acres: 640.
+
+
+The final locality wording after “Leflore” is not promoted here beyond present visual reach. The source-written “7 slaves]” is retained diplomatically; the closing bracket-like stroke is not converted into punctuation of another kind.
+
+
+Grammar finding
+This row supplies another direct instance in Public Lands No. 3 where a numeric slave-category phrase and ordinary geography occupy the same printed Locality field as separable subparts: “7 slaves]” closes, then fresh place language begins. That strengthens the category-subtrack reading without making the bracket a universal requirement, since other controlled faces also carry bare category phrases without it.
+
+
+The printed family total on this row is 5 while the separate locality-track slave count is 7. Therefore the 7 cannot be treated as a simple numerical decomposition of the printed “Entire No. of the Family” figure on this row. This independently reinforces the page-89 Greenwood LeFlore row, where 33 slaves likewise exceeds a printed family total of 5. It does not yet establish a universal rule about who the printed family column includes or excludes; it establishes only that these two measures are not mechanically interchangeable on the controlled rows.
+
+
+Whole-face negative state
+No second numeric white(s), slave(s), or Black(s) category phrase was safely observed elsewhere on page 91 at present visual reach. That is an audited no-other-phrase observation, not an arithmetic zero and not proof that no obscured or unresolved mark exists.
+
+
+Emancipation / labor boundary
+The Capt Shields row is a legitimate retrieval occurrence for the flare because it aligns a named administrative farm row with a source-written count of seven slaves. It does not name any of the seven people; establish legal ownership, title, household membership, residence, sale, later emancipation, or freed-person identity; or establish that those seven people cultivated the source-written “6 fields,” the 21 cultivated acres, or any particular land. No owner→freed-person chain is created here.
+
+
+Crossing boundary
+Comparison to page 89 is structural only: both are Public Lands No. 3 rows showing separate family and slave counts whose arithmetic cannot be collapsed. No person identity, household, locality, labor arrangement, or ownership relation is transferred between the rows.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+Fieldglass Mapping Addendum — recurring Tunnagusha / Quilla place forms — 2026-09-10
+
+
+Direct source return and correction
+OHC_2483.pdf Copy A (Drive ID 1th1BP5zrQnNO5Ge24EqlXwcgBlQa-PEX) was reopened as the governing manuscript witness and inspected at high visual scale. A temporary local 400-DPI render was used only for reading and is not admitted as another source or custody object.
+
+
+Correction: the Major Leflore Locality of Farms reading formerly held as `[unclear: Funnagusha?] creek` is superseded at present visual confidence by `Tunnagusha creek`. The superseded reading remains correction history. Direct comparison to manuscript p.90 / OHC_2481, where the same hand repeatedly writes `Tunnagusha village.` and `Tunnagusha creek.`, supports the diplomatic reading only; p.90 is a neighboring face of the same continued return, not an independent geographic witness and not proof that every like-written occurrence is one feature.
+
+
+Whole-face map-facing locality audit
+Page 91 visibly carries three separate `Quilla village` occurrences at present visual confidence, a separate `Swamp field` occurrence, a later `Quilla creek` occurrence, a penultimate directionless locality relation beginning `Four miles from the Chf Greenwood Leflore's`, and a final `Yazoo valley` occurrence. The penultimate row also carries a preceding non-spatial category annotation in the same Locality field; that annotation is preserved by the earlier jacket deepening and is not reinterpreted or extended here. The possessive referent after `Leflore's` is not supplied by this pass.
+
+
+Map consequence
+Across manuscript pp.90→91, source-written `Tunnagusha` occurs with both `village` and `creek`; on p.91 source-written `Quilla` occurs with both `village` and `creek`, while p.90 separately carries `Quilla creek.`. These now earn OPEN recurring-place-form / FEATURE-CANDIDATE clusters for historical-reference-layer testing. The cluster state is a retrieval and comparison device, not a geographic identity finding: no source here says that a village is on, at, or identical with the like-named creek, and no member supplies a canonical spelling or modern feature for another.
+
+
+`Swamp field` stays a separate source-written agricultural/site occurrence. `Four miles from the Chf Greenwood Leflore's` stays a source-stated four-mile relation with no direction and an unresolved endpoint class; do not supply house, residence, plantation, property, ownership, or a map point from the possessive. `Yazoo valley` remains broad source geography rather than a polygon.
+
+
+Representation / provenance boundary
+Authoritative object for this correction and p.91 locality audit: the OHC_2483 manuscript witness as preserved in the byte-identical PDF custody copies already identified above. The p.90 OHC_2481 face is comparison control from the same documentary run, not a second historical witness for p.91 and not a coordinate donor. Any workshop grouping of Tunnagusha or Quilla occurrences is map-derived and remains weaker than the source-written occurrence-level wording.
+
+
+Nonclaims
+No modern Tunnagusha or Quilla identification; no village center; no creek polyline; no settlement-to-creek topology; no route; no parcel; no residence; no ownership; no row-to-row or page-to-page physical adjacency; no legal-route equivalence; no category conversion; no emancipation/postwar synthesis.
+
+
+Next honest source
+A period map, gazetteer, survey, agency map, field note, or other independently controlled geographic witness capable of locating and distinguishing the Tunnagusha and Quilla village/creek forms. Greater precision requires that new source crossing rather than a tighter rendering of these table rows.
+
+
+Exact return path
+Marauder's Map / Mapping Grounds shared face → this p.91 governing jacket (Drive 148CnyuvYYHEpxBaGFkPHkSXFWbHKfobx_G02ITSPojM) → Fieldglass Mapping Addendum — recurring Tunnagusha / Quilla place forms → OHC_2483.pdf Copy A (Drive 1th1BP5zrQnNO5Ge24EqlXwcgBlQa-PEX) → manuscript p.91, Locality of Farms. Reading comparison only → p.90 governing jacket (Drive 1aN7THfxPX6u3PdFoiIcfOTYZyY9x12lg8rLEwZFdKIM) → OHC_2481.pdf (Drive 1QQPc_SPRtEXG6zEkRiNVvVnMIwrY8ntC) → manuscript p.90 Locality of Farms.
+
+
+Maker: Fieldglass
+Date: 2026-09-10
+
+
+
+
+SMALL DOOR NAME WEB RETURN — 2026-09-20
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 1
+Person / Entity: Major Leflore [Public Lands p.91 farm-row occurrence] / Robert [surname-less purchase-narrative occurrence]
+Date: source states `three years ago`; the page-facing return does not independently date the purchase or the annotation
+Earned verb / relation: Manuscript p.91 General Remarks STATES `Bought by the Major from Robert three years ago` on the Major Leflore row. The same row separately carries 30 cultivated acres and the directly corrected locality reading `Tunnagusha creek`.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.91 / OHC_2483 manuscript witness
+Place: `Tunnagusha creek` [source-written row locality after direct-source correction; this return does not place Robert there or establish the situs of the purchase]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.91 — Major Leflore purchase-from-Robert / son-gift nonresidence and Capt Shields 7-slaves row — OHC_2483 source jacket
+Identity / Relation Status: source-local Major Leflore and surname-less Robert occurrences only; Robert is not identified with Robert Bell or any other Robert; `Bought ... from` remains the manuscript's wording and is not expanded into deed, patent, fee title, consideration, transaction date, possession, or later land outcome; no merge with Michael Leflore, Govr Leflore, Greenwood Leflore, or another Leflore occurrence.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 2
+Person / Entity: Major Leflore [Public Lands p.91 farm-row occurrence] / [son name unresolved in governing direct-source reading]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.91 General Remarks STATES that the farm was `given to his son … who now resides with his father` and separately STATES `none of the family ever resided on the place.` The relation remains proposition-local to this row: the source supplies the father/son language and explicitly separates the son's present residence with his father from residence on the listed farm.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.91 / OHC_2483 manuscript witness
+Place: row locality `Tunnagusha creek`; the co-residence phrase is NOT assigned to that farm or locality because the same remark says none of the family ever resided on the place
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.91 — Major Leflore purchase-from-Robert / son-gift nonresidence and Capt Shields 7-slaves row — OHC_2483 source jacket
+Identity / Relation Status: source-local kinship/residence wording only; the son's written name remains unresolved in the governing direct-source reading; `given to his son` is not normalized into deed, patent, fee-simple transfer, inheritance, or another legal category; `resides with his father` does not identify a geographic residence and is not converted into residence at the farm.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 3
+Person / Entity: Capt Shields [Public Lands p.91 penultimate farm-row occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.91 name field CARRIES source-written `Capt Shields (6 fields)` and the same row's Locality of Farms field CARRIES `7 slaves]` followed by fresh locality wording beginning `Four miles from the Chf Greenwood Leflore's`; the row separately carries 21 cultivated acres, entire family = 5, males over 16 = 2, and total acres = 640.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.91 / OHC_2483 manuscript witness
+Place: `Four miles from the Chf Greenwood Leflore's` [source-relative wording; no direction; endpoint class and the wording after `Leflore's` remain unresolved]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.91 — Major Leflore purchase-from-Robert / son-gift nonresidence and Capt Shields 7-slaves row — OHC_2483 source jacket
+Identity / Relation Status: source-local Capt Shields occurrence only; `(6 fields)` remains source-written row text and is not normalized into the person name; the seven people counted as `slaves` are unnamed and Shields is not inferred to be one of them; the count does not establish ownership, household membership, residence, labor on the six fields or 21 cultivated acres, sale, emancipation, freed-person identity, or a relation to a separately occurring person; source-written `Capt` does not establish title continuity elsewhere; the Greenwood Leflore possessive does not supply a house, residence, plantation, property, ownership relation, or map point.
+
+
+Representation-history note — not a fourth index row: Quoin's first-pass image body carries alternative derivative readings including `Reluck`, `Bazal`, `Capt Shilde (6 field)`, and `Five miles from the Chief Greenwood Leflore.` The governing direct-source jacket presently controls `Robert`, keeps the son's written name unresolved, reads `Capt Shields (6 fields)`, and reads `Four miles from the Chf Greenwood Leflore's`. The Quoin body remains derivative correction/comparison history, not an independent witness and not a second storage target.
+
+
+— Small Door | Name Web compilation footing; Glean, Fieldglass, and Quoin attribution, source custody, representation history, and richer mapping/prose findings remain in place

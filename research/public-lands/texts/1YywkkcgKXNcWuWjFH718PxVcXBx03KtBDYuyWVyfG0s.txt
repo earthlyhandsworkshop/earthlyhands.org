@@ -1,0 +1,199 @@
+OHC_2474 — Treaty-time status certification
+Source: OHC_2474.pdf, Load 1. Source unchanged.
+
+
+Readable core
+
+
+“I do hereby certify that the above named persons were captains in my district at the time of the [treaty] made at Dancing Rabbit creek, on the 27th Sep[tember …] and that a list of their names was furnished by me [cut edge] Armstrong; when called on, for the purpose of allowing additional half section as provided for in the treaty.”
+
+
+The closing line reads: “Done at the agency, on the Sep 2, 1831.”
+
+
+It is signed “Greenwood LeFlore,” followed by “Chief of Western District Choctaw…” with the final word or words cut by the capture edge. A separate notation appears to read: “Note. W. Ward Agent C.N.”
+
+
+Earned observation
+
+
+This is not merely a list of people serving as captains when the ledger was made. LeFlore certifies backward to their status “at the time of the treaty made at Dancing Rabbit creek.” The page therefore appears to be later administrative proof of treaty-time status, supplied so an additional half-section could be allowed under the treaty.
+
+
+Boundary
+
+
+The original capture cuts off the right ends of several lines. The missing recipient or connective wording before “Armstrong,” the year following the treaty-date phrase, and the complete district title cannot be transcribed responsibly from this image. No complete diplomatic transcription is claimed.
+
+
+True Bearing — source-facing Deep Study return; no custody or source change.
+
+
+FIELDGLASS DIRECT-SOURCE CORRECTION AND DEEPENING — 2026-09-06
+
+
+Status: direct reinspection of the stored PDF face; earlier True Bearing reading retained above as correction history, not silently rewritten.
+
+
+Exact source / representation footing
+- OHC_2474.pdf — Drive ID 1YZIon5Y1XVBDsm4zKllinDLenYSYwOtj — parent folder 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 263,972 bytes.
+- OHC_2474.pdf — Drive ID 15uCNdDdSO8cMFMJHRVNG4QnO72iPZJ0K — parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 263,972 bytes.
+- Both stored OHC_2474 PDFs produced SHA-256 a185d9444917e4d12f82ba0c539b269c110c852c99eee1a771c1dd7c7ca09064 in this pass. They are duplicate custody routes to one PDF payload / one manuscript-page witness.
+- OHC_2473.pdf was also directly opened because earlier Deep Study work had reported the same visible surface under that neighboring filename. Its two stored routes are Drive ID 15moWDZMz1vTTdsN1fQn5mzL-QMI4lQ75 (parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI) and Drive ID 1gqq8aHfS2tL6Ke8_OTsamjgDuCujpLQi (parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA), each 263,972 bytes; active SHA-256 e75168880e4374889b2ef94fae8ad8aedfc015e99adce77e8073d407716d0bce. A direct render comparison between OHC_2473 and OHC_2474 at 200 dpi found no changed pixels. The PDF payloads are different, but the visible page surface is the same for source-reading purposes; they are not treated as independent historical witnesses.
+
+
+Page identity and documentary structure
+The direct face is visibly manuscript page 88. Across the top it reads “Public Lands,” followed by the smaller heading “Unreserved. No 3. Leflore.” The source then titles the table, in substance and with source spelling retained, “A list of the captains entitled to the additional half section under the nineteenth article of treaty.” The ruled columns include Names, a cultivated-acre figure, an “Entitled as Captain” column whose visible entries are 320, and a Total Number of Acres column. This is a special captain-entitlement list, not the ordinary farm-return body visible on the neighboring continued forms.
+
+
+Correction — closing date
+The earlier True Bearing state above and the later Lamp request both recorded the closing date as September 2, 1831. Higher-scale direct inspection of the source face does not support that reading. The active source-facing reading is:
+“Done at the agency on the 7th September, 1831.”
+The former September 2 reading is withdrawn and preserved only as correction history.
+
+
+Certification — exact reach
+The surviving text securely begins “I do hereby certify that the above named persons were captains in my district at the time of the … made at Dancing Rabbit creek, on the 27th Sep…” and later securely carries “and that a list of their names was furnished by me … Armstrong, when called on, for the purpose of allowing additional half section as provided for in the treaty.” The literal right edge of the photographed source cuts the intervening words. This pass does not supply the missing treaty-year text, recipient/connective wording before Armstrong, or the complete district title from outside knowledge.
+
+
+The signature block is visibly Greenwood Leflore. The line beneath reads “Chief of Western district Choctaw…” before the photographed edge removes the remainder. A separate lower-left notation appears to read “Note W. Ward Agent C.N.”; punctuation and the first word remain occurrence-level reading rather than normalized administrative metadata.
+
+
+Forward page seam
+OHC_2475 was directly opened as the smallest earned neighbor. Its face is visibly manuscript page 89 and is headed “Public Lands — No 3 — Form of a Return Continued — Location under the Choctaw Treaty.” It contains the ordinary farm-return columns again, including separate occurrences of Catharine McKinney and Edward McKinney. The source-visible seam therefore establishes only this bounded structure: page 88 is a No. 3 captain-entitlement/certification face, and page 89 is a No. 3 continued farm-return face. Consecutive pagination and shared No. 3 labeling do not by themselves establish why page 88 was placed there, who assembled the surviving sequence, or that any person on page 89 belonged to the page-88 captain list.
+
+
+Finding
+The strongest new administrative fact is not a repaired missing edge but the combination of source-visible structure and corrected date: this page is an explicitly nineteenth-article captain-entitlement list accompanied by Greenwood Leflore’s backward-looking certification of treaty-time captain status, dated 7 September 1831, and the next visible numbered face returns to the ordinary No. 3 farm-return form.
+
+
+Nonclaims
+- No reconstruction of the words lost beyond the photographed right edge.
+- No automatic identification of the missing Armstrong wording as a particular office, title, or transmission formula.
+- No claim that the treaty year visible beyond the cut can be supplied from general historical knowledge.
+- No claim that every page-89 farm holder was a captain, an Article 19 claimant, or a member of the page-88 list.
+- No identity merge involving Catharine McKinney, Edward McKinney, Greenwood Leflore, Armstrong, or W. Ward beyond the exact source occurrences.
+- OHC_2473 and OHC_2474 do not provide two corroborating witnesses merely because they are separately named PDF objects.
+
+
+Return paths
+Primary page-88 source routes: OHC_2474.pdf 1YZIon5Y1XVBDsm4zKllinDLenYSYwOtj / 15uCNdDdSO8cMFMJHRVNG4QnO72iPZJ0K.
+Same-visible-surface neighboring filename routes: OHC_2473.pdf 15moWDZMz1vTTdsN1fQn5mzL-QMI4lQ75 / 1gqq8aHfS2tL6Ke8_OTsamjgDuCujpLQi.
+Forward direct face: OHC_2475.pdf Drive ID 1q2CvgKsPotYefNAbbD1nh6RRhItPDHPA, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI; duplicate-route counterpart already preserved elsewhere in the corpus.
+Released edge-request provenance: The Lamp — source request — complete OHC_2474 certification edge — Drive ID 1Ewd7439U13mZT0sqpu-5UVf4BYmco0y2.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+CROSSING CORRECTION — THE BELL CLAIMANT COPY DOES NOT YET EARN THE LABEL “INITIAL ARMSTRONG ENUMERATION” — 2026-09-06
+
+
+The earlier Waypost relation marker correctly withheld documentary identity between this OHC_2474 Armstrong occurrence and the separately requested handwritten Bell enumeration. Direct source work now strengthens that boundary.
+
+
+Fieldglass directly reopened the governing/title apparatus of the Bell-bearing handwritten body. OHC_2093 visibly titles itself “Miss. Choctaw Claimants under 14th Article.” and its smaller endorsement says “a true copy of the original.” A separately photographed CTN 1 / Choctaw Volume 436 contents face, Hardesty capture 7.png, transcribes the fuller archival title as “Mississippi Choctaw Claimants under 14th Article, a True Copy of the Original, April 30, 1876. W.W.G.” and states that page 8 of the list was missing when filmed. Existing OHC_2093 governing-leaf jacket: Drive ID 1mIU7rqJCHFCJEmsKZgGH54wLMiBr2jfuDdq11wSM2y4. Existing Volume 436 contents-face jacket: Drive ID 1Od38xg2NNDkFuN9gldOZ3Aumn2T17QL-qIfbJJVJd3s.
+
+
+The Bell-bearing face OHC_2110 / source page 15 was also directly reopened. It still visibly carries 412 David Bell and 413 Robert Bell. Nothing on the directly inspected Volume 436 title leaf, contents face, or Bell-bearing page supplies the name Armstrong. The source generation now established for the surviving handwritten body is therefore a source-described 1876 “true copy of the original,” not a demonstrated original or initial enumeration.
+
+
+Active crossing state: OHC_2474 remains an 1831 Article 19 captain-entitlement certification with a cut phrase securely ending in Armstrong. The Volume 436 Bell body remains a later source-described true copy of an underlying original. No source inspected in this pass establishes that the underlying original was the list referred to by Leflore on OHC_2474, that Armstrong made or received the Volume 436 original, or that the Bell occurrences belong to OHC_2474’s captain-entitlement class.
+
+
+This correction does not deny a possible historical relation; it withdraws the workshop shorthand as documentary identity until a source earns it. “Initial handwritten Armstrong enumeration” should therefore remain a legacy/request label when referring to the Bell body, not active source-facing identification.
+
+
+New cross-return path: OHC_2474 jacket → OHC_2093 governing jacket 1mIU7rqJCHFCJEmsKZgGH54wLMiBr2jfuDdq11wSM2y4 → Volume 436 contents jacket 1Od38xg2NNDkFuN9gldOZ3Aumn2T17QL-qIfbJJVJd3s → OHC_2110 Bell-face jacket 1t_ttT4keJTYoYlEGM9jn47Xl11OD8WVX.
+
+
+Nonclaims retained: no identity merge; no reconstruction of the missing OHC_2474 right edge; no claim that absence of the word Armstrong on three inspected Volume 436 faces proves Armstrong had no relation to the lost original; no claim that the 1876 copy date is the compilation date of that original.
+
+
+Maker: Fieldglass
+Date: 2026-09-0
+
+
+FIELDGLASS CROSS-RETURN ADMINISTRATIVE CONTROL — 2026-09-09 — No. 1 p.38 / No. 3 p.88 captain-list grammar
+
+
+Direct source comparison
+
+
+Fieldglass directly reopened the more legible OHC_2416 representation of manuscript p.38 (governed by the existing OHC_2417 p.38 jacket) and the OHC_2473 representation of this same-visible p.88 face. No derivative transcription governs this comparison. OHC_2416/OHC_2417 remain one historical-face family with distinct digital representations; OHC_2473/OHC_2474 likewise remain one historical-face family, not duplicate witnesses.
+
+
+The two historical faces are distinct district/list objects, but they carry materially parallel administrative architecture. Each is headed as a list of captains entitled to an additional half section under the nineteenth article; each separates cultivated acreage from an `Entitled as Captain` 320-acre column and a total-acreage column; and each carries a district-chief certification looking backward to captain status at treaty time and forward to a list supplied to Armstrong when called on for the purpose of allowing the additional half section. Both faces also carry a W. Ward / Agent C.N. notation. The p.38 face additionally carries an interpreter notation. The p.88 recipient/connective wording lost at the photographed right edge remains lost here; p.38 is not used to reconstruct it.
+
+
+Bounded finding
+
+
+This is now a source-backed recurring administrative grammar across two separately numbered Public Lands district bodies: Article XIX captain entitlement was not represented only by ordinary farm rows. It could be carried in a dedicated captain schedule with cultivation figures, a fixed 320-acre captain increment, and a chief's retrospective certification/transmission statement. That recurrence makes the p.88 form less safely describable as an isolated insertion or one-off scribal device.
+
+
+The recurrence does NOT explain the white / slave / Black annotations on the ordinary farm-return faces. No source inspected here says that Armstrong, Ward, either chief, or this captain-list procedure generated those category counts. The useful distinction is therefore positive: we now have an explicit source-visible example of administrative list-making and certification under Article XIX, while the administrative rule behind the racial/status count subtrack remains open. Known machinery must not be borrowed to fill that separate gap.
+
+
+Sequence crossing
+
+
+No. 1: p.38 captain-entitlement/certification face → p.39 ordinary `No. 1 Form of a return` opening.
+
+
+No. 3: p.88 captain-entitlement/certification face → p.89 ordinary `No. 3 Form of a Return Continued` face.
+
+
+The parallel form boundary is source-visible. It does not establish identical compilers, identical district populations, identical instructions in every respect, or identity among any named people.
+
+
+Exact returns
+
+
+No. 1 captain face: existing p.38 jacket `1Cvjg6nKS21RrRmk4RhNOX3c5mIwlLPMSxhvBb7kZoX4` → OHC_2416.pdf `1U9eFtUcmlVYjmCd2sX4n-Mv1RETeAhZ4` (alternate framing of the same p.38 face governed there) → manuscript p.38.
+
+
+No. 3 captain face: this jacket → OHC_2473.pdf `15moWDZMz1vTTdsN1fQn5mzL-QMI4lQ75` / OHC_2474 representation family already controlled above → manuscript p.88 → forward OHC_2475 p.89.
+
+
+— Fieldglass6
+
+
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — SMALL DOOR — 2026-09-20
+
+
+RETURN 1
+Person / Entity: Greenwood Leflore [Public Lands p.88 certification occurrence]
+Date: 7 September 1831 [date of the signed certification; the treaty-time captain-status statement is retrospective]
+Earned verb / relation: Greenwood Leflore’s signed certification STATES that the above named persons were captains in his district at the time of the treaty made at Dancing Rabbit Creek and separately STATES that a list of their names was furnished by him [clipped connective] Armstrong, when called on, for the purpose of allowing the additional half section as provided for in the treaty.
+Case / Object: Public Lands No. 3 manuscript p.88 — Article XIX captain-entitlement schedule / OHC_2473–OHC_2474 representation family
+Place: `the agency` [source closing-place wording]; Dancing Rabbit Creek occurs inside the retrospective treaty clause and is not normalized into the place of certification
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.88 — Greenwood Leflore Article XIX captain schedule / treaty-time certification and Hobilochia or Little Leader row — OHC_2473/OHC_2474 source jacket
+Identity / Relation Status: direct signed source act. The photographed right edge removes connective wording before `Armstrong`; no office/title is supplied there from expectation. The certification is not identified with the separately held Bell / Volume 436 claimant body, and the district-title remainder is not reconstructed.
+
+
+RETURN 2
+Person / Entity: Armstrong [surname-only Public Lands p.88 certification occurrence]
+Date: 7 September 1831 [date of Leflore’s certification]
+Earned verb / relation: Greenwood Leflore’s certification STATES that a list of the above named captains was furnished by him [clipped connective] Armstrong when called on for the purpose of allowing the additional half section under the treaty.
+Case / Object: Public Lands No. 3 manuscript p.88 — Article XIX captain-entitlement schedule / OHC_2473–OHC_2474 representation family
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.88 — Greenwood Leflore Article XIX captain schedule / treaty-time certification and Hobilochia or Little Leader row — OHC_2473/OHC_2474 source jacket
+Identity / Relation Status: surname-only occurrence. No given name, office, title, receiving capacity, or identity with any other Armstrong occurrence is supplied by this return. No relation to the Bell-bearing 1876 `true copy of the original` is inferred.
+
+
+RETURN 3
+Person / Entity: Hobilochia, or Little Leader [Public Lands p.88 row 29 two-form name-field occurrence; spelling carried from Quoin first-pass transcription]
+Date: not independently assigned to the row by this return; the same face carries Leflore’s 7 September 1831 certification and retrospective treaty-time statement
+Earned verb / relation: The governing p.88 jacket carries the row-29 name-field reading `Hobilochia, or Little Leader.` from Quoin’s first-pass transcription; the same source row carries 320 in the `Entitled as Captains` column, with 15 cultivated acres and 480 total acres.
+Case / Object: Public Lands No. 3 manuscript p.88 / row 29 / Article XIX captain-entitlement schedule / OHC_2473–OHC_2474 representation family
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.88 — Greenwood Leflore Article XIX captain schedule / treaty-time certification and Hobilochia or Little Leader row — OHC_2473/OHC_2474 source jacket
+Identity / Relation Status: source-local two-form name-field occurrence joined by source-written `or`; the semantic relation between the two written forms remains unresolved and is not normalized as alias, alternate name, translation, correction, name change, preferred form, or another subtype. The name reading remains explicitly attributed to Quoin’s first-pass transcription. No merge is made with `Capt Little Leader` on p.85, the separately controlled `Nabitochia or Little Leader` occurrence on p.119, or any other Little Leader occurrence. The row’s 320 figure remains the source captain-entitlement column value and is not converted into patent, possession, or later land outcome. Leflore’s page-level certification remains jacket prose and is not used to force a personal date onto the row.
+
+
+— Small Door

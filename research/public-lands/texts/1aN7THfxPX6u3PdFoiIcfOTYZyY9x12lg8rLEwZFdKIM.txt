@@ -1,0 +1,353 @@
+Public Lands No. 3 p.90 — Jacob movement-since-treaty, Michael Leflore supplement, and Capt Oakchiah Leflore-testimony remarks — OHC_2481/OHC_2482 source jacket
+
+
+Status
+Direct-source page jacket for one visible manuscript face carried by distinct archival source objects. Created only after checking that no equivalent page-90 source-facing jacket was findable in the live Public Lands body. Archival PDFs govern custody. The admitted OHC_2481 PNG was used as the legible reading representation; it remains a derivative and does not replace the PDFs.
+
+
+Source identity and documentary boundary
+The visible face is manuscript page 90. Its heading reads: “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.” This pass treats only this page-level face and the two stabilized rows below. It does not claim completeness for the larger return, reconstruct the administrative history of No. 3, or convert neighboring page order into a corpus-level theory.
+
+
+Exact custody and representation footing
+OHC_2481.pdf has two separately stored Drive custody objects:
+- Drive ID 1QQPc_SPRtEXG6zEkRiNVvVnMIwrY8ntC — current parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces” — 255,746 bytes.
+- Drive ID 1HFqrNgxj1ZsfEHBV7e5GowuuLdStT4xw — current parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, “Source objects — received batch 1 — OHC 2408–2518” — 255,746 bytes.
+A fresh full-file check in this pass gives SHA-256 c35ad78ecdeae34a73247f3a318d44d9c5474925b7de83db13357203e102cab1 for both custody copies. They remain two custody objects / two return routes, not two witnesses.
+
+
+OHC_2482.pdf also has two separately stored Drive custody objects:
+- Drive ID 1sqmUAjyGKxmIk_2etccmV1WbkiTW4bPv — current parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces” — 255,746 bytes.
+- Drive ID 16jFdVHakayYQxhQKnyDYEHaB3Tc7WLwe — current parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, “Source objects — received batch 1 — OHC 2408–2518” — 255,746 bytes.
+A fresh full-file check in this pass gives SHA-256 e27b35b5fefb6d0f8e720711a37d4e53c194ee07640199e01c79d842d435393e for both custody copies. They likewise remain two custody objects / two return routes, not two witnesses.
+
+
+OHC_2481 and OHC_2482 therefore have different PDF payload hashes. Prior Deep Study had already established them as an adjacent pair with identical visible pixel surfaces under embedded-image extraction. This pass independently rendered the governing PDFs at 200 DPI and found zero changed pixels across the full page. Preserve both archival identities and sequence positions; for reading the manuscript face, do not double-count them as independent historical witnesses.
+
+
+Reading representation: OHC_2481.png — Drive ID 1wbMBzkP-63ShVqpLddTV4nWGNy3N0NMf — in “76 Distinct Study Surfaces,” parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh. This is a lossless study derivative used for direct visual reading. No OCR or inherited transcription supplied the two readings below. Temporary local crops/renders used for inspection are not preserved as source objects.
+
+
+Direct source reading — stabilized rows
+1. Michael Leflore.
+- Acres cultivated: 74.
+- Entire number of the family: 4.
+- Males over 16 years: 2.
+- Males and females under 10 years: 1.
+- Locality of farms: “Little Black creek. west side.”
+- Total number of acres: 1280.
+- General Remarks: “Provided for in supplement; two sections.”
+
+
+2. Capt Oakchiah.
+- Acres cultivated: 8.
+- Entire number of the family: 9.
+- Males over 16 years: 4.
+- Males and females under 10 years: 2.
+- Locality of farms: “Quilla creek.”
+- Total number of acres: 400.
+- General Remarks: “One sect. on the testimony of Govr Leflore.”
+
+
+Transcription boundary
+The quoted remarks and row values above are direct visual readings from the page-90 study face. “sect.” is retained as the source abbreviation and is not silently expanded. “Govr Leflore” is retained as a source occurrence; it is not normalized to a particular full name. “Capt” is source-written with Oakchiah on this face and is preserved as part of this occurrence without asserting title continuity elsewhere.
+
+
+Finding
+Page 90 makes a useful local distinction between the printed acreage fields and separate administrative/evidentiary prose in General Remarks. Michael Leflore’s row carries “Provided for in supplement; two sections.” beside a printed total-acre figure; Capt Oakchiah’s row separately carries “One sect. on the testimony of Govr Leflore.” beside its printed total-acre figure. The remarks should therefore survive as independent source statements rather than being collapsed into or normalized as acreage data.
+
+
+Interpretation boundary
+This pass does not identify what legal or administrative instrument “supplement” denotes. It does not expand “sect.” to a survey unit, reconcile either remark arithmetically to the printed total-acre figure, or infer the procedural force of “testimony.” The source demonstrates that these statements were written in General Remarks; it does not by itself explain the complete rule that produced them.
+
+
+Unresolved questions
+- What exact instrument or administrative step does “supplement” refer to on this page?
+- What does the source writer intend by “sect.” in this specific remark, and how—if at all—does it relate to the printed 400-acre total?
+- How, if at all, do “two sections” and the printed 1280-acre total relate administratively?
+- Who is the “Govr Leflore” occurrence in this remark, and what source would be required to identify that occurrence responsibly?
+- What evidentiary or administrative role did the cited testimony have in fixing the row’s acreage or entitlement?
+
+
+Explicit nonclaims
+- No identity merge among Michael Leflore, “Govr Leflore,” Greenwood Leflore, or any other Leflore occurrence.
+- No claim that “sect.” has been diplomatically expanded or legally defined in this pass.
+- No claim that either General Remark mathematically explains the printed total-acre figure.
+- No claim that “supplement” means a particular treaty supplement, later statute, schedule, or adjudication without another source.
+- No claim that Capt Oakchiah’s source-written title establishes the same office or status on another date or page.
+- No double-counting of OHC_2481 and OHC_2482 as corroborating historical witnesses merely because their archival object identities differ.
+
+
+Backward and forward seams
+Backward: manuscript page 89 is already source-jacketed through the repeated-capture cluster represented by “LEAF JACKET — OHC_2480 — Public Lands No. 3 Form of a Return — Catharine and Edmond McKinney” (Drive ID 18DrjY2k0r_LVB5ySBNXUyS-khEGraz7gXOVKrRTRtyg). Existing work preserves that page’s repeated-capture structure. This jacket does not absorb or revise it.
+
+
+Forward: OHC_2483.png — Drive ID 13mOmcC6DWVkygZPzw485YMMlw-Nd-oSf — was opened only far enough to establish a distinct manuscript face visibly numbered 91 under the same “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty” form. Page-91 rows were not worked here and no page-91 jacket is claimed by this pass.
+
+
+The earned seam is therefore bounded: 89 → 90 → 91 in visible pagination/form continuity. This does not establish why the surviving archive sequence was assembled as it was, whether every archival filename corresponds one-to-one with a manuscript page, or any person-level relation across the three pages.
+
+
+Return paths
+Primary page-90 archival source routes:
+- OHC_2481.pdf — 1QQPc_SPRtEXG6zEkRiNVvVnMIwrY8ntC / 1HFqrNgxj1ZsfEHBV7e5GowuuLdStT4xw.
+- OHC_2482.pdf — 1sqmUAjyGKxmIk_2etccmV1WbkiTW4bPv / 16jFdVHakayYQxhQKnyDYEHaB3Tc7WLwe.
+Direct reading derivative: OHC_2481.png — 1wbMBzkP-63ShVqpLddTV4nWGNy3N0NMf — “76 Distinct Study Surfaces.”
+Backward page-89 jacket: “LEAF JACKET — OHC_2480 — Public Lands No. 3 Form of a Return — Catharine and Edmond McKinney” — 18DrjY2k0r_LVB5ySBNXUyS-khEGraz7gXOVKrRTRtyg.
+Forward seam face: OHC_2483.png — 13mOmcC6DWVkygZPzw485YMMlw-Nd-oSf.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+GLEAN TARGETED SOURCE RETURN — Jacob (widow) Choctaw occurrence / interlinear treaty remark — 2026-09-08
+
+
+Disposition
+
+
+This is an in-place deepening of the governing page-90 jacket, not a new wrapper and not a full-page transcription. The source materially gives one additional row-level occurrence whose General Remarks geometry had not been recorded in this jacket.
+
+
+Direct source / representation / derivative boundary
+
+
+Direct digital facsimile inspected: OHC_2481.pdf — Drive ID 1HFqrNgxj1ZsfEHBV7e5GowuuLdStT4xw — 255,746 bytes — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, “Source objects — received batch 1 — OHC 2408–2518.” The PDF remains the archival source object used for this return. For visual inspection only, Glean rendered temporary 400-DPI and 800-DPI PNGs and made local crops. Those are reading derivatives only; they were not filed as source objects, were not treated as witnesses, and supplied no OCR transcription.
+
+
+The separately stored OHC_2481 PDF and both OHC_2482 PDFs remain distinct custody objects under the duplicate/same-surface controls already recorded above. This pass did not reopen or recount them as corroborating witnesses.
+
+
+Exact return path
+
+
+Public Lands — Whole-Document Corpus → Source objects — received batch 1 — OHC 2408–2518 → OHC_2481.pdf (1HFqrNgxj1ZsfEHBV7e5GowuuLdStT4xw) → manuscript p.90 → name-field occurrence “Jacob (widow) Choctaw.” → same-row General Remarks.
+
+
+Bounded diplomatic reading
+
+
+Name field: “Jacob (widow) Choctaw.” The parenthetical “(widow)” is source-written and is retained as part of this occurrence; it is not converted here into a modern person-level description or identity claim.
+
+
+Printed numerical fields on the same row are securely readable at this pass as cultivated acres 6; entire family 8; males over 16 years 4. No under-10 figure, locality wording, or total-acre figure is safely promoted from this representation for the row.
+
+
+General Remarks preserves a visible writing operation rather than one flat line. The main line reads:
+
+
+“Moved from Mississippi to the nation since”
+
+
+At the far right, “the treaty.” is written interlinearly above the line, with a visible insertion/caret relation to the end of the main text. A reading-order integration therefore yields:
+
+
+“Moved from Mississippi to the nation since the treaty.”
+
+
+That integrated sentence is a transcriptional reading of the source’s insertion structure; it is not a claim that the manuscript was originally written as one uninterrupted baseline sentence. The interlinear state is the source-facing fact and must remain recoverable.
+
+
+Finding
+
+
+At this exact row occurrence, the manuscript itself records a move “from Mississippi to the nation” and explicitly qualifies the move as occurring “since the treaty” through an interlinear insertion. The useful gain is twofold: the movement statement is row-attributable, and the treaty qualification is visibly part of the manuscript’s own correction/addition geometry rather than wording supplied by later workshop interpretation.
+
+
+Interpretation boundary / nonclaims
+
+
+- “the nation” is not normalized to a modern place, boundary, jurisdiction, or cadastral location in this pass.
+- “the treaty” is not identified here with a specific treaty instrument by external inference, even though the printed form itself is headed as a return under the Choctaw Treaty.
+- The statement is preserved as a source assertion; this pass does not independently prove that the move occurred, when it occurred, or under what legal authority.
+- The interlinear insertion is not dated, attributed to a particular hand, or characterized as contemporaneous, later, clerical, corrective, or evidentiary beyond its visible placement.
+- No identity merge is made between this Jacob occurrence and any Jacob, widow, or Choctaw-labeled person elsewhere.
+- No kinship, household relation beyond the printed family count, ownership, patent, entitlement, residence duration, removal status, citizenship status, or legal consequence is inferred.
+- Absence of safely readable locality or total-acre entries is not converted into “no locality,” “no land,” zero acreage, refusal, or denial.
+
+
+Backward / forward seams
+
+
+Backward: the immediately preceding named row remains separately held. Its name and fields are not used to complete, identify, or interpret the Jacob occurrence, and no remark is carried downward into Jacob’s row.
+
+
+Forward: the immediately following named row is “James Foster.” Its separately visible total-acre figure 160 belongs to that following row and is not imported upward into Jacob’s row. Nothing in the Jacob remark is carried forward into Foster’s row.
+
+
+The previously established manuscript-page seam 89 → 90 → 91 remains unchanged. No content from p.89 or p.91 was used to manufacture the row reading or the meaning of the interlinear treaty phrase.
+
+
+Unresolved questions
+
+
+- whether a future hand-comparison can responsibly attribute the interlinear “the treaty.” to the same hand and writing episode as the main-line remark;
+- whether a stronger representation can classify the row’s presently unpromoted under-10, locality, and total-acre states;
+- what administrative purpose caused this movement statement to be entered in General Remarks;
+- what documentary source, if any, would independently test the row’s movement claim without collapsing this occurrence into a same-name person elsewhere.
+
+
+Maker: Glean
+Date: 2026-09-08
+
+
+
+
+FIELDGLASS SOURCE-FACING DEEPENING — PAGE-90 WHITE-COUNT OCCURRENCES / PUNCTUATION CONTROL — 2026-09-09
+
+
+Disposition
+
+
+In-place deepening of the governing OHC_2481/OHC_2482 manuscript-page-90 jacket. No new wrapper is created. Fieldglass reopened the archival OHC_2481 PDF rather than relying on the earlier jacket text, filenames, OCR, or inherited transcription.
+
+
+Direct source / representation boundary
+
+
+Direct archival facsimile inspected: OHC_2481.pdf — Drive ID 1HFqrNgxj1ZsfEHBV7e5GowuuLdStT4xw — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 255,746 bytes. Temporary 400-DPI render and crops were used only for visual inspection and were not admitted as source objects. Existing duplicate/same-surface controls for OHC_2481/OHC_2482 remain unchanged.
+
+
+Bounded whole-face locality-track audit
+
+
+At present visual reach, the page-90 Locality of Farms column carries exactly two safely readable numeric category phrases using the live white/slave/Black vocabulary. Both are source-written “1 white.” occurrences:
+
+
+- Benoni Taylor. Same row printed fields visibly read cultivated acres 9; entire family 8; males over 16 = 1; under 10 = 3. Locality of Farms: “1 white.” No geographic locality wording is safely present in that cell beyond the category phrase.
+- Isaac Simpson. Same row printed fields visibly read cultivated acres 14; entire family 8; males over 16 = 1. Locality of Farms: “1 white.” The total-acre column visibly carries 160. No geographic locality wording is safely present in that cell beyond the category phrase.
+
+
+No numeric source-written “slave(s)” or “Black(s)” phrase was safely found elsewhere in the page-90 locality track during this full-face pass. This is an observation at present visual reach, not an arithmetic zero and not a claim that such people were historically absent from the named rows or page.
+
+
+Structural finding
+
+
+Page 90 adds a punctuation/layout variant to the category-count grammar. On these two rows the category phrase stands alone in the printed Locality of Farms field and ends with an ordinary period: “1 white.” The page does not supply the bracket-like closing mark seen on some other count-bearing rows, and it does not append fresh geography after the count phrase.
+
+
+This means the bracket-like stroke is not a necessary signature for recognizing the manuscript’s category-count annotations. Audit logic that searches only for count + closing bracket + geography will miss legitimate category occurrences such as Benoni Taylor and Isaac Simpson. Conversely, the two page-90 phrases do not authorize reconstructing a missing place name, household relation, residence, or ownership relation merely because the printed column is labeled Locality of Farms.
+
+
+Crossing / exact reach
+
+
+The page-90 punctuation variant can be compared structurally with other already source-controlled Public Lands count-bearing rows, including page 89’s “33 slaves] Big black prairie, Yazoo valley.” The comparison is limited to manuscript layout behavior: one count phrase can be followed by a bracket-like delimiter and geography, while another can stand alone with a period. This does not establish a common annotator, common date, common administrative instruction, or identical category semantics across the rows or returns. “white,” “slave(s),” and “Black(s)” remain source-distinct vocabulary.
+
+
+Emancipation-flare use / nonclaims
+
+
+Benoni Taylor and Isaac Simpson are now source-backed retrieval occurrences because each named farm row carries a numeric “1 white.” annotation. The source does not identify who the counted white person was, whether that person belonged to the printed family total, lived on the farm, held any legal status relevant to the row-holder, or later appears in another body. No identity merge, household assignment, ownership verb, or postwar continuity is made.
+
+
+Exact return path
+
+
+Public Lands — Whole-Document Corpus → Source objects — received batch 1 — OHC 2408–2518 → OHC_2481.pdf (1HFqrNgxj1ZsfEHBV7e5GowuuLdStT4xw) → manuscript p.90 → Benoni Taylor / Isaac Simpson rows → Locality of Farms column.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+FIELDGLASS MAPPING ADDENDUM — PAGE-89→90 RANKIN / TUNNAGUSHA / BLACK-CREEK LOCALITY BODY — 2026-09-10
+
+
+Disposition
+In-place deepening of the existing page-90 Glean jacket. No new wrapper is created. Fieldglass reopened actual Public Lands manuscript facsimiles OHC_2475.pdf (visible p.89) and OHC_2481.pdf (visible p.90); the existing duplicate/same-surface controls remain in force, so alternate custody copies are not counted as additional historical witnesses.
+
+
+Direct source-facing spatial return
+The lower locality run on p.89 carries four especially useful source-written relations in sequence: `Near Rankin. Mississippi.`; `Near the mouth of Black creek`; `Near Rankin. Yazoo valley.`; and `Tunnagusha creek near Rankin.` The last phrase is the strongest map bridge on the face because it explicitly relates a named creek occurrence to Rankin without requiring page adjacency to do the work.
+
+
+The next visible manuscript face, p.90, independently carries `Near Rankin.` at the top of the locality column; `Tunnagusha village.`; `Black creek`; repeated source-written `Tunnagusha creek.` occurrences; `Spring Prairie`; `Yazoo valley.`; and, lower on the page, the already stabilized `Little Black creek. west side.` and `Quilla creek.` occurrences. One additional p.90 Black-creek locality visibly includes the source phrase `his residence`; that stronger residence wording belongs only to its own row and is not generalized across the locality body.
+
+
+Map consequence
+The Historical Landscape Map now earns a bounded OPEN Rankin / Tunnagusha / Yazoo locality field plus a separate Black-Creek hydrologic field. The source itself earns `Tunnagusha creek --[near]--> Rankin` on p.89 and separately records a `Tunnagusha village` occurrence on p.90. It also earns a p.89 relation `near the mouth of Black creek`, p.90 Black-creek occurrences, and one p.90 `Little Black creek. west side.` occurrence.
+
+
+These relations are not yet geometry. Do not place modern Rankin, draw Tunnagusha Creek or Black Creek, infer the receiving water at Black Creek's mouth, make `Tunnagusha village` identical with the creek or place the village at Rankin, or treat `Little Black creek` as a tributary/branch of `Black creek` from name resemblance. `Spring Prairie`, `Yazoo valley`, and `Quilla creek` remain source-written localities requiring their own historical control before placement. Consecutive manuscript rows/faces are documentary adjacency, not proof of geographic adjacency. The p.90 `his residence` phrase does not convert other Locality of Farms entries into residence claims.
+
+
+Representation / precision boundary
+The reopened PDFs are historical-page facsimiles. Temporary renders/crops used for close reading are reading derivatives only and are not admitted source objects. Literal locality wording is source precision; any future plotted point, line, polygon, modern-name match, watershed relation, or derived distance is a separate map operation requiring its own evidence crossing and return path.
+
+
+Exact return
+Marauder's Map / Mapping Grounds shared face → this Fieldglass mapping addendum → governing p.90 jacket `1aN7THfxPX6u3PdFoiIcfOTYZyY9x12lg8rLEwZFdKIM` → direct inspected p.90 `OHC_2481.pdf` `1QQPc_SPRtEXG6zEkRiNVvVnMIwrY8ntC` → manuscript p.90 Locality of Farms column. Backward source control: Glean p.89 review jacket `1W9UCuqEIzwOyEcXMgoCuZQhc7CBU7aG0Izk89CXOzXc` → direct inspected `OHC_2475.pdf` `1q2CvgKsPotYefNAbbD1nh6RRhItPDHPA` → manuscript p.89 lower Locality of Farms run. Existing alternate same-surface custody routes remain returnable through those jackets and are not independent corroboration.
+
+
+Next honest door
+A period map, survey, road/creek description, land-office locality record, or other independently controlled geographic witness that can locate Rankin relative to Tunnagusha Creek and test Black Creek / Little Black Creek feature identity without borrowing from modern resemblance.
+
+
+Maker: Fieldglass
+Ground: Historical Landscape Map / Public Lands
+
+
+SMALL DOOR NAME WEB RETURN — 2026-09-20
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 1
+Person / Entity: Michael Leflore [Public Lands p.90 farm-row occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.90 General Remarks STATES `Provided for in supplement; two sections.` on the Michael Leflore row; the same row separately carries 74 cultivated acres, entire family = 4, locality `Little Black creek. west side.`, and total acres = 1280.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.90 / OHC_2481–OHC_2482 same-face representation family
+Place: `Little Black creek. west side.` [source wording; modern identity and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.90 — Jacob movement-since-treaty, Michael Leflore supplement, and Capt Oakchiah Leflore-testimony remarks — OHC_2481/OHC_2482 source jacket
+Identity / Relation Status: source-local Michael Leflore occurrence only; `supplement` is not identified; `two sections` is not normalized or arithmetically reconciled to 1280; no merge with `Govr Leflore`, Greenwood Leflore, or another Leflore occurrence; no patent, possession, or final-entitlement conclusion is inherited.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 2
+Person / Entity: Capt Oakchiah [Public Lands p.90 farm-row occurrence] / Govr Leflore [testimony-attribution occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.90 General Remarks STATES `One sect. on the testimony of Govr Leflore.` on the source-written `Capt Oakchiah.` row; the same row separately carries 8 cultivated acres, entire family = 9, locality `Quilla creek.`, and total acres = 400.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.90 / OHC_2481–OHC_2482 same-face representation family
+Place: `Quilla creek.` [source wording; modern identity and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.90 — Jacob movement-since-treaty, Michael Leflore supplement, and Capt Oakchiah Leflore-testimony remarks — OHC_2481/OHC_2482 source jacket
+Identity / Relation Status: source-local Oakchiah occurrence and source-local `Govr Leflore` attribution only; `sect.` remains the source abbreviation and is not expanded; the procedural force of `testimony` remains open; `Govr Leflore` is not normalized or merged with Michael Leflore, Greenwood Leflore, or another Leflore occurrence; source-written `Capt` does not establish title continuity elsewhere.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 3
+Person / Entity: Jacob (widow) Choctaw [Public Lands p.90 name-field occurrence]
+Date: source states `since the treaty`; exact move date and annotation date not supplied
+Earned verb / relation: Manuscript p.90 General Remarks STATES `Moved from Mississippi to the nation since the treaty.` through a visible baseline-plus-interlinear insertion: the main line ends `since`, while source-written `the treaty.` is inserted above with a caret relation.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.90 / OHC_2481–OHC_2482 same-face representation family
+Place: `Mississippi` → `the nation` [literal source terms; `the nation` is not normalized to a modern place, boundary, jurisdiction, or cadastral location]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.90 — Jacob movement-since-treaty, Michael Leflore supplement, and Capt Oakchiah Leflore-testimony remarks — OHC_2481/OHC_2482 source jacket
+Identity / Relation Status: direct row occurrence and source assertion only; `(widow)` remains source-written occurrence language rather than a normalized identity claim; no merge with another Jacob, widow, or Choctaw-labeled occurrence; the statement does not independently establish the move, its legal authority, residence duration, removal status, citizenship status, patent, entitlement, or other legal consequence.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 4
+Person / Entity: Benoni Taylor [Public Lands p.90 farm-row occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.90 Locality of Farms field CARRIES source-written `1 white.` on the Benoni Taylor row; the same row separately carries 9 cultivated acres, entire family = 8, males over 16 = 1, and under-10 field = 3.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.90 / OHC_2481–OHC_2482 same-face representation family
+Place: none assigned by this return; the Locality of Farms cell safely carries the category-count phrase only
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.90 — Jacob movement-since-treaty, Michael Leflore supplement, and Capt Oakchiah Leflore-testimony remarks — OHC_2481/OHC_2482 source jacket
+Identity / Relation Status: source-local Benoni Taylor occurrence only; the counted person is unidentified and Taylor is not inferred to be the person counted; `white` is preserved as source language and is not converted into a modern racial, ethnic, citizenship, household, residence, ownership, employment, dependency, or legal-status claim.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — 5
+Person / Entity: Isaac Simpson [Public Lands p.90 farm-row occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.90 Locality of Farms field CARRIES source-written `1 white.` on the Isaac Simpson row; the same row separately carries 14 cultivated acres, entire family = 8, males over 16 = 1, and total acres = 160.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.90 / OHC_2481–OHC_2482 same-face representation family
+Place: none assigned by this return; the Locality of Farms cell safely carries the category-count phrase only
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.90 — Jacob movement-since-treaty, Michael Leflore supplement, and Capt Oakchiah Leflore-testimony remarks — OHC_2481/OHC_2482 source jacket
+Identity / Relation Status: source-local Isaac Simpson occurrence only; the counted person is unidentified and Simpson is not inferred to be the person counted; `white` is preserved as source language and is not converted into a modern racial, ethnic, citizenship, household, residence, ownership, employment, dependency, or legal-status claim.
+
+
+—The Small Door | Name Web compilation footing; Glean and Fieldglass source-facing attribution, source custody, representation history, and richer map/prose findings remain in place

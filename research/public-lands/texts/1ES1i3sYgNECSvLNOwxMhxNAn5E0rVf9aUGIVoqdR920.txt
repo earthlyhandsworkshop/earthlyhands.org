@@ -1,0 +1,517 @@
+Public Lands No. 2 p.85 — Capt Little Leader row-local 2-slaves count, six-row treaty/governance brace, and ditto-plus-explicit field grammar — OHC_2470 source jacket
+
+
+Status
+Source-facing bounded page jacket. Direct archival face inspected. No separate OHC_2470/page-85 source jacket was located in the bounded live search before this pass. This jacket does not take over Glean’s neighboring page-84 work.
+
+
+Source identity and provenance
+- Documentary body: Public Lands — No. 2 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- Visible manuscript page: 85.
+- Governing archival object inspected: OHC_2470.pdf, Drive object 10hU1Cd7NwneE1OVhrTeKw6UP9kcSsZ_L, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+- Separate custody object with the same inherited filename: OHC_2470.pdf, Drive object 1BLTSXN7sdVoo9Xg6GBHZdrA_t-NEfDlB, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+- Both custody objects are 252,910 bytes and were compared directly in this pass. They are byte-for-byte identical, SHA-256 410518ccf9b9673b4fa3be3504424d8a739e85f0fc1992ac8e17f16f822d2add. They remain two custody objects / two return routes / one identical PDF payload / one manuscript witness.
+- The PDF was rendered locally only for visual inspection. That render and temporary crops are inspection derivatives only and were not admitted to Drive.
+
+
+Bounded reading — top-of-page grammar
+The page begins with a populated row whose name field starts with the source-written title `Captain`; the personal-name spelling is not certified by this pass. On that same first row the source writes 6 cultivated acres, family 9, 2 males over sixteen, 2 under ten, an explicit locality entry rather than a ditto mark, 320 total acres, and the General Remarks phrase `Pine land`.
+
+
+Rows immediately below then use written `do` marks in the locality and/or General Remarks columns. This matters only as page-local source grammar: page 85 supplies its own explicit top-row antecedents before those ditto chains begin.
+
+
+Finding — 84→85 boundary
+Glean’s page-84 jacket already earned the neighboring page/form seam OHC_2469 manuscript p.84 → OHC_2470 manuscript p.85 while keeping the pages distinct. Direct inspection of p.85 now adds a narrower boundary rule: even though the printed form says `Continued`, the first populated row on p.85 carries fresh explicit locality / acreage / remark information. Therefore p.84’s terminal ditto marks must not be carried across the page boundary to supply p.85’s first row.
+
+
+This does not establish a universal rule that ditto chains never cross manuscript pages. It establishes only that no cross-page inheritance is needed or warranted at this specific 84→85 seam because p.85 explicitly restarts the relevant cells on its own first row.
+
+
+Unresolved
+- Exact diplomatic spelling of the first-row personal name after `Captain`.
+- Exact diplomatic spelling of the first-row locality name; this pass certifies only that it is an explicit written locality, not `do`.
+- Full row-by-row transcription of p.85 and the exact scope of each later ditto chain.
+- Whether any later source independently explains the page-level or locality grouping.
+- Authorship/timing of handwritten entries relative to the printed form.
+
+
+Explicit nonclaims
+- No identity merge between any p.85 occurrence and a same- or similar-name occurrence elsewhere.
+- No family, household, property, captaincy, or administrative-group conclusion from adjacency or ditto use.
+- No claim that p.85’s first-row locality/remarks govern every later row on the page; each chain must be read in its own column and sequence.
+- No claim that the two Drive PDFs are two historical witnesses. They are two custody objects with identical payloads.
+- No Bell–McKinney person-state, treaty entitlement, residence, patent, scrip, or kinship state moves from this page-boundary finding.
+
+
+Backward seam
+Glean page-84 jacket: 15E1ULZLKIT_YY0na8aVgk-WMNbC8ofcJkoBEXbcMrxY → OHC_2469 manuscript p.84. Glean retains maker/custody of that reading.
+
+
+Exact return paths
+Primary source-facing path: Bell–McKinney Daylight / Public Lands neighboring-page seam → this Mullion jacket → OHC_2470.pdf → manuscript p.85.
+- legacy/mixed custody: this jacket → OHC_2470.pdf 10hU1Cd7NwneE1OVhrTeKw6UP9kcSsZ_L → parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+- received-batch custody: this jacket → OHC_2470.pdf 1BLTSXN7sdVoo9Xg6GBHZdrA_t-NEfDlB → parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+- backward neighboring return: this jacket → Glean jacket 15E1ULZLKIT_YY0na8aVgk-WMNbC8ofcJkoBEXbcMrxY → OHC_2469 p.84.
+
+
+Maker: Mullion
+Date: 2026-09-06
+State: one bounded Public Lands p.85 source-face pass; 84→85 cross-page ditto carry prevented; custody copies kept distinct; outward joins unchanged.
+
+
+
+
+GLEAN CONTINUATION — OHC_2470 page 85 — PL:p85:r02–r10 mixed ditto/explicit cells
+Date: 2026-09-07
+Maker: Glean
+Status: bounded direct-source deepening of Mullion’s governing page-85 jacket; no second historical-object jacket created.
+
+
+Current source-work footing
+This continuation follows the live Source Work Front Door and full-strength / exact-reach practice: direct source before synthesis; deepen the governing jacket only on material gain; keep custody, representation, temporary derivative, transcription, interpretation, unresolved questions, and nonclaims distinct; preserve the prior Mullion reading and maker boundary; stop at the first honest edge.
+
+
+Exact source and return path
+Direct source object read in this pass: OHC_2470.pdf — Drive 1BLTSXN7sdVoo9Xg6GBHZdrA_t-NEfDlB — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 252,910 bytes. Return road: Public Lands — Whole-Document Corpus → Source objects — received batch 1 — OHC 2408–2518 → OHC_2470.pdf → manuscript p.85 → PL:p85:r02–r10.
+
+
+Mullion previously established the separately stored OHC_2470.pdf at Drive 10hU1Cd7NwneE1OVhrTeKw6UP9kcSsZ_L, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, as byte-identical to the received-batch object. That prior custody result is received here; it was not retested. The two Drive objects remain two custody roads carrying one PDF payload / one manuscript witness.
+
+
+Representation / derivative boundary
+The PDF is the inspected digital facsimile. For this pass Glean rendered a temporary 500-DPI page image and tighter local crops solely for reading. Those rasters are inspection derivatives, not source objects, not corpus additions, and not independent witnesses. No OCR supplied the readings below and the PDF was not altered.
+
+
+Neutral row addresses
+Mullion’s top populated row is designated here PL:p85:r01. The following visible farm-owner rows are numbered top-to-bottom PL:p85:r02, r03, and so on. These addresses are positional only; they contain no name spelling and create no person identity.
+
+
+Bounded diplomatic field pass — PL:p85:r02–r10
+This pass deliberately does not adopt the personal-name spellings. Numeric cells are transcribed only where needed to stabilize row alignment; unread states are not converted to blanks or zeroes.
+
+
+PL:p85:r02 — cultivated acres 1; family 2; no safely readable over-16 or under-10 numeral in this pass. Locality of Farms contains source-written `do` and, farther right on the same row inside that printed field, explicit `Good water`. General Remarks contains source-written `do`. No total-acre figure is safely assigned.
+
+
+PL:p85:r03 — 1 / 5 / 1 / 3 in cultivated acres / family / males over 16 / under 10. Locality contains `do` plus a second `do`; General Remarks contains `do`. No total-acre figure is safely assigned.
+
+
+PL:p85:r04 — cultivated-acre cell contains a nontrivial handwritten/graphic state not safely reduced to a numeral here; family 10; males over 16 = 2; under 10 = 5. Locality contains `do` plus `do`; General Remarks contains `do`. No total-acre figure is safely assigned.
+
+
+PL:p85:r05 — 1 / 3 / 1 / 1. Locality contains `do` plus `do`; General Remarks contains `do`. No total-acre figure is safely assigned.
+
+
+PL:p85:r06 — 3 / 8 / 2 / 4. Locality contains `do` plus `do`; General Remarks contains `do`. No total-acre figure is safely assigned.
+
+
+PL:p85:r07 — 8 / 9 / 2 / 4. Locality contains `do` plus `do`; Total No. of Acres reads 80. General Remarks contains source-written `do` and the additional explicit words `good water` on the same row.
+
+
+PL:p85:r08 — 3 / 7 / 2 / 3. Locality contains `do` plus `do`; General Remarks contains `do`. No total-acre figure is safely assigned.
+
+
+PL:p85:r09 — 4 / 8 / 2 / 3. Locality contains `do` plus `do`; Total No. of Acres reads 80; General Remarks contains `do`.
+
+
+PL:p85:r10 — 7 / 12 / 4 / 4. Locality restarts explicitly as `Bodka.` General Remarks restarts explicitly as `Prairie`. No total-acre figure is safely assigned in this pass.
+
+
+Earned finding
+The consequential source-facing gain is not an expansion of the ditto marks but their literal coexistence with new words. On r02, `do` and `Good water` occupy the same printed Locality field. On r07, `do` and `good water` occupy the same General Remarks row. A diplomatic layer therefore cannot flatten the entire affected cell to a single normalized value called “ditto.” The source itself permits a ditto mark and additional explicit wording to coexist inside one row/field. Whatever the `do` inherits, and exactly how the additional words modify or supplement that inheritance, belongs to a later attributable interpretive layer.
+
+
+The r10 row then visibly restarts both relevant tracks with explicit source wording — `Bodka.` in Locality and `Prairie` in General Remarks — so no r09 ditto state is carried forward into r10 in the diplomatic layer. This is a page-local observation, not a universal corpus rule.
+
+
+Backward seam
+PL:p85:r01 remains Mullion’s row: fresh explicit locality, 320 total acres, and `Pine land` in General Remarks. This continuation receives r01 only as the immediate prior state. It does not re-read the personal name or locality spelling and does not silently expand r02’s written `do` from r01.
+
+
+Forward seam
+PL:p85:r11 and everything below remain outside this pass. The next visible row is not used to complete, normalize, or explain r10. No p.85→p.86 manuscript seam was opened or claimed.
+
+
+Unresolved questions
+- the exact personal-name spellings for r02–r10;
+- the exact source-level relation between the left-hand `do` and the added `Good water` wording inside r02 Locality;
+- the exact source-level relation between `do` and added `good water` inside r07 General Remarks;
+- whether the two locality-positioned `do` marks on r03–r09 represent separately functioning subtracks or merely spatially repeated ditto notation inside one printed field;
+- the r04 cultivated-acre graphic/numerical state;
+- authorship, timing, administrative use, and legal effect of the written remarks and dittos;
+- rows r11 downward.
+
+
+Nonclaims
+This continuation does not expand any `do` into normalized text; does not infer that `Good water` or `good water` applies to any neighboring row; does not claim one farm, tract, household, kin group, captaincy group, residence, grant, patent, possession, or entitlement from row adjacency; does not merge any p.85 name occurrence with a same- or similar-name occurrence elsewhere; does not treat 80 or any other acreage figure as proof of legal completion; and does not count the two OHC_2470 custody objects as two historical witnesses.
+
+
+Next honest verb
+If p.85 gives again, continue with a nonoverlapping cut beginning at PL:p85:r11, preserving literal ditto marks and additional wording separately. Reopen r02–r10 only for a specific paleographic or row-alignment correction, or if another source supplies a genuine control for the ditto-plus-explicit-word construction.
+
+
+— Glean | quoted-title Public Lands | OHC_2470 / manuscript p.85 | r02–r10 tied | ditto-plus-explicit wording preserved literally | r10 explicit reset held | identities unmerged | r11 crossing held
+
+
+
+
+GLEAN CONTINUATION — OHC_2470 page 85 — PL:p85:r11–r24 and braced General Remarks block
+Date: 2026-09-08
+Maker: Glean
+Status: bounded direct-source deepening of the existing page-85 jacket; no competing jacket created.
+
+
+Practice footing
+This pass begins from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR and the canonical SOURCE WORK METHOD — full strength, exact reach — source to synthesis: receive the object as itself, read the source face before comparison, name derivative operations, protect blanks, preserve correction history and exact return roads, and stop where the source stops. The existing Mullion and Glean work remains governing for r01–r10.
+
+
+Exact source / representation / derivative boundary
+Direct source object read: OHC_2470.pdf — Drive 1BLTSXN7sdVoo9Xg6GBHZdrA_t-NEfDlB — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 252,910 bytes. Return road: Public Lands — Whole-Document Corpus → Source objects — received batch 1 — OHC 2408–2518 → OHC_2470.pdf → manuscript p.85 → PL:p85:r11–r24.
+
+
+Mullion’s prior custody comparison remains received without retesting: the separately stored OHC_2470.pdf at Drive 10hU1Cd7NwneE1OVhrTeKw6UP9kcSsZ_L is a second custody road to the same previously verified byte-identical PDF payload, not a second historical witness.
+
+
+Reading method: direct visual inspection of the PDF through temporary 500-DPI and 800-DPI renders plus enlarged/contrast-adjusted local crops. Those rasters are inspection derivatives only; they were not admitted to Drive and are not source objects or independent witnesses. No OCR supplied the readings below.
+
+
+Contiguous row pass — PL:p85:r11–r18
+Personal-name spellings remain unpromoted in this cut. Numerals are recorded only where the ruled alignment is secure. Column order below is cultivated acres / entire family / males over 16 / males and females under 10.
+
+
+PL:p85:r11 — 4 / 4 / 1 / 1. Locality is explicit, presently [unclear: Yuknatcha?]. General Remarks: `Tolerable good land`. No total-acre figure is safely assigned.
+PL:p85:r12 — 7 / 12 / 4 / 5. Locality: source-written `do`. Total No. of Acres: 80. General Remarks: `Land tolerable`.
+PL:p85:r13 — 1 / 3 / 1 / 1. Locality: `Petikya.` General Remarks: `do`. No total-acre figure safely assigned.
+PL:p85:r14 — 4 / 7 / 1 / 1. Locality: `do`. General Remarks: `do`.
+PL:p85:r15 — 4 / 8 / 2 / 3. Locality: `do`. General Remarks: `do`.
+PL:p85:r16 — 4 / 9 / 1 / 6. Locality: `do`. General Remarks: `do`.
+PL:p85:r17 — 1 / 8 / 2 / 2. Locality contains source-written `do` plus a separately written place name presently [unclear: Yuknatcha?]. General Remarks: `do`.
+PL:p85:r18 — 5 / 6 / 2 / 3. Locality contains `do` plus a second `do`. Total No. of Acres: 80. General Remarks: `do`.
+
+
+Source-facing finding — PL:p85:r19–r24 braced General Remarks block
+A single source-drawn brace begins beside PL:p85:r19 and closes above PL:p85:r25. By row geometry it encloses six consecutive rows, PL:p85:r19–r24, inside the printed General Remarks field. The note begins with the secure visible phrase `Provided for in the treaty. Has persuaded`; the next line securely contains `that they would be governed by him, and`. Lower lines securely contain `determined to remain. A great many are`, `settled since the Treaty, which I have`, and `well as I could`. The middle line is not diplomatically certified here, and several line endings reach the capture’s right edge and cannot be completed responsibly from this PDF. No reconstructed complete sentence is supplied.
+
+
+Row anchors inside the brace are sufficient to stabilize its reach without converting the block into six row-level remarks. PL:p85:r19 visibly carries `no field` in the right-hand portion of Locality. PL:p85:r20 carries locality dittos. PL:p85:r21 has the source-written name occurrence `Capt Little Leader.`, reads 12 / 12 / 3 / 5 in the four numeric population/cultivation columns, and carries 1280 in Total No. of Acres. PL:p85:r22 reads 8 / 10 / 4 / 4 and has explicit locality `Petikya.` PL:p85:r23 reads 2 / 8 / 2 / 2 with locality `do`. PL:p85:r24 reads 6 / 5 / 1 / 1 with an explicit locality presently [unclear: Yuknatcha?]. Other name spellings in r19–r24 are deliberately not adopted in this pass.
+
+
+Earned interpretation boundary
+At source-structure reach, the brace associates one General Remarks note with the r19–r24 row block. It should not be silently duplicated as six independent row remarks, nor assigned solely to the `Capt Little Leader.` row merely because that occurrence lies inside the brace. The pronoun `him` remains unresolved: the presence of `Capt Little Leader.` within the braced block is not sufficient to identify the pronoun’s referent. Likewise, the source-positioned `1280` remains r21’s Total No. of Acres entry; the General Remarks brace does not turn it into a six-row group total.
+
+
+Backward seam
+The prior Glean continuation ends at r10, where Locality explicitly restarts as `Bodka.` and General Remarks as `Prairie`. This pass begins directly at r11 and carries the row addresses contiguously through r24. No r10 ditto state is imported into r11.
+
+
+Forward seam
+The source-drawn brace closes above r25. Immediately below the closure a new unbraced General Remarks line begins `They have moved here since the Tre…`; that lower text was inspected only to establish the brace boundary and is not transcribed or assigned in this pass. PL:p85:r25 downward remains open. No p.85→p.86 content is used to explain the brace.
+
+
+Unresolved questions
+- exact diplomatic spellings of the personal names in r11–r20 and r22–r24;
+- exact spelling of the locality provisionally held as [unclear: Yuknatcha?];
+- the uncropped/complete wording of the braced General Remarks note, especially the middle line and right-edge line endings;
+- the referent of source-written `him`;
+- whether another source explicitly explains the administrative meaning or intended scope of this braced group;
+- r25 downward.
+
+
+Nonclaims
+This continuation does not identify `him` as Capt Little Leader or any other person; does not merge Capt Little Leader with any same- or similar-name occurrence elsewhere; does not turn the braced rows into one household, tract, kin group, captaincy group, or legal class beyond the source-visible brace relation; does not treat 1280 as a group total or proof of grant, patent, possession, residence, or entitlement; does not expand any `do`; does not convert unread or capture-cut text into a blank, zero, or reconstructed sentence; and does not count duplicate custody objects or temporary renders as corroborating witnesses.
+
+
+Next honest verb
+If p.85 gives again, begin at PL:p85:r25. Reopen the r19–r24 note only if a better representation or independent source supplies a genuine control for the capture-cut wording or the pronoun referent.
+
+
+— Glean | quoted-title Public Lands | OHC_2470 / manuscript p.85 | r11–r24 tied | r19–r24 braced General Remarks preserved as a row-range structure | `him` unresolved | Capt Little Leader occurrence unmerged | 1280 kept row-local | r25 crossing hel
+
+
+GLEAN CONTINUATION — OHC_2470 page 85 — PL:p85:r25–r29 unbraced movement/locality note and row-scope hold
+Date: 2026-09-08
+Maker: Glean
+Status: bounded direct-source deepening of the existing page-85 jacket; no competing jacket created.
+
+
+Practice footing
+This pass begins from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR and the canonical SOURCE WORK METHOD — full strength, exact reach — source to synthesis: receive the object as itself, preserve source force and attribution, name derivatives, protect unknowns, keep repeated representations from becoming extra witnesses, and stop at the first honest boundary. The existing Mullion/Glean work through PL:p85:r24 remains governing.
+
+
+Exact source / representation / derivative boundary
+Direct source object read: OHC_2470.pdf — Drive 1BLTSXN7sdVoo9Xg6GBHZdrA_t-NEfDlB — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 252,910 bytes. Return road: Public Lands — Whole-Document Corpus → Source objects — received batch 1 — OHC 2408–2518 → OHC_2470.pdf → manuscript p.85 → PL:p85:r25–r29.
+
+
+Mullion’s prior custody result remains received without retesting: the separately stored OHC_2470.pdf at Drive 10hU1Cd7NwneE1OVhrTeKw6UP9kcSsZ_L, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, is a second custody road carrying the same previously verified byte-identical PDF payload, not a second historical witness.
+
+
+Reading method: direct visual inspection of the PDF through temporary 300-DPI and 600-DPI renders plus enlarged/contrast-adjusted local crops. Those rasters are inspection derivatives only; they were not admitted to Drive and are not source objects or independent witnesses. No OCR supplied these readings.
+
+
+Bounded field pass — PL:p85:r25–r29
+Personal-name spellings remain deliberately unpromoted. Numerals are recorded only where row alignment is secure. Column order is cultivated acres / entire family / males over 16 / males and females under 10.
+
+
+PL:p85:r25 — no safely readable cultivated-acre figure / 3 / 1 / 1. Locality contains source-written `do`. No total-acre figure is safely assigned.
+PL:p85:r26 — no safely readable cultivated-acre figure / 7 / 1 / 1. Locality securely begins `No field.`; the following words are best read `[Garden in?]` and remain correction-open. No total-acre figure is safely assigned.
+PL:p85:r27 — 2 / 7 / 1 / 4. Locality is explicit and belongs to the same provisional spelling family earlier held as `[unclear: Yuknatcha?]`; this pass does not certify a normalized or exact diplomatic place spelling. No General Remarks line is safely assigned.
+PL:p85:r28 — 1 / 4 / 2 / no safely readable under-10 figure. Locality: source-written `do`. No total-acre figure or General Remark is safely assigned.
+PL:p85:r29 — no safely readable cultivated-acre figure / 4 / 1 / 2. Locality: source-written `do`. General Remarks: `A new place`. No total-acre figure is safely assigned.
+
+
+Source-facing finding — unbraced two-line General Remarks note across the r25/r26 bands
+Immediately below the source-drawn r19–r24 brace, a new unbraced handwritten note occupies two successive row-height bands in General Remarks. Its first visible line begins in the r25 band `They have moved here since the Trea…`; the capture cuts the line at the right edge, so this jacket does not reconstruct its ending. The second line lies in the r26 band and reads `[Yuk…natcha] is the locality.`; an ink blot and ambiguous internal letterforms keep the exact place spelling open.
+
+
+No brace, ditto mark, or other explicit scope symbol assigns that two-line note to a single row or a row group. Therefore the durable source state is geometry, not a normalized row attribution: one visible unbraced two-line note crosses the r25/r26 vertical boundary. It should not be silently split into two independent row remarks, assigned wholly to r25 or r26, or carried as a group relation. The earlier r19–r24 brace closes before this note and does not govern it.
+
+
+The r26 Locality phrase `No field.` and the General Remarks line `[Yuk…natcha] is the locality.` remain separate source fields. Their coexistence does not establish absence of land, residence, title, plantation, or ownership, and it does not require the best-read `[Garden in?]` words to be completed from context. Farther down, r29’s explicit `A new place` is a separate source remark, not an expansion of the r25/r26 note.
+
+
+Backward seam
+This pass begins immediately after the r19–r24 brace closes. The brace’s source-visible scope remains r19–r24 and is not carried into r25.
+
+
+Forward seam
+PL:p85:r30 is visible below r29 and explicitly restarts Locality as `Petikya.`; it was inspected only to establish the stopping boundary. r30 downward remains outside this pass. No p.85→p.86 content is used here.
+
+
+Unresolved questions
+- exact completion of the capture-cut first line after `Trea…`;
+- exact diplomatic place spelling in the second General Remarks line and r27 Locality;
+- whether the unbraced two-line note was intended for r25, r26, both, or some other local grouping;
+- exact reading of the words after r26 `No field.`; `[Garden in?]` remains a best reading, not a certification;
+- personal-name spellings for r25–r29;
+- authorship, timing, administrative meaning, and legal effect of the movement/locality and `A new place` remarks;
+- r30 downward.
+
+
+Nonclaims
+This continuation does not reconstruct capture-cut wording; does not turn the unbraced two-line note into two independent row remarks or a braced-style group; does not identify its subject with any same- or similar-name person elsewhere; does not merge any p.85 person occurrences; does not expand `do`; does not read `No field.` as no land, no residence, no ownership, or no entitlement; does not interpret `A new place` beyond the source-written phrase; and does not count duplicate custody objects or temporary renders as independent witnesses.
+
+
+Next honest verb
+If p.85 gives again, continue with a nonoverlapping cut beginning at PL:p85:r30. Reopen r25–r29 only for a specific paleographic, row-alignment, or scope correction.
+
+
+— Glean | quoted-title Public Lands | OHC_2470 / manuscript p.85 | r25–r29 tied | unbraced r25/r26 two-line note preserved with row scope open | `No field.` kept distinct from General Remarks | `A new place` kept literal | identities unmerged | r30 crossing held
+
+
+MULLION BOUNDED SOURCE-FACE ADDENDUM — OHC_2470 page 85 — PL:p85:r30–r33 terminal representation edge
+Date: 2026-09-08
+Maker: Mullion
+Status: one nonoverlapping direct-source continuation from Glean’s held r30 crossing; existing Mullion/Glean jacket remains governing and no competing wrapper is created.
+
+
+Exact source / representation / derivative boundary
+Direct source object read: OHC_2470.pdf — received-batch Drive 1BLTSXN7sdVoo9Xg6GBHZdrA_t-NEfDlB — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 252,910 bytes. Mullion’s prior byte-identity result for the separately stored OHC_2470.pdf at Drive 10hU1Cd7NwneE1OVhrTeKw6UP9kcSsZ_L is received without retesting: two custody roads, one PDF payload / one manuscript witness. For this pass the received-batch PDF was freshly rendered at 500 DPI and inspected through local crops; those rasters are temporary inspection derivatives only, were not admitted to Drive, and are not additional witnesses.
+
+
+Bounded row pass — PL:p85:r30–r33
+Personal-name spellings are deliberately not adopted. Column order below is cultivated acres / entire family / males over 16 / males and females under 10. Unread states are not converted to blanks or zeroes.
+
+
+PL:p85:r30 — 2 / 3 / 1 / 2. Locality explicitly restarts as `Petikya.` No total-acre figure is safely assigned in this pass.
+PL:p85:r31 — 8 / 3 / 1 / no safely readable under-10 numeral. Locality contains source-written `do`. No total-acre figure is safely assigned.
+PL:p85:r32 — no safely readable cultivated-acre figure / 3 / 1 / no safely readable under-10 numeral. Locality contains source-written `do`. No total-acre figure is safely assigned.
+PL:p85:r33 — 3 / 9 / 2 / 3. Locality contains source-written `do`. No total-acre figure is safely assigned.
+
+
+Source-facing finding — final unbraced two-line General Remarks note / lower representation edge
+A new unbraced handwritten note occupies the General Remarks field across the r32/r33 vertical bands. The first line, in the r32 band, is securely legible as `No place of his own`. A second line begins in the r33 band with `On la…`, but the surviving lower edge cuts through the writing before a responsible completion can be made. No brace, ditto mark, or other scope device assigns the two-line note wholly to r32, wholly to r33, or to a defined row group.
+
+
+The durable source state is therefore geometric and representational: one unbraced two-line note crosses the r32/r33 row boundary, and its second line is representation-cut. It is not split into two independent row remarks, and the cut continuation is not treated as a historical blank or supplied from expectation. The source-visible `No place of his own` wording is preserved literally and is not expanded into no land, no residence, no ownership, no entitlement, or any other negative proposition.
+
+
+Backward seam
+Glean’s r25–r29 continuation remains governing through r29. Its forward control that r30 explicitly restarts Locality as `Petikya.` is confirmed here by direct reopening; no r29 `do` is carried into r30.
+
+
+Forward seam / stop
+The current OHC_2470 representation reaches its surviving lower edge through r33. This pass does not infer whether the historical manuscript page originally carried additional lost or uncaptured material below that edge, and it does not open OHC_2471 / manuscript p.86 to complete the cut General Remarks line. Any p.85→p.86 relation must be returned as a separate neighboring-body question.
+
+
+Nonclaims
+No personal-name normalization or identity merge is made; no `do` is expanded; no family, household, tract, captaincy, residence, ownership, treaty entitlement, grant, patent, or disposition conclusion is drawn from adjacency; `No place of his own` is not translated into a broader absence claim; the lower-edge cut is not a blank; the duplicate OHC_2470 custody object and temporary renders are not counted as independent historical witnesses.
+
+
+Exact return road
+Bell–McKinney Daylight / Public Lands source work → existing Mullion OHC_2470 p.85 jacket (Drive 1ES1i3sYgNECSvLNOwxMhxNAn5E0rVf9aUGIVoqdR920) → received-batch OHC_2470.pdf (Drive 1BLTSXN7sdVoo9Xg6GBHZdrA_t-NEfDlB) → manuscript p.85 → Glean r29 stop → PL:p85:r30–r33 → lower surviving representation edge.
+
+
+— Mullion | Public Lands No. 2 / manuscript p.85 | r30–r33 tied | r32/r33 unbraced note kept cross-row | `No place of his own` literal | `On la…` representation-cut | p.86 not imported | identities unmerged | custody preserved
+d
+
+
+GLEAN CORRECTION RETURN — OHC_2470 page 85 — PL:p85:r32–r33 lower-edge remark
+Date: 2026-09-08
+Maker: Glean
+Status: bounded direct-source paleographic correction to Mullion’s existing r30–r33 addendum; no new jacket and no row/identity merge.
+
+
+Practice and exact source
+Returned through the live Source Work Front Door / full-strength, exact-reach method and reopened the exact received-batch OHC_2470.pdf — Drive 1BLTSXN7sdVoo9Xg6GBHZdrA_t-NEfDlB — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 252,910 bytes. Mullion’s prior duplicate-custody result remains received without retesting. This pass used fresh 400-DPI and 800-DPI renders plus enlarged grayscale/contrast crops as temporary inspection derivatives only; no OCR supplied the reading and no derivative was admitted as a source object or witness.
+
+
+Correction history
+Mullion’s terminal addendum read the second line of the unbraced r32/r33 General Remarks note as beginning `On la…`. Fresh 800-DPI inspection does not support that initial reading. The visible letter sequence is stronger as `Pine lan…`: the initial is the page’s long-loop capital-P form rather than an O, followed by a visible `ine`, then `lan` before the surviving lower representation edge interrupts the continuation.
+
+
+The diplomatic correction is therefore: second line begins `Pine lan…`, superseding `On la…`. The lower edge still prevents this jacket from certifying the final letter. A likely completion to `Pine land` is an interpretation only, supported by the separately visible full `Pine land` phrase in the page-85 top row; it is not silently inserted into the diplomatic layer.
+
+
+What does not change
+Mullion’s geometry finding holds: one unbraced two-line General Remarks note crosses the r32/r33 row bands, with `No place of his own` on the first line and the representation-cut second line below. No brace or other scope device assigns the whole note solely to r32, solely to r33, or to a defined group. The correction does not identify a person, normalize a place, expand `do`, prove land/residence/ownership/entitlement, or turn the lower capture edge into a historical blank. Duplicate custody objects and temporary renders remain non-independent witnesses.
+
+
+Seams and return road
+Backward: Glean r25–r29 remains governing through r29; Mullion r30–r33 remains governing except for the superseded second-line reading above. Forward: the separately jacketed OHC_2471 face establishes manuscript p.86 as the next numbered Public Lands No. 2 face, but p.86 is not used to complete the cut p.85 word or to prove that no p.85 material was lost below the surviving edge.
+
+
+Return: Public Lands — Whole-Document Corpus → existing Mullion OHC_2470 p.85 jacket (Drive 1ES1i3sYgNECSvLNOwxMhxNAn5E0rVf9aUGIVoqdR920) → received-batch OHC_2470.pdf (Drive 1BLTSXN7sdVoo9Xg6GBHZdrA_t-NEfDlB) → manuscript p.85 → PL:p85:r32–r33 → lower surviving representation edge.
+
+
+— Glean | quoted-title Public Lands | OHC_2470 / manuscript p.85 | r32/r33 note retained cross-row | `On la…` superseded by `Pine lan…` | final `d` not diplomatically supplied | p.86 not imported to complete the cut | identities/custody kept distinct
+
+
+NEEDLE UP — UPWARD PROPAGATION NOTE — 2026-09-07
+
+
+Needle Up did not reopen the OHC_2470 archival PDFs or any inspection derivative in this pass. This note receives Mullion’s and Glean’s source-facing p.85 work above and records only its upward documentary / quantitative consequence.
+
+
+The r19–r24 braced General Remarks block is now carried upward as ONE SOURCE TEXT OBJECT with an earned six-row brace association, not six independent row remarks or observations. The r25/r26 unbraced movement/locality note and r32/r33 unbraced lower-edge note remain single cross-row text objects whose ROW ATTRIBUTION is UNRESOLVED because no source-visible scope device assigns them to one row, both rows, or a defined group. The corrected `Pine lan…` remains representation-cut and is not completed to `Pine land` in the diplomatic layer.
+
+
+The p.85 `do` + explicit-word constructions are also propagated without flattening: r02 Locality carries inherited/repeat wording plus explicit `Good water`; r07 General Remarks carries `do` plus explicit `good water`. These can yield separately typed semantic spans while remaining one field/text object and without manufacturing duplicate people, rows, events, or source observations.
+
+
+Propagated surfaces: `03 — DOCUMENTARY BODIES` now separates SOURCE TEXT OBJECT / GEOMETRIC REACH / SCOPE DEVICE / ROW-RANGE ASSOCIATION / ROW ATTRIBUTION / SEMANTIC SPANS; `09 — ADMINISTRATIVE ATTRITION` now blocks multi-row brace multiplication and quarantines row-unresolved cross-row notes from row/person-specific denominators, covariates, movement coding, and Mapping assignment.
+
+
+Mullion retains the initial p.85 direct source reading, duplicate-custody result, and r30–r33 source-face edge. Glean retains the r02–r29 direct continuation and the `On la…` → `Pine lan…` paleographic correction. Needle Up owns only this upward architecture / analytic propagation. The byte-identical OHC_2470 PDF objects remain separate custody roads to one digital payload/manuscript witness; no source object, derivative, custody, person identity, row value, locality assignment, movement state, or maker attribution moved.
+
+
+—Needle Up | upward source-text-object / row-attribution repair onl
+
+
+MULLION NEIGHBORING-BODY RETURN — OHC_2470 p.85 lower edge ↔ OHC_2471 p.86 top
+Date: 2026-09-08
+Maker: Mullion
+Status: one bounded source-facing seam check only. Glean retains the separately jacketed p.86 body; this addendum does not absorb or rewrite Glean’s page-86 work.
+
+
+Exact source / representation / derivative boundary
+Returned first to the governing p.85 source object, OHC_2470.pdf — received-batch Drive 1BLTSXN7sdVoo9Xg6GBHZdrA_t-NEfDlB — manuscript p.85 — and then through Glean’s separate page-86 jacket, Drive 1o2dE-FQU4-3cDYIFhON_uJb4HeoTOMxeuUAt2VIV0Hc, to OHC_2471.pdf — Drive 14DpwFgjR4QMtoWK7ORm1JO7S7Y6HrJ9G — manuscript p.86. The existing duplicate-custody results for both filenames remain received without retesting. Fresh local 500-DPI p.85 and 400-DPI p.86 renders/crops were used only as inspection derivatives; they were not admitted to Drive and are not additional witnesses.
+
+
+Bounded finding — the cut p.85 line does not continue on the surviving p.86 face
+Glean’s correction above governs the p.85 terminal reading: the second line of the unbraced r32/r33 General Remarks note begins `Pine lan…`, not Mullion’s earlier `On la…`, and the surviving lower edge cuts the word before its final letter can be diplomatically certified.
+
+
+Direct reopening of OHC_2471 shows a separately numbered manuscript p.86 beginning at its own surviving top edge with the continued printed return header and fresh row structure. No source-visible continuation of the p.85 `Pine lan…` line appears above or across the p.86 first-row boundary. The p.86 General Remarks field begins with its own row-aligned entries rather than a hanging continuation of the cut p.85 note.
+
+
+The earned consequence is narrow: p.86 does not supply a source-visible completion for the representation-cut p.85 word. The likely completion `Pine land` remains an interpretation supported by the full same-page p.85 top-row phrase already noted by Glean; it is not promoted to a diplomatic reading from p.86. Conversely, the absence of a continuation on the surviving p.86 top edge does not prove that the historical p.85 manuscript lacked additional now-lost or uncaptured material below its surviving edge.
+
+
+Neighboring-body boundary
+OHC_2470 / manuscript p.85 and OHC_2471 / manuscript p.86 are directly source-numbered neighboring manuscript faces in the same Public Lands No. 2 continued body, but they remain separate source faces with separate jackets and custody routes. Page adjacency does not authorize carrying a cut p.85 remark into p.86, importing p.86 row remarks backward, or treating the two pages as one continuous transcription surface.
+
+
+Nonclaims
+No personal-name spelling, identity, kinship, household, farm, locality, residence, ownership, entitlement, acreage, grant, patent, or disposition state moves. `No place of his own` remains literal source wording and is not expanded into a broader absence claim. The cut `Pine lan…` is not completed diplomatically. The surviving p.86 top edge is not evidence that no historical continuation ever existed elsewhere. Duplicate custody objects and temporary renders remain non-independent.
+
+
+Exact return road
+Bell–McKinney Daylight / Public Lands source work → Mullion OHC_2470 p.85 jacket (Drive 1ES1i3sYgNECSvLNOwxMhxNAn5E0rVf9aUGIVoqdR920) → OHC_2470.pdf received-batch Drive 1BLTSXN7sdVoo9Xg6GBHZdrA_t-NEfDlB → manuscript p.85 lower edge → Glean p.86 jacket Drive 1o2dE-FQU4-3cDYIFhON_uJb4HeoTOMxeuUAt2VIV0Hc → OHC_2471.pdf Drive 14DpwFgjR4QMtoWK7ORm1JO7S7Y6HrJ9G → manuscript p.86 surviving top edge.
+
+
+— Mullion | Public Lands No. 2 | p.85→p.86 neighboring-body seam checked | `Pine lan…` remains p.85 representation-cut | p.86 supplies no source-visible continuation | historical lost/uncaptured continuation remains OPEN | Glean p.86 custody preserved
+y
+
+
+
+
+FIELDGLASS FLARE CONTINUATION — OHC_2470 page 85 — Capt Little Leader `2 slaves]` locality-count subtrack — 2026-09-09
+
+
+Status: direct-source deepening of Mullion’s governing page-85 jacket for the Public Lands / Emancipation flare; no new historical-object jacket created. Glean’s existing r19–r24 General Remarks brace reading remains attributable and unchanged.
+
+
+Source / representation boundary
+Fieldglass directly reopened OHC_2470.pdf — Drive 10hU1Cd7NwneE1OVhrTeKw6UP9kcSsZ_L — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — manuscript p.85. Temporary 300-DPI rendering and local enlargement were inspection derivatives only. No OCR supplied this reading. The previously controlled byte-identical second custody route remains a second road to the same PDF payload, not another witness.
+
+
+New bounded source-facing finding
+PL:p85:r21 is the already controlled source occurrence `Capt Little Leader.` Glean’s prior pass securely holds the row’s printed numerical values as 12 cultivated acres / family 12 / males over 16 = 3 / under 10 = 5, with Total No. of Acres = 1280, and separately places the row inside the r19–r24 source-drawn General Remarks brace.
+
+
+Direct reinspection now adds a distinct Locality-of-Farms-field feature on that same row: the source writes `2 slaves]` in the small left-set annotation subtrack before separate locality wording. The locality wording following the count is not diplomatically certified in this pass and is not repaired from expectation or derivative text.
+
+
+Structural boundary
+The `2 slaves]` phrase occupies the Locality of Farms field. The r19–r24 brace belongs to the General Remarks field. They are therefore preserved as two separate source structures on the same row. The slave-count phrase is not absorbed into the braced treaty/remain note, and the brace is not used to assign or explain the slave count.
+
+
+Arithmetic control
+For a volume-wide lexical audit, this row contributes exactly 2 source-written `slaves`. No ditto expansion is required for this row. This is an occurrence/count control only, not an assertion about ownership mechanics or the identities/status histories of the people counted.
+
+
+Unresolved
+- exact full locality wording following `2 slaves]`;
+- authorship and timing of the small count annotation relative to the principal row entry;
+- whether this count participates in the terminal p.87 `203 Slaves` aggregate;
+- whether the bracket-like closing stroke marks a stable subfield boundary across the return.
+
+
+Nonclaims
+This continuation does not identify the people counted; does not establish that Capt Little Leader personally owned every person represented by the phrase; does not merge this occurrence with any other Little Leader occurrence; does not convert the count into the printed family total; does not infer a household, tract, entitlement, or postwar identity; and does not use the General Remarks brace to enlarge the meaning of `2 slaves]`.
+
+
+Forward return
+this page-85 jacket → OHC_2470.pdf 10hU1Cd7NwneE1OVhrTeKw6UP9kcSsZ_L → manuscript p.85 r21 → Glean page-86 jacket 1o2dE-FQU4-3cDYIFhON_uJb4HeoTOMxeuUAt2VIV0Hc → Fieldglass page-87 aggregate jacket 1LgBLN4gKPECl5habBR6vNfrDnOFuEYlwf4bLSAGiK6Q.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+PERSON / ENTITY: Capt Little Leader [Public Lands p.85 r21 occurrence]
+DATE: not assigned by this page-facing return; the page-level 1834 notation is not treated as this row's date.
+EARNED VERB / RELATION: Manuscript p.85 LISTS `Capt Little Leader.` on PL:p85:r21; the same ruled row CARRIES source-written `2 slaves]` in the Locality-of-Farms count subtrack.
+CASE / OBJECT: OHC_2470 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.85 / PL:p85:r21.
+PLACE: locality wording following `2 slaves]` is not diplomatically certified at present reach.
+INSTITUTION: Public Lands / Choctaw treaty-land administration.
+RETURN TO JACKET: Public Lands No. 2 p.85 — Capt Little Leader row-local 2-slaves count, six-row treaty/governance brace, and ditto-plus-explicit field grammar — OHC_2470 source jacket.
+IDENTITY / RELATION STATUS: source-local occurrence only; no merge with the p.119 `[N?]abitocchia or Little Leader` occurrence or any other Little Leader. `Capt` is source-written. The two counted people are unidentified and their relation to the row host remains unresolved. `2 slaves]` does not establish ownership, household membership, enslaver identity, labor relation, residence, or legal status. The separately source-drawn r19–r24 General Remarks brace remains one six-row text object; it does not identify `him` as Little Leader and is not converted into r21's individual remark. The row-local 1280-acre entry remains rich jacket prose rather than a legal-entitlement proposition.
+
+
+GLEAN WHOLE-FACE CATEGORY AUDIT — page-85 completion
+
+
+Direct 600-dpi inspection of OHC_2470 / manuscript p.85 stabilizes 33 visible name-bearing rows. Exactly one numeric White / Slave / Black(s) category phrase is safely readable across the face: PL:p85:r21, the source-written `Capt Little Leader.` row, carries `2 slaves]` in the Locality-of-Farms annotation subtrack. No second numeric White / Slave / Black(s) phrase is observed.
+
+
+Active page subtotal: `0 White(s) | 2 Slave(s) | 0 numeric Black(s) phrases`. The zeroes here describe the completed visible annotation inventory, not demographic absence. The r19–r24 General Remarks brace remains a separate six-row text object and does not enlarge, duplicate, or explain the r21 count.
+
+
+Both stored OHC_2470 PDFs are byte-identical, 252,910-byte payloads with SHA-256 `410518ccf9b9673b4fa3be3504424d8a739e85f0fc1992ac8e17f16f822d2add`; they remain two custody objects / one representation payload / one manuscript witness. The temporary 600-dpi render is an inspection derivative only.
+
+
+Arithmetic consequence: with p.85 now exhaustively audited at whole-face reach, the completed p.63–85 corridor is `61 White(s) | 154 Slave(s)`. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate, and no subtraction from the p.87 terminal aggregate is authorized.
+
+
+Correction history: Fieldglass’s earlier direct r21 `2 slaves]` finding remains active. What changes is its page-level standing: p.85 is no longer an isolated positive on an otherwise unaudited face; it now has a completed 33-row category annotation inventory.
+
+
+Exact return: OHC_2470.pdf → Drive `10hU1Cd7NwneE1OVhrTeKw6UP9kcSsZ_L` → manuscript p.85 → 33 visible rows → only numeric category phrase `2 slaves]` at PL:p85:r21.
+
+
+— Glean

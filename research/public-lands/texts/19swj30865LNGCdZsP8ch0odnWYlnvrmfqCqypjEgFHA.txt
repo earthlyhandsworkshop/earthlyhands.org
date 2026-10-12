@@ -1,0 +1,158 @@
+GLEAN SOURCE-FACING JACKET — OHC_2489 page 96 — Near the Captains / settled since the treaty remark and 95→96→97 seam
+
+
+Source identity
+Historical object: manuscript page 96 in “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+Status: visible manuscript witness preserved through archival scan/PDF capture. Following the current True North representation correction carried on the neighboring page-95 jacket, present Drive custody does not establish whether this manuscript face is the first/original return or a contemporaneous or later near-primary administrative copy; primary-versus-near-primary manuscript generation remains OPEN. Direct reading in this pass used OHC_2489.pdf. Temporary local full-page renders, row crops, and contrast-stretched views were inspection derivatives only; they were not admitted to Drive and do not create another historical witness.
+
+
+Current source-work footing
+This pass follows EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR and SOURCE WORK METHOD — FULL STRENGTH, EXACT REACH: receive the historical object before synthesis; object first / compare second; keep source, digital representation, derivative transcription or inspection aid, jacket, and interpretation distinct; preserve exact custody and roads home; protect blanks and unresolved readings; do not let repeated representations become corroboration; do not silently merge people or documentary objects; stop at the source’s exact reach.
+
+
+Archival custody / duplicate-copy control
+OHC_2489.pdf — Copy A — Drive ID 1nrSEY2e1ceKOJs2ppTPuF9171m6Z9nb- — 234,437 bytes — parent Drive ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.”
+OHC_2489.pdf — Copy B — Drive ID 1PVWzPo9zxgxT-IW66_iiFh1BuFUdC329 — 234,437 bytes — parent Drive ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, “Source objects — received batch 1 — OHC 2408–2518.”
+Payload check in this pass: both custody copies were fetched independently and compare byte-for-byte identical. Both resolve to SHA-256 3286d2d307c6faee7f3736fa879fc11a824752cb739eff647769fb3e853db39d. Preserve both Drive objects and both exact custody routes, but count one PDF payload / one visible manuscript witness rather than two independent corroborating witnesses. No deletion, rename, preferred-copy choice, or custody merge is earned.
+
+
+Documentary boundary
+One visible manuscript face, page number 96. The face continues the No. 3 printed form and column grammar. This jacket does not assert completeness of the larger return, the generation history of the manuscript, or a corpus-level sequence theory. Filename adjacency is not used as proof of sequence; the bounded page seam below is earned from directly visible manuscript pagination/form continuity.
+
+
+Bounded source-facing reading — lower-page General Remarks relation
+One lower-page row carries a personal-name reading that remains correction-open as [unclear: Phillimook?]. The row occurrence is retained without normalization and is not merged with any similarly written person elsewhere.
+
+
+On the same ruled row, the visible fields carry:
+- No. of acres cultivated: 8.
+- Entire No. of the Family: 12.
+- Males over 16 years: 2.
+- Males and Females under 10 years: 6.
+- Locality of Farms: no source writing is safely readable in this representation at this pass. This is not strengthened to a certified source blank.
+- Total No. of Acres: no numeral is safely readable in this representation at this pass. This is not strengthened to a certified source blank or zero.
+- General Remarks: “Near the Captains. settled since the treaty” — the words are directly readable; final punctuation after “treaty” is not certified because the right-side surface is damaged/obscured.
+
+
+Finding — relative geography and settlement-time language remain in General Remarks
+This row places both a relative-geographic phrase, “Near the Captains,” and a settlement-time statement, “settled since the treaty,” in General Remarks while the printed Locality of Farms cell supplies no source wording that is safely readable on the present representation.
+
+
+The durable source-facing gain is therefore a field distinction, not a corpus theory: on this page, spatial relation can be carried in General Remarks rather than in a safely readable Locality entry. The jacket does not move “Near the Captains” into the Locality field, manufacture a locality value, or infer that every row with an unreadable locality cell uses General Remarks as a substitute.
+
+
+Named / collective occurrence boundary
+“The Captains” is retained as the source-written collective reference on this row. This face does not identify which captain or captains the phrase denotes, how many people are included, whether the reference is to office-holders elsewhere on the page or in another source, or whether any person named with “Capt” elsewhere is one of these Captains. No title continuity, identity merge, household relation, kinship, property relation, or adjacency join is made.
+
+
+The personal-name reading [unclear: Phillimook?] likewise remains one page-96 source occurrence only. Similar spelling elsewhere would be comparison material, not identity proof.
+
+
+Attribution / exact reach
+“settled since the treaty” is source-carried wording on this row and is preserved at full force as the recorder’s statement. The face does not by itself establish an exact settlement date, permanence, a legal approval or refusal, Article XIX treatment, entitlement, patent, later possession, removal status, later residence, or later enrollment consequence. It also does not establish whether “settled” refers specifically to residence, the farm, cultivation, a household establishment, or another administrative category.
+
+
+“Near” is relative geography only. This jacket does not derive a distance, direction, cadastral tract, modern coordinate, creek, district, or residence point from it.
+
+
+Unresolved questions
+- Exact diplomatic reading of the personal name presently held as [unclear: Phillimook?].
+- Whether the Locality and Total No. of Acres cells are source-blank, contain faint writing or marks lost in this representation, or are otherwise unreadable.
+- Which person or people “the Captains” denotes.
+- Whether “Near the Captains” describes the farm, dwelling, cultivated ground, another place, or compiler shorthand of a different kind.
+- What precise administrative force “settled since the treaty” carried in this return and which treaty-time reference the recorder intended.
+- Authorship and timing of the General Remarks entry relative to the numerical row entries.
+- Final punctuation after “treaty.”
+- Any identity, office, kinship, household, locality, property, or cross-page relation beyond what this row explicitly states.
+
+
+Nonclaims / refused crossings
+- This jacket does not identify “the Captains.”
+- It does not merge the correction-open row name with any same-name or similar-name person.
+- It does not relocate General Remarks wording into the Locality field.
+- It does not make “near” into residence, ownership, or a fixed location.
+- It does not assign legal effect to “settled since the treaty.”
+- It does not infer that an unreadable locality cell is truly blank, zero, ditto, or administratively inapplicable.
+- It does not generalize this row into a corpus-wide field rule.
+- It does not count local inspection renders, crops, this jacket, or duplicate Drive PDFs as additional historical witnesses.
+
+
+Backward seam
+Glean’s existing jacket “Public Lands No. 3 p.95 — Capt Fletcher refused-entitled coexistence and Wolf Creek–Big Black compound locality — OHC_2488 source jacket” — Drive ID 1JlAimpg8M4UVAO__GaOOEUrMw-NiIaCen_tqvUcXjTo — worked manuscript page 95 and established OHC_2489 / manuscript page 96 only as an unworked forward boundary. This page-96 jacket receives that seam without altering page-95 custody, reading, True North QA correction, findings, nonclaims, or authorship.
+
+
+Forward seam
+OHC_2490.pdf — Drive ID 1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3 — was opened only far enough to establish a distinct manuscript face visibly numbered 97 continuing the same No. 3 form. Page-97 row content was not worked in this pass.
+
+
+An existing Underscore Deep Study representation study — Drive ID 1fqC5CspFJby-lpFxFPTlsNLrkdKBU3s_uMzO8_fjicE — independently established that OHC_2490 and OHC_2491 are distinct archival PDF objects with distinct source hashes but identical visible pixel surfaces under direct embedded-image extraction. That relation is received only as representation/custody control for the forward boundary: the two archival identities remain separate, their repeated visible surface is not counted as two historical witnesses, and no page-97 content claim is borrowed from the study.
+
+
+Exact downward return
+Public Lands — Whole-Document Corpus → this Glean jacket Drive ID 19swj30865LNGCdZsP8ch0odnWYlnvrmfqCqypjEgFHA → OHC_2489 Copy A 1nrSEY2e1ceKOJs2ppTPuF9171m6Z9nb- or Copy B 1PVWzPo9zxgxT-IW66_iiFh1BuFUdC329 → manuscript page 96 → lower-page [unclear: Phillimook?] row → General Remarks “Near the Captains. settled since the treaty”.
+Backward → Glean page-95 jacket 1JlAimpg8M4UVAO__GaOOEUrMw-NiIaCen_tqvUcXjTo.
+Forward boundary-control only → OHC_2490 / manuscript page 97, Drive ID 1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3; repeated-visible-surface relation for OHC_2490/OHC_2491 documented by Underscore at 1fqC5CspFJby-lpFxFPTlsNLrkdKBU3s_uMzO8_fjicE.
+
+
+Maker: Glean
+Date: 2026-09-07
+State: bounded page-96 source-facing pass; General Remarks spatial/temporal relation preserved without identity or locality normalization; duplicate custody controlled; bounded 95→96→97 seam tied.
+
+
+
+
+FIELDGLASS FLARE DEEPENING — page 96 whole-face category-track control — 2026-09-09
+
+
+Status: direct-source deepening of Glean’s governing page-96 jacket for the Public Lands / Emancipation flare; no competing jacket created. Glean’s `Near the Captains. settled since the treaty` reading, custody controls, uncertainty, nonclaims, and maker attribution remain standing.
+
+
+Direct source return
+Fieldglass reopened OHC_2489.pdf — Copy A, Drive 1nrSEY2e1ceKOJs2ppTPuF9171m6Z9nb- — manuscript p.96 — and audited the complete visible `Locality of Farms` field from a fresh 300-dpi render of the archival PDF. Temporary full-page and locality-strip renders were inspection derivatives only and were not admitted as historical witnesses. The existing identical Copy B custody route, Drive 1PVWzPo9zxgxT-IW66_iiFh1BuFUdC329, remains unchanged.
+
+
+Whole-face numeric category audit
+At present visual reach, no safely readable numeric phrase using `white(s)`, `slave(s)`, or `Black(s)` was observed anywhere in the complete visible Locality field. This is not entered as zero whites, zero slaves, or zero Blacks; it is only an audited no-category-phrase observation at this representation and reading reach.
+
+
+The Locality field is nevertheless visibly active elsewhere on the face, including ordinary geographic writing such as `Yellow Busha. east side`, `Big Black. east side`, and `Snow creek` at present reading reach. The negative category observation therefore cannot be explained simply as an unused Locality column.
+
+
+Consecutive-face seam
+Read together with the already-deepened neighboring jackets, the directly controlled No. 3 sequence now moves from six safely read literal `slaves` phrases on p.94, to one safely read `4 slaves]` phrase on p.95, to no safely observed numeric white/slave/Black category phrase on p.96. This is a three-face observation about visible annotation frequency only. It does not identify the recorder, timing, administrative instruction, population rule, or reason for the change, and it is not a district roll-up or cumulative count.
+
+
+Arithmetic / emancipation boundaries
+Page 96 contributes no arithmetic zero to any reconstruction. The p.94 and p.95 source-written counts are not imported into the distinct No. 2 terminal `121 Whites. 203 Slaves.` aggregate. Absence of a p.96 category phrase does not establish absence of enslaved people, slaveholding, free status, household membership, labor, residence, emancipation, or later freed-person identity. `white(s)`, `slave(s)`, and `Black(s)` remain distinct source vocabularies unless a source itself earns a relation among them.
+
+
+Exact return
+Public Lands / Emancipation flare → existing Glean page-96 jacket 19swj30865LNGCdZsP8ch0odnWYlnvrmfqCqypjEgFHA → OHC_2489 Copy A 1nrSEY2e1ceKOJs2ppTPuF9171m6Z9nb- or Copy B 1PVWzPo9zxgxT-IW66_iiFh1BuFUdC329 → manuscript p.96 → complete Locality-of-Farms category audit.
+Backward → Glean page-95 jacket 1JlAimpg8M4UVAO__GaOOEUrMw-NiIaCen_tqvUcXjTo → p.95 `4 slaves] Yellow Bushes west side.` occurrence.
+Backward one more face → Mullion page-94 jacket 1zdihucasc2vBYHUkNfIaL6GjotakhjFqqQjBzsxseqI → six literal `slaves` phrases / page-local subtotal 88.
+
+
+Maker: Fieldglass
+State: whole-face p.96 negative category control added; three-face p.94→95→96 annotation-frequency seam preserved without explanation or category conversion
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+Return 1 — correction-open row / relative geography
+PERSON / ENTITY: [unclear: Phillimook?] [Public Lands p.96 lower-row occurrence; Quoin first-pass reads `Phillimoah`]
+DATE: not supplied by this page-facing proposition
+EARNED VERB / RELATION: Manuscript p.96 General Remarks STATES `Near the Captains.` on the same ruled row.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2489 / Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.96 / lower-row occurrence / General Remarks; `the Captains` is a source-written collective reference.
+RETURN TO THIS BODY: Public Lands No. 3 p.96 — correction-open Phillimook row, Near the Captains / settled-since-treaty remark, and no-category face — OHC_2489 source jacket
+IDENTITY / RELATION STATUS: source-local correction-open occurrence only; the governing direct-source jacket does not close the name beyond `[unclear: Phillimook?]`; Quoin’s `Phillimoah` remains derivative correction history. `the Captains` is unidentified and no captain elsewhere is joined. `Near` remains relative geography and does not establish residence, ownership, household, distance, direction, cadastral geometry, or a modern place identity.
+
+
+Return 2 — settlement-time statement
+PERSON / ENTITY: [unclear: Phillimook?] [same Public Lands p.96 lower-row occurrence]
+DATE: since the treaty [source wording; exact date and treaty-time normalization remain OPEN]
+EARNED VERB / RELATION: Manuscript p.96 General Remarks separately STATES `settled since the treaty`.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2489 / Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.96 / same ruled row / General Remarks
+RETURN TO THIS BODY: Public Lands No. 3 p.96 — correction-open Phillimook row, Near the Captains / settled-since-treaty remark, and no-category face — OHC_2489 source jacket
+IDENTITY / RELATION STATUS: source-local recorder statement only; `settled` is not normalized into residence, permanent settlement, farm occupancy, cultivation, property, legal approval, entitlement, patent, removal status, or later outcome. Exact settlement date, object/domain of `settled`, and duration remain OPEN. The occurrence remains unmerged.
+.

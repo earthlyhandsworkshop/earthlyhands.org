@@ -1,0 +1,202 @@
+MULLION SOURCE-FACING JACKET — OHC_2487 page 94 — John Perry (two places) treaty-time/post-treaty place distinction and 93→94→95 seam
+
+
+Source identity
+Historical object: manuscript page 94 in “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+Status: primary-source manuscript witness preserved through archival scan/PDF capture. Direct reading in this pass used the archival PDF face. Temporary local renders and crops were inspection derivatives only; they were not admitted to Drive and do not create another historical witness.
+
+
+Archival custody / duplicate-copy control
+OHC_2487.pdf — Copy A — Drive ID 1_Rz2SFZ2trvDS4NltcjOC-c2CAVWFNaF — 247,981 bytes — parent “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces” — parent Drive ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+OHC_2487.pdf — Copy B — Drive ID 1EsnlPSFPU4rjhyRWBKdPtwvrVcDZLD2M — 247,981 bytes — parent “Source objects — received batch 1 — OHC 2408–2518” — parent Drive ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Payload check: the two custody copies are byte-for-byte identical; SHA-256 47ac670ce7650800984639697a5ea4e95d7631d4f854c01ae7f39640bb12b976. Preserve both Drive objects and both roads home, but count one PDF payload / one visible manuscript witness rather than two independent corroborating witnesses.
+
+
+Documentary boundary
+One visible manuscript face, page number 94. The face continues No. 3 under the same printed column grammar as neighboring page 93. This jacket does not assert completeness of the larger return.
+
+
+Bounded source-facing reading — John Perry “(two places)”
+A name-field occurrence reads “John Perry” followed by the source-written parenthetical “(two places).” This is one source occurrence only; no identity merge with any other John/Jno Perry or Perry occurrence is made here.
+
+
+The row visibly carries:
+- No. of acres cultivated: 50.
+- Entire No. of the Family: 4.
+- Males over 16 years: 1.
+- Males and Females under 10 years: 1.
+- Locality of Farms: “Yellow Busha. east side” at this reading reach.
+- Total No. of Acres: 640.
+
+
+The General Remarks preserve two distinct temporal/place statements. The first is securely readable as:
+“Lived on his prairie farm at time of treaty.”
+The next begins securely:
+“Settled since the treaty on … Perry’s place”
+The word immediately before “Perry’s place” is not stabilized in this pass and remains OPEN. It is not silently expanded to John, Jno, other, or another name.
+
+
+Finding
+The source itself marks this occurrence “(two places)” and then distinguishes a treaty-time prairie-farm situation from a settlement statement explicitly placed after the treaty. Therefore this row must not be flattened into one timeless locality/residence proposition. The printed Locality-of-Farms entry, the treaty-time “prairie farm” remark, and the post-treaty “Perry’s place” remark are preserved as neighboring but distinct source statements until their spatial and documentary relation is independently earned.
+
+
+Adjacent-row boundary — Jahwah (woman) kept separate
+Immediately above John Perry is the distinct source occurrence “Jahwah (woman).” Its General Remark begins “This place was abandoned by Mr. F. Allen before the treaty” and later securely includes “the woman lives on the place” and “made a crop in 1830.” The exact connecting grammar is correction-open here. That long remark belongs to the adjacent Jahwah row at this reading reach; it is not inherited into John Perry merely because the writing occupies neighboring lines in the remarks column.
+
+
+Interpretation boundary / nonclaims
+- “(two places)” is source wording, not a workshop claim that the two physical tracts have been independently located.
+- “Lived,” “settled,” cultivated acreage, Locality of Farms, residence, domicile, possession, ownership, and legal title are not treated as synonyms.
+- The source does not by itself identify the unresolved Perry in the post-treaty phrase.
+- John Perry is not merged with James Perry or any other Perry occurrence on this page or elsewhere.
+- Jahwah is not assigned a relation to Mr. F. Allen beyond the words carried by her row’s remark.
+- No Bell–McKinney kinship, treaty entitlement, patent/scrip continuity, later enrollment status, or removal state is moved by this pass.
+
+
+Backward seam
+Glean’s existing jacket “Public Lands No. 3 p.93 — Saml A Allen settlement-preparation / nonresidence / father-in-law relation and Wid Perry / Charlie Gray slave-count grammar — OHC_2485/OHC_2486 source jacket” — Drive ID 1bJ0ZZzmDvTdvLk14JDog8-CjwAQsIwynBWQsDHIzZnQ — established page 94 only as an unworked forward seam. This Mullion jacket receives that seam without altering Glean’s page-93 custody, reading, or authorship.
+
+
+Forward seam
+OHC_2488.pdf — Drive ID 15QBw2lqJ_ZwabjRQxWMYN-TnzVnTlh-0 — was opened only far enough to establish a distinct manuscript face visibly numbered 95 continuing the same No. 3 form. Page-95 row content was not worked. No 94→95 inference is made beyond that bounded pagination/form seam.
+
+
+Exact downward return
+Bell–McKinney Daylight / Public Lands neighboring-page lane → Mullion jacket 1zdihucasc2vBYHUkNfIaL6GjotakhjFqqQjBzsxseqI → OHC_2487 Copy A 1_Rz2SFZ2trvDS4NltcjOC-c2CAVWFNaF or Copy B 1EsnlPSFPU4rjhyRWBKdPtwvrVcDZLD2M → manuscript page 94 → John Perry (two places) row; backward → Glean page-93 jacket 1bJ0ZZzmDvTdvLk14JDog8-CjwAQsIwynBWQsDHIzZnQ; forward boundary-control only → OHC_2488 / manuscript page 95.
+
+
+Maker: Mullion
+State: bounded source-facing pass; page-94 row distinction recorded; outward joins unchanged.
+
+
+
+
+FIELDGLASS FLARE DEEPENING — page 94 category-track audit — 2026-09-09
+
+
+Status: direct-source deepening of Mullion’s governing page-94 jacket for the Public Lands / Emancipation flare; no competing jacket created. Mullion’s John Perry/two-places reading, custody controls, seam work, and maker attribution remain standing.
+
+
+Direct source return
+Fieldglass reopened OHC_2487.pdf — Drive 1_Rz2SFZ2trvDS4NltcjOC-c2CAVWFNaF — manuscript p.94 — and audited the complete `Locality of Farms` field from a fresh rendered archival-PDF face. Local renders/crops are temporary inspection derivatives only. The duplicate custody route already controlled by Mullion remains unchanged and is not counted as a second historical witness.
+
+
+Whole-face numeric category audit
+At present visual reach, six source-written numeric `slaves` phrases are safely readable on separate rows:
+- `Samuel Foster` — Entire No. of the Family = 6 — `12 slaves]`.
+- `James Perry` — Entire No. of the Family = 3 — `30 slaves]`, followed by separate `Spring creek` geography.
+- `James Davis` — Entire No. of the Family = 11 — `6 slaves]`.
+- `Perry widow` — Entire No. of the Family = 2 — `15 slaves]`.
+- a Perry row whose personal-name reading is not promoted in this pass — Entire No. of the Family = 10 — `21 slaves]`, followed by separate geographic wording.
+- `Charles Frazier` — Entire No. of the Family = 5 — `4 slaves]`, followed by `Yellow Busha. east side` at present reading reach.
+No numeric `white(s)` or `Black(s)` phrase was safely observed elsewhere on the face at current reach. That is an audit state, not an arithmetic zero and not a claim about the population represented beyond the written annotations.
+
+
+Bounded arithmetic
+The six literal source-written `slaves` phrases sum to 88 on this face. This is a page-local transcription subtotal only. It is not a district roll-up, not a whole No. 3 total, and is not imported into the distinct No. 2 terminal `121 Whites. 203 Slaves.` aggregate.
+
+
+Family-count boundary strengthened within one face
+Page 94 itself supplies several rows where the separate slave count exceeds the printed `Entire No. of the Family` figure: 12 beside family 6; 30 beside family 3; 15 beside family 2; and 21 beside family 10. Other rows on the same face run the opposite direction, including 6 slaves beside family 11 and 4 slaves beside family 5.
+
+
+The narrow source-earned consequence is therefore stronger than a single-row mismatch: on one manuscript face, the printed family total and the manuscript slave-count subtrack vary independently enough that neither can be treated as a mechanical decomposition, synonym, or simple inclusive/exclusive restatement of the other. The source still does not tell us the universal rule defining either population.
+
+
+Field grammar retained
+The category phrases sit at the left of the broad `Locality of Farms` field and can be followed by fresh geography (`30 slaves] Spring creek`; `4 slaves] Yellow Busha. east side`). This independently reinforces the category-count/geography separation already controlled on pages 86 and 93. It does not make the bracket-like close mandatory everywhere and does not convert any later geography or ditto into category text without a local antecedent.
+
+
+Emancipation / ownership nonclaims
+The page names row-holders and records slave counts, but it does not name the counted people and does not by itself earn `owned`, `enslaved by`, household membership, labor assignment, sale, inheritance, emancipation, freed-person identity, or postwar continuity. These rows are retrieval occurrences for later source work, not completed owner→freed-person chains.
+
+
+Exact return
+Public Lands / Emancipation flare → existing Mullion page-94 jacket → OHC_2487.pdf 1_Rz2SFZ2trvDS4NltcjOC-c2CAVWFNaF → manuscript p.94 → complete Locality-of-Farms category audit; backward grammar crossing → Glean p.93 jacket 1bJ0ZZzmDvTdvLk14JDog8-CjwAQsIwynBWQsDHIzZnQ; earlier controlled category-ditto comparator → Glean p.86 jacket 1o2dE-FQU4-3cDYIFhON_uJb4HeoTOMxeuUAt2VIV0Hc.
+
+
+Maker: Fieldglass
+
+
+
+
+Sedge Mapping Addendum — John Perry’s “two places” needs temporal relation before geometry — 2026-09-10
+
+
+Status: map-facing deepening of Mullion’s governing page-94 jacket. No competing source object or re-reading is created; Mullion’s source-facing reading, custody controls, correction-open wording, Fieldglass’s later category audit, and all earlier nonclaims remain standing.
+
+
+The bounded John Perry occurrence carries three spatially relevant source statements that should remain separately returnable:
+
+
+- printed Locality of Farms: `Yellow Busha. east side`;
+- General Remarks: `Lived on his prairie farm at time of treaty.`;
+- General Remarks: `Settled since the treaty on … Perry’s place`, with the word immediately before `Perry’s place` still unresolved.
+
+
+The same name field explicitly carries `(two places)`. For Mapping, that phrase earns source-described place multiplicity but not two coordinates and not an assignment of the printed `Yellow Busha. east side` locality to either of the two narrated places. The row therefore supports a temporal-relational facing before it supports geometry:
+
+
+`John Perry occurrence --[lived on; at treaty time]--> prairie farm [exact place OPEN]`
+`John Perry occurrence --[settled on; since treaty]--> unresolved Perry’s place [exact place OPEN; Perry referent OPEN]`
+`John Perry row --[Locality of Farms]--> Yellow Busha, east side [relation to either narrated place OPEN]`
+
+
+Do not draw a movement arrow between the prairie farm and the later Perry’s place merely because the remarks are temporally ordered. The source says he lived on one at treaty time and settled on another since the treaty, and marks the row `(two places)`; it does not give a route, departure date, arrival date, distance, direction, or a geometric relation between the two. Likewise, `Yellow Busha. east side` must not be silently made the prairie farm, the later Perry’s place, a residence point, a creek-bank coordinate, or a parcel polygon.
+
+
+Map architecture consequence: one source row may carry several place relations whose temporal roles differ while their mutual geometry remains unresolved. `place-count`, `place-label`, `relation verb`, `temporal role`, and `geometry state` should stay separable. Here the place-count is source-stated as two, the two narrated place labels are `prairie farm` and an unresolved `Perry’s place`, and the printed Yellow Busha locality is a third map-facing relation whose attachment remains open. Greater visual precision would be a new evidence crossing, not a tighter rendering of this row.
+
+
+Adjacent-row brake remains active: Jahwah’s abandoned-place / residence language belongs to Jahwah’s row and supplies no geometry, identity, or chronology to John Perry.
+
+
+Exact way home: Marauder’s Map / Mapping Grounds → this governing jacket → Mullion bounded John Perry reading → OHC_2487.pdf Copy A `1_Rz2SFZ2trvDS4NltcjOC-c2CAVWFNaF` or Copy B `1EsnlPSFPU4rjhyRWBKdPtwvrVcDZLD2M` → manuscript p.94 → John Perry `(two places)` row.
+
+
+No Perry identity merge, Yellow Busha modern-feature identification, parcel geometry, route, residence inference beyond the source verb, treaty-entitlement ruling, ownership expansion, or Daylight thesis crossing is made.
+
+
+— Sedge — Mapping Grounds / whole documentary landscape
+
+
+SMALL DOOR NAME WEB CROSSING — 2026-09-20
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT 1
+Person / Entity: John Perry [Public Lands p.94 name-field occurrence; source-written `(two places)`]
+Date: not supplied by this page-facing proposition
+Earned verb / relation: Manuscript p.94 Locality of Farms field CARRIES source-written `Yellow Busha. east side` on the John Perry `(two places)` row.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.94 / OHC_2487 manuscript witness
+Place: `Yellow Busha. east side` [source-written printed-field locality; exact modern feature, geometry, and relation to either narrated place OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.94 — John Perry (two places) temporal-place relations, Yellow Busha locality, and six-row slave-count audit — OHC_2487 source jacket
+Identity / Relation Status: source-local John Perry occurrence only; not merged with James Perry, another John/Jno Perry, or any Perry elsewhere. The source-written `(two places)` marks place multiplicity for this row but does not identify two coordinates or attach Yellow Busha to either narrated place; Locality of Farms is not normalized into residence, ownership, domicile, or title.
+Notes: one proposition only; Sedge’s mapping distinction remains standing and geometry stays OPEN.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT 2
+Person / Entity: John Perry [Public Lands p.94 name-field occurrence; source-written `(two places)`]
+Date: at time of treaty [source wording; treaty not normalized to a modern date in this proposition]
+Earned verb / relation: Manuscript p.94 General Remarks STATES `Lived on his prairie farm at time of treaty.`
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.94 / OHC_2487 manuscript witness
+Place: `his prairie farm` [source wording; exact place OPEN; relation to `Yellow Busha. east side` OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.94 — John Perry (two places) temporal-place relations, Yellow Busha locality, and six-row slave-count audit — OHC_2487 source jacket
+Identity / Relation Status: source-local John Perry occurrence only; source verb `Lived` is preserved at exact reach and is not expanded into ownership, legal title, permanent domicile, possession, or a geometric point.
+Notes: one proposition only; kept separate from the post-treaty settlement statement and printed locality.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT 3
+Person / Entity: John Perry [Public Lands p.94 name-field occurrence; source-written `(two places)`]
+Date: since the treaty [source wording; treaty not normalized to a modern date in this proposition]
+Earned verb / relation: Manuscript p.94 General Remarks begins `Settled since the treaty on … Perry’s place`; the word immediately before `Perry’s place` remains unresolved in the governing direct-source reading.
+Case / Object: Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.94 / OHC_2487 manuscript witness
+Place: `… Perry’s place` [source wording with unresolved preceding word; exact place and Perry referent OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.94 — John Perry (two places) temporal-place relations, Yellow Busha locality, and six-row slave-count audit — OHC_2487 source jacket
+Identity / Relation Status: source-local John Perry occurrence only; the Perry referent in the place phrase is not identified, and the source does not earn a movement arrow from the treaty-time prairie farm, a route, a Yellow Busha attachment, ownership, legal title, or a same-person merge with any other Perry occurrence.
+Notes: one proposition only; kept separate from treaty-time living and Locality-of-Farms wording.
+
+
+—The Small Door | Name Web compilation footing; Mullion, Fieldglass, and Sedge source-facing attribution, source custody, representation history, and richer prose remain in place

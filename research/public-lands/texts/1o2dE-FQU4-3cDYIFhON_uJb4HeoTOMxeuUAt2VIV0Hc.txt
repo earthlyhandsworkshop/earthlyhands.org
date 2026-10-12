@@ -1,0 +1,329 @@
+GLEAN SOURCE-FACING JACKET — OHC_2471 page 86 — locality-field kin relations and 85→86→87 seam
+
+
+Status
+Direct-source bounded page jacket. A live search found no existing OHC_2471/page-86 source-facing jacket. Page 85 is already jacketed by Mullion and page 87 by Fieldglass; this object therefore remains distinct from both neighbors.
+
+
+Source identity and provenance
+- Documentary body: Public Lands — No. 2 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- Visible manuscript page: 86.
+- Custody object A: OHC_2471.pdf — Drive ID 14DpwFgjR4QMtoWK7ORm1JO7S7Y6HrJ9G — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 245,059 bytes.
+- Custody object B: OHC_2471.pdf — Drive ID 1FHqmMYO9lOvFo-hPLikAg2Dk0r7KPJnL — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 245,059 bytes.
+- Existing duplicate-surface control records OHC_2471 SHA-256 e23711c094875c590ce7e794a4144e7d61d45853e6392f34f72bad4e0bd9716d. This pass fetched both same-named custody objects and preserves them as two custody routes to the same inherited source filename; it does not count them as independent historical witnesses.
+- Direct visual reading was made from the PDF rendered locally for inspection. The local render and crops are temporary inspection derivatives only and were not admitted to Drive.
+
+
+Bounded direct reading
+Two consecutive rows near the middle of page 86 carry written locality ditto marks and then additional relational prose inside the broad printed Locality of Farms field.
+
+
+PL:p86:r15 — personal name remains correction-open in this pass as [unclear: Mofiashuka?]. After written locality `do`, the same row reads `brother to Leader.`
+
+
+PL:p86:r16 — personal name remains correction-open in this pass as [unclear: Tuckenikijo?]. After written locality `do`, the same row reads `uncle to Leader`.
+
+
+The two personal-name readings are provisional visual readings only. No normalization or cross-source identity merge is authorized from them.
+
+
+Finding
+On this page the printed Locality of Farms field is not exhausted by geography or ditto inheritance. A row may inherit a locality through written `do` while separately carrying a kin/relation phrase in the same broad field. The relational prose therefore must not be flattened into the inherited place value or discarded as non-locality noise.
+
+
+This is a page-local source grammar finding only. It does not establish that every Public Lands locality field behaves this way, that the two rows share one household or farm, or that `Leader` identifies the same person or office in both lines.
+
+
+Source / transcription / interpretation boundary
+Source: manuscript page 86 visibly supplies the two relation phrases above inside the locality field.
+Transcription: the phrases are preserved as written; the associated personal names remain correction-open.
+Interpretation: the safest present consequence is structural — kin/relation language can coexist with geographic inheritance in one printed field. No broader administrative meaning is assigned.
+
+
+Unresolved questions
+- Exact diplomatic spellings of the two associated personal names.
+- Whether `Leader` is a role word, a named person, a local title, or another source-specific referent.
+- Whether both relation phrases refer to the same Leader.
+- Exact locality antecedent inherited by each `do`.
+- Whether the kin statements describe biological, social, political, household, or administrative relations.
+- Whether either relation affected acreage, entitlement, residence, or treatment.
+- Authorship and timing of the relational additions relative to the principal row entries.
+- Full row-by-row diplomatic transcription of page 86.
+
+
+Explicit nonclaims
+- Same or similar names elsewhere do not establish identity with either page-86 occurrence.
+- `brother to Leader` and `uncle to Leader` do not by themselves identify the Leader.
+- The two rows are not merged into one family, household, farm, or entitlement.
+- A locality ditto does not make the relational phrase itself inherited from the previous row.
+- The relation phrases do not prove residence, property ownership, political office, treaty entitlement, or acreage causation.
+- The two same-named PDF custody objects are not treated as two historical witnesses.
+
+
+Backward seam
+Mullion’s page-85 jacket directly establishes OHC_2470 as manuscript page 85 in the same Public Lands No. 2 continued body and keeps that face distinct. Return: MULLION SOURCE JACKET — OHC_2470 page 85 — top-of-page ditto boundary / duplicate custody objects kept distinct.
+
+
+Forward seam
+Fieldglass’s existing direct-source jacket establishes OHC_2472 as manuscript page 87 in the same Public Lands No. 2 continued body. Page 87 remains Fieldglass’s separately jacketed source object. This page-86 jacket does not absorb its aggregate findings.
+
+
+The bounded neighboring sequence now reads 85 → 86 → 87 as separately jacketed manuscript faces. Filename adjacency alone is not promoted into a universal archival-sequence rule.
+
+
+Exact return paths
+Corpus home: Public Lands — Whole-Document Corpus — Drive folder 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+Primary return: this Glean jacket → OHC_2471.pdf → manuscript page 86.
+Custody route A: this jacket → OHC_2471.pdf 14DpwFgjR4QMtoWK7ORm1JO7S7Y6HrJ9G → parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+Custody route B: this jacket → OHC_2471.pdf 1FHqmMYO9lOvFo-hPLikAg2Dk0r7KPJnL → parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Backward neighbor: this jacket → Mullion page-85 jacket → OHC_2470 manuscript page 85.
+Forward neighbor: this jacket → Fieldglass page-87 jacket → OHC_2472 manuscript page 87.
+
+
+Maker: Glean
+Date: 2026-09-06
+State: one bounded page-86 source-facing pass; locality-field kin relations preserved; duplicate custody kept distinct; 85→86→87 seam tied without corpus-level theory.
+
+
+
+
+FIELDGLASS FLARE CONTINUATION — OHC_2471 page 86 — numeric ditto inside category-count subtrack — 2026-09-09
+
+
+Status: direct-source deepening of Glean’s governing page-86 jacket for the Public Lands / Emancipation flare; no competing jacket created.
+
+
+Source / representation boundary
+Fieldglass directly reopened OHC_2471.pdf — Drive 14DpwFgjR4QMtoWK7ORm1JO7S7Y6HrJ9G — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — manuscript p.86. A temporary 300-DPI render and local crop were used only as inspection derivatives. No OCR supplied the readings. Glean’s existing duplicate-custody control for the second OHC_2471.pdf route remains received and was not retested.
+
+
+New bounded source-facing sequence
+Near the bottom of the face, three consecutive locality-field rows preserve a category-count subtrack before ordinary geographic wording:
+
+
+- The row immediately above `Col David Wilson.` carries `10 Slaves]` at the left of the Locality of Farms field, followed by separate geographic text beginning `Near ...`; the place-name continuation is not certified in this pass.
+- `Col David Wilson.` carries `10 do] Robinson road.` The numeral-plus-ditto phrase occupies the same left-set position used by the preceding `10 Slaves]`, while `Robinson road.` is separately written farther right on Wilson’s own row.
+- The next row, source-visibly labeled `U.S. interpreter` (personal name not promoted in this pass), carries `1 white]` in that same left-set subtrack.
+
+
+Source observation
+The manuscript itself therefore distinguishes, within the broad printed Locality field, a small count/category subtrack from the geographic text that follows it. Most importantly, the Wilson row does not merely contain a bare locality ditto: it contains the numeric phrase `10 do]` and then an explicit fresh locality, `Robinson road.`
+
+
+Bounded inference
+At page-local grammar level, the strongest antecedent for the `do` in `10 do]` is the immediately preceding category word `Slaves`, not the preceding geographic place. The diplomatic reading remains exactly `10 do]`; an interpretive/arithmetic layer may test it as `10 [Slaves]`, but must keep that expansion visibly supplied rather than source-written.
+
+
+Arithmetic control
+Literal lexical subtotal for these three rows: 10 source-written `Slaves`, 1 source-written `white`, plus one unresolved numeric `10 do` phrase.
+Conditional page-local ditto expansion: if `10 do]` carries forward `Slaves`, these same three rows contribute 20 Slaves and 1 white. Both states must be retained until a wider return-level control either confirms or breaks the expansion.
+
+
+Why this matters to the flare
+A volume-wide audit that counts only explicit strings such as `slave`, `Slaves`, `white`, or `Blacks` can undercount the manuscript if numeric ditto phrases inherit category labels. Category arithmetic therefore requires paleographic/structural reading, not keyword tallying alone.
+
+
+Unresolved
+- whether the category-subtrack ditto grammar seen here recurs elsewhere in No. 2;
+- whether the terminal p.87 totals were calculated from these row annotations;
+- whether any `Blacks` annotations participate in, sit outside, or relate differently to the terminal `Slaves` aggregate;
+- exact personal name on the `U.S. interpreter` row; this pass deliberately does not use it for identity work;
+- full place-name wording after the explicit `10 Slaves]` phrase.
+
+
+Nonclaims
+This continuation does not convert `Blacks` to `Slaves`; does not claim that the `U.S. interpreter` occurrence is any McKinney occurrence; does not infer legal ownership, household membership, identity, or personal status from a category count; does not claim `10 do]` is source-written `10 Slaves`; and does not yet reconcile these rows to the p.87 terminal aggregate.
+
+
+Forward return
+this page-86 jacket → OHC_2471.pdf 14DpwFgjR4QMtoWK7ORm1JO7S7Y6HrJ9G → manuscript p.86 category-count sequence → Fieldglass p.87 aggregate jacket 1LgBLN4gKPECl5habBR6vNfrDnOFuEYlwf4bLSAGiK6Q → OHC_2472 manuscript p.87.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+QUIET REACH FEDERAL-ROLE / CATEGORY-GRAMMAR ADDENDUM — 2026-09-09
+
+
+Status: bounded direct-source deepening of the existing page-86 jacket for the Public Lands / Emancipation flare. No competing jacket created; Glean and Fieldglass retain their prior readings and maker boundaries.
+
+
+Direct source return
+Quiet Reach reopened OHC_2471.pdf — Drive 14DpwFgjR4QMtoWK7ORm1JO7S7Y6HrJ9G — manuscript p.86 — and inspected the lower rows from a fresh 400-DPI render and local enlargement. Those rasters are temporary inspection derivatives only and are not source objects or additional witnesses. No OCR supplies the reading below.
+
+
+Material name-field promotion
+The row Fieldglass previously left as an unnamed `U.S. interpreter` occurrence is directly legible on the source face as:
+`Middleton MacKay. U. S. interpreter.`
+
+
+On that same ruled row, the source carries: no safely readable cultivated-acre numeral at present reach; Entire No. of the Family = 6; males over 16 = 1; males and females under 10 = 3; the separate left-set Locality-of-Farms annotation `1 white]`; and Total No. of Acres = 640.
+
+
+Category / role boundary
+The source therefore co-locates four different kinds of information on one row: a personal name, a federal-service qualifier (`U. S. interpreter`), a printed family count, and a separate source-written `1 white]` count, together with a 640-acre row figure. These are not normalized into one category. In particular, this pass does not convert `1 white]` into a direct statement that Middleton MacKay himself was the person counted; does not make the family figure 6 equal to or exclusive of that white count; and does not treat 640 acres as a benefit caused by federal service, a completed grant, patent, possession, or treaty entitlement.
+
+
+Cross-page identity control
+The existing page-67 jacket independently preserves a General Remarks statement naming `Middleton MacKay, U.S interpreter` in connection with the place William Windham occupies, including source assertions that MacKay lived there when the treaty was made, later moved to the prairie, said the place belonged to him, and `Provided for in the treaty.` That p.67 narrative occurrence and the p.86 name-field occurrence now share a directly controlled full name plus federal-role form. This materially strengthens a same-person hypothesis, but Quiet Reach does not merge them in this pass. The p.86 `1 white]`, family 6, and 640-acre values are not imported backward into the p.67 narrative; the p.67 treaty/provision language is not imported forward to explain the p.86 acreage.
+
+
+Flare consequence
+Federal role, row-local racial/status count, family count, and acreage can sit on the same documentary occurrence without the source itself stating the causal or identity bridges a later synthesis may be tempted to make. For the flare, the safe unit is therefore field-local first: `Middleton MacKay` / `U. S. interpreter` / family 6 / `1 white]` / 640 remain separately typed source facts until another controlled source earns a bridge among them.
+
+
+Nonclaims
+No modern racial classification, household reconstruction, ownership conclusion, entitlement conclusion, causal federal-benefit claim, postwar identity, or emancipation-burden inference is made here. No identity merge is made between the p.67 and p.86 Middleton MacKay occurrences. The Fieldglass `10 do]` category-ditto work on the rows immediately above remains unchanged.
+
+
+Exact return
+Public Lands / Emancipation flare → existing Glean p.86 jacket → OHC_2471.pdf 14DpwFgjR4QMtoWK7ORm1JO7S7Y6HrJ9G → manuscript p.86 lower row `Middleton MacKay. U. S. interpreter.` → separately, First Light/Glean/Ravel p.67 jacket for the narrative Middleton MacKay occurrence.
+
+
+— Quiet Reac
+
+
+FIELDGLASS MAP DEEPENING — 2026-09-10 — PETIKFA / SUKENATCHA JUNCTION-AND-MOUTH CONTROL
+
+
+Direct source return
+
+
+Fieldglass reopened the admitted study representation `OHC_2471.png`, Drive `12gs-Eik49QwzKGnGe7BECb2h0f9OAd7E`, and inspected manuscript p.86 directly. Temporary crops/enlargements were used only to test row alignment and handwriting; they are inspection derivatives, not source objects or additional witnesses. The two same-named PDF custody routes already controlled above remain one manuscript witness.
+
+
+Source-visible map-bearing sequence
+
+
+Using the row count already established in this jacket, `PL:p86:r18` carries explicit locality `Petikfa`. In the same ruled row, General Remarks reads `½ mile from its junction with Sukenatcha.`
+
+
+The immediately following `PL:p86:r19` carries source-visible locality `do`; Fieldglass does not silently expand that ditto here. Its aligned General Remarks reads `At the mouth of Sukenatcha: land tolerable` at present visual reach.
+
+
+Lower on the same face, `PL:p86:r20` explicitly writes `Panta creek`, and `PL:p86:r22` explicitly writes `Sukenatcha`; these are preserved as separate source occurrences and are not used to force the r18–r19 relation into geometry.
+
+
+Cross-face control
+
+
+This p.86 sequence is useful beside two already source-faced occurrences in the same continued Public Lands return: p.78 writes `Petikfa: enters in Sukenatcha`; p.79 independently writes `Petikfa creek`. Page 86 now adds an explicit Petikfa row carrying a half-mile-from-junction phrase and an immediately following ditto row carrying an at-the-mouth-of-Sukenatcha phrase.
+
+
+Map consequence
+
+
+The Historical Landscape Map may deepen the existing OPEN Petikfa / Sukenatcha topology candidate from a two-face clue into a stronger multi-face source envelope. It may carry, separately and returnably: p.78 `Petikfa: enters in Sukenatcha`; p.79 `Petikfa creek`; p.86 `Petikfa` + `½ mile from its junction with Sukenatcha`; and p.86 next-row `do` + `At the mouth of Sukenatcha`.
+
+
+This does not yet earn one identified geographic feature, a modern stream name, a coordinate, a creek polyline, or a drawn confluence. The p.78 directed wording `enters in` and the p.86 `mouth of Sukenatcha` wording are both preserved. Fieldglass does not repair them into one directed hydrologic model merely because a map would prefer a clean topology. The r18 pronoun `its` is carried exactly as source wording; its relation is anchored to the explicit Petikfa row without upgrading the source phrase into a surveyed point. The r19 locality remains literal `do` unless a separate diplomatic/locality-chain pass earns its expansion.
+
+
+Representation and spelling boundary
+
+
+These are several photographed manuscript faces inside one continued-return body, not independent historical witnesses. Recurrence is strong enough to justify comparison and an OPEN feature-candidate envelope; it is not feature identity. `Sukenatcha` remains source-written here and is not normalized to p.75–76 `Suckanatcha` or p.80 `Sickenatcha`. Mullion’s feature-candidate-cluster grammar is compatible with this state but does not itself supply geographic authority.
+
+
+Explicit nonclaims
+
+
+No residence, ownership, household, parcel, treaty-route, or person identity is inferred from these locality rows. No category-count work is reopened by this map pass. No receiving water is supplied for either named creek. No modern hydrology is substituted for the historical wording. No adjacency between p.78, p.79, and p.86 farms is inferred from page order. No direction or distance beyond the source-written `½ mile` relation is calculated.
+
+
+Earned next door
+
+
+A period geographic source, survey, field note, map, or other independently controlled hydrologic witness capable of identifying Petikfa and Sukenatcha and explaining their junction/mouth relations could promote the candidate toward mapped feature identity. Until that crossing arrives, the source envelope should remain unplaced and internally plural.
+
+
+Exact return
+
+
+`Marauder’s Map / Historical Landscape Map → existing p.86 Glean jacket [1o2dE-FQU4-3cDYIFhON_uJb4HeoTOMxeuUAt2VIV0Hc] → Fieldglass map deepening → OHC_2471.png [12gs-Eik49QwzKGnGe7BECb2h0f9OAd7E] → manuscript p.86 Locality of Farms / General Remarks r18–r19 → sideways p.78 jacket [1WeaFCb1tYpmlj_88LhS0Nyv7lgCskzUqRpyNsOrr5ps] / OHC_2463.png [1tGgZwHLJ1RIXeoP2arz31As_bMxJ8UbM] → sideways p.79 jacket [1Ramug1yq6UIM2RYTvBoLuENLlzCPShZqryTOc9n0L0Y] / OHC_2464.png [1jMgKJX219HNwo5P71C7mIZPdvSojEiYt].`
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+h
+
+
+
+
+
+
+SMALL DOOR NAME WEB RETURN — 2026-09-20
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+PERSON / ENTITY: [unclear: Mofiashuka?] [Public Lands p.86 r15 occurrence; Quoin first-pass reads `Hopiashuka.`]
+DATE: not supplied by this page-facing return.
+EARNED VERB / RELATION: Manuscript p.86 PL:p86:r15 carries source-written locality `do` and separately carries `brother to Leader.` in the same broad Locality of Farms field.
+CASE / OBJECT: OHC_2471 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.86 / PL:p86:r15.
+PLACE: literal source-written `do`; locality antecedent not expanded by this return.
+INSTITUTION: Public Lands / Choctaw treaty-land administration.
+RETURN TO JACKET: Public Lands No. 2 p.86 — brother/uncle-to-Leader relations, David Wilson category ditto, and Middleton MacKay U.S. interpreter row — OHC_2471 source jacket.
+IDENTITY / RELATION STATUS: source-local occurrence only; personal-name reading remains correction-open. The governing direct-source jacket reads `[unclear: Mofiashuka?]`; Quoin's first-pass image derivative reads `Hopiashuka.` and is retained as correction history rather than promoted over the governing uncertainty. `Leader` remains unidentified and may be a person, role, title, or another source-specific referent. `brother to Leader` is preserved as source wording and is not normalized into a proven biological genealogy, household, political office, entitlement, residence, or cross-source identity. The relational phrase is separately written and is not inherited through the locality `do`.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+PERSON / ENTITY: [unclear: Tuckenikijo?] [Public Lands p.86 r16 occurrence; Quoin first-pass reads `Tuskenikiyo.`]
+DATE: not supplied by this page-facing return.
+EARNED VERB / RELATION: Manuscript p.86 PL:p86:r16 carries source-written locality `do` and separately carries `uncle to Leader` in the same broad Locality of Farms field.
+CASE / OBJECT: OHC_2471 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.86 / PL:p86:r16.
+PLACE: literal source-written `do`; locality antecedent not expanded by this return.
+INSTITUTION: Public Lands / Choctaw treaty-land administration.
+RETURN TO JACKET: Public Lands No. 2 p.86 — brother/uncle-to-Leader relations, David Wilson category ditto, and Middleton MacKay U.S. interpreter row — OHC_2471 source jacket.
+IDENTITY / RELATION STATUS: source-local occurrence only; personal-name reading remains correction-open. The governing direct-source jacket reads `[unclear: Tuckenikijo?]`; Quoin's first-pass image derivative reads `Tuskenikiyo.` and is retained as correction history rather than promoted over the governing uncertainty. `Leader` remains unidentified, and this return does not assume that r15 and r16 refer to the same Leader. `uncle to Leader` is preserved as source wording and is not normalized into a proven biological genealogy, household, political office, entitlement, residence, or cross-source identity. The relational phrase is separately written and is not inherited through the locality `do`.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+PERSON / ENTITY: Middleton MacKay [Public Lands p.86 name-field occurrence]
+DATE: not supplied by this page-facing return.
+EARNED VERB / RELATION: Manuscript p.86 PRESENTS `Middleton MacKay. U. S. interpreter.`; the same ruled row separately carries Entire No. of the Family = 6, source-written `1 white]` in the Locality-of-Farms count subtrack, and Total No. of Acres = 640.
+CASE / OBJECT: OHC_2471 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.86 / Middleton MacKay row.
+PLACE: no geographic locality is assigned by this return; `1 white]` is retained as a count-subtrack phrase, not a place.
+INSTITUTION: Public Lands / Choctaw treaty-land administration; `U. S. interpreter` is source-written role language on this occurrence.
+RETURN TO JACKET: Public Lands No. 2 p.86 — brother/uncle-to-Leader relations, David Wilson category ditto, and Middleton MacKay U.S. interpreter row — OHC_2471 source jacket.
+IDENTITY / RELATION STATUS: source-local p.86 occurrence only. The separately controlled p.67 Public Lands occurrence also names Middleton MacKay with an interpreter role, which materially strengthens a same-person hypothesis but does not close identity; no p.86 count or acreage is imported backward and no p.67 residence, movement, belonging, or treaty-provision proposition is imported forward. `1 white]` does not identify MacKay as the person counted or establish a modern racial classification, household relation, ownership, labor relation, or legal status. The 640-acre row figure does not establish grant, patent, possession, entitlement, or federal-service causation.
+
+
+— Small Door | Name Web compile return only | Glean / Fieldglass / Quiet Reach / Quoin attribution preserved above | source custody unchanged
+
+
+GLEAN WHOLE-FACE CATEGORY AUDIT / GOVERNING NAME CORRECTION
+
+
+Status
+Complete visible-face audit of Public Lands No. 2 manuscript p.86 from fresh 600-DPI inspection of both OHC_2471 custody PDFs. The PDFs are byte-identical at SHA-256 e23711c094875c590ce7e794a4144e7d61d45853e6392f34f72bad4e0bd9716d and remain two custody routes to one manuscript witness.
+
+
+Whole-face control
+The face carries 35 visible name-bearing rows. The damaged lower edge still preserves the thirty-fifth name-field occurrence, `Ishtchikogo. (dec'd)`, but missing or obscured lower-edge cells are not converted to zero.
+
+
+Across all 35 visible rows, the only observed numeric White / Slave / Black-category phrases are:
+- PL:p86:r32 — `10 slaves]` in the left-set count/category subtrack of the Mingoquishshatubbe row, followed separately by geographic wording beginning `Near ...`.
+- PL:p86:r33 — `10 do]` in the same subtrack on the row source-written `Col David Folsom.`, followed separately by `Robinson road.`
+- PL:p86:r34 — `1 white]` in the same subtrack on the source-written `Middleton MacKay. U. S. interpreter.` row.
+No numeric `Black`, `Blacks`, or `Blks.` phrase is observed on the face.
+
+
+Governing name correction
+Earlier passages in this jacket and its former Drive title called PL:p86:r33 `Col David Wilson.` Direct reinspection of the name field, supported by Quoin's independent first-pass reading, supports the source-written reading `Col David Folsom.` The governing row name is corrected to Folsom. The earlier Wilson wording remains visible above as correction history and is not a valid page-86 person occurrence. This correction does not merge the Folsom occurrence with any same- or similar-name occurrence elsewhere.
+
+
+Ditto resolution and arithmetic
+PL:p86:r33 `10 do]` sits immediately below PL:p86:r32 `10 slaves]` in the same left-set count/category subtrack. The page-local antecedent is therefore earned: the diplomatic layer remains source-written `10 do]`; the separate counting layer expands it as 10 [slaves]. `Robinson road.` remains fresh row-local geography and is not the ditto antecedent.
+
+
+Literal lexical layer for p.86: 1 source-written `white`; 10 source-written `slaves`; one source-written numeric `10 do]` whose category is supplied only in the interpretive counting layer.
+Resolved p.86 page subtotal: `1 White(s) | 20 Slave(s) | 0 numeric Black(s) phrases`.
+With the completed p.63–85 corridor at `61 White(s) | 154 Slave(s)`, the completed p.63–86 corridor is now `62 White(s) | 174 Slave(s)`. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Manuscript p.62 remains unestablished in the present OHC capture run; the separately controlled American State Papers printed p.62 carries no observed numeric category phrase and is not inserted as its surrogate. The p.87 terminal `121 Whites. 203 Slaves.` aggregate remains a separate source-written statement and is not forced into reconciliation here.
+
+
+Nonclaims and return
+The count phrases do not establish which people were counted, ownership, household membership, labor relation, legal status, or modern racial classification. Row adjacency supplies only the controlled ditto antecedent described above. Primary return: this governing jacket → OHC_2471.pdf → manuscript p.86. Forward accounting return: p.87 aggregate jacket 1LgBLN4gKPECl5habBR6vNfrDnOFuEYlwf4bLSAGiK6Q.
+
+
+Maker: Glean

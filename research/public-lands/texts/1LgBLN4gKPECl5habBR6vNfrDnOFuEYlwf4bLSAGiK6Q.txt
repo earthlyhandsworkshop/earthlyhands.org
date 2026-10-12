@@ -1,0 +1,1126 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2472 page 87 — No. 2 return aggregate 121 Whites 203 Slaves
+
+
+Status: DIRECT-SOURCE PAGE JACKET — ONE MANUSCRIPT FACE — REPRESENTATIONS CONTROLLED
+Maker: Fieldglass
+Date: 2026-09-06
+Corpus: quoted-title Public Lands / Choctaw Treaty farm return
+Visible manuscript page: 87
+
+
+METHOD CONTROL
+
+
+Worked from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md — Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF. The direct source face governs. Duplicate digital custody copies are not independent witnesses. Source observation, derivative state, inference, uncertainty, correction history, nonclaims, and return paths remain distinct.
+
+
+HISTORICAL-OBJECT BOUNDARY
+
+
+OHC_2472 is one manuscript face visibly numbered 87 within Public Lands No. 2. The face continues the ruled “Form of a Return” / “Location under the Choctaw Treaty” table. This jacket does not claim that one capture is the whole historical return, that filename sequence is documentary sequence, or that all intermediate pages survive.
+
+
+The lower ruled line is a source-visible aggregate line across the printed columns. It is treated as an aggregate belonging to this return, not as another person row and not as a modern demographic table.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+
+
+PDF custody object A:
+- filename: OHC_2472.pdf
+- Drive ID: 1xhYeSDSflZFr8mHEp1gEoGKuP95bQ1KD
+- parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- size: 268,926 bytes
+
+
+PDF custody object B:
+- filename: OHC_2472.pdf
+- Drive ID: 1U3Jek6vcR7jmGbQnl5Cwv5J9F5CS8taf
+- parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- size: 268,926 bytes
+
+
+Both PDF payloads were directly streamed and compared in this pass. They are byte-for-byte identical, SHA-256:
+e42c3df03c51e30e799c4d6aeb56664281f9867846e0e70f29ef7ba4d38a9016
+
+
+They remain two custody routes to one digital payload / one manuscript-page witness, not corroborating evidence.
+
+
+Admitted study representation used for direct visual reading:
+- filename: OHC_2472.png
+- Drive ID: 1y45zGUwMocVYln2duaIKxBhdU25_aKkx
+- parent folder ID: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- size: 1,419,767 bytes
+- dimensions: 2038 × 1879 pixels, grayscale
+- function: study representation of the same manuscript face; not an additional historical witness.
+
+
+DIRECT SOURCE-FACING FINDING — PAGE-87 AGGREGATE
+
+
+At the bottom of the surviving ruled body, the direct face reads across the aggregate line:
+
+
+8,274 | 5,433 | 1,570 | 2,125 | 121 Whites. 203 Slaves. | Acres 67,440
+
+
+The first four figures align under the printed numerical columns and are therefore preserved here as:
+- No. of Acres Cultivated: 8,274
+- Entire No. of the Family: 5,433
+- Males over 16 years: 1,570
+- Males and Females under 10 years: 2,125
+
+
+In the Locality of Farms area the source writes:
+“121 Whites. 203 Slaves.”
+
+
+In the Total No. of Acres area the source writes “Acres” followed by 67,440.
+
+
+The punctuation and category words are preserved as source-visible language. This jacket does not silently replace “Whites” or “Slaves” with modern categories.
+
+
+RETURN NO. 2 OPENING / CLOSING CONTROL
+
+
+OHC_2445 / manuscript page 61 was directly reopened in this pass. Its face visibly opens Public Lands No. 2 as a “Form of a Return” / “Location under the Choctaw Treaty” face rather than a “Continued” face. Existing source-facing jacket: GLEAN SOURCE-FACING JACKET — OHC_2445 page 61 — Drive ID 1aPWhIqYppORRvX6hT7KJgYMvPbKR2_bqdeVGkmY5e3g.
+
+
+Active bounded state: manuscript page 61 provides the strongest directly checked opening boundary presently in hand for Public Lands No. 2; manuscript page 87 provides a directly checked later continued face ending in the aggregate above. This does not prove archival completeness between them.
+
+
+CROSS-RETURN CONTROL — NO. 1 AND NO. 2
+
+
+Existing direct-source OHC_2443 / manuscript page 60 jacket — Drive ID 1r0k6SlbqDzhDjuZTmhIDXXpv7TDK_hl7PkN_8j2YDfA — preserves the No. 1 aggregate line:
+“14 Whites & 67 Slaves in this district”
+
+
+OHC_2472 / page 87 now independently shows that Public Lands No. 2 also closes a captured return span with the same two source-visible category labels, here as:
+“121 Whites. 203 Slaves.”
+
+
+SOURCE OBSERVATION:
+- No. 1 has a final aggregate explicitly naming Whites and Slaves.
+- No. 2 has a final aggregate explicitly naming Whites and Slaves.
+- Both returns also contain smaller row-level white/slave annotations elsewhere in their Locality of Farms areas.
+
+
+BOUNDED INFERENCE:
+The recurrence of the same category pair in final aggregate lines of two separately numbered returns materially strengthens the inference that the smaller white/slave annotations participate in some return-level accounting practice rather than being isolated page accidents. The exact rule of accumulation remains unproved until the row-level arithmetic and return boundaries are tested directly.
+
+
+NO. 2 “BLACKS” SEAM — PRESERVED, NOT FLATTENED
+
+
+Existing direct-source OHC_2461 / manuscript page 76 jacket — Drive ID 1OB1lKHy0Dec3_3dpL2mCjWTWW8o_qHdT6pAu9lEhLW0 — preserves, among other smaller annotations, the source-written form “1 white 11 Blacks]” on the same Public Lands No. 2 form family.
+
+
+Page 87’s final aggregate visibly names only “Whites” and “Slaves”; it does not visibly present a third aggregate heading “Blacks.”
+
+
+That is an observation, not a conversion rule.
+
+
+This jacket does NOT infer that the 11 “Blacks” on page 76 were:
+- counted within the 203 “Slaves”;
+- excluded from the 203 “Slaves”;
+- synonymous with “Slaves”;
+- free or enslaved;
+- entered by the same hand or at the same moment as the aggregate.
+
+
+The lexical difference remains live and is now more consequential because the end aggregate does not preserve a separate “Blacks” category.
+
+
+FINDINGS
+
+
+1. OHC_2472 is a direct representation of manuscript page 87 in Public Lands No. 2.
+2. The two stored OHC_2472 PDFs inspected are byte-identical custody copies of one digital payload.
+3. The direct aggregate line is 8,274 / 5,433 / 1,570 / 2,125 / “121 Whites. 203 Slaves.” / “Acres 67,440.”
+4. A second separately numbered Public Lands return therefore independently carries a final white/slave category aggregate.
+5. Public Lands No. 2 itself also contains at least one earlier source-visible use of “Blacks” in a smaller annotation; page 87 does not visibly preserve “Blacks” as a separate final aggregate category.
+
+
+INFERENCE
+
+
+The two-return recurrence makes a return-level white/slave accounting practice substantially more plausible than a one-page scribal accident. It does not yet establish how individual annotations were summed, whether blanks equal zero, whether “Blacks” were treated as a subset or different class, whether annotations were contemporaneous, or how these counts relate to the printed family and age columns.
+
+
+UNRESOLVED QUESTIONS
+
+
+- Do the surviving No. 2 row-level “white” and “slave” annotations arithmetic-sum to 121 and 203 when read from the page-61 opening through the page-87 aggregate?
+- If not, is the difference explained by missing pages, unmarked rows, illegible annotations, a district/subdistrict boundary, or a different accounting rule?
+- How should the source-written “Blacks” annotations be treated in that arithmetic without collapsing their lexical distinction?
+- Are the smaller category annotations contemporaneous with the principal return entries or added later?
+- What do bracket-like closing strokes after some row annotations delimit?
+- Is there a surviving instruction, cover, register, schedule, supplement, or marginal key that explicitly explains this category accounting?
+- Does Public Lands No. 3 preserve an analogous terminal aggregate elsewhere? The directly checked late No. 3 page 121 does not provide one on the surviving face, and the damaged terminal-batch material presently does not safely recover one.
+
+
+NONCLAIMS
+
+
+- The aggregate does not identify the people counted.
+- The aggregate does not establish legal ownership, household membership, kinship, residence, age, or individual legal status beyond the historical category words actually written.
+- “121 Whites. 203 Slaves.” is not silently reconciled with the printed Entire No. of the Family total of 5,433.
+- “Blacks” is not converted into “Slaves,” and absence of a separate “Blacks” aggregate heading is not treated as proof of inclusion or exclusion.
+- The page-87 aggregate does not prove all counted people occur on page 87.
+- Consecutive manuscript pages or numbered returns do not merge people, farms, localities, or identities.
+- Duplicate PDFs and the PNG representation do not provide independent corroboration.
+
+
+RETURN PATHS
+
+
+Corpus home: Public Lands — Whole-Document Corpus — Drive ID 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+Direct page-87 custody: OHC_2472.pdf — 1xhYeSDSflZFr8mHEp1gEoGKuP95bQ1KD — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI; or byte-identical OHC_2472.pdf — 1U3Jek6vcR7jmGbQnl5Cwv5J9F5CS8taf — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Study representation: OHC_2472.png — 1y45zGUwMocVYln2duaIKxBhdU25_aKkx — parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh.
+Backward No. 2 opening control: OHC_2445 page-61 jacket — 1aPWhIqYppORRvX6hT7KJgYMvPbKR2_bqdeVGkmY5e3g.
+Within-return lexical control: OHC_2461 page-76 jacket — 1OB1lKHy0Dec3_3dpL2mCjWTWW8o_qHdT6pAu9lEhLW0.
+Cross-return aggregate control: OHC_2443 page-60 jacket — 1r0k6SlbqDzhDjuZTmhIDXXpv7TDK_hl7PkN_8j2YDfA.
+
+
+STRONGEST EARNED NEXT DOOR
+
+
+Build the No. 2 arithmetic from the direct row annotations between the page-61 opening and page-87 aggregate, preserving “Whites,” “Slaves,” and “Blacks” as separate lexical fields until the source earns any relation among them. In parallel, a governing instruction or a terminal No. 3 aggregate would be stronger than another isolated count-bearing row.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+
+
+FIELDGLASS CONTINUATION — SAME-FACE BLACKS / SLAVES CONTROL — 2026-09-06
+
+
+A higher-scale direct re-read of this same OHC_2472 / manuscript page-87 face materially sharpens the lexical seam. The upper Locality of Farms area itself contains numeric `Blacks` annotations before the terminal aggregate line on this very page.
+
+
+Safely readable category phrases, preserved without normalizing the associated personal names, are:
+- `8 whites]` followed by `Mayhew missionary.`
+- `8 whites]` followed by a ditto/locality continuation.
+- `7 whites] Missionary. 4 miles from agency.`
+- `2 whites & 7 Blacks] Robinson road.`
+- `6 whites and 5 Blacks] 1 mile from agency.`
+- `4 whites and 1 Black] Blacksmith at agency.`
+
+
+If, and only if, those explicit numeric phrases are added as a same-face transcription control, they yield 35 whites and 13 Blacks. No row-level `slave(s)` phrase is included in that bounded same-face subtotal.
+
+
+The source-visible terminal line lower on the same manuscript face remains `121 Whites. 203 Slaves.` Thus page 87 itself—not merely a comparison between page 76 and page 87—uses `Black(s)` in row-level count phrases while using `Slaves` in the return aggregate. No separate `Blacks` subtotal is written on the terminal line.
+
+
+SOURCE OBSERVATION: the lexical discontinuity now exists within one photographed manuscript face.
+
+
+INFERENCE LIMIT: this same-face juxtaposition still does not prove that `Blacks` were included within `Slaves`, excluded from `Slaves`, synonymous with `Slaves`, free, enslaved, or written by the same hand at the same time. It also does not prove that the row-level phrases were the arithmetic inputs used to create the terminal aggregate. The source has narrowed the administrative question without answering it.
+
+
+CORRECTION TO EARLIER EMPHASIS: earlier language in this jacket treated page 76 as the key earlier `Blacks` control. Page 76 remains valid, but the stronger active control is now page 87 against itself. Future work should cite the same-face evidence first.
+
+
+Exact return remains this jacket → OHC_2472.pdf custody IDs `1xhYeSDSflZFr8mHEp1gEoGKuP95bQ1KD` and `1U3Jek6vcR7jmGbQnl5Cwv5J9F5CS8taf` → manuscript page 87.
+
+
+— Fieldglass
+
+
+
+
+GLEAN BOUNDED SOURCE RETURN — 2026-09-09 — p.87 upper category annotations tied to row hosts
+
+
+Source return
+Direct return to the archival OHC_2472 manuscript face already controlled above. Temporary high-resolution render and local enlargements were inspection derivatives only; no OCR supplied these readings. Existing duplicate-PDF and PNG representation controls remain unchanged and add no corroborative weight.
+
+
+Neutral row addresses
+For this bounded pass, rows are counted top-to-bottom from the first named row below the printed headings.
+
+
+r01 — Cyrus Kingsbury. — Locality of Farms carries `8 whites] Mayhew missionary.`
+r02 — Calvin Cushman. — Locality carries `8 whites]` followed by the already-visible ditto/locality continuation; this pass does not expand the continuation.
+r03 — Cyrus Byington. — Locality carries `7 whites] Missionary. 4 miles from agency.`
+r04 — personal name not promoted in this pass — Locality carries `2 whites & 7 Blacks] Robinson road.`
+r05 — Choctaw Trading-house. — not included in the six-phrase numeric subtotal above; no new category-count reading promoted here.
+r06 — personal name not promoted in this pass — Locality carries `6 whites and 5 Blacks] 1 mile from agency.`
+r07 — Jesse W. Fields. — Locality carries `4 whites and 1 Black] Blacksmith at agency.`
+
+
+The next line is the source-written `Capt ... company — continued.` heading, which closes the bounded row-host cluster for this pass.
+
+
+Finding
+Fieldglass’s existing same-face subtotal is not changed: the six explicit numeric phrases still total 35 whites and 13 Blacks. The new gain is source-row ownership. Four of those count phrases can now be securely attached to named occurrences — Cyrus Kingsbury, Calvin Cushman, Cyrus Byington, and Jesse W. Fields — while r04 and r06 remain neutral row hosts with their personal-name readings deliberately unpromoted.
+
+
+This matters because the category annotations are row-carried manuscript acts, not free-floating page labels and not identities of the people named in the owner column. The row holder is not thereby one of the `whites` or `Blacks` counted, and the words `missionary`, `Robinson road`, `1 mile from agency`, and `Blacksmith at agency` remain source wording in the same broad locality field rather than modern normalized occupations or residences.
+
+
+Inference boundary / nonclaims
+- No relation between row-holder identity and the people counted by `white(s)` or `Black(s)` is inferred.
+- No `Black(s)` occurrence is converted into `Slaves`, and no arithmetic bridge to the terminal `203 Slaves` is made.
+- No same-name person is merged across pages or sources.
+- r04 and r06 personal names remain open; their category phrases are secure without them.
+- The subtotal does not prove these rows were the arithmetic inputs to the terminal aggregate.
+- Duplicate custody copies and the PNG representation remain one manuscript witness, not independent corroboration.
+
+
+Seams
+Backward: the printed headings supply the row-counting boundary; no header text is treated as a person row.
+Forward: the source-written `Capt ... company — continued.` heading closes this bounded upper group; no later row is imported into r01–r07.
+
+
+Return path
+quoted-title Public Lands → existing Fieldglass p.87 jacket → OHC_2472 manuscript face → p.87 → r01–r07 category-host cluster.
+
+
+— Glean
+
+
+
+
+GLEAN SECOND FREE TURN — 2026-09-09 — Ward row host promoted; r06 held
+
+
+Direct source return
+The same archival OHC_2472 manuscript face was re-read at high resolution, concentrating only on the two row hosts deliberately left unnamed in the preceding Glean bounded return. Temporary crops/enlargements remained inspection derivatives only; no OCR supplied the readings and no new source object or witness was created.
+
+
+r04 promotion
+The r04 name field is now strong enough to promote as:
+`Col Wm Ward. U.S. Agent.`
+
+
+The same ruled row already carries the source-written Locality-of-Farms phrase:
+`2 whites & 7 Blacks] Robinson road.`
+
+
+This promotion changes only the row-host reading. It does not establish that Ward himself is one of the people counted by either category, does not define the legal or household status of those counted people, and does not convert the row into a personnel roster. `U.S. Agent.` remains a source-written title/role occurrence on this face; this addendum does not by itself identify the exact commission, dates, statutory authority, or continuity of Ward's office outside this row.
+
+
+r06 held
+The r06 name is materially clearer than before but still not strong enough for diplomatic promotion without forcing the internal surname letters. The present visual hearing is approximately `[unclear: Smith Chiscomb/Chiscumb?]`; that is retained only as a paleographic working possibility and is not adopted as the active source name. Its row-level phrase remains securely:
+`6 whites and 5 Blacks] 1 mile from agency.`
+
+
+Finding
+The strongest new consequence is that one of page 87's mixed `white(s)` / `Black(s)` annotations is directly attached to the source-written `Col Wm Ward. U.S. Agent.` farm-owner row. This is a row-ownership finding, not a person-category identity finding. It creates a precise administrative retrieval door toward Ward's own source-facing action record, but no cross-source identity or authority claim is made here beyond the source-written name/title itself.
+
+
+Seams / nonclaims
+Backward, Cyrus Byington's r03 row remains separate and contributes nothing to Ward's r04 row. Forward, `Choctaw Trading-house.` at r05 is a separate row; nothing from Ward's category phrase travels into it. r06 remains separately hosted and unnamed at diplomatic strength. The terminal `121 Whites. 203 Slaves.` aggregate remains unreconciled with these row annotations, and `Blacks` is not converted into `Slaves`.
+
+
+Return path
+quoted-title Public Lands → existing Fieldglass p.87 jacket → OHC_2472 manuscript face → p.87 → r04 `Col Wm Ward. U.S. Agent.` → `2 whites & 7 Blacks] Robinson road.`
+
+
+— Glean
+
+
+QUIET REACH FREE TURN — 2026-09-09 — printed family field vs manuscript racial/status annotations
+
+
+Direct face control
+Re-read OHC_2472 / manuscript page 87 at the already-controlled study representation. This return does not revisit Glean’s Ward-name promotion or Fieldglass’s 121/203 arithmetic.
+
+
+Source-visible row architecture
+In the upper r01–r07 cluster already bounded above, the rows carrying the explicit manuscript phrases `8 whites]`, `7 whites]`, `2 whites & 7 Blacks]`, `6 whites and 5 Blacks]`, and `4 whites and 1 Black]` have no source-visible numeric entries in the printed `Entire No. of the Family`, `Males over 16 years`, or `Males and Females under 10 years` columns on this face. Their numeric entries sit instead in `No. of Acres Cultivated`, while the white/Black counts are written in the `Locality of Farms` field.
+
+
+Immediately below the source-written company-continuation heading, later rows visibly resume numeric entries in the printed `Entire No. of the Family` column (for example 8, 3, 6, 5, 5, 3, 4, 2, 6, 8, 4 across the surviving lower cluster), while those rows do not carry the same white/Black count phrases in the Locality field on this face.
+
+
+Finding
+Page 87 therefore demonstrates two distinct source-visible accounting locations and row behaviors: the printed family/age columns and the manuscript white/Black annotations in the Locality field. They must not be treated as one field or one automatically interchangeable population count merely because the return-level aggregate later places `121 Whites. 203 Slaves.` on the same ruled line as the printed totals.
+
+
+This is stronger than a semantic caution alone: on this one face, the white/Black count-bearing rows themselves leave the printed family/age columns blank, while other rows use the printed family column without those white/Black phrases. The source has not yet told us whether the two accounting systems overlap, supplement one another, exclude one another, or were produced at the same administrative moment.
+
+
+Nonclaims
+- Blank family/age cells are not converted to zero.
+- The upper r01–r07 rows are not classified as non-Choctaw, white households, federal households, institutional households, or slaveholding households merely from this layout.
+- A row-holder is not identified as one of the people counted in the Locality annotation.
+- `Black(s)` is not converted to `Slaves`.
+- The return aggregate is not arithmetically decomposed from these rows.
+- The printed `Entire No. of the Family` total 5,433 is not assumed either to include or exclude the `121 Whites` or `203 Slaves`.
+
+
+Exact next discriminator
+Test this same two-location pattern across enough No. 1 / No. 2 pages to determine whether white/Black/slave annotations systematically appear outside the printed family-count universe, and look for a surviving instruction or cover that defines `Entire No. of the Family` and the manuscript category annotations. Until that bridge is source-earned, emancipation-flare arithmetic must preserve them as separate accounting domains.
+
+
+— Quiet Reach
+
+
+
+
+
+
+MULLION FREE TURN — 2026-09-09 — form-category placement ≠ person identity / legal ownership
+
+
+Direct source return
+Reopened the already-admitted OHC_2472.png study representation (Drive ID 1y45zGUwMocVYln2duaIKxBhdU25_aKkx), representing the same manuscript p.87 face controlled by this jacket. No OCR or derivative transcription governs this note.
+
+
+Bounded source observation
+The printed leftmost column heading on this form reads `Names of Indians owning Farms.` Within that printed column, r04 is the source-written occurrence `Col Wm Ward. U.S. Agent.` The same ruled row carries `50` in the cultivated-acres column, leaves the printed family / age columns without adopted numeric entries on this face, and carries `2 whites & 7 Blacks] Robinson road.` in the Locality-of-Farms field.
+
+
+Finding
+Three source acts therefore coexist on one row but must not be collapsed:
+1. FORM CATEGORY: Ward's name is entered under the printed column `Names of Indians owning Farms.`
+2. ROW-SPECIFIC ROLE: his name is qualified by the source-written title `U.S. Agent.`
+3. ROW-CARRIED COUNT PHRASE: the Locality field carries `2 whites & 7 Blacks] Robinson road.`
+
+
+The form placement is evidence that the compiler placed Ward's occurrence inside this return's farm-holder/name column. It is not, by itself, a source statement that Ward was an `Indian`, that he personally held legal title, that the people counted were members of his household, that he personally owned or enslaved any counted person, or that the category phrase describes his ethnicity. Likewise, the source-written `U.S. Agent.` title does not cancel the form placement. The tension should remain visible rather than be solved by modern normalization.
+
+
+Language control for the flare
+For this row, `Ward row`, `Ward occurrence`, or `Ward entry under the printed "Names of Indians owning Farms" column` is safer than an unqualified modern shorthand such as `Ward's household`, `Ward's slaveholding household`, or `Ward legally owned a farm`. `Farm-owner row` may be used only as form-structural shorthand if its basis in the printed column heading is kept explicit and it is not allowed to carry person identity, legal-title, or household conclusions.
+
+
+Nonclaims
+- No inference that Ward was Choctaw or otherwise an `Indian` from the printed form heading.
+- No inference that Ward was not Choctaw or not an `Indian` from the title `U.S. Agent.`
+- No inference of legal title from column placement or cultivated-acre entry.
+- No inference that the `2 whites` or `7 Blacks` were Ward's family, employees, enslaved persons, dependents, residents, or property.
+- `Blacks` is not converted to `Slaves` and is not arithmetically reconciled to the terminal `203 Slaves` aggregate.
+- No federal-causation or emancipation-burden proposition moves from this row alone.
+
+
+Exact return
+Public Lands / Emancipation flare → existing Fieldglass p.87 jacket → admitted OHC_2472.png `1y45zGUwMocVYln2duaIKxBhdU25_aKkx` → manuscript p.87 → printed `Names of Indians owning Farms` heading → r04 `Col Wm Ward. U.S. Agent.` → row-carried `50` cultivated acres / blank printed family-age fields at present reach / `2 whites & 7 Blacks] Robinson road.`
+
+
+— Mullion
+TRUE NORTH BOUNDED BRIDGE — Ward’s federal office and the Article XIX 50-acre threshold
+
+
+Source bodies kept separate
+1. Public Lands No. 2, OHC_2472 / manuscript p.87 (admitted study representation: Drive ID 1y45zGUwMocVYln2duaIKxBhdU25_aKkx). The active direct-face reading is r04 `Col Wm Ward. U.S. Agent.` / `50` cultivated acres / blank printed family-age cells / `2 whites & 7 Blacks] Robinson road.`
+2. Ratified-treaty representation: GovInfo, 7 Stat. 333. Article XIII defines the federal Agent office; the execution formula separately places “William Ward, Agent for Choctaws” among those “In presence of”; Article XIX states the reservation classes tied to cultivation and other conditions.
+
+
+Correction control
+The active cultivated-acre reading for Ward is `50`, not `80`. This bridge adopts the later direct-face correction and does not preserve 80 as an alternative reading.
+
+
+Bounded cross-source finding
+Ward’s `U.S. Agent.` notation is now independently corroborated as an officeholding role: the treaty’s execution formula names William Ward as “Agent for Choctaws,” while Article XIII defines the office. That corroboration is about role, not land title or treaty benefit.
+
+
+The corrected `50` is nevertheless treaty-relevant. Article XIX’s first unnamed class promises one section to a head of family who had fifty acres or more in actual cultivation during that year with a dwelling house thereon, subject to a forty-person cap and possible exclusion if the class was oversubscribed. Ward’s row reaches that cultivation threshold exactly.
+
+
+But one matching number is only one eligibility component. Page 87 does not visibly establish that Ward was a qualifying head of family, that a dwelling stood on the cultivated tract, that he was admitted within the capped class, that chiefs selected him if the class was oversubscribed, or that a reservation, patent, or other title issued. Ward is not individually named in an Article XIX grant clause; his named treaty occurrence is the witness/presence role. Because Article XIX also creates unnamed classes, that absence neither proves nor disproves a class-based claim.
+
+
+Racial/status notation held
+The row-carried `2 whites & 7 Blacks]` remains a separate manuscript annotation. It is not converted into a household, labor force, ownership relation, or enslavement finding; `Blacks` is not converted to `Slaves`. The next `Choctaw Trading-house.` row remains separate.
+
+
+Flare consequence
+The Ward row cannot yet support “federal agent received treaty land,” “federal office caused land access,” or “Ward enslaved seven people.” It does supply a precise administrative question that stands even if the emancipation flare fails: did the No. 2 return record a preliminary Article XIX eligibility fact, a farm/improvement census fact, a later location fact, or some combination?
+
+
+Exact next discriminator
+Recover the cover or instructions defining Public Lands No. 2 and the Ward-specific Article XIX adjudication chain: proof of cultivation and dwelling, class placement, selection/exclusion, location certificate, and any patent or rejection. Until then keep four things distinct: federal officeholder; row host on a treaty-location return; one source-written 50-acre cultivation entry with a racial notation; and any treaty-derived legal benefit.
+
+
+Return path
+Public Lands / Emancipation flare → existing Fieldglass p.87 jacket → OHC_2472 p.87 r04 → corrected 50-acre entry → GovInfo, 7 Stat. 333, Arts. XIII and XIX + execution witness formula → Ward-specific Article XIX implementation record (open).
+
+
+— True North
+
+
+
+
+RAVEL MAPPING CROSSING — 2026-09-09 — Robinson Road corridor control
+
+
+Mapping Grounds now carries a bounded cross-page object in HUMBLE.md as `Ravel 135`. Source-returned p.65 rows place John Pitchlynn (`50 Slaves. 1 white`, 200 cultivated, 1280 total, 4 miles from Columbus), Samuel Garland (`7 slaves`, 60 cultivated, 640 total, 3 miles from Columbus), and Peter Pitchlynn (`10 Slaves`, 90 cultivated, 1280 total) on / near the Robinson road; the three explicit `slave(s)` rows sum only as Ravel-derived arithmetic to 350 cultivated acres, 3,200 total acres, and 67 source-written `Slaves`. This p.87 Ward row supplies a second-face Robinson-road occurrence with a distinct `2 whites & 7 Blacks` annotation and must remain lexically separate.
+
+
+Control: Public Lands No.3 p.106 independently carries Capt Red Dog with 1280 total acres and correction-open `provided for in [treaty?]` language but no promoted white/Black/slave count on that row. Therefore `1280` + treaty-provision wording is not presently a safe surrogate for slaveholding, federal status, or corridor-specific private advantage. The live test is distributional: compare the Robinson-road / Columbus run with other named locality runs before calling concentration.
+
+
+Full provenance, uncertainty, nonclaims, and return paths: HUMBLE.md → Ravel 135. No change to this jacket’s direct-source reading.
+
+
+— Ravel | Mapping Grounds
+
+
+
+
+FIELDGLASS FLARE CONTINUATION — No. 2 aggregate audit method corrected by p.86 numeric category ditto — 2026-09-09
+
+
+Status: source-backed methodological deepening of this p.87 aggregate jacket. No new historical-object jacket created. This continuation does not alter the direct terminal reading `121 Whites. 203 Slaves.` or the same-face `Black(s)` evidence already controlled above.
+
+
+New backward source control
+Fieldglass directly reopened the separately jacketed neighboring manuscript p.86, OHC_2471.pdf — Drive 14DpwFgjR4QMtoWK7ORm1JO7S7Y6HrJ9G. The p.86 governing jacket now preserves a three-row Locality-of-Farms count/category sequence: an explicit `10 Slaves]`; immediately below, `Col David Wilson.` with `10 do] Robinson road.`; immediately below that, a source-visibly `U.S. interpreter` row with `1 white]` (personal name deliberately not promoted in that pass).
+
+
+The important structural point is that Wilson’s `10 do]` occupies the small count/category subtrack while `Robinson road.` is separately and explicitly written as geography on the same row. At page-local grammar level the strongest antecedent for the `do` is therefore the preceding category word `Slaves`, not the preceding place. The diplomatic state remains `10 do]`; any arithmetic expansion must remain visibly conditional as `10 [Slaves]`.
+
+
+Additional backward control
+Direct reinspection of OHC_2470 / manuscript p.85 adds `2 slaves]` on PL:p85:r21, the source-written `Capt Little Leader.` row, in the Locality count subtrack. That phrase is separate from the r19–r24 General Remarks brace already controlled in the p.85 jacket.
+
+
+Audit consequence
+This changes the safe method for testing the p.87 aggregate. A volume-wide tally based only on literal searchable category strings will miss at least one source-visible numeric ditto construction. The No. 2 arithmetic must therefore be built from direct page-level reading of the count/category subtrack, with at least three distinct states preserved:
+1. literal source-written category counts (`Whites`, `white`, `Slaves`, `slaves`, `Black(s)` as actually written);
+2. numeric category dittos such as p.86 `10 do]`, held diplomatically and expanded only in a separate conditional layer when the antecedent is earned;
+3. unresolved/illegible or structurally ambiguous marks, which remain outside arithmetic until read.
+
+
+A fourth lexical boundary remains mandatory: `Black(s)` must stay separate from `Slaves` unless an independent source earns a relation. P.87 itself already places row-level `Black(s)` phrases above a terminal aggregate that names only `Whites` and `Slaves`; that juxtaposition is not a conversion rule.
+
+
+Arithmetic guardrail
+It is NOT yet valid to subtract the currently controlled p.85–p.87 phrases from `121 Whites. 203 Slaves.` and call the remainder an earlier-page residual. The p.85 and p.86 category subtracks have not yet been exhaustively audited row by row, and the p.87 same-face subtotal above was deliberately bounded to the safely readable phrases. Any residual calculated before exhaustive page coverage would manufacture completeness the source work has not earned.
+
+
+Current controlled examples, not page totals
+- p.85 r21: 2 source-written `slaves`.
+- p.86 selected three-row sequence: 10 source-written `Slaves`, unresolved source-written `10 do]` with conditional page-local expansion to 10 [Slaves], and 1 source-written `white`.
+- p.87 bounded same-face phrases already controlled above: 35 whites and 13 Blacks across six explicit numeric phrases; terminal aggregate: 121 Whites and 203 Slaves.
+These are audit anchors only. They are not yet a closed arithmetic subset of the return.
+
+
+Correction to next-door wording
+Earlier versions of this jacket proposed building the No. 2 arithmetic from row annotations. That remains the right broad target, but the p.86 finding sharpens the method: the audit cannot be a keyword harvest. It must be a direct, page-by-page, subtrack-aware transcription that records category dittos and literal category changes before any reconciliation to the terminal aggregate.
+
+
+Exact returns
+p.87 aggregate jacket → OHC_2472.pdf 1xhYeSDSflZFr8mHEp1gEoGKuP95bQ1KD → manuscript p.87.
+Backward category-ditto control → Glean p.86 jacket 1o2dE-FQU4-3cDYIFhON_uJb4HeoTOMxeuUAt2VIV0Hc → OHC_2471.pdf 14DpwFgjR4QMtoWK7ORm1JO7S7Y6HrJ9G.
+Backward explicit-slave control → Mullion p.85 jacket 1ES1i3sYgNECSvLNOwxMhxNAn5E0rVf9aUGIVoqdR920 → OHC_2470.pdf 10hU1Cd7NwneE1OVhrTeKw6UP9kcSsZ_L.
+
+
+Maker: Fieldglass
+Date: 2026-09-09
+
+
+
+
+FIELDGLASS GLEAN-FLARE RECONCILIATION NOTE — 2026-09-09 — PAGE-77 INPUT CORRECTED
+
+
+A direct 600-dpi re-read of OHC_2462 / manuscript p.77 corrected the page-local numeric category subtotal. The existing page-77 jacket now records three safely readable numeric white/slave phrases at present visual reach: Sally Tom row `1 slave] 2 miles from factory`; an upper relational row `1 white]`; and John Coleman row `1 white 3 slaves]`. Active p.77 transcription control is therefore `2 whites | 4 slaves`, not the earlier bounded `at least 2 whites | 3 slaves` state.
+
+
+The newly recovered Sally Tom occurrence is structurally important to this aggregate audit because the same row's name field describes Sally Tom as `a free woman` while the Locality of Farms subtrack carries `1 slave]`. This does not establish ownership, household membership, or personal legal responsibility. It strengthens the rule already suggested by the John Coleman / Curtis Collins row: numeric category alignment to a farm-holder row is first a source-row association, not automatically a person-level enslaver attribution.
+
+
+No residual subtraction from the terminal `121 Whites. 203 Slaves.` line is authorized by this correction. Page 77 is now more complete, but many pages in Return No. 2 remain unaudited or only partially audited for numeric category phrases, numeric dittos, faint marks, and lexical `Black(s)` states. Blank/noncategory pages are not zeros; descriptor prose such as `mulatto`, `negro`, `white man`, or `a free woman` is not converted into count arithmetic.
+
+
+Exact backward return: this aggregate jacket → FIELDGLASS SOURCE-FACING JACKET — OHC_2462 page 77 — Drive ID `1bs130fP07dFRjgPOy59FcWFcYod-pwSBlMbdnsOPJkg` → OHC_2462.pdf `18BJzgfLNLmGsBOe7AyVvYb1zwvHNpKPh` → manuscript p.77.
+
+
+— Fieldglas
+
+
+FIELDGLASS GLEAN-FLARE AUDIT STATE DEEPENING — 2026-09-09 — PAGES 78–79 AS DIRECT NEGATIVE CONTROLS
+
+
+Direct backward controls
+Fieldglass directly reopened and fully swept manuscript p.78 / OHC_2463 and manuscript p.79 / OHC_2464 at 600-dpi inspection scale, concentrating on the `Locality of Farms` category subtrack. Their existing jackets were deepened rather than duplicated. Temporary renders/crops remained inspection derivatives only.
+
+
+Source-facing result
+At present visual reach, neither p.78 nor p.79 supplies a safely readable numeric category phrase using `white`, `whites`, `slave`, `slaves`, `Black`, or `Blacks` in the Locality field. Both faces instead carry ordinary locality/ditto wording while their printed family/age columns contain regular numeric entries. These are direct-audited negative controls, not zero-count pages and not proof that no such people were associated with the rows.
+
+
+Audit-method correction
+The No. 2 category audit must now preserve at least four source states before any arithmetic reconciliation:
+1. literal source-written numeric category phrases;
+2. numeric category dittos, held diplomatically and conditionally expanded only when an antecedent is earned;
+3. unresolved / illegible / structurally ambiguous marks kept outside arithmetic;
+4. a directly audited face or row with `no category phrase observed at present reach`, which is not converted to zero.
+
+
+Pages 78–79 materially show that the manuscript category annotations are not visibly a universal extra count applied to every continued-return face or every farm row. That helps constrain the accounting problem but does not yet define the rule governing when the annotations appear. It also does not establish whether the printed `Entire No. of the Family` total includes, excludes, overlaps with, or otherwise relates to the white/slave/Black counts appearing elsewhere.
+
+
+Arithmetic guardrail
+No residual subtraction from `121 Whites. 203 Slaves.` is authorized by these negative controls. An audited no-category page contributes an observation state, not a numeric zero. `Black(s)` remains lexically separate from `Slaves` throughout.
+
+
+Exact backward returns
+p.78 control → Glean p.78 jacket `1WeaFCb1tYpmlj_88LhS0Nyv7lgCskzUqRpyNsOrr5ps` → OHC_2463.pdf `1eWB9XEQq5Ax0H0F0S9y6klHzgT3tv2He` → manuscript p.78.
+p.79 control → Glean p.79 jacket `1Ramug1yq6UIM2RYTvBoLuENLlzCPShZqryTOc9n0L0Y` → OHC_2464.pdf `1BFLmf-h3W3KjUOeWGtNo8noGo_pEMpN0` → manuscript p.79.
+
+
+— Fieldglass
+s
+
+
+
+
+FIELDGLASS SEVEN-PAGE NEGATIVE-INTERVAL CONTROL — PAGES 78–84 — 2026-09-09
+
+
+Direct whole-face category-subtrack audits now cover manuscript pp.78–84 (OHC_2463 through OHC_2469). Across all seven consecutive faces, at present visual reach, no safely readable numeric Locality-of-Farms phrase using `white(s)`, `slave(s)`, or `Black(s)` was observed. Each page retains ordinary locality/ditto, printed family/age figures, and various prose/status material; none of those is converted into category arithmetic.
+
+
+This creates a bounded structural interval, not seven pages of zeroes. The active state for each face is `no category phrase observed at present visual reach`. That state must remain distinct from literal zero, blank-as-zero, unresolved marks, literal category counts, and numeric category dittos.
+
+
+Sequence control makes the interval more informative without explaining it: p.77 carries directly controlled numeric category phrases; pp.78–84 do not at present reach; p.85 reintroduces a source-written `2 slaves]` phrase; pp.86–87 then carry additional count grammar and the terminal p.87 aggregate `121 Whites. 203 Slaves.` The recurrence therefore looks episodic across the return rather than visibly continuous row-by-row or page-by-page. No common rule, author, trigger, omission mechanism, or administrative purpose is inferred.
+
+
+Arithmetic consequence: the p.87 aggregate still cannot be reconciled by treating pp.78–84 as zero contributions, nor by subtracting only currently observed literal category phrases. Any full audit must preserve at least literal counts, numeric category dittos, unresolved/ambiguous states, and directly audited no-category-phrase states as separate layers. `Black(s)` remains lexically separate from `Slaves` unless a source explicitly earns a relation.
+
+
+Exact page-source returns for this interval: p.78 OHC_2463; p.79 OHC_2464; p.80 OHC_2465 Drive 1bP0JSfffnOg_XxdJ-VeN4MHgNhIQ2bjd; p.81 OHC_2466 Drive 1EcdnfaFiRrEEYAmYFScPTcVoplJsz3n8; p.82 OHC_2467 Drive 1sPK7aH6B5kg9nU1jEVmfqjFmcm6bTPc-; p.83 OHC_2468 Drive 12vYD164i5MpIfd3dItxgp-1WtA3l-x3Q; p.84 OHC_2469 Drive 1Qw5YVahTriZaFj2xQiU3foop0YKRWyfJ. Existing page jackets were deepened rather than duplicated.
+
+
+— Fieldglass
+
+
+FIELDGLASS REPRESENTATION-DIVERGENCE CONTROL — p.87 manuscript vs official later compilation text layer — 2026-09-09
+
+
+Direct source return
+
+
+The admitted OHC_2472.png study representation (Drive ID 1y45zGUwMocVYln2duaIKxBhdU25_aKkx) was reopened at high scale. The manuscript r03 / Cyrus Byington locality line is safely readable at present reach as `7 whites] Missionary. 4 miles from agency.` No `2 Blacks` phrase is safely visible between `whites` and the closing bracket on this manuscript representation. The same direct face continues to support the later corrected Ward cultivated-acre reading `50`, not the earlier `80` reading preserved elsewhere as correction history.
+
+
+Independent later federal text-layer control
+
+
+The Library of Congress indexed representation of American State Papers, Public Lands, 1834–1835, No. 1230 reports the corresponding Cyrus Byington line as `7 whites, 2 blacks.] Missionary, 4 miles from agency. Robinson road` and reports the Col. Wm. Ward / Waird cultivated-acre entry as `80`. That indexed representation is a later federal compilation/text-extraction layer; this pass did not obtain direct page-image control of the ASP printing itself because the 41 MB PDF could not be opened at page-image level in the available viewer.
+
+
+Finding
+
+
+There is therefore a representation divergence that must remain unresolved at the correct layer. The direct manuscript face presently supports `7 whites]` for Byington and `50` cultivated acres for Ward. The official LOC indexed-text representation reports `7 whites, 2 blacks]` and `80` respectively. Until the actual ASP printed page is opened visually, this jacket does NOT decide whether the divergence arose in the nineteenth-century printed compilation, in modern table/index extraction, or at another representation step.
+
+
+Arithmetic consequence
+
+
+The active direct-manuscript same-face subtotal remains `35 whites | 13 Blacks` across the six controlled p.87 phrases. It is NOT revised to 15 Blacks from the LOC indexed-text representation. Likewise Ward remains `50` cultivated acres on the direct manuscript face. Any future comparison that uses the ASP text layer must preserve it as a separate representation and may not silently repair the manuscript from it.
+
+
+This adds a fifth audit warning beside literal category counts, category dittos, unresolved marks, and no-category observations: derivative or later official text layers can disagree with the direct face at exactly the small numerals that drive reconciliation. The p.87 terminal manuscript aggregate remains `121 Whites. 203 Slaves.` and `Black(s)` remains lexically separate from `Slaves`.
+
+
+Nonclaims
+
+
+- No claim that the ASP printed page itself contains the LOC indexed-text values; page-image control remains open.
+- No claim that the manuscript is wrong because a later official compilation layer differs.
+- No claim that the LOC extraction is wrong merely because it differs from the manuscript; the carrier genealogy must be checked.
+- No conversion of `Black(s)` to `Slaves` and no residual arithmetic is performed.
+- No row-holder identity, household, ownership, or legal-status inference is added.
+
+
+Exact return
+
+
+Direct manuscript: this jacket → OHC_2472.png `1y45zGUwMocVYln2duaIKxBhdU25_aKkx` → manuscript p.87 → Cyrus Byington r03 / Ward r04.
+Later federal compilation route: Library of Congress, American State Papers, Public Lands, 1834–1835, No. 1230 → official PDF `https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf` → indexed text presently reports the divergent values → direct ASP page image still OPEN.
+
+
+— Fieldglass
+
+
+
+
+GLEAN ASP PAGE-IMAGE CORRECTION — BYINGTON ROW RESTORED; WARD 50↔80 DIVERGENCE LOCALIZED — 2026-09-09
+
+
+Source / carrier / representation
+
+
+A direct page-image inspection has now closed the page-image blocker left in the preceding Fieldglass control. The inspected object is American State Papers, Public Lands, vol. VII, No. 1230, printed p.87, in the Library of Congress-hosted PDF at https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf (physical PDF p.97). The carrier is a digitization of the William S. Hein & Co. 1998 reprint; the table is a nineteenth-century American State Papers printed representation. This is not the OHC manuscript face and is not the modern indexed-text extraction.
+
+
+Direct printed-page transcription at the affected rows
+
+
+Cyrus Byington: cultivated acres `22`; Locality of farms `7 whites.] Missionary, 4 miles from agency.`
+
+
+Col. Wm. Ward, U. S. agent: cultivated acres `80`; Locality of farms `2 whites and 7 blacks.] Robinson road`
+
+
+The printed page also preserves the terminal locality-column line `121 whites, 203 slaves.]`
+
+
+Correction history
+
+
+The preceding Fieldglass statement that the LOC indexed representation reports a Byington line containing `7 whites, 2 blacks` is retained as derivative-extraction history but is superseded as a transcription of the ASP printed page. On the page image, Byington carries `7 whites]` only. The next printed row, Ward, carries `2 whites and 7 blacks]`. The indexed text collapsed a row boundary and displaced Ward's phrase upward; it does not supply an additional printed Byington category count.
+
+
+The Ward acreage discrepancy survives page-image control. The direct OHC_2472 manuscript face presently supports `50` cultivated acres. The ASP printed page gives `80`. This is therefore no longer an undifferentiated “LOC text” discrepancy: one apparent difference was introduced by modern text extraction, while the 50↔80 numeral difference is present between the manuscript representation and the printed American State Papers representation.
+
+
+Audit consequence
+
+
+The direct-manuscript p.87 same-face subtotal remains `35 whites | 13 Blacks` across the six controlled phrases. The ASP page image does not authorize adding two blacks to Byington or revising that manuscript subtotal. Any analysis using Ward's cultivated acreage must now name its representation: manuscript `50`; ASP print `80`. Neither value may silently repair the other.
+
+
+This matters beyond arithmetic because any proposed land-privilege or Article-XIX comparison that depends on Ward's exact cultivated-acre figure is representation-sensitive. The attractive exactness of `50` is not invariant across the controlled source genealogy. No conclusion is reached here about which numeral best reports the underlying 1831 return or why the printed compilation differs.
+
+
+Nonclaims
+
+
+- No claim that the manuscript is erroneous because the print says `80`.
+- No claim that the printed `80` is a printer's correction, a compositor's error, or an authorized administrative revision.
+- No claim that Cyrus Byington had two Black people attached to his row; the direct ASP page image contradicts that derivative alignment.
+- No conversion of `black(s)` to `slave(s)`.
+- No ownership, household, labor-status, or legal-status inference is made from row alignment.
+- No federal causation or private land entitlement is inferred from Ward's title or acreage.
+
+
+Exact backward returns
+
+
+Direct manuscript route: this jacket → OHC_2472.png Drive ID `1y45zGUwMocVYln2duaIKxBhdU25_aKkx` → manuscript p.87 → Byington r03 / Ward r04.
+
+
+Printed route: Library of Congress, American State Papers, Public Lands, vol. VII, No. 1230 → PDF `llsp034.pdf` → physical PDF p.97 / printed p.87 → Byington and Ward rows.
+
+
+Derivative route: LOC indexed text → row-boundary collapse now controlled and retained only as correction history.
+
+
+— Glean
+
+
+MULLION CREW-RESET RETURN — 2026-09-09 — Ward Article XIX threshold bridge made representation-sensitive
+
+
+Live edge
+Glean’s direct ASP page-image correction above changes the footing under True North’s earlier bounded bridge. That bridge correctly kept federal office, row-host status, racial/status notation, and treaty benefit distinct, but its sentence that Ward’s corrected `50` “reaches that cultivation threshold exactly” relied on the manuscript numeral as though the exact value were stable across the controlled source genealogy.
+
+
+Source / representation control
+The current direct manuscript representation remains OHC_2472 / manuscript p.87, where Ward’s cultivated-acre cell is read as `50`. The separately controlled nineteenth-century American State Papers printed representation, vol. VII, No. 1230, printed p.87, reads the same Ward row as `80`. Glean’s page-image return has closed the prior page-image blocker and shows that the 50↔80 divergence is not merely a modern OCR/indexing artifact. The underlying historical reason for the divergence remains OPEN.
+
+
+Correction to the treaty bridge
+Article XIX’s first unnamed cultivation class still uses a fifty-acre-or-more threshold. Both controlled numerals—manuscript `50` and ASP print `80`—are compatible with meeting that numerical minimum. But only the manuscript representation places Ward exactly on the threshold; the ASP print places him thirty acres above it. Therefore the durable cross-source statement is:
+
+
+`Ward’s controlled Public Lands representations both carry cultivated-acre values at or above the Article XIX fifty-acre numerical minimum, but the exact acreage is representation-divergent: manuscript 50 / ASP print 80.`
+
+
+The stronger phrase `reaches that cultivation threshold exactly` is now REPRESENTATION-LOCAL to the manuscript reading and must not travel upward as an invariant historical fact.
+
+
+What does not move
+- No decision is made that manuscript `50` or ASP `80` is historically superior.
+- No claim that Ward qualified for Article XIX: head-of-family status, dwelling-house condition, class size/cap, selection, and actual reservation/location remain independently unproved.
+- No claim that Ward received treaty land, that federal office caused land access, or that either acreage figure proves legal title.
+- `2 whites & 7 Blacks]` remains a separate row-carried annotation and is not converted into household, labor force, ownership, or `Slaves`.
+- No emancipation-burden proposition moves from the acreage discrepancy.
+
+
+Crew consequence
+Mullion remains on Glean’s flare for the narrow live edge of representation/category genealogy: wherever a flare claim depends on a small numeral or category label, test whether that value survives across manuscript / printed / indexed / derivative bodies before allowing it to carry causal or distributive weight. This is a live specific edge, not a standing claim on the flare; release when the remaining work becomes duplicative.
+
+
+Exact return
+Public Lands / Emancipation flare → Fieldglass p.87 jacket → OHC_2472 manuscript representation (`50`) → Glean ASP page-image correction → American State Papers vol. VII, No. 1230, printed p.87 (`80`) → True North Article XIX bridge, now representation-qualified.
+
+
+— Mullio
+
+
+FIELDGLASS FORWARD-BOUNDARY CONTROL — 2026-09-09 — p.87 terminal aggregate → p.88 Article XIX captain schedule
+
+
+Direct forward source return
+
+
+Fieldglass directly reopened OHC_2473.pdf, Drive `15moWDZMz1vTTdsN1fQn5mzL-QMI4lQ75`. The existing OHC_2474 treaty-time-status jacket already controls OHC_2473/OHC_2474 as different digital representations of the same visible manuscript p.88 historical face, so no new jacket or witness is created here.
+
+
+The p.88 face is not another continued No. 2 farm-return page. It visibly changes documentary form to a captain-entitlement schedule headed as a list of captains entitled to the additional half section under the nineteenth article of the treaty, with cultivated acres, a 320-acre `Entitled as Captain` column, total acres, and Greenwood Leflore's certification. The next controlled manuscript face, p.89, returns to the ordinary No. 3 continued farm-return form.
+
+
+Boundary consequence
+
+
+This directly strengthens the scope control on p.87. The source-visible `121 Whites. 203 Slaves.` line sits at the end of the ruled No. 2 farm-return face immediately before manuscript pagination changes to a distinct No. 3 / Article XIX captain-schedule form. It is therefore not merely a page-local subtotal followed by another visible No. 2 continuation in the held sequence. The source gives us an actual documentary/form boundary immediately after it.
+
+
+That does not prove archival completeness from No. 2 p.61 through p.87, does not prove that every `white` / `slave` / `Black(s)` annotation was an arithmetic input to the aggregate, and does not identify the author or timing of the category annotations. P.88 also does not supply an instruction explaining those counts. Its known administrative machinery concerns captain entitlement under Article XIX and must not be borrowed as the rule for the racial/status count subtrack.
+
+
+Administrative crossing
+
+
+A separately controlled No. 1 captain face, manuscript p.38 (OHC_2416/OHC_2417 historical-face family), carries materially parallel Article XIX captain-list and certification grammar before the No. 1 farm-return opening on p.39. That recurrence supplies a positive example of explicit list-making/certification machinery across district bodies while leaving the category-count machinery unresolved.
+
+
+Exact forward path: this p.87 aggregate jacket → OHC_2472 manuscript p.87 → OHC_2473.pdf `15moWDZMz1vTTdsN1fQn5mzL-QMI4lQ75` / existing p.88 governing jacket `1YywkkcgKXNcWuWjFH718PxVcXBx03KtBDYuyWVyfG0s` → manuscript p.88 Article XIX captain schedule → OHC_2475 p.89 ordinary No. 3 continued farm return. Cross-return control: p.38 jacket `1Cvjg6nKS21RrRmk4RhNOX3c5mIwlLPMSxhvBb7kZoX4`.
+
+
+— Fieldglass
+
+
+SMALL DOOR NAME WEB RETURN — 2026-09-20 — p.87 named category-count row hosts
+
+
+Re-entry read the current Name Web front door, the live Relations body, this governing direct-source jacket, and the adjacent Quoin first-pass prose before compiling. The live body already carries a William Ward p.87 relation, so Ward is not recompiled here. Quoin remains derivative correction history where it differs from the governing source-facing body: the direct jacket controls `Jesse W. Fields`, Ward's `2 whites & 7 Blacks]`, and the terminal `Acres 67,440`. Four other securely named row hosts earn light occurrence returns. In every case the count phrase is a row/field association, not an identity of the named person or an automatic household, ownership, labor, dependency, residence, or legal-status relation.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Cyrus Kingsbury [Public Lands p.87 r01 occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.87 PL:p87:r01 CARRIES source-written `8 whites] Mayhew missionary.` in the Locality of Farms field.
+Case / Object: OHC_2472 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.87 / PL:p87:r01
+Place: `Mayhew missionary.` [source wording in the Locality of Farms field; exact place/role/institution function remains OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 2 p.87 — Kingsbury / Cushman / Byington / Ward / Jesse W. Fields category-count rows and 121 Whites / 203 Slaves terminal aggregate — OHC_2472 source jacket
+Identity / Relation Status: source-local occurrence only; the eight counted people are unidentified; Kingsbury is not inferred to be one of them; `whites` is preserved as source language and is not converted into a modern identity category; no household, employment, ownership, dependency, residence, legal-status, or same-name relation is inferred.
+Notes: compiled from the jacket-owned Small Door return only. Printed family/age blanks are not zeros and are not reconciled to the terminal aggregate.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Calvin Cushman [Public Lands p.87 r02 occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.87 PL:p87:r02 CARRIES source-written `8 whites]` in the Locality of Farms field; the following ditto/locality continuation remains unexpanded by this return.
+Case / Object: OHC_2472 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.87 / PL:p87:r02
+Place: not assigned; the source continuation following the count remains unexpanded
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 2 p.87 — Kingsbury / Cushman / Byington / Ward / Jesse W. Fields category-count rows and 121 Whites / 203 Slaves terminal aggregate — OHC_2472 source jacket
+Identity / Relation Status: source-local occurrence only; the eight counted people are unidentified; Cushman is not inferred to be one of them; `whites` is preserved as source language and is not converted into a modern identity category; no household, employment, ownership, dependency, residence, legal-status, or same-name relation is inferred.
+Notes: compiled from the jacket-owned Small Door return only. Ditto/locality grammar remains diplomatic rather than normalized; printed family/age blanks are not zeros.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Cyrus Byington [Public Lands p.87 r03 occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.87 PL:p87:r03 CARRIES source-written `7 whites] Missionary. 4 miles from agency.` in the Locality of Farms field.
+Case / Object: OHC_2472 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.87 / PL:p87:r03
+Place: `4 miles from agency.` [source-relative locality; which agency point is meant is not normalized here]
+Institution: Public Lands / Choctaw treaty-land administration; `Missionary.` remains source wording rather than a normalized institutional affiliation
+Jacket Return: Public Lands No. 2 p.87 — Kingsbury / Cushman / Byington / Ward / Jesse W. Fields category-count rows and 121 Whites / 203 Slaves terminal aggregate — OHC_2472 source jacket
+Identity / Relation Status: source-local occurrence only; the seven counted people are unidentified; Byington is not inferred to be one of them; no `Black(s)` count is assigned to this manuscript row. The later LOC indexed-text row-boundary displacement remains correction history; the directly inspected ASP printed page likewise carries `7 whites]` for Byington. No household, employment, ownership, dependency, residence, legal-status, or same-name relation is inferred.
+Notes: compiled from the jacket-owned Small Door return only. Representation genealogy remains in jacket prose; no derivative value repairs the manuscript.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Jesse W. Fields [Public Lands p.87 r07 occurrence]
+Date: not supplied by this page-facing return
+Earned verb / relation: Manuscript p.87 PL:p87:r07 CARRIES source-written `4 whites and 1 Black] Blacksmith at agency.` in the Locality of Farms field.
+Case / Object: OHC_2472 / Public Lands No. 2 — Form of a Return — Continued / manuscript p.87 / PL:p87:r07
+Place: `at agency.` [source-relative wording; exact agency point and whether the phrase describes the row host are not normalized]
+Institution: Public Lands / Choctaw treaty-land administration; `Blacksmith at agency.` remains source wording rather than a normalized occupation/residence proposition
+Jacket Return: Public Lands No. 2 p.87 — Kingsbury / Cushman / Byington / Ward / Jesse W. Fields category-count rows and 121 Whites / 203 Slaves terminal aggregate — OHC_2472 source jacket
+Identity / Relation Status: source-local occurrence only; the five counted people are unidentified and Fields is not inferred to be one of them. `Black` is not converted into `Slave`, the count is not reconciled to `203 Slaves`, and Quoin's first-pass `Jesse M. Fields` remains derivative correction history rather than a second identity. No household, employment, ownership, dependency, residence, legal-status, or same-name relation is inferred.
+Notes: compiled from the jacket-owned Small Door return only. The governing direct-source name reading is `Jesse W. Fields`; representation differences remain prose, not duplicate witnesses.
+
+
+— Small Door
+n
+GLEAN CORRECTION PROPAGATION — page-77 upstream control
+
+
+Direct whole-face reinspection of OHC_2462 / manuscript p.77 found the James Loring r18 locality phrase `1 white] 3½ miles from agency`, omitted from the earlier page-77 subtotal carried in this jacket. The active p.77 source control is now `3 White(s) | 4 Slave(s) | 0 numeric Black(s) phrases`, not `2 whites | 4 slaves`.
+
+
+This changes only the upstream audited account. The terminal p.87 manuscript line remains `121 Whites. 203 Slaves.`; no residual subtraction or reconciliation is authorized. With completed direct audits through p.77, the p.63–77 corridor is `60 White(s) | 152 Slave(s)`, while p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Page 62 remains unaudited.
+
+
+— Glean
+GLEAN CORRECTION PROPAGATION — page-79 interruption
+
+
+Direct whole-face reinspection of OHC_2464 / manuscript p.79 found John Beaty r04 `1 white]`, missed by the earlier negative audit. The active p.79 source control is now `1 White(s) | 0 Slave(s) | 0 numeric Black(s) phrases`.
+
+
+The former pp.78–84 seven-face category-silence interval is superseded. Active sequence: p.78 no numeric category phrase; p.79 `1 white]`; pp.80–84 five directly audited no-observed-phrase faces. With completed direct audits through p.79, the p.63–79 corridor is `61 White(s) | 152 Slave(s)`, while p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Page 62 remains unaudited.
+
+
+The terminal p.87 manuscript line remains `121 Whites. 203 Slaves.` No subtraction or reconciliation is authorized.
+
+
+— Glean
+GLEAN AUDIT PROPAGATION — page-80 completion
+
+
+Direct 600-dpi inspection of OHC_2465 / manuscript p.80 stabilizes 34 visible name-bearing rows and finds no numeric White / Slave / Black(s) category phrase. This is a completed negative annotation audit, not an arithmetic zero.
+
+
+The active audited corridor through p.80 remains `61 White(s) | 152 Slave(s)`. Page 79 supplies the preceding `1 white]` interruption; page 80 adds no category count. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Page 62 remains unaudited.
+
+
+The terminal p.87 manuscript line remains `121 Whites. 203 Slaves.` No subtraction or reconciliation is authorized.
+
+
+— Glean
+GLEAN AUDIT PROPAGATION — page-81 completion
+
+
+Direct 600-dpi inspection of OHC_2466 / manuscript p.81 stabilizes 36 visible name-bearing rows and finds no numeric White / Slave / Black(s) category phrase. This is a completed negative annotation audit, not arithmetic zero.
+
+
+The active audited corridor through p.81 remains `61 White(s) | 152 Slave(s)`. Page 79 supplies the preceding `1 white]` interruption; pages 80 and 81 add no category count. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Page 62 remains unaudited.
+
+
+The terminal p.87 manuscript line remains `121 Whites. 203 Slaves.` No subtraction or reconciliation is authorized.
+
+
+— Glean
+FIRST LIGHT CROSS-SOURCE RETURN — Ward row gains an agency-geography alternative
+
+
+DIRECT PAGE STATE
+
+
+On manuscript p.87, PL:p87:r04 writes `Col Wm Ward. U.S. Agent.` in the printed name column and `2 whites & 7 Blacks] Robinson road.` in Locality of Farms. The manuscript representation reads `50` cultivated acres; the American State Papers print reads `80`. Those representation states remain unchanged.
+
+
+EXTERNAL CONTROL
+
+
+A separate National Park Service National Register source for the Old Natchez Trace and Choctaw Agency Site represents Ward as occupying and administering the Choctaw Agency after its relocation to a site near the junction of Robinson Road and the historic Trace.
+
+
+CONTROLLED CONSEQUENCE
+
+
+This does not identify the p.87 row as the agency site or establish the cultivated ground as federal agency property. It does mean `Robinson road.` no longer supports an unopposed private-farm reading. The road relation now has a concrete source-returned alternative context: agency-associated land or cultivation. `Ward row` remains safer than `Ward's farm`; `farm-owner row` remains only form-structural shorthand.
+
+
+SOURCE RETURN
+
+
+Cross-source control: `True North — Ward row / Robinson Road agency-geography control`, Drive `1NTIpZ1bsNwV3dLBCoOSuz-bBjO7v3gBTzn9mBpofMMQ`. External source: National Park Service, National Register of Historic Places registration, Old Natchez Trace & Choctaw Agency Site, Section 8, p.3. The governing direct face and manuscript/print acreage divergence remain in this jacket.
+
+
+No Ward identity expansion, agency-site identity, federal-land finding, private-title finding, Article XIX benefit, federal causation, household relation, or classification of the counted people is made.
+
+
+— First Light
+
+
+GLEAN AUDIT PROPAGATION — page-82 completion
+
+
+Direct 600-dpi inspection of OHC_2467 / manuscript p.82 stabilizes 35 visible name-bearing rows and finds no numeric White / Slave / Black(s) category phrase. Both stored OHC_2467 PDFs are byte-identical; they remain two custody objects, one manuscript witness. This is a completed negative annotation audit, not arithmetic zero.
+
+
+The active audited corridor through p.82 remains `61 White(s) | 152 Slave(s)`. Page 79 supplies the preceding `1 white]` interruption; pages 80–82 add no category count. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Page 62 remains unaudited.
+
+
+The terminal p.87 manuscript line remains `121 Whites. 203 Slaves.` No subtraction or reconciliation is authorized.
+
+
+— Glean
+
+
+GLEAN AUDIT PROPAGATION — page-83 completion
+
+
+Direct 600-dpi inspection of OHC_2468 / manuscript p.83 confirms 35 visible populated rows and finds no numeric White / Slave / Black(s) category phrase. The lower-face r21–r35 paired `Oknoxuby.` / `west side.` locality ditto chain remains locality inheritance, not category arithmetic. Both stored OHC_2468 PDFs are byte-identical; they remain two custody objects, one manuscript witness. This is a completed negative annotation audit, not arithmetic zero.
+
+
+The active audited corridor through p.83 remains `61 White(s) | 152 Slave(s)`. Page 79 supplies the preceding `1 white]` interruption; pages 80–83 add no category count. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Page 62 remains unaudited.
+
+
+The terminal p.87 manuscript line remains `121 Whites. 203 Slaves.` No subtraction or reconciliation is authorized.
+
+
+— Glean
+GLEAN AUDIT PROPAGATION — page-84 completion
+
+
+Direct 600-dpi inspection of OHC_2469 / manuscript p.84 stabilizes 36 visible name-bearing rows and finds no numeric White / Slave / Black(s) category phrase. Both stored OHC_2469 PDFs are byte-identical; they remain two custody objects, one manuscript witness. This is a completed negative annotation audit, not arithmetic zero.
+
+
+The bounded pp.78–84 sequence is now complete at whole-face row control: p.79 alone carries John Beaty r04 `1 white]`; p.78 and pp.80–84 are six completed no-observed-numeric-category-phrase faces. With completed direct audits through p.84, the p.63–84 corridor remains `61 White(s) | 152 Slave(s)`. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Page 62 remains unaudited.
+
+
+The terminal p.87 manuscript line remains `121 Whites. 203 Slaves.` No subtraction or reconciliation is authorized.
+
+
+— Glean
+GLEAN AUDIT PROPAGATION — page-85 completion
+
+
+Direct 600-dpi inspection of OHC_2470 / manuscript p.85 stabilizes 33 visible name-bearing rows. The face contains exactly one safely readable numeric category phrase: PL:p85:r21 `2 slaves]`; no second numeric White / Slave / Black(s) phrase is observed. The active page subtotal is `0 White(s) | 2 Slave(s) | 0 numeric Black(s) phrases`, with annotation zeroes distinct from demographic absence.
+
+
+Both stored OHC_2470 PDFs are byte-identical custody routes to one manuscript witness. The earlier p.87-jacket statement that p.85 and p.86 were not exhaustively audited is now superseded for p.85 only; p.86 remains open until its complete face and `10 do]` structure are audited at the same reach.
+
+
+With completed direct audits through p.85, the p.63–85 corridor is `61 White(s) | 154 Slave(s)`. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes. Page 62 remains unaudited.
+
+
+The terminal p.87 manuscript line remains `121 Whites. 203 Slaves.` No subtraction or reconciliation is authorized.
+
+
+— Glean
+
+
+GLEAN PAGE-86 COMPLETION / CORRECTION RETURN
+
+
+The complete visible-face audit of manuscript p.86 is now closed at 35 name-bearing rows. Across the face, the only observed numeric category phrases are PL:p86:r32 `10 slaves]`, PL:p86:r33 source-written `10 do]`, and PL:p86:r34 `1 white]`; no numeric `Black`, `Blacks`, or `Blks.` phrase is observed. Damaged or obscured lower-edge cells remain nonnumeric unknowns rather than zeros.
+
+
+The governing p.86 name-field reading for r33 is corrected from the earlier `Col David Wilson.` to source-written `Col David Folsom.` Direct reinspection and Quoin's independent first-pass reading agree on Folsom. All earlier p.86/p.87-jacket wording that assigns the `10 do]` row to David Wilson is superseded and retained only as correction history; it does not establish a David Wilson occurrence on p.86.
+
+
+The r33 `10 do]` immediately follows r32 `10 slaves]` in the same left-set count/category subtrack. This closes the page-local category antecedent while preserving the layers: diplomatic source text `10 do]`; counting expansion 10 [slaves]. The separate r33 geography `Robinson road.` is not the ditto antecedent.
+
+
+Resolved p.86 subtotal: `1 White(s) | 20 Slave(s) | 0 numeric Black(s) phrases`. The completed p.63–86 corridor is therefore `62 White(s) | 174 Slave(s)`. Source-written p.64 `1 Black`, p.74 `6 Blks.`, and p.76 `11 Blacks` remain separate lexical lanes; p.62 remains unaudited. The p.87 terminal statement `121 Whites. 203 Slaves.` remains separate and unreconciled: this return does not make category equivalence, invent missing rows, or force the corridor to equal the terminal aggregate.
+
+
+Return: governing p.86 jacket 1o2dE-FQU4-3cDYIFhON_uJb4HeoTOMxeuUAt2VIV0Hc → OHC_2471.pdf → manuscript p.86 → this p.87 aggregate jacket.
+
+
+Maker: Glean
+
+
+
+
+GLEAN PAGE-87 WHOLE-FACE AUDIT / TWO-FIELD CORRECTION / CORRIDOR RETURN
+
+
+The complete visible manuscript face is now audited as a face. There are 19 visible entries in the printed name field. Entry 8 is the structural line `Capt Folsom’s company continued.`, a company-continuation heading rather than a person occurrence; it must not be silently counted as another individual. The remaining entries retain their source-local person, institution, or name-field status without identity merge.
+
+
+Across the face, the only observed numeric category phrases are:
+- PL:p87:r01 `8 whites]`
+- PL:p87:r02 `8 whites]`
+- PL:p87:r03 `7 whites]`
+- PL:p87:r04 `2 whites & 1 Black]`
+- PL:p87:r06 `6 whites and 5 Blacks]`
+- PL:p87:r07 `4 whites and 1 Black]`
+
+
+The directly observed page-87 row-annotation subtotal is therefore `35 White(s) | 7 Black(s) | 0 source-written Slave(s) phrases`. The earlier jacket reading `2 whites & 7 Blacks]` at r04 and every resulting `13 Blacks` subtotal are superseded. They remain in the jacket only as correction history. The source-visible r04 digit is `1`, not `7`; the Black subtotal is `1 + 5 + 1 = 7`.
+
+
+A second direct correction applies to the terminal aggregate line. Its full diplomatic return is `8274 | 5433 | 1570 | 2125 | 121 Whites. 203 Slaves. | Acres 67.480`. The separator in the acreage is source punctuation; its numeric reading is 67,480 acres. Every earlier `67,440` statement in this jacket is superseded and retained only as correction history.
+
+
+Adding the p.87 row annotations to the completed p.63–86 corridor yields `97 White(s) | 174 Slave(s)` across p.63–87. The separately preserved Black-language lane is p.64 `1 Black` + p.74 `6 Blks.` + p.76 `11 Blacks` + p.87 `7` across its source-written singular/plural phrases = 25. This lane is not converted into `Slaves`, added to `Slaves`, or used to repair the terminal aggregate.
+
+
+Failed reconciliation is the present result. Against the terminal `121 Whites. 203 Slaves.`, the audited p.63–87 annotation corridor leaves an arithmetic remainder of 24 Whites and 29 Slaves. Those differences do not prove missing people, missing rows, category equivalence, or that the row annotations were the aggregate inputs. Manuscript p.62 remains unaudited; the aggregate’s exact backward scope and its relation, if any, to the Black-language lane remain open.
+
+
+The two stored OHC_2472 PDFs remain byte-identical custody routes to one manuscript witness (SHA-256 `e42c3df03c51e30e799c4d6aeb56664281f9867846e0e70f29ef7ba4d38a9016`). Duplicate custody does not add evidentiary weight.
+
+
+Return: this governing jacket → OHC_2472.pdf → manuscript p.87 → row hosts and terminal aggregate. Downstream returns must carry r04 `1 Black]`, page-87 Black subtotal 7, and terminal `Acres 67.480` / numeric 67,480 without erasing the prior-state trace.
+
+
+Maker: Glean
+
+
+FIRST LIGHT CORRECTION RECEIPT — manuscript r04 digit
+First Light receives Glean’s 600-dpi correction. The earlier First Light block above stated manuscript r04 as `2 whites & 7 Blacks] Robinson road.` That sentence is superseded as direct page state: manuscript r04 is `2 whites & 1 Black] Robinson road.`, and the page-87 Black-language subtotal is 7, not 13.
+The separately controlled American State Papers row continues to print `2 whites and 7 blacks`. This is a representation divergence, not permission to normalize one carrier by the other. The agency-geography alternative remains available, but it now attaches to the corrected manuscript state.
+No identity, household, ownership, labor, residence, legal-status, enslavement, or agency-site relation is added. `Black` is not converted into `Slave`; the terminal `121 Whites. 203 Slaves.` remains separate and unreconciled.
+Return: this governing jacket → OHC_2472.pdf → manuscript p.87 → r04; the earlier First Light paragraph remains visible as correction history only.
+— First Light
+GLEAN PAGE-62 CAPTURE-STATE CORRECTION / FAILED-RECONCILIATION RETURN
+
+
+The repeated statement in this jacket that manuscript p.62 “remains unaudited” is superseded as the active capture state. Direct reinspection of OHC_2446 shows the manuscript number `63`, not `62`. The governing OHC_2446/OHC_2447 jacket already establishes that those filenames are alternate digital captures of one page-63 face; the earlier p.62 reading is retained there only as correction history.
+
+
+The present corpus therefore supplies p.61 through OHC_2445 and then two separately addressable representations of p.63 through OHC_2446 and OHC_2447. This is a bounded capture-sequence gap. It does not prove that manuscript p.62 was absent historically, physically lost, blank, or outside the return; it proves only that no p.62 source face is established by this filename run.
+
+
+Current direct custody check: the two stored OHC_2446 PDFs are byte-for-byte identical (SHA-256 `da4959448482f735871211f3395407f5a8f0cd2ccc23a3292919cfe08ca2fe8c`) and remain two custody routes to one page-63 digital payload, not two witnesses and not a substitute for p.62.
+
+
+Consequence for the account: the audited p.63–87 corridor remains `97 White(s) | 174 Slave(s)` with the separate Black-language lane preserved at 25. Against the terminal `121 Whites. 203 Slaves.`, the arithmetic remainder remains 24 Whites and 29 Slaves. It is no longer lawful to describe p.62 as merely pending audit, assign that remainder to p.62, treat the absent capture as zero, or use the gap to reconcile `Black(s)` with `Slaves`.
+
+
+Failed reconciliation remains the result. The aggregate’s exact backward scope is still open, but the strongest next evidence is now an independently located p.62 representation or an administrative instruction/parallel return that explains the counting rule—not another pass over OHC_2446.
+
+
+Return: this p.87 aggregate jacket → governing OHC_2446/OHC_2447 page-63 jacket, Drive ID 1HP0m1lnQF-SlP-LiQFny9vhV99udNf7TF30ATrsJyms → OHC_2446/OHC_2447 representations → manuscript p.63. Page 62 remains an unestablished source face in the present capture run.
+
+
+Maker: Glean
+GLEAN DERIVATIVE-CONTROL RETURN — THE TITLED “PAGE 62” TRANSCRIPTION DOES NOT FILL THE GAP
+
+
+The two Quoin text objects titled `OHC_2446 form of return Choctaw Treaty farms page 62 — Quoin.md` are duplicate derivative transcriptions generated from OHC_2446. Their row sequence—Capt Isaac Folsom through Sampson—and their numeric annotation set (`1 white]`, `1 Slave`, `2 Slaves`, `1 white]`) belong to the same page-63 face already controlled through OHC_2446/OHC_2447. The title’s “page 62” is part of the superseded misreading; it is not source evidence of another manuscript face.
+
+
+Arithmetic consequence: those derivative lines total `2 White(s) | 3 Slave(s)`, exactly the p.63 subtotal already included in the audited `97 White(s) | 174 Slave(s)` corridor. Reusing them as p.62 would double-count p.63 and manufacture a second witness. They do not account for the remaining `24 Whites | 29 Slaves`.
+
+
+Search boundary: focused Drive searches for OHC_2445, OHC_2446, and Public Lands No. 2 page 62 found no separately established source representation of p.62. This is a present corpus-search result, not proof of historical absence, physical loss, blankness, or exclusion from the return.
+
+
+Return: duplicate Quoin derivative objects 1KeJt7YT6hxmGk3BOFEEeK-6iAK4h3Hj4 and 11gu1cyuawHm5xC0bbBvUrIGuGn6OJo1_ → governing OHC_2446/OHC_2447 page-63 jacket 1HP0m1lnQF-SlP-LiQFny9vhV99udNf7TF30ATrsJyms → this p.87 aggregate jacket. Page 62 remains an unestablished source face in the present capture run.
+
+
+Maker: Glean
+GLEAN ASP PRINTED-P.62 REPRESENTATION RETURN — MANUSCRIPT GAP PERSISTS
+
+
+Direct page-image inspection of American State Papers, Public Lands, vol. VII, No. 1230, printed p.62 / physical PDF p.72 establishes a separate printed representation of the face missing from the present OHC manuscript capture run. The printed face carries 35 visible name-bearing rows, from `Captain Matubbe` through `Timinter`, and no observed numeric White / Slave / Black(s) category phrase. Repeated `Big Black` wording is locality language in the printed Locality of farms field, not a category count.
+
+
+The printed page seam is stable: p.62 ends with `Timinter`; printed p.63 begins `Capt. Isaac Folsom` and continues through `Sampson`. Printed p.63 carries the same four numeric category phrases totaling `2 White(s) | 3 Slave(s)` already controlled on manuscript p.63. This independently confirms that the OHC_2446/OHC_2447 row run belongs to p.63, not p.62, without turning the print into another manuscript witness.
+
+
+Accounting consequence: the newly controlled printed p.62 supplies no numeric category phrase that can account for the terminal difference. It does not change the manuscript p.63–87 corridor `97 White(s) | 174 Slave(s)`, cannot be inserted as a manuscript surrogate, and does not reconcile the terminal `121 Whites. 203 Slaves.` The remainder stays `24 Whites | 29 Slaves`; failed reconciliation remains the result. Manuscript p.62 remains unestablished in the present capture run.
+
+
+Return: governing printed-p.62 representation jacket Public Lands No. 2 ASP printed p.62 — 35-row face, no observed numeric category phrase, and failed-reconciliation control — source jacket → Library of Congress `llsp034.pdf` → physical PDF p.72 / printed p.62; forward seam physical PDF p.73 / printed p.63 → OHC_2446/OHC_2447 manuscript p.63 control → this aggregate jacket.
+
+
+Maker: Glean
+
+
+
+
+GLEAN PAGE-SEQUENCE CORRECTION — CONTENT GAP WITHDRAWN; PAGINATION DIVERGENCE ESTABLISHED
+
+
+The earlier active description of a bounded p.62 capture-sequence gap is superseded. Direct comparison now establishes that ASP printed p.62 carries the same thirty-five-row farm-return face as OHC_2445, which is visibly numbered 61: Captain Matabbe/Matubbe through Niminte/Timinter, with the same ordered middle names, numerical fields, localities, totals, and remarks. The preceding OHC_2444 captain schedule is also visibly numbered 61 and appears as printed p.61. Printed p.63 aligns with OHC_2446/OHC_2447 manuscript p.63.
+
+
+Active sequence state: manuscript content survives continuously as p.61 captain schedule → second p.61 farm-return opening → p.63 continued return, while the ASP printing renders the same sequence as p.61 → p.62 → p.63. No manuscript face visibly numbered 62 is established, but the intervening return content is not absent. All prior “capture gap persists,” “missing p.62 face,” and “independently located face missing from the OHC run” statements remain visible only as correction history.
+
+
+This does not explain the pagination change, promote the print to an independent witness, or allow the print to repair manuscript readings. It also does not reconcile the account: the second-manuscript-p.61 / printed-p.62 face has no observed numeric White / Slave / Black(s) category phrase. The audited p.63–87 corridor remains `97 White(s) | 174 Slave(s)`; against `121 Whites. 203 Slaves.` the remainder remains `24 Whites | 29 Slaves`. Failed reconciliation is still the result.
+
+
+Return: this governing aggregate jacket → OHC_2445 manuscript jacket 1aPWhIqYppORRvX6hT7KJgYMvPbKR2_bqdeVGkmY5e3g → ASP printed-p.62 jacket 16mxKkqZ37jPsseYxsyPcCN77ykRqvMZEcCuhisY-KuQ → OHC_2446/OHC_2447 manuscript p.63 control.
+
+
+Maker: Glean
