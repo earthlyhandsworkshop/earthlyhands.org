@@ -1,0 +1,388 @@
+Public Lands No. 3 p.102 — Masa / Robert / Silas McKinney spacing correction, John Pickens Big Black / Poor land, and Susan / Nashola treaty-time remarks — OHC_2496/OHC_2497 source jacket
+
+
+Status: source-facing leaf jacket; no identity merge; no genealogical conclusion.
+
+
+Source object
+- Archival source: OHC_2497.pdf, Drive ID 1JAXyMDSPOGMTNtGCA5W2faxiZKSYk4z7.
+- OHC_2496 is a distinct archival capture preserving the same visible page. Treat 2496/2497 as twin source objects with a repeated visible surface, not as two independent witnesses.
+- No separately searchable OHC_2497.png was located in this pass. This jacket was made from direct inspection of the archival PDF page image.
+
+
+Page identity / structure
+- Header reads, in substance: “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+- Visible columns include: Names of Indians owning farms; No. of acres cultivated; Entire No. of family; males over 16 years; males and females under 10 years; Locality of farms; Total No. of acres; General Remarks.
+- The page is a household/farm return, not merely a name list.
+
+
+McKinney cluster — direct source observations
+Three McKinney rows appear consecutively:
+1. Given name best read as “Masa” or “Mesa” McKinney, followed by “(widow).” The given name is not perfectly clear and should remain unresolved between those close readings unless a better representation settles it.
+   - cultivated acres: 5
+   - entire family: 10
+   - males over 16: 2
+   - under 10: 3
+   - visible total acreage: 80
+2. Albert McKinney
+   - cultivated acres: 2
+   - entire family: 3
+   - males over 16: 1
+   - under 10: 1
+   - no total-acre figure confidently assigned in this pass
+3. Silas McKinney
+   - cultivated acres: 12
+   - entire family: 5
+   - males over 16: 1
+   - under 10: best read as 2
+   - visible total acreage: 160
+
+
+Important restraint
+- Consecutive placement establishes adjacency in this return, not kinship.
+- “Widow” is a source notation attached to the first McKinney row; it does not by itself identify the deceased spouse.
+- No identity bridge is made here between any of these McKinneys and Catherine McKinney, John McKinney, or any later Bell–McKinney litigation person.
+
+
+Other source-visible English-script names / labels worth preserving
+- “Bungard or Burgard” (reading uncertain)
+- John Pickens
+- an additional widow entry lower on the page, given name uncertain
+- several Choctaw-language personal names remain unforced rather than normalized from handwriting
+
+
+Locality / remarks visible on the page
+- Locality column includes “Big Black” and a phrase best read as “Jefferson …” on nearby rows; another locality lower on the page includes “Oak Chitto” / similar wording. These locality notes have not been assigned to named rows beyond what is visually secure.
+- General remarks include phrases such as “Settled since the treaty,” “Poor land,” and a line beginning “More proof required to establish …” on nearby rows. The exact row-to-remark alignment should be rechecked before using any of those remarks as person-specific evidence.
+- A lower-page remark reads “Since treaty.”
+
+
+Why this leaf matters
+- It shows a compact McKinney cluster within the same Public Lands return machinery that also records household size, cultivated acreage, age structure, locality, total acreage, and remarks.
+- The first McKinney row is explicitly marked widow, making marital-status notation part of the administrative description on this page.
+- Because OHC_2496 and OHC_2497 preserve the same visible surface, later research should cite one page event while preserving both archival return paths.
+
+
+Unresolved questions
+- Is the widow’s given name best read Masa, Mesa, or another close form?
+- Can a cleaner source representation securely assign the nearby locality and general-remark entries to the McKinney rows?
+- What is the documentary sequence immediately before and after this page, and do those surrounding pages clarify company/captain groupings or geographic organization?
+- Does another independent source establish relationships among the three adjacent McKinney occurrences?
+
+
+Nonclaims
+- This jacket does not identify the widow as Catherine McKinney.
+- It does not claim Albert or Silas are her sons, brothers, or other relatives.
+- It does not infer household kinship from adjacency.
+- It does not treat OHC_2496 and OHC_2497 as independent corroboration.
+
+
+Return paths
+- OHC_2497.pdf — Drive ID 1JAXyMDSPOGMTNtGCA5W2faxiZKSYk4z7
+- Twin visible-surface counterpart: OHC_2496.pdf (separate archival object; exact twin relation already documented in Deep Study / duplicate-surface receipts)
+
+
+—First Light
+
+
+
+
+GLEAN SOURCE-FACING ADDENDUM — 2026-09-07
+
+
+Status
+Material deepening of the existing First Light jacket from a fresh direct-source return. Earlier First Light readings and uncertainty states are preserved as encounter history; this addendum does not silently rewrite them.
+
+
+Source / representation / custody
+- Directly reopened OHC_2497.pdf — Drive ID 1JAXyMDSPOGMTNtGCA5W2faxiZKSYk4z7 — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.”
+- Directly retrieved the batch-held OHC_2497.pdf — Drive ID 1rL6pgyY57eI8udO2lY3N--4yzGu37Ax4 — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, “Source objects — received batch 1 — OHC 2408–2518.” Both OHC_2497 custody objects are 239,681 bytes and byte-identical; SHA-256 c9efdc05c6042c874c3074969602b66f042ba60c74be1b46a2051de0b9e02291.
+- OHC_2496 likewise survives as two byte-identical custody objects: Drive ID 1FVOttq6NLpCbqU9HiJroqPsy2Ql8smAS in the legacy parent and Drive ID 1OxF1REglyxMFPl93fCdRtv3Rd_FdSFMd in the batch parent. Both are 239,681 bytes; SHA-256 de43030ccbdfb46a2f6f514c7b244baf4c5338873afd7d2a5f1298483a38e81d.
+- OHC_2496 and OHC_2497 are not byte-identical PDFs. A fresh 300-dpi full-page render comparison produced 0 changed pixels / 0.0% changed surface. Treat them as two distinct archival PDF representations carrying one visible manuscript face, not two historical witnesses. Preserve all four custody roads home.
+- Local PNG renders and crops used for inspection were temporary derivatives only; they were not admitted as source objects.
+
+
+Page identity / source-visible boundary
+Fresh direct inspection stabilizes the visible manuscript page number as 102. The face is headed “Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.” This addendum concerns that one manuscript page, not the full return.
+
+
+Diplomatic correction / strengthened reading
+The first McKinney widow row is now better read as “Masa McKinney (widow).” This supersedes First Light’s earlier “Masa or Mesa” uncertainty at the first name only. “widow” remains a source-written descriptor and does not identify a spouse or establish a kin relation. Albert McKinney and Silas McKinney remain separate adjacent source occurrences; adjacency and shared surname do not merge them.
+
+
+Row-level finding
+The “John Pickens.” row can now be securely aligned with Locality “Big Black” and General Remarks “Poor land”. The earlier jacket correctly held those phrases as nearby but not person-specific; this pass earns the row relation. “Poor land” remains source-carried qualitative language, not a legal, ownership, residence, entitlement, or valuation conclusion. “Big Black” remains a source locality phrase, not a cadastral point or modern mapped coordinate.
+
+
+Unresolved questions / explicit nonclaims
+- Other nearby localities and remarks remain correction-open. Do not assign “Settled since the treaty”, the line beginning “More proof required to establish …”, company language, “Since treaty”, or the clipped bottom remark to a person without a separate row-level pass.
+- Do not identify Masa, Albert, or Silas McKinney with Catherine/Catharine, John, or other McKinney occurrences elsewhere without independent evidence.
+- Do not infer family, household, or kinship from adjacency or common surname.
+- Do not treat OHC_2496, OHC_2497, or their duplicate custody copies as independent corroborating witnesses.
+- Do not generalize page 102’s administrative wording across the full Public Lands body.
+
+
+Seams / return paths
+Backward: FIELDGLASS SOURCE-FACING JACKET — OHC_2495 — manuscript p.101 — William Black row and row-aligned locality/remarks structure — Drive ID 1yShfAzWLjxoEcaCgId7EHePa0dhdJfy4JskjscuU1xQ → OHC_2495 → manuscript p.101.
+This addendum: Public Lands No. 3 p.102 — Masa / Robert / Silas McKinney spacing correction, John Pickens Big Black / Poor land, and Susan / Nashola treaty-time remarks — OHC_2496/OHC_2497 source jacket — Drive ID 130Mm7iLfckr2eT09ACIrCpiLd9qTmFGlG4IPqfGf0lo → OHC_2496/OHC_2497 repeated visible face → manuscript p.102.
+Forward: FIELDGLASS SOURCE-FACING JACKET — OHC_2498 — manuscript p.103 — explicit ditto carry-forward in General Remarks — Drive ID 1NzxckfGMBoTF2wLfD9U5TsARbtrMFCTNxWZMzVEvaKs → OHC_2498 → manuscript p.103.
+The 101→102→103 seam is now tied at visible manuscript pagination and form continuity. It does not establish completeness of Public Lands No. 3 or a corpus-level administrative theory.
+
+
+Maker: Glean
+Date: 2026-09-07
+
+
+GLEAN SOURCE-FACING CORRECTION ADDENDUM — 2026-09-08 — McKinney row spacing / adjacency repair
+
+
+Status
+Direct-source correction to the existing p.102 jacket. The earlier source-facing readings remain encounter history; only the adjacency/row-spacing statements and dependent interpretations identified below are superseded. No new jacket is created.
+
+
+Source / representation / derivative boundary
+Directly reopened: OHC_2497.pdf — Drive ID 1JAXyMDSPOGMTNtGCA5W2faxiZKSYk4z7 — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 239,681 bytes. The existing Glean addendum already controls the second OHC_2497 custody copy and the OHC_2496 repeated-visible-surface relation; this pass does not recount either as a new witness or re-prove those payload/representation relations.
+
+
+For reading only, the PDF was rendered locally at 400 DPI and cropped/enlarged around the McKinney neighborhood. Those PNGs are temporary inspection derivatives, not source objects, not corpus additions, and not independent witnesses. No OCR supplied the readings.
+
+
+Correction: McKinney row spacing
+Counting named rows top-to-bottom from the first visible row below the header on manuscript p.102:
+- PL:p102:r06 = `Masa McKinney (widow).`
+- PL:p102:r07 = `Albert McKinney.`
+- PL:p102:r08 = a different named row; personal-name spelling not promoted in this pass.
+- PL:p102:r09 = another different named row; personal-name spelling not promoted in this pass.
+- PL:p102:r10 = `Silas McKinney.`
+
+
+Therefore the original jacket statement `Three McKinney rows appear consecutively` is superseded. Masa and Albert are consecutive rows. Silas is not adjacent to Albert: two separately named rows intervene between them. The later phrase describing Albert and Silas as `adjacent source occurrences` is likewise superseded. `McKinney cluster` remains only the jacket's retrieval title / same-page study shorthand; it must not be read as a source-visible uninterrupted three-row run.
+
+
+Dependent source-facing check
+The previously recorded numerical readings remain supported at this pass's reach: Masa 5 cultivated / family 10 / males over 16 = 2 / under 10 = 3 / total acres 80; Albert 2 / 3 / 1 / 1 with no total-acre figure safely assigned; Silas 12 / 5 / 1 / 2 / total acres 160.
+
+
+No safely readable Locality-of-Farms wording or General-Remarks text is attributable to PL:p102:r06, r07, or r10 in this representation. In particular, the lower-page phrases previously held as `Settled since the treaty`, `Poor land`, `More proof required to establish ...`, and `Since treaty` are not promoted onto any of these three McKinney rows. This is a row-alignment finding for the visible representation, not a claim that the historical cells were never marked or that another representation could not expose more.
+
+
+Finding
+The page still contains three McKinney surname occurrences, but only two form an adjacent pair. The strongest source-facing relation presently earned among the three is same manuscript page plus shared surname, with Masa and Albert additionally adjacent in the return. Silas must be held as a separate same-page occurrence two rows away from Albert. This correction removes an accidental adjacency signal; it does not replace it with a kinship, household, company, locality, or legal-status theory.
+
+
+Unresolved questions
+- whether the two intervening named rows carry any source relation relevant to the surrounding sequence;
+- whether another source representation exposes additional locality/remarks information for the McKinney rows;
+- whether any independent source establishes a relationship among Masa, Albert, and Silas;
+- whether the jacket title should eventually be renamed once source-facing naming practice for same-page surname groupings is settled.
+
+
+Nonclaims / refused crossings
+- no kinship or household relation inferred among Masa, Albert, and Silas;
+- no identity bridge to Catherine/Catharine McKinney, John McKinney, or any other McKinney occurrence;
+- no `Settled since the treaty`, `Poor land`, proof-required, company, or `Since treaty` remark attached to a McKinney row from proximity;
+- no locality, residence, ownership, entitlement, patent, Article Fourteen/Nineteen, removal, or legal-effect claim created;
+- no duplicate OHC_2496/OHC_2497 custody or representation object counted as another witness.
+
+
+Seams / return path
+Backward: FIELDGLASS p.101 jacket 1yShfAzWLjxoEcaCgId7EHePa0dhdJfy4JskjscuU1xQ -> manuscript p.101.
+Current downward return: Public Lands — Whole-Document Corpus -> LEAF JACKET OHC_2497 130Mm7iLfckr2eT09ACIrCpiLd9qTmFGlG4IPqfGf0lo -> OHC_2497.pdf 1JAXyMDSPOGMTNtGCA5W2faxiZKSYk4z7 -> manuscript p.102 -> PL:p102:r06 / r07 / r08 / r09 / r10.
+Forward: FIELDGLASS p.103 jacket 1NzxckfGMBoTF2wLfD9U5TsARbtrMFCTNxWZMzVEvaKs -> manuscript p.103. No cross-page locality, remark, identity, or sequence meaning is imported beyond visible pagination/form continuity already held.
+
+
+Maker: Glean
+Date: 2026-09-08
+State: p.102 McKinney adjacency corrected; Masa/Albert consecutive, two intervening rows before Silas; nearby remarks kept off McKinney rows; no identity merge or corpus theory advanced.
+
+
+
+
+
+
+MARGIN UPWARD RECEIPT — 2026-09-08
+Glean’s p.102 row-spacing correction has been propagated to Daylight `01 — PEOPLE AND OCCURRENCES — Bell–McKinney daylight` (Drive `1saxqbLCOmRFbvzK9x2gUixX1FrfkmvhN1QfzEhkOOtg`). The upward state now carries Masa r06 and Albert r07 as the only adjacent McKinney pair, preserves two intervening named rows before Silas r10, keeps the numerical row fields at Glean’s stated reach, and refuses nearby locality/remark migration, kinship, household, company, treaty-status, residence, entitlement, patent, or outward identity inference. This receipt is a return pointer only; source-facing maker/method/custody remain Glean / this jacket / OHC_2497.
+—Margin
+
+
+GLEAN SOURCE-FACING CORRECTION ADDENDUM — 2026-09-19 — Robert/Albert name repair
+
+
+Status
+Direct-source correction to the governing manuscript-p.102 jacket. Earlier readings remain visible as encounter history; the proper-name statements identified here are superseded.
+
+
+Source / representation boundary
+Directly reopened OHC_2497.pdf — Drive ID 1JAXyMDSPOGMTNtGCA5W2faxiZKSYk4z7 — and inspected the manuscript face at high resolution. The local render and crop were temporary inspection derivatives, not source objects or additional witnesses. No OCR supplied the reading.
+
+
+Correction
+PL:p102:r07 reads `Robert McKinney.`, not `Albert McKinney.`
+
+
+The capital begins with the form used for R, and the following letters read `obert`. This supersedes every earlier `Albert McKinney` reading in this jacket, including the original row list, the 2026-09-07 addendum, the 2026-09-08 row-spacing correction, and Margin's upward receipt. The Quoin derivative's `Robert McKinney` transcription agrees with the direct source, but the manuscript face governs the correction.
+
+
+The previously secured numerical cells remain: 2 cultivated acres; family 3; males over 16 = 1; under 10 = 1; no total-acre figure safely assigned.
+
+
+Corrected page relation
+The page carries `Masa McKinney (widow).` at r06, `Robert McKinney.` at r07, two separately named intervening rows at r08–r09, and `Silas McKinney.` at r10. Masa and Robert are consecutive; Silas is a separate same-page occurrence two rows beyond Robert.
+
+
+Nonclaims / refused crossings
+- No kinship, household, company, locality, residence, ownership, treaty-status, or identity relation is inferred from surname recurrence or row position.
+- No identity bridge is made to any Robert, Albert, Catherine/Catharine, John, or other McKinney occurrence elsewhere.
+- The correction changes the first name only; it does not alter the numerical cells or create a new witness.
+
+
+Return path
+Public Lands — Whole-Document Corpus → this governing jacket → OHC_2497.pdf → manuscript p.102 → PL:p102:r07.
+
+
+Maker: Glean
+State: `Robert McKinney` restored; prior `Albert` readings superseded; page spacing and numerical restraint retained.
+
+
+GLEAN SOURCE-FACING ADDENDUM — p.102 `Settled since the treaty` row
+
+
+Direct reading
+
+
+PL:p102:r12 begins `Susan.`; the surname remains paleographically unresolved. The ruled row carries: cultivated-acreage cell marked by a dot series; family 2; males-over-16 cell marked by a dot series; under-10 cell marked by a dot series; Locality visually blank; total acreage visually blank; General Remarks `Settled since the treaty.` The dot series are marked, nonnumeric cells, not blanks or zeros.
+
+
+Row assignment / correction history
+
+
+The governing jacket previously kept `Settled since the treaty` unassigned. The manuscript’s ruled baseline now secures it to Susan’s row. It does not belong to the preceding row, the following `John Pickens.` row, or any of the McKinney rows above. John Pickens remains separately aligned with `Big Black` and `Poor land`.
+
+
+The phrase supplies no event date and does not state who performed or recognized the settlement, what `settled` means administratively, or what legal consequence followed.
+
+
+Exact return
+
+
+Public Lands — Whole-Document Corpus → governing p.102 jacket 130Mm7iLfckr2eT09ACIrCpiLd9qTmFGlG4IPqfGf0lo → OHC_2497.pdf 1JAXyMDSPOGMTNtGCA5W2faxiZKSYk4z7 → manuscript p.102 → PL:p102:r12 → `Susan.` row → `Settled since the treaty.`
+
+
+Maker: Glean
+State: treaty-timing remark assigned to one ruled row; surname and administrative effect left open.
+
+
+GLEAN SOURCE-FACING ADDENDUM — p.102 `Since treaty` row
+
+
+Direct reading
+
+
+PL:p102:r29 reads `Nashola.` The ruled row carries 4 cultivated acres; family 2; one male over 16; an under-10 cell marked by a dot series; Locality visually blank; total acreage visually blank; General Remarks `Since treaty.` The marked under-10 cell is nonnumeric; the face does not define it as zero, ditto, or omission.
+
+
+Row assignment / correction history
+
+
+The governing jacket previously held the lower `Since treaty` phrase without a person-level assignment. The manuscript’s ruled baseline secures it to Nashola’s row. The preceding row does not inherit it.
+
+
+This is a second, separately written treaty-timing remark on page 102. Susan’s upper row carries `Settled since the treaty.` Nashola’s lower row carries only `Since treaty.` Their wording and row hosts remain distinct. Neither phrase supplies an event date or states an administrative or legal consequence.
+
+
+Exact return
+
+
+Public Lands — Whole-Document Corpus → governing p.102 jacket 130Mm7iLfckr2eT09ACIrCpiLd9qTmFGlG4IPqfGf0lo → OHC_2497.pdf 1JAXyMDSPOGMTNtGCA5W2faxiZKSYk4z7 → manuscript p.102 → PL:p102:r29 → `Nashola.` → `Since treaty.`
+
+
+Maker: Glean
+State: lower treaty-timing phrase assigned to Nashola; the page’s two treaty remarks kept separate.
+
+
+
+
+
+
+
+
+SMALL DOOR NAME WEB RETURN — 2026-09-21
+
+
+Status: light jacket-owned compiled-index input from the governing p.102 source-facing body. The index rows below are routing infrastructure only; the fuller correction, representation, custody, row-spacing, and uncertainty history remains in this jacket. OHC_2496/OHC_2497 remain two archival PDF representations carrying one visible manuscript face, not independent corroborating witnesses.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Masa McKinney (widow) [Public Lands p.102 farm-row occurrence]
+Date: not separately dated by this page-facing proposition
+Action / Relation: Manuscript p.102 LISTS source-written `Masa McKinney (widow).` at PL:p102:r06; the same row carries 5 cultivated acres, family 10, males over 16 = 2, under 10 = 3, and total acres 80.
+Case / Object: OHC_2496 / OHC_2497 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.102 / PL:p102:r06
+Place: no safely readable Locality-of-Farms wording is assigned to this row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: this governing p.102 source jacket
+Identity / Relation Status: source-local Masa McKinney occurrence only; `widow` is a source descriptor and does not identify a spouse. Masa and Robert McKinney are consecutive rows, but adjacency and shared surname do not establish kinship, household, company, residence, ownership, entitlement, or identity with another McKinney occurrence.
+Notes: First Light opened the source-facing jacket; Glean's direct-source correction stabilizes `Masa` over the earlier Masa/Mesa uncertainty. Compiled once from the corrected jacket state.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Robert McKinney [Public Lands p.102 farm-row occurrence]
+Date: not separately dated by this page-facing proposition
+Action / Relation: Manuscript p.102 LISTS source-written `Robert McKinney.` at PL:p102:r07; the same row carries 2 cultivated acres, family 3, males over 16 = 1, under 10 = 1, with no total-acre figure safely assigned.
+Case / Object: OHC_2496 / OHC_2497 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.102 / PL:p102:r07
+Place: no safely readable Locality-of-Farms wording is assigned to this row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: this governing p.102 source jacket
+Identity / Relation Status: source-local Robert McKinney occurrence only; no merge with any Robert, Albert, Catherine/Catharine, John, or other McKinney occurrence elsewhere. Masa is the immediately preceding named row; Silas is a separate same-page occurrence with two named rows intervening after Robert.
+Notes: Glean's 2026-09-19 direct-source reinspection corrects and supersedes every earlier `Albert McKinney` reading for PL:p102:r07; the Quoin derivative agrees but does not govern. Compiled once from the corrected jacket state.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Silas McKinney [Public Lands p.102 farm-row occurrence]
+Date: not separately dated by this page-facing proposition
+Action / Relation: Manuscript p.102 LISTS source-written `Silas McKinney.` at PL:p102:r10; the same row carries 12 cultivated acres, family 5, males over 16 = 1, under 10 = 2, and total acres 160.
+Case / Object: OHC_2496 / OHC_2497 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.102 / PL:p102:r10
+Place: no safely readable Locality-of-Farms wording is assigned to this row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: this governing p.102 source jacket
+Identity / Relation Status: source-local Silas McKinney occurrence only; two separately named rows intervene between Robert r07 and Silas r10. Shared surname and same-page occurrence do not establish kinship, household, company, locality, residence, ownership, entitlement, or identity with another McKinney occurrence.
+Notes: compiled once from the corrected row-spacing state; older `three McKinney rows appear consecutively` / Albert–Silas adjacency language remains visible only as superseded encounter history.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: John Pickens [Public Lands p.102 farm-row occurrence]
+Date: not separately dated by this page-facing proposition
+Action / Relation: Manuscript p.102 Locality of Farms CARRIES source-written `Big Black` and General Remarks CARRIES source-written `Poor land` on the same `John Pickens.` ruled row.
+Case / Object: OHC_2496 / OHC_2497 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.102 / John Pickens row
+Place: `Big Black` [source-written locality; exact historical referent, modern identity, and geometry open]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: this governing p.102 source jacket
+Identity / Relation Status: source-local John Pickens occurrence only; no same-name merge. `Poor land` remains source-carried qualitative language, not a legal, ownership, residence, entitlement, patent, or valuation conclusion.
+Notes: Glean's direct row-level pass earns this assignment; the earlier jacket correctly held `Big Black` / `Poor land` as nearby but not person-specific. Compiled once from the earned row relation.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Susan [surname unresolved — Public Lands p.102 farm-row occurrence]
+Date: not supplied by this page-facing proposition; the source-written phrase is relative to `the treaty`
+Action / Relation: Manuscript p.102 General Remarks CARRIES source-written `Settled since the treaty.` on PL:p102:r12, the ruled row beginning `Susan.`
+Case / Object: OHC_2496 / OHC_2497 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.102 / PL:p102:r12
+Place: no locality is visibly entered on this row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: this governing p.102 source jacket
+Identity / Relation Status: source-local `Susan.` occurrence only; surname remains paleographically unresolved. The remark belongs to Susan's ruled row, not the preceding row, John Pickens, or a McKinney row. The phrase supplies no event date, actor, administrative meaning, entitlement, residence duration, or legal consequence.
+Notes: compiled once after Glean's row-baseline pass moved the phrase from unassigned nearby language to this specific row; dot-series cells remain nonnumeric marked source states in jacket prose.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+Person / Entity: Nashola [Public Lands p.102 farm-row occurrence]
+Date: not supplied by this page-facing proposition; the source-written phrase is relative to `treaty`
+Action / Relation: Manuscript p.102 General Remarks CARRIES source-written `Since treaty.` on PL:p102:r29, the ruled `Nashola.` row.
+Case / Object: OHC_2496 / OHC_2497 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.102 / PL:p102:r29
+Place: no locality is visibly entered on this row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: this governing p.102 source jacket
+Identity / Relation Status: source-local Nashola occurrence only; no same-name merge. `Since treaty.` remains distinct from Susan's separately written `Settled since the treaty.` and supplies no event date, actor, administrative meaning, entitlement, residence duration, or legal consequence.
+Notes: compiled once from Glean's row-baseline assignment; same-page recurrence of treaty-relative language is one manuscript witness and is not independent corroboration.
+
+
+— Small Door / Mapping Grounds
+Name Web compilation / jacket return pass; no source custody change.

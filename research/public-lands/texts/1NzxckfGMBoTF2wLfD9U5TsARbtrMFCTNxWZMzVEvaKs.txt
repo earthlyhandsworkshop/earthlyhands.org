@@ -1,0 +1,334 @@
+Public Lands No. 3 p.103 — Jerry Briggs moved since treaty / not entitled to land, Eden Ward Long Creek / Big Black locality, and explicit ditto carry-forward — OHC_2498 source jacket
+
+
+Status: faithful source-facing jacket made from direct inspection of the rendered archival PDF. This jacket represents one visible manuscript page, not the whole return.
+
+
+SOURCE IDENTITY
+- Exact filename: OHC_2498.pdf
+- Current Drive ID used for reading: 1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs
+- Current Drive folder: Source objects — received batch 1 — OHC 2408–2518
+- Folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- Alternate held OHC_2498.pdf: Drive ID 1xuxPJkKh-JGl2iRBIRWYLuM-Jc3YHSo2. It is an alternate custody object with the same inherited filename; this pass does not treat it as independent historical corroboration.
+- Form: one scanned manuscript register/return page preserved in a one-page PDF.
+- Source status: primary-source manuscript representation / archival scan.
+
+
+SOURCE-VISIBLE TITLE AND BOUNDARY
+The page is visibly numbered “103” and headed:
+“Public Lands — No 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+
+
+Visible column structure includes:
+- Names of Indians owning Farms
+- No. of Acres Cultivated
+- Entire No. of the Family
+- Males over 16 years
+- Males and Females under 10 years
+- Locality of Farms
+- Total No. of Acres
+- General Remarks
+
+
+The capture establishes only manuscript page 103. It does not by itself establish the completeness of the larger return or the archival sequence before and after this leaf.
+
+
+FAITHFUL CONTENT / LOAD-BEARING LANGUAGE
+The page contains many person rows with cultivated-acre, family-count, age/sex, locality, acreage, and remarks fields. Clear source occurrences include William Taylor, James Choak, Charlie Durant, Amos Wilson, Dua Wilson, Eden Ward, and additional names whose spellings remain less certain in this pass.
+
+
+At the top of the General Remarks column, the William Taylor row carries:
+“Capt Durant’s company.”
+
+
+The immediately following row carries a small repeat/ditto-like mark in that same remarks column rather than a rewritten company name. The mark is visibly placed on the next row baseline beneath “Capt Durant’s company.”
+
+
+Farther down the same column the page separately writes:
+“Capt Dua Wilson’s company.”
+
+
+and, on another row:
+“Capt Durant’s company.”
+
+
+Elsewhere on the page other company phrases are written out on their own row baselines. The page therefore shows both full written company remarks and at least one explicit repeat device.
+
+
+The Locality of Farms column also contains source-visible qualifying text, including an occurrence of “1 slave” on one row and several creek/trace/locality phrases. This jacket does not assign those words beyond their visible row placement without a separate row-by-row reading.
+
+
+FINDING
+This page supplies the explicit scope device that the immediately preceding Public Lands reading had been waiting for. A company remark may be carried forward when the manuscript itself supplies a repeat/ditto mark on the next row. The page does not support silent propagation merely from visual proximity.
+
+
+INFERENCE
+The most conservative reading rule for this form is now:
+1. treat a written company phrase as belonging to its visible row;
+2. carry it forward to another row only when the manuscript supplies an explicit repeat/ditto or another source-visible scope device;
+3. do not infer multi-row company membership from adjacency alone.
+
+
+That rule is an interpretation of the form’s visible writing practice, not a claim about every page in the series.
+
+
+UNCERTAINTY
+- The small repeat mark is visually consistent with a ditto/carry-forward device, but its exact scribal symbol is not labeled by the source. Preserve it as “[repeat/ditto-like mark]” rather than silently converting it to quotation marks.
+- Several personal-name spellings and lower-page company names remain unresolved and are not normalized here.
+- The partially visible date notation at the upper right is not relied on in this pass.
+
+
+EXPLICIT NONCLAIMS
+- A company phrase does not establish kinship.
+- Adjacency does not establish that neighboring rows belong to the same company unless the page supplies a carry-forward device.
+- The appearance of a captain/company name in General Remarks does not by itself establish residence, land ownership outside the row’s recorded fields, or identity with another same-named person elsewhere in the corpus.
+- The “1 slave” notation is preserved as a source occurrence only; this jacket does not infer ownership history or identity beyond the row on which the notation appears.
+- The alternate OHC_2498 PDF is not treated as an independent historical witness.
+
+
+CORRECTION / METHOD HISTORY
+Earlier work on manuscript pp.100–101 withdrew an over-broad “block-spanning” reading and adopted row-carried force unless a brace, ditto, key, or other explicit device appeared. OHC_2498 / p.103 now provides a concrete example of such an explicit carry-forward mark. This strengthens the corrected rule; it does not restore the withdrawn block-spanning assumption.
+
+
+RETURN PATHS
+Primary read object:
+- OHC_2498.pdf — Drive ID 1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs
+- Folder: Source objects — received batch 1 — OHC 2408–2518
+- Folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+
+
+Alternate held custody object:
+- OHC_2498.pdf — Drive ID 1xuxPJkKh-JGl2iRBIRWYLuM-Jc3YHSo2
+
+
+NEXT RETRIEVAL TARGET
+If later work needs to assign company membership across neighboring rows, return first to the exact row-level manuscript marks on this page and then test other pages for the same explicit ditto/carry-forward practice. Do not generalize the carry-forward beyond source-visible devices.
+
+
+Maker: Fieldglass
+Date: 2026-09-07
+
+
+
+
+NEEDLE UP UPWARD PROPAGATION — 2026-09-07
+
+
+Received Fieldglass’s p.103 scope finding into the active Public Lands grammar without reopening the archival source. `03 — DOCUMENTARY BODIES` now distinguishes STANDALONE HEADING-RUN | ROW-CARRIED COMPANY REMARK | EXPLICIT REPEAT-CARRIED INHERITANCE, preserving this p.103 mark as the positive local carry-forward control while leaving the p.100/p.101 no-scope-device correction intact. `09 — ADMINISTRATIVE ATTRITION` now records the same mechanism in GROUPING / COMPANY SCOPE so a repeat-carried row is not falsely coded unknown, while blank neighboring cells are not silently inherited.
+
+
+This jacket remains the governing source-facing home for the p.103 observation. Fieldglass retains direct reading, the `[repeat/ditto-like mark]` diplomatic uncertainty, alternate-custody distinction, and source custody. Needle Up owns only the upward documentary/quantitative grammar repair. No company territory, residence, kinship, identity, entitlement, or universal ditto rule was added.
+
+
+Upward destinations: `03 — DOCUMENTARY BODIES — Bell–McKinney daylight` Drive `1Xa1jbLQswwUIcD0waD-_MtkQJscg5GSD6jhA_ubWVBo`; `09 — ADMINISTRATIVE ATTRITION — Public Lands population to later federal bodies — Bell–McKinney daylight` Drive `1--RLeGugeaf4Am6q2-iRdgkZpthdtW6VxHyWDcrpo2I`.
+
+
+—Needle Up
+FIELDGLASS MAPPING ADDENDUM — p.103 Long Creek / Big Black compound-locality relation — 2026-09-11
+
+
+Status: map-facing deepening of this existing p.103 jacket after direct return to batch-held OHC_2498.pdf, Drive 1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs. The one-page PDF was rendered locally at 300 DPI for visual inspection; that render and its crops are temporary derivatives only, not source objects or independent witnesses. No OCR supplied the reading.
+
+
+Direct source reading
+
+
+The Eden Ward row carries, in Locality of Farms, at current visual reach:
+
+
+`Long creek. west side Big Black.`
+
+
+The same row also carries a separate source-written `1 slave]` notation at the left edge of the broad locality area. This mapping addendum records that boundary only and does not interpret or pursue the category notation.
+
+
+A later p.103 locality occurrence separately reads `Long creek.` Its row-holder is not promoted here because the row alignment/name is unnecessary to this bounded mapping return. Same-face recurrence remains one manuscript witness, not independent corroboration.
+
+
+Map consequence
+
+
+Carry an OPEN p.103 Long-Creek / Big-Black compound-locality relation with source syntax preserved:
+
+
+`PL:p103:Eden Ward --[Locality of Farms; syntax OPEN]--> "Long creek. west side Big Black."`
+
+
+This strengthens the recurring Public Lands compound-locality grammar already controlled on p.95 (`Wolf creek. west side Big Black`) without identifying either creek or resolving the syntax. The map may preserve `Long creek` / `west side` / `Big Black` as three source-carried spatial elements. It may not yet draw a creek polyline, Big Black bank, tributary or confluence, shared reach, coordinate, residence, route, parcel, or modern feature identity, and it must not read `west side` as definitely modifying Big Black rather than the locality phrase more generally.
+
+
+Representation / comparison boundary
+
+
+P.95 and p.103 are separate manuscript-face occurrences in the same Public Lands No. 3 body. Their parallel phrase structure is a comparison relation, not proof that the creeks are the same feature, occupy neighboring reaches, or drain to Big Black. The second `Long creek.` occurrence on p.103 is same-face recurrence, not a second historical witness.
+
+
+Exact return
+
+
+Marauder’s Map / Mapping Grounds → this existing p.103 Fieldglass jacket `1NzxckfGMBoTF2wLfD9U5TsARbtrMFCTNxWZMzVEvaKs` → this mapping addendum → batch-held OHC_2498.pdf `1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs` → manuscript p.103 → Eden Ward row → Locality of Farms. Comparator only: p.95 Glean/Fieldglass jacket `1JlAimpg8M4UVAO__GaOOEUrMw-NiIaCen_tqvUcXjTo` → Capt Fletcher row → `Wolf creek. west side Big Black`.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+
+
+
+
+GLEAN SOURCE-FACING DEEPENING — 2026-09-19 — Jerry Briggs: movement recorded with land disqualification
+
+
+Status
+Material row-level deepening of the existing manuscript-p.103 jacket. The earlier ditto and mapping findings remain unchanged.
+
+
+Source / representation boundary
+Directly reopened batch-held OHC_2498.pdf — Drive ID 1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs — and inspected manuscript p.103 at high resolution. Temporary render and crop files were reading derivatives only, not source objects or additional witnesses. Quoin derivative 1CH5WbB-9513DzioqFkAU23CKDs6viB7K agrees with the row reading but does not multiply the witness.
+
+
+Occurrence
+Counting named rows from the first visible row below the headers, PL:p103:r26 reads:
+
+
+- Name field: `Jerry Briggs.`
+- No. of acres cultivated: blank
+- Entire No. of the Family: `11`
+- Males over 16 years: blank
+- Males and Females under 10 years: blank
+- Locality of Farms: `1 white] Opooktah creek`
+- Total No. of Acres: blank
+- General Remarks: `Moved here since the treaty and not entitled to land`
+
+
+The punctuation after `treaty` is not relied upon. The wording and row alignment are the load-bearing observations.
+
+
+Finding
+The page retains Jerry Briggs inside the farm-return form while the General Remarks cell records both a completed temporal movement proposition and a negative land-status judgment. The row therefore cannot be treated as a successful allotment or entitlement ledger entry merely because it appears beneath `Names of Indians owning Farms`.
+
+
+At this source reach the row records: a named host; a family numeral; a white-category numeral; a creek locality; movement `here` after the treaty; and the clerk's statement that Briggs was not entitled to land. Those are separate source-written propositions on one row. The source does not explain the legal rule applied, the decision maker, the date of the judgment, or what later happened to Briggs or the eleven counted in the family field.
+
+
+Nonclaims / refused crossings
+- `1 white` is not identified as Jerry Briggs or placed inside the family total by inference.
+- The family numeral does not establish one household or kin relation.
+- `Moved here` is not expanded into an origin, route, residence history, or removal narrative.
+- `Not entitled to land` is not converted into eviction, departure, loss of an existing title, or final disposition.
+- The adjacent `Capt Durant.` row does not inherit Briggs's locality or remark.
+- No same-name identity, treaty-article route, company membership, ownership, or later administrative outcome is supplied.
+
+
+Return path
+Public Lands — Whole-Document Corpus → this governing p.103 jacket → OHC_2498.pdf 1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs → manuscript p.103 → PL:p103:r26.
+
+
+Maker: Glean
+State: Jerry Briggs retained as a counted farm-row occurrence and expressly recorded as moved since the treaty / not entitled to land; later disposition open
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+Return 1 — Jerry Briggs [Public Lands p.103 farm-row occurrence]
+PERSON / ENTITY: `Jerry Briggs.`
+DATE: not separately dated by this page-facing return.
+EARNED VERB / RELATION: Manuscript p.103 LISTS Jerry Briggs with Entire No. of the Family `11`; Locality of Farms carries source-written `1 white] Opooktah creek`; General Remarks STATES `Moved here since the treaty and not entitled to land`.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2498 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.103 / PL:p103:r26; `Opooktah creek`; Public Lands / Choctaw treaty-land administration.
+RETURN: this governing p.103 source jacket → OHC_2498.pdf Drive `1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs` → manuscript p.103 → PL:p103:r26.
+IDENTITY / RELATION STATUS: source-local Jerry Briggs occurrence only; no same-name merge. `Moved here` is not expanded into origin, route, residence history, or removal narrative; `not entitled to land` is not converted into eviction, loss of an existing title, or later disposition. `1 white` is preserved as source wording and is not identified as Briggs or inferred into the family total.
+
+
+Return 2 — Eden Ward [Public Lands p.103 farm-row occurrence]
+PERSON / ENTITY: `Eden Ward`
+DATE: not separately dated by this page-facing return.
+EARNED VERB / RELATION: Manuscript p.103 Locality of Farms on the Eden Ward row STATES `Long creek. west side Big Black.` A separate source-written `1 slave]` notation appears at the left edge of the broad locality area on that same row.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2498 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.103 / Eden Ward row; `Long creek`; `Big Black`; Public Lands / Choctaw treaty-land administration.
+RETURN: this governing p.103 source jacket → OHC_2498.pdf Drive `1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs` → manuscript p.103 → Eden Ward row → Locality of Farms.
+IDENTITY / RELATION STATUS: source-local Eden Ward occurrence only; no merge with another Ward occurrence. The compound locality syntax remains OPEN: no creek identity, confluence, bank geometry, residence, route, parcel, or modern-feature identity is inferred. The `1 slave]` notation remains attributed source language and does not establish ownership, household, residence, labor relation, or identity of the enslaved person.
+.
+
+
+GLEAN SOURCE-FACING DEEPENING — 2026-09-20 — exact host of the repeat/ditto-like mark
+
+
+Status
+Material row-level deepening of the existing manuscript-p.103 jacket. The earlier finding that the symbol is consistent with a repeat/carry-forward device remains unchanged; the source does not label the symbol.
+
+
+Source / representation boundary
+Directly reopened batch-held OHC_2498.pdf — Drive ID 1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs — and inspected manuscript p.103 at high resolution. The local render and enlargement were temporary reading derivatives, not source objects or additional witnesses. The existing Quoin transcription was used only as a comparison derivative; direct manuscript geometry governs this addendum.
+
+
+Two-row occurrence
+Counting named rows from the first visible row below the headers:
+
+
+PL:p103:r1 — `William Taylor.`
+- No. of Acres Cultivated: `7`
+- Entire No. of the Family: `6`
+- Males over 16 years: `1`
+- Males and Females under 10 years: `4`
+- Locality of Farms: blank
+- Total No. of Acres: blank
+- General Remarks: `Capt Durant's company.`
+
+
+PL:p103:r2 — the name field ends `(spirit)`; the preceding personal-name letters remain correction-open.
+- No. of Acres Cultivated: `7`
+- Entire No. of the Family: `6`
+- Males over 16 years: `1`
+- Males and Females under 10 years: `4`
+- Locality of Farms: `West Big Black: nearest house to Scott's store.`
+- Total No. of Acres: blank
+- General Remarks: `[repeat/ditto-like mark]`
+
+
+The punctuation in the locality phrase is not load-bearing. The wording, four numerals, and row alignment are.
+
+
+Finding
+The repeat/ditto-like mark has an exact host: PL:p103:r2. Its placement in General Remarks immediately beneath William Taylor's written `Capt Durant's company.` earns a local carry-forward reading for that company phrase onto r2. The mark does not carry William Taylor's blank locality cell forward, erase r2's separately written locality, or extend the company phrase beyond r2.
+
+
+Nonclaims / refused crossings
+- The source does not call the mark “ditto”; `[repeat/ditto-like mark]` remains the diplomatic description.
+- The r2 personal-name reading before `(spirit)` is not stabilized here.
+- The repeated values `7 / 6 / 1 / 4` do not merge the two rows or establish kinship, household, shared farm, or identity.
+- `Capt Durant's company` does not establish residence, land ownership, or the wider membership or boundaries of that company.
+- The locality phrase is row-local; it does not pass upward to William Taylor or downward to the following row.
+
+
+Return path
+Public Lands — Whole-Document Corpus → this governing p.103 jacket → OHC_2498.pdf Drive `1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs` → manuscript p.103 → PL:p103:r1–r2.
+
+
+Maker: Glean
+State: repeat/carry-forward relation narrowed to one written remark and one immediately following marked row; r2 personal name still correction-open
+
+
+
+
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — repeat-scope addendum
+
+
+Return 3 — William Taylor [Public Lands p.103 farm-row occurrence] / Capt Durant [company-reference occurrence]
+PERSON / ENTITY: `William Taylor.` / `Capt Durant` [source-written company reference]
+DATE: not separately dated by this page-facing proposition.
+EARNED VERB / RELATION: Manuscript p.103 General Remarks CARRIES source-written `Capt Durant's company.` on PL:p103:r1, the `William Taylor.` row.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2498 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.103 / PL:p103:r1; no Locality-of-Farms wording is written on this row; Public Lands / Choctaw treaty-land administration.
+RETURN: this governing p.103 source jacket → OHC_2498.pdf Drive `1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs` → manuscript p.103 → PL:p103:r1 → General Remarks.
+IDENTITY / RELATION STATUS: source-local William Taylor occurrence and source-local Capt Durant company-reference only; no same-name merge and no identity bridge to another Durant occurrence. The company phrase is preserved as a row-carried remark and is not expanded into kinship, residence, ownership, company territory, entitlement, or a complete roster. William Taylor's blank Locality-of-Farms cell remains blank and does not inherit neighboring geography.
+
+
+Return 4 — [personal name unresolved — Public Lands p.103 r2 ending `(spirit)`] / Capt Durant [repeat-carried company-reference occurrence]
+PERSON / ENTITY: `[personal name unresolved; source name field ends (spirit)]` / `Capt Durant` [repeat-carried company reference]
+DATE: not separately dated by this page-facing proposition.
+EARNED VERB / RELATION: Manuscript p.103 General Remarks CARRIES `[repeat/ditto-like mark]` on PL:p103:r2 immediately beneath William Taylor's written `Capt Durant's company.`; direct row geometry therefore EARNS a local carry-forward reading of that company phrase to r2 only.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2498 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.103 / PL:p103:r2; Locality of Farms `West Big Black: nearest house to Scott's store.`; Public Lands / Choctaw treaty-land administration.
+RETURN: this governing p.103 source jacket → OHC_2498.pdf Drive `1TjyTBkXN_thWk6HW1E9xOPGD1saCg2zs` → manuscript p.103 → PL:p103:r1–r2 → General Remarks / r2 Locality of Farms.
+IDENTITY / RELATION STATUS: r2 personal-name reading remains correction-open and is not merged with William Taylor or another occurrence. The source does not label the mark `ditto`; `[repeat/ditto-like mark]` remains the diplomatic description. Carry-forward is limited to the immediately preceding company remark and does not copy William Taylor's blank locality, erase r2's written locality, extend beyond r2, or turn the repeated `7 / 6 / 1 / 4` numerals into identity, kinship, household, or shared-farm evidence. `Capt Durant's company` is not expanded into residence, land ownership, company territory, or a complete roster.
+
+
+Existing Returns 1–2 for Jerry Briggs and Eden Ward remain governing and already compile in the live Name Web; do not duplicate them.

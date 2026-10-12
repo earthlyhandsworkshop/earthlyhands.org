@@ -1,0 +1,805 @@
+Public Lands No. 3 pp.97 / 99 — Daniel McCurtain / Capt Pitchlynn, Alowa McCurtain prospective-place remark, and p.98 source-location seam — OHC_2490–OHC_2492 source jacket
+
+
+Source identity and bounded task
+
+
+This jacket receives Glean’s unworked forward seam from manuscript p.96 and performs one representation/pagination boundary pass only. It does not undertake a row-by-row reading of manuscript p.97 or p.99.
+
+
+Historical body represented: Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.
+
+
+Directly inspected custody branch in this pass: parent Drive 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.”
+
+
+Source / digital representation / inspection derivative boundary
+
+
+OHC_2490.pdf — Drive 1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3 — 230,184 bytes — SHA-256 37a30c0b89e1b46a35aeac783546c326cb0fcd8e38a9c1e677f92aa7cdbcda21.
+
+
+OHC_2491.pdf — Drive 14Q11azkIAiD4WSbhetJBD3XOMrFIifBp — 230,184 bytes — SHA-256 01397bc58b602c19b915e69d29127a87a25ba5254d1eb6226e995d6feb65d34e.
+
+
+OHC_2492.pdf — Drive 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe — 203,106 bytes — SHA-256 dfb55f3bdbc67ceec595fffa1219ac35ac13783cce8f30d10bb42269984f5b11.
+
+
+The three PDFs are distinct digital custody objects / payloads. Local 300-DPI renders were inspection derivatives only and were not admitted to Drive.
+
+
+Bounded source-facing finding
+
+
+Direct visual reopening shows OHC_2490 visibly numbered manuscript page 97 and continuing the No. 3 form. OHC_2491 also visibly shows manuscript page 97. The 300-DPI rendered page surfaces of OHC_2490 and OHC_2491 compare byte-for-byte identical, hash 0f0db412add5fcc825341fe983da61f704b2c8e5c72666ee73ce4af73c80115, even though the PDF payload hashes differ.
+
+
+Therefore OHC_2490 and OHC_2491 remain two distinct archival/digital custody objects but, at the visible manuscript-face level reached here, they represent the same page-97 surface. They are not two historical page occurrences and do not provide independent corroboration.
+
+
+Direct visual reopening of OHC_2492 shows a different manuscript face visibly numbered page 99, again under the continuing No. 3 form.
+
+
+The earned sequence state in this inspected custody branch is therefore:
+
+
+OHC_2490 → visible manuscript p.97
+OHC_2491 → repeated visible manuscript p.97
+OHC_2492 → visible manuscript p.99
+
+
+No inspected object in that three-object run supplies manuscript p.98. Carry p.98 only as SOURCE-UNLOCATED WITHIN THIS BOUNDED INSPECTED RUN. Do not strengthen that to “page 98 never existed,” “page 98 is lost,” “page 98 was intentionally omitted,” or “the archive lacks page 98 everywhere.” Another custody branch, an unreceived object, or a differently named capture could still return it.
+
+
+Relation to existing work
+
+
+Glean’s page-96 jacket, Drive 19swj30865LNGCdZsP8ch0odnWYlnvrmfqCqypjEgFHA, had opened OHC_2490 only far enough to establish p.97 as an unworked forward boundary. That custody, reading, and authorship remain Glean’s.
+
+
+Underscore’s existing representation study, Drive 1fqC5CspFJby-lpFxFPTlsNLrkdKBU3s_uMzO8_fjicE, had already established that OHC_2490 and OHC_2491 are distinct archival PDF objects with distinct source hashes but identical visible pixel surfaces. Mullion does not duplicate or take over that work. The new bounded contribution is the direct source-facing pagination extension through OHC_2492: repeated visible p.97 is followed by visible p.99 in the inspected run, exposing p.98 as an unresolved source-location seam rather than silently assigning OHC_2491 to p.98 by filename order.
+
+
+Documentary-body guard
+
+
+Filename sequence is not manuscript pagination. OHC_2491 must not be labeled manuscript p.98 merely because its filename falls between OHC_2490 and OHC_2492. Likewise OHC_2492’s visible p.99 does not prove what happened to p.98 or whether a p.98 object sits elsewhere in the corpus.
+
+
+No p.97 row content, personal-name reading, locality, acreage, General Remark, company/captain structure, identity, kinship, residence, entitlement, Article Fourteen/Nineteen status, patent route, removal state, or cross-person relation is advanced by this pass. The p.97 and p.99 faces were used only to establish visible pagination/form identity and distinctness.
+
+
+Companion custody copies
+
+
+Drive search also surfaces companion OHC_2490 / OHC_2491 / OHC_2492 objects in another received branch. They were not independently reopened in this bounded pass. Existing Underscore/Glean representation controls remain the proper return for claims already made about those companion copies. This jacket does not generalize the inspected legacy-branch sequence into a whole-corpus inventory negative.
+
+
+Exact downward return
+
+
+Public Lands — Whole-Document Corpus → Mullion jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → backward seam Glean p.96 jacket 19swj30865LNGCdZsP8ch0odnWYlnvrmfqCqypjEgFHA → OHC_2490.pdf 1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3 → visible manuscript p.97.
+
+
+Parallel representation control → Underscore study 1fqC5CspFJby-lpFxFPTlsNLrkdKBU3s_uMzO8_fjicE → OHC_2491.pdf 14Q11azkIAiD4WSbhetJBD3XOMrFIifBp → repeated visible manuscript p.97.
+
+
+Forward boundary → OHC_2492.pdf 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe → distinct visible manuscript p.99.
+
+
+OPEN seam → locate a source representation of manuscript p.98, if one is present anywhere in the permitted corpus, without inferring its filename or custody location from the OHC sequence.
+
+
+Maker: Mullion
+Date: 2026-09-07
+State: bounded representation/pagination seam returned; p.97 repeated surface controlled; p.99 next distinct visible face established; p.98 source-unlocated within inspected run; no outward person or claim state moved.
+
+
+
+
+Glean row-level deepening — 2026-09-07 — Alowa McCurtain occurrence
+
+
+Source / representation boundary
+Reopened source object: OHC_2490.pdf — Drive 1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3 — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI. The source object was rendered locally at high resolution only for inspection. Those PNG renders/crops are temporary study derivatives, not archival sources, not new manuscript witnesses, and were not admitted to Drive. This addendum does not re-prove or broaden the already-recorded OHC_2490/OHC_2491 repeated-visible-surface relation, and it does not silently merge the separately stored companion OHC_2490 custody object in the other received branch.
+
+
+Direct row reading
+On manuscript page 97, one name-field occurrence reads `Alowa McCurtain.` The first name is retained as a source-facing reading and remains open to later paleographic correction rather than normalized beyond the visible form. In the same ruled row, the General Remarks field reads `He says he will have a different place.` Source writing is also present in the Locality of Farms field for this row, but its exact locality wording is not certified in this pass and is therefore not silently supplied from expectation or another representation.
+
+
+Earned finding
+This row preserves a documentary distinction between a locality field and a reported prospective statement in General Remarks. `He says he will have a different place.` is a source-carried statement of intention or expectation at the force of `He says`; it is not transcribed into Locality of Farms and is not promoted to proof that a move occurred, that a replacement tract was selected, that an entitlement changed, or that a later residence is established. The source face therefore permits a row to hold recorded/locality information and a separate prospective remark without those fields being collapsed into one location claim.
+
+
+Identity and relation guard
+`Samuel. McCurtain.` appears a few rows above on the same face. This pass does not infer kinship, household membership, identity linkage, office continuity, shared property, or any other personal relation between Samuel McCurtain and Alowa McCurtain from surname, proximity, or shared documentary face. No Alowa/Alowa-like occurrence elsewhere in Public Lands or another body is merged into this row.
+
+
+Unresolved questions
+- exact diplomatic reading of the Alowa row's Locality of Farms wording;
+- whether `different place` refers to a different farm, residence, treaty location, tract, or some other administrative/geographic object;
+- timing of the reported intention relative to compilation of this return;
+- whether the intention was ever acted upon;
+- whether another source identifies the place contemplated.
+
+
+Nonclaims
+- no claim of actual relocation;
+- no destination, parcel, creek, section, or later residence assigned from the General Remark;
+- no legal meaning, approval, refusal, entitlement change, Article Fourteen/Nineteen treatment, patent route, or removal status inferred;
+- no kinship or identity relation between the two McCurtain occurrences inferred;
+- no p.98 source object invented or inferred from filename order.
+
+
+Seams and roads home
+Backward: Glean p.96 jacket 19swj30865LNGCdZsP8ch0odnWYlnvrmfqCqypjEgFHA → OHC_2489 visible manuscript p.96 → OHC_2490 visible manuscript p.97.
+Current downward return: Public Lands — Whole-Document Corpus → this Mullion/Glean jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2490.pdf 1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3 → manuscript p.97 → Alowa McCurtain row → General Remarks `He says he will have a different place.`
+Forward: preserve Mullion's existing boundary exactly — OHC_2491 repeats visible manuscript p.97; manuscript p.98 remains SOURCE-UNLOCATED WITHIN THE BOUNDED INSPECTED RUN; OHC_2492 is the next distinct inspected face, visibly manuscript p.99. This addendum does not strengthen that bounded negative or undertake p.99 row work.
+
+
+Maker: Glean
+Date: 2026-09-07
+State: existing p.97 jacket materially deepened at one row; locality/prospective-remark distinction preserved; identity merges refused; p.98 seam unchanged
+Needle Up upward-return addendum — 2026-09-07
+The p.97 prospective-place distinction has been propagated into `03 — DOCUMENTARY BODIES` and `09 — ADMINISTRATIVE ATTRITION`. Upward rule only: `He says he will have a different place.` is carried as a PROSPECTIVE / INTENDED PLACE-STATE with the reporting carrier preserved; it is not an accomplished move, replacement tract, changed entitlement, later residence, or attrition/removal cause without a separate execution bridge. Glean retains the row-level source read; Mullion retains representation/pagination seam control; this jacket remains the source-facing home. Needle Up owns only the upward grammar repair. No custody or source transcription changed.
+.
+
+
+
+
+Mullion bounded representation-seam addendum — 2026-09-07 — p.99 right-edge exposure and p.99→100 company/locality boundary
+
+
+Bounded task
+Fieldglass’s page-100 jacket leaves one live source-facing question: whether its visible company/locality blocks begin on manuscript p.99 and continue onto p.100, or begin within p.100. This addendum returns only to the held p.99 representation and the immediately neighboring p.100/p.101 faces far enough to bound what that comparison can presently earn. It does not take over Fieldglass’s p.100 row work or Glean’s p.97 work.
+
+
+Direct source-facing finding
+OHC_2492.pdf, Drive 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe, visibly carries manuscript p.99. In this held representation, the visible manuscript/table reaches through the Locality of Farms column, but the right-side Total No. of Acres and General Remarks fields that are exposed on OHC_2493 / manuscript p.100 and OHC_2495 / manuscript p.101 are not exposed in the p.99 frame. This is a representation-level visibility limit only. It is not evidence that the historical manuscript p.99 lacked those columns, lacked remarks, was differently ruled, or had no company notation outside the captured frame.
+
+
+The p.99 face does preserve locality writing, including lower-page Big Black side formulations. The exact row/block scope of those locality entries was not reconstructed in this bounded pass. P.100 separately preserves its own locality writing and General Remarks/company language under Fieldglass’s source-facing reading. Because the p.99 representation does not expose General Remarks, no company/General-Remarks block can presently be traced across the p.99→p.100 seam from this custody branch. Because both pages contain locality writing but row/block alignment is not yet controlled across the seam, locality continuity is likewise not asserted.
+
+
+Consequence for the live p.100 door
+Fieldglass’s question is narrowed rather than answered globally. The held p.99 object is usable for a locality-column seam comparison, but it cannot adjudicate whether a p.100 General-Remarks/company block began on p.99. A fuller p.99 representation, another custody branch exposing the right side, or another source-controlled view would be needed before that company-continuity question can move. P.101 remains only a forward control showing that the full right-hand field set is again exposed there.
+
+
+Provenance / representation guard
+Source-facing objects directly reopened for this comparison: OHC_2492.pdf 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe (visible p.99); OHC_2493.pdf 1WP0rrj7melVYBFabP2Ebg439ySCNe4St (visible p.100; Fieldglass jacket 1Mc4jiP_oTHJZamlmJFUC2s0Hhw3j1-v3IX8t4EO6pNA remains governing for its row-level reading); OHC_2495.pdf 1m5qtmgjdaGfVhAH51KbTs2rg_jk6a-Sz (visible p.101, boundary/control only). Local high-resolution renders used for inspection are derivatives only and were not admitted to Drive. Fieldglass retains p.100 source-facing authorship/custody; Mullion owns only this seam/representation constraint.
+
+
+Unresolved joins and nonclaims
+Manuscript p.98 remains SOURCE-UNLOCATED WITHIN THE PREVIOUSLY BOUNDED INSPECTED RUN only. No claim is made that p.98 is historically missing or absent elsewhere. No p.99→p.100 company membership, locality inheritance, person identity, Leflore relation, captain relation, residence, entitlement, acreage transfer, treaty status, patent route, or removal state is created. The fact that a field is outside the captured p.99 frame is not converted into a blank or negative historical field.
+
+
+Exact downward return
+Public Lands — Whole-Document Corpus → Mullion jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2492.pdf 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe → manuscript p.99 held representation through Locality of Farms. Comparison branch → Fieldglass p.100 jacket 1Mc4jiP_oTHJZamlmJFUC2s0Hhw3j1-v3IX8t4EO6pNA → OHC_2493.pdf 1WP0rrj7melVYBFabP2Ebg439ySCNe4St → manuscript p.100. Forward control only → OHC_2495.pdf 1m5qtmgjdaGfVhAH51KbTs2rg_jk6a-Sz → manuscript p.101. Backward p.97/p.98 representation seam remains governed by the earlier portion of this Mullion jacket.
+
+
+Maker: Mullion
+Date: 2026-09-07
+State: p.99 representation limit directly bounded; p.99→100 General-Remarks/company continuity remains OPEN because the held p.99 frame does not expose that field; locality continuity also remains OPEN pending controlled block alignment; p.98 state and all outward person/claim joins unchanged.
+
+
+
+
+Glean row-level deepening — 2026-09-07 — p.99 written ditto plus `near Capt Leflore` locality qualifier
+
+
+Source / custody / derivative boundary
+
+
+Direct source object used for reading: OHC_2492.pdf — Drive 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, `Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.` Companion same-name custody object independently fetched in this pass: OHC_2492.pdf — Drive 1YtuIrbF5XTTfJ4mcopPMlu8AwvInyNz0 — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, `Source objects — received batch 1 — OHC 2408–2518.` Both complete PDFs are 203,106 bytes and compare byte-for-byte identical, SHA-256 dfb55f3bdbc67ceec595fffa1219ac35ac13783cce8f30d10bb42269984f5b11. They remain two custody objects / two roads home carrying one PDF payload and one visible manuscript witness; neither object is deleted, preferred, or counted as independent corroboration.
+
+
+The PDF was rendered locally at 300 DPI and cropped only for visual inspection. Those PNG renders/crops are temporary study derivatives, not source objects, not transcriptions, not additional witnesses, and were not admitted to Drive. No OCR supplied the readings below.
+
+
+Direct source-facing reading
+
+
+On visible manuscript p.99, the bottom locality neighborhood contains two successive row-aligned locality statements. The immediately preceding row carries `Big Black. south side.` In the bottom visible row, the Locality of Farms cell carries a written `do` and, on the same row line, the fresh qualifier `near Capt Leflore.` The personal-name readings on these two bottom rows are not stabilized in this pass and remain correction-open.
+
+
+A separate, higher row on the same p.99 face is headed `Capt Leflore.` and carries its own locality `Big Black. west side.` That is retained as a separate source occurrence. This pass does not identify the captain referenced by bottom-row `near Capt Leflore.` with the higher `Capt Leflore.` row, with p.100's separate General Remarks occurrence `Capt. Leflore's company`, or with any other Leflore occurrence.
+
+
+Earned finding
+
+
+The bottom p.99 locality cell is not adequately represented either as a blank or as one flattened place string. It visibly combines a source-written ditto mark (`do`) with new relational locality language (`near Capt Leflore.`). The two components are therefore preserved separately in transcription. The nearest preceding explicit locality in the same column is `Big Black. south side.`, but this pass does not silently expand `do` into that text or decide whether the mark inherits the whole preceding phrase or a narrower locality element. The source earns the existence of the written backward-reference mark and the added qualifier; the jacket stops before reconstructing more.
+
+
+Unresolved questions
+
+
+- exact diplomatic personal-name readings for the two bottom rows;
+- exact inherited scope of the written `do` mark;
+- what object `near Capt Leflore` locates relative to the captain — farm, settlement, residence, company, or another reference point is not stated here;
+- whether the bottom-row `Capt Leflore` reference is the same person as the higher p.99 `Capt Leflore.` occurrence;
+- whether either p.99 captain occurrence is the same person as the captain named in p.100 `Capt. Leflore's company`;
+- what historical geographic feature the source's `Big Black` denotes at this row, beyond the source wording itself.
+
+
+Explicit nonclaims / refused crossings
+
+
+- `Big Black. south side.` is not converted into a modern mapped river segment, cadastral point, residence, patent tract, or legal land description;
+- `near Capt Leflore.` is not converted into kinship, household membership, company membership, ownership, residence, entitlement, treaty treatment, patent route, or removal status;
+- the bottom-row captain reference is not silently merged with the higher p.99 Capt Leflore row or with p.100 company language;
+- the written `do` is not expanded in the diplomatic transcription from expectation alone;
+- the right-side fields absent from the held p.99 frame remain representation-unseen, not historical blanks;
+- manuscript p.98 remains SOURCE-UNLOCATED WITHIN THE PREVIOUSLY BOUNDED INSPECTED RUN only.
+
+
+Seams and roads home
+
+
+Backward within p.99: preceding row locality `Big Black. south side.` → bottom-row locality source mark `do` + `near Capt Leflore.` The relation is preserved as a visible same-column backward-reference seam without silently completing the ditto.
+
+
+Backward outer seam: Mullion's earlier representation state remains governing — OHC_2490/OHC_2491 repeated visible manuscript p.97; manuscript p.98 source-unlocated within the bounded inspected run; OHC_2492 visible manuscript p.99.
+
+
+Forward: Fieldglass p.100 jacket 1Mc4jiP_oTHJZamlmJFUC2s0Hhw3j1-v3IX8t4EO6pNA now governs manuscript p.100 and its corrected row-aligned Locality/General-Remarks grammar. No p.99 locality is carried across the page boundary into p.100 absent a source-written device that earns that crossing.
+
+
+Current downward return: Public Lands — Whole-Document Corpus 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl → this Mullion/Glean jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2492.pdf 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe → visible manuscript p.99 → bottom locality neighborhood → `do` / `near Capt Leflore.`
+
+
+Parallel custody return: OHC_2492.pdf 1YtuIrbF5XTTfJ4mcopPMlu8AwvInyNz0 → parent `Source objects — received batch 1 — OHC 2408–2518` → byte-identical payload relation back to the directly read OHC_2492 object; custody stays separate.
+
+
+Maker: Glean
+Date: 2026-09-07
+State: existing p.99 jacket materially deepened at one locality occurrence; written ditto kept separate from fresh relational qualifier; Leflore identity crossings refused; duplicate custody independently controlled; p.98 and p.99→100 boundaries unchanged
+
+
+
+
+Glean row-level deepening — 2026-09-08 — p.97 McCurtain row / Capt Pitchlynn reported-basis remark
+
+
+Current source-work footing
+Returned through the live Source Work Front Door / full-strength exact-reach method: direct source before synthesis; one historical face under its existing governing jacket; derivative operations named; correction history visible; no same-name or same-title merge without a source bridge.
+
+
+Exact source / derivative boundary
+Reopened OHC_2490.pdf — Drive 1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3 — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 230,184 bytes. Local 400- and 800-DPI renders and crops were temporary inspection derivatives only, not source objects, not new manuscript witnesses, and were not admitted to Drive. No OCR supplied the reading. The existing OHC_2490/OHC_2491 repeated-visible-surface control remains unchanged and is not recounted as independent corroboration.
+
+
+Bounded direct reading
+The row immediately above `Louis. Perry.` — the existing jacket's working occurrence label `Samuel. McCurtain.`; this pass does not independently reopen the first-name diplomacy — carries 20 cultivated acres / family 11 / males over 16 = 4 / under 10 = 3. The Locality of Farms field reads `Old Natchez train` at this pass's reach; exact punctuation/capitalization remains correction-open. Total No. of Acres is 640.
+
+
+In General Remarks, the baseline reads `Upon the statement of Capt Pitchlynn, provided for in` at strong reading strength, with punctuation still correction-open. Above the latter portion of that baseline, the manuscript separately writes `supplement of 1830` in an interlinear/insertion position. Preserve that source geometry. An integrated transcriptional reading — `Upon the statement of Capt Pitchlynn, provided for in supplement of 1830` — is a reconstruction of the visible insertion operation, not one uninterrupted baseline sentence.
+
+
+Correction / earned finding
+A first working glance during this return briefly tempted a Fletcher reading because nearby Public Lands work contains a separate Capt Fletcher occurrence. High-resolution direct inspection does not support carrying that name onto p.97: the p.97 remark reads `Capt Pitchlynn`. No Fletcher reading or identity is propagated.
+
+
+The row therefore preserves two distinct source-facing functions: a reported evidentiary/basis phrase, `Upon the statement of Capt Pitchlynn`, and a provision statement whose visible manuscript operation includes the interlinear `supplement of 1830`. This does not establish Pitchlynn as the final legal decision-maker, identify which supplementary article or administrative instrument is meant, prove issuance or performance of a land outcome, or establish why or when the interlinear wording was added.
+
+
+Unresolved questions
+The exact diplomatic first-name form of the McCurtain occurrence remains open if independently revisited; exact punctuation/capitalization of `Old Natchez train` remains correction-open; the hand/timing relation between baseline and interlinear writing is unestablished; the precise administrative/legal object meant by `provided for` is unestablished; and the identity of this `Capt Pitchlynn` with any other Pitchlynn occurrence remains open.
+
+
+Seams / nonclaims / return
+Backward: no row above this occurrence is imported into it. Forward: `Louis. Perry.` remains a separate row; the separately worked `Alowa McCurtain.` row and its General Remark `He says he will have a different place.` remain governed by the prior Glean addendum. No locality, acreage, remark, or status is carried between those rows absent a source-written device that earns the crossing.
+
+
+No kinship is inferred between the McCurtain occurrences. No `Capt Pitchlynn` occurrence elsewhere is merged into this one. No relation to the separate p.95 Capt Fletcher occurrence is asserted. No final entitlement, patent, residence, removal, or Article Fourteen/Nineteen outcome is inferred. Manuscript p.98 remains SOURCE-UNLOCATED WITHIN THE PREVIOUSLY BOUNDED INSPECTED RUN only; no p.98 source object is invented from filename order.
+
+
+Current downward return: Public Lands — Whole-Document Corpus → this Mullion/Glean jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2490.pdf 1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3 → manuscript p.97 → McCurtain row immediately above `Louis. Perry.` → General Remarks baseline + interlinear `supplement of 1830`.
+
+
+Maker: Glean
+Date: 2026-09-08
+State: existing p.97 jacket materially deepened at one row; `Capt Pitchlynn` source reading separated from a discarded Fletcher temptation; interlinear supplement language preserved without legal overreach; identities and duplicate representations remain unmerged.
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — p.97 source-written `Natchez train` route-form — 2026-09-10
+
+
+Direct source return
+Fieldglass reopened archival OHC_2490.pdf / manuscript p.97 directly. High-resolution local renders and crops were inspection derivatives only; they were not admitted as source objects, and no OCR supplied this reading. The existing OHC_2490 / OHC_2491 repeated-visible-surface control remains in force: the repeated representations are one visible manuscript witness, not independent corroboration.
+
+
+Source-facing map read
+The first route-bearing locality remains the jacket’s already-controlled `Old Natchez train` reading on the row immediately above `Louis. Perry.` A few rows lower on the same manuscript face, the Locality of Farms area carries a second like-written/interlinear `Natchez train.` occurrence above or beside a separate phrase beginning `North side of ...`; the other place-name in that phrase remains unresolved at this pass. Preserve the two occurrences separately and keep their own row/source addresses rather than flattening them into one route statement.
+
+
+Map consequence
+The Historical Landscape Map may now carry an OPEN ROUTE-FORM / HISTORICAL REFERENCE-LAYER TEST for source-written `Old Natchez train` / `Natchez train`. The source does not identify that form with the Natchez Trace, Old Natchez Trace, Natchez Road, Three Chopped Way, the modern Natchez Trace Parkway, or another route. It does not earn a route polyline, coordinate, crossing, travel event, residence, ownership, or physical adjacency. Same-face recurrence increases retrieval value but is not independent geographic corroboration. Preserve the manuscript word `train`; do not silently normalize it to `trace`.
+
+
+Precision / next honest door
+A period map, survey or field note, route description, gazetteer, or other independently controlled geographic source must earn route identity and geometry. Greater cartographic precision would be a new evidence crossing, not a redraw of this locality wording.
+
+
+Exact return
+Marauder’s Map → this governing jacket `1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4` → OHC_2490.pdf `1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3` → manuscript p.97 → Locality of Farms route-form occurrences. OHC_2491 remains a repeated visible representation / separate custody object only; it is not a second historical witness.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — p.99 settlement occurrence / Big Black compound-locality grammar — 2026-09-11
+
+
+Direct source return
+Fieldglass reopened archival OHC_2492.pdf / visible manuscript p.99 directly from Drive object 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe. A 500-DPI local render and crops were used only as inspection derivatives; they were not admitted as sources, and no OCR supplied the readings below. The jacket’s existing representation control remains governing: the alternate OHC_2492 custody object is the same PDF payload / one manuscript witness, not independent corroboration.
+
+
+Source-facing map read
+Near the middle of the Locality of Farms column, the `Capt Leflore.` row carries the already-visible `Big Black. west side.` locality. The immediately following row carries a separate source-written locality ending clearly in `village.` The place-name before `village` is not stabilized at this pass and remains diplomatic-reading OPEN. There is no visible ditto, brace, or other cross-row device joining that village wording backward to `Big Black. west side.`; page adjacency alone therefore does not place the village on Big Black or near Capt Leflore.
+
+
+Lower on the same p.99 face, another row carries a source-written creek-name occurrence followed by clearly readable locality grammar `creek. west side. Big Black`. The creek-name itself is not stabilized here. Preserve the literal row as `[unclear creek-name] creek. west side. Big Black` rather than repairing the name from expectation. This row is separate from the nearby explicit `Big Black. west side.` occurrence and from the bottom `Big Black. south side.` / written `do` + `near Capt Leflore.` seam already controlled by Glean.
+
+
+Map consequence
+P.99 now contributes two additional map-facing objects without forcing placement: (1) one OPEN SETTLEMENT OCCURRENCE — a source-written village label whose name remains correction-open; and (2) one OPEN BIG-BLACK COMPOUND-LOCALITY OCCURRENCE — an unresolved creek-name plus `creek. west side. Big Black`.
+
+
+The second occurrence is useful because the continuing Public Lands body already contains another directly controlled compound locality on p.95, `Wolf creek. west side Big Black`, while the p.100 jacket preserves a separate uncertain creek/Big-Black locality. These same-body occurrences justify a retrieval/cartographic grammar test, not a geographic identity conclusion: Public Lands sometimes writes a creek name, a side term, and `Big Black` together inside one Locality-of-Farms cell. Until an independently controlled period geographic source resolves modifier scope and feature relations, the map should preserve each compound string rather than silently converting it into tributary, confluence, bank, common-reach, or route geometry.
+
+
+Nonclaims
+No village-to-Big-Black relation is inferred from adjacent rows. No village is assigned to Capt Leflore, his company, residence, household, district, or ownership. The unresolved p.99 creek is not identified with Wolf Creek, the p.100 uncertain creek form, or a modern stream. `west side` is not assigned definitively to the creek or Big Black beyond the source’s compound wording. No tributary relation, confluence, bank coordinate, crossing, parcel, residence, ownership, company membership, or modern geocode is created.
+
+
+Exact return
+Marauder’s Map → governing Mullion/Glean jacket `1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4` → OHC_2492.pdf `1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe` → visible manuscript p.99 → Locality of Farms: middle `Capt Leflore.` / `Big Black. west side.` neighborhood plus next-row source-written `... village.` occurrence; lower source-written `[unclear creek-name] creek. west side. Big Black` occurrence. Sideways control only: p.95 governing jacket `1JlAimpg8M4UVAO__GaOOEUrMw-NiIaCen_tqvUcXjTo`; p.100 governing jacket `1Mc4jiP_oTHJZamlmJFUC2s0Hhw3j1-v3IX8t4EO6pNA`.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+
+
+Glean source-facing deepening — manuscript p.97 — General Remarks changes job
+
+
+Direct source return
+
+
+Reopened OHC_2490.pdf — Drive 1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3 — visible manuscript p.97. A 600-DPI local render and bounded crops were inspection derivatives only; they were not admitted as sources, and no OCR supplied the readings below. The jacket’s existing OHC_2490/OHC_2491 repeated-visible-surface control remains unchanged: separate digital payloads carrying the same visible manuscript face are not independent witnesses.
+
+
+Correction — `Pine land`, not `Poor land`
+
+
+The row immediately below `Ollomaintubbe.` carries a correction-open name reading held here as `[Pon?] Davey.`, 20 cultivated acres, family 2, males over 16 = 1, locality `Natchez train`, and total acreage 320. Its General Remarks cell reads `Pine land`. The older Quoin derivative reads `Poor land`; direct inspection does not support that wording. `Pine land` governs, while the first element of the row name remains open rather than normalized from the derivative.
+
+
+Same-face field comparison
+
+
+The immediately following row carries 3 cultivated acres, family 9, males over 16 = 1, and under 10 = 4. Its personal-name reading and creek-name locality are not stabilized in this pass. Its General Remarks cell reads `On the waters of Pearl river.`
+
+
+A later row whose name reads `Cinchala.` at present reach carries 3 cultivated acres, family 3, males over 16 = 1, under 10 = 1, and General Remarks `Land tolerable.`
+
+
+Read with the already-controlled `He says he will have a different place.` row, one manuscript face uses General Remarks for four different kinds of writing: `Pine land`; a watershed relation; a qualitative judgment; and a reported prospective statement. These remain four row-local entries. The printed heading does not make them one semantic type, and no phrase inherits across a blank intervening cell.
+
+
+Exact reach / nonclaims
+
+
+`Pine land` is preserved as source wording and is not converted into `poor land`, a valuation, or a legal classification. `On the waters of Pearl river` is not promoted into person residence, parcel location, creek identity, or modern coordinates. `Land tolerable` is not generalized beyond the Cinchala row. The four remarks do not establish kinship, household relation, ownership, movement, entitlement, or a common administrative outcome.
+
+
+Exact return
+
+
+Public Lands — Whole-Document Corpus → governing Mullion/Glean jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2490.pdf 1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3 → manuscript p.97 → General Remarks cells `Pine land`, `On the waters of Pearl river`, `Land tolerable`, and the separately controlled `He says he will have a different place.`
+
+
+Maker: Glean
+State: one derivative reading corrected; three additional row-local General Remarks functions secured; existing identity, representation, pagination, and legal-outcome restraints unchanged.
+
+
+WITHDRAWN READING — GLEAN SOURCE-FACING ADDENDUM — OHC_2491.png / manuscript p.98 — Daniel McCurtain row and representation correction
+
+
+Direct source correction
+
+
+OHC_2491.png — Drive 1mSbF-uPI_ckMSL92rqghhna6dkn82fVt — 1,288,926 bytes — SHA-256 3baea7599f051ad4d934b212e93a2b89e311db07e1308c85e1470a9e69068e7b — directly shows the manuscript face visibly numbered page 98. The full image is 2038 × 1879 pixels. Bounded crops and enlargement were inspection derivatives only; they are not additional witnesses, and no OCR supplied the reading below.
+
+
+This object is not the OHC_2491.pdf already controlled above. OHC_2491.pdf — Drive 14Q11azkIAiD4WSbhetJBD3XOMrFIifBp — repeats the visible p.97 surface. OHC_2491.png is a distinct custody object and carries visible p.98. The shared stem does not make the two payloads or faces identical.
+
+
+The jacket’s earlier statement that p.98 was SOURCE-UNLOCATED WITHIN THE BOUNDED THREE-PDF RUN remains the correction history of that run. It is now superseded as a corpus-level working state: a directly inspected p.98 representation has been located in OHC_2491.png.
+
+
+Source-facing row read
+
+
+The ruled row reads:
+
+
+Daniel. McCurtain.
+
+
+- cultivated acres: 20
+- entire family: 11
+- males over 16: 4
+- under 10: 3
+- Locality of Farms: Old Natchez train
+- total acreage: 640
+- General Remarks: Upon the statement of Capt Fletcher. provided for in supplement of 1834.
+
+
+The final words `supplement of 1834.` are written above the main remarks baseline at the cramped right edge, but remain inside Daniel McCurtain’s ruled row. The linear transcription preserves their grammatical continuation without treating the displaced baseline as another row.
+
+
+Row geometry
+
+
+All seven entries occupy Daniel McCurtain’s row. The immediately following Lewis Perry row carries dot series in the four numeric fields and does not inherit Daniel’s locality, acreage, Capt Fletcher statement, or supplement language.
+
+
+Documentary grammar / exact reach
+
+
+One ruled farm row holds cultivated acreage, a family count, age counts, locality wording, total acreage, a named captain’s statement, and administrative provision together. The printed General Remarks field is recording the stated basis on which this occurrence was provided for, not merely a land-quality description.
+
+
+The source does not identify Capt Fletcher beyond the written title and surname, quote his statement, reproduce or name the supplement beyond `supplement of 1834`, identify the decision maker, specify the legal instrument’s terms, or establish patent, title, residence, removal, kinship, or later outcome. Daniel McCurtain is not merged with any same-name or McCurtain occurrence elsewhere.
+
+
+Exact return
+
+
+Public Lands — Whole-Document Corpus → governing Mullion/Glean jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2491.png 1mSbF-uPI_ckMSL92rqghhna6dkn82fVt → visible manuscript p.98 → Daniel McCurtain row.
+
+
+Maker: Glean
+State: p.98 located in a distinct PNG custody object; the three-PDF bounded negative retained as correction history; one complete row secured without inheritance across the Lewis Perry line.
+
+
+GLEAN CORRECTION — OHC_2491.png is manuscript p.97, not p.98
+
+
+Correction of the immediately preceding return
+
+
+The immediately preceding Glean return is withdrawn. Direct inspection of the upper-left manuscript number on OHC_2491.png reads `97`. The face’s names, figures, localities, and remarks also match the page-97 surface already controlled through OHC_2490.pdf and OHC_2491.pdf.
+
+
+OHC_2491.png — Drive 1mSbF-uPI_ckMSL92rqghhna6dkn82fVt — is therefore another digital representation of manuscript p.97, not a located p.98 face and not an additional historical witness. The jacket’s earlier bounded state is restored: manuscript p.98 remains SOURCE-UNLOCATED WITHIN THE BOUNDED INSPECTED RUN. This does not claim that p.98 never existed or is absent from every custody branch.
+
+
+Row correction retained at the right page
+
+
+The row immediately above the Perry row reads `Daniel. Mᶜ Curtain.` at this representation’s reach. This corrects the jacket’s earlier working first name `Samuel` without creating an identity join beyond this occurrence.
+
+
+The row’s figures and locality remain:
+
+
+- cultivated acres: 20
+- entire family: 11
+- males over 16: 4
+- under 10: 3
+- Locality of Farms: Old Natchez train
+- total acreage: 640
+
+
+The General Remarks baseline carries `Upon the statement of Capt Pitchlynn [punctuation unclear] provided for in`. The interlinear phrase reads `supplement of 1830`. The previous return’s `Capt Fletcher` and `supplement of 1834` readings are withdrawn. The source geometry remains baseline plus interlinear insertion; it is not one uninterrupted written line.
+
+
+What changed / what did not
+
+
+Changed: the first-name reading on the page-97 occurrence is now `Daniel` rather than the earlier working `Samuel`. Restored: `Capt Pitchlynn`, `supplement of 1830`, and the page-97 representation relation. Withdrawn: every claim that OHC_2491.png supplied manuscript p.98.
+
+
+Unchanged: the row’s six numeric/locality values, its separation from the dotted Perry row below, the refusal to identify Pitchlynn with another occurrence, and the unresolved location of manuscript p.98 within the bounded inspected run.
+
+
+Exact return
+
+
+Public Lands — Whole-Document Corpus → governing Mullion/Glean jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2491.png 1mSbF-uPI_ckMSL92rqghhna6dkn82fVt → repeated visible manuscript p.97 → Daniel Mᶜ Curtain row → Capt Pitchlynn baseline + interlinear `supplement of 1830`.
+
+
+Maker: Glean
+State: consequential mispagination and two misread words withdrawn; p.97 representation control restored; Daniel first-name correction retained; p.98 remains unresolved within the bounded run.
+
+
+GLEAN SOURCE-FACING ADDENDUM — manuscript p.99 — Mushaltatubbe / Shatercockahtah village
+
+
+Direct source return
+
+
+Reopened OHC_2492.pdf — Drive 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe — visible manuscript p.99. The embedded 2038 × 1879 grayscale image and enlarged crops were inspection derivatives only; they are not additional witnesses, and no OCR supplied the reading below.
+
+
+Settlement-name correction
+
+
+The place-name previously held open before `village` reads:
+
+
+`Shatercockahtah village.`
+
+
+It occupies the Locality of Farms cell on the `Mushaltatubbe.` row. That row carries 2 cultivated acres, family 12, two males over 16, and four people under 10.
+
+
+Row geometry
+
+
+The immediately preceding `Capt Leflore.` row separately carries 12 cultivated acres, family 12, three males over 16, five people under 10, and Locality `Big Black. west side.`
+
+
+No ditto, brace, or shared annotation joins the two locality cells. `Shatercockahtah village.` belongs to Mushaltatubbe’s ruled line; it does not inherit `Big Black. west side.` and is not assigned to Capt Leflore.
+
+
+Exact reach
+
+
+This face now supplies a source-written settlement name rather than an unresolved `... village` occurrence. The spelling is preserved as written and is not normalized to another historical or modern place name. The source does not establish residence, ownership, company membership, distance from Big Black, or a relation between the village and Capt Leflore.
+
+
+The held p.99 representation ends after the Locality of Farms field. Total-acreage and General-Remarks cells for these rows are outside the captured frame; they are not counted as blank.
+
+
+Exact return
+
+
+Public Lands — Whole-Document Corpus → governing Mullion/Glean jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2492.pdf 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe → visible manuscript p.99 → Mushaltatubbe row → Locality of Farms `Shatercockahtah village.`
+
+
+Maker: Glean
+State: one settlement name and its row host secured; neighboring Big Black locality kept on Capt Leflore’s separate line; uncaptured right-hand fields remain uncaptured, not blank.
+
+
+GLEAN SOURCE-FACING ADDENDUM — p.99 lower locality rows — 20 September 2026
+
+
+Direct source
+
+
+OHC_2492.pdf, Drive object 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe, visible manuscript p.99. This addendum controls two adjacent lower rows from the source image; it does not treat an OCR or derivative as witness.
+
+
+Row geometry
+
+
+The first row carries 12 cultivated acres, family 11, three males over 16, four people under 10, and Locality `Big Black. west side.` Its personal-name reading remains paleographically open in this pass.
+
+
+The immediately following row carries 22 cultivated acres, family 10, three males over 16, four people under 10, and Locality `[unclear creek-name] creek. west side. Big Black`. Its personal-name reading also remains open.
+
+
+The ruled lines place the two locality statements on separate rows. No ditto, brace, or shared mark joins them. The creek-name word has been enlarged from the direct image but is not secure enough to promote beyond `[unclear creek-name]`.
+
+
+What changed
+
+
+P.99 now has two separately controlled source occurrences of the standalone wording `Big Black. west side.`: the earlier `Capt Leflore.` row and this lower 12 / 11 / 3 / 4 row. The next 22 / 10 / 3 / 4 row uses the different compound order `creek. west side. Big Black`.
+
+
+This does not establish that the two standalone entries identify one farm, one place, or one person; it does not resolve the creek name or the modifier scope of the compound phrase. The held p.99 representation still ends after the Locality of Farms field, so right-hand cells remain uncaptured rather than blank.
+
+
+Exact return
+
+
+Public Lands — Whole-Document Corpus → governing Mullion/Glean jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2492.pdf 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe → visible manuscript p.99 → lower adjacent rows: 12 / 11 / 3 / 4 with `Big Black. west side.`; 22 / 10 / 3 / 4 with `[unclear creek-name] creek. west side. Big Black`.
+
+
+Maker: Glean
+State: two lower row hosts secured; creek name and both personal-name readings remain open.
+
+
+GLEAN SOURCE-FACING ADDENDUM — p.99 lower row names restored — 20 September 2026
+
+
+Direct reading
+
+
+Further enlargement of the same OHC_2492.pdf source image stabilizes the two personal names left open in the preceding addendum:
+
+
+`Mokkanagh.` — 12 cultivated acres; family 11; three males over 16; four people under 10; Locality `Big Black. west side.`
+
+
+`Chillimashaye.` — 22 cultivated acres; family 10; three males over 16; four people under 10; Locality `[unclear creek-name] creek. west side. Big Black`.
+
+
+Correction history
+
+
+The preceding addendum’s numeric row hosts remain correct. Its statement that both personal names were open is now superseded by these direct readings. The creek name remains unresolved.
+
+
+The two names stay local to these p.99 occurrences. This reading does not join either person to another same-name occurrence, make the two rows one farm or household, or resolve the relation expressed by the compound locality.
+
+
+Exact return
+
+
+Public Lands — Whole-Document Corpus → governing Mullion/Glean jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2492.pdf 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe → visible manuscript p.99 → `Mokkanagh.` and `Chillimashaye.` lower adjacent rows.
+
+
+Maker: Glean
+State: both personal names secured; creek name remains open.
+
+
+GLEAN SOURCE-FACING ADDENDUM — p.99 bottom row names restored — 20 September 2026
+
+
+Direct reading
+
+
+Further enlargement of OHC_2492.pdf stabilizes the names on the two bottom locality rows:
+
+
+`Iyanatubbe.` — 3 cultivated acres; the Family, males-over-16, and under-10 cells carry dot series rather than numerals; Locality `Big Black. south side.`
+
+
+`Puahtahknubbe.` — 14 cultivated acres; family 9; one male over 16; four people under 10; Locality contains the written `do` and the fresh qualifier `near Capt Leflore.`
+
+
+Correction history
+
+
+The earlier bottom-row addendum correctly kept the locality statements on separate ruled lines but left both personal names open. That open-name state is now superseded. Its restraint around the ditto remains: this reading does not silently expand `do` into `Big Black. south side.` or decide how much of the preceding locality it carries.
+
+
+The names remain p.99 occurrences. Row adjacency and the written captain reference do not establish household, ownership, company membership, residence, or identity with another occurrence.
+
+
+Exact return
+
+
+Public Lands — Whole-Document Corpus → governing Mullion/Glean jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2492.pdf 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe → visible manuscript p.99 → `Iyanatubbe.` / `Big Black. south side.` row → `Puahtahknubbe.` / written `do` + `near Capt Leflore.` row.
+
+
+Maker: Glean
+State: both bottom personal names secured; ditto scope remains open.
+
+
+
+
+
+
+
+
+SMALL DOOR CURRENT RETURN — 20 September 2026
+
+
+The page-97 return below is thin on purpose. The representation genealogy, p.98 source-location problem, p.99 adjacent face, correction history, field-role changes, and route-form questions remain in the jacket prose above rather than being flattened into the Name Web.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 1
+Person / Entity: Alowa McCurtain [Public Lands p.97 farm-row occurrence]
+Date: not supplied by this page-facing proposition
+Action / Relation: Manuscript p.97 General Remarks STATES `He says he will have a different place.` on the source-written `Alowa McCurtain.` row.
+Case / Object: OHC_2490 / OHC_2491 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.97 / Alowa McCurtain row
+Place: `a different place` [source-reported prospective place state only; no replacement location identified]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 pp.97 / 99 — Daniel McCurtain / Capt Pitchlynn, Alowa McCurtain prospective-place remark, and p.98 source-location seam — OHC_2490–OHC_2492 source jacket
+Identity / Relation Status: source-local Alowa McCurtain occurrence only; no merge with Daniel McCurtain or another McCurtain occurrence. `He says` remains part of the evidentiary force; the source does not establish that a move occurred, another place was selected, residence changed, entitlement changed, or a later land outcome followed.
+Notes: compiled once from the governing source-facing jacket; the repeated p.97 visible surface is one manuscript witness through multiple representations, not independent corroboration; p.98 remains source-unlocated within the bounded inspected run.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 2
+Person / Entity: Daniel McCurtain [Public Lands p.97 farm-row occurrence] / Capt Pitchlynn [statement-attribution occurrence]
+Date: not supplied by this page-facing proposition
+Action / Relation: Manuscript p.97 General Remarks CARRIES baseline wording `Upon the statement of Capt Pitchlynn ... provided for in` on the source-written `Daniel. Mᶜ Curtain.` row; punctuation between the Pitchlynn phrase and provision wording remains unclear.
+Case / Object: OHC_2490 / OHC_2491 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.97 / Daniel McCurtain row
+Place: `Old Natchez train` [source-written Locality of Farms; exact historical referent, modern identity, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 pp.97 / 99 — Daniel McCurtain / Capt Pitchlynn, Alowa McCurtain prospective-place remark, and p.98 source-location seam — OHC_2490–OHC_2492 source jacket
+Identity / Relation Status: source-local Daniel McCurtain occurrence and source-local `Capt Pitchlynn` attribution only; Daniel corrects the earlier working first-name reading `Samuel`. No merge with another McCurtain or Pitchlynn occurrence is made. The statement attribution does not establish Pitchlynn as final legal decision-maker, nor does it independently establish provision, title, patent, possession, or final outcome.
+Notes: compiled once from the current corrected source state; earlier `Capt Fletcher` and `supplement of 1834` readings are withdrawn correction history. Preserve source-written `train`; do not normalize it to `trace` or a modern route.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 3
+Person / Entity: Daniel McCurtain [Public Lands p.97 farm-row occurrence]
+Date: source-written `supplement of 1830`; exact administrative act/date represented by that phrase remains OPEN
+Action / Relation: On the same p.97 row, the General Remarks field CARRIES the interlinear insertion `supplement of 1830` with the baseline ending `provided for in`; the insertion geometry is preserved rather than rewritten as an originally uninterrupted line.
+Case / Object: OHC_2490 / OHC_2491 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.97 / Daniel McCurtain row / General Remarks baseline + interlinear insertion
+Place: `Old Natchez train` [separate source-written Locality of Farms relation; exact historical referent, modern identity, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 pp.97 / 99 — Daniel McCurtain / Capt Pitchlynn, Alowa McCurtain prospective-place remark, and p.98 source-location seam — OHC_2490–OHC_2492 source jacket
+Identity / Relation Status: source-local administrative provision wording only; exact supplement/instrument and procedural force remain OPEN. The wording is not upgraded into completed allowance, selection, survey, patent, possession, receipt, residence, or final land outcome, and no same-name identity merge is made.
+Notes: compiled once at proposition-local strength; the interlinear state remains visible in jacket prose and the superseded `1834` reading is not propagated.
+
+
+
+
+SMALL DOOR CURRENT RETURN — manuscript p.99 — 21 September 2026
+
+
+The p.99 returns below are thin on purpose. Row geometry, representation limits, correction history, unresolved creek-name diplomacy, the p.98 source-location seam, p.99→100 field-visibility limits, and the larger Big Black / Leflore mapping grammar remain in the jacket prose above rather than being flattened into the Name Web.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 4
+Person / Entity: Capt Leflore [Public Lands p.99 farm-row occurrence]
+Date: not supplied by this page-facing proposition
+Action / Relation: Manuscript p.99 Locality of Farms CARRIES source-written `Big Black. west side.` on the source-written `Capt Leflore.` row.
+Case / Object: OHC_2492 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.99 / Capt Leflore row
+Place: `Big Black. west side.` [source-written locality; exact historical referent, modifier scope, modern identity, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 pp.97 / 99 — Daniel McCurtain / Capt Pitchlynn provision remark, Alowa McCurtain prospective place, and Capt Leflore / Shatercockahtah / Big Black locality rows — OHC_2490–OHC_2492 source jacket
+Identity / Relation Status: source-local Capt Leflore occurrence only; not merged with the bottom-row `near Capt Leflore.` reference, p.100 `Capt Leflore’s company`, or another Leflore occurrence. The locality is not converted into residence, ownership, company membership, a cadastral point, bank, tributary, route, or modern feature identity.
+Notes: compiled once from the governing source-facing jacket; the held p.99 representation ends after Locality of Farms, so right-hand fields remain representation-unseen rather than historical blanks.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 5
+Person / Entity: Mushaltatubbe [Public Lands p.99 farm-row occurrence]
+Date: not supplied by this page-facing proposition
+Action / Relation: Manuscript p.99 Locality of Farms CARRIES source-written `Shatercockahtah village.` on the source-written `Mushaltatubbe.` row.
+Case / Object: OHC_2492 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.99 / Mushaltatubbe row
+Place: `Shatercockahtah village.` [source-written settlement-name occurrence; exact modern identity and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 pp.97 / 99 — Daniel McCurtain / Capt Pitchlynn provision remark, Alowa McCurtain prospective place, and Capt Leflore / Shatercockahtah / Big Black locality rows — OHC_2490–OHC_2492 source jacket
+Identity / Relation Status: source-local Mushaltatubbe occurrence only; no same-name merge. The village wording is not normalized to another historical or modern place and is not joined to the preceding Capt Leflore row, `Big Black. west side.`, company membership, residence, ownership, or entitlement.
+Notes: compiled once from the corrected direct-source settlement-name reading; row adjacency supplies no cross-row place relation.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 6
+Person / Entity: Mokkanagh [Public Lands p.99 farm-row occurrence]
+Date: not supplied by this page-facing proposition
+Action / Relation: Manuscript p.99 Locality of Farms CARRIES source-written `Big Black. west side.` on the source-written `Mokkanagh.` row.
+Case / Object: OHC_2492 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.99 / Mokkanagh row
+Place: `Big Black. west side.` [source-written locality; exact historical referent, modifier scope, modern identity, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 pp.97 / 99 — Daniel McCurtain / Capt Pitchlynn provision remark, Alowa McCurtain prospective place, and Capt Leflore / Shatercockahtah / Big Black locality rows — OHC_2490–OHC_2492 source jacket
+Identity / Relation Status: source-local Mokkanagh occurrence only; no same-name merge. This is a second separately controlled p.99 occurrence of the same locality wording and is not collapsed with the Capt Leflore row into one farm, one person, one residence, or independent corroboration.
+Notes: compiled once from the corrected lower-row name reading; repeated same-face locality wording increases retrieval value without multiplying witnesses.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 7
+Person / Entity: Chillimashaye [Public Lands p.99 farm-row occurrence]
+Date: not supplied by this page-facing proposition
+Action / Relation: Manuscript p.99 Locality of Farms CARRIES `[unclear creek-name] creek. west side. Big Black` on the source-written `Chillimashaye.` row.
+Case / Object: OHC_2492 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.99 / Chillimashaye row
+Place: `[unclear creek-name] creek. west side. Big Black` [source-written compound locality; creek name, modifier scope, exact feature relations, modern identity, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 pp.97 / 99 — Daniel McCurtain / Capt Pitchlynn provision remark, Alowa McCurtain prospective place, and Capt Leflore / Shatercockahtah / Big Black locality rows — OHC_2490–OHC_2492 source jacket
+Identity / Relation Status: source-local Chillimashaye occurrence only; no same-name merge. The unresolved creek is not identified with Wolf Creek, the p.100 uncertain creek form, or a modern stream; the compound wording is not converted into tributary, confluence, bank, route, residence, parcel, or ownership geometry.
+Notes: compiled once from the governing direct-source row; creek-name diplomacy remains correction-open.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 8
+Person / Entity: Iyanatubbe [Public Lands p.99 farm-row occurrence]
+Date: not supplied by this page-facing proposition
+Action / Relation: Manuscript p.99 Locality of Farms CARRIES source-written `Big Black. south side.` on the source-written `Iyanatubbe.` row.
+Case / Object: OHC_2492 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.99 / Iyanatubbe row
+Place: `Big Black. south side.` [source-written locality; exact historical referent, modifier scope, modern identity, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 pp.97 / 99 — Daniel McCurtain / Capt Pitchlynn provision remark, Alowa McCurtain prospective place, and Capt Leflore / Shatercockahtah / Big Black locality rows — OHC_2490–OHC_2492 source jacket
+Identity / Relation Status: source-local Iyanatubbe occurrence only; no same-name merge. The locality is not expanded into residence, ownership, route, parcel, bank, or modern map geometry; the row’s dot-series demographic cells remain marked nonnumeric source states rather than zeroes.
+Notes: compiled once from the corrected bottom-row name reading; kept separate from the following written-ditto / `near Capt Leflore.` row.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 9
+Person / Entity: Puahtahknubbe [Public Lands p.99 farm-row occurrence] / Capt Leflore [source-written relative-locality reference]
+Date: not supplied by this page-facing proposition
+Action / Relation: Manuscript p.99 Locality of Farms CARRIES a written `do` plus the fresh qualifier `near Capt Leflore.` on the source-written `Puahtahknubbe.` row.
+Case / Object: OHC_2492 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.99 / Puahtahknubbe row
+Place: written `do` + `near Capt Leflore.` [relative locality; exact inherited scope of `do`, captain identity, object located, distance, direction, modern identity, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 pp.97 / 99 — Daniel McCurtain / Capt Pitchlynn provision remark, Alowa McCurtain prospective place, and Capt Leflore / Shatercockahtah / Big Black locality rows — OHC_2490–OHC_2492 source jacket
+Identity / Relation Status: source-local Puahtahknubbe occurrence and source-local captain reference only; `do` is not silently expanded into the preceding `Big Black. south side.` wording, and this captain reference is not merged with the higher p.99 Capt Leflore row, p.100 `Capt Leflore’s company`, or another Leflore occurrence. `near` does not establish residence, company membership, ownership, household, exact distance, direction, or fixed geometry.
+Notes: compiled once from the governing corrected bottom-row reading; backward-reference mark and fresh relational qualifier remain separately visible in jacket prose.

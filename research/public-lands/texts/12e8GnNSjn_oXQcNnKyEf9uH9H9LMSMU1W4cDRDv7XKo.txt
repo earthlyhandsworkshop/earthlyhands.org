@@ -1,0 +1,312 @@
+GLEAN SOURCE-FACING JACKET — OHC_2502 — manuscript p.107 — Capt Red Dog company-reference seam and 106→107→108
+
+
+Status: NEW DIRECT-SOURCE JACKET — ONE MANUSCRIPT FACE — COMPANY-REFERENCE ROW — DUPLICATE CUSTODY CONTROLLED — CORPUS SYNTHESIS NOT CLAIMED
+
+
+SOURCE-WORK FOOTING
+
+
+This jacket follows the current Earthly Hands Source Work Front Door and canonical-source-work practice: source before synthesis; materially earned work only; one historical witness across duplicate digital custody; source, digital facsimile, inspection derivative, diplomatic reading, and interpretation kept distinct; exact provenance and roads home preserved; uncertainty and nonclaims carried forward; no person merge from a repeated name string.
+
+
+SOURCE IDENTITY AND CUSTODY
+
+
+- Corpus: quoted-title Public Lands.
+- Documentary body visible on the face: Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- Visible manuscript page: 107.
+- Exact filename: OHC_2502.pdf.
+- Current received-batch custody object: Drive ID 1kNpcG6876Js7vwYzpttllIM8ADoTrz9s.
+- Current received-batch folder: Source objects — received batch 1 — OHC 2408–2518.
+- Current received-batch folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+- Alternate legacy custody object: Drive ID 12rJ8A0uXZX9W1o_LsMqFLHQXBvaCGwbK.
+- Alternate legacy parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI; established neighboring source-work identifies that custody branch as Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.
+- Both OHC_2502 PDFs were independently retrieved in this pass. Each is 236,160 bytes. Direct SHA-256 comparison returned 43dc8406168f6821eb6cd90a8810ecbf3cd65b87e726ed8b5c887abbcdcb12ee for each; the byte streams are identical.
+- Custody conclusion: two Drive objects / two custody roads / one PDF payload / one visible manuscript witness. The repeated custody object is not independent historical corroboration and neither road is erased.
+- Historical-status boundary: the surviving face is a manuscript historical witness preserved in archival scan form. Present digital custody does not establish whether the manuscript itself is the first/original return, an office copy, a fair copy, or another administrative state.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY
+
+
+The manuscript face visible within OHC_2502.pdf is the historical evidence used here. The two PDFs are digital facsimiles in separate custody. A Files-rendered page image, a temporary high-resolution render, crops, and any contrast/enlargement used for inspection are study derivatives only; they are not new source objects or additional witnesses. No OCR carries the load-bearing reading below.
+
+
+This jacket does not attempt a full-page transcription. It records one bounded diplomatic occurrence and its row geometry. Interpretation is stated separately and does not silently enter the transcription.
+
+
+BOUNDED SOURCE READING — BOTTOM VISIBLE ROW
+
+
+The personal-name field on the bottom visible row is not certified in this pass. Its letterforms remain correction-open, and no normalized person name is created from them.
+
+
+On that same ruled row, the General Remarks field reads:
+
+
+Capt Red Dog's company
+
+
+The wording is source-written in General Remarks. The Locality of Farms field on the same row contains no source writing that I can safely certify in this pass; that state is not strengthened into a claim that the historical cell was necessarily blank.
+
+
+The horizontal rule and baseline are strong enough to assign Capt Red Dog's company to the bottom visible row. The phrase is not assigned to the row above, carried upward, or moved into Locality.
+
+
+FINDINGS
+
+
+1. Manuscript p.107 contains a same-row General Remarks occurrence reading Capt Red Dog's company.
+2. On this face, company language is documentary content of General Remarks, distinct from the printed Locality of Farms field.
+3. The immediately preceding worked face, p.106 / OHC_2501, contains Capt Red Dog. as a titled name-field occurrence with a different same-row narrative remark using Mississippi and provided-for language. The adjacent faces therefore earn a same-string / different-documentary-role seam: p.106 names Capt Red Dog as a row subject; p.107 uses Capt Red Dog inside another row's company-reference remark.
+4. That seam earns comparison, not identity. The p.106 name occurrence and the p.107 company reference are not silently merged into one historical person.
+5. The two held OHC_2502 PDFs are byte-identical custody copies and do not double the historical evidence.
+
+
+INFERENCE — KEPT SEPARATE
+
+
+The ordinary grammatical reading of Capt Red Dog's company is that the recorder was describing the bottom-row subject through some company relation associated with a captain called Red Dog. The source face does not itself define what company meant administratively, geographically, politically, militarily, or temporally in this return.
+
+
+Because p.106 contains a neighboring titled occurrence Capt Red Dog., it is reasonable to preserve a comparison target between that occurrence and p.107's company phrase. It is not reasonable from these two strings alone to assert that both refer to the same historical individual. That identity question remains open.
+
+
+UNRESOLVED QUESTIONS
+
+
+- What is the exact diplomatic spelling of the bottom-row personal name?
+- What administrative or enumerative meaning did company have in this Public Lands return?
+- Does a source-written key, heading, instruction, certification, or neighboring record define the company labels?
+- Does the p.107 phrase Capt Red Dog's company refer to the same historical person represented by the p.106 name-field occurrence Capt Red Dog.?
+- Who entered the p.107 company remark, and at what stage of the return's preparation?
+- Can another representation clarify the bottom-row personal name or any faint Locality writing?
+- What documentary generation is the surviving manuscript face: original field return, office copy, later fair copy, or another administrative state?
+
+
+EXPLICIT NONCLAIMS
+
+
+- The p.106 Capt Red Dog name occurrence is not merged with the p.107 Capt Red Dog's company reference.
+- The bottom-row person is not identified beyond the correction-open source occurrence.
+- Company is not normalized into a modern military, political, kinship, household, landholding, or residence category.
+- The company wording does not establish command duration, office continuity, kinship, household membership, ownership, residence, removal, migration, treaty article, entitlement, patent, payment, delivery, or later possession.
+- Capt Red Dog's company remains in General Remarks and is not relocated into Locality of Farms.
+- A locality cell with no safely readable writing is not converted into a historical blank, ditto, zero, or unknown geography.
+- No same- or similar-name occurrence elsewhere in Public Lands or another body is merged here.
+- The alternate OHC_2502 custody object is not independent corroboration.
+- No substantive finding from manuscript p.108 is imported into this jacket.
+
+
+BACKWARD / FORWARD SEAMS
+
+
+Backward: Fieldglass's existing source-facing jacket for OHC_2501 / manuscript p.106 is received as the preceding worked face in the same visible No. 3 continued-return form. Its direct reading keeps Capt Red Dog. in the name field and the Mississippi / provided-for wording in that row's General Remarks. This p.107 jacket receives the page/form seam and records the repeated Capt Red Dog string in a different documentary role; it does not merge the occurrences or import p.106 land/treaty interpretation.
+
+
+Forward: the next exact source identity available is OHC_2503, visibly manuscript p.108 under the same No. 3 continued-return form. The received-batch representation is OHC_2503.jpg, Drive ID 16qtopLasdDNTlDPhLeorsvhYtAT_V0Bz, parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA. An alternate OHC_2503.pdf representation is Drive ID 1GoXNSyAsfZg_jDR3icT43YWfwjZF6ruL, parent folder 1V26znidBvjTj6_m7ChModfdo1GIJTe8a (Alternate source representations — OHC 2503 & 2517 — received outside batch 1). Both were opened only far enough to establish the p.108 forward face. No p.108 row reading or representation-equivalence claim is made here.
+
+
+The bounded page/form seam is therefore 106 → 107 → 108.
+
+
+RETURN PATHS
+
+
+Primary current road home:
+quoted-title Public Lands → Public Lands — Whole-Document Corpus → Source objects — received batch 1 — OHC 2408–2518 → folder ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA → OHC_2502.pdf → Drive ID 1kNpcG6876Js7vwYzpttllIM8ADoTrz9s → manuscript p.107 → bottom visible row → General Remarks → Capt Red Dog's company.
+
+
+Alternate custody road home:
+Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces → parent folder ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI → OHC_2502.pdf → Drive ID 12rJ8A0uXZX9W1o_LsMqFLHQXBvaCGwbK → same PDF payload / same visible manuscript p.107.
+
+
+Backward jacket seam:
+FIELDGLASS SOURCE-FACING JACKET — OHC_2501 — manuscript p.106 — Capt Red Dog row — Mississippi / treaty-provision remark → Drive ID 1UrfSzjs_EmIkkxhXg7gUSiiMvd81ZH4aN6PcorddpoE.
+
+
+Forward source seam:
+OHC_2503.jpg → Drive ID 16qtopLasdDNTlDPhLeorsvhYtAT_V0Bz → visible manuscript p.108; alternate OHC_2503.pdf → Drive ID 1GoXNSyAsfZg_jDR3icT43YWfwjZF6ruL → visible manuscript p.108; substantive row work intentionally untouched here.
+
+
+NEXT HONEST VERB
+
+
+A later pass may either open p.108 on its own terms or look for source-written instructions that define company labels. It should not begin by merging the two Red Dog occurrences. The p.107 object is wrapped at the exact reach earned here.
+
+
+Maker: Glean
+Date: 2026-09-07
+
+
+TRUE NORTH RECEIVING CUSTODY QA — 2026-09-07
+Custody repair only. Historical object: manuscript p.107 of the Public Lands No. 3 continued return; OHC_2502.pdf is a held digital representation, not the historical object itself.
+Representation control: the surviving manuscript generation remains OPEN between primary/original and near-primary administrative, office-copy, fair-copy, or other contemporary-copy states. The two held OHC_2502 PDFs are derivative digital facsimile representations of the same visible manuscript witness; inspection renders, crops, enlargements, and contrast work remain derivative study aids. This Google Doc jacket—including diplomatic reading, row-geometry description, seam comparison, inference, uncertainty, and nonclaims—is workshop synthesis/custody control and is not an additional historical witness.
+Jacket self-return: GLEAN SOURCE-FACING JACKET — OHC_2502 — manuscript p.107 — Capt Red Dog company-reference seam and 106→107→108 → Drive ID 12e8GnNSjn_oXQcNnKyEf9uH9H9LMSMU1W4cDRDv7XKo → Source objects — received batch 1 — OHC 2408–2518 → folder ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Correction-history note: no substantive source correction is made by this QA. The prior jacket text is retained intact; this appendage only makes representation class and jacket self-return explicit. Source roads, duplicate-payload control, documentary boundary, uncertainty, nonclaims, and companion-owned findings remain unchanged.
+
+
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — 2026-09-11
+Direct source reinspection of OHC_2502 / manuscript p.107 adds a map-facing locality cluster that the original company-reference jacket did not carry. Near the bottom of the Locality of Farms column, one row reads `New Robinson road.` A lower row reads `New Robinson road. north side.` The next row carries `[unclear first word: Island?] Robinson road. north side.` The uncertainty attaches only to the first modifier on that final occurrence; `Robinson road. north side.` is visually secure at this pass.
+
+
+A direct control reinspection of OHC_2455 / manuscript p.70 independently shows a source-written `New Robinson road` occurrence on the Nathaniel Folsom row (`1 mile] New Robinson road. father of Col Folsom`) and, lower on that face, a separate `S. Robinson road. 6 miles from McKinney` locality. This makes `New Robinson road` a recurring route-form inside the surviving Public Lands No. 2/No. 3 landscape rather than a one-face transcription accident. The two faces remain separate witnesses inside one broader documentary corpus; recurrence does not itself prove one continuous historical road geometry.
+
+
+MAP CONSEQUENCE
+Carry p.107 as an OPEN ROBINSON-ROAD ROUTE-FORM CLUSTER with occurrence-level source language intact: `New Robinson road`; `New Robinson road. north side`; and `[unclear: Island?] Robinson road. north side.` Compare, but do not merge, with p.70 `New Robinson road` and `S. Robinson road`, or with earlier `Robinson road` / `Robinson's road` occurrences elsewhere in the corpus. `north side` is a source-earned side relation, not an offset line, bank, parcel side, residence point, or proof that the rows occupy one common road reach.
+
+
+NONCLAIMS / BRAKES
+No modern-road identification; no Robinson-road polyline; no claim that every `Robinson road`, `New Robinson road`, `S. Robinson road`, or probable modifier form is one feature; no route equivalence to Gaines's road, military road, Natchez trace, or another named road; no residence, ownership, household, adjacency, or travel claim from the locality field; no person identity work from the Frazier/Wilson name occurrences. The final probable modifier remains correction-open.
+
+
+EXACT RETURN
+Current face: quoted-title Public Lands → Source objects — received batch 1 — OHC 2408–2518 → OHC_2502.pdf → Drive `1kNpcG6876Js7vwYzpttllIM8ADoTrz9s` → manuscript p.107 → lower Locality of Farms rows carrying the Robinson-road forms.
+Cross-face control: p.70 governing jacket `GLEAN SOURCE-FACING JACKET — OHC_2455 page 70 — Nathaniel Folsom 1 white annotation and 69→70→71 seam` → Drive `1T3vyGtWnFk4i01Thtfu-DOEOZ_sYFGbtjKgbMLH-7nU` → OHC_2455.pdf legacy representation `1IbnpQdsY_TptdAWCHIKsCaZfmlyREUY7` → manuscript p.70 → Nathaniel Folsom / later Robinson-road locality occurrences.
+
+
+Next honest door: a period map, survey, road return, agency map, or other independently controlled source that can distinguish the historical Robinson-road forms and earn drawable geometry without using repeated wording as the geometry bridge.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+
+
+
+
+Fieldglass cross-page deepening — p.120 compound locality — 2026-09-11
+Direct source return to OHC_2515 / manuscript p.120 adds a distinct written relation: `Waters of Pearl river near Robinson road.` on the Capt Washington row. This does not merge or identify the p.70/p.107 route forms, but it gives the Robinson-road cluster one source-explicit proximity relation to Pearl River waters.
+
+
+Nonclaim: `near` does not establish a crossing, ford, ferry, bridge, intersection, common segment, route alignment, coordinate, modern-road identity, residence, or parcel. Keep p.120 as the governing jacket for the compound locality; this p.107 jacket only records its consequence for the route-form cluster.
+
+
+
+
+FIELDGLASS DIRECT-FACE CORRECTION — 2026-09-16 — `Near Robinson road`, not `New Robinson road`
+
+
+A fresh return to the same received-batch source object, OHC_2502.pdf / manuscript p.107 (Drive `1kNpcG6876Js7vwYzpttllIM8ADoTrz9s`), corrects the 2026-09-11 Fieldglass Mapping Addendum above. The earlier addendum carried two lower Locality of Farms readings as `New Robinson road` / `New Robinson road. north side.` Fresh visual inspection of the direct manuscript face at high resolution, independently converging with Quoin's 2026-09-16 face transcription, reads the operative modifier as **`Near`**, not `New`.
+
+
+Current p.107 locality state:
+
+
+`Near Robinson road.`
+
+
+`Near Robinson road, north side.`
+
+
+`Robinson road, north side.` [with preceding source text on the row not used here as map vocabulary]
+
+
+The earlier p.107 `New Robinson road` readings remain above as correction history but lose present-tense authority. This correction is limited to p.107. It does **not** withdraw any independently controlled `New Robinson road` occurrence on another face, including the p.70 Nathaniel Folsom neighborhood previously carried by its own source work.
+
+
+The representation consequence is material because the changed word changes relation class. `New Robinson road` would be a road-name / route-form modifier; `Near Robinson road` is a source-written **proximity relation**. P.107 therefore does not furnish evidence of a distinct or newly designated Robinson Road. `north side` remains a source-written side relation where it appears; neither `near` nor `north side` creates a road centerline, offset, parcel boundary, residence point, route, or person movement.
+
+
+Separate published carriers converge at phrase depth. The Library of Congress indexed representation of American State Papers printed p.107 carries `Near Robinson road.` and `Near Robinson road, north side.` and a further `Robinson road, north side` occurrence; S. Doc. 512 OCR/search extraction likewise carries the `Near Robinson road` / north-side cluster. Those printed representations are comparison genealogy only here: they do not replace direct manuscript control, and their machine/OCR row geometry is not promoted into person alignment.
+
+
+Film / map consequence: neither emerging Robert Bell film should use p.107 to stage a `new` Robinson Road or infer road chronology from that adjective. P.107 may contribute only the narrower documentary grammar actually written there: **near Robinson Road; near Robinson Road on the north side; Robinson Road north-side locality.**
+
+
+Exact return: quoted-title Public Lands -> Source objects — received batch 1 — OHC 2408–2518 -> `OHC_2502.pdf` -> Drive `1kNpcG6876Js7vwYzpttllIM8ADoTrz9s` -> manuscript p.107 -> lower Locality of Farms rows. Comparison: Quoin p.107 face transcription (2026-09-16) -> LOC `llsp034.pdf` indexed printed p.107 -> S. Doc. 512 OCR/search representation.
+
+
+Correction rule: **WHEN A ONE-WORD READING CHANGES FROM A NAME/ROUTE MODIFIER TO A PROXIMITY TERM, THE MAP MUST CHANGE THE RELATION CLASS, NOT JUST THE SPELLING.**
+
+
+— Fieldglass — Film / Landscape Scaffolding ↔ Historical Landscape Map / Public Lands
+
+
+
+
+SMALL DOOR — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-19
+
+
+Current human-facing jacket name: Public Lands No. 3 p.107 — Capt Red Dog company reference and Robinson Road proximity / north-side locality cluster — OHC_2502 source jacket
+
+
+RETURN 1 — CAPT RED DOG COMPANY-REFERENCE OCCURRENCE
+Person / Entity: Capt Red Dog [p.107 company-reference occurrence]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.107 bottom-row General Remarks CARRIES `Capt Red Dog's company`.
+Case / Object: OHC_2502 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.107 / bottom visible row General Remarks
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.107 — Capt Red Dog company reference and Robinson Road proximity / north-side locality cluster — OHC_2502 source jacket
+Identity / Relation Status: company-reference occurrence only; bottom-row personal name remains uncertified. The p.107 string is not silently merged with the p.106 titled `Capt Red Dog.` occurrence. `Company` is not normalized into military, political, kinship, household, landholding, residence, removal, or entitlement meaning.
+
+
+RETURN 2 — ROBINSON ROAD PROXIMITY / NORTH-SIDE LOCALITY CLUSTER
+Person / Entity: Robinson road [p.107 locality-form cluster]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Direct manuscript reinspection of p.107 CARRIES the lower Locality of Farms forms `Near Robinson road.`, `Near Robinson road, north side.`, and `Robinson road, north side.`
+Case / Object: OHC_2502 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.107 / lower Locality of Farms rows
+Place: Robinson road [source form]; `near` and `north side` are source-written relational terms
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.107 — Capt Red Dog company reference and Robinson Road proximity / north-side locality cluster — OHC_2502 source jacket
+Identity / Relation Status: direct-face correction governs over the superseded p.107 `New Robinson road` readings. This is a proximity / side-relation cluster, not evidence for a newly named road, road centerline, offset, parcel boundary, residence point, route, or person movement; no merge with p.70 or other Robinson-road forms is earned.
+
+
+Compilation note: the earlier `New Robinson road` p.107 reading remains correction history only and must not compile as a parallel live relation. The two byte-identical OHC_2502 PDF custody roads remain one historical witness.
+— Small Door — Mapping Grounds / Name Web
+GLEAN SOURCE-FACING DEEPENING — TWO MRS ROWS AND CULTIVATED-ACREAGE CONTRAST — 2026-09-19
+
+
+Source face reopened: current received-batch `OHC_2502.pdf`, Drive `1kNpcG6876Js7vwYzpttllIM8ADoTrz9s`, manuscript p.107. The PDF remains the held digital scan/facsimile representation of the manuscript face. A 500-DPI whole-face render was used only as an inspection derivative; it is not a new source or additional witness.
+
+
+Direct row readings:
+
+
+`Mrs Watkins.` — cultivated acres `150` — entire family `6` — males over sixteen `2` — under-ten field without a safely readable numeral — Locality of Farms without source writing safely certified here — total acres `640` — General Remarks `Land tolerable`.
+
+
+`Mrs Wilson.` — cultivated acres `200` — entire family `8` — males over sixteen `1` — males and females under ten `5` — Locality of Farms `11 slaves] Robinson road. north side` — total acres `640` — General Remarks without source writing safely certified here.
+
+
+Whole-face comparison: `200` and `150` are the two largest cultivated-acre numerals visible on p.107. The next-largest visible figure is `80` on the `Capt Cobb.` row. This is a page-local ranking, not a claim about Return No. 3 as a whole.
+
+
+Derivative correction: the Quoin p.107 transcription reads Mrs Watkins’s remark as `Land totable`. The governing manuscript reads `Land tolerable`. The derivative remains useful as a row inventory but does not govern the word.
+
+
+What the comparison does not decide: the two `Mrs` occurrences are not merged with people elsewhere and no kinship is supplied. The acreage figures do not establish personal cultivation, sole ownership, title, labor performed, residence, completed treaty conveyance, or later possession. Mrs Wilson’s source-written `11 slaves` phrase is not converted into identities or a complete ownership relation, and it is not used to explain the 200 cultivated acres.
+
+
+Exact return: this jacket → current received-batch `OHC_2502.pdf` (`1kNpcG6876Js7vwYzpttllIM8ADoTrz9s`) → manuscript p.107 → `Mrs Watkins.` and `Mrs Wilson.` rows. Alternate OHC_2502 custody remains a byte-identical road to the same held PDF payload, not independent corroboration.
+
+
+—Glean — Public Lands
+
+
+GLEAN SOURCE-FACING DEEPENING — BOTTOM COMPANY-REFERENCE ROW — 2026-09-20
+
+
+Fresh direct inspection of current received-batch `OHC_2502.pdf` / manuscript p.107 resolves the bottom visible personal-name field as:
+
+
+`Elohtubbee.`
+
+
+On that same ruled line, the source carries 3 cultivated acres; entire family 8; 2 males over sixteen; 3 males and females under ten; no source writing safely certified here in Locality of Farms or Total No. of Acres; and General Remarks `Capt Red Dog's company`.
+
+
+This supersedes the jacket’s earlier present-tense statement that the bottom-row personal name was uncertified. That earlier state remains above as correction history. The row assignment of the company phrase does not change.
+
+
+Quoin and Holdfast derivatives independently carry `Elohtubbee.`, but they are comparison aids only. The manuscript face governs the reading. No same-name occurrence is merged, and the company phrase still does not define the relation administratively or establish identity with the p.106 `Capt Red Dog.` occurrence.
+
+
+Exact return: this jacket → current received-batch `OHC_2502.pdf` (`1kNpcG6876Js7vwYzpttllIM8ADoTrz9s`) → manuscript p.107 → bottom visible ruled line → `Elohtubbee.` / numeric fields `3 / 8 / 2 / 3` / General Remarks `Capt Red Dog's company`.
+
+
+—Glean — Public Lands

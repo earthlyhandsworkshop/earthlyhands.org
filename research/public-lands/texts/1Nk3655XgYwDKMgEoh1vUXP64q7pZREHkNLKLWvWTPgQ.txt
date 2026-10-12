@@ -1,0 +1,378 @@
+Public Lands No. 3 p.104 — Hotimahoy inconsistent family/age counts and Natchez Trace locality / heterogeneous remarks — OHC_2499 source jacket
+
+
+Status: faithful source-facing jacket made from direct inspection of the rendered archival PDF. This jacket represents one visible manuscript page, not the whole return.
+
+
+SOURCE IDENTITY
+- Exact filename: OHC_2499.pdf
+- Primary read/custody object: Drive ID 1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr
+- Current folder: Source objects — received batch 1 — OHC 2408–2518
+- Folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- Alternate held OHC_2499.pdf: Drive ID 1gr_t0lzXt0hbcv8PYNxT30gOKCPMoETy
+- Alternate folder: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+- Alternate folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- Form: one scanned manuscript register/return page preserved in a one-page PDF.
+- Source status: primary-source manuscript representation / archival scan.
+- Both held PDFs are 243,267 bytes and were directly hashed in this pass. Each returned SHA-256 c77852b9c62c15ed5faa302c6fac328026ce80ab3fbb5a08b97371d0455b5784. They are duplicate custody instances of one PDF payload, not independent historical witnesses.
+
+
+SOURCE-VISIBLE TITLE AND BOUNDARY
+The page is visibly numbered “104” and headed:
+“Public Lands — No 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+
+
+Visible column structure includes:
+- Names of Indians owning Farms
+- No. of Acres Cultivated
+- Entire No. of the Family
+- Males over 16 years
+- Males and Females under 10 years
+- Locality of Farms
+- Total No. of Acres
+- General Remarks
+
+
+At the upper right, a source notation appears to read “No 1230” followed by “1834.” This jacket preserves that literal reading without deciding whether the first element is an archival/document number, whether 1834 is the operative date for every row, or how the notation was administratively used.
+
+
+The capture establishes manuscript page 104 only. It does not establish the completeness of the larger return or any person identity beyond the visible row occurrence.
+
+
+FAITHFUL CONTENT / LOAD-BEARING LANGUAGE
+The page contains many person rows with cultivated-acre, family-count, age/sex, locality, total-acreage, and General Remarks fields. Clear source-visible personal-name occurrences include James Gibson, Lucy Liston, John Cooper, Benjamin Bacon, Isaac Chat, and additional names whose spellings remain less certain in this pass.
+
+
+The General Remarks column is visibly heterogeneous. Clear written entries include:
+- “Capt Wilson’s company.”
+- “Tom LeFlore company”
+- another “Wilson company.”
+- another “Tom LeFlore company”
+- “Poor land” on more than one row
+- “Land very poor” on a later row
+
+
+A separate General Remarks entry between the first company phrase and the Tom LeFlore entry appears to read “[unclear: Meshueckehoma?]”. It is not accompanied by the word “company” in the visible cell and is preserved without assigning a documentary role.
+
+
+A lower company entry appears to read “Capt [unclear: Junelachai?] company.” The captain-name reading is not secure enough to normalize.
+
+
+The Locality of Farms column contains source-visible place/route phrases including:
+- “Old Natchez Trace”
+- “Natchez trace” on more than one row
+- “[unclear: Bullockcheska?] village”
+- “[unclear: Kiamtockta?] village”
+- “Near Natchez trace”
+
+
+These locality phrases occur in their own column and must not be silently converted into residence claims beyond what the row records.
+
+
+FINDINGS
+1. Page 104 gives direct source evidence that the General Remarks column is not a single-purpose “company” field. On this one page it carries company descriptions, land-quality evaluations, and at least one standalone uncertain term/name without the word “company.” Downstream extraction should therefore preserve the literal General Remarks cell before classifying its content.
+2. The Locality of Farms column likewise uses descriptive route/village language rather than a uniform cadastral format. “Old Natchez Trace,” “Natchez trace,” village phrases, and “Near Natchez trace” are source language, not modern coordinates.
+3. Explicit written company phrases are separated by many blank General Remarks cells. This page itself does not supply a visible brace, ditto, or other carry-forward device that would authorize treating intervening blank remarks as inherited company membership.
+4. The two held OHC_2499 PDFs are byte-identical custody copies. Evidence count remains one manuscript page.
+
+
+INFERENCE
+The safest parsing rule earned by this page is column-preserving and row-preserving: transcribe the visible Locality and General Remarks cells first; classify them only afterward and only to the level the wording supports. A blank General Remarks cell should remain blank/unknown unless another source-visible scope device supplies inheritance.
+
+
+This is an interpretation of page 104’s writing practice, not a universal rule for every page in Public Lands No. 3.
+
+
+UNCERTAINTY
+- Several personal names are difficult and are not normalized here.
+- “[unclear: Meshueckehoma?]” is a probable reading only; its role is unresolved.
+- “Capt [unclear: Junelachai?] company” remains uncertain in the captain name.
+- The two village spellings are preserved as probable readings only.
+- “No 1230” / “1834” is preserved as visible upper-right notation without assigning administrative meaning beyond the face.
+
+
+EXPLICIT NONCLAIMS
+- A company remark does not establish kinship.
+- A company remark does not by itself establish residence outside the row’s recorded fields.
+- A locality phrase such as “Natchez trace” does not establish a modern coordinate, parcel boundary, or exact dwelling site.
+- “Poor land” and “Land very poor” are source evaluations; this jacket does not infer who made the evaluation beyond the documentary hand or why.
+- Blank neighboring General Remarks cells are not treated as silent repetitions.
+- Same or similar names elsewhere in the corpus are not merged with any person on this page.
+- The duplicate OHC_2499 PDF is not independent corroboration.
+
+
+CORRECTION / METHOD HISTORY
+No prior source-facing jacket for OHC_2499 / manuscript p.104 was located in the Drive search performed before creation. This jacket therefore creates the source-facing home for this historical page. It intentionally preserves uncertain readings rather than extending earlier Public Lands grouping rules beyond what p.104 itself shows.
+
+
+RETURN PATHS
+Primary held object:
+- OHC_2499.pdf — Drive ID 1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr
+- Folder: Source objects — received batch 1 — OHC 2408–2518
+- Folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+
+
+Alternate duplicate custody object:
+- OHC_2499.pdf — Drive ID 1gr_t0lzXt0hbcv8PYNxT30gOKCPMoETy
+- Folder: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+- Folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+
+
+NEXT RETRIEVAL TARGET
+If later mapping or company analysis uses this page, return first to the exact row/cell geometry on p.104. The strongest earned follow-up is to resolve the uncertain village and company-name spellings from a better representation or neighboring source context, not to infer identity or territory from the present page.
+
+
+Maker: Fieldglass
+Date: 2026-09-07
+
+
+MARGIN UPWARD RETURN RECEIPT — 2026-09-07
+The p.104 heterogeneous-General-Remarks finding is now incorporated into Documentary Bodies Section 1 rather than left only as a comment/blocker. Margin used this jacket as the first control and the separately jacketed p.106 face as an independent second control. Upward rule: preserve literal General Remarks row/cell content before classification; CONTENT TYPE and SCOPE MECHANISM remain separate, so company semantics do not attach merely because material shares the printed General Remarks column.
+Upward surface: `03 — DOCUMENTARY BODIES — Bell–McKinney daylight`, Drive `1Xa1jbLQswwUIcD0waD-_MtkQJscg5GSD6jhA_ubWVBo`. Companion control: p.106 Fieldglass jacket `1UrfSzjs_EmIkkxhXg7gUSiiMvd81ZH4aN6PcorddpoE`. The earlier p.104 source reading, uncertain names, locality vocabulary, and custody state remain unchanged.
+Maker boundary: Fieldglass retains direct source reading and custody; Margin owns only the upward body-grammar translation.
+
+
+
+
+
+
+GLEAN SOURCE-FACING DEEPENING — 2026-09-19 — p.104 family/age arithmetic contradiction
+
+
+Status
+Material row-level deepening of the existing manuscript-p.104 jacket. Earlier findings about General Remarks, locality vocabulary, and duplicate custody remain unchanged.
+
+
+Source / representation boundary
+Directly reopened batch-held OHC_2499.pdf — Drive ID 1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr — and inspected manuscript p.104 at high resolution. Temporary render and crop files were reading derivatives only, not source objects or additional witnesses. Quoin derivative 1b3U_85fmm6BIse5v7tvTS2J37Zx29fFq preserves the same numerals but does not multiply the witness.
+
+
+Occurrence
+Counting named rows from the first visible row below the headers, PL:p104:r34 is best read as `Hotimahoy.` The row carries:
+
+
+- No. of Acres Cultivated: `3`
+- Entire No. of the Family: `8`
+- Males over 16 years: `10`
+- Males and Females under 10 years: `4`
+- Locality of Farms: `Near Natchez trace`
+- Total No. of Acres: blank
+- General Remarks: blank
+
+
+Finding
+The source-written `10` in the males-over-16 column exceeds the source-written Entire Family figure `8`. If the two age columns were read as subsets of the printed family total, the row would also yield `10 + 4 = 14` against `8`.
+
+
+The face supplies no correction mark, explanation, or alternate accounting instruction. The contradiction therefore remains part of the recoverable record. It may reflect an entry error, a different counting rule, displaced numerals, or another unrecovered condition; this page does not decide among them.
+
+
+This row prevents a universal parsing rule in which the age fields are automatically treated as a clean decomposition of Entire No. of the Family. Each source numeral must remain independently returnable unless the object itself earns their relation.
+
+
+Nonclaims / refused repairs
+- `10` is not silently corrected to `1`.
+- `8` is not silently corrected to `18`, `14`, or another derived total.
+- The under-10 figure is not added to the family total as historical fact; `14` is a diagnostic comparison only.
+- No household, kinship, sex-distribution, population, entitlement, or residence conclusion is derived from the inconsistent row.
+- `Near Natchez trace` remains a row-local locality phrase, not a modern coordinate or proof of residence.
+
+
+Return path
+Public Lands — Whole-Document Corpus → this governing p.104 jacket → OHC_2499.pdf 1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr → manuscript p.104 → PL:p104:r34.
+
+
+Maker: Glean
+State: `8` family / `10` males over 16 / `4` under 10 preserved without repair; accounting relation unresolved
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+Return 1 — Hotimahoy [Public Lands p.104 farm-row occurrence]
+PERSON / ENTITY: `Hotimahoy.`
+DATE: not assigned by this page-facing return; the upper-right `1834` notation is preserved but not treated here as the date of this row.
+EARNED VERB / RELATION: Manuscript p.104 LISTS `Hotimahoy.` with 3 cultivated acres, Entire No. of the Family `8`, Males over 16 years `10`, Males and Females under 10 years `4`, and Locality of Farms `Near Natchez trace`; the face supplies no correction mark or explanation for the source-written count contradiction.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2499 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.104 / PL:p104:r34; `Near Natchez trace`; Public Lands / Choctaw treaty-land administration.
+RETURN: this governing p.104 source jacket → OHC_2499.pdf Drive `1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr` → manuscript p.104 → PL:p104:r34.
+IDENTITY / RELATION STATUS: source-local Hotimahoy occurrence only; spelling is not normalized and no same-name merge is made. `10` is not silently repaired to `1`; `8` is not repaired to `14`, `18`, or another derived total. `Near Natchez trace` remains row-local source geography and is not upgraded into a modern coordinate, exact dwelling site, residence conclusion, or parcel geometry.
+.
+
+
+
+
+SEDGE MAP DEEPENING — 2026-09-20 — Hotimahoy / `Near Natchez trace`
+
+
+Map-facing source edge
+PL:p104:r34 is already controlled at row level as `Hotimahoy.` with Locality of Farms `Near Natchez trace`. For mapping, the earned geographic verb is LOCALITY OF FARMS CARRIES / STATES. The row does not itself say Hotimahoy lived near, resided near, traveled on, owned land near, or appeared bodily on the Trace.
+
+
+Place / relation classification
+- `Near` is a source-written non-metric proximity relation.
+- `Natchez trace` is a source-written historical route-form token inside this row's Locality of Farms field.
+- The row-local map relation is therefore: `PL:p104:r34 HOTIMAHOY FARM-ROW OCCURRENCE — LOCALITY OF FARMS CARRIES → NEAR NATCHEZ TRACE`.
+- The separate family / age numeral contradiction on this row remains documentary state only. It neither strengthens nor weakens the locality phrase and is not repaired for mapping.
+
+
+Geometry / precision
+RELATIONAL / UNPLACED. `Near` does not earn a distance, buffer, direction, side, crossing, intersection, route segment, farm point, parcel, field polygon, dwelling, county, centroid, or coordinate. `Natchez trace` is not silently normalized to a modern Natchez Trace Parkway alignment, a recovered Old Natchez Trace segment, or any other modern / later geometry. No line is drawn from the row host to a route.
+
+
+Occurrence / identity control
+Hotimahoy remains the source-local host of this farm-row occurrence. The locality phrase performs no person-identity work and does not establish residence, bodily presence, ownership, possession, route use, travel, or same-name identity elsewhere. Neighboring p.104 Natchez-Trace and village phrases remain separate row occurrences; repetition on the same face does not make them one site.
+
+
+Temporal / source / representation / provenance control
+The page-level `No 1230` / `1834` notation remains page metadata whose administrative meaning is unresolved; it is not promoted to the date of this row-local geographic state. Historical manuscript p.104 → OHC_2499 archival PDF payload held through two byte-identical custody copies as one historical representation occurrence → temporary inspection renders / crops and the Quoin derivative as reading derivatives only → this governing jacket → Sedge map classification → First Draw Register. Duplicate custody and downstream derivatives do not multiply the witness.
+
+
+Drawing permission / Ravel handoff
+Ravel may inherit one unresolved verb-labeled proximity relation: `HOTIMAHOY ROW — LOCALITY OF FARMS CARRIES → NEAR NATCHEZ TRACE`, with the Trace referent and exact reach visibly open. No person dot, road / trace line, buffer, route, residence mark, parcel, modern-feature snap, or identity bridge crosses with it.
+
+
+Open next
+A controlled period map, survey / field note, road return, agency map, or other independent historical source may someday place a contemporaneous Natchez Trace segment at compatible scale or give this row a measurable relation. Until then, preserve `Near Natchez trace` exactly as relational source geography.
+
+
+— Sedge — Mapping Grounds / whole documentary landscape
+
+
+GLEAN SOURCE-FACING CORRECTION — 2026-09-20 — land-quality remarks restored to their ruled rows
+
+
+Status
+Material row-level deepening of the existing manuscript-p.104 jacket and correction of the Quoin reading derivative. The jacket's earlier page-level finding—that General Remarks carries heterogeneous row-local content—remains correct.
+
+
+Source / derivative boundary
+Directly reopened OHC_2499.pdf — primary Drive custody ID `1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr` — and inspected manuscript p.104 at high resolution. Temporary renders and aligned crops were reading derivatives only. The two held Quoin `.md` copies are repeated representations of one derivative, not additional historical witnesses.
+
+
+Direct row geometry
+Counting named rows from the first visible row below the headers:
+
+
+PL:p104:r20 — `Punnipisa Carns.`
+- No. of Acres Cultivated: `6`
+- Entire No. of the Family: `8`
+- Males over 16 years: `2`
+- Males and Females under 10 years: `5`
+- Locality of Farms: blank
+- Total No. of Acres: blank
+- General Remarks: `Poor land`
+
+
+PL:p104:r21 — `Pokahoyah.`
+- No. of Acres Cultivated: dotted, nonnumeric
+- Entire No. of the Family: `3`
+- Males over 16 years: dotted, nonnumeric
+- Males and Females under 10 years: dotted, nonnumeric
+- Locality of Farms: `Natchez trace`
+- Total No. of Acres: blank
+- General Remarks: blank
+
+
+PL:p104:r22 — `Ebahnatubbe.`
+- No. of Acres Cultivated: `5`
+- Entire No. of the Family: `6`
+- Males over 16 years: `1`
+- Males and Females under 10 years: `3`
+- Locality of Farms: blank
+- Total No. of Acres: blank
+- General Remarks: `Poor land`
+
+
+PL:p104:r26 — `Elamba.`
+- No. of Acres Cultivated: `4`
+- Entire No. of the Family: `4`
+- Males over 16 years: `1`
+- Males and Females under 10 years: `2`
+- Locality of Farms: `Bullockchecha village.`
+- Total No. of Acres: blank
+- General Remarks: blank
+
+
+PL:p104:r27 — `Nockemiyah.`
+- No. of Acres Cultivated: `5`
+- Entire No. of the Family: `3`
+- Males over 16 years: `1`
+- Males and Females under 10 years: `1`
+- Locality of Farms: blank
+- Total No. of Acres: blank
+- General Remarks: `Land very poor.`
+
+
+Correction history
+The held Quoin derivative assigns the second `Poor land` to Pokahoyah and assigns both `Bullockchecha village.` and `Land very poor` to Elamba. Direct manuscript alignment supersedes those assignments: Pokahoyah's General Remarks cell is blank; the second `Poor land` belongs to Ebahnatubbe; Elamba carries the village locality but no remark; and `Land very poor.` belongs to Nockemiyah on the next ruled line. The derivative also gives Punnipisa Carns an under-ten value of `3`; the manuscript shows `5`.
+
+
+Finding
+The land-quality evaluations are individual row remarks, not a block label. The page records `Poor land` for Punnipisa Carns and Ebahnatubbe, then separately records `Land very poor.` for Nockemiyah. It does not attach the latter evaluation to Elamba's `Bullockchecha village.` locality.
+
+
+Nonclaims
+- The manuscript does not identify who made the land-quality evaluations or the criteria used.
+- `Poor land` does not establish the size, boundary, title, residence, crop, productivity, or later disposition of a farm.
+- Repetition of the same evaluation does not join the rows, people, or places.
+- The village spelling is preserved at current visual reach and is not normalized to a modern place.
+
+
+Return path
+Public Lands — Whole-Document Corpus → this governing p.104 jacket → OHC_2499.pdf Drive `1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr` → manuscript p.104 → PL:p104:r20–r22 and r26–r27.
+
+
+Maker: Glean
+State: three land-quality remarks restored to their own rows; two derivative row fusions and one numeral corrected
+
+
+
+
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — corrected row-alignment addendum
+
+
+Return 2 — Punnipisa Carns [Public Lands p.104 farm-row occurrence]
+PERSON / ENTITY: `Punnipisa Carns.`
+DATE: not assigned by this page-facing return; the upper-right `1834` notation remains page metadata whose row-level force is unresolved.
+EARNED VERB / RELATION: Manuscript p.104 LISTS `Punnipisa Carns.` at PL:p104:r20 with 6 cultivated acres, family `8`, males over 16 `2`, under 10 `5`, and General Remarks CARRIES source-written `Poor land`.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2499 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.104 / PL:p104:r20; Locality of Farms blank; Public Lands / Choctaw treaty-land administration.
+RETURN: this governing p.104 source jacket → OHC_2499.pdf Drive `1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr` → manuscript p.104 → PL:p104:r20.
+IDENTITY / RELATION STATUS: source-local Punnipisa Carns occurrence only; no same-name merge. `Poor land` remains a source-written qualitative evaluation whose maker and criteria are not identified; it does not establish ownership, residence, parcel boundary, productivity, title, entitlement, or later disposition. Direct manuscript `5` under ten governs over the older Quoin derivative `3`.
+
+
+Return 3 — Pokahoyah [Public Lands p.104 farm-row occurrence]
+PERSON / ENTITY: `Pokahoyah.`
+DATE: not assigned by this page-facing return; the upper-right `1834` notation remains page metadata whose row-level force is unresolved.
+EARNED VERB / RELATION: Manuscript p.104 Locality of Farms CARRIES source-written `Natchez trace` on PL:p104:r21, the `Pokahoyah.` row; direct row alignment leaves General Remarks blank.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2499 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.104 / PL:p104:r21; `Natchez trace`; Public Lands / Choctaw treaty-land administration.
+RETURN: this governing p.104 source jacket → OHC_2499.pdf Drive `1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr` → manuscript p.104 → PL:p104:r21.
+IDENTITY / RELATION STATUS: source-local Pokahoyah occurrence only; no same-name merge. `Natchez trace` is row-local source geography, not residence, route use, modern-road identity, parcel geometry, or an exact dwelling point. The older Quoin derivative's `Poor land` assignment to this row is superseded by direct manuscript alignment and does not cross into this return.
+
+
+Return 4 — Ebahnatubbe [Public Lands p.104 farm-row occurrence]
+PERSON / ENTITY: `Ebahnatubbe.`
+DATE: not assigned by this page-facing return; the upper-right `1834` notation remains page metadata whose row-level force is unresolved.
+EARNED VERB / RELATION: Manuscript p.104 General Remarks CARRIES source-written `Poor land` on PL:p104:r22, the `Ebahnatubbe.` row; the same row carries 5 cultivated acres, family `6`, males over 16 `1`, and under 10 `3`.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2499 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.104 / PL:p104:r22; Locality of Farms blank; Public Lands / Choctaw treaty-land administration.
+RETURN: this governing p.104 source jacket → OHC_2499.pdf Drive `1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr` → manuscript p.104 → PL:p104:r22.
+IDENTITY / RELATION STATUS: source-local Ebahnatubbe occurrence only; no same-name merge. `Poor land` remains a source-written qualitative evaluation whose maker and criteria are not identified; it does not establish ownership, residence, parcel boundary, productivity, title, entitlement, or later disposition. Same-face recurrence of `Poor land` does not join this row to Punnipisa Carns or create a second witness.
+
+
+Return 5 — Elamba [Public Lands p.104 farm-row occurrence]
+PERSON / ENTITY: `Elamba.`
+DATE: not assigned by this page-facing return; the upper-right `1834` notation remains page metadata whose row-level force is unresolved.
+EARNED VERB / RELATION: Manuscript p.104 Locality of Farms CARRIES source-written `Bullockchecha village.` on PL:p104:r26, the `Elamba.` row; direct row alignment leaves General Remarks blank.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2499 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.104 / PL:p104:r26; `Bullockchecha village.` [historical source spelling at current visual reach]; Public Lands / Choctaw treaty-land administration.
+RETURN: this governing p.104 source jacket → OHC_2499.pdf Drive `1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr` → manuscript p.104 → PL:p104:r26.
+IDENTITY / RELATION STATUS: source-local Elamba occurrence only; no same-name merge. The village phrase remains row-local source geography and is not normalized to a modern place, residence, ownership, parcel, route, or coordinate. The older Quoin derivative's `Land very poor` assignment to this row is superseded by direct manuscript alignment and does not cross into this return.
+
+
+Return 6 — Nockemiyah [Public Lands p.104 farm-row occurrence]
+PERSON / ENTITY: `Nockemiyah.`
+DATE: not assigned by this page-facing return; the upper-right `1834` notation remains page metadata whose row-level force is unresolved.
+EARNED VERB / RELATION: Manuscript p.104 General Remarks CARRIES source-written `Land very poor.` on PL:p104:r27, the `Nockemiyah.` row; the same row carries 5 cultivated acres, family `3`, males over 16 `1`, and under 10 `1`.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2499 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.104 / PL:p104:r27; Locality of Farms blank; Public Lands / Choctaw treaty-land administration.
+RETURN: this governing p.104 source jacket → OHC_2499.pdf Drive `1d5YzBgeK7PtzZWAmsd83QPR6Hmw8D2Wr` → manuscript p.104 → PL:p104:r27.
+IDENTITY / RELATION STATUS: source-local Nockemiyah occurrence only; no same-name merge. `Land very poor.` remains a source-written qualitative evaluation whose maker and criteria are not identified; it does not establish ownership, residence, parcel boundary, productivity, title, entitlement, or later disposition. Direct manuscript alignment keeps the remark on Nockemiyah rather than Elamba.

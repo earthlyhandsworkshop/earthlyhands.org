@@ -1,0 +1,276 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2501 — manuscript p.106 — Capt Red Dog row — Mississippi / treaty-provision remark
+
+
+Status: NEW DIRECT-SOURCE JACKET — ONE MANUSCRIPT FACE — ROW-LEVEL READING — DUPLICATE CUSTODY CONTROLLED — CORPUS SYNTHESIS NOT CLAIMED
+
+
+SOURCE-WORK FOOTING
+This jacket follows the Earthly Hands Source Work Front Door: source before synthesis; one historical object across duplicate digital custody; faithful reading before normalization; observation, inference, uncertainty, nonclaims, and return paths kept distinct; no identity merge from a name occurrence; no land outcome inferred from an acreage or treaty remark.
+
+
+SOURCE IDENTITY AND CUSTODY
+- Corpus: quoted-title Public Lands.
+- Documentary body visible on the face: Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- Visible manuscript page: 106.
+- Exact filename: OHC_2501.pdf.
+- Current received-batch custody object: Drive ID 1rtr4gYSckVv_gWjavp0F8NVgcCBZuQ2C.
+- Current received-batch folder: Source objects — received batch 1 — OHC 2408–2518.
+- Current received-batch folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+- Alternate legacy custody object: Drive ID 1ViOtkvhs2DgAxg0enypuUsczHXeAeUuf.
+- Alternate legacy folder: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.
+- Alternate legacy folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+- Both held PDFs were fetched in this pass. Each is 233,030 bytes. Direct SHA-256 comparison returned 73496cd9d810be4f8027aa31bd18f728123337dd25af0571d27e3e343aa89294 for each, and byte comparison was identical.
+- Custody conclusion: two Drive objects / two custody roads, one PDF payload, one visible manuscript witness. The duplicate does not count as independent corroboration.
+- Historical-status boundary: the surviving face is a manuscript historical witness preserved in an archival scan. Present custody does not establish whether the surviving manuscript is the first/original return or a contemporaneous/later administrative copy.
+
+
+SOURCE / DERIVATIVE BOUNDARY
+The manuscript face visible inside the PDF is the historical evidence used here. The received and legacy PDFs are derivative digital facsimiles of that face. Temporary 300-DPI renders, crops, contrast adjustments, and enlargements were made only to inspect handwriting and row geometry; those inspection derivatives were not uploaded, admitted as new corpus sources, or counted as witnesses. No OCR supplied the load-bearing reading below.
+
+
+SOURCE-VISIBLE TITLE AND FORM
+The upper-left manuscript page number reads 106. Across the top the face reads, at source force, Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty. The upper-right notation again visibly includes No. 1230 and 1834; no administrative function is assigned to that notation here.
+
+
+The face retains the printed/ruled fields for Names of Indians owning Farms; No. of Acres Cultivated; Entire No. of the Family; demographic-count columns; Locality of Farms; Total No. of Acres; and General Remarks. The available capture establishes this one manuscript face, not completeness of Return No. 3.
+
+
+BOUNDED SOURCE READING — CAPT RED DOG ROW
+Near the bottom of the page, one name row reads:
+
+
+Capt Red Dog.
+
+
+On the same ruled baseline, the visible numeric fields read:
+- No. of Acres Cultivated: 6
+- Entire No. of the Family: 4
+- Males over 16 years: 2
+- Total No. of Acres: 1280
+
+
+The next demographic field is not assigned a value in this jacket because the surviving row marks are not strong enough to require one.
+
+
+The General Remarks entry on that same row begins clearly:
+
+
+The captain [unclear: went?] Mississippi provided for in [unclear: treaty?]
+
+
+The middle word provided is strong on the surviving face. The word after captain is preserved as probable rather than certain, and the final darkened word is not promoted beyond a probable treaty reading because the right edge of the scan loses contrast. No missing preposition is silently supplied; the manuscript as visible does not earn a modernized sentence such as “went to Mississippi.”
+
+
+ROW-GEOMETRY OBSERVATION
+The Capt Red Dog name, 6 / 4 / 2 numeric entries, total 1280, and the narrative General Remarks wording share one horizontal ruled row. This is a source observation about page geometry. It does not require the remark to be treated as a multi-row block, and neighboring rows do not inherit this wording without a source-written repeat device.
+
+
+FINDINGS
+1. Page 106 contains an explicit titled name occurrence, Capt Red Dog, with 6 cultivated acres, family count 4, 2 males over 16, and total acreage 1280 on the same row.
+2. That row carries a narrative General Remarks statement combining Mississippi language with “provided for in …” treaty language. The source therefore records more than a company label or land-quality note in this field; it carries an administrative/historical characterization attached to the row.
+3. The surviving face does not make the syntax fully secure. In particular, [unclear: went?] and the final [unclear: treaty?] remain correction-open.
+4. The two held OHC_2501 PDFs are byte-identical custody copies and do not double the historical evidence.
+
+
+INFERENCE — KEPT SEPARATE
+Because the row name is Capt Red Dog and the same-row remark begins The captain, the most economical local reading is that “the captain” refers to the titled person named in that row. That is a row-grammar inference, not a repeated source-written identification. It remains open to correction if a source key, brace, continuation mark, or clearer representation shows a different scope.
+
+
+Nothing stronger is inferred. In particular, “Mississippi” is not converted into a removal date, route, residence, destination history, or modern map coordinate, and “provided for in [treaty?]” is not converted into proof of a specific treaty article, completed allotment, patent, payment, delivery, or later possession.
+
+
+UNRESOLVED QUESTIONS
+- Is the word after The captain exactly went, or another closely written form?
+- Is the dark right-edge final word exactly treaty, and is any punctuation or additional wording lost in the edge shadow?
+- Which treaty provision or administrative instrument, if any, is being referenced by provided for in [treaty?]?
+- Does another surviving copy of this exact page preserve the right edge more clearly?
+- What documentary generation is this manuscript return: original field return, office copy, later fair copy, or another administrative state?
+- Does any source-written key elsewhere in Return No. 3 explain how narrative General Remarks such as this one were entered or used?
+
+
+EXPLICIT NONCLAIMS
+- Capt Red Dog is not merged with any same- or similar-name person elsewhere in this corpus or another body.
+- The row does not establish kinship to neighboring names.
+- The figure 1280 does not by itself establish a completed grant, survey, patent, residence, occupation, transfer, or receipt.
+- The phrase provided for in [treaty?] does not establish that the referenced provision was actually executed, received, or legally satisfied.
+- The word Mississippi does not by itself establish removal, permanent migration, residence, travel route, or date.
+- No blank locality field is converted into geography.
+- Neighboring company remarks on the page are not assigned to Capt Red Dog unless the source explicitly does so.
+- The alternate OHC_2501 PDF is not independent corroboration.
+
+
+BACKWARD / FORWARD SEAMS
+Backward: Glean’s existing source-facing jacket establishes OHC_2500 / manuscript p.105 as the preceding worked face in the same visible No. 3 continued-return form. This jacket receives that page/form seam only; it does not import p.105 person-level findings into p.106.
+
+
+Forward: OHC_2502.pdf, current received-batch Drive ID 1kNpcG6876Js7vwYzpttllIM8ADoTrz9s, was opened only far enough to establish visible manuscript p.107 continuing the same Public Lands No. 3 form. No p.107 row reading is claimed here. The bounded page/form seam is therefore 105 → 106 → 107.
+
+
+RETURN PATHS
+Primary current road home:
+quoted-title Public Lands → Source objects — received batch 1 — OHC 2408–2518 → OHC_2501.pdf → Drive ID 1rtr4gYSckVv_gWjavp0F8NVgcCBZuQ2C → manuscript p.106 → Capt Red Dog row.
+
+
+Alternate custody road home:
+Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces → OHC_2501.pdf → Drive ID 1ViOtkvhs2DgAxg0enypuUsczHXeAeUuf → same PDF payload / same visible manuscript p.106.
+
+
+Backward jacket seam:
+Public Lands No. 3 p.105 — Nelly Bean children remark, Gilbert Powell South Natchez Trace / Parker locality, and Rubin Harris supplement — OHC_2500 source jacket → Drive ID 1e_R-HG3753hytA_qYyuU8CnpiTSfRKvxtBSca4TGUdc.
+
+
+Forward source seam:
+OHC_2502.pdf → Drive ID 1kNpcG6876Js7vwYzpttllIM8ADoTrz9s → visible manuscript p.107; substantive rows intentionally unworked in this jacket.
+
+
+NEXT HONEST VERB
+First seek a clearer representation of the p.106 right edge or another exact copy of the manuscript face to stabilize the full Capt Red Dog remark. Only after that wording is secure should the treaty reference be pursued into a specific article or administrative instrument. Do not begin by merging Capt Red Dog with another person, mapping Mississippi as a residence, or treating 1280 acres as a completed land outcome.
+
+
+Maker: Fieldglass
+Date: 2026-09-07
+
+
+MARGIN UPWARD RETURN RECEIPT — 2026-09-07
+Documentary Bodies Section 1 now receives this p.106 face only at body-grammar reach: General Remarks can carry a same-row narrative statement using Mississippi language and `provided for in ...` wording, and that content type is distinct from company remarks, land-quality remarks, and the separate question of whether any scope/carry device is visible. The exact Capt Red Dog wording, including `[unclear: went?]` and `[unclear: treaty?]`, remains governed by this Fieldglass jacket and is not stabilized by the upward rule.
+Upward surface: `03 — DOCUMENTARY BODIES — Bell–McKinney daylight`, Drive `1Xa1jbLQswwUIcD0waD-_MtkQJscg5GSD6jhA_ubWVBo`. Structural companion control used by Margin: p.104 Fieldglass jacket `1Nk3655XgYwDKMgEoh1vUXP64q7pZREHkNLKLWvWTPgQ`. No Capt Red Dog identity, removal, residence, treaty article, completed land outcome, or custody relation moved.
+Maker boundary: Fieldglass retains direct source reading, method, uncertainty, duplicate-custody control, and custody; Margin owns only the upward translation.
+
+
+
+
+
+
+NEEDLE UP — UPWARD RETURN / REFERENCE-RESOLUTION PROPAGATION — 2026-09-07
+
+
+Using Fieldglass’s existing direct reading only; no archival source object was reopened. Needle Up propagated one derivative rule into 03 — DOCUMENTARY BODIES and 09 — ADMINISTRATIVE ATTRITION: same-row `The captain ...` is preserved as a ROLE/ANAPHORIC REFERENCE SURFACE; its relation to `Capt Red Dog.` remains Fieldglass’s correction-open row-grammar inference, rather than being upgraded to repeated source-written identification or another named occurrence. No change to Fieldglass’s reading, uncertainties, seam, representations, custody, or maker attribution. Margin’s separate p.106 heterogeneous-General-Remarks return remains unchanged.
+GLEAN SOURCE-FACING DEEPENING — YAUTAH SIX-FIELD ROW — 2026-09-19
+
+
+Source face reopened: current received-batch `OHC_2501.pdf`, Drive `1rtr4gYSckVv_gWjavp0F8NVgcCBZuQ2C`, manuscript p.106. The PDF remains the held digital scan/facsimile representation of the manuscript face. A 500-DPI render and bounded row crop were used only as inspection derivatives; they are not new sources or additional witnesses.
+
+
+Direct row reading:
+
+
+`Yautah. (6 fields)` — cultivated acres `15` — entire family `12` — males over sixteen `5` — males and females under ten `1` — Locality of Farms blank — total acres `160` — General Remarks `Capt Oshatubbee company`
+
+
+The parenthetical `(6 fields)` is source-written in the name field immediately after `Yautah.` It is not a workshop description. Page 106 therefore preserves one named row host while explicitly recording six fields, cultivated acreage, a family count, age counts, total acreage, and a company relation in separate fields.
+
+
+Derivative correction: the Quoin transcription `OHC_2501 form of return Choctaw Treaty farms page 106` reads `Yautah. (3 files)`. Direct inspection of the governing manuscript face reads `Yautah. (6 fields)`. Both the numeral and the noun are corrected here. The Quoin file remains a derivative representation, not a second witness.
+
+
+What the row does not decide: it does not distribute the 15 cultivated acres among the six fields, state that the six fields were contiguous, identify six separate farms or parcels, or explain the relation between the 160 total acres and the six fields. `Capt Oshatubbee company` does not make Yautah a captain or explain why the row contains six fields. The blank locality field remains blank.
+
+
+Exact return: this jacket → current received-batch `OHC_2501.pdf` (`1rtr4gYSckVv_gWjavp0F8NVgcCBZuQ2C`) → manuscript p.106 → lower `Yautah. (6 fields)` row. Alternate OHC_2501 custody remains a byte-identical road to the same held PDF payload, not independent corroboration.
+
+
+—Glean — Public Lands
+
+
+
+
+SMALL DOOR — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-19
+
+
+Current human-facing jacket name: Public Lands No. 3 p.106 — Capt Red Dog row, Yautah six-field row, and Capt Oshatubbee company reference — OHC_2501 source jacket
+
+
+RETURN 1 — CAPT RED DOG FARM-ROW OCCURRENCE
+Person / Entity: Capt Red Dog [Public Lands p.106 row occurrence]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.106 LISTS `Capt Red Dog.` with 6 cultivated acres, family total 4, 2 males over 16, and total acres 1280.
+Case / Object: OHC_2501 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.106 / Capt Red Dog row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.106 — Capt Red Dog row, Yautah six-field row, and Capt Oshatubbee company reference — OHC_2501 source jacket
+Identity / Relation Status: source-local titled row occurrence only; no same-name merge. The later Glean direct-source correction secures source-visible `The captain went Mississippi provided for in treaty`; that narrative proposition is exposed separately below, while this Return 1 remains the titled/numeric row occurrence.
+
+
+RETURN 2 — YAUTAH SIX-FIELD FARM-ROW OCCURRENCE
+Person / Entity: Yautah [source form; Public Lands p.106 row occurrence]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.106 LISTS `Yautah. (6 fields)` with 15 cultivated acres, family total 12, 5 males over 16, 1 male or female under 10, and total acres 160.
+Case / Object: OHC_2501 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.106 / Yautah row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.106 — Capt Red Dog row, Yautah six-field row, and Capt Oshatubbee company reference — OHC_2501 source jacket
+Identity / Relation Status: direct manuscript reading controls the source-written `(6 fields)` over the Quoin derivative's superseded `3 files`; locality remains blank on the direct row reading. Six fields are not six proved parcels or farms; the 15 cultivated acres are not distributed among them; no same-name merge or completed land outcome is inferred.
+
+
+RETURN 3 — CAPT OSHATUBBEE COMPANY-REFERENCE OCCURRENCE
+Person / Entity: Capt Oshatubbee [company-reference occurrence on Yautah row]
+Date: not assigned by this page-facing pass
+Earned verb / relation: The Yautah row's General Remarks field CARRIES the source-written phrase `Capt Oshatubbee company`.
+Case / Object: OHC_2501 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.106 / Yautah row General Remarks
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.106 — Capt Red Dog row, Yautah six-field row, and Capt Oshatubbee company reference — OHC_2501 source jacket
+Identity / Relation Status: source-local company-reference occurrence only; the source does not define `company`, does not make Yautah a captain, and does not establish membership, command duration, kinship, household, residence, ownership, or a same-name identity bridge to any other Oshatubbee occurrence.
+
+
+Compilation note: these three returns are proposition-local. The duplicate OHC_2501 PDF custody roads remain one historical witness and must not create duplicate Name Web rows.
+— Small Door — Mapping Grounds / Name Web
+
+
+GLEAN SOURCE-FACING CORRECTION — 2026-09-20 — Capt Red Dog remark stabilized
+
+
+Status
+Direct-source paleographic correction to the existing manuscript-p.106 jacket. The Capt Red Dog row geometry, numerals, acreage, custody, and surrounding findings remain unchanged.
+
+
+Source / representation boundary
+Directly reopened OHC_2501.pdf — current received-batch Drive ID `1rtr4gYSckVv_gWjavp0F8NVgcCBZuQ2C` — and inspected the embedded manuscript image at its native resolution and through temporary enlargement/contrast derivatives. Those inspection files are not new source objects or additional witnesses.
+
+
+Corrected diplomatic reading
+On the `Capt Red Dog.` row, General Remarks reads:
+
+
+`The captain went Mississippi provided for in treaty`
+
+
+`went` and the terminal `treaty` are now source-visible enough to supersede the jacket's earlier `[unclear: went?]` and `[unclear: treaty?]` brackets.
+
+
+Correction boundary
+The manuscript as visible does not contain a legible `to` between `went` and `Mississippi`. None is supplied. The source sentence is preserved in its surviving form rather than silently modernized to `went to Mississippi` or punctuated into separate propositions.
+
+
+What changed
+- `went` is no longer provisional.
+- `treaty` is no longer provisional.
+- The row's General Remarks transcription is now returnable without bracketed alternatives.
+
+
+What did not change
+- `The captain` remains same-row wording alongside the titled name `Capt Red Dog.`; the source does not repeat the personal name inside the remark.
+- The remark does not name a treaty, article, date, destination within Mississippi, route, decision maker, or later outcome.
+- The missing preposition and compressed syntax are not repaired by inference.
+- The source wording is not converted here into formal removal, permanent migration, residence, entitlement, completed grant, patent, payment, delivery, or possession.
+
+
+Return path
+Public Lands — Whole-Document Corpus → this governing p.106 jacket → OHC_2501.pdf Drive `1rtr4gYSckVv_gWjavp0F8NVgcCBZuQ2C` → manuscript p.106 → `Capt Red Dog.` row → General Remarks.
+
+
+Maker: Glean
+State: `went` and `treaty` secured; unsupplied `to` remains absent
+
+
+
+
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Capt Red Dog stabilized remark addendum
+
+
+Return 4 — Capt Red Dog [same-row titled occurrence] / `The captain` [source-written anaphoric reference]
+PERSON / ENTITY: `Capt Red Dog.` / `The captain` [same-row anaphoric reference; repeated personal naming not supplied]
+DATE: not assigned by this page-facing pass; the upper-right `1834` notation remains unresolved page metadata.
+EARNED VERB / RELATION: Manuscript p.106 General Remarks STATES source-written `The captain went Mississippi provided for in treaty` on the same ruled row as `Capt Red Dog.` The manuscript supplies no legible `to` between `went` and `Mississippi`, and none is inserted.
+CASE / OBJECT / PLACE / INSTITUTION: OHC_2501 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.106 / Capt Red Dog row / General Remarks; `Mississippi` [source-written token; exact grammatical role, destination force, place reach, and later outcome OPEN]; Public Lands / Choctaw treaty-land administration.
+RETURN: this governing p.106 source jacket → OHC_2501.pdf Drive `1rtr4gYSckVv_gWjavp0F8NVgcCBZuQ2C` → manuscript p.106 → `Capt Red Dog.` row → General Remarks.
+IDENTITY / RELATION STATUS: direct source stabilizes `went` and terminal `treaty`; same-row grammar makes `The captain` most economically refer to the titled row host, but that reference resolution remains a row-grammar inference rather than repeated source-written identification. The compressed phrase is not modernized to `went to Mississippi`, split into an origin/destination route, or converted into formal removal, residence, permanent migration, a specific treaty/article, entitlement, completed grant, patent, payment, delivery, possession, or later land outcome. Duplicate OHC_2501 custody roads remain one historical witness.

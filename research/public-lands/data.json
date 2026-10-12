@@ -1217,7 +1217,7 @@
         "OHC_2490",
         "OHC_2492"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4.txt"
     },
     {
@@ -1258,7 +1258,7 @@
         "OHC_2493",
         "OHC_2494"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1Mc4jiP_oTHJZamlmJFUC2s0Hhw3j1-v3IX8t4EO6pNA.txt"
     },
     {
@@ -1278,7 +1278,7 @@
       "objects": [
         "OHC_2495"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1yShfAzWLjxoEcaCgId7EHePa0dhdJfy4JskjscuU1xQ.txt"
     },
     {
@@ -1299,7 +1299,7 @@
         "OHC_2496",
         "OHC_2497"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/130Mm7iLfckr2eT09ACIrCpiLd9qTmFGlG4IPqfGf0lo.txt"
     },
     {
@@ -1319,7 +1319,7 @@
       "objects": [
         "OHC_2498"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1NzxckfGMBoTF2wLfD9U5TsARbtrMFCTNxWZMzVEvaKs.txt"
     },
     {
@@ -1339,7 +1339,7 @@
       "objects": [
         "OHC_2499"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1Nk3655XgYwDKMgEoh1vUXP64q7pZREHkNLKLWvWTPgQ.txt"
     },
     {
@@ -1359,7 +1359,7 @@
       "objects": [
         "OHC_2500"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1e_R-HG3753hytA_qYyuU8CnpiTSfRKvxtBSca4TGUdc.txt"
     },
     {
@@ -1379,7 +1379,7 @@
       "objects": [
         "OHC_2501"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1UrfSzjs_EmIkkxhXg7gUSiiMvd81ZH4aN6PcorddpoE.txt"
     },
     {
@@ -1399,7 +1399,7 @@
       "objects": [
         "OHC_2502"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/12e8GnNSjn_oXQcNnKyEf9uH9H9LMSMU1W4cDRDv7XKo.txt"
     },
     {
@@ -1409,7 +1409,7 @@
       "objects": [
         "OHC_2503"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1N1aX3Z8MFJ65KvOA8WP_SxgMH1vQsesob5vfA3dAGO4.txt"
     },
     {
@@ -1419,7 +1419,7 @@
       "objects": [
         "OHC_2504"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1iyTmKvr_vPgLlS2OniaiWDxWA5UhhFQxy9fhtq9AueA.txt"
     },
     {
@@ -1439,7 +1439,7 @@
       "objects": [
         "OHC_2505"
       ],
-      "public": false,
+      "public": true,
       "file": "texts/1NrHA5SpfnIkApWlC8cpp8vQaY299uOTbgHSo0mVDnOA.txt"
     },
     {

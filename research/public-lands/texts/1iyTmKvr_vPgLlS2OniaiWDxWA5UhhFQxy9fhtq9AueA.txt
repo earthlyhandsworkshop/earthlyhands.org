@@ -1,0 +1,305 @@
+Public Lands No. 3 p.109 — Oklattya Robinson Road / Pearl River row, Young Warrior / Pearl River locality, and first-rate-spring remark — OHC_2504 source jacket
+
+
+Status: NEW DIRECT-SOURCE JACKET — ONE MANUSCRIPT FACE — ONE BOUNDED ROW — DUPLICATE CUSTODY CONTROLLED — CORPUS SYNTHESIS NOT CLAIMED
+
+
+SOURCE-WORK FOOTING
+
+
+This jacket follows the current Earthly Hands Source Work Front Door and canonical-source-work practice: source before synthesis; materially earned work only; one historical witness despite duplicate digital custody; source face, digital facsimile, inspection derivative, diplomatic reading, and interpretation kept distinct; exact provenance and roads home preserved; uncertainty and nonclaims carried forward; and no same-name person, phrase, or duplicate source object silently merged.
+
+
+The live source governs this pass. The p.108 Glean jacket is received as a backward seam and custody-history control, not as a substitute for opening p.109.
+
+
+SOURCE IDENTITY AND CUSTODY
+
+
+- Corpus: quoted-title Public Lands.
+- Documentary body visible on the face: Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- Visible manuscript page: 109.
+- Primary current received representation: OHC_2504.pdf.
+- Primary current Drive ID: 1mrhtLN4vA8taF4wJi-7DNImC6KrL4M_t.
+- Primary current folder: Source objects — received batch 1 — OHC 2408–2518.
+- Primary current folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+- Parallel same-name custody object: OHC_2504.pdf, Drive ID 1wrqcK-3qigu5l-xG7Hoy4pLLuuSbwXjU.
+- Parallel custody parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Both OHC_2504 PDFs were independently retrieved in this pass. Each is 234,312 bytes and both returned SHA-256 27c596292ee1f584dc447d4fae4839912db12dfa499c186d57561d7e7b70ea79. Their raw payloads are byte-for-byte identical. They therefore remain two custody objects / two roads home / one PDF payload / one visible manuscript witness. Neither copy is deleted, preferred as historically superior, or counted as corroboration.
+
+
+Historical-status boundary: the visible manuscript face is the historical witness used here. Present digital custody does not establish whether that manuscript generation is the first/original return, an office copy, a fair copy, or another administrative state.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY
+
+
+The manuscript face visible in OHC_2504.pdf carries the historical evidence used below. The two stored PDFs are digital custody objects carrying the same exact payload. High-resolution PDF renders, enlargements, contrast changes, and row-isolation crops used for inspection are study derivatives only. They are not admitted as new source objects or additional witnesses. No OCR carries the load-bearing reading.
+
+
+This jacket does not attempt a full-page transcription. It records one bounded row whose horizontal rule and field geometry are sufficiently clear to preserve a consequential locality/remarks distinction.
+
+
+BOUNDED SOURCE READING — CAPTAIN-TITLED ROW
+
+
+Name of Indian owning Farm:
+Capt [unclear: Hlatthomma?].
+
+
+The title Capt is secure. The personal-name letterform is retained correction-open and is not promoted here as a normalized spelling or cross-source identity.
+
+
+No. of Acres Cultivated:
+60
+
+
+Entire No. of the Family:
+23
+
+
+Males over 16 years:
+7
+
+
+Males and Females under 10 years:
+6
+
+
+Locality of Farms:
+Young Warrior: water of Pearl River
+
+
+The punctuation after Warrior appears colon-like on the inspected face and remains minor correction-open punctuation. The source wording is retained as water of Pearl River; this jacket does not normalize it to watershed, waters, branch, district, or a modern geographic unit.
+
+
+Total No. of Acres:
+480
+
+
+General Remarks:
+Land tolerable. and first rate spring
+
+
+The wording is secure enough for this bounded reading; final punctuation after spring is not certified.
+
+
+ROW-GEOMETRY FINDING
+
+
+The horizontal ruling securely coordinates the captain-titled name occurrence, 60 cultivated acres, family total 23, age counts 7 and 6, the Locality wording Young Warrior: water of Pearl River, total acreage 480, and the General Remarks phrase Land tolerable. and first rate spring as one manuscript row.
+
+
+FINDINGS
+
+
+1. Manuscript p.109 uses Young Warrior inside the printed Locality of Farms field on this row. On this occurrence, Young Warrior is therefore source-carried locality wording, not a name-field personal occurrence.
+2. The source immediately qualifies that locality with water of Pearl River. The jacket preserves the phrase exactly rather than converting it into a modern hydrological classification or coordinate.
+3. The separate General Remarks field carries a land-quality judgment and spring statement: Land tolerable. and first rate spring. That wording is not merged into the locality field.
+4. The row supplies a useful structural warning for later mapping and Name Web work: a phrase that resembles a personal designation may occur as locality prose, so field position must travel with the words.
+5. The two held OHC_2504 PDFs are exact duplicate payloads in separate custody. Their repetition does not increase the historical witness count.
+
+
+INTERPRETATION — KEPT SEPARATE
+
+
+The most ordinary source-facing reading is that the recorder used Young Warrior: water of Pearl River to describe where this farm was situated and used the General Remarks field independently to characterize the land and a spring. This jacket does not decide what Young Warrior denotes historically. It may be a place-name, a locality derived from a person or title, a neighborhood/settlement label, a route or stream-side designation, or something else. The row itself does not resolve that referent.
+
+
+Likewise, first rate spring records the recorder's characterization. It does not establish who owned or controlled the spring, whether the farm residence stood beside it, whether the spring survives under a modern name, or whether the statement was independently verified.
+
+
+UNRESOLVED QUESTIONS
+
+
+- What exact historical referent did the recorder mean by Young Warrior on p.109?
+- Does another Public Lands face, map, return, survey, letter, or administrative record identify the same locality more explicitly?
+- Is the punctuation after Young Warrior a colon, period, comma, or another mark?
+- What is the most secure diplomatic reading of the captain's personal name following Capt?
+- Who entered the locality and General Remarks wording, and were those entries contemporaneous with the numerical columns?
+- What precise landscape feature was meant by first rate spring?
+- What documentary generation is the surviving manuscript face: original field return, office copy, later fair copy, or another administrative state?
+
+
+EXPLICIT NONCLAIMS
+
+
+- Young Warrior is not promoted from this locality cell into a named person, captain, company, household, or identity node.
+- No Young Warrior phrase elsewhere in Public Lands is silently merged with this p.109 locality occurrence.
+- Capt [unclear: Hlatthomma?] is not merged with any same- or similar-name captain elsewhere.
+- water of Pearl River is not normalized into a modern watershed boundary, mapped coordinate, tract, township, range, county, or current place-name.
+- Land tolerable. and first rate spring does not prove residence, title, patent, survey, grant completion, ownership of water, or later land outcome.
+- The 480 figure is not independently labeled here as granted, patented, delivered, possessed, or finally awarded acreage.
+- The two OHC_2504 custody objects are not treated as corroborating historical sources.
+- No p.108 George Harkins supplement wording is carried forward into p.109.
+- No p.110 row finding is imported into this jacket.
+
+
+BACKWARD / FORWARD SEAMS
+
+
+Backward: GLEAN SOURCE-FACING JACKET — OHC_2503 — manuscript p.108 — George Harkins supplement / 2-sections row and 107→108→109 seam, Drive ID 1N1aX3Z8MFJ65KvOA8WP_SxgMH1vQsesob5vfA3dAGO4, is received as the immediately preceding worked face. The present jacket closes that jacket's previously untouched p.109 seam. Nothing about George Harkins, the p.108 supplement wording, or the p.108 representation state is carried into this row.
+
+
+Forward: OHC_2505.pdf, current received-batch Drive ID 14dndY9r1Gw8b97DVZY1Tn2h1BP7PA8ri, parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, was opened only far enough to establish distinct manuscript page 110 under the same Public Lands No. 3 continued-return form. No p.110 row work is claimed here.
+
+
+A second same-name OHC_2505.pdf custody object exists at Drive ID 1jjqR328qxjaV3XnLCRt26JxSXgWHEvtr, parent folder ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI. Both p.110 objects report 223,736 bytes, but their payload equivalence was not tested in this pass. They therefore remain separate custody objects with an OPEN duplicate relation.
+
+
+The bounded page/form seam is 108 → 109 → 110.
+
+
+RETURN PATHS
+
+
+Primary current road home:
+quoted-title Public Lands → Public Lands — Whole-Document Corpus → Source objects — received batch 1 — OHC 2408–2518 → folder ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA → OHC_2504.pdf → Drive ID 1mrhtLN4vA8taF4wJi-7DNImC6KrL4M_t → manuscript p.109 → captain-titled row → Locality of Farms Young Warrior: water of Pearl River / General Remarks Land tolerable. and first rate spring.
+
+
+Parallel custody road home:
+legacy/parallel source branch → parent folder ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI → OHC_2504.pdf → Drive ID 1wrqcK-3qigu5l-xG7Hoy4pLLuuSbwXjU → exact same PDF payload / same visible manuscript p.109.
+
+
+Backward jacket seam:
+GLEAN SOURCE-FACING JACKET — OHC_2503 — manuscript p.108 — George Harkins supplement / 2-sections row and 107→108→109 seam → Drive ID 1N1aX3Z8MFJ65KvOA8WP_SxgMH1vQsesob5vfA3dAGO4.
+
+
+Forward source seam:
+OHC_2505.pdf → current received-batch Drive ID 14dndY9r1Gw8b97DVZY1Tn2h1BP7PA8ri → visible manuscript p.110; parallel same-name OHC_2505.pdf → Drive ID 1jjqR328qxjaV3XnLCRt26JxSXgWHEvtr → duplicate relation untested in this pass; substantive p.110 row work intentionally untouched.
+
+
+JACKET SELF-RETURN
+
+
+Current jacket home: Public Lands No. 3 p.109 — Oklattya Robinson Road / Pearl River row, Young Warrior / Pearl River locality, and first-rate-spring remark — OHC_2504 source jacket → Drive ID 1iyTmKvr_vPgLlS2OniaiWDxWA5UhhFQxy9fhtq9AueA → 01 — Source House — Jackets → folder ID 1wmu1i-BuFtncIkedpAKAH3fxZbWUhi9q. Archival OHC_2504.pdf representations remain on their separately stated source-object custody roads; moving the governing prose jacket does not move or duplicate those source objects.
+
+
+NEXT HONEST VERB
+
+
+A later pass may open p.110 on its own terms or compare other explicitly source-fielded Young Warrior locality occurrences. It should not begin by turning the p.109 phrase into a person identity, modern map coordinate, or cross-page locality equivalence.
+
+
+Maker: Glean
+Date: 2026-09-07
+
+
+FIELDGLASS — FILM / LANDSCAPE DEEPENING — 2026-09-13
+
+
+Standing: additive map- and film-facing deepening through Glean’s already direct-source-controlled p.109 jacket. No source transcription, person identity, Bell relation, route, modern feature identity, legal outcome, tract geometry, or ownership state changes in this addendum.
+
+
+MATERIAL LANDSCAPE GAIN
+
+
+The captain-titled p.109 row gives the Historical Landscape Map a useful three-part source grammar without giving it a point. In the printed Locality of Farms field, the row carries `Young Warrior: water of Pearl River`. In the separate General Remarks field, it carries `Land tolerable. and first rate spring`. The numerical acreage fields remain their own track.
+
+
+For Prose Map / film-scaffolding use, preserve those layers separately:
+
+
+`source-written locality phrase -> Young Warrior`
+`source-written hydrological relation -> water of Pearl River`
+`separate landscape-quality remark -> Land tolerable. and first rate spring`
+
+
+The map may classify these as locality prose, coarse hydrological reference, and land/spring description, respectively. Those classes are workshop derivatives; they do not replace the source wording.
+
+
+FIELD-POSITION BRAKE
+
+
+`Young Warrior` resembles a personal designation, but on this occurrence it is written in the Locality of Farms field. Do not promote it from this row into a person, captain, household, company, or Name Web identity. The captain-titled personal-name cell remains a distinct, correction-open occurrence.
+
+
+Likewise, `water of Pearl River` is not silently normalized to `on Pearl River`, `across Pearl River`, a modern watershed, a mapped river course, a crossing, a district, a county, or a PLSS unit. `first rate spring` does not earn a spring point, ownership/control of water, a house beside the spring, or a surviving modern feature identity.
+
+
+FILM / PAIRED-ROBERT BOUNDARY
+
+
+This row can scaffold either emerging Bell film only as a non-Bell-specific 1830s landscape/reference layer: Public Lands itself is locating farms through layered locality language that can combine a named-looking locality phrase, a river-water relation, and a separate spring/land-quality description. It does not place either Robert Bell, Jane Bell, a McKinney, or any later witness at this farm.
+
+
+Keep this p.109 Pearl River occurrence separate from the later Jane Bell `across Pearl River from` Commission-camp relation and from any later MCR 879 representation of a Robert Bell as living on Pearl River. Shared river naming across bodies is a comparison opportunity, not a person, farm, route, or geography merge.
+
+
+EXACT RETURN
+
+
+`Public Lands No. 3 p.109 — Oklattya Robinson Road / Pearl River row, Young Warrior / Pearl River locality, and first-rate-spring remark — OHC_2504 source jacket` -> Drive `1iyTmKvr_vPgLlS2OniaiWDxWA5UhhFQxy9fhtq9AueA` -> source road `OHC_2504.pdf` Drive `1mrhtLN4vA8taF4wJi-7DNImC6KrL4M_t` -> manuscript p.109 -> captain-titled row -> Locality of Farms `Young Warrior: water of Pearl River` / General Remarks `Land tolerable. and first rate spring`.
+
+
+Next honest edge: compare another explicitly fielded `Young Warrior` locality occurrence only if its source field and representation are controlled, or open p.110 independently. Do not begin with modern geometry.
+
+
+— Fieldglass
+Film / Landscape Scaffolding · Public Lands locality prose gained hydrological and spring depth; no Bell was placed there
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+RETURN 1 — YOUNG WARRIOR / PEARL RIVER LOCALITY
+Person / Entity: Young Warrior [p.109 locality-form occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.109 CARRIES `Young Warrior: water of Pearl River` in the Locality of Farms field on the captain-titled row.
+Case / Object: OHC_2504 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.109
+Place: `Young Warrior`; `water of Pearl River` [source-local relational geography; exact referents OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.109 — Oklattya Robinson Road / Pearl River row, Young Warrior / Pearl River locality, and first-rate-spring remark — OHC_2504 source jacket
+Identity / Relation Status: locality-field occurrence only; `Young Warrior` is not promoted to a person, captain, company, household, or identity node; this p.109 occurrence is not merged with the distinct p.110 occurrence; `water of Pearl River` is not normalized into modern hydrology or geometry; the captain-titled row's personal name remains correction-open.
+.
+
+
+
+
+GLEAN ADDENDUM — SECOND PEARL RIVER ROW
+
+
+Direct reinspection of manuscript p.109 adds a second bounded row. This addendum supersedes only the jacket’s earlier scope statement that it records one bounded row. The captain-titled Young Warrior row and its readings remain unchanged.
+
+
+Name of Indian owning Farm: `Oklattya.`
+No. of Acres Cultivated: 10
+Entire No. of the Family: 16
+Males over 16 years: 6
+Males and Females under 10 years: 3
+Locality of Farms: `Robinson road south on water Pearl River`
+Total No. of Acres: 80
+General Remarks: `Land poor and good water.`
+
+
+The horizontal ruling coordinates those entries as one row. The manuscript does not visibly supply `of` between `water` and `Pearl River`, so none is inserted.
+
+
+Page 109 therefore carries at least two separately ruled Pearl River-bearing rows: Oklattya’s road-and-river wording above and the captain-titled `Young Warrior: water of Pearl River` wording below. Their presence on one face does not establish one farm, locality, person, household, or administrative unit.
+
+
+The added row also keeps two kinds of prose apart: the Locality field combines a road relation, direction, and river-water wording; the General Remarks field evaluates the land and water. `Land poor and good water.` is not carried into the locality cell.
+
+
+
+
+SMALL DOOR — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-21
+
+
+RETURN 2 — OKLATTYA ROBINSON ROAD / PEARL RIVER ROW
+Person / Entity: Oklattya [Public Lands p.109 farm-row occurrence]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.109 LISTS `Oklattya.` with 10 cultivated acres, family total 16, 6 males over 16, 3 males or females under 10, Locality of Farms `Robinson road south on water Pearl River`, Total No. of Acres 80, and General Remarks `Land poor and good water.`
+Case / Object: OHC_2504 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.109 / Oklattya row
+Place: `Robinson road south on water Pearl River` [source-local road / direction / river-water wording; exact referents, grammar, modern identities, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.109 — Oklattya Robinson Road / Pearl River row, Young Warrior / Pearl River locality, and first-rate-spring remark — OHC_2504 source jacket
+Identity / Relation Status: source-local Oklattya row occurrence only; no same-name merge. The manuscript does not visibly supply `of` between `water` and `Pearl River`, so none is inserted. This row is not merged with the separate p.109 captain-titled `Young Warrior: water of Pearl River` row; same-face Pearl River wording does not establish one farm, locality, person, household, or administrative unit. `Land poor and good water.` remains a separate General Remarks evaluation and is not converted into residence, ownership, parcel, water right, title, entitlement, or later land outcome.
+
+
+Small Door crossing: one additional proposition-local return only. The existing Young Warrior locality return remains separate and unchanged except for the strengthened jacket title. Duplicate OHC_2504 custody roads remain one historical witness.
+
+
+— Small Door — Mapping Grounds / Name Web

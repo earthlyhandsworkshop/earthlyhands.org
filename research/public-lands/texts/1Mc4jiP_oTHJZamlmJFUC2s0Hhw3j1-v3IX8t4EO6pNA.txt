@@ -1,0 +1,289 @@
+Public Lands No. 3 p.100 — Joel Leflore “white Father” parenthetical, Pissahnowah / Capt Leflore company row, and Punstubbee company remark — OHC_2493/OHC_2494 source jacket
+
+
+STATUS
+Direct source-facing pass on one historical manuscript page in the Public Lands No. 3 return. This jacket represents manuscript page 100 as one documentary page, not the whole return and not two historical pages merely because two PDF custody objects preserve the same visible surface.
+
+
+SOURCE IDENTITY / RETURN PATH
+Historical body visible on the face: “Public Lands — No 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+Visible manuscript page number: 100.
+Primary representation directly reopened in this pass: OHC_2493.pdf — Drive 1WP0rrj7melVYBFabP2Ebg439ySCNe4St — 234,114 bytes — parent folder 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.”
+Alternate custody representation already controlled in the corpus: OHC_2494.pdf — Drive 1dakYz-7gz0BtJbbcz6FkGmeFSgQmf2ez — 234,114 bytes — same parent folder. Existing representation-control work records OHC_2493 and OHC_2494 as distinct PDF payload/custody objects with the same visible page surface. This pass does not count them as independent historical witnesses and did not create a second jacket for OHC_2494.
+Current jacket home after Small Door crossing: Source House — Jackets — Drive folder 1wmu1i-BuFtncIkedpAKAH3fxZbWUhi9q. Previous working home: Public Lands — Whole-Document Corpus — Drive folder 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+
+
+DOCUMENTARY BOUNDARY
+One photographed/scanned manuscript page of a continuing tabular return. The face itself establishes page 100 and continuation of the No. 3 form. The page does not establish that the whole return is complete, nor does capture filename order substitute for manuscript pagination.
+Backward boundary directly checked in this pass: OHC_2492.pdf — Drive 1HSvLizZTmHKPYcJ9mCwzB8sq_nY2-FOe — visibly manuscript page 99, already controlled by Mullion’s representation/pagination jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4.
+Forward boundary directly checked in this pass: OHC_2495.pdf — Drive 1m5qtmgjdaGfVhAH51KbTs2rg_jk6a-Sz — visibly manuscript page 101, continuing the same form. Page 101 was used only as a forward boundary check here and is not represented by this jacket.
+The earlier unresolved page-98 seam remains exactly that: source-unlocated within the previously inspected run. Page 100 does not repair or explain page 98.
+
+
+FAITHFUL SOURCE OBSERVATION
+The visible columns include:
+- “Names of Indians owning Farms”;
+- “No of Acres Cultivated”;
+- “Entire No. of the Family”;
+- “Males over 16 years”;
+- “Males and Females under 10 years”;
+- “Locality of Farms”;
+- “Total No. of Acres”;
+- “General Remarks.”
+
+
+Clear named occurrences near the upper part of page 100 include “David Leflore,” “Mary Smallwood,” “Joel Leflore” followed by a parenthetical note whose full wording is not stabilized here, and “Jefferson Folsom.” These are source occurrences only.
+
+
+Clear numerical examples, preserving the table’s own column meanings:
+- David Leflore: 32 in “No of Acres Cultivated,” 2 in “Entire No. of the Family,” and 1 in “Males over 16 years.” The remaining visible demographic cell on that row is not forced into a reading here.
+- Jefferson Folsom: 4 cultivated acres, family count 6, 1 male over 16, and 3 in the under-10 column.
+
+
+The “General Remarks” column contains repeated qualitative and grouping language, including “Good land,” “[unclear: Punstubbee’s] company,” and the clearly readable “Capt. Leflore’s company.” The vertical placement of these remarks spans blocks of rows rather than behaving like a simple one-remark-per-person field.
+
+
+The “Locality of Farms” column also contains block-like entries. One upper locality begins “[unclear: Atipahochunha] creek or [unclear],” and a lower locality reads approximately “[unclear: Fittahat] creek. Big Black, south.” Because the handwriting and vertical scope are not fully resolved, this jacket preserves those locality readings as uncertain rather than assigning them to named persons.
+
+
+A manuscript notation at the extreme upper right is present but is not stabilized in this pass; it is not used as a date or archival identifier here.
+
+
+FINDINGS
+1. Page 100 is now directly source-controlled as a distinct manuscript page between visible pages 99 and 101.
+2. The page shows that “General Remarks” can carry company-level and land-quality language across row blocks. “Capt. Leflore’s company” should therefore not be mechanically attached to the single row horizontally nearest the words without first establishing the intended vertical scope.
+3. The same caution applies to locality language: entries in the locality column can visually span multiple rows or operate as group descriptors.
+4. The page contains multiple Leflore surname occurrences, including David Leflore and Joel Leflore, while “Capt. Leflore’s company” appears separately as a grouping remark. The source face does not itself state how those named occurrences are related to one another.
+5. Cultivated-acre figures are explicitly carried in a column labeled “No of Acres Cultivated.” They should not be silently converted into reservation acreage, patent acreage, total landholding, or residence coordinates.
+
+
+INFERENCE
+The layout strongly suggests that at least some company and locality remarks organize blocks of entries rather than functioning solely as row-level attributes. That is a layout inference from the source face, not a completed reconstruction of every block boundary. A row-by-row/bracket-level reading across pages 99–101 would be needed before assigning company or locality membership to every named occurrence.
+
+
+UNRESOLVED QUESTIONS
+- Exact reading of the parenthetical note after Joel Leflore.
+- Exact reading of “[unclear: Punstubbee’s] company.”
+- Exact wording and row scope of the two locality annotations noted above.
+- Whether visible company/locality blocks begin on page 99 and continue onto page 100, or begin within page 100 itself in each instance.
+- Meaning of the upper-right manuscript notation.
+- A complete row-by-row transcription of page 100 remains undone; this pass stabilizes the strongest source-facing structure and clear load-bearing occurrences only.
+
+
+EXPLICIT NONCLAIMS
+- No claim that David Leflore, Joel Leflore, or the “Capt. Leflore” of the company remark are the same person or are kin.
+- No claim that proximity to “Capt. Leflore’s company” proves company membership for any one named row until the source’s block structure is resolved.
+- No claim that “Good land” is an ownership, entitlement, patent, or legal-status finding.
+- No claim that cultivated acres equal total acreage owned, reserved, patented, occupied, or later conveyed.
+- No claim that a locality notation provides a cadastral point or exact residence.
+- No claim that OHC_2493 and OHC_2494 are independent historical corroboration; they are alternate digital custody representations of one visible manuscript-page surface under existing representation control.
+- No claim that page 98 is absent from the entire corpus or historically missing.
+
+
+CROSSINGS / EARNED NEXT TARGET
+Backward representation/pagination control: Mullion jacket 1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4 → OHC_2492 visible p.99.
+Forward source boundary: OHC_2495.pdf 1m5qtmgjdaGfVhAH51KbTs2rg_jk6a-Sz → visible p.101.
+Earned next source-facing target if this seam is continued: compare pages 99–101 specifically for the vertical scope of company/locality annotations before using those labels in mapping, identity work, or person-level synthesis.
+Separate open seam inherited from prior work: locate a source representation of manuscript p.98 if one exists in the permitted corpus, without inferring its filename.
+
+
+CORRECTION HISTORY
+This jacket does not supersede prior representation work. It adds the first bounded source-facing content/structure reading for manuscript page 100 found in this pass and preserves earlier custody conclusions about the OHC_2493/OHC_2494 repeated visible surface.
+
+
+Maker: Fieldglass
+Date: 2026-09-07
+
+
+
+
+FIELDGLASS CORRECTION ADDENDUM — 2026-09-07 — row alignment supersedes block-spanning reading
+
+
+Reason for correction
+The original p.100 pass described several General Remarks and Locality entries as visually spanning blocks of rows. A direct comparative rereading of manuscript p.100 with newly jacketed manuscript p.101 shows that wording was too strong. The manuscript consistently places names, demographic values, locality text, total-acre values, and General Remarks on common horizontal row baselines. No brace, ditto, vertical connector, or other cross-row device was found on the company/locality entries used in that earlier inference.
+
+
+Direct p.100 correction
+On p.100, “[unclear: Punstubbee’s] company” is entered on the same horizontal row line as one named occurrence immediately below Billy Fry; this pass does not stabilize that person’s full name. “Capt. Leflore’s company” is likewise entered on the row carrying the widow occurrence read approximately “[unclear: Pissahnowah?] (widow).” The source therefore earns those phrases first as row-carried General Remarks. Their semantic reference may involve a wider company, but the visible page does not itself prove that the phrase governs adjacent rows.
+
+
+The same correction applies to locality language on p.100. Locality phrases occupy row positions. They should not be treated as block descriptors merely because long phrases extend horizontally or because neighboring rows are blank in that column.
+
+
+Comparative control from p.101
+Manuscript p.101, OHC_2495.pdf — Drive 1m5qtmgjdaGfVhAH51KbTs2rg_jk6a-Sz — now has its own Fieldglass jacket: 1yShfAzWLjxoEcaCgId7EHePa0dhdJfy4JskjscuU1xQ. Its clearest control is the “William Black” row, which simultaneously carries locality “Natchez trace. north side.”, total acreage 160, and General Remarks “Poor lands.” on one horizontal row. Other p.101 company/captain remarks are likewise row-aligned. This comparison makes the row grammar materially stronger than the earlier block-spanning inference.
+
+
+Superseded state
+The earlier sentences stating that General Remarks “span blocks of rows,” that locality entries are “block-like,” and Findings 2–3 / the Inference section insofar as they assert multi-row scope are WITHDRAWN / SUPERSEDED by this addendum. They remain in the jacket as correction history and should not be used as current source state.
+
+
+Current source rule
+Read p.100 General Remarks and Locality entries first at row-carried force. A company phrase can still refer semantically to a larger company, but membership or scope beyond the row where the phrase is written requires an explicit cross-row device, another source key, or independent corroborating structure. Horizontal row alignment may now be used as positive source-structure evidence; mere vertical proximity should not override it.
+
+
+Boundary retained
+Mullion’s p.99 representation finding remains controlling: the held p.99 capture does not expose the General Remarks column, so it cannot establish whether any company notation continues across p.99→p.100. The earlier p.98 source-unlocated state is unchanged.
+
+
+Nonclaims after correction
+- No claim that the row carrying “Capt. Leflore’s company” identifies the captain himself.
+- No claim that adjacent rows belong to Capt. Leflore’s company.
+- No kinship or identity merge among David Leflore, Joel Leflore, or the captain named in the remark.
+- No company boundary is reconstructed beyond the row-carried notation.
+- No locality phrase is converted into an exact residence or cadastral point.
+
+
+Maker: Fieldglass
+Date: 2026-09-07
+State: p.100 block-spanning interpretation corrected; row-aligned documentary grammar now governing; p.101 separately jacketed; p.99 company-continuity limit and p.98 seam unchanged.
+
+
+NEEDLE UP UPWARD-PROPAGATION NOTE — 2026-09-07
+Fieldglass’s row-alignment correction now governs the live Public Lands entrance and quantitative grammar. `03 — DOCUMENTARY BODIES` distinguishes demonstrated standalone company/grouping headings from row-carried company remarks; `09 — ADMINISTRATIVE ATTRITION` carries grouping/company scope as a source-structure field before any company-level pattern test. This note changes no p.100 source reading, row assignment, locality, person relation, or custody. Fieldglass retains source-facing reading/correction authorship; Needle Up owns only the upward propagation.
+—Needle Up
+
+
+GLEAN SOURCE-FACING ADDENDUM — JOEL LEFLORE PARENTHESIS
+
+
+Direct enlargement of OHC_2493 narrows the parenthetical in Joel Leflore’s printed Name field without closing it completely.
+
+
+Current reading:
+`Joel Leflore. (white Father [terminal notation unresolved])`
+
+
+`white` is source-visible; the Quoin derivative’s `with` is withdrawn at that word. `Father` is also source-visible. The characters between `Father` and the closing parenthesis are fraction-like and compatible with `1/2`, but the slash and spacing are not secure enough at the surviving image depth to promote `1/2` as exact transcription. The earlier derivative’s unqualified terminal `12` is therefore not retained as a stabilized reading either.
+
+
+The same ruled row carries 20 cultivated acres, family 7, 2 males over sixteen, 3 people under ten, and 160 total acres. Its Locality of Farms and General Remarks cells are visually blank on surviving paper.
+
+
+Documentary grammar
+
+
+The parenthetical belongs to Joel Leflore’s name cell. It is not a neighboring row annotation or a company remark. The source supplies relation language through `Father`, but it does not name that father, identify another Leflore occurrence as the father, define the terminal notation, or establish a modern racial, legal-status, kinship, residence, ownership, or entitlement conclusion beyond the words and marks written here.
+
+
+Representation control
+
+
+OHC_2494 exposes the same visible page surface and is not counted as an independent witness. Enlargement clarifies the first two words but does not manufacture new evidence for the terminal notation.
+
+
+Correction history
+
+
+The jacket’s earlier statement that the full parenthetical was unstabilized is superseded only to this extent: `white Father` is now controlled; the terminal notation remains unresolved. The Quoin reading `(with Father 12)` remains visible as a derivative reading and is superseded at `with`; its final `12` is not promoted.
+
+
+Maker: Glean
+State: `white Father` secured to Joel Leflore’s row; terminal notation left open.
+
+
+GLEAN SOURCE-FACING ADDENDUM — p.100 consecutive widow rows — 20 September 2026
+
+
+Direct reading
+
+
+Two consecutive name cells carry source-written widow designations:
+
+
+`Cahkahla. (widow)` — 5 cultivated acres; family 10; four males over 16; three people under 10. Its Locality, total-acreage, and General-Remarks cells are visually blank on the captured face.
+
+
+`Pissahnowah. (widow)` — 3 cultivated acres; family 6; two males over 16; one person under 10; total acres 50; General Remarks `Capt Leflore’s company.` Its Locality cell is visually blank.
+
+
+Correction history
+
+
+The jacket’s earlier approximate `[unclear: Pissahnowah?] (widow)` reading is superseded by `Pissahnowah. (widow)`. The prior row-alignment correction remains governing: `Capt Leflore’s company.` belongs visibly to Pissahnowah’s ruled row, not to the preceding Cahkahla row or the rows below.
+
+
+The remark may refer to a company larger than one row, but this face supplies no brace, ditto, or other device defining that wider membership. The two widow-titled occurrences remain separate rows; adjacency does not establish kinship, shared household, ownership, or residence.
+
+
+Exact return
+
+
+Source House → p.100 governing jacket 1Mc4jiP_oTHJZamlmJFUC2s0Hhw3j1-v3IX8t4EO6pNA → OHC_2493.pdf 1WP0rrj7melVYBFabP2Ebg439ySCNe4St → manuscript p.100 → `Cahkahla. (widow)` row → `Pissahnowah. (widow)` / 50 acres / `Capt Leflore’s company.` row.
+
+
+Maker: Glean
+State: two widow rows separately controlled; company remark secured to Pissahnowah’s line.
+
+
+GLEAN SOURCE-FACING ADDENDUM — p.100 row immediately below Billy Fry
+
+
+Direct reading
+
+
+The ruled line immediately below `Billy Fry` carries a personal name that remains paleographically unresolved. Its cells record: cultivated acreage marked by a dot series; family 2; one male over 16; under 10 marked by a dot series; Locality visually blank; total acreage visually blank; General Remarks `Punstubbee’s company.` The dot series are marked, nonnumeric cells; the face does not define them as zero, ditto, or omission.
+
+
+Correction history
+
+
+This supersedes the jacket’s earlier `[unclear: Punstubbee’s] company` only at the phrase reading and adds the row’s exact numeric and cell states. The personal name remains open. Billy Fry above and Chultah below do not inherit the remark.
+
+
+Exact return
+
+
+Source House → p.100 governing jacket 1Mc4jiP_oTHJZamlmJFUC2s0Hhw3j1-v3IX8t4EO6pNA → OHC_2493.pdf 1WP0rrj7melVYBFabP2Ebg439ySCNe4St → manuscript p.100 → ruled line immediately below `Billy Fry` → `Punstubbee’s company.`
+
+
+Maker: Glean
+State: company phrase secured to one ruled row; personal name left open.
+
+
+
+
+
+
+The p.100 returns below are thin on purpose. The row-alignment correction, representation genealogy, superseded block-spanning reading, widow-row adjacency, numeric/dot-series cell states, unresolved terminal notation after `white Father`, p.99 right-edge limit, and p.98 source-location seam remain in the jacket prose above rather than being flattened into the Name Web.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 1
+Person / Entity: Joel Leflore [Public Lands p.100 name-field occurrence] / unnamed father [source-written relational reference]
+Date: not supplied by this page-facing proposition
+Action / Relation: Manuscript p.100 Name field CARRIES `Joel Leflore. (white Father [terminal notation unresolved])`; `Father` supplies source-written relation language to an unnamed father while the terminal notation remains unresolved.
+Case / Object: OHC_2493 / OHC_2494 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.100 / Joel Leflore row / Name field
+Place: no place is assigned by this proposition; the row’s Locality of Farms cell is visually blank on the surviving face
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.100 — Joel Leflore “white Father” parenthetical, Pissahnowah / Capt Leflore company row, and Punstubbee company remark — OHC_2493/OHC_2494 source jacket
+Identity / Relation Status: source-local Joel Leflore occurrence and source-written unnamed-father reference only; the father is not identified with David Leflore, Capt Leflore, or another Leflore occurrence. `white` is preserved as historical source wording and is not normalized into a modern racial or legal-status classification. The terminal notation is not promoted to exact `1/2`, `12`, or another reading.
+Notes: compiled once from Glean’s source-facing parenthesis addendum; OHC_2493 and OHC_2494 are two custody representations of one visible manuscript face, not independent corroboration.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 2
+Person / Entity: Pissahnowah [Public Lands p.100 widow-row occurrence] / Capt Leflore [company-reference occurrence]
+Date: not supplied by this page-facing proposition
+Action / Relation: Manuscript p.100 General Remarks CARRIES source-written `Capt Leflore’s company.` on the same ruled row as source-written `Pissahnowah. (widow)`.
+Case / Object: OHC_2493 / OHC_2494 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.100 / Pissahnowah row / General Remarks
+Place: no place is assigned by this proposition; the row’s Locality of Farms cell is visually blank
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.100 — Joel Leflore “white Father” parenthetical, Pissahnowah / Capt Leflore company row, and Punstubbee company remark — OHC_2493/OHC_2494 source jacket
+Identity / Relation Status: source-local Pissahnowah occurrence and source-local `Capt Leflore` company-reference only; no merge with the p.99 Capt Leflore occurrence, the p.99 `near Capt Leflore.` reference, or another Leflore occurrence. Row alignment secures the remark to Pissahnowah’s line, but does not identify the captain, reconstruct a wider company roster, or establish kinship, household, residence, ownership, entitlement, or another cross-row relation. The source-written `(widow)` designation remains proposition-local and does not identify a spouse.
+Notes: compiled once from the governing corrected row state; the preceding `Cahkahla. (widow)` row does not inherit the company remark, and adjacency of the two widow rows creates no kinship or household relation.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT — Return 3
+Person / Entity: [personal name unresolved — Public Lands p.100 row immediately below Billy Fry] / Punstubbee [company-reference occurrence]
+Date: not supplied by this page-facing proposition
+Action / Relation: Manuscript p.100 General Remarks CARRIES source-written `Punstubbee’s company.` on the ruled line immediately below `Billy Fry`; the personal name on that same line remains paleographically unresolved.
+Case / Object: OHC_2493 / OHC_2494 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.100 / row immediately below Billy Fry / General Remarks
+Place: no place is assigned by this proposition; the row’s Locality of Farms cell is visually blank
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.100 — Joel Leflore “white Father” parenthetical, Pissahnowah / Capt Leflore company row, and Punstubbee company remark — OHC_2493/OHC_2494 source jacket
+Identity / Relation Status: the row host remains unresolved and is not merged with Billy Fry above, Chultah below, or any other name occurrence. `Punstubbee` is carried only as the possessive company-reference occurrence written in General Remarks and is not merged with another Punstubbee occurrence. The phrase does not establish a wider roster, company boundary, kinship, residence, ownership, or entitlement.
+Notes: compiled once from Glean’s corrected direct row reading; the row’s dot-series cells remain marked nonnumeric source states rather than zero, ditto, or omission and stay in jacket prose rather than becoming extra Name Web relations.
+
+
+Small Door return — 2026-09-21
+Three proposition-local Name Web returns compiled from the corrected p.100 source state. No return is drawn from the jacket’s superseded block-spanning interpretation. Jacket authorship remains Fieldglass with Glean / Needle Up addenda preserved; Small Door owns only the Name Web routing / human-facing jacket crossing.

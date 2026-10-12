@@ -1,0 +1,383 @@
+Public Lands No. 3 p.110 — Capt Moko grouping, Ahaglaucha / Young Warrior locality, unresolved captain / Leaf River row, and Moko–Moyo distinction — OHC_2505 source jacket
+
+
+Status: NEW DIRECT-SOURCE JACKET — ONE MANUSCRIPT FACE — DUPLICATE CUSTODY CONTROLLED — PRIOR CROSS-SEAM READING RECEIVED, NOT DUPLICATED — CORPUS SYNTHESIS NOT CLAIMED
+
+
+SOURCE-WORK FOOTING
+
+
+This jacket follows the current Earthly Hands Source Work Front Door and canonical-source-work practice: open the source object before synthesis; create or deepen only when a durable source-facing gain is earned; preserve one historical witness despite duplicate digital custody; keep manuscript surface, PDF custody object, temporary inspection derivative, diplomatic reading, and interpretation distinct; retain exact return paths, uncertainty, correction history, forward/backward seams, and nonclaims; and do not silently merge same-name people, company labels, locality phrases, or duplicate files.
+
+
+A bounded Drive search did not surface a separate faithful OHC_2505 / manuscript p.110 jacket. The existing OHC_2506 jacket contains Ravel’s p.110→p.111 company-heading grammar addendum and therefore already represents one narrow source observation from p.110. This jacket receives that prior work explicitly rather than pretending p.110 was wholly untouched. The present pass is earned because direct return to OHC_2505 materially stabilizes the previously open company-heading name, records a separate populated locality row, and closes duplicate-payload custody for the two OHC_2505 PDFs.
+
+
+SOURCE IDENTITY AND CUSTODY
+
+
+- Corpus: quoted-title Public Lands.
+- Documentary body visible on the face: Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- Visible manuscript page: 110.
+- Primary current received representation: OHC_2505.pdf.
+- Primary current Drive ID: 14dndY9r1Gw8b97DVZY1Tn2h1BP7PA8ri.
+- Primary current parent folder: Source objects — received batch 1 — OHC 2408–2518.
+- Primary current parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+- Parallel same-name custody object: OHC_2505.pdf, Drive ID 1jjqR328qxjaV3XnLCRt26JxSXgWHEvtr.
+- Parallel custody parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Both OHC_2505 PDFs were independently retrieved in this pass. Each is 223,736 bytes. Direct byte comparison gives SHA-256 37fac9a4fb3ce4802fb684cf781c420e7dc37316afb13adbbada7c68f6811a4c for each; the payloads are byte-for-byte identical. Custody state is therefore: two Drive objects / two roads home / one PDF payload / one visible manuscript witness. Neither copy is deleted, preferred as historically superior, or counted as corroboration.
+
+
+Historical-status boundary: the visible manuscript face is the historical witness used here. Present digital custody does not establish whether this manuscript generation is the first/original field return, an office copy, fair copy, later administrative copy, or another documentary state.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY
+
+
+The historical evidence used below is the manuscript surface visible in OHC_2505.pdf. The two stored PDFs are digital custody objects carrying the same exact payload. A 300-DPI full-page render and a 600-DPI full-page render, plus enlarged and contrast-adjusted row crops, were made only for inspection. Those images are temporary study derivatives and are not returned as additional source objects or witnesses. No OCR carries the load-bearing readings in this jacket.
+
+
+This is not a full-page transcription. It records two bounded features on p.110 whose row/line geometry is sufficiently clear to produce durable source-facing gains: one standalone company/grouping line and one populated farm row.
+
+
+CORRECTION HISTORY — STANDALONE COMPANY LINE
+
+
+Prior Ravel addendum state in the OHC_2506 jacket: p.110 contains a standalone `Capt ... comp.` grouping line with no ordinary farm-row numerals on that line; the captain name was deliberately left open.
+
+
+Present direct-source best reading:
+`Capt Moko comp.`
+
+
+`Capt`, `Moko`, and the abbreviated `comp.` are visually strong on the 600-DPI direct PDF render. The spelling Moko is strengthened here as the best diplomatic reading of this occurrence, but remains source-spelling rather than a normalized person identity. This does not silently rewrite Ravel’s earlier open reading; the earlier `Capt ... comp.` state is preserved above as correction history.
+
+
+The line is structurally different from ordinary populated farm rows: the adjacent numerical cells do not carry the ordinary row entries seen immediately above and below. This pass therefore confirms Ravel’s grouping-line reading while materially sharpening its source-written label.
+
+
+BOUNDED POPULATED ROW — AHAGLAUCHA
+
+
+Name of Indian owning Farm:
+`Ahaglaucha.` [best reading; retain correction-open for later paleographic review]
+
+
+No. of Acres Cultivated:
+`4`
+
+
+Entire No. of the Family:
+`10`
+
+
+Males over 16 years:
+`2`
+
+
+Males and Females under 10 years:
+`2`
+
+
+Locality of Farms:
+`Young Warrior. Water of Pearl River.`
+
+
+The punctuation after `Warrior` looks period-like on this face; punctuation and capitalization remain diplomatic details rather than normalized geography. `Water of Pearl River` is retained as source wording and is not converted here to watershed, drainage, district, township, modern place-name, or coordinate.
+
+
+Total No. of Acres:
+No numeral is safely certified on this row in this pass.
+
+
+General Remarks:
+No remark is safely certified on this row in this pass.
+
+
+The latter two statements are reading-state limits, not historical claims that the cells were administratively blank.
+
+
+ROW-GEOMETRY FINDING
+
+
+The horizontal ruling coordinates Ahaglaucha, the numerical sequence 4 / 10 / 2 / 2, and the Locality entry `Young Warrior. Water of Pearl River.` as one populated manuscript row. The locality wording therefore belongs to this row at source force. It is not carried from a neighbor by this jacket, and it is not relocated into General Remarks.
+
+
+FINDINGS
+
+
+1. The previously unnamed p.110 predecessor company heading can now be read at best source-facing strength as `Capt Moko comp.`. This materially deepens the existing p.110→p.111 grammar observation without creating a new person identity outside this occurrence.
+
+
+2. The OHC_2506 / p.111 jacket already demonstrates that populated rows continue across the p.110→p.111 page break before the next standalone heading `Capt Thomas Leflore company.` appears. With the p.110 heading now stabilized, the local seam can be described more exactly: the predecessor grouping line at the source-structure level is the `Capt Moko comp.` line. This is a documentary-structure statement only. It does not by itself establish that any named individual verbally or legally “belonged to” Moko’s company, and it carries no geographic territory.
+
+
+3. On p.110, `Young Warrior. Water of Pearl River.` occurs inside the printed Locality of Farms field on the Ahaglaucha row. On the immediately preceding worked p.109 face, a different populated row carries `Young Warrior: water of Pearl River` in the same printed field. The two adjacent faces therefore provide repeated field-position evidence that the `Young Warrior` wording functions here as locality prose. The punctuation/capitalization is not identical and the rows are distinct.
+
+
+4. Repetition of the same or near-same locality wording across two rows does not make the rows one household, one tract, one farm, one person, or one legal claim. It only strengthens the source-facing field-role reading.
+
+
+5. The two OHC_2505 PDFs are exact duplicate payloads in separate custody. Their repetition does not increase the historical witness count.
+
+
+INTERPRETATION — KEPT SEPARATE
+
+
+The ordinary documentary reading is that `Capt Moko comp.` is a grouping label in the names column rather than an ordinary farm-holder row, while `Young Warrior. Water of Pearl River.` is row-owned locality prose for Ahaglaucha. The p.110→p.111 seam shows that this form can let a company/grouping run cross a page break before a successor heading appears.
+
+
+This jacket does not decide who Capt Moko was, whether Moko is the normalized or complete historical name, what administrative meaning `comp.` carried beyond the source’s grouping grammar, or whether every person structurally between headings personally identified with that captain in some other documentary sense. It also does not decide what `Young Warrior` denotes historically. The words may represent a place-name, locality label derived from a person/title, neighborhood, route, settlement, or another referent; the source face does not resolve that question.
+
+
+UNRESOLVED QUESTIONS
+
+
+- Is `Moko` the strongest diplomatic spelling once compared with other independent occurrences, if any, of the same written name?
+- Who created the company/grouping headings, and at what administrative stage relative to the farm-row entries?
+- What precise administrative force did `comp.` carry in this return?
+- What historical referent did `Young Warrior` denote on pp.109–110?
+- Does a separate map, return, survey, letter, or administrative record define that locality more precisely without relying on modern reconstruction?
+- Is the punctuation after `Young Warrior` on p.110 a period, colon-like stop, or another mark?
+- What documentary generation is the surviving manuscript face?
+
+
+EXPLICIT NONCLAIMS
+
+
+- `Capt Moko comp.` is not merged with any same- or similar-name person elsewhere in Public Lands, Article 14, patents, MCR files, testimony, maps, or later family materials.
+- The company heading is not converted into a captain territory, residence district, cadastral unit, route, household, kin group, or ownership relation.
+- No person in the structural run is assigned personal company membership beyond the ledger’s demonstrated grouping grammar.
+- `Ahaglaucha.` is not merged with any same- or similar-name occurrence elsewhere.
+- `Young Warrior` is not promoted from locality prose into a person identity node.
+- The p.109 and p.110 `Young Warrior / Pearl River` locality occurrences are not treated as proof of one parcel, one farm, adjacency, co-residence, kinship, or shared ownership.
+- `Water of Pearl River` is not normalized into a modern watershed polygon, coordinate, township/range, county, patent tract, or present-day place-name.
+- The absence of a safely certified total-acre numeral or General Remarks text on the Ahaglaucha row is not promoted into a historical zero, administrative denial, lack of land, or lack of remarks in another documentary state.
+- The two OHC_2505 custody objects are not treated as corroborating historical sources.
+- No Bell, McKinney, Leflore, or other family identity conclusion moves from this pass.
+
+
+BACKWARD / FORWARD SEAMS
+
+
+Backward: GLEAN SOURCE-FACING JACKET — OHC_2504 — manuscript p.109 — Young Warrior / Pearl River locality row and 108→109→110 seam, Drive ID 1iyTmKvr_vPgLlS2OniaiWDxWA5UhhFQxy9fhtq9AueA. That jacket’s p.110 forward seam is now worked. The p.109 locality wording `Young Warrior: water of Pearl River` is compared only at field-role reach; its captain-titled row is not merged with Ahaglaucha or with p.110’s Moko heading.
+
+
+Forward: LEAF JACKET — OHC_2506 — Public Lands No. 3 Form of a Return — James Bell and Levy Bell, Drive ID 1juDZZddemXFM6nuQQyuADABQ5BbvyxFkU0INL148DTY. First Light’s source-facing p.111 work and Ravel’s later p.110→p.111 company-heading grammar addendum are received as the forward control. The direct sequence establishes manuscript p.111 and the successor standalone heading `Capt Thomas Leflore company.` after initial populated rows. This jacket adds the exact predecessor label `Capt Moko comp.` but does not reopen or rewrite the p.111 Bell rows.
+
+
+The bounded seam is 109 → 110 → 111. No corpus-wide company theory is asserted.
+
+
+RETURN PATHS
+
+
+Primary current road home:
+quoted-title Public Lands → Public Lands — Whole-Document Corpus → Source objects — received batch 1 — OHC 2408–2518 → folder ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA → OHC_2505.pdf → Drive ID 14dndY9r1Gw8b97DVZY1Tn2h1BP7PA8ri → manuscript p.110 → standalone `Capt Moko comp.` grouping line and Ahaglaucha row → Locality of Farms `Young Warrior. Water of Pearl River.`
+
+
+Parallel custody road home:
+parallel/legacy source branch → parent folder ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI → OHC_2505.pdf → Drive ID 1jjqR328qxjaV3XnLCRt26JxSXgWHEvtr → exact same PDF payload / same visible manuscript p.110.
+
+
+Backward jacket seam:
+GLEAN SOURCE-FACING JACKET — OHC_2504 — manuscript p.109 — Young Warrior / Pearl River locality row and 108→109→110 seam → Drive ID 1iyTmKvr_vPgLlS2OniaiWDxWA5UhhFQxy9fhtq9AueA.
+
+
+Forward jacket seam:
+LEAF JACKET — OHC_2506 — Public Lands No. 3 Form of a Return — James Bell and Levy Bell → Drive ID 1juDZZddemXFM6nuQQyuADABQ5BbvyxFkU0INL148DTY.
+
+
+JACKET SELF-RETURN
+
+
+Current jacket home: Public Lands No. 3 p.110 — Capt Moko grouping, Ahaglaucha / Young Warrior locality, unresolved captain / Leaf River row, and Moko–Moyo distinction — OHC_2505 source jacket → Drive ID 1NrHA5SpfnIkApWlC8cpp8vQaY299uOTbgHSo0mVDnOA → 01 — Source House — Jackets → folder ID 1wmu1i-BuFtncIkedpAKAH3fxZbWUhi9q. Archival OHC_2505.pdf representations remain on their separately stated source-object custody roads; the governing prose jacket is not duplicate source storage.
+
+
+NEXT HONEST VERB
+
+
+No further row work is required to justify this jacket. A later source-facing pass may independently test other Moko occurrences, the exact administrative semantics of `comp.`, or additional `Young Warrior` locality rows. It should not begin by converting the present source-structure relation into a person-level identity, geography, kinship, residence, or land-title conclusion.
+
+
+Maker: Glean
+Date: 2026-09-07
+
+
+
+
+UPWARD PROPAGATION — NEEDLE UP — 2026-09-07
+
+
+Needle Up received this wrapped source-facing result only; the archival source was not reopened. Active 03 / 09 grammar now separates source-structural heading-run placement from person-level company membership. `Capt Moko comp.` plus the p.110→p.111 seam supports the structural run until the successor heading `Capt Thomas Leflore company.`; no `member of Capt Moko’s company` proposition has been added. The p.103 source-device scope rule remains active; this is a relation-type correction, not a reversal of scope detection. Custody, maker attribution, source wording, representation distinctions, seam, and uncertainties are unchanged. Glean retains the source-facing read and wrapper; Needle Up owns only the upward repair.
+
+
+
+
+MULLION BOUNDED SOURCE-FACE ADDENDUM — Moko heading / Moyo row distinction — 2026-09-07
+
+
+Mullion received Glean’s p.110 jacket and Needle Up’s later upward propagation without reopening their work. I returned directly to the governing received source representation, OHC_2505.pdf, Drive ID 14dndY9r1Gw8b97DVZY1Tn2h1BP7PA8ri, and inspected only one local paleographic/row-structure seam on manuscript p.110.
+
+
+The face contains two nearby but source-distinct written forms. The earlier standalone grouping line is the already stabilized `Capt Moko comp.`. Farther down the same face, after the ordinary row best read `Sholotka.`, the next ordinary name-row is best read `Moyo.`. The lower `Moyo.` line occupies an ordinary ruled row and carries ordinary row entries to the right; `Capt Moko comp.` is a standalone grouping line whose adjacent numerical cells do not carry the ordinary row entries. This is therefore both a spelling-form distinction and a source-structural distinction on the same manuscript face.
+
+
+The bounded gain is protective rather than identificatory: `Moko` and `Moyo` are not silently normalized into one source string, one row, or one person. Their visual resemblance and proximity do not establish aliasing, identity, kinship, succession, household relation, company membership, or any other person-level join. Conversely, the differing written forms do not prove that two different historical people are represented. The identity relation between the captain label and the later `Moyo.` row remains OPEN.
+
+
+This same-face comparison modestly strengthens the diplomatic stability of Glean’s `Moko` reading because the manuscript face visibly distinguishes the heading’s medial `k` form from the later row’s descending `y` form. That is a paleographic control only; it does not normalize either name or establish who either occurrence denotes.
+
+
+Exact downward return: GLEAN SOURCE-FACING JACKET — OHC_2505 — manuscript p.110 — Drive ID 1NrHA5SpfnIkApWlC8cpp8vQaY299uOTbgHSo0mVDnOA → primary received OHC_2505.pdf → Drive ID 14dndY9r1Gw8b97DVZY1Tn2h1BP7PA8ri → manuscript p.110 → standalone `Capt Moko comp.` line → later ordinary row best read `Moyo.`. Parallel custody remains OHC_2505.pdf, Drive ID 1jjqR328qxjaV3XnLCRt26JxSXgWHEvtr, already established by Glean as an exact duplicate payload / separate road home / same visible manuscript witness.
+
+
+The full-page render, embedded-image extraction, and enlarged crops used in this check were temporary inspection derivatives only and were not admitted to Drive. No row beyond the bounded Moyo distinction was transcribed, no neighboring name was normalized, no captain run was redefined, and no Bell–McKinney identity, entitlement, residence, geography, or land-title proposition moved.
+
+
+Maker: Mullion
+State: Bell–McKinney Daylight / Public Lands p.110 source-face distinction; Glean custody preserved; Needle Up upward grammar preserved; outward joins unchanged
+
+
+## NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+RETURN 1 — CAPT MOKO GROUPING LINE
+Person / Entity: Capt Moko [p.110 grouping-line occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.110 CARRIES the standalone source-written grouping line `Capt Moko comp.` in the names column; the adjacent numerical cells do not carry ordinary farm-row entries on that line.
+Case / Object: OHC_2505 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.110
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.110 — Capt Moko grouping, Ahaglaucha / Young Warrior locality, unresolved captain / Leaf River row, and Moko–Moyo distinction — OHC_2505 source jacket
+Identity / Relation Status: source-local grouping-heading occurrence only; `comp.` is preserved as documentary grouping grammar and is not expanded into personal membership, territory, household, kinship, residence, or ownership; Moko is not silently normalized or merged with the later ordinary-row `Moyo.` occurrence, and the historical-person identity relation between those two written forms remains OPEN.
+
+
+RETURN 2 — AHAGLAUCHA / YOUNG WARRIOR LOCALITY
+Person / Entity: Ahaglaucha [p.110 farm-row occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.110 LISTS `Ahaglaucha.` with 4 cultivated acres, family total 10, 2 males over 16, 2 males or females under 10, and Locality of Farms `Young Warrior. Water of Pearl River.`
+Case / Object: OHC_2505 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.110 / Ahaglaucha row
+Place: `Young Warrior`; `Water of Pearl River` [source-local locality wording; exact referents OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.110 — Capt Moko grouping, Ahaglaucha / Young Warrior locality, unresolved captain / Leaf River row, and Moko–Moyo distinction — OHC_2505 source jacket
+Identity / Relation Status: source-local farm-row occurrence; Ahaglaucha reading remains correction-open and is not merged with another same- or similar-name occurrence; the p.109 and p.110 Young Warrior / Pearl River phrases are repeated locality-field evidence but are not one proved farm, parcel, household, or geographic point; no total-acre numeral or General Remarks text is safely certified for this row in the governing jacket.
+
+
+RETURN 3 — MOYO ORDINARY ROW / MOKO DISTINCTION
+Person / Entity: Moyo [p.110 ordinary-row occurrence]
+Date: not supplied by this page-facing pass
+Earned verb / relation: Direct p.110 reinspection CARRIES a later source-written `Moyo.` as an ordinary ruled name-row with ordinary row entries to the right, structurally distinct from the earlier standalone `Capt Moko comp.` grouping line.
+Case / Object: OHC_2505 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.110
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.110 — Capt Moko grouping, Ahaglaucha / Young Warrior locality, unresolved captain / Leaf River row, and Moko–Moyo distinction — OHC_2505 source jacket
+Identity / Relation Status: occurrence and source-structure distinction only; differing written forms and row functions do not establish either identity or disidentity between Moko and Moyo; no alias, kinship, succession, company-membership, or same-person relation is manufactured.
+.
+
+
+PUBLIC LANDS PP.109–111 — `POOR LAND` / `GOOD WATER` RECURRENCE — SOURCE-GRAMMAR DEEPENING — 2026-09-19
+
+
+Direct inspection of three consecutive manuscript faces establishes a repeated General Remarks pairing:
+
+
+- Manuscript p.109 / OHC_2504 / `Oklattya.` row: 10 cultivated acres; family 16; males over 16 = 6; under 10 = 3; a source-written Robinson-road / Pearl-river locality phrase whose internal connective remains correction-open; total acreage 80; General Remarks `Land poor and good water` [final punctuation correction-open].
+- Manuscript p.110 / OHC_2505 / bottom captain-titled row: the personal name after `Capt` remains correction-open; 8 cultivated acres; family 7; males over 16 = 2; under 10 = 3; Locality `Strong river: water of Leaf river` [punctuation and singular/plural of water remain minor correction-open]; total acreage 80; General Remarks `Poor land. good water` [final punctuation correction-open].
+- Manuscript p.111 / OHC_2506 / `James Bell.` row: 8 cultivated acres; family 6; one visible entry in the under-10 column; source-visible blank Locality of Farms and Total No. of Acres cells; General Remarks `Poor land [punctuation unclear] good water.`
+
+
+Each phrase is written afresh on its own row. No ditto sign, brace, or other carry device is needed to attach any of the three remarks. The recurrence therefore belongs to three row-local source cells, not one remark spread across faces.
+
+
+SOURCE-GRAMMAR FINDING
+
+
+The land/water pairing recurs despite different row hosts and different supporting-field states. Pages 109 and 110 carry source-written localities and 80-acre totals; James Bell's p.111 row carries neither locality nor total acreage. `Good water` therefore does not supply a missing locality, named water body, or acreage on the Bell row. `Poor land` does not supply a legal status or land outcome.
+
+
+The recurrence makes `poor land` / `good water` a demonstrated descriptive-vocabulary pattern in this three-face run. It does not yet establish a formally defined rating scale, a single assessor, one inspection moment, or mechanically standardized wording. Page 109 reverses the order as `Land poor`; pages 110 and 111 use `Poor land`; punctuation varies or remains unclear.
+
+
+This comparison changes the reading context of the James Bell remark without changing its row assignment. The p.111 phrase is not a unique personal narrative: closely corresponding wording occurs on the two immediately preceding faces. James Bell's locality and total-acreage cells remain blank.
+
+
+SOURCE / REPRESENTATION CONTROL
+
+
+The comparison was made from direct renders of the held manuscript representations: OHC_2504.pdf, OHC_2505.pdf, and OHC_2506.pdf. The renders and row crops are inspection derivatives only. The three manuscript faces remain three historical faces; duplicate stored representations of a face do not add witnesses.
+
+
+EXPLICIT NONCLAIMS
+
+
+- The three row hosts are not linked by identity, kinship, household, company membership, land adjacency, or a shared water source.
+- `Good water` is not normalized to Pearl River, Leaf River, a spring, creek, crossing, watershed, or residence.
+- `Poor land` is not converted into poor title, rejection, disqualification, low acreage, low value, or nonoccupation.
+- Recurrent wording is not proof that one clerk inspected all three farms or used an official grading code.
+- The recurrence does not fill James Bell's blank locality or total-acreage cells.
+
+
+RETURN PATHS
+
+
+p.109: OHC_2504.pdf → Drive 1mrhtLN4vA8taF4wJi-7DNImC6KrL4M_t → governing jacket 1iyTmKvr_vPgLlS2OniaiWDxWA5UhhFQxy9fhtq9AueA → `Oklattya.` row.
+p.110: OHC_2505.pdf → Drive 14dndY9r1Gw8b97DVZY1Tn2h1BP7PA8ri → this governing jacket → bottom captain-titled row.
+p.111: OHC_2506.pdf → Drive 1DtoquScbiLdeLOPQifkGDBNItYi1Y_nd → governing jacket 1juDZZddemXFM6nuQQyuADABQ5BbvyxFkU0INL148DTY → `James Bell.` row.
+
+
+Maker: Glean
+
+
+
+
+SEDGE MAP-FACING DEEPENING — AHAGLAUCHA LOCALITY FIELD — 19 SEP 2026
+
+
+DIRECT SOURCE RETURN
+Sedge returned to the received OHC_2505.pdf face rather than mapping from the prose jacket alone. On manuscript p.110, the Ahaglaucha row carries the printed-field relation `Locality of Farms` → `Young Warrior. Water of Pearl River.` The row ruling carries that locality on the same horizontal occurrence as Ahaglaucha and the numerical entries 4 / 10 / 2 / 2.
+
+
+PLACE / RELATION CLASSIFICATION
+For Prose Map purposes, the source-facing geographic object is the full composite locality phrase exactly as written: `Young Warrior. Water of Pearl River.` The map may index the visible tokens `Young Warrior` and `Water of Pearl River` for return and comparison, but this face does not earn a directional, containment, distance, route, or identity relation between those two tokens. Punctuation separates the phrases; it does not by itself tell us whether `Young Warrior` is a person-derived locality, settlement, neighborhood, route, district, or another referent, nor whether `Water of Pearl River` should be normalized as a modern watershed or river-side location.
+
+
+OCCURRENCE / IDENTITY BRAKE
+`Ahaglaucha` is the host of this locality-field occurrence. The locality does not identify Ahaglaucha with another same- or similar-name person, and `Young Warrior` does not become a person node merely because its wording could derive from a title or name. The nearby `Capt Moko comp.` grouping line is documentary structure, not geography for this Ahaglaucha row unless a separate source earns that attachment.
+
+
+GEOMETRY STATE
+Precision remains RELATIONAL / UNPLACED. No coordinate, parcel, farm boundary, Pearl River segment, modern county, watershed polygon, road, or person dot is earned by this face. The map should not draw a `Young Warrior`↔`Pearl River` line from this wording alone. The p.109 recurrence of near-identical locality prose may be carried as a cross-source vocabulary comparison only; it does not create adjacency, co-location, one farm, or a shared tract.
+
+
+REPRESENTATION / PROVENANCE
+Historical witness: manuscript p.110. Current received carrier inspected by Sedge: OHC_2505.pdf, Drive 14dndY9r1Gw8b97DVZY1Tn2h1BP7PA8ri. Governing jacket: this document. Temporary page render used for inspection is a derivative only and is not a new witness.
+
+
+MAP CONSEQUENCE
+Cross one source occurrence only: AHAGLAUCHA FARM ROW — LOCALITY OF FARMS → `Young Warrior. Water of Pearl River.` Keep event date OPEN on this face; keep all outward geometry and identity joins OPEN.
+
+
+Custody mark: Sedge — Mapping Grounds / whole documentary landscape — 19 Sep 2026
+
+
+
+
+SMALL DOOR — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-21
+
+
+RETURN 4 — CORRECTION-OPEN CAPTAIN / STRONG RIVER–LEAF RIVER ROW
+Person / Entity: [captain personal name unresolved — Public Lands p.110 bottom captain-titled row]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Direct manuscript p.110 inspection CARRIES a bottom captain-titled row with 8 cultivated acres, family total 7, 2 males over 16, 3 males or females under 10, Locality of Farms `Strong river: water of Leaf river`, Total No. of Acres 80, and General Remarks `Poor land. good water` [punctuation and the singular/plural form of `water` remain minor correction-open details].
+Case / Object: OHC_2505 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.110 / bottom captain-titled row
+Place: `Strong river: water of Leaf river` [source-local locality wording; exact referents, grammar, modern identities, hydrology, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.110 — Capt Moko grouping, Ahaglaucha / Young Warrior locality, unresolved captain / Leaf River row, and Moko–Moyo distinction — OHC_2505 source jacket
+Identity / Relation Status: the personal name following `Capt` remains unresolved and is not normalized or merged with another captain occurrence. The locality phrase is not converted into a modern Strong River / Leaf River identity, route, watershed, farm point, residence, parcel, or water-right relation. `Poor land. good water` remains row-local descriptive language and is not imported from p.109 Oklattya or p.111 James Bell; recurrence across the three faces is comparison evidence, not one farm, one assessor, one water source, one administrative event, or corroboration.
+
+
+Small Door crossing: one proposition-local return only. Existing Capt Moko, Ahaglaucha, and Moyo returns remain separate and unchanged except for the strengthened jacket title. Duplicate OHC_2505 custody roads remain one historical witness.
+
+
+— Small Door — Mapping Grounds / Name Web

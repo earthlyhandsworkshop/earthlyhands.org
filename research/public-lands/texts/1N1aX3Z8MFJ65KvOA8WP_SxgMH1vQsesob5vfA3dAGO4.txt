@@ -1,0 +1,386 @@
+Public Lands No. 3 p.108 — George Harkins supplement and Capt Thos Hays / Mrs Lytle taken-by remark — OHC_2503 source jacket
+
+
+Status: NEW DIRECT-SOURCE JACKET — ONE MANUSCRIPT FACE — ONE BOUNDED ROW — CROSS-FORM REPRESENTATION CONTROLLED — CORPUS SYNTHESIS NOT CLAIMED
+
+
+SOURCE-WORK FOOTING
+
+
+This jacket follows the current Earthly Hands Source Work Front Door and canonical-source-work practice: source before synthesis; materially earned work only; one historical witness despite duplicate digital custody or alternate representations; source face, digital facsimile, inspection derivative, diplomatic reading, and interpretation kept distinct; exact provenance and roads home preserved; uncertainty and nonclaims carried forward; and no same-name person or duplicate source object silently merged.
+
+
+The live source governs this pass. Earlier crossings are received as provenance and representation history, not as substitutes for opening the source face.
+
+
+SOURCE IDENTITY AND CUSTODY
+
+
+- Corpus: quoted-title Public Lands.
+- Documentary body visible on the face: Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- Visible manuscript page: 108.
+- Primary current received representation: OHC_2503.jpg.
+- Primary current Drive ID: 16qtopLasdDNTlDPhLeorsvhYtAT_V0Bz.
+- Primary current folder: Source objects — received batch 1 — OHC 2408–2518.
+- Primary current folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+- Alternate same-name JPEG custody object: OHC_2503.jpg, Drive ID 1yV3qrBxMlTWkBYrG2TL5HUwIIBB_6aUL.
+- Alternate-representation folder: Alternate source representations — OHC 2503 & 2517 — received outside batch 1.
+- Alternate-representation folder ID: 1V26znidBvjTj6_m7ChModfdo1GIJTe8a.
+- Parallel PDF representation: OHC_2503.pdf, Drive ID 1GoXNSyAsfZg_jDR3icT43YWfwjZF6ruL, in the same alternate-representation folder.
+
+
+The two separately stored OHC_2503.jpg objects were independently retrieved in this pass. Each is 839,340 bytes and both returned SHA-256 bacd63cf084376631a1908176576525b9b68b0b3a4db0e4637e0ad32bed54fd5. Direct byte comparison is exact. They therefore remain two custody roads / one JPEG payload, not two historical witnesses.
+
+
+The OHC_2503.pdf object is a different file payload: 243,795 bytes, SHA-256 2b7fc919aebc7bdb8efd4c001790583a693cecf452dd3a6c182c7ebb319720e5. Its embedded grayscale image is 2038 × 1879 pixels; the standalone JPEG is 2037 × 1875 pixels. Direct visual comparison and an aligned image comparison show the same visible manuscript p.108 surface, while the pixel dimensions, encoding, and file payload remain distinct. Derivative direction between the JPEG and PDF is NOT established. The governing representation state is therefore: two JPEG custody objects sharing one exact payload + one distinct PDF representation + one visible manuscript face / one historical witness.
+
+
+This jacket does not delete, prefer, normalize, or silently merge any of those held objects. The prior crossing panel concerning OHC_2479 / OHC_2503 / OHC_2517 is received as representation-history provenance; this pass independently checks the p.108 relation needed here.
+
+
+Historical-status boundary: the visible manuscript face is the historical witness used here. Present digital custody does not establish whether that manuscript generation is the first/original return, an office copy, a fair copy, or another administrative state.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY
+
+
+The manuscript face visible in OHC_2503.jpg and OHC_2503.pdf carries the historical evidence used below. The stored JPEGs and PDF are digital representations. The high-resolution PDF render, extracted PDF image, crops, enlargement, contrast changes, and row-isolation images used for inspection are study derivatives only. They are not admitted as new source objects or additional witnesses. No OCR carries the load-bearing reading.
+
+
+This jacket does not attempt a full-page transcription. It records one bounded top-row occurrence whose row geometry is clear enough to support exact field assignment. Interpretation is kept separate.
+
+
+BOUNDED SOURCE READING — TOP ROW
+
+
+Name of Indian owning Farm:
+George Harkins.
+
+
+No. of Acres Cultivated:
+20
+
+
+Entire No. of the Family:
+3
+
+
+Males over 16 years:
+1
+
+
+Males and Females under 10 years:
+1
+
+
+Locality of Farms:
+No source writing is safely certified in the George Harkins row's Locality cell in this pass. That state is not strengthened into a claim that the historical cell was necessarily blank.
+
+
+Total No. of Acres:
+1280
+
+
+General Remarks:
+Provided for in supplement. 2 sections.
+
+
+The punctuation between supplement and 2 sections is read as a period from the inspected face but remains minor correction-open punctuation; the wording and the two-section quantity are secure enough for this bounded reading.
+
+
+ROW-GEOMETRY FINDING
+
+
+The horizontal rules are clear enough to coordinate George Harkins, 20 cultivated acres, family total 3, the two age counts of 1 and 1, total acreage 1280, and the General Remarks wording Provided for in supplement. 2 sections. as one manuscript row. The General Remarks phrase is not carried into the row below and is not relocated into Locality of Farms.
+
+
+FINDINGS
+
+
+1. Manuscript p.108 contains a clearly coordinated George Harkins row with total acreage 1280 and the General Remarks entry Provided for in supplement. 2 sections.
+2. The source itself places the supplement / two-sections statement in General Remarks, distinct from the printed Total No. of Acres column.
+3. The row juxtaposes a numeric total acreage and a section-count remark, but it does not explain the administrative calculation or documentary stage connecting them.
+4. The Locality cell is not used to carry the supplement wording on this row.
+5. The two held OHC_2503 JPEGs are exact duplicate payloads in separate custody; the PDF is a distinct digital representation of the same visible manuscript face. None of these digital repetitions increases the historical witness count.
+
+
+INFERENCE — KEPT SEPARATE
+
+
+The most ordinary reading is that the recorder understood George Harkins as having some provision associated with a supplement and described that provision as 2 sections while also recording 1280 in Total No. of Acres. The row alone does not establish what supplement is meant, when the provision was made, whether the 1280 figure was derived from the two-section statement, whether either notation reflects an intermediate or final administrative state, or what later legal or physical land outcome followed.
+
+
+Because 1280 and 2 sections appear on the same ruled row, their relation is an earned comparison target. This jacket does not use modern arithmetic or land-law assumptions to rewrite one field from the other.
+
+
+UNRESOLVED QUESTIONS
+
+
+- What exact supplementary instrument or schedule is meant by supplement on this row?
+- Was the 1280 total entered from the same administrative act represented by 2 sections, or did the two notations come from different stages or sources?
+- Who entered the General Remarks wording and the total-acreage figure, and were they entered contemporaneously?
+- Does another face, certification, supplement list, or later administrative record explain the George Harkins provision?
+- Does the row's Locality cell contain faint source writing not safely recoverable from the present representations?
+- What documentary generation is the surviving manuscript face: original field return, office copy, later fair copy, or another administrative state?
+
+
+EXPLICIT NONCLAIMS
+
+
+- George Harkins on p.108 is not silently merged with any same- or similar-name Harkins occurrence elsewhere in Public Lands or another body.
+- Provided for in supplement. 2 sections. is not promoted to proof of patent, survey, delivery, possession, residence, completed grant, payment, transfer, removal status, or later ownership.
+- The 1280 figure is not independently labeled here as granted, delivered, patented, possessed, or finally awarded acreage.
+- This jacket does not identify the supplement or treaty article from this row alone.
+- A Locality cell without safely certifiable writing is not converted into a historical blank, zero, ditto, unknown geography, or evidence of nonresidence.
+- The two JPEG custody objects are not treated as corroborating historical sources.
+- The PDF is not treated as an additional historical witness merely because it is a separate file form.
+- Derivative direction between JPEG and PDF is not claimed.
+- No p.109 row finding is imported into this jacket.
+
+
+BACKWARD / FORWARD SEAMS
+
+
+Backward: GLEAN SOURCE-FACING JACKET — OHC_2502 — manuscript p.107 — Capt Red Dog company-reference seam and 106→107→108, Drive ID 12e8GnNSjn_oXQcNnKyEf9uH9H9LMSMU1W4cDRDv7XKo, is received as the immediately preceding worked face. This p.108 jacket receives only the page/form seam from p.107; it does not carry the p.107 Capt Red Dog company wording, identity question, locality state, or row interpretation forward.
+
+
+Forward: the next distinct source object opened only for seam control is OHC_2504.pdf, current received-batch Drive ID 1mrhtLN4vA8taF4wJi-7DNImC6KrL4M_t, parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA. It visibly carries manuscript page 109 under the same Public Lands No. 3 continued-return form. No p.109 row work is claimed here.
+
+
+A second same-name OHC_2504.pdf custody object exists at Drive ID 1wrqcK-3qigu5l-xG7Hoy4pLLuuSbwXjU, parent folder ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI. Both p.109 PDFs report 234,312 bytes, but their payload equivalence was not independently tested in this pass. They therefore remain separate custody objects with an OPEN duplicate relation; no silent merge or corroboration claim is made.
+
+
+The bounded page/form seam is 107 → 108 → 109.
+
+
+RETURN PATHS
+
+
+Primary current road home:
+quoted-title Public Lands → Public Lands — Whole-Document Corpus → Source objects — received batch 1 — OHC 2408–2518 → folder ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA → OHC_2503.jpg → Drive ID 16qtopLasdDNTlDPhLeorsvhYtAT_V0Bz → manuscript p.108 → top row → George Harkins → Total No. of Acres 1280 / General Remarks Provided for in supplement. 2 sections.
+
+
+Alternate JPEG custody road home:
+Alternate source representations — OHC 2503 & 2517 — received outside batch 1 → folder ID 1V26znidBvjTj6_m7ChModfdo1GIJTe8a → OHC_2503.jpg → Drive ID 1yV3qrBxMlTWkBYrG2TL5HUwIIBB_6aUL → exact same JPEG payload / same visible manuscript p.108.
+
+
+Parallel PDF representation road home:
+Alternate source representations — OHC 2503 & 2517 — received outside batch 1 → folder ID 1V26znidBvjTj6_m7ChModfdo1GIJTe8a → OHC_2503.pdf → Drive ID 1GoXNSyAsfZg_jDR3icT43YWfwjZF6ruL → distinct PDF representation / same visible manuscript p.108.
+
+
+Backward jacket seam:
+GLEAN SOURCE-FACING JACKET — OHC_2502 — manuscript p.107 — Capt Red Dog company-reference seam and 106→107→108 → Drive ID 12e8GnNSjn_oXQcNnKyEf9uH9H9LMSMU1W4cDRDv7XKo.
+
+
+Forward source seam:
+OHC_2504.pdf → current received-batch Drive ID 1mrhtLN4vA8taF4wJi-7DNImC6KrL4M_t → visible manuscript p.109; alternate same-name OHC_2504.pdf → Drive ID 1wrqcK-3qigu5l-xG7Hoy4pLLuuSbwXjU → duplicate relation untested in this pass; substantive p.109 row work intentionally untouched.
+
+
+JACKET SELF-RETURN
+
+
+Public Lands No. 3 p.108 — George Harkins supplement and Capt Thos Hays / Mrs Lytle taken-by remark — OHC_2503 source jacket → Drive ID 1N1aX3Z8MFJ65KvOA8WP_SxgMH1vQsesob5vfA3dAGO4 → Source objects — received batch 1 — OHC 2408–2518 → folder ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+
+
+NEXT HONEST VERB
+
+
+A later pass may open p.109 on its own terms, or it may look for the source-written supplement referenced in George Harkins's p.108 remark. It should not begin by converting this row into a completed land outcome or by merging George Harkins with a same-name person elsewhere.
+
+
+Maker: Glean
+Date: 2026-09-07
+
+
+NEEDLE UP — UPWARD RETURN — 2026-09-07
+This jacket now supplies the control case for the live 03/09 PARALLEL QUANTITY EXPRESSIONS / QUANTITY-RELATION rule. The row’s `1280` and `2 sections` remain two source-carried expressions with relation UNRESOLVED. Any later conversion or normalization is derivative and must carry its source pointer, formula/authority, assumptions, and uncertainty; it cannot overwrite either source surface or cause this occurrence to be double-counted as multiple awards/events.
+
+
+No source text, row geometry, seam, person identity, supplement identification, entitlement/finality, representation, custody, or maker attribution changed. Glean retains the direct reading/jacket; existing representation/custody QA remains where already recorded. Needle Up owns only the upward documentary/quantitative propagation.
+
+
+
+
+OHC_2503 — trace name enters cross-carrier conflict — 2026-09-14 — source-jacket addendum
+
+
+Name Web hooks: Subject = OHC_2503 / manuscript p.108 | Relation = trace-name cross-carrier conflict | Date = 2026-09-14 | Object type = source-jacket addendum | Maker = Fieldglass | Ground = Film / Landscape Scaffolding ↔ Historical Landscape Map / Public Lands.
+
+
+A Library of Congress indexed-text representation of the printed American State Papers, Public Lands, 1834–1835 carrier exposes a row sequence corresponding closely to this manuscript neighborhood. In that printed representation: Chompah carries `Robinson bridge, east side.`; Athotubbee carries `West Natchez trace, east side.`; Ahnoyathubbee carries ditto; Tokahyah carries `Punmissah, east side.`; Capt. Thos. Hays carries ditto with 480 acres; and Moses Perry carries `Robinson road, south side` in the same continuing table neighborhood.
+
+
+This materially changes only the confidence state of the trace label. The current manuscript-facing Fieldglass/Selvedge reading `West Hatchy trace.` remains a direct visual reading of OHC_2503 at its own representation depth. The LOC layer is indexed/structured text from the printed carrier, not a Fieldglass visual reading of the printed page. Therefore it does not overwrite the manuscript face. But `West Hatchy trace` may no longer stand on the shared map as an uncontested settled label: the printed carrier supplies a strong same-neighborhood reading of `West Natchez trace, east side.`
+
+
+Current safe state:
+`MANUSCRIPT OHC_2503 / p.108 -> West Hatchy trace. — DIRECT-VISUAL WORKSHOP READING; RECHECK NOW EARNED`
+`PRINTED ASP CARRIER -> West Natchez trace, east side. — INDEXED-TEXT PRINTED-LAYER READING`
+`MANUSCRIPT <-> PRINTED TRACE WORDING -> CONFLICT / SOURCE-GENEALOGY TEST; NOT NORMALIZED`
+
+
+Nonclaims: no claim that either wording is a modern feature identity; no modern Natchez Trace line; no course, endpoint, road connection, Robinson-road connection, person movement, farm placement, reservation polygon, or Bell relation; no claim that the printed carrier is an independent historical witness rather than a published representation of the same administrative return tradition.
+
+
+Exact return path: OHC_2503 manuscript p.108 -> this governing jacket -> Library of Congress, American State Papers, Public Lands, 1834–1835, LOC-hosted PDF `llsp034.pdf`, indexed-text row sequence -> direct printed-page image still wanted -> then re-open the manuscript trace cell at full resolution before any diplomatic correction.
+
+
+Film / map consequence: suspend `West Hatchy trace` as a clean background label. If this locality enters either film before the face conflict is resolved, carry the trace only as a source-layer disagreement or leave it unnamed. Do not repair the disagreement with staging.
+
+
+— Fieldglass
+Film / Landscape Scaffolding · a printed carrier has challenged the trace word; the landscape waits for the faces to agree
+
+
+SECOND LOOK — SOURCE HOUSE RE-ENTRY — 15 Sep 2026
+
+
+This governing jacket was found inside the received source-object batch beside the source representations it describes. The source images remain source objects; this prose body belongs in Source House.
+
+
+The reread sharpens the George Harkins relation without resolving it. Manuscript p.108 coordinates one row carrying George Harkins, 20 cultivated acres, family total 3, age counts 1 and 1, Total No. of Acres 1280, and the General Remarks wording `Provided for in supplement. 2 sections.` The source gives two quantity expressions on one row but does not itself state the arithmetic or legal relation between them. The supplement remains unidentified.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+PERSON / ENTITY: George Harkins [p.108 occurrence]
+DATE: not assigned by this row alone
+EARNED VERB / RELATION: manuscript p.108 LISTS George Harkins with 20 cultivated acres, family total 3, Total No. of Acres 1280, and General Remarks `Provided for in supplement. 2 sections.`
+OBJECT: OHC_2503 / manuscript p.108 / Public Lands No. 3 continued return
+RETURN: this governing jacket → OHC_2503 source representations
+STATUS: proposition-local occurrence; supplement identity, calculation relation between `1280` and `2 sections`, locality, final land outcome, and same-name identity joins remain OPEN
+
+
+LIVE EDGE RETURN: a jacket stored among source objects can create a custody illusion even when its prose is careful. Source, representation, jacket, and compiled relation should remain distinguishable.
+
+
+Maker of re-entry: Sedge. Glean retains the governing direct-source reading; Needle Up and Fieldglass retain their attributed additions.
+
+
+
+
+CAPT THOS HAYS ROW — `TAKEN BY MRS LYTLE OF NASHVILLE` — SOURCE-FACING DEEPENING — 2026-09-19
+
+
+A whole-face reread of manuscript p.108 establishes a second bounded row on this historical face:
+
+
+Name field: `Capt Thos Hays.`
+No. of Acres Cultivated: `30`
+Entire No. of the Family: `6`
+Males over 16 years: `3`
+Males and Females under 10 years: no source numeral safely certified in this pass
+Locality of Farms: `Robinson road. south side.`
+Total No. of Acres: `480`
+General Remarks: `Taken by Mrs Lytle of Nashville.`
+
+
+The horizontal rules and baseline alignment coordinate these entries as one row. `Thos`, `Robinson road. south side.`, and `Mrs Lytle` are direct visual readings from OHC_2503.jpg and the same-face OHC_2503.pdf representation. Enlargement, grayscale conversion, and row-isolation crops were inspection derivatives only; they are not additional witnesses.
+
+
+CORRECTION HISTORY
+
+
+An initial working look during this pass misread the name as `Capt Alex Hays` and the locality as north side. Full-width alignment and enlargement reject both readings. The manuscript reads `Capt Thos Hays.` and `Robinson road. south side.` The initial readings were never promoted into the governing jacket and are recorded here only as superseded inspection history.
+
+
+SOURCE-FACING FINDING
+
+
+The row combines a named captain occurrence, cultivated and family figures, a road-side locality, a 480-acre total, and the source-written action phrase `Taken by Mrs Lytle of Nashville.` The manuscript supplies no explicit grammatical object after `Taken`. The phrase therefore opens a transaction, possession, or administrative-state retrieval door without deciding which of those relations the clerk meant.
+
+
+The printed heading `Name of Indian owning Farm` and the handwritten `Taken by` remark coexist on the row. Their coexistence does not settle whether the heading describes an earlier state, a classification convention, or the state current when the return was made. The form preserves both statements without explaining their chronology.
+
+
+The existing Library of Congress indexed-text print-layer seam is not used to verify, normalize, or rearrange this manuscript row. A direct image of the corresponding printed page remains wanted before any manuscript/print comparison is made.
+
+
+UNRESOLVED QUESTIONS
+
+
+- What object did the clerk understand after `Taken`—the farm, land, claim, entry, possession, or something else?
+- What event, instrument, date, or decision produced the remark?
+- Does a separate deed, assignment, claim, examination, or implementation record name Mrs Lytle?
+- Was `of Nashville` a residence, domicile, origin, or merely the clerk's identifying relation?
+- Does the 480-acre figure describe the same administrative state as the `Taken by` remark?
+
+
+EXPLICIT NONCLAIMS
+
+
+- `Taken by` is not promoted here to purchase, completed conveyance, legal title, occupation, inheritance, seizure, agency, or final ownership.
+- Mrs Lytle is not merged with any same-name occurrence outside this row.
+- `of Nashville` does not by itself prove residence or domicile.
+- The family and age figures are not reassigned to Mrs Lytle.
+- The row does not identify who cultivated the 30 acres.
+- Capt Thos Hays is not merged with another Hays occurrence elsewhere in Public Lands.
+
+
+RETURN PATH
+
+
+quoted-title Public Lands → Public Lands — Whole-Document Corpus → Source objects — received batch 1 — OHC 2408–2518 → folder ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA → OHC_2503.jpg → Drive ID 16qtopLasdDNTlDPhLeorsvhYtAT_V0Bz → manuscript p.108 → Capt Thos Hays row → General Remarks `Taken by Mrs Lytle of Nashville.`
+
+
+Maker: Glean
+
+
+SMALL DOOR — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-19
+
+
+RETURN — CAPT THOS HAYS FARM-ROW OCCURRENCE
+Person / Entity: Capt Thos Hays [Public Lands p.108 row occurrence]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.108 LISTS `Capt Thos Hays.` with 30 cultivated acres, family total 6, 3 males over 16, Locality of Farms `Robinson road. south side.`, Total No. of Acres 480, and General Remarks `Taken by Mrs Lytle of Nashville.`
+Case / Object: OHC_2503 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.108 / Capt Thos Hays row
+Place: `Robinson road. south side.` [source-local road-side wording; exact geometry and modern identity OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.108 — George Harkins supplement and Capt Thos Hays / Mrs Lytle taken-by remark — OHC_2503 source jacket
+Identity / Relation Status: source-local titled row occurrence only; no same-name merge; the under-10 numeral remains uncertified. The source-written `Taken by Mrs Lytle of Nashville.` remark is kept as a separate proposition and is not converted into purchase, conveyance, title, possession, occupation, or final ownership.
+
+
+RETURN — MRS LYTLE TAKEN-BY OCCURRENCE
+Person / Entity: Mrs Lytle [source-written named referent on Capt Thos Hays row]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.108 General Remarks CARRIES the source-written phrase `Taken by Mrs Lytle of Nashville.` on the Capt Thos Hays row.
+Case / Object: OHC_2503 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.108 / Capt Thos Hays row General Remarks
+Place: `Nashville` [source-written `of Nashville` identifying relation; exact type and reach OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.108 — George Harkins supplement and Capt Thos Hays / Mrs Lytle taken-by remark — OHC_2503 source jacket
+Identity / Relation Status: source-visible named occurrence and passive `Taken by` wording only; the source supplies no explicit grammatical object after `Taken`. Do not infer that Mrs Lytle took the farm, land, claim, entry, title, possession, or another object, and do not convert `of Nashville` into proved residence or domicile; no same-name merge.
+
+
+Small Door crossing: two proposition-local returns only. The Hays row state and the Mrs Lytle `Taken by` occurrence remain separately turnable. The held OHC_2503 JPEG/PDF representations remain one historical witness despite duplicate and parallel custody.
+
+
+— Small Door — Mapping Grounds / Name Web
+
+
+GLEAN DIRECT-FACE CORRECTION — `WEST NATCHEZ TRACE`, NOT `WEST HATCHY TRACE` — 2026-09-20
+
+
+Fresh direct reinspection of current received-batch `OHC_2503.jpg` / manuscript p.108 at enlargement corrects the earlier manuscript-facing reading carried above.
+
+
+On the ruled row carrying numeric fields `3 / 7 / 2 / 3`, the Locality of Farms field reads:
+
+
+`West Natchez trace. Punmissah.`
+
+
+The word is `Natchez`, not `Hatchy`. The earlier `West Hatchy trace.` reading remains above as correction history but loses present-tense authority.
+
+
+The immediately following ruled row, carrying `4 / 7 / 3 / 2`, contains two separately placed repeat marks in Locality of Farms: one `do` beneath the trace portion of the preceding line, and a second `do east side` beneath the `Punmissah` portion. The source-visible positions are recorded; neither mark is expanded here into a complete inherited locality statement.
+
+
+This removes the previously reported manuscript-versus-printed conflict at the trace-word level: the direct manuscript face and the indexed printed carrier both carry `Natchez`. It does not make the printed carrier an additional witness or authorize its indexed row assignments to rearrange the manuscript’s ruled-line geometry. Any remaining manuscript/print difference must be tested at face level.
+
+
+The personal-name readings on these two rows are not recertified by this correction. No modern Natchez Trace identity, mapped line, farm position, route, or person movement is inferred.
+
+
+Exact return: this jacket → current received-batch `OHC_2503.jpg` (`16qtopLasdDNTlDPhLeorsvhYtAT_V0Bz`) → manuscript p.108 → Locality of Farms → `3 / 7 / 2 / 3` row and immediately following `4 / 7 / 3 / 2` row.
+
+
+—Glean — Public Lands

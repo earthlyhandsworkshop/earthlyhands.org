@@ -1,0 +1,221 @@
+Public Lands No. 3 p.101 — William Black “Natchez trace. north side.” / “Poor lands.” row, Siley “2 fields 7 and 5,” and three X-mark hosts — OHC_2495 source jacket
+
+
+STATUS
+Direct source-facing pass on one historical manuscript page in the Public Lands No. 3 return. This jacket represents manuscript page 101 as one documentary page. It does not treat duplicate PDF custody instances as separate historical witnesses.
+
+
+SOURCE IDENTITY / RETURN PATH
+Historical body visible on the face: “Public Lands — No 3 — Form of a Return — Continued — Location under the Choctaw Treaty.”
+Visible manuscript page number: 101.
+Primary representation directly reopened: OHC_2495.pdf — Drive 1m5qtmgjdaGfVhAH51KbTs2rg_jk6a-Sz — 236,353 bytes — parent folder 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, “Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.”
+Alternate custody instance directly tested: OHC_2495.pdf — Drive 1a7xL0UATmvM04abWeIYcFKD77SpAf_jC — 236,353 bytes — parent folder 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Direct local byte comparison in this pass gives the same SHA-256 for both PDFs: 9cd44bb2889d282ea0edb1524d4dad3250095a4cb41a8d9535c68b57dc72a85c. They are byte-identical digital custody instances of one representation, not independent historical corroboration.
+Current jacket home after Small Door crossing: Source House — Jackets — Drive folder 1wmu1i-BuFtncIkedpAKAH3fxZbWUhi9q. Previous working home: Public Lands — Whole-Document Corpus — Drive folder 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+Backward neighboring source directly reopened for comparison: manuscript p.100, OHC_2493.pdf — Drive 1WP0rrj7melVYBFabP2Ebg439ySCNe4St — governed by Fieldglass jacket 1Mc4jiP_oTHJZamlmJFUC2s0Hhw3j1-v3IX8t4EO6pNA.
+
+
+DOCUMENTARY BOUNDARY
+One scanned manuscript page of a continuing ruled return. The face establishes page 101 and continuation of the same form. This pass does not claim the full return is complete and does not infer historical sequence from filenames alone. Local high-resolution PNG renders/crops were inspection derivatives only and were not admitted to Drive.
+
+
+FAITHFUL SOURCE OBSERVATION
+The same ruled columns visible on page 100 continue here, including “Names of Indians owning Farms,” cultivated acres, family count, age/sex columns, “Locality of Farms,” “Total No. of Acres,” and “General Remarks.”
+
+
+A particularly clear row is “William Black.” In that row the source carries:
+- 6 in “No of Acres Cultivated”;
+- 5 in “Entire No. of the Family”;
+- 2 in “Males over 16 years”;
+- 1 in the under-10 column;
+- locality: “Natchez trace. north side.”;
+- total acreage: 160;
+- General Remarks: “Poor lands.”
+These values and phrases are recorded as one row-coordinated source occurrence. No identity relation to any other William Black is inferred.
+
+
+Other visible General Remarks on page 101 include “Good land,” another “Poor lands,” and several captain/company remarks lower on the page. Exact personal-name readings inside the lower captain/company phrases are not stabilized here; where needed they remain [unclear]. The important layout fact is that these remarks occupy discrete horizontal row baselines rather than visibly spanning several rows with a brace, ditto, or other cross-row device.
+
+
+The “Locality of Farms” column behaves the same way on this face. Clear or substantially clear locality phrases include “Big Black,” “Natchez trace. south side,” “Natchez trace. north side,” and lower village/creek entries whose exact spellings are not fully stabilized. They are placed on row baselines and can coexist with a separate Total Acres value and a separate General Remark in the same row, as the William Black row demonstrates.
+
+
+Several X-like marks occur in the far left margin beside individual rows. Their administrative meaning is not established in this pass and they are not converted into approval, rejection, removal, patent, or entitlement status.
+
+
+FINDINGS
+1. Manuscript p.101 directly demonstrates row-coordinated use of Locality, Total Acres, and General Remarks. The William Black row is a clean example: locality “Natchez trace. north side.”, total 160, and “Poor lands.” coexist on the same horizontal row.
+2. Company/captain language on this face is visually row-aligned. The source does not show a brace or ditto proving that a company phrase governs adjacent rows above or below it.
+3. “Poor lands.” is a source-carried qualitative remark on the William Black row. It is not promoted into a legal finding, valuation formula, ownership determination, or characterization of every farm on Natchez Trace.
+4. The row structure is evidentiary: horizontal alignment is stronger here than free-floating proximity. At the same time, row alignment alone does not establish the wider membership, size, or composition of any captain’s company.
+
+
+INFERENCE
+The p.101 layout supports reading General Remarks first as row-carried entries unless the manuscript supplies an explicit cross-row device. A remark such as “Capt. [unclear] company” may semantically refer to a wider company, but the visible entry itself is attached to one row position. Any claim that it also governs neighboring rows requires additional source evidence.
+
+
+UNRESOLVED QUESTIONS
+- Exact diplomatic readings of the lower captain/company names.
+- Exact readings of several lower locality names and village/creek spellings.
+- Meaning of the far-left X marks.
+- Exact reading and function of the small upper-right manuscript notation.
+- Whether another page or administrative key explains how company remarks were intended to operate across the return.
+- No complete row-by-row transcription of p.101 is attempted here; this jacket stabilizes the row structure and the clearest load-bearing occurrence.
+
+
+EXPLICIT NONCLAIMS
+- No identity merge for William Black or any other named occurrence.
+- No claim that “Poor lands.” proves ownership, legal quality, patent status, value, or later condition.
+- No claim that a captain/company phrase automatically governs adjacent rows.
+- No claim that a locality phrase is a cadastral coordinate or exact residence point.
+- No claim that the left-margin X marks signify approval, refusal, removal, entitlement, or patent status.
+- No claim that the two OHC_2495 PDFs are independent witnesses; they are byte-identical custody instances.
+
+
+CROSSINGS / EARNED NEXT TARGET
+Backward source-facing comparison: Fieldglass p.100 jacket 1Mc4jiP_oTHJZamlmJFUC2s0Hhw3j1-v3IX8t4EO6pNA → OHC_2493.pdf 1WP0rrj7melVYBFabP2Ebg439ySCNe4St → manuscript p.100.
+The strongest earned correction from comparing p.100 and p.101 is that earlier “block-spanning” language for company/locality remarks should be demoted unless a cross-row device is visible. P.101 supplies the clearer row grammar.
+Next retrieval target if this seam remains live: inspect any source key, neighboring page, or repeated company occurrence that explicitly shows a brace/ditto or otherwise establishes multi-row scope. Until then, preserve company remarks at row-carried force.
+
+
+Maker: Fieldglass
+Date: 2026-09-07
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — p.101 Natchez trace side-relations / p.97 lexical comparison — 2026-09-11
+
+
+Direct source return
+Fieldglass reopened archival OHC_2495.pdf / manuscript p.101 directly from Drive object 1m5qtmgjdaGfVhAH51KbTs2rg_jk6a-Sz and, for the comparison only, archival OHC_2490.pdf / manuscript p.97 from Drive object 1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3. High-resolution local renders/crops were inspection derivatives only; they were not admitted as source objects, and no OCR supplied the readings. Existing duplicate-custody controls remain in force for both pages.
+
+
+Source-facing map read
+P.101 clearly carries row-level Locality-of-Farms occurrences `Natchez trace. south side.` and `Natchez trace. north side.` The William Black row is the secure row-level control for the north-side form: locality `Natchez trace. north side.`, total acreage 160, General Remarks `Poor lands.` These are source-carried row relations, not route geometry or residence points.
+
+
+Direct side-by-side comparison with p.97 materially sharpens the lexical boundary. P.97 still reads `Old Natchez train` on the controlled McCurtain-row occurrence and carries a second like-written `Natchez train.` occurrence; p.101 clearly writes `trace`. At this pass, the different final words are source-visible enough that p.97 `train` should NOT be silently corrected to `trace` merely because the later page carries the more familiar form. The two forms occur within the same continuing Public Lands No. 3 return and are therefore useful for comparison, but same-body recurrence is not independent geographic corroboration and does not by itself prove one route identity.
+
+
+Map consequence
+The Historical Landscape Map may now carry an OPEN ROUTE-FORM CANDIDATE CLUSTER: p.97 `Old Natchez train` / `Natchez train` alongside p.101 `Natchez trace` with source-stated north-side and south-side relations. Preserve every lexical form and page address. The side terms may be carried as relational constraints only; they do not earn a route polyline, perpendicular offset, bank-like geometry, coordinate, crossing, travel event, residence, ownership, parcel, or modern-road identity. Do not equate the cluster with the Natchez Trace, Old Natchez Trace, Natchez Road, Three Chopped Way, or the modern Natchez Trace Parkway without an independently controlled period geographic source.
+
+
+Exact return
+Marauder’s Map → this p.101 governing jacket `1yShfAzWLjxoEcaCgId7EHePa0dhdJfy4JskjscuU1xQ` → OHC_2495.pdf `1m5qtmgjdaGfVhAH51KbTs2rg_jk6a-Sz` → manuscript p.101 → Locality of Farms `Natchez trace. south side.` / `Natchez trace. north side.`; comparison branch only → p.97 governing jacket `1GC6XFyNtSeevze-C6UcVeVy1962BXHCkWeu0u0zgSy4` → OHC_2490.pdf `1t89A7uZ3UYMglgbSxlzvLWoHnPXs3He3` → manuscript p.97 → `Old Natchez train` / `Natchez train.`
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+Glean source-facing deepening — manuscript p.101 — two-field arithmetic and derivative row repair
+
+
+Direct source return
+
+
+Reopened OHC_2495.pdf — Drive 1m5qtmgjdaGfVhAH51KbTs2rg_jk6a-Sz — visible manuscript p.101. A 400-DPI full-face render and bounded enlarged crops were inspection derivatives only; they were not admitted as source objects, and no OCR supplied the reading. Existing duplicate-custody control remains unchanged.
+
+
+Direct row reading
+
+
+One upper-page name-field occurrence reads at present reach `Siley. (2 fields 7 and 5)`. The left-margin `X` is a separate source mark and its meaning remains unresolved. The same row carries 12 cultivated acres, family 6, males over 16 = 2, and under 10 = 3.
+
+
+The source does not write a unit after the parenthetical 7 and 5. As derivative arithmetic, however, `7 + 5 = 12`, exactly matching the row’s cultivated-acre entry. This is the first controlled occurrence on this face where free writing in the name field supplies two component numerals that reconcile with a printed numeric column. It may record the cultivated acreage of the two fields, but the manuscript does not state that relation in words.
+
+
+Correction to the Quoin derivative
+
+
+The older Quoin transcription reads `(2 fields 7 miles)`. Direct inspection reads `and 5`, not `miles`. The derivative also carries a `Natchez trace` locality and total acreage 160 on the Siley row. On the manuscript face, those entries align with the immediately following row, not Siley. They are not carried upward.
+
+
+Documentary consequence
+
+
+The printed cultivated-acre column gives one total. The handwritten name cell can preserve how that total was composed. The form therefore does not merely tolerate prose beneath a name heading; on this row, that field carries potentially explanatory accounting that would disappear if the name were extracted alone.
+
+
+Exact reach / nonclaims
+
+
+The arithmetic fit is derivative and source-scoped. It does not prove that 7 and 5 are acre units, establish two legal tracts, identify two residences, or enlarge the 12 cultivated acres into total ownership. The `X` is not interpreted as approval, refusal, selection, removal, or entitlement. The name reading `Siley` remains open to later paleographic correction. No neighboring locality, total acreage, company remark, or person relation is inherited into this row.
+
+
+Exact return
+
+
+Source House — Jackets → governing p.101 jacket 1yShfAzWLjxoEcaCgId7EHePa0dhdJfy4JskjscuU1xQ → OHC_2495.pdf 1m5qtmgjdaGfVhAH51KbTs2rg_jk6a-Sz → manuscript p.101 → upper `Siley. (2 fields 7 and 5)` occurrence → cultivated-acre entry 12.
+
+
+Maker: Glean
+State: parenthetical corrected; row fusion repaired; exact arithmetic relation preserved without assigning an unstated unit or legal meaning.
+
+
+GLEAN SOURCE-FACING ADDENDUM — p.101 left-margin X host audit
+
+
+Direct reading
+
+
+The captured left margin contains exactly three X-like marks. Their ruled-row hosts are:
+
+
+`Siley. (2 fields 7 and 5)`
+
+
+`Tom Hillcock.`
+
+
+`William Black.`
+
+
+No further X-like mark is visible beside the remaining rows on the captured face. Each mark stands in the margin immediately left of its row’s name cell. No brace, line, ditto, caption, or other visible device joins the three marks.
+
+
+Correction history
+
+
+This supersedes the jacket’s earlier phrase `Several X-like marks` only by replacing it with an exact face-local count and three row hosts. Their administrative meaning remains unresolved. The marks are not converted into approval, refusal, selection, removal, entitlement, patent, identity, or shared status.
+
+
+Exact return
+
+
+Source House — Jackets → governing p.101 jacket 1yShfAzWLjxoEcaCgId7EHePa0dhdJfy4JskjscuU1xQ → OHC_2495.pdf 1m5qtmgjdaGfVhAH51KbTs2rg_jk6a-Sz → manuscript p.101 → left margin → X-like marks beside `Siley`, `Tom Hillcock`, and `William Black`.
+
+
+Maker: Glean
+State: three marks counted and given row hosts; function left open.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+Person / Entity: William Black [Public Lands p.101 farm-row occurrence]
+Date: not supplied by this page-facing proposition
+Earned verb / relation: Manuscript p.101 Locality of Farms CARRIES source-written `Natchez trace. north side.` and General Remarks CARRIES source-written `Poor lands.` on the same `William Black.` ruled row.
+Case / Object: OHC_2495 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.101 / William Black row
+Place: `Natchez trace. north side.` [source-written locality; exact historical referent, route identity, modern identity, and geometry OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.101 — William Black “Natchez trace. north side.” / “Poor lands.” row, Siley “2 fields 7 and 5,” and three X-mark hosts — OHC_2495 source jacket
+Identity / Relation Status: source-local William Black occurrence only; no same-name merge. `Poor lands.` remains a source qualitative remark, not a legal, ownership, residence, entitlement, patent, valuation, or whole-route conclusion. The row’s left-margin X-like mark remains a separate unresolved source mark and is not converted into status.
+Notes: direct-source `north side` governs this row; the older Quoin derivative’s `south side` assignment does not govern. Same-face recurrence of Natchez-trace wording is not independent geographic corroboration and does not earn a route polyline or modern-road identity.
+
+
+NAME WEB RETURN — COMPILED INDEX INPUT
+
+
+Person / Entity: Siley [reading correction-open; Public Lands p.101 name-field occurrence]
+Date: not supplied by this page-facing proposition
+Earned verb / relation: Manuscript p.101 Name field CARRIES `Siley. (2 fields 7 and 5)`; derivative arithmetic `7 + 5 = 12` exactly matches the same row’s printed cultivated-acre entry `12`, while the source supplies no written unit after `7` or `5`.
+Case / Object: OHC_2495 — Public Lands No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty / manuscript p.101 / Siley row / Name field
+Place: no place is assigned by this proposition; the older Quoin derivative’s Natchez-trace locality and total `160` align with the immediately following row and are not carried upward to Siley
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.101 — William Black “Natchez trace. north side.” / “Poor lands.” row, Siley “2 fields 7 and 5,” and three X-mark hosts — OHC_2495 source jacket
+Identity / Relation Status: source-local Siley occurrence only; the name reading remains correction-open. The two numerals are not assigned an unstated acre unit, legal-tract status, residences, ownership, or entitlement. The row’s left-margin X-like mark remains separate and unresolved.
+Notes: direct inspection corrects the older Quoin `(2 fields 7 miles)` reading to `2 fields 7 and 5` and repairs the derivative row fusion. The arithmetic match is derivative and source-scoped, not a source-written explanation.
+
+
+Compilation note: these light returns preserve Fieldglass’s and Glean’s source-facing readings and correction history; Small Door compiles the routing handles only. The exact three-host X-mark audit remains rich jacket prose rather than three additional thin-index relations because the marks’ administrative meaning is unresolved.

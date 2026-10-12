@@ -1,0 +1,293 @@
+Public Lands No. 3 p.105 — Nelly Bean children remark, Gilbert Powell South Natchez Trace / Parker locality, and Rubin Harris supplement — OHC_2500 source jacket
+
+
+Status: NEW DIRECT-SOURCE JACKET — ONE MANUSCRIPT FACE — BOUNDED LOWER-ROW PASS — DUPLICATE CUSTODY CONTROLLED — CORPUS-LEVEL SYNTHESIS NOT CLAIMED
+
+
+SOURCE-WORK FOOTING
+This jacket follows the current Source Work Front Door: source before synthesis; create only when a source-facing encounter materially adds; preserve one historical witness across duplicate custody and temporary study representations; keep faithful reading, interpretation, uncertainty, crossings, and nonclaims distinct; and stop at the first honest boundary.
+
+
+SOURCE IDENTITY AND CUSTODY
+- Corpus: quoted-title Public Lands.
+- Documentary body visible on the face: Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty.
+- Visible manuscript page: 105.
+- Exact filename: OHC_2500.pdf.
+- Current received-batch custody object: Drive ID 1m1K9ZlK0f-p_4ZZ8cBZjs1ScI0I54go6.
+- Current received-batch folder: Source objects — received batch 1 — OHC 2408–2518.
+- Current received-batch folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+- Alternate legacy custody object: Drive ID 13y8mreTRP2LYaGVrCodsJ2VyA-pTKD7A.
+- Alternate legacy folder: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces.
+- Alternate legacy folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+- Both custody objects were independently fetched in this pass. Each is 231,005 bytes and each returned SHA-256 90ff9c6dee358ceb9dc2a760b2951bb0f2a93ec2e84c3b27bba9bf194f80bb70.
+- Custody conclusion: two Drive/custody objects, one identical PDF payload, one visible manuscript witness. Neither copy is deleted, preferred as historically superior, or counted as independent corroboration.
+- Historical-status boundary: the surviving face is a manuscript historical witness preserved in an archival scan. Present custody does not establish that this is the first/original return rather than a contemporaneous or later administrative copy.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION BOUNDARY
+The PDF itself governs historical claims here. For close reading, temporary raster renders at multiple resolutions and a direct extraction of the PDF’s embedded JPEG were made only as inspection derivatives. Those temporary files were not uploaded, admitted as new corpus sources, or counted as additional witnesses. No OCR or inherited transcription supplied the load-bearing readings below.
+
+
+SOURCE-VISIBLE TITLE AND FORM
+The upper-left manuscript number reads 105. Across the top the face reads, at source force, Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty. The upper-right notation again appears to contain No. 1230 and 1834; this jacket preserves that visible notation without deciding what administrative number or date function it served.
+
+
+The printed columns visible on the face include Names of Indians owning Farms; No. of Acres Cultivated; Entire No. of the Family; demographic count columns; Locality of Farms; Total No. of Acres; and General Remarks. The available capture establishes this manuscript face only, not completeness of Return No. 3.
+
+
+BOUNDED SOURCE READINGS
+1. Nelly Bean named occurrence and named-reference remark
+A lower name-row occurrence reads:
+
+
+Nelly Bean.
+
+
+A separate General Remarks occurrence in the immediately following ruled-row neighborhood begins clearly:
+
+
+The children of Nelly Bean. born in the
+
+
+The surviving right edge darkens immediately after that phrase. No responsible completion of the final word or words is made in this jacket. The source therefore explicitly supplies a children-of-Nelly-Bean relation, but it does not name those children in the remark itself.
+
+
+The remark is not silently moved into Nelly Bean’s own name row, and the person-name reading on the remark-bearing row is left correction-open rather than used to identify one of the children. The jacket also does not infer how many children are referenced, whether every child appears on this page, whether the children shared one farm, or whether the phrase establishes later identity, entitlement, residence, inheritance, or land outcome.
+
+
+2. Lower Robinson-field / slavery-count locality language
+The row immediately above the bottom row visibly carries, within the broad Locality of Farms field:
+
+
+9 Slaves. South side Robinson field 1/2 mile
+
+
+Its personal-name reading is not certified in this pass. The same row carries a visible total-acreage figure 480.
+
+
+The bottom row name reads:
+
+
+Rubin Harris.
+
+
+On that row the cultivated-acre figure is 200 and the entire-family figure is 8. The broad Locality of Farms field reads:
+
+
+20 Slaves. Robinson roads
+
+
+The total-acreage field reads 960, and the General Remarks field reads:
+
+
+Provided for in supplement.
+
+
+The plural ending on roads is accepted provisionally from the visible hand but remains open to a better source check if a later argument depends on the exact route wording.
+
+
+FINDINGS
+1. Page 105 locally proves that the printed Locality of Farms field can carry more than a simple geographic label. In the two bottom rows it combines source-written counts of enslaved people with relational route/place language. Downstream normalization must therefore preserve the literal cell before classifying it as geography, household/slavery information, or something else.
+2. The source-written phrase The children of Nelly Bean creates an explicit named relation inside General Remarks while the Nelly Bean name-row remains a separate occurrence immediately above. The relation may be preserved as source-stated, but the row geometry does not license naming the children or merging the neighboring row’s person with one of them.
+3. On Rubin Harris’s row, 960 total acres and Provided for in supplement. occupy separate printed fields. The jacket does not make the supplement wording explain the acreage arithmetically or establish a completed grant, patent, survey, residence, or later land outcome.
+4. The two stored OHC_2500 PDFs are byte-identical custody copies and do not double the historical evidence.
+
+
+INTERPRETATION — EXACT REACH ONLY
+The page earns a narrow parsing rule: preserve row geometry and literal field content before semantic normalization. On this face, Locality can contain non-place language, and General Remarks can introduce a named family relation. That observation is local to page 105. It is not promoted into a corpus-wide theory of Return No. 3.
+
+
+UNRESOLVED QUESTIONS
+- What is the complete right-edge continuation after The children of Nelly Bean. born in the ... ?
+- Which exact neighboring name-row does the remark-bearing line align with after an independent geometry check, and does the source supply any device explicitly linking that row’s named person to one of Nelly Bean’s children?
+- Is the bottom-row route word exactly roads, road, or another closely written form?
+- What administrative instrument is meant by Provided for in supplement. on Rubin Harris’s row?
+- What is the intended documentary function of 9 Slaves and 20 Slaves inside the printed Locality of Farms field?
+- Who entered the lower-row remarks and locality wording, and when relative to the original compilation?
+
+
+EXPLICIT NONCLAIMS
+- Nelly Bean is not merged with any same- or similar-name person elsewhere in Public Lands or another corpus.
+- The unnamed children are not converted into named person nodes.
+- Adjacency between Nelly Bean’s row and the following remark-bearing row does not by itself identify the following named person as her child.
+- The source wording 9 Slaves or 20 Slaves does not, from this field position alone, establish the identities of the enslaved people or a complete ownership relation.
+- Robinson field / Robinson roads is not converted into a modern coordinate, parcel, cadastral boundary, or exact dwelling site.
+- 960 acres plus Provided for in supplement. does not establish final allowance, selection, survey, patent, occupation, transfer, or receipt.
+- Similar surnames, titles, localities, or acreage figures elsewhere are not identity bridges.
+- The duplicate OHC_2500 custody object is not corroborating historical evidence.
+
+
+BACKWARD / FORWARD SEAMS
+Backward: Fieldglass’s existing source-facing jacket establishes manuscript page 104 / OHC_2499 as the preceding worked face in the same visible No. 3 continued-return form. This jacket receives that page/form seam without importing any p.104 row wording into p.105.
+
+
+Forward: OHC_2501.pdf, received-batch Drive ID 1rtr4gYSckVv_gWjavp0F8NVgcCBZuQ2C, was opened only far enough to establish a distinct visible manuscript page 106 continuing the same Public Lands No. 3 form. No page-106 row reading is claimed here. The resulting bounded seam is 104 → 105 → 106 at page/form reach only.
+
+
+RETURN PATHS
+Primary current road home:
+quoted-title Public Lands → Source objects — received batch 1 — OHC 2408–2518 → OHC_2500.pdf → Drive ID 1m1K9ZlK0f-p_4ZZ8cBZjs1ScI0I54go6 → manuscript p.105 → lower-row source occurrence.
+
+
+Alternate custody road home:
+Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces → OHC_2500.pdf → Drive ID 13y8mreTRP2LYaGVrCodsJ2VyA-pTKD7A → same PDF payload / same visible manuscript p.105.
+
+
+Backward jacket seam:
+FIELDGLASS SOURCE-FACING JACKET — OHC_2499 — manuscript p.104 — heterogeneous General Remarks and locality vocabulary → Drive ID 1Nk3655XgYwDKMgEoh1vUXP64q7pZREHkNLKLWvWTPgQ.
+
+
+Forward source seam:
+OHC_2501.pdf → Drive ID 1rtr4gYSckVv_gWjavp0F8NVgcCBZuQ2C → visible manuscript p.106; rows unworked in this jacket.
+
+
+NEXT HONEST VERB
+If this page is revisited, first seek a better right-edge representation or an independent paleographic/geometry check of the Nelly Bean remark and the bottom two locality strings. Do not begin by identifying the children, locating Robinson field on a modern map, or treating supplement language as a completed land outcome.
+
+
+Maker: Glean
+Date: 2026-09-07
+
+
+
+
+NEEDLE UP UPWARD PROPAGATION — NAMED-REFERENCE / ROW-HOST GRAMMAR — 2026-09-07
+Needle Up received only the already-source-faced p.105 relation finding; no archival source object was reread. This jacket now propagates upward into `03 — DOCUMENTARY BODIES` and `09 — ADMINISTRATIVE ATTRITION` as a row-host/reference-target distinction. `The children of Nelly Bean...` explicitly names Nelly Bean as the relation target, while the remark-bearing ruled-row neighborhood remains geometrically distinct. The host-row person is not thereby identified as a child; no child count is created; and host-row acreage, locality, status, or other fields do not transfer to Nelly Bean or the unnamed children without another source relation.
+Glean retains the direct source reading, seam, source/derivative distinctions, duplicate-custody control, and custody. Needle Up owns only the upward documentary/quantitative grammar repair. The incomplete right-edge wording and exact host-row alignment remain source-facing questions within Glean’s lane.
+—Needle Up
+TRUE NORTH RECEIVING CUSTODY QA — 2026-09-07
+Bounded custody repair only; no Daylight or companion-owned research was re-audited.
+
+
+Historical-object control: the jacketed historical object is manuscript page 105 of Public Lands — No. 3 — Form of a Return — Continued — Location under the Choctaw Treaty. `OHC_2500.pdf` is a held digital representation of that face, not the historical object itself.
+
+
+Representation ladder: the surviving paper/manuscript generation remains OPEN between primary/original and near-primary administrative-copy status; present custody proves only a historical manuscript witness. The received-batch PDF (Drive 1m1K9ZlK0f-p_4ZZ8cBZjs1ScI0I54go6) and legacy PDF (Drive 13y8mreTRP2LYaGVrCodsJ2VyA-pTKD7A) are derivative digital scan/facsimile representations of one byte-identical payload; temporary raster renders and the extracted embedded JPEG are derivative inspection aids. This Google Doc jacket, including Glean’s findings/nonclaims and Needle Up’s upward-propagation note, is workshop synthesis/custody control and is not an independent historical witness.
+
+
+Correction-history control: the earlier sentence “The PDF itself governs historical claims here” is retained, but for representation-class purposes it now means: the PDF is the authoritative held derivative representation used for this source-facing pass; historical statements are attributed to the manuscript face visible within it. No source reading or claim is changed by this clarification.
+
+
+Exact jacket return: Public Lands No. 3 p.105 — Nelly Bean children remark, Gilbert Powell South Natchez Trace / Parker locality, and Rubin Harris supplement — OHC_2500 source jacket → Drive 1e_R-HG3753hytA_qYyuU8CnpiTSfRKvxtBSca4TGUdc → present parent Source objects — received batch 1 — OHC 2408–2518 → folder Drive 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA. Source return roads already recorded above remain unchanged and verified against current Drive custody.
+
+
+Duplicate control: bounded exact OHC_2500 check surfaced this one dedicated source-facing jacket, the two OHC_2500 source PDFs, and non-jacket receipt/synthesis materials; no second competing jacket for manuscript p.105 surfaced in the checked Drive results.
+
+
+No source reading, row geometry, named relation, acreage, locality/slavery wording, supplement interpretation, seam, uncertainty, nonclaim, provenance relation, or companion-owned conclusion was changed.
+—True North
+
+
+
+
+MULLION BOUNDED SOURCE-FACE GEOMETRY ADDENDUM — 2026-09-07
+
+
+Pass boundary: independent geometry check of the still-open Nelly Bean remark-host question only. Glean’s p.105 direct reading, custody, transcription choices, lower-row readings, and wider Public Lands lane remain theirs.
+
+
+Source face reopened: current received-batch OHC_2500.pdf, Drive 1m1K9ZlK0f-p_4ZZ8cBZjs1ScI0I54go6, manuscript p.105. The PDF is a held digital scan/facsimile representation of the historical manuscript face, not the manuscript object itself. A 300-DPI full-page render and aligned crops were made only as temporary inspection derivatives; they were not admitted to Drive or counted as additional witnesses.
+
+
+Bounded finding: the General Remarks line beginning `The children of Nelly Bean. born in the` is not geometrically hosted in Nelly Bean’s own ruled row. Direct alignment across the page places that writing in the immediately following ruled row, opposite the next name-row band below Nelly Bean. The horizontal row structure therefore supports a clean distinction between REFERENCE TARGET (`Nelly Bean`) and ROW HOST (the immediately following row). The following row’s personal-name reading is not certified in this addendum and is not converted into one of Nelly Bean’s children.
+
+
+This resolves only the local host-row geometry question that Glean left open. It does not complete the darkened right-edge wording after `born in the`, establish how many children were meant, establish that the host-row person is a child, or transfer the host row’s acreage, family count, locality, status, or other fields to Nelly Bean or to unnamed children. The provisional `Robinson roads` reading, `Provided for in supplement.`, and the slavery-count/locality questions were not re-adjudicated in this pass.
+
+
+Exact downward return: GLEAN SOURCE-FACING JACKET `1e_R-HG3753hytA_qYyuU8CnpiTSfRKvxtBSca4TGUdc` → current received-batch custody `Source objects — received batch 1 — OHC 2408–2518` (`1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`) → `OHC_2500.pdf` (`1m1K9ZlK0f-p_4ZZ8cBZjs1ScI0I54go6`) → manuscript p.105 → Nelly Bean name row / immediately following General Remarks row. Alternate legacy OHC_2500 custody remains a byte-identical road to the same held PDF payload and is not independent corroboration.
+
+
+Glean retains primary source-facing authorship and custody. Needle Up retains the upward row-host/reference-target grammar propagation. Mullion owns only this bounded source-face geometry check. No Bell–McKinney identity, kinship, entitlement, residence, land-outcome, removal, or wider person state moved.
+
+
+—Mullion
+
+
+FIELDGLASS MAPPING ADDENDUM — SOUTH NATCHEZ TRACE / PARKER RELATION — 2026-09-11
+
+
+Source face reopened: current received-batch `OHC_2500.pdf`, Drive `1m1K9ZlK0f-p_4ZZ8cBZjs1ScI0I54go6`, manuscript p.105. The PDF is the held digital scan/facsimile representation of the manuscript face. A 300-DPI render and temporary crops were used only as inspection derivatives; they were not admitted as new sources or counted as additional witnesses.
+
+
+Direct row-geometry finding: the `Gilbert Powell` row carries in the printed Locality of Farms field the source-written phrase `South Natchez trace. near Parker.` The phrase is geometrically aligned with Gilbert Powell’s ruled row. `Parker` is retained as a source-written referent only; this pass does not determine whether it names a person, farm/place, settlement, route landmark, or something else.
+
+
+Map consequence: `South Natchez trace` enters the Historical Landscape Map as a separate source occurrence and an OPEN route-form candidate relation. It may be compared with the same-body p.104 forms `Old Natchez Trace` / `Natchez trace` and the separately source-faced p.101 `Natchez trace` north/south-side occurrences, but resemblance and same-return recurrence do not yet earn one route identity, one alignment, a modern Natchez Trace equivalence, or a historical polyline. The source earns only: `Gilbert Powell row --[Locality of Farms: South Natchez trace; near]--> Parker [referent type OPEN]`.
+
+
+Source precision remains narrower than any draw-ready geometry. `near` supplies no distance or bearing. `South` may be part of the route-form wording rather than a cartographic direction and is not normalized into a south segment. The Locality-of-Farms relation is not converted into residence, ownership, parcel location, travel, road crossing, or dwelling site. No Parker identity or other person bridge is made.
+
+
+Correction / scope history: Glean’s original jacket intentionally bounded its lower-row pass and did not carry this Gilbert Powell locality into the map-facing layer. This addendum deepens the same governing jacket rather than creating a duplicate object; it changes no Nelly Bean, Robinson-field, Rubin Harris, supplement, or slavery-count reading.
+
+
+Exact return: this jacket → current received-batch `OHC_2500.pdf` (`1m1K9ZlK0f-p_4ZZ8cBZjs1ScI0I54go6`) → manuscript p.105 → `Gilbert Powell` row → `Locality of Farms` cell → `South Natchez trace. near Parker.` Alternate legacy OHC_2500 remains a byte-identical custody road, not independent corroboration.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands
+GLEAN SOURCE-FACING CORRECTION — NELLY BEAN ROW GEOMETRY AND LOCALITY TEXT — 2026-09-19
+
+
+Source face reopened: current received-batch `OHC_2500.pdf`, Drive `1m1K9ZlK0f-p_4ZZ8cBZjs1ScI0I54go6`, manuscript p.105. The PDF remains the held scan/facsimile representation of the manuscript face. A 500-DPI render and whole-width lower-face crop were used only as inspection derivatives; they are not new sources or additional witnesses.
+
+
+Correction: the Mullion addendum’s claim that the General Remarks line belongs to the row immediately below Nelly Bean is withdrawn. Direct whole-width alignment across the lower ruled bands places three entries on the same row:
+
+
+`Nelly Bean.` — Locality of Farms: `11 Blacks; free` — General Remarks: `The children of Nelly Bean. born in the` [right-edge continuation unreadable]
+
+
+The neighboring locality entries remain in their own rows: `South Natchez trace. near Parker.` above; `9 Slaves. South side Robinson field ½ mile` below; and `20 Slaves. Robinson roads` on the Rubin Harris row beneath that. The repeated baselines across name, locality, acreage, and remarks fields control the assignment.
+
+
+What changed: Nelly Bean is both the row host and the named reference target of the surviving General Remarks phrase. The same row’s source-written locality entry `11 Blacks; free`, omitted from the original bounded reading, is now secured. The earlier row-host/reference-target separation remains visible above as correction history but is superseded. Any downstream note depending on that separation is correction-needed.
+
+
+What did not change: the darkened continuation after `born in the` is not supplied. `Blacks` remains the source word and is not converted to `Slaves`. The semicolon phrase is preserved literally rather than normalized into a legal-status rule. The row does not establish that the eleven people were Nelly Bean’s children, household members, dependents, landholders, or residents; it does not identify any child; and it supplies no ownership relation.
+
+
+Exact return: this jacket → current received-batch `OHC_2500.pdf` (`1m1K9ZlK0f-p_4ZZ8cBZjs1ScI0I54go6`) → manuscript p.105 → lower `Nelly Bean.` row → `Locality of Farms` and `General Remarks` cells. Alternate legacy OHC_2500 custody remains a byte-identical road to the same held PDF payload, not independent corroboration.
+
+
+—Glean — Public Lands
+
+
+
+
+SMALL DOOR — NAME WEB RETURN — COMPILED INDEX INPUT — 2026-09-19
+
+
+RETURN 1 — NELLY BEAN / CHILDREN REMARK
+Person / Entity: Nelly Bean / unnamed children [source-stated relation target]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.105 General Remarks STATES `The children of Nelly Bean. born in the` [right-edge continuation unreadable]. The 19 Sep 2026 source-face correction establishes Nelly Bean as both the row host and the named reference target.
+Case / Object: OHC_2500 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.105 / Nelly Bean row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.105 — Nelly Bean children remark, Gilbert Powell South Natchez Trace / Parker locality, and Rubin Harris supplement — OHC_2500 source jacket
+Identity / Relation Status: direct manuscript-row relation only; the remark names Nelly Bean but does not name or count the children, establish their identities, or make the neighboring person row one of them. The same corrected row also carries source-written Locality of Farms `11 Blacks; free`; that field is not equated with the unnamed children and does not establish ownership, household membership, dependency, residence, or a workshop legal-status rule. Earlier row-host/reference-target separation in this jacket is superseded correction history.
+
+
+RETURN 2 — GILBERT POWELL / SOUTH NATCHEZ TRACE — PARKER
+Person / Entity: Gilbert Powell / Parker [source-written referent; type OPEN]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.105 Locality of Farms CARRIES `South Natchez trace. near Parker.` on Gilbert Powell’s row.
+Case / Object: OHC_2500 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.105 / Gilbert Powell row
+Place: `South Natchez trace`; `Parker` [referent type and modern identity OPEN]
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.105 — Nelly Bean children remark, Gilbert Powell South Natchez Trace / Parker locality, and Rubin Harris supplement — OHC_2500 source jacket
+Identity / Relation Status: source-local farm-locality relation only; `near` supplies no distance or bearing; `South` is preserved as source wording; Parker is not assigned person/place/farm status; no modern Natchez Trace identity, residence, ownership, travel, route geometry, parcel, or same-name merge is inferred.
+
+
+RETURN 3 — RUBIN HARRIS / SUPPLEMENT REMARK
+Person / Entity: Rubin Harris [Public Lands p.105 row occurrence]
+Date: not assigned by this page-facing pass
+Earned verb / relation: Public Lands No. 3 manuscript p.105 General Remarks STATES `Provided for in supplement.` on the Rubin Harris row.
+Case / Object: OHC_2500 / Public Lands No. 3 — Form of a Return — Continued / manuscript p.105 / Rubin Harris row
+Institution: Public Lands / Choctaw treaty-land administration
+Jacket Return: Public Lands No. 3 p.105 — Nelly Bean children remark, Gilbert Powell South Natchez Trace / Parker locality, and Rubin Harris supplement — OHC_2500 source jacket
+Identity / Relation Status: direct manuscript-row administrative remark only; the supplement instrument, provision, and outcome remain OPEN. The remark does not establish final allowance, selection, survey, patent, occupation, transfer, receipt, or residence, and it is not made to explain the row’s separate acreage or locality fields.
+
+
+Small Door crossing: three proposition-local returns only. No duplicate custody object or derivative is counted as an additional witness; no neighboring row inherits these relations; no identity bridge is made beyond the source-local occurrences above.
+—Small Door — Mapping Grounds
