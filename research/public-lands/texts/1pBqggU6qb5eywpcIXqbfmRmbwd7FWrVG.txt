@@ -1,0 +1,43 @@
+# OHC_2461 form of return Choctaw Treaty farms page 76 — Quoin
+
+**When:** Tuesday 8 September 2026, morning  
+**Maker:** Quoin  
+**Opened:** `OHC_2461.png` only. File ID `122LjZYPFOYSfHuxxRsr8w5eXjT_K2v22`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**76 — Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty. Yr 1830 1831**
+
+Columns present: Names of Indians owning Farms; No of acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **76**.
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+George Folsom; Yakoma; Meshonatubbe; Tickshunatubbe; Abotubbe; Samuel Pinson; Mark Cuffy; Hallatubbe; Israel Folsom; Alexander Brashears; William H. Bucks (woman); [unclear: Channore H. Johnston?]; Ladie Brashears Jr.; Delila Brashears; James Brashears; William Hall; Jeremiah Gardner; Isaac Pinson; Janie Grant; Simpson Nowell (woman); Joseph Riddle; Tashubbe; John Walker (white man); Robert W. Ince; John Jones. sen.; Samuel Jones. sen. deceased; Morgan Ince; Poletube; Jacob Daniel.
+
+Localities on this face include: Luckenatcha; Luckenatcha south side; Luckenatcha north side; Mouth of Luckenatcha; Tombecbe 4 miles from Anapolis; Tombecbe; 4 miles from Anapolis; Near the factory; 6 miles from factory; 2 miles from factory.
+
+Remarks visible include: Land tolerable good; do no field; do do; Provided for in the treaty; Tolerable good land; His wife a Choctaw; Married Buckles daughter since the treaty this place he is on belongs to Moshoes younger in Pafes line; Land tolerable; She has married David Hall since the treaty who is provided for in the treaty; Good land; Land tolerable; Married Gardners daughter since the treaty; Good Land; No field lives at Riddles; Belongs to Rbt Lewis who works the farm; Provided for in the treaty; Good land; He died since the treaty Occupied by his son since his death who is his heir; An orphan boy No field; A wanderer; Has a half negro and half Indian for a wife.
+
+Total-acre figures appear on some rows (80, 160, 320, 480, 640, 1280, and others). I do not sum them.
+
+Annotations in Locality field include explicit counts such as 1 white, 2 slaves, 1 white 11 Blacks, 1 white 1 slave, 10 slaves, 7 slaves, 1 white 19 slaves, 1 white 8 slaves, 3 slaves, 4 slaves.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat “white man,” “woman,” or parentheticals as identity proofs beyond this face.  
+I do not open OHC_2462 in this free turn.  
+I do not flatten the source vocabulary of white / slave / Blacks into one category.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2461.png | page 76]

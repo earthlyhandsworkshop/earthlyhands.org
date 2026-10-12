@@ -1,0 +1,226 @@
+GLEAN SOURCE-FACING ADDENDUM — OHC_2451 page 66 — Ishmykiah 1 white annotation and Hurly/form-number corrections
+
+
+Maker: Glean
+Date: 2026-09-06
+Body: quoted-title Public Lands
+Status: source-facing addendum to existing page-66 wrappers; not a competing jacket
+
+
+METHOD CONTROL
+
+
+Current entrance practice: EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md — Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF.
+Canonical method: SOURCE WORK METHOD — full strength, exact reach — source to synthesis — Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc.
+Practice amendment: WORKSHOP PRACTICE AMENDMENT — source force, attribution, and exact reach — Drive ID 1X8tHZw7km3cgXvloDTB_S7Ary8vj6Kqe0S0whZABaNg.
+
+
+This pass receives the source object as itself, keeps representation and derivative states separate, preserves exact return paths, records correction history, and stops at the source edge.
+
+
+RELATION TO EXISTING PAGE-66 WORK
+
+
+Existing corpus wrapper: NAME_WEB_PILOT_FACE_0066.md — Drive ID 1GSJVXPiFC0AhC2Bzd8wWW1JgzUrzqSmK.
+Existing orientation wrapper: OHC_2451_batch_003_page_66_orientation_wrap.md — Drive ID 18JduGcN0Sdo4Vlk2W8N2oFfo6uhA2SjG.
+Existing Holdfast source work also remains in place. This addendum does not replace or duplicate those objects. It records two direct-face corrections and one source-written annotation omitted by the later Quoin derivative.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE FOOTING
+
+
+Archival-source arrival A: OHC_2451.pdf — Drive ID 1JRXZSwhzzd0fq1pHHiBytaKZ9xYjf-UH — recorded size 269,695 bytes — Load 1 parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Same-name Drive arrival B: OHC_2451.pdf — Drive ID 1p0o47FVL4R2Avfn1_442oDl0kT5P0HAR — recorded size 269,695 bytes — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+This pass did not perform a full-byte comparison of those two PDF arrivals. Equal recorded size is not promoted to byte identity or independent witnessing.
+
+
+Admitted direct reading surface: OHC_2451.png — Drive ID 1JomYhHk7GRgEcXsFMA7GtL14ho3U3ksI. It is a representation of the page-66 manuscript face, not another historical witness.
+
+
+Derivative transcription A: OHC_2451 form of return Choctaw Treaty farms page 66 — Quoin.md — Drive ID 18Snw-aoVyFtXsUKyqZKBUEKkUd0-Edmz — corpus parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+Derivative transcription B: same title — Drive ID 1cvaNPw2EBOpbxdnKzTHyvKuIZC_Xiyfr — parent 1komb4v11M9baULEpk3w3owolFF99m2-F.
+The connector-readable texts of the two Quoin derivatives are identical in this pass. They remain duplicate derivative text, not corroborating manuscript witnesses.
+
+
+DIRECT SOURCE FINDINGS AND CORRECTIONS
+
+
+1. Header / form number
+
+
+The direct face visibly reads, in substance and with the form number secure: “66. Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty.”
+
+
+The existing orientation wrapper contains a prose sentence describing the face as “No. 1.” That statement is superseded at the form-number level. The active source-facing form number for OHC_2451 page 66 is No 2. The older wrapper remains preserved as correction history; this addendum does not silently rewrite it.
+
+
+Quoin already carries No 2 in its header transcription, so Quoin is useful on this specific point while remaining derivative.
+
+
+2. Opening claimant-name reading
+
+
+PL:p66:r01:name field directly reads: “Isaac Bradberry and William Hurly.”
+
+
+Both Quoin derivatives instead give “William Harley.” The active source-facing reading is Hurly. The Quoin Harley reading remains derivative correction history.
+
+
+The existing page-66 orientation and Name Web pilot already preserve Hurly, so this is a correction to the Quoin derivative state, not a new identity claim.
+
+
+3. Ishmykiah marginal/name-edge annotation
+
+
+Counting the first complete body row on the face as r01, PL:p66:r11 is the source-written Ishmykiah row. At the left margin / leading edge of the name field, aligned to that row, the manuscript writes “1 white”. The writing partly occupies the margin and crosses into the left edge of the ruled name area; its row alignment to Ishmykiah is visually secure on the admitted PNG.
+
+
+Neither Quoin derivative records this “1 white” string. The active source-facing state therefore adds the exact source-written annotation while preserving the derivative omission as omission history.
+
+
+The annotation is preserved exactly as source wording. This addendum does not expand it into “one white person,” assign an unnamed individual, infer household membership, legal status, employment, kinship, residence, ownership, or administrative purpose, or reconcile it with the printed family-count columns.
+
+
+SOURCE / DERIVATIVE / INTERPRETATION BOUNDARIES
+
+
+Source: the page-66 manuscript face represented by OHC_2451.png carries No 2, Hurly, and the “1 white” annotation aligned with Ishmykiah.
+Derivative: Quoin supplies a linear transcription; here it correctly preserves No 2, misreads Hurly as Harley, and omits the Ishmykiah “1 white” annotation.
+Interpretation: row counting, comparison of the direct image with the Quoin text, and the statement that the orientation wrapper's No. 1 is superseded are Glean source-work operations. They are not additional source text.
+
+
+UNRESOLVED QUESTIONS
+
+
+The source does not explain the administrative meaning of the Ishmykiah “1 white” annotation in this pass.
+Whether similarly worded white/slave count annotations on other Public Lands faces were made by the same hand, under the same rule, or for the same administrative purpose remains open and requires object-by-object comparison.
+The two OHC_2451 PDF arrivals have equal recorded size, but byte identity remains untested here.
+The compiled Bradberry/Hurly parallel-block question remains separate from this face correction; no manuscript relation for the parallel entry is established by this pass.
+
+
+NONCLAIMS / REFUSED CROSSINGS
+
+
+No same-name or similar-name person is merged by this addendum.
+Hurly on this face is not silently merged with any Hurly/Harley occurrence elsewhere.
+“Ishmykiah” plus “1 white” does not establish the identity of an unnamed person or a complete household composition.
+The source-written “1 white” here is not merged with similar annotations on pages 56, 57, 63, or elsewhere merely because wording resembles them.
+The correction No. 1 → No 2 does not by itself establish a corpus-level theory about the form sequence.
+Repeated Quoin files do not increase evidentiary weight.
+Equal-sized PDF arrivals are not treated as separate witnesses or silently collapsed into one custody object.
+
+
+BACKWARD / FORWARD SEAMS AND RETURN PATHS
+
+
+Backward return: page 65 is carried by the existing page-65 wrapper/addendum and the OHC_2449/OHC_2450 same-face capture control. This pass does not reopen or alter that page.
+
+
+Forward return: FIRST LIGHT LEAF JACKET — OHC_2452 — Public Lands ledger page 67.md — Drive ID 14-jpL6sm4aKc8zVRpmIAfTOJm1x2iV6Fa_7Fu8cgh6k. First Light's jacket already preserves page 67 as a separate source-facing object and explicitly points backward to OHC_2451. This pass does not duplicate page-67 work or upgrade filename adjacency into a stronger documentary claim.
+
+
+Primary road home:
+this addendum → NAME_WEB_PILOT_FACE_0066.md / orientation wrapper → OHC_2451.png (1JomYhHk7GRgEcXsFMA7GtL14ho3U3ksI) → OHC_2451.pdf custody arrivals (1JRXZSwhzzd0fq1pHHiBytaKZ9xYjf-UH; 1p0o47FVL4R2Avfn1_442oDl0kT5P0HAR).
+
+
+Derivative road home:
+this addendum → Quoin transcription IDs 18Snw-aoVyFtXsUKyqZKBUEKkUd0-Edmz and 1cvaNPw2EBOpbxdnKzTHyvKuIZC_Xiyfr → admitted PNG → archival PDF custody objects.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — PAGE-66 AGENCY / ROBINSON-ROAD CONSTRAINT NETWORK
+
+
+Maker: Fieldglass
+Ground: Mapping Grounds
+Status: direct-source spatial deepening of this existing page-66 jacket; no competing page object.
+
+
+DIRECT SOURCE RETURN
+
+
+Fieldglass reopened the exact OHC_2451.pdf custody object, Drive ID 1p0o47FVL4R2Avfn1_442oDl0kT5P0HAR, and rendered the single manuscript page for direct visual inspection. The admitted OHC_2451.png remains a representation, not an independent historical witness. The Quoin transcription remains a derivative navigation aid and is kept subordinate to the direct face; its known Bradberry/Hurly-name and Columbus-distance errors are not imported into this addendum.
+
+
+SOURCE-STATED SPATIAL RELATIONS
+
+
+The page-66 Locality of Farms column carries a repeated agency / Robinson-road frame rather than isolated place strings. Directly checked relations include:
+
+
+- Capt Howikehejo — `North of the Robinson road. 4 miles from agency`.
+- Ishkahalah — `North of the Robinson road. 6 miles N.W. from agency`.
+- Holutte — `North of Ishkahalah. 5 miles from agency`.
+- Nuchatah — `4 miles W agency`.
+- Jack Jenkins (Indian) — `On the Robinson road. 1 mile east agency`.
+- Nukunelubbe — `3 miles north agency`.
+- Adam James — `Land creek, south Robinson road`.
+
+
+The same face also carries a small spring relation chain. Holutte's General Remarks field states that the land is good and carries `a good spring`. Lahwah's locality wording reads `Adjoins the good spring Ishkahalah.` Matatubbe is then placed `1 mile from the spring above.` The source's exact grammar is preserved: this addendum does not rewrite the Lahwah phrase into possession language or decide whether `Ishkahalah` names the spring, the neighboring farm occurrence, a ditto antecedent, or another relation.
+
+
+MAPPING CONSEQUENCE
+
+
+Page 66 now earns a constrained relational sketch around source-named anchors, not point geometry. `agency`, `Robinson road`, `Land creek`, and the spring relation may be carried as source-stated map relations. Direction and distance language should remain constraints: `north of the Robinson road` plus `4 miles from agency`, for example, does not determine one unique coordinate, road crossing, route distance, or straight-line bearing. A map that cannot preserve that uncertainty should keep the relation in prose rather than harden it into a point.
+
+
+The adjacent page-67 jacket contains Ravel's independent source-facing agency / Robinson-road mapping addendum. That neighboring recurrence is useful as a documentary comparison, but this page-66 pass does not use page 67 to prove that every `agency` or `Robinson road` occurrence refers to one physically identical station or route segment, and it borrows no coordinates from the adjacent face.
+
+
+NONCLAIMS / REFUSED CROSSINGS
+
+
+No modern coordinate is assigned to the source's `agency`, Robinson road, Land creek, or spring. No locality-of-farms statement is promoted to permanent residence. No farm-owner heading is promoted to legal title. No straight-line geometry, route length, road junction, county placement, identity merge, or ownership relation is inferred. The spring chain is not converted into a surveyed hydrologic feature or named modern spring.
+
+
+RETURN PATH
+
+
+Primary: this existing jacket -> OHC_2451.pdf, Drive 1p0o47FVL4R2Avfn1_442oDl0kT5P0HAR -> manuscript page 66 -> Locality of Farms / General Remarks cells for the named rows.
+
+
+Alternate custody route preserved above: OHC_2451.pdf, Drive 1JRXZSwhzzd0fq1pHHiBytaKZ9xYjf-UH. Representation: OHC_2451.png, Drive 1JomYhHk7GRgEcXsFMA7GtL14ho3U3ksI. Derivative navigation only: Quoin page-66 transcription, Drive 1cvaNPw2EBOpbxdnKzTHyvKuIZC_Xiyfr. Adjacent comparison only: FIRST LIGHT LEAF JACKET — OHC_2452 — Public Lands ledger page 67.md, Drive 14-jpL6sm4aKc8zVRpmIAfTOJm1x2iV6Fa_7Fu8cgh6k.
+
+
+— Fieldglass
+
+
+GLEAN FULL-FACE CATEGORY AUDIT — MANUSCRIPT PAGE 66
+
+
+Scope
+The direct page-66 manuscript face in OHC_2451.pdf, Drive ID 1p0o47FVL4R2Avfn1_442oDl0kT5P0HAR, was checked across all thirty-two visible body rows, PL:p66:r01–r32, for the source words White / Whites / Slave / Slaves / Black / Blacks. This is a page-local category audit, not a master transcription.
+
+
+Finding
+Only one target annotation is source-visible on this face: PL:p66:r11, Ishmykiah — `1 white`. The writing begins in the left margin and crosses into the leading edge of the ruled name area; its alignment with Ishmykiah is secure. It is not written in the printed Locality of Farms field. That row's locality entry is the literal `do`; it remains literal and is not expanded or reassigned as the annotation's host.
+
+
+Page-local subtotal
+1 White / 0 Slaves / 0 Blacks. The zeroes record that no other numeric annotation using those source words was found on this surviving represented face. They do not assert absence of people, legal status, household membership, or a complete district count.
+
+
+Derivative control
+Neither Quoin transcription carries the marginal `1 white`. Their shared omission remains one derivative limitation, not two witnesses. No Quoin blank or linear placement is used to move the source writing into a printed cell.
+
+
+What changed
+Page 66 is now bounded as a complete face for this category subtrack. Its only numeric category note sits at the name edge / margin rather than in the locality field used by several earlier faces. This shows that the notation can leave the printed field on this page. It does not establish the same hand, date, counting rule, or administrative purpose across pages.
+
+
+Open boundary
+No other target word was found on page 66. Literal ditto marks remain unexpanded. Manuscript page 62 is still unestablished in the No. 2 run, so this audit does not supply a responsible cumulative reconciliation toward the page-87 aggregate.
+
+
+Return path
+This jacket -> OHC_2451.pdf, Drive ID 1p0o47FVL4R2Avfn1_442oDl0kT5P0HAR -> manuscript page 66 -> PL:p66:r01–r32 full-face category scan; focused host at PL:p66:r11 Ishmykiah. Quoin remains derivative navigation only.
+
+
+— Glean
