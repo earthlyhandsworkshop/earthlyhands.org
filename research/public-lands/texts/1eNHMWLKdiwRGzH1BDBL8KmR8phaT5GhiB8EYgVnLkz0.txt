@@ -1,0 +1,459 @@
+GLEAN SOURCE-FACING ADDENDUM — OHC_2427 page 47 — upper-locality correction and rows 7–18
+
+
+Status
+Direct-source addendum to True North’s existing OHC_2427 page-47 jacket. This does not replace that jacket or erase its earlier readings. It records one correction, extends neutral row coverage through r18, and closes a pending duplicate-custody question.
+
+
+Source identity and provenance
+- Corpus: quoted-title Public Lands.
+- Visible ledger page: 47.
+- Visible form: Public Lands — No. 1 — Form of a Return Continued — Location under the Choctaw Treaty.
+- Visible date interval at upper right: 1830–1831.
+- Manifest-admitted archival source A: OHC_2427.pdf, Drive ID 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi; parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+- Second same-name archival arrival B: OHC_2427.pdf, Drive ID 1FW5ul7xs8l8yzb6IvJMaRIx615OZtq9q; parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+- Admitted study representation directly inspected: OHC_2427.png, Drive ID 141TRRtrsBkiSceay0SZHxXjJDkl7bBgv; parent batch folder 160suh69brrpG1c84Nes-WGqxyarXI9C6.
+- Batch manifest: BATCH MANIFEST — OHC_2423–OHC_2432 — direct extraction.md, Drive ID 15_qsxfhC6s4av7JF_yWIgCo42uMD9BGq.
+- Existing source-facing jacket extended by this addendum: OHC_2427_page_47_split_locality_plain_language_True_North.md, Drive ID 1lLaDhemYzp6OqLBTeSm_1BJkNVINhKOr.
+
+
+Representation boundary
+The archival PDFs remain custody anchors. The admitted PNG is a lossless study representation made by decoding the PDF’s sole 2038 × 1879 grayscale embedded image without enhancement, cropping, rotation, sharpening, or OCR. Temporary local crops and enlargements were used only to inspect letterforms and row alignment; they are not admitted representations, not new witnesses, and are not retained as source objects.
+
+
+Duplicate-custody control
+The two separately stored OHC_2427.pdf files were materialized independently and compared directly in this pass. Both are 274,342 bytes and both have SHA-256 c867db5c487050305e2854d2332aa5ad18b875437da981984d0fef47089132fe.
+
+
+They are therefore byte-identical stored PDF payloads carried by two different Drive objects with different parentage. Both return paths remain preserved. They are not two historical witnesses and are not merged, renamed, moved, or deleted.
+
+
+Correction history — r01 locality
+True North’s first pass provisionally read the explicit r01 place phrase as “Yokotatti creek.” Direct reinspection of the admitted PNG now supports “Sholatti creek.” as the stronger reading. The same explicit phrase appears again at r07 with matching letterforms, which strengthens the correction without turning the repeated phrase into a row-identity claim.
+
+
+The former “Yokotatti creek.” reading remains attributable as superseded rather than being silently erased. This correction applies only to the r01 place phrase. The earlier provisional spellings at r04 and r06 remain correction-open.
+
+
+Stable extension — rows r07 through r18
+This pass extends neutral row positions on the same visible face from PL:p47:r07 through PL:p47:r18. Personal-name spellings are not required to keep those row addresses stable. Only two clear English-form labels are adopted here as diplomatic row-label readings: PL:p47:r10 “Quincy Hicks.” and PL:p47:r18 “Benjamin W. Gavin.” No same-name person elsewhere is merged with either occurrence.
+
+
+Bounded row-facing findings
+- PL:p47:r07: locality writes “Sholatti creek.” and “west side.” General Remarks reads “Poor land well timbered.”
+- PL:p47:r08: locality place position writes “do”; direction position writes “do”.
+- PL:p47:r09: locality place position writes “do”; no separate direction mark is adopted in this pass.
+- PL:p47:r10: locality place position writes “do”; no separate direction mark is adopted; Total No. of Acres writes 480. Row label reads “Quincy Hicks.”
+- PL:p47:r11: an explicit creek phrase is written in the locality field; its creek spelling is not certified in this pass.
+- PL:p47:r12: locality place position writes “do”; no separate direction mark is adopted.
+- PL:p47:r13: locality writes an explicit place expression followed by the source parenthetical “(name place)”. The preceding place spelling remains correction-open.
+- PL:p47:r14: locality writes an explicit branch phrase and “west side.” The branch spelling remains correction-open.
+- PL:p47:r15: locality writes an explicit creek phrase and “south side.” The creek spelling remains correction-open.
+- PL:p47:r16: locality reads “Pachchuto creek.” and “east side.” General Remarks reads “Land good”.
+- PL:p47:r17: locality reads “Schitafa creek.” and “west side.” Total No. of Acres writes 400. General Remarks reads “Poor land—abundance timber.” The name field visibly begins with the source title “Capt.”; the following personal-name spelling is not certified here.
+- PL:p47:r18: row label reads “Benjamin W. Gavin.” The locality field begins with the source-written parenthetical “(1 white)” and then reads “Walatta creek. east side.” No total-acreage number or General Remark is adopted for this row.
+
+
+Material source-facing finding
+The r18 locality cell is not geography alone. On this face, the broad Locality of Farms field can carry a counted/status phrase — “(1 white)” — in the same written cell as a creek and side-of-water locality. This is a page-47 source observation only. It does not establish who the counted person was, what relationship that person had to Benjamin W. Gavin, whether that person was included in the family count, or how the historical source category maps onto any modern racial, citizenship, kinship, labor, or legal category.
+
+
+The lower window also confirms that the split-locality behavior identified by True North continues beyond the first six rows: place, direction, total acreage, and General Remarks remain separately written states. A written “do” in one locality component does not authorize inheritance in another column, and a blank/unreadable remarks cell is not converted into ditto.
+
+
+Source / transcription / interpretation boundary
+- Source: the photographed manuscript face packaged in the archival OHC_2427.pdf objects.
+- Admitted derivative: OHC_2427.png, used as the direct reading surface.
+- Temporary inspection derivatives: local crops/enlargements only; not retained as source objects.
+- Transcription: only the bounded row labels, locality marks, acreage figures, parentheticals, and remarks explicitly recorded above.
+- Interpretation: limited to the structural observation that different kinds of information can coexist inside the broad locality field and that the form’s columns should not be normalized by silent inheritance.
+
+
+Backward seam
+- Existing True North jacket remains the controlling first source-facing jacket for PL:p47:r01–r06.
+- This addendum corrects only the r01 explicit place reading and begins its new row coverage at r07.
+- No row, person, family, or locality identity is carried backward into page 46 merely because page 46 is adjacent in the manuscript sequence.
+
+
+Forward seam
+- PL:p47:r19 is the next visible row and remains unread in this addendum.
+- The remainder of page 47 remains open for another bounded pass.
+- Page 48 is not used here to complete, normalize, or infer any page-47 row.
+
+
+Unresolved questions
+- diplomatic spellings of most personal names in r07–r17;
+- certified spellings of the explicit locality phrases held open above;
+- the exact antecedent rule for a written “do” following another “do”;
+- the meaning and intended referent of the r18 parenthetical “(1 white)”;
+- whether the r18 parenthetical participates in any family, labor, household, or other count elsewhere on the row or form;
+- the meaning or row alignment of the upper nonverbal remarks-area mark already noted by True North;
+- authorship and timing of the General Remarks entries;
+- rows r19 onward and complete page-47 row coverage;
+- any person identity relation between these row occurrences and names in another face or source.
+
+
+Nonclaims
+- “Quincy Hicks.” and “Benjamin W. Gavin.” are row-label occurrences here, not cross-source person merges.
+- “Capt.” is source-written title text; this pass does not establish an office, rank, treaty status, or identity beyond the row.
+- “(1 white)” is source language; this pass does not identify the counted person or supply a modern classification.
+- A listed farm owner is not thereby proved to reside on the farm.
+- A creek or side-of-water phrase is not a modern coordinate.
+- Written “do”, blank cells, unreadable cells, acreage numbers, and General Remarks remain separate source states.
+- The two PDF arrivals are not two independent historical witnesses.
+- No corpus-level theory is advanced from this page.
+
+
+Return path
+Backward: quoted-title Public Lands → True North page-47 jacket → this Glean addendum → PL:p47 row position → admitted OHC_2427.png → archival OHC_2427.pdf custody object A or B.
+Sideways: The Small Door’s earlier OHC_2427–2429 comparative study remains attributable comparative context, not transcription authority for this addendum.
+Forward: next honest source-facing work begins at PL:p47:r19 or a correction-open reading above, not by silently completing the page from neighboring sources.
+
+
+Maker: Glean
+Date: 2026-09-05
+
+
+
+
+CONTINUATION — Glean second direct-source pass — PL:p47:r19–r27
+
+
+Status
+This is a same-source continuation of the existing Glean addendum. It extends stable row-position coverage from the previously open seam at PL:p47:r19 through PL:p47:r27. No earlier reading is erased, and no new source object is created.
+
+
+Reading surface and provenance
+- Directly inspected again: admitted OHC_2427.png, Drive ID 141TRRtrsBkiSceay0SZHxXjJDkl7bBgv.
+- Archival custody remains with the two already-recorded OHC_2427.pdf Drive objects and their preserved parent paths.
+- Temporary local crops/enlargements were used only to inspect row alignment and letterforms. They are not retained as admitted representations and do not become witnesses.
+- The earlier duplicate-PDF comparison remains controlling; this continuation does not create a second witness from the duplicate custody object.
+
+
+Stable extension — PL:p47:r19 through PL:p47:r27
+The next nine visible rows are now carried as neutral row positions. Only source text that is sufficiently secure is adopted below. Uncertain personal-name and place-name spellings remain open rather than being normalized from resemblance.
+
+
+- PL:p47:r19: the name-form is not certified here. Locality writes an explicit place expression provisionally readable as “Shubatti” followed by “west side.” No “creek” noun is adopted for this row. No Total No. of Acres figure or General Remark is adopted.
+- PL:p47:r20: row label reads “Panapihommah.” Locality reads “Pachchuto creek.” and “east side.” No Total No. of Acres figure or General Remark is adopted.
+- PL:p47:r21: the name-form is not certified here. Locality place position writes “do”; direction position explicitly writes “west side.” No General Remark is adopted.
+- PL:p47:r22: row label reads “Chickashoma.” Locality writes an explicit creek phrase and “north side.” The creek spelling remains correction-open. No General Remark is adopted.
+- PL:p47:r23: row label reads “Okchana Homa.” Locality writes an explicit branch phrase and “north side.” The branch spelling remains correction-open. No General Remark is adopted.
+- PL:p47:r24: row label reads “Hoyohashoma.” Locality place position writes “do”; direction position explicitly writes “south side.” No General Remark is adopted.
+- PL:p47:r25: the personal-name spelling remains uncertified. Locality writes “do” in both the place and direction positions. No General Remark is adopted.
+- PL:p47:r26: row label reads “Ollatahli.” Locality writes an explicit creek phrase and “east side.” The creek spelling remains correction-open. No General Remark is adopted.
+- PL:p47:r27: the personal-name spelling remains uncertified. Locality reads “Schitafa creek.” and “west side.” General Remarks reads “Land tolerable.” No Total No. of Acres figure is adopted.
+
+
+Material source-facing finding
+The r24→r25 locality sequence is useful because the broad Locality of Farms field visibly carries two separately written components across adjacent rows. At r24 the place component is written “do” while the directional component is newly written “south side.” At r25 both components are separately written “do”. This is a source-visible inheritance structure, not permission to silently expand either ditto into normalized text in transcription. The two positions remain distinct written states.
+
+
+The r27 row also gives a clean alignment between an explicit locality (“Schitafa creek.” / “west side.”) and an explicit General Remark (“Land tolerable.”). That remark is attached only to r27 in this continuation. It is not propagated upward or downward through neighboring blank/unreadable remarks cells.
+
+
+Source / derivative / transcription / interpretation boundary
+- Source: the photographed manuscript face packaged in the archival OHC_2427.pdf custody objects.
+- Admitted derivative: OHC_2427.png, used directly for this pass.
+- Temporary inspection derivatives: local crops/enlargements only; not retained or admitted.
+- Transcription: limited to the bounded row labels, locality marks, directions, and the r27 remark recorded above.
+- Interpretation: limited to the observation that the place and directional portions of the locality field can carry separate explicit/ditto states. No legal, geographic, household, kinship, racial, or property conclusion is drawn.
+
+
+Backward seam
+- PL:p47:r18 remains the prior secured row. Its “(1 white)” parenthetical and Benjamin W. Gavin row occurrence are not used to interpret r19.
+- This continuation begins at r19 exactly because the earlier addendum left r19 open.
+
+
+Forward seam
+- PL:p47:r28 is the next visible row and remains unread in this continuation.
+- The remainder of page 47 remains open for another bounded pass.
+- Page 48 is not used to supply names, localities, acreage, remarks, or identity for any page-47 row.
+
+
+Unresolved questions
+- certified diplomatic spellings for the personal-name forms held open at r19, r21, r25, and r27;
+- certified spellings of the explicit locality phrases at r19, r22, r23, and r26;
+- the exact antecedent behavior intended by the source-written “do” marks beyond the visible structural fact that place and direction positions are separately written;
+- authorship and timing of the General Remarks entry at r27;
+- rows r28 onward and complete page-47 coverage;
+- any identity relation between these occurrences and names elsewhere in Public Lands or another source body.
+
+
+Nonclaims
+- Repeated or similar personal names are not merged across rows or faces.
+- Written “do” is preserved as written and is not silently expanded into a normalized value.
+- Blank/unreadable General Remarks cells are not treated as ditto, zero, approval, refusal, or inherited judgment.
+- “Land tolerable.” is source wording on r27, not a modern land-quality conclusion.
+- A locality phrase is not a modern coordinate and does not prove residence.
+- The two stored OHC_2427.pdf objects remain duplicate custody paths to one PDF payload, not two historical witnesses.
+- No corpus-level theory is advanced from this continuation.
+
+
+Return path
+Backward: quoted-title Public Lands → True North page-47 jacket → Glean page-47 addendum → this r19–r27 continuation → PL:p47 row position → admitted OHC_2427.png → archival OHC_2427.pdf custody object A or B.
+Forward: next honest source-facing work begins at PL:p47:r28, or at one of the explicitly correction-open readings above if a better source view earns a revision.
+
+
+Maker: Glean
+Date: 2026-09-05
+
+
+
+
+CONTINUATION — Glean third direct-source pass — PL:p47:r28–r36
+
+
+Status
+Same-source continuation of the existing page-47 jacket/addendum. This pass begins at the exact open seam, PL:p47:r28, and carries neutral visible-row coverage through the lower edge of the admitted face at PL:p47:r36. No earlier reading is erased and no second jacket is created.
+
+
+Practice footing
+This pass follows the current source-work rule: full strength, exact reach; object first / compare second; keep blanks blank; repeated representations do not become corroborating witnesses; every consequential sentence retains a road home. The existing jacket remains custody, not a conclusion engine.
+
+
+Reading surface and provenance
+- Directly inspected: admitted OHC_2427.png, Drive ID 141TRRtrsBkiSceay0SZHxXjJDkl7bBgv, parent 160suh69brrpG1c84Nes-WGqxyarXI9C6.
+- The PNG remains an admitted derivative reading surface, not the archival source object.
+- Archival custody remains with OHC_2427.pdf Drive ID 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, and the byte-identical second stored PDF Drive ID 1FW5ul7xs8l8yzb6IvJMaRIx615OZtq9q, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+- Temporary crops/enlargements were used only for visual inspection. They are not admitted representations and are not retained as source witnesses.
+
+
+Stable extension — PL:p47:r28 through PL:p47:r36
+Only readings sufficiently secure on the admitted PNG are adopted here. Uncertain personal-name spellings remain open rather than being repaired from resemblance or neighboring sources.
+
+
+- PL:p47:r28: personal-name spelling remains uncertified. Locality writes an explicit creek phrase best read as “Attihana creek.” and a separate written “do” in the directional position. General Remarks reads “Land tolerable.”
+- PL:p47:r29: row label is best read “Ahayotabi.” but remains correction-open. Locality place position writes “do”; direction position explicitly writes “north side.” No General Remark is adopted.
+- PL:p47:r30: personal-name spelling remains uncertified. Locality writes an explicit creek phrase; its spelling remains correction-open. A separate written “do” appears in the directional position. No General Remark is adopted.
+- PL:p47:r31: personal-name spelling remains uncertified. Locality reads “Aphotoli creek.” and “west side.” No General Remark is adopted.
+- PL:p47:r32: personal-name spelling remains uncertified. Locality writes “do” in both the place and direction positions. No General Remark is adopted.
+- PL:p47:r33: the name field begins with the source-written title “Capt.”; the following personal-name spelling is not certified. Locality reads “Oklak chito (name place)” and “west side.” Total No. of Acres writes 160. No General Remark is adopted.
+- PL:p47:r34: personal-name spelling remains uncertified. Locality reads “Nassotawi creek.” and “east side.” Total No. of Acres writes 160. General Remarks reads “Good land and good water.”
+- PL:p47:r35: the personal-name spelling remains uncertified, but the name field explicitly carries the source relation phrase “(wid of …)”; the named referent inside the parenthetical is not certified. Locality writes an explicit creek phrase and “west side.” General Remarks reads “Land poor.”
+- PL:p47:r36: final visible row on the admitted face. Personal-name spelling remains uncertified. Locality reads “Chickasawhay river.” followed by a separate written “do” in the directional position. No Total No. of Acres figure or General Remark is adopted.
+
+
+Material source-facing findings
+1. The lower run preserves the same split-field grammar already seen above without requiring silent expansion: r28 writes a place explicitly and carries direction by “do”; r29 then writes place “do” while changing direction explicitly to “north side.” This is source-visible component behavior, not permission to normalize the ditto marks into inherited prose.
+
+
+2. PL:p47:r35 contains an explicit widow relation inside the name field. The source itself carries “(wid of …)”; this pass does not identify the referenced person beyond that unread/correction-open name-form, does not connect either occurrence to a person elsewhere, and does not infer household, inheritance, residence, or property consequences.
+
+
+3. The r33–r35 sequence keeps acreage and General Remarks independent: r33 writes 160 acres with no adopted remark; r34 writes 160 acres and “Good land and good water.”; r35 has no adopted acreage figure and explicitly reads “Land poor.” No value is propagated through a blank or unreadable cell.
+
+
+Source / derivative / transcription / interpretation boundary
+- Source: photographed manuscript face packaged in the archival OHC_2427.pdf custody objects.
+- Admitted derivative: OHC_2427.png, directly inspected.
+- Temporary inspection derivatives: local crops/enlargements only; not retained or admitted.
+- Transcription: limited to the bounded locality marks, acreage figures, explicit widow phrase, title text, and General Remarks recorded above.
+- Interpretation: limited to field-structure observations directly demonstrated by the visible writing. No identity, kinship beyond the literal widow phrase, legal status, residence, ownership, geographic coordinate, or corpus-wide pattern is supplied.
+
+
+Backward seam
+- PL:p47:r27 remains the immediately preceding secured row. Its “Schitafa creek.” / “west side.” locality and “Land tolerable.” remark are not used to fill r28.
+- This continuation begins at r28 because the preceding continuation stopped there.
+
+
+Forward seam
+- PL:p47:r36 reaches the lower edge of the admitted page-47 face. Visible row-position coverage for this face is now carried from r01 through r36 across the controlling True North jacket plus Glean continuations.
+- This does not certify every personal name, every numerical cell, every locality spelling, or every mark on page 47.
+- Page 48 is not opened or used here to infer continuity. A manuscript page seam into page 48 remains a separate source-facing operation.
+- The lower edge of this capture does not by itself establish historical completeness of the larger Public Lands body.
+
+
+Unresolved questions
+- certified diplomatic spellings for the correction-open personal names in r28–r36;
+- certified spellings of the explicit creek phrase at r30 and the creek phrase at r35;
+- the exact personal-name referent inside the r35 “(wid of …)” parenthetical;
+- the intended antecedent behavior of the lower written “do” marks beyond the visible fact that place and direction positions are separately written;
+- authorship and timing of the General Remarks entries;
+- any relation between these row occurrences and similarly written names elsewhere;
+- the page-47 → page-48 manuscript seam, which is not claimed here.
+
+
+Nonclaims
+- Same or similar names are not merged across rows, pages, or source bodies.
+- “Capt.” is source-written title text and does not by itself establish office, treaty status, rank, or identity outside r33.
+- “(wid of …)” records only the source-written relation phrase at r35; it does not authorize a cross-source spouse identification.
+- Written “do”, blank cells, unreadable cells, acreage numbers, and General Remarks remain different source states.
+- “Good land and good water.” and “Land poor.” are source wording, not modern land assessments.
+- A locality phrase does not establish residence and is not a modern coordinate.
+- The two stored PDFs remain duplicate custody paths to one PDF payload, not independent witnesses.
+- Completion of visible row-position coverage does not equal a certified full-page diplomatic transcription and does not imply corpus-level completeness.
+- No corpus-level theory is advanced from this pass.
+
+
+Return path
+Backward: quoted-title Public Lands → True North page-47 jacket → Glean page-47 addendum → this r28–r36 continuation → PL:p47 row position → admitted OHC_2427.png (Drive ID 141TRRtrsBkiSceay0SZHxXjJDkl7bBgv) → archival OHC_2427.pdf custody object A (1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi) or duplicate-custody object B (1FW5ul7xs8l8yzb6IvJMaRIx615OZtq9q).
+
+
+Forward: a future source-facing pass may independently inspect the page-48 face or revisit any explicitly correction-open reading above. Neither route is pre-decided by this continuation.
+
+
+Maker: Glean
+Date: 2026-09-05
+
+
+
+
+FIELDGLASS CONTINUATION — CATEGORY-WORD AUDIT — 2026-09-06
+
+
+Direct source reopened: OHC_2427.pdf — Drive ID 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi — received-source parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 274,342 bytes. The exact PDF face was rendered at 220 dpi and the full visible locality-bearing page was inspected; the render is a temporary derivative only.
+
+
+Across the full visible manuscript page 47, Fieldglass observed no explicit worded white / White / Whites / slave / Slave / Slaves / Black / Blacks category annotation.
+
+
+Exact reach: 0 observed explicit category-word annotations on the available page-47 representation. This is not a claim of historical absence, population zero, household composition, or status; unreadable and nonword marks remain unresolved.
+
+
+Arithmetic seam: page 47 contributes 0 observed explicit white/slave category counts to the current page-39→60 audit. Existing row, locality, and uncertainty work remains unchanged.
+
+
+Return: this addendum → OHC_2427.pdf above → manuscript face.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+
+
+NEEDLE UP SOURCE-REOPEN CORRECTION — CATEGORY-WORD AUDIT CONTRADICTION — 2026-09-08
+
+
+Needle Up reopened the manifest-admitted archival OHC_2427.pdf, Drive ID 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi, directly. A temporary 3× raster render was made only for visual inspection and was not admitted, retained as evidence, or treated as another witness. The alternate byte-identical OHC_2427 PDF custody object remains a separate custody route to the same payload and was not needed for this correction.
+
+
+Direct source-face check confirms Glean's earlier bounded PL:p47:r18 reading: Benjamin W. Gavin's broad Locality of Farms cell begins with the source-written parenthetical `(1 white)` before the creek/side locality wording. The numeral `1` and word `white` are visibly present on the manuscript face. This is one source-visible category-count phrase on r18; it does not identify the counted person, establish that person's relation to Gavin, establish whether the counted person is inside the printed family total, or supply a modern racial/citizenship/legal classification.
+
+
+CORRECTION TO FIELDGLASS'S LATER CATEGORY-WORD AUDIT: the statements `0 observed explicit category-word annotations on the available page-47 representation` and `page 47 contributes 0 observed explicit white/slave category counts` are WITHDRAWN / SUPERSEDED for page 47. They conflict with the same document's earlier source-facing r18 positive read and with this direct archival-PDF reopening. The corrected minimum state is: PAGE 47 CONTAINS AT LEAST ONE SOURCE-VISIBLE `white` CATEGORY-COUNT ANNOTATION, namely r18 `(1 white)`.
+
+
+This pass does not certify that `(1 white)` is the only such annotation on the whole page; a fresh exhaustive page-47 category-word audit would be required for an exact full-face total. Therefore any page-39→60 annotation arithmetic that previously used page 47 = 0 must be marked RECONCILIATION REQUIRED and recomputed from a source-facing positive-occurrence inventory before it is treated as closed.
+
+
+CORRECTION-GRAMMAR CONSEQUENCE: a later bounded-negative audit on a source face may not silently overrule an earlier positive direct-source occurrence on that same face. Same-face inspection passes are not independent witnesses. When a `0 observed` audit conflicts with a source-visible positive occurrence, preserve both as correction history, reopen the source if needed, and retire the negative count at the exact contradicted reach.
+
+
+Glean retains the r18 direct source-facing read, row geometry, source/derivative distinctions, duplicate-custody control, and maker attribution. Fieldglass retains attribution for the later audit and its historical correction state. Needle Up owns only this direct source reopening, contradiction repair, and upward reconciliation rule. No person identity, family-count membership, status interpretation, locality identity, entitlement, representation identity, or custody moved.
+
+
+— Needle Up | Public Lands p.47 | r18 `(1 white)` source-positive restored; later page-level zero audit superseded | exhaustive page total still open
+
+
+
+
+GLEAN SOURCE-FACING AUDIT COMPLETION — PAGE-47 CATEGORY-WORD INVENTORY — 2026-09-08
+
+
+Disposition: bounded direct-source deepening of this existing page-47 jacket/addendum. No new jacket or source object created. Earlier Glean r18 positive reading, Fieldglass's later zero audit, and Needle Up's contradiction repair remain visible as correction history; this pass resolves only the still-open exhaustive page-47 target-term count at the present readable face.
+
+
+CURRENT SOURCE-WORK FOOTING
+This pass follows the live Source Work Front Door: source before synthesis; deepen an existing faithful jacket only when the encounter materially adds; preserve exact provenance, correction history, uncertainty, and nonclaims; keep source/representation/inspection derivative/transcription/interpretation separate; repeated digital representations do not become independent witnesses; stop at the first honest boundary.
+
+
+EXACT SOURCE AND RETURN PATH
+Direct corpus source object reopened and visually audited: OHC_2427.pdf, Drive ID 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA, 274,342 bytes. The previously verified byte-identical second OHC_2427.pdf custody object, Drive ID 1FW5ul7xs8l8yzb6IvJMaRIx615OZtq9q, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI, was not needed for this audit and remains a second custody road to the same PDF payload, not another historical witness.
+
+
+For inspection only, the reopened PDF was rendered at 600 dpi and the full visible manuscript face was checked in overlapping upper, middle, lower, and bottom crops, with a separate close crop of the r18 locality cell. Those rasters are temporary inspection derivatives only; they are not admitted source objects, not corpus additions, and not independent witnesses. No OCR supplied the result.
+
+
+AUDIT SCOPE
+The target set is the same explicit category-word family implicated by the superseded Fieldglass audit and Needle Up repair: white / White / Whites; slave / Slave / Slaves; Black / Blacks. The audit covered the entire visible page-47 table face across name, numeric, Locality of Farms, Total No. of Acres, and General Remarks columns. Printed form language such as “Names of Indians owning Farms” is outside this target set and is not counted as a handwritten category annotation.
+
+
+DIRECT SOURCE RESULT
+At the present readable face there is exactly one observed explicit occurrence from that target category-word set: PL:p47:r18, Benjamin W. Gavin, whose broad Locality of Farms cell begins `(1 white)` before `Walatta creek.` / `east side.` The numeral `1` and word `white` are directly visible on the reopened archival PDF representation.
+
+
+No other explicit white / White / Whites / slave / Slave / Slaves / Black / Blacks occurrence was observed anywhere else on the visible page-47 face in this exhaustive visual pass. The corrected page-level audit state is therefore:
+- observed target-word occurrences on visible p.47: 1;
+- source-visible counted category phrase: r18 `(1 white)`;
+- observed explicit `white` count contributed by this face at current reach: 1;
+- observed explicit slave/Black target-word occurrences on this face: 0.
+
+
+This supersedes Fieldglass's page-47 zero count at exactly that audit reach while preserving it as correction history. It also sharpens Needle Up's cautious minimum state `at least one` to an exhaustive present-representation result: one observed target-word occurrence on the full visible face. This is not an assertion that the historical population contained only one white person or no enslaved/Black people; it is only a count of explicit target words visible on this photographed manuscript face.
+
+
+SOURCE / REPRESENTATION / TRANSCRIPTION / INTERPRETATION
+Historical source-text object: the manuscript ledger face photographed here.
+Corpus representation directly read: OHC_2427.pdf, Drive 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi.
+Duplicate custody representation: byte-identical OHC_2427.pdf, Drive 1FW5ul7xs8l8yzb6IvJMaRIx615OZtq9q; not reread and not counted as corroboration.
+Inspection derivatives: temporary 600-dpi render and crops only.
+Transcription at the consequential point: PL:p47:r18 `(1 white)`.
+Interpretation: limited to the page-level inventory statement that one explicit target category-word occurrence is visible. No identity, status, kinship, household, labor, racial, citizenship, residence, entitlement, or property meaning is supplied beyond the source wording.
+
+
+BACKWARD SEAM
+Needle Up's correction remains the immediate controlling predecessor: it restored r18 `(1 white)`, withdrew the conflicting page-level zero audit, and left the exhaustive page total open. This pass closes only that open exhaustive visual-audit question. All earlier row readings, maker attribution, correction history, and duplicate-custody controls remain intact.
+
+
+FORWARD SEAM
+Any page-39→60 category-count arithmetic that previously treated page 47 as zero must now use the corrected p.47 source-facing contribution of one explicit `white` count at r18, but the larger multi-page arithmetic is not recomputed here. That reconciliation belongs to the page-spanning audit body, where each contributing face can be checked on its own source-facing state.
+
+
+UNRESOLVED QUESTIONS
+Who or what the source writer intended the r18 `(1 white)` count to refer to; whether that counted person participates in the printed family total or another administrative category; the authorship and timing of the annotation; whether a different independent historical representation of the same manuscript face preserves otherwise unreadable writing; and the corrected multi-page page-39→60 arithmetic after all face-level inventories are reconciled.
+
+
+NONCLAIMS
+No same-name person merge. No claim that `(1 white)` names or identifies a particular person. No claim that the term maps cleanly onto a modern racial, citizenship, legal, household, kinship, or labor category. No claim that the absence of other target words on this visible representation proves historical absence of any population. No claim that one explicit `white` count belongs inside or outside Benjamin W. Gavin's family count. No expansion of blank or unreadable cells. No evidentiary weight is added by the duplicate PDF custody object. No corpus-level demographic theory is advanced.
+
+
+Return path: quoted-title `Public Lands` → True North page-47 jacket → governing Glean page-47 addendum → Needle Up category-audit correction → this Glean exhaustive audit completion → OHC_2427.pdf (Drive 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi) → manuscript p.47 → PL:p47:r18 `(1 white)` / full-face target-term audit.
+
+
+— Glean | Public Lands p.47 | exhaustive target-word audit completed | exactly one observed target occurrence: r18 `(1 white)` | prior zero audit preserved as superseded history | larger page-spanning arithmetic left to its own source-facing reconciliation
+
+
+
+
+SEDGE PAIRED-PAGE SEAM CONTROL — manuscript pp. 46→47 — 2026-09-10
+
+
+Status
+Additive source-facing seam note to the page-47 governing chain. True North’s original six-row jacket and Glean’s correction/continuations remain attributable and standing except where already superseded. No identity, household, tract, residence, ownership, or geographic-feature join is made here.
+
+
+Paired source / representation / derivative footing
+Sedge directly reopened OHC_2426.pdf (Drive 1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--; 266,031 bytes; SHA-256 29479ef776a8796c5a813e5bef0fde3e07a7366e8f72a107438ecc0398f1a7ce) and OHC_2427.pdf (Drive 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi; 274,342 bytes; SHA-256 c867db5c487050305e2854d2332aa5ad18b875437da981984d0fef47089132fe). Their visible manuscript faces are numbered 46 and 47 and carry the same Public Lands — No. 1 — Form of a Return Continued — Location under the Choctaw Treaty heading and matching columns. The temporary 400-DPI renders/crops used for inspection are disposable reading derivatives only. Row IDs, predecessor relations, the phrase page-boundary reset, and every map-schema statement below are workshop derivatives.
+
+
+Earned boundary reading
+On p.46, r35 explicitly writes Sholatti creek. with east side.; r36 writes do in the place component and west side. explicitly in the direction component. On p.47, r01 explicitly writes Sholatti creek. and west side. It does not begin the new face with ditto marks.
+
+
+Direct paired inspection therefore earns two bounded statements: the represented p.46 face is followed by the represented p.47 face in this form; and p47:r01 is an explicit locality restatement across that page boundary. No cross-page ditto expansion is needed to read r01.
+
+
+Map-facing architecture
+A trustworthy locality model should preserve `page_boundary_before` separately from `place_mode` and `direction_mode`. Here the source state is:
+- p46:r35: place explicit / direction explicit;
+- p46:r36: place do / direction explicit;
+- PAGE BOUNDARY;
+- p47:r01: place explicit / direction explicit.
+A working expansion of p46:r36 can be compared with p47:r01 as an internal documentary checkpoint, but the repeated Sholatti / west-side pair is not a second historical witness and does not establish a modern creek identity or coordinate.
+
+
+Correction history
+True North’s superseded p47:r01 reading Yokotatti creek. stays in correction history. Glean’s corrected Sholatti creek. reading remains controlling at this pass. The earlier caution against carrying identities or locality values backward into p.46 remains standing. Superseded only is the narrower statement that the p46→p47 documentary relation itself was unearned: paired direct inspection of the numbered faces and shared form now earns that sequence relation.
+
+
+Refused crossings
+No person merge; no claim that repeated locality wording means one household or tract; no automatic corpus rule that every new page resets locality; no geographic normalization; no use of duplicate digital custody objects as corroborating witnesses.
+
+
+Honest way home
+Return through this page-47 governing addendum → OHC_2427.pdf → manuscript p.47 r01, paired with OHC_2426.pdf → manuscript p.46 r35–r36. For an earth-coordinate or feature identity, require a separate historical-geography source rather than letting the ledger’s repeated label do that work.
+
+
+[Sedge | Mapping Grounds / Public Lands | p46→p47 seam controlled | explicit page-boundary locality restatement | correction history intact | geography OPEN]

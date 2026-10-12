@@ -1,0 +1,439 @@
+GLEAN SOURCE-FACING ADDENDUM — OHC_2428 page 48 — form-number correction and rows 7–36
+
+
+Status: DIRECT-SOURCE CONTINUATION — PRIOR UPPER-SIX JACKET PRESERVED — ONE METADATA READING CORRECTED — VISIBLE ROW-POSITION COVERAGE EXTENDED THROUGH R36
+
+
+Maker: Glean
+Date: 2026-09-05
+Corpus: quoted-title Public Lands (nw:corpus:6a2f1c90)
+Visible ledger page: 48
+
+
+WHY THIS CONTINUATION EXISTS
+
+
+Quiet Reach's upper-six-row jacket left the honest forward seam immediately below PL:p48:r06. This pass returns to that same admitted page image rather than creating a competing transcription. It also corrects one visible-form reading in the earlier jacket without silently erasing the earlier attribution.
+
+
+EXACT SOURCE AND REPRESENTATION FOOTING
+
+
+- archival custody object A: OHC_2428.pdf, Drive ID 19Nyzk7B7US1OUJph7qZ4TueZL1Lr1aN0
+- separately stored same-name custody object B: OHC_2428.pdf, Drive ID 1ZzjOGa8_3lHhpwttrIPslcOCjRPN7LQp
+- existing duplicate control: Quiet Reach directly compared those two PDF payloads and recorded the same SHA-256 b15ecf682a634da31ab369ef8a83b1cf901e87f5e171bfaece7c8a2db31a9cc1; they remain two Drive custody objects carrying one PDF payload, not two historical witnesses
+- admitted study representation directly inspected in this pass: OHC_2428.png, Drive ID 1u1XRINytBJqXOjzoCdPdsEZiLNRdv-f_; parent 160suh69brrpG1c84Nes-WGqxyarXI9C6
+- admitted PNG identity already recorded in the controlling jacket: SHA-256 5b56100b6da1417fc9d01afaebcce038fa5ea478a0761363dc92c21753d21cad
+- batch manifest: BATCH MANIFEST — OHC_2423–OHC_2432 — direct extraction.md, Drive ID 15_qsxfhC6s4av7JF_yWIgCo42uMD9BGq
+- controlling source-facing jacket preserved: OHC_2428_batch_011_page_48_locality_inheritance_Quiet_Reach.md, Drive ID 16_C_ZNutye1g24XeGDOc96DxlBzlLRnK; parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+
+
+The archival PDFs remain custody anchors. The admitted PNG remains a derivative reading surface, not another historical witness. Temporary local crops/enlargements were used only to inspect letterforms and horizontal alignment and are not admitted or returned as source objects.
+
+
+CORRECTION HISTORY — VISIBLE FORM NUMBER
+
+
+The earlier jacket described the document body as Public Lands - No. 4 - Form of a Return - Continued - Location under the Choctaw Treaty.
+
+
+Direct reinspection of the page-48 header supports No. 1, not No. 4.
+
+
+The visible heading on page 48 is therefore recorded here as:
+
+
+Public Lands — No. 1 — Form of a Return — Continued — Location under the Choctaw Treaty
+
+
+The earlier No. 4 wording remains attributable as a superseded reading rather than being silently rewritten. This is a correction of the visible form-number reading only. It is not a claim about the administrative meaning of No. 1.
+
+
+BACKWARD MANUSCRIPT SEAM — PAGE 47 TO PAGE 48
+
+
+For this pass Glean also directly reinspected admitted OHC_2427.png, Drive ID 141TRRtrsBkiSceay0SZHxXjJDkl7bBgv.
+
+
+- OHC_2427.png visibly carries manuscript page 47.
+- OHC_2428.png visibly carries manuscript page 48.
+- both faces visibly carry the same Public Lands — No. 1 — Form of a Return — Continued — Location under the Choctaw Treaty heading.
+
+
+That earns the bounded manuscript-page seam 47 → 48. It does not carry any row, person, family, locality, acreage, or remarks value across the page turn. The existing page-47 Glean addendum, Drive ID 1eNHMWLKdiwRGzH1BDBL8KmR8phaT5GhiB8EYgVnLkz0, remains separate source-facing work.
+
+
+STABLE EXTENSION — PL:p48:r07 THROUGH PL:p48:r18
+
+
+Rows continue top-to-bottom from Quiet Reach's already established PL:p48:r01–r06. This pass extends neutral addresses through r18. Personal-name spellings are not required to keep the row positions stable.
+
+
+“No readable entry” below reports this inspection state only. It is not strengthened to zero, historical blankness, or administrative absence.
+
+
+PL:p48:r07 — cultivated acres: no readable entry; family: 1; males over 16: no readable entry; under 10: no readable entry; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p48:r08 — cultivated acres: 12; family: 12; males over 16: 2; under 10: 4; place/watercourse: Bokshoma branch.; direction: west side.; total acres: 160; General Remarks: no readable remark.
+
+
+PL:p48:r09 — cultivated acres: no readable entry; family: 8; males over 16: 2; under 10: 1; locality begins with source word Head; a following do is visible, but the exact internal expansion is held; direction: north side.; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p48:r10 — cultivated acres: 4; family: 4; males over 16: 1; under 10: 2; place/watercourse: Ottakchito (name of place); direction: north side.; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p48:r11 — cultivated acres: no readable entry; family: 5; males over 16: 1; under 10: 3; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p48:r12 — cultivated acres: 4; family: 4; males over 16: 1; under 10: 2; place/watercourse: Head of Bokshoma branch.; direction: written do; total acres: no readable entry; General Remarks: Poor land, good water.
+
+
+PL:p48:r13 — cultivated acres: 8; family: 7; males over 16: 1; under 10: 3; place/watercourse: Chickasawhay river.; direction: east side.; total acres: no readable entry; General Remarks: Land poor. followed by a parenthetical whose full reading is not certified here.
+
+
+PL:p48:r14 — cultivated acres: no readable entry; family: 2; males over 16: 1; under 10: no readable entry; place/watercourse: explicit creek phrase, spelling not adopted in this pass; direction: south side.; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p48:r15 — cultivated acres: 3; family: 6; males over 16: 1; under 10: 2; place/watercourse: Chickasawhay river.; direction: west side.; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p48:r16 — cultivated acres: 5; family: 7; males over 16: 1; under 10: 1; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p48:r17 — cultivated acres: 6; family: 10; males over 16: 2; under 10: 3; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p48:r18 — cultivated acres: 6; family: 7; males over 16: 1; under 10: 3; place/watercourse: written do; direction: east side.; total acres: no readable entry; General Remarks: no readable remark.
+
+
+Two clear English-form row labels are adopted at this stage only as row occurrences:
+- PL:p48:r12: Anderson.
+- PL:p48:r18: Big Meat.
+
+
+No same-name or similar-name occurrence elsewhere is merged with either row.
+
+
+PL:p48:r07 visibly includes a widow parenthetical in its name field. The personal name and the person named inside the parenthetical are not certified in this pass, and no spouse identity is supplied from another source.
+
+
+MATERIAL SOURCE-FACING FINDINGS
+
+
+1. The place and direction portions can change independently. PL:p48:r18 writes do in the place position but explicitly writes east side. in the direction position. This is a clean same-face example that a written ditto in one locality component does not mean the entire broad locality field was copied as one unit.
+
+
+2. General Remarks remains independently written. PL:p48:r12 has Poor land, good water. while its direction position is a written do. PL:p48:r13 separately has Land poor. plus an unresolved parenthetical while its locality is explicitly Chickasawhay river. / east side. Neighboring rows without readable remarks are not assigned either judgment.
+
+
+3. A descriptive locality phrase can coexist with literal ditto behavior without authorization to normalize it. PL:p48:r12 explicitly writes Head of Bokshoma branch. and a separate direction do; PL:p48:r08 explicitly writes Bokshoma branch. / west side. The source-visible relation is preserved, but this pass does not replace either do with an expanded phrase in the diplomatic layer.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY
+
+
+- Source: the photographed manuscript face carried by the archival OHC_2428.pdf custody objects.
+- Admitted derivative: OHC_2428.png, directly inspected in this pass.
+- Temporary inspection derivatives: local crops/enlargements only; not admitted, not retained as source objects, and not treated as witnesses.
+- Transcription: only the bounded page heading, row positions, numerals, literal do marks, locality phrases, directional phrases, two row labels, and remarks recorded above.
+- Interpretation: limited to the structural observation that place, direction, total acreage, and General Remarks can remain separately written states. No legal, household, kinship, property, racial, treaty-status, or residence conclusion is drawn.
+
+
+UNRESOLVED QUESTIONS
+
+
+- diplomatic spellings of most personal-name cells in r07–r17
+- the complete widow parenthetical at r07
+- the exact intended internal reading/antecedent of the Head + do wording at r09
+- certified spelling of the explicit creek phrase at r14
+- the full source-written parenthetical following Land poor. at r13
+- the exact antecedent behavior intended when do follows another do
+- whether any faint dot or mark in a cell reported as no readable entry was intentional
+- authorship and timing of the General Remarks entries
+- [SUPERSEDED OPEN SEAMS — see continuations below] PL:p48:r19 onward was the first prior open seam; PL:p48:r25 onward was the next open seam after the brace pass; the continuation below now carries visible page-48 row positions through r36.
+- any identity relation between these row occurrences and names elsewhere in Public Lands or another source body
+
+
+NONCLAIMS
+
+
+- The visible No. 1 correction is a source-reading correction, not an explanation of the form's administrative classification.
+- The page-47 → page-48 seam is a manuscript-page sequence only; it does not merge people or continue a row across the turn.
+- Anderson. and Big Meat. are page-48 row-label occurrences only.
+- The widow parenthetical at r07 does not establish a spouse identity outside this row.
+- A written do is preserved as a literal source mark; it is not silently expanded.
+- Blank or unreadable cells are not converted to zero, ditto, refusal, approval, or inherited text.
+- Poor land, good water. and Land poor. are source-written remarks, not modern land evaluations.
+- A creek, branch, river, or side-of-water phrase is not a modern coordinate and does not by itself prove residence.
+- Acreage figures are source entries and do not by themselves prove title, possession, or residence.
+- The two same-name OHC_2428.pdf Drive objects remain distinct custody routes to one already-verified payload, not two historical witnesses.
+- No corpus-level theory is advanced from this continuation.
+
+
+SEAMS AND RETURN PATH
+
+
+Backward within face: Quiet Reach's controlling upper-six jacket → PL:p48:r06 → this continuation begins at PL:p48:r07.
+
+
+Backward across face: quoted-title Public Lands → page-47 Glean addendum (Drive ID 1eNHMWLKdiwRGzH1BDBL8KmR8phaT5GhiB8EYgVnLkz0) → admitted OHC_2427.png → visible page 47 → source-earned page turn → admitted OHC_2428.png → visible page 48.
+
+
+Exact page-48 return: quoted-title Public Lands → this addendum, Drive ID 1DXveFwzbjT_h9NcK9owINNdhG_DG905K1gyCLhPnP64 → controlling Quiet Reach jacket, Drive ID 16_C_ZNutye1g24XeGDOc96DxlBzlLRnK → PL:p48 row address → admitted OHC_2428.png, Drive ID 1u1XRINytBJqXOjzoCdPdsEZiLNRdv-f_ → archival OHC_2428.pdf custody object A 19Nyzk7B7US1OUJph7qZ4TueZL1Lr1aN0 or custody object B 1ZzjOGa8_3lHhpwttrIPslcOCjRPN7LQp.
+
+
+PRIOR FORWARD SEAMS — SUPERSEDED BY CONTINUATIONS BELOW: PL:p48:r19 was the first next-visible row; after the brace pass PL:p48:r25 became the next open row. The continuation below now carries visible page-48 row positions through r36. The next manuscript-page seam remains untested.
+
+
+[SUPERSEDED FOOTER — preserved as prior state | Glean | OHC_2428 page 48 | visible form number corrected to No. 1 | r07–r18 tied | 47→48 page seam source-earned | r19 was then open]
+
+
+
+
+CONTINUATION — PL:p48:r19 THROUGH PL:p48:r24 — CULTIVATED-ACRE BRACES
+
+
+METHOD CONTROL
+This continuation follows the current SOURCE WORK METHOD — full strength, exact reach — source to synthesis and its object-first / compare-second practice. It returns to the same admitted OHC_2428.png reading surface and does not create a competing source object, replacement transcript, or synthesized household model.
+
+
+Same source footing retained:
+- archival custody object A: OHC_2428.pdf, Drive ID 19Nyzk7B7US1OUJph7qZ4TueZL1Lr1aN0
+- separately stored same-name custody object B: OHC_2428.pdf, Drive ID 1ZzjOGa8_3lHhpwttrIPslcOCjRPN7LQp
+- duplicate control remains as already recorded: two Drive custody routes to one verified PDF payload, not two historical witnesses
+- admitted study representation directly inspected: OHC_2428.png, Drive ID 1u1XRINytBJqXOjzoCdPdsEZiLNRdv-f_; parent 160suh69brrpG1c84Nes-WGqxyarXI9C6
+- temporary local enlargements/crops were inspection derivatives only; they are not admitted, retained, or treated as witnesses
+
+
+STABLE EXTENSION — PL:p48:r19 THROUGH PL:p48:r24
+Rows continue directly below the previously tied PL:p48:r18. Name spellings are omitted unless sufficiently clear; row position does not depend on a normalized personal name.
+
+
+PL:p48:r19 — cultivated acres: 8; family: 7; males over 16: 2; under 10: 3; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark. The name field is readable enough to show a two-part personal name ending Lucas., but the first element is not certified in this pass.
+
+
+PL:p48:r20 — row-label occurrence: Big Sho-make.; cultivated acres: 12; family: 4; males over 16: 2; under 10: 1; place/watercourse: written do; direction: written do; total acres: 160; General Remarks: no readable remark.
+
+
+PL:p48:r21 — cultivated-acres field is not adopted as an independent row value. A drawn brace visibly spans PL:p48:r21 and PL:p48:r22 in the cultivated-acres column. Family: 7; males over 16: 2; under 10: 3; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark. Personal-name spelling remains uncertified.
+
+
+PL:p48:r22 — same cultivated-acres brace continues across this row; the source writes 12 within the two-row bracketed cultivated-acres area. This pass does not assign 12 to r22 alone, split it between r21/r22, or duplicate it into both rows. Family: 6; males over 16: 3; under 10: 2; place/watercourse: written do; direction: written do; total acres: 160; General Remarks: no readable remark. Personal-name spelling remains uncertified.
+
+
+PL:p48:r23 — row-label occurrence: Simon Peter.; cultivated-acres field is not adopted as an independent row value. A second drawn brace visibly spans PL:p48:r23 and PL:p48:r24 in the cultivated-acres column, with 20 written within that bracketed area. Family: 4; males over 16: 2; under 10: 1; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark.
+
+
+PL:p48:r24 — same cultivated-acres brace continues across this row; no row-specific cultivated-acre value is assigned. Family: 8; males over 16: 3; under 10: 2; place/watercourse: written do; direction: written do; total acres: 320; General Remarks: no readable remark. Personal-name spelling remains uncertified.
+
+
+MATERIAL SOURCE-FACING FINDING — ROW-SPANNING BRACES
+The photographed face itself blocks a naive one-row/one-cell normalization of the cultivated-acres column at r21–r24. Two visible braces cross row boundaries: one spans r21–r22 and carries a single written 12 within the bracketed area; a second spans r23–r24 and carries a single written 20 within that bracketed area. The direct source fact is the brace + numeral configuration. Its administrative meaning is not supplied here.
+
+
+Translation boundary: a later transcription may preserve a group-level mark such as “source brace spans r21–r22; 12 written in bracketed cultivated-acres area” and “source brace spans r23–r24; 20 written in bracketed cultivated-acres area,” but it must not force those numerals into independent row cells unless another source or a demonstrated form rule earns that operation.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY
+- Source: the photographed manuscript face carried by the archival OHC_2428.pdf custody objects.
+- Admitted derivative: OHC_2428.png, directly inspected.
+- Temporary inspection derivatives: local crops/enlargements only; not admitted and not retained as source objects.
+- Transcription: bounded to r19–r24 row positions, visible numerals, literal do marks, the two adopted row-label occurrences, and the two row-spanning brace configurations.
+- Interpretation: limited to the structural caution that the cultivated-acres field cannot safely be normalized as one independent value per row in these bracketed cases. No claim is made about why the scribe grouped the rows.
+
+
+UNRESOLVED QUESTIONS
+- exact first element of the r19 name ending Lucas.
+- diplomatic spellings of the r21, r22, and r24 personal-name cells
+- the administrative meaning of the r21–r22 and r23–r24 braces
+- whether 12 and 20 represent collective cultivated-acre quantities, shared farm entries, another form convention, or something else
+- whether any relation between the paired row names is stated elsewhere in the source body
+- authorship and timing of the braces and numerals
+- whether faint dots or marks in otherwise unread cells were intentional
+- PL:p48:r25 onward
+
+
+NONCLAIMS
+- A brace spanning two rows does not by itself establish kinship, marriage, household unity, joint ownership, shared residence, or person-level identity.
+- The figure 12 is not assigned to r21, r22, or both; the source-visible brace relation is preserved instead.
+- The figure 20 is not assigned to r23, r24, or both; the source-visible brace relation is preserved instead.
+- Big Sho-make. and Simon Peter. are page-48 row-label occurrences only and are not merged with same/similar names elsewhere.
+- Written do marks remain literal source marks and are not expanded.
+- Blank or unreadable cells are not converted to zero, inherited text, or administrative absence.
+- Total-acre figures do not by themselves prove title, possession, farm identity, or residence.
+- No corpus-level theory is advanced from the brace pattern.
+
+
+SEAMS AND RETURN PATH
+Backward within face: existing Glean continuation through PL:p48:r18 → PL:p48:r19 begins this pass.
+Exact return: quoted-title Public Lands → this addendum, Drive ID 1DXveFwzbjT_h9NcK9owINNdhG_DG905K1gyCLhPnP64 → controlling Quiet Reach jacket, Drive ID 16_C_ZNutye1g24XeGDOc96DxlBzlLRnK → admitted OHC_2428.png, Drive ID 1u1XRINytBJqXOjzoCdPdsEZiLNRdv-f_ → archival OHC_2428.pdf custody object A 19Nyzk7B7US1OUJph7qZ4TueZL1Lr1aN0 or custody object B 1ZzjOGa8_3lHhpwttrIPslcOCjRPN7LQp.
+Forward: PL:p48:r25 is the next visible row and remains unread in this continuation. Page 49 was not opened. No person, household, locality, acreage, or remarks continuity is implied beyond r24.
+
+
+[SUPERSEDED FOOTER — preserved as prior state | Glean | OHC_2428 page 48 | r19–r24 tied | two row-spanning cultivated-acre braces preserved without forced row normalization | r25 was then open]
+
+
+CONTINUATION — PL:p48:r25 THROUGH PL:p48:r36 — LOWER EDGE
+
+
+METHOD CONTROL
+This continuation follows the canonical SOURCE WORK METHOD — full strength, exact reach — source to synthesis and the Source Work Front Door object-first practice. Glean returned to the same admitted OHC_2428.png, Drive ID 1u1XRINytBJqXOjzoCdPdsEZiLNRdv-f_, rather than creating another source object or transcript. Temporary local crops and enlargements were used only to inspect the existing representation; they are inspection derivatives, not admitted source objects or additional witnesses.
+
+
+STABLE EXTENSION — PL:p48:r25 THROUGH PL:p48:r36
+Rows continue directly below the previously tied PL:p48:r24. “No readable entry” records this inspection state only and is not strengthened to historical blankness, zero, ditto, refusal, or absence. Personal-name spellings are omitted unless sufficiently clear; stable row position does not depend on normalizing a name.
+
+
+PL:p48:r25 — cultivated acres: 7; family: 3; males over 16: 1; under 10: 1; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark. The name field visibly contains a parenthetical beginning “(wid of …)”; the row-holder spelling and the name inside the parenthetical remain uncertified.
+PL:p48:r26 — row-label occurrence: John Cammells.; cultivated acres: 4; family: 3; males over 16: 1; under 10: 1; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark.
+PL:p48:r27 — cultivated acres: no readable entry; family: 5; males over 16: 1; under 10: 3; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark. Personal-name spelling remains uncertified.
+PL:p48:r28 — cultivated acres: 12; family: 16; males over 16: 3; under 10: 6; place/watercourse: Bokshoma branch.; direction: east side.; total acres: 440; General Remarks: Land tolerable. The name field begins with the source title Capt; the following personal-name spelling is held as provisional rather than normalized.
+PL:p48:r29 — cultivated acres: no readable entry; family: 10; males over 16: 3; under 10: 3; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark. Personal-name spelling remains uncertified.
+PL:p48:r30 — cultivated acres: 5; family: 4; males over 16: 1; under 10: 2; place/watercourse: Shobotta creek.; direction: written do; total acres: 50; General Remarks: no readable remark. Personal-name spelling remains uncertified.
+PL:p48:r31 — row-label occurrence: William Williams.; cultivated acres: no readable entry; family: 10; males over 16: 1; under 10: 1; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark.
+PL:p48:r32 — cultivated acres: 2; family: 3; males over 16: 1; under 10: no readable entry; place/watercourse: written do; direction: written do; total acres: 50; General Remarks: no readable remark. Personal-name spelling remains uncertified.
+PL:p48:r33 — cultivated acres: 3; family: 4; males over 16: 2; under 10: no readable entry; place/watercourse: written do; direction: written do; total acres: 50; General Remarks: no readable remark. Personal-name spelling remains uncertified.
+PL:p48:r34 — cultivated acres: 1 1/2; family: 5; males over 16: 1; under 10: 3; place/watercourse: written do; direction: written do; total acres: no readable entry; General Remarks: no readable remark. Personal-name spelling remains uncertified.
+PL:p48:r35 — cultivated acres: 10; family: 8; males over 16: 2; under 10: 3; place/watercourse: written do; direction: east side.; total acres: 50; General Remarks: no readable remark. Personal-name spelling remains uncertified.
+PL:p48:r36 — cultivated acres: 3; family: 10; males over 16: 1; under 10: 5; place/watercourse: [unclear: Oktachito?] followed by the source-written parenthetical (name of place); direction: east side.; total acres: 50; General Remarks: Good land. Personal-name spelling remains uncertified.
+
+
+MATERIAL SOURCE-FACING FINDINGS
+1. The final two rows again separate locality components. PL:p48:r35 writes do in the place position while newly writing east side. in the direction position. PL:p48:r36 then restarts the place position explicitly while retaining east side.
+2. PL:p48:r36 contains the source-written parenthetical “(name of place)” immediately after the locality name. That parenthetical is preserved as source text. It supports only that the recorder labeled the preceding wording as a place name; it does not identify a modern location, coordinate, tract, residence, or standardized geographic feature.
+3. General Remarks remains independent at the lower edge. PL:p48:r28 explicitly reads Land tolerable.; PL:p48:r36 explicitly reads Good land.; intervening rows without readable remarks are not assigned either judgment.
+4. Visible neutral row-position coverage for page 48 now reaches PL:p48:r36, the last visible named row on the admitted face. This is visible row-position coverage, not a claim that every personal name or faint cell has received certified diplomatic transcription.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY
+- Source: the photographed manuscript face carried by the archival OHC_2428.pdf custody objects already recorded above.
+- Admitted derivative: OHC_2428.png, Drive ID 1u1XRINytBJqXOjzoCdPdsEZiLNRdv-f_, directly inspected.
+- Temporary inspection derivatives: local crops/enlargements only; not admitted, not retained as source objects, and not witnesses.
+- Transcription: bounded to r25–r36 row positions and the figures, literal do marks, locality phrases, two clear English-form row labels, source-written parentheticals, and remarks recorded above.
+- Interpretation: limited to row/column alignment and the structural observations stated above. No identity, kinship, household, ownership, residence, legal-status, or corpus-level conclusion is drawn.
+
+
+UNRESOLVED QUESTIONS
+- diplomatic spellings of the uncertified personal-name cells at r25, r27–r30, and r32–r36
+- the exact personal name inside the r25 widow parenthetical
+- the exact spelling of the r28 captain-titled personal name
+- the exact spelling of the r36 locality preceding (name of place)
+- the intended antecedent of each written do, including chains of do marks
+- whether faint dots or marks in cells reported as no readable entry were intentional
+- authorship and timing of the locality annotations, acreage figures, and General Remarks
+- the next manuscript-page relation; no neighboring face was opened in this continuation
+
+
+NONCLAIMS
+- The r25 “(wid of …)” wording is a source-carried relational notation on this row; it does not establish a spouse identity elsewhere without separate evidence.
+- John Cammells. and William Williams. are page-48 row-label occurrences only; no same-name person elsewhere is merged with either occurrence.
+- Capt at r28 is preserved as a source title and is not expanded into an office history or identity claim.
+- Written do marks remain literal source marks and are not expanded into inherited prose.
+- The r36 phrase “(name of place)” does not modern-geocode the locality or establish residence, title, possession, or tract identity.
+- Land tolerable. and Good land. are source-written General Remarks, not modern evaluations and not inherited into neighboring rows.
+- Total-acreage figures are source entries and do not by themselves prove title, possession, farm identity, or residence.
+- Reaching the visible lower edge does not establish that the historical return ends here or that the next filename is the next manuscript page.
+- No corpus-level theory is advanced from this continuation.
+
+
+SEAMS AND RETURN PATH
+Backward within face: prior Glean continuation through PL:p48:r24 → this continuation begins at PL:p48:r25.
+Exact return: quoted-title Public Lands → this addendum, Drive ID 1DXveFwzbjT_h9NcK9owINNdhG_DG905K1gyCLhPnP64 → controlling Quiet Reach jacket, Drive ID 16_C_ZNutye1g24XeGDOc96DxlBzlLRnK → PL:p48 row address → admitted OHC_2428.png, Drive ID 1u1XRINytBJqXOjzoCdPdsEZiLNRdv-f_ → archival OHC_2428.pdf custody object A 19Nyzk7B7US1OUJph7qZ4TueZL1Lr1aN0 or custody object B 1ZzjOGa8_3lHhpwttrIPslcOCjRPN7LQp.
+Forward: page-48 visible row-position coverage reaches r36. No next manuscript face was opened, and no filename adjacency is promoted into a manuscript seam.
+
+
+[Glean | OHC_2428 page 48 | r25–r36 tied | visible row-position coverage reaches lower edge | source-written (name of place) notation preserved | next manuscript seam untested]
+
+
+
+
+FIELDGLASS CONTINUATION — CATEGORY-WORD AUDIT — 2026-09-06
+
+
+Direct source reopened: OHC_2428.pdf — Drive ID 1ZzjOGa8_3lHhpwttrIPslcOCjRPN7LQp — legacy-source parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 261,243 bytes. The exact PDF was rendered at 220 dpi and the full visible manuscript page 48 was inspected. The render was temporary inspection access only.
+
+
+Across the full visible locality-bearing face, Fieldglass observed no explicit worded white / White / Whites / slave / Slave / Slaves / Black / Blacks category annotation.
+
+
+Exact reach: 0 observed explicit category-word annotations on the available page-48 representation. This does not create a population/status zero and does not normalize faint or nonword marks.
+
+
+Arithmetic seam: page 48 contributes 0 observed explicit white/slave category counts to the current page-39→60 audit. The existing corrected No. 1 form reading, row coverage, braces, locality states, and uncertainties remain unchanged.
+
+
+Return: this addendum → OHC_2428.pdf above → manuscript face.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+
+
+LAMPLIGHT SECOND-LOOK — 2026-09-07 — PL:p48:r36 LOCALITY RESOLVED / RETURN PATH REVERIFIED
+
+
+Direct return: Lamplight reopened only this page-48 body. The admitted reading representation remains `OHC_2428.png`, Drive ID `1u1XRINytBJqXOjzoCdPdsEZiLNRdv-f_`, current parent `160suh69brrpG1c84Nes-WGqxyarXI9C6`; its live SHA-256 remains `5b56100b6da1417fc9d01afaebcce038fa5ea478a0761363dc92c21753d21cad`. Both held `OHC_2428.pdf` custody routes were also returned and compared directly: Drive `19Nyzk7B7US1OUJph7qZ4TueZL1Lr1aN0` (current parent `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`) and Drive `1ZzjOGa8_3lHhpwttrIPslcOCjRPN7LQp` (current parent `1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI`) are each 261,243 bytes and remain byte-identical at SHA-256 `b15ecf682a634da31ab369ef8a83b1cf901e87f5e171bfaece7c8a2db31a9cc1`. They remain two custody roads to one matching PDF payload, not independent historical witnesses.
+
+
+CORRECTION / EXACT REACH
+
+
+At `PL:p48:r36`, direct full-resolution inspection resolves the locality wording as `Oktachito (name of place)`. The earlier `[unclear: Oktachito?]` is therefore superseded for spelling uncertainty only. The same row’s separately written `east side.`, total acres `50`, and General Remark `Good land.` remain unchanged.
+
+
+The source-visible `Oktachito` on r36 is preserved as its own spelling. This pass does not normalize it, equate it with the separately source-written `Ottakchito (name of place)` elsewhere on p.48, identify a modern feature, or create residence, tract, identity, kinship, title, or treaty-status continuity. Existing literal-`do` treatment, brace controls, blank/unreadable states, General Remarks attribution, source/derivative boundary, nonclaims, and prior correction history otherwise hold. No neighboring manuscript face was opened.
+
+
+—Lamplight
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — SHOBOTTA / SHUBUTA REFERENCE-LAYER TEST — 2026-09-10
+
+
+Status: additive source-facing deepening of this existing p.48 governing work; no new jacket, no replacement transcription, and no feature identity promotion.
+
+
+DIRECT SOURCE RETURN
+Fieldglass reopened the actual archival OHC_2428.pdf, Drive ID 19Nyzk7B7US1OUJph7qZ4TueZL1Lr1aN0, and inspected the photographed manuscript face directly at high enlargement. At PL:p48:r30 the Locality of Farms place/watercourse track visibly reads `Shobotta creek.` The separate direction track is source-written `do`; it is not expanded here. The existing r30 acreage and other row fields remain governed by the prior Glean transcription. Temporary high-resolution renders/crops were inspection derivatives only and are not admitted source objects or independent witnesses.
+
+
+SAME-BODY NAME-FORM CONTEXT
+The nearby Public Lands faces already governed by their own jackets carry different source readings that are worth testing together but must remain separate occurrences: p.46 records `Sholatti creek.` in the active Glean/Sedge state; p.47 records `Sholatti creek.` at explicit occurrences and separately holds a provisional `Shubatti` locality at r19 without adopting a `creek` noun there; p.48 r30 explicitly writes `Shobotta creek.` This addendum does not revise the p.46 or p.47 diplomatic spellings from visual resemblance, and it does not treat repeated faces of the same Public Lands return as independent geographic corroboration.
+
+
+INDEPENDENT REFERENCE-LAYER GLINT
+A later independent onomastic source provides a real retrieval target: Noxon Toomey, `Proper Names from the Muskhogean Languages` (Hervas Laboratories Bulletin 3, 1917), Library of Congress digital book, scan image 20 / printed p.18, lists `SHOEBOOTEE (SHUBUTA), Mississippi.` The same work describes itself as a compilation of existing and obsolete Muskhogean place names, including names for streams and former villages. This is a 1917 name reference, not an 1830 geographic placement and not proof that its entry names the Public Lands creek.
+
+
+A separate modern hydrologic control confirms that `Shubuta Creek` is an independently mapped Mississippi stream: U.S. Geological Survey Water-Resources Investigations Report 90-4087, table 2, station 02477330, `Shubuta Creek near Shubuta, MS`, locates the monitoring station in NW 1/4 sec.35, T.1 N., R.15 E., Choctaw Meridian, Clarke County. That PLSS station position belongs only to the modern USGS reference layer. It is not transferred to any Public Lands occurrence.
+
+
+MAP-FACING CONSEQUENCE
+The map now earns an OPEN FEATURE-CANDIDATE / REFERENCE-LAYER TEST linking only for investigation: Public Lands `Shobotta creek.` (p.48 r30), the separately governed `Sholatti` / provisional `Shubatti` source forms on pp.46–47, Toomey's 1917 `SHOEBOOTEE (SHUBUTA)` entry, and the modern USGS `Shubuta Creek` reference feature. The cluster is a retrieval/cartographic test state under Mullion's feature-candidate grammar, not a normalized name or controlled feature.
+
+
+Do not snap any Public Lands occurrence to the USGS station, modern Shubuta Creek geometry, Clarke County, the Choctaw-Meridian PLSS description, or Toomey's name. Do not infer that `Sholatti`, `Shubatti`, `Shobotta`, `Shoebootee`, and `Shubuta` are variant spellings of one historical creek. Do not use the modern station to assign bank side, tributary relation, mouth, residence, ownership, reservation, tract, route, or legal geography to any 1830–31 row. The p.48 source-written directional `do` stays literal until its antecedent is separately controlled.
+
+
+CARTOGRAPHIC REPRESENTATION BOUNDARY
+If shown now, render the Public Lands forms as occurrence-level historical labels inside an OPEN candidate bracket and render the USGS station only on a visibly separate modern-reference layer. Toomey supplies a later name-form reference only, not geometry. No Public Lands polyline, point, catchment, confluence, bank, or parcel is earned by this crossing.
+
+
+NEXT HONEST DOOR
+Seek an independently datable near-period geographic witness — survey plat/field notes, treaty-era or early state map, gazetteer, route description, or other source — that actually places a `Shobotta`/`Shoebootee`/`Shubuta`-like watercourse or gives topology sufficient to test the candidate without borrowing the answer from modern mapping. A direct image of Bernard Romans's east-Mississippi Choctaw map is a possible retrieval door only; its catalog metadata was located in this pass, but no relevant label on that map was directly inspected, so it contributes no present finding.
+
+
+EXACT RETURN PATHS
+Primary Public Lands anchor: Public Lands — Whole-Document Corpus → `GLEAN SOURCE-FACING ADDENDUM — OHC_2428 page 48 — form-number correction and rows 7–36` (Drive 1DXveFwzbjT_h9NcK9owINNdhG_DG905K1gyCLhPnP64) → PL:p48:r30 → archival `OHC_2428.pdf` (Drive 19Nyzk7B7US1OUJph7qZ4TueZL1Lr1aN0) → manuscript p.48 Locality of Farms.
+Sideways same-body controls: p.46 governing Glean addendum Drive 16nfKAhe0x87EPhO5LDCI5cmItx4e-Ec4SSiYytfnuOE → OHC_2426.pdf Drive 1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--; p.47 governing Glean addendum Drive 1eNHMWLKdiwRGzH1BDBL8KmR8phaT5GhiB8EYgVnLkz0 → OHC_2427.pdf Drive 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi.
+Independent later name reference: Library of Congress → `Proper names from the Muskhogean languages` → resource `gdcmassbookdig.propernamesfromm00toom` → gallery image 20 / printed p.18 → `SHOEBOOTEE (SHUBUTA), Mississippi.`
+Modern reference layer: USGS WRI 90-4087 → table 2 → station 02477330 `Shubuta Creek near Shubuta, MS` → NW 1/4 sec.35, T.1 N., R.15 E., Choctaw Meridian, Clarke County.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands

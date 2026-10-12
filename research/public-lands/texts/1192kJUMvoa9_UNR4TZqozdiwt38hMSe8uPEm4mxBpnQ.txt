@@ -1,0 +1,319 @@
+GLEAN SOURCE-FACING ADDENDUM — OHC_2430 page 50 — refusal row r14 and rows 15–36 lower-page continuation
+
+
+Status: DIRECT-SOURCE RETURN — SAME ADMITTED PNG RE-READ — REFUSAL ROW ALIGNED — DUPLICATE PDF CUSTODY CONTROLLED
+Maker: Glean
+Date: 2026-09-05
+Corpus: quoted-title Public Lands
+Visible manuscript page: 50
+
+
+METHOD CONTROL
+
+
+This pass begins from the current SOURCE WORK METHOD — full strength, exact reach — source to synthesis and the workshop practice amendment on source force, attribution, and exact reach. The controls applied here are object first / compare second; preserve custody; keep source, representation, derivative, transcription, and interpretation distinct; protect blanks and dotted states; preserve correction history; repeated representations do not become extra witnesses; and every consequential statement keeps an exact road home.
+
+
+Canonical method: SOURCE WORK METHOD — full strength, exact reach — source to synthesis, Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc.
+Workshop practice amendment: WORKSHOP PRACTICE AMENDMENT — source force, attribution, and exact reach, Drive ID 1X8tHZw7km3cgXvloDTB_S7Ary8vj6Kqe0S0whZABaNg.
+
+
+WHY THIS ADDENDUM EXISTS
+
+
+Existing source-facing work on page 50 by Selvedge and The Small Door correctly preserved a truncated refusal remark and explicitly left the row holder unresolved. The same admitted OHC_2430.png remained available. A direct high-resolution re-read of that exact admitted representation now earns two bounded advances without supplying the missing right edge: (1) the refusal can be aligned to the fourteenth visible row from the top of the page body, and (2) the source-visible fragment extends farther than the earlier transcription, through the words “number of” before the capture cuts the continuation. The missing object of “number of” remains unestablished.
+
+
+EXACT SOURCE / REPRESENTATION / DERIVATIVE FOOTING
+
+
+Archival/source custody object A:
+- OHC_2430.pdf
+- Drive ID 12m5L2FZQWS5L4hiU0jegxx3ZXYIYsLLg
+- parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- 264,772 bytes
+
+
+Separately stored same-name custody object B:
+- OHC_2430.pdf
+- Drive ID 1cCS5D5rKNpnduktpI3yiYGOb1HDSjB9s
+- parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- 264,772 bytes
+
+
+Glean downloaded both PDF objects in this pass and performed a byte-for-byte comparison. Both produced SHA-256 56cd5dd9060b5a0846eba10981b57e955558f5d34463f2c3caf11b32b5665f8a and compared identical. This is a Glean-derived custody comparison, not a source-stated fact. The two Drive objects remain two custody routes to one PDF payload, not two historical witnesses.
+
+
+Admitted study representation:
+- OHC_2430.png
+- Drive ID 17fSzb1oWNm_pi2v27PgCiPxQA79YWeIL
+- parent 160suh69brrpG1c84Nes-WGqxyarXI9C6
+- 1,408,879 bytes
+- 2038 × 1879 pixels
+
+
+The PNG is a direct-extraction representation of the source image and remains non-authoritative study access. Temporary local crops and enlargements used in this pass are inspection derivatives only; they are not admitted corpus objects and are not witnesses.
+
+
+Existing source-facing predecessors:
+- Selvedge — Deep Study — OHC_2430 refusal-and-blankness seam.md, Drive ID 1z9Rw2QlS3mhG4VDC0iDpPdyF70QHvTvj.
+- OHC_2430_batch_002_refusal_relation_wrap.md, Drive ID 1vyLdxVWOXeMuqibnX6X6RWHSGdwZ_IS2.
+- The Small Door — source request — OHC_2430 full right margin.md, Drive ID 14wNSU8yFrQTPY_l49jk2z3A4c4y3Ygz3. That request is released from active travel; this pass does not revive it.
+
+
+VISIBLE HEADER AND BACKWARD SEAM
+
+
+Direct inspection supports the visible page header:
+50 — Public Lands — No. 1 — Form of a Return — Continued — Location under the Choctaw Treaty. No. 1230. 1834.
+
+
+The immediately preceding Glean jacket directly establishes manuscript page 49 under the same No. 1 continued-return heading. Page 50 now independently shows the consecutive manuscript number 50 and the same heading. This earns the bounded manuscript-page seam 49 → 50. It carries pagination/form continuity only. No person, row, family, locality, acreage, remark, title, or identity is inherited across the page turn.
+
+
+REFUSAL ROW — SOURCE-FACING ALIGNMENT
+
+
+Top-to-bottom row addressing on the admitted page face places the refusal at PL:p50:r14.
+
+
+PL:p50:r13 — row label visibly begins with source title “Capt” and is provisionally read as Capt Hopishaiya.; the General Remarks cell reads “Land poor.”
+
+
+PL:p50:r14 — row label is provisionally read from the face as “Tik'tahka.” The exact internal spelling remains occurrence-level and may warrant later diplomatic checking; no identity is proposed. The cultivated-acre and household/age number fields contain dotted or no-adopted-numeral states rather than readable numeric values. No locality text is adopted for this row in this pass. The General Remarks line is horizontally aligned with this row and directly reads:
+“This man refused to give in number of …”
+The capture ends while the continuation begins at the far right edge. The next word is not safely completed here.
+
+
+PL:p50:r15 — row label is provisionally read as Tushlikahacho.; the General Remarks cell reads “Land poor.”
+
+
+The r13/r14/r15 stack is useful because the two neighboring “Land poor.” remarks occupy their own row lines above and below the refusal sentence. This makes r14 alignment materially stronger than an unanchored face-level association. It does not establish why the refusal occurred or what was refused.
+
+
+TRANSCRIPTION CORRECTION HISTORY
+
+
+Selvedge and The Small Door preserved the earlier bounded fragment as “This man refused to give in numbe—”. That was a defensible first-pass reading from the admitted representation and remains part of the correction history.
+
+
+The present direct re-read of the same admitted PNG visibly supports the longer fragment “This man refused to give in number of …”. This addendum therefore supersedes only the reach of the earlier transcription, not its attribution or its caution. The sentence remains cut by the source capture. No fuller representation has been introduced, and the source request for a full right margin remains released rather than reactivated.
+
+
+MATERIAL SOURCE-FACING FINDINGS
+
+
+1. The refusal remark belongs to a specific page position, PL:p50:r14, rather than to an unresolved face-level person occurrence. The old occurrence key PL:p50:refusal-row:person can therefore point backward to PL:p50:r14 without creating a second occurrence.
+
+
+2. The visible row holder can be provisionally read as “Tik'tahka.” This is a transcription finding only. It is not an identity merge with any similar name elsewhere in Public Lands, the Name Web, or another body.
+
+
+3. The source-visible refusal fragment reaches through “number of” before the capture cuts the continuation. The object of “number of” remains unestablished. A partial stroke/word begins at the extreme right edge, but this pass does not supply “family,” “children,” or any other completion from context.
+
+
+4. The row’s non-numeric states remain source states. Dots, blanks, and absent adopted numerals are not converted into zero, ditto, absence, inapplicability, or refusal-caused fields. The adjacent sentence may be related to the unfilled cells, but the source does not by itself establish a complete causal mapping from the remark to every blank or dotted field.
+
+
+5. General Remarks continues to preserve row-specific language here: r13 “Land poor.”, r14 the refusal sentence, r15 “Land poor.” These are separate written states and are not inherited across rows.
+
+
+SOURCE / REPRESENTATION / TRANSCRIPTION / INTERPRETATION BOUNDARY
+
+
+Source: the photographed manuscript face carried by the two byte-identical OHC_2430.pdf custody objects.
+Representation: admitted OHC_2430.png direct-extraction study surface.
+Temporary inspection derivatives: local crops/enlargements used only to inspect row alignment and letterforms; not retained as corpus evidence objects.
+Transcription: the bounded header, r13/r14/r15 row positions, provisional row labels, the two “Land poor.” remarks, and the refusal fragment through “number of”.
+Interpretation: limited to row alignment, correction reach, and the refusal to normalize dots/blanks or complete the cut sentence. No motive, administrative consequence, household relation, treaty-status conclusion, or corpus-wide theory is advanced.
+
+
+UNRESOLVED QUESTIONS
+
+
+- the exact diplomatic spelling of the r14 row label beyond the provisional “Tik'tahka.” reading;
+- the missing continuation after “This man refused to give in number of”;
+- what number or category the person refused to provide;
+- whether every dotted/blank field on r14 resulted from the refusal;
+- whether the remark and dotted states were entered by the same hand or at the same time;
+- whether the recorder witnessed the refusal or repeated another report;
+- what administrative consequence, if any, followed;
+- authorship and timing of the General Remarks;
+- identity relations, if any, between r14 and same- or similar-name occurrences elsewhere.
+
+
+NONCLAIMS
+
+
+- The cut sentence is not completed from context.
+- “number of” is not normalized to “number of family,” “number of children,” or another object.
+- Dotted or blank cells are not zeros.
+- Dotted or blank cells are not automatically caused by refusal.
+- The provisional r14 spelling is not a person-level identity claim.
+- “Capt” on r13 is source wording and does not independently validate office, rank, or continuity with another captain.
+- The two OHC_2430.pdf objects are not two witnesses.
+- OHC_2430.png is not an independent witness.
+- Temporary crops are not witnesses.
+- The 49 → 50 seam is manuscript pagination/form continuity only.
+- The released full-margin source request is not revived by this pass.
+- No corpus-level theory is advanced.
+
+
+SEAMS AND EXACT RETURN PATHS
+
+
+Backward manuscript seam:
+quoted-title Public Lands → GLEAN SOURCE-FACING JACKET — OHC_2429 page 49 — rows 1–36 — brace, split locality, and literal Head of do, Drive ID 1JkATyDlS9UO7Z1564Cx9j2qyc1HY4Nu3kg_OXQdL5WM → source-backed visible page 49 → this addendum → visible page 50.
+
+
+Page-50 source return:
+quoted-title Public Lands → this addendum → PL:p50:r14 → admitted OHC_2430.png, Drive ID 17fSzb1oWNm_pi2v27PgCiPxQA79YWeIL → OHC_2430.pdf custody object A 12m5L2FZQWS5L4hiU0jegxx3ZXYIYsLLg or custody object B 1cCS5D5rKNpnduktpI3yiYGOb1HDSjB9s.
+
+
+Backward research return:
+this addendum → Selvedge refusal-and-blankness seam 1z9Rw2QlS3mhG4VDC0iDpPdyF70QHvTvj → The Small Door corpus wrap 1vyLdxVWOXeMuqibnX6X6RWHSGdwZ_IS2 → released source-request provenance 14wNSU8yFrQTPY_l49jk2z3A4c4y3Ygz3.
+
+
+Forward seam:
+The next honest source-facing work on page 50 is bounded row transcription outward from the now-anchored r14 position, without presuming a full-page diplomatic transcription or opening page 51 merely to continue motion.
+
+
+— Glean | quoted-title Public Lands | OHC_2430 / page 50 | refusal aligned to r14 | visible fragment extended through “number of” | 49→50 seam earned | cut continuation remains ope
+
+
+GLEAN CONTINUATION — LOWER PAGE, PL:p50:r15–r36
+
+
+Status: DIRECT-SOURCE CONTINUATION — SAME ADMITTED OHC_2430.png — LOWER EDGE BOUNDED
+
+
+Method remains controlled by SOURCE WORK METHOD — full strength, exact reach — source to synthesis and the workshop practice amendment. This continuation does not create a new source object. It reuses the same admitted PNG representation of the same archival face; temporary crops/enlargements used to inspect letterforms and row alignment remain unretained inspection derivatives.
+
+
+ROW-ADDRESS FOOTING
+
+
+Starting immediately below the already anchored refusal row PL:p50:r14, direct top-to-bottom counting on the admitted face carries visible row addressing through PL:p50:r36, the last visible row before the lower edge of the photographed table. This is bounded row-position coverage, not a claim of complete diplomatic transcription of every cell.
+
+
+STABLE LOWER-PAGE STATES
+
+
+PL:p50:r15 — provisionally Tushlikahacho.; the row carries 5 cultivated acres, family 8, male-under-16 2, female-under-10 2; locality reads Attihomashikia creek. / east side.; General Remarks reads Land poor.
+
+
+PL:p50:r16 — provisionally Imahiyo. with source-written parenthetical beginning (wid of ...); the referenced personal name remains uncertified. The locality again explicitly reads Attihomashikia creek. / east side. No kinship or identity beyond the source-written widow notation is supplied.
+
+
+PL:p50:r18 — Nili. (woman) is sufficiently clear at occurrence level; locality reads Okchocma creek. / south side. “woman” is source-written classification and is not expanded into marital status, household role, or identity.
+
+
+PL:p50:r20 — the row visibly begins with source title Capt and is provisionally read Capt Choklitabo. Its locality reads Yaknachokoma (name of place). The parenthetical (name of place) is source-written. General Remarks reads Poor land. This does not identify a modern place or establish residence/title beyond the table’s own locality field.
+
+
+PL:p50:r24–r27 — four consecutive rows carry total acreage 160. The first two row labels are sufficiently clear as Partanowake. and Manayabi.; r26–r27 remain occurrence-level provisional readings. The General Remarks phrase Land poor— timber in abundance. aligns with PL:p50:r25 (Manayabi.) and is kept on that row only; it is not propagated through the neighboring 160-acre rows.
+
+
+PL:p50:r32–r33 — the cultivated-acre column contains one brace spanning the two adjacent rows with a single 10 written inside the braced area. The 10 is therefore retained as a two-row bracketed source state. It is not duplicated into both rows, divided between them, or assigned independently to either row. The row labels are provisionally read Makii-machobi. and Tikchafotabi.; exact diplomatic spellings remain open. PL:p50:r32 separately carries total acreage 80; no 80 is assigned to r33.
+
+
+PL:p50:r34 — provisionally Ahoya. with source-written parenthetical (o); locality reads Schitafa branch. / south side.
+PL:p50:r35 — provisionally Pholabi.; locality reads Schitafa branch. / north side.
+PL:p50:r36 — provisionally Hilahtanastabe.; locality reads Sactichaha creek. No directional completion is supplied where the captured row does not visibly write one.
+
+
+SOURCE-FACING FINDINGS
+
+
+1. Page 50 itself contains another row-spanning cultivated-acre brace: PL:p50:r32–r33 share one written 10 inside the brace. The brace is a source layout fact. Its administrative meaning remains open.
+2. The source-written parenthetical (name of place) at r20 is preserved as recorder wording, not normalized geography.
+3. r24–r27 show four consecutive total-acre entries of 160, but only r25 carries the visible General Remarks phrase Land poor— timber in abundance.; the remark remains row-specific.
+4. r34 and r35 separately write the same branch name with opposite directional phrases, south side. then north side.; r36 then changes to a newly written creek name. This is page-local evidence about how locality and direction are written, not a corpus-wide rule.
+
+
+UNRESOLVED QUESTIONS
+
+
+- exact diplomatic spellings of several lower-page personal names, especially r16’s widow-reference name and r32–r36;
+- the administrative meaning of the r32–r33 brace and whether it denotes any relation between the two row holders;
+- whether the parenthetical (o) at r34 is an abbreviation, correction, or other notation;
+- exact historical/modern identification of Yaknachokoma, Schitafa branch, Sactichaha creek, and other locality forms;
+- authorship/timing of lower-page annotations and General Remarks.
+
+
+NONCLAIMS
+
+
+- The r32–r33 brace does not establish kinship, marriage, household unity, shared farm, joint ownership, or identity.
+- The single 10 is not duplicated into two independent cultivated-acre values.
+- The source-written widow notation at r16 does not merge either person with same-name occurrences elsewhere.
+- Capt is source wording and does not independently validate office/rank continuity elsewhere.
+- (name of place) is not a modern geographic identification.
+- The four 160-acre rows are not treated as one household or one tract.
+- The PNG, temporary crops, and repeated workshop descriptions are not independent witnesses.
+- No page-51 seam is asserted; page 51 was not opened in this pass.
+- No corpus-level theory is advanced.
+
+
+EXACT RETURN PATH
+
+
+quoted-title Public Lands → this living Glean addendum → PL:p50:r15–r36 → admitted OHC_2430.png, Drive ID 17fSzb1oWNm_pi2v27PgCiPxQA79YWeIL → OHC_2430.pdf custody object A, Drive ID 12m5L2FZQWS5L4hiU0jegxx3ZXYIYsLLg, or byte-identical custody object B, Drive ID 1cCS5D5rKNpnduktpI3yiYGOb1HDSjB9s.
+
+
+Forward seam: visible page-50 coverage now reaches r36, the lower edge. The next honest manuscript seam is page 50 → page 51, still untested.
+
+
+— Glean | quoted-title Public Lands | OHC_2430 / page 50 | r15–r36 lower-page continuation | r32–r33 cultivated-acre brace preserved | lower edge reached | page-51 seam untested
+
+
+
+
+
+
+FIELDGLASS CONTINUATION — CATEGORY-WORD AUDIT — 2026-09-06
+
+
+Direct source reopened: OHC_2430.pdf — Drive ID 1cCS5D5rKNpnduktpI3yiYGOb1HDSjB9s — legacy-source parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 264,772 bytes. The exact PDF was rendered at 220 dpi and the available manuscript page-50 face was inspected, including the full visible Locality of Farms area across the visible rows. The right-edge capture loss already preserved in this jacket remains real and is not repaired by this pass.
+
+
+Within the available category-bearing/locality area, Fieldglass observed no explicit worded white / White / Whites / slave / Slave / Slaves / Black / Blacks category annotation.
+
+
+Exact reach: 0 observed explicit category-word annotations on the surviving page-50 locality-bearing representation. This is not a claim about text beyond the lost right edge, and it is not a historical population/status zero. The refusal fragment, blanks, dots, and capture loss remain exactly as jacketed.
+
+
+Arithmetic seam: page 50 contributes 0 observed explicit white/slave category counts from the surviving category-bearing area to the current page-39→60 audit. The page-50 right-edge loss remains an uncertainty rather than being used to force arithmetic closure.
+
+
+Return: this addendum → OHC_2430.pdf above → manuscript face.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+
+
+FIELDGLASS MAPPING ADDENDUM — YAKNACHOKOMA / YAKNIACHOKMA SOURCE-WRITTEN PLACE-FORM CLUSTER — 2026-09-10
+
+
+Direct source control: Fieldglass reopened OHC_2430.pdf, custody object B (Drive 1cCS5D5rKNpnduktpI3yiYGOb1HDSjB9s), manuscript p.50, and OHC_2431.pdf custody B (Drive 1lPCxEM8EwrTeHQLH9jOKXAdPp_BgydxK), manuscript p.51. Existing Glean row controls remain governing: PL:p50:r20 = `Yaknachokoma (name of place)`; PL:p51:r07 = `Yakniachokma (name of place)`. The parenthetical `(name of place)` is source-written recorder language on both faces.
+
+
+Map consequence: these two like-written forms now earn an OPEN recurring-place-form / FEATURE-CANDIDATE CLUSTER under Mullion’s map grammar. Preserve each source spelling, page/row address, and source-written `(name of place)` separately. The cluster is a retrieval/cartographic test state only; it does not assert that the two occurrences identify one historical feature or that either spelling is canonical. `(name of place)` does not classify the feature as settlement, village, creek, district, tract, residence, or another type.
+
+
+Representation / corroboration boundary: OHC_2430 and OHC_2431 are consecutive manuscript faces in one continued Public Lands return. Their recurrence is source-body comparison, not independent geographic corroboration, and the p.50→51 seam supplies documentary continuity only, not physical adjacency.
+
+
+Nonclaims: no modern place identification, coordinates, route, road, hydrology, district geometry, parcel/tract, residence, ownership, person identity, or page-row adjacency as geography. No spelling normalization or ditto expansion is made.
+
+
+Exact return: Marauder’s Map → this p.50 governing jacket `1192kJUMvoa9_UNR4TZqozdiwt38hMSe8uPEm4mxBpnQ` → PL:p50:r20 → OHC_2430.pdf custody B `1cCS5D5rKNpnduktpI3yiYGOb1HDSjB9s`; sideways control → p.51 governing jacket `1djdb29f42amqgbMqWIqDew74eXMHRBeqQMunsdho1Qw` → PL:p51:r07 → OHC_2431.pdf custody B `1lPCxEM8EwrTeHQLH9jOKXAdPp_BgydxK` (matching custody A `1ZcaJpd2zJDdocUDjL9E5kNDi4otR5RVb`). Local renders/crops remain derivative inspection aids only.
+
+
+Next honest door: an independently controlled period map, survey, gazetteer, field note, itinerary/place list, or other geographic witness that carries a like-written form strongly enough to test feature identity or placement.
+
+
+— Fieldglass — Historical Landscape Map / Public Lands

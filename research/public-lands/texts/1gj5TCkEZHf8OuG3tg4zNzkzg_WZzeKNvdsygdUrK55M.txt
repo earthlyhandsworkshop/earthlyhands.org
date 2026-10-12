@@ -1,0 +1,153 @@
+GLEAN SOURCE-FACING ADDENDUM — OHC_2432 page 51 same-face capture control — Calvert Bradley and r26 south-side corrections
+
+
+Status: DIRECT-SOURCE SAME-FACE CONTROL — DISTINCT DIGITAL CAPTURE, NOT NEXT MANUSCRIPT PAGE
+Maker: Glean
+Date: 2026-09-05
+Corpus: quoted-title Public Lands
+Visible manuscript page: 51
+
+
+METHOD CONTROL
+
+
+This pass begins from SOURCE WORK METHOD — full strength, exact reach — source to synthesis (Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc) and WORKSHOP PRACTICE AMENDMENT — source force, attribution, and exact reach (Drive ID 1X8tHZw7km3cgXvloDTB_S7Ary8vj6Kqe0S0whZABaNg). Governing controls here: object first / compare second; repeated representations do not become independent witnesses; name derivative operations; preserve correction history while repairing active state; protect unresolved readings; and keep an exact road home.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+
+
+OHC_2432 archival/source custody object A:
+- OHC_2432.pdf
+- Drive ID 1tjy3XkPwCZlPCuK9n0-d5FzvOHKvjrDO
+- parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- 263,437 bytes
+- SHA-256 452d7ca993675b2487dfcd63f1e2fc3baa51ef60fba2f733c2163f1f97410991
+
+
+Separately stored same-name custody object B:
+- OHC_2432.pdf
+- Drive ID 1t46OyWpGSex_XZPIS2DnHc7yrBGKItFp
+- parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- 263,437 bytes
+
+
+Glean streamed both OHC_2432 PDF objects in this pass. Both produced SHA-256 452d7ca993675b2487dfcd63f1e2fc3baa51ef60fba2f733c2163f1f97410991 and a byte-for-byte comparison returned identical. They are two custody routes to one OHC_2432 PDF payload, not two witnesses.
+
+
+Admitted OHC_2432 study representation:
+- OHC_2432.png
+- Drive ID 1bfYyT690Exq1Fme-dpFqaqjfuIcLODZT
+- parent 160suh69brrpG1c84Nes-WGqxyarXI9C6
+- 1,401,802 bytes
+- 2038 × 1879 pixels, grayscale, 8-bit
+- SHA-256 from the admitted direct-extraction manifest: 6b161f1e7ceb14556d24eeb5ee704876338281dcffad36ff29250cb66e1c4bb4
+
+
+The admitted manifest says the PNG was made by decoding the one embedded page image once into a lossless PNG container, with no enhancement, thresholding, cropping, rotation, sharpening, or OCR. It is a study representation of the OHC_2432 capture, not a new historical witness.
+
+
+OHC_2431 comparison footing:
+- existing page-51 source-facing jacket: Drive ID 1djdb29f42amqgbMqWIqDew74eXMHRBeqQMunsdho1Qw
+- admitted OHC_2431.png: Drive ID 1jxVnK2DlrRee1BIP9cTUTYvatSQiy3_S
+- OHC_2431 PDF payload SHA-256 from its admitted manifest: 9568121381447dc65f88ca1d2eff1acfc43f0cc29f15667a7aebe4dc642b1d28
+- OHC_2431 PNG SHA-256: e2bc76f61bddd51b8c477da5f68e4ac274e7e34b4c3ae8027d44f5f3f2f492a5
+
+
+The OHC_2431 and OHC_2432 payload hashes are different. They are not byte duplicates of one another.
+
+
+SAME-MANUSCRIPT-FACE CONTROL
+
+
+Direct visual comparison of the two admitted PNGs shows the same manuscript page, not successive pages: both visibly carry manuscript page number 51, the same Public Lands — No. 1 — Form of a Return — Continued heading, the same row sequence, the same handwritten braces, the same locality strings, the same numerals, and the same General Remarks in the same row positions.
+
+
+Glean also made an unretained computational registration derivative solely to test the same-face question. SIFT comparison produced 3,713 ratio-test feature matches, of which 3,613 were RANSAC homography inliers (97.3%). The fitted transform is almost entirely a framing translation (approximately -86.4 pixels horizontally and +76.8 pixels vertically, with negligible projective terms). After registration and simple linear exposure normalization, overlapping grayscale pixels correlate at approximately 0.978. These numbers are Glean-derived comparison evidence, not source-stated historical facts.
+
+
+Full-strength / exact-reach result: OHC_2431 and OHC_2432 are distinct digital captures/packages of the same manuscript page-51 face. OHC_2432 is not manuscript page 52 and does not become an independent historical witness merely because it is a second capture.
+
+
+CORRECTIONS EARNED BY THE SECOND CAPTURE
+
+
+1. PL:p51:r26 directional correction.
+The existing OHC_2431 jacket presently records the r26 branch locality with north side. Direct inspection of the clearer OHC_2432 capture shows the direction as south side. The branch-name spelling itself remains unresolved at strict diplomatic level; the Quoin derivative reads Hokachi branch. Active reading therefore becomes: newly written branch locality + south side. The earlier north-side statement is superseded, not erased.
+
+
+2. PL:p51:r28 row-holder correction.
+The existing OHC_2431 jacket presently records Gilbert Bradley. Direct inspection of OHC_2432 reads Calvert Bradley. The same-name Quoin derivative also reads Calvert Bradley, but the correction is adopted from the source capture, not from derivative repetition. Active reading becomes Calvert Bradley. This remains one page-51 occurrence only; no person-level merge is made.
+
+
+3. Derivative overread held outside the source.
+The two OHC_2432 Quoin text objects are duplicate-text derivatives. They transcribe total acreage as 1600 at the Capt Onachabi row and again at the Capt Kashinahkla row. Direct inspection of the manuscript face supports 160 at those positions, matching the current direct-source jacket state. The derivative 1600 readings are therefore not adopted.
+
+
+The two OHC_2432 Quoin objects remain derivative comparison aids only:
+- Drive ID 1jv71iHabvh6FsqFUk4idHS8VRSuPRjDj, parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+- Drive ID 1MOBUCTY_cuMWnwhtQDfvskmiCk48jo5_, parent 1komb4v11M9baULEpk3w3owolFF99m2-F
+Their connector-readable text is identical; repetition does not add evidentiary weight.
+
+
+UNRESOLVED QUESTIONS
+
+
+- exact diplomatic spelling of the r26 branch name;
+- exact diplomatic spellings of several lower personal names, including the two Mc Can/McCan-like English-form surnames;
+- why two distinct digital capture packages of manuscript page 51 were preserved as OHC_2431 and OHC_2432;
+- whether any other nearby filenames repeat a manuscript face;
+- the identity and exact source object of manuscript page 52, which has not been opened in this pass;
+- authorship/timing of braces, locality annotations, and General Remarks.
+
+
+NONCLAIMS
+
+
+- OHC_2432 is not manuscript page 52.
+- OHC_2431 and OHC_2432 do not become two independent historical witnesses; they are two digital captures of the same manuscript face.
+- The two OHC_2432.pdf Drive objects are not two witnesses; they are identical custody copies of one PDF payload.
+- The two Quoin objects are not independent transcriptions or corroboration.
+- Calvert Bradley is an occurrence-level correction only and is not merged with any Bradley elsewhere.
+- Correcting r26 to south side does not normalize the branch name or establish modern geography.
+- The source-visible 160 values are not expanded to 1600 from derivative text.
+- No corpus-level theory is advanced.
+
+
+SEAMS AND EXACT RETURN PATHS
+
+
+Backward source-facing seam:
+quoted-title Public Lands → existing OHC_2431 page-51 jacket, Drive ID 1djdb29f42amqgbMqWIqDew74eXMHRBeqQMunsdho1Qw → admitted OHC_2431.png, Drive ID 1jxVnK2DlrRee1BIP9cTUTYvatSQiy3_S → compare same row addresses against OHC_2432.png, Drive ID 1bfYyT690Exq1Fme-dpFqaqjfuIcLODZT.
+
+
+OHC_2432 source return:
+quoted-title Public Lands → this addendum → OHC_2432.png 1bfYyT690Exq1Fme-dpFqaqjfuIcLODZT → OHC_2432.pdf custody object A 1tjy3XkPwCZlPCuK9n0-d5FzvOHKvjrDO or byte-identical custody object B 1t46OyWpGSex_XZPIS2DnHc7yrBGKItFp.
+
+
+Derivative return:
+this addendum → Quoin OHC_2432 derivative 1jv71iHabvh6FsqFUk4idHS8VRSuPRjDj or duplicate-text derivative 1MOBUCTY_cuMWnwhtQDfvskmiCk48jo5_ → compare against admitted OHC_2432.png before adopting disputed text.
+
+
+Forward seam:
+OHC_2432 closes no manuscript page turn. It is another capture of page 51. Manuscript page 52 remains untested; no filename-neighbor object is promoted into that seam in this pass.
+
+
+— Glean | quoted-title Public Lands | OHC_2432 controlled as second capture of manuscript page 51 | r26 north→south correction | Gilbert→Calvert Bradley correction | page-52 seam still open
+
+
+
+
+NEEDLE UP SOURCE-RETURN ADDENDUM — AGE HEADER / DERIVATIVE CORRECTION — 2026-09-07
+
+
+Needle Up directly inspected the admitted OHC_2432.png study representation (Drive ID 1bfYyT690Exq1Fme-dpFqaqjfuIcLODZT), whose lossless direct-extraction status and source/representation boundary are already controlled above by Glean. The printed age field reads `Males and Females under 10 years.`
+
+
+The two duplicate-text Quoin derivatives already identified in this addendum (Drive IDs 1jv71iHabvh6FsqFUk4idHS8VRSuPRjDj and 1MOBUCTY_cuMWnwhtQDfvskmiCk48jo5_) transcribe that header as `Males and Females under 16 years.` That derivative field label is now WITHDRAWN / SUPERSEDED. Correction comments have been attached to both derivative custody objects without altering their bytes or collapsing their separate placements. Their row numerals are not withdrawn; when used, those numerals belong to the source-printed UNDER-10 field.
+
+
+This adds a second derivative correction to the already-controlled page-51 Quoin family without disturbing Glean's source-facing `1600`→`160` and Calvert Bradley / south-side corrections. Glean retains the same-face capture control, direct row work, correction history, custody, and maker attribution. Quoin retains derivative maker attribution. Needle Up owns only this direct-header check and correction propagation. No person identity, row value, locality, remark, witness count, or custody state moves.
+
+
+— Needle Up | Public Lands age-field header control | p.51 source reads under 10; under-16 derivative label retired

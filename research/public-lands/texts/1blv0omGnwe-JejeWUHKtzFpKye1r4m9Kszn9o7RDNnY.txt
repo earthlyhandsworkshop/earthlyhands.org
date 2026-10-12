@@ -1,0 +1,84 @@
+FIELDGLASS SOURCE-FACING ADDENDUM — OHC_2425 page 45 — page-75 qualified-ditto control
+
+
+Status
+This is an addendum to Lintel’s existing source-facing jacket `OHC_2425_batch_009_page_45_inheritance_grammar_pilot_Lintel.md`, Drive ID 1n09Zhq90eKf8R2KnP98iy22mcMdizwJw. It does not create a second historical-object jacket for manuscript page 45.
+
+
+Source reopened
+OHC_2425.pdf, Drive ID 1Iy9hRQfjvysXEh09WtxxiSsoXnVPb4Sh, was opened directly from the received-source custody route and rendered for a separate Fieldglass visual pass. The PDF is 262,661 bytes and currently sits in the received OHC source batch.
+
+
+Direct second look — page 45
+The source-visible General Remarks sequence at the live seam is confirmed as:
+
+
+`do and good water.`
+`do`
+`Land tolerable.`
+
+
+The middle mark is visually a plain written `do`. This pass does not add inherited words to it.
+
+
+Separate source control opened
+A separately opened later face, OHC_2460 / manuscript page 75, has now received its own source-facing jacket: `FIELDGLASS SOURCE-FACING JACKET — OHC_2460 page 75 — qualified ditto grammar in General Remarks`, Drive ID 1_oFgj1F2atjI20fcLY-WTmm-DZY3W62KXoeGZ6LwaYI.
+
+
+Page 75 directly writes multiple visibly different General Remarks forms, including `do`, `do and good water.`, `do prairie`, `do no water.`, and `do     do`. Those forms remain source observations on page 75; they are not rewritten backward into page 45.
+
+
+Comparison / inference
+The page-75 control materially strengthens one part of Lintel’s page-45 footing: a recorder in this return could visibly write a modifier or second ditto token when one was present. Therefore page 45 r23 should remain diplomatically a single `do`; “good water” is not source-written in that cell and must not be silently carried into the transcription.
+
+
+The comparison does NOT fully resolve Lintel’s deeper semantic question of what antecedent the plain `do` inherits. `[Poor land and good water]` versus `[Poor land]` remains an interpretive question unless a source or demonstrable recurrence earns the rule. The gain here is narrower: source transcription and semantic expansion are now even more cleanly separated.
+
+
+Correction history
+No Lintel source reading is withdrawn. The direct sequence is confirmed. The active caution is sharpened: the r23 source text is `do`, while any expanded value remains interpretive and unresolved.
+
+
+Nonclaims
+This addendum does not establish a universal ditto grammar across the ledger. It does not claim page 75 was written by the same hand or at the same moment as page 45. It does not assign legal or agricultural meaning to the remarks. It does not turn the comparison into a person, tract, or household crossing.
+
+
+Return paths
+Backward:
+Public Lands — Whole-Document Corpus → Lintel page-45 jacket → this Fieldglass addendum → OHC_2425.pdf, Drive 1Iy9hRQfjvysXEh09WtxxiSsoXnVPb4Sh.
+
+
+Sideways, earned comparison only:
+this addendum → OHC_2460 page-75 Fieldglass jacket, Drive 1_oFgj1F2atjI20fcLY-WTmm-DZY3W62KXoeGZ6LwaYI → OHC_2460 source PDFs.
+
+
+Next honest door
+Only another independently opened qualified-ditto sequence that bears directly on antecedent behavior would justify extending the grammar question. Pagination alone is not a reason to proceed.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+
+
+FIELDGLASS CONTINUATION — FULL-FACE CATEGORY-WORD AUDIT — 2026-09-06
+
+
+Direct source reopened: OHC_2425.pdf — Drive ID 1AodT1UMwK1cvVpghJi0gjOmLlqKob7uz — legacy-source parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 262,661 bytes. The exact PDF face was rendered at 220 dpi for direct visual inspection; the render was temporary and is not a source object.
+
+
+Across the full visible manuscript page 45, Fieldglass observed no explicit worded white / White / Whites / slave / Slave / Slaves / Black / Blacks category annotation. This does not alter the previously jacketed ditto sequence or its unresolved semantic antecedent question.
+
+
+Exact reach: 0 observed explicit category-word annotations on the available page-45 representation. This is not a historical population, household, ownership, or status zero; unreadable or nonword marks remain unreadable/nonword.
+
+
+Arithmetic seam: page 45 contributes 0 observed explicit white/slave category counts to the current page-39→60 audit against the page-60 district aggregate. That use is arithmetic observation only and does not itself prove how the district roll-up was constructed.
+
+
+Return: this addendum → OHC_2425.pdf above → source face. Prior page-75 qualified-ditto control remains separately valid and unaltered.
+
+
+Maker: Fieldglass
+Date: 2026-09-06

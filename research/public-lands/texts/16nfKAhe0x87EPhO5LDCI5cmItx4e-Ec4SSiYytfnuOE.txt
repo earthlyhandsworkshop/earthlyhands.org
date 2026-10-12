@@ -1,0 +1,503 @@
+GLEAN SOURCE-FACING ADDENDUM — OHC_2426 page 46 — rows 17–25
+
+
+Actor: Glean
+Mode: bounded continuation of the existing source jacket; no replacement jacket created
+Source opened: admitted OHC_2426.png, Drive ID 1cdGnfldHCNbWbruipordtw6deIeIMgo1
+Archival source footing retained: OHC_2426.pdf, admitted Drive ID 1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--; second same-payload custody object 1MQJcQrNWQZ7jQsnT8C_pK7cnYsitieLN remains distinct
+Inspection derivative: temporary local crops/enlargements made only from the admitted PNG to inspect row alignment and letterforms; they are not source objects, not admitted representations, and are not promoted into custody.
+
+
+This continuation takes the next nonoverlapping same-face cut immediately below the jacketed PL:p46:r16. The row keys extend the already-established top-to-bottom count on manuscript page 46. This is a same-face seam only; it creates no cross-person, household, or cross-page relation.
+
+
+DIPLOMATIC ROW CONTINUATION
+
+
+PL:p46:r17 — name [Shu…tabi?], first and medial letters unresolved; cultivated acres 7; entire family 6; males over 16: 4; male/female under 10: 3; locality best read as a “… branch” on the “south side,” exact first word held open; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r18 — Noyotachaha.; cultivated acres 3; entire family 7; males over 16: 1; under 10: 5; locality writes do with north side; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r19 — Tushkaokchaya.; cultivated acres 10; entire family 17; males over 16: 8; under 10: 7; locality best read Piniatalla creek. north side.; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r20 — Ilokchaya.; cultivated acres 13; entire family 6; males over 16: 1; under 10: 2; locality writes do and a second do; total acreage 160; no readable General Remark.
+
+
+PL:p46:r21 — Imichabi.; no safely readable cultivated-acre numeral; entire family 5; males over 16: 4; no safely readable under-10 numeral; locality writes do; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r22 — Tahincheko.; cultivated acres 4; entire family 6; males over 16: 1; under 10: 4; locality writes do with north side; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r23 — Pahomma.; no safely readable cultivated-acre numeral; entire family 7; males over 16: 2; under 10: 3; explicit locality begins Head … creek. north side.; creek name not promoted in this pass; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r24 — Itotayabi.; cultivated acres 5; entire family 9; males over 16: 3; under 10: 4; explicit place phrase followed by source parenthetical (name place), exact place spelling held open, then written do; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r25 — Capt. Panapiyubbi; cultivated acres 6; entire family 6; males over 16: 1; under 10: 3; locality best read Sholatti creek. west side.; no readable total acreage; General Remarks reads Land poor.
+
+
+These readings are row-occurrence transcriptions only. Similar or identical-looking names elsewhere remain separate occurrences unless another source-facing act earns a relation.
+
+
+CONSEQUENTIAL SOURCE-FACING GAIN
+
+
+Written locality inheritance continues below r16 through repeated do marks and side-of-water qualifiers, while the General Remarks column remains independently sparse across r17–r24. Row r20 carries total acreage 160 while its General Remarks cell remains unread/blank. Row r25 reintroduces an explicit land judgment, Land poor, after the preceding eight-row run supplies no readable General Remark. This continuation therefore still does not permit locality ditto, numeric content, or a neighboring land judgment to be propagated into a blank/unread remarks cell.
+
+
+This is a page-46 observation. It is not promoted into a corpus-wide grammar.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY
+
+
+Source: photographed manuscript face represented in the archival PDF.
+Admitted study representation read directly: OHC_2426.png.
+Temporary inspection derivatives: local crops/enlargements from the PNG only; disposable inspection aids, not new evidence.
+Transcription: bounded row readings and exact visible numerals/phrases above.
+Interpretation: limited to the structural observation that the visible columns behave independently on these rows. No legal, agricultural, identity, kinship, household, office, or residence conclusion is added.
+
+
+BACKWARD SEAM
+
+
+PL:p46:r16 remains the immediately preceding jacketed row on the same face. This continuation begins at the next visible row and does not revise r16 or any earlier reading.
+
+
+FORWARD SEAM
+
+
+The same page continues below PL:p46:r25. Those lower rows remain unopened by this continuation and are not silently treated as transcribed. The next honest verb is a new nonoverlapping cut beginning at PL:p46:r26.
+
+
+UNRESOLVED QUESTIONS
+
+
+Exact diplomatic spelling of the r17 name; exact first locality word at r17; exact creek name after Head at r23; exact place spelling before (name place) at r24; whether faint marks in cells recorded here as unread are meaningful writing rather than filming/surface noise; complete row-level transcription below r25; authorship, timing, and administrative effect of the General Remarks language.
+
+
+NONCLAIMS
+
+
+No same-name identity merge across this or any other page. No claim that Capt. establishes an office outside the source-written row label. No claim that locality do causes General Remarks inheritance. No claim that 160 at r20 proves legal entitlement, residence, or patent outcome. No claim that an unread or visually blank cell equals zero, refusal, approval, missing data, or ditto. No claim that this continuation completes manuscript page 46. No corpus-level theory is advanced.
+
+
+RETURN PATH
+
+
+Backward: Public Lands receiver → existing OHC_2426 page-46 jacket → this Glean continuation r17–r25 → OHC_2426.png (Drive 1cdGnfldHCNbWbruipordtw6deIeIMgo1) → admitted OHC_2426.pdf (Drive 1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--).
+
+
+Sideways: original True Bearing upper-sixteen-row work remains attributable and unchanged; second PDF custody object 1MQJcQrNWQZ7jQsnT8C_pK7cnYsitieLN remains a distinct Drive object carrying the same previously established payload, not another historical witness.
+
+
+Forward: PL:p46:r26 and lower page-46 rows only after a separate direct-source pass.
+
+
+Maker of continuation: Glean
+Date: 2026-09-05
+
+
+[Glean | Public Lands page 46 | rows 17–25 newly tied; locality, numerals, remarks, uncertainty, and custody kept separate]
+
+
+EXTENSION — PL:p46:r26–r36 — LOWER VISIBLE PAGE COMPLETED
+
+
+Actor: Glean
+Date: 2026-09-05
+Mode: direct continuation of this same source-facing addendum; earlier text is preserved as encounter history rather than silently rewritten.
+
+
+SOURCE FOOTING
+Admitted study representation read directly: OHC_2426.png, Drive ID 1cdGnfldHCNbWbruipordtw6deIeIMgo1; current Drive parent 160suh69brrpG1c84Nes-WGqxyarXI9C6; file size 1,420,984 bytes. Archival source footing remains OHC_2426.pdf, admitted Drive ID 1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--; second same-payload PDF custody object 1MQJcQrNWQZ7jQsnT8C_pK7cnYsitieLN remains a distinct Drive object, not another witness. Temporary local crops/enlargements from the admitted PNG were used only to inspect row alignment and letterforms; they are disposable derivatives, not admitted source objects.
+
+
+This extension begins at the exact row named by the earlier forward seam, PL:p46:r26, and continues through the last visible named row at the bottom of manuscript page 46. It completes row-position coverage of the visible page without claiming that every difficult name or faint cell now has a certified diplomatic reading.
+
+
+DIPLOMATIC LOWER-PAGE CONTINUATION
+
+
+PL:p46:r26 — name best read Illulana.; cultivated acres 5; entire family 1; males over 16: 1; no safely readable under-10 numeral; locality best read Bokhoma creek. south side.; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r27 — name best read Chasheshomma.; cultivated acres 2; entire family 5; males over 16: 1; under 10: 1; locality writes do in the place track and do in the side track; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r28 — name provisionally [Tobentabi?]; cultivated acres 3; entire family 6; males over 16: 2; under 10: 1; locality reads Okpal (name place), with the source parenthetical retained; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r29 — name provisionally [Pashistonabbi?]; cultivated acres 3; entire family 5; males over 16: 2; no safely readable under-10 numeral; locality writes do; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r30 — name best read Pisachnowa.; cultivated acres 4; entire family 5; males over 16: 2; under 10: 2; locality writes do; no readable total acreage; General Remarks reads Prairie.
+
+
+PL:p46:r31 — name provisionally [Paknatta?]; cultivated acres 12; entire family 4; males over 16: 1; under 10: 1; locality writes do; total acreage 160; no readable General Remark.
+
+
+PL:p46:r32 — name provisionally [Hanhokchaya?]; cultivated acres best read 1 1/2; entire family 6; males over 16: 1; under 10: 2; locality writes do; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r33 — name unresolved, ending appears consistent with …ilionga; no safely readable cultivated-acre numeral; entire family 4; males over 16: 3; no safely readable under-10 numeral; locality writes do; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r34 — name unresolved, ending appears consistent with …chukabi; cultivated acres 3; entire family 6; males over 16: 1; under 10: 2; locality reads Hickory growth.; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r35 — name unresolved; second written element is best read Battice.; cultivated acres 3; entire family 7; males over 16: 2; under 10: 2; locality reads Sholatti creek. east side.; no readable total acreage; no readable General Remark.
+
+
+PL:p46:r36 — name unresolved, ending appears consistent with …shomah.; cultivated acres 2; entire family 4; males over 16: 1; under 10: 1; locality writes do in the place track and west side. explicitly in the side track; no readable total acreage; General Remarks reads Land tolerable.
+
+
+These are row-occurrence readings only. Bracketed or described names remain unresolved diplomatic forms and are not normalized to similar spellings elsewhere.
+
+
+CONSEQUENTIAL SOURCE-FACING GAIN
+The bottom cut closes the visible page-position sequence through r36 and strengthens the page-46 evidence that the broad locality field contains separable inheritance tracks. Most clearly, r35 writes Sholatti creek. east side.; r36 then writes do for the place while explicitly changing the side to west side. The watercourse can therefore be carried while the directional qualification changes on the next row. General Remarks remains independent: r30 writes Prairie.; r31 carries total acreage 160 but no readable remark; r36 writes Land tolerable. Nothing on the face permits those remarks or the 160-acre figure to inherit merely because the locality track uses do.
+
+
+This is a page-46 finding only. It is not promoted into a corpus-wide rule, although it may later be compared with separately jacketed faces.
+
+
+SOURCE / DERIVATIVE / TRANSCRIPTION / INTERPRETATION BOUNDARY
+Source: photographed manuscript face represented in the archival PDF.
+Admitted study representation read directly: OHC_2426.png.
+Temporary inspection derivatives: local crops/enlargements from the PNG only; not retained as evidence objects.
+Transcription: bounded row-position readings, numerals, locality phrases, and remarks above, with unresolved forms explicitly held.
+Interpretation: limited to the visible structural behavior of columns and inheritance marks on this page. No identity, kinship, household, office, residence, legal entitlement, patent, ownership, or agricultural conclusion is added.
+
+
+BACKWARD SEAM
+PL:p46:r25, Capt. Panapiyubbi, remains the immediately preceding row already recorded in this addendum. The present extension begins at the next visible row and does not revise r25.
+
+
+FORWARD SEAM
+PL:p46:r36 is the last visible named row at the bottom of this admitted representation. No additional page-46 row is silently invented below it. Any page-47 relation must be earned from a separately opened source face; filename adjacency alone is insufficient.
+
+
+UNRESOLVED QUESTIONS
+Exact diplomatic spellings at r28, r29, r31, r32, r33, r34, r35, and r36; whether the r26 name is exactly Illulana and r27 exactly Chasheshomma; whether faint marks in cells recorded as unread are meaningful writing; the exact administrative meaning of the source phrase Prairie.; authorship, timing, and effect of General Remarks; whether another independent representation improves the obscured lower-left name forms; and the source-earned relation, if any, to the following manuscript page.
+
+
+NONCLAIMS
+No same-name identity merge across this or another page. No expansion of unresolved names from external lists. No claim that locality do carries General Remarks, acreage, family counts, or legal status. No claim that r36 west side changes the watercourse rather than only the directional track beyond what the written do visibly indicates. No claim that 160 at r31 proves entitlement, residence, patent outcome, ownership, or legal acreage. No unread or blank cell is converted to zero, refusal, approval, missing data, or ditto. Completing visible row-position coverage does not equal a certified full-page diplomatic transcription. No corpus-level theory is advanced.
+
+
+RETURN PATH
+Backward: Public Lands receiver → existing OHC_2426 page-46 jacket → this Glean addendum r17–r36 → OHC_2426.png (Drive 1cdGnfldHCNbWbruipordtw6deIeIMgo1) → admitted OHC_2426.pdf (Drive 1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--).
+Sideways: original True Bearing upper-sixteen-row work remains attributable and unchanged; second PDF custody object 1MQJcQrNWQZ7jQsnT8C_pK7cnYsitieLN remains distinct; earlier Glean r17–r25 text remains preserved as the prior pass rather than overwritten.
+Forward: next manuscript-page seam only after direct inspection of the separately stored next face earns it.
+
+
+[Glean | Public Lands page 46 | rows 26–36 newly tied; visible page row-position coverage now reaches the bottom edge; unresolved names remain honestly open]
+
+
+
+
+FIELDGLASS CONTINUATION — CATEGORY-WORD AUDIT — 2026-09-06
+
+
+Direct source reopened: OHC_2426.pdf — Drive ID 1MQJcQrNWQZ7jQsnT8C_pK7cnYsitieLN — legacy-source parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 266,031 bytes. The exact one-page PDF was rendered at 220 dpi and the full visible locality-bearing face was visually inspected. The render was temporary inspection access only.
+
+
+Across the full visible page-46 face, including the row span already completed through PL:p46:r36, Fieldglass observed no explicit worded white / White / Whites / slave / Slave / Slaves / Black / Blacks category annotation.
+
+
+Exact reach: 0 observed explicit category-word annotations on the available page-46 representation. This does not convert blanks, faint marks, names, numerals, or locality dittos into demographic/status evidence, and it does not assert historical absence.
+
+
+Arithmetic seam: page 46 contributes 0 observed explicit white/slave category counts to the current page-39→60 audit against the page-60 district aggregate. The existing row transcription, uncertainty, and locality/remarks findings remain unchanged.
+
+
+Return: this addendum → OHC_2426.pdf above → manuscript face.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+
+
+GLEAN SOURCE-RETURN CORRECTION — FORM HEADER AND SOURCE-WRITTEN “SAME PLACE” — 2026-09-07
+
+
+Disposition: bounded correction only. Earlier text remains above as encounter history and is superseded only at the fields named here.
+
+
+Direct source reopened: OHC_2426.pdf, Drive ID 1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--, 266,031 bytes, present source-object parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA. The PDF was rendered locally at 800 dpi and inspected by enlargement/crop only. Those raster views are temporary derivatives, not source objects, corpus additions, or independent witnesses. The second same-name PDF custody object 1MQJcQrNWQZ7jQsnT8C_pK7cnYsitieLN was not reopened and remains, by prior verification, a distinct custody object carrying the same PDF payload rather than a second historical witness.
+
+
+CORRECTION 1 — DEMOGRAPHIC FIELD HEADER
+The manuscript header reads “Males and Females under 10 years.” The later granular Glean addendum GLEAN_SOURCE_FACING_ADDENDUM_OHC_2426_PAGE46_R22_R26.md labels that fourth demographic column “Males/females under 16.” That is a derivative field-label error only. For PL:p46:r22–r26, the recorded numerals remain attached to the source column headed “Males and Females under 10 years.” No cell value is changed by this correction, and no age category is inferred beyond the written header.
+
+
+CORRECTION 2 — SOURCE-WRITTEN PARENTHETICAL
+Direct inspection resolves the parenthetical at both PL:p46:r24 and PL:p46:r28 as “(same place)”, superseding this document’s earlier “(name place)” reading at those two occurrences. The immediately preceding place words remain correction-open at their prior reach; only the parenthetical is corrected. “(same place)” is source writing inside the Locality of Farms field, not an editorial gloss supplied by Glean.
+
+
+EARNED FINDING
+These corrections matter because they repair two different documentary layers without collapsing them: the printed form defines the demographic category as under 10 years, while the handwritten locality text separately supplies an internal carry phrase, “(same place)”. Neither correction authorizes normalization of personal names, expansion of written do marks, identification of the antecedent tract or household, or any legal conclusion.
+
+
+BACKWARD SEAM
+All prior row-position work on p.46 remains in force except the two parenthetical readings explicitly superseded above. The granular r22–r26 addendum remains useful for its row values and source-facing uncertainty, but its fourth demographic-column label must be read through this correction as under 10 years.
+
+
+FORWARD SEAM
+No new row below r36 and no neighboring manuscript page was opened. Page-46 coverage remains bounded to the visible face; no page-47 relation is created here.
+
+
+UNRESOLVED
+Exact diplomatic spellings of the place phrases preceding “(same place)” at r24 and r28; exact personal-name spellings on the affected rows; the antecedent and administrative force of each “same place” notation; authorship and timing of those handwritten locality notes.
+
+
+NONCLAIMS
+No same-name merge; no claim that the two “same place” occurrences share one antecedent; no claim that “same place” means one tract, household, ownership chain, or cadastral parcel; no conversion of unreadable cells to blank or zero; no change to custody identity; no corpus-level rule.
+
+
+Return path: Public Lands — Whole-Document Corpus → GLEAN SOURCE-FACING ADDENDUM — OHC_2426 page 46 — rows 17–36 → OHC_2426.pdf (Drive 1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--) → manuscript p.46 → printed demographic header / PL:p46:r24 / PL:p46:r28.
+
+
+— Glean | Public Lands p.46 | under-10 header restored | r24 and r28 “(same place)” corrected | custody and row identities unchange
+
+
+GLEAN CORRECTION — SUPERSEDED DUPLICATE ADDENDUM / ACTIVE PATH REPAIRED — 2026-09-08
+
+
+Disposition: source-facing correction and custody/derivative cleanup only. No new historical row occurrence is created.
+
+
+A return through the current source-work method exposed a separate raw Markdown artifact, `GLEAN_SOURCE_FACING_ADDENDUM_OHC_2426_PAGE46_R27_R31.md` (Drive ID `1VVppQSI3xqLCbPXygoH4rgRnAAsLVSEy`), created 2026-09-08 after this governing Glean document had already completed page-46 row-position coverage through `PL:p46:r36`. The Markdown therefore duplicated existing same-face transcription work and incorrectly described `r27–r31` as a fresh nonoverlapping continuation with `r32` still untouched.
+
+
+DIRECT SOURCE RETEST
+
+
+Direct corpus source reopened: `OHC_2426.pdf`, Drive ID `1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--`, parent `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`, 266,031 bytes. A temporary 600-DPI render and local crop were used only as inspection derivatives; they are not source objects, corpus additions, or independent witnesses. No OCR supplied the reading.
+
+
+The source-visible locality at `PL:p46:r28` reads `Okpal (same place)`. This directly confirms the correction already preserved above in this governing document and supersedes the duplicate Markdown artifact's stale `Okpal (prairie place)` reading. The printed demographic header reads `Males and Females under 10 years`; the duplicate Markdown's `under 16` field label is likewise stale. Its forward statement that `r32` downward remained untouched is also stale because this governing document had already carried the visible face through `r36`.
+
+
+ACTIVE STATE
+
+
+This document remains the governing Glean page-46 addendum. The separate Markdown artifact has been retained only as correction provenance and marked/renamed as superseded duplicate material; it must not be used as a competing source-facing jacket or counted as a second source observation. No manuscript source, admitted representation, custody object, row occurrence, or historical witness was deleted or merged.
+
+
+Exact current reading at the corrected point: `PL:p46:r28` locality = `Okpal (same place)`; demographic fourth column = source header `Males and Females under 10 years`; visible page-position coverage = `PL:p46:r01–r36` across the governing page-46 jacket/addendum family. Personal-name readings remain correction-open where previously held open.
+
+
+NONCLAIMS
+
+
+No claim that `same place` identifies a cadastral parcel, household, tract, ownership relation, or antecedent beyond the source's visible wording; no identity or kinship merge; no expansion of `do`; no new corpus-level grammar; no extra corroborative weight from repeated digital artifacts. This correction repairs the active documentary path rather than enlarging the historical claim.
+
+
+Return path: `Public Lands — Whole-Document Corpus → GLEAN SOURCE-FACING ADDENDUM — OHC_2426 page 46 — rows 17–36 → OHC_2426.pdf (Drive 1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--) → manuscript p.46 → PL:p46:r28 / printed demographic header`.
+
+
+— Glean | Public Lands p.46 | duplicate r27–r31 artifact retired from active path | `same place` and under-10 state confirmed | correction history preserved
+d
+
+
+
+
+SEDGE PAIRED-PAGE SEAM CONTROL — manuscript pp. 46→47 — 2026-09-10
+
+
+Status
+Additive source-facing seam note. Earlier Glean and Lamplight readings and corrections remain standing. This note does not replace the page-46 work and does not create a person, household, tract, or geographic-feature join.
+
+
+Paired source control
+Sedge directly reopened both archival digital facsimile carriers in the same pass: OHC_2426.pdf, Drive 1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--, 266,031 bytes, SHA-256 29479ef776a8796c5a813e5bef0fde3e07a7366e8f72a107438ecc0398f1a7ce; and OHC_2427.pdf, Drive 1JXjW77W5D-xTDhXCQIzGc0Ct5zuzc7Yi, 274,342 bytes, SHA-256 c867db5c487050305e2854d2332aa5ad18b875437da981984d0fef47089132fe. The visible manuscript faces are numbered 46 and 47 and carry the same Public Lands — No. 1 — Form of a Return Continued — Location under the Choctaw Treaty heading and matching column architecture. Temporary 400-DPI page renders and crops were inspection derivatives only; they are not source objects or independent witnesses. Row keys, seam labels, and the map-schema consequence below are workshop derivatives.
+
+
+Small earned seam
+At the bottom of manuscript p.46, PL:p46:r35 explicitly writes Sholatti creek. / east side.; PL:p46:r36 then writes do in the place track while explicitly writing west side. in the direction track. The first visible row of manuscript p.47, PL:p47:r01, explicitly writes Sholatti creek. / west side. rather than beginning with ditto marks.
+
+
+This paired inspection now earns a documentary page-sequence relation between the represented faces: p.46 is followed by p.47 within this carried form. It also earns a source-visible page-boundary reset at p47:r01: the new face rewrites both locality components explicitly. No cross-page inheritance is required to read p47:r01.
+
+
+Map-facing consequence
+Keep two different relations separate:
+1. within-page inheritance on p.46: r36 place-track do points backward only as an interpretive/documentary transform;
+2. cross-page explicit restatement on p.47: r01 supplies its own written place and direction.
+If a normalized working layer expands p46:r36 place through r35, it yields Sholatti creek. / west side.; p47:r01 independently writes the same label-direction pair. That agreement is an internal documentary checkpoint on the split-track representation, not independent geographic corroboration and not proof that a modern feature has been identified.
+
+
+Correction history
+True North’s earlier p47:r01 reading Yokotatti creek. remains superseded by Glean’s direct-source correction to Sholatti creek.; nothing here reopens that correction. No p46 reading is revised. The earlier refusal to infer a page-46→47 relation from filename adjacency alone is superseded only because both numbered manuscript faces were now directly inspected together and their shared form structure was visible.
+
+
+Refused crossings
+No claim that Sholatti is a modern mapped creek; no residence, ownership, reservation, tract, kinship, or identity relation; no assumption that a page boundary always resets ditto behavior; no use of the repeated phrase as an independent witness.
+
+
+Honest way home
+Public Lands corpus → this p46 governing continuation → OHC_2426.pdf → manuscript p.46 bottom rows r35–r36; paired with OHC_2427.pdf → manuscript p.47 → r01. For geographic placement, require an independently datable historical map, survey, gazetteer, or other locality source before assigning a feature ID or coordinate.
+
+
+[Sedge | Mapping Grounds / Public Lands | p46→p47 documentary seam earned | page-boundary locality restatement explicit | geography OPEN]
+
+
+
+
+SEDGE MAP-FACING ADDENDUM — PL:p46:r25 — Capt. Panapiyubbi / Sholatti creek — 2026-09-11
+
+
+Source-facing occurrence
+PL:p46:r25 carries the source-written name occurrence `Capt. Panapiyubbi`; cultivated acres 6; entire family 6; males over 16: 1; under 10: 3; Locality of Farms best read `Sholatti creek. west side.`; and General Remarks `Land poor.` The demographic values remain source-table fields and are not used here to create geography.
+
+
+Classification
+- PLACE / LOCALITY RELATION: this row records `Sholatti creek.` in the Locality of Farms field. The map-safe verb is source records locality. It is not promoted to residence, ownership, person-presence, household, tract, or modern-feature identity.
+- SIDE RELATION: the same locality field carries `west side.` Preserve that as a source-written relational qualifier. Do not convert it to a west-bank point, bank segment, route, or surveyed side relation; its finer grammatical and geometric target remains open.
+- QUALITATIVE LAND RELATION: General Remarks writes `Land poor.` Preserve this as a source-stated qualitative judgment attached to the row. It is not a soil class, acreage value, polygon, legal status, or new place.
+- IDENTITY: `Capt. Panapiyubbi` remains a row occurrence only. No merge to another Panapiyubbi occurrence or person is earned.
+
+
+Geometry state
+RELATIONAL / UNPLACED. No coordinate, creek course, bank trace, farm point, field or parcel polygon, road, distance, township/section, or modern `Sholatti` feature identification is earned. Page order and neighboring rows do not create adjacency in physical space. Same-body repetitions of `Sholatti creek.`, or like-written Shobotta/Shubatti forms elsewhere, remain documentary recurrence/comparison unless an independent geographic source earns a feature relation.
+
+
+Source / representation / derivative boundary
+Historical Public Lands return face → archival digital facsimile `OHC_2426.pdf` (Drive `1XO9JfhT2h9FVjHoFndg2I7LzLARr-f--`) / admitted study representation `OHC_2426.png` (Drive `1cdGnfldHCNbWbruipordtw6deIeIMgo1`) → this governing Glean source-facing jacket → Sedge Mapping Grounds derivative. Temporary crops/enlargements remain inspection derivatives only and are not additional witnesses. Repetition inside this carried return does not add independent corroborative weight.
+
+
+Ravel boundary
+Sedge crosses only occurrence-level place/relation grammar. Ravel may later assemble this occurrence with independently earned geographic controls. This addendum donates no creek line, bank geometry, farm point, field polygon, parcel, or modern feature ID.
+
+
+[Sedge | Mapping Grounds / Public Lands | PL:p46:r25 locality and side relation crossed | land-quality remark preserved | geometry and identity OPEN]
+
+
+
+
+Sedge — MAP-FACING ADDENDUM — OHC_2426 p.46 — PL:p46:r28
+Date: 2026-09-11
+Role: map-facing deepening of the governing source-facing jacket; no identity join.
+
+
+A. Smallest live edge
+Direct inspection of the controlled p.46 face, read through the row calibration above, keeps PL:p46:r28 as a row-owned occurrence whose Locality of Farms carries the current source-facing reading `Okpal (same place)`.
+
+
+B. Place / relation classification
+`Okpal` is a source-carried locality label only. `(same place)` is a source-carried relational qualifier only. The earning verb here is records/carries: the table records this locality-relation for row 28. This face does not say lived at, owned, patented, resided, appeared, traveled, or filed at. Person identity remains outside this geography crossing; row occurrence geography does not merge the personal-name writing with any other person.
+
+
+C. Source / representation / derivative / provenance
+Historical p.46 table face → OHC_2426 archival facsimile PDF representation → admitted PNG reading representation → this Glean source-facing calibration jacket → Sedge Mapping Grounds derivative. The calibration text and map entry are not independent witnesses.
+
+
+D. Geography / geometry
+No dot, parcel, route, line, polygon, creek match, modern-place normalization, or coordinate is earned. `same place` is left relationally unresolved: its exact antecedent, feature identity, spatial scale, and administrative/physical meaning remain OPEN until another source-facing edge resolves them. Adjacency alone does not manufacture an antecedent.
+
+
+Crossing status: SAFE TO MAP AS AN UNPLACED SOURCE LABEL + UNRESOLVED RELATIONAL EDGE ONLY.
+
+
+
+
+2026-09-11 — Sedge map-crossing addendum — PL:p46:r29 locality ditto
+
+
+Source-facing receive
+Direct return to the original OHC_2426 p.46 scan confirms PL:p46:r29 has “do” in Locality of Farms. The locality cell itself writes no place-name. Its row-level General Remarks cell is blank.
+
+
+Place / relation classification
+• Type: locality-field ditto / documentary predecessor relation.
+• Source verb: carries / repeats by ditto.
+• Predecessor: immediately preceding locality expression in PL:p46:r28.
+• Independent place assertion: no.
+• Normalized feature: OPEN.
+• Geometry: OPEN.
+
+
+“do” is not expanded into “Okpal” as if r29 wrote that word. It records a documentary relation to r28’s locality cell. Because r28 is itself controlled as “Okpal (same place)” with an unresolved internal relation, r29 inherits no more geographic precision than that predecessor expression warrants. A map derivative may expose an unresolved documentary carryover edge, r29 locality → r28 locality expression; it must not create a second geographic witness, point, segment, area, town identification, creek identification, or coordinate.
+
+
+Column firewall
+The locality ditto does not reach into or inherit content from any neighboring General Remarks cell or any other column. r29’s General Remarks remain blank on this face. Adjacency does not make an identity join between the r28 and r29 personal occurrences.
+
+
+Provenance / representation / derivative
+Historical Public Lands p.46 table face → OHC_2426.pdf facsimile representation → controlled p.46 reading in this governing jacket → Sedge Mapping Grounds derivative. The “do” relation is source-carried documentary structure. Any expanded place-name in a later derivative is a labeled interpretation/inheritance, not a second source witness.
+
+
+Geometry / crossing
+LANDED: unplaced r29 locality-field ditto relation to predecessor r28 locality expression.
+OPEN: r28 “same place” antecedent; r29 normalized place-name; modern feature identity; exact or approximate geometry; route; parcel; residence/ownership/patent/presence verbs.
+
+
+Do not donate geometry to Ravel. Do not upgrade documentary adjacency into identity.
+
+
+
+
+FIELDGLASS LANDSCAPE DEEPENING — SHOLATTI / SHOBATTI REFERENCE-LAYER FORK — 2026-09-15
+
+
+Standing: additive source-facing landscape correction and historical-reference comparison. No manuscript wording is replaced by a modern name; no feature identity, creek course, route, farm point, residence, ownership, tract, or geometry is added.
+
+
+NAME WEB HOOKS
+Subject: Sholatti / Shobatti creek occurrence family
+Relation / verb: spelling fork + historical-reference convergence; feature identity withheld
+Historical date: 1830s source body, with later reference layers explicitly dated at their own depth
+Working object type: landscape/source-jacket deepening
+Governing source object: OHC_2426 p.46 → OHC_2427 p.47
+Maker: Fieldglass
+
+
+SOURCE-CONTROLLED STATE
+The governing direct-source work in this jacket keeps the manuscript locality on p.46 r35 and the paired p.47 r01 face as `Sholatti creek.` The p.46 r36 place-track ditto carries that manuscript locality while changing the side relation to west side. That direct facsimile reading remains primary for what the handwritten faces say.
+
+
+PRINTED-CARRIER FORK
+The Library of Congress digitized American State Papers, Public Lands, 1834–1835, printed p.47 carries `Shobatti creek, west side.` and another `Shobatti, west side.` occurrence in the printed table. This is a later printed representation in the same administrative return tradition, not an independent landscape witness and not permission to rewrite the manuscript `Sholatti` spelling. The relation now earned is a source-genealogy spelling fork: manuscript `Sholatti` versus printed `Shobatti`.
+
+
+INDEPENDENT HISTORICAL-REFERENCE LAYER
+A separate modern USGS feature is `Shubuta Creek` in Clarke County, Mississippi. GNIS-derived reference surfaces preserve variant forms including `Shoboti Creek` and `Shoebootee Creek`; the Library of Congress 1917 Noxon Toomey place-name volume separately prints `SHOEBOOTEE (SHUBUTA), Mississippi.` These later reference forms are close enough to keep `Shubuta Creek` as a materially stronger comparison candidate than a generic same-sounding modern creek, but they do not close `Sholatti/Shobatti = Shubuta Creek`.
+
+
+Current reference URLs:
+- LOC American State Papers, Public Lands, 1834–1835: https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf
+- USGS Water Data, Shubuta Creek near Shubuta: https://waterdata.usgs.gov/monitoring-location/USGS-02477330/
+- LOC, Noxon Toomey, Proper names from the Muskhogean languages (1917): https://www.loc.gov/resource/gdcmassbookdig.propernamesfromm00toom/
+
+
+CORRECTION TO LEGACY FIELDGLASS DERIVATIVE
+The older derivative `FIELDGLASS_MARAUDER_PUBLIC_LANDS_SHOBATTI_SHUBUTA_COMPARISON_CANDIDATE_2026-09-12.md` described the controlled manuscript p.46 label as `Shobatti`. At the present governing depth that wording is stale: direct manuscript control here is `Sholatti`, while `Shobatti` belongs to the printed American State Papers carrier. Preserve the legacy artifact as correction history; do not use its manuscript-spelling sentence prospectively.
+
+
+MAP / FILM CONSEQUENCE
+The map may carry three typed layers without joining them:
+`manuscript Sholatti creek` → source-written locality occurrence;
+`printed Shobatti creek / Shobatti` → printed-carrier spelling state;
+`Shubuta Creek / Shoboti / Shoebootee` → later historical/reference-name family.
+The films may use the spelling drift itself as documentary landscape texture. They may not use a modern Shubuta Creek line, Clarke County coordinate, bank, road crossing, or route as the 1830s creek geometry until an independently datable geographic source bridges the feature.
+
+
+EARNED RULE
+A NAME FAMILY CAN DEEPEN BEFORE A FEATURE IDENTITY DOES.
+
+
+RETURN PATH
+Public Lands corpus → governing Glean page-46 addendum / paired p46→p47 seam → OHC_2426.pdf manuscript p.46 + OHC_2427.pdf manuscript p.47 → LOC American State Papers printed p.47 → USGS/GNIS-derived Shubuta reference layer + LOC 1917 Toomey place-name reference. Each representation retains its own wording and date depth.
+
+
+— Fieldglass | Film / Landscape Scaffolding | spelling fork landed; modern creek geometry withheld

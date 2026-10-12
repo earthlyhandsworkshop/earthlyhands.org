@@ -1,0 +1,130 @@
+FIELDGLASS SOURCE-FACING ADDENDUM — OHC_2424 page 44 — Gibson brace placement and duplicate-custody resolution
+
+
+Historical object: same visible manuscript page 44 already jacketed by True Bearing and Lintel. This is a bounded deepening note, not a second historical-object jacket.
+
+
+SOURCE AND REPRESENTATION FOOTING
+
+
+Fieldglass reopened the archival-sequence OHC_2424.pdf, Drive ID 1LUR33_TpzCyypeGQcg53-Jr_t17S1f-k, and separately fetched the manifest-admitted OHC_2424.pdf, Drive ID 1juvzVr0wyWjWdWMVT6QXzR3xHpusidRN.
+
+
+Both are 249,971 bytes and compared byte-for-byte identical in this pass. SHA-256 for each payload: b9d521a1029c498a0df7e685a3f9a120167b0c14f97495dbfc33dcf254963ba2.
+
+
+This resolves the earlier jacket boundary that held byte identity as unestablished. The two Drive objects remain distinct custody and return routes. Byte identity does not turn them into two witnesses and does not erase either provenance path.
+
+
+The direct-reading surface used here was the PDF's sole embedded 2038 × 1879 grayscale image, extracted losslessly for inspection. No OCR or inherited transcription supplied the observations below.
+
+
+BOUNDED DIRECT-FACE PASS — ROWS 18–23
+
+
+PL:p44:r18 — Thomas Gibson
+
+
+Direct source-visible row label: Thomas Gibson.
+
+
+The drawn brace begins beside this row and continues downward across the row boundary toward PL:p44:r19. Its strokes sit at the left edge of the cultivated-acreage field, immediately to the right of the name column. The cultivated-acreage cell on the Thomas Gibson row does not contain a safely attributable numeral in this pass; faint dot-like marks are preserved as marks or blank-like condition rather than converted to zero.
+
+
+The visible household columns read family 6 and males over 16 = 1. The under-10 column appears to carry 4, but that final numeral is less crisp and remains a direct working reading rather than certified transcription.
+
+
+PL:p44:r19 — Charles Gibson alternate-label row
+
+
+The direct source-visible row label begins Charles Gibson. or followed by a second handwritten name-form.
+
+
+This pass does not collapse the existing disagreement between Lintel's provisional Sabitimalle and True Bearing's provisional [Ishitmale?]. Enlarged direct inspection shows an ending visually compatible with ...itmale / ...itimalle, but the opening letters remain insufficiently secure for certification. Present Fieldglass reading:
+
+
+Charles Gibson. or [unclear: Ishitmale? / Sabitimalle?]
+
+
+That bracketed notation preserves two live workshop readings as alternatives; it is not a claim that both alternatives are source-written spellings.
+
+
+The r19 numeric fields are clearer: cultivated acres 9; entire family 9; males over 16 = 3; under-10 column 3; locality carries written do; total acres 80.
+
+
+The brace spans the Thomas/Charles row pair while the numeral 9 is written on the Charles Gibson row inside the cultivated-acreage column. That placement is source-observed. Its meaning remains unresolved. The brace alone does not establish that 9 applies jointly to both rows, that Thomas and Charles shared a farm, that they were kin, that one row inherits the other's acreage, or that the two rows form one household.
+
+
+PL:p44:r23 — widow-qualified row
+
+
+The parenthetical relation is directly source-visible as a widow relation. Enlarged inspection continues to support the existing working reading:
+
+
+Moshiena. (wid of Ahniyati)
+
+
+The exact first-name spelling remains provisional at the vowel level; this pass does not promote it beyond a working reading. The phrase wid of is the source's relation language. It does not establish a death date, marriage date, inheritance route, household structure, residence continuity, or identity with any occurrence outside this row.
+
+
+NEGATIVE OBSERVATION BOUNDED TO THIS PASS
+
+
+Across rows 18–23, Fieldglass found no explicit smaller worded annotation containing white, White, Slave, or Slaves. This is only an observation about this bounded visible neighborhood. It is not a statement about the whole historical district and is not substituted for the printed family columns.
+
+
+CORRECTION HISTORY
+
+
+Earlier source footing: two same-name PDFs with matching size but byte identity unresolved.
+Current source footing: byte identity directly established; separate custody routes retained.
+
+
+Earlier brace description: brace spanning the Gibson rows with a nearby figure, relation unresolved.
+Current brace description: brace localized to the cultivated-acreage-field edge spanning r18–r19; the clear numeral 9 is on r19 in that cultivated-acreage column. Meaning remains unresolved.
+
+
+Earlier alternate-name state: competing provisional Sabitimalle / [Ishitmale?].
+Current alternate-name state: disagreement remains open after enlargement; no false certification added.
+
+
+EXACT RETURN PATHS
+
+
+Archival-sequence PDF: OHC_2424.pdf — Drive ID 1LUR33_TpzCyypeGQcg53-Jr_t17S1f-k.
+Manifest-admitted PDF: OHC_2424.pdf — Drive ID 1juvzVr0wyWjWdWMVT6QXzR3xHpusidRN.
+Admitted study representation already recorded by the page jacket: OHC_2424.png — Drive ID 1bSXPc2vE1I1NHBE_CzXHTdf9U5-qhHtW.
+Existing True Bearing page-44 jacket: Drive ID 1Qc9XOStgNrCPM3GF06cRZ-Z_pzdMLQ04.
+Existing Lintel page-44 wrapper: Drive ID 1M8S09H-ZpQej3yJN-HptMb08ObfXPlir.
+This bounded addendum: Drive ID 1NrVJ9ICQ1MmKm9iNx0Iw7li00QHWbCXBaujh0S4lQAc.
+
+
+NEXT HONEST VERB
+
+
+A genuinely useful next pass would seek an independent source occurrence of the second name-form attached to Charles Gibson, or a source that explains the two-row brace convention. Another enlargement of the same letters without a new control is unlikely to earn much. Do not turn the brace, or, or widow relation into an identity or family reconstruction merely because the graphic neighborhood is now clearer.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+
+
+
+
+FIELDGLASS CONTINUATION — FULL-FACE CATEGORY-WORD AUDIT — 2026-09-06
+
+
+Direct source reopened: OHC_2424.pdf — Drive ID 1LUR33_TpzCyypeGQcg53-Jr_t17S1f-k — legacy-source parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI. The exact PDF face was rendered at 220 dpi for visual inspection; the render was a temporary inspection derivative only.
+
+
+This pass extends, and supersedes only in coverage, the earlier rows-18–23 negative control. Across the full visible manuscript page 44, Fieldglass observed no explicit worded white / White / Whites / slave / Slave / Slaves / Black / Blacks category annotation. The source-visible braces, locality wording, numerals, remarks, and unresolved names remain exactly as previously jacketed.
+
+
+Exact reach: this is zero observed explicit category-word annotations on the available full page-44 representation. It is not a claim that no white person, enslaved person, or Black person was historically connected to any row, and it is not a zero in any demographic or ownership sense. Faint, unreadable, or nonword marks are not converted into category counts.
+
+
+Arithmetic seam: for the current page-39→60 audit against the page-60 district total, page 44 contributes 0 observed explicit white/slave category counts. That arithmetic use does not prove the roll-up rule. Return to this jacket → OHC_2424.pdf above → manuscript face before adopting any future count.
+
+
+Maker: Fieldglass
+Date: 2026-09-06

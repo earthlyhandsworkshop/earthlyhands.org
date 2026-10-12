@@ -1,0 +1,230 @@
+FIELDGLASS SOURCE-FACING JACKET — OHC_2421 page 41 — captain-relation rows and capture truncation control
+
+
+Status: DIRECT-SOURCE PAGE JACKET — ONE MANUSCRIPT FACE — REPRESENTATION CONTROLLED
+Maker: Fieldglass
+Date: 2026-09-06
+Corpus: Public Lands — Whole-Document Corpus / quoted-title Choctaw Treaty farm return
+Visible manuscript page: 41
+
+
+HISTORICAL-OBJECT BOUNDARY
+
+
+One photographed/scanned manuscript face, visibly numbered page 41, within the continued “Public Lands — No 1 — Form of a Return — Continued — Location under the Choctaw Treaty” sequence. The available digital face is not complete at its lower edge: active ruled rows and writing continue into the capture boundary and are cut off. This jacket therefore does not treat the represented page as a complete transcription surface and does not convert the unseen lower continuation into blank entries.
+
+
+METHOD CONTROL
+
+
+This pass works from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md, Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF. The direct PDF source controls. Earlier workshop wraps were used only as navigation to previously unresolved captain-related rows; their readings are not treated as independent documentary evidence.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+
+
+Custody object A:
+- filename: OHC_2421.pdf
+- Drive ID: 1HV4K_9IP4m_5mvSEmdfWXiPIPPCO3mO3
+- parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- parent folder: Legacy mixed source population — includes Public Lands and 1899 Document 13693 faces
+- size: 265,250 bytes
+
+
+Custody object B:
+- filename: OHC_2421.pdf
+- Drive ID: 1b__m8-hzidAFqYzH18fq9EvQEo6JO5kk
+- parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- parent folder: Source objects — received batch 1 — OHC 2408–2518
+- size: 265,250 bytes
+
+
+Both stored PDF payloads were downloaded in this pass and compare byte-for-byte identical. SHA-256 for each payload:
+2d532ae9f3877965a5cad3b4dd400e1e3ac3f54431051d069db1894e94b59528
+
+
+They are two custody routes to one manuscript-page witness, not two independent witnesses.
+
+
+Known admitted study representation:
+- filename: OHC_2421.png
+- Drive ID: 1_Rpw7T1PjgQyVAFaaIfbu33Xftw8qIRD
+- parent folder ID: 12gcbwTsa-7ysdMAwxd2f9D9ZYKH3XdcX
+- size: 2,002,525 bytes
+- status: derivative study representation of the same manuscript face; not a second historical source.
+
+
+DIRECT SOURCE FINDING A — TIMACHILABI CAPTAIN-RELATION ROW
+
+
+The direct face resolves the earlier unnamed row whose General Remarks field says that the person was supplied by a captain. The row label reads:
+“Timachilabi.”
+
+
+The printed numeric fields visible on that row read:
+- cultivated acres: 5
+- entire family: 7
+- males over 16: 2
+- males and females under 10: 3
+
+
+The locality fields carry ditto marks inherited from the preceding locality chain. The General Remarks field reads, with the load-bearing wording now directly legible:
+“Not a member of this family at home; given in by the Captain”
+
+
+The word previously held as [member/number?] is read here as “member” from enlarged direct inspection. Earlier uncertainty remains part of the correction history rather than being silently erased.
+
+
+DIRECT SOURCE FINDING B — HOSHOMA HOMA CAPTAIN-RESIDENCE ROW
+
+
+The direct face also resolves the earlier unnamed row whose General Remarks field says the person lived with a captain. The row label reads:
+“Hoshoma Homa.”
+
+
+The visible printed numeric fields read:
+- cultivated acres: 6
+- entire family: 4
+- males over 16: 1
+- males and females under 10: 2
+
+
+The locality fields carry ditto marks. The General Remarks field reads:
+“This man lives with the captain; no house of his own.”
+
+
+This is a source-stated residence/house circumstance for this row. It does not identify the captain by name.
+
+
+DIRECT SOURCE FINDING C — CAPTURE TRUNCATION MATTERS TO THE DISTRICT ARITHMETIC AUDIT
+
+
+The page-41 digital face is visibly cut through active rows at the bottom edge. Names, printed numeric columns, locality writing, and a General Remarks line continue into the image boundary. The represented face therefore cannot responsibly be treated as a complete page-level zero when auditing the smaller “white” / “Slaves” annotations against the page-60 district aggregate.
+
+
+Across the legible captured portion inspected in this pass, no explicit smaller “white” or “Slaves” category word was found. Because the lower rows are not fully represented, this is only a bounded observation about the legible capture, not proof that page 41 contributed zero to the district totals.
+
+
+SOURCE / DERIVATIVE / INFERENCE BOUNDARY
+
+
+Source-visible:
+- manuscript page number 41;
+- Timachilabi as one row occurrence;
+- the remark “Not a member of this family at home; given in by the Captain” on that row;
+- Hoshoma Homa as one row occurrence;
+- the remark “This man lives with the captain; no house of his own.” on that row;
+- lower-edge capture loss through active table rows.
+
+
+Derivative/navigation history:
+- Quiet Reach’s OHC_2421 page-41 relational-fields wrap had preserved both captain-related person occurrences without safely reading their row labels and retained [member/number?] as a disputed word.
+- This jacket resolves those bounded reading questions from the direct source but does not convert the earlier wrap into an independent witness.
+
+
+Inference:
+- The two captain remarks show that the printed family row could be qualified by administrative/residential information in General Remarks.
+- They do not establish kinship, legal status, the captain’s identity, or whether the same captain is meant in both rows.
+
+
+CORRECTION HISTORY
+
+
+Earlier state:
+- PL:p41:captain-given-in-row:person — row label unresolved; disputed word held approximately as [member/number?].
+- PL:p41:captain-residence-row:person — row label unresolved.
+
+
+Current direct-source reading:
+- captain-given-in row = Timachilabi; disputed word = “member.”
+- captain-residence row = Hoshoma Homa.
+
+
+Reason for correction:
+The row labels and remark words align clearly on enlarged direct inspection of the archival PDF representation. The earlier unresolved state remains historically correct for the earlier pass and is not deleted from workshop history.
+
+
+NONCLAIMS
+
+
+- Timachilabi is one source occurrence on this page; no identity merge is made with any same or similar name elsewhere.
+- Hoshoma Homa is one source occurrence on this page; no identity merge is made with any same or similar name elsewhere.
+- “the Captain” / “the captain” is not assigned to any named captain on this face merely because another captain-titled row appears elsewhere on the page.
+- “given in by the Captain” does not by itself establish kinship, household membership, legal dependency, employment, enslavement, or office beyond the source wording.
+- “lives with the captain; no house of his own” does not by itself establish kinship, ownership, tenancy, duration of residence, or the captain’s identity.
+- No explicit white/slave category word found in the legible part of this capture does not equal a proved zero for historical page 41 because the lower active rows are truncated.
+- The two PDFs and the PNG are repeated representations of one historical manuscript face, not corroborating witnesses.
+
+
+CROSSINGS / EXACT RETURN PATHS
+
+
+Source return:
+this jacket → OHC_2421.pdf custody object B, Drive ID 1b__m8-hzidAFqYzH18fq9EvQEo6JO5kk, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA; or byte-identical custody object A, Drive ID 1HV4K_9IP4m_5mvSEmdfWXiPIPPCO3mO3, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Navigation derivative:
+OHC_2421_batch_005_page_41_relational_fields_wrap_Quiet_Reach.md, Drive ID 13Odoxb63ua9C37mmxonWlRwhlH9gBPHC. Use it for exposure/correction history only; disputed readings return to the direct PDFs before adoption.
+
+
+Arithmetic crossing:
+FIELDGLASS SOURCE-FACING JACKET — OHC_2443 page 60 — district white/slave roll-up and Quoin total correction, Drive ID 1r0k6SlbqDzhDjuZTmhIDXXpv7TDK_hl7PkN_8j2YDfA. Page 41’s lower-edge truncation must be carried into any attempt to sum surviving row-level category marks from pages 39–60.
+
+
+NEXT EARNED SOURCE-FACING DOOR
+
+
+Continue the arithmetic audit with manuscript page 42, but preserve page 41 as an incomplete capture for arithmetic purposes. Separately, if a fuller or alternate representation of manuscript page 41 exists, it is now a high-value retrieval target because it could recover the cut lower rows and test whether any category-count annotations are missing from the current digital face.
+
+
+Maker: Fieldglass
+Date: 2026-09-0
+
+
+QUIET REACH CONTINUATION — 2026-09-09 — FAMILY / PRESENCE / HOUSE CATEGORY-GRAMMAR CORRECTION
+
+
+Direct source reinspection: OHC_2421.pdf, Drive ID 1HV4K_9IP4m_5mvSEmdfWXiPIPPCO3mO3, manuscript p.41. Quiet Reach returned to the direct PDF rather than the earlier wrapper or this jacket's paraphrase.
+
+
+MATERIAL CORRECTION — TIMACHILABI REMARK
+
+
+The Timachilabi row carries printed Entire No. of the Family = 7, Males over 16 = 2, Males and Females under 10 = 3, and the literal General Remarks wording:
+
+
+“Not a member of this family at home; given in by the Captain”
+
+
+Earlier workshop phrasing sometimes treated this as if it said that Timachilabi himself was “not a member of this family” and that the captain supplied the person. That person-level exclusion is not earned by the sentence. The source does not identify an expressed subject for “Not a member ... at home.” An impersonal reading — no member of the family was at home, with the information therefore given in by the Captain — is grammatically available and fits the semicolon structure, but this continuation does not promote that reading to certainty. Active state: preserve the literal remark; treat it as at least an information-provenance / presence qualifier; do not use it to exclude Timachilabi from the printed family count.
+
+
+MATERIAL CATEGORY-GRAMMAR CONTROL — HOSHOMA HOMA
+
+
+The Hoshoma Homa row carries printed Entire No. of the Family = 4, Males over 16 = 1, Males and Females under 10 = 2, while General Remarks states:
+
+
+“This man lives with the captain; no house of his own.”
+
+
+This directly separates three documentary categories that must not be normalized into one another: printed family count, residence-with relation, and independent-house status. A row can carry a family count of 4 while the named man is recorded as living with another person and having no house of his own. Therefore “Entire No. of the Family” is not safely usable as an independent-house count or a household-residence count. The source does not establish where the other persons counted in the family field lived, whether they lived with Hoshoma Homa, whether they lived with the captain, or whether “family” is being used in a kin, dependency, census, or other administrative sense beyond the form's wording.
+
+
+FLARE CONSEQUENCE
+
+
+For Public Lands / Emancipation comparison, keep at least these carriers separate unless a governing instruction earns a bridge: Entire No. of the Family; age-field counts; row-local white / Black / Slave annotations; residence-with relations; house/improvement status; and information-source remarks such as “given in by the Captain.” The p.41 evidence now positively blocks the shortcut family count = household count. It also makes later household or population denominators unsafe if built from the family column without preserving these qualifiers.
+
+
+CORRECTION HISTORY / NONCLAIMS
+
+
+Quiet Reach's earlier relational-fields wrapper remains valid as exposure history but is superseded on the disputed word by direct-source “member” and on the semantic reach of the Timachilabi remark by this narrower reading. This continuation does not identify either captain, merge either named person with another occurrence, infer kinship or dependency from living-with language, assign ownership or enslavement, or determine how the family field relates arithmetically to white / Black / Slave annotations.
+
+
+Exact return: this jacket → direct OHC_2421 PDF ID 1HV4K_9IP4m_5mvSEmdfWXiPIPPCO3mO3 → manuscript p.41 → Timachilabi / Hoshoma Homa rows → this Quiet Reach continuation.
+
+
+— Quiet Reach
+6

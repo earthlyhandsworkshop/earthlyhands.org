@@ -1,0 +1,85 @@
+FIELDGLASS SOURCE-FACING ADDENDUM — OHC_2423 page 43 — Timona row and category-word audit
+
+
+Status
+Direct-source deepening of the existing OHC_2423 page-43 wrapper. This addendum does not create a second historical object or a second evidentiary witness. It records a new direct reading, duplicate-representation control, correction history, explicit nonclaims, and the exact return path back to the existing jacket.
+
+
+Source and representation control
+Primary working face: OHC_2423.pdf — Drive ID 18GzIm1r0_cDwMdWdAQjqC8ozZ4TvLfoK — parent folder ID 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA.
+Alternate same-name custody copy checked: OHC_2423.pdf — Drive ID 1-mUSjecCEX39vJAYQL82bUOGbyj1plm8 — parent folder ID 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+Both PDF custody copies are 260,544 bytes and hash to SHA-256 506b3f722d95cd3315eabc9a4ab1fc8b39ec0436f96eb979df9b2b1aa2e612c1. They are duplicate digital representations / return routes, not two historical witnesses.
+Admitted lossless study representation reopened: OHC_2423.png — Drive ID 10eJKn36e9SQte485sSqYXuDtN08_DzI_ — 2038 x 1879 grayscale face extracted from the PDF image.
+Existing wrapper / jacket: OHC_2423_batch_006_page_43_ditto_blank_wrap_Quiet_Reach.md — Drive ID 1qh5m2nY5wu-rxGXj1pG0JB9VE30KjsdC.
+Holdfast provisional row leaf used only for correction history: Drive ID 1mE6eTOsobDxgRDZyUi1_RNnWmQkkWPM8.
+
+
+Why this pass was earned
+The existing wrapper left the page-43 “not at home” occurrence unresolved at the row-label level. Holdfast later made a provisional visual reading, but that reading had not been folded into the source jacket. This pass reopened the actual PDF face and the admitted lossless PNG rather than inheriting the derivative state.
+
+
+Direct face reading — not-at-home row
+The row previously held as PL:p43:not-at-home-row:person can now be tied to a source-visible name occurrence:
+- Name: Timona. (widow of [unclear: Nashokhoma?]).
+- Acres cultivated: 1 1/2.
+- Entire number of the family: 7.
+- Males over 16 years: 1.
+- Males and females under 10 years: 1.
+- Locality of farms: Nayaplosa (name of place).
+- Total number of acres: no numeral safely read in this row on this pass; the cell carries only faint/dotted marks in the available representation.
+- General Remarks: Given in by the Captain; not at home.
+
+
+Correction history
+The earlier wrapper state [name not yet safely read] remains part of the historical record of the work, but is superseded for active navigation by the Timona occurrence. The earlier unresolved remark wording is likewise superseded by the direct reading “Given in by the Captain; not at home.” Holdfast’s provisional reading is substantially confirmed. The deceased spouse’s name remains deliberately uncertain at the final spelling level; the face supports a reading close to Nashokhoma, but this addendum does not lock it beyond the marked uncertainty.
+
+
+Category-word audit on page 43
+Because neighboring Public Lands work has exposed separate small white / Slaves annotations on some other faces, page 43 was inspected specifically for those worded category marks. On the surviving page-43 face, no explicit annotation containing white, White, Slave, or Slaves was found.
+
+
+The correct bounded statement is: 0 explicit white/slave worded annotations observed on the available page-43 representation.
+
+
+This does not mean:
+- no white person or enslaved person was associated with any listed household;
+- the printed family columns encode or exclude those categories in the same way;
+- absence of a worded annotation proves historical absence;
+- page 43 contributes a numerical zero to any later district roll-up unless the accounting rule is independently earned.
+
+
+The photographed face includes the bottom ruled edge of the table beneath the final row, so this negative observation is not being made from a visibly truncated lower-edge capture. Capture quality and faint writing remain normal uncertainty controls.
+
+
+Source observation distinct from inference
+Source observation:
+- page 43 writes Timona on the row whose General Remarks state Given in by the Captain; not at home.;
+- that row carries the numerical and locality fields recorded above;
+- no explicit white / Slave(s) worded annotation was found on the available face during this pass.
+
+
+Inference not promoted:
+- the Captain is not identified from this row;
+- Timona is not merged with any similarly named occurrence elsewhere;
+- [unclear: Nashokhoma?] is not merged with another named person;
+- Nayaplosa is preserved as a source-written place-name occurrence, not converted here into a modern coordinate;
+- this row does not establish why Timona was absent, who supplied the rest of the information beyond the source phrase Given in by the Captain, or when the remark was written relative to the printed form;
+- the page-43 negative category observation does not by itself explain the district-level annotation system.
+
+
+Return paths
+Source PDF custody route A: 18GzIm1r0_cDwMdWdAQjqC8ozZ4TvLfoK
+Source PDF custody route B: 1-mUSjecCEX39vJAYQL82bUOGbyj1plm8
+Admitted PNG study face: 10eJKn36e9SQte485sSqYXuDtN08_DzI_
+Existing wrapper / jacket: 1qh5m2nY5wu-rxGXj1pG0JB9VE30KjsdC
+Holdfast provisional Timona row leaf: 1mE6eTOsobDxgRDZyUi1_RNnWmQkkWPM8
+This addendum: 1-Yg8rKeURJ9PIXhRNIZ06R05ecLcIRoaT8od3DI0FxI
+
+
+Next honest source-facing door
+For the category-count thread, page 44 is the next distinct surviving face only if it is opened to answer the same bounded question rather than merely to advance pagination. For the Timona occurrence, the earned door is an exact second source occurrence or administrative instruction that names the captain or explains Given in by the Captain; no identity is to be manufactured from adjacency.
+
+
+Maker: Fieldglass
+Date: 2026-09-06
+Method: direct visual inspection of the actual OHC_2423 PDF face and admitted lossless PNG; raw-byte hash comparison for the two PDF custody copies; prior wrappers used only for correction history and return-path control.
