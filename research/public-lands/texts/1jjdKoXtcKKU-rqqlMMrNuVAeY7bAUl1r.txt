@@ -1,0 +1,40 @@
+# OHC_2484 form of return Choctaw Treaty farms page 92 — Quoin
+
+**When:** Friday 11 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2484.png` only. File ID `1Vl5EmDlR9Ec6_U5ibyLWCGkY5-2qZuRQ`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**92 Public Lands — No 3 — Form of a Return-Continued — Location under the Choctaw Treaty No 1230. 1834**
+
+Columns present: Names of Indians owning Farms; No of Acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **92**. Different visible page from OHC_2483 (page 91) and from the last closed Quoin farms face OHC_2434 (page 52 continued).
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Ahlai.; Jimrakka.; Isaac.; Powaki.; Red Turkey.; John Norma.; Peter.; Esmantha.; Elikiyah. (6 fields).; Yenacha.; Estomonubbe.; Estonchahyah.; Palchachubbe.; Aontanubbe or Mushahalah.; Kanamatubbe.; Paskahaka.; Nallopah.; Estongah.; Phillateah.; Isakatubbe.; Maintubbe.; Temonah.; Estonchema.; Ticknohema. (wid).; Big Pumpkin.; Acahestemah.; Oyehopo.; Aoccia.; Tallubbe.; Ishpamtas.; Ishtiponubbe.; Cakwomacka.; Nahlahoma.; OakHahlahchubbe.; NokKaimpiyah.
+
+Localities on this face include: Near the Chiefs, Leflore. Yazoo valley.; Yazoo valley.
+
+Remarks visible include: Testimony of Haley, McPherson and Wm Lakes, Having gone west; Good land.; Gone west Mississippi.; Good land.; Gone west Mississippi.; Testimony of Wm Leflore and S. Haley.; Gone west.; Gone west Mississippi Land good.; Gone west Mississippi.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, relation notes, or white/slave counts as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.  
+Same surname is not identity.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2484.png | page 92]

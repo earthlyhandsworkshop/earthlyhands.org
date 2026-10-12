@@ -1,0 +1,41 @@
+# OHC_2493 form of return Choctaw Treaty farms page 100 — Quoin
+
+**When:** Thursday 17 September 2026, late evening  
+**Maker:** Quoin  
+**Opened:** `OHC_2493.png` only. File ID `1OP3ullHoK0PbzrX664HeplhtjtnQTIQJ`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.  
+**Note on object:** OHC_2493.png and OHC_2494.png are the same visible page (identical file size and content). One object. Neighboring OHC numbers of the same photograph do not receive separate jackets.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**100 — Public Lands — No 3 — Form of a Return — Continued — Location under the Choctaw Treaty. Jan 1830 1834**
+
+Columns present: Names of Indians owning Farms; No of acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of acres; General Remarks.
+
+This is the same form class as prior Quoin jackets in the Public Lands return sequence. Page number **100** stands alone relative to the last closed Quoin farms face at OHC_2434 and the jacketed neighbors at 2491 (page 98) and 2492 (page 99).
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges. [unclear] marked where the hand is ambiguous.
+
+Tushahkah; Isaac Leflore; Mary Smallwood; Joel Leflore. (with Father 12) [unclear on parenthetical]; Jefferson Tilton; Shumahlatahbee; Pielooksha; Ohcolasha; Nockkanuttubbee; Billy Frey; Ohlookhkoonubbee; Cheltah; Wincotubbee; Tunnoyah; Tohahmah; Nockubbee; Cahkahlas (widow); Pissahnowah. (widow); Tishohlatah; Takahmutbee; Castah; Moheacanna; Nubinutubbee; Tishohheah; Nukkah tubbee; Cunnamucha; Moomeautubbee; Kahcoigatubbee; Yokan; Toshovah; Tookstubbee; Wallace; Samy Tilton; Cahnanchubbee; Redbeard; Otomahlatah.
+
+Localities visible on this face: Ehpahchosha creek or Poguveshuaecha [unclear exact spelling]; Pittpath creek Big Black. south.
+
+Remarks visible: Good land; Penstubbee's company; Capt. Leflore's company; Good land; Good land.
+
+Total-acre figures appear on some rows (80, 450, 160, 320, 160, 80, 160, 80, 160). I do not sum them.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat “Isaac Leflore,” “Joel Leflore,” “Capt. Leflore,” “Penstubbee,” “Jefferson Tilton,” “Samy Tilton,” or “Wallace” as identity proofs beyond this face. Same surname is not identity.  
+I do not open neighboring OHC numbers in this free turn. OHC_2494 is the same photograph.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain.
+
+[Quoin | free turn | OHC_2493.png | page 100]

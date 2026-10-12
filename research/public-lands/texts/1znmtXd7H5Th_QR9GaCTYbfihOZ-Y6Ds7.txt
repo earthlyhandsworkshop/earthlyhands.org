@@ -1,0 +1,40 @@
+# OHC_2483 form of return Choctaw Treaty farms page 91 — Quoin
+
+**When:** Friday 11 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2483.png` only. File ID `13mOmcC6DWVkygZPzw485YMMlw-Nd-oSf`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**91 Public Lands — No 3 Form of a Return-Continued — Location under the Choctaw Treaty No 1230. 1834**
+
+Columns present: Names of Indians owning Farms; No of Acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **91**. Different visible page from the page-90 cluster (OHC_2481 / OHC_2482) and from the last closed Quoin farms face OHC_2434 (page 52 continued).
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Major Leflore.; Chokkanubbee.; Chokkanubbee's two sisters.; Nelly Lowphit.; Chickashono.; Ahsonokhahtah.; Mahkkenawtubbee.; Pakahshoka.; Imkahlatah.; Okiniohtubbee.; Holetanahi.; Ahpalinga.; Biahtah (widow).; Oakchia.; Phill.; Himachubbee.; Ahlomachubbee.; Natubbee.; Ahpaba.; Tallahoma.; Fiokkah.; Holatubbe.; Nahkanubbee.; Eapacia.; Ahpola.; Little Nowaktonah.; Big Nowaktonah.; Muslatubbee or Elias.; Hotubbe.; Capt Shilde (6 field).; Pukha.
+
+Localities on this face include: Funnagusha creek.; Quilla village.; Quilla village.; Quilla village.; Swamp field.; Quilla creek.; Yazoo valley.
+
+Remarks visible include: Bought by the Major from Reluck three years ago and given to his son Bazal, who now resides with his Father, none of the family ever resided on this place but had it in cultivation, (captain) West Mississippi.; West Mississippi.; On testimony of William Leflore.; Good upland.; Gone west Mississippi.; West Mississippi.; West Mississippi.; Gone west Mississippi, testimony of W Leflore.; 7 slaves Five miles from the Chief Greenwood Leflore.; Gone west Mississippi: good land.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, captain marks, relation notes, or white/slave counts as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.  
+Same surname is not identity.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2483.png | page 91]

@@ -1,0 +1,71 @@
+# OHC_2485 form of return Choctaw Treaty farms page 93 — Quoin
+
+**When:** Friday 11 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2485.png` only. File ID `1at8v3-V9nWviWZKdJ-wJH3wVvCPW3IQx`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.  
+**Note:** OHC_2486.png is byte-identical (md5 b0f122edfd51f1bcc4f965d63c1f6a68). Same visible page. One object.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**93 Public Lands — No 3 — Form of a Return — Continued — Location under the Choctaw Treaty No 1230. 1834**
+
+Columns present: Names of Indians owning Farms; No of Acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **93**. Different visible page from OHC_2484 (page 92) and from the last closed Quoin farms face OHC_2434 (page 52 continued).
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Old Perry  
+Charles Gray  
+Hannjah  
+Nowtubbe  
+Moshologah  
+Tamba  
+Kahconetokubbe  
+Phatacocca (5 fields)  
+OnaKambo  
+Kahneahkotetah (6 fields)  
+Nahahotahnowah  
+Cahnowtontah  
+Hoyabtah  
+Nakatubbe  
+Muscogahhomah  
+Elikopiah  
+Yenatubbe  
+Elihomegah  
+Cahcuktonah  
+Kahnowanubba  
+Capt Tunnaball  
+Ohyahpah  
+Pat Riley  
+Ems Waids  
+Emahka (widow)  
+TickHahphalutte  
+Samiel A Allen  
+Jacob Thompson  
+Cahacontantah  
+John Hammond  
+Robert Tunnaball  
+
+Localities on this face include: [Helen] Tyyooktahlish creek.; Big sand; Puttahcahcoah creek; Yellow Buck (a river); Puttah cahcoah; Yazoo valley flat; Yellow Busha, east side.; Yellow Busha, west side.
+
+Remarks visible include: Upon the testimony of Wm Leflore; Land tolerable; Gone west Mississippi; Insane, and must be guarded; Upon the testimony of the Captain and John Hammond; Land tolerable; Was working and preparing to settle his present place at the time of the treaty, but was not living on the place nor living with his father in law; Settled since the treaty; Upon the testimony of Captain and Mrs Hammond.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, relation notes, or white/slave counts as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.  
+Same surname is not identity.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2485.png | page 93]
