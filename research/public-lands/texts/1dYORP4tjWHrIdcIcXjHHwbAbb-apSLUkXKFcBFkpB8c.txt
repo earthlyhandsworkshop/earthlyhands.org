@@ -1,0 +1,222 @@
+GLEAN SOURCE-FACING JACKET — OHC_2442 page 59 — r26 source-written locality or and r29 family-count correction
+
+
+Status: DIRECT-SOURCE PAGE JACKET — BOUNDED SOURCE-FACING PASS — DUPLICATE CUSTODY AND DERIVATIVES CONTROLLED
+Maker: Glean
+Date: 2026-09-06
+Corpus: Public Lands — Whole-Document Corpus / quoted-title Choctaw Treaty farm return
+Visible manuscript page: 59
+Historical-object boundary: one manuscript page within a continued multi-page return. This jacket does not claim completeness of the larger return and does not supply a full diplomatic transcription of page 59.
+
+
+METHOD CONTROL
+This pass began from EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md, Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF, and SOURCE WORK METHOD — full strength, exact reach — source to synthesis, Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc. Object first; source face governs; source / representation / derivative / interpretation remain distinct; repeated representations do not become witnesses; blanks stay blank; correction history remains visible; every consequential statement keeps a return path.
+
+
+A bounded Drive search for OHC_2442 returned two custody PDFs, the admitted PNG study representation, two same-text Quoin derivatives, receipts, and no equivalent source-facing OHC_2442/page-59 jacket. This jacket therefore represents the underlying manuscript face rather than creating separate jackets for PDF, PNG, or Quoin forms.
+
+
+EXACT SOURCE / REPRESENTATION FOOTING
+Custody object A:
+- filename: OHC_2442.pdf
+- Drive ID: 1gZd_qIGx5HqSg1bhf4Fp5Nygp3sAmY-s
+- parent folder ID: 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA
+- size: 258,872 bytes
+
+
+Custody object B:
+- filename: OHC_2442.pdf
+- Drive ID: 1qK0_55tw9G5WO-j61PCyjw6_Wf8PxOcC
+- parent folder ID: 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI
+- size: 258,872 bytes
+
+
+Both PDF payloads were streamed in this pass. They are byte-for-byte identical and each produced SHA-256:
+446f615bb884d3a098ab763d0b0599a94bc74e5777d2f6f8e19ffd51699fa630
+They are two custody routes to one matching PDF payload and one manuscript-page witness, not two independent witnesses.
+
+
+Admitted study representation used for direct visual reading:
+- filename: OHC_2442.png
+- Drive ID: 1zge2dWwxLpeJBgAjmnCTeMLkYevZmX9w
+- parent folder ID: 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- size: 1,384,392 bytes
+- operation: study representation of the manuscript face; not a second historical source.
+
+
+Existing derivative transcriptions:
+- OHC_2442 form of return Choctaw Treaty farms page 59 — Quoin.md — Drive ID 1mqt3ZW79v4MXkvK3zlqVFke8YV8d2iqO — parent 1komb4v11M9baULEpk3w3owolFF99m2-F
+- same-title duplicate derivative — Drive ID 1FSE_00DHAEWPpFR7DmoJNnzXACRDrgA0 — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl
+The connector-readable text of the two Quoin objects is identical. They remain repeated derivative text and do not add evidentiary weight by repetition.
+
+
+PAGE IDENTITY AND 58→59 SEAM
+The admitted OHC_2442 face visibly carries manuscript page number 59 at upper left and continues the ruled “Public Lands — No 1 — Form of a Return — Continued — Location under the Choctaw Treaty” form. Fieldglass’s existing OHC_2441 jacket, Drive ID 1kYej7_ROC8GpRE-oGYedUr3OmgGXXt29ri_sL3DWZ08, directly establishes manuscript page 58 under the same continued form. Consecutive visible pagination and form identity earn a bounded 58 → 59 pagination/form seam only. No person, family, tract, locality, count, annotation, identity, ownership relation, or legal conclusion is inherited across the turn.
+
+
+WORKSHOP ROW INDEX
+For this jacket only, Glean counts the 36 visible body rows top-to-bottom as PL:p59:r01–r36. These are workshop navigation indices, not source-written row numbers.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING A — PL:p59:r26 — SOURCE-WRITTEN LOCALITY ALTERNATIVE
+At r26, the row-holder is a source-written widow occurrence; the personal-name string is left at occurrence level in this jacket and is not merged with any same-name person elsewhere.
+
+
+In the locality field, the manuscript visibly writes a first locality form readable as “Nalaapilka”, then the literal source word “or”, then a second locality form, followed by “branch south side.” The second locality spelling is not secure enough on the admitted face for Glean to promote a full diplomatic reading. The Quoin derivative supplies “Nalampuli” for that second form; that reading remains derivative navigation, not source-certified certainty.
+
+
+Exact source-facing state:
+“Nalaapilka or [unclear: second locality form] branch south side.”
+
+
+The source itself therefore presents an alternative-form construction at this row. Exact reach stops there. The literal “or” does not by itself establish whether the two strings are two names for one place, two different places, a recorder correction, a translation relation, a spelling alternative, or some other administrative notation.
+
+
+LOAD-BEARING DIRECT SOURCE FINDING B — PL:p59:r29 — FAMILY-COUNT CORRECTION
+At r29, direct inspection of the manuscript face shows the “Entire No of the Family” value as 16. The Quoin derivative gives 15. The active source-facing value is therefore 16; Quoin’s 15 is preserved as superseded derivative history.
+
+
+The same row visibly carries 12 in cultivated acres, 4 in males over 16 years, 6 in males and females under 10 years, total acres 480, and the General Remarks phrase “Poor land.” These row-level states remain separate from any interpretation of household composition or legal status. The exact diplomatic spelling of the captain row-holder’s personal name is not independently settled by this pass and is not silently borrowed from Quoin merely to label the correction.
+
+
+SOURCE / DERIVATIVE / INTERPRETATION BOUNDARY
+Source-stated / source-visible:
+- manuscript page 59 under the continued Public Lands return form;
+- r26 contains a locality string beginning “Nalaapilka”, the literal word “or”, a second unresolved locality form, and “branch south side.”;
+- r29 entire-family value = 16;
+- r29 cultivated acres = 12; males over 16 = 4; under 10 = 6; total acres = 480; General Remarks = “Poor land.”
+
+
+Derivative:
+- OHC_2442.png is a study representation of the manuscript face;
+- the two Quoin files are derivative transcriptions/navigation aids;
+- PL:p59:r01–r36 are Glean navigation indices;
+- temporary crops, contrast adjustment, enlargement, and sharpening used for direct inspection were unretained inspection derivatives and are not historical evidence.
+
+
+Interpretation / exact reach:
+- the source itself records an alternative locality construction at r26, but the relation between the two locality strings is unresolved;
+- the r29 family-count discrepancy is a source-versus-derivative correction only. It is not an arithmetic reconciliation of the row and does not imply what the source intended the family column to include.
+
+
+FINDINGS
+- OHC_2442 is visible manuscript page 59 of the continued Public Lands / Choctaw Treaty farm return.
+- The two stored OHC_2442 PDFs inspected are byte-identical custody copies of one payload and one manuscript-page witness.
+- The two same-title Quoin files carry identical derivative text and are not corroborating witnesses.
+- r26 preserves a literal source-written “or” between two locality forms; the first is readable as Nalaapilka and the second remains unresolved in this jacket.
+- r29 directly carries family count 16; Quoin’s 15 is corrected at source force.
+
+
+CORRECTION HISTORY
+Correction A — r29 entire-family count:
+Quoin: 15.
+Direct face: 16.
+Reason: direct visual inspection of the ruled source row securely shows the second digit as 6. Active state = 16.
+
+
+UNRESOLVED QUESTIONS
+- What is the exact diplomatic spelling of the second r26 locality form after “or”?
+- What did the recorder intend by the r26 alternative locality construction?
+- What is the exact diplomatic spelling of the r29 captain row-holder’s personal name?
+- Does another direct representation or neighboring source state clarify the r26 alternative without relying on Quoin?
+- OHC_2443 direct source face was not opened in this pass. Existing derivative navigation labels it page 60; that page identity is not promoted here until direct inspection.
+
+
+NONCLAIMS
+- The r26 literal “or” does not establish same place, different places, translation, renaming, correction, movement, ownership, or residence.
+- The r26 widow wording, locality, and adjacency do not merge the row-holder with any same-name person elsewhere.
+- The r29 family count 16 does not by itself define household membership, kinship, residence, dependency, or legal status.
+- No arithmetic completion or reconciliation is inferred from the printed count columns.
+- Dotted/blank fields remain dotted/blank and are not converted to zero.
+- Duplicate PDFs and duplicate Quoin derivatives do not become independent witnesses.
+- Consecutive manuscript pages do not merge people, tracts, localities, counts, or annotations across the turn.
+
+
+SEAMS AND EXACT RETURN PATHS
+Backward seam:
+Public Lands — Whole-Document Corpus → FIELDGLASS SOURCE-FACING JACKET — OHC_2441 page 58 — Drive ID 1kYej7_ROC8GpRE-oGYedUr3OmgGXXt29ri_sL3DWZ08 → admitted OHC_2441 page-58 face → consecutive visible manuscript page 59 / OHC_2442 → this jacket.
+
+
+Source return:
+this jacket → OHC_2442.png study representation, Drive ID 1zge2dWwxLpeJBgAjmnCTeMLkYevZmX9w, parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh → matching OHC_2442.pdf custody object A, Drive ID 1gZd_qIGx5HqSg1bhf4Fp5Nygp3sAmY-s, parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA; or byte-identical custody object B, Drive ID 1qK0_55tw9G5WO-j61PCyjw6_Wf8PxOcC, parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI.
+
+
+Derivative return:
+this jacket → Quoin derivative 1mqt3ZW79v4MXkvK3zlqVFke8YV8d2iqO or duplicate-text derivative 1FSE_00DHAEWPpFR7DmoJNnzXACRDrgA0 → any disputed locality spelling, count, or row alignment returns to OHC_2442.png / matching custody PDF before adoption.
+
+
+Forward seam:
+Direct OHC_2443 remains unopened in this pass. Existing derivative navigation calls it page 60, which is an earned retrieval target but not adopted here as direct page identity.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+LAMPLIGHT SECOND-LOOK / SOURCE-RETURN — 2026-09-06
+
+
+Direct return: OHC_2442.png — Drive ID 1zge2dWwxLpeJBgAjmnCTeMLkYevZmX9w — parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh. The two recorded OHC_2442.pdf custody objects were returned again; both remain 258,872 bytes and SHA-256 446f615bb884d3a098ab763d0b0599a94bc74e5777d2f6f8e19ffd51699fa630.
+
+
+SOURCE-IDENTITY DEEPENING
+
+
+The upper-right heading on the direct face visibly carries the additional source-written notation “No 1230. 1834.” The active jacket preserved manuscript page 59 and the continued Public Lands / Choctaw Treaty form identity but did not preserve this notation. Active source-facing state now includes it as source-visible identifying text on this face.
+
+
+EXACT REACH / NONCLAIM
+
+
+This pass does not promote “No 1230” to an archival call number, treaty number, item number, or other administrative category, and does not assign a documentary function to “1834.” The face supplies the notation; its exact administrative meaning remains unestablished here.
+
+
+REPRESENTATION CHECK
+
+
+The current one-page PDF embeds a 2038 × 1879 grayscale JPEG of the same page geometry. The admitted PNG is also 2038 × 1879 and visually corresponds to that face, but it is not byte- or pixel-identical to the embedded JPEG. Generation direction is therefore not supplied by this check. PDF and PNG remain representation routes to one manuscript-page witness, not independent corroboration.
+
+
+Everything else tested in this return holds at the jacket’s stated reach: the r26 second locality remains unresolved rather than silently adopting Quoin’s “Nalampuli”; the r29 family count remains source-visible 16 against Quoin’s derivative 15; the existing uncertainty, nonclaims, refused identity/household crossings, and correction history remain intact. OHC_2443 was deliberately left unopened.
+
+
+Maker: Lamplight
+Date: 2026-09-06
+
+
+GLEAN SOURCE-RETURN AUDIT — PAGE 59 CATEGORY ANNOTATIONS AND PLACE-NAME CONTROL
+
+
+Disposition
+This is a bounded page-wide audit of the direct OHC_2442 manuscript face. It deepens this governing page-59 jacket and does not create another historical object or add witness weight to repeated representations.
+
+
+Inspection boundary
+All 36 visible body rows were inspected across the surviving page, using the existing PL:p59:r01–r36 workshop coordinates. The handwritten locality and remarks fields were checked for White / Whites / Slave / Slaves / Black / Blacks. Dots, dittos, blanks, numerals without a category word, and derivative expansions were not counted.
+
+
+Page-59 finding
+No explicit White / Whites / Slave / Slaves / Black / Blacks category-count annotation appears on page 59. The page therefore contributes 0 Whites and 0 Slaves to the explicit annotation account.
+
+
+A literal non-category occurrence must remain visible: PL:p59:r01, Timma, writes `Standing White Oak creek` in Locality of Farms. Here `White` is part of a source-written place-name, not a racial/category count. The following `do` entries remain source-written dittos; they are not expanded into fresh target-word occurrences and do not enter the category arithmetic.
+
+
+Whole-return accounting result
+The controlled surviving subtotal through page 58 was 13 Whites and 48 Slaves. Page 59 adds zero, so the surviving explicit-annotation subtotal for manuscript pages 39–59 remains 13 Whites and 48 Slaves.
+
+
+The page-60 closing aggregate reads `14 Whites & 67 Slaves in this district`. The surviving explicit annotations therefore do not reconcile to the closing aggregate: they are short by 1 White and 19 Slaves. This is the active result. The difference is not assigned to page 41’s uncaptured lower rows, page 50’s lost right edge, another missing or unreadable surface, an unrecorded category mark, or a different administrative operation. The source does not yet choose among those possibilities.
+
+
+Source boundary and nonclaims
+The printed form permits locality language and category-count language to occupy the same Locality of Farms field on different faces. The shared word `White` does not make those uses semantically equivalent. No person, household, ownership relation, or legal status is inferred from the place-name, the dittos, the explicit annotations, or the aggregate.
+
+
+Exact return road
+this jacket → OHC_2442.pdf, Drive ID 1qK0_55tw9G5WO-j61PCyjw6_Wf8PxOcC → manuscript p.59 → PL:p59:r01 Locality of Farms `Standing White Oak creek` as non-category place-name → no page-59 category-count annotations → surviving p39–59 subtotal 13 Whites / 48 Slaves → p60 aggregate 14 Whites / 67 Slaves → unresolved mismatch 1 White / 19 Slaves.
+
+
+— Glean

@@ -1,0 +1,697 @@
+GLEAN SOURCE-FACING ADDENDUM — OHC_2449-OHC_2450 page 65 — r20 interlinear cultivation note and 64→65 seam
+
+
+Status: SOURCE-FACING ADDENDUM TO EXISTING FACE-65 WRAPPER — NOT A SECOND PAGE JACKET
+Corpus: quoted-title “Public Lands” — Whole-Document Corpus
+Visible manuscript page: 65
+Maker: Glean
+Date: 2026-09-06
+
+
+METHOD CONTROL
+
+
+Current entrance practice: EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md — Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF.
+Canonical method: SOURCE WORK METHOD — full strength, exact reach — source to synthesis — Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc.
+Practice amendment: WORKSHOP PRACTICE AMENDMENT — source force, attribution, and exact reach — Drive ID 1X8tHZw7km3cgXvloDTB_S7Ary8vj6Kqe0S0whZABaNg.
+
+
+Applied here: object first / compare second; direct manuscript representations before derivative repair; repeated representations do not become witnesses; uncertain placement stays uncertain; correction history stays visible; source wording, derivative transcription, and Glean comparison remain separately attributed.
+
+
+WHY THIS IS AN ADDENDUM, NOT ANOTHER JACKET
+
+
+Visible face 65 already has a source-facing wrapper: NAME_WEB_PILOT_FACE_0065.md — Drive ID 1EH4VHKX2yJWV4mgSDLcvI_3mUNM36LdG. A separate working transcription packet, OHC_2450_batch_001_pitchlynn_cluster.md — Drive ID 1XXTaXZmCENFMqrvJRm6haeUvNS2xK9dE, covers rows 26–29. This addendum does not replace either object and does not mint another historical face. It preserves one material direct-source finding outside the currently stabilized row-26–29 packet and repairs the backward page seam.
+
+
+HISTORICAL OBJECT / REPRESENTATION CONTROL
+
+
+The documentary object here is one manuscript ledger face visibly numbered 65 in the continued quoted-title “Public Lands — No 2 Form of a Return—Continued — Location under the Choctaw Treaty” body.
+
+
+Known direct study representations used in this pass:
+- OHC_2449.png — Drive ID 1eGIAsPF1kfA7Qf_flj2RfmIUoFwQefDJ — parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh — 1,444,177 bytes.
+- OHC_2450.png — Drive ID 12vIEHEgwCW5ZTweXJifPfnrFIpB7XVw7 — parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh — 1,427,757 bytes.
+- OHC_2450 — Twin Chassis Source.jpg — Drive ID 1_kNu7VNO9VjBtF4F1Qb4NY2rUkny3eEt — parent 15Qhk0Zf3p-FXA3VUbpxrUS1xPQxdVEQN — 711,795 bytes.
+
+
+The Seam previously established that OHC_2449 and OHC_2450 are non-identical captures of the same visible manuscript page 65. Their separate archival/file identities and pixel differences are preserved; they are not independent historical witnesses and are not silently deduplicated.
+
+
+Archival PDF routes already attached to that representation relation include:
+- OHC_2449.pdf — Drive ID 1_6xeByrYVsfWviePLGcyV5DHTcW_u0K3.
+- OHC_2450.pdf — Drive ID 1do-w6PvxnqclGTvfyFwdfRrldyB-3E43.
+A separate same-name OHC_2450.pdf arrival is recorded in the working packet as Drive ID 1autXkSbGmWGtQZ0t8s8Q8kjd0Yk7WbYa. This addendum does not collapse those custody objects.
+
+
+Derivative consulted:
+- OHC_2449 form of return Choctaw Treaty farms page 65 — Quoin.md — Drive ID 1sj3aVJoZj1Yer68AN6PP_iQwxiLr8_wK.
+Historical experimental comparison consulted only as reading history:
+- Difference Bench — OHC_2450 — Drive ID 1_6qs7kcJcidxl3XM_0xmInmWz39YZsHK3Fz1q_npgZc.
+
+
+DIRECT SOURCE-FACING FINDING — GENERAL REMARKS INTERLINE
+
+
+Correction-stable navigation address: PL:p65:remarks-interline:r20-neighborhood.
+
+
+This address deliberately does not certify row ownership. The small source-written note lies in the General Remarks area at the row presently navigated as r20 and visibly crosses or rides the ruled-row neighborhood closely enough that exact row assignment remains unresolved.
+
+
+Direct comparison of OHC_2449.png and OHC_2450.png, with the Twin Chassis JPEG used as an additional representation, confirms that a small interlinear manuscript note is genuinely present on the face. It is not a Quoin invention or a single-capture artifact.
+
+
+Secure direct fragments in that interlinear note:
+- “worked this place”
+- “15 acres cultivated”
+
+
+The opening words and the connective wording between those fragments are not secure enough for a complete diplomatic transcription in this pass. They remain unresolved rather than being completed from an earlier reader.
+
+
+A separate main-line General Remarks statement in the same neighborhood reads:
+- “Lived in Tennessee when the treaty was made.”
+
+
+The main line and the small interlinear note remain separate source-written states. This addendum does not silently combine them into one reconstructed sentence.
+
+
+DERIVATIVE / CORRECTION HISTORY
+
+
+The current Quoin derivative records the main-line “Lived in Tennessee when the treaty was made” statement but omits the small interlinear note.
+
+
+The retired Difference Bench preserved disagreement rather than resolving it. One historical cold read provisionally offered a fragment containing “10 acres cultivated”; another provisionally offered “15 acres cultivated.” Direct comparison in this Glean pass supports 15 for the visible numeric fragment. Therefore:
+- former experimental reading “10 acres cultivated” — superseded for this fragment;
+- active direct-source fragment — “15 acres cultivated”;
+- neither historical cold read is adopted wholesale as a full transcription of the interlinear line.
+
+
+This correction is bounded to the visible numeric fragment. It does not certify the disputed opening wording, connective wording, name spelling, or row assignment.
+
+
+NAME / IDENTITY BOUNDARY
+
+
+Earlier derivatives disagree over the first-name form on the nearby Debrell entry, including Charles/Charlie variants. This pass did not need that name to establish the interlinear note and does not certify a new personal-name reading. The source parenthetical “(white man)” in that name-field neighborhood remains source wording, not a Glean classification of a person beyond the occurrence.
+
+
+No Debrell occurrence is merged with any same or similar name elsewhere. No same-page adjacency establishes kinship, household unity, ownership unity, or identity continuity.
+
+
+BACKWARD SEAM — PAGE 64 → PAGE 65
+
+
+Existing Glean page-64 jacket:
+- GLEAN SOURCE-FACING JACKET — OHC_2448 page 64 — Ahlomah cultivated-acre correction and 63→64 seam — Drive ID 17zwsJ-goeCivi8bdyNvUkv3bdgCAGvqIy4upnjhXOUk.
+
+
+OHC_2448 is directly established as visible manuscript page 64 in the same continued No. 2 farm-return form. OHC_2449/OHC_2450 directly show visible manuscript page 65 and the continued form. That earns a bounded 64→65 pagination/form seam.
+
+
+The seam does not mean filename sequence alone proves documentary order, and it does not explain why page 65 survives in two non-identical captures.
+
+
+FORWARD SEAM
+
+
+Earlier source-facing work by The Seam establishes OHC_2451 as a distinct visible page 66. This addendum does not re-open or re-certify that face. It preserves the existing page-66 return door without manufacturing a new Glean claim from it.
+
+
+FINDINGS
+
+
+1. The existing page-65 wrapper remains the governing face object; this is an addendum, not a duplicate jacket.
+2. A small source-written interlinear note is present in the General Remarks r20 neighborhood on both OHC_2449 and OHC_2450 representations.
+3. The secure fragments “worked this place” and “15 acres cultivated” are directly readable; exact opening/connective wording and exact row assignment remain unresolved.
+4. Quoin omits this interlinear note while retaining the separate main-line statement “Lived in Tennessee when the treaty was made.”
+5. Direct source comparison supersedes the earlier experimental “10 acres cultivated” reading for the numeric fragment with 15, without adopting either historical cold read wholesale.
+6. Direct page numbering and continued form structure earn a bounded 64→65 seam from OHC_2448 to the OHC_2449/OHC_2450 face.
+
+
+UNRESOLVED QUESTIONS
+
+
+- What is the exact complete diplomatic wording of the small interlinear note?
+- Which ruled row, if any, should own the interlinear note in a stabilized row transcription?
+- What is the exact source-form first name and surname spelling of the nearby Debrell entry?
+- Who wrote the interlinear addition, and whether it was entered contemporaneously with the main row text, are not established by this face.
+- Why do OHC_2449 and OHC_2450 preserve non-identical captures of the same page 65? Existing representation work leaves that cause open.
+
+
+NONCLAIMS / TRANSLATION BOUNDARY
+
+
+This addendum does not establish:
+- that “15 acres cultivated” is the total acreage of the farm, an entitlement, a patent quantity, or title;
+- that the interlinear note belongs definitively to r20 merely because it lies in that neighborhood;
+- that “Lived in Tennessee when the treaty was made” establishes a complete residence history;
+- the legal or administrative reason for the source parenthetical “(white man)”;
+- identity between any same or similar name elsewhere;
+- kinship or household relations from adjacency;
+- that repeated captures or repeated workshop readings provide independent corroboration;
+- that the page-65 face is completely transcribed or reconciled;
+- a corpus-level theory of how these remarks were generated or used.
+
+
+RETURN PATHS
+
+
+Corpus folder: Public Lands — Whole-Document Corpus — Drive ID 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+Existing face-65 wrapper: NAME_WEB_PILOT_FACE_0065.md — 1EH4VHKX2yJWV4mgSDLcvI_3mUNM36LdG.
+Rows 26–29 working packet: OHC_2450_batch_001_pitchlynn_cluster.md — 1XXTaXZmCENFMqrvJRm6haeUvNS2xK9dE.
+OHC_2449 direct representation: 1eGIAsPF1kfA7Qf_flj2RfmIUoFwQefDJ.
+OHC_2450 direct representation: 12vIEHEgwCW5ZTweXJifPfnrFIpB7XVw7.
+Twin Chassis representation: 1_kNu7VNO9VjBtF4F1Qb4NY2rUkny3eEt.
+Quoin derivative consulted: 1sj3aVJoZj1Yer68AN6PP_iQwxiLr8_wK.
+Historical Difference Bench: 1_6qs7kcJcidxl3XM_0xmInmWz39YZsHK3Fz1q_npgZc.
+Backward page-64 jacket: 17zwsJ-goeCivi8bdyNvUkv3bdgCAGvqIy4upnjhXOUk.
+Existing representation seam study: The Seam — OHC_2449–OHC_2450 — one ledger page, two non-identical captures — 1mjrTwKDxvPmdqBseGZ0F4y4DBaMQl5Wg.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+FIELDGLASS CONTINUATION — PAGE-65 CATEGORY-COUNT CONTROL — 2026-09-06
+
+
+Fieldglass directly reopened the OHC_2450 page-65 face while testing the Return No. 2 terminal aggregate. The lower page preserves several clear numeric category phrases in the Locality of Farms field:
+- Calvin N. Howell `(white man)` — `5 whites]` followed by additional family wording that is not fully certified here;
+- John Pitchlynn `(U. S. Interpreter)` — `50 Slaves. 1 white]` followed by `On the Robinson road 4 Miles from Columbus.`;
+- Samuel Garland — `7 slaves]` followed by `Three miles from Columbus on the Robinson road.`;
+- Peter Pitchlynn — `10 slaves]` followed by `Near the Robinson road.`
+
+
+A neighboring Thomas Evans row uses a materially different construction: `7 in family] All white.` followed by prose that he lives with John Pitchlynn. That wording is preserved separately and is NOT silently converted into an additional numeric `7 whites` entry in the lexical count audit.
+
+
+Bounded transcription control: the explicit numeric `white(s)` / `slave(s)` phrases above contribute 6 whites and 67 slaves on this face. The distinct `7 in family] All white` construction remains its own field state pending an earned administrative rule.
+
+
+NONCLAIM: these row-aligned counts are not by themselves household, ownership, kinship, or person-attribution findings. The page-77 John Coleman / Curtis Collins prose provides an especially useful later control against making that assumption.
+
+
+Return: existing page-65 face/addendum → OHC_2450.pdf Drive `1do-w6PvxnqclGTvfyFwdfRrldyB-3E43` and the already recorded alternate OHC_2450 custody/representation routes. Forward accounting seam: corrected page-76 jacket `1OB1lKHy0Dec3_3dpL2mCjWTWW8o_qHdT6pAu9lEhLW0`; page-77 jacket `1bs130fP07dFRjgPOy59FcWFcYod-pwSBlMbdnsOPJkg`; page-87 aggregate jacket `1LgBLN4gKPECl5habBR6vNfrDnOFuEYlwf4bLSAGiK6Q`.
+
+
+— Fieldglass
+
+
+
+
+QUIET REACH SOURCE-GENEALOGY CORRECTION — OHC_2450 PDF CUSTODY — 2026-09-09
+
+
+Direct custody test
+Quiet Reach independently fetched the two same-name archival OHC_2450.pdf custody objects already recorded above:
+- Drive `1do-w6PvxnqclGTvfyFwdfRrldyB-3E43` — 271,550 bytes — parent `14VSQRWTBZCG5-yGT6h2DubRsRN4npFE1`; Drive-created 2026-08-29; preserved modified time 2026-08-14.
+- Drive `1autXkSbGmWGtQZ0t8s8Q8kjd0Yk7WbYa` — 271,550 bytes — parent `1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA`; Drive-created 2026-08-26; preserved modified time 2026-07-31.
+
+
+Raw-byte comparison
+The two fetched PDFs are byte-for-byte identical. Both hash to SHA-256 `4673471f7f51fc5bfc0d1ac21304e679a09487966138bf1108e3ce7490f57317`.
+
+
+Active source-genealogy state
+These are two Drive custody objects for one exact OHC_2450 PDF payload, not two independent PDF representations or corroborating manuscript witnesses. The earlier sentence above that deliberately did not collapse the custody objects remains valid as correction history; the open byte-identity question is now closed.
+
+
+This correction does NOT collapse OHC_2449 and OHC_2450 at the representation layer. The Seam's standing finding that OHC_2449 and OHC_2450 are non-identical captures of the same historical manuscript page 65 remains unchanged. Exact equality of the two OHC_2450 PDF custody objects establishes only one payload along the OHC_2450 branch.
+
+
+Flare consequence / counting control
+Any Public Lands occurrence census or evidentiary count must treat these two OHC_2450 PDFs as one representation payload / one historical-face witness while retaining both custody return paths. Different Drive creation dates, preserved modified timestamps, parent folders, or arrival histories do not make the payloads independent evidence.
+
+
+Exact returns
+Face-65 addendum → OHC_2450.pdf `1do-w6PvxnqclGTvfyFwdfRrldyB-3E43` OR byte-identical custody twin `1autXkSbGmWGtQZ0t8s8Q8kjd0Yk7WbYa` → SHA-256 above → historical manuscript page 65. OHC_2449 remains a separate non-identical representation branch of that same historical face.
+
+
+— Quiet Reach
+
+
+GLEAN PITCHLYNN / EVANS ROLE CONTROL — SOURCE-WRITTEN OVERSEER RELATION ON p.65 — 2026-09-09
+
+
+Source footing
+
+
+The admitted OHC_2450.png study representation, Drive ID `12vIEHEgwCW5ZTweXJifPfnrFIpB7XVw7`, was reopened directly at the lower page-65 rows. It represents the manuscript face and is not a new historical witness. The comparison representation is American State Papers, Public Lands, vol. VII, No. 1230, printed p.65, in the Library of Congress-hosted `llsp034.pdf` at physical PDF p.75. The PDF carrier is a digitization of the William S. Hein & Co. 1998 reprint. The ASP table and the OHC face remain separate manuscript/print representations of the return, not independent witnesses to two events.
+
+
+Direct manuscript relation
+
+
+On the manuscript face, `John Pitchlynn (U.S. Interpreter)` occupies one name-field row. That row carries cultivated acres `200`, Entire Family `9`, over-16 `2`, under-10 `6`, the Locality phrase `50 Slaves. 1 white]` followed by the Robinson-road / Columbus locality, total acres `1280`, and the General Remark `Fine prairie; provided for in treaty.`
+
+
+The next named rows are Samuel Garland and then Thomas Evans. Thomas Evans's Locality field carries a two-line relational statement whose secure content is:
+
+
+`7 in family] All white. lives with John Pitchlynn`
+`overseer for John Pitchlynn`
+
+
+The Thomas Evans row carries `1280` in Total No. of Acres. Its printed family/age columns are not converted from the separate Locality phrase.
+
+
+Printed representation
+
+
+The ASP page image preserves the same relation in regularized print:
+
+
+`Thomas Evans`
+`7 in family.] All white, lives with John Pitchlynn, overseer for John Pitchlynn.`
+Total No. of Acres: `1,280`
+
+
+The immediately preceding John Pitchlynn row prints:
+
+
+`John Pitchlynn, (U. S. interpreter)`
+cultivated `200`; Entire Family `9`; over-16 `2`; under-10 `6`;
+`50 slaves, 1 white.]`
+Total No. of Acres: `1,280`;
+`Fine prairie; provided for in treaty.`
+
+
+The print is useful for punctuation and row-boundary control, but it is not counted as an extra occurrence. The direct manuscript remains separately returnable.
+
+
+Material completion
+
+
+The earlier Fieldglass page-65 continuation preserved Thomas Evans's `7 in family] All white` construction and stated that he lives with John Pitchlynn. That account was correct but incomplete. The manuscript and print both continue the relation with the source-written role `overseer for John Pitchlynn`. This completion is now active.
+
+
+Earned source-facing consequence
+
+
+This is an explicit relationship, not a connection inferred from neighboring rows or a later biography. The page source-writes:
+
+
+- John Pitchlynn's federal-facing role: `U.S. Interpreter`;
+- Thomas Evans's private managerial relation: `overseer for John Pitchlynn`;
+- a `50 Slaves. 1 white]` category phrase on Pitchlynn's row;
+- `1,280` in the total-acre field on both the Pitchlynn and Evans rows;
+- `provided for in treaty` on Pitchlynn's row.
+
+
+These co-occurrences make p.65 a controlled specimen in which federal service, treaty-facing land language, racial/slave category notation, and an overseer relation occupy the same administrative face.
+
+
+They do not complete the flare. In particular, `overseer for John Pitchlynn` does not say what Evans oversaw. It does not assign the fifty counted enslaved people to Pitchlynn, place them under Evans, or establish a plantation, employment contract, wage, residence, legal ownership, or labor regime. The source supplies a managerial title and principal relation, not its full duties.
+
+
+Ledger consequence
+
+
+The role ledger may now enter a source-level occurrence:
+
+
+`Thomas Evans — overseer for John Pitchlynn — Public Lands No.2 p.65 — source-written in Locality of Farms — total-acre field 1,280`.
+
+
+The category-occurrence ledger may retain:
+
+
+`John Pitchlynn (U.S. Interpreter) — row host for 50 Slaves. 1 white] — cultivated 200 — total acres 1,280 — provided for in treaty`.
+
+
+Neither entry is sufficient for the person-level enslaver ledger. Nor may Thomas Evans's `7 in family] All white` be converted into seven additional `whites` for the literal category subtotal; it remains its distinct source construction.
+
+
+Cross-source seam held open
+
+
+The separately controlled treaty provision giving one section each to Silas and Thomas, children of John Pitchlynn, expressly invokes their father's forty years of service as United States interpreter. That treaty consideration remains a separate, stronger service→land statement. This p.65 finding does not merge the treaty's John occurrence with the ledger occurrence or add the sons' grants to either man's acreage. An identity/implementation bridge remains required for person-level accumulation.
+
+
+Nonclaims
+
+
+- No claim that Thomas Evans oversaw enslaved labor.
+- No claim that John Pitchlynn owned the fifty people counted as `Slaves`.
+- No claim that Evans's 1,280-acre field value was pay for overseer service, a completed patent, or final title.
+- No household merge between Evans's seven-person `All white` family phrase and Pitchlynn's family or category fields.
+- No claim that `provided for in treaty` identifies a particular article or states the consideration for John Pitchlynn's own acreage.
+- No duplicate evidentiary weight is assigned to the manuscript and ASP print.
+- No same-name identity bridge is silently completed.
+
+
+Exact returns
+
+
+Manuscript route: this page-65 addendum → OHC_2450.png `12vIEHEgwCW5ZTweXJifPfnrFIpB7XVw7` → manuscript p.65 → John Pitchlynn / Samuel Garland / Thomas Evans / Peter Pitchlynn lower-row cluster.
+
+
+Printed route: Library of Congress → American State Papers, Public Lands, vol. VII, No. 1230 → `https://tile.loc.gov/storage-services/service/ll/llscd/llsp034/llsp034.pdf` → physical PDF p.75 / printed p.65 → John Pitchlynn and Thomas Evans rows.
+
+
+Treaty crossing remains separate: True North treaty study `1D03QG4NHreHxJvLCnOL4RFb86SN8cEMT6jn5nyWbkqE` → official 7 Stat. 340–341 Supplementary Article II representation → Pitchlynn-children service consideration.
+
+
+— Glean
+
+
+
+
+QUIET REACH CATEGORY-GRAMMAR CONTROL — PRINTED FAMILY COUNT VS LOCALITY COUNTS — 2026-09-09
+
+
+Direct source return
+Quiet Reach reopened OHC_2449.png directly — Drive ID `1eGIAsPF1kfA7Qf_flj2RfmIUoFwQefDJ` — the admitted page-65 source representation already controlled above. This note deepens the existing page-65 object; it does not create another face or witness.
+
+
+Material source-facing finding
+The printed `Entire No. of the Family` column and the source-written white/slave counts in `Locality of Farms` cannot be treated as interchangeable counts or as though the locality count were simply a subset of the printed family total. Several directly visible rows make that arithmetic impossible:
+- Calvin N. Howell: printed family `3`; locality phrase `5 whites]` (followed by additional prose).
+- John Pitchlynn `(U. S. Interpreter)`: printed family `9`; locality phrase `50 Slaves. 1 white]`.
+- Samuel Garland: printed family `3`; locality phrase `7 slaves]`.
+- Peter Pitchlynn: printed family `5`; locality phrase `10 slaves]`.
+
+
+The page also preserves a structurally different case: Thomas Evans has no adopted numeric entry in the printed family column at present direct visual reach, while the locality field writes `7 in family] All white.` and continues with the John Pitchlynn / overseer prose. Thus the manuscript can use `family` language inside the locality track independently of the printed family-count cell.
+
+
+Earned control
+Page 65 therefore gives direct negative evidence against a one-denominator reconstruction. The printed family count is not safely replaceable by, or arithmetically reconstructed from, the white/slave phrases. Nor can the locality white/slave phrases be assumed to enumerate only people already counted inside the printed family number: on multiple rows the locality number by itself exceeds the printed family total.
+
+
+What remains open
+This finding does NOT establish that the printed family column excludes enslaved people, excludes whites, counts only Choctaw kin, counts only resident household members, or follows one stable legal rule. It also does not establish ownership of any enslaved person by the row host. The two fields may describe overlapping, disjoint, or differently scoped populations; the source rule remains to be earned.
+
+
+Cross-page consequence
+The page-77 Sally Tom structure (`Entire No. of the Family` = 1; locality `1 slave]`) cannot be resolved by simple addition, inclusion, or exclusion from that one row. Page 65 now supplies multiple counterexamples to any automatic equality rule. For the flare, retain separate tracks at minimum: printed-family count; locality numeric category occurrence; person-level attribution. Only an instruction, administrative key, or controlled arithmetic across the return should bridge them.
+
+
+Exact return
+Public Lands / Emancipation flare → existing page-65 Glean addendum → OHC_2449.png `1eGIAsPF1kfA7Qf_flj2RfmIUoFwQefDJ` → manuscript p.65 → printed `Entire No. of the Family` cells compared only with source-written row-aligned Locality phrases listed above.
+
+
+— Quiet Reach
+
+
+GLEAN IDENTITY CORRECTION — JOHN PYTCHLYNN / JOHN PITCHLYNN MERGE EARNED
+
+
+Correction history
+
+
+The earlier control above—“No same-name identity bridge is silently completed,” and the corresponding statement that the treaty crossing remains separate—was proper intake restraint but is now superseded at identity synthesis. The occurrences remain separately transcribed with their exact source spellings; they are now treated as one historical person.
+
+
+Evidence for the merge
+
+
+- Rare, near-identical name: John `Pytchlynn` in the treaty representation; John `Pitchlynn` in Public Lands and implementation records.
+- Same Choctaw treaty and implementation setting.
+- Same distinctive role: long-serving United States interpreter. Public Lands source-writes `(U. S. Interpreter)`; OHC_2416 source-writes `John Pitchlynn U.S. interpreter`; Supplementary Article II identifies the father of Silas and Thomas through forty years of service as United States interpreter.
+- Same family-land context: the supplement gives Silas and Thomas one section each adjoining their father’s location, while Public Lands records John’s farm row and `provided for in treaty` remark.
+- Compatible chronology and no conflicting person evidence presently found.
+
+
+Earned identity statement
+
+
+John `Pytchlynn` in the treaty supplement and John `Pitchlynn` in the Public Lands / implementation bodies are one working historical identity. This is an evidence-based normalization of representation variants, not a claim that the clerks wrote the same spelling.
+
+
+What the merge strengthens
+
+
+The treaty’s service/family clause may now be joined to the Public Lands John Pitchlynn person: the supplement expressly makes John’s stated forty years of United States interpreter service the consideration for one adjoining section to Silas and one adjoining section to Thomas. This supplies a bounded instance of source-written federal service → stated treaty consideration → family land advantage.
+
+
+Proposition boundaries after the merge
+
+
+- The service consideration attaches to the sons’ adjoining grants. It is not transferred to John’s own 1,280-acre Public Lands field.
+- The sons’ two sections are not added to John’s acreage or described as his personal grant.
+- The Public Lands `50 Slaves. 1 white]` remains a row-aligned category phrase; identity convergence does not by itself prove John owned the fifty people counted.
+- `Provided for in treaty` does not, by itself, identify which article controlled John’s own 1,280-acre entry.
+- Public Lands manuscript, ASP print, treaty print, and implementation manuscript remain distinct representations and are not counted as duplicate witnesses.
+- Merge the person; keep each proposition local to the source that states it.
+
+
+Exact returns
+
+
+Public Lands occurrence: this p.65 addendum → OHC_2449 / OHC_2450 manuscript representations → John `Pitchlynn` row.
+
+
+Implementation occurrence: OHC_2416 → captain implementation list → William Ward, Agent C.N., and John `Pitchlynn`, U.S. interpreter.
+
+
+Treaty occurrence and controlled synthesis: True North treaty study, Drive `1D03QG4NHreHxJvLCnOL4RFb86SN8cEMT6jn5nyWbkqE` → official 7 Stat. 340–341 Supplementary Article II representation → Silas and Thomas, children of John `Pytchlynn`, adjoining sections and father’s stated interpreter-service consideration.
+
+
+Method note: Ten’s aluminum folio box → `Identity restraint without identity paralysis — folio note`, Drive `1Fa0o4LwYrayERbgKseMu67_Jo9VcfqOq_RQ00jGgVqs`.
+
+
+— Glean
+
+
+GLEAN CROSS-SOURCE ADDENDUM — SAMUEL GARLAND: ONE-SECTION TREATY PROVISION WITHOUT SOURCE-WRITTEN FEDERAL ROLE
+
+
+Source genealogy
+
+
+This addendum deepens the existing p.65 object. It uses the direct OHC_2449 manuscript face for the Public Lands row and the already controlled official Statutes at Large representation of the treaty supplement. The American State Papers print is a representation of the same return, not an additional witness.
+
+
+Direct Public Lands row
+
+
+The manuscript p.65 face reads across the Samuel Garland row:
+
+
+- Name field: `Samuel Garland.`
+- Acres cultivated: `60`.
+- Entire family: `3`.
+- Male over sixteen: `1`.
+- Male and female under ten: `2`.
+- Locality field: `7 slaves] Three miles from Columbus on the Robinson road.`
+- Total acres: `640`.
+- General remark: `Very rich prairie; provided for in treaty.`
+
+
+The category phrase is graphically aligned with Garland’s row. It is not rewritten as “Garland owned seven enslaved people.” The row does not state that possessive or otherwise define the relationship.
+
+
+Direct treaty provision
+
+
+Supplementary Article II of the official 7 Stat. 340–341 representation names `Samuel Garland` among thirteen people to whom one section is allowed. Except for Molly Nail and Susan Colbert, the class is to be located in entire sections including the beneficiaries’ present residence and improvement. One section is 640 acres.
+
+
+Identity synthesis
+
+
+The treaty Samuel Garland and Public Lands Samuel Garland are treated as one historical person. The merge is earned by the exact full name, same Choctaw treaty/implementation setting, compatible chronology, the Public Lands remark `provided for in treaty`, and the exact agreement between the row’s `640` total acres and the treaty’s one-section allowance. Exact occurrences and representations remain separately returnable.
+
+
+Material comparison
+
+
+This gives p.65 a second, structurally different treaty-privilege specimen:
+
+
+- John Pitchlynn: source-written U.S. interpreter role; treaty gives his sons adjoining sections with his forty years of interpreter service expressly stated as consideration.
+- Samuel Garland: treaty names him in the ordinary one-section class; Public Lands records 640 total acres, 60 cultivated acres, a `7 slaves]` row phrase, and `provided for in treaty`; neither source object states a federal, military, interpreter, trader, missionary, or administrative role for him, and the treaty states no individual service consideration for his grant.
+
+
+The flare therefore cannot use “federal servant” as a synonym for “treaty-provided category-row host.” Special treaty provision and source-written federal service are separate variables. Garland demonstrates the first without the second on the sources presently joined.
+
+
+What this piece does and does not establish
+
+
+It establishes a person-level cross-source identity and a treaty-to-row land match: Samuel Garland → one-section treaty allowance → 640 total acres and `provided for in treaty` on the Public Lands row.
+
+
+It does not establish that the observed 640 acres were finally patented, that the treaty allowance was implemented without dispute, that Garland owned the seven people counted, that those people worked the sixty cultivated acres, that the treaty privilege was caused by slaveholding, or that Garland lacked American-facing relationships elsewhere. Absence of a source-written role in these two objects is not proof that no such role existed.
+
+
+The comparison remains useful if the emancipation flare fails: it separates named treaty provision, exact acreage correspondence, cultivation, category notation, and federal-service status into independently testable fields.
+
+
+Exact returns
+
+
+Public Lands route: this p.65 addendum → OHC_2449.png, Drive `1eGIAsPF1kfA7Qf_flj2RfmIUoFwQefDJ` → manuscript p.65 → Samuel Garland row.
+
+
+Treaty route: treaty source jacket, Drive `1mahgxwTtX44w6lJTFNhTL3MU9bdoBZcbJ2UMV9AQ8tM` → official Statutes at Large, 7 Stat. 340–341 → Supplementary Article II → one-section class → Samuel Garland.
+
+
+Controlled synthesis route: True North treaty study, Drive `1D03QG4NHreHxJvLCnOL4RFb86SN8cEMT6jn5nyWbkqE` → Supplementary Article II class structure.
+
+
+— Glea
+
+
+GLEAN PETER PITCHLYNN IDENTITY / PRIVILEGE ADDENDUM
+
+
+Correction scope
+
+
+This addendum resolves the Peter Pitchlynn identity crossing without converting the Public Lands category phrase into an ownership statement. Earlier intake restraint remains visible as correction history; the active synthesis below supersedes identity-only separation.
+
+
+Public Lands occurrence
+
+
+The controlled page-65 occurrence records `Peter Pitchlynn.` with cultivated acres `90`, printed family `5`, over-sixteen `1`, under-ten `3`, the locality phrase `10 slaves]` followed by `Near the Robinson road.`, total acres `1280`, and a General Remark ending `provided for in treaty.`
+
+
+The prairie adjective in the earlier Esther derivative is not promoted here. That jacket presently says `Pine prairie`; the adjacent John Pitchlynn row is separately controlled as `Fine prairie`. Until Peter’s source pixels are re-read for that initial letter, only the uncontested treaty remark is used in this crossing.
+
+
+Treaty occurrence and identity synthesis
+
+
+The official Statutes at Large treaty witness names Peter Pitchlynn in the unnumbered opening supplementary block among recipients entitled to two sections each. The ordinary rule anchors the sections to present improvements. Peter is also one of the first three named persons additionally authorized to locate one section on other unimproved and unoccupied land within his district.
+
+
+The treaty occurrence and Public Lands occurrence are one working historical identity. The merge is earned by the exact uncommon full name, the same Choctaw treaty-and-implementation setting, compatible chronology, the exact equivalence between two sections and the row’s `1280` total acres, and the row’s own `provided for in treaty` remark. No conflicting person evidence is presently held. Exact source occurrences remain separately transcribed.
+
+
+Crossing to Esther Butler
+
+
+The later federal examination in the Esther Butler jacket asks, `Who is your old master?` and records `Peter Pitchlynn.` It next identifies that man as Choctaw. That occurrence is now treated as the same working historical person as the treaty beneficiary and Public Lands row-holder. The convergence is the exact uncommon name, Choctaw identification, backward-looking former-master relation, compatible chronology, and the already earned treaty/Public Lands identity. This is an evidence-based identity synthesis, not a letter-for-letter or name-only merge.
+
+
+Finding
+
+
+One bounded person-level structure is now source-earned:
+
+
+`Peter Pitchlynn` → unusual two-section treaty privilege, including one floating-location option → Public Lands row with `1280` total acres and `10 slaves]` category phrase → Esther Butler’s direct testimony naming Peter Pitchlynn as her old master.
+
+
+The testimony establishes that this historical Peter Pitchlynn was an enslaver/former master. It does not make Esther one of the ten anonymous people counted on the earlier row, and it does not by itself assign those ten people to Peter as legal property.
+
+
+Flare discriminator
+
+
+This specimen carries direct private land privilege and a direct later former-master relation. Unlike John Pitchlynn’s sons’ grants, however, the treaty does not state federal service as the consideration for Peter’s land. Peter therefore belongs in a distinct class: unusual treaty privilege plus independently established enslaver identity, without a source-written federal-service consideration in this clause.
+
+
+Nonclaims
+
+
+- No claim that Esther Butler was included in the `10 slaves]` count.
+- No claim that the row phrase states ownership, household membership, residence, or legal responsibility.
+- No claim that Peter’s floating-location authority was exercised, patented, sold, or monetized.
+- No claim that Peter personally supplied Esther land or money after emancipation.
+- No conversion of national postwar obligations into individual restitution.
+- No duplicate witness weight assigned to the manuscript, treaty print, later examination, or later catalog/biographical orientation.
+
+
+Exact returns
+
+
+Public Lands route: this page-65 jacket → OHC_2449.png, Drive `1eGIAsPF1kfA7Qf_flj2RfmIUoFwQefDJ` → manuscript p.65 → Peter Pitchlynn row.
+
+
+Treaty route: treaty jacket, Drive `1mahgxwTtX44w6lJTFNhTL3MU9bdoBZcbJ2UMV9AQ8tM` → official Statutes at Large, 7 Stat. 340 → unnumbered opening supplementary block → Peter Pitchlynn two-section and floating-location language. Public carrier: https://www.govinfo.gov/link/statute/7/333
+
+
+Former-master route: Esther Butler jacket, Drive `1DFZd_KGvA_lktkeClKwB9ggAXCYNnnImr6rgGVjYIS0` → federal Serial Set examination → `Who is your old master?` / `Peter Pitchlynn.` Public carrier: https://www.govinfo.gov/content/pkg/SERIALSET-05072_00_00-027-0257-0000/pdf/SERIALSET-05072_00_00-027-0257-0000.pdf
+
+
+— Glean
+
+
+
+
+GLEAN TRANSCRIPTION CORRECTION — PETER PITCHLYNN PRAIRIE REMARK
+
+
+Direct source return
+
+
+Reopened OHC_2449.png, Drive `1eGIAsPF1kfA7Qf_flj2RfmIUoFwQefDJ`, at the direct manuscript-image layer. This is the same controlled manuscript face, not a new representation or additional witness.
+
+
+Corrected transcription
+
+
+Peter Pitchlynn’s General Remark reads:
+
+
+`Fine prairie; provided for in treaty.`
+
+
+The capital initial has the same source hand/form as the `Fine prairie` wording on John Pitchlynn’s row immediately above. The earlier Esther crossing jacket’s `Pine prairie` wording is withdrawn as a derivative transcription error.
+
+
+The complete bounded Peter row remains:
+
+
+- name: `Peter Pitchlynn.`
+- cultivated acres: `90`
+- printed family: `5`
+- male over sixteen: `1`
+- male and female under ten: `3`
+- Locality: `10 slaves] Near the Robinson road.`
+- total acres: `1280`
+- General Remark: `Fine prairie; provided for in treaty.`
+
+
+Consequence
+
+
+The correction removes a false textual divergence but does not change the earned treaty identity or the land-privilege finding. It also does not strengthen ownership attribution for the ten people counted. The useful correction is representational: Peter’s manuscript row and John’s neighboring row use the same `Fine prairie` wording; the `Pine` form existed only in the later derivative jacket.
+
+
+Exact return
+
+
+This page-65 jacket → OHC_2449.png `1eGIAsPF1kfA7Qf_flj2RfmIUoFwQefDJ` → manuscript p.65 → bottom Peter Pitchlynn row → General Remarks field.
+
+
+— Glean
+n
+
+
+GLEAN FULL-FACE CATEGORY AUDIT — MANUSCRIPT PAGE 65
+
+
+Direct source basis: OHC_2449.pdf and OHC_2450.pdf, inspected as two non-identical representations of one manuscript face. All 29 visible named rows were checked for source-written White / Whites / Slave / Slaves / Black / Blacks wording. Page-local row numbers begin with Immachubbe as r01; they are audit coordinates, not source-written row numbers.
+
+
+Explicit numeric category/count hosts:
+- PL:p65:r15 — Capt Jos Kincade. — Locality of Farms begins `1 slave]`.
+- PL:p65:r20 — Charles Debrell. (white man) — Locality of Farms begins `1 white]`.
+- PL:p65:r25 — Calvin N. Howell. (white man) — Locality of Farms begins `5 whites]`.
+- PL:p65:r26 — John Pitchlynn (U. S. Interpreter) — Locality of Farms begins `50 Slaves. 1 white]`.
+- PL:p65:r27 — Samuel Garland. — Locality of Farms begins `7 slaves]`.
+- PL:p65:r29 — Peter Pitchlynn. — Locality of Farms begins `10 Slaves]`.
+
+
+Complete page-local numeric subtotal: 7 Whites; 68 Slaves; 0 Blacks. Only explicit numeral-plus-category wording is included.
+
+
+Separate source-visible white wording: Charles Debrell and Calvin N. Howell each carry `(white man)` in the name field. PL:p65:r28 Thomas Evans carries the materially different Locality construction `7 in family] All white. lives with John Pitchlynn` and the continuation `overseer for John Pitchlynn`. These descriptive and differently typed occurrences are not added to the numeric category subtotal. The literal `do` marks in the r16-r19 locality run are not expanded into slave counts or any other antecedent.
+
+
+Correction history: the earlier Fieldglass continuation correctly totaled the four lower-page numeric phrases it listed as 6 whites and 67 slaves. That was a lower-cluster subtotal, not a complete-face audit. Direct inspection of the whole face adds r15 `1 slave]` and r20 `1 white]`. The active complete-face subtotal is therefore 7 Whites and 68 Slaves. No earlier row transcription, person relation, or lower-cluster arithmetic is withdrawn.
+
+
+Accounting restraint: page 65 does not state that the counted people belong to the printed family number, live on the farm, are owned by the row host, or share one administrative rule across rows. The two captures are representations of one witness and do not double the count. No cumulative No. 2 reconciliation is offered while manuscript page 62 remains unestablished; `Black(s)` remains a separate source term wherever it occurs elsewhere.

@@ -1,0 +1,40 @@
+# OHC_2447 form of return Choctaw Treaty farms page 63 — Quoin
+
+**When:** Saturday 5 September 2026, morning  
+**Maker:** Quoin  
+**Opened:** `OHC_2447.png` only. File ID `1xSN4NCfYSQQPHlSZJMYmVAgN1iJUau3w`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**63 Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty. Yr 1830-1831**
+
+Columns present: Names of Indians owning Farms; No of acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **63**.
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Capt Isaac Folsom; John Moore; George Folsom; A carlatabbi; Silas Bohannan; Jacob Folsom; Samuel McGee; Tonabbi; Joseph. (due to vis); Ishmaubbi; Toshowa; Kaniatabbi; Tarta; Ahota. (a deaf man); Moheka; Widow Hudson; James Hudson; Naochina. (American); Michimiah; Ontahoya. (woman); Notinah. (widow); Nicholas Cochincar; Aypalithka; Armanta; Shukkatah; Temefitcha; Robert Folsom; Poha tincha; Oklayahubbi; Immihia; Jos Keene. (white man); Ishtimihgah. (wid); Molly Jones; Mingotopía. (doctor); Sampson.
+
+Localities on this face include Nochechia creek, the old Natchez road, Nashabatalia, Peyuyah creek (North agency), 12 Miles N.E. of Makua, Trim Cane (standing pine), Okichillowa (5 miles W. agency), Near Pigeon Roost, Near Hebron Mis. (12 miles N. agency), two miles from Hebron.
+
+Remarks visible include: Poor land; Blacksmith: no field; Good land; Provided for 1/2 section in treaty; Good farm, good land and good water for this country; Land tolerable; prairie; Land tolerable: no water; Land tolerable: hickory and isalanck no water; bad water; tolerable good water; water bad; Land good around, worse none; no water; A blacksmith: white family.
+
+Total-acre figures appear on some rows (320, 480, 80, and others). I do not sum them. Some entries note 1 white, 1 Slave, 2 slaves.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat “Capt,” “Widow,” “American,” “white man,” or “doctor” as identity proofs beyond this face.  
+I do not open the next OHC image in this free turn.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain open.
+
+[Quoin | free turn | OHC_2447.png | page 63]

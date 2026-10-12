@@ -1,0 +1,287 @@
+GLEAN SOURCE-FACING JACKET — OHC_2446/OHC_2447 page 63 — same-face capture control, page-number repair, and Robert Folsom correction
+
+
+Status: DIRECT-SOURCE PAGE JACKET — ONE MANUSCRIPT FACE — REPRESENTATIONS CONTROLLED
+Corpus: quoted-title “Public Lands” — Whole-Document Corpus
+Active visible manuscript page: 63 — prior page-62 reading superseded in correction history below
+Maker: Glean
+Date: 2026-09-06
+
+
+METHOD CONTROL
+
+
+Current entrance practice: EARTHLY_HANDS_SOURCE_WORK_FRONT_DOOR.md — Drive ID 1vRy-G6WBcr7X1cH7bhSFEtXgmtPS15zF.
+Canonical method: SOURCE WORK METHOD — full strength, exact reach — source to synthesis — Drive ID 1gzPONf6neA2bR6_IPIOQkpsWO3g1t3ryFclPwvbrmFc.
+Practice amendment: WORKSHOP PRACTICE AMENDMENT — source force, attribution, and exact reach — Drive ID 1X8tHZw7km3cgXvloDTB_S7Ary8vj6Kqe0S0whZABaNg.
+
+
+Applied here: receive the object as itself; direct face before derivative repair; one historical object does not become several witnesses because PDF/PNG/transcription routes repeat it; preserve blanks, exact occurrence-level wording, correction history, unresolved semantics, seams, and the road home; do not turn repeated surnames, adjacent rows, locality text, or category/count annotations into person-level or household-level joins.
+
+
+HISTORICAL-OBJECT BOUNDARY
+
+
+OHC_2446 is one manuscript face visibly numbered 62. Its heading visibly continues the quoted-title Public Lands farm-return body: “Public Lands — No 2 Form of a Return-Continued — Location under the Choctaw Treaty …”. The far-right identifier is present but is not relied upon here.
+
+
+The ruled table retains the source-visible columns:
+Names of Indians owning Farms | No of Acres Cultivated | Entire No of the Family | Males over 16 years | Males and Females under 10 years | Locality of Farms | Total No of Acres | General Remarks.
+
+
+Thirty-five body rows are visible through the lower edge. Capture count is not document count, and this jacket does not claim that the larger return is complete.
+
+
+SOURCE / REPRESENTATION / DERIVATIVE CONTROL
+
+
+Direct reading surface:
+- OHC_2446.png — Drive ID 1Sn8fz_vzlfdK3lKtCnogtN0nHPPR7G4m
+- parent folder ID 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh
+- 1,490,370 bytes
+- function here: admitted study representation used for direct visual inspection; not an independent historical witness.
+
+
+Stored PDF custody routes:
+- OHC_2446.pdf — Drive ID 1kqkwnNEYm0-YOeYmbsT4YxLCnDJZQtJR — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 283,854 bytes.
+- OHC_2446.pdf — Drive ID 1MdnsEsOJcrE6C_cjjfi1jP2iuclm1osN — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 283,854 bytes.
+- Glean derivative operation: full-byte comparison in this pass. The two payloads are identical; SHA-256 da4959448482f735871211f3395407f5a8f0cd2ccc23a3292919cfe08ca2fe8c. They remain two custody routes to one PDF payload / one manuscript-page witness.
+
+
+Quoin derivative transcription routes:
+- “OHC_2446 form of return Choctaw Treaty farms page 62 — Quoin.md” — Drive ID 1KeJt7YT6hxmGk3BOFEEeK-6iAK4h3Hj4 — parent 1komb4v11M9baULEpk3w3owolFF99m2-F.
+- same titled Quoin object — Drive ID 11gu1cyuawHm5xC0bbBvUrIGuGn6OJo1_ — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+- Their fetched text is identical in this pass. They are duplicate derivative text, not corroboration.
+
+
+DIRECT SOURCE-FACING FINDING / CORRECTION
+
+
+PL:p62:r27 — source-written row-holder “Robert Folsom.”
+
+
+Direct-face row state:
+- No of Acres Cultivated: 30
+- Entire No of the Family: 11
+- Males over 16 years: 2
+- Males and Females under 10 years: 5
+- smaller source writing at the leading edge of the locality area: “2 Slaves]”
+- locality wording follows as “Prim Cane, near Ebrin.” [locality spelling retained as read on this face; no modern normalization]
+- Total No of Acres: 1480
+- General Remarks: “Good land.”
+
+
+Quoin derivative state for the same row gives total acreage 480.
+
+
+Active source-facing state: total acreage 1480.
+
+
+Correction history: preserve Quoin’s 480 as a derivative reading, superseded for this cell by direct visual inspection of OHC_2446.png. The leading “1” in the source cell is visible and belongs to the same total-acre numeral; it is not a mark from the neighboring locality field.
+
+
+The correction is occurrence-level only. This jacket does not merge this Robert Folsom occurrence with any other Robert Folsom, Folsom household, treaty claimant, landholder, or later person merely because the written name matches.
+
+
+SOURCE-WRITTEN CATEGORY/COUNT ANNOTATION — BOUNDED STATE
+
+
+The same r27 row visibly writes “2 Slaves]” immediately before the locality phrase. This is preserved at full source force as wording/count written on this row. It is not converted into a separate printed column, ownership theory, legal status theory, complete household composition, or explanation of the 1480-acre total.
+
+
+Elsewhere on the face, similarly small writing such as “1 white]” appears inside/at the leading edge of locality-area text on other rows. These are source-written occurrence-level annotations. Their repeated form permits comparison later; repetition on one page does not itself establish a common administrative rule, relationship, or identity link.
+
+
+BACKWARD SEAM — OHC_2445 / PAGE 61
+
+
+Existing source-facing neighbor:
+- GLEAN SOURCE-FACING JACKET — OHC_2445 page 61 — r02 cultivated-acre correction and repeated-page control — Drive ID 1aPWhIqYppORRvX6hT7KJgYMvPbKR2_bqdeVGkmY5e3g.
+
+
+OHC_2445 is a distinct manuscript face visibly numbered 61 with the same farm-return column structure. OHC_2446 is visibly numbered 62 and source-writes “Form of a Return-Continued.” This earns a bounded 61→62 pagination/form seam between these two farm-return faces.
+
+
+That seam does not explain why a different surviving face, OHC_2444, is also numbered 61; it does not merge OHC_2444 into this farm-return page; and it does not establish the complete archival history of the sequence.
+
+
+FORWARD SEAM
+
+
+A bounded metadata search confirms that OHC_2447 objects exist, including derivative navigation titled as a page-63 form-of-return object. The OHC_2447 direct face was not opened in this pass. Therefore page 63 and the exact 62→63 source-facing seam remain untested by Glean here.
+
+
+FINDINGS
+
+
+1. OHC_2446 is a distinct manuscript face visibly numbered 62 within the Public Lands No. 2 farm-return body.
+2. PL:p62:r27, “Robert Folsom.”, carries total acreage 1480 on the direct face; both duplicate Quoin derivatives transcribe 480.
+3. The same source row carries smaller source writing “2 Slaves]” before its locality wording; the jacket preserves that wording/count without supplying an administrative or legal interpretation.
+4. The two stored PDFs are duplicate custody routes to one identical payload, and the two Quoin objects are duplicate derivative text.
+5. OHC_2445 page 61 and OHC_2446 page 62 now have a direct-source bounded pagination/form seam; the next face remains unopened.
+
+
+UNRESOLVED QUESTIONS
+
+
+- Exact administrative meaning and placement logic of the small “2 Slaves]” annotation in r27.
+- Whether similar “1 white]” / “1 Slave” / “2 Slaves]” annotations across the form belong to a consistent recording convention; this page alone does not establish that rule.
+- Exact historical spelling/identity of the r27 locality form read here as “Prim Cane, near Ebrin.”
+- How the 1480-acre total was derived or authorized; this jacket records the numeral but does not infer the governing allocation rule.
+- Full archival/documentary explanation for the repeated page-61 state immediately before this page.
+- Direct-face status of OHC_2447 and the exact 62→63 seam.
+
+
+NONCLAIMS / TRANSLATION BOUNDARY
+
+
+This page does not, by itself, establish:
+- that any same or similar “Robert Folsom” elsewhere is the same historical person;
+- that Folsom-surname rows on this page are one family, one household, one ownership unit, or one event;
+- that adjacency in the table establishes kinship or continuity;
+- that the source-written “2 Slaves]” annotation can be expanded into a complete household, ownership, labor, or legal-status account;
+- that the 1480-acre figure may be repaired downward to 480 because a derivative or expected allocation pattern makes 480 seem more plausible;
+- that locality-of-farm wording proves residence in a broader sense than the source field states;
+- that blank/dotted cells are zeros;
+- that duplicate PDFs or duplicate Quoin transcriptions provide independent corroboration;
+- that OHC_2444 and OHC_2445 are one page merely because both are numbered 61;
+- that filename order alone establishes documentary order.
+
+
+RETURN PATHS
+
+
+Corpus folder: Public Lands — Whole-Document Corpus — Drive ID 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+Direct face: OHC_2446.png — 1Sn8fz_vzlfdK3lKtCnogtN0nHPPR7G4m.
+PDF custody: 1kqkwnNEYm0-YOeYmbsT4YxLCnDJZQtJR ; 1MdnsEsOJcrE6C_cjjfi1jP2iuclm1osN.
+Derivative transcription: 1KeJt7YT6hxmGk3BOFEEeK-6iAK4h3Hj4 ; 11gu1cyuawHm5xC0bbBvUrIGuGn6OJo1_.
+Backward farm-return jacket: OHC_2445 — 1aPWhIqYppORRvX6hT7KJgYMvPbKR2_bqdeVGkmY5e3g.
+Forward door: OHC_2447 source objects exist; direct face not opened in this pass.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+CORRECTION / ACTIVE FOOTING — 2026-09-06 — OHC_2447 SECOND-CAPTURE CONTROL
+
+
+This section supersedes the active documentary-state claims above that call OHC_2446 manuscript page 62, label its occurrence coordinates PL:p62:*, or establish a 61→62 seam. Those earlier states remain visible as correction history rather than being silently erased.
+
+
+Direct source comparison:
+- OHC_2446.png — Drive ID 1Sn8fz_vzlfdK3lKtCnogtN0nHPPR7G4m — parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh — 1,490,370 bytes — SHA-256 163ef8ea11cb277dc0345c2797f85860d8d886d3752b96e04944f2050e6020b2.
+- OHC_2447.png — Drive ID 1xSN4NCfYSQQPHlSZJMYmVAgN1iJUau3w — parent 11dgrYlwyeRgfaKLlKo16ASepGwH0fjRh — 1,478,562 bytes — SHA-256 ee9b12f151016afe96524380922fc6818e571a7e4f5390182721cf0b8abd4a74.
+- These are distinct digital image payloads. Direct visual comparison shows the same manuscript face: the same visible page number 63, same heading/form, same thirty-five row sequence, same names, numerals, locality writing, remarks, and pen marks. A Glean image-registration check is retained only as a derivative comparison operation: ORB matching produced 2,701 cross-checked feature matches; a RANSAC homography on the best 2,000 retained 1,182 inliers and primarily reflects horizontal capture/framing shift. This operation supports capture identity; it is not historical-source testimony.
+
+
+ACTIVE HISTORICAL-OBJECT BOUNDARY
+
+
+OHC_2446 and OHC_2447 are two digital captures/representation routes to one manuscript face visibly numbered 63. They are not manuscript pages 62 and 63 and not two historical witnesses. The prior OHC_2446 page-62 reading was a direct-reading error, also repeated by the OHC_2446 Quoin derivative. The separately made OHC_2447 Quoin derivative correctly labels the face page 63, but its repetition remains derivative navigation rather than independent corroboration.
+
+
+OHC_2447 stored PDF custody routes:
+- OHC_2447.pdf — Drive ID 1fl_GBqXJRqjTpPEf23jTF08aHTSnE492 — parent 1hMt2btk4jNB3Iz-kh5k_gCqHRFmRQ5kI — 284,939 bytes.
+- OHC_2447.pdf — Drive ID 1x6NijNGhc4ucOTyyMe23LPuAEaoVYg-l — parent 1qBiU33LC1FXr2n7X1CrvtNrx7qennMdA — 284,939 bytes.
+These custody routes remain representation-level objects. Their equal size alone is not treated as a byte-identity proof in this pass.
+
+
+OHC_2447 Quoin derivative routes:
+- “OHC_2447 form of return Choctaw Treaty farms page 63 — Quoin.md” — Drive ID 173V2ly2BD1xpBY7vRpaWkpxFVOsP6B-8 — parent 1komb4v11M9baULEpk3w3owolFF99m2-F.
+- same titled Quoin object — Drive ID 1xj-cY2SCrxr2MlhkLQjU0I6hFQc2S4wV — parent 1RSoGuuT4le3VVUj3FBedIWNhQcaOEjUl.
+Their fetched text is identical. They are duplicate derivative text, not corroboration.
+
+
+OCCURRENCE-LEVEL CORRECTION / DEEPENING
+
+
+The previously jacketed Robert Folsom row is active as PL:p63:r27, not PL:p62:r27. The direct source state remains: cultivated acres 30; family 11; males over 16 = 2; under 10 = 5; smaller locality-edge writing “2 Slaves]”; total acres 1480; General Remarks “Good land.” The prior 480 Quoin total remains a derivative error. The alternate OHC_2447 capture also resolves the locality wording more strongly as “Trim Cane. near Ebrin.” The earlier jacket reading “Prim Cane, near Ebrin.” is superseded at this occurrence only.
+
+
+Four small category/count annotations can now be tied to exact rows on this face without inventing a rule: PL:p63:r02 John Moore carries “1 white]” before “On the old Natchez road”; PL:p63:r08 Tonabbi carries “1 Slave]” before Nashabatalia; PL:p63:r27 Robert Folsom carries “2 Slaves]” before “Trim Cane. near Ebrin.”; PL:p63:r31 Jos Keene carries “1 white]” before “Cultivate a field of C. McCombs”. These are source-written row states. The page alone does not establish the administrative convention, ownership relation, household composition, legal status, or identity continuity implied by none of those words beyond their exact occurrence.
+
+
+SEAMS — ACTIVE STATE
+
+
+Backward: OHC_2445 remains a distinct farm-return face visibly numbered 61. The former claimed 61→62 direct pagination seam is withdrawn. Because OHC_2446/OHC_2447 are page 63, no manuscript page 62 has been established by this pair. The relation between OHC_2445 page 61 and this page-63 face is therefore only a surviving/capture-sequence adjacency within the current filename run, not a documentary page-to-page continuity claim.
+
+
+Forward: OHC_2448.png exists as Drive object 1qOLgrApcZZORAuXT7sQwTJzHxk45lbCF, but its direct face was not opened in this pass. No page number or documentary relation is promoted from filename order.
+
+
+Earned retrieval target: locate or identify the manuscript page-62 face, if it survives in the corpus, without assuming which filename contains it.
+
+
+NONCLAIMS / TRANSLATION BOUNDARY — ADDITION
+
+
+This correction does not establish that page 62 is absent historically; only that OHC_2446 and OHC_2447 do not supply it. It does not merge the two PNG/PDF capture objects; they remain separately addressable representations of one manuscript face. It does not use identical row content across the two captures as two-source corroboration. It does not turn same-name Folsom occurrences or the repeated white/slave annotations into person, household, ownership, or legal-status joins.
+
+
+ACTIVE RETURN PATH
+
+
+Living jacket: this Google Doc, Drive ID 1HP0m1lnQF-SlP-LiQFny9vhV99udNf7TF30ATrsJyms.
+Underlying manuscript face: OHC_2446.png 1Sn8fz_vzlfdK3lKtCnogtN0nHPPR7G4m and OHC_2447.png 1xSN4NCfYSQQPHlSZJMYmVAgN1iJUau3w as alternate captures of the same page-63 face.
+Backward source-facing jacket: OHC_2445 — 1aPWhIqYppORRvX6hT7KJgYMvPbKR2_bqdeVGkmY5e3g — requires dependent seam repair from 61→62 to 61→[page 62 unestablished]→63.
+Forward source object: OHC_2448.png — 1qOLgrApcZZORAuXT7sQwTJzHxk45lbCF — direct face unopened.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+FORWARD SEAM UPDATE — 2026-09-06 — OHC_2448 DIRECT FACE OPENED
+
+
+This section supersedes the active forward-state lines above that call OHC_2448 direct face unopened.
+
+
+Direct inspection now establishes OHC_2448.png — Drive ID 1qOLgrApcZZORAuXT7sQwTJzHxk45lbCF — as a distinct manuscript face visibly numbered 64, carrying the same continued Public Lands No. 2 farm-return form. The bounded forward seam from this page-63 face to OHC_2448 page 64 is therefore earned by direct page numbering and continued form structure, not by filename sequence alone.
+
+
+New source-facing neighbor: GLEAN SOURCE-FACING JACKET — OHC_2448 page 64 — Ahlomah cultivated-acre correction and 63→64 seam — Drive ID 17zwsJ-goeCivi8bdyNvUkv3bdgCAGvqIy4upnjhXOUk.
+
+
+The still-open page-62 identification problem is unchanged by this forward seam.
+
+
+Maker: Glean
+Date: 2026-09-06
+
+
+
+
+GLEAN NO. 2 CATEGORY-WORD AUDIT — MANUSCRIPT PAGE 63 — 2026-09-26
+
+
+OHC_2446 and OHC_2447 are alternate captures of one historical face. Their repeated visibility does not double any occurrence or count.
+
+
+Four numeric category annotations are source-visible at the leading edge of Locality of Farms cells:
+
+
+- PL:p63:r02 — `1 white]`
+- PL:p63:r08 — `1 Slave]`
+- PL:p63:r27 — `2 Slaves]`
+- PL:p63:r31 — `1 white]`
+
+
+For the explicit numeric annotation audit, manuscript page 63 therefore contributes 2 Whites and 3 Slaves. Source case and singular/plural wording remain preserved above; the normalized subtotal is only arithmetic.
+
+
+PL:p63:r31 also carries `(white man)` in the name cell and `A blacksmith: white family` in General Remarks. Those two `white` occurrences are descriptive and nonnumeric. They are not added to the page subtotal, and their presence on the same ruled row does not establish that the `1 white]` annotation, the named occurrence, and the family phrase denote one person or one complete household.
+
+
+PL:p63:r03 writes `Blacksmith: no field`, and r31 writes `A blacksmith: white family`. `Blacksmith` / `blacksmith` is an occupational compound, not a standalone source-written `Black` or `Blacks` category word. No standalone `Black` or `Blacks` occurs on the surviving face.
+
+
+Because manuscript page 62 remains unestablished in the present capture run, this page-level subtotal is not promoted to a cumulative No. 2 subtotal from the opening.
+
+
+Maker: Glean
+Date: 2026-09-26
