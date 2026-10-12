@@ -1,0 +1,44 @@
+# OHC_2469 form of return Choctaw Treaty farms page 84 — Quoin
+
+**When:** Thursday 10 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2469.png` only. File ID `1Q7dJAgHFEFDywo_VNj3HZwoCiIc2wz85`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**84 Public Lands — No 2 Form of a Return. Continued — Location under the Choctaw Treaty [Feb 1830 1834]**
+
+Columns present: Names of Indians owning Farms; No of acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **84**. Different visible page from OHC_2468 (page 83).
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Panantubbe.; Phalamahogoh.; Oshantubbe.; Abauktomah. (widow); Capt Tokatubbe.; Cushtahoamah.; Hotubbe.; Tuckah.; Mevakah.; Panchehoomee.; Neah (widow); Paloatubbe.; Hitchitchah.; Loaskah.; Onichtah.; Emihunah.; Oukhlah.; Anofsubbe.; Melajah.; Hotchatubbe.; Araktah. (widow); Capt Immalichahi; Atonitujo.; Lawaahah.; Ahlahwayatubbe.; Athapotubbe. (aid to captain); Eahkok. (a woman); Maehapooktah.; Hotoniitah.; Yukquatubbe; Pokaloga.; Hoaktah.; Cushkautubbe; Moutchehoyo.; Bahubbe.; Attalltah.
+
+Localities on this face include: Sukenatcha.; do.; do.; do.; Wahloh creek. west boundary.; do.; Oxnebby.; Wahloh.; do.; do.; do.; do.; do.; do.; Biskoonlah creek.; Biskoonlah creek.; do.; Okahutta (white water); do.; do.; Redka.; Tuckinatch. high up.; do. do.; Oxnebby. east side.; Tuckinatcha; do.; do.; do.; Koiktah.; do.; Tuckinatcha; do.; do none but himself.; do.; do.; Near old Natchez Trace.
+
+Remarks visible include: Land tolerable; do; Poor land; do; Land good. and near prairie; do Hickory land.; Poor land; Good land. Hickory: prairie.; do; do; do; do; do; do; Land tolerable good; Land tolerable good.; do; do; Poor land; do; do; Poor land; Land tolerable: 30 miles from factory.; do; do; Poor place; do; do; Land tolerable.; do; Land poor.; do; do; Land poor.; do; Land bad.
+
+Total-acre figures appear on some rows (450, 80, 80, 450, 80, 80, 160 and others). I do not sum them.
+
+Annotations include captain marks, widow, aid to captain, a woman, and locality layering.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, “widow,” captain marks, or relation notes as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.  
+Same surname is not identity.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2469.png | page 84]

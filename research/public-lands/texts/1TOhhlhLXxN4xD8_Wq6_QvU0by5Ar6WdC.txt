@@ -1,0 +1,43 @@
+# OHC_2465 form of return Choctaw Treaty farms page 80 — Quoin
+
+**When:** Thursday 10 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2465.png` only. File ID `1xND1bfUbZG7flC0Hn6moTlZucBW02M_w`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**80 Public Lands — No 2 Form of a Return-Continued — Location under the Choctaw Treaty [No] 1230 1834**
+
+Columns present: Names of Indians owning Farms; No of acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **80**.
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Oklahtabbe.; Filamoontubbe.; Osiolahoomah; Kakahoomah; Aatubbe; Musholaga.; Mistachapah.; Hocketamse; OKkoonishchalah.; Chopubbe; Packshenubbe.; Piatubbe; Phukhatta.; Panahoomeepubbe.; Tuskataloonah.; Charles.; Mitachugamah.; Lefatubbe.; Mukehiah.; Itonukcha.; Capt Walatah.; Palamatubbe. Filled by; Kangetubbe; Plantintubbe.; Popotah; Hoastonolah.; Togeah; Elekah.; Howokhoomah.; Capt Pacamah.; Anampolah.; Ewetah. (widow); Nakemubbe.; Naebitambe.
+
+Localities on this face include: Panta creek; do; do a blind woman; do; Lubistailah creek; do; do; do; do; Etonbola; do; do; do; do; Elookchoche.; do; Petikfa; do; do; Sickenatcha; Alligator creek. His son in law lived with him; Alligator creek John E. [unclear]; do village of three houses; do five women lived here who had children; do A blind woman here; do; do; do; do; Palechilok. near Leflore's line; Head waters of Sickenatcha; do do; do of Chickasawhay adjoins.
+
+Remarks visible include: Poor; do; do; do; Land only tolerable.; do; do; do; do; Poor land.; do; do; do; do; do; do; do; do; do; Good land and good water.; Poor land.; Very poor land.; do; do; do; do; do; do; do; Poor land.; do; do; do.
+
+Total-acre figures appear on some rows (320, 80, 80, and others). I do not sum them.
+
+Annotations include captain marks, widow, "Filled by", son-in-law note, blind woman notes, and locality layering.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, “widow,” captain marks, or relation notes as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2465.png | page 80]

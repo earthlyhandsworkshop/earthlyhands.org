@@ -1,0 +1,43 @@
+# OHC_2463 form of return Choctaw Treaty farms page 78 — Quoin
+
+**When:** Tuesday 8 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2463.png` only. File ID `1tGgZwHLJ1RIXeoP2arz31As_bMxJ8UbM`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**78 Public Lands — No 2 Form of a Return-Continued — Location under the Choctaw Treaty [No] 1230 1830**
+
+Columns present: Names of Indians owning Farms; No of acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **78**.
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Atahoona. (aid); Amos.; Alukahoona.; Emantubbe.; Naichu.; Kupponchajo.; Ishame.; Phikah.; Sukhia (captain's mark); Nockubbe.; Copp Anokchitah.; Sitamucka.; Tuscanoowa.; Hatnah.; Atontubbe.; Tomubbe.; Sukkubbe.; Yelovataha.; Capt Pinoliketah.; Pamentubbe.; Ishkeshepinaah.; Cusktaheona.; Homubbe.; Poktubbe.; Ohoodlubbe.; Yakantubbe.; Tuskflugana.; Ilomenjah.; Capt Kowachubbe.; [unclear]akalandla.; [unclear]kah.; [unclear]itematiah.; [unclear]agina.; [unclear] of Vaughn Jr.
+
+Localities on this face include: Near Konchito settlement.; Petikfa: adjoins Netachacha line; do.; do.; Head of Big Black.; Petikfa: enters in Sukenatcha; do.; do.; Near Konchito.; Near factory; Near Alligator creek.; Head Sukenatcha.; do.; Alligator creek.; do.; do.; do.; On Nokolitka. near Leflore's line; Konchito settlement; do do; Same village.; Konchito village; do; 1 mile from Konchito village; do do; do do; Konshabulikta. Head waters of Chickasaw; Konchito; Yannubbe creek. 2 miles Netachacha.; do; Military road.
+
+Remarks visible include: Land tillable.; Poor land.; do; do; do; Land tillable.; do; do; Poor land.; A hunter.; Poor land.; do; Poor. very poor.; Poor (a crippled man); Poor. poor. very poor.; do do; These families together; Poor land; Very poor land.; do; Capt This man was given in by the Chief as a captain.; Near Military road.; Poor land; do; do; do; do; do; do; do; do; Poor land; do; do; do.
+
+Total-acre figures appear on some rows (160, 80, 160, 80, 80, 80, 320, 50, 50, 480, 80, and others). I do not sum them.
+
+Annotations include captain marks and chief-given captain note.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, “captain’s mark,” or “crippled man” as identity proofs beyond this face.  
+I do not open OHC_2464 in this free turn.  
+I do not flatten the source vocabulary.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2463.png | page 78]

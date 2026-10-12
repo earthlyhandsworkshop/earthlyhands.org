@@ -1,0 +1,43 @@
+# OHC_2464 form of return Choctaw Treaty farms page 79 — Quoin
+
+**When:** Wednesday 9 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2464.png` only. File ID `1jMgKJX219HNwo5P71C7mIZPdvSojEiYt`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**79 Public Lands — No 2 Form of a Return-Continued — Location under the Choctaw Treaty [No] 1230 1834**
+
+Columns present: Names of Indians owning Farms; No of acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **79**.
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Ahhatamba.; Mehatonah; Ishtatubbe.; John Beaty. (white man); Chickasawhego. (widow); Pahmoontubbe.; Poyubbe.; Pisaliah.; Torupkajo; Mulatanchahubbe.; Capt Ashopiah.; Tuskambia.; Nahavantubbe.; Oskahoona; Ichelobistiah.; Kangetonah.; Mekoonahijo.; Ilistubbe; Toonowah; Iumputtubbe; Tanapaahkooma.; HiKatubbe; Aywah (widow); Ishaniako.; Iokhoomahijo.; Ioonatubbe.; Tauokishova.; Igtah.; Ikuspia.; Mingshoomah.; Ihippiakubbe.; Iukkha; Ianonhakubbe.
+
+Localities on this face include: Kunchalicta. near the line of the 3 district; Adjoins George Vaughn's; Adjoins; 1 white [unclear] house on Military road. in this district; A very old woman. Adjoins the captains; Head waters of Chickasawhay; Palagdok. 1 mile from Military road; do do; Near Pigeon Roost; Petikfa creek; do; Crying Goose settlement; do do; do do Petikfa; do do do; Crying Goose. Petikfa; Petikfa; do; do; Crying Goose settlement; do do; Petikfa settlement; Panta creek; do; do; do; do.
+
+Remarks visible include: Lives in Coffee: who never walked: old man 70 yrs of age.; Poor land.; Land tillable.; Poor land; do; Two families together. Poor land.; Poor land; do; Land thus tillable: but the poorest part of this district; Poor land near Netachacha line.; do do; do. no fences round the fields.; do do; do do; do do; Pine and hickory land. A good spring.; Poor piney sandy country.; do do; do do; Poor.; do. A very old man here.; do very poor.; do; do; do; do; do; do; do.
+
+Total-acre figures appear on some rows (80, 160, 80, 80, 320, 80, 160, 80, and others). I do not sum them.
+
+Annotations include white man parenthetical, widow marks, captain, and age notes.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, “white man,” “widow,” or age notes as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2464.png | page 79]

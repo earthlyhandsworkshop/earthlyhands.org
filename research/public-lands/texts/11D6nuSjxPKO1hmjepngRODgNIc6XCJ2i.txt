@@ -1,0 +1,44 @@
+# OHC_2471 form of return Choctaw Treaty farms page 86 — Quoin
+
+**When:** Thursday 10 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2471.png` only. File ID `12gs-Eik49QwzKGnGe7BECb2h0f9OAd7E`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**86 Public Lands — No 2 Form of a Return. Continued. — Locations under the Choctaw Treaty.**
+
+Columns present: Names of Indians owning Farms; No of Acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **86**. Different visible page from OHC_2470 (page 85) and from the last closed Quoin farms face OHC_2434 (page 52 continued).
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Aichak.; Noakonah.; Onahambe.; Bigah.; N. Katube.; Lorie.; Nokhatubbe.; Elakatubbe.; Ontaantubbe.; Huppakoomah.; Tokatubbe.; Impayah.; Ishtihopah.; Imimeah (woman); Hopiashuka.; Tuskenikiyo.; Tushchowa.; Nanakoomah.; Pelotah.; Ukatubbe.; Elkus Ko.; Nilatopah.; Atokah.; Anoza Kubbe.; Tokalatubbe.; Anokoplubbe.; Tukkiantubbe.; Ottaaktubbe.; Ouanoncha.; Uptah.; Tishkowmubbe.; Mingoquishshatubbe.; Col. David Folsom.; Middleton Mackay, U.S. interpreter.; Ishtchikogo (dec'd).
+
+Localities on this face include: Petikfa; Hoataille; do; do; Sukenatcha; do; do; do; do; do; do; do; do; do; do; do; Petikfa; do; Panta creek; do; Sukenatcha; do; do; do; do; do; do; do; do; On the military road; (10 slaves) Near Ashukwa; (10 do) Robinson road; 1 white; Petikfa.
+
+Remarks visible include: Poor land; do; do; do; do; Has no field; Land tolerable; do; do; do; Land; Has field; Good land; Lives across creek; Settled since treaty; do; ½ mile from the junction with Sukenatcha; At the mouth of Sukenatcha; land tolerable; do; Two miles from Leaders; No field; Has a house and field 2½ miles from Leaders; A new place settled since Treaty; do; No field; Four miles from Leaders; Land tolerable; Provided for in treaty; do; do.
+
+Total-acre figures appear on some rows (80, 2500, 2500, 640, 160 and others). I do not sum them.
+
+Annotations include (woman), (dec'd), U.S. interpreter, slave counts in locality field, and relation notes such as brother to Leader, uncle to Leader.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, captain marks, relation notes, or slave counts as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.  
+Same surname is not identity.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2471.png | page 86]

@@ -1,0 +1,81 @@
+# OHC_2473 captains list Greenwood Leflore additional half section page 88 — Quoin
+
+**When:** Thursday 10 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2473.png` only. File ID `1uWjb1HD3gN2xndMBhUNqjsr9K5m1senI`.  
+**Kind:** signed first-pass image jacket. Free turn. Different documentary object from the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**88 Public Lands. Greenwood N° 3. Leflore.**  
+**No 1230 1834**  
+**A list of the captains entitled to the additional half section under the nineteenth article of treaty.**
+
+Columns present: No. Names Number of acres Cultivated Entitled as Captains Total Number of Acres.
+
+This is a captains list under Article 19, not a form-of-return of farms. Page number **88**.
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+1 Thomas Leflore.  
+2 James Shields.  
+3 Okchia.  
+4 Anthony Turnbull.  
+5 Lewis Durant.  
+6 Cullashubbe.  
+7 Minta.  
+8 Mishiashubbe.  
+9 James Pitcher.  
+10 Thomas Hays.  
+11 William Hays.  
+12 Pintetubbe.  
+13 Hoamalicha.  
+14 Ahacacha.  
+15 Nolitahoma.  
+16 Jiketoma.  
+17 Oshcama.  
+18 Chuckmubbe.  
+19 Toko.  
+20 Chataematcha.  
+21 Tobala.  
+22 Duceasmitta.  
+23 Nathaniel Jones.  
+24 Achiletta.  
+25 Washington.  
+26 Ticklahoma.  
+27 Big Cloud.  
+28 Washehashamastubbe.  
+29 Hobilochia, or Little Leader.  
+30 Hopiahtoma.
+
+Cultivated-acre figures appear (12, 41, 2, 40, 8, 14, 4, 2, 12, 30, 30, 4, 20, 20, 30, 8, 20, 8, 3, 40, 8, 12, 25, 15, 20, 15, 15, 4, 15, 4). Entitled as Captains column shows 320 on each visible row. Total Number of Acres column shows corresponding totals (480, 640, 400, 800, 400, 480, 400, 400, 480, 480, 800, 400, 640, 640, 800, 400, 640, 400, 400, 800, 400, 480, 640, 480, 640, 480, 480, 400, 480, 400).
+
+## Certification as written
+
+Right side of the page:
+
+I do hereby certify that the above named persons were captains in my district at the time of the treaty made at Dancing Rabbit creek, on the 27th Sept. and that a list of their names was furnished by me to Armstrong, when called on, for the purpose of allowing the additional half section, as provided for in the treaty.
+
+Done at the agency, on the 7th September 1831.
+
+Greenwood Leflore  
+Chief of Northwest District Choctaw
+
+Teste W. Ward Agent C. N.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat the “or Little Leader” parenthetical as identity proof beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary of captains, entitled, additional half section, or nineteenth article.
+
+## Runway
+
+Captains lists and Article 19 objects remain open. Form-of-return sequence still has ground ahead. Sideways options remain free.
+
+[Quoin | free turn | OHC_2473.png | page 88]

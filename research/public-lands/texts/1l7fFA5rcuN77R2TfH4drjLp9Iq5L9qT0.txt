@@ -1,0 +1,40 @@
+# OHC_2475 form of return Choctaw Treaty farms page 89 — Quoin
+
+**When:** Thursday 10 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2475.png` only. File ID `1lE-_7ct-W5Ym8wuge8jG-iST1t4Uz8aW`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**89 Public Lands — No 3. Form of a Return Continued — Locations under the Choctaw Treaty. No 1230. 1834**
+
+Columns present: Names of Indians owning Farms; No of Acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **89**. Different visible page from OHC_2473/OHC_2474 (page 88 captains list, identical photograph) and from the last closed Quoin farms face OHC_2434 (page 52 continued).
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Chief Green Leflore.; Capt. Kullishubbee.; Joseph Nelson.; Catharine McKinney.; Rubin Harris.; Freeman Smith.; James Stanley.; Thomas Erage.; Hiram Vincent.; William Ott.; Benjamin Brashears.; Maj Lewis Leflore.; Edmond McKinney.; Lewis Brashears.; Turner Brashears.; Richard Holderfield.; Vaughn Brashears.; Ezekiel Roebuck.; Gideon Beane.; Widow Beane.; Gilbert B. Collins.; Henry Tibbs.; John A. Crantee.; Ephraim Loyd.; Moses Foster.; Mohonbee.; Susan Graham.; Ann V.L. McEllyn (widow).; Alex McGarkey.; Lothoma (widow).; Nanah (widow).; Etonubbee.
+
+Localities on this face include: Big land prairie, Yazoo valley.; Black creek, the place where Capt Lewis is now.; Yazoo valley.; do; do; do; do; do; do; do; do; do; do; do; do; Honey Island.; Near Rankin Mississippi.; Near the mouth of Black creek.; Near Rankin, Yazoo valley.; Funnagusha creek near Rankin.; do do.
+
+Remarks visible include: Good Land; Chief, 4 sections provided.; Stationed with the United States troops.; Best quality of land.; Settled since the treaty; this place not allowed; Settled since the treaty; best quality of land; do do; Provided for in supplement of 2 sections: best quality of land; Provided for in supplement. 1 1/2 sections; Provided for in supplement.; Provided for in supplement.; Settlement made in the spring of 1830: since the treaty. Provided for in supplement.; Residence on poor lands, two miles from his float. Provided for in supplement.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, captain marks, relation notes, or slave counts as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.  
+Same surname is not identity.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2475.png | page 89]

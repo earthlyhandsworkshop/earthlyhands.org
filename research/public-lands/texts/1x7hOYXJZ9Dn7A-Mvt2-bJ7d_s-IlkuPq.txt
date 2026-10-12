@@ -1,0 +1,43 @@
+# OHC_2466 form of return Choctaw Treaty farms page 81 — Quoin
+
+**When:** Thursday 10 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2466.png` only. File ID `1tfyi1ykLOWcWHPndfYmK-pPz3ShAmmAS`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**81 Public Lands — No 2 Form of a Return Continued. — Location under the Choctaw Treaty. No 1230 1834**
+
+Columns present: Names of Indians owning Farms; No of acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **81**.
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Pannontubbe.; Ahwooleh.; Nahchuka.; Yakabe.; Onantambe.; Capt Ashehoomah. (in a bind); Lopah.; Papanakchiah.; Pishkunowah.; Nahmahtubbe.; Opaia.; Mahtoonah. (widow); Estachubbe.; Mingo.; Nonetiah.; Mehachubbe.; Onatamba; Mahalaktubbe.; Capt Atinimastubbe.; Pishehkatubbe.; Pishohambe.; Hoampha hooma. (woman); Oolah.; Istanshiah.; Eptah.; Yekahoomeh.; Inohoomah.; Quahi.; LaKanvah.; Atahihutte.; Ochintahubbe.; Adamantubbe.; Mahogo. (woman); Mehionah; Capt Tuscatiyo. [unclear] Tuskahargo; Adamah. (blind)
+
+Localities on this face include: Talagelok; do; do; Adjoins Hituachacha line; do; Kooncheto settlement.; do; do; do on Leflore's line; do; Adjoins Kooncheto village.; Head waters Sukenatcha.; Kooncheto east military road.; do; do rest of family over Mississippi.; do includes his son-in-law.; Balance of family over Mississippi.; do; Petikfa.; do no field; do; do; do; do; Hoomehukhooma.; Petikfa.; do; do; do; Sukenatcha head waters; do do; do do; do do; Oknebby east side.; do do
+
+Remarks visible include: Poor land; do; do; do; do; Very Poor land.; do; do; do 4 mile west Military road.; do; do; do; do; do; do; do; do; Land tolerable; Poor land.; do; do; Land tolerable; do; do; do; do; do; Poor land.; do; do; do; do; do; do.
+
+Total-acre figures appear on some rows (320, 80, 80, 160, 320, 80 and others). I do not sum them.
+
+Annotations include captain marks, widow, woman, blind, "in a bind", son-in-law notes, and locality layering over Mississippi.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, “widow,” captain marks, or relation notes as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2466.png | page 81]

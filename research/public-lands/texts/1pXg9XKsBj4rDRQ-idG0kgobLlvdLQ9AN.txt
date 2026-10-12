@@ -1,0 +1,43 @@
+# OHC_2467 form of return Choctaw Treaty farms page 82 — Quoin
+
+**When:** Thursday 10 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2467.png` only. File ID `1SznR94NXcVTdBQjQFYIoMKRQ-UOO6bMU`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**82 Public Lands — No 2 Form of a Return Continued — Location under the Choctaw Treaty No 1230 1834**
+
+Columns present: Names of Indians owning Farms; No of acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **82**.
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Pahmontubbe.; YoKotiah.; Tiahocha.; Kanahogah.; Okleashah. (said); Yakamatubbe.; Akochatubbe.; Okatachubbe; Capt. James King.; Poshuhoomah.; Hukalhoomah.; Itohoto.; Englishah. (English); Yahcontubbe.; Shelijah. (widow); Psatugah. (widow); Oluktopijo.; Capt. Toutejah.; Belajato; Tishanowah.; Tanglabbe.; Tikathube.; Hulashoomah.; Ahtelah.; Ohastunikk.; Tascahoomeh.; Filahimah.; Noticktahoomeh.; Homemastubbe.; Atteah.; Oiotah.; Yanowah; Opanokchiah; [unclear]chia. woman.; [unclear]niehta.
+
+Localities on this face include: Oknebby. east side; do do; Hot Natte creek east side; do do; do do; do do; N of Kincaids canyon.; Oknebby (no field); Shukulluk.; do; do; Oknebby Filed by Abel Colbert; do; do; do; do; Shukulluk west side. Oknebby.; Hatifilla; do; do; do; Shukulluk; do; do; Oknebby; do; do; do; do; do; do; do; do; do.
+
+Remarks visible include: Poor land; do; do; do; do; do; do; do; Lives with his father Mushalatubbe. and [unclear]; Land tolerable; Says he is Captain in place of [unclear]; Poor land.; do; do; do; do; Poor land. good water.; do do; do do; do do; do do; do (blind man and [unclear]); Poor land.; Land tolerable.; do; do; do; do; do; do; do; Land good; do Hickory.
+
+Total-acre figures appear on some rows (80, 640, 80, 80, 80, 320, 160, 80, 80 and others). I do not sum them.
+
+Annotations include captain marks, widow, woman, said, English, blind man notes, and locality layering.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, “widow,” captain marks, or relation notes as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2467.png | page 82]

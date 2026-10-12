@@ -1,0 +1,44 @@
+# OHC_2470 form of return Choctaw Treaty farms page 85 — Quoin
+
+**When:** Thursday 10 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2470.png` only. File ID `16NqKX5RXh7zSgEoPaVZ_kmu75IoPBV42`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**85 Public Lands — No 2 Form of a Return. Continued. — Location under the Choctaw Treaty. [No 1230 1834]**
+
+Columns present: Names of Indians owning Farms; No of Acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **85**. Different visible page from OHC_2469 (page 84).
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Captain Phuphaupushelubbi.; Noyotah.; Pohakalak.; Ahtonahooma.; Tishshalotah.; Lokotubbe.; Notabbi.; Pashunautubbe.; Natscubbe.; Anantubbe.; Capt. Meshobenowah. Jr.; Tishsheomitta. (aid); Hoataka.; Jimmalcha.; Kamp.; Kaunchitubbe.; Tikantubbe.; Atllaaunchubbe.; To Hubbe.; Pestanbe.; Capt Little Leader.; Notakubbe.; Tuckahoomah.; Ahpahah.; Amincha.; Neatubbe.; Necatubbe.; Neletah.; Eschutagama.; Shiwinho. No.; Atahoonah.; Muskhage.; Olaluntubbe.
+
+Localities on this face include: Suckenatcha; do; do; do; do; do; do; do; do; do; Bodka.; Sukenatcha.; do.; Petikfa.; do; do; do; do Sukenatcha.; do do; do no field; do do; Sukenatcha; Petikfa; do; Sukenatcha; do; No field. Leaders on Sukenatcha; do; do; Petikfa; do; do; do.
+
+Remarks visible include: Poor land; do; do; do; do; do; do; do - good water; do; do; Prairie; Tolerable good land; Land tolerable; do; do; do; do; do; do; Provided for in the treaty. Has persuaded that they would be governed by him, and own the country around where they live. I determined to remain. A great many are settled since the treaty, which I have as well as I could; They have moved here since the treaty. Sukenatcha is the locality.; A new place; No place of his own; Poor land.
+
+Total-acre figures appear on some rows (320, 80, 80, 80, 80, 1280 and others). I do not sum them.
+
+Annotations include captain marks, Jr., aid, and locality layering. Some rows show slave counts in the locality or remarks area (e.g. 2 slaves).
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, captain marks, Jr., aid notes, or relation notes as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.  
+Same surname is not identity.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2470.png | page 85]

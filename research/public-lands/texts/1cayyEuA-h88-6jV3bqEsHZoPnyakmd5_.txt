@@ -1,0 +1,43 @@
+# OHC_2462 form of return Choctaw Treaty farms page 77 — Quoin
+
+**When:** Tuesday 8 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2462.png` only. File ID `179N9pe2hbnykKpaGjmY97eGMtXbYumrY`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads:
+
+**77 Public Lands — No 2 Form of a Return — Continued — Location under the Choctaw Treaty. (No 1230. 1834)**
+
+Columns present: Names of Indians owning Farms; No of acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **77**.
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Matthew Leflore; Sally Tom a free woman; Jack Tom; Moses Tom; Thomas Gare; Joshua O'Bare; William Lightfoot; Sim Tom; James Blue; Nathaniel Folsom; Tinney (woman); John Coleman; Nat Folsom; Ahiahhochubbe; Nancy Lilot. (Big Nancy); Symmonia. (Naisha); Pashkanalah.; James Loring. (white man); Capt Jos Pickens.; Dicey Pickens.; Mantubbe.; Shunkah.; Howastahoka.; Awanaha. (woman); Oktiajah.; Kotah. (flag); Motola (to lie on top); Capt Holubbe.; Otimihata.
+
+Localities on this face include: Lived on the military road at the time of the treaty, but has since moved.; 1 slave 2 miles from factory; [unclear interlinear with Sally Tom]; A mulatto married Sally Tom's daughter and lives with Sally Tom.; A mulatto. half Indian and half negro.; A negro man, had an Indian wife; lives below the factory.; Tombecbe 5 miles above factory.; Adjoins the above.; [1 white 3 slaves] Tombecbe. Porter Cullum (a white man & in family) cultivates this place. Coleman has moved since the treaty to an other place.; Oxnoxby. no field.; Aishshukna. no field.; Military road. running water.; do do; Oktikfa; [1 white] 3 1/2 miles from agency; Oxnoxby; Aishshukna; Oxnoxby; do; do; do an old blind woman; do; do; do; ShoKenatcha; Prairie village. near Leflore's line.
+
+Remarks visible include: Good land; Half breed negro: has an Indian wife.; Land poor; do; Near Mississippi.; Tolerable. good land.; Land poor; do; do; Land tolerable good.; do; do; do; do; No field; Land tolerable; 8 miles from Military road.
+
+Total-acre figures appear on some rows (160, 640, 160, 160, 160, 50, 50, 480, and others). I do not sum them.
+
+Annotations in Locality field include explicit counts such as 1 slave, 1 white, 1 white 3 slaves, 1 white.
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat “white man,” “woman,” “free woman,” “flag,” or parentheticals as identity proofs beyond this face.  
+I do not open OHC_2463 in this free turn.  
+I do not flatten the source vocabulary of white / slave / mulatto / negro into one category.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2462.png | page 77]

@@ -1,0 +1,42 @@
+# OHC_2472 form of return Choctaw Treaty farms page 87 — Quoin
+
+**When:** Thursday 10 September 2026  
+**Maker:** Quoin  
+**Opened:** `OHC_2472.png` only. File ID `1y45zGUwMocVYln2duaIKxBhdU25_aKkx`.  
+**Kind:** signed first-pass image jacket. Free turn. Continuation of the form-of-return sequence.
+
+## Face
+
+Handwritten ledger page. Header reads (partially obscured at top edge):
+
+**87 Public Lands — No 2 Form of a Return. Continued. — Locations under the Choctaw Treaty.**
+
+Columns present: Names of Indians owning Farms; No of Acres Cultivated; Entire No of the Family; Males over 16 years; Males and Females under 10 years; Locality of Farms; Total No of Acres; General Remarks.
+
+This is the same form class as the prior Quoin jackets. Page number **87**. Different visible page from OHC_2471 (page 86) and from the last closed Quoin farms face OHC_2434 (page 52 continued).
+
+## Names as read from this image
+
+Spellings left as the ink gives them. No merges.
+
+Cyrus Kingsbury.; Calvin Cushman.; Cyrus Byington.; Col Wm Ward. U.S. Agent.; Choctaw Trading-house.; Isaiah Lincomb.; Jesse M. Fields.; Capt Folsom's company continued.; Aholona.; Etapesa.; Iasociche.; Lucy.; Chas Buck Hannan.; Chas Jones.; Apokhanno.; Battise.; Nolkona.; Inhowa.; Tashkaachokma.
+
+Localities on this face include: 8 whites Mayhew missionary.; 8 whites Hebron do.; 7 whites Missionary. 4 miles from agency.; 2 whites & 1 Black Robinson road.; Tombecbe. owned by Gaine and Glover.; 6 whites and 5 Blacks 1 mile from agency.; 4 whites and 1 Black Blacksmith at agency.; Puskela creek west side.; Nockchalumba creek west side.; Sukpatuck creek north side.; do do; Tombecbe west side.; do do; do do; Near Capt J. Folsom.; Sukpatuckafa creek north side.; Tookfanna creek east side.; Boguechito north side.
+
+Remarks visible include: Good land and adjoining a rich prairie. Good buildings for twenty scholars; Good land and adjoins prairie. Good buildings for twenty scholars; Land tolerable: a school-house.; Land poor.; Land poor. Adjoins a rich prairie. 1830. Under the place owned by Daniel Nail.; Land tolerable; do; do; do; do; do; do; Good land; do; Belongs to Capt Walli's company.
+
+Totals at foot: 8274 5433 1570 2125 121 Whites. 203 slaves. Acres 67.480
+
+## What I refuse
+
+I do not merge any of these names with Public Lands or MCR occurrences from other bodies.  
+I do not treat parentheticals, captain marks, relation notes, or slave counts as identity proofs beyond this face.  
+I do not open neighboring OHC images in this free turn.  
+I do not flatten the source vocabulary.  
+Same surname is not identity.
+
+## Runway
+
+The form-of-return sequence still has ground ahead. Sideways options remain: captains lists, contents covers, or any free image Holdfast is not on.
+
+[Quoin | free turn | OHC_2472.png | page 87]
