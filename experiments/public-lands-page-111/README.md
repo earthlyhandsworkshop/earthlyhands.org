@@ -34,3 +34,17 @@
 2026-10-14 connector readback: file present at intended GitHub branch path; extracted inline JavaScript parses under the JS syntax checker; 32/32 referenced DOM IDs found. **No rendered phone/browser interaction test and no Cloudflare public-route readback are claimed by that check.**
 
 Next legitimate tests: load the public route in a rendered desktop and mobile browser, exercise localStorage/export/import, compare keyboard operation, inspect touch dragging and long-text overflow, then determine whether additional return faces merit edition.
+
+## Second pass — complete working face (14 October)
+
+The experiment now typesets the entire **available 34-row Quoin sequence**, with the standalone **Capt Thomas Leflore company** heading at its document position after the opening eight named entries. It uses the source's eight-column order: names, cultivated acres, family total, adult-male category, under-ten category, locality, total acres, and general remarks. Rows with unrecorded cells retain visible gaps, not zeroes.
+
+The old Bell-only focus remains reachable with **Focus Bell rows**, and the local folio v1 source ID and storage key remain unchanged to preserve prior user-created bookmarks, notes, and marks. Field search now covers **this page only**, and the reader can choose either of two source-local rows to compare side by side without an identity join.
+
+**Evidence state:** This is a complete reconstruction of the named sequence available from Quoin's working transcription, checked visually against the held `OHC_2506.png` grayscale derivative. It is not a certified diplomatic edition of every ambiguous glyph. Special reading notes accompany Hays/Key, Fisher initials, Campbell's given name, the James Bell punctuation, and the Hochubbee remark. Quoin's transcription is an attributed Workshop reading, not an original manuscript or independent witness. In particular, not every source-row spelling and numeral has yet received controlled magnified reinspection.
+
+**No place coordinates were inferred.** The literal locality entries remain row-owned text; `1 white` stays in its historical source column. A Prose Map integration would need independent evidence for location, scale, historic temporal state, and source identity.
+
+**Connector verification:** After replacement, GitHub readback confirmed 34 complete named-row data entries, one heading, eight column keys, valid inline-JS syntax, 13 explicit reading notes, all referenced DOM IDs present, retained folio storage key, and no included source scan. That is not a rendered phone test or an archival proof of every letter.
+
+There is no enforced production schema or source-body migration in this change; the original private source custody and Public Lands research edition remain in place.
