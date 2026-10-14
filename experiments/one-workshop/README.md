@@ -33,4 +33,18 @@ Keep existing Drive holdings intact as a dated historical corpus. Ingest into th
 ## Hospitality
 A folio and backpack need durable ownership, private/public boundaries, and discoverable grounds. This experiment addresses the document beneath those experiences, not their final expression.
 
+## State-model experiment (2026-10-14)
+
+`model.mjs` isolates the fictional document's history, working revision, explicit release snapshot, import validation, and export serialization. `model.test.mjs` provides executable tests:
+
+```sh
+node --test experiments/one-workshop/model.test.mjs
+```
+
+A local Node test pass covered private/public separation, pinned releases after later edits, refusal of stale expected revisions, export/import round trips, and rejection of inconsistent metadata.
+
+**Important standing:** the existing `index.html` is not yet wired to this module; its older inline code is still a separate browser-only proof of concept. The model's expected-revision guard detects conflicts in a single in-memory state; it is *not* a transactional, multi-user storage guarantee. That must be tested against a real storage engine before any migration or public use. A serialized JSON round trip checks structural consistency, not authenticity or independent provenance.
+
+Next earned edge: integrate the model with the interface and run a browser round-trip test, then choose and test an isolated transactional persistence adapter with public-read-only snapshots.
+
 Powerful finger. Trustworthy result.
