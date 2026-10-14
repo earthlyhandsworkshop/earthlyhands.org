@@ -63,5 +63,11 @@ export class SqliteDocumentStore {
     return this.#commit(expectedGeneration, doc => approveRevision(doc, doc.working_revision));
   }
 
+  // Explicit local restore from a portable document export. Import validation runs
+  // before the generation-checked SQL write. Never expose this on a public endpoint.
+  restore(exportedDocument, expectedGeneration) {
+    return this.#commit(expectedGeneration, () => parseDocument(exportedDocument));
+  }
+
   close() { this.db.close(); }
 }
