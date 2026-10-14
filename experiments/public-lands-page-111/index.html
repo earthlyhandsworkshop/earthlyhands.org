@@ -133,8 +133,8 @@ $("grip").addEventListener("pointerdown",e=>{if(e.button!==0&&e.pointerType==="m
 $("grip").addEventListener("pointermove",e=>{if(!grab||e.pointerId!==grab.id)return;moved.x=Math.max(-80,Math.min(80,grab.sx+e.clientX-grab.x));moved.y=Math.max(-55,Math.min(55,grab.sy+e.clientY-grab.y));move()});
 for(const ev of ["pointerup","pointercancel"])$("grip").addEventListener(ev,e=>{if(grab&&grab.id===e.pointerId)grab=null});
 $("reset-position").addEventListener("click",()=>{moved={x:0,y:0};move();toast("Leaf set down.")});
-window.addEventListener("pagehide",()=>{state.scrollY=Math.max(0,Math.round(window.scrollY));persist()});
-$("note").value=state.note;populate();renderFolio();theme();comparison();storageNote();if(state.focus)select(state.focus.row,state.focus.field);requestAnimationFrame(()=>window.scrollTo(0,state.scrollY||0));
+if("scrollRestoration" in history)history.scrollRestoration="manual";let scrollFrame=0;window.addEventListener("scroll",()=>{if(scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;state.scrollY=Math.max(0,Math.round(window.scrollY));persist()})},{passive:true});
+$("note").value=state.note;populate();renderFolio();theme();comparison();storageNote();if(state.focus)select(state.focus.row,state.focus.field);requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo(0,state.scrollY||0)));
 })();
 </script>
 </body>
