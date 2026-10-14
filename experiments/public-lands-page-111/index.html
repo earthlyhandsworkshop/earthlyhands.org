@@ -134,7 +134,7 @@ $("grip").addEventListener("pointermove",e=>{if(!grab||e.pointerId!==grab.id)ret
 for(const ev of ["pointerup","pointercancel"])$("grip").addEventListener(ev,e=>{if(grab&&grab.id===e.pointerId)grab=null});
 $("reset-position").addEventListener("click",()=>{moved={x:0,y:0};move();toast("Leaf set down.")});
 if("scrollRestoration" in history)history.scrollRestoration="manual";let scrollTimer=0;window.addEventListener("scroll",()=>{clearTimeout(scrollTimer);scrollTimer=setTimeout(()=>{state.scrollY=Math.max(0,Math.round(window.scrollY));persist()},120)},{passive:true});
-$("note").value=state.note;populate();renderFolio();theme();comparison();storageNote();if(state.focus)select(state.focus.row,state.focus.field);requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo(0,state.scrollY||0)));
+$("note").value=state.note;populate();renderFolio();theme();comparison();storageNote();if(state.focus){select(state.focus.row,state.focus.field);requestAnimationFrame(()=>requestAnimationFrame(()=>document.querySelector('[data-row="'+state.focus.row+'"][data-field="'+state.focus.field+'"]')?.scrollIntoView({block:"center",inline:"nearest"})))}else{requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo(0,state.scrollY||0)))}
 })();
 </script>
 </body>
