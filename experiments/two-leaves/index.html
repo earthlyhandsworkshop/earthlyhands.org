@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Two Leaves — Earthly Hands Workshop</title>
+<meta name="description" content="A GitHub-only documentary reading prototype: pages, corrections, themes, browser folio.">
+<link rel="stylesheet" href="style.css"></head>
+<body data-theme="paper"><div class="wrap">
+<header class="top"><a href="https://earthlyhands.org/">Earthly Hands Workshop</a><span>Workbench · source-first · not deployed</span></header>
+<main><section class="hero"><div class="sup">Small Door / working specimen</div><h1>Two leaves.<br>One folio.</h1>
+<p>Let the historical page keep its shape. Dress the paper, find a name, save what catches your eye.</p>
+<p class="small">This GitHub specimen accepts local Markdown and scan files. Nothing is uploaded. Ten's original readings, and any mistakes in them, remain unchanged. This is a tool test—not a published edition.</p></section>
+<nav class="control" aria-label="Leaf and appearance"><button type="button" class="tab" data-leaf="OHC_2245" aria-pressed="true">O · 2245</button>
+<button type="button" class="tab" data-leaf="OHC_2280" aria-pressed="false">Y · 2280</button><span class="grow"></span>
+<button type="button" class="theme" data-theme="paper" aria-pressed="true">Paper</button>
+<button type="button" class="theme" data-theme="deco" aria-pressed="false">Deco</button>
+<button type="button" class="theme" data-theme="future" aria-pressed="false">Future</button></nav>
+<div class="layout" id="reader"><div class="stack">
+<article class="leaf" id="leaf-OHC_2245" aria-label="OHC 2245 page">
+<div class="folio-num">95</div><div class="letter">O</div><h2 class="paper-title">N a m e s .</h2>
+<div class="headers"><span>Page</span><span>Names</span></div>
+<div class="rows" id="rows-OHC_2245"><p class="small">Choose OHC_2245.md to open this page as HTML.</p></div>
+<div class="paper-bottom">OHC_2245 · Ten's working reading · original remains unchanged</div></article>
+<article class="leaf" id="leaf-OHC_2280" aria-label="OHC 2280 page" hidden>
+<div class="folio-num">129</div><div class="letter">Y</div><h2 class="paper-title">N a m e s .</h2>
+<div class="headers"><span>Page</span><span>Names</span></div>
+<div class="rows" id="rows-OHC_2280"><p class="small">Choose OHC_2280.md to open this page as HTML.</p></div>
+<div class="paper-bottom">OHC_2280 · Ten's working reading · original remains unchanged</div></article>
+</div>
+<aside class="side" aria-label="Reader instruments">
+<section class="box"><h2>Bring a page</h2><label for="md-input" class="small">Choose either Ten transcription (.md or .txt):</label><input id="md-input" type="file" accept=".md,.txt,text/plain">
+<p id="load-status" role="status">The two page shells are waiting for their original Markdown.</p>
+<label for="pdf-input" class="small">Optional source scan (.pdf):</label><input id="pdf-input" type="file" accept="application/pdf,.pdf">
+<p id="scan-status" class="small">Source images stay local; no scan is republished.</p><a id="scan-open" href="#" target="_blank" rel="noopener" hidden>Open local scan ↗</a></section>
+<section class="box"><h2>Find</h2><label class="small" for="query">Name or index page number:</label><input id="query" type="search" placeholder="Try a name or 167" autocomplete="off"><div id="results" aria-live="polite"><p>Load a reading to search.</p></div></section>
+<section class="box"><h2>Your folio <span id="folio-count">0</span></h2>
+<p>Keep this page, or a name occurrence. Saved only in this browser. A kept occurrence is not an identity claim.</p>
+<button id="keep-page" type="button" class="solid">Keep this leaf</button><ul id="folio"></ul>
+<button id="export" type="button" class="solid">Export folio .json</button><button id="clear" type="button">Clear</button><p id="folio-status" role="status"></p></section>
+</aside></div>
+<section class="end"><div class="sup">Uncertainty remains visible</div><h2>Nothing silently corrected.</h2>
+<p>These pages are shaped by Ten's attributable, provisional Markdown transcriptions of OHC_2245 and OHC_2280, within Choctaw Volume 437. A later reader may compare the scan, report an error, and publish a separately credited correction. An index appearance is not proof of a historical person's identity.</p>
+<p>Small Door's comparison of the OHC_2280 source face found two page-167 entries missing from Ten's working reading; this observation has not been inserted into his text. A complete correction still requires a row-by-row review. The scanner and editorial reading must remain distinguishable.</p>
+<p class="small">The page shells and controls live in public GitHub source, but the historical readings are not automatically transferred from Google Drive. Bring a local file to this prototype. This avoids pretending an existing Drive link is anonymously public or that a source scan is cleared for republication.</p></section>
+</main><footer class="top"><span>Small Door · GitHub specimen · not on main</span><a href="https://github.com/earthlyhandsworkshop/earthlyhands.org">Workshop source</a></footer></div>
+<script src="app.js" defer></script></body></html>
