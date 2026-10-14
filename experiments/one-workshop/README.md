@@ -43,8 +43,20 @@ node --test experiments/one-workshop/model.test.mjs
 
 A local Node test pass covered private/public separation, pinned releases after later edits, refusal of stale expected revisions, export/import round trips, and rejection of inconsistent metadata.
 
-**Important standing:** the existing `index.html` is not yet wired to this module; its older inline code is still a separate browser-only proof of concept. The model's expected-revision guard detects conflicts in a single in-memory state; it is *not* a transactional, multi-user storage guarantee. That must be tested against a real storage engine before any migration or public use. A serialized JSON round trip checks structural consistency, not authenticity or independent provenance.
+**Current state (2026-10-15):** `index.html` now loads `browser.mjs`, which uses the shared `model.mjs` for revisions, approval, and import/export; the earlier duplicated inline state model is removed. The document stays local to one open browser tab, and the "public doorway" is only a preview of an explicitly pinned revision. It publishes nothing and provides no access control.
 
-Next earned edge: integrate the model with the interface and run a browser round-trip test, then choose and test an isolated transactional persistence adapter with public-read-only snapshots.
+### Browser walk test — completed
+Ran headless Chromium through Playwright against **byte-matched copies** of the committed `index.html`, `browser.mjs`, and `model.mjs` (Git blob hashes checked). The environment prevented local URL navigation, so the page HTML was inserted directly and the browser module's relative import was mapped to a `data:` module containing the identical model bytes. Verified: initial unpublished state, refusal to approve an unsaved draft, save to revision 2, pinned preview, later private revision leaving public preview unchanged, JSON export, reset, import preserving all revisions and preview, malformed release rejection without clobbering current state, and no browser script exceptions or remote requests. **This is a browser-execution test, not a deployed HTTP serving test.**
+
+To open the experiment in a local web server from the repository root:
+
+```sh
+python3 -m http.server 8000
+# open http://localhost:8000/experiments/one-workshop/
+```
+
+**Remaining boundary:** The model's expected-revision guard detects conflicts in a single in-memory state; it is *not* a transactional, multi-user storage guarantee. That requires a server transaction or conditional write tested under actual concurrency. A JSON round trip confirms structural consistency, not authenticity, independent provenance, or verified binary integrity. Public preview content is still present in the same client session as drafts, so it does not demonstrate private/server-side authorization.
+
+Next earned edge: select an isolated persistence adapter and test two competing writers, authoritative publication snapshots, provider-independent export, and unauthorized-read refusal before any migration or public use.
 
 Powerful finger. Trustworthy result.
