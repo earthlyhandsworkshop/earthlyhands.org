@@ -2,59 +2,220 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Earthly Hands Workshop works with historical records, people, places, archives, maps, film, and public experiments.">
-<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14262b">
+<meta name="description" content="Earthly Hands is a living workshop. Wander a little country, encounter a question, or try a reading.">
 <link rel="canonical" href="https://earthlyhands.org/">
-<title>Earthly Hands Workshop</title>
+<title>Come wander — Earthly Hands</title>
 <style>
-:root{--paper:#eee8dc;--ink:#181713;--muted:#6f695f;--line:rgba(24,23,19,.22);--accent:#8a583e}
-*{box-sizing:border-box}html{background:var(--paper)}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.45 Georgia,serif}
-a{color:inherit;text-underline-offset:.2em}.wrap{width:min(82rem,calc(100% - 2rem));margin:auto}
-header,footer{display:flex;justify-content:space-between;gap:1rem;align-items:center;min-height:3.2rem;border-bottom:1px solid var(--ink);font:11px/1 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
-.home-mark{color:inherit;text-decoration:none}.home-mark:focus-visible{outline:2px solid var(--accent);outline-offset:3px}nav{display:flex;gap:1rem;flex-wrap:wrap}nav a{text-decoration:none}
-.hero{padding:12vh 0 9vh;border-bottom:1px solid var(--ink)}
-.hero small,.kind{color:var(--muted);font:11px/1.2 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
-h1{font-size:clamp(4.5rem,13vw,9rem);font-weight:400;line-height:.8;letter-spacing:-.065em;margin:.6rem 0 1.8rem}
-.hero p{max-width:43rem;font-size:clamp(1.25rem,2.8vw,2rem);line-height:1.22;margin:.7rem 0}
-.grid{display:grid;grid-template-columns:1fr 1fr}
-.card{min-height:16rem;display:flex;flex-direction:column;padding:1rem;border-bottom:1px solid var(--line);text-decoration:none}
-.card:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}
-.card:nth-child(even){padding-right:0}
-.card .kind{margin-bottom:auto}.card strong{display:block;max-width:12ch;margin:3rem 0 .5rem;font-size:clamp(1.9rem,4vw,3.6rem);font-weight:400;line-height:.92;letter-spacing:-.04em}
-.invite{padding:4rem 0;border-bottom:1px solid var(--ink)}.invite h2{font-size:clamp(2.4rem,6vw,5rem);font-weight:400;line-height:.9;margin:0 0 1.2rem}.invite p{max-width:44rem}
-footer{border-bottom:0;color:var(--muted)}
-@media(max-width:44rem){.wrap{width:calc(100% - 1rem)}header{align-items:flex-start;padding:.8rem 0}.grid{grid-template-columns:1fr}.card,.card:nth-child(odd),.card:nth-child(even){padding:1rem 0;border-right:0}}
+  :root{color-scheme:dark;--night:#14262b;--paper:#ffecd0;--warm:#ffd38e;--water:#9bd1cd;--muted:#d8cbb9;--line:#8d9d93}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;min-height:100vh;background:var(--night);color:var(--paper);font:clamp(20px,2.1vw,25px)/1.5 Georgia,serif}
+  button,a,summary{touch-action:manipulation}
+  a{color:var(--warm);text-underline-offset:.25em}
+  button{font:inherit}
+  button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--warm);outline-offset:4px}
+  .skip{position:absolute;left:.7rem;top:-5rem;background:var(--paper);color:var(--night);padding:.5rem;z-index:20}
+  .skip:focus{top:.7rem}
+  .stage{min-height:100svh;position:relative;overflow:hidden;isolation:isolate}
+  .night-sky{position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 73% 18%,#557375 0,#27444b 27%,#14262b 69%)}
+  .land{position:absolute;z-index:-1;inset:auto 0 0;width:100%;height:min(48vh,440px);pointer-events:none}
+  .site-head{padding:clamp(1rem,3vw,2rem) clamp(1.1rem,6vw,6rem);display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .wordmark{font:700 .79rem/1.2 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--paper);text-decoration:none}
+  .living-mark{display:flex;align-items:center;gap:.55rem;font:600 .62rem/1.2 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+  .living-mark::before{content:"";width:.65rem;height:.65rem;border-radius:50%;background:var(--warm);box-shadow:0 0 1rem rgba(255,211,142,.8)}
+  main{width:min(1100px,calc(100% - 2.3rem));margin:0 auto;padding:clamp(3rem,9vh,7rem) 0 14rem}
+  [hidden]{display:none!important}
+  .scene{animation:arrive .5s ease-out both}
+  .eyebrow{font:700 .69rem/1.4 system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--water);margin:0 0 1.1rem}
+  h1,h2{font-weight:400;letter-spacing:-.055em;line-height:.93;margin:0 0 1.7rem;text-wrap:balance}
+  h1{font-size:clamp(3.9rem,11vw,9rem);max-width:12ch}
+  h2{font-size:clamp(3.5rem,9vw,7rem);max-width:14ch}
+  h1 em,h2 em{font-style:italic;color:var(--warm)}
+  .scene p.lead{font-size:clamp(1.25rem,2.8vw,1.85rem);line-height:1.3;max-width:34ch;margin:.7rem 0 2rem;text-wrap:pretty}
+  .choice-row{display:flex;align-items:stretch;gap:.8rem;flex-wrap:wrap;margin:1.5rem 0}
+  .choice{display:inline-flex;justify-content:center;align-items:center;text-align:center;min-height:3.3rem;padding:.8rem 1.15rem;border:1.5px solid var(--paper);border-radius:10rem;background:var(--paper);color:var(--night);cursor:pointer;font:700 .87rem/1.2 system-ui,sans-serif;transition:transform .15s,background .15s}
+  .choice:hover{transform:translateY(-2px);background:var(--warm)}
+  .choice.secondary{background:rgba(20,38,43,.5);color:var(--paper)}
+  .choice.secondary:hover{background:rgba(255,236,208,.13)}
+  .smallprint{font:.66rem/1.5 system-ui,sans-serif;color:var(--muted);max-width:52ch}
+  .trail{font:.64rem/1.4 system-ui,sans-serif;letter-spacing:.04em;color:var(--water);min-height:1.4rem;margin:2rem 0 0}
+  .reader-panel{max-width:41rem;border:1px solid var(--line);border-radius:1rem;background:rgba(20,38,43,.75);padding:clamp(1rem,3vw,2rem);margin:1.5rem 0}
+  .reader-line{font-size:clamp(1.6rem,4vw,2.9rem);line-height:1.12;letter-spacing:-.025em;margin:.6rem 0 1.4rem}
+  #record-status{font:.75rem/1.4 system-ui,sans-serif;color:var(--water);min-height:1.4rem}
+  #local-playback{width:min(100%,36rem);margin:.7rem 0}
+  .below{background:#eee3d0;color:#1e2d30;padding:clamp(2rem,6vw,5rem) clamp(1.1rem,6vw,6rem);font:clamp(18px,1.8vw,22px)/1.5 Georgia,serif}
+  .below-inner{max-width:1000px;margin:auto}
+  .below p{max-width:43rem}
+  .below details{border-top:1px solid #87908b;padding:1rem 0}
+  .below summary{cursor:pointer;font:700 1rem/1.4 system-ui,sans-serif}
+  .below a{color:#284e59}
+  footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font:.67rem/1.5 system-ui,sans-serif;margin-top:2rem}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  @keyframes arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+  @media(max-width:600px){
+    .site-head{padding:1rem 1.15rem}.living-mark{font-size:.55rem}
+    main{padding:2.5rem 0 9rem}
+    .choice{flex:1 1 100%;min-height:3.7rem}
+    .land{height:36vh}
+    h1{font-size:clamp(3.5rem,15vw,5.4rem)}
+    h2{font-size:clamp(3.1rem,12vw,5rem)}
+  }
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-<a class="home-mark" href="/" aria-label="Earthly Hands Workshop — home"><strong>Earthly Hands Workshop</strong></a>
-<nav><a href="/research/public-lands/">Public Lands</a><a href="/experiments/">Explore</a><a href="/experiments/shared-country/">Shared Country</a><a href="mailto:workshop@earthlyhands.org">Contact</a></nav>
-</header>
-<main>
-<section class="hero">
-<small>Research · documentation · art · public ground</small>
-<h1>Earthly Hands</h1>
-<p>We work with historical records, people, places, archives, maps, film, and the strange paths between them.</p>
-<p>We keep sources close, uncertainty visible, and the road back to the record open.</p>
-</section>
-<section class="grid" aria-label="Selected public work">
-<a class="card" href="/research/public-lands/"><span class="kind">Open research corpus</span><strong>Public Lands</strong><span>Choctaw treaty land returns: working jackets, provisional readings, and correction history.</span></a>
-<a class="card" href="/experiments/public-house-on-the-road/"><span class="kind">Place</span><strong>Public House on the Road</strong><span>A place can be present before its exact point is earned.</span></a>
-<a class="card" href="/experiments/dancing-rabbit-statehood-line/"><span class="kind">Drawing</span><strong>Dancing Rabbit to Oklahoma</strong><span>A long historical orientation without pretending sequence is reconstructed route geometry.</span></a>
-<a class="card" href="/experiments/missing-people-machine/"><span class="kind">Instrument</span><strong>The Missing People Machine</strong><span>Try an unearned documentary move. The instrument refuses it.</span></a>
-<a class="card" href="/experiments/article-xiv-identity-gate/"><span class="kind">Instrument</span><strong>Article XIV Identity Gate</strong><span>An administrative join with the historical bridges still open.</span></a>
-</section>
-<section class="invite">
-<h2>Come work with us.</h2>
-<p>Earthly Hands is a living workshop. We are interested in archives, families, Nations, researchers, artists, filmmakers, institutions, and records that could change what is presently understood.</p>
-<p>Collaboration does not require agreement with a conclusion. The work can change when the evidence changes.</p>
-<p><a href="mailto:workshop@earthlyhands.org">workshop@earthlyhands.org</a></p>
-</section>
-</main>
-<footer><span>Earthly Hands Workshop</span><span>Same ground, more truth.</span></footer>
+<a class="skip" href="#country">Skip to the country</a>
+<div class="stage">
+  <div class="night-sky" aria-hidden="true"></div>
+  <svg class="land" viewBox="0 0 1440 450" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <path d="M0 260 Q180 155 380 260 T800 235 T1440 250 V450 H0Z" fill="#2b5050"/>
+    <path d="M0 328 Q180 275 420 334 T910 300 T1440 336 V450 H0Z" fill="#1c3b3a"/>
+    <path d="M500 450 C600 398 725 415 775 354 C815 300 905 317 1005 354" fill="none" stroke="#77a5a1" stroke-width="40" opacity=".68"/>
+    <path d="M480 450 C595 397 725 417 775 354 C815 300 905 317 1005 354" fill="none" stroke="#a5d4ce" stroke-width="5" opacity=".65"/>
+    <circle cx="1160" cy="150" r="46" fill="#f6ca86" opacity=".65"/>
+    <g fill="#e8d8b7" opacity=".85"><circle cx="200" cy="80" r="2.5"/><circle cx="730" cy="35" r="2"/><circle cx="1270" cy="75" r="2.5"/><circle cx="920" cy="118" r="1.5"/></g>
+  </svg>
+  <header class="site-head">
+    <a href="/" class="wordmark" aria-label="Earthly Hands — restart">Earthly Hands</a>
+    <span class="living-mark">A living workshop</span>
+  </header>
+  <main id="country">
+    <section class="scene" id="scene-arrive" aria-labelledby="title-arrive">
+      <p class="eyebrow">Shared Country · An invitation to play</p>
+      <h1 id="title-arrive">Come get lost <em>on purpose.</em></h1>
+      <p class="lead">A place made by curious people and AI companions. No map to memorize. No application to fill out. Just choose what catches.</p>
+      <div class="choice-row" aria-label="Choose your first encounter">
+        <button class="choice" type="button" data-go="creek">Follow the creek →</button>
+        <button class="choice secondary" type="button" data-go="voice">Try a reading →</button>
+        <button class="choice secondary" type="button" data-go="paper">Find a question →</button>
+      </div>
+      <div id="resume-line" hidden>
+        <p class="smallprint">You've been here before. Your last place is saved on this device only.</p>
+        <button type="button" class="choice secondary" id="resume-button">Pick up where you left off →</button>
+      </div>
+    </section>
+    <section class="scene" id="scene-creek" aria-labelledby="title-creek" hidden>
+      <p class="eyebrow">The creek · A playful encounter, not a historical map</p>
+      <h2 id="title-creek">The water has <em>no street address.</em></h2>
+      <p class="lead">Some journeys leave us a place, a person, and a question—but no honest line between them. You can still look around.</p>
+      <div class="choice-row">
+        <button class="choice" type="button" data-go="paper">See what the record knows →</button>
+        <button class="choice secondary" type="button" data-go="voice">Hear a human voice →</button>
+        <button class="choice secondary" type="button" data-go="arrive">Go back to the beginning</button>
+      </div>
+    </section>
+    <section class="scene" id="scene-paper" aria-labelledby="title-paper" hidden>
+      <p class="eyebrow">The paper · Questions are welcome here</p>
+      <h2 id="title-paper">A blank space <em>isn't an answer.</em></h2>
+      <p class="lead">A record can tell us something real without telling us everything. We can keep the question open and still make something together.</p>
+      <div class="choice-row">
+        <button class="choice" type="button" data-go="voice">Give the question a voice →</button>
+        <button class="choice secondary" type="button" data-go="creek">Go back to the water →</button>
+        <button class="choice secondary" type="button" data-go="arrive">Start over</button>
+      </div>
+    </section>
+    <section class="scene" id="scene-voice" aria-labelledby="title-voice" hidden>
+      <p class="eyebrow">The listening room · A local rehearsal</p>
+      <h2 id="title-voice">Every story needs <em>a reader.</em></h2>
+      <p class="lead">Want to try one line? Read it your way. Hear yourself. No account, no audition, no upload.</p>
+      <div class="reader-panel">
+        <p class="smallprint">Practice line written for this doorway · not historical testimony</p>
+        <p class="reader-line">“There was a name on the paper. The name was not enough.”</p>
+        <div class="choice-row">
+          <button class="choice" type="button" id="start-record">Record my reading</button>
+          <button class="choice secondary" type="button" id="stop-record" hidden>Stop and listen</button>
+        </div>
+        <p id="record-status" role="status" aria-live="polite">Your microphone is off.</p>
+        <audio id="local-playback" controls hidden aria-label="Your recorded reading"></audio>
+        <p class="smallprint">Your recording stays in this browser tab. It is not sent to Earthly Hands or saved on a server. Closing the tab ends this rehearsal. Permission to use the microphone is requested only when you press Record.</p>
+      </div>
+      <div class="choice-row">
+        <button class="choice secondary" type="button" data-go="creek">Walk by the creek →</button>
+        <button class="choice secondary" type="button" data-go="arrive">Back to the beginning</button>
+      </div>
+    </section>
+    <p class="trail" id="trail" aria-live="polite"></p>
+  </main>
 </div>
+<section class="below" aria-label="The workshop behind this doorway">
+  <div class="below-inner">
+    <p><strong>Earthly Hands is real work in motion.</strong> This little country is a new entrance, not an account of a reconstructed historical route. We explore records, films, drawings, and the spaces between certainty and curiosity. The experience can change as the work earns new forms.</p>
+    <details>
+      <summary>Want to see the work beneath the country?</summary>
+      <p>The earlier rooms haven't been erased. <a href="/experiments/shared-country/">Explore the source-facing Shared Country experiment</a>, or <a href="/research/public-lands/">visit Public Lands</a>. These are working bodies with different kinds of depth.</p>
+    </details>
+    <footer>
+      <span>Earthly Hands Workshop · Same ground, more truth.</span>
+      <span><a href="mailto:workshop@earthlyhands.org">Write to the Workshop</a></span>
+    </footer>
+  </div>
+</section>
+<script>
+(function(){
+  "use strict";
+  var names=["arrive","creek","paper","voice"];
+  var scenes={};
+  names.forEach(function(name){scenes[name]=document.getElementById("scene-"+name);});
+  var trail=document.getElementById("trail");
+  var recorder=null,stream=null,chunks=[],playUrl=null;
+  var play=document.getElementById("local-playback");
+  var start=document.getElementById("start-record");
+  var stop=document.getElementById("stop-record");
+  var status=document.getElementById("record-status");
+  function shutMic(){
+    if(recorder && recorder.state==="recording"){recorder.stop();}
+    if(stream){stream.getTracks().forEach(function(track){track.stop();});stream=null;}
+  }
+  function show(name,scroll){
+    if(!scenes[name])return;
+    names.forEach(function(n){scenes[n].hidden=(n!==name);});
+    trail.textContent=(name==="arrive")?"The path is yours.":"You're in "+({"creek":"the creek","paper":"the paper","voice":"the listening room"}[name])+". You can always return.";
+    if(name!=="voice")shutMic();
+    try{if(name==="arrive")localStorage.removeItem("earthly-hands-last-place-v1");else localStorage.setItem("earthly-hands-last-place-v1",name);}catch(e){}
+    if(scroll){window.scrollTo({top:0,behavior:"auto"});scenes[name].querySelector("h1,h2").setAttribute("tabindex","-1");scenes[name].querySelector("h1,h2").focus({preventScroll:true});}
+  }
+  document.querySelectorAll("[data-go]").forEach(function(button){
+    button.addEventListener("click",function(){show(button.getAttribute("data-go"),true);});
+  });
+  try{
+    var last=localStorage.getItem("earthly-hands-last-place-v1");
+    if(last && last!=="arrive" && scenes[last]){
+      document.getElementById("resume-line").hidden=false;
+      document.getElementById("resume-button").addEventListener("click",function(){show(last,true);});
+    }
+  }catch(e){}
+  if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !window.MediaRecorder){
+    start.disabled=true;
+    status.textContent="Recording isn't supported by this browser. You can still read the line aloud.";
+  }else{
+    start.addEventListener("click",async function(){
+      start.disabled=true;status.textContent="Requesting microphone permission…";
+      try{
+        stream=await navigator.mediaDevices.getUserMedia({audio:true});
+        if(playUrl){URL.revokeObjectURL(playUrl);playUrl=null;}
+        play.hidden=true;play.removeAttribute("src");chunks=[];
+        recorder=new MediaRecorder(stream);
+        recorder.addEventListener("dataavailable",function(event){if(event.data && event.data.size)chunks.push(event.data);});
+        recorder.addEventListener("stop",function(){
+          if(chunks.length){
+            playUrl=URL.createObjectURL(new Blob(chunks,{type:recorder.mimeType||"audio/webm"}));
+            play.src=playUrl;play.hidden=false;status.textContent="Here's your reading. Press play to hear it.";
+          }else{status.textContent="No audio was captured. You can try again.";}
+          start.disabled=false;stop.hidden=true;
+        },{once:true});
+        recorder.start();stop.hidden=false;status.textContent="Recording on this device. Press Stop and listen when you're ready.";
+      }catch(error){
+        if(stream){stream.getTracks().forEach(function(track){track.stop();});stream=null;}
+        start.disabled=false;stop.hidden=true;status.textContent="Microphone not available. You can still read the line aloud.";
+      }
+    });
+    stop.addEventListener("click",shutMic);
+  }
+  window.addEventListener("pagehide",function(){shutMic();if(playUrl)URL.revokeObjectURL(playUrl);});
+  show("arrive",false);
+})();
+</script>
 </body>
 </html>
