@@ -20,7 +20,7 @@ if(scroll)$('reader').scrollIntoView({block:'start'});
 }
 function node(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e}
 function label(id,entry){return entry? id+' · '+entry.name+' · index p.'+entry.page:id+' · full index leaf'}
-function addRemove(key,desc){const ix=folio.findIndex(x=>x.key===key);if(ix<0)folio.push({key,label:desc});else folio.splice(ix,1);persist();renderFolio();renderRows(active)}
+function addRemove(key,desc){const ix=folio.findIndex(x=>x.key===key);if(ix<0)folio.push({key,label:desc});else folio.splice(ix,1);persist();renderFolio();const id=key.split(':')[0];if(readings.has(id))renderRows(id);if(id!==active&&readings.has(active))renderRows(active)}
 function renderRows(id){const host=$('rows-'+id),rows=readings.get(id);if(!rows)return;
 host.replaceChildren();for(const r of rows){if(r.type==='section'){host.append(node('div','roman',r.label));continue}
 const div=node('div','row');div.dataset.key=r.key;div.id='entry-'+r.key.replace(':','-');div.tabIndex=-1;
