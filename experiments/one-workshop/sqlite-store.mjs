@@ -63,10 +63,18 @@ export class SqliteDocumentStore {
     return this.#commit(expectedGeneration, doc => approveRevision(doc, doc.working_revision));
   }
 
-  // Explicit local restore from a portable document export. Import validation runs
-  // before the generation-checked SQL write. Never expose this on a public endpoint.
+  // Restore is an initial import, NOT an overwrite command. A valid old export
+  // must never erase later revisions or unpublish approved work merely because
+  // its caller knows today's generation. A separate, reviewed migration tool
+  // would be needed to replace a live store. Never expose this on a public API.
   restore(exportedDocument, expectedGeneration) {
-    return this.#commit(expectedGeneration, () => parseDocument(exportedDocument));
+    const incoming = parseDocument(exportedDocument); // validate before any mutation
+    if (expectedGeneration !== 1) {
+      throw new Error('Restore refused: destination is not a pristine store');
+    }
+    // #commit does a generation-conditioned UPDATE, so concurrent restores can
+    // never both win. Since generation only increases here, 1 is pristine.
+    return this.#commit(expectedGeneration, () => incoming);
   }
 
   close() { this.db.close(); }
