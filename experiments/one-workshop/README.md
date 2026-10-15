@@ -57,6 +57,20 @@ python3 -m http.server 8000
 
 **Remaining boundary:** The model's expected-revision guard detects conflicts in a single in-memory state; it is *not* a transactional, multi-user storage guarantee. That requires a server transaction or conditional write tested under actual concurrency. A JSON round trip confirms structural consistency, not authenticity, independent provenance, or verified binary integrity. Public preview content is still present in the same client session as drafts, so it does not demonstrate private/server-side authorization.
 
-Next earned edge: select an isolated persistence adapter and test two competing writers, authoritative publication snapshots, provider-independent export, and unauthorized-read refusal before any migration or public use.
+Later experimental work lives alongside this first browser walk; see the locally persisted and portable test bearings below. Nothing in this directory authorizes a production migration, public deployment, or release of historical holdings.
+
+## Persisted, reversible crossing — 15 October 2026
+
+The *independent* Node 22+ modules now include `sqlite-store.mjs` (a local SQLite generation-conditioned write and separately projected release), `blob-integrity.mjs` (streaming SHA-256 verification and content-addressed receipt), `blob-transfer.mjs` (manifest-checked binary copying), and `portable-bundle.mjs` (one fictional document's history, pinned release, and verified binary companions). These are **local experiments**. The original `index.html` remains browser-tab-local, and none of these modules is an authenticated or deployed multi-user service.
+
+To repeat the portable crossing directly from this branch's checked-out repository:
+
+```sh
+node --test experiments/one-workshop/portable-bundle.test.mjs
+```
+
+The six regression cases cover a 3 MiB object with private revision history and stable public release; tampered document; tampered binary; non-pristine destination refusal; invalid/duplicated claims; and a writer intervening just before the final SQLite restore. Small Door ran the committed test bytes locally against Git-blob-matched implementations: six passed. Further local related-module tests passed, but they are not a substitute for CI on the branch.
+
+**Unproven:** user authentication and authorization; HTTP boundary; source identity, historical provenance, or permission to publish; crash durability; a transaction spanning SQLite and binary storage; a complete multi-document Workshop or Shared Country migration. A failed late restore can leave a verified but unreferenced binary, never a silently overwritten working revision. The tests use invented content only. Google Drive holdings stay untouched, and this draft must not be merged or deployed without an independent deliberate crossing.
 
 Powerful finger. Trustworthy result.
