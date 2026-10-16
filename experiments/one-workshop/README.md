@@ -74,3 +74,11 @@ The six regression cases cover a 3 MiB object with private revision history and 
 **Unproven:** user authentication and authorization; HTTP boundary; source identity, historical provenance, or permission to publish; crash durability; a transaction spanning SQLite and binary storage; a complete multi-document Workshop or Shared Country migration. A failed late restore can leave a verified but unreferenced binary, never a silently overwritten working revision. The tests use invented content only. Google Drive holdings stay untouched, and this draft must not be merged or deployed without an independent deliberate crossing.
 
 Powerful finger. Trustworthy result.
+
+## Native folio import receipts — 16 October 2026
+
+`native-folio-history.mjs` is a **pure, not-yet-UI-wired** model for the visitor who exports Face 111's JSON, edits it away from the Workshop, and imports it again. The existing `native-folio-crossing.html` still carries **only the latest file**, replacing its previous local single-pocket copy on a successful import. Do not represent it as preserving a history yet.
+
+The new model preserves the exact raw native JSON from each receipt, keeps older imports recoverable after a later edit, refuses an invalid import or an overflowing journal instead of discarding history, and can receive an older single-pocket record without rewriting the native bytes. It limits one journal to 12 receipts and 3 MB; an exported journal may be restored only into an empty journal. These are specimen limits, not a final visitor retention policy.
+
+Five tests in `native-folio-history.test.mjs` passed under Node 22.16.0 from byte-for-byte Git-blob-matched copies. This proves model behavior, **not** browser persistence, migration of actual visitor data, chronology or authorship, access protection, multi-user operation, or a completed personal backpack. The next earned work is an explicit visitor interface with legible import receipts, recoverable older versions, export before clearing, refusal to overwrite a different backpack, and browser-restart tests. Neither the source page nor the public site was changed.
