@@ -61,7 +61,7 @@ let journal=emptyFolioHistory(),selectedFolio=null,selectedJournal=null,snapshot
 let canReadStorage=true,locked=false;
 function report(message){status.textContent=message;}
 try{snapshot=localStorage.getItem(KEY);}catch{canReadStorage=false;report('Browser storage is unavailable. This pocket can still receive files in the current tab; download your journal before closing.');}
-if(snapshot){
+if(snapshot!==null){
   try{journal=parseFolioHistory(snapshot);report('Welcome back. Previous versions were recovered from this browser.');}
   catch{locked=true;report('Stored journal could not be validated. Import and release are locked to avoid erasing possibly recoverable browser data. No stored data was changed.');}
 }
@@ -83,7 +83,8 @@ function download(text,name){
 function render(){
   const count=journal.receipts.length;
   add.disabled=locked||!selectedFolio;restore.disabled=locked||!selectedJournal;
-  take.disabled=exportButton.disabled=release.disabled=locked||!count;
+  take.disabled=exportButton.disabled=locked||!count;
+  release.disabled=locked||!canReadStorage||!count;
   held.textContent=count?count+' version(s) held. Latest source edition: '+journal.receipts.at(-1).working_edition+'.':'No versions received.';
   versions.replaceChildren();
   journal.receipts.forEach((receipt,i)=>{
@@ -135,14 +136,17 @@ restore.addEventListener('click',async()=>{
 take.addEventListener('click',()=>{if(journal.receipts.length)download(recoverLatestFolio(journal),'public-lands-face-111-return-folio.json');});
 exportButton.addEventListener('click',()=>{if(journal.receipts.length)download(exportFolioHistory(journal),'public-lands-face-111-journal.json');});
 release.addEventListener('click',()=>{
-  if(locked||!journal.receipts.length||!confirm('Release the ENTIRE browser journal, including older versions? Download the journal first if you want to keep it.'))return;
-  if(canReadStorage){
-    try{
-      if(localStorage.getItem(KEY)!==snapshot)throw Error('Another tab changed the stored journal. Nothing released.');
-      localStorage.removeItem(KEY);snapshot=null;
-    }catch(err){report('RELEASE REFUSED — '+err.message+'; existing versions kept.');return;}
+  if(locked||!canReadStorage||!journal.receipts.length||!confirm('Release the ENTIRE browser journal, including older versions? Download the journal first if you want to keep it.'))return;
+  try{
+    if(localStorage.getItem(KEY)!==snapshot)throw Error('Another tab changed the stored journal. Nothing released.');
+    localStorage.removeItem(KEY);
+    if(localStorage.getItem(KEY)!==null)throw Error('Browser storage still contains a journal after release was requested');
+    snapshot=null;
+  }catch(err){
+    report('RELEASE NOT CONFIRMED — '+err.message+'. Versions remain available in this tab; stored data may have changed. Export before leaving.');
+    return;
   }
-  journal=emptyFolioHistory();render();report('Browser journal released. Files you downloaded remain yours.');
+  journal=emptyFolioHistory();render();report('Browser journal release confirmed. Files you downloaded remain yours.');
 });
 render();
 </script></body></html>
