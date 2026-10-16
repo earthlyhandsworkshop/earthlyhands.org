@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One Workshop — First Backpack Walk</title>
+<style>:root{font-family:Georgia,serif;background:#eee9df;color:#292c29}*{box-sizing:border-box}body{max-width:950px;margin:auto;padding:clamp(1rem,4vw,3rem);line-height:1.6}nav{font:12px system-ui;letter-spacing:.12em;text-transform:uppercase;color:#65685f}h1{font-size:clamp(2.2rem,5vw,4rem);font-weight:normal;line-height:1.05}section{padding:clamp(1rem,3vw,2rem);background:#fffdf8;border:1px solid #cfc8bb;border-radius:8px;margin:1.4rem 0}a{color:#31594d}button,.file-button{border:1px solid #4a5e4e;padding:.7rem 1rem;background:#f5f2e9;border-radius:4px;cursor:pointer;color:#263b2e;font:14px system-ui;margin:.25rem .35rem .25rem 0}button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid #ad8143}textarea{width:100%;min-height:140px;padding:1rem;font:1rem/1.5 Georgia}small,.muted{color:#666c62}#status{min-height:2rem}header p{max-width:670px}code{font-size:.85em;overflow-wrap:anywhere}</style>
+<nav>Earthly Hands / Experimental Ground / A First Walk</nav><header><h1>Put something in your backpack.</h1>
+<p>A first experiment in working with a historical document, keeping your own notes, and returning without changing the common source.</p></header>
+<section><h2>Encounter a source</h2><p><strong>Public Lands Return No. 3 · page 111</strong></p><p>The existing public working edition is a historical research instrument with visible distinctions and corrections. Open the actual page to read it; this experiment does not duplicate, certify, or amend the source.</p><p><a href="https://earthlyhands.org/experiments/public-lands-page-111/" target="_blank" rel="noopener">Visit the Public Lands working edition ↗</a></p><small>Backpack reference: <code>eh:public-lands:no3:p111</code>. Working edition; source revisions must be reconciled before production.</small></section>
+<section><h2>Your backpack</h2><p>This is only a prototype. Notes are saved in this browser's local storage, not in an Earthly Hands account. Don't store sensitive information here. Export a copy to carry it to another device.</p>
+<label for="note">A question, observation, or reason to return</label><textarea id="note" placeholder="What caught your attention?"></textarea>
+<p><button id="save">Place in backpack</button><button id="clear">Remove note</button></p><p id="status" role="status"></p>
+<p><button id="export">Export backpack</button><label class="file-button" for="import">Import backpack</label><input id="import" type="file" accept=".json,application/json" style="max-width:180px"></p>
+</section><section><h2>Leave and return</h2><p>Try saving a note. Close this tab, reopen this same page in the same browser, and see whether it remains. Export your backpack and import it back to test portability. Clearing site data or changing browsers may lose a local-only copy.</p><p><a href="./">Return to the One Workshop experimental threshold</a></p></section>
+<script type="module">
+import {newBackpack,parseBackpack,putNote,removeNote,exportBackpack} from './backpack.mjs';
+const key='earthlyhands-one-workshop-private-backpack-v0';
+const doc='eh:public-lands:no3:p111';
+const note=document.querySelector('#note'), status=document.querySelector('#status');
+let b;try{b=parseBackpack(localStorage.getItem(key)||newBackpack('local-browser-visitor'))}catch{b=newBackpack('local-browser-visitor');status.textContent='Old local data could not be read; no changes made to it.'}
+function show(){const entry=b.entries.find(e=>e.document_id===doc);note.value=entry?.note||'';status.textContent=entry?'A note is in your backpack for this source.':'No note saved for this source yet.'}
+document.querySelector('#save').onclick=()=>{try{const next=putNote(b,doc,1,note.value);localStorage.setItem(key,exportBackpack(next));b=next;show()}catch(e){status.textContent='Save refused: '+e.message}};
+document.querySelector('#clear').onclick=()=>{try{const next=removeNote(b,doc);localStorage.setItem(key,exportBackpack(next));b=next;show()}catch(e){status.textContent='Remove refused: '+e.message}};
+document.querySelector('#export').onclick=()=>{try{const blob=new Blob([exportBackpack(b)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='earthly-hands-backpack.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}catch(e){status.textContent='Export refused: '+e.message}};
+document.querySelector('#import').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{if(f.size>200000)throw Error('File too large for this experiment');const next=parseBackpack(await f.text());localStorage.setItem(key,exportBackpack(next));b=next;show()}catch(err){status.textContent='Import refused: '+err.message}finally{e.target.value=''}};
+show();
+</script></html>
