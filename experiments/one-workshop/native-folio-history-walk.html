@@ -13,6 +13,7 @@ h1{font-weight:normal;font-size:clamp(2.5rem,7vw,5rem);line-height:1.06;letter-s
 .wide{grid-column:1/-1}.number{font-size:.73rem;font-weight:700;letter-spacing:.07em;color:#345a4c}
 a{color:#345a4c;text-underline-offset:3px}button,.pick{font:600 .9rem system-ui;color:#fff;background:#345a4c;border:1px solid #345a4c;border-radius:4px;padding:11px 14px;display:inline-block;cursor:pointer;margin:8px 8px 8px 0}
 button.alt{background:transparent;color:#345a4c}button:disabled{opacity:.5;cursor:not-allowed}
+[hidden]{display:none!important}
 input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #bd8742;outline-offset:3px}
 .pick{position:relative}.pick input{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}.pick:focus-within{outline:3px solid #bd8742;outline-offset:3px}
 .quiet{font-size:.88rem;color:#4b554b;overflow-wrap:anywhere}#status{white-space:pre-wrap;overflow-wrap:anywhere;background:#e5eada;border-left:4px solid #345a4c;padding:15px;min-height:4em}
@@ -43,6 +44,7 @@ details summary{cursor:pointer}footer{border-top:1px solid #bcb9a9;margin-top:36
 <ol id="versions" aria-label="Carried folio versions"></ol>
 <button id="take" type="button" disabled>Download latest original folio JSON</button>
 <button id="export" type="button" disabled>Download complete journal JSON</button>
+<button id="rescue" class="alt" type="button" hidden disabled>Download unrecognized stored bytes (unverified)</button>
 <button id="release" class="alt" type="button" disabled>Release this browser journal</button>
 <p class="quiet">An imported version is preserved byte for byte. The source page, not this pocket, decides how old marks relate to its current edition. This journal remembers the order files arrived, <em>not</em> their historical dates or authors. Twelve distinct versions / 3 MB maximum in this specimen. Export before clearing. A second tab may race this tab; local storage is not a transactional account.</p>
 </section></main>
@@ -56,14 +58,14 @@ const $=id=>document.getElementById(id);
 const folioFile=$('folio-file'),journalFile=$('journal-file'),add=$('add'),restore=$('restore'),
   folioSelection=$('folio-selection'),journalSelection=$('journal-selection'),
   held=$('held'),status=$('status'),versions=$('versions'),take=$('take'),
-  exportButton=$('export'),release=$('release');
+  exportButton=$('export'),rescue=$('rescue'),release=$('release');
 let journal=emptyFolioHistory(),selectedFolio=null,selectedJournal=null,snapshot=null;
 let canReadStorage=true,locked=false;
 function report(message){status.textContent=message;}
 try{snapshot=localStorage.getItem(KEY);}catch{canReadStorage=false;report('Browser storage is unavailable. This pocket can still receive files in the current tab; download your journal before closing.');}
 if(snapshot!==null){
   try{journal=parseFolioHistory(snapshot);report('Welcome back. Previous versions were recovered from this browser.');}
-  catch{locked=true;report('Stored journal could not be validated. Import and release are locked to avoid erasing possibly recoverable browser data. No stored data was changed.');}
+  catch{locked=true;report('Stored journal could not be validated. Import and release are locked. You can download the exact unreadable stored bytes below for possible repair. No stored data was changed.');}
 }
 function persist(candidate){
   if(locked)throw Error('The unrecognized stored journal must be preserved');
@@ -75,8 +77,8 @@ function persist(candidate){
   try{localStorage.setItem(KEY,next);snapshot=next;return true;}
   catch{return false;}
 }
-function download(text,name){
-  const url=URL.createObjectURL(new Blob([text],{type:'application/json'}));
+function download(text,name,type='application/json'){
+  const url=URL.createObjectURL(new Blob([text],{type}));
   const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
   setTimeout(()=>URL.revokeObjectURL(url),3000);
 }
@@ -84,6 +86,7 @@ function render(){
   const count=journal.receipts.length;
   add.disabled=locked||!selectedFolio;restore.disabled=locked||!selectedJournal;
   take.disabled=exportButton.disabled=locked||!count;
+  rescue.hidden=!locked;rescue.disabled=!locked||snapshot===null;
   release.disabled=locked||!canReadStorage||!count;
   held.textContent=count?count+' version(s) held. Latest source edition: '+journal.receipts.at(-1).working_edition+'.':'No versions received.';
   versions.replaceChildren();
@@ -135,6 +138,11 @@ restore.addEventListener('click',async()=>{
 });
 take.addEventListener('click',()=>{if(journal.receipts.length)download(recoverLatestFolio(journal),'public-lands-face-111-return-folio.json');});
 exportButton.addEventListener('click',()=>{if(journal.receipts.length)download(exportFolioHistory(journal),'public-lands-face-111-journal.json');});
+rescue.addEventListener('click',()=>{
+  if(!locked||snapshot===null)return;
+  download(snapshot,'public-lands-face-111-unrecognized-browser-data.txt','text/plain;charset=utf-8');
+  report('RAW RECOVERY COPY REQUESTED — These stored bytes are unverified; they may need repair. The browser journal has not been changed.');
+});
 release.addEventListener('click',()=>{
   if(locked||!canReadStorage||!journal.receipts.length||!confirm('Release the ENTIRE browser journal, including older versions? Download the journal first if you want to keep it.'))return;
   try{
