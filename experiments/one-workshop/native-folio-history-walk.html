@@ -44,15 +44,16 @@ details summary{cursor:pointer}footer{border-top:1px solid #bcb9a9;margin-top:36
 <ol id="versions" aria-label="Carried folio versions"></ol>
 <button id="take" type="button" disabled>Download latest original folio JSON</button>
 <button id="export" type="button" disabled>Download complete journal JSON</button>
-<button id="rescue" class="alt" type="button" hidden disabled>Download unrecognized stored bytes (unverified)</button>
+<button id="rescue" class="alt" type="button" hidden disabled>Download unrecognized stored string (unverified)</button>
 <button id="release" class="alt" type="button" disabled>Release this browser journal</button>
-<p class="quiet">An imported version is preserved byte for byte. The source page, not this pocket, decides how old marks relate to its current edition. This journal remembers the order files arrived, <em>not</em> their historical dates or authors. Twelve distinct versions / 3 MB maximum in this specimen. Export before clearing. A second tab may race this tab; local storage is not a transactional account.</p>
+<p class="quiet">An imported version’s JSON text is preserved exactly as received by the browser text reader. The source page, not this pocket, decides how old marks relate to its current edition. This journal remembers the order files arrived, <em>not</em> their historical dates or authors. Twelve distinct versions / 3 MB maximum in this specimen. Export before clearing. A second tab may race this tab; local storage is not a transactional account.</p>
 </section></main>
 <footer class="quiet">Local, reversible, and not deployed as a multi-user service. Browser data can be cleared. Avoid private or sensitive annotations on an untrusted device. · Powerful finger. Trustworthy result.</footer>
 </div>
 <script type="module">
 import {emptyFolioHistory,parseFolioHistory,receiveFolioVersion,recoverFolioVersion,recoverLatestFolio,
   exportFolioHistory,restoreFolioHistoryIntoEmpty} from './native-folio-history.mjs';
+import {exportUnrecognizedStoredString} from './unrecognized-storage-rescue.mjs';
 const KEY='earthlyhands.one-workshop.native-folio-history.111.v0';
 const $=id=>document.getElementById(id);
 const folioFile=$('folio-file'),journalFile=$('journal-file'),add=$('add'),restore=$('restore'),
@@ -65,7 +66,7 @@ function report(message){status.textContent=message;}
 try{snapshot=localStorage.getItem(KEY);}catch{canReadStorage=false;report('Browser storage is unavailable. This pocket can still receive files in the current tab; download your journal before closing.');}
 if(snapshot!==null){
   try{journal=parseFolioHistory(snapshot);report('Welcome back. Previous versions were recovered from this browser.');}
-  catch{locked=true;report('Stored journal could not be validated. Import and release are locked. You can download the exact unreadable stored bytes below for possible repair. No stored data was changed.');}
+  catch{locked=true;report('Stored journal could not be validated. Import and release are locked. You can download the unverified stored browser string below without validating or repairing it. No stored data was changed.');}
 }
 function persist(candidate){
   if(locked)throw Error('The unrecognized stored journal must be preserved');
@@ -140,8 +141,9 @@ take.addEventListener('click',()=>{if(journal.receipts.length)download(recoverLa
 exportButton.addEventListener('click',()=>{if(journal.receipts.length)download(exportFolioHistory(journal),'public-lands-face-111-journal.json');});
 rescue.addEventListener('click',()=>{
   if(!locked||snapshot===null)return;
-  download(snapshot,'public-lands-face-111-unrecognized-browser-data.txt','text/plain;charset=utf-8');
-  report('RAW RECOVERY COPY REQUESTED — These stored bytes are unverified; they may need repair. The browser journal has not been changed.');
+  download(exportUnrecognizedStoredString(snapshot,KEY),
+    'public-lands-face-111-unrecognized-browser-storage.json','application/json');
+  report('UNVERIFIED RECOVERY ENVELOPE REQUESTED — Stored browser string wrapped without validation or repair; browser journal unchanged.');
 });
 release.addEventListener('click',()=>{
   if(locked||!canReadStorage||!journal.receipts.length||!confirm('Release the ENTIRE browser journal, including older versions? Download the journal first if you want to keep it.'))return;
