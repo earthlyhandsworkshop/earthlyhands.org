@@ -8,17 +8,91 @@
 <label for="note">A question, observation, or reason to return</label><textarea id="note" placeholder="What caught your attention?"></textarea>
 <p><button id="save">Place in backpack</button><button id="clear">Remove note</button></p><p id="status" role="status"></p>
 <p><button id="export">Export backpack</button><label class="file-button" for="import">Import backpack</label><input id="import" type="file" accept=".json,application/json" style="max-width:180px"></p>
+<p id="rescue-row" hidden><button id="rescue">Download unrecognized saved data (unverified)</button></p>
 </section><section><h2>Leave and return</h2><p>Try saving a note. Close this tab, reopen this same page in the same browser, and see whether it remains. Export your backpack and import it back to test portability. Clearing site data or changing browsers may lose a local-only copy.</p><p><a href="./">Return to the One Workshop experimental threshold</a></p></section>
 <script type="module">
 import {newBackpack,parseBackpack,putNote,removeNote,exportBackpack} from './backpack.mjs';
+import {exportUnrecognizedStoredString} from './unrecognized-storage-rescue.mjs';
 const key='earthlyhands-one-workshop-private-backpack-v0';
 const doc='eh:public-lands:no3:p111';
 const note=document.querySelector('#note'), status=document.querySelector('#status');
-let b;try{b=parseBackpack(localStorage.getItem(key)||newBackpack('local-browser-visitor'))}catch{b=newBackpack('local-browser-visitor');status.textContent='Old local data could not be read; no changes made to it.'}
-function show(){const entry=b.entries.find(e=>e.document_id===doc);note.value=entry?.note||'';status.textContent=entry?'A note is in your backpack for this source.':'No note saved for this source yet.'}
-document.querySelector('#save').onclick=()=>{try{const next=putNote(b,doc,1,note.value);localStorage.setItem(key,exportBackpack(next));b=next;show()}catch(e){status.textContent='Save refused: '+e.message}};
-document.querySelector('#clear').onclick=()=>{try{const next=removeNote(b,doc);localStorage.setItem(key,exportBackpack(next));b=next;show()}catch(e){status.textContent='Remove refused: '+e.message}};
-document.querySelector('#export').onclick=()=>{try{const blob=new Blob([exportBackpack(b)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='earthly-hands-backpack.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}catch(e){status.textContent='Export refused: '+e.message}};
-document.querySelector('#import').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{if(f.size>200000)throw Error('File too large for this experiment');const next=parseBackpack(await f.text());localStorage.setItem(key,exportBackpack(next));b=next;show()}catch(err){status.textContent='Import refused: '+err.message}finally{e.target.value=''}};
+let b, unrecognized=null, locked=false;
+try {
+  const saved=localStorage.getItem(key);
+  if(saved===null) b=newBackpack('local-browser-visitor');
+  else {
+    try { b=parseBackpack(saved); }
+    catch { locked=true; unrecognized=saved; b=newBackpack('local-browser-visitor'); }
+  }
+} catch {
+  locked=true; b=newBackpack('local-browser-visitor');
+}
+function show(){
+  if(locked){
+    note.value='';
+    status.textContent=unrecognized===null
+      ? 'Browser storage could not be read. Changes are locked; no stored data was changed.'
+      : 'Saved backpack could not be validated. Changes are locked to protect the original. Download the unrecognized data before attempting recovery.';
+    return;
+  }
+  const entry=b.entries.find(e=>e.document_id===doc);
+  note.value=entry?.note||'';
+  status.textContent=entry?'A note is in your backpack for this source.':'No note saved for this source yet.';
+}
+if(locked){
+  for(const id of ['save','clear','export','import'])document.querySelector('#'+id).disabled=true;
+  note.disabled=true;
+  if(unrecognized!==null)document.querySelector('#rescue-row').hidden=false;
+}
+document.querySelector('#rescue').onclick=()=>{
+  if(unrecognized===null)return;
+  try{
+    // The envelope preserves the JavaScript string, not original source bytes.
+    // It is not validation, repair, or a permission to overwrite the stored value.
+    const envelope=exportUnrecognizedStoredString(unrecognized,key);
+    const url=URL.createObjectURL(new Blob([envelope],{type:'application/json'}));
+    const link=document.createElement('a');
+    link.href=url;
+    link.download='earthly-hands-unrecognized-backpack-storage.json';
+    link.click();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }catch(e){status.textContent='Rescue download failed: '+e.message;}
+};
+document.querySelector('#save').onclick=()=>{
+  if(locked)return;
+  try{
+    const next=putNote(b,doc,1,note.value);
+    localStorage.setItem(key,exportBackpack(next));
+    b=next;show();
+  }catch(e){status.textContent='Save refused: '+e.message;}
+};
+document.querySelector('#clear').onclick=()=>{
+  if(locked)return;
+  try{
+    const next=removeNote(b,doc);
+    localStorage.setItem(key,exportBackpack(next));
+    b=next;show();
+  }catch(e){status.textContent='Remove refused: '+e.message;}
+};
+document.querySelector('#export').onclick=()=>{
+  if(locked)return;
+  try{
+    const blob=new Blob([exportBackpack(b)],{type:'application/json'});
+    const url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download='earthly-hands-backpack.json';a.click();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }catch(e){status.textContent='Export refused: '+e.message;}
+};
+document.querySelector('#import').onchange=async e=>{
+  if(locked)return;
+  const f=e.target.files[0];if(!f)return;
+  try{
+    if(f.size>200000)throw Error('File too large for this experiment');
+    const next=parseBackpack(await f.text());
+    localStorage.setItem(key,exportBackpack(next));
+    b=next;show();
+  }catch(err){status.textContent='Import refused: '+err.message;}
+  finally{e.target.value='';}
+};
 show();
 </script></html>
