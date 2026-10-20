@@ -23,7 +23,7 @@ export function parseFolioHistory(value) {
   }
   const receipts=x.receipts.map(checkNativeFolioPocket);
   const result={schema:FOLIO_HISTORY_SCHEMA,source:PL111_SOURCE,receipts};
-  if (bytes(JSON.stringify(result)) > MAX_HISTORY_BYTES) throw Error('Folio history too large');
+  if (bytes(JSON.stringify(result, null, 2) + '\n') > MAX_HISTORY_BYTES) throw Error('Folio history too large');
   return result;
 }
 
