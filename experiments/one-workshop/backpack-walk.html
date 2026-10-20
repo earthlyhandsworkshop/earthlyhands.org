@@ -4,7 +4,7 @@
 <nav>Earthly Hands / Experimental Ground / A First Walk</nav><header><h1>Put something in your backpack.</h1>
 <p>A first experiment in working with a historical document, keeping your own notes, and returning without changing the common source.</p></header>
 <section><h2>Encounter a source</h2><p><strong>Public Lands Return No. 3 · page 111</strong></p><p>The existing public working edition is a historical research instrument with visible distinctions and corrections. Open the actual page to read it; this experiment does not duplicate, certify, or amend the source.</p><p><a href="https://earthlyhands.org/experiments/public-lands-page-111/" target="_blank" rel="noopener">Visit the Public Lands working edition ↗</a></p><small>Backpack reference: <code>eh:public-lands:no3:p111</code>. Working edition; source revisions must be reconciled before production.</small></section>
-<section><h2>Your backpack</h2><p>This is only a prototype. Notes are saved in this browser's local storage, not in an Earthly Hands account. Don't store sensitive information here. Export a copy to carry it to another device.</p>
+<section><h2>Your backpack</h2><p>This is only a prototype. Notes are saved in this browser's local storage, not in an Earthly Hands account. Don't store sensitive information here. Export a copy to carry it to another device. Two tabs can conflict; the draft checks for intervening changes before writes, but this is not an atomic multi-tab lock.</p>
 <label for="note">A question, observation, or reason to return</label><textarea id="note" placeholder="What caught your attention?"></textarea>
 <p><button id="save">Place in backpack</button><button id="clear">Remove note</button></p><p id="status" role="status"></p>
 <p><button id="export">Export backpack</button><label class="file-button" for="import">Import backpack</label><input id="import" type="file" accept=".json,application/json" style="max-width:180px"></p>
@@ -16,9 +16,10 @@ import {exportUnrecognizedStoredString} from './unrecognized-storage-rescue.mjs'
 const key='earthlyhands-one-workshop-private-backpack-v0';
 const doc='eh:public-lands:no3:p111';
 const note=document.querySelector('#note'), status=document.querySelector('#status');
-let b, unrecognized=null, locked=false;
+let b, unrecognized=null, locked=false, stale=false, snapshot=null;
 try {
   const saved=localStorage.getItem(key);
+  snapshot=saved;
   if(saved===null) b=newBackpack('local-browser-visitor');
   else {
     try { b=parseBackpack(saved); }
@@ -38,6 +39,21 @@ function show(){
   const entry=b.entries.find(e=>e.document_id===doc);
   note.value=entry?.note||'';
   status.textContent=entry?'A note is in your backpack for this source.':'No note saved for this source yet.';
+}
+// Best-effort tab-to-tab freshness check, never an atomic storage transaction.
+function persist(next){
+  if(locked||stale)throw Error('Changes are locked in this tab. Export or copy your work before reloading');
+  const present=localStorage.getItem(key);
+  if(present!==snapshot){
+    stale=true;
+    for(const id of ['save','clear','import'])document.querySelector('#'+id).disabled=true;
+    throw Error('Another tab changed this browser backpack. Nothing was overwritten. Export the earlier backpack from this tab, copy any unsaved note, and reload before making changes');
+  }
+  const serialized=exportBackpack(next);
+  localStorage.setItem(key,serialized);
+  snapshot=serialized;
+  b=next;
+  show();
 }
 if(locked){
   for(const id of ['save','clear','export','import'])document.querySelector('#'+id).disabled=true;
@@ -62,16 +78,14 @@ document.querySelector('#save').onclick=()=>{
   if(locked)return;
   try{
     const next=putNote(b,doc,1,note.value);
-    localStorage.setItem(key,exportBackpack(next));
-    b=next;show();
+    persist(next);
   }catch(e){status.textContent='Save refused: '+e.message;}
 };
 document.querySelector('#clear').onclick=()=>{
   if(locked)return;
   try{
     const next=removeNote(b,doc);
-    localStorage.setItem(key,exportBackpack(next));
-    b=next;show();
+    persist(next);
   }catch(e){status.textContent='Remove refused: '+e.message;}
 };
 document.querySelector('#export').onclick=()=>{
@@ -89,8 +103,7 @@ document.querySelector('#import').onchange=async e=>{
   try{
     if(f.size>200000)throw Error('File too large for this experiment');
     const next=parseBackpack(await f.text());
-    localStorage.setItem(key,exportBackpack(next));
-    b=next;show();
+    persist(next);
   }catch(err){status.textContent='Import refused: '+err.message;}
   finally{e.target.value='';}
 };
