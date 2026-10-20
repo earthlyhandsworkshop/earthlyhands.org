@@ -52,3 +52,24 @@ test('portable history imports only into empty history', () => {
   assert.throws(()=>restoreFolioHistoryIntoEmpty(saved,exportFolioHistory(saved)),
     /already has folio history/);
 });
+
+test('near-limit journal never accepts a receipt whose export cannot return', () => {
+  // Each valid native folio fits the 300 KB per-file cap. Ten fit the
+  // old compact journal size limit, but indentation makes its export too big.
+  const largeFolio = index => JSON.stringify({
+    v:1, source:'public-lands-return-3-face-111',
+    format:'Earthly Hands / Public Lands / folio v1',
+    workingReadingEdition:'edge-'+index,
+    note:'x'.repeat(25),
+    occurrences:Array(40).fill('x'.repeat(7485)),
+    marks:[]
+  })+'\n';
+
+  let kept=emptyFolioHistory();
+  for(let i=0;i<9;i++) kept=receiveFolioVersion(kept,largeFolio(i));
+  const portable=exportFolioHistory(kept);
+  assert.deepEqual(parseFolioHistory(portable),kept);
+
+  assert.throws(()=>receiveFolioVersion(kept,largeFolio(9)),/too large/);
+  assert.equal(exportFolioHistory(kept),portable);
+});
