@@ -36,4 +36,25 @@ export function removeNote(backpack,document_id) {
   x.entries=x.entries.filter(e=>e.document_id!==document_id);
   return x;
 }
+// Receiving is additive. A conflicting history must be reconciled by the visitor,
+// never silently replaced by an imported specimen. Owner is an unauthenticated label.
+export function receiveBackpack(current, incoming) {
+  const local=parseBackpack(current);
+  const arrival=parseBackpack(incoming);
+  if(local.entries.length===0) return arrival; // restore a carried bag on an empty device
+  if(local.owner!==arrival.owner) throw Error('Different visitor labels; keep both copies for reconciliation');
+  const entries=local.entries.slice();
+  const byId=new Map(entries.map(entry=>[entry.document_id,entry]));
+  for(const entry of arrival.entries) {
+    const present=byId.get(entry.document_id);
+    if(present) {
+      if(present.source_revision!==entry.source_revision || present.note!==entry.note)
+        throw Error('Conflicting annotation; keep both copies for reconciliation');
+    } else {
+      entries.push(entry);
+      byId.set(entry.document_id,entry);
+    }
+  }
+  return parseBackpack({schema:VERSION,owner:local.owner,entries}); // capacity gate
+}
 export function exportBackpack(backpack) {return JSON.stringify(parseBackpack(backpack),null,2)+'\n';}
