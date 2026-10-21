@@ -4,14 +4,14 @@
 <nav>Earthly Hands / Experimental Ground / A First Walk</nav><header><h1>Put something in your backpack.</h1>
 <p>A first experiment in working with a historical document, keeping your own notes, and returning without changing the common source.</p></header>
 <section><h2>Encounter a source</h2><p><strong>Public Lands Return No. 3 · page 111</strong></p><p>The existing public working edition is a historical research instrument with visible distinctions and corrections. Open the actual page to read it; this experiment does not duplicate, certify, or amend the source.</p><p><a href="https://earthlyhands.org/experiments/public-lands-page-111/" target="_blank" rel="noopener">Visit the Public Lands working edition ↗</a></p><small>Backpack reference: <code>eh:public-lands:no3:p111</code>. Working edition; source revisions must be reconciled before production.</small></section>
-<section><h2>Your backpack</h2><p>This is only a prototype. Notes are saved in this browser's local storage, not in an Earthly Hands account. Don't store sensitive information here. Export a copy to carry it to another device. Two tabs can conflict; the draft checks for intervening changes before writes, but this is not an atomic multi-tab lock.</p>
+<section><h2>Your backpack</h2><p>This is only a prototype. Notes are saved in this browser's local storage, not in an Earthly Hands account. Don't store sensitive information here. Export a copy to carry it to another device. Imports add nonconflicting saved notes; differing versions are refused, not replaced. Save or copy unsaved words before importing. Two tabs can conflict; the draft checks for intervening changes before writes, but this is not an atomic multi-tab lock.</p>
 <label for="note">A question, observation, or reason to return</label><textarea id="note" placeholder="What caught your attention?"></textarea>
 <p><button id="save">Place in backpack</button><button id="clear">Remove note</button></p><p id="status" role="status"></p>
 <p><button id="export">Export backpack</button><label class="file-button" for="import">Import backpack</label><input id="import" type="file" accept=".json,application/json" style="max-width:180px"></p>
 <p id="rescue-row" hidden><button id="rescue">Download unrecognized saved data (unverified)</button></p>
 </section><section><h2>Leave and return</h2><p>Try saving a note. Close this tab, reopen this same page in the same browser, and see whether it remains. Export your backpack and import it back to test portability. Clearing site data or changing browsers may lose a local-only copy.</p><p><a href="./">Return to the One Workshop experimental threshold</a></p></section>
 <script type="module">
-import {newBackpack,parseBackpack,putNote,removeNote,exportBackpack,MAX_BACKPACK_IMPORT_BYTES} from './backpack.mjs';
+import {newBackpack,parseBackpack,receiveBackpack,putNote,removeNote,exportBackpack,MAX_BACKPACK_IMPORT_BYTES} from './backpack.mjs';
 import {exportUnrecognizedStoredString} from './unrecognized-storage-rescue.mjs';
 const key='earthlyhands-one-workshop-private-backpack-v0';
 const doc='eh:public-lands:no3:p111';
@@ -103,7 +103,9 @@ document.querySelector('#import').onchange=async e=>{
   try{
     if(f.size>MAX_BACKPACK_IMPORT_BYTES)throw Error('File too large for this experiment');
     const next=parseBackpack(await f.text());
-    persist(next);
+    const savedNote=b.entries.find(e=>e.document_id===doc)?.note ?? '';
+    if(note.value!==savedNote) throw Error('Unsaved writing would be lost. Save or copy it before importing');
+    persist(receiveBackpack(b,next));
   }catch(err){status.textContent='Import refused: '+err.message;}
   finally{e.target.value='';}
 };
