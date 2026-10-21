@@ -1,6 +1,9 @@
 // A portable private backpack specimen, independent of any AI provider.
 // Pure model only: no authentication, storage, networking, or publication.
 export const VERSION = 'earthlyhands.backpack.specimen.v0';
+// Supports every canonical export admitted by this model, including escaped notes.
+// This is a file-import ceiling, not a promise of browser storage capacity.
+export const MAX_BACKPACK_IMPORT_BYTES = 8_000_000;
 const LIMIT = 100;
 export function newBackpack(owner) {
   if (typeof owner !== 'string' || !owner.trim() || owner.length > 128) throw Error('Invalid owner');
