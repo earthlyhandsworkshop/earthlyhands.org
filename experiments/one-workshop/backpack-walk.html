@@ -11,7 +11,7 @@
 <p id="rescue-row" hidden><button id="rescue">Download unrecognized saved data (unverified)</button></p>
 </section><section><h2>Leave and return</h2><p>Try saving a note. Close this tab, reopen this same page in the same browser, and see whether it remains. Export your backpack and import it back to test portability. Clearing site data or changing browsers may lose a local-only copy.</p><p><a href="./">Return to the One Workshop experimental threshold</a></p></section>
 <script type="module">
-import {newBackpack,parseBackpack,putNote,removeNote,exportBackpack} from './backpack.mjs';
+import {newBackpack,parseBackpack,putNote,removeNote,exportBackpack,MAX_BACKPACK_IMPORT_BYTES} from './backpack.mjs';
 import {exportUnrecognizedStoredString} from './unrecognized-storage-rescue.mjs';
 const key='earthlyhands-one-workshop-private-backpack-v0';
 const doc='eh:public-lands:no3:p111';
@@ -101,7 +101,7 @@ document.querySelector('#import').onchange=async e=>{
   if(locked)return;
   const f=e.target.files[0];if(!f)return;
   try{
-    if(f.size>200000)throw Error('File too large for this experiment');
+    if(f.size>MAX_BACKPACK_IMPORT_BYTES)throw Error('File too large for this experiment');
     const next=parseBackpack(await f.text());
     persist(next);
   }catch(err){status.textContent='Import refused: '+err.message;}
