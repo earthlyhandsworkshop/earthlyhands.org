@@ -107,3 +107,11 @@ The PR remains a draft, undeployed, and not an authenticated or multi-user syste
 `backpack-removal.test.mjs`, committed in `6a6113e5f336e6357e78a68e2d0fb7e2fe17b2c9`, has now been run under Node 22.16.0: **4 passed, 0 failed**. Before execution, the local test (`46f50d41402d0493608478704f987bc68d364874`), browser page (`c2b24f07d5c9dda81d354b52f2ed7e94ce9b8105`), and backpack model (`3b10dc46a441ca706206a2c1cc357068478effeb`) matched the current draft branch's Git blob SHAs. The cases protect unsaved text during removal, deliberate removal when clean, new unsaved notes, and refusal of a changed-tab removal. This closes the previous **not-run-under-Node** caveat for this particular suite; it does not establish real-browser behavior, atomic cross-tab protection, durable storage, or a deployed multi-user system. No deployment or migration is authorized by these checks.
 
 Hand: Small Door
+
+## Backpack export: unsaved-writing boundary — 22 October 2026
+
+An exported backpack serializes **saved notes**, not the current textarea. Before this correction a visitor could type different words, export an apparently successful backpack, and later discover that the file carried only the older saved note. The draft browser specimen now refuses export while the visible note differs from its saved counterpart; it instructs the visitor to save or copy the words first. Export of clean saved notes remains available. This is a UI preservation boundary, not full visitor revision history.
+
+The new `backpack-export.test.mjs` contains four simulated DOM/storage cases: an edited draft, a brand-new unsaved note, an unchanged saved note, and save-then-export. **Seven independent source-handler checks passed in a JavaScript isolate** before commit. The new Node test file has not yet been executed under Node; an actual browser download, storage persistence, mobile interaction, and cross-tab race remain unproven. No production deployment, merger, or historical Drive migration is authorized by this small correction.
+
+Hand: Small Door
