@@ -115,3 +115,19 @@ An exported backpack serializes **saved notes**, not the current textarea. Befor
 The new `backpack-export.test.mjs` contains four simulated DOM/storage cases: an edited draft, a brand-new unsaved note, an unchanged saved note, and save-then-export. The exact committed bytes have now been executed under Node 22.16.0: **4 passed, 0 failed**. Before execution, the test (`31fcdb1dc3ca29dbe65d023bebfe59bbd567007e`), browser page (`1bfc73fe9c906bcbb3c2f0a6454dabd07459a3c8`), and backpack model (`3b10dc46a441ca706206a2c1cc357068478effeb`) matched the draft branch's Git blob SHAs. This closes the **Node suite unexecuted** limitation for this specific test file; an actual browser download, storage persistence, mobile interaction, and cross-tab race remain unproven. No production deployment, merger, or historical Drive migration is authorized by this small correction.
 
 Hand: Small Door
+
+## Stale-tab backpack export — 22 October 2026
+
+`backpack-walk.html` now checks whether local browser storage still matches the snapshot used by the open tab **before creating an export**. If a different saved copy is present or storage cannot be read, export requires explicit visitor confirmation and uses the distinct name `earthly-hands-backpack-earlier-or-unverified-copy.json`. Declining keeps the old copy available in the tab but creates no file and does not alter storage. The normal export name remains `earthly-hands-backpack.json` for an unchanged saved state. Unsaved textarea writing still blocks export before any stale-copy consent is offered. A conflict already observed by the tab is not erased merely because storage later happens to match the earlier bytes.
+
+Draft correction: `db4ecec8`; six committed regression cases: `98d46564`. The six tests in `backpack-stale-export.test.mjs` were previously executed under Node 22.16.0 against Git-blob-matched branch files: **6 passed, 0 failed**. Current readback on 22 October confirms test blob `ff0ead3f5ebd4bd3da88a63ffc4415b87c3b12e6`, browser specimen blob `59a91d983878730fd8d441d556bf2243f1764119`, and model blob `3b10dc46a441ca706206a2c1cc357068478effeb`. These are Node tests using simulated DOM and storage, **not an actual browser download test**. No fresh Node execution is claimed by this documentation change.
+
+To repeat the suite from a checkout:
+
+```sh
+node --test experiments/one-workshop/backpack-stale-export.test.mjs
+```
+
+**Not established:** atomic multi-tab safety, browser download behavior, crash durability, user authentication, or a production multi-user backpack. This is still an isolated draft experiment. No public deployment or historical Drive migration follows from these results.
+
+Hand: Small Door
