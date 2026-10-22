@@ -10,9 +10,9 @@ import {
 
 const docId = 'eh:public-lands:no3:p111';
 const html = readFileSync(new URL('./backpack-walk.html', import.meta.url), 'utf8');
-const inline = html.match(/<script type="module">([\\s\\S]*?)<\\/script>/)?.[1];
+const inline = html.match(/<script type="module">([\s\S]*?)<\/script>/)?.[1];
 assert.ok(inline, 'page must expose its module handler');
-const script = inline.replace(/^import [^\\n]+\\n/gm, '');
+const script = inline.replace(/^import [^\n]+\n/gm, '');
 
 function openPage(initial = null) {
   let stored = initial === null ? null : exportBackpack(initial);
