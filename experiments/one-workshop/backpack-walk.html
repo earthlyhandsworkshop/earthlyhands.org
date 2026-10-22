@@ -4,7 +4,7 @@
 <nav>Earthly Hands / Experimental Ground / A First Walk</nav><header><h1>Put something in your backpack.</h1>
 <p>A first experiment in working with a historical document, keeping your own notes, and returning without changing the common source.</p></header>
 <section><h2>Encounter a source</h2><p><strong>Public Lands Return No. 3 · page 111</strong></p><p>The existing public working edition is a historical research instrument with visible distinctions and corrections. Open the actual page to read it; this experiment does not duplicate, certify, or amend the source.</p><p><a href="https://earthlyhands.org/experiments/public-lands-page-111/" target="_blank" rel="noopener">Visit the Public Lands working edition ↗</a></p><small>Backpack reference: <code>eh:public-lands:no3:p111</code>. Working edition; source revisions must be reconciled before production.</small></section>
-<section><h2>Your backpack</h2><p>This is only a prototype. Notes are saved in this browser's local storage, not in an Earthly Hands account. Don't store sensitive information here. Export a copy to carry it to another device. Imports add nonconflicting saved notes; differing versions are refused, not replaced. Save or copy unsaved words before importing. Two tabs can conflict; the draft checks for intervening changes before writes, but this is not an atomic multi-tab lock.</p>
+<section><h2>Your backpack</h2><p>This is only a prototype. Notes are saved in this browser's local storage, not in an Earthly Hands account. Don't store sensitive information here. Export a copy to carry it to another device. Imports add nonconflicting saved notes; differing versions are refused, not replaced. Save or copy unsaved words before importing or removing a note. Two tabs can conflict; the draft checks for intervening changes before writes, but this is not an atomic multi-tab lock.</p>
 <label for="note">A question, observation, or reason to return</label><textarea id="note" placeholder="What caught your attention?"></textarea>
 <p><button id="save">Place in backpack</button><button id="clear">Remove note</button></p><p id="status" role="status"></p>
 <p><button id="export">Export backpack</button><label class="file-button" for="import">Import backpack</label><input id="import" type="file" accept=".json,application/json" style="max-width:180px"></p>
@@ -84,6 +84,8 @@ document.querySelector('#save').onclick=()=>{
 document.querySelector('#clear').onclick=()=>{
   if(locked)return;
   try{
+    const savedNote=b.entries.find(e=>e.document_id===doc)?.note ?? '';
+    if(note.value!==savedNote)throw Error('Unsaved writing would be lost. Save or copy it before removing the note');
     const next=removeNote(b,doc);
     persist(next);
   }catch(e){status.textContent='Remove refused: '+e.message;}
