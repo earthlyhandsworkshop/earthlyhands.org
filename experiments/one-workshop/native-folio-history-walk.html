@@ -180,6 +180,7 @@ release.addEventListener('click',()=>{
     if(localStorage.getItem(KEY)!==null)throw Error('Browser storage still contains a journal after release was requested');
     snapshot=null;
   }catch(err){
+    stale=true; // A failed release is an observed custody uncertainty, even if storage later reverts.
     report('RELEASE NOT CONFIRMED — '+err.message+'. Versions remain available in this tab; stored data may have changed. Export before leaving.');
     return;
   }
