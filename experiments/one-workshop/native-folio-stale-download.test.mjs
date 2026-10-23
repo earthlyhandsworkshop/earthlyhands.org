@@ -122,3 +122,14 @@ test('observed conflict remains disclosed if storage later reverts',async()=>{
   p.changeStored(one);p.elements.export.handlers.click();
   assert.equal(p.confirmations,1);assert.equal(p.bodies.length,0);
 });
+
+test('failed release keeps the observed storage conflict visible after reversion',()=>{
+  const p=openPage(one);p.changeStored(two);p.allowDownload();
+  p.elements.release.handlers.click();
+  assert.match(p.elements.status.textContent,/RELEASE NOT CONFIRMED/);
+  assert.equal(p.stored,two);
+  p.changeStored(one);p.elements.export.handlers.click();
+  assert.equal(p.confirmations,2); // release consent AND later stale-export consent
+  assert.deepEqual(p.names,['public-lands-face-111-journal-earlier-or-unverified-copy.json']);
+  assert.equal(parseFolioHistory(p.bodies[0]).receipts.length,1);
+});
