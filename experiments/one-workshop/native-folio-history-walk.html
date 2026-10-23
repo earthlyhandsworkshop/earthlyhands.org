@@ -61,7 +61,7 @@ const folioFile=$('folio-file'),journalFile=$('journal-file'),add=$('add'),resto
   held=$('held'),status=$('status'),versions=$('versions'),take=$('take'),
   exportButton=$('export'),rescue=$('rescue'),release=$('release');
 let journal=emptyFolioHistory(),selectedFolio=null,selectedJournal=null,snapshot=null;
-let canReadStorage=true,locked=false;
+let canReadStorage=true,locked=false,stale=false,unsavedInTab=false;
 function report(message){status.textContent=message;}
 try{snapshot=localStorage.getItem(KEY);}catch{canReadStorage=false;report('Browser storage is unavailable. This pocket can still receive files in the current tab; download your journal before closing.');}
 if(snapshot!==null){
@@ -73,10 +73,10 @@ function persist(candidate){
   if(!canReadStorage)return false;
   let present;
   try{present=localStorage.getItem(KEY);}catch{canReadStorage=false;return false;}
-  if(present!==snapshot)throw Error('Another tab changed the browser journal. Nothing replaced; export your held journal and reload this page.');
+  if(present!==snapshot){stale=true;throw Error('Another tab changed the browser journal. Nothing replaced; export your held journal and reload this page.');}
   const next=exportFolioHistory(candidate);
-  try{localStorage.setItem(KEY,next);snapshot=next;return true;}
-  catch{return false;}
+  try{localStorage.setItem(KEY,next);snapshot=next;unsavedInTab=false;return true;}
+  catch{unsavedInTab=true;return false;}
 }
 function download(text,name,type='application/json'){
   const url=URL.createObjectURL(new Blob([text],{type}));
@@ -137,8 +137,35 @@ restore.addEventListener('click',async()=>{
     report('JOURNAL RESTORED — '+journal.receipts.length+' version(s), '+(saved?'saved in this browser.':'held in this tab ONLY; download a copy before leaving.'));
   }catch(err){report('RESTORE REFUSED — '+err.message+'. Existing versions kept.');}
 });
-take.addEventListener('click',()=>{if(journal.receipts.length)download(recoverLatestFolio(journal),'public-lands-face-111-return-folio.json');});
-exportButton.addEventListener('click',()=>{if(journal.receipts.length)download(exportFolioHistory(journal),'public-lands-face-111-journal.json');});
+// Downloads reflect the held tab's state. A second tab may have changed storage.
+// This is a disclosure/consent boundary, NOT an atomic multi-tab lock.
+function downloadState(){
+  let unverified=stale||!canReadStorage||unsavedInTab;
+  try{
+    if(localStorage.getItem(KEY)!==snapshot){stale=true;unverified=true;}
+  }catch{canReadStorage=false;unverified=true;}
+  if(unverified&&!confirm('This tab may hold an earlier or unverified folio history. A different tab may hold newer versions, or this tab may hold changes not saved in the browser. Download this copy anyway?')){
+    report('DOWNLOAD CANCELED — The tab may hold an earlier or unverified copy. Nothing was downloaded.');
+    return null;
+  }
+  return unverified?'unverified':'current';
+}
+take.addEventListener('click',()=>{
+  if(!journal.receipts.length||locked)return;
+  const state=downloadState();if(!state)return;
+  download(recoverLatestFolio(journal),state==='current'
+    ?'public-lands-face-111-return-folio.json'
+    :'public-lands-face-111-return-folio-earlier-or-unverified-copy.json');
+  if(state==='unverified')report('EARLIER OR UNVERIFIED SOURCE FOLIO — Download requested for this tab copy; it may omit newer versions.');
+});
+exportButton.addEventListener('click',()=>{
+  if(!journal.receipts.length||locked)return;
+  const state=downloadState();if(!state)return;
+  download(exportFolioHistory(journal),state==='current'
+    ?'public-lands-face-111-journal.json'
+    :'public-lands-face-111-journal-earlier-or-unverified-copy.json');
+  if(state==='unverified')report('EARLIER OR UNVERIFIED JOURNAL — Download requested for this tab copy; it may omit newer versions or may not be saved in browser storage.');
+});
 rescue.addEventListener('click',()=>{
   if(!locked||snapshot===null)return;
   download(exportUnrecognizedStoredString(snapshot,KEY),
