@@ -131,3 +131,19 @@ node --test experiments/one-workshop/backpack-stale-export.test.mjs
 **Not established:** atomic multi-tab safety, browser download behavior, crash durability, user authentication, or a production multi-user backpack. This is still an isolated draft experiment. No public deployment or historical Drive migration follows from these results.
 
 Hand: Small Door
+
+## Native folio history: don't mistake an older tab for the complete journal — 23 October 2026
+
+A new inspection found that `native-folio-history-walk.html` downloaded its held complete journal, or "latest" source folio, **without checking whether another tab had changed browser storage**. A simulated two-tab encounter with the branch's actual inline handler and history model reproduced the problem: one receipt was downloaded under the ordinary complete-journal filename while the stored journal contained two, without a warning.
+
+The draft now checks `localStorage` against the tab's remembered snapshot before **either** download. If the tab saw a conflict, cannot read storage, or has received a version that failed to save in storage, the visitor must explicitly consent; the file is distinctly named `*-earlier-or-unverified-copy.json`. Declining leaves the held content and stored browser data unchanged. A previously observed conflict remains disclosed even if storage later returns to the old bytes. This is **best-effort disclosure and naming**, not atomic multi-tab safety, authenticated visitor custody, or guaranteed browser persistence.
+
+The repaired page was re-fetched from the draft branch at blob `03894a8fb9da9d49d748988429aa033bf5812d08`. Eight behavioral probes using the actual branch inline handler and model with **simulated DOM/storage in a JavaScript isolate** passed: stale-decline, stale-consent with distinct filename, clean export, source-folio stale decline and consent, unreadable storage, in-tab unsaved import, and sticky observed conflict. A repeatable Node regression source `native-folio-stale-download.test.mjs` is committed at blob `b8ae538ed45e119af3ad2726f14e5303b856bb93`; **its native Node execution is not yet recorded**. Repeat it from a branch checkout:
+
+```sh
+node --test experiments/one-workshop/native-folio-stale-download.test.mjs
+```
+
+This still needs actual browser download and cross-tab/restart tests. The PR stays draft and undeployed; no historic Google Drive objects or public website pages were touched. The stale earlier copy is recoverable by deliberate choice, not silently promoted to the current journal.
+
+Hand: Small Door
