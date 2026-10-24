@@ -97,7 +97,13 @@ function render(){
     const summary=document.createElement('p');
     summary.textContent='Version '+(i+1)+' · '+receipt.working_edition+' · '+native.occurrences.length+' kept field(s), '+native.marks.length+' mark(s), '+native.note.length+' note character(s).';
     const button=document.createElement('button');button.type='button';button.className='alt';button.textContent='Download original version '+(i+1);
-    button.addEventListener('click',()=>download(recoverFolioVersion(journal,i),'public-lands-face-111-version-'+(i+1)+'.json'));
+    button.addEventListener('click',()=>{
+      const state=downloadState();if(!state)return;
+      download(recoverFolioVersion(journal,i),state==='current'
+        ?'public-lands-face-111-version-'+(i+1)+'.json'
+        :'public-lands-face-111-version-'+(i+1)+'-earlier-or-unverified-copy.json');
+      if(state==='unverified')report('EARLIER OR UNVERIFIED VERSION — Download requested for this tab copy; another tab may hold newer versions.');
+    });
     const detail=document.createElement('details'),summaryNote=document.createElement('summary'),note=document.createElement('pre');
     summaryNote.textContent='Inspect note';note.textContent=native.note||'(No personal note)';
     detail.append(summaryNote,note);item.append(summary,button,detail);versions.appendChild(item);
