@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Carry a Folio · One Workshop · Earthly Hands</title>
+<style>
+:root{--ink:#2f342d;--paper:#f9f6ed;--ground:#e8e5db;--line:#bcb9a9;--accent:#345a4c;--muted:#51594e;--focus:#bd8742;font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--ground)}
+*{box-sizing:border-box}body{margin:0;line-height:1.5}.wrap{max-width:1000px;margin:0 auto;padding:clamp(18px,4vw,52px)}
+nav,.eyebrow,.note{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.77rem;letter-spacing:.055em}nav{padding-bottom:15px;border-bottom:1px solid var(--line)}
+h1{font-size:clamp(2.5rem,7vw,5rem);font-weight:normal;letter-spacing:-.04em;line-height:1.04;margin:.7em 0 .3em}.lede{max-width:740px;font-size:clamp(1.15rem,2.2vw,1.5rem)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:36px}.card{background:var(--paper);border:1px solid var(--line);padding:clamp(20px,3vw,33px);border-radius:6px;min-width:0}
+.card h2{font-weight:normal;font-size:1.75rem;line-height:1.1;margin:.4em 0}.card p{margin:.5em 0 1em}.number{font:600 .75rem system-ui;color:var(--accent)}
+a{color:var(--accent);text-underline-offset:3px}button,.file-label{font:600 .92rem system-ui;color:#fff;background:var(--accent);border:1px solid var(--accent);border-radius:4px;display:inline-block;padding:12px 16px;cursor:pointer;margin:8px 8px 8px 0;text-decoration:none}
+button.secondary{background:transparent;color:var(--accent)}button:disabled{opacity:.52;cursor:not-allowed}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.file-label input{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}.file-label:focus-within{outline:3px solid var(--focus);outline-offset:3px}
+#status{background:#e5eada;border-left:4px solid var(--accent);padding:14px 18px;min-height:54px;white-space:pre-wrap;overflow-wrap:anywhere}
+#held{font:1rem Georgia,serif;overflow-wrap:anywhere}#selection{font:0.9rem system-ui;color:#4d574b;overflow-wrap:anywhere}#note-check{white-space:pre-wrap;overflow-wrap:anywhere;background:#f2eee2;padding:12px;border:1px solid var(--line);font-size:1rem;min-height:2.3em}details{margin-top:13px}details summary{cursor:pointer;font-weight:bold}.private{color:var(--muted);font-size:.91rem}.full{grid-column:1/-1}.bottom{margin:38px 0 0;border-top:1px solid var(--line);padding:20px 0;color:var(--muted)}
+@media(max-width:670px){.steps{grid-template-columns:1fr}.wrap{padding:19px}.full{grid-column:auto}}
+</style>
+</head>
+<body><div class="wrap">
+<nav>EARTHLY HANDS WORKSHOP / ONE WORKSHOP / PRIVATE EXPERIMENT</nav>
+<header><p class="eyebrow">One source. Your marks. A way back.</p><h1>Carry a folio.</h1>
+<p class="lede">Take the personal work you made on one Public Lands page, carry it without altering its contents, and return it to the page that understands it.</p></header>
+<main class="steps">
+<section class="card"><div class="number">01 / ENCOUNTER</div><h2>Read the leaf</h2>
+<p>Visit <strong>Public Lands Return No. 3, face 111</strong>. Keep a source occurrence, mark a phrase, or write a marginal note. Export your folio as JSON from that page.</p>
+<p><a href="https://earthlyhands.org/experiments/public-lands-page-111/" target="_blank" rel="noopener noreferrer">Open the Public Lands working edition ↗</a></p>
+<p class="private">That page owns its historical reading. This experiment neither copies the archival image nor adjudicates a correction.</p></section>
+<section class="card"><div class="number">02 / RECEIVE</div><h2>Bring your folio</h2>
+<p>Choose the <strong>folio JSON exported by Face 111</strong>, then press <strong>Import selected folio</strong>. Choosing a file does not import it. The earlier <em>Backpack Walk</em> JSON is a different format and is not accepted here.</p>
+<label class="file-label">Browse for folio JSON <input id="receive" type="file" accept=".json,application/json" aria-label="Choose an exported Public Lands folio JSON file"></label><button id="import-button" type="button" disabled>Import selected folio</button><p id="selection" role="status">No file selected. Nothing imported.</p>
+<p class="private">Files are read in this browser only. No server, account, sharing, or synchronization.</p></section>
+<section class="card full"><div class="number">03 / CARRY AND RETURN</div><h2>Your pocket</h2>
+<p id="held">No folio received yet.</p>
+<p id="status" role="status" aria-live="polite">You can begin at the source page, or reopen this page to see whether an earlier folio remains in this browser.</p><details id="inspect" hidden><summary>Inspect the carried note</summary><div id="note-check"></div></details>
+<button id="take" type="button" disabled>Download original folio JSON</button>
+<button id="erase" class="secondary" type="button" disabled>Release this browser's copy</button>
+<p class="private">Return the downloaded JSON with the <strong>Import folio JSON</strong> control on the original Public Lands page. That page, not this pocket, must interpret older marks against its current working edition. Reopening this page in the same browser may recover the pocket; private browsing, storage clearance, or another device may not.</p>
+</section>
+</main>
+<footer class="bottom">A reversible local experiment, not a Workshop account or public publication. Do not place private or sensitive information here. Export to preserve your own copy. · Powerful finger. Trustworthy result.</footer>
+</div>
+<script type="module">
+import {carryNativeFolio,checkNativeFolioPocket,recoverNativeFolio} from './native-folio-pocket.mjs';
+function inspectNativePocket(value){return JSON.parse(checkNativeFolioPocket(value).raw_json);}
+
+const KEY='earthlyhands.one-workshop.native-folio.111.v0';
+const receive=document.getElementById('receive'),importButton=document.getElementById('import-button'),selection=document.getElementById('selection'),held=document.getElementById('held'),status=document.getElementById('status'),take=document.getElementById('take'),erase=document.getElementById('erase'),inspect=document.getElementById('inspect'),noteCheck=document.getElementById('note-check');
+let pocket=null,selectedFile=null;
+function report(message){status.textContent=message}
+function render(){
+  take.disabled=erase.disabled=!pocket;
+  const original=pocket?inspectNativePocket(pocket):null;
+  held.textContent=original?`Folio in your pocket: ${original.occurrences.length} kept field(s), ${original.marks.length} mark(s), note ${original.note.length} character(s). Working edition: ${pocket.working_edition}. Your complete original JSON is held intact.`:'No folio received yet.';
+  inspect.hidden=!original;
+  noteCheck.textContent=original?(original.note||'(No personal note in this folio)'):'';
+}
+try{
+  const saved=localStorage.getItem(KEY);
+  if(saved){pocket=checkNativeFolioPocket(saved);report('Welcome back. Your folio is still in this browser. You may download it and return to the source.');}
+}catch(err){report('This browser could not restore a saved pocket. An exported file remains your reliable backup. No saved data was changed.');}
+render();
+receive.addEventListener('change',event=>{
+  selectedFile=event.currentTarget.files?.[0]||null;
+  importButton.disabled=!selectedFile;
+  selection.textContent=selectedFile?`Selected “${selectedFile.name}”. Not imported yet. Press “Import selected folio”.`:'No file selected. Nothing imported.';
+});
+importButton.addEventListener('click',async()=>{
+  const file=selectedFile;
+  if(!file)return;
+  // Disallow a second click while the file is being received.
+  selectedFile=null;importButton.disabled=true;receive.value='';
+  if(file.size>300000){selection.textContent='Selection cleared.';report('Import refused: file too large for this experimental pocket. Existing folio kept.');return;}
+  try{
+    const raw=await file.text();
+    if(JSON.parse(raw)?.schema==='earthlyhands.backpack.specimen.v0')throw Error('Earlier Backpack Walk JSON is a different format. Export folio JSON from Face 111.');
+    const candidate=carryNativeFolio(raw);
+    const original=inspectNativePocket(candidate);
+    let persisted=false;
+    try{localStorage.setItem(KEY,JSON.stringify(candidate));persisted=true;}catch{}
+    pocket=candidate;render();
+    selection.textContent=`Imported “${file.name}”.`;
+    report((persisted?'IMPORT CONFIRMED — received and saved in this browser.':'IMPORT CONFIRMED — held in this tab only; browser storage refused the save.')+`\n${original.occurrences.length} kept field(s), ${original.marks.length} mark(s), ${original.note.length} note character(s). Inspect the note below, then download the original JSON to return to the source page.`);
+  }catch(err){selection.textContent=`Could not import “${file.name}”.`;report(`IMPORT REFUSED — ${err.message}. Existing folio kept.`);}
+});
+take.addEventListener('click',()=>{
+  if(!pocket)return;
+  try{
+    const native=recoverNativeFolio(pocket),blob=new Blob([native],{type:'application/json'});
+    const url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download='public-lands-face-111-return-folio.json';a.click();
+    setTimeout(()=>URL.revokeObjectURL(url),3000);
+    report('Original folio JSON downloaded. Bring that file to “Import folio JSON” on the source page.');
+  }catch(err){report('The pocket could not be returned safely: '+err.message);}
+});
+erase.addEventListener('click',()=>{
+  if(!pocket||!confirm('Release this browser copy? Export your folio first if you want to keep it.'))return;
+  let storageCleared=false;
+  try{localStorage.removeItem(KEY);storageCleared=true;}catch{}
+  pocket=null;render();
+  report(storageCleared?'Browser copy released. Exported files, if any, remain yours.':'Tab copy released; browser storage refused the removal, so a stored copy may remain. Check your browser site data.');
+});
+</script>
+</body></html>

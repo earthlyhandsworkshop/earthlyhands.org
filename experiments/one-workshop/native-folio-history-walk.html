@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Carry Your Folio History · One Workshop · Earthly Hands</title>
+<style>
+:root{font-family:Georgia,"Times New Roman",serif;color:#2f342d;background:#e8e5db}
+*{box-sizing:border-box}body{margin:0;line-height:1.5}.wrap{max-width:980px;margin:auto;padding:clamp(18px,4vw,48px)}
+nav,.eyebrow,.number,.quiet{font-family:system-ui,sans-serif}nav{font-size:.76rem;border-bottom:1px solid #bcb9a9;padding-bottom:15px;letter-spacing:.06em}
+h1{font-weight:normal;font-size:clamp(2.5rem,7vw,5rem);line-height:1.06;letter-spacing:-.035em;margin:.6em 0 .2em}
+.lede{max-width:740px;font-size:clamp(1.1rem,2.2vw,1.5rem)}h2{font-size:1.6rem;font-weight:normal;margin:.3em 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:#f9f6ed;border:1px solid #bcb9a9;border-radius:5px;padding:clamp(18px,3vw,30px);min-width:0}
+.wide{grid-column:1/-1}.number{font-size:.73rem;font-weight:700;letter-spacing:.07em;color:#345a4c}
+a{color:#345a4c;text-underline-offset:3px}button,.pick{font:600 .9rem system-ui;color:#fff;background:#345a4c;border:1px solid #345a4c;border-radius:4px;padding:11px 14px;display:inline-block;cursor:pointer;margin:8px 8px 8px 0}
+button.alt{background:transparent;color:#345a4c}button:disabled{opacity:.5;cursor:not-allowed}
+[hidden]{display:none!important}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #bd8742;outline-offset:3px}
+.pick{position:relative}.pick input{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}.pick:focus-within{outline:3px solid #bd8742;outline-offset:3px}
+.quiet{font-size:.88rem;color:#4b554b;overflow-wrap:anywhere}#status{white-space:pre-wrap;overflow-wrap:anywhere;background:#e5eada;border-left:4px solid #345a4c;padding:15px;min-height:4em}
+#versions{padding-left:1.6em}#versions li{padding:12px 0;border-top:1px solid #bcb9a9}#versions p{margin:.25em 0}#versions pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f0ede3;padding:10px}
+details summary{cursor:pointer}footer{border-top:1px solid #bcb9a9;margin-top:36px;padding-top:18px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.wide{grid-column:auto}}
+</style></head>
+<body><div class="wrap">
+<nav>EARTHLY HANDS WORKSHOP / ONE WORKSHOP / PRIVATE EXPERIMENT</nav>
+<header><p class="eyebrow">A folio can have more than one return.</p><h1>Carry your folio history.</h1>
+<p class="lede">Bring successive exports from Public Lands Face 111. Keep each original JSON unchanged, recover an earlier version, and carry the whole local journal away.</p>
+<p class="quiet">This is a separate experimental pocket, not a change to Face 111 or to the earlier single-folio crossing. No account, server, sharing, encryption, or multi-tab synchronization.</p></header>
+<main class="grid">
+<section class="card"><div class="number">01 / RECEIVE A SOURCE FOLIO</div><h2>Add a version</h2>
+<p><a href="https://earthlyhands.org/experiments/public-lands-page-111/" target="_blank" rel="noopener noreferrer">Visit the original Public Lands Face 111 ↗</a>, export its folio JSON, and select that file here. Choosing is not importing.</p>
+<label class="pick">Browse folio JSON <input id="folio-file" type="file" accept=".json,application/json" aria-label="Select a source folio JSON"></label>
+<button id="add" disabled type="button">Import selected folio</button>
+<p class="quiet" id="folio-selection">Nothing selected or imported.</p>
+</section>
+<section class="card"><div class="number">02 / BRING THE WHOLE JOURNAL HOME</div><h2>Restore a journal</h2>
+<p>To move your collected versions to another browser, download the journal below. Restore it only into an empty pocket. Existing receipts are never overwritten.</p>
+<label class="pick">Browse journal JSON <input id="journal-file" type="file" accept=".json,application/json" aria-label="Select a saved folio history journal"></label>
+<button id="restore" type="button" disabled>Restore selected journal</button>
+<p class="quiet" id="journal-selection">Nothing selected or restored.</p>
+</section>
+<section class="card wide"><div class="number">03 / RETURN</div><h2>Versions in this pocket</h2>
+<p id="held">No versions received.</p><p id="status" role="status" aria-live="polite">Start with the source page. An earlier journal may also be remembered by this browser.</p>
+<ol id="versions" aria-label="Carried folio versions"></ol>
+<button id="take" type="button" disabled>Download latest original folio JSON</button>
+<button id="export" type="button" disabled>Download complete journal JSON</button>
+<button id="rescue" class="alt" type="button" hidden disabled>Download unrecognized stored string (unverified)</button>
+<button id="release" class="alt" type="button" disabled>Release this browser journal</button>
+<p class="quiet">An imported version’s JSON text is preserved exactly as received by the browser text reader. The source page, not this pocket, decides how old marks relate to its current edition. This journal remembers the order files arrived, <em>not</em> their historical dates or authors. Twelve distinct versions / 3 MB maximum in this specimen. Export before clearing. A second tab may race this tab; local storage is not a transactional account.</p>
+</section></main>
+<footer class="quiet">Local, reversible, and not deployed as a multi-user service. Browser data can be cleared. Avoid private or sensitive annotations on an untrusted device. · Powerful finger. Trustworthy result.</footer>
+</div>
+<script type="module">
+import {emptyFolioHistory,parseFolioHistory,receiveFolioVersion,recoverFolioVersion,recoverLatestFolio,
+  exportFolioHistory,restoreFolioHistoryIntoEmpty} from './native-folio-history.mjs';
+import {exportUnrecognizedStoredString} from './unrecognized-storage-rescue.mjs';
+const KEY='earthlyhands.one-workshop.native-folio-history.111.v0';
+const $=id=>document.getElementById(id);
+const folioFile=$('folio-file'),journalFile=$('journal-file'),add=$('add'),restore=$('restore'),
+  folioSelection=$('folio-selection'),journalSelection=$('journal-selection'),
+  held=$('held'),status=$('status'),versions=$('versions'),take=$('take'),
+  exportButton=$('export'),rescue=$('rescue'),release=$('release');
+let journal=emptyFolioHistory(),selectedFolio=null,selectedJournal=null,snapshot=null;
+let canReadStorage=true,locked=false,stale=false,unsavedInTab=false;
+function report(message){status.textContent=message;}
+try{snapshot=localStorage.getItem(KEY);}catch{canReadStorage=false;report('Browser storage is unavailable. This pocket can still receive files in the current tab; download your journal before closing.');}
+if(snapshot!==null){
+  try{journal=parseFolioHistory(snapshot);report('Welcome back. Previous versions were recovered from this browser.');}
+  catch{locked=true;report('Stored journal could not be validated. Import and release are locked. You can download the unverified stored browser string below without validating or repairing it. No stored data was changed.');}
+}
+function persist(candidate){
+  if(locked)throw Error('The unrecognized stored journal must be preserved');
+  if(!canReadStorage)return false;
+  let present;
+  try{present=localStorage.getItem(KEY);}catch{canReadStorage=false;return false;}
+  if(present!==snapshot){stale=true;throw Error('Another tab changed the browser journal. Nothing replaced; export your held journal and reload this page.');}
+  const next=exportFolioHistory(candidate);
+  try{localStorage.setItem(KEY,next);snapshot=next;unsavedInTab=false;return true;}
+  catch{unsavedInTab=true;return false;}
+}
+function download(text,name,type='application/json'){
+  const url=URL.createObjectURL(new Blob([text],{type}));
+  const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),3000);
+}
+function render(){
+  const count=journal.receipts.length;
+  add.disabled=locked||!selectedFolio;restore.disabled=locked||!selectedJournal;
+  take.disabled=exportButton.disabled=locked||!count;
+  rescue.hidden=!locked;rescue.disabled=!locked||snapshot===null;
+  release.disabled=locked||!canReadStorage||!count;
+  held.textContent=count?count+' version(s) held. Latest source edition: '+journal.receipts.at(-1).working_edition+'.':'No versions received.';
+  versions.replaceChildren();
+  journal.receipts.forEach((receipt,i)=>{
+    const native=JSON.parse(receipt.raw_json);
+    const item=document.createElement('li');
+    const summary=document.createElement('p');
+    summary.textContent='Version '+(i+1)+' · '+receipt.working_edition+' · '+native.occurrences.length+' kept field(s), '+native.marks.length+' mark(s), '+native.note.length+' note character(s).';
+    const button=document.createElement('button');button.type='button';button.className='alt';button.textContent='Download original version '+(i+1);
+    button.addEventListener('click',()=>{
+      const state=downloadState();if(!state)return;
+      download(recoverFolioVersion(journal,i),state==='current'
+        ?'public-lands-face-111-version-'+(i+1)+'.json'
+        :'public-lands-face-111-version-'+(i+1)+'-earlier-or-unverified-copy.json');
+      if(state==='unverified')report('EARLIER OR UNVERIFIED VERSION — Download requested for this tab copy; another tab may hold newer versions.');
+    });
+    const detail=document.createElement('details'),summaryNote=document.createElement('summary'),note=document.createElement('pre');
+    summaryNote.textContent='Inspect note';note.textContent=native.note||'(No personal note)';
+    detail.append(summaryNote,note);item.append(summary,button,detail);versions.appendChild(item);
+  });
+}
+folioFile.addEventListener('change',()=>{
+  selectedFolio=folioFile.files?.[0]||null;
+  folioSelection.textContent=selectedFolio?'Selected “'+selectedFolio.name+'”. Not yet imported.':'Nothing selected or imported.';
+  render();
+});
+journalFile.addEventListener('change',()=>{
+  selectedJournal=journalFile.files?.[0]||null;
+  journalSelection.textContent=selectedJournal?'Selected “'+selectedJournal.name+'”. Not yet restored.':'Nothing selected or restored.';
+  render();
+});
+add.addEventListener('click',async()=>{
+  const file=selectedFolio;if(!file||locked)return;
+  selectedFolio=null;folioFile.value='';render();
+  try{
+    if(file.size>300000)throw Error('File exceeds the native folio limit');
+    const candidate=receiveFolioVersion(journal,await file.text());
+    const changed=candidate.receipts.length!==journal.receipts.length;
+    const saved=persist(candidate);
+    journal=candidate;render();
+    folioSelection.textContent='Received “'+file.name+'”.';
+    report((changed?'VERSION RECEIVED':'ALREADY HELD — latest version is identical')+(saved?' and saved in this browser.':' in this tab ONLY; browser storage did not save it. Download the complete journal now.')+' Older versions remain recoverable.');
+  }catch(err){report('IMPORT REFUSED — '+err.message+'. Existing versions kept.');}
+});
+restore.addEventListener('click',async()=>{
+  const file=selectedJournal;if(!file||locked)return;
+  selectedJournal=null;journalFile.value='';render();
+  try{
+    if(file.size>3000000)throw Error('Journal exceeds the experimental limit');
+    const candidate=restoreFolioHistoryIntoEmpty(journal,await file.text());
+    const saved=persist(candidate);journal=candidate;render();
+    journalSelection.textContent='Restored “'+file.name+'”.';
+    report('JOURNAL RESTORED — '+journal.receipts.length+' version(s), '+(saved?'saved in this browser.':'held in this tab ONLY; download a copy before leaving.'));
+  }catch(err){report('RESTORE REFUSED — '+err.message+'. Existing versions kept.');}
+});
+// Downloads reflect the held tab's state. A second tab may have changed storage.
+// This is a disclosure/consent boundary, NOT an atomic multi-tab lock.
+function downloadState(){
+  let unverified=stale||!canReadStorage||unsavedInTab;
+  try{
+    if(localStorage.getItem(KEY)!==snapshot){stale=true;unverified=true;}
+  }catch{canReadStorage=false;unverified=true;}
+  if(unverified&&!confirm('This tab may hold an earlier or unverified folio history. A different tab may hold newer versions, or this tab may hold changes not saved in the browser. Download this copy anyway?')){
+    report('DOWNLOAD CANCELED — The tab may hold an earlier or unverified copy. Nothing was downloaded.');
+    return null;
+  }
+  return unverified?'unverified':'current';
+}
+take.addEventListener('click',()=>{
+  if(!journal.receipts.length||locked)return;
+  const state=downloadState();if(!state)return;
+  download(recoverLatestFolio(journal),state==='current'
+    ?'public-lands-face-111-return-folio.json'
+    :'public-lands-face-111-return-folio-earlier-or-unverified-copy.json');
+  if(state==='unverified')report('EARLIER OR UNVERIFIED SOURCE FOLIO — Download requested for this tab copy; it may omit newer versions.');
+});
+exportButton.addEventListener('click',()=>{
+  if(!journal.receipts.length||locked)return;
+  const state=downloadState();if(!state)return;
+  download(exportFolioHistory(journal),state==='current'
+    ?'public-lands-face-111-journal.json'
+    :'public-lands-face-111-journal-earlier-or-unverified-copy.json');
+  if(state==='unverified')report('EARLIER OR UNVERIFIED JOURNAL — Download requested for this tab copy; it may omit newer versions or may not be saved in browser storage.');
+});
+rescue.addEventListener('click',()=>{
+  if(!locked||snapshot===null)return;
+  download(exportUnrecognizedStoredString(snapshot,KEY),
+    'public-lands-face-111-unrecognized-browser-storage.json','application/json');
+  report('UNVERIFIED RECOVERY ENVELOPE REQUESTED — Stored browser string wrapped without validation or repair; browser journal unchanged.');
+});
+release.addEventListener('click',()=>{
+  if(locked||!canReadStorage||!journal.receipts.length||!confirm('Release the ENTIRE browser journal, including older versions? Download the journal first if you want to keep it.'))return;
+  try{
+    if(localStorage.getItem(KEY)!==snapshot)throw Error('Another tab changed the stored journal. Nothing released.');
+    localStorage.removeItem(KEY);
+    if(localStorage.getItem(KEY)!==null)throw Error('Browser storage still contains a journal after release was requested');
+    snapshot=null;
+  }catch(err){
+    stale=true; // A failed release is an observed custody uncertainty, even if storage later reverts.
+    report('RELEASE NOT CONFIRMED — '+err.message+'. Versions remain available in this tab; stored data may have changed. Export before leaving.');
+    return;
+  }
+  journal=emptyFolioHistory();render();report('Browser journal release confirmed. Files you downloaded remain yours.');
+});
+render();
+</script></body></html>
