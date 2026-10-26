@@ -77,6 +77,11 @@ function openPage(initial) {
       elements['folio-file'].files=[{name:'fictional.json',size:text.length,text:async()=>text}];
       elements['folio-file'].handlers.change();
       await elements.add.handlers.click();
+    },
+    beginImportNative(text, readPromise){
+      elements['folio-file'].files=[{name:'pending.json',size:text.length,text:()=>readPromise}];
+      elements['folio-file'].handlers.change();
+      return elements.add.handlers.click();
     }
   };
 }
@@ -173,4 +178,42 @@ test('a failed release remains forbidden after intervening storage reverts',()=>
   p.elements.release.handlers.click();
   assert.match(p.elements.status.textContent,/RELEASE NOT CONFIRMED.*earlier tab conflict/);
   assert.equal(p.stored,one);
+});
+
+test('late same-tab import cannot resurrect a journal deliberately released during file read',async()=>{
+  const p=openPage(one);
+  let finish;
+  const read=new Promise(resolve=>{finish=resolve;});
+  const late=native('late import');
+  const pending=p.beginImportNative(late,read);
+  p.allowDownload();
+  p.elements.release.handlers.click();
+  assert.match(p.elements.status.textContent,/release confirmed/i);
+  assert.equal(p.stored,null);
+  finish(late);
+  await pending;
+  assert.match(p.elements.status.textContent,/IMPORT REFUSED.*Another local operation finished/);
+  assert.equal(p.stored,null); // No import from before the deliberate release can restore old receipts.
+  assert.equal(p.writes,0);
+});
+
+test('two overlapping file reads never silently replace the first completed import',async()=>{
+  const p=openPage(one);
+  let finishFirst,finishSecond;
+  const firstIncoming=native('earlier read');
+  const secondIncoming=native('later read');
+  const readFirst=new Promise(resolve=>{finishFirst=resolve;});
+  const readSecond=new Promise(resolve=>{finishSecond=resolve;});
+  const pendingFirst=p.beginImportNative(firstIncoming,readFirst);
+  const pendingSecond=p.beginImportNative(secondIncoming,readSecond);
+  finishFirst(firstIncoming);
+  await pendingFirst;
+  assert.equal(parseFolioHistory(p.stored).receipts.length,2);
+  finishSecond(secondIncoming);
+  await pendingSecond;
+  assert.match(p.elements.status.textContent,/IMPORT REFUSED.*Another local operation finished/);
+  const stored=parseFolioHistory(p.stored);
+  assert.equal(stored.receipts.length,2);
+  assert.equal(stored.receipts[1].raw_json,firstIncoming); // The uncompleted second receipt was refused, not silently substituted.
+  assert.equal(p.writes,1);
 });
