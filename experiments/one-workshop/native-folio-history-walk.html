@@ -62,6 +62,8 @@ const folioFile=$('folio-file'),journalFile=$('journal-file'),add=$('add'),resto
   exportButton=$('export'),rescue=$('rescue'),release=$('release');
 let journal=emptyFolioHistory(),selectedFolio=null,selectedJournal=null,snapshot=null;
 let canReadStorage=true,locked=false,stale=false,unsavedInTab=false;
+// Same-tab file reads are asynchronous. An older read may not commit over a newer action.
+let inTabGeneration=0;
 function report(message){status.textContent=message;}
 try{snapshot=localStorage.getItem(KEY);}catch{canReadStorage=false;report('Browser storage is unavailable. This pocket can still receive files in the current tab; download your journal before closing.');}
 if(snapshot!==null){
@@ -123,12 +125,15 @@ journalFile.addEventListener('change',()=>{
 add.addEventListener('click',async()=>{
   const file=selectedFolio;if(!file||locked)return;
   selectedFolio=null;folioFile.value='';render();
+  const startedAt=inTabGeneration;
   try{
     if(file.size>300000)throw Error('File exceeds the native folio limit');
-    const candidate=receiveFolioVersion(journal,await file.text());
+    const incoming=await file.text();
+    if(startedAt!==inTabGeneration)throw Error('Another local operation finished while this file was being read. Select the file again');
+    const candidate=receiveFolioVersion(journal,incoming);
     const changed=candidate.receipts.length!==journal.receipts.length;
     const saved=persist(candidate);
-    journal=candidate;render();
+    journal=candidate;inTabGeneration++;render();
     folioSelection.textContent='Received “'+file.name+'”.';
     report((changed?'VERSION RECEIVED':'ALREADY HELD — latest version is identical')+(saved?' and saved in this browser.':' in this tab ONLY; browser storage did not save it. Download the complete journal now.')+' Older versions remain recoverable.');
   }catch(err){report('IMPORT REFUSED — '+err.message+'. Existing versions kept.');}
@@ -136,10 +141,13 @@ add.addEventListener('click',async()=>{
 restore.addEventListener('click',async()=>{
   const file=selectedJournal;if(!file||locked)return;
   selectedJournal=null;journalFile.value='';render();
+  const startedAt=inTabGeneration;
   try{
     if(file.size>3000000)throw Error('Journal exceeds the experimental limit');
-    const candidate=restoreFolioHistoryIntoEmpty(journal,await file.text());
-    const saved=persist(candidate);journal=candidate;render();
+    const incoming=await file.text();
+    if(startedAt!==inTabGeneration)throw Error('Another local operation finished while this file was being read. Select the file again');
+    const candidate=restoreFolioHistoryIntoEmpty(journal,incoming);
+    const saved=persist(candidate);journal=candidate;inTabGeneration++;render();
     journalSelection.textContent='Restored “'+file.name+'”.';
     report('JOURNAL RESTORED — '+journal.receipts.length+' version(s), '+(saved?'saved in this browser.':'held in this tab ONLY; download a copy before leaving.'));
   }catch(err){report('RESTORE REFUSED — '+err.message+'. Existing versions kept.');}
@@ -196,7 +204,7 @@ release.addEventListener('click',()=>{
     report('RELEASE NOT CONFIRMED — '+err.message+'. Versions remain available in this tab; stored data may have changed. Export before leaving.');
     return;
   }
-  journal=emptyFolioHistory();render();report('Browser journal release confirmed. Files you downloaded remain yours.');
+  journal=emptyFolioHistory();inTabGeneration++;render();report('Browser journal release confirmed. Files you downloaded remain yours.');
 });
 render();
 </script></body></html>
