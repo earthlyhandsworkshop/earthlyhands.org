@@ -89,7 +89,7 @@ function render(){
   add.disabled=locked||!selectedFolio;restore.disabled=locked||!selectedJournal;
   take.disabled=exportButton.disabled=locked||!count;
   rescue.hidden=!locked;rescue.disabled=!locked||snapshot===null;
-  release.disabled=locked||!canReadStorage||!count;
+  release.disabled=locked||!canReadStorage||!count||unsavedInTab;
   held.textContent=count?count+' version(s) held. Latest source edition: '+journal.receipts.at(-1).working_edition+'.':'No versions received.';
   versions.replaceChildren();
   journal.receipts.forEach((receipt,i)=>{
@@ -180,6 +180,10 @@ rescue.addEventListener('click',()=>{
   report('UNVERIFIED RECOVERY ENVELOPE REQUESTED — Stored browser string wrapped without validation or repair; browser journal unchanged.');
 });
 release.addEventListener('click',()=>{
+  if(unsavedInTab){
+    report('RELEASE REFUSED — This tab holds versions that were not saved in browser storage. Download the complete journal before closing; reload only after saving the tab copy.');
+    return;
+  }
   if(locked||!canReadStorage||!journal.receipts.length||!confirm('Release the ENTIRE browser journal, including older versions? Download the journal first if you want to keep it.'))return;
   try{
     if(stale)throw Error('An earlier tab conflict was observed; reload and reconcile before releasing browser storage');
