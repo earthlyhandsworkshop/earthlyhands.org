@@ -192,6 +192,93 @@ test('real Chromium: damaged-journal rescue and intervening tab history', async 
       }
     });
 
+
+    await t.test('a delayed same-tab import cannot replace a newer completed import', async () => {
+      const context = await browser.newContext({acceptDownloads: true});
+      try {
+        const page = await context.newPage();
+        await page.goto(url);
+        await page.evaluate(() => {
+          const read = Blob.prototype.text;
+          File.prototype.text = function () {
+            if (this.name !== 'delayed-first.json') return read.call(this);
+            const file = this;
+            return new Promise((resolve, reject) => {
+              window.finishFolioRead = () => read.call(file).then(resolve, reject);
+            });
+          };
+        });
+
+        await page.locator('#folio-file').setInputFiles({
+          name: 'delayed-first.json', mimeType: 'application/json',
+          buffer: Buffer.from(native('delayed first'))
+        });
+        await page.locator('#add').click();
+        await page.waitForFunction(() => typeof window.finishFolioRead === 'function');
+
+        await page.locator('#folio-file').setInputFiles({
+          name: 'immediate-second.json', mimeType: 'application/json',
+          buffer: Buffer.from(native('completed second'))
+        });
+        await page.locator('#add').click();
+        await page.waitForFunction(() =>
+          document.querySelector('#status').textContent.includes('VERSION RECEIVED'));
+
+        await page.evaluate(() => window.finishFolioRead());
+        await page.waitForFunction(() =>
+          document.querySelector('#status').textContent.includes('Another local operation finished'));
+
+        const saved = await page.evaluate(key => localStorage.getItem(key), KEY);
+        assert.equal(JSON.parse(saved).receipts.length, 1);
+        assert.equal(JSON.parse(saved).receipts[0].raw_json, native('completed second'));
+        assert.match(await page.locator('#status').textContent(), /IMPORT REFUSED/);
+      } finally {
+        await context.close();
+      }
+    });
+
+    await t.test('a delayed same-tab import cannot resurrect a released journal', async () => {
+      const context = await browser.newContext({acceptDownloads: true});
+      try {
+        const page = await context.newPage();
+        await page.addInitScript(({key, value}) => localStorage.setItem(key, value), {
+          key: KEY, value: journal('held earlier')
+        });
+        await page.goto(url);
+        await page.evaluate(() => {
+          const read = Blob.prototype.text;
+          File.prototype.text = function () {
+            if (this.name !== 'delayed-after-release.json') return read.call(this);
+            const file = this;
+            return new Promise((resolve, reject) => {
+              window.finishFolioRead = () => read.call(file).then(resolve, reject);
+            });
+          };
+        });
+        await page.locator('#folio-file').setInputFiles({
+          name: 'delayed-after-release.json', mimeType: 'application/json',
+          buffer: Buffer.from(native('must not resurrect'))
+        });
+        await page.locator('#add').click();
+        await page.waitForFunction(() => typeof window.finishFolioRead === 'function');
+
+        page.once('dialog', dialog => { void dialog.accept(); });
+        await page.locator('#release').click();
+        assert.equal(await page.evaluate(key => localStorage.getItem(key), KEY), null);
+        assert.match(await page.locator('#held').textContent(), /No versions received/);
+
+        await page.evaluate(() => window.finishFolioRead());
+        await page.waitForFunction(() =>
+          document.querySelector('#status').textContent.includes('Another local operation finished'));
+
+        assert.equal(await page.evaluate(key => localStorage.getItem(key), KEY), null);
+        assert.match(await page.locator('#held').textContent(), /No versions received/);
+        assert.match(await page.locator('#status').textContent(), /IMPORT REFUSED/);
+      } finally {
+        await context.close();
+      }
+    });
+
   } finally {
     if (browser) await browser.close();
     await new Promise(resolve => server.close(resolve));
