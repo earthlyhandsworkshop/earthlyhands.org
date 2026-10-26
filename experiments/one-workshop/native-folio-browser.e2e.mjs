@@ -138,6 +138,60 @@ test('real Chromium: damaged-journal rescue and intervening tab history', async 
         await context.close();
       }
     });
+
+    await t.test('real Chromium: refused browser save cannot release the tab-only new version', async () => {
+      const context = await browser.newContext({acceptDownloads: true});
+      try {
+        const original = journal('first');
+        const page = await context.newPage();
+        // Seed an existing journal, then inject a storage-write refusal.
+        // This uses real Chromium events, but SIMULATES quota failure;
+        // it does not demonstrate an actual browser quota being exhausted.
+        await page.addInitScript(({key, value}) => {
+          localStorage.setItem(key, value);
+          const actualSetItem = Storage.prototype.setItem;
+          Storage.prototype.setItem = function (nextKey, nextValue) {
+            if (this === localStorage && nextKey === key) {
+              throw new DOMException('simulated full storage', 'QuotaExceededError');
+            }
+            return actualSetItem.call(this, nextKey, nextValue);
+          };
+        }, {key: KEY, value: original});
+        await page.goto(url);
+        assert.match(await page.locator('#held').textContent(), /1 version/);
+
+        await page.locator('#folio-file').setInputFiles({
+          name: 'fictional-second.json', mimeType: 'application/json',
+          buffer: Buffer.from(native('second'))
+        });
+        await page.locator('#add').click();
+        await page.waitForFunction(() =>
+          document.querySelector('#status').textContent.includes('in this tab ONLY'));
+
+        assert.match(await page.locator('#held').textContent(), /2 version/);
+        assert.equal(await page.locator('#release').isDisabled(), true);
+        // A direct dispatched click must also be refused, not merely greyed out.
+        await page.locator('#release').evaluate(button =>
+          button.dispatchEvent(new Event('click', {bubbles: true})));
+        assert.match(await page.locator('#status').textContent(), /RELEASE REFUSED/);
+        assert.equal(await page.evaluate(key => localStorage.getItem(key), KEY), original);
+
+        // The sole surviving new version must remain exportable, clearly unverified.
+        page.once('dialog', dialog => { void dialog.accept(); });
+        const [download] = await Promise.all([
+          page.waitForEvent('download'),
+          page.locator('#export').click()
+        ]);
+        assert.match(download.suggestedFilename(), /earlier-or-unverified-copy/);
+        const carried = JSON.parse(await readFile(await download.path(), 'utf8'));
+        assert.equal(carried.receipts.length, 2);
+        assert.equal(carried.receipts[1].raw_json, native('second'));
+        assert.equal(await page.evaluate(key => localStorage.getItem(key), KEY), original);
+      } finally {
+        await context.close();
+      }
+    });
+
   } finally {
     if (browser) await browser.close();
     await new Promise(resolve => server.close(resolve));
