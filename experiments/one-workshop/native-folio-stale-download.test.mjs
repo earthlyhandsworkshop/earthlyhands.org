@@ -81,6 +81,24 @@ function openPage(initial) {
   };
 }
 
+test('storage write refusal keeps a tab-only newer version out of destructive release',async()=>{
+  const p=openPage(one);p.preventWrite();
+  await p.importNative(native('not saved to browser storage'));
+  assert.match(p.elements.status.textContent,/in this tab ONLY/);
+  assert.equal(p.elements.release.disabled,true);
+  assert.equal(p.stored,one); // The original saved history remains.
+  p.allowDownload();
+  // Guard the handler as well as the disabled button, against programmatic calls.
+  p.elements.release.handlers.click();
+  assert.match(p.elements.status.textContent,/RELEASE REFUSED.*not saved/);
+  assert.equal(p.confirmations,0);
+  assert.equal(p.stored,one);
+  p.elements.export.handlers.click();
+  assert.equal(p.confirmations,1);
+  assert.deepEqual(p.names,['public-lands-face-111-journal-earlier-or-unverified-copy.json']);
+  assert.equal(parseFolioHistory(p.bodies[0]).receipts.length,2);
+});
+
 test('stale journal refused without consent; other tab storage unchanged',()=>{
   const p=openPage(one);p.changeStored(two);p.elements.export.handlers.click();
   assert.equal(p.confirmations,1);assert.equal(p.bodies.length,0);
