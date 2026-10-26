@@ -12,7 +12,8 @@ const KEY = 'earthlyhands.one-workshop.native-folio-history.111.v0';
 const allowed = new Set([
   'native-folio-history-walk.html',
   'native-folio-history.mjs',
-  'unrecognized-storage-rescue.mjs'
+  'unrecognized-storage-rescue.mjs',
+  'native-folio-pocket.mjs'
 ]);
 const pageName = 'native-folio-history-walk.html';
 
