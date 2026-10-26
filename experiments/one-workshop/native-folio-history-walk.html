@@ -70,6 +70,7 @@ if(snapshot!==null){
 }
 function persist(candidate){
   if(locked)throw Error('The unrecognized stored journal must be preserved');
+  if(stale)throw Error('An earlier tab conflict was observed; reload and reconcile before changing storage');
   if(!canReadStorage)return false;
   let present;
   try{present=localStorage.getItem(KEY);}catch{canReadStorage=false;return false;}
@@ -181,6 +182,7 @@ rescue.addEventListener('click',()=>{
 release.addEventListener('click',()=>{
   if(locked||!canReadStorage||!journal.receipts.length||!confirm('Release the ENTIRE browser journal, including older versions? Download the journal first if you want to keep it.'))return;
   try{
+    if(stale)throw Error('An earlier tab conflict was observed; reload and reconcile before releasing browser storage');
     if(localStorage.getItem(KEY)!==snapshot)throw Error('Another tab changed the stored journal. Nothing released.');
     localStorage.removeItem(KEY);
     if(localStorage.getItem(KEY)!==null)throw Error('Browser storage still contains a journal after release was requested');
