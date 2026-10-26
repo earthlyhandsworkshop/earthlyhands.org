@@ -123,7 +123,9 @@ test('real Chromium: damaged-journal rescue and intervening tab history', async 
           });
           await firstTab.locator('#add').click();
           // File.text() is asynchronous; a completed click is not a completed import.
-          await firstTab.waitForFunction(() => document.querySelector('#status').textContent.includes('IMPORT REFUSED'));
+          const expected = text === 'refused after reversion'
+            ? 'earlier tab conflict' : 'Another tab changed';
+          await firstTab.waitForFunction(needle => document.querySelector('#status').textContent.includes(needle), expected);
           return await firstTab.locator('#status').textContent();
         }
         assert.match(await attempt('refused first attempt'), /IMPORT REFUSED/);
