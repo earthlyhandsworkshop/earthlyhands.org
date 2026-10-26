@@ -133,3 +133,26 @@ test('failed release keeps the observed storage conflict visible after reversion
   assert.deepEqual(p.names,['public-lands-face-111-journal-earlier-or-unverified-copy.json']);
   assert.equal(parseFolioHistory(p.bodies[0]).receipts.length,1);
 });
+
+test('later reversion cannot authorize a journal write after an observed conflict',async()=>{
+  const p=openPage(one);p.changeStored(two);
+  await p.importNative(native('first refused import'));
+  assert.match(p.elements.status.textContent,/IMPORT REFUSED/);
+  assert.equal(p.stored,two);
+  p.changeStored(one);
+  await p.importNative(native('second refused import'));
+  assert.match(p.elements.status.textContent,/IMPORT REFUSED.*earlier tab conflict/);
+  assert.equal(p.stored,one);
+  assert.equal(p.writes,0);
+});
+
+test('a failed release remains forbidden after intervening storage reverts',()=>{
+  const p=openPage(one);p.changeStored(two);p.allowDownload();
+  p.elements.release.handlers.click();
+  assert.match(p.elements.status.textContent,/RELEASE NOT CONFIRMED/);
+  assert.equal(p.stored,two);
+  p.changeStored(one);
+  p.elements.release.handlers.click();
+  assert.match(p.elements.status.textContent,/RELEASE NOT CONFIRMED.*earlier tab conflict/);
+  assert.equal(p.stored,one);
+});
