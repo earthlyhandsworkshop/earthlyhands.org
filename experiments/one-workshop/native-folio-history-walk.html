@@ -65,6 +65,16 @@ let canReadStorage=true,locked=false,stale=false,unsavedInTab=false;
 // Same-tab file reads are asynchronous. An older read may not commit over a newer action.
 let inTabGeneration=0;
 function report(message){status.textContent=message;}
+// Another tab can change a journal and later restore its old bytes.
+// The storage event is evidence of the intervening edit even when a later comparison matches.
+// This is a best-effort observed-conflict guard, not an atomic cross-tab lock.
+window.addEventListener('storage',event=>{
+  if(event.storageArea!==localStorage)return;
+  if(event.key!==KEY && !(event.key===null && snapshot!==null))return;
+  stale=true;
+  report('ANOTHER TAB CHANGED THE JOURNAL — This tab observed a storage change. Even if the old bytes return, imports and release cannot overwrite that history. Export an earlier/unverified copy if needed, then reload and reconcile.');
+  render();
+});
 try{snapshot=localStorage.getItem(KEY);}catch{canReadStorage=false;report('Browser storage is unavailable. This pocket can still receive files in the current tab; download your journal before closing.');}
 if(snapshot!==null){
   try{journal=parseFolioHistory(snapshot);report('Welcome back. Previous versions were recovered from this browser.');}
@@ -91,7 +101,7 @@ function render(){
   add.disabled=locked||!selectedFolio;restore.disabled=locked||!selectedJournal;
   take.disabled=exportButton.disabled=locked||!count;
   rescue.hidden=!locked;rescue.disabled=!locked||snapshot===null;
-  release.disabled=locked||!canReadStorage||!count||unsavedInTab;
+  release.disabled=locked||!canReadStorage||!count||unsavedInTab||stale;
   held.textContent=count?count+' version(s) held. Latest source edition: '+journal.receipts.at(-1).working_edition+'.':'No versions received.';
   versions.replaceChildren();
   journal.receipts.forEach((receipt,i)=>{
