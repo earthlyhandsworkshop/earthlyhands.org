@@ -12,6 +12,16 @@ export function access(a) {
   if (['public', 'workshop'].includes(a.kind) && (a.ownerId !== undefined || a.matchId !== undefined))
     throw new Error('Unexpected owner or match');
   if (a.kind === 'private' && a.matchId !== undefined) throw new Error('Unexpected private match');
+  // Versioned v0 compartments have no extension keys. If a snapshot hides
+  // unrecognized access hints beside the canonical fields, accessKey()
+  // would otherwise silently ignore them. Never carry ambiguous permission
+  // instructions into a later runtime that might interpret those hints.
+  const keys = new Set(Object.keys(a));
+  const permitted = a.kind === 'bello-player'
+    ? ['kind', 'ownerId', 'matchId']
+    : a.kind === 'private' ? ['kind', 'ownerId'] : ['kind'];
+  if (keys.size !== permitted.length || permitted.some(key => !keys.has(key)))
+    throw new Error('Unexpected access metadata fields');
 }
 export function accessKey(a) { access(a); return JSON.stringify([a.kind, a.ownerId ?? '', a.matchId ?? '']); }
 function canView(a, viewer) {
