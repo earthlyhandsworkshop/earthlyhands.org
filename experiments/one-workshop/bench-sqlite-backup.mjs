@@ -8,6 +8,7 @@ import { dirname, join } from 'node:path';
 import { Transform } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 import { accessKey, validateItem } from './bench-sqlite-core.mjs';
+import { auditBenchSnapshotReceipts } from './bench-sqlite-snapshot-audit.mjs';
 
 export const BENCH_SNAPSHOT_SCHEMA = 'earthlyhands.workbench.surface-sqlite-snapshot.v0';
 const HEX_SHA256 = /^[0-9a-f]{64}$/;
@@ -82,6 +83,9 @@ function inspectSnapshot(path) {
     const orphanEvents = db.prepare(`SELECT COUNT(*) AS n FROM events e LEFT JOIN benches b
       ON b.bench_id=e.bench_id WHERE b.bench_id IS NULL`).get().n;
     if (orphanEvents) throw new Error('Snapshot contains orphaned events');
+    // A structurally valid database can still contain a contradictory receipt
+    // graph. Check clear/restore acts and final active flags, not only row counts.
+    auditBenchSnapshotReceipts(db);
     return {
       benchCount: benches.length,
       eventCount: benches.reduce((n, b) => n + b.events, 0)
