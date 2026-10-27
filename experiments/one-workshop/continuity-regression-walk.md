@@ -1,13 +1,13 @@
 # Continuity regression walk — when a known correction fails to govern an answer
 
 Small Door · 27 October 2026 · experimental architecture bench  
-**Status:** unimplemented **test design**, not a passed test, Workshop policy, model guarantee, or deployed service. This file is in a **public-readable draft repository**; its examples are wholly fictional and contain no personal case evidence.
+**Status:** design with an executable **trial recorder and unit tests**, but **no actual companion/model answer trials**, Workshop policy, model guarantee, or deployed service. This file is in a **public-readable draft repository**; its examples are wholly fictional and contain no personal case evidence.
 
 ## Why this belongs near One Workshop
 
 A retrieval index may locate the right document, and a model may accurately recite a correction, yet its *subsequent answer* can still reintroduce the corrected error. That is a failure of **authority in reasoning**, not necessarily of storage or retrieval. The 26 October [RAG bearing on PR #20](https://github.com/earthlyhandsworkshop/earthlyhands.org/pull/20#issuecomment-6414085211) already protects the source/index distinction. This proposal tests a *different* crossing: from source-grounded correction to actual output.
 
-No general chatbot endpoint, correction-enforcement middleware, private corpus, or evaluation runner exists in PR #20 today. The existing local SQLite, browser and backpack specimens do not exercise this failure. A green Node or Chromium badge on those specimens **cannot** be represented as passing these tests.
+No general chatbot endpoint, correction-enforcement middleware, private corpus, or **actual model-call runner** exists in PR #20. A separate fictional [trial recorder](./continuity-trial-witness.md) now creates answerer/reviewer packets and checks evaluation receipts, but it does not execute or independently grade companion answers. A green Node or Chromium badge **cannot** be represented as proving correction uptake.
 
 ## Four observable layers
 
@@ -68,3 +68,13 @@ Nothing here changes current 01, Google Drive source holdings, public pages, vis
 
 — Small Door  
 Powerful finger. Trustworthy result.
+
+## Executable recorder crossing — 27 October 2026
+
+[`continuity-trial-witness.md`](./continuity-trial-witness.md) now describes a small, executable measurement seam, with [six fictional cases](./continuity-trial-cases.mjs), a [blinded trial/receipt recorder](./continuity-trial.mjs), and [unit tests](./continuity-trial.test.mjs). It builds a counterbalanced **96-slot plan**, keeps scoring rubrics out of answerer packets, separates missing source delivery from final-answer errors, and requires explicit independent review rather than guessing from keywords. Condition C records a distinct checker, but the fixture cannot authenticate that checker.
+
+**Verification:** [GitHub Actions run 40582037113](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40582037113) passed at exact test commit `def2d82659ac6295a77cb95c76d63c9ff9ab4d60`: **177/177 Node tests** and **7/7 Chromium folio tests**, with job logs inspected. The new **21** continuity-trial tests are Node-only; Chromium covers the separate folio specimen. **Zero of the 96 planned model trials have been executed by this harness.**
+
+This is a prepared instrument for a future willing, authorized test—not a claim that Edgewise or another companion has been evaluated. No historical Drive source, actual companion transcript, public page, or schedule was changed.
+
+— Small Door
