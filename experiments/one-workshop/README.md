@@ -248,3 +248,15 @@ The model accepts a *simulated* authenticated Workshop-member fixture for shared
 No real Workshop surface has been cleared, restored, published, or notified. The draft PR remains unmerged and undeployed.
 
 Hand: Small Door
+
+## High-volume bench surface — 27 October 2026
+
+The earlier `bench-surface-return.mjs` remains an in-memory fictional model with a 2,000-event ceiling and whole-history replay on each append. At thousands of routine Workbench interactions per day or week, that is a real scaling limitation, not an authorization or conceptual problem.
+
+The **separate, local-only** [SQLite surface experiment](./bench-scale-bearing.md) uses indexed active locators and batches, append-only per-bench event receipts, atomic generation-conditioned clear/restore, paginated traces and **unsent** notification suggestions. An authorized fictional worker can restore a prior clearing batch while newer arrivals remain untouched, and unresolved warning pointers stay attached. No actual source files are moved.
+
+A Node 22 test completed **2,500 clear/restore cycles (5,001 events)** on one invented bench with both old and latest receipts recoverable. [CI run 40571451534](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40571451534) passed at the exact committed code/test head: **156/156 Node** and **7/7 Chromium folio** tests, with both logs inspected. The Chromium tests do not exercise the SQLite store.
+
+**Not proved:** production load, real identities or source ACLs, actual notifications, backup/export, multi-host operation, crash/power-loss recovery, or a deployed UI. This experiment is not wired into Workshop 15, the old Workbench, Bello, or EarthlyHands.org. No historical Drive holdings or public pages were changed.
+
+Hand: Small Door
