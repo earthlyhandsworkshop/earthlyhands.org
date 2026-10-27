@@ -177,3 +177,11 @@ The model emits **only** the intended notice and eligible source references in i
 **Remaining authority boundary:** `reviewedBy`, `recordedBy`, and caller-supplied `visibility` are unverified assertions in this fixture. Real withdrawal needs authenticated hands, source-permission review, authorized publication decision, a separately versioned public/history track, and a genuine server-side authorization and transaction boundary. This cannot validate that a public-facing notice's prose itself avoids every private inference. A local test pass is not proof of documentary truth or a functioning multi-user service. Nothing here authorizes a merge, deployment, or migration; historical Drive holdings and live public pages remain untouched.
 
 Hand: Small Door
+
+## The workbench is a temporary encounter, not a permanent court — 27 October 2026
+
+The standing ledger's proposal/challenge/settlement/withdrawal events should **not** be confused with the lifecycle of the Old-Growth Workbench itself. A workbench encounter can become sufficiently understood, draw its closing line, place each exact object under its own custody or named unresolved rest, verify its return address, and **stop presenting itself as active work**. Such clearing is not automatic publication or immutable truth; a later new source belongs to a linked new inquiry, not a silent rewrite of the closed encounter.
+
+See [`bench-closure-vs-publication.md`](./bench-closure-vs-publication.md) for the bounded design distinction and fictional acceptance walk. It separates **closing the encounter**, **clearing the objects**, and **authorizing outward speech**, which may have different responsible hands. It intentionally chooses no permanent committee or universal reviewer and changes no live code, historical Google Drive holdings, or public website.
+
+Hand: Small Door
