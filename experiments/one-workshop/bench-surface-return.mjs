@@ -29,10 +29,19 @@ function canTidy(a, actor) {
   // and authorize the actor, not trust these booleans or strings.
   return canView(a, actor) && actor.workshopMember === true;
 }
-function validateItem(item) {
+function accessKey(a) {
+  access(a);
+  return [a.kind, a.ownerId ?? '', a.matchId ?? ''].join(':');
+}
+function validateItem(item, benchAccess) {
   if (!object(item)) throw new Error('Invalid bench item');
   requireId(item.itemId, 'item ID');
   requireId(item.sourceId, 'source pointer');
+  // Homogeneous fixture compartments: never expose a private source/locator
+  // or warning pointer by placing it on a broader shared board.
+  // A real adapter must independently verify each referenced source and warning.
+  if (accessKey(item.access) !== accessKey(benchAccess))
+    throw new Error('Item access does not match bench compartment');
   if (item.warningIds !== undefined &&
       (!Array.isArray(item.warningIds) || item.warningIds.length > 40 ||
        !item.warningIds.every(id) || new Set(item.warningIds).size !== item.warningIds.length))
@@ -59,7 +68,7 @@ function replay(ledger) {
     if (eventIds.has(e.eventId)) throw new Error('Duplicate event ID');
     eventIds.add(e.eventId);
     if (e.kind === 'place') {
-      validateItem(e.item);
+      validateItem(e.item, ledger.access);
       if (known.has(e.item.itemId)) throw new Error('Duplicate item identity');
       known.add(e.item.itemId);
       active.set(e.item.itemId, structuredClone(e.item));
