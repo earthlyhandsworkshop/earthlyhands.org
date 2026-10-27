@@ -123,9 +123,8 @@ test('real Chromium: damaged-journal rescue and intervening tab history', async 
           });
           await firstTab.locator('#add').click();
           // File.text() is asynchronous; a completed click is not a completed import.
-          const expected = text === 'refused after reversion'
-            ? 'earlier tab conflict' : 'Another tab changed';
-          await firstTab.waitForFunction(needle => document.querySelector('#status').textContent.includes(needle), expected);
+          // A live storage event may now mark the first tab stale before its import.
+          await firstTab.waitForFunction(() => document.querySelector('#status').textContent.includes('IMPORT REFUSED'));
           return await firstTab.locator('#status').textContent();
         }
         assert.match(await attempt('refused first attempt'), /IMPORT REFUSED/);
@@ -134,6 +133,44 @@ test('real Chromium: damaged-journal rescue and intervening tab history', async 
         });
         assert.match(await attempt('refused after reversion'), /earlier tab conflict/);
         assert.equal(await firstTab.evaluate(key => localStorage.getItem(key), KEY), original);
+      } finally {
+        await context.close();
+      }
+    });
+
+
+    await t.test('a cross-tab edit observed before any click remains blocking after exact byte reversion', async () => {
+      const context = await browser.newContext({acceptDownloads: true});
+      try {
+        const original = journal('opening receipt');
+        const changed = journal('opening receipt', 'other tab receipt');
+        const firstTab = await context.newPage();
+        await firstTab.addInitScript(({key, value}) => localStorage.setItem(key, value), {
+          key: KEY, value: original
+        });
+        await firstTab.goto(url);
+        const secondTab = await context.newPage();
+        await secondTab.goto(url);
+        await secondTab.evaluate(({key, value}) => localStorage.setItem(key, value), {
+          key: KEY, value: changed
+        });
+        // No import, download or release action has happened on the first tab.
+        await firstTab.waitForFunction(() =>
+          document.querySelector('#status').textContent.includes('ANOTHER TAB CHANGED THE JOURNAL'));
+        assert.equal(await firstTab.locator('#release').isDisabled(), true);
+        await secondTab.evaluate(({key, value}) => localStorage.setItem(key, value), {
+          key: KEY, value: original
+        });
+        await firstTab.locator('#folio-file').setInputFiles({
+          name: 'late-fictional.json', mimeType: 'application/json',
+          buffer: Buffer.from(native('should not overwrite'))
+        });
+        await firstTab.locator('#add').click();
+        await firstTab.waitForFunction(() =>
+          document.querySelector('#status').textContent.includes('IMPORT REFUSED'));
+        assert.match(await firstTab.locator('#status').textContent(), /earlier tab conflict/);
+        assert.equal(await firstTab.evaluate(key => localStorage.getItem(key), KEY), original);
+        assert.match(await firstTab.locator('#held').textContent(), /1 version/);
       } finally {
         await context.close();
       }
