@@ -47,7 +47,7 @@ function replay(ledger) {
       !Array.isArray(ledger.events) ||
       ledger.generation !== ledger.events.length ||
       ledger.events.length > maxEvents) throw new Error('Invalid ledger');
-  const proposals = new Map(), current = new Map(), used = new Set();
+  const proposals = new Map(), current = new Map(), withdrawals = new Map(), used = new Set();
   const settled = new Set(), challenges = [];
   for (const e of ledger.events) {
     if (!object(e)) throw new Error('Invalid event');
@@ -82,6 +82,7 @@ function replay(ledger) {
         throw new Error('Restricted replacement would alter a wider audience; separate publication tracks required');
       }
       current.set(p.propositionId, p.proposalId);
+      withdrawals.delete(p.propositionId); // An explicit new settlement reopens the visible road.
       settled.add(p.proposalId);
     } else if (e.kind === 'challenge') {
       requireId(e.targetsProposalId, 'challenged ID');
@@ -95,14 +96,25 @@ function replay(ledger) {
     } else if (e.kind === 'withdraw') {
       requireId(e.targetsProposalId, 'withdrawn ID');
       requireString(e.reason, 'withdrawal reason');
+      requireString(e.notice, 'audience-facing withdrawal notice');
+      requireString(e.reviewBasis, 'withdrawal review basis');
+      names(e.reviewedBy);
+      level(e.visibility);
+      sources(e.sourceRefs);
+      if (!coveredBySources(e.visibility, e.sourceRefs)) throw new Error('Withdrawal visibility exceeds source access');
       const p = proposals.get(e.targetsProposalId);
       if (!p || current.get(p.propositionId) !== p.proposalId) throw new Error('Withdrawal targets stale/noncurrent standing');
+      // A restricted withdrawal cannot silently remove broader published standing.
+      // A withdrawal must be an explicit reviewed act at the existing audience level.
+      // This is receipt validation, NOT proof of reviewer identity or authority.
+      if (e.visibility !== p.visibility) throw new Error('Withdrawal audience must match current standing');
       current.delete(p.propositionId);
+      withdrawals.set(p.propositionId, { event: e, proposal: p });
     } else {
       throw new Error('Unknown event kind');
     }
   }
-  return { proposals, current, challenges };
+  return { proposals, current, withdrawals, challenges };
 }
 
 // Logical compare-and-swap for a single in-memory specimen ONLY.
@@ -132,12 +144,26 @@ export function readStanding(ledger, scopeKey, clearance) {
     const pending = state.challenges.some(c =>
       c.targetsProposalId === proposalId && level(c.visibility) <= level(clearance));
     entries.push({
-      propositionId, proposalId, standingText: p.standingText,
+      propositionId, proposalId, status: 'settled', standingText: p.standingText,
       scopeKeys: [...p.scopeKeys], sourceRefs: structuredClone(p.sourceRefs),
       visibility: p.visibility, reopenWhen: p.reopenWhen,
       // Do not return global ledger generation: even a hidden private event advances
       // it and would reveal private activity to a lower-clearance reader.
       challengePending: pending
+    });
+  }
+  for (const [propositionId, receipt] of state.withdrawals) {
+    const { event: e, proposal: p } = receipt;
+    if (state.current.has(propositionId) ||
+        !p.scopeKeys.includes(scopeKey) ||
+        level(e.visibility) > level(clearance)) continue;
+    // A withdrawal is a deliberately visible review event, not a vanished entry.
+    // Project only the authorized notice and source road; not private challenges,
+    // internal global generation, or potentially sensitive internal review notes.
+    entries.push({
+      propositionId, proposalId: p.proposalId, status: 'withdrawn',
+      withdrawalNotice: e.notice, scopeKeys: [...p.scopeKeys],
+      sourceRefs: structuredClone(e.sourceRefs), visibility: e.visibility
     });
   }
   return entries.sort((a, b) => a.propositionId.localeCompare(b.propositionId));
