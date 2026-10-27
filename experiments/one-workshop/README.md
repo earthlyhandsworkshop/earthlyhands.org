@@ -185,3 +185,22 @@ The standing ledger's proposal/challenge/settlement/withdrawal events should **n
 See [`bench-closure-vs-publication.md`](./bench-closure-vs-publication.md) for the bounded design distinction and fictional acceptance walk. It separates **closing the encounter**, **clearing the objects**, and **authorizing outward speech**, which may have different responsible hands. It intentionally chooses no permanent committee or universal reviewer and changes no live code, historical Google Drive holdings, or public website.
 
 Hand: Small Door
+
+## Workbench conflict glance — advisory preflight, 27 October 2026
+
+Ten proposed that the Old-Growth Workbench should quietly warn about **possible conflicts while a question is being worked and before an exact piece is put away**, not merely preserve a correction after the fact. The isolated [`bench-conflict-glance.mjs`](./bench-conflict-glance.mjs) and [15 fictional tests](./bench-conflict-glance.test.mjs) are a first, executable answer. They do **not** connect to live Drive records, the Workshop 15 index, a model's actual responses, or the public website.
+
+Two explicit calls to the same pure inspector:
+
+- **`phase: 'working'`** — warn when two authorized, explicitly scoped claim values differ; when the *same stable object ID* has different revisions; when a proposed claim has no exact source road; or when its source is too restricted for the proposed audience. A similar name or title is **not** an identity match.
+- **`phase: 'clearing'`** — additionally warn before a proposed move, locator release, named rest, or encounter closure if authority is unconfirmed, a paired object is omitted, an exact target-file path collides, the original behind a locator is unverified, an unresolved matter has no named rest, or the final destination/receipt has not been verified.
+
+Every warning includes a **reason and next inspection**, not a verdict, silent correction, permission grant, or automatic move. A clean result does not authorize anything. Hidden private neighbors are excluded **before** comparisons so adding one does not change a public warning count or metadata; an actual system must enforce authentication and source ACLs upstream, rather than trusting the caller-supplied `audience` or `authority` fields. The code uses exact keys and cannot discover semantic contradictions, disguised duplicates, identity errors, or false metadata on its own.
+
+**Proposed eventual seam, not implemented:** authenticated source reader → authorized, revision-pinned candidate/neighbor snapshot → conflict glance during work or before clearing → source-facing examination by the responsible hand → explicit crossing and readback. At a final clearing, check again against current source versions; no stale preflight can serve as a move receipt. The bench can still become empty without becoming forgetful.
+
+Local Node 22.16.0 execution of the two exact files: **15/15 tests passed**. Both files were committed and fetched back; Git blob SHAs matched the locally tested bytes: model `5472d49a2993bed731c473671f45495bdec9565a`, tests `5a2e79e25bd57603d6ed823010d817ff8de22a47`. CI completion should be separately witnessed before claiming a branch-wide pass.
+
+No actual conflict detection across Workshop holdings, no authenticated warning UI, no source move, no public publication, and no new schedule occurred.
+
+Hand: Small Door
