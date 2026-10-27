@@ -20,9 +20,12 @@ const challenge = (id, visibility = 'workshop', sources = sourcePublic) => ({
   reason: 'An attributable contrary document calls for another examination',
   visibility, sourceRefs: sources, recordedBy: 'reader-b'
 });
-const withdraw = id => ({
+const withdraw = (id, visibility = 'workshop', sourceRefs = sourcePublic) => ({
   kind: 'withdraw', eventId: 'withdraw-' + id, targetsProposalId: id,
   reason: 'A dated correction displaces this provisional standing',
+  notice: 'This invented conclusion was withdrawn after further review.',
+  reviewBasis: 'Reviewed the fictional dated account and its limits',
+  reviewedBy: ['source-reader'], visibility, sourceRefs,
   recordedBy: 'reviewer-a'
 });
 function start() {
@@ -122,10 +125,15 @@ test('private replacement cannot silently retract workshop standing', () => {
   assert.throws(() => appendEvent(l, settlement('v2', 'v1'), l.generation), /Restricted replacement/);
   assert.deepEqual(readStanding(l, 'invented-dates', 'workshop'), before);
 });
-test('a documented withdrawal removes current projection without erasing history', () => {
+test('a reviewed withdrawal leaves an audience-visible notice and recoverable history', () => {
   let l = start();
   l = appendEvent(l, withdraw('v1'), l.generation);
-  assert.deepEqual(readStanding(l, 'invented-dates', 'workshop'), []);
+  const view = readStanding(l, 'invented-dates', 'workshop');
+  assert.equal(view.length, 1);
+  assert.equal(view[0].status, 'withdrawn');
+  assert.match(view[0].withdrawalNotice, /withdrawn/);
+  assert.deepEqual(view[0].sourceRefs, sourcePublic);
+  assert.equal(Object.hasOwn(view[0], 'standingText'), false);
   assert.equal(l.events.length, 3);
 });
 test('invalid event kind, duplicate ID, and mismatched generation fail closed', () => {
@@ -153,4 +161,57 @@ test('hidden private events do not leak through public/workshop projection metad
   assert.deepEqual(readStanding(l, 'invented-dates', 'workshop'), workshopBefore);
   assert.equal(Object.hasOwn(publicBefore[0], 'ledgerGeneration'), false);
   assert.equal(readStanding(l, 'invented-dates', 'private')[0].challengePending, true);
+});
+
+test('a private challenge cannot silently withdraw a public conclusion', () => {
+  let l = emptyLedger();
+  l = appendEvent(l, proposal('v1', 'public'), l.generation);
+  l = appendEvent(l, settlement('v1'), l.generation);
+  const visible = readStanding(l, 'invented-dates', 'public');
+  l = appendEvent(l, challenge('v1', 'private', sourcePrivate), l.generation);
+  assert.deepEqual(readStanding(l, 'invented-dates', 'public'), visible);
+
+  assert.throws(() => appendEvent(l, withdraw('v1', 'private', sourcePrivate), l.generation),
+    /Withdrawal audience must match/);
+  assert.deepEqual(readStanding(l, 'invented-dates', 'public'), visible);
+
+  l = appendEvent(l, withdraw('v1', 'public'), l.generation);
+  const publicAfter = readStanding(l, 'invented-dates', 'public');
+  assert.equal(publicAfter.length, 1);
+  assert.equal(publicAfter[0].status, 'withdrawn');
+  assert.equal(Object.hasOwn(publicAfter[0], 'challengePending'), false);
+  assert.equal(Object.hasOwn(publicAfter[0], 'reason'), false);
+  assert.equal(Object.hasOwn(publicAfter[0], 'reviewBasis'), false);
+  assert.deepEqual(readStanding(l, 'invented-dates', 'workshop'), publicAfter);
+});
+
+test('withdrawal cannot launder restricted evidence into a public notice', () => {
+  let l = emptyLedger();
+  l = appendEvent(l, proposal('v1', 'public'), l.generation);
+  l = appendEvent(l, settlement('v1'), l.generation);
+  const before = readStanding(l, 'invented-dates', 'public');
+  assert.throws(() => appendEvent(l, withdraw('v1', 'public', sourcePrivate), l.generation),
+    /Withdrawal visibility exceeds source access/);
+  assert.deepEqual(readStanding(l, 'invented-dates', 'public'), before);
+});
+
+test('withdrawals require explicit review and an audience-facing notice', () => {
+  const l = start();
+  assert.throws(() => appendEvent(l, { ...withdraw('v1'), reviewedBy: [] }, l.generation),
+    /Nonempty scope or reviewer/);
+  assert.throws(() => appendEvent(l, { ...withdraw('v1'), notice: '' }, l.generation),
+    /Invalid audience-facing withdrawal notice/);
+  assert.deepEqual(readStanding(l, 'invented-dates', 'workshop')[0].status, 'settled');
+});
+
+test('a later independently settled conclusion supersedes a withdrawal notice', () => {
+  let l = start();
+  l = appendEvent(l, withdraw('v1'), l.generation);
+  l = appendEvent(l, proposal('v2'), l.generation);
+  l = appendEvent(l, settlement('v2', null), l.generation);
+  const view = readStanding(l, 'invented-dates', 'workshop');
+  assert.equal(view.length, 1);
+  assert.equal(view[0].status, 'settled');
+  assert.equal(view[0].proposalId, 'v2');
+  assert.ok(l.events.some(e => e.kind === 'withdraw' && e.targetsProposalId === 'v1'));
 });
