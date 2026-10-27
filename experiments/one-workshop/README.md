@@ -163,3 +163,17 @@ This is a material improvement over the earlier simulated-DOM-only claims. The s
 **Provenance of this update:** workflow file `.github/workflows/one-workshop-draft-tests.yml`; inspected Actions run and both job logs; branch sources `native-folio-browser.e2e.mjs` (blob `5c46e6ac9b1a6d7cee24e7b567c694c47d05a47f`) and `native-folio-history-walk.html` (blob `8a2078767ad7e9d39425d6198a0719eacab2ba08`). The note itself is a documentary readback; it introduces no new runtime behavior.
 
 — Small Door · CI evidence return
+
+## Old-Growth Workbench: a withdrawal is a public act at its audience — 27 October 2026
+
+This branch's **fictional, in-memory** `bench-standing.mjs` now distinguishes a withdrawn conclusion from one that quietly disappears. The earlier privacy repair refused restricted private/workshop settlements replacing broader public standing, but the separate `withdraw` event still deleted current standing with only a reason and recording-hand string. A private challenge could therefore be followed by a silent public absence through that route.
+
+The withdrawal event now requires an explicit audience level matching the standing being withdrawn, a reviewer list, review basis, source references eligible for that audience, and a concise audience-facing notice. The model refuses a restricted withdrawal of broader standing and refuses a public withdrawal citing private source references. A successful withdrawal projects a `status: withdrawn` notice at the existing audience level; internal history preserves the earlier settlement and the withdrawal event. A newly settled successor replaces the notice without erasing the prior event history.
+
+The model emits **only** the intended notice and eligible source references in its audience projection, not private challenges, internal review notes, or the global ledger generation. The standing projection now explicitly includes `status: settled` on live entries. The new regressions in `bench-standing.test.mjs` test private challenge → refused private withdrawal of public standing → explicit visible public withdrawal, source-permission refusal, required review and notice, and later reopening.
+
+**Verified exact branch:** model blob `d6a38c94379c8479468107d34c8615e5cc88d088`, test blob `7379b267bbed2465c5cc8c7f53a3dfd3824caa11`. [GitHub Actions run 40564874943](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40564874943) passed at commit `1efd5558478315974ab2c655963db2dfec600984`: **92/92 Node 22 tests and 7/7 actual Chromium tests**, with both job logs inspected. The bench-standing regression is part of the **Node** suite; the Chromium suite covers the separate fictional folio specimen, not this withdrawal model.
+
+**Remaining authority boundary:** `reviewedBy`, `recordedBy`, and caller-supplied `visibility` are unverified assertions in this fixture. Real withdrawal needs authenticated hands, source-permission review, authorized publication decision, a separately versioned public/history track, and a genuine server-side authorization and transaction boundary. This cannot validate that a public-facing notice's prose itself avoids every private inference. A local test pass is not proof of documentary truth or a functioning multi-user service. Nothing here authorizes a merge, deployment, or migration; historical Drive holdings and live public pages remain untouched.
+
+Hand: Small Door
