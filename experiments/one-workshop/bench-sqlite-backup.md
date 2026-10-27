@@ -59,6 +59,16 @@ The [four adversarial probes](./bench-sqlite-backup.test.mjs) alter an otherwise
 
 This still does not authenticate a snapshot: someone who can rewrite *rows inside the expected schema* and recompute the manifest may still forge an internally coherent story. Nor is raw SQL text comparison a general migration engine; it is a narrow v0 admission gate. Never treat it as an identity, authorization, archival, encryption, or publication check.
 
+## Fourth gate: permission metadata must not carry hidden instructions
+
+The v0 access compartments are deliberately small: `public` or `workshop` has only `kind`; `private` requires `kind` and `ownerId`; `bello-player` requires `kind`, `ownerId`, and `matchId`. Previously, `accessKey()` compared only those known dimensions but silently ignored additional JSON keys. A snapshot could therefore contain an invented `unexpectedPublicGrant` flag and still match its bench's expected compartment. A future importer or viewer might interpret such a field differently.
+
+The shared `access()` guard in [bench-sqlite-core.mjs](./bench-sqlite-core.mjs) now refuses **any undeclared access key**, on ordinary local bench creation/placement and when inspecting a portable snapshot. New fields require an explicit, reviewed schema change rather than an accidental interpretation. The [backup tests](./bench-sqlite-backup.test.mjs) separately forge the bench and item access JSON, recompute a perfectly matching SHA-256 manifest, and verify that each tampered snapshot is rejected without creating a destination. The [local surface test](./bench-surface-sqlite.test.mjs) verifies that a direct attempted placement rolls back and leaves the bench unchanged.
+
+**Independent evidence:** [GitHub Actions run 40597598824](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40597598824) at exact code/test commit `679ad7d1d879241f92312b891d9c8903751b59ca`. Both jobs completed successfully; Node log: **206/206 tests passed**, including both forged snapshot compartments and a rollback test. Separate Chromium folio job succeeded; it does **not** exercise these SQLite access checks.
+
+These keys remain *fictional access assertions*, not authenticated credentials, independently verified source permissions, or an enforceable network ACL. A malicious author able to forge valid expected fields and coherent rows can still forge an internally consistent snapshot. The gate's achievement is narrower: no silent extension of the v0 compartment vocabulary during creation or return.
+
 ## Uncrossed boundaries
 
 This is not an automated backup schedule, encrypted off-machine storage, a two-machine transfer demonstration, a crash/power-loss durability certification, an authenticated multi-user service, or the whole Workshop's export/reimport. The SQLite backup carries Workbench *surface locators and receipts*, not the linked archival originals, personal folios, source permission servers, revisions of research bodies, or public release history. It cannot create new documentary standing. The source and snapshot paths must remain local and access-controlled.
