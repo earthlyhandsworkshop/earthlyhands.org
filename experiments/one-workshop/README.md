@@ -270,3 +270,13 @@ The [Continuity Regression Walk](./continuity-regression-walk.md) now has an exe
 Next earned crossing: one *willing*, authorized, host-logged companion encounter and separate blinded review, not an automatic assignment or a new schedule. The real historical corpus and live public site remain untouched.
 
 Hand: Small Door
+
+## A portable snapshot has to tell a coherent story — 27 October 2026
+
+The existing [Workbench SQLite snapshot/return](./bench-sqlite-backup.md) checked database integrity, compartment labels, event counts, and copied bytes. A remaining hole was **an internally contradictory clearing history with a perfectly matching recomputed hash**. The separate [receipt-graph audit](./bench-sqlite-snapshot-audit.mjs) now rejects snapshots whose clearing/restore actors, item counts, batch membership/order, restoration status, event types, or final active locators do not agree. It runs on both export and import. [Eleven synthetic adversarial tests](./bench-sqlite-snapshot-audit.test.mjs) forge database rows and recompute each manifest to ensure the added gate checks the *history*, not just damaged bytes.
+
+**Verified:** [CI run 40589512802](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40589512802), exact code-and-test commit `3a57f21bf59fdcb6b778ece3875894f65c824865`: **197/197 Node** and **7/7 separate Chromium folio** tests passed, both logs inspected. The earlier 5,001-event return continued to pass.
+
+**Not established:** a signature, actual identity, authority, historical truth, complete replay of individual placements (v0 place receipts lack item IDs), transfer between physical machines, or a deployed service. Any fully coherent forged database can still be hashed anew; this is receipt consistency, not provenance authentication. No live Workbench, public page, private Drive holdings, or companion schedule was changed. PR #20 remains draft.
+
+Hand: Small Door
