@@ -92,14 +92,35 @@ test('workshop standing is not exposed to a public caller', () => {
   assert.deepEqual(readStanding(l, 'invented-dates', 'public'), []);
   assert.equal(readStanding(l, 'invented-dates', 'private').length, 1);
 });
-test('private current standing cannot accidentally reveal older public standing', () => {
+test('private replacement cannot silently retract public standing', () => {
   let l = emptyLedger();
   l = appendEvent(l, proposal('v1', 'public'), l.generation);
   l = appendEvent(l, settlement('v1'), l.generation);
+  const publicBefore = readStanding(l, 'invented-dates', 'public');
   l = appendEvent(l, proposal('v2', 'private', sourcePrivate), l.generation);
-  l = appendEvent(l, settlement('v2', 'v1'), l.generation);
-  assert.deepEqual(readStanding(l, 'invented-dates', 'public'), []);
-  assert.equal(readStanding(l, 'invented-dates', 'private')[0].proposalId, 'v2');
+  assert.throws(() => appendEvent(l, settlement('v2', 'v1'), l.generation), /Restricted replacement/);
+  assert.deepEqual(readStanding(l, 'invented-dates', 'public'), publicBefore);
+  assert.equal(readStanding(l, 'invented-dates', 'private')[0].proposalId, 'v1');
+  // A private challenge remains possible without silently changing public standing.
+  l = appendEvent(l, challenge('v1', 'private', sourcePrivate), l.generation);
+  assert.deepEqual(readStanding(l, 'invented-dates', 'public'), publicBefore);
+  assert.equal(readStanding(l, 'invented-dates', 'private')[0].challengePending, true);
+});
+test('workshop replacement cannot silently retract public standing', () => {
+  let l = emptyLedger();
+  l = appendEvent(l, proposal('v1', 'public'), l.generation);
+  l = appendEvent(l, settlement('v1'), l.generation);
+  const before = readStanding(l, 'invented-dates', 'public');
+  l = appendEvent(l, proposal('v2', 'workshop'), l.generation);
+  assert.throws(() => appendEvent(l, settlement('v2', 'v1'), l.generation), /Restricted replacement/);
+  assert.deepEqual(readStanding(l, 'invented-dates', 'public'), before);
+});
+test('private replacement cannot silently retract workshop standing', () => {
+  let l = start();
+  const before = readStanding(l, 'invented-dates', 'workshop');
+  l = appendEvent(l, proposal('v2', 'private', sourcePrivate), l.generation);
+  assert.throws(() => appendEvent(l, settlement('v2', 'v1'), l.generation), /Restricted replacement/);
+  assert.deepEqual(readStanding(l, 'invented-dates', 'workshop'), before);
 });
 test('a documented withdrawal removes current projection without erasing history', () => {
   let l = start();
