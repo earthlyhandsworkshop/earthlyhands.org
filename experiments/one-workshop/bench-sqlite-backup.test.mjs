@@ -178,3 +178,28 @@ test('matching fingerprints do not authorize unexpected SQLite schema objects', 
   // The original valid source and its manifest are not altered by the probes.
   assert.deepEqual(readFileSync(snapshot),knownGood);
 });
+
+test('portable return rejects undeclared compartment fields despite valid hash and schema',async t=>{
+  const {db}=setup(t),dir=scratch(t),source=join(dir,'source.db');
+  db.place('old-growth',item(1),alice,0,'place-1');
+  const manifest=await exportBenchSnapshot(db,source);
+  assert.equal(manifest.eventCount,1);
+  const clean=readFileSync(source);
+  for(const table of ['benches','items']){
+    await t.test(table,async()=>{
+      const bad=join(dir,'tampered-'+table+'.db'),dest=join(dir,'received-'+table+'.db');
+      writeFileSync(bad,clean);
+      const handle=new DatabaseSync(bad);
+      try{
+        // Unknown permission hints used to pass accessKey() comparison because
+        // its key intentionally includes only known compartment dimensions.
+        handle.prepare('UPDATE '+table+' SET access_json=?')
+          .run(JSON.stringify({kind:'workshop',unexpectedPublicGrant:true}));
+      }finally{handle.close();}
+      await assert.rejects(importBenchSnapshot(bad,dest,refingerprint(bad,1,1)),
+        /Unexpected access metadata fields/);
+      assert.equal(existsSync(dest),false);
+    });
+  }
+  assert.deepEqual(readFileSync(source),clean);
+});
