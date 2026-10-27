@@ -9,6 +9,7 @@ import { Transform } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 import { accessKey, validateItem } from './bench-sqlite-core.mjs';
 import { auditBenchSnapshotReceipts } from './bench-sqlite-snapshot-audit.mjs';
+import { openDb } from './bench-sqlite-schema.mjs';
 
 export const BENCH_SNAPSHOT_SCHEMA = 'earthlyhands.workbench.surface-sqlite-snapshot.v0';
 const HEX_SHA256 = /^[0-9a-f]{64}$/;
@@ -43,6 +44,21 @@ async function fingerprint(path) {
   return { bytes, sha256: h.digest('hex') };
 }
 
+// A checksum and valid receipts do not mean the file is safe to *run* later.
+// A forged SQLite file can carry extra triggers or weakened table constraints,
+// which execute only after return. Accept exactly the schema written by this
+// v0 fixture; any future migration needs its own deliberate format/version gate.
+function refuseUnknownSnapshotSchema(db) {
+  const query = 'SELECT type,name,tbl_name,sql FROM sqlite_schema ORDER BY type,name,tbl_name';
+  const expectedDb = openDb(':memory:');
+  try {
+    const expected = expectedDb.prepare(query).all();
+    const actual = db.prepare(query).all();
+    if (JSON.stringify(actual) !== JSON.stringify(expected))
+      throw new Error('Snapshot schema differs from known Workbench v0 schema');
+  } finally { expectedDb.close(); }
+}
+
 function inspectSnapshot(path) {
   const db = new DatabaseSync(path, { readOnly: true });
   try {
@@ -51,6 +67,7 @@ function inspectSnapshot(path) {
       throw new Error('Snapshot failed SQLite integrity check');
     if (db.prepare('PRAGMA foreign_key_check').all().length)
       throw new Error('Snapshot contains broken foreign keys');
+    refuseUnknownSnapshotSchema(db);
     // These reads require the actual current bench shape, not just a valid SQLite file.
     db.prepare('SELECT item_id,source_id,access_json,warning_ids_json,active FROM items LIMIT 1').all();
     db.prepare('SELECT bench_id,batch_id,cleared_by,restored_by FROM batches LIMIT 1').all();
