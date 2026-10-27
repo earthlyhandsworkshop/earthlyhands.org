@@ -260,3 +260,13 @@ A Node 22 test completed **2,500 clear/restore cycles (5,001 events)** on one in
 **Not proved:** production load, real identities or source ACLs, actual notifications, backup/export, multi-host operation, crash/power-loss recovery, or a deployed UI. This experiment is not wired into Workshop 15, the old Workbench, Bello, or EarthlyHands.org. No historical Drive holdings or public pages were changed.
 
 Hand: Small Door
+
+## Edgewise continuity: measuring answer-use, not just retrieval — 27 October 2026
+
+The [Continuity Regression Walk](./continuity-regression-walk.md) now has an executable [blinded trial recorder and witness](./continuity-trial-witness.md). Six **fictional** cases are crossed with four conditions (baseline, retrieval, self-check, independent checker) and four phases (immediate, after intervening discussion, fresh return, different companion): **96 planned trials, zero actual model trials yet**. Answerer packets exclude scoring rubrics; reviewer packets conceal condition, model and phase. Delivery receipts, recognition, final answer, independent review, human repair turns, and missing data remain distinct. Missing or stale source delivery does not count as a final-answer-use failure; ungraded results do not become zeros.
+
+[`continuity-trial.mjs`](./continuity-trial.mjs), [synthetic cases](./continuity-trial-cases.mjs), and [tests](./continuity-trial.test.mjs) are deliberately public-safe and do not ingest real Workshop 15 documents or private conversations. [CI run 40582037113](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40582037113), exact code/test commit `def2d82659ac6295a77cb95c76d63c9ff9ab4d60`, passed **177/177 Node** and **7/7 Chromium folio** tests (logs inspected). The 21 new continuity tests are Node-only; no actual Edgewise answers or cross-session corrections were evaluated.
+
+Next earned crossing: one *willing*, authorized, host-logged companion encounter and separate blinded review, not an automatic assignment or a new schedule. The real historical corpus and live public site remain untouched.
+
+Hand: Small Door
