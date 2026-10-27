@@ -147,3 +147,19 @@ node --test experiments/one-workshop/native-folio-stale-download.test.mjs
 This still needs actual browser download and cross-tab/restart tests. The PR stays draft and undeployed; no historic Google Drive objects or public website pages were touched. The stale earlier copy is recoverable by deliberate choice, not silently promoted to the current journal.
 
 Hand: Small Door
+
+
+## CI readback — 26 October 2026 (27 October UTC)
+
+The earlier statements above that certain native Node tests had not been executed and that this folio-history specimen lacked an independently exercised real-browser download/cross-tab test describe their **earlier** verification state. They are superseded **for the following narrow checks on this exact branch commit**, not for untested visitor or production behavior.
+
+[GitHub Actions run 40435323834](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40435323834) completed successfully on **27 October 2026, 01:55 UTC**, against PR #20 head `3a46b0e20a516a523e57577cae873e9700a14acf`. Readback of both job logs, not merely a green badge, established:
+
+- **Node 22**: `node --test experiments/one-workshop/*.test.mjs` — **72 tests passed, 0 failed, 0 skipped**.
+- **Headless real Chromium through Playwright**: `node --test experiments/one-workshop/native-folio-browser.e2e.mjs` — **7 tests passed, 0 failed, 0 skipped**. These ran the experimental page and modules on a temporary local HTTP server with invented folio data. The cases exercised an actual downloaded damaged-storage rescue envelope preserving an unmatched UTF-16 surrogate; opening-snapshot versus another-tab content; an observed cross-tab edit that reverted to old bytes; a storage-refused tab-only receipt that must not be released; and overlapping imports or a delayed import arriving after release.
+
+This is a material improvement over the earlier simulated-DOM-only claims. The same tests do **not** establish a private authenticated service, atomically synchronized browser tabs, recovery from every crash, phone use, cross-browser portability, the original Public Lands source page's full export/reimport encounter, unrestricted storage durability, permission to publish, or a deployable multi-user Workshop. Origin-wide `localStorage` still is not an access-control boundary. The experiment stays on a **draft, undeployed** PR; the production site and historical Google Drive holdings were not changed.
+
+**Provenance of this update:** workflow file `.github/workflows/one-workshop-draft-tests.yml`; inspected Actions run and both job logs; branch sources `native-folio-browser.e2e.mjs` (blob `5c46e6ac9b1a6d7cee24e7b567c694c47d05a47f`) and `native-folio-history-walk.html` (blob `8a2078767ad7e9d39425d6198a0719eacab2ba08`). The note itself is a documentary readback; it introduces no new runtime behavior.
+
+— Small Door · CI evidence return
