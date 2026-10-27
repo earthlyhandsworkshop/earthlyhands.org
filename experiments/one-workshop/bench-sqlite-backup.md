@@ -47,6 +47,18 @@ The new [snapshot receipt audit](./bench-sqlite-snapshot-audit.mjs) follows the 
 
 **Crucial limit:** internal coherence is **not** proof that an actor really performed an act. The current v0 `place` event does not name the exact item it received, so the audit cannot fully replay every individual item from creation. A malicious party able to rewrite a coherent database and recompute its manifest can still make an internally consistent fiction. Signatures, custody identities, a source-object manifest, archival originals, proper backups, and permissions remain separate earned work. Do not represent this check as authentication, an untamperable ledger, or historical truth.
 
+## Third gate: do not inherit an unexpected SQLite program
+
+A snapshot is not just rows. SQLite files also contain executable database definitions. Even a file that passes integrity checks, shows internally consistent clear/restore receipts, and has a matching newly computed SHA-256 can contain an added trigger that silently changes a *future* bench write. A changed table definition, an extra view, or a shadow table may likewise cross unnoticed if we inspect only expected columns.
+
+The receiver now compares the entire stored `sqlite_schema` inventory (tables, indexes, views, triggers, and their SQL definitions) against a newly created, trusted v0 Workbench schema. Unknown or changed definitions are refused **before installation**. This is intentionally strict: a future legitimate schema change must earn an explicit new version and migration rule, rather than being silently accepted as this v0 snapshot.
+
+The [four adversarial probes](./bench-sqlite-backup.test.mjs) alter an otherwise valid exported snapshot by adding (1) a trigger that would change locator flags on a later write, (2) an extra table, (3) a view, and (4) a column. Each case recomputes the snapshot manifest to match the tampered bytes; each is rejected by the new schema gate without creating a restored destination.
+
+**Independent verification:** [GitHub Actions run 40590524122](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40590524122), exact tested branch commit `4a39a2df6b99880bc4f4f4bb378023ac6fde5759`: **202/202 Node tests** and **7/7 Chromium tests** passed. The Node job's logs include all four new probes. The test is local and uses invented data; it does not claim multi-machine operation.
+
+This still does not authenticate a snapshot: someone who can rewrite *rows inside the expected schema* and recompute the manifest may still forge an internally coherent story. Nor is raw SQL text comparison a general migration engine; it is a narrow v0 admission gate. Never treat it as an identity, authorization, archival, encryption, or publication check.
+
 ## Uncrossed boundaries
 
 This is not an automated backup schedule, encrypted off-machine storage, a two-machine transfer demonstration, a crash/power-loss durability certification, an authenticated multi-user service, or the whole Workshop's export/reimport. The SQLite backup carries Workbench *surface locators and receipts*, not the linked archival originals, personal folios, source permission servers, revisions of research bodies, or public release history. It cannot create new documentary standing. The source and snapshot paths must remain local and access-controlled.
