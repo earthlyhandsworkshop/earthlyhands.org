@@ -53,3 +53,9 @@ Run the mobile UI on a real phone; verify navigation and accessibility. Connect 
 No website deployment, public data release, migration, or companion invitation is authorized by this draft.
 
 Powerful finger. Trustworthy result.
+
+## Separate local two-hand phone walk — 27 October 2026
+
+The isolated browser/API specimen **Pocket Workshop — Two-Hand Phone Walk v0.2** was saved as a ZIP and read back byte-for-byte in Google Drive Workshop 15: [archive](https://drive.google.com/file/d/1I0OtnfLpepsPuHC7WF4vTb0PmzZJSTUK/view), [README](https://drive.google.com/file/d/168BXZLQe9Jd_cPZXzj8so0ZexeD2Gf15/view). This is a companion artifact to this branch's static interface, not code deployed by this repository.
+
+Its local fictional service and browser UI demonstrate both invitation directions, explicit acceptance, a shared object, notes, and session recovery. 24 Node tests passed; a Chromium logic walk with a Python-to-loopback API bridge passed at a narrow phone viewport. Direct Chromium HTTP navigation was blocked in the test environment, so no native phone/HTTP browser claim is made. All tokens and principals are invented; no real identity, Drive source, companion delivery, or public deployment is connected. The secure authenticated read-only object crossing remains open.
