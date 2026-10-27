@@ -82,3 +82,13 @@ test('restoration cannot replay the same batch or silently replace another batch
   assert.equal(db.readBatch('old-growth', 'batch-again', alice).restored, false);
 });
 
+test('unknown compartment metadata cannot enter a live SQLite bench',t=>{
+  const {db}=setup(t);
+  const disguised={kind:'workshop',unexpectedPublicGrant:true};
+  assert.throws(()=>db.createBench('other-bench',disguised),
+    /Unexpected access metadata fields/);
+  assert.throws(()=>db.place('old-growth',item(1,disguised),alice,0,'place-1'),
+    /Unexpected access metadata fields/);
+  assert.equal(db.readActive('old-growth',alice).generation,0);
+  assert.equal(db.readActive('old-growth',alice).activeItems.length,0);
+});
