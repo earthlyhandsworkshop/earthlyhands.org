@@ -33,7 +33,9 @@ function page(initial) {
   const URL={createObjectURL(blob){bodies.push(blob.parts.join(''));return 'blob:test';},
     revokeObjectURL(){}};
   class BlobMock{constructor(parts){this.parts=parts;}}
-  runInNewContext(inline,{document,localStorage,URL,Blob:BlobMock,setTimeout(){},
+  // This suite tests download handlers; storage-event behavior has separate coverage.
+  const window={addEventListener(){}};
+  runInNewContext(inline,{document,window,localStorage,URL,Blob:BlobMock,setTimeout(){},
     confirm(){confirms++;return consent;},exportUnrecognizedStoredString(){return '';},
     emptyFolioHistory,parseFolioHistory,receiveFolioVersion,recoverFolioVersion,
     recoverLatestFolio,exportFolioHistory,restoreFolioHistoryIntoEmpty});
