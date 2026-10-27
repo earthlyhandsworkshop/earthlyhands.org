@@ -74,6 +74,13 @@ function replay(ledger) {
       if (!coveredBySources(p.visibility, p.sourceRefs)) throw new Error('Visibility exceeds source access');
       const earlier = current.get(p.propositionId) ?? null;
       if (e.replaces !== earlier) throw new Error('Standing changed; explicit replacement and fresh review required');
+      // In this single-current-head fixture, replacing broadly visible standing
+      // with more restricted standing would make its public/workshop view vanish.
+      // That disappearance reveals an otherwise hidden private event. Refuse
+      // until this model has separate authorized publication tracks per audience.
+      if (earlier && level(p.visibility) > level(proposals.get(earlier).visibility)) {
+        throw new Error('Restricted replacement would alter a wider audience; separate publication tracks required');
+      }
       current.set(p.propositionId, p.proposalId);
       settled.add(p.proposalId);
     } else if (e.kind === 'challenge') {
