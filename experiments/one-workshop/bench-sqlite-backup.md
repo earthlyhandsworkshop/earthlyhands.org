@@ -69,6 +69,16 @@ The shared `access()` guard in [bench-sqlite-core.mjs](./bench-sqlite-core.mjs) 
 
 These keys remain *fictional access assertions*, not authenticated credentials, independently verified source permissions, or an enforceable network ACL. A malicious author able to forge valid expected fields and coherent rows can still forge an internally consistent snapshot. The gate's achievement is narrower: no silent extension of the v0 compartment vocabulary during creation or return.
 
+## Unclosed fifth edge: exact arrival chronology is not yet proven
+
+The v0 clearing audit correctly compares counts, batches, actors, ordinals, and final active flags, but **it cannot establish exactly which item was already present at a particular earlier clearing**. The placement event stores `item_count=1`, not the placed `item_id`. A matching SHA-256, valid SQLite structure, and coherent receipt counts cannot supply information the receipt never recorded.
+
+A new, executable [red-team witness](./bench-sqlite-snapshot-audit.test.mjs) establishes a specific counterexample with fictional items: Alice places leaves 1 and 2, clears and restores both, and only afterward places leaf 3. An offline editor changes the old clearing's membership from leaf 2 to leaf 3, while leaving the final item rows, active flags, ordinary event counts, schema, and valid foreign keys intact. The editor recomputes the manifest's SHA-256. **The current v0 importer accepts the altered snapshot.** The test deliberately *passes when this known limitation is reproduced*; it must not be mistaken for a protective rejection test.
+
+**Independent result:** [GitHub Actions run 40604837518](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40604837518), exact red-team test commit `4ed3a925a4516bfb94220a1ec032a18c3c4b0ea8`. The Node job's log reports the counterexample as passing and **207/207 Node tests passing**. This means the witness ran successfully, **not** that the v0 audit has closed the weakness.
+
+A future receipt format should record the exact placed item ID as a first-class field and replay membership chronologically, under an explicitly versioned schema with a reviewed migration. Merely guessing IDs from `event_id` strings is unsafe: those IDs have never been defined as an authoritative item pointer. Older v0 histories cannot retroactively recover that missing evidence. Until then, call the Workbench snapshot internally consistent **within its count-based model**, not a complete account of item-by-item chronology. Keep it an unmerged, private, fictional-data experiment; source authority, authenticated custody, and real permissions remain outside it.
+
 ## Uncrossed boundaries
 
 This is not an automated backup schedule, encrypted off-machine storage, a two-machine transfer demonstration, a crash/power-loss durability certification, an authenticated multi-user service, or the whole Workshop's export/reimport. The SQLite backup carries Workbench *surface locators and receipts*, not the linked archival originals, personal folios, source permission servers, revisions of research bodies, or public release history. It cannot create new documentary standing. The source and snapshot paths must remain local and access-controlled.
