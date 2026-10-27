@@ -24,7 +24,7 @@ The exact source and tests were run under **Node 22.16.0** using `node --test ex
 - Private and Bello player/match compartments hiding active items, batches, traces, and notices from unauthorized fixture viewers.
 - **2,500 clear/restore cycles on one bench, or 5,001 committed events including initial placement**, with the first and last batch receipts still recoverable and bounded trace pages working. The local test completed in approximately 2–3 seconds on the available runner. This is a bounded software test, **not** a measured multi-user traffic service or guarantee at any daily rate.
 
-All eight files were read back from the draft branch and compared against locally tested Git blob hashes. The committed source and test bytes matched. The complete GitHub Actions run must be inspected separately before a CI-wide claim.
+All eight files were read back from the draft branch and compared against locally tested Git blob hashes. The committed source and test bytes matched. **Independent CI witness:** [GitHub Actions run 40571451534](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40571451534), exact code/test head `a0a84d26187dbbf85b16a889a99134767ba09875`, completed successfully. Both job logs were inspected: **156/156 Node tests** passed, including the 12 new SQLite cases and 5,001-event walk; **7/7 Chromium folio tests** passed, but those browser tests cover the separate fictional folio specimen, not this SQLite bench store.
 
 ## Uncrossed boundaries
 
