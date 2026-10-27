@@ -104,3 +104,37 @@ test('a valid snapshot still crosses an offline file boundary', async t => {
   await importBenchSnapshot(source, dest, manifest);
   assert.equal(existsSync(dest), true);
 });
+
+test('KNOWN v0 LIMIT: a forged member placed after clearing can pass the receipt count audit', async t => {
+  // Proof of an *unclosed* boundary, not a desired authorization outcome:
+  // v0 place events record only a count, not the item ID. A forged snapshot
+  // can name a future item in an earlier clearing without breaking counts.
+  const { db } = setup(t), dir = scratch(t);
+  let gen = db.place('old-growth', item(1), alice, 0, 'place-1');
+  gen = db.place('old-growth', item(2), alice, gen, 'place-2');
+  gen = db.clear('old-growth', 'batch-2', ['leaf-1','leaf-2'], alice, gen, 'clear-2');
+  gen = db.restore('old-growth', 'batch-2', alice, gen, 'restore-2');
+  db.place('old-growth', item(3), alice, gen, 'place-3');
+
+  const source = join(dir, 'original.sqlite');
+  const altered = join(dir, 'forged.sqlite');
+  const received = join(dir, 'received.sqlite');
+  const manifest = await exportBenchSnapshot(db, source);
+  copyFileSync(source, altered);
+  const handle = new DatabaseSync(altered);
+  try {
+    handle.prepare("UPDATE batch_items SET item_id='leaf-3' WHERE bench_id='old-growth' AND batch_id='batch-2' AND item_id='leaf-2'").run();
+    assert.deepEqual(handle.prepare("PRAGMA foreign_key_check").all(), []);
+  } finally { handle.close(); }
+  // This entry was never present at clearing time. We would want a future
+  // item-ID-bearing event format to refuse this altered batch.
+  const recomputed = forgedManifest(altered, manifest);
+  await importBenchSnapshot(altered, received, recomputed);
+  const returned = new DatabaseSync(received, { readOnly: true });
+  try {
+    const members = returned.prepare("SELECT item_id FROM batch_items WHERE batch_id='batch-2' ORDER BY ordinal").all();
+    assert.deepEqual(members.map(x => x.item_id), ['leaf-1', 'leaf-3']);
+    assert.equal(returned.prepare("SELECT seq FROM events WHERE event_id='place-3'").get().seq, 5);
+    assert.equal(returned.prepare("SELECT seq FROM events WHERE event_id='clear-2'").get().seq, 3);
+  } finally { returned.close(); }
+});
