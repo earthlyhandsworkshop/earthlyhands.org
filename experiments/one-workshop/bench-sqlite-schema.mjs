@@ -2,7 +2,7 @@
 import { DatabaseSync } from 'node:sqlite';
 export function openDb(filename) {
   const db = new DatabaseSync(filename);
-  db.exec(\`PRAGMA busy_timeout=5000;
+  db.exec(`PRAGMA busy_timeout=5000;
     PRAGMA journal_mode=WAL;
     PRAGMA synchronous=FULL;
     PRAGMA foreign_keys=ON;
@@ -32,6 +32,6 @@ export function openDb(filename) {
       PRIMARY KEY(bench_id,seq), UNIQUE(bench_id,event_id),
       FOREIGN KEY(bench_id) REFERENCES benches(bench_id)
     );
-    CREATE INDEX IF NOT EXISTS events_notices ON events(bench_id,kind,seq);\`);
+    CREATE INDEX IF NOT EXISTS events_notices ON events(bench_id,kind,seq);`);
   return db;
 }
