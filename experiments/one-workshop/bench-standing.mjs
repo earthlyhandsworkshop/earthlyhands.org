@@ -128,7 +128,9 @@ export function readStanding(ledger, scopeKey, clearance) {
       propositionId, proposalId, standingText: p.standingText,
       scopeKeys: [...p.scopeKeys], sourceRefs: structuredClone(p.sourceRefs),
       visibility: p.visibility, reopenWhen: p.reopenWhen,
-      challengePending: pending, ledgerGeneration: ledger.generation
+      // Do not return global ledger generation: even a hidden private event advances
+      // it and would reveal private activity to a lower-clearance reader.
+      challengePending: pending
     });
   }
   return entries.sort((a, b) => a.propositionId.localeCompare(b.propositionId));
