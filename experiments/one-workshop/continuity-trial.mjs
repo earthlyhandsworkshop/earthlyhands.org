@@ -39,9 +39,13 @@ export function makePlan(runId, blindSalt) {
       for (let k = 0; k < CONDITIONS.length; k++) {
         const condition = CONDITIONS[(k + ci + pi) % CONDITIONS.length];
         const caseId = cases[ci].id, phase = PHASES[pi];
-        const trialId = [runId, caseId, phase, condition].join(':');
+        // Neither the answerer-facing trial ID nor the review ID encodes
+        // condition or timing in plain text. The private plan retains the mapping.
+        const trialId = 'trial-' + createHash('sha256')
+          .update('answerer:' + blindSalt + ':' +
+            [runId, caseId, phase, condition].join(':')).digest('hex').slice(0, 24);
         const blindId = 'blind-' + createHash('sha256')
-          .update(blindSalt + ':' + trialId).digest('hex').slice(0, 20);
+          .update('reviewer:' + blindSalt + ':' + trialId).digest('hex').slice(0, 20);
         entries.push({ schema: TRIAL_SCHEMA, runId, trialId, blindId, caseId, phase, condition });
       }
     }
@@ -140,14 +144,29 @@ export function summarizePlan(plan, observations = [], reviews = []) {
   }
   const seenObs = new Map(), seenReviews = new Map();
   for (const o of observations) {
-    if (!object(o) || !entries.has(o.trialId) || seenObs.has(o.trialId) ||
-        o.blindId !== entries.get(o.trialId).blindId) throw new Error('Duplicate/unplanned observation');
+    const e = entries.get(o?.trialId);
+    if (!object(o) || !e || seenObs.has(o.trialId) ||
+        o.schema !== TRIAL_SCHEMA || o.blindId !== e.blindId ||
+        o.caseId !== e.caseId || o.phase !== e.phase || o.condition !== e.condition ||
+        !object(o.delivery) || !exactRefs(o.delivery.sourceRefs) ||
+        !exactRefs(o.delivery.correctionRefs) ||
+        o.delivery.complete !== (
+          sameRefs(o.delivery.sourceRefs, expected(e).sources) &&
+          sameRefs(o.delivery.correctionRefs, expected(e).corrections)
+        ) || !prose(o.finalAnswer) || !Number.isSafeInteger(o.humanRepairTurns) ||
+        o.humanRepairTurns < 0) throw new Error('Duplicate/unplanned observation');
     seenObs.set(o.trialId, o);
   }
   for (const v of reviews) {
-    if (!object(v) || !seenObs.has(v.trialId) || seenReviews.has(v.trialId) ||
-        v.blindId !== seenObs.get(v.trialId).blindId ||
-        !['graded', 'inconclusive'].includes(v.verdict))
+    const o = seenObs.get(v?.trialId);
+    if (!object(v) || !o || seenReviews.has(v.trialId) ||
+        v.schema !== TRIAL_SCHEMA || v.blindId !== o.blindId ||
+        !ident(v.reviewerId) || v.reviewerId === o.answererId ||
+        v.reviewerId === o.checker?.id || !prose(v.notes) ||
+        !['graded', 'inconclusive'].includes(v.verdict) ||
+        (v.verdict === 'graded' &&
+          (!object(v.metrics) || METRICS.some(k => typeof v.metrics[k] !== 'boolean'))) ||
+        (v.verdict === 'inconclusive' && v.metrics !== null))
       throw new Error('Duplicate/unmatched review');
     seenReviews.set(v.trialId, v);
   }
@@ -156,17 +175,25 @@ export function summarizePlan(plan, observations = [], reviews = []) {
     const observed = subset.map(e => seenObs.get(e.trialId)).filter(Boolean);
     const graded = observed.map(o => ({ o, v: seenReviews.get(o.trialId) }))
       .filter(x => x.v?.verdict === 'graded');
+    // Separate the retrieval gate from answer-use. A graded answer whose
+    // correction was never delivered is not evidence that self-checking failed.
+    const gradedCompleteDelivery = graded.filter(x => x.o.delivery.complete);
     const metrics = Object.fromEntries(METRICS.map(k => [k,
-      graded.length ? { trueCount: graded.filter(x => x.v.metrics[k] === true).length,
-        denominator: graded.length } : null]));
+      gradedCompleteDelivery.length ? {
+        trueCount: gradedCompleteDelivery.filter(x => x.v.metrics[k] === true).length,
+        denominator: gradedCompleteDelivery.length
+      } : null]));
     return {
       condition, planned: subset.length, observed: observed.length,
       deliveryComplete: observed.filter(o => o.delivery?.complete === true).length,
       graded: graded.length,
+      gradedCompleteDelivery: gradedCompleteDelivery.length,
+      gradedWithDeliveryGap: graded.length - gradedCompleteDelivery.length,
       inconclusive: observed.filter(o => seenReviews.get(o.trialId)?.verdict === 'inconclusive').length,
       awaitingReview: observed.filter(o => !seenReviews.has(o.trialId)).length,
       unobserved: subset.length - observed.length,
-      humanRepairTurns: graded.length ? graded.reduce((n, x) => n + x.o.humanRepairTurns, 0) : null,
+      humanRepairTurns: gradedCompleteDelivery.length ?
+        gradedCompleteDelivery.reduce((n, x) => n + x.o.humanRepairTurns, 0) : null,
       metrics
     };
   });
