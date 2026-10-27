@@ -144,3 +144,36 @@ test('2,500 clear/restore cycles and oldest/newest receipts survive export/impor
     assert.equal(returned.readTrace('old-growth',alice,{after:4999}).length,2);
   }finally{returned.close();}
 });
+
+test('matching fingerprints do not authorize unexpected SQLite schema objects', async t => {
+  const {db}=setup(t),dir=scratch(t),snapshot=join(dir,'source.db');
+  db.place('old-growth',item(7),alice,0,'place-7');
+  const manifest=await exportBenchSnapshot(db,snapshot);
+  assert.equal(manifest.eventCount,1);
+  const knownGood=readFileSync(snapshot);
+  const attacks=[
+    ['future-write trigger',
+      `CREATE TRIGGER invisible_change AFTER UPDATE ON benches
+       BEGIN UPDATE items SET active=0; END`],
+    ['extra private table', 'CREATE TABLE shadow_receipts (note TEXT)'],
+    ['invented view', 'CREATE VIEW shared_public AS SELECT * FROM items'],
+    ['altered column layout', 'ALTER TABLE items ADD COLUMN forged_permission TEXT']
+  ];
+  for (const [name,sql] of attacks) {
+    await t.test(name,async()=>{
+      const slug=name.replaceAll(' ','-');
+      const tampered=join(dir,slug+'.db'), dest=join(dir,slug+'-returned.db');
+      writeFileSync(tampered,knownGood);
+      const handle=new DatabaseSync(tampered);
+      try { handle.exec(sql); } finally { handle.close(); }
+      // SQLite still opens cleanly. Recalculate a *matching* manifest, so
+      // rejection is due to the schema gate, not damaged transport bytes.
+      const refreshed=refingerprint(tampered,1,1);
+      await assert.rejects(importBenchSnapshot(tampered,dest,refreshed),
+        /schema differs from known Workbench v0 schema/);
+      assert.equal(existsSync(dest),false);
+    });
+  }
+  // The original valid source and its manifest are not altered by the probes.
+  assert.deepEqual(readFileSync(snapshot),knownGood);
+});
