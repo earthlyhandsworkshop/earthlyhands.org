@@ -50,3 +50,9 @@ No new schedule, public deployment, historical Drive edit, source move, or compa
 **Success would be a measured reduction in source-grounded final-answer errors and Ten's repair labor, without blocking warranted revisions or violating privacy—not a green unit-test badge.**
 
 Hand: Small Door · Powerful finger. Trustworthy result.
+
+## Independent test receipt
+
+The source and test files were fetched back from the draft branch after commit. [GitHub Actions run 40582037113](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40582037113) on exact code/test commit `def2d82659ac6295a77cb95c76d63c9ff9ab4d60` completed successfully. Inspected logs show **177/177 Node tests**, including **21** new continuity-trial tests, and **7/7 Chromium folio tests**. Chromium tests a separate browser specimen; it does not test this answer-use harness. No real model trials, actual Google sign-in, or independent human grading occurred.
+
+The important result is a trustworthy **measurement instrument**, not a measured improvement in companion continuity.
