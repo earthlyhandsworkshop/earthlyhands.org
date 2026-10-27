@@ -6,9 +6,9 @@ const workshop = { kind: 'workshop' };
 const alice = { authenticated: true, workshopMember: true, principalId: 'alice' };
 const bob = { authenticated: true, workshopMember: true, principalId: 'bob' };
 const visitor = { authenticated: false, principalId: 'visitor' };
-const place = (i, by = 'alice') => ({
+const place = (i, by = 'alice', access = workshop) => ({
   kind: 'place', eventId: 'place-' + i, by,
-  item: { itemId: 'leaf-' + i, sourceId: 'source-' + i,
+  item: { itemId: 'leaf-' + i, sourceId: 'source-' + i, access,
     warningIds: i === 7 ? ['warning-open-7'] : [] }
 });
 const clear = (ids, by = 'alice', batchId = 'batch-14') => ({
@@ -109,7 +109,7 @@ test('Bello competitor and other match see neither items nor clearing count or t
   const rival = { authenticated: true, workshopMember: true, principalId: 'player-b', matchId: 'match-1' };
   const otherMatch = { authenticated: true, workshopMember: true, principalId: 'player-a', matchId: 'match-2' };
   let l = emptyBenchSurface('private-game', aAccess);
-  l = append(l, place(1, 'player-a'), playerA);
+  l = append(l, place(1, 'player-a', aAccess), playerA);
   l = append(l, clear(['leaf-1'], 'player-a', 'private-batch'), playerA);
   assert.equal(readBenchSurface(l, rival), null);
   assert.equal(readBenchSurface(l, otherMatch), null);
@@ -120,7 +120,7 @@ test('Bello competitor and other match see neither items nor clearing count or t
 test('private owner can restore while another member cannot inspect or tidy', () => {
   const privateAccess = { kind: 'private', ownerId: 'alice' };
   let l = emptyBenchSurface('private-bench', privateAccess);
-  l = append(l, place(1));
+  l = append(l, place(1, 'alice', privateAccess));
   l = append(l, clear(['leaf-1']));
   assert.equal(readBenchSurface(l, bob), null);
   assert.throws(() => appendBenchSurfaceEvent(l, restore('batch-14', 'bob'), l.generation, bob), /permission/);
@@ -154,4 +154,13 @@ test('invalid duplicate batch or event identity cannot replace a prior receipt',
   const l = append(fourteen(), clear(ids));
   assert.throws(() => append(l, clear(ids)), /Duplicate event ID/);
   assert.throws(() => append(l, { ...restore(), eventId: 'clear-batch-14' }, bob), /Duplicate event ID/);
+});
+
+test('a shared bench refuses a private or rival-game locator before it can leak', () => {
+  const l = emptyBenchSurface('old-growth', workshop);
+  const privateItem = place(1, 'alice', { kind: 'private', ownerId: 'alice' });
+  assert.throws(() => append(l, privateItem), /compartment/);
+  const gameItem = place(1, 'alice', { kind: 'bello-player', ownerId: 'alice', matchId: 'match-1' });
+  assert.throws(() => append(l, gameItem), /compartment/);
+  assert.deepEqual(readBenchSurface(l, alice).activeItems, []);
 });
