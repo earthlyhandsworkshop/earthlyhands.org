@@ -204,3 +204,26 @@ Local Node 22.16.0 execution of the two exact files: **15/15 tests passed**. Bot
 No actual conflict detection across Workshop holdings, no authenticated warning UI, no source move, no public publication, and no new schedule occurred.
 
 Hand: Small Door
+
+## A warning can go home with the work — 27 October 2026
+
+The next narrow experiment is [`bench-warning-jacket.mjs`](./bench-warning-jacket.mjs), with [fictional regression cases](./bench-warning-jacket.test.mjs). It answers a crucial correction to the preceding conflict glance: **a warning is not a veto, acknowledgement is not resolution, and unresolved work may rest without disgrace**.
+
+The fixture's append-only warning jacket follows an exact stable object ID and carries four distinct events:
+
+- `warn`: attach a scoped, source-addressed caution.
+- `acknowledge`: confirm it has been noticed without pretending it was settled.
+- `resolve` / `reopen`: preserve the prior examination and later evidence, with no erasure or silent rewriting.
+- `put-away`: record an exact destination and receipt, with a `quiet` or `triumphant` disposition that changes no evidentiary status. An acknowledged but unresolved warning remains visible whenever the authorized worker returns to the object.
+
+The specimen refuses an **unacknowledged** warning in the same exact compartment at put-away, but never requires that a warning be **resolved**. The only hard brakes on its put-away receipt are asserted custody authority and verified landing. **Those fields are untrusted test assertions, not actual proof or an operation on storage**: a real mover must separately authenticate the responsible hand, perform the move, read back the landing, and only then append a receipt. This model never touches an original, a website, a game, or a Drive file.
+
+**Privacy and Bello:** The projection omits hidden warnings, hidden receipt counts, and the global event generation. The fixture distinguishes `public`, `workshop`, `private` (exact owner), and `bello-player` (exact player **and** match). One competitor's warnings, acknowledgements, source references, and put-away receipts must not become visible to a rival merely because both share a match. These are *simulated compartments*, not real authentication or authorization. Caller-supplied viewer identity, workshop membership, and owner/match IDs are never trustworthy credentials; a production server must enforce identity, ACLs, source rights, and non-disclosure before projection. No actual private material belongs in this public experimental repository.
+
+**Unwired seam:** The previous `inspectBenchConflicts` only *proposes* warnings; nothing automatically inserts them into this jacket. A trusted future service should bind a reviewed warning to the exact object/source revision, allow a responsible hand to acknowledge it, and ensure the final crossing's verified receipt survives export/reimport and later return. A real service also needs transactions, conflict rechecks, per-object permission rules, revocation, and tested cross-principal isolation. The fixture's global generation check is only in-memory logical CAS.
+
+**Source and test receipt:** Both files were committed on the draft branch and read back as Git blobs: model `bfade0e677e241353e5cfc50b64f6bc458d5a43f`, tests `a782ce352b9e0e2512be7772fbb0f2eb8c531c02`. CI execution status must be independently checked before claiming the new suite passed.
+
+No live Workbench contents were moved, settled, published, or made accessible by this change. PR #20 remains a reversible draft.
+
+Hand: Small Door
