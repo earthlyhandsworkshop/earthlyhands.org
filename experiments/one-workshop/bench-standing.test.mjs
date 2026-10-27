@@ -119,3 +119,17 @@ test('a stale challenge cannot attach itself to a replaced conclusion', () => {
   l = appendEvent(l, settlement('v2', 'v1'), l.generation);
   assert.throws(() => appendEvent(l, challenge('v1'), l.generation), /stale/);
 });
+
+test('hidden private events do not leak through public/workshop projection metadata', () => {
+  let l = emptyLedger();
+  l = appendEvent(l, proposal('v1', 'public'), l.generation);
+  l = appendEvent(l, settlement('v1'), l.generation);
+  const publicBefore = readStanding(l, 'invented-dates', 'public');
+  const workshopBefore = readStanding(l, 'invented-dates', 'workshop');
+  l = appendEvent(l, challenge('v1', 'private', sourcePrivate), l.generation);
+  assert.equal(l.generation, 3); // a real hidden event happened
+  assert.deepEqual(readStanding(l, 'invented-dates', 'public'), publicBefore);
+  assert.deepEqual(readStanding(l, 'invented-dates', 'workshop'), workshopBefore);
+  assert.equal(Object.hasOwn(publicBefore[0], 'ledgerGeneration'), false);
+  assert.equal(readStanding(l, 'invented-dates', 'private')[0].challengePending, true);
+});
