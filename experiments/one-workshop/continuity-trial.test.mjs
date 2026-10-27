@@ -191,3 +191,40 @@ test('the harness does not call a model or invent an independent review', () => 
   assert.equal(Object.hasOwn(packet, 'checker'), false);
   assert.equal(summarizePlan(plan).every(x => x.graded === 0), true);
 });
+
+test('answerer trial IDs do not spell out condition, timing or case labels', () => {
+  for (const e of plan) {
+    const packet = makeAnswererPacket(e);
+    assert.equal(packet.trialId, e.trialId);
+    assert.equal(packet.trialId.includes(e.condition), false);
+    assert.equal(packet.trialId.includes(e.phase), false);
+    assert.equal(packet.trialId.includes(e.caseId), false);
+    assert.equal(Object.hasOwn(packet, 'condition'), false);
+  }
+});
+
+test('a scored answer without delivered correction stays outside answer-use denominators', () => {
+  const e = entry(), o = recordObservation(e, data(e, { deliveredCorrections: [] }));
+  const v = review(o);
+  const s = summarizePlan(plan, [o], [v]).find(x => x.condition === 'A-retrieval');
+  assert.equal(s.graded, 1);
+  assert.equal(s.gradedWithDeliveryGap, 1);
+  assert.equal(s.gradedCompleteDelivery, 0);
+  assert.equal(s.metrics.correctionUptake, null);
+  assert.equal(s.humanRepairTurns, null);
+});
+
+test('forged delivery-complete flags cannot enter a summary as genuine retrieval', () => {
+  const e = entry(), o = recordObservation(e, data(e, { deliveredCorrections: [] }));
+  assert.throws(() => summarizePlan(plan, [{ ...o, delivery: { ...o.delivery, complete: true } }]),
+    /Duplicate\/unplanned/);
+});
+
+test('forged reviewer identity and missing rubric fields cannot inflate the summary', () => {
+  const e = entry(), o = recordObservation(e, data(e)), v = review(o);
+  assert.throws(() => summarizePlan(plan, [o], [{ ...v, reviewerId: 'responder-a' }]),
+    /Duplicate\/unmatched/);
+  const { falseVeto, ...missing } = v.metrics;
+  assert.throws(() => summarizePlan(plan, [o], [{ ...v, metrics: missing }]),
+    /Duplicate\/unmatched/);
+});
