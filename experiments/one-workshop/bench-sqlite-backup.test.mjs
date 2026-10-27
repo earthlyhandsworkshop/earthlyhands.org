@@ -104,7 +104,8 @@ test('an unrelated SQLite schema is refused even with matching fingerprint',asyn
   const handle=new DatabaseSync(source);
   handle.exec('CREATE TABLE other (id INTEGER)');
   handle.close();
-  await assert.rejects(importBenchSnapshot(source,dest,refingerprint(source,0,0)),/no such table/);
+  await assert.rejects(importBenchSnapshot(source,dest,refingerprint(source,0,0)),
+    /schema differs from known Workbench v0 schema/);
   assert.equal(existsSync(dest),false);
 });
 test('a previous destination and its sidecars cannot be replaced',async t=>{
