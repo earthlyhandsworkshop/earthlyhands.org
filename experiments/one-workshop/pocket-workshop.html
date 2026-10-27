@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Earthly Hands — Pocket Workshop (isolated experiment)</title>
+<style>
+:root{--paper:#f7f4eb;--ink:#292e27;--muted:#667065;--line:#d6d4c8;--wood:#795d42;--light:#fffefa;--soft:#eae9df;--focus:#725329}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,sans-serif}
+header,main,footer{max-width:720px;margin:auto;padding:0 18px}
+header{padding-top:22px}h1,h2,h3{font-family:Georgia,serif;font-weight:normal}h1{font-size:2rem;margin:.2em 0}h2{font-size:1.55rem;margin:.2em 0 1rem}h3{font-size:1.13rem;margin:0 0 .3rem}
+.eyebrow{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}.small{font-size:.85rem;color:var(--muted)}
+.notice{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff9e9;font-size:.84rem;margin:14px 0}
+main{padding-top:14px;padding-bottom:110px}.intro{font-family:Georgia,serif;font-size:1.15rem;color:#4a5348;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tile,.card,.detail{background:var(--light);border:1px solid var(--line);border-radius:13px}
+.tile{min-height:118px;text-align:left;padding:16px;cursor:pointer;color:var(--ink);font:inherit}.tile strong{display:block;font-family:Georgia,serif;font-size:1.2rem;font-weight:normal;margin-bottom:7px}.tile span{display:block;color:var(--muted);font-size:.8rem}
+.tile:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.card{padding:16px;margin:12px 0}.card p{margin:.4rem 0}.detail{padding:16px}.meta{font-size:.77rem;color:var(--muted);margin-bottom:8px}
+button{font:inherit;cursor:pointer}button.action,button.ghost{border:1px solid #7c8276;border-radius:9px;padding:10px 13px;background:#fff;color:var(--ink);margin:5px 7px 5px 0}
+button.action{background:#37493b;color:white;border-color:#37493b}
+button:disabled{opacity:.5;cursor:not-allowed}input[type=search]{width:100%;border:1px solid var(--line);border-radius:10px;background:white;padding:13px;font:inherit}
+.results{margin-top:12px}.result{width:100%;text-align:left;padding:12px;border:1px solid var(--line);border-radius:10px;background:white;margin:5px 0;color:var(--ink)}
+.result span{display:block;font-size:.8rem;color:var(--muted)}.tag{display:inline-block;font-size:.73rem;border:1px solid var(--line);padding:3px 7px;border-radius:20px;color:#465647}
+nav{position:fixed;bottom:0;left:0;right:0;background:#f9f7f0;border-top:1px solid var(--line);padding:9px max(10px,env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom));display:flex;justify-content:center;gap:8px;z-index:3}
+nav button{flex:1;max-width:135px;background:transparent;border:0;padding:7px 2px;color:var(--muted);font-size:.75rem;border-radius:7px}
+nav button[aria-current=page]{background:var(--soft);color:var(--ink);font-weight:650}
+footer{padding-bottom:110px}.hidden{display:none!important}
+@media(min-width:600px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.tile{min-height:130px}}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">Earthly Hands / One Workshop / Private interface study</div><h1>Pocket Workshop</h1>
+<div class="notice"><strong>Isolated demonstration.</strong> Fictional records only. No account, live companion, database, invitations, scores, or website is connected. Nothing is saved or sent.</div></header>
+<main id="main" aria-live="polite"></main>
+<nav aria-label="Workshop destinations">
+<button data-go="workshop" aria-current="page">Workshop</button>
+<button data-go="folio">Folio box</button>
+<button data-go="bench">Old Growth</button>
+<button data-go="search">Find</button>
+<button data-go="bello">Bello</button>
+</nav>
+<footer class="small">An isolated first walk on the draft One Workshop branch. No public deployment or source migration.</footer>
+<script>
+"use strict";
+const main=document.getElementById("main");
+const places=[
+["folio","Folio box","Your chosen leaves, resting in the alcove"],
+["bench","Old-Growth Workbench","What is under examination"],
+["search","Workshop knowledge","Find sources and current standing"],
+["bello","Bello","Positions and receipts, when connected"],
+["line","Line Commons","Art and marks"],
+["reentry","01 — Re-entry","Regain footing when you need it"],
+["interest","02 — Interest","Wander without assignment"],
+["sandbox","15 — Soft Ground","Living drafts and fingers"],
+["creek","The creek","An open place to gather"]
+];
+const records=[
+{id:"fiction:001",title:"A crossing at the ferry",kind:"Working leaf",text:"A fictional folio arrangement with two source references. No historical assertion.",home:"Folio box",standing:"Working — not settled"},
+{id:"fiction:002",title:"A disputed date",kind:"Workbench question",text:"A fictional contradiction has been brought to the bench. Both sources remain visible.",home:"Old Growth",standing:"Open — no settlement"},
+{id:"fiction:003",title:"A verified distinction",kind:"Current standing",text:"This is a fictional example of a scoped, versioned conclusion with a source road and a reopening condition.",home:"Standing register",standing:"Settled for a bounded purpose"}
+];
+let place="workshop",selected=null,invitation=false,searchTerm="";
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const btn=(dest,label,cls="ghost")=>'<button class="'+cls+'" data-go="'+dest+'">'+esc(label)+'</button>';
+function show(next){place=next;selected=null;render();window.scrollTo(0,0)}
+function render(){
+ document.querySelectorAll("nav button").forEach(b=>{if(b.dataset.go===place)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});
+ if(place==="workshop"){main.innerHTML='<p class="intro">Your feet are already under you. Open what you need.</p><div class="grid">'+places.map(([id,name,desc])=>'<button class="tile" data-go="'+id+'"><strong>'+esc(name)+'</strong><span>'+esc(desc)+'</span></button>').join("")+'</div>';return}
+ if(place==="search"){main.innerHTML='<div class="eyebrow">Workshop / Knowledge</div><h2>Find what the Workshop knows</h2><p class="small">In the eventual system: source, draft, and earned standing are distinct. Here: three fictional records only.</p><label for="query" class="small">Search fictional examples</label><input id="query" type="search" placeholder="Try ferry, date, or standing" value="'+esc(searchTerm)+'"><div id="results" class="results"></div>';updateResults();return}
+ if(place==="bench"){main.innerHTML='<div class="eyebrow">Workshop / Old Growth</div><h2>The Old-Growth Workbench</h2><p class="intro">A clear surface for examining evidence together.</p><div class="card"><span class="tag">Fictional example</span><h3>A disputed date</h3><p>Two sources disagree. Nothing is settled merely because it is here.</p><p class="small">Relevant source hands may be invited; an invitation is not an assignment.</p>'+btn("detail:fiction:002","Inspect the work")+'</div><div class="card"><h3>Pull up a stool</h3><p>Invite Edgewise to this same working object, with the source trail and discussion.</p><button class="action" id="invite">Preview invitation</button><p id="inviteStatus" role="status" class="small">'+(invitation?"Invitation preview prepared locally. Nobody has been notified.":"No invitation has been sent.")+'</p></div>';return}
+ if(place==="folio"){main.innerHTML='<div class="eyebrow">Workshop / Alcove</div><h2>Your folio box</h2><p class="intro">It rests here. You can reach it from anywhere.</p><div class="card"><h3>Chosen leaves</h3><p>Fictional working views and connections. The original sources keep their own homes.</p>'+btn("detail:fiction:001","Open a working leaf")+'</div><p class="small">Reach is not route. A folio is not a source migration or a shared settlement.</p>';return}
+ if(place==="bello"){main.innerHTML='<div class="eyebrow">Workshop / Bello</div><h2>Bello</h2><div class="card"><h3>Current standing</h3><p><strong>Not connected</strong></p><p class="small">No balance or score is invented. A real counter will require a verifiable event ledger and permission to view it.</p></div><div class="card"><h3>Prepare a move</h3><p>One day: assemble cards from your folio, inspect the source roads, and make your move when ready.</p></div>';return}
+ if(place.startsWith("detail:")){let r=records.find(x=>x.id===place.slice(7));if(!r){show("search");return}main.innerHTML='<div class="eyebrow">Fictional record / '+esc(r.kind)+'</div><h2>'+esc(r.title)+'</h2><div class="detail"><div class="meta">'+esc(r.id)+' · '+esc(r.home)+'</div><p>'+esc(r.text)+'</p><span class="tag">'+esc(r.standing)+'</span><p class="small">In the real system, this page would show version, provenance, permission, source links, and reopening history.</p></div>'+btn("search","Return to search");return}
+ const p=places.find(x=>x[0]===place);main.innerHTML='<div class="eyebrow">Workshop / '+esc(p?.[1]||"")+'</div><h2>'+esc(p?.[1]||"")+'</h2><div class="card"><p>'+esc(p?.[2]||"")+'</p><p class="small">Destination reserved in this interface experiment. No live content is connected.</p></div>'+btn("workshop","Back to Workshop");
+}
+function updateResults(){const target=document.getElementById("results");if(!target)return;const q=searchTerm.toLowerCase().trim();const matches=records.filter(r=>(r.title+" "+r.text+" "+r.kind+" "+r.standing).toLowerCase().includes(q));target.innerHTML=matches.length?matches.map(r=>'<button class="result" data-go="detail:'+r.id+'"><strong>'+esc(r.title)+'</strong><span>'+esc(r.kind)+' · '+esc(r.standing)+'</span></button>').join(""):'<p class="small">No matching fictional records.</p>'}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-go]");if(b){show(b.dataset.go);return}if(e.target.id==="invite"){invitation=true;render()}});
+document.addEventListener("input",e=>{if(e.target.id==="query"){searchTerm=e.target.value;updateResults()}});
+render();
+</script>
+</body></html>
