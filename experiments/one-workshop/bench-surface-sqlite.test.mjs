@@ -81,3 +81,4 @@ test('restoration cannot replay the same batch or silently replace another batch
   assert.equal(db.readBatch('old-growth', 'batch-14', alice).restored, true);
   assert.equal(db.readBatch('old-growth', 'batch-again', alice).restored, false);
 });
+
