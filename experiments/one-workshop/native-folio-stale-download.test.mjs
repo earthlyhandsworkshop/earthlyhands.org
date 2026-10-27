@@ -28,7 +28,7 @@ const ids=['folio-file','journal-file','add','restore','folio-selection',
 
 function openPage(initial) {
   let stored=initial,accept=false,unreadable=false,refuseWrites=false,confirmations=0,writes=0;
-  const names=[],bodies=[];
+  const names=[],bodies=[],listeners={};
   function element(tag){
     return {
       tag,disabled:false,hidden:false,value:'',textContent:'',children:[],
@@ -57,8 +57,9 @@ function openPage(initial) {
     revokeObjectURL(){}
   };
   class BlobMock {constructor(parts){this.parts=parts;}}
+  const window={addEventListener(type,handler){listeners[type]=handler;}};
   runInNewContext(script,{
-    document,localStorage,URL,Blob:BlobMock,setTimeout(){},
+    document,window,localStorage,URL,Blob:BlobMock,setTimeout(){},
     confirm(){confirmations++;return accept;},
     exportUnrecognizedStoredString(){return '';},
     emptyFolioHistory,parseFolioHistory,receiveFolioVersion,recoverFolioVersion,
@@ -67,6 +68,16 @@ function openPage(initial) {
   return {
     elements,names,bodies,
     changeStored(value){stored=value;},
+    // An actual storage event is delivered asynchronously in other browser contexts;
+    // this mock dispatches that evidence explicitly.
+    otherTabChanged(value){
+      const prior=stored;stored=value;
+      listeners.storage?.({storageArea:localStorage,key:'earthlyhands.one-workshop.native-folio-history.111.v0',oldValue:prior,newValue:value});
+    },
+    otherTabCleared(){
+      stored=null;
+      listeners.storage?.({storageArea:localStorage,key:null,oldValue:null,newValue:null});
+    },
     allowDownload(){accept=true;},
     preventRead(){unreadable=true;},
     preventWrite(){refuseWrites=true;},
@@ -157,6 +168,30 @@ test('failed release keeps the observed storage conflict visible after reversion
   assert.equal(parseFolioHistory(p.bodies[0]).receipts.length,1);
 });
 
+
+test('observed cross-tab event remains a conflict after bytes return, even before any click',async()=>{
+  const p=openPage(one);
+  p.otherTabChanged(two);
+  assert.match(p.elements.status.textContent,/ANOTHER TAB CHANGED THE JOURNAL/);
+  assert.equal(p.elements.release.disabled,true);
+  p.otherTabChanged(one); // The previously observed edit is not undone by a matching byte string.
+  await p.importNative(native('not allowed to overwrite intervening history'));
+  assert.match(p.elements.status.textContent,/IMPORT REFUSED.*earlier tab conflict/);
+  assert.equal(p.stored,one);
+  assert.equal(p.writes,0);
+  p.allowDownload();p.elements.export.handlers.click();
+  assert.deepEqual(p.names,['public-lands-face-111-journal-earlier-or-unverified-copy.json']);
+});
+
+test('storage clear of a held journal is an observed conflicting change',async()=>{
+  const p=openPage(one);
+  p.otherTabCleared();
+  assert.match(p.elements.status.textContent,/ANOTHER TAB CHANGED THE JOURNAL/);
+  await p.importNative(native('cannot silently restore deleted other-tab journal'));
+  assert.match(p.elements.status.textContent,/IMPORT REFUSED.*earlier tab conflict/);
+  assert.equal(p.stored,null);
+  assert.equal(p.writes,0);
+});
 test('later reversion cannot authorize a journal write after an observed conflict',async()=>{
   const p=openPage(one);p.changeStored(two);
   await p.importNative(native('first refused import'));
