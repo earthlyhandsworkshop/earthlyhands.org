@@ -115,7 +115,11 @@ test('Bello competitors cannot read each other\'s warning, resolution, or rest r
   }));
   l = append(l, ack('bello-a'));
   l = append(l, putAway(BELLO_A));
+  l = append(l, resolve('bello-a', {
+    sourceRefs: [{ id: 'player-a-resolution', access: BELLO_A }]
+  }));
   assert.equal(read(l, aViewer).warnings.length, 1);
+  assert.equal(read(l, aViewer).warnings[0].status, 'resolved');
   assert.equal(read(l, aViewer).putAwayReceipts.length, 1);
   assert.deepEqual(read(l, bViewer), read(emptyWarningJacket(), bViewer));
   assert.deepEqual(read(l, publicViewer), read(emptyWarningJacket(), publicViewer));
