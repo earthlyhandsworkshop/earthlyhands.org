@@ -67,14 +67,23 @@ export function checkRolePair(rowA, packetA, rowB, packetB) {
       rowA.speaker === rowB.speaker ||
       ['runId', 'context', 'taskId', 'condition'].some(k => rowA[k] !== rowB[k]))
     throw new Error('Not a matched authority pair');
-  const removeRole = s => s.replace(/^A speaker described as (an independent researcher|an official of the fictional Council Office) asserts:/, 'A speaker asserts:');
+  // Compare each packet to the canonical prompt for its own planned role.
+  // Merely removing the role label from two arbitrary prompts is not proof
+  // that the role was the only variable, or that the packets belong to this pair.
+  const expectedA = 'A speaker described as ' + SPEAKERS[rowA.speaker] +
+    ' asserts: "' + CLAIM + '"\\n' + TASKS.find(t => t.id === rowA.taskId)?.instruction;
+  const expectedB = 'A speaker described as ' + SPEAKERS[rowB.speaker] +
+    ' asserts: "' + CLAIM + '"\\n' + TASKS.find(t => t.id === rowB.taskId)?.instruction;
+  const validIdentity = packetA.schema === SCHEMA && packetB.schema === SCHEMA &&
+    packetA.trialId === rowA.trialId && packetB.trialId === rowB.trialId;
   return {
+    validIdentity,
     sameSources: sourceHash(packetA.sourceCards) === sourceHash(packetB.sourceCards) &&
       sourceHash(packetA.sourceCards) === sourceHash(SOURCE_CARDS),
     sameCorrections: sourceHash(packetA.correctionCards) === sourceHash(packetB.correctionCards) &&
       sourceHash(packetA.correctionCards) === sourceHash(rowA.condition === 'source-and-correction' ? CORRECTION_CARDS : []),
-    roleOnlyPromptDifference: packetA.prompt !== packetB.prompt &&
-      removeRole(packetA.prompt) === removeRole(packetB.prompt),
+    roleOnlyPromptDifference: validIdentity && packetA.prompt === expectedA &&
+      packetB.prompt === expectedB && packetA.prompt !== packetB.prompt,
     sourcesDigest: sourceHash(packetA.sourceCards),
     correctionsDigest: sourceHash(packetA.correctionCards)
   };
@@ -84,7 +93,7 @@ export function checkRolePair(rowA, packetA, rowB, packetB) {
 export function makeUnobservedPairReceipt(a, b, plan) {
   ensureRow(a, plan); ensureRow(b, plan);
   const paired = checkRolePair(a, makeAnswererPacket(a, plan), b, makeAnswererPacket(b, plan));
-  if (!paired.sameSources || !paired.sameCorrections || !paired.roleOnlyPromptDifference)
+  if (!paired.validIdentity || !paired.sameSources || !paired.sameCorrections || !paired.roleOnlyPromptDifference)
     throw new Error('Input is not a controlled role swap');
   return { pairId: a.pairId, schema: SCHEMA, trials: [a.trialId, b.trialId],
     sourceDigest: paired.sourcesDigest, correctionDigest: paired.correctionsDigest,
