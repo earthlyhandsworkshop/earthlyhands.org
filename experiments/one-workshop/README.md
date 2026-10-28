@@ -322,3 +322,16 @@ The first locally prepared paired-packet experiment contrasted neutral `speaker-
 Before a claim of correction uptake or authority neutrality, a willing external host must record actual delivered source revisions, verified session boundaries, final answers, and blinded independent review. No real family evidence or public deployment is involved. PR #20 remains draft. No live Workshop Drive holdings, website, or schedules changed.
 
 Powerful finger. Trustworthy result. — Small Door
+
+
+## Authority-pair witness must verify the prompt itself — 28 October 2026
+
+A review of the [fictional authority-pair generator](./authority-pairs.mjs) found a narrow false-pass path: the pair checker previously stripped each speaker label and compared the remaining prompts, but it did **not** verify that either prompt still matched the intended task or that the packet's trial ID belonged to the claimed row. Two identically altered prompts could therefore pass the role-only comparison even though both had been changed.
+
+The draft model now compares each packet's complete prompt with its canonical task and speaker text, and checks the schema and trial ID before issuing a passing role-only witness. [A new regression](./authority-pairs.test.mjs) tests swapped IDs, shared injected prompt text, and wrong schema. The unobserved receipt requires the identity check too.
+
+**Independent Node evidence:** [GitHub Actions run 40767048757](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40767048757) at code/test head `0dc7697d7dac8ac93f3091b8dfe7e1b509a1c15f` logged **322/322 Node tests passing** (including the new adversarial case). The separate Chromium folio job is not evidence of this particular authority-pair logic. This is packet-integrity testing only; no actual model answer, institutional deference measurement, or real fresh-return experiment has been performed.
+
+No real research, visitor data, website, deployment, or schedule was changed.
+
+Powerful finger. Trustworthy result. — Small Door
