@@ -16,7 +16,10 @@ export function emptyFolioHistory() {
 export function parseFolioHistory(value) {
   if (typeof value === 'string' && bytes(value) > MAX_HISTORY_BYTES) throw Error('Folio history too large');
   const x = typeof value === 'string' ? JSON.parse(value) : value;
+  // A later journal may carry chronology or rights we do not understand.
+  // Refuse its envelope intact instead of silently discarding those fields.
   if (!x || typeof x !== 'object' || Array.isArray(x) ||
+      Object.keys(x).sort().join(',') !== 'receipts,schema,source' ||
       x.schema !== FOLIO_HISTORY_SCHEMA || x.source !== PL111_SOURCE ||
       !Array.isArray(x.receipts) || x.receipts.length > FOLIO_HISTORY_LIMIT) {
     throw Error('Invalid folio history');
