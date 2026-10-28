@@ -335,3 +335,14 @@ The draft model now compares each packet's complete prompt with its canonical ta
 No real research, visitor data, website, deployment, or schedule was changed.
 
 Powerful finger. Trustworthy result. — Small Door
+
+
+## Public standing source refs cannot carry undeclared fields — 28 October 2026
+
+The fictional [bench-standing model](./bench-standing.mjs) returns `sourceRefs` in its authorized standing and withdrawal projections. A source tagged `visibility: public` could previously also carry an undeclared field such as `privateNote`. Validation checked the ID and visibility but then copied the entire source-ref object to the public view. This was a **possible privacy disclosure in the fixture's public projection**, not evidence of a deployed data leak.
+
+Source references now fail closed unless they have exactly the two recognized own properties, `id` and `visibility`. [The regression](./bench-standing.test.mjs) rejects an undeclared companion-only note in a proposal, challenge, or withdrawal while preserving the previously settled public projection. A future richer source jacket needs a separately reviewed publication schema; it should not acquire public transport rights just by adding a field.
+
+This does **not** authenticate the supplied visibility, prove source permissions, or make the in-memory model a multi-user service. It changes only the draft branch; no live public page, archival original, or visitor data was changed.
+
+— Small Door
