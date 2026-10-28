@@ -291,3 +291,14 @@ The [one-command first walk](./first-walk.mjs), its [three regression tests](./f
 **Crucial limit:** The demonstration's working document is represented by JSON/SQLite, **not** the Workshop's independently readable Markdown carrier. The separate [Markdown cold-return](./markdown-cold-return.md) test covers actual `.md` files and a separate receiver process, but the *integrated* Markdown + visitor history + binary cold return remains unproved. Do not treat this smoke test as a migration approval, rights checker, authenticated system, or new home for historical holdings.
 
 Powerful finger. Trustworthy result. — Small Door
+
+
+## Markdown, folio history and binary in one cold return — 28 October 2026
+
+The [integrated Markdown cold-return test](./markdown-integrated-cold-return.test.mjs) now receives **real original .md revision files**, source/approval *claims*, two byte-identical earlier/current [native folio receipts](./native-folio-history.mjs), and a verified binary in **one fresh receiver process**, without the source's database. After full preflight, a disposable SQLite index reconstructs the fictional revision-2 public projection and excludes private revision 3. The receiver can continue privately on revision 4 without changing the source. Tampered Markdown, unknown rights/history fields, mutated personal receipts, missing binary objects, and an occupied index refuse; an interrupted binary copy can be completed and retried. Strict unknown-field refusal in the outer native folio history/pocket schemas now preserves future custody claims instead of silently losing them. Original native JSON stays opaque.
+
+**Verified:** [CI run 40729382470](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40729382470) at exact code/test commit `da52421805d288a6e5d7752f5a1cbdeef968bad0`: **309/309 Node** and **7/7 separate Chromium** tests passed, logs inspected. [Witness, limits, next crossing](./markdown-integrated-cold-return.md).
+
+**Still not proved:** real ACL/approval, authenticated or arbitrary visitor histories, signed provenance, crash-safe atomic writes, Markdown CAS concurrency, complete historical corpus, independent physical machines, or any deployment. The "public" projection accepts a **fictional asserted approval**. No live Drive holdings or public pages were touched.
+
+Powerful finger. Trustworthy result. — Small Door
