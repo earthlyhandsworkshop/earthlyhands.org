@@ -1,7 +1,7 @@
 // Witnessed read/write fixture: still local and unauthenticated.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, mkdirSync, rmSync, copyFileSync, unlinkSync, chmodSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, rmSync, copyFileSync, unlinkSync, chmodSync, linkSync, symlinkSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -130,4 +130,27 @@ test('valid multi-event batch is refused before local commit, not after witness 
     assert.equal(m.summary().generation,2);
     assert.equal(call(p.witness,'latest',{}).generation,2);
   } finally {m.close();}
+});
+
+test('witness path must not alias mirror or tip, including same-inode links',t=>{
+  const p=paths(t),initial=seed(p);
+  const hardlink=join(p.dir,'same-inode-hardlink.sqlite');
+  const symlink=join(p.dir,'same-inode-symlink.sqlite');
+  linkSync(p.db,hardlink);
+  symlinkSync(p.db,symlink);
+  const aliases=[
+    p.db,
+    join(p.dir,'mirror','..','mirror','db.sqlite'),
+    p.tip,
+    hardlink,
+    symlink
+  ];
+  for (const witnessFile of aliases)
+    assert.throws(()=>new NightwolfWitnessedMirror(p.db,p.tip,witnessFile,id),
+      /Independent witness requires a distinct file/);
+  // No attempted enrollment or modification of the database/tip.
+  const raw=new NightwolfMirrorWithTip(p.db,p.tip);
+  try { assert.deepEqual(raw.summary(),initial); } finally {raw.close();}
+  const guarded=new NightwolfWitnessedMirror(p.db,p.tip,p.witness,id);
+  try { assert.deepEqual(guarded.summary(),initial); } finally {guarded.close();}
 });

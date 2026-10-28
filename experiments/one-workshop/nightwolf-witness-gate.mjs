@@ -2,16 +2,41 @@
 // No authenticated RPC, source permission, service identity, or OS isolation.
 // Other callers can still bypass this wrapper and open the underlying SQLite.
 import { spawnSync } from 'node:child_process';
+import { existsSync, statSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { NightwolfMirrorWithTip } from './nightwolf-mirror-tip.mjs';
 
 const CLI=fileURLToPath(new URL('./nightwolf-witness-cli.mjs',import.meta.url));
+
+// The witness is optional, but must not accidentally be the mirror database
+// or local tip in disguise. This is an initial configuration check only:
+// it cannot prevent a privileged actor replacing paths after construction,
+// nor does it supply a separate security principal or filesystem.
+function checkDistinctWitness(databasePath, tipPath, witnessFile) {
+  if (![databasePath,tipPath,witnessFile].every(
+    path => typeof path === 'string' && path.length > 0))
+    throw new Error('Mirror, tip, and witness require three file paths');
+  const witnessResolved=resolve(witnessFile);
+  if ([databasePath,tipPath].some(path => resolve(path)===witnessResolved))
+    throw new Error('Independent witness requires a distinct file from mirror and tip');
+  if (existsSync(witnessFile)) {
+    const witnessStat=statSync(witnessFile);
+    for (const path of [databasePath,tipPath]) {
+      if (!existsSync(path)) continue;
+      const stat=statSync(path);
+      if (witnessStat.dev===stat.dev && witnessStat.ino===stat.ino)
+        throw new Error('Independent witness requires a distinct file from mirror and tip');
+    }
+  }
+}
 
 export class NightwolfWitnessedMirror {
   #mirror;
   #witnessFile;
   #mirrorId;
   constructor(databasePath,tipPath,witnessFile,mirrorId) {
+    checkDistinctWitness(databasePath,tipPath,witnessFile);
     this.#mirror=new NightwolfMirrorWithTip(databasePath,tipPath);
     this.#witnessFile=witnessFile;
     this.#mirrorId=mirrorId;
