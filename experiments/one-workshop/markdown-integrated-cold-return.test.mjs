@@ -120,7 +120,16 @@ function preflightReceivedInventory(root, carrier, blobs) {
 async function receiveOnFreshProcess(root, indexPath) {
   // No index is created until ALL received carriers, histories and blobs pass.
   // An existing derived index is not an import/overwrite target.
-  if (existsSync(indexPath)) throw Error('Fresh receiver refuses existing index');
+  // existsSync would report false for a dangling symlink. lstat sees the
+  // destination pathname itself, so even a broken link is occupied.
+  let indexOccupied = false;
+  try {
+    lstatSync(indexPath);
+    indexOccupied = true;
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+  }
+  if (indexOccupied) throw Error('Fresh receiver refuses existing index');
   readHandoff(root);
   const carrier = readCarrier(join(root, 'carriers'), ID);
   const personal = parseFolioHistory(readFileSync(folioPath(root), 'utf8'));
@@ -314,6 +323,20 @@ if (process.argv[2] === '--receive') {
     assert.equal(result.status, 1);
     assert.match(result.stderr, /refuses existing index/);
     assert.deepEqual(readFileSync(f.index), before);
+  });
+
+  test('dangling destination symlink refuses before creating an index or following its target', async t => {
+    const f = await fixture(t);
+    const target = join(f.work, 'target-not-present.sqlite');
+    symlinkSync(target, f.index);
+    // This is precisely why existsSync alone was insufficient.
+    assert.equal(existsSync(f.index), false);
+    assert.equal(lstatSync(f.index).isSymbolicLink(), true);
+    const result = receive(f.received, f.index);
+    assert.equal(result.status, 1);
+    assert.match(result.stderr, /Fresh receiver refuses existing index/);
+    assert.equal(existsSync(target), false);
+    assert.equal(lstatSync(f.index).isSymbolicLink(), true);
   });
 
   test('unlisted top-level and private personal files cannot hitchhike in a clean return', async t => {
