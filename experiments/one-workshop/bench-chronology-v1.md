@@ -50,6 +50,22 @@ The v1 placement event records the item ID, not the source pointer or warning li
 
 [CI run 40611160620](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40611160620) passed this known-limitation test in the 226-test Node suite at commit `d0dae1e0f6e390a222f14bdc084b8169ad29e480`. This is a boundary finding, not a green light for real holdings. Any new design must explicitly account for original source and warning assertions, later corrections, and independent authorization. Existing receipts must not be retroactively treated as evidence they never contained.
 
+## What a later source-claim receipt must do
+
+The source-pointer counterexample suggests a **new event grammar**, not a stronger checksum on the same incomplete receipt. A versioned future placement would record the exact item ID, original source pointer, warning-pointer list, and compartment as an **arrival assertion in one atomic act**. The old arrival would remain readable even after a correction. A later correction would name the item, the prior assertion, the replacement assertion, the responsible actor, and a basis pointer; it would not secretly rewrite the old placement. A basis pointer is an attributed claim, not proof that its underlying evidence exists.
+
+An ordinary clear or restore stays a separate reversible bench-surface act and must not alter documentary assertions. A change of *who may read*, *where an original is kept*, or *whether something may be published* is neither tidying nor merely correcting a typo: those crossings need independent authority and receipts. One access compartment should not broaden because somebody changed an item's source metadata.
+
+Concrete adversarial tests for an opt-in future specimen:
+
+1. Change a current source pointer or erase a warning without appending a correction, then recompute the transfer hash: the receiver should refuse the contradictory materialization.
+2. Append a properly sequenced correction with its basis pointer: the original assertion, replacement, author field, and unresolved warning history should all survive return.
+3. Attempt to label a v0/v1 placement as though it had recorded these fields: refuse retrospective witness claims; retain legacy evidence with its gaps.
+4. Change a correction's claimed predecessor, silently switch compartments, or substitute another item's assertion: refuse the resulting false chronology.
+5. Present a fully coherent *forged* history and recalculated hash: recognize that internal replay still cannot establish actor identity, source custody, rights, or external authenticity. That requires independent trust anchors and actual source-permission checks.
+
+This is an **unimplemented design bearing**, not a v2 schema, passing regression, signed log, or migration plan. It follows the proved limitation while leaving current v0/v1 experimental receipts and historical holdings unchanged. A future implementation should begin as a fresh versioned specimen with invented records, not a silent in-place promotion.
+
 ## Verification status
 
 The v1 code and regression tests were committed to the draft experiment branch. The separate GitHub Actions suite is the independent execution witness; check the latest run for the exact commit before describing any test as passed. No public deployment or merging is authorized.
