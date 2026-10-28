@@ -47,8 +47,16 @@ events, and binary bytes. They verify:
 
 Local Node 22.16.0 execution of the exact checked-out fixture produced
 **5/5 passing tests**. The repository versions of the new module and test
-were read back from GitHub after committing. CI must be inspected at an
-exact commit before attributing independent execution to GitHub Actions.
+were read back from GitHub after committing; their Git blob hashes matched
+the locally tested bytes.
+
+**Independent GitHub Actions witness:** [run 40636528560](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40636528560)
+at the exact test-bearing commit `5a38f1a7f69a6cc5245f56f6e7e2121f3452899f` completed
+successfully. Its Node 22 log explicitly shows all five new SQLite tests
+passing within **255/255 total Node tests**, and the separate Chromium folio
+job also succeeded. That Chromium job checks older folio boundaries, not this
+SQLite receiver. The later documentation-only commit does not change these
+tested implementation bytes.
 
 ## What the passing tests do NOT establish
 
