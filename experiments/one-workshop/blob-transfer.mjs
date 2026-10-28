@@ -9,6 +9,7 @@ const MAX_ITEMS = 100_000;
 export function parseBlobManifest(raw) {
   const value = typeof raw === 'string' ? JSON.parse(raw) : raw;
   if (!value || typeof value !== 'object' || Array.isArray(value) ||
+      Object.keys(value).sort().join(',') !== 'objects,schema' ||
       value.schema !== MANIFEST_SCHEMA || !Array.isArray(value.objects) ||
       value.objects.length > MAX_ITEMS) throw new Error('Invalid blob manifest');
   const seen = new Set();

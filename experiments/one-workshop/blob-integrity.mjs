@@ -21,6 +21,7 @@ export async function fingerprintBlob(path) {
 export function parseFingerprint(value) {
   const x = typeof value === 'string' ? JSON.parse(value) : value;
   if (!x || typeof x !== 'object' || Array.isArray(x) ||
+      Object.keys(x).sort().join(',') !== 'bytes,object_key,schema,sha256' ||
       x.schema !== BLOB_SCHEMA || !Number.isSafeInteger(x.bytes) || x.bytes < 0 ||
       typeof x.sha256 !== 'string' || !/^[a-f0-9]{64}$/.test(x.sha256) ||
       x.object_key !== `sha256/${x.sha256}`) {

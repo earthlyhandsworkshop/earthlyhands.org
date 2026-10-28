@@ -20,8 +20,10 @@ function documentFingerprint(text) {
 export function parseBundleManifest(raw) {
   const x = typeof raw === 'string' ? JSON.parse(raw) : raw;
   if (!x || typeof x !== 'object' || Array.isArray(x) ||
+      Object.keys(x).sort().join(',') !== 'blobs,document,schema' ||
       x.schema !== BUNDLE_SCHEMA || !x.document ||
       typeof x.document !== 'object' || Array.isArray(x.document) ||
+      Object.keys(x.document).sort().join(',') !== 'bytes,encoding,sha256' ||
       x.document.encoding !== 'utf8-json' ||
       !Number.isSafeInteger(x.document.bytes) || x.document.bytes < 1 ||
       x.document.bytes > MAX_DOCUMENT_BYTES ||

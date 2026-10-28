@@ -5,6 +5,10 @@ export const DOCUMENT_ID = 'eh:test:0001';
 export const INITIAL_TEXT = '# A sheet on the workbench\n\nA visitor enters the Workshop, finds a sheet, and leaves a question beside it.';
 const MAX_REVISIONS = 1000;
 const MAX_CONTENT_LENGTH = 100_000;
+// A v0 parser must not silently erase future provenance, permission, or
+// revision metadata when it normalizes an imported record.
+const hasExactFields = (value, fields) => value && typeof value === 'object' &&
+  !Array.isArray(value) && Object.keys(value).sort().join(',') === fields;
 
 export function newDocument() {
   return {
@@ -23,15 +27,17 @@ export function parseDocument(value) {
       x.schema !== SCHEMA || x.id !== DOCUMENT_ID || x.kind !== 'fictional-test') {
     throw new Error('Incorrect schema or document identity');
   }
+  if (!hasExactFields(x, 'history,id,kind,publication,schema,working_revision'))
+    throw new Error('Unrecognized document fields; retain the original carrier');
   const h = x.history;
   if (!Array.isArray(h) || h.length < 1 || h.length > MAX_REVISIONS ||
-      !h.every((r, i) => r && r.revision === i + 1 &&
+      !h.every((r, i) => hasExactFields(r, 'content,revision') && r.revision === i + 1 &&
         typeof r.content === 'string' && r.content.length <= MAX_CONTENT_LENGTH) ||
       x.working_revision !== h.length) {
     throw new Error('Invalid revision history');
   }
   const p = x.publication;
-  if (p !== null && (!p || !Number.isSafeInteger(p.revision) ||
+  if (p !== null && (!hasExactFields(p, 'content,revision') || !Number.isSafeInteger(p.revision) ||
       p.revision < 1 || p.revision > h.length ||
       typeof p.content !== 'string' || p.content !== h[p.revision - 1].content)) {
     throw new Error('Public release does not match its recorded revision');
