@@ -1,37 +1,39 @@
-# Unrecognized browser storage — helper wired, browser test outstanding
+# Unrecognized browser storage — actual Chromium rescue witnessed
 
-Small Door · corrected 20 October 2026 · draft PR #20
+Small Door · 20 October 2026 first account · corrected 28 October 2026 · draft PR #20
 
-**Standing:** Current branch evidence, not a claim of completed browser recovery or permission to merge or deploy. This replaces the stale 18 October assertion that the JSON helper was not connected.
+**Standing:** A limited, **independently exercised Chromium browser-download recovery**, not a full recovery system, cross-browser claim, authenticated visitor storage, permission to deploy, or migration of historical holdings. This corrects the 20 October status that the rescue helper was wired but a browser test was still outstanding. The earlier limitation was truthful for that earlier inspection; it is no longer the current test status.
 
-## What is now present
+## Present source crossing
 
-At inspection of branch `experiment/one-workshop-foundation-2026-10-14` (head `d904c5b2c6ffecc1ad15eeee5f62fd781d96f399`):
+- [The experimental folio journal page](./native-folio-history-walk.html) imports [`exportUnrecognizedStoredString`](./unrecognized-storage-rescue.mjs), captures the opening `localStorage` value, and exposes a rescue download only if its saved journal fails validation.
+- An unrecognized opening journal locks the import, restore, and release controls. The rescue action wraps the captured JavaScript string and storage-key label in a JSON envelope and offers it as a download. It does **not** validate, repair, rewrite, or clear the stored journal.
+- The envelope preserves a browser **JavaScript string**, including isolated UTF-16 surrogate code units through JSON escaping. It makes no claim to recover original upstream file bytes or authenticate the stored contents.
 
-- `native-folio-history-walk.html` imports `exportUnrecognizedStoredString` from `./unrecognized-storage-rescue.mjs`.
-- On a journal validation failure at page opening, the page locks import/release operations and exposes a download-only rescue button for the captured `localStorage` string.
-- The rescue handler calls the helper and downloads `public-lands-face-111-unrecognized-browser-storage.json` as `application/json`, rather than wrapping the damaged JavaScript string directly in a plain-text Blob.
-- `unrecognized-storage-rescue.mjs` serializes the captured JavaScript string inside a JSON envelope alongside a schema and storage-key field. JSON escaping is designed to preserve unmatched UTF-16 surrogate code units that a plain-text Blob would otherwise replace.
+## What was actually exercised
 
-**This is code-level wiring, verified by reading the actual branch files.** The earlier statement “helper committed but not connected” is no longer true. The helper's promises and browser behavior have not thereby been independently demonstrated. It preserves the string read from browser storage, **not** the original bytes from any upstream source.
+The source-controlled [real-browser test](./native-folio-browser.e2e.mjs) starts a local HTTP fixture server with the committed experimental HTML and JavaScript, launches headless Chrome-channel Chromium via Playwright, and reads the **downloaded JSON file** from disk. Its fictional damaged string contains an unmatched high surrogate.
 
-## The real uncompleted crossing
+In that test:
+1. A real browser's `localStorage` is seeded with malformed journal text containing the unmatched surrogate.
+2. The rescue button appears; the add and release controls are disabled.
+3. The rescue is clicked, the resulting downloaded file is read independently, and `JSON.parse` reconstructs a string **equal to the seeded JavaScript string**, including that unmatched code unit.
+4. The stored value is verified unchanged by the rescue.
+5. A second tab then changes the storage value. Another rescue download from the original tab still carries its **opening snapshot**, not a false claim to capture the newest other-tab contents.
 
-Perform an independent browser interaction and downloaded-file test, using only invented damaged content:
+The same browser test also checks separate tab-conflict, reverted-bytes, failed-save, and delayed-operation guards in the folio journal; those checks are not themselves proof of the rescue envelope's broader reliability.
 
-1. Seed the specimen's exact `localStorage` key with an invalid journal string containing an unmatched high surrogate, then load the page.
-2. Confirm that the raw rescue control appears while imports, restoration, and clearing remain locked.
-3. Download the resulting JSON file, read its bytes independently, parse the envelope, and compare the recovered string **code unit by code unit** with the seeded string (including the unmatched surrogate).
-4. Confirm that attempting rescue does **not** rewrite or clear the stored value.
-5. Check behavior after a second tab changes storage after the first tab's initial read: the offered rescue is the **opening snapshot**, not a claim to capture the other tab's latest value.
-6. Check failures of download/storage access, keyboard operation, and major browsers as justified by the actual visitor use. A successful rescue does not validate, repair, or authenticate the damaged journal.
+**Independent run receipt:** [GitHub Actions 40651930370](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40651930370), code/test commit `ebf697b9bee5544e04e844e8d27f54c9f2ace1dc`, 28 October 2026. The real-Chromium job succeeded with **7/7 reported tests passed, zero failures**, and its log explicitly reports the successful `unpaired UTF-16 surrogate survives actual browser download; stored data stays untouched` subtest. The separate Node fictional-model job also succeeded. These are results for the **draft experiment**, not the deployed public site.
 
-No successful independent end-to-end browser download is recorded by this note. A JavaScript round trip or a source-code reading is not that test.
+## Still open
 
-## Larger boundaries remain
+- The rescue captures the value at **page opening**. If another tab edits the storage afterward, the rescue is an earlier snapshot. The envelope does not discover, merge, or preserve the other tab's newer state.
+- Browser storage remains origin-wide. A path like `/private/` does not isolate it from scripts elsewhere on the same origin. No actual visitor authentication, source permission, encrypted at-rest account, separate security principal, transactional multi-tab lock, or protected portable backup exists here.
+- Other browser engines, browser permission/download failures, keyboard and screen-reader usability, interrupted downloads, device restart after data eviction, and any real visitor recovery remain untested by this browser job.
+- The e2e test passes against a local server, not a public deployment, and its success does not establish original source bytes, historical provenance, or archival rights.
 
-The specimen uses origin-wide `localStorage`, not isolated visitor storage; path separation does not create origin isolation. No multi-user transactional store, visitor authentication, rights enforcement, access control, encryption, production durability, or deployed recovery service exists here. Do **not** merge or deploy PR #20 on this basis. Historical Google Drive holdings remain untouched.
+No historical Google Drive holdings or public site was changed by this correction. The draft must not be merged or deployed simply because this narrow test passed.
 
-This correction is deliberately narrow: **implementation present; tested recovery not yet established.**
+**Current distinction:** SOURCE WIRED → REAL CHROMIUM DOWNLOAD TESTED → BROADER RECOVERY STILL UNEARNED.
 
 Powerful finger. Trustworthy result.
