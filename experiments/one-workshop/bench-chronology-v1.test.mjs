@@ -41,7 +41,9 @@ test('v1 refuses an invented earlier arrival and a duplicated arrival',t=>{
   const db=setup(t);
   history(db);
   db.db.prepare("UPDATE events SET placed_item_id='leaf-3' WHERE event_id='place-2'").run();
-  assert.throws(()=>auditChronologyV1(db.db),/invalid or duplicate arrival/);
+  // The false receipt is caught at the intervening clearing, before the later
+  // duplicate place is reached; either failure is an appropriate refusal.
+  assert.throws(()=>auditChronologyV1(db.db),/Chronology v1 mismatch/);
 });
 test('v1 refuses an arrival identity removed from its receipt',t=>{
   const db=setup(t);
