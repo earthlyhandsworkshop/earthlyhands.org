@@ -7,6 +7,16 @@ A person opens the Workshop on a phone. They may return directly to living work,
 
 The first static specimen is `pocket-workshop.html`. It uses fictional examples only. It has no account, database, live score, remote call, source text, or actual invitation. It is not a deployment and not a working multi-user Workshop. Do not confuse the visible "Preview invitation" control with a delivered message.
 
+## Folio alcove, not a compulsory backpack — 28 October 2026
+
+Ten clarified a consequential interface distinction. His **folio box** belongs in the Workshop's **folio alcove**. He calls for it, works with it, closes it, and it returns to its place. The Workshop should not visually burden him with a backpack that follows him from room to room. The return is a change of working view, **not** a transfer or deletion of custody.
+
+The earlier "backpack" experiments remain useful as technical tests of portable personal receipts, offline copies, and recoverable history. They do **not** establish a required visitor metaphor, a compulsory carried inventory, or thousands of permanent visible folio boxes. Portable data is a storage capability; the folio box is one possible, already-earned Workshop experience. A visitor might choose a folio, a simpler saved place, or no persistent personal container at all. The interface must not assume that everyone wants one.
+
+**Interaction contract:** request an authorized folio box from the alcove → show only its permitted contents → work with chosen references and notes → close the view → return the box to its alcove position. The same stable identity and revision history survive closing, returning, device changes, and permitted export. Opening a box does not relocate archival originals; closing it does not erase private history. Permission, retention, recovery, and actual synchronization remain backend responsibilities.
+
+**Acceptance questions for a later real UI:** Can Ten summon and dismiss his box without carrying a persistent backpack icon? Can he return and find his contents and earlier revisions? Does the box stay in the alcove when closed? Can a visitor decline a personal container entirely? Does a private box stay private even when another visitor opens the Workshop? These are requirements to test, **not claims of implemented behavior**.
+
 ## Shared object and shared session are distinct
 
 An **object** has stable ID, type, current revision, source and provenance references, scope/permissions, history, and a route home. It may be a folio leaf, source jacket, question, finger, drawing, game record, or versioned standing. The canonical Markdown/source bodies are senior to any derived index. A **session** is a temporary gathering around one or more objects. It has session ID, participants and roles, a pinned or explicitly moving revision view, message/event history, invitations, and a recoverable return path. Ending the session must not move or erase source custody.
