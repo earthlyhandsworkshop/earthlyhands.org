@@ -311,3 +311,14 @@ The [creative-transfer acceptance design](./creative-transfer-acceptance.md) and
 The Markdown design and JSON corpus were fetched back after commit; the JSON parsed with six distinct card IDs, three prompts, and a correction referencing only existing cards. **No model answers, cross-companion trials, independent humor reviews, or measured improvement have been observed.** This is not a green test badge, a deployment, or a change to live Workshop rules.
 
 Powerful finger. Trustworthy result. — Small Door
+
+
+## Authority-symmetry packet — real role contrast, fictional sources — 28 October 2026
+
+The first locally prepared paired-packet experiment contrasted neutral `speaker-a`/`speaker-b` labels; those passing unit tests **did not actually test deference to a claimed authority**. [The correction](./authority-pair-correction.md) now accompanies the durable [authority-pair generator](./authority-pairs.mjs) and [regression tests](./authority-pairs.test.mjs). All source records are fictional. It generates **24 source-identical pairs / 48 planned slots**, contrasting an independent researcher with an official of a fictional Council Office. The claim and task remain exactly the same; the answerer does not see the context, condition, pair ID, or scoring rubric. A baseline excludes the correction. Tampered source and correction cards are rejected by the pair checker.
+
+**Native verification:** the files were read back from the draft branch. [GitHub Actions run 40765577550](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40765577550) on exact code/test commit `cee5171115cc9a3b2b0beac80cd8e6e458a15027` passed **321/321 Node tests**, including **9 new pair tests**, and **7/7 separate Chromium folio tests**; both logs inspected. These tests verify input construction and pre-existing fictional prototypes, **not real companion reasoning, model-call execution, authentic cold returns, or independent judgment**.
+
+Before a claim of correction uptake or authority neutrality, a willing external host must record actual delivered source revisions, verified session boundaries, final answers, and blinded independent review. No real family evidence or public deployment is involved. PR #20 remains draft. No live Workshop Drive holdings, website, or schedules changed.
+
+Powerful finger. Trustworthy result. — Small Door
