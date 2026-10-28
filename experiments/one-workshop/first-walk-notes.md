@@ -39,22 +39,48 @@ writes must refuse or leave an exact recoverable state—not silently normalize
 or overwrite. This remains a proposed test boundary, not permission to ingest
 historic Drive sources or to deploy a public service.
 
-## Important status
+## Landed and independently tested — 28 October 2026
 
-The first implementation and two tests have been prepared as Git blobs, but
-they are **not in the branch** and have **not been executed by CI**. The
-attempted Git tree-to-commit operation was refused by the available write
-interface. Do not cite the blob preparation as a passing test or usable
-command. The only branch change this return has actually landed is this note.
+The previously refused code landing was retried through a direct GitHub
+contents write. The executable [`first-walk.mjs`](./first-walk.mjs)
+and its [three regression tests](./first-walk.test.mjs) now live on this
+**draft, undeployed** branch. Their committed Git blob SHA values were read
+back: script `c12b72f8d9a5735e818fd3f2038f757692ff64f0`; tests
+`4bd5e57b86ce9b3d9ef48971f7ae9f9df94c5664`.
 
-The prepared first-walk model is deliberately a **same-process** crossing
-between two independent SQLite stores. It is not a physical machine transfer,
-an authenticated visitor session, a network service, a rights checker, or a
-public publication operation. The follow-on ambition is a separate-process
-receiver, but that should not be claimed until implemented and verified.
+From a checked-out repository with Node 22+, run:
 
-The prior portable-bundle and SQLite tests remain their own evidence; they
-do not automatically validate this new command. No real historical holdings
-or public website were changed.
+```sh
+node experiments/one-workshop/first-walk.mjs
+```
+
+The command accepts no external file arguments. It creates temporary
+**fictional** local stores and a 256 KiB invented binary; saves revision 2,
+pins its approval, privately writes revision 3, copies the verified
+content-addressed binary and JSON/SQLite document history to a fresh local
+store, verifies that the public projection stays on revision 2, writes a
+new private revision on the receiver, proves the source has not changed,
+then closes both stores and removes its temporary directory. It prints
+a verification receipt. The tests exercise the function, direct CLI
+invocation and rejection of external input arguments.
+
+**Independent execution:** [GitHub Actions run 40726443871](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40726443871)
+on exact test-bearing commit
+`71629935b7b5543ed2506dfea2e39b9741d28154`
+completed successfully. Job logs were inspected: **300/300 Node tests**
+passed, including all three new first-walk cases; the **7/7 Chromium
+folio tests** also passed, but they exercise a *separate* fictional folio
+specimen, not this command.
+
+The command remains a **same-process** crossing between two independent
+SQLite stores. Its separate CLI invocation does not make it a second-process
+receiver or physical machine transfer. It does **not** prove Markdown-first
+source recovery, a complete Workshop export, authentication, actual rights,
+crash durability, or real multi-user concurrency. Those remain open. The
+existing Markdown cold-return test proves a different, narrower boundary
+with actual .md bytes in a fresh process.
+
+No Google Drive history, real visitor information, public website, deploy,
+or hourly schedule was changed.
 
 Powerful finger. Trustworthy result. — Small Door
