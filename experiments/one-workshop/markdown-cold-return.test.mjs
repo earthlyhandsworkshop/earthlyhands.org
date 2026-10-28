@@ -30,3 +30,29 @@ if(process.argv[2]==='--receive') {
     assert.deepEqual(readFileSync(join(dest,'revisions','0001.md')),body);
   });
 }
+
+if(process.argv[2] !== '--receive') {
+  test('cold receiver refuses altered bytes and future metadata before creating an index',t=>{
+    const root=mkdtempSync(join(tmpdir(),'md-cold-refusal-'));
+    t.after(()=>rmSync(root,{recursive:true,force:true}));
+    const dir=join(root,'leaf-one'),rev=join(dir,'revisions'),db=join(root,'index.sqlite');
+    mkdirSync(rev,{recursive:true});
+    const bytes=Buffer.from('# Original\\n');
+    const record={schema:RECORD_SCHEMA,id:'leaf-one',sourceClaim:'invented',rightsState:'unknown',
+      publication:null,revisions:[{revision:1,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')}]};
+    writeFileSync(join(dir,'record.json'),JSON.stringify(record));
+    writeFileSync(join(rev,'0001.md'),bytes);
+    const invoke=()=>spawnSync(process.execPath,[self,'--receive',root,db],{encoding:'utf8',timeout:20000});
+    writeFileSync(join(rev,'0001.md'),'# Changed without receipt\\n');
+    let r=invoke();
+    assert.equal(r.status,1);
+    assert.match(r.stderr,/Markdown bytes disagree/);
+    assert.equal(readFileSync(join(dir,'record.json'),'utf8'),JSON.stringify(record));
+    writeFileSync(join(rev,'0001.md'),bytes);
+    writeFileSync(join(dir,'record.json'),JSON.stringify({...record,permissionHistory:['unknown']}));
+    r=invoke();
+    assert.equal(r.status,1);
+    assert.match(r.stderr,/Unsupported Markdown sidecar/);
+    assert.ok(readFileSync(join(dir,'record.json'),'utf8').includes('permissionHistory'));
+  });
+}
