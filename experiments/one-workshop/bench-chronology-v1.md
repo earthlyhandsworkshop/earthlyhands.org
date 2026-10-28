@@ -36,6 +36,14 @@ Three further independent regression tests cover what the successful 5,001-event
 
 The exact test commit `34dd9bd26c224c45ebf9c67c6a88ca39cd13c2bf` passed **223/223 Node tests** in [GitHub Actions run 40609434780](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40609434780). These tests extend the local-file evidence; they do not prove two-machine recovery, real credential enforcement, or actual interrupted-power durability.
 
+## Independent-process return — 27 October 2026
+
+The [independent-process crossing test](./bench-chronology-process-return.test.mjs) extends the v1 local-file handoff beyond two SQLite handles inside one Node process. A source process exports a fictional snapshot. A separate Node executable process, given only a copied snapshot, a private manifest, and a fresh destination path in a different directory, imports it and checks the exact item arrivals, warning pointer, clearing/restoration, and generation. The original process independently reopens the returned file and audits the chronology again.
+
+A second spawned receiver is handed a deliberately forged clearing that names an item arriving later. The test recomputes the forged snapshot's SHA-256 manifest, so its refusal must come from the chronology audit rather than a mismatched transport hash. The receiver exits with an error and leaves no installed destination.
+
+**Independent execution:** [GitHub Actions run 40610164965](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40610164965), exact test commit `64c2b2a4c5251bcf0d0494b10fcd232aba179cb5`, recorded **225/225 Node tests passed**, including both new process-boundary cases. This proves **separate processes on one CI runner**, not separate physical computers or networks. Both processes still have access to the same checkout and filesystem environment. No encryption, identity service, archival-original transport, or real source permission check is implied. The receiving machine has not been demonstrated on Nightwolf or any other second device.
+
 ## Verification status
 
 The v1 code and regression tests were committed to the draft experiment branch. The separate GitHub Actions suite is the independent execution witness; check the latest run for the exact commit before describing any test as passed. No public deployment or merging is authorized.
