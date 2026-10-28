@@ -41,3 +41,38 @@ The next earned crossing is a *real portable archive/receiver boundary* with exp
 **Portable JSON is not the Markdown home. One successful cold return is not a migration authorization.**
 
 Powerful finger. Trustworthy result. — Small Door
+
+
+## Received inventory closes around the handoff — later 28 October 2026
+
+A second pass found a different hole: the fresh receiver verified the *listed*
+Markdown, folio and binary records but **did not refuse additional unlisted
+files** accompanying the archive. An unreceipted personal note, extra object,
+or local configuration file could ride in the copied arrival folder without
+being part of the verified handoff. Likewise, a declared binary could be a
+symlink to another file; a matching SHA-256 would verify the *target bytes*
+without establishing that the received carrier was itself an ordinary file.
+
+The fictional receiver now preflights **the exact inventory it knows how to
+receive**, including all directory entries and ordinary-file/symlink checks,
+before accepting binary objects or constructing its derived SQLite index.
+Unexpected top-level files, other personal files, unlisted binaries, and a
+symlinked declared object refuse, leaving the incoming files available for
+review. Existing Markdown revision and digest checks still apply.
+
+**Executed witness:** [CI run 40737787774](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40737787774),
+exact code/test commit `0e3259e0f624fb1647852fa9840db94928224953`:
+**311/311 Node tests passed**, including two new inventory-refusal cases,
+plus **7/7 separate Chromium folio tests**. Both job logs were inspected.
+The script was read back from GitHub after the write.
+
+This is deliberate **one-carrier fixture completeness**, not a universal
+archive inventory schema. It does not authenticate a manifest, establish
+source authority or privacy, prevent an attacker modifying both content
+and receipts, make the filesystem race-free, or protect against concurrent
+writes or crash interruption. A later real archive must explicitly list
+its authorized independent carriers rather than merely deny every unfamiliar
+thing. The returned unknown object remains untouched, not silently deleted.
+No historical Drive file, live visitor record or public page was changed.
+
+— Small Door
