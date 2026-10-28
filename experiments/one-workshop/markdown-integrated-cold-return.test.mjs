@@ -274,4 +274,23 @@ if (process.argv[2] === '--receive') {
     assert.match(result.stderr, /refuses existing index/);
     assert.deepEqual(readFileSync(f.index), before);
   });
+
+  test('future folio rights field refuses cold receiving even if the local digest is recomputed', async t => {
+    const f = await fixture(t);
+    const original = readFileSync(folioPath(f.received), 'utf8');
+    const later = JSON.parse(original);
+    later.receipts[0].permissionHistory = [{ state: 'unknown-from-future' }];
+    writeFileSync(folioPath(f.received), JSON.stringify(later, null, 2) + '\n');
+    const handoff = JSON.parse(readFileSync(handoffPath(f.received), 'utf8'));
+    handoff.folioSHA256 = hash(readFileSync(folioPath(f.received)));
+    writeFileSync(handoffPath(f.received), JSON.stringify(handoff, null, 2) + '\n');
+
+    const result = receive(f.received, f.index);
+    assert.equal(result.status, 1);
+    assert.match(result.stderr, /Invalid native-folio pocket/);
+    assert.equal(existsSync(f.index), false);
+    assert.ok(readFileSync(folioPath(f.received), 'utf8').includes('permissionHistory'));
+    assert.equal(readFileSync(folioPath(f.source), 'utf8'), original);
+  });
+
 }
