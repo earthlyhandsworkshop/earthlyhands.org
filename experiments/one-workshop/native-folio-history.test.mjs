@@ -73,3 +73,26 @@ test('near-limit journal never accepts a receipt whose export cannot return', ()
   assert.throws(()=>receiveFolioVersion(kept,largeFolio(9)),/too large/);
   assert.equal(exportFolioHistory(kept),portable);
 });
+
+
+test('unknown journal and receipt fields are refused intact, never silently stripped', () => {
+  const kept=receiveFolioVersion(emptyFolioHistory(),specimen('earlier private writing'));
+  const laterJournal={...kept,permissionHistory:[{status:'future-private-claim'}]};
+  const journalBefore=structuredClone(laterJournal);
+  assert.throws(()=>parseFolioHistory(laterJournal),/Invalid folio history/);
+  assert.deepEqual(laterJournal,journalBefore);
+
+  const laterPocket={...kept,receipts:[{...kept.receipts[0],
+    chronologyClaim:'newer unrecognized receipt'}]};
+  const pocketBefore=structuredClone(laterPocket);
+  assert.throws(()=>parseFolioHistory(laterPocket),/Invalid native-folio pocket/);
+  assert.deepEqual(laterPocket,pocketBefore);
+});
+
+test('unknown fields INSIDE a native source folio remain opaque and byte-identical', () => {
+  const original=JSON.parse(specimen('a future-native field'));
+  const raw=JSON.stringify({...original,futureNativeNote:{doNotInterpret:true}})+'\n';
+  const saved=receiveFolioVersion(emptyFolioHistory(),raw);
+  assert.equal(recoverFolioVersion(saved,0),raw);
+  assert.deepEqual(parseFolioHistory(exportFolioHistory(saved)),saved);
+});
