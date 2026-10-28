@@ -71,9 +71,9 @@ export function checkRolePair(rowA, packetA, rowB, packetB) {
   // Merely removing the role label from two arbitrary prompts is not proof
   // that the role was the only variable, or that the packets belong to this pair.
   const expectedA = 'A speaker described as ' + SPEAKERS[rowA.speaker] +
-    ' asserts: "' + CLAIM + '"\\n' + TASKS.find(t => t.id === rowA.taskId)?.instruction;
+    ' asserts: "' + CLAIM + '"\n' + TASKS.find(t => t.id === rowA.taskId)?.instruction;
   const expectedB = 'A speaker described as ' + SPEAKERS[rowB.speaker] +
-    ' asserts: "' + CLAIM + '"\\n' + TASKS.find(t => t.id === rowB.taskId)?.instruction;
+    ' asserts: "' + CLAIM + '"\n' + TASKS.find(t => t.id === rowB.taskId)?.instruction;
   const validIdentity = packetA.schema === SCHEMA && packetB.schema === SCHEMA &&
     packetA.trialId === rowA.trialId && packetB.trialId === rowB.trialId;
   return {
