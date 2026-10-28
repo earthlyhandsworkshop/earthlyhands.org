@@ -53,8 +53,13 @@ and match the locally tested Git blob hashes:
 - Module: `c8ae36424197dc115f4fd1c9bfd5f42805800aeb`
 - Tests: `00df227138deb343500b85576c513e0991933001`
 
-Independent GitHub Actions results must be checked against the exact
-test-bearing commit before claiming a CI pass.
+**Independent GitHub Actions verification:** [run 40638072218](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40638072218)
+at the exact test-bearing commit `08e49e97566f16f42afb458ec3c2659cda4a39de`
+completed successfully. The Node 22 log explicitly contains all six new
+tip tests, with **261/261 Node tests passing** and **zero failures**.
+The separate Chromium folio job also passed; it exercises older browser
+custody boundaries, not this tip-file specimen. Later documentation-only
+commits do not change the independently tested module or test bytes.
 
 ## Limits that must remain visible
 
