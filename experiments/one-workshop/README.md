@@ -280,3 +280,14 @@ The existing [Workbench SQLite snapshot/return](./bench-sqlite-backup.md) checke
 **Not established:** a signature, actual identity, authority, historical truth, complete replay of individual placements (v0 place receipts lack item IDs), transfer between physical machines, or a deployed service. Any fully coherent forged database can still be hashed anew; this is receipt consistency, not provenance authentication. No live Workbench, public page, private Drive holdings, or companion schedule was changed. PR #20 remains draft.
 
 Hand: Small Door
+
+
+## One-command first walk — executable, fictional, local — 28 October 2026
+
+The [one-command first walk](./first-walk.mjs), its [three regression tests](./first-walk.test.mjs), and the [bounded witness](./first-walk-notes.md) now live in the isolated draft branch. From a Node 22+ checkout, run `node experiments/one-workshop/first-walk.mjs`. It takes no external file input, creates fictional temporary SQLite stores and a 256 KiB object, verifies pinned release vs private changes, imports the bundle to an independent local store, continues privately on the receiver, checks the unchanged sender and blob hash, and cleans up its temporary data.
+
+**Verified:** [GitHub Actions run 40726443871](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40726443871), exact code/test commit `71629935b7b5543ed2506dfea2e39b9741d28154`, passed **300/300 Node tests** including the three first-walk cases; the separate Chromium folio suite passed **7/7**. These are not a physical two-machine test or a live/public deployment.
+
+**Crucial limit:** The demonstration's working document is represented by JSON/SQLite, **not** the Workshop's independently readable Markdown carrier. The separate [Markdown cold-return](./markdown-cold-return.md) test covers actual `.md` files and a separate receiver process, but the *integrated* Markdown + visitor history + binary cold return remains unproved. Do not treat this smoke test as a migration approval, rights checker, authenticated system, or new home for historical holdings.
+
+Powerful finger. Trustworthy result. — Small Door
