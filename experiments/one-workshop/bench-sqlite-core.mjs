@@ -78,9 +78,22 @@ export function mutate(db, benchId, actor, expectedGeneration, eventId, kind, ap
     const next = db.prepare('UPDATE benches SET generation=generation+1 WHERE bench_id=? AND generation=?')
       .run(benchId, expectedGeneration);
     if (next.changes !== 1) throw new Error('Stale bench generation');
-    db.prepare(`INSERT INTO events(bench_id,seq,event_id,kind,actor,batch_id,item_count)
-      VALUES(?,?,?,?,?,?,?)`).run(benchId, expectedGeneration + 1, eventId, kind,
-        actor.principalId, result.batchId ?? null, result.count);
+    // v1 names the exact arriving item in the SAME transaction as its
+    // placement. v0 remains byte-for-byte compatible and cannot claim this.
+    const version = db.prepare('PRAGMA user_version').get().user_version;
+    if (version === 1) {
+      const arriving = kind === 'place' ? result.placedItemId : null;
+      if ((kind === 'place' && !id(arriving)) ||
+          (kind !== 'place' && arriving !== null))
+        throw new Error('Chronology v1 requires exact placement identity');
+      db.prepare(`INSERT INTO events(bench_id,seq,event_id,kind,actor,batch_id,item_count,placed_item_id)
+        VALUES(?,?,?,?,?,?,?,?)`).run(benchId, expectedGeneration + 1, eventId, kind,
+          actor.principalId, result.batchId ?? null, result.count, arriving);
+    } else if (version === 0) {
+      db.prepare(`INSERT INTO events(bench_id,seq,event_id,kind,actor,batch_id,item_count)
+        VALUES(?,?,?,?,?,?,?)`).run(benchId, expectedGeneration + 1, eventId, kind,
+          actor.principalId, result.batchId ?? null, result.count);
+    } else throw new Error('Unsupported Workbench chronology schema');
     db.exec('COMMIT');
     return expectedGeneration + 1;
   } catch (err) { db.exec('ROLLBACK'); throw err; }
