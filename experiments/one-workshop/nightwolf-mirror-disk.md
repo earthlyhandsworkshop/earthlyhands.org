@@ -75,6 +75,12 @@ detected without an independent high-water mark or trusted witness. This
 carrier is not historical proof, a true audit authority, or a public-release
 permission.
 
+A separate [local tip experiment](./nightwolf-mirror-tip.md) now tests that
+specific whole-database rollback and same-generation fork. It refuses a
+mismatch when the tip file survives independently of the database file.
+It **does not** solve simultaneous replacement of both files, provide an
+authenticated off-machine witness, or make the two writes crash-atomic.
+
 The demonstration is still **one machine and two processes**, not a
 physical two-machine transfer. SQLite's transaction behavior was exercised
 in ordinary tests, not proven under sudden power loss. No real Workshop
