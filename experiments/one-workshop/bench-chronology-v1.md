@@ -66,6 +66,10 @@ Concrete adversarial tests for an opt-in future specimen:
 
 This is an **unimplemented design bearing**, not a v2 schema, passing regression, signed log, or migration plan. It follows the proved limitation while leaving current v0/v1 experimental receipts and historical holdings unchanged. A future implementation should begin as a fresh versioned specimen with invented records, not a silent in-place promotion.
 
+## Separate v2 receipt specimen
+
+The source-claim distinction above has now been exercised in a **separate pure, opt-in event ledger**, [Source assertions v2](./bench-source-assertions-v2.md), with tests. That is a narrow proof of a new receipt grammar; **the v1 SQLite schema, snapshot receiver and existing historical claims have not acquired source-assertion protection**. There is no v1-to-v2 migration or deployed transactional service. The v1 limitations described above remain true.
+
 ## Verification status
 
 The v1 code and regression tests were committed to the draft experiment branch. The separate GitHub Actions suite is the independent execution witness; check the latest run for the exact commit before describing any test as passed. No public deployment or merging is authorized.
