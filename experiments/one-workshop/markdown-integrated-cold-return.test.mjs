@@ -7,7 +7,7 @@ import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import {
   mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync,
-  copyFileSync, cpSync, unlinkSync, existsSync
+  copyFileSync, cpSync, unlinkSync, existsSync, readdirSync, lstatSync, symlinkSync
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -77,6 +77,46 @@ function readHandoff(root) {
   return x;
 }
 
+// The handoff receipts cover claimed carriers, not arbitrary extra files.
+// Refuse unlisted files and symlinks rather than declaring a mixed folder a
+// complete received archive. This is the one-carrier fixture's inventory,
+// NOT a general archive format or a public/private access-control scheme.
+function exactEntries(dir, names) {
+  const stat = lstatSync(dir);
+  if (!stat.isDirectory() || stat.isSymbolicLink()) {
+    throw Error('Unsupported receiving inventory: directory is not an ordinary directory');
+  }
+  const got = readdirSync(dir).sort();
+  if (got.join('\\n') !== names.slice().sort().join('\\n')) {
+    throw Error('Unsupported receiving inventory: unreceipted or missing entry');
+  }
+}
+function ordinaryFile(file) {
+  const stat = lstatSync(file);
+  if (!stat.isFile() || stat.isSymbolicLink()) {
+    throw Error('Unsupported receiving inventory: file is not an ordinary file');
+  }
+}
+function preflightReceivedInventory(root, carrier, blobs) {
+  exactEntries(root, ['blob-manifest.json', 'carriers', 'handoff.json', 'objects', 'personal']);
+  exactEntries(join(root, 'carriers'), [ID]);
+  exactEntries(carrierDir(root), ['record.json', 'revisions']);
+  exactEntries(join(carrierDir(root), 'revisions'), carrier.revisions.map(r =>
+    String(r.revision).padStart(4, '0') + '.md'));
+  exactEntries(join(root, 'personal'), ['folio-history.json']);
+  exactEntries(join(root, 'objects'), ['sha256']);
+  exactEntries(join(root, 'objects', 'sha256'), blobs.objects.map(x => x.sha256));
+  ordinaryFile(recordPath(root));
+  ordinaryFile(handoffPath(root));
+  ordinaryFile(folioPath(root));
+  ordinaryFile(blobManifestPath(root));
+  for (const rev of carrier.revisions) {
+    ordinaryFile(join(carrierDir(root), 'revisions',
+      String(rev.revision).padStart(4, '0') + '.md'));
+  }
+  for (const object of blobs.objects) ordinaryFile(join(root, 'objects', object.object_key));
+}
+
 async function receiveOnFreshProcess(root, indexPath) {
   // No index is created until ALL received carriers, histories and blobs pass.
   // An existing derived index is not an import/overwrite target.
@@ -88,6 +128,7 @@ async function receiveOnFreshProcess(root, indexPath) {
     throw Error('Fictional folio history does not match source carrier');
   const blobs = parseBlobManifest(readFileSync(blobManifestPath(root), 'utf8'));
   if (blobs.objects.length !== 1) throw Error('Fictional fixture expects one binary');
+  preflightReceivedInventory(root, carrier, blobs);
   for (const object of blobs.objects) {
     await verifyBlob(join(root, 'objects', object.object_key), object);
   }
@@ -273,6 +314,39 @@ if (process.argv[2] === '--receive') {
     assert.equal(result.status, 1);
     assert.match(result.stderr, /refuses existing index/);
     assert.deepEqual(readFileSync(f.index), before);
+  });
+
+  test('unlisted top-level and private personal files cannot hitchhike in a clean return', async t => {
+    for (const name of ['unlisted-root', 'unlisted-personal']) {
+      const f = await fixture(t);
+      const extra = name === 'unlisted-root' ? join(f.received, '.env') :
+        join(f.received, 'personal', 'bystander-notes.json');
+      writeFileSync(extra, 'invented secret not in handoff receipts');
+      const result = receive(f.received, f.index);
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /Unsupported receiving inventory/);
+      assert.equal(existsSync(f.index), false);
+      assert.equal(existsSync(extra), true);
+    }
+  });
+
+  test('unlisted binary and symlinked claimed object refuse before index creation', async t => {
+    const extra = await fixture(t);
+    const stray = join(extra.received, 'objects', 'sha256', 'unreceipted-object');
+    writeFileSync(stray, 'not in the manifest');
+    const refused = receive(extra.received, extra.index);
+    assert.equal(refused.status, 1);
+    assert.match(refused.stderr, /Unsupported receiving inventory/);
+    assert.equal(existsSync(extra.index), false);
+
+    const linkFixture = await fixture(t);
+    const expected = join(linkFixture.received, 'objects', linkFixture.fingerprint.object_key);
+    unlinkSync(expected);
+    symlinkSync(join(linkFixture.source, 'objects', linkFixture.fingerprint.object_key), expected);
+    const viaLink = receive(linkFixture.received, linkFixture.index);
+    assert.equal(viaLink.status, 1);
+    assert.match(viaLink.stderr, /Unsupported receiving inventory/);
+    assert.equal(existsSync(linkFixture.index), false);
   });
 
   test('future folio rights field refuses cold receiving even if the local digest is recomputed', async t => {
