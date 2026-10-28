@@ -30,7 +30,7 @@ function parseManifest(value) {
 }
 
 // Exported only for verifying a private offline handoff; not a publishing credential.
-export function validateBenchSnapshotManifest(value) { return parseManifest(value); }
+export function validateChronologyV1SnapshotManifest(value) { return parseManifest(value); }
 
 async function fingerprint(path) {
   const h = createHash('sha256');
@@ -46,7 +46,7 @@ async function fingerprint(path) {
 // A checksum and valid receipts do not mean the file is safe to *run* later.
 // A forged SQLite file can carry extra triggers or weakened table constraints,
 // which execute only after return. Accept exactly the schema written by this
-// v0 fixture; any future migration needs its own deliberate format/version gate.
+// v1 fixture; any future migration needs its own deliberate format/version gate.
 function refuseUnknownChronologySchema(db) {
   const query = 'SELECT type,name,tbl_name,sql FROM sqlite_schema ORDER BY type,name,tbl_name';
   const expectedStore = new ChronologyV1BenchStore(':memory:');
