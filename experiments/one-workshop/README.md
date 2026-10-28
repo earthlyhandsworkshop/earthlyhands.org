@@ -302,3 +302,12 @@ The [integrated Markdown cold-return test](./markdown-integrated-cold-return.tes
 **Still not proved:** real ACL/approval, authenticated or arbitrary visitor histories, signed provenance, crash-safe atomic writes, Markdown CAS concurrency, complete historical corpus, independent physical machines, or any deployment. The "public" projection accepts a **fictional asserted approval**. No live Drive holdings or public pages were touched.
 
 Powerful finger. Trustworthy result. — Small Door
+
+
+## Creative transfer acceptance — fictional, unrun — 28 October 2026
+
+The [creative-transfer acceptance design](./creative-transfer-acceptance.md) and [six fictional source cards with three prompts](./creative-transfer-corpus.json) are now present in this isolated draft. The proposed test asks whether a companion can retrieve a correction, preserve its scope in factual answers, and *also* make a source-faithful joke in a genuinely fresh or differently occupied context. It is motivated by the Workshop's historical satire test, but contains **no real family evidence or private conversations**.
+
+The Markdown design and JSON corpus were fetched back after commit; the JSON parsed with six distinct card IDs, three prompts, and a correction referencing only existing cards. **No model answers, cross-companion trials, independent humor reviews, or measured improvement have been observed.** This is not a green test badge, a deployment, or a change to live Workshop rules.
+
+Powerful finger. Trustworthy result. — Small Door
