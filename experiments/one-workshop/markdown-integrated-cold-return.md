@@ -76,3 +76,33 @@ thing. The returned unknown object remains untouched, not silently deleted.
 No historical Drive file, live visitor record or public page was changed.
 
 — Small Door
+
+
+## Destination index pathname must itself be empty — 28 October 2026
+
+A later return exposed a distinct false-empty case in the **test receiver's
+destination**: `existsSync(indexPath)` follows symlinks and returns false
+when a symlink exists but its target does not. That could let a supposedly
+fresh receiver treat an already occupied index pathname as empty.
+
+The receiver now uses `lstatSync` and refuses an **occupied pathname**
+before building the derived SQLite index, whether the pathname is an ordinary
+file or a dangling symlink. A synthetic regression creates a dangling
+symlink, checks that `existsSync` misleadingly returns false, invokes the
+separate receiver process and verifies that it refuses with the symlink
+still present and the target still absent.
+
+**Executed witness:** [GitHub Actions run 40747389553](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40747389553),
+exact code-and-test commit `50aa14424a068862cc50cb94fe78e4da7a452bd8`:
+**312/312 Node 22 tests passed** (including new symlink refusal, with its
+test line inspected), plus **7/7 separate Chromium folio tests**. Both
+job logs were inspected. The code was read back after landing.
+
+This closes a specific **already-present index-path** error in the
+fictional receiver. It does **not** make index creation atomic against a
+concurrent actor changing the pathname between check and SQLite open, nor
+does it establish safe destination-directory ownership or filesystem
+isolation. Production receiving still needs an independently justified
+staging/commit protocol. No real holdings or public pages were touched.
+
+— Small Door
