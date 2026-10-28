@@ -11,11 +11,19 @@ export function newBackpack(owner) {
 }
 export function parseBackpack(raw) {
   const x = typeof raw === 'string' ? JSON.parse(raw) : raw;
-  if (!x || x.schema !== VERSION || typeof x.owner !== 'string' || !x.owner.trim() ||
+  // Unknown fields may be a later carrier's history, provenance, or custody.
+  // Refuse them rather than silently erase them during import/export.
+  if (!x || typeof x !== 'object' || Array.isArray(x) ||
+      Object.keys(x).sort().join(',') !== 'entries,owner,schema')
+    throw Error('Unrecognized backpack fields; original import must be kept');
+  if (x.schema !== VERSION || typeof x.owner !== 'string' || !x.owner.trim() ||
     x.owner.length > 128 || !Array.isArray(x.entries) || x.entries.length > LIMIT) throw Error('Invalid backpack');
   const seen = new Set();
   for (const e of x.entries) {
-    if (!e || typeof e.document_id !== 'string' || !/^[a-zA-Z0-9:._-]{1,120}$/.test(e.document_id) ||
+    if (!e || typeof e !== 'object' || Array.isArray(e) ||
+        Object.keys(e).sort().join(',') !== 'document_id,note,source_revision')
+      throw Error('Unrecognized annotation fields; original import must be kept');
+    if (typeof e.document_id !== 'string' || !/^[a-zA-Z0-9:._-]{1,120}$/.test(e.document_id) ||
         !Number.isSafeInteger(e.source_revision) || e.source_revision < 1 ||
         typeof e.note !== 'string' || e.note.length > 10000 || seen.has(e.document_id)) throw Error('Invalid entry');
     seen.add(e.document_id);
