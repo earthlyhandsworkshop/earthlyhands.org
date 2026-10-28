@@ -44,6 +44,11 @@ export class NightwolfWitnessedMirror {
   }
   receive(envelope) {
     const previous=this.summary();
+    // The underlying mirror accepts appended batches. This witness records
+    // exactly one generation per receipt, so reject skips BEFORE SQLite
+    // changes: otherwise a valid batch would brick future guarded reads.
+    if (envelope?.core?.generation !== previous.generation+1)
+      throw new Error('Witnessed fixture requires exactly one new generation per receive; no local commit');
     // The mirror+tip commits first. If the witness refuses, no automatic
     // repair is attempted; future witnessed reads refuse the mismatch.
     const next=this.#mirror.receive(envelope);

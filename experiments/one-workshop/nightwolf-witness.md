@@ -18,7 +18,7 @@ The original [Nightwolf mirror](./nightwolf-mirror.mjs), [SQLite carrier](./nigh
 
 ## Tested crossing
 
-The [eight witness tests](./nightwolf-witness.test.mjs) and [five guarded-read tests](./nightwolf-witness-gate.test.mjs) use only fictional actors, notes, and binary bytes. They demonstrate:
+The [eight witness tests](./nightwolf-witness.test.mjs) and [six guarded-read tests](./nightwolf-witness-gate.test.mjs) use only fictional actors, notes, and binary bytes. They demonstrate:
 
 - A separate Node process receives only a generation and digest and independently reopens its witness database.
 - With the witness at generation 2, replacing **both** the mirror SQLite file and its tip with valid generation-1 copies is detected by a witness check.
@@ -26,10 +26,11 @@ The [eight witness tests](./nightwolf-witness.test.mjs) and [five guarded-read t
 - Two SQLite witness handles cannot both accept the same next generation.
 - Ordinary guarded reads and a guarded generation-2 write consult the witness process, including after close/reopen.
 - A missing witness is **not** silently re-created.
+- A raw-mirror-compatible multi-event batch that would skip a witness generation is refused **before** local SQLite commit, leaving the valid previous generation readable and a normal one-step append possible.
 - An unwitnessed advance is detected. A simulated witness-write refusal *after* local commit leaves a visible mismatch and no automatic repair.
 - A deliberately passing **counterexample**: replacing the witness file itself with an older internally consistent copy makes the witness accept that old state. The witness is not protected from a party who controls its file.
 
-Local Node 22.16.0 execution of these **13 new tests**, plus the 11 existing disk/tip tests, passed **24/24** in the combined local run. Source and test files were staged as Git blobs and checked against the exact local Git blob hashes. **Independent CI witness:** [GitHub Actions run 40638765657](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40638765657) at exact implementation-and-test commit `c0ac29a873d2bf4777f08b7c12e10cd2a336814e` recorded **274/274 Node tests passing**, zero failures. The Node job log explicitly includes the new separate-process and guarded-read cases. This verifies the isolated fictional suite, not a real Nightwolf device or authenticated network service.
+Source and test files were staged as Git blobs and checked against their exact blob hashes. **Independent CI witness for the preceding implementation (before the generation-skip preflight):** [GitHub Actions run 40638765657](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40638765657) at exact implementation-and-test commit `c0ac29a873d2bf4777f08b7c12e10cd2a336814e` recorded **274/274 Node tests passing**, zero failures. The Node job log explicitly includes the original separate-process and guarded-read cases. This added preflight regression requires its own exact-commit CI evidence. This verifies the isolated fictional suite, not a real Nightwolf device or authenticated network service.
 
 ## Boundaries still unearned
 

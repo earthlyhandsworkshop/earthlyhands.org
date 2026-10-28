@@ -113,3 +113,21 @@ test('witness write refusal after local commit is visible and future guarded rea
   const raw=new NightwolfMirrorWithTip(p.db,p.tip);
   try {assert.equal(raw.summary().generation,2);} finally {raw.close();}
 });
+
+test('valid multi-event batch is refused before local commit, not after witness mismatch',t=>{
+  const p=paths(t),first=seed(p);
+  const m=new NightwolfWitnessedMirror(p.db,p.tip,p.witness,id);
+  try {
+    // The raw SQLite mirror accepts this append of two events at once.
+    // The witness has only one receipt slot per generation. The guarded
+    // API must refuse BEFORE its own local mirror/tip are mutated.
+    assert.throws(()=>m.receive(sealMirror(core('private','shared','third'))),
+      /exactly one new generation per receive; no local commit/);
+    assert.deepEqual(m.summary(),first);
+    assert.equal(call(p.witness,'latest',{}).generation,1);
+    const next=m.receive(sealMirror(core('private','shared')));
+    assert.equal(next.generation,2);
+    assert.equal(m.summary().generation,2);
+    assert.equal(call(p.witness,'latest',{}).generation,2);
+  } finally {m.close();}
+});
