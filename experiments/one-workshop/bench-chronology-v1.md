@@ -44,6 +44,12 @@ A second spawned receiver is handed a deliberately forged clearing that names an
 
 **Independent execution:** [GitHub Actions run 40610164965](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40610164965), exact test commit `64c2b2a4c5251bcf0d0494b10fcd232aba179cb5`, recorded **225/225 Node tests passed**, including both new process-boundary cases. This proves **separate processes on one CI runner**, not separate physical computers or networks. Both processes still have access to the same checkout and filesystem environment. No encryption, identity service, archival-original transport, or real source permission check is implied. The receiving machine has not been demonstrated on Nightwolf or any other second device.
 
+## A limit on what an arrival receipt records
+
+The v1 placement event records the item ID, not the source pointer or warning list. A [fictional regression](./bench-chronology-v1-unbound-fields.test.mjs) demonstrates that altering these two fields after placement leaves the existing chronology internally consistent and accepted on import when the accompanying checksum is also updated. Thus a successful return of an unchanged warning pointer does not establish the pointer's authenticity or permanence.
+
+[CI run 40611160620](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40611160620) passed this known-limitation test in the 226-test Node suite at commit `d0dae1e0f6e390a222f14bdc084b8169ad29e480`. This is a boundary finding, not a green light for real holdings. Any new design must explicitly account for original source and warning assertions, later corrections, and independent authorization. Existing receipts must not be retroactively treated as evidence they never contained.
+
 ## Verification status
 
 The v1 code and regression tests were committed to the draft experiment branch. The separate GitHub Actions suite is the independent execution witness; check the latest run for the exact commit before describing any test as passed. No public deployment or merging is authorized.
