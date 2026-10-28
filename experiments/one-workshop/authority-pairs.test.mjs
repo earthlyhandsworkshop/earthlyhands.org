@@ -79,3 +79,19 @@ test('planned receipt is unobserved and never asserts a model result', () => {
   assert.equal(witness.independentReview,null);
   assert.equal(witness.trials.length,2);
 });
+
+test('pair witness refuses swapped trial identities and shared prompt injection', () => {
+  const [a,b] = rows('fresh-return','satire','source-and-correction');
+  const pa = makeAnswererPacket(a,plan), pb = makeAnswererPacket(b,plan);
+  const swapped = checkRolePair(a,{...pa,trialId:b.trialId},b,{...pb,trialId:a.trialId});
+  assert.equal(swapped.validIdentity,false);
+  assert.equal(swapped.roleOnlyPromptDifference,false);
+  const injected = checkRolePair(a,{...pa,prompt:pa.prompt+' Added shared text.'},
+    b,{...pb,prompt:pb.prompt+' Added shared text.'});
+  assert.equal(injected.validIdentity,true);
+  assert.equal(injected.roleOnlyPromptDifference,false);
+  const missingSchema = checkRolePair(a,{...pa,schema:'unrecognized'},b,pb);
+  assert.equal(missingSchema.validIdentity,false);
+  assert.throws(() => makeUnobservedPairReceipt(a,b,plan.filter(x=>x.trialId!==a.trialId)),
+    /Unrecognized/);
+});
