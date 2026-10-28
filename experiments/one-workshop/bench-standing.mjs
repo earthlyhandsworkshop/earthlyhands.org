@@ -22,6 +22,13 @@ function sources(xs) {
   const ids = new Set();
   for (const x of xs) {
     if (!object(x)) throw new Error('Invalid source ref');
+    // A public projection copies sourceRefs. An unknown field (even on a
+    // ref tagged "public") could otherwise carry private notes to readers.
+    // This fixture's source reference contract is exactly {id, visibility}.
+    const keys = Reflect.ownKeys(x);
+    if (keys.length !== 2 || !Object.hasOwn(x, 'id') ||
+        !Object.hasOwn(x, 'visibility'))
+      throw new Error('Unexpected source reference fields; refuse');
     requireId(x.id, 'source ID');
     level(x.visibility);
     if (ids.has(x.id)) throw new Error('Duplicate source ref');
