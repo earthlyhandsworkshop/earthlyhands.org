@@ -6,7 +6,7 @@ export function place(db, benchId, item, actor, expected, eventId) {
     db.prepare(`INSERT INTO items(bench_id,item_id,source_id,access_json,warning_ids_json,active)
       VALUES(?,?,?,?,?,1)`).run(benchId, item.itemId, item.sourceId,
         JSON.stringify(item.access), JSON.stringify(item.warningIds));
-    return { count: 1 };
+    return { count: 1, placedItemId: item.itemId };
   });
 }
 export function clear(db, benchId, batchId, itemIds, actor, expected, eventId) {
