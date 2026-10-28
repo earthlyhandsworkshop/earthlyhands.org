@@ -2,7 +2,7 @@
 // SHA-256 here is a transfer check, not an identity or historical truth claim.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, rmSync, readFileSync, writeFileSync, copyFileSync, existsSync } from 'node:fs';
+import { mkdtempSync, rmSync, readFileSync, writeFileSync, copyFileSync, existsSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
@@ -146,4 +146,56 @@ test('2,500 exact-identity clear/restore cycles remain replayable after v1 retur
       ['clear','restore']);
     assert.equal(restored.db.prepare("SELECT placed_item_id FROM events WHERE event_id='place-7'").get().placed_item_id,'leaf-7');
   } finally {restored.close();}
+});
+
+test('v1 private compartments survive return without granting a rival read access',async t=>{
+  const {dir,db}=setup(t);
+  const compartment={kind:'bello-player',ownerId:'player-a',matchId:'match-1'};
+  const owner={authenticated:true,workshopMember:true,principalId:'player-a',matchId:'match-1'};
+  const rival={authenticated:true,workshopMember:true,principalId:'player-b',matchId:'match-1'};
+  db.createBench('bello-player-a',compartment);
+  db.place('bello-player-a',item(7,compartment),owner,0,'private-place-7');
+  const source=join(dir,'private-snapshot.db'),dest=join(dir,'private-return.db');
+  const manifest=await exportChronologyV1Snapshot(db,source);
+  assert.equal(manifest.benchCount,2);
+  await importChronologyV1Snapshot(source,dest,manifest);
+  const restored=new ChronologyV1BenchStore(dest);
+  try {
+    assert.equal(auditChronologyV1(restored.db),true);
+    assert.equal(restored.readActive('bello-player-a',rival),null);
+    assert.equal(restored.readTrace('bello-player-a',rival),null);
+    assert.equal(restored.readActive('bello-player-a',owner).activeItems[0].itemId,'leaf-7');
+    assert.deepEqual(restored.readActive('bello-player-a',owner).activeItems[0].warningIds,
+      ['unresolved-warning-7']);
+  } finally {restored.close();}
+});
+
+test('truncated transfer refuses installation and leaves no private staging file',async t=>{
+  const {dir,db}=setup(t);populate(db);
+  const source=join(dir,'snapshot.db'),damaged=join(dir,'truncated.db'),dest=join(dir,'not-installed.db');
+  const manifest=await exportChronologyV1Snapshot(db,source);
+  const bytes=readFileSync(source);
+  writeFileSync(damaged,bytes.subarray(0,Math.floor(bytes.length/2)));
+  const before=readdirSync(dir).filter(x=>x.startsWith('.workbench-snapshot-'));
+  await assert.rejects(importChronologyV1Snapshot(damaged,dest,manifest),/bytes\/hash mismatch/);
+  assert.equal(existsSync(dest),false);
+  assert.deepEqual(readdirSync(dir).filter(x=>x.startsWith('.workbench-snapshot-')),before);
+  assert.deepEqual(readFileSync(source),bytes);
+});
+
+test('two independent v1 handles reject a stale post-restore write',async t=>{
+  const {dir,db}=setup(t);populate(db);
+  const source=join(dir,'snapshot.db'),dest=join(dir,'returned.db');
+  await importChronologyV1Snapshot(source,dest,await exportChronologyV1Snapshot(db,source));
+  const first=new ChronologyV1BenchStore(dest),second=new ChronologyV1BenchStore(dest);
+  try {
+    const oldGeneration=first.readActive('old-growth',alice).generation;
+    assert.equal(oldGeneration,5);
+    const next=first.place('old-growth',item(8),alice,oldGeneration,'place-8');
+    assert.equal(next,6);
+    assert.throws(()=>second.place('old-growth',item(9),bob,oldGeneration,'place-9'),
+      /Stale bench generation/);
+    assert.equal(second.readActive('old-growth',bob).generation,6);
+    assert.equal(auditChronologyV1(second.db),true);
+  } finally {first.close();second.close();}
 });
