@@ -122,3 +122,28 @@ test('a hidden trigger is refused even when the v1 manifest is recomputed',async
     /schema differs from known Workbench chronology v1 schema/);
   assert.equal(existsSync(dest),false);
 });
+
+test('2,500 exact-identity clear/restore cycles remain replayable after v1 return',async t=>{
+  const {dir,db}=setup(t);
+  let gen=db.place('old-growth',item(7),alice,0,'place-7');
+  for(let i=1;i<=2500;i++) {
+    gen=db.clear('old-growth','batch-'+i,['leaf-7'],alice,gen,'clear-'+i);
+    gen=db.restore('old-growth','batch-'+i,bob,gen,'restore-'+i);
+  }
+  const source=join(dir,'long-snapshot.db'),dest=join(dir,'long-return.db');
+  const manifest=await exportChronologyV1Snapshot(db,source);
+  assert.equal(manifest.eventCount,5001);
+  await importChronologyV1Snapshot(source,dest,manifest);
+  const restored=new ChronologyV1BenchStore(dest);
+  try {
+    assert.equal(auditChronologyV1(restored.db),true);
+    assert.equal(restored.readActive('old-growth',alice).generation,5001);
+    assert.deepEqual(restored.readActive('old-growth',alice).activeItems[0].warningIds,
+      ['unresolved-warning-7']);
+    assert.equal(restored.readBatch('old-growth','batch-1',alice).restored,true);
+    assert.equal(restored.readBatch('old-growth','batch-2500',bob).restored,true);
+    assert.deepEqual(restored.readTrace('old-growth',alice,{after:4999}).map(x=>x.kind),
+      ['clear','restore']);
+    assert.equal(restored.db.prepare("SELECT placed_item_id FROM events WHERE event_id='place-7'").get().placed_item_id,'leaf-7');
+  } finally {restored.close();}
+});
