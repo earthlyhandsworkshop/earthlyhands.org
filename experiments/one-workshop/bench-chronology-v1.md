@@ -26,6 +26,16 @@ The [v1 transfer tests](./bench-chronology-v1-backup.test.mjs) cover a normal re
 
 **Independent verification:** [GitHub Actions run 40608812042](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40608812042), exact code-and-test commit `6875503d36a58e999087b8719059d0bb458239bd`, passed **220/220 Node tests** and **7/7 Chromium tests**. The Node logs explicitly show the new 5,001-event chronology-v1 return case passing. This remains a **local-file crossing**, not a demonstrated two-machine return, real custody, authenticated actor, encryption, source-object transfer, or an archival backup. Do not copy live Workshop history into it.
 
+## Return-under-pressure checks — 27 October 2026
+
+Three further independent regression tests cover what the successful 5,001-event return alone cannot establish:
+
+- **Compartment preservation:** a fictional private Bello player's bench and its warning pointer cross in the same snapshot as a separate workshop bench. The rival still cannot read the private bench through the returned model's access filter. These flags are invented fixtures, not real identity or authorization.
+- **Incomplete transfer:** a deliberately truncated snapshot, paired with the original valid manifest, is refused; the destination is not installed, the source remains byte-for-byte intact, and no temporary staging file is left by this ordinary error path. This simulates incomplete bytes, **not** a sudden power failure or filesystem crash.
+- **Concurrent post-restore writing:** two independent SQLite connections to the restored file cannot both write against the same stale generation. The losing writer receives a conflict, and the winning arrival remains replayable.
+
+The exact test commit `34dd9bd26c224c45ebf9c67c6a88ca39cd13c2bf` passed **223/223 Node tests** in [GitHub Actions run 40609434780](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40609434780). These tests extend the local-file evidence; they do not prove two-machine recovery, real credential enforcement, or actual interrupted-power durability.
+
 ## Verification status
 
 The v1 code and regression tests were committed to the draft experiment branch. The separate GitHub Actions suite is the independent execution witness; check the latest run for the exact commit before describing any test as passed. No public deployment or merging is authorized.
