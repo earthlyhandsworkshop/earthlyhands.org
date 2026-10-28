@@ -16,6 +16,29 @@ them into a fresh destination, checks the pinned public view, verifies the
 binary's SHA-256, continues writing privately on the receiving copy, and checks
 that the source copy remained unchanged. It then cleans up its temporary files.
 
+## A needed distinction: portable JSON is not the Markdown home
+
+This proposed one-command walk would exercise the **fictional JSON/SQLite**
+document bundle and the verified binary-transfer code. That would be a useful
+integration smoke test, but it would **not** demonstrate that an ordinary
+Workshop .md body survives as a first-class, readable carrier. A successful
+JSON transfer must never be represented as a complete Workshop migration.
+
+The separate `markdown-rebuild.mjs` and `markdown-cold-return.test.mjs`
+already test genuine Markdown bytes, receipts, a disposable index, and one
+fresh receiver process without the sender's database. That is real but narrow
+progress. It does not yet carry visitor note history and binary companions
+through the *same* cold-return path.
+
+The larger acceptance walk must start with actual .md revision files and
+receipts, receive **still-readable .md files**, reconstruct the allowed index
+without the sender's database, keep a pinned public revision distinct from a
+later private revision, and independently verify attached objects and personal
+history. Future-schema fields, unknown rights, interruptions and competing
+writes must refuse or leave an exact recoverable state—not silently normalize
+or overwrite. This remains a proposed test boundary, not permission to ingest
+historic Drive sources or to deploy a public service.
+
 ## Important status
 
 The first implementation and two tests have been prepared as Git blobs, but
