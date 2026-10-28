@@ -31,8 +31,12 @@ export function carryNativeFolio(raw) {
 
 export function checkNativeFolioPocket(value) {
   const x = typeof value === 'string' ? JSON.parse(value) : value;
-  if (!x || Array.isArray(x) || x.schema !== CAPSULE_SCHEMA ||
-      x.source !== PL111_SOURCE || typeof x.working_edition !== 'string') {
+  // The wrapper is a versioned custody receipt. Preserve new/unknown
+  // wrapper fields by refusing the import; the inner native JSON stays opaque.
+  if (!x || typeof x !== 'object' || Array.isArray(x) ||
+      Object.keys(x).sort().join(',') !== 'raw_json,schema,source,working_edition' ||
+      x.schema !== CAPSULE_SCHEMA || x.source !== PL111_SOURCE ||
+      typeof x.working_edition !== 'string') {
     throw Error('Invalid native-folio pocket');
   }
   const source = readNative(x.raw_json);
