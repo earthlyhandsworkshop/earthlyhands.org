@@ -215,3 +215,25 @@ test('a later independently settled conclusion supersedes a withdrawal notice', 
   assert.equal(view[0].proposalId, 'v2');
   assert.ok(l.events.some(e => e.kind === 'withdraw' && e.targetsProposalId === 'v1'));
 });
+
+test('unrecognized source fields cannot travel through a public standing projection', () => {
+  const leakySource = [{
+    id: 'invented-register', visibility: 'public',
+    privateNote: 'This companion-only note must not travel with a public source reference.'
+  }];
+  // Even when the source ID and visibility look public, opaque extra metadata
+  // must not be cloned onto the public response.
+  assert.throws(() => appendEvent(emptyLedger(), proposal('v1', 'public', leakySource), 0),
+    /Unexpected source reference fields/);
+
+  let l = emptyLedger();
+  l = appendEvent(l, proposal('v1', 'public'), l.generation);
+  l = appendEvent(l, settlement('v1'), l.generation);
+  const publicBefore = readStanding(l, 'invented-dates', 'public');
+  assert.throws(() => appendEvent(l, challenge('v1', 'public', leakySource), l.generation),
+    /Unexpected source reference fields/);
+  assert.throws(() => appendEvent(l, withdraw('v1', 'public', leakySource), l.generation),
+    /Unexpected source reference fields/);
+  assert.deepEqual(readStanding(l, 'invented-dates', 'public'), publicBefore);
+  assert.equal(JSON.stringify(publicBefore).includes('companion-only'), false);
+});
