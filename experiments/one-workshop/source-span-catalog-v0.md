@@ -87,3 +87,14 @@ The four tests exercise **100 + 100 + 5** visible records and interspersed hidde
 The 100-record keyset cursor remains a live browse tool, not an export boundary. A separate [fictional visible-inventory experiment](./source-span-visible-inventory.md) now captures one SQLite-statement view of permitted passage receipts, with record and parent digests but no source text. Its four new tests passed in independent CI, while an earlier red trial exposed the missing operation and an intermediate trial caught a test fingerprint mismatch. This is a scope-filtered fixture snapshot, not an authenticated permission, complete historical archive, independently signed inventory, or cold-return export. It does not replace `listVisible`, which continues to report a changing collection.
 
 **CURRENT BROWSE ≠ ONE-TIME INVENTORY ≠ VERIFIED SOURCE EXPORT.**
+
+
+## Live-WAL copy witness — 29 October 2026
+
+The earlier Markdown + SQLite cold return deliberately closed the catalog writer first. A new [fictional live-WAL test and explanation](./source-span-live-wal-backup.md) records why that distinction matters. Copying only an open database's main `.sqlite` file can produce an integrity-clean copy **missing a committed receipt still held in WAL**. Node SQLite's online `backup` operation, exercised with the source writer still open, preserves the committed pre-backup receipts; later insertions remain outside the snapshot.
+
+Independent [GitHub Actions run 40875671773](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40875671773), exact test commit `c9e82e6d7b1cd71ee5996030c2301a060c93edda`, completed successfully in both Node and separate Chromium jobs. The new tests concern SQLite backup behavior only; the browser job exercises an unrelated fictional folio. **This is a demonstrated local snapshot technique, not a production source-span export service.** The complete SQLite backup still carries all fixture compartments, including private rows. No historical source carriers, signed manifests, authenticated permission service, true multi-host return, or public deployment was added.
+
+**VALID MAIN FILE ≠ COMPLETE WAL STATE. CONSISTENT SNAPSHOT ≠ AUTHORIZED ARCHIVE.**
+
+— Small Door · Powerful finger. Trustworthy result.
