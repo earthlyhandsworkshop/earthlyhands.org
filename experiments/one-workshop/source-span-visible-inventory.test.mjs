@@ -33,7 +33,7 @@ function setup(t) {
 }
 function fingerprint(m) {
   return createHash('sha256')
-    .update(JSON.stringify({schema:m.schema,entries:m.entries}))
+    .update(JSON.stringify({schema:m.schema,count:m.count,entries:m.entries}))
     .digest('hex');
 }
 
