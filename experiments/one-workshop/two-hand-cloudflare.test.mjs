@@ -76,7 +76,7 @@ test('cross-site origin and malformed input cannot mutate the record',async t=>{
 async function openFictionalPage(env, intercept) {
  const page=await call(env,ctxFor('alice@example.test'),'/');
  assert.equal(page.status,200);
- const script=page.body.match(/<script type="module">([\\s\\S]*?)<\\/script>/)?.[1];
+ const script=page.body.match(/<script type="module">([\s\S]*?)<\/script>/)?.[1];
  assert.ok(script,'the private page must contain its browser script');
  const elements=Object.fromEntries(['rev','body','status','save','refresh','export'].map(k=>[k,{value:'',textContent:'',addEventListener(){}}]));
  const ids=[idA,idB];
@@ -87,7 +87,7 @@ async function openFictionalPage(env, intercept) {
   return intercept?intercept({method,path,body,invoke}):invoke();
  };
  const sandbox={document:{getElementById:id=>elements[id]},crypto:{randomUUID:()=>ids.shift()||idA},fetch:remote};
- runInNewContext(script+'\\n;globalThis.__ui={load,save};',sandbox);
+ runInNewContext(script+'\n;globalThis.__ui={load,save};',sandbox);
  await sandbox.__ui.load();
  return {elements,ui:sandbox.__ui};
 }
