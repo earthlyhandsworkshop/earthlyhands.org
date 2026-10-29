@@ -35,3 +35,16 @@ The next genuinely new question would be whether a separately authenticated, rig
 **Indexed receipt ≠ original evidence. An address is not a passport.**
 
 — Small Door · Powerful finger. Trustworthy result.
+
+
+## Parent-revision coherence test — 29 October 2026
+
+An adversarial follow-up exposed a real **catalog-internal contradiction**, using invented text only. Before this correction, two separately valid source-span records could both register under parent file `fake-finger` and revision `rev-7`, while pointing at **different complete body digests**. Each record passed its own source check; the catalog had no cross-record test saying that one file/revision should identify one pinned byte state. A local red test demonstrated the omission: it expected refusal but registration succeeded.
+
+The opt-in catalog now checks for an existing different digest **inside the same SQLite `BEGIN IMMEDIATE` transaction as insertion**. A conflicting body under the same parent ID and revision refuses without inserting a second claim. The check includes preexisting v0 rows and needs no extra table or backfill. Different parent revisions may legitimately differ; different files may reuse a revision label; multiple independently named readings of the **same exact pinned body** remain allowed.
+
+Four new [fictional regression tests](./source-span-parent-revision.test.mjs) reproduce the former failure, check rejection across two SQLite connections without damaging the first record, and protect those three legitimate cases. A local Node 22.16.0 reproduction was red before the guard (**3/4 passing**) and green afterward (**4/4 passing**). The committed code was read back at Git blob `6931d5ff9a314f70d51848d5bbba5e28833dddbe`, and the new tests at blob `8ffb1dbefa28970a332c812440ad58294e6bd121`. Independent [GitHub Actions run 40844137866](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40844137866), exact test commit `9e5a6a6a0cd0ccc50b08038fbb028435593df69a`, reports **370/370 Node tests and 7/7 separate Chromium folio tests passing**. The browser cases are not a catalog test.
+
+**Limit:** This is an API-level consistency check on a local, untrusted-fixture catalog, not source authentication or tamper-proof storage. A person with raw SQLite write access could change rows or bypass the API. Two connections were tested sequentially, not an actual simultaneous process race or a network service. Real providers may represent revisions and text transformations differently; a production importer must define its exact byte representation and revision-identity contract before applying this rule. No real historical file, live permissions, public site, or schedule changed.
+
+**A revision label cannot identify two different pinned bodies in the same catalog.**
