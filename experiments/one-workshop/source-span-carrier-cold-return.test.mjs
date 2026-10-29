@@ -21,9 +21,9 @@ const workshop={kind:'workshop'};
 const privateBob={kind:'private',ownerId:'bob'};
 const council='The invented committee answered under instructions from the people.';
 const accounts='The invented officer deferred a response to a later letter.';
-const oldBody='Opening of fictional record.\\n'+council+'\\n'+
-  'neutral filler '.repeat(50000)+'\\n'+accounts+'\\nEnd of fictional record.';
-const revisedBody='A newly inserted fictional heading.\\n'+oldBody;
+const oldBody='Opening of fictional record.\n'+council+'\n'+
+  'neutral filler '.repeat(50000)+'\n'+accounts+'\nEnd of fictional record.';
+const revisedBody='A newly inserted fictional heading.\n'+oldBody;
 const sha=text=>createHash('sha256').update(text,'utf8').digest('hex');
 const receipt=(text,number)=>({
   revision:number,bytes:Buffer.byteLength(text,'utf8'),sha256:sha(text)
@@ -45,7 +45,7 @@ function putCarrier(root,texts) {
     rightsState:'unknown',revisions:texts.map((text,i)=>receipt(text,i+1)),
     publication:null
   };
-  writeFileSync(join(base,'record.json'),JSON.stringify(meta,null,2)+'\\n');
+  writeFileSync(join(base,'record.json'),JSON.stringify(meta,null,2)+'\n');
   return {base,meta};
 }
 function pinned(root,revision) {
@@ -124,10 +124,10 @@ test('self-consistent carrier rewrite still fails the separately pinned index di
   const catalog=new SourceSpanCatalog(join(dir,'spans.sqlite'));
   t.after(()=>catalog.close());
   catalog.register(span('council-old',old,council,'alice'),old,workshop,alice);
-  const rewritten='A different fictional first revision.\\n'+oldBody;
+  const rewritten='A different fictional first revision.\n'+oldBody;
   writeFileSync(join(base,'revisions','0001.md'),rewritten,'utf8');
   meta.revisions[0]=receipt(rewritten,1);
-  writeFileSync(join(base,'record.json'),JSON.stringify(meta,null,2)+'\\n');
+  writeFileSync(join(base,'record.json'),JSON.stringify(meta,null,2)+'\n');
   const apparentlyValid=pinned(carriers,1);
   assert.notEqual(apparentlyValid.bodyDigest,old.bodyDigest);
   assert.throws(()=>catalog.read('council-old',alice,apparentlyValid),
