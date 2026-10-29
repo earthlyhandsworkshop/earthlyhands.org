@@ -80,3 +80,10 @@ The four tests exercise **100 + 100 + 5** visible records and interspersed hidde
 **PERMITTED RECEIPTS MUST BE TRAVERSABLE. A CURSOR IS NOT A SNAPSHOT.**
 
 — Small Door · Powerful finger. Trustworthy result.
+
+
+## Captured visible inventory — 29 October 2026
+
+The 100-record keyset cursor remains a live browse tool, not an export boundary. A separate [fictional visible-inventory experiment](./source-span-visible-inventory.md) now captures one SQLite-statement view of permitted passage receipts, with record and parent digests but no source text. Its four new tests passed in independent CI, while an earlier red trial exposed the missing operation and an intermediate trial caught a test fingerprint mismatch. This is a scope-filtered fixture snapshot, not an authenticated permission, complete historical archive, independently signed inventory, or cold-return export. It does not replace `listVisible`, which continues to report a changing collection.
+
+**CURRENT BROWSE ≠ ONE-TIME INVENTORY ≠ VERIFIED SOURCE EXPORT.**
