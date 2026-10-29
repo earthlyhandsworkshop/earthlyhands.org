@@ -13,6 +13,9 @@ const READING_KEYS = ['readingHand','claim','limit'];
 const id = s => typeof s === 'string' && /^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$/.test(s);
 const prose = (s,n=1000) => typeof s === 'string' && s.trim().length > 0 && s.length <= n;
 const digest = s => createHash('sha256').update(s,'utf8').digest('hex');
+// Node UTF-8 replaces isolated UTF-16 surrogate units with U+FFFD. Reject
+// ill-formed bodies before hashing: the alias is in the encoder, not SHA-256.
+const wellFormedText = s => typeof s === 'string' && s.isWellFormed();
 function shape(o,keys,label) {
   if (!o || typeof o !== 'object' || Array.isArray(o) ||
       Object.keys(o).length !== keys.length || keys.some(k => !Object.hasOwn(o,k)))
@@ -32,13 +35,15 @@ function validSpan(text,start,end) {
 function validateSnapshot(snapshot) {
   shape(snapshot,['fileId','revision','body','bodyDigest'],'snapshot');
   if (!id(snapshot.fileId) || !id(snapshot.revision) ||
-      !prose(snapshot.body,10_000_000) || !HEX.test(snapshot.bodyDigest) ||
+      !prose(snapshot.body,10_000_000) || !wellFormedText(snapshot.body) ||
+      !HEX.test(snapshot.bodyDigest) ||
       digest(snapshot.body) !== snapshot.bodyDigest)
     throw new Error('Snapshot identity or body digest mismatch');
 }
 export function makeSourceSnapshot(fileId,revision,body) {
-  if (!id(fileId) || !id(revision) || !prose(body,10_000_000))
-    throw new Error('Invalid source snapshot');
+  if (!id(fileId) || !id(revision) || !prose(body,10_000_000) ||
+      !wellFormedText(body))
+    throw new Error('Invalid source snapshot: ill-formed UTF-16 text');
   return {fileId,revision,body,bodyDigest:digest(body)};
 }
 function recordHash(record) {
