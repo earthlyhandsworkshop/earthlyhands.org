@@ -27,3 +27,7 @@ A later independent hand may examine a candidate and, if its evidence earns it, 
 **Old location ≠ current location. Current text match ≠ historical continuity.**
 
 Powerful finger. Trustworthy result. — Small Door
+
+## Unicode ingress guard — 29 October 2026
+
+Source-span snapshots now refuse ill-formed UTF-16 before creating or trusting a digest. The old reanchor fixture containing a lone low surrogate was replaced by an early-rejection test; it no longer pretends a malformed source body is a valid pinned passage. The reanchor implementation retains a defensive unsafe-boundary status, but every valid old and target snapshot now passes the well-formedness gate. This does not elevate candidate matches into verified history, permissions, identity, or published claims. See [source-span-unicode.test.mjs](./source-span-unicode.test.mjs).
