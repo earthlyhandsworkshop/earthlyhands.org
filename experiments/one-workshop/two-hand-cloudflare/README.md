@@ -1,5 +1,32 @@
 # Two hands, one fictional page — live D1 crossing (NOT DEPLOYED)
 
+## Current crossing — 29 October 2026 (replaces older unverified status below)
+
+**Evidence received from Ten's Cloudflare D1 Console:** Ten ran the fixture SQL, then pasted a result containing the exact invented body `Two hands, one invented page. Nothing here is historical source.` with Cloudflare query timings. This is credible **account-side readback of the fictional page**, not independent connector access. The pasted output did **not** show `id`, `version`, the history table, or the trigger; those details remain to be checked. Do not re-run migration just because an older paragraph in this README says the SQL has not run. Ten separately supplied D1 database ID `06f04cc4-443a-4684-9aa2-d1d0f90e7e14`; it was committed and read back in this isolated branch's `wrangler.jsonc`. The ID's association with the intended D1 database has not been independently verified. No staging Worker deployment or authenticated two-device encounter has been verified.
+
+**Current Cloudflare dashboard crossing:** Ten reached Workers & Pages → Create → "Make something new" and showed the **Continue with GitHub** option. The new Git-connected Worker must not accidentally use the default branch or the public site's root. Before any **Save and Deploy** action, check all of:
+
+- Repository: `EarthlyHandsWorkshop/EarthlyHands.org` (the Workshop GitHub connection).
+- Selected production/source branch for this *distinct staging Worker*: `experiment/one-workshop-foundation-2026-10-14`, **not `main`**. Git's default may otherwise select `main`.
+- **Root directory:** `experiments/one-workshop/two-hand-cloudflare` (the directory containing this experiment's `wrangler.jsonc` and `worker.mjs`), not the repository root or public `worker` directory.
+- **Worker name:** `earthly-hands-two-hand-staging`, matching `wrangler.jsonc` exactly. No existing Worker should be selected or overwritten.
+- **D1 binding:** `DB` to the *new staging* database. Never use `RECEIVING_DB` or the existing `earthly-hands-receiving` database.
+- **Build/deploy:** a root-relative `npx wrangler deploy` is the usual deploy command *when* the root is correctly set; no public-static-site build command. The effective Wrangler version and its handling of required secrets still need a real build check. Git connection can trigger builds/deploys on pushes; don't treat it as a harmless repository link.
+- **Before a reachable test:** Cloudflare Access must protect the entire new Worker (including `workers.dev` and previews) with only two consenting test identities, and both secrets `TWO_HAND_ALLOWED_EMAILS` and `TWO_HAND_ACTOR_SALT` must be configured privately, never committed or pasted into chat. Missing `ctx.access` fails closed in the present Worker, but that is a *second* guard, not a substitute for perimeter Access. Wrangler's `secrets.required` may reject a deployment until the secrets are configured. If the new-Worker creation flow offers only immediate **Save and Deploy** without a way to establish those preconditions, stop at the configuration screen and take an explicit protected-provisioning route; no rush to publish.
+
+**Remaining read-only SQL preflight** (in the *staging* D1 Console):
+```sql
+SELECT id, version, body FROM shared_fixture WHERE id = 'fictional-door';
+SELECT type, name FROM sqlite_master
+WHERE name IN ('shared_fixture', 'shared_fixture_history', 'fixture_revision_receipt')
+ORDER BY type, name;
+```
+Expected: `fictional-door` at version `0` unless a real staged edit has occurred, plus two tables and one trigger. The SQL's successful execution alone does not prove a two-person collaboration. No repeated writes or schema changes are needed now.
+
+Documentation checked 29 October 2026: Cloudflare [Workers Builds](https://developers.cloudflare.com/workers/ci-cd/builds/), [Build configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/), [Advanced monorepo setups](https://developers.cloudflare.com/workers/ci-cd/builds/advanced-setups/), [Worker-level Access](https://developers.cloudflare.com/workers/configuration/cloudflare-access/), and [Wrangler secrets configuration](https://developers.cloudflare.com/workers/wrangler/configuration/). Cloudflare's documentation specifically warns about Worker-name/config mismatch and recommends pointing monorepo root at the directory containing the correct Wrangler file.
+
+No public website, existing listening/receiving Worker, historical corpus, or production routes may be changed by this crossing. This stays in draft PR #20.
+
 Small Door · 29 October 2026 · isolated draft PR #20
 
 This deliberately small Cloudflare Worker is a real HTTP/API seam for two authenticated visitors editing **one server-owned D1 record**. It contains no real Workshop source or Google Drive content. It is not a new canonical home, a deployed multi-user system, or a production/public website change.
