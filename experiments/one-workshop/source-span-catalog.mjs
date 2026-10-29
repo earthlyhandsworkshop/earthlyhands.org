@@ -96,16 +96,23 @@ export class SourceSpanCatalog {
       catalogStatus:'indexed-only' };
   }
 
-  listVisible(viewer,limit=50) {
+  // Keyset pagination, not a frozen multi-page transaction. The last returned
+  // spanId is the next page's exclusive cursor; it need not be a visible row
+  // when supplied by another reader. Concurrent inserts ahead of the cursor
+  // can appear on later pages; inserts behind it will not.
+  listVisible(viewer,limit=50,afterSpanId=null) {
     if (!Number.isSafeInteger(limit) || limit < 1 || limit > 100)
       throw new Error('Invalid catalog page size');
+    if (afterSpanId !== null && !exactSpanId(afterSpanId))
+      throw new Error('Invalid catalog cursor');
     if (!viewer || viewer.authenticated !== true) return [];
-    // Gate by scope BEFORE LIMIT: hidden alphabetically-earlier rows must not
-    // crowd out visible records or disclose a hidden record count.
+    // Gate by scope BEFORE cursor and LIMIT: hidden records must not consume
+    // a page or reveal their IDs. Empty string precedes every valid span ID.
     return this.db.prepare(`SELECT span_id,parent_file_id,parent_revision
-      FROM source_span_catalog WHERE ${viewClause}
+      FROM source_span_catalog WHERE ${viewClause} AND span_id>?
       ORDER BY span_id LIMIT ?`).all(
-        membership(viewer),principal(viewer),principal(viewer),match(viewer),limit)
+        membership(viewer),principal(viewer),principal(viewer),match(viewer),
+        afterSpanId ?? '',limit)
       .map(r=>({spanId:r.span_id,parentFileId:r.parent_file_id,
         parentRevision:r.parent_revision}));
   }
