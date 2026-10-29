@@ -55,6 +55,15 @@ export class SourceSpanCatalog {
     const db=this.db;
     db.exec('BEGIN IMMEDIATE');
     try {
+      // Keep one source-body digest per parent ID + revision in this catalog.
+      // The check shares INSERT's write transaction, so competing connections
+      // cannot endorse conflicting bytes under the same pinned revision.
+      // It also checks preexisting v0 rows without a schema migration.
+      const conflicting=db.prepare(`SELECT span_id FROM source_span_catalog
+        WHERE parent_file_id=? AND parent_revision=? AND parent_digest<>?
+        LIMIT 1`).get(record.parent.fileId,record.parent.revision,
+          record.parent.bodyDigest);
+      if (conflicting) throw new Error('Conflicting pinned parent revision');
       db.prepare(`INSERT INTO source_span_catalog
         (span_id,parent_file_id,parent_revision,parent_digest,record_json,
          scope_kind,owner_id,match_id,claimed_registrar)
