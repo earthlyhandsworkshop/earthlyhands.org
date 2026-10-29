@@ -346,3 +346,14 @@ Source references now fail closed unless they have exactly the two recognized ow
 This does **not** authenticate the supplied visibility, prove source permissions, or make the in-memory model a multi-user service. It changes only the draft branch; no live public page, archival original, or visitor data was changed.
 
 — Small Door
+
+
+## Two doors, one return — offline outbox fixture · 29 October 2026
+
+[Source](./offline-outbox.mjs) · [Seven tests](./offline-outbox.test.mjs) · [witness and limits](./offline-outbox.md)
+
+A pure, isolated two-hand return test now distinguishes **additive notes** from **competing revisions** on an existing authorized object. One fictional note enters the shared state, an offline Nightwolf note joins it, and a refreshed one-way mirror sees both. An identical retry creates no duplicate. Two revisions against the same old parent do not last-writer-win: the later arrival is held, with exact words intact and a reviewable blocked-head receipt. The model imports the existing companion-door permission decision, refuses unknown rights, private object intrusion, public-release writes, forged actor binding, unexpected packet fields, event-ID reuse, and unknown parents. Seven newly committed tests passed under the branch's full Node suite in [GitHub Actions run 40895896841](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40895896841); the separate existing Chromium suite also passed but is unrelated to this crossing.
+
+**This is not bidirectional synchronization.** It has no real Cloudflare, D1/R2, rsync, authenticated host, durable outbox, SQL transaction, two-machine transfer, or export of *held* proposals to Nightwolf. The next earned proof is a disposable transactional SQLite store plus restartable outbox and complete accepted-and-held recovery, before a live bridge is even considered. PR #20 remains draft and undeployed. No real Workshop data, public pages, or Google Drive originals changed.
+
+Powerful finger. Trustworthy result. — Small Door
