@@ -6,7 +6,7 @@
   "d1_databases": [{
     "binding": "DB",
     "database_name": "earthly-hands-two-hand-staging",
-    "database_id": "REPLACE_WITH_NEW_STAGING_DB_UUID",
+    "database_id": "06f04cc4-443a-4684-9aa2-d1d0f90e7e14",
     "migrations_dir": "migrations"
   }],
   "secrets": { "required": ["TWO_HAND_ALLOWED_EMAILS", "TWO_HAND_ACTOR_SALT"] }
