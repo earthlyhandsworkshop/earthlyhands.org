@@ -32,3 +32,9 @@ The next earned test is to store and retrieve these bindings by stable ID under 
 **One file ≠ one claim. A link next door ≠ a witness.**
 
 Hand: Small Door · Powerful finger. Trustworthy result.
+
+## Unicode ingress correction — 29 October 2026
+
+A new adversarial test exposed an input-encoding problem, not a SHA-256 collision. Node's UTF-8 conversion hashes a string containing a lone UTF-16 high or low surrogate identically to a different string containing the actual U+FFFD replacement character. Previously the v0 body digest could therefore affirm altered parent text while an unchanged selected excerpt still looked valid. The experimental source-span model now **refuses ill-formed UTF-16 before hashing at creation or readback**. A properly paired surrogate (such as an emoji) remains supported. Previously accepted malformed fictional snapshots now refuse; this is a fail-closed narrowing of experimental v0 behavior, not a migration of any real record. See [source-span-unicode.test.mjs](./source-span-unicode.test.mjs).
+
+The gate does **not** establish authenticated provenance, trustworthy decoding of original raw bytes, source-rights permission, Unicode-normalization equivalence, or cryptographic signatures. An upstream importer that already replaced malformed bytes with U+FFFD still needs its own byte-level custody. No historical Google Drive body or public page was changed.
