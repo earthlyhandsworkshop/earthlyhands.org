@@ -92,15 +92,8 @@ test('new identical body at a fresh revision is still not an approved new pointe
   assert.equal(r.requiresIndependentReview,true);
 });
 
-test('candidate overlapping a new UTF-16 surrogate pair cannot be selected',()=>{
-  const original=makeSourceSnapshot('fictional-lone-low','v1','A\uDC00B');
-  const i=1;
-  const rec=bindSourceSpan({id:'low-surrogate',snapshot:original,start:i,end:i+1,
-    exactText:'\uDC00',originalPointer:'fictional:leaf',originalLocator:'1',
-    originalMaker:'writer',readingHand:'reader',claim:'low surrogate only',limit:'fixture only'});
-  const target=makeSourceSnapshot('fictional-lone-low','v2','A\uD800\uDC00B');
-  const r=propose(rec,original,target);
-  assert.equal(r.status,'unsafe-boundary-only');
-  assert.equal(r.unsafeBoundariesSeen,true);
-  assert.equal(r.candidates.length,0);
+test('unpaired UTF-16 refuses at ingress before a reanchor candidate can be proposed',()=>{
+  assert.throws(()=>makeSourceSnapshot('fictional-lone-low','v1','A\u005c\u0075DC00B'),/ill-formed UTF-16/);
+  assert.throws(()=>makeSourceSnapshot('fictional-lone-high','v1','A\u005c\u0075D800B'),/ill-formed UTF-16/);
+  assert.doesNotThrow(()=>makeSourceSnapshot('fictional-pair','v1','A\u005c\u0075D800\u005c\u0075DC00B'));
 });
