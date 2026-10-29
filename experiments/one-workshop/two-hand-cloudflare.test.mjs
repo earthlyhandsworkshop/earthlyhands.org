@@ -73,7 +73,7 @@ test('cross-site origin and malformed input cannot mutate the record',async t=>{
 });
 
 // These are scripted-DOM checks, not actual browser, Access, or deployed D1 checks.
-async function openFictionalPage(env, intercept) {
+async function openFictionalPage(env, intercept, onInitialPending) {
  const page=await call(env,ctxFor('alice@example.test'),'/');
  assert.equal(page.status,200);
  const script=page.body.match(/<script type="module">([\s\S]*?)<\/script>/)?.[1];
@@ -88,7 +88,9 @@ async function openFictionalPage(env, intercept) {
  };
  const sandbox={document:{getElementById:id=>elements[id]},crypto:{randomUUID:()=>ids.shift()||idA},fetch:remote};
  runInNewContext(script+'\n;globalThis.__ui={load,save};',sandbox);
- await sandbox.__ui.load();
+ const initialLoad=sandbox.__ui.load();
+ if(onInitialPending) await onInitialPending(elements);
+ await initialLoad;
  return {elements,ui:sandbox.__ui};
 }
 
@@ -128,4 +130,48 @@ test('browser page preserves new typing during a pending save',async t=>{
  assert.equal(current.body,'A newer paragraph while the save was pending.');
  assert.equal(current.version,2);
  assert.deepEqual((await call(env,ctxFor('bob@example.test'),'/api/history')).body.events.map(x=>x.version),[1,2]);
+});
+
+test('in-flight refresh cannot roll back a save that finished while GET was pending',async t=>{
+ const {env}=setup(t);
+ let getCount=0,unblock,signaled;
+ const caught=new Promise(resolve=>{signaled=resolve;});
+ const intercept=async ({method,invoke})=>{
+  if(method==='GET'&&++getCount===2){
+   const earlierResponse=await invoke();
+   await new Promise(resolve=>{unblock=resolve;signaled();});
+   return earlierResponse;
+  }
+  return invoke();
+ };
+ const {elements,ui}=await openFictionalPage(env,intercept);
+ const refreshing=ui.load();
+ await caught;
+ elements.body.value='The words I saved while an older refresh waited.';
+ await ui.save();
+ assert.equal(elements.rev.textContent,'Your saved revision 1');
+ unblock();
+ await refreshing;
+ assert.equal(elements.body.value,'The words I saved while an older refresh waited.');
+ assert.equal(elements.rev.textContent,'Your saved revision 1');
+ assert.match(elements.status.textContent,/Not refreshed: writing or saved revision changed/);
+ const actual=(await call(env,ctxFor('bob@example.test'),'/api/state')).body;
+ assert.equal(actual.version,1);
+ assert.equal(actual.body,elements.body.value);
+});
+
+test('initial loading does not erase words typed before the first response',async t=>{
+ const {env}=setup(t);
+ let release;
+ const intercept=async ({method,invoke})=>{
+  if(method==='GET')await new Promise(resolve=>{release=resolve;});
+  return invoke();
+ };
+ const {elements,ui}=await openFictionalPage(env,intercept,async elements=>{
+  elements.body.value='I arrived and began writing before the page loaded.';
+  release();
+ });
+ assert.equal(elements.body.value,'I arrived and began writing before the page loaded.');
+ assert.match(elements.status.textContent,/Not refreshed: writing or saved revision changed/);
+ assert.equal((await call(env,ctxFor('bob@example.test'),'/api/state')).body.version,0);
 });
