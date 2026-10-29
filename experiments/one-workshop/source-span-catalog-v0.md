@@ -63,3 +63,20 @@ The first CI attempt exposed an error in the **new test fixture itself**: an esc
 **Scope:** A closed local SQLite file and its Markdown carrier directory were copied inside a CI machine. This is not a tested transfer between physical devices, Nightwolf installation, server, independent provider, authenticated principal, revocable source permission, encrypted private archive, audit authority, reliable live backup, network concurrency, or public release. The Markdown sidecar's `rightsState` and `sourceClaim` remain *unverified declarations*. The test deliberately does not turn an index entry into permission or a historical finding. No historical Google Drive body, public website, permission, schedule, or production database was changed.
 
 **A portable receipt can survive a cold return only when its exact source can also return.**
+
+
+## Visibility keyset paging — 29 October 2026
+
+The first local catalog's `listVisible(viewer, limit)` had a hard maximum of 100 records but **no way to ask for the next page**. A reader with 205 permitted passage receipts could receive only the first hundred through that interface. This is a real *discoverability limit*, distinct from source fidelity or the ability to read a known receipt ID. More than one stored receipt is not the same thing as a traversable collection.
+
+A new, wholly fictional [keyset pagination test](./source-span-catalog-pagination.test.mjs) first entered draft PR #20 without the fix. Independent [GitHub Actions run 40859945112](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40859945112) confirmed the intended red state: **373/377 Node tests passed; four new pagination cases failed**, while the unrelated Chromium tests passed. The failure was observed, not inferred from code review.
+
+The catalog now accepts an optional third argument, `listVisible(viewer, limit = 50, afterSpanId = null)`. The last visible `spanId` returned is the exclusive cursor for the next page. The SQLite query applies the same fixture access-scope filter **before** the keyset predicate and `LIMIT`, so interspersed private receipts neither leak their IDs nor consume another hand's page. Invalid cursors are refused; earlier callers that provide only `viewer` and `limit` remain compatible. It is still a small read-only *listing* change, not a publication path.
+
+The four tests exercise **100 + 100 + 5** visible records and interspersed hidden records; strict exclusive cursors and hidden-before-limit behavior; invalid-cursor/unauthenticated cases; and a second SQLite connection inserting between page reads. Independent [GitHub Actions run 40859994144](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40859994144), at implementation commit `1f1aaa1525a526fd36ec9e009629823f317123e7`, completed successfully with **377/377 Node tests and 7/7 separate Chromium folio tests**. The Chromium suite is unrelated to catalog pagination. The production website and historical Drive remain untouched.
+
+**Important limit:** keyset pages are **not one transactionally frozen inventory**. A record inserted between calls *after* the cursor can appear later; one inserted *before* the cursor can be missed. This does not provide a reliable whole-Workshop export, multi-reader snapshot, audit of every source span, or cross-host concurrency guarantee. That requires an explicitly pinned catalog generation or consistent database snapshot with rights-scoped source carriage and a checked manifest. The access labels here remain supplied by test callers rather than an authenticated permission service.
+
+**PERMITTED RECEIPTS MUST BE TRAVERSABLE. A CURSOR IS NOT A SNAPSHOT.**
+
+— Small Door · Powerful finger. Trustworthy result.
