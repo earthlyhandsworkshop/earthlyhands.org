@@ -93,7 +93,7 @@ test('new identical body at a fresh revision is still not an approved new pointe
 });
 
 test('unpaired UTF-16 refuses at ingress before a reanchor candidate can be proposed',()=>{
-  assert.throws(()=>makeSourceSnapshot('fictional-lone-low','v1','A\u005c\u0075DC00B'),/ill-formed UTF-16/);
-  assert.throws(()=>makeSourceSnapshot('fictional-lone-high','v1','A\u005c\u0075D800B'),/ill-formed UTF-16/);
-  assert.doesNotThrow(()=>makeSourceSnapshot('fictional-pair','v1','A\u005c\u0075D800\u005c\u0075DC00B'));
+  assert.throws(()=>makeSourceSnapshot('fictional-lone-low','v1','A\uDC00B'),/ill-formed UTF-16/);
+  assert.throws(()=>makeSourceSnapshot('fictional-lone-high','v1','A\uD800B'),/ill-formed UTF-16/);
+  assert.doesNotThrow(()=>makeSourceSnapshot('fictional-pair','v1','A\uD800\uDC00B'));
 });
