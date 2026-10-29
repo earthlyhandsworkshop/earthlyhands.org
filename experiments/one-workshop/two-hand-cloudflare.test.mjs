@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { runInNewContext } from 'node:vm';
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -69,4 +70,62 @@ test('cross-site origin and malformed input cannot mutate the record',async t=>{
  assert.equal((await handleTwoHand(bad,env,ctx)).status,403);
  assert.equal((await call(env,ctx,'/api/state','PUT',{body:'test',expectedVersion:0,requestId:'not-a-uuid'})).status,400);
  assert.equal((await call(env,ctx,'/api/state')).body.version,0);
+});
+
+// These are scripted-DOM checks, not actual browser, Access, or deployed D1 checks.
+async function openFictionalPage(env, intercept) {
+ const page=await call(env,ctxFor('alice@example.test'),'/');
+ assert.equal(page.status,200);
+ const script=page.body.match(/<script type="module">([\\s\\S]*?)<\\/script>/)?.[1];
+ assert.ok(script,'the private page must contain its browser script');
+ const elements=Object.fromEntries(['rev','body','status','save','refresh','export'].map(k=>[k,{value:'',textContent:'',addEventListener(){}}]));
+ const ids=[idA,idB];
+ const remote=async (path,options={})=>{
+  const method=options.method||'GET';
+  const body=options.body?JSON.parse(options.body):undefined;
+  const invoke=()=>handleTwoHand(request(path,method,body),env,ctxFor('alice@example.test'));
+  return intercept?intercept({method,path,body,invoke}):invoke();
+ };
+ const sandbox={document:{getElementById:id=>elements[id]},crypto:{randomUUID:()=>ids.shift()||idA},fetch:remote};
+ runInNewContext(script+'\\n;globalThis.__ui={load,save};',sandbox);
+ await sandbox.__ui.load();
+ return {elements,ui:sandbox.__ui};
+}
+
+test('browser page refuses to erase unsaved writing on refresh',async t=>{
+ const {env}=setup(t);
+ const {elements,ui}=await openFictionalPage(env);
+ assert.match(elements.body.value,/invented page/);
+ elements.body.value='Words that have not been saved yet.';
+ await ui.load();
+ assert.equal(elements.body.value,'Words that have not been saved yet.');
+ assert.match(elements.status.textContent,/Refresh refused: unsaved writing/);
+ assert.equal((await call(env,ctxFor('alice@example.test'),'/api/state')).body.version,0);
+});
+
+test('browser page preserves new typing during a pending save',async t=>{
+ const {env}=setup(t);
+ let unblock;
+ const intercept=async ({method,invoke})=>{
+  if(method==='PUT') await new Promise(resolve=>{unblock=resolve;});
+  return invoke();
+ };
+ const {elements,ui}=await openFictionalPage(env,intercept);
+ elements.body.value='The draft I intended to save.';
+ const first=ui.save();
+ assert.equal(typeof unblock,'function');
+ elements.body.value='A newer paragraph while the save was pending.';
+ unblock();
+ await first;
+ assert.equal(elements.body.value,'A newer paragraph while the save was pending.');
+ assert.match(elements.status.textContent,/newer unsaved writing/);
+ assert.equal((await call(env,ctxFor('bob@example.test'),'/api/state')).body.body,'The draft I intended to save.');
+ const second=ui.save();
+ assert.equal(typeof unblock,'function');
+ unblock();
+ await second;
+ const current=(await call(env,ctxFor('bob@example.test'),'/api/state')).body;
+ assert.equal(current.body,'A newer paragraph while the save was pending.');
+ assert.equal(current.version,2);
+ assert.deepEqual((await call(env,ctxFor('bob@example.test'),'/api/history')).body.events.map(x=>x.version),[1,2]);
 });
