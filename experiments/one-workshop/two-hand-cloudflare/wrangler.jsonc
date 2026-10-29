@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../worker/node_modules/wrangler/config-schema.json",
+  "name": "earthly-hands-two-hand-staging",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-29",
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "earthly-hands-two-hand-staging",
+    "database_id": "REPLACE_WITH_NEW_STAGING_DB_UUID",
+    "migrations_dir": "migrations"
+  }],
+  "secrets": { "required": ["TWO_HAND_ALLOWED_EMAILS", "TWO_HAND_ACTOR_SALT"] }
+}
