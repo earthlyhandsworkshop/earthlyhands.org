@@ -2,8 +2,12 @@
 // NOT source bodies, original evidence, permissions, or publication approval.
 // Every principal/access assertion below is an untrusted TEST FIXTURE.
 import { DatabaseSync } from 'node:sqlite';
+import { createHash } from 'node:crypto';
 import { access, id } from './bench-sqlite-core.mjs';
 import { readSourceSpan } from './source-span.mjs';
+
+export const VISIBLE_INVENTORY_SCHEMA = 'earthlyhands.source-span-visible-inventory.fixture.v0';
+const sha256 = text => createHash('sha256').update(text,'utf8').digest('hex');
 
 const mayView = (a, v) => {
   if (!v || typeof v !== 'object' || v.authenticated !== true) return false;
@@ -115,6 +119,36 @@ export class SourceSpanCatalog {
         afterSpanId ?? '',limit)
       .map(r=>({spanId:r.span_id,parentFileId:r.parent_file_id,
         parentRevision:r.parent_revision}));
+  }
+
+  // One consistent SQLite SELECT statement returns a frozen *inventory of
+  // visible receipt claims*; NOT the source bodies or a durable rights grant.
+  // No long-lived cursor, stored snapshot token, or publication authorization.
+  // The digest has meaning only against an independently retained earlier copy.
+  captureVisibleInventory(viewer) {
+    if (!viewer || viewer.authenticated !== true) return null;
+    const entries=[];
+    // A single SELECT iterator has one SQLite read snapshot, even if another
+    // connection commits while it is being read. Scope is applied by SQL.
+    for(const r of this.db.prepare(`SELECT span_id,parent_file_id,parent_revision,
+        parent_digest,record_json,scope_kind,owner_id,match_id,claimed_registrar
+        FROM source_span_catalog WHERE ${viewClause} ORDER BY span_id`).iterate(
+      membership(viewer),principal(viewer),principal(viewer),match(viewer)
+    )) {
+      entries.push(Object.freeze({
+        spanId:r.span_id,parentFileId:r.parent_file_id,
+        parentRevision:r.parent_revision,parentDigest:r.parent_digest,
+        recordSha256:sha256(r.record_json),scopeKind:r.scope_kind,
+        ownerId:r.owner_id,matchId:r.match_id,
+        claimedRegistrar:r.claimed_registrar
+      }));
+    }
+    Object.freeze(entries);
+    const inventory={schema:VISIBLE_INVENTORY_SCHEMA,count:entries.length,entries};
+    return Object.freeze({
+      ...inventory,status:'unverified-fixture-inventory',
+      sha256:sha256(JSON.stringify(inventory))
+    });
   }
 
   close() { this.db.close(); }
