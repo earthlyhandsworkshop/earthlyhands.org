@@ -1,0 +1,130 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { DatabaseSync } from 'node:sqlite';
+import { readFileSync, mkdtempSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { handleCaught } from './two-hand-cloudflare/caught-moments.mjs';
+import worker from './two-hand-cloudflare/worker.mjs';
+
+class Statement {
+  constructor(db,sql){ this.db=db;this.sql=sql;this.values=[]; }
+  bind(...values){this.values=values;return this;}
+  async run(){const x=this.db.prepare(this.sql).run(...this.values);return {success:true,meta:{changes:Number(x.changes)}};}
+  async first(){return this.db.prepare(this.sql).get(...this.values)??null;}
+  async all(){return {results:this.db.prepare(this.sql).all(...this.values)};}
+}
+class D1 {
+  constructor(db){this.db=db;}
+  prepare(sql){return new Statement(this.db,sql);}
+}
+const initial=readFileSync(new URL('./two-hand-cloudflare/migrations/0001_fixture.sql',import.meta.url),'utf8');
+const schema=readFileSync(new URL('./two-hand-cloudflare/migrations/0002_caught_moments.sql',import.meta.url),'utf8');
+const keyA='3a20e247-cd33-4f08-8180-e6514d10e284';
+const keyB='3a20e247-cd33-4f08-8180-e6514d10e285';
+const example={
+  request_key:keyA,
+  noticed_by:'An observer',
+  noticed_hand:'Another hand',
+  moment:'An interesting moment.\nThe work remains with its maker.',
+  source_label:'Fictional source jacket',
+  source_url:'https://github.com/example/repository/blob/main/fictional-jacket.md'
+};
+function setup(t){
+ const dir=mkdtempSync(join(tmpdir(),'caught-room-'));
+ const file=join(dir,'test.sqlite');
+ const db=new DatabaseSync(file);
+ db.exec(initial);db.exec(schema);
+ t.after(()=>{try{db.close();}catch{} rmSync(dir,{recursive:true,force:true});});
+ return {db,env:{DB:new D1(db),TWO_HAND_ALLOWED_EMAILS:'alice@example.test,bob@example.test',TWO_HAND_ACTOR_SALT:'test-only-not-a-real-secret'}};
+}
+function request(path,method='GET',data,headers={}){
+ return new Request('https://staging.example.test'+path,{method,
+ headers:method==='POST'?{'content-type':'application/json',origin:'https://staging.example.test',...headers}:headers,
+ body:method==='POST'?JSON.stringify(data):undefined});
+}
+async function direct(env,actor,path,method='GET',data,headers={}){
+ const req=request(path,method,data,headers);
+ const r=await handleCaught(req,env,new URL(req.url),actor);
+ return {status:r.status,body:r.headers.get('content-type')?.includes('application/json')?await r.json():await r.text()};
+}
+const ctx=(email)=>({access:{async getIdentity(){return {email};}}});
+async function throughWorker(env,email,path,method='GET',data){
+ const req=request(path,method,data);
+ const r=await worker.fetch(req,env,email?ctx(email):{});
+ return {status:r.status,body:r.headers.get('content-type')?.includes('application/json')?await r.json():await r.text()};
+}
+test('private web door exists and empty collection is visible to authorized hands only',async t=>{
+ const {env}=setup(t);
+ const page=await throughWorker(env,'alice@example.test','/caught');
+ assert.equal(page.status,200);
+ assert.match(page.body,/Caught here/);
+ assert.match(page.body,/not independently authenticated/);
+ assert.equal((await throughWorker(env,null,'/api/caught')).status,403);
+ assert.equal((await throughWorker(env,'mallory@example.test','/api/caught')).status,403);
+ const contents=await throughWorker(env,'bob@example.test','/api/caught');
+ assert.equal(contents.status,200);
+ assert.deepEqual(contents.body.items,[]);
+ assert.equal(contents.body.scope,'private-staging');
+});
+test('another hand can keep a multiline observation and a pointer; both readers see it',async t=>{
+ const {db,env}=setup(t);
+ const first=await throughWorker(env,'alice@example.test','/api/caught','POST',example);
+ assert.equal(first.status,201);
+ assert.equal(first.body.ok,true);
+ assert.equal(first.body.receipt.moment,example.moment);
+ assert.equal(first.body.receipt.source_url,example.source_url);
+ const other=await throughWorker(env,'bob@example.test','/api/caught');
+ assert.equal(other.status,200);
+ assert.equal(other.body.items.length,1);
+ assert.equal(other.body.items[0].noticed_by,'An observer');
+ assert.equal(other.body.items[0].noticed_hand,'Another hand');
+ assert.equal(other.body.items[0].source_url,example.source_url);
+ assert.equal(JSON.stringify(other.body).includes('actor_hash'),false);
+ assert.equal(JSON.stringify(other.body).includes(keyA),false);
+ const stored=db.prepare('SELECT actor_hash,request_key,scope,status FROM caught_moments_v1').get();
+ assert.match(stored.actor_hash,/^[a-f0-9]{64}$/);
+ assert.equal(stored.request_key,keyA);
+ assert.equal(stored.scope,'private-staging');
+ assert.equal(stored.status,'observer-assertion');
+});
+test('uncertain network retry with same request is idempotent and cannot be hijacked',async t=>{
+ const {db,env}=setup(t);
+ const alice=await throughWorker(env,'alice@example.test','/api/caught','POST',example);
+ assert.equal(alice.status,201);
+ const replay=await throughWorker(env,'alice@example.test','/api/caught','POST',example);
+ assert.equal(replay.status,201);
+ assert.equal(replay.body.receipt.id,alice.body.receipt.id);
+ const wrongAccount=await throughWorker(env,'bob@example.test','/api/caught','POST',example);
+ assert.equal(wrongAccount.status,409);
+ const different=await throughWorker(env,'alice@example.test','/api/caught','POST',{...example,moment:'different words'});
+ assert.equal(different.status,409);
+ assert.equal(db.prepare('SELECT COUNT(*) as n FROM caught_moments_v1').get().n,1);
+});
+test('a self-reported self portrait, broken source roads and foreign origin are refused',async t=>{
+ const {db,env}=setup(t);
+ for(const changed of [
+  {...example,noticed_hand:'An observer'},
+  {...example,noticed_hand:'AN OBSERVER'},
+  {...example,source_url:'http://github.com/example/file'},
+  {...example,source_url:'https://drive.google.com.evil.invalid/file/x'},
+  {...example,source_url:'https://example.com/secret'},
+  {...example,source_url:'javascript:alert(1)'},
+  {...example,source_label:''},
+  {...example,moment:''}
+ ]){
+  assert.equal((await direct(env,'a','/api/caught','POST',changed)).status,400);
+ }
+ const invalidOrigin=await direct(env,'a','/api/caught','POST',example,{origin:'https://another.example'});
+ assert.equal(invalidOrigin.status,403);
+ assert.equal(db.prepare('SELECT COUNT(*) as n FROM caught_moments_v1').get().n,0);
+});
+test('no editor, deletion, source copying or publication route is created',async t=>{
+ const {env}=setup(t);
+ assert.equal((await direct(env,'a','/api/caught','PUT',example)).status,404);
+ assert.equal((await direct(env,'a','/api/caught','DELETE')).status,404);
+ const normal=await throughWorker(env,'alice@example.test','/api/state');
+ assert.equal(normal.status,200);
+ assert.equal(normal.body.version,0);
+ assert.equal((await throughWorker(env,'alice@example.test','/')).status,200);
+});
