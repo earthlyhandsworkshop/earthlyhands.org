@@ -1,0 +1,19 @@
+{
+  "origin_database": "ravel-fictional-source-db",
+  "instrument": "Ravel",
+  "visibility": "fictional-staging",
+  "records": [
+    {
+      "origin_table": "represented_spans", "origin_id": "ravel-fictional-westford-council", "source_road": "fiction://west-ford/council", "source_proposition": "one-footbridge-proposal", "record_kind": "source-occurrence", "source_standing": "invented-fixture", "hand_label": "Invented clerk", "hand_standing": "unverified-test-label", "source_verb": "decline", "occurrence_order": 0, "payload": {"words":"The council declined the proposed footbridge at West Ford."}
+    },
+    {
+      "origin_table": "represented_spans", "origin_id": "ravel-fictional-westford-summary", "source_road": "fiction://west-ford/summary", "source_proposition": "one-footbridge-proposal", "record_kind": "source-occurrence", "source_standing": "invented-fixture", "hand_label": "Invented clerk", "hand_standing": "unverified-test-label", "source_verb": "characterize", "occurrence_order": 0, "payload": {"words":"The council did nothing about crossing the river."}
+    },
+    {
+      "origin_table": "readings", "origin_id": "ravel-fictional-reading-ravel", "source_road": "fiction://west-ford/comparison", "source_proposition": "scope-of-refusal", "record_kind": "interpretation", "source_standing": "invented-fixture", "hand_label": "Ravel (fictional label)", "hand_standing": "unverified-test-label", "source_verb": "propose", "occurrence_order": 1, "payload": {"reading":"The later summary may widen one refusal into general inaction."}
+    },
+    {
+      "origin_table": "readings", "origin_id": "ravel-fictional-reading-second", "source_road": "fiction://west-ford/comparison", "source_proposition": "scope-of-refusal", "record_kind": "interpretation", "source_standing": "invented-fixture", "hand_label": "Second hand (fictional label)", "hand_standing": "unverified-test-label", "source_verb": "dissent", "occurrence_order": 2, "payload": {"reading":"That widening is possible, not proved. Preserve the original words."}
+    }
+  ]
+}

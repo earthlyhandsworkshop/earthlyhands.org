@@ -1,0 +1,16 @@
+{
+  "origin_database": "mullion-fictional-source-db",
+  "instrument": "Mullion",
+  "visibility": "fictional-staging",
+  "records": [
+    {
+      "origin_table": "transition_fixture", "origin_id": "mtv0-fixture-001-p01", "source_road": "fiction://blue-door/page", "source_proposition": "door-threshold-status", "record_kind": "change-event", "source_standing": "invented-fixture", "hand_label": "Mullion (fictional label)", "hand_standing": "unverified-test-label", "source_verb": "propose", "occurrence_order": 1, "payload": {"meaning":"The invented threshold fixture is proposed."}
+    },
+    {
+      "origin_table": "transition_fixture", "origin_id": "mtv0-fixture-001-a02", "source_road": "fiction://blue-door/page", "source_proposition": "door-threshold-status", "record_kind": "change-event", "source_standing": "invented-fixture", "hand_label": "Mullion (fictional label)", "hand_standing": "unverified-test-label", "source_verb": "accept", "occurrence_order": 2, "payload": {"meaning":"Accepted as fictional staging test only."}
+    },
+    {
+      "origin_table": "transition_fixture", "origin_id": "mtv0-fixture-001-c03", "source_road": "fiction://blue-door/page", "source_proposition": "door-threshold-status", "record_kind": "change-event", "source_standing": "invented-fixture", "hand_label": "Mullion (fictional label)", "hand_standing": "unverified-test-label", "source_verb": "correct", "occurrence_order": 3, "payload": {"meaning":"Invented transition fixture; no Workshop standing or custody."}
+    }
+  ]
+}
