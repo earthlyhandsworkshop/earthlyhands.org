@@ -185,3 +185,110 @@ test('bad, duplicate or malformed cursors fail closed without changing observati
  }
  assert.equal(db.prepare('SELECT COUNT(*) AS n FROM caught_moments_v1').get().n,0);
 });
+
+
+test('identity check shows which email Cloudflare Access authenticated, never guesses from a shared account',async t=>{
+ const {db,env}=setup(t);
+ const personal=await throughWorker(env,'alice@example.test','/api/caught/identity');
+ assert.equal(personal.status,200);
+ assert.deepEqual(personal.body.account,{email:'alice@example.test',kind:'individual'});
+ assert.equal(personal.body.profile,null);
+ assert.equal(personal.body.enrollment_available,true);
+ assert.equal(personal.body.contribution_mode,'registration-required');
+ const shared=await throughWorker(env,'bob@example.test','/api/caught/identity');
+ assert.equal(shared.status,200);
+ assert.deepEqual(shared.body.account,{email:'bob@example.test',kind:'shared'});
+ assert.equal(shared.body.profile,null);
+ assert.equal(shared.body.enrollment_available,false);
+ assert.equal(shared.body.contribution_mode,'shared-account-assertion');
+ assert.equal(db.prepare('SELECT COUNT(*) n FROM caught_profiles_v1').get().n,0);
+});
+
+test('an individual must choose the Ten profile; the shared account cannot register it',async t=>{
+ const {db,env}=setup(t);
+ const named={...example,noticed_by:'Ten',noticed_hand:'Another hand'};
+ const missing=await throughWorker(env,'alice@example.test','/api/caught','POST',named);
+ assert.equal(missing.status,403);
+ assert.equal(missing.body.error,'profile_registration_required');
+ const sharedClaim=await throughWorker(env,'bob@example.test','/api/caught/identity','POST',{workshop_name:'Ten'});
+ assert.equal(sharedClaim.status,403);
+ assert.equal(sharedClaim.body.error,'personal_account_required');
+ const wrongName=await throughWorker(env,'alice@example.test','/api/caught/identity','POST',{workshop_name:'Register'});
+ assert.equal(wrongName.status,400);
+ const wrongAliases=['X','10','ten','Small Door'];
+ for(const workshop_name of wrongAliases){
+  assert.equal((await throughWorker(env,'alice@example.test','/api/caught/identity','POST',{workshop_name})).status,400);
+ }
+ assert.equal(db.prepare('SELECT COUNT(*) n FROM caught_profiles_v1').get().n,0);
+ assert.equal(db.prepare('SELECT COUNT(*) n FROM caught_moments_v1').get().n,0);
+});
+
+test('one personal sign-in can enroll as Ten and contributes account-linked receipts without client impersonation',async t=>{
+ const {db,env}=setup(t);
+ const register=await throughWorker(env,'alice@example.test','/api/caught/identity','POST',{workshop_name:'Ten'});
+ assert.equal(register.status,200);
+ assert.equal(register.body.profile.name,'Ten');
+ assert.equal(register.body.profile.id,'human-ten-v1');
+ assert.equal(register.body.profile.link,'account-backed');
+ const again=await throughWorker(env,'alice@example.test','/api/caught/identity','POST',{workshop_name:'Ten'});
+ assert.equal(again.status,200);
+ assert.equal(again.body.profile.id,register.body.profile.id);
+ const raw=db.prepare('SELECT * FROM caught_profiles_v1').get();
+ assert.equal(raw.display_name,'Ten');
+ assert.equal(raw.profile_id,'human-ten-v1');
+ assert.match(raw.actor_hash,/^[a-f0-9]{64}$/);
+ assert.notEqual(raw.actor_hash,'alice@example.test');
+ assert.equal(JSON.stringify(raw).includes('alice@example.test'),false);
+ const identity=await throughWorker(env,'alice@example.test','/api/caught/identity');
+ assert.equal(identity.body.contribution_mode,'account-linked');
+ assert.equal(identity.body.enrollment_available,false);
+ assert.equal(identity.body.profile.name,'Ten');
+ const forged=await throughWorker(env,'alice@example.test','/api/caught','POST',{...example,noticed_by:'Register'});
+ assert.equal(forged.status,400);
+ const self=await throughWorker(env,'alice@example.test','/api/caught','POST',{...example,noticed_by:'Ten',noticed_hand:'Ten'});
+ assert.equal(self.status,400);
+ const submitted=await throughWorker(env,'alice@example.test','/api/caught','POST',{...example,noticed_by:'Ten',noticed_hand:'Another hand'});
+ assert.equal(submitted.status,201);
+ assert.equal(submitted.body.receipt.noticed_by,'Ten');
+ assert.equal(submitted.body.receipt.observer_profile_id,'human-ten-v1');
+ assert.equal(submitted.body.receipt.identity_kind,'account-linked');
+ assert.equal(JSON.stringify(submitted.body).includes('actor_hash'),false);
+ const other=await throughWorker(env,'bob@example.test','/api/caught');
+ assert.equal(other.status,200);
+ assert.equal(other.body.items[0].identity_kind,'account-linked');
+ assert.equal(other.body.items[0].noticed_by,'Ten');
+ const sharedImpersonation=await throughWorker(env,'bob@example.test','/api/caught','POST',{...example,request_key:keyB,noticed_by:'Ten'});
+ assert.equal(sharedImpersonation.status,409);
+ assert.equal(sharedImpersonation.body.error,'registered_name_requires_personal_sign_in');
+ assert.equal(db.prepare('SELECT COUNT(*) n FROM caught_moments_v1').get().n,1);
+});
+
+test('the identity route refuses forged email fields, wrong browser origin and unsaved configuration',async t=>{
+ const {env}=setup(t);
+ const bogus=await throughWorker(env,'alice@example.test','/api/caught/identity','POST',{workshop_name:'Ten',email:'bob@example.test'});
+ assert.equal(bogus.status,400);
+ const req=request('/api/caught/identity','POST',{workshop_name:'Ten'},{origin:'https://evil.example'});
+ const rejected=await worker.fetch(req,env,ctx('alice@example.test'));
+ assert.equal(rejected.status,403);
+ const missing=await throughWorker({...env,CAUGHT_TEN_EMAIL:''},'alice@example.test','/api/caught/identity');
+ assert.equal(missing.status,503);
+ const unknown=await throughWorker({...env,TWO_HAND_ALLOWED_EMAILS:'alice@example.test,bob@example.test,mallory@example.test'},'mallory@example.test','/api/caught/identity');
+ assert.equal(unknown.status,403);
+});
+
+test('the profile and its account link survive a cold SQLite reopen without changing the earlier caught entry',async t=>{
+ const {db,env}=setup(t);
+ // Existing shared-authored entry remains unlinked forever.
+ const old=await throughWorker(env,'bob@example.test','/api/caught','POST',example);
+ assert.equal(old.status,201);
+ const reg=await throughWorker(env,'alice@example.test','/api/caught/identity','POST',{workshop_name:'Ten'});
+ assert.equal(reg.status,200);
+ const existing=db.prepare('SELECT observer_profile_id FROM caught_moments_v1 WHERE request_key=?').get(keyA);
+ assert.equal(existing.observer_profile_id,null);
+ const recoveredProfile=db.prepare('SELECT actor_hash,profile_id FROM caught_profiles_v1').get();
+ assert.equal(recoveredProfile.profile_id,'human-ten-v1');
+ const newEntry=await throughWorker(env,'alice@example.test','/api/caught','POST',{...example,request_key:keyB,noticed_by:'Ten'});
+ assert.equal(newEntry.status,201);
+ assert.equal(db.prepare('SELECT count(*) n FROM caught_moments_v1 WHERE observer_profile_id IS NOT NULL').get().n,1);
+ assert.equal(db.prepare('SELECT count(*) n FROM caught_moments_v1 WHERE observer_profile_id IS NULL').get().n,1);
+});
