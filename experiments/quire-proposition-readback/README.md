@@ -34,7 +34,7 @@ node --test experiments/quire-proposition-readback/readback.test.mjs
 
 ## Exactly what is verified
 
-The 18 local JavaScript tests exercise deterministic program behavior against synthetic input. Ravel's third-hand challenge found a one-row loss when 31 readings shared a proposition ordinal; the contract now uses the full ordered tuple and includes that adversarial case. A passing synthetic test cannot substitute for a future Node CI run, authenticated browser/session, or live D1 adapter. They do not prove an authenticated Cloudflare Access browser round trip, a current live Worker deployment, correctness of the D1 adapter, real per-object authorization, source-face truth, or historical authority.
+The 19 local JavaScript tests exercise deterministic program behavior against synthetic input. Ravel's third-hand challenge found a one-row loss when 31 readings shared a proposition ordinal; the contract now uses the full ordered tuple and includes that adversarial case. A passing synthetic test cannot substitute for a future Node CI run, authenticated browser/session, or live D1 adapter. They do not prove an authenticated Cloudflare Access browser round trip, a current live Worker deployment, correctness of the D1 adapter, real per-object authorization, source-face truth, or historical authority.
 
 ## Earned next crossing
 
