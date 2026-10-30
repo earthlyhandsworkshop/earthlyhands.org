@@ -83,18 +83,44 @@ function appPage() {
 </style></head><body><main><header><div class="kicker">Earthly Hands · protected staging · Quire</div><h1>Follow One Claim</h1><p class="lede">A private operator bench for the current review-adequacy specimen. The operator can suggest a test and a retrieval door. The proposal remains OPEN; it cannot decide the historical question.</p></header>
 <div class="notice"><strong>What gets saved:</strong> when you ask for a proposal, the question, selected carrier IDs, repository version, model proposal, and opaque Access-account hash are appended to the staging D1. Companion identity is not verified. Do not enter personal or unrelated material.</div>
 <div id="status" class="muted" role="status" aria-live="polite">Loading the versioned specimen…</div><div id="brakes" class="notice" hidden></div><div class="grid"><section class="bay"><h2>1902 review body</h2><div id="review"></div></section><section class="bay"><h2>Article XIX body</h2><div id="other"></div></section></div>
-<label class="question"><span class="label">What are you trying to figure out?</span><textarea id="question" maxlength="${MAX_QUESTION_CHARS}"></textarea></label><button id="propose" disabled>Ask for one proposed test</button>
+<label class="question"><span class="label">What are you trying to figure out?</span><textarea id="question" maxlength="${MAX_QUESTION_CHARS}"></textarea></label><button id="propose" disabled>Ask for one proposed test</button> <button id="new-request" type="button" hidden>Start different request</button><p id="retry-note" class="muted" hidden>Unconfirmed request: retry sends the same key and question while this tab remains open. Reloading loses that local retry key; the server request may still finish.</p>
 <section class="readout"><div class="kicker">Operator result</div><h2>OPEN · proposal only</h2><pre id="result">No proposal requested.</pre></section><section class="history"><div class="kicker">Append-only D1 history</div><h2>Operator activity</h2><p id="history-count">Loading activity…</p><div id="history">No activity loaded.</div><button id="older" type="button" hidden>Earlier activity</button></section>
 <footer>Repository specimen mirror ≠ source custody. A model suggestion ≠ a source, a finding, or an accepted test. Corrections must be a new attributed act; the source jacket remains governing.</footer>
 <script>
-const $=s=>document.querySelector(s);let specimen=null,historyCursor=null,historyTotal=0;
+const $=s=>document.querySelector(s);let specimen=null,historyCursor=null,historyTotal=0,pendingProposal=null;
+function setRetryState(){const retry=Boolean(pendingProposal);$('#propose').textContent=retry?'Retry same request':'Ask for one proposed test';$('#propose').disabled=!specimen;$('#new-request').hidden=!retry;$('#retry-note').hidden=!retry;$('#question').readOnly=retry;for(const input of document.querySelectorAll('input[data-ticket]'))input.disabled=retry;}
 function node(tag,text,cls){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;}
 function drawBay(side,items){const box=$('#'+side);box.replaceChildren();for(const item of items){const art=node('article',undefined,'piece'),label=node('label'),input=document.createElement('input'),body=node('div'),title=node('h3',item.title),text=node('p',item.text),brake=node('p',item.brake,'brake'),src=node('p',item.meta?.source||'Source path not recorded','source');input.type='checkbox';input.value=item.id;input.dataset.ticket=side;body.append(title,text,brake,src);label.append(input,body);art.append(label);box.append(art);}}
-async function load(){try{const [sr,hr]=await Promise.all([fetch('/api/quire/v0/specimen'),fetch('/api/quire/v0/proposals')]);const sx=await sr.json();if(!sr.ok)throw Error(sx.error||'specimen_unavailable');specimen=sx;drawBay('review',sx.body.review);drawBay('other',sx.body.other);$('#question').value=sx.body.question;$('#brakes').textContent='Working brakes: '+sx.body.brakes.join(' · ');$('#brakes').hidden=false;$('#status').textContent='Loaded '+sx.body.review.length+' review pieces and '+sx.body.other.length+' Article XIX pieces · repository mirror version '+sx.version_ordinal+' · '+sx.source_blob_sha;$('#propose').disabled=false;if(hr.ok)drawHistory(await hr.json(),true);else $('#history').textContent='Operator activity is temporarily unavailable.';}catch(e){$('#status').textContent='The governed specimen could not be loaded. No proposal can be made.';}}
+async function load(){try{const [sr,hr]=await Promise.all([fetch('/api/quire/v0/specimen'),fetch('/api/quire/v0/proposals')]);const sx=await sr.json();if(!sr.ok)throw Error(sx.error||'specimen_unavailable');specimen=sx;drawBay('review',sx.body.review);drawBay('other',sx.body.other);$('#question').value=sx.body.question;$('#brakes').textContent='Working brakes: '+sx.body.brakes.join(' · ');$('#brakes').hidden=false;$('#status').textContent='Loaded '+sx.body.review.length+' review pieces and '+sx.body.other.length+' Article XIX pieces · repository mirror version '+sx.version_ordinal+' · '+sx.source_blob_sha;setRetryState();if(hr.ok)drawHistory(await hr.json(),true);else $('#history').textContent='Operator activity is temporarily unavailable.';}catch(e){$('#status').textContent='The governed specimen could not be loaded. No proposal can be made.';}}
 function drawHistory(data,replace=false){const box=$('#history');if(replace)box.replaceChildren();historyTotal=data.total_requests||0;historyCursor=data.next_before||null;$('#history-count').textContent='Showing '+(box.querySelectorAll('.entry').length+data.events.length)+' of '+historyTotal+' operator requests · latest recorded activity first';$('#older').hidden=!historyCursor;if(!data.events?.length&&!box.childNodes.length){box.textContent='No operator requests recorded.';return;}for(const p of data.events){const e=node('article',undefined,'entry'),state=p.proposal_state||'unknown';e.append(node('small',new Date(p.created_at).toLocaleString()+' · '+state+' · '+p.model_id));e.append(node('p','Question: '+p.question));if(state==='model-proposed-open'&&p.proposal_json){const proposal=JSON.parse(p.proposal_json);e.append(node('p','OPEN proposal: '+proposal.proposed_test));e.append(node('p','Suggested source door: '+proposal.suggested_next_source_door));}else if(state==='model-failed')e.append(node('p','No proposal produced. Recorded outcome: '+p.error_code));else e.append(node('p','Request has no recorded model result yet.'));box.append(e);}}
 async function loadOlder(){if(!historyCursor)return;$('#older').disabled=true;try{const r=await fetch('/api/quire/v0/proposals?before='+encodeURIComponent(historyCursor));if(!r.ok)throw Error('history_unavailable');drawHistory(await r.json());}catch(e){$('#status').textContent='Earlier operator activity could not be loaded.';}finally{$('#older').disabled=false;}}
 $('#older').addEventListener('click',loadOlder);
-$('#propose').addEventListener('click',async()=>{const btn=$('#propose'),question=$('#question').value.trim(),loaded=[...document.querySelectorAll('input[data-ticket]:checked')].map(x=>x.value);if(!question||!loaded.length){$('#status').textContent='Enter a question and load at least one evidence piece.';return;}btn.disabled=true;$('#status').textContent='Asking for a bounded proposal…';$('#result').textContent='Waiting. This is a model proposal, not a verdict.';const body={request_key:crypto.randomUUID(),question,loaded_carrier_ids:loaded};try{const r=await fetch('/api/quire/v0/proposals',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)}),x=await r.json();if(!r.ok)throw Error(x.error||'proposal_unavailable');$('#result').textContent=JSON.stringify(x.proposal,null,2);$('#status').textContent=(x.replay?'Replayed the same recorded request. ':'Saved as an OPEN model proposal. ')+'Inspect the selected carrier brakes and proposed next door before using it.';const h=await fetch('/api/quire/v0/proposals');if(h.ok)drawHistory(await h.json(),true);}catch(e){$('#status').textContent='No proposal produced. The request or failure is retained if D1 accepted it: '+String(e.message||e);}finally{btn.disabled=false;}});
+$('#new-request').addEventListener('click',()=>{if(!pendingProposal)return;if(!confirm('The previous request may still finish. Abandon its local retry key and begin a different question?'))return;pendingProposal=null;setRetryState();$('#status').textContent='Previous request may still be recorded. This form now starts a new request.';});
+$('#propose').addEventListener('click',async()=>{
+  const btn=$('#propose');
+  if(!specimen)return;
+  if(!pendingProposal){
+    const question=$('#question').value.trim();
+    const loaded=[...document.querySelectorAll('input[data-ticket]:checked')].map(x=>x.value);
+    if(!question||!loaded.length){$('#status').textContent='Enter a question and load at least one evidence piece.';return;}
+    pendingProposal={request_key:crypto.randomUUID(),question,loaded_carrier_ids:[...loaded]};
+  }
+  const body=pendingProposal;
+  setRetryState();btn.disabled=true;
+  $('#status').textContent='Submitting the same saved request if this is a retry…';
+  $('#result').textContent='This remains a model proposal, not a verdict.';
+  try{
+    const r=await fetch('/api/quire/v0/proposals',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});
+    const x=await r.json();
+    if(!r.ok||!x.proposal)throw Error(x.error||'response_unconfirmed');
+    pendingProposal=null;
+    $('#result').textContent=JSON.stringify(x.proposal,null,2);
+    $('#status').textContent=(x.replay?'Existing receipt confirmed. ':'Saved as an OPEN model proposal. ')+'The selected carrier brakes and proposed next door remain open for inspection.';
+    try{const h=await fetch('/api/quire/v0/proposals');if(h.ok)drawHistory(await h.json(),true);}catch{}
+  }catch(e){
+    $('#status').textContent='Outcome unconfirmed. Retry will keep the identical key, question and selected carriers while this tab stays open. '+String(e.message||e);
+  }finally{setRetryState();}
+});
 load();
 </script></main></body></html>`);
 }
@@ -182,9 +208,9 @@ export async function handleQuire(request, env, url, principal) {
         'SELECT COUNT(*) AS n FROM quire_operator_requests_v0 WHERE specimen_id=?'
       ).bind(SPECIMEN_ID).first();
       const statement = beforeAt
-        ? env.DB.prepare("SELECT request_id,event_id,question,loaded_carrier_ids_json,proposal_json,error_code,model_id,outcome AS proposal_state,event_at AS created_at FROM quire_operator_history_v0 WHERE specimen_id=? AND (event_at<? OR (event_at=? AND event_id<?)) ORDER BY event_at DESC,event_id DESC LIMIT 31")
+        ? env.DB.prepare("SELECT request_id,request_id AS event_id,question,loaded_carrier_ids_json,proposal_json,error_code,model_id,outcome AS proposal_state,requested_at AS created_at,resolved_at FROM quire_operator_history_v0 WHERE specimen_id=? AND (requested_at<? OR (requested_at=? AND request_id<?)) ORDER BY requested_at DESC,request_id DESC LIMIT 31")
             .bind(SPECIMEN_ID,beforeAt,beforeAt,beforeId)
-        : env.DB.prepare("SELECT request_id,event_id,question,loaded_carrier_ids_json,proposal_json,error_code,model_id,outcome AS proposal_state,event_at AS created_at FROM quire_operator_history_v0 WHERE specimen_id=? ORDER BY event_at DESC,event_id DESC LIMIT 31")
+        : env.DB.prepare("SELECT request_id,request_id AS event_id,question,loaded_carrier_ids_json,proposal_json,error_code,model_id,outcome AS proposal_state,requested_at AS created_at,resolved_at FROM quire_operator_history_v0 WHERE specimen_id=? ORDER BY requested_at DESC,request_id DESC LIMIT 31")
             .bind(SPECIMEN_ID);
       const pageResult = await statement.all();
       const events = pageResult.results || [];
