@@ -183,6 +183,22 @@ function response(body, status, html = false) {
   });
 }
 
+// GET pagination request, never an authority grant. Headers also require log review.
+function pagingHeader(request) {
+  const raw=request.headers?.get?.('x-quire-before-cursors');
+  if(raw==null||raw==='')return undefined;
+  if(typeof raw!=='string'||raw.length>4096)throw new RangeError('large cursor header');
+  let parsed;
+  try{parsed=JSON.parse(raw)}catch{throw new RangeError('invalid cursor header')}
+  if(!parsed||typeof parsed!=='object'||Array.isArray(parsed))throw new RangeError('invalid cursor header');
+  const pairs=Object.entries(parsed);
+  if(pairs.length>30)throw new RangeError('too many cursors');
+  for(const [key,x] of pairs)if(!key||key.length>128||!x||typeof x!=='object'||
+    Array.isArray(x)||!validOrdinal(x.proposition_ordinal)||!validOrdinal(x.event_ordinal)||
+    !asText(x.event_id)||x.event_id.length>256)throw new RangeError('invalid cursor header');
+  return parsed;
+}
+
 /**
  * Example integration boundary: a trusted server must provide a verified
  * Access identity AND an authorized set of event IDs. Verifying an email
@@ -199,12 +215,16 @@ export async function handleReadback(request, { authorize, loadSnapshot, represe
     return response({ error: 'forbidden' }, 403);
   }
   if (request.method !== 'GET') return response({ error: 'method_not_allowed' }, 405);
+  let beforeByProposition;
+  try { beforeByProposition=pagingHeader(request); }
+  catch { return response({ error: 'invalid_pagination_cursor' }, 400); }
   try {
     const snapshot = await loadSnapshot(grant);
     const allow = new Set(grant.allowedEventIds);
     const view = projectForReader(snapshot, {
       canSeeEvent: e => allow.has(e.event_id),
       canSeeJacket: grant.canSeeJacket === true,
+      beforeByProposition,
       pageSize: DEFAULT_PAGE_SIZE
     });
     return representation === 'html' ? response(renderHtml(view), 200, true) : response(view, 200);
