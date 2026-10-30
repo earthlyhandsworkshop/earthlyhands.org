@@ -92,10 +92,52 @@ test('61-row history pages 30/30/1 without lost or duplicated accessible events'
     if(before!==null)opts.beforeByProposition={'one-claim':before};
     const p=projectForReader(s,opts).propositions[0];
     got.push(...p.readings.map(e=>e.event_ordinal));
-    before=p.older_before_ordinal;
+    before=p.older_before_cursor;
   }while(before!==null);
   assert.equal(got.length,61);
   assert.deepEqual(got,Array.from({length:61},(_,i)=>61-i));
+});
+
+test('31 mapped readings tied on proposition ordinal page 30/1 without loss', () => {
+  const s={events:[],mappings:[]};
+  for(let i=1;i<=31;i++){
+    s.events.push(event('tie'+i,i,'invented'));
+    s.mappings.push(mapping('tie'+i,'one',1));
+  }
+  const seen=[];let before=null;
+  do {
+    const opts={canSeeEvent:()=>true,pageSize:30};
+    if(before!==null)opts.beforeByProposition={one:before};
+    const p=projectForReader(s,opts).propositions[0];
+    seen.push(...p.readings.map(r=>r.event_id));
+    before=p.older_before_cursor;
+  }while(before!==null);
+  assert.equal(seen.length,31);
+  assert.equal(new Set(seen).size,31);
+  assert.deepEqual(seen,Array.from({length:31},(_,i)=>'tie'+(31-i)));
+});
+
+test('equal proposition and event ordinals use stable event-ID tie-breaker', () => {
+  const s={events:[],mappings:[]};
+  for(let i=1;i<=31;i++){
+    const id='item'+String(i).padStart(2,'0');
+    s.events.push(event(id,7,'invented'));
+    s.mappings.push(mapping(id,'one',1));
+  }
+  const first=view(s,undefined,{pageSize:30}).propositions[0];
+  assert.equal(first.readings.length,30);
+  assert.deepEqual(first.older_before_cursor,{proposition_ordinal:1,event_ordinal:7,event_id:'item02'});
+  const second=view(s,undefined,{pageSize:30,beforeByProposition:{one:first.older_before_cursor}}).propositions[0];
+  assert.deepEqual(second.readings.map(r=>r.event_id),['item01']);
+  assert.equal(second.older_before_cursor,null);
+});
+
+test('invalid cursors and duplicate visible sort keys are refused rather than silently skipping',()=>{
+  const s={events:[event('a',1,'invented'),event('b',2,'invented')],mappings:[mapping('a','one',1),mapping('b','one',1)]};
+  assert.throws(()=>view(s,undefined,{beforeByProposition:{one:1}}),/invalid pagination cursor/);
+  assert.throws(()=>view(s,undefined,{beforeByProposition:{one:{proposition_ordinal:1,event_ordinal:2,event_id:''}}}),/invalid pagination cursor/);
+  s.mappings.push(mapping('b','one',1));
+  assert.throws(()=>view(s),/duplicate visible pagination key/);
 });
 
 test('pagination never counts or reveals hidden rows', () => {
@@ -103,7 +145,7 @@ test('pagination never counts or reveals hidden rows', () => {
   for(let i=1;i<=40;i++){s.events.push(event('x'+i,i,'invented'));s.mappings.push(mapping('x'+i,'one',i));}
   const v=view(s,['x1','x2','x35','x40'],{pageSize:2});
   assert.deepEqual(v.propositions[0].readings.map(r=>r.event_id),['x40','x35']);
-  assert.equal(v.propositions[0].older_before_ordinal,35);
+  assert.deepEqual(v.propositions[0].older_before_cursor,{proposition_ordinal:35,event_ordinal:35,event_id:'x35'});
   assert.equal(JSON.stringify(v).includes('x39'),false);
 });
 
