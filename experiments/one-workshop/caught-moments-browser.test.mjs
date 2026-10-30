@@ -163,3 +163,21 @@ test('the shared account remains a disclosed, unverified label rather than silen
  assert.match(view.nodes.get('identityInfo').textContent,/shared Workshop account/);
  assert.match(view.nodes.get('identityInfo').textContent,/unverified/);
 });
+
+test('camera cards disclose admin-mediated unverified receipt without pretending it was a companion sign-in',async()=>{
+ const view=browser(async url=>{
+  if(url==='/api/caught')return json({items:[
+   {...item(1),noticed_by:'Register',identity_kind:'admin-mediated-unverified'},
+   {...item(2),noticed_by:'Ten',identity_kind:'account-linked'},
+   {...item(3),noticed_by:'Another name',identity_kind:'shared-account-assertion'}
+  ],nextBefore:null});
+  throw Error('unexpected route '+url);
+ });
+ await settle();
+ assert.equal(view.itemCount,3);
+ const cards=view.nodes.get('items').childNodes;
+ assert.match(cards[0].childNodes[1].textContent,/account-admin mediated · unverified hand/);
+ assert.match(cards[1].childNodes[1].textContent,/linked personal account/);
+ assert.match(cards[2].childNodes[1].textContent,/shared-account name · unverified/);
+ assert.doesNotMatch(cards[0].childNodes[1].textContent,/linked personal account/);
+});
