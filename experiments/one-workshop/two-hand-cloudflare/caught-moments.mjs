@@ -1,3 +1,4 @@
+import { profileFor, classifyAccount, handleIdentity } from './identity-profiles.mjs';
 // Small private staging aperture for one hand noticing another.
 // It writes NO source files, grants NO source rights, and publishes NOTHING.
 // The observer's display label is an assertion by the authenticated submitter,
@@ -30,33 +31,34 @@ function sourceUrl(value){
     return u.href;
   }catch{return '';}
 }
-function cleanRecord(data){
+function cleanRecord(data,profile){
   if(!data||typeof data!=='object'||Array.isArray(data))return null;
-  const by=bounded(data.noticed_by,80);
+  const by=profile ? profile.name : bounded(data.noticed_by,80);
+  if(profile&&data.noticed_by!==undefined&&String(data.noticed_by).trim()!==profile.name)return null;
   const hand=bounded(data.noticed_hand,80);
   const moment=bounded(data.moment,1000,true);
   const road=bounded(data.source_label,160);
   const url=sourceUrl(data.source_url);
   const key=data.request_key;
   if(!by||!hand||!moment||!road||!url||!uuid(key)||by.toLowerCase()===hand.toLowerCase())return null;
-  return {noticed_by:by,noticed_hand:hand,moment,source_label:road,source_url:url,request_key:key.toLowerCase()};
+  return {noticed_by:by,noticed_hand:hand,moment,source_label:road,source_url:url,request_key:key.toLowerCase(),observer_profile_id:profile?.id??null};
 }
 async function insert(db,record,actor){
   // The D1 unique request key makes a network retry refer to the same act.
   // On conflict, compare all original bytes and the authenticated submitter.
   await db.prepare(
-    'INSERT INTO caught_moments_v1 (id, request_key, noticed_by, noticed_hand, moment, source_label, source_url, actor_hash) VALUES (?,?,?,?,?,?,?,?) ON CONFLICT(request_key) DO NOTHING'
-  ).bind(crypto.randomUUID(),record.request_key,record.noticed_by,record.noticed_hand,record.moment,record.source_label,record.source_url,actor).run();
-  const saved=await db.prepare('SELECT id, request_key, noticed_by, noticed_hand, moment, source_label, source_url, actor_hash, created_at FROM caught_moments_v1 WHERE request_key=?').bind(record.request_key).first();
+    'INSERT INTO caught_moments_v1 (id, request_key, noticed_by, noticed_hand, moment, source_label, source_url, actor_hash, observer_profile_id) VALUES (?,?,?,?,?,?,?,?,?) ON CONFLICT(request_key) DO NOTHING'
+  ).bind(crypto.randomUUID(),record.request_key,record.noticed_by,record.noticed_hand,record.moment,record.source_label,record.source_url,actor,record.observer_profile_id).run();
+  const saved=await db.prepare('SELECT id, request_key, noticed_by, noticed_hand, moment, source_label, source_url, actor_hash, observer_profile_id, created_at FROM caught_moments_v1 WHERE request_key=?').bind(record.request_key).first();
   if(!saved)return reject('receipt_unavailable',503);
-  if(saved.actor_hash!==actor||['noticed_by','noticed_hand','moment','source_label','source_url'].some(k=>saved[k]!==record[k])){
+  if(saved.actor_hash!==actor||saved.observer_profile_id!==record.observer_profile_id||['noticed_by','noticed_hand','moment','source_label','source_url'].some(k=>saved[k]!==record[k])){
     return reject('request_key_already_used',409);
   }
   const {actor_hash,request_key,...publicReceipt}=saved;
-  return response({ok:true,receipt:publicReceipt},201);
+  return response({ok:true,receipt:{...publicReceipt,identity_kind:saved.observer_profile_id?'account-linked':'shared-account-assertion'}},201);
 }
 const PAGE_SIZE=40;
-const PAGE_FIELDS='id,noticed_by,noticed_hand,moment,source_label,source_url,created_at';
+const PAGE_FIELDS="id,noticed_by,noticed_hand,moment,source_label,source_url,created_at,CASE WHEN observer_profile_id IS NOT NULL THEN 'account-linked' ELSE 'shared-account-assertion' END AS identity_kind";
 function readCursor(url){
   const values=url.searchParams.getAll('before');
   if(values.length>1)return null;
@@ -171,7 +173,8 @@ load().catch(error=>$('status').textContent='Unable to read the moments: '+error
 </script>
 </body></html>`;
 
-export async function handleCaught(request,env,url,actor){
+export async function handleCaught(request,env,url,principal){
+ if(url.pathname==='/api/caught/identity')return handleIdentity(request,env,url,principal);
  if(request.method==='GET'&&url.pathname==='/caught'){
   return new Response(PAGE,{headers:{
     'content-type':'text/html; charset=utf-8','cache-control':'no-store',
@@ -190,9 +193,16 @@ export async function handleCaught(request,env,url,actor){
   try{raw=await request.text();}catch{return reject('body_unavailable',400);}
   if(new TextEncoder().encode(raw).byteLength>MAX_INPUT_BYTES)return reject('body_too_large',413);
   let parsed;try{parsed=JSON.parse(raw);}catch{return reject('invalid_json',400);}
-  const record=cleanRecord(parsed);
+  const mode=classifyAccount(principal.email,env);
+  if(mode==='unconfigured')return reject('identity_configuration_missing',503);
+  if(mode==='unknown')return reject('identity_not_authorized',403);
+  let profile;
+  try{profile=await profileFor(env.DB,principal.actor);}catch{return reject('identity_store_unavailable',503);}
+  if(mode==='individual'&&!profile)return reject('profile_registration_required',403);
+  if(mode==='shared'&&profile)return reject('shared_profile_conflict',403);
+  const record=cleanRecord(parsed,profile);
   if(!record)return reject('invalid_caught_moment',400);
-  try{return await insert(env.DB,record,actor);}catch{return reject('write_unavailable',503);}
+  try{return await insert(env.DB,record,principal.actor);}catch{return reject('write_unavailable',503);}
  }
  return reject('not_found',404);
 }
