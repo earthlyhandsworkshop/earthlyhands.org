@@ -57,7 +57,7 @@ async function write(db, body, expectedVersion, requestId, actor) {
 }
 
 const PAGE = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Two hands, one fictional page</title><style>body{font:16px/1.5 system-ui;max-width:43rem;margin:2rem auto;padding:0 1rem}textarea{box-sizing:border-box;width:100%;min-height:11rem;font:inherit}button,a{font:inherit;margin:0.5rem 0.5rem 0.5rem 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}button:focus-visible,textarea:focus-visible{outline:3px solid #4678b6}</style></head><body><h1>Two hands, one fictional page</h1><p>Private staging experiment. Nothing here is a historical source or public publication. Sign in separately from two browsers and take turns saving. The other browser must refresh to see the new revision. Stale saves are refused, not overwritten.</p><p id="rev" aria-live="polite">Loading...</p><textarea id="body" aria-label="Fictional shared page"></textarea><div><button id="save">Save expected revision</button><button id="refresh">Refresh shared page</button><button id="export">Export history</button></div><pre id="status" role="status" aria-live="polite"></pre><script type="module">let version=null;let savedBody=null;let saving=false;let pendingSave=null;const $=id=>document.getElementById(id);async function load(){if(pendingSave){$('status').textContent='Refresh refused: a previous save is awaiting confirmation. Press Save to retry it first.';return;}const beforeVersion=version;const beforeSaved=savedBody;const beforeText=$('body').value;if((beforeVersion===null&&beforeText!=='')||(beforeVersion!==null&&beforeText!==beforeSaved)){$('status').textContent='Refresh refused: unsaved writing is in the box. Save or copy it first.';return;}const r=await fetch('/api/state');const x=await r.json();if(!r.ok)throw new Error(x.error||'Read failed');if(version!==beforeVersion||savedBody!==beforeSaved||$('body').value!==beforeText){$('status').textContent='Not refreshed: writing or saved revision changed while the read was in progress.';return;}version=x.version;savedBody=x.body;$('body').value=x.body;$('rev').textContent='Server revision '+version;$('status').textContent='Read from the shared database.';}async function save(){
-if(version===null||saving)return;
+if(version===null){$('status').textContent='Cannot save before the first server revision loads. Copy your draft words before clearing the box, then Refresh shared page and paste them back.';return;}if(saving)return;
 saving=true;
 if(!pendingSave)pendingSave={body:$('body').value,expectedVersion:version,requestId:crypto.randomUUID()};
 const attempt=pendingSave;
@@ -65,11 +65,11 @@ try{
  const r=await fetch('/api/state',{method:'PUT',headers:{'content-type':'application/json'},body:JSON.stringify(attempt)});
  const x=await r.json();
  if(!r.ok){
-   if(r.status===409)pendingSave=null;
+   if((r.status===409&&['stale_or_reused_request','fixture_capacity_reached'].includes(x.error))||(r.status===400&&x.error==='invalid_write'))pendingSave=null;
    $('status').textContent='Save was refused: '+(x.error||r.status)+'. Current server revision: '+(x.currentVersion??'unknown')+'. Your writing remains in the box.';
    return;
  }
- if(!Number.isSafeInteger(x.acceptedVersion)||x.acceptedVersion<=attempt.expectedVersion)throw new Error('Unverified save receipt');
+ if(!Number.isSafeInteger(x.acceptedVersion)||x.acceptedVersion!==attempt.expectedVersion+1)throw new Error('Unverified save receipt');
  pendingSave=null;
  version=x.acceptedVersion;
  savedBody=attempt.body;
