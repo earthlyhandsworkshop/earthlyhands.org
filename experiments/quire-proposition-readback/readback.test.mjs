@@ -140,6 +140,18 @@ test('invalid cursors and duplicate visible sort keys are refused rather than si
   assert.throws(()=>view(s),/duplicate visible pagination key/);
 });
 
+test('invalid or duplicate visible event IDs are refused before page generation',()=>{
+  const s=fixture();
+  s.events[0].event_ordinal=0;
+  assert.throws(()=>view(s),/invalid visible event key/);
+  s.events[0].event_ordinal=1;
+  s.events.push({...s.events[0]});
+  assert.throws(()=>view(s),/duplicate visible event ID/);
+  // Hidden invalid input never creates an observable ghost for a restricted reader.
+  const only=['date-face'];
+  assert.deepEqual(view(s,only),view(fixture(),only));
+});
+
 test('pagination never counts or reveals hidden rows', () => {
   const s={events:[],mappings:[]};
   for(let i=1;i<=40;i++){s.events.push(event('x'+i,i,'invented'));s.mappings.push(mapping('x'+i,'one',i));}
