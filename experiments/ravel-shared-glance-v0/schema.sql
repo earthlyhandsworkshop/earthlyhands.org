@@ -44,18 +44,32 @@ SELECT r.origin_database, r.origin_table, r.origin_id,
   FROM bench_crossing_records_v0 r
   JOIN bench_crossing_runs_v0 c ON c.run_id=r.run_id;
 
--- 'Latest' is local to a named proposition, not an entire historical carrier.
--- A current-view convenience does not supersede or delete the earlier rows.
-CREATE VIEW IF NOT EXISTS bench_latest_event_by_proposition_v0 AS
+-- Retire the misleading v0 view in disposable copies; it ranked dissent as if
+-- a later interpretation superseded another reading. Source rows are untouched.
+DROP VIEW IF EXISTS bench_latest_event_by_proposition_v0;
+
+-- Event chronology is not interpretive consensus. One can observe the last
+-- change in a fictional transition without choosing between separate readings.
+CREATE VIEW IF NOT EXISTS bench_latest_change_by_proposition_v1 AS
 SELECT * FROM (
   SELECT r.*,
     ROW_NUMBER() OVER (
       PARTITION BY origin_database,instrument,source_road,source_proposition
       ORDER BY occurrence_order DESC,origin_table DESC,origin_id DESC
-    ) AS seq_rank
+    ) AS event_rank
   FROM bench_crossing_records_v0 r
-  WHERE record_kind IN ('change-event','interpretation')
-) WHERE seq_rank=1;
+  WHERE record_kind='change-event'
+) WHERE event_rank=1;
+
+-- Every interpretation stays visible, including dissent; no last-write-wins.
+CREATE VIEW IF NOT EXISTS bench_readings_by_proposition_v1 AS
+SELECT r.origin_database,r.origin_table,r.origin_id,r.instrument,
+       r.source_road,r.source_proposition,r.source_verb,r.occurrence_order,
+       r.hand_label,r.hand_standing,r.source_standing,r.payload_json,
+       r.payload_sha256,c.run_id,c.receipt_standing
+  FROM bench_crossing_records_v0 r
+  JOIN bench_crossing_runs_v0 c ON c.run_id=r.run_id
+ WHERE r.record_kind='interpretation';
 
 CREATE TRIGGER IF NOT EXISTS bench_runs_no_update_v0
 BEFORE UPDATE ON bench_crossing_runs_v0 BEGIN
