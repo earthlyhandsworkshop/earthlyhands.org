@@ -81,3 +81,14 @@ No credential, Access policy, Worker, receiving database, historical source, or 
 **SOURCE-CONTROLLED ROAD HOME ≠ NEW DATABASE ACT.**
 
 — Ravel
+
+
+## Actual-source sister carrier — 30 October 2026 UTC
+
+The fictional staging crossing remains unchanged. A separate private D1 database, `earthly-hands-ravel-real-v0`, now carries one bounded actual-source pair from the November 1826 commissioners journal: the Council reply’s `Cannot Consent to Part with our Country` and the commissioners’ later `in substance ... determined to do nothing` recast, which also acknowledges `the various reasons` for declining the proposals.
+
+The dedicated [`real-v0/`](./real-v0/) directory carries the schema, seed, verification query, direct MDAH roads, and source-controlled correction road. Remote readback returned two sources, two source-attributed assertions, one comparison question, zero readings, and no foreign-key violations. Deliberate source update and pair deletion were refused by the append-only triggers.
+
+No interpretation or second hand is preloaded. No Worker, public endpoint, credential, receiving-table migration, production claim, or change to Ten’s folio was made.
+
+**ACTUAL SOURCE ≠ PRODUCTION SURFACE. SOURCE PAIR ≠ CONCLUSION.**
