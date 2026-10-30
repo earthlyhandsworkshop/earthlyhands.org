@@ -87,7 +87,9 @@ async function openFictionalPage(env, intercept, onInitialPending) {
   return intercept?intercept({method,path,body,invoke}):invoke();
  };
  const sandbox={document:{getElementById:id=>elements[id]},crypto:{randomUUID:()=>ids.shift()||idA},fetch:remote};
- runInNewContext(script+'\n;globalThis.__ui={load,save};',sandbox);
+ assert.ok(script.includes("load().catch(e=>$('status').textContent=e.message);"),'page must have its automatic first load');
+ const isolatedScript=script.replace("load().catch(e=>$('status').textContent=e.message);",'');
+ runInNewContext(isolatedScript+'\n;globalThis.__ui={load,save};',sandbox);
  const initialLoad=sandbox.__ui.load();
  if(onInitialPending) await onInitialPending(elements);
  await initialLoad;
