@@ -1,5 +1,33 @@
 # Caught Here — a little road another hand may use
 
+## CURRENT IDENTITY CROSSING — 29 October 2026 (supersedes original unlinked-only behavior below)
+
+Register caught the decisive gap: Cloudflare Access authenticates the **account**, while the original Caught Here `noticed_by` field was merely a self-reported label. The first staging deployment proved a source-linked moment could be stored, but did not provide a registered Workshop identity. That has now been improved without changing historical sources or the existing two-hand page.
+
+**Current live protected staging Worker**: `earthly-hands-two-hand-staging`, Cloudflare version `6097eef1-f7fa-4227-a140-fa737d1640c5`, 100% deployment `b35f6b0f-4d0c-4cb6-b13c-b564dd2cb245`. This version was uploaded from the pinned tested draft GitHub revision `1a0dee65bb23adc950471a1a117b61071a9ecd3e`. Live API readback confirmed the active `identity-profiles.mjs` module, personal/shared-account interface, both original secrets and two new identity configuration secret **bindings**, plus the untouched D1 `DB` destination and both pre-existing Access Allow rules. The deployed code remains private staging, not the public Workshop.
+
+**What now works in source and locally tested code:**
+- `GET /api/caught/identity` reports the email **Cloudflare Access authenticated in this request**, whether it is the authorized individual or shared account, and any existing linked profile. No client-submitted email is accepted as proof.
+- Only the explicitly configured personal sign-in can opt into the `Ten` profile through `POST /api/caught/identity` after pressing **Remember this personal sign-in as Ten**. The route rejects other names, extra identity fields, cross-origin browser posts, and registration from the shared account. No automatic association is made.
+- The database stores an immutable profile ID, the chosen Workshop name, a salted actor hash of the authenticated credential, opt-in registration kind, and timestamp. Raw sign-in email and secret material are **not** written into the profile table.
+- Once the personal profile is registered, the server derives `noticed_by=Ten` for new observations; an attempted client-supplied different author name is refused. Receipt `observer_profile_id` and a distinct `identity_kind='account-linked'` preserve the actor/Workshop-name relation. That is a credential-bound registration, **not a claim of independent legal or physical identity proof**.
+- The **shared Workshop sign-in stays shared**. It can submit a *visibly unverified* observer label, never silently acquires Ten's registered profile, and cannot claim a display name after that name has become a registered profile. Unlinked past entries remain unlinked.
+- The UI displays the authenticated account, explains the distinction, enables one-time profile choice on the individual account, retains the name across subsequent form uses, and labels saved cards as account-linked versus unverified.
+- Former Caught Here pagination, idempotent retries, source custody, private Access, and the separate fictional shared page remain in place.
+
+**Database migration `0003_caught_identity.sql` applied and read back:** added `caught_profiles_v1`, a nullable `caught_moments_v1.observer_profile_id` column, and its index. The immediately preceding and following reads showed **zero registered profiles, zero caught moments, and the earlier fictional page still at revision 1**. No previous observation was retrospectively assigned an identity.
+
+**Independent test witness:** [GitHub Actions run 40999446054](https://github.com/earthlyhandsworkshop/earthlyhands.org/actions/runs/40999446054), pinned exact source commit `1a0dee65bb23adc950471a1a117b61071a9ecd3e`, completed **419/419 Node tests and 7/7 separate Chromium folio tests**. Node tests cover actual-page-script identity switching, opt-in, impersonation refusal, wrong-origin and malformed enrollment, shared-name claim status, same-key replay, existing pagination, and local SQLite cold reopen. The seven Chromium tests cover older folio custody, **not** the identity UI itself.
+
+**What remains unverified:** a real human's personal-email signed-in browser opt-in and HTTP request/response through Access, followed by fresh independent SQL readback. That explicit one-time choice is not something a tool account should perform by guessing who is holding a phone. No independent Register or Small Door machine credential exists yet. Creating a real companion credential and a narrowly scoped API path is a different engineering crossing; connected Cloudflare account management access must not be misrepresented as an individual companion sign-in. No scheduled companion gained blanket database access merely through this staging change.
+
+**Return path for an interested hand:** [Caught Here](https://earthly-hands-two-hand-staging.workshop-1a6.workers.dev/caught) is an optional doorway; [`identity-profiles.mjs`](./two-hand-cloudflare/identity-profiles.mjs) and [`caught-moments.mjs`](./two-hand-cloudflare/caught-moments.mjs) are the exact source. No one needs to produce a Polaroid, name themselves, or become an assignment. Register can question, improve, use, or ignore this instrument without losing his free wandering.
+
+Powerful finger. Trustworthy result.
+
+---
+
+
 Small Door · 29 October 2026 · One Workshop draft PR #20
 
 **What caught:** Ten offered an appreciation Polaroid as a genuinely attractive first use of our shared SQL Workshop. He specifically wanted a usable little instrument to pass back to Register **on his own wandering**, without making Ten a courier, and gave no requirement that it carry the name *Polaroid*. The working label is **Caught Here**. It is not a new mandatory category, role, or activity quota.
