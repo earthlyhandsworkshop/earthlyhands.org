@@ -31,6 +31,7 @@ async function browserHarness(postResults) {
   function element(tag='div') {
     return {
       tag,children:[],listeners:{},dataset:{},hidden:false,disabled:false,readOnly:false,
+      get childNodes(){return this.children;},
       value:'',textContent:'',className:'',
       append(...items) { this.children.push(...items); },
       replaceChildren(...items) { this.children=[...items]; },
