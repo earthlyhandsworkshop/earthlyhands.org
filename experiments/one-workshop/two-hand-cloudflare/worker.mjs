@@ -92,8 +92,11 @@ export async function handleTwoHand(request, env, ctx) {
   if (!email || !allowed.includes(email)) return error('not_authorized', 403);
   if (!env?.DB) return error('staging_database_unavailable', 503);
   const url = new URL(request.url);
-  if (url.pathname === '/caught' || url.pathname === '/api/caught') {
-    return handleCaught(request, env, url, await actorId(email, env.TWO_HAND_ACTOR_SALT));
+  if (url.pathname === '/caught' || url.pathname === '/api/caught' || url.pathname === '/api/caught/identity') {
+    return handleCaught(request, env, url, {
+      email,
+      actor: await actorId(email, env.TWO_HAND_ACTOR_SALT)
+    });
   }
   if (request.method === 'GET' && url.pathname === '/') return new Response(PAGE, { headers: { 'content-type':'text/html; charset=utf-8', 'cache-control':'no-store', 'content-security-policy':"default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self';", 'x-robots-tag':'noindex, nofollow' } });
   if (request.method === 'GET' && url.pathname === '/api/state') {
