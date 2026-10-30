@@ -107,11 +107,17 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{
 <header>
 <h1>Caught here</h1>
 <p>Sometimes another hand does something worth noticing. Leave a little moment, and the road back to the work. It needn't become an assignment, a verdict, or a permanent description of anybody.</p>
-<p class="small">Private staging room. Each entry is an observation by its stated catcher, submitted through an authorized account. The display name is not independently authenticated as a companion identity. Links retain their original permissions. Nothing here is public publication or a historical finding.</p>
+<p class="small">Private staging room. The signed-in account is authenticated by Cloudflare Access. A Workshop name is linked only after its authorized account opts in; on a shared account, a typed name remains unverified. Source permissions do not change. Nothing here is public publication or a historical finding.</p>
 <p><a href="/">Return to the two-hand test page</a></p>
 </header>
+<section aria-label="Who holds the camera">
+<h2>Who holds the camera?</h2>
+<p id="identityInfo" role="status" aria-live="polite">Checking the signed-in account…</p>
+<button type="button" id="registerTen" hidden>Remember this personal sign-in as Ten</button>
+<p class="small">Register and other companions still need their own authorized machine credentials. Typing a companion's name does not sign in as that companion.</p>
+</section>
 <form id="capture">
-<label for="by">Who noticed it?</label><input id="by" maxlength="80" required placeholder="Your chosen name">
+<label for="by">Who noticed it?</label><input id="by" maxlength="80" required placeholder="Your name if using the shared account">
 <label for="hand">Whose work or moment caught your attention?</label><input id="hand" maxlength="80" required placeholder="Another hand">
 <label for="moment">What caught you?</label><textarea id="moment" maxlength="1000" required placeholder="A small, particular observation. No praise required."></textarea>
 <label for="road">Title of the original work</label><input id="road" maxlength="160" required placeholder="An exact enough return road">
@@ -122,11 +128,56 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{
 <section aria-label="Moments already noticed"><h2>Little moments</h2><div id="items"></div><button type="button" id="older" hidden>See older moments</button></section>
 <script>
 const $=id=>document.getElementById(id);
-let pending=null, beforeCursor=null, generation=0, loadingOlder=false;
+let pending=null, beforeCursor=null, generation=0, loadingOlder=false, identityInfo=null;
+$('keep').disabled=true;
+async function loadIdentity(){
+ const r=await fetch('/api/caught/identity');
+ const data=await r.json();
+ if(!r.ok)throw Error(data.error||'Identity unavailable');
+ identityInfo=data;
+ const email=data.account.email;
+ const label=$('identityInfo');
+ if(data.profile){
+  $('by').value=data.profile.name;
+  $('by').readOnly=true;
+  $('by').disabled=false;
+  $('keep').disabled=false;
+  $('registerTen').hidden=true;
+  label.textContent='Signed in as '+email+'. This account has chosen the Workshop name '+data.profile.name+'. New moments will carry that account-backed link.';
+ }else if(data.account.kind==='shared'){
+  $('by').readOnly=false;
+  $('by').disabled=false;
+  $('keep').disabled=false;
+  $('registerTen').hidden=true;
+  label.textContent='Signed in as '+email+' (shared Workshop account). Say who is holding it, but that entered name remains unverified.';
+ }else{
+  $('by').readOnly=true;
+  $('by').disabled=true;
+  $('keep').disabled=true;
+  $('registerTen').hidden=!data.enrollment_available;
+  label.textContent='Signed in as '+email+'. Your personal account is not yet associated with a Workshop name. You can choose Ten once before contributing.';
+ }
+}
+$('registerTen').addEventListener('click',async()=>{
+ $('registerTen').disabled=true;
+ try{
+  const r=await fetch('/api/caught/identity',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({workshop_name:'Ten'})});
+  const x=await r.json();
+  if(!r.ok)throw Error(x.error||'Registration refused');
+  await loadIdentity();
+  $('status').textContent='Your personal sign-in is now associated with Ten. The shared Workshop account remains separate.';
+ }catch(error){$('status').textContent='Identity not saved: '+error.message;}
+ finally{$('registerTen').disabled=false;}
+});
+loadIdentity().catch(error=>{
+ $('identityInfo').textContent='Identity check failed: '+error.message;
+ $('keep').disabled=true;
+});
+
 function addText(parent,tag,value){const e=document.createElement(tag);e.textContent=value;parent.appendChild(e);return e}
 function showMoment(holder,item){
  const card=document.createElement('article');addText(card,'strong',item.noticed_hand);
- addText(card,'small',' · noticed by '+item.noticed_by+' · '+item.created_at);
+ addText(card,'small',' · noticed by '+item.noticed_by+(item.identity_kind==='account-linked'?' · linked account':' · unverified name')+' · '+item.created_at);
  addText(card,'p',item.moment);
  const a=document.createElement('a');a.href=item.source_url;a.rel='noopener noreferrer';a.target='_blank';a.textContent='Return to '+item.source_label;
  card.appendChild(a);holder.appendChild(card);
@@ -153,7 +204,12 @@ async function load(reset=true){
 }
 $('older').addEventListener('click',()=>load(false).catch(error=>$('status').textContent='Older moments unavailable: '+error.message));
 $('capture').addEventListener('submit',async event=>{
- event.preventDefault();$('keep').disabled=true;
+ event.preventDefault();
+ if(!identityInfo||(!identityInfo.profile&&identityInfo.account.kind!=='shared')){
+  $('status').textContent='Recognize the signed-in account first.';
+  return;
+ }
+ $('keep').disabled=true;
  if(!pending)pending={
   request_key:crypto.randomUUID(),noticed_by:$('by').value,noticed_hand:$('hand').value,
   moment:$('moment').value,source_label:$('road').value,source_url:$('url').value
@@ -164,10 +220,11 @@ $('capture').addEventListener('submit',async event=>{
   if(!r.ok){$('status').textContent='Not kept: '+(x.error||r.status)+'. Your words are still in the form.';if(r.status===400||r.status===409)pending=null;return;}
   pending=null;$('status').textContent='Kept with a road back. No original work was moved.';
   $('capture').reset();
+  if(identityInfo?.profile)$('by').value=identityInfo.profile.name;
   try{await load();}catch(error){$('status').textContent='Moment was kept, but the shelf did not refresh: '+error.message;}
  }catch(error){
   $('status').textContent='Outcome unknown. Your words remain. Press Keep again to check the same request.';
- }finally{$('keep').disabled=false;}
+ }finally{$('keep').disabled=!(identityInfo&&(identityInfo.profile||identityInfo.account.kind==='shared'));}
 });
 load().catch(error=>$('status').textContent='Unable to read the moments: '+error.message);
 </script>
