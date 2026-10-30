@@ -1,5 +1,6 @@
 const VIEW = 'public_lands_nameweb_prosemap_crossings_v0';
 const OCCURRENCE_ID = /^[a-z0-9][a-z0-9:_-]{0,127}$/i;
+const VISIBLE_OCCURRENCES = new Set(['pl111:james:remarks']);
 
 function json(body, status = 200, extraHeaders = {}) {
   return new Response(JSON.stringify(body), {
@@ -99,6 +100,9 @@ export async function handleGlean(request, env, url) {
   if (!OCCURRENCE_ID.test(occurrenceId)) {
     return error('invalid_occurrence_id', 400);
   }
+  if (!VISIBLE_OCCURRENCES.has(occurrenceId)) {
+    return error('crossing_not_found', 404);
+  }
 
   let row;
   try {
@@ -112,4 +116,5 @@ export async function handleGlean(request, env, url) {
 
   return json(crossing(row));
 }
+
 
