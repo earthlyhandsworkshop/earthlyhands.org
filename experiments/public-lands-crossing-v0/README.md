@@ -9,7 +9,11 @@ Source preparation for one isolated, protected, GET-only road over the existing
 
 The active shared Worker must continue to perform Cloudflare Access
 authentication and its account allowlist check before dispatching here. The
-handler performs one parameterized lookup and exposes no write method.
+handler additionally allows only the single earned v0 occurrence before D1 is
+touched. Other well-formed occurrence IDs receive the same not-found response
+without a query. Adding another object requires an explicit source-and-permission
+review; URL possession and GET alone are not authorization. The handler performs
+one parameterized lookup and exposes no write method.
 
 ## Preserved distinctions
 
@@ -21,6 +25,7 @@ handler performs one parameterized lookup and exposes no write method.
 - A protected read is not a source edit, GitHub merge, deployment, rendered
   browser validation, public conclusion, or verified companion identity.
 - The held scan is not present in this route or repository slice.
+- This v0 object allowlist is deliberately narrower than the backing view.
 
 ## Current state
 
@@ -33,3 +38,4 @@ Run the local tests with:
 ```sh
 node --test experiments/public-lands-crossing-v0/handler.test.mjs
 ```
+
