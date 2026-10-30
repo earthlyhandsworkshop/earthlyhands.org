@@ -22,6 +22,8 @@ one parameterized lookup and exposes no write method.
   representation remain distinct instruments.
 - The latest reading is not automatic authority.
 - Blank locality and total acreage remain blank; geometry remains unearned.
+- `no-entry-observed` is a dated, bounded register observation—not proof of
+  complete-corpus membership, historical absence, death, dispossession, or identity.
 - A protected read is not a source edit, GitHub merge, deployment, rendered
   browser validation, public conclusion, or verified companion identity.
 - The held scan is not present in this route or repository slice.
@@ -38,4 +40,5 @@ Run the local tests with:
 ```sh
 node --test experiments/public-lands-crossing-v0/handler.test.mjs
 ```
+
 
