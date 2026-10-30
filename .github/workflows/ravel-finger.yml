@@ -1,0 +1,31 @@
+name: Ravel fictional finger gate
+
+on:
+  push:
+    branches:
+      - ravel/two-source-d1-v0
+    paths:
+      - 'experiments/ravel-finger-d1-v0/**'
+      - '.github/workflows/ravel-finger.yml'
+  pull_request:
+    paths:
+      - 'experiments/ravel-finger-d1-v0/**'
+      - '.github/workflows/ravel-finger.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  proof-boundary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate worker module syntax
+        run: node --check experiments/ravel-finger-d1-v0/handler.mjs
+      - name: Run synthetic SQLite and Worker boundary tests
+        run: |
+          python3 experiments/ravel-finger-d1-v0/test_local.py
+          node --test experiments/ravel-finger-d1-v0/handler.test.mjs
