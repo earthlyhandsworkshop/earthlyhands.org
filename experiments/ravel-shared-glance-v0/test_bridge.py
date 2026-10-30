@@ -24,8 +24,9 @@ class BridgeTests(unittest.TestCase):
         self.assertEqual(self.db.execute('PRAGMA foreign_key_check').fetchall(),[])
         self.assertEqual(self.db.execute('SELECT COUNT(DISTINCT instrument) FROM bench_glance_v0').fetchone()[0],2)
         self.assertEqual(self.db.execute('SELECT COUNT(*) FROM bench_crossing_runs_v0').fetchone()[0],2)
-        self.assertEqual(self.db.execute("SELECT origin_id FROM bench_latest_event_by_proposition_v0 WHERE instrument='Mullion'").fetchone()[0],'mtv0-fixture-001-c03')
-        self.assertEqual(self.db.execute("SELECT origin_id FROM bench_latest_event_by_proposition_v0 WHERE instrument='Ravel'").fetchone()[0],'ravel-fictional-reading-second')
+        self.assertEqual(self.db.execute("SELECT origin_id FROM bench_latest_change_by_proposition_v1 WHERE instrument='Mullion'").fetchone()[0],'mtv0-fixture-001-c03')
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM bench_latest_change_by_proposition_v1 WHERE instrument='Ravel'").fetchone()[0],0)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM bench_readings_by_proposition_v1 WHERE instrument='Ravel'").fetchone()[0],2)
         # A historical sentence remains in its own occurrence even after dissent.
         self.assertEqual(self.db.execute("SELECT json_extract(payload_json,'$.words') FROM bench_crossing_records_v0 WHERE origin_id='ravel-fictional-westford-council'").fetchone()[0],
            'The council declined the proposed footbridge at West Ford.')
@@ -82,9 +83,28 @@ class BridgeTests(unittest.TestCase):
         copy_one(self.db,self.r)
         # A newer reading in one proposition does not replace an occurrence
         # belonging to another proposition, or the other instrument.
-        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM bench_latest_event_by_proposition_v0 WHERE instrument='Ravel'").fetchone()[0],1)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM bench_latest_change_by_proposition_v1 WHERE instrument='Ravel'").fetchone()[0],0)
         copy_one(self.db,self.m)
-        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM bench_latest_event_by_proposition_v0').fetchone()[0],2)
+        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM bench_latest_change_by_proposition_v1').fetchone()[0],1)
+
+    def test_old_latest_view_retired_without_erasing_rows(self):
+        copy_one(self.db,self.m)
+        copy_one(self.db,self.r)
+        self.db.execute('CREATE VIEW bench_latest_event_by_proposition_v0 AS SELECT * FROM bench_crossing_records_v0')
+        ensure_db(self.db)
+        self.assertIsNone(self.db.execute("SELECT name FROM sqlite_master WHERE type='view' AND name='bench_latest_event_by_proposition_v0'").fetchone())
+        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM bench_crossing_records_v0').fetchone()[0],7)
+        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM bench_readings_by_proposition_v1').fetchone()[0],2)
+
+    def test_dissent_remains_reading_not_latest_truth(self):
+        copy_one(self.db,self.m)
+        copy_one(self.db,self.r)
+        readings=self.db.execute("SELECT origin_id,source_verb,occurrence_order,payload_json FROM bench_readings_by_proposition_v1 WHERE instrument='Ravel' ORDER BY occurrence_order").fetchall()
+        self.assertEqual([(r[0],r[1]) for r in readings],
+          [('ravel-fictional-reading-ravel','propose'),('ravel-fictional-reading-second','dissent')])
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM bench_latest_change_by_proposition_v1 WHERE instrument='Ravel'").fetchone()[0],0)
+        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM bench_glance_v0').fetchone()[0],7)
+        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM bench_readings_by_proposition_v1').fetchone()[0],2)
 
 if __name__=='__main__':
     unittest.main(verbosity=2)
