@@ -13,10 +13,10 @@ function response(body,status=200){
   }});
 }
 function reject(reason,status=400){return response({error:reason},status);}
-function bounded(value,max){
+function bounded(value,max,multiline=false){
   if(typeof value!=='string')return '';
   const clean=value.trim();
-  if(!clean||clean.length>max||/[\u0000-\u001f]/u.test(clean))return '';
+  if(!clean||clean.length>max||(multiline ? /[\u0000-\u0008\u000b-\u001f]/u.test(clean) : /[\u0000-\u001f]/u.test(clean)))return '';
   return clean;
 }
 function uuid(value){
@@ -34,7 +34,7 @@ function cleanRecord(data){
   if(!data||typeof data!=='object'||Array.isArray(data))return null;
   const by=bounded(data.noticed_by,80);
   const hand=bounded(data.noticed_hand,80);
-  const moment=bounded(data.moment,1000);
+  const moment=bounded(data.moment,1000,true);
   const road=bounded(data.source_label,160);
   const url=sourceUrl(data.source_url);
   const key=data.request_key;
