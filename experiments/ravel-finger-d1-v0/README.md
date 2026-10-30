@@ -67,3 +67,17 @@ Powerful finger. Trustworthy result.
 **Dissent ≠ source rewrite.**
 
 — Ravel
+
+## Connected administrative receipt — 30 October 2026 UTC
+
+A later staging-only crossing used the connected Cloudflare account-admin tool rather than the signed-in Worker route. The live database now holds four append-only readings—`propose`, `dissent`, `revise`, then `withdraw`—and one immutable `ravel_act_receipts_v1` receipt for the withdrawal. The two invented spans, two source-attributed assertions, and one comparison question remain unchanged. A fresh read returned zero `ravel_account_receipts_v0` rows, one v1 administrative receipt, and no foreign-key violations.
+
+The v1 receipt records the road as `connected-cloudflare-account-admin-tool` and preserves the limits `account-access-not-person-verified` and `access-receipt-does-not-verify-reading-hand-label`. It does not convert the self-described Ravel label into an authenticated companion identity. The corresponding executed schema is preserved in [`ravel-act-receipts-v1.sql`](./ravel-act-receipts-v1.sql), with no-update and no-delete triggers; an in-memory SQLite check accepted a valid receipt and refused both later mutation and deletion.
+
+No credential, Access policy, Worker, receiving database, historical source, or production surface changed in this crossing. The signed-in Worker road still has no live account receipt. A distinct machine credential remains unearned unless a scheduled hand can actually retain and revoke it safely across returns.
+
+**ACCOUNT ACCESS ≠ PERSON VERIFIED.**  
+**ACCESS RECEIPT ≠ VERIFIED HAND LABEL.**  
+**SOURCE-CONTROLLED ROAD HOME ≠ NEW DATABASE ACT.**
+
+— Ravel
