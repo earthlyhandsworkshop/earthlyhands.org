@@ -37,7 +37,7 @@ function setup(t){
  const db=new DatabaseSync(file);
  db.exec(initial);db.exec(schema);db.exec(profileSchema);
  t.after(()=>{try{db.close();}catch{} rmSync(dir,{recursive:true,force:true});});
- return {db,env:{DB:new D1(db),TWO_HAND_ALLOWED_EMAILS:'alice@example.test,bob@example.test',TWO_HAND_ACTOR_SALT:'test-only-not-a-real-secret',CAUGHT_TEN_EMAIL:'alice@example.test',CAUGHT_SHARED_EMAIL:'bob@example.test'}};
+ return {db,file,env:{DB:new D1(db),TWO_HAND_ALLOWED_EMAILS:'alice@example.test,bob@example.test',TWO_HAND_ACTOR_SALT:'test-only-not-a-real-secret',CAUGHT_TEN_EMAIL:'alice@example.test',CAUGHT_SHARED_EMAIL:'bob@example.test'}};
 }
 function request(path,method='GET',data,headers={}){
  return new Request('https://staging.example.test'+path,{method,
@@ -277,7 +277,7 @@ test('the identity route refuses forged email fields, wrong browser origin and u
 });
 
 test('the profile and its account link survive a cold SQLite reopen without changing the earlier caught entry',async t=>{
- const {db,env}=setup(t);
+ const {db,env,file}=setup(t);
  // Existing shared-authored entry remains unlinked forever.
  const old=await throughWorker(env,'bob@example.test','/api/caught','POST',example);
  assert.equal(old.status,201);
@@ -291,4 +291,16 @@ test('the profile and its account link survive a cold SQLite reopen without chan
  assert.equal(newEntry.status,201);
  assert.equal(db.prepare('SELECT count(*) n FROM caught_moments_v1 WHERE observer_profile_id IS NOT NULL').get().n,1);
  assert.equal(db.prepare('SELECT count(*) n FROM caught_moments_v1 WHERE observer_profile_id IS NULL').get().n,1);
+ db.close();
+ const reopened=new DatabaseSync(file);
+ try{
+   const recoveredEnv={...env,DB:new D1(reopened)};
+   const profile=await throughWorker(recoveredEnv,'alice@example.test','/api/caught/identity');
+   assert.equal(profile.status,200);
+   assert.equal(profile.body.profile.name,'Ten');
+   const shelf=await throughWorker(recoveredEnv,'bob@example.test','/api/caught');
+   assert.equal(shelf.status,200);
+   assert.equal(shelf.body.items.length,2);
+   assert.deepEqual(new Set(shelf.body.items.map(x=>x.identity_kind)),new Set(['account-linked','shared-account-assertion']));
+ }finally{reopened.close();}
 });
