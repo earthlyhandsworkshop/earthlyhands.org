@@ -1,4 +1,16 @@
-# Two hands, one fictional page — live D1 crossing (NOT DEPLOYED)
+# Two hands, one fictional page — protected live staging experiment (NOT THE PUBLIC SITE)
+
+## Verified live staging standing — 30 October 2026 UTC (supersedes obsolete predeployment claims below)
+
+The **separate Access-protected staging Worker is deployed and serving the fictional page**. Ten's iPhone screenshot showed the page and “Server revision 1”; an authenticated Cloudflare D1 SQL read independently returned the same fictional body at `version=1`, with exactly **one** matching revision-history receipt (timestamp `2026-10-30T02:34:34.786Z`). The body was unchanged; the receipt proves a committed first save, **not** a substantive edit or two-person encounter.
+
+Direct authenticated Cloudflare API inspection showed two configured `Allow` Access policies, each with one explicit email rule, for the staging Worker app. Worker settings show the staging `DB` binding and both required secret **bindings** (values not exposed). Active deployment annotation identifies a pinned tested draft source at GitHub commit `655f73ba` with 100% traffic; this is an API deployment, not a live GitHub-linked build. The staging Worker's build-configuration API returned **not found**, with **zero build triggers** and **zero builds**. Consequently pushing this *draft branch* is not currently configured to deploy the staging Worker; future changes to build linkage must be checked before every push. These branch-only edits are **not yet deployed**.
+
+**Still unproved:** signed-out rejection from an actual external browser, successful second-identity sign-in and write, first-session refresh after second-hand write, stale-write rejection over live HTTP, complete export/restore and source permissions. Access policy configuration does not substitute for testing an actual session. This Worker remains disposable fictional staging; no historical Google Drive files, public website routes, or production receiving D1 were changed.
+
+**Current draft-client correction:** when a browser is blocked with writing entered before its first state load, Save now explains a copy/clear/refresh/reconcile road instead of doing nothing. A confirmed `400 invalid_write` releases the failed idempotency request key so corrected writing can be saved; an uncertain transport outcome retains the immutable key for replay. Accepted revision receipts must equal the attempted expected version plus one. Scripted-browser regression tests accompany this draft-only change. They do not establish that the updated code is deployed.
+
+Earlier chronological notes below describe the path to this point and may state “not deployed”; those claims are superseded by this verified standing.
 
 ## Current crossing — 29 October 2026 (replaces older unverified status below)
 
