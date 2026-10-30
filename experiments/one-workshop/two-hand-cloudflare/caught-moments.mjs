@@ -259,6 +259,14 @@ export async function handleCaught(request,env,url,principal){
   if(mode==='shared'&&profile)return reject('shared_profile_conflict',403);
   const record=cleanRecord(parsed,profile);
   if(!record)return reject('invalid_caught_moment',400);
+  if(mode==='shared'){
+    // The shared sign-in may offer an unverified label, but may not impersonate
+    // the exact name of a profile already bound to an individual credential.
+    try{
+      const taken=await env.DB.prepare('SELECT profile_id FROM caught_profiles_v1 WHERE lower(display_name)=lower(?) LIMIT 1').bind(record.noticed_by).first();
+      if(taken)return reject('registered_name_requires_personal_sign_in',409);
+    }catch{return reject('identity_store_unavailable',503);}
+  }
   try{return await insert(env.DB,record,principal.actor);}catch{return reject('write_unavailable',503);}
  }
  return reject('not_found',404);
