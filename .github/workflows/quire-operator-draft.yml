@@ -1,0 +1,29 @@
+name: Quire protected operator draft tests
+
+on:
+  push:
+    branches:
+      - quire/d1-operator-v0
+    paths:
+      - 'experiments/quire-d1-v0/**'
+      - '.github/workflows/quire-operator-draft.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  isolated-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Worker module syntax
+        run: node --check experiments/quire-d1-v0/handler.mjs
+      - name: Browser retry / immutable request-key tests
+        run: node --test experiments/quire-d1-v0/handler.test.mjs
+      - name: SQLite history cursor test
+        run: python3 experiments/quire-d1-v0/test_history.py
