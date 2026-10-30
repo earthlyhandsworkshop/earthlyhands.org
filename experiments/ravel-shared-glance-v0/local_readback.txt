@@ -1,0 +1,10 @@
+mullion-fictional.json {'run_id': 'fictional-snapshot-7f3bad2524dddc81bc21034e06ca3bfa9d5d2587', 'status': 'copied', 'count': 3}
+ravel-fictional.json {'run_id': 'fictional-snapshot-fc8cfe780de29cd64caf7ed0ef6b66ddda3d3b70', 'status': 'copied', 'count': 4}
+foreign_key_check: []
+mullion-fictional-source-db | Mullion | change-event | fiction://blue-door/page | door-threshold-status | mtv0-fixture-001-p01 | Mullion (fictional label) | unverified-test-label | propose | copy-receipt-not-source-authority
+mullion-fictional-source-db | Mullion | change-event | fiction://blue-door/page | door-threshold-status | mtv0-fixture-001-a02 | Mullion (fictional label) | unverified-test-label | accept | copy-receipt-not-source-authority
+mullion-fictional-source-db | Mullion | change-event | fiction://blue-door/page | door-threshold-status | mtv0-fixture-001-c03 | Mullion (fictional label) | unverified-test-label | correct | copy-receipt-not-source-authority
+ravel-fictional-source-db | Ravel | source-occurrence | fiction://west-ford/council | one-footbridge-proposal | ravel-fictional-westford-council | Invented clerk | unverified-test-label | decline | copy-receipt-not-source-authority
+ravel-fictional-source-db | Ravel | source-occurrence | fiction://west-ford/summary | one-footbridge-proposal | ravel-fictional-westford-summary | Invented clerk | unverified-test-label | characterize | copy-receipt-not-source-authority
+ravel-fictional-source-db | Ravel | interpretation | fiction://west-ford/comparison | scope-of-refusal | ravel-fictional-reading-ravel | Ravel (fictional label) | unverified-test-label | propose | copy-receipt-not-source-authority
+ravel-fictional-source-db | Ravel | interpretation | fiction://west-ford/comparison | scope-of-refusal | ravel-fictional-reading-second | Second hand (fictional label) | unverified-test-label | dissent | copy-receipt-not-source-authority
