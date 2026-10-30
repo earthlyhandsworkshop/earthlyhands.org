@@ -20,6 +20,7 @@ class D1 {
 }
 const initial=readFileSync(new URL('./two-hand-cloudflare/migrations/0001_fixture.sql',import.meta.url),'utf8');
 const schema=readFileSync(new URL('./two-hand-cloudflare/migrations/0002_caught_moments.sql',import.meta.url),'utf8');
+const profileSchema=readFileSync(new URL('./two-hand-cloudflare/migrations/0003_caught_identity.sql',import.meta.url),'utf8');
 const keyA='3a20e247-cd33-4f08-8180-e6514d10e284';
 const keyB='3a20e247-cd33-4f08-8180-e6514d10e285';
 const example={
@@ -34,9 +35,9 @@ function setup(t){
  const dir=mkdtempSync(join(tmpdir(),'caught-room-'));
  const file=join(dir,'test.sqlite');
  const db=new DatabaseSync(file);
- db.exec(initial);db.exec(schema);
+ db.exec(initial);db.exec(schema);db.exec(profileSchema);
  t.after(()=>{try{db.close();}catch{} rmSync(dir,{recursive:true,force:true});});
- return {db,env:{DB:new D1(db),TWO_HAND_ALLOWED_EMAILS:'alice@example.test,bob@example.test',TWO_HAND_ACTOR_SALT:'test-only-not-a-real-secret'}};
+ return {db,env:{DB:new D1(db),TWO_HAND_ALLOWED_EMAILS:'alice@example.test,bob@example.test',TWO_HAND_ACTOR_SALT:'test-only-not-a-real-secret',CAUGHT_TEN_EMAIL:'alice@example.test',CAUGHT_SHARED_EMAIL:'bob@example.test'}};
 }
 function request(path,method='GET',data,headers={}){
  return new Request('https://staging.example.test'+path,{method,
@@ -45,7 +46,7 @@ function request(path,method='GET',data,headers={}){
 }
 async function direct(env,actor,path,method='GET',data,headers={}){
  const req=request(path,method,data,headers);
- const r=await handleCaught(req,env,new URL(req.url),actor);
+ const r=await handleCaught(req,env,new URL(req.url),{actor,email:'bob@example.test'});
  return {status:r.status,body:r.headers.get('content-type')?.includes('application/json')?await r.json():await r.text()};
 }
 const ctx=(email)=>({access:{async getIdentity(){return {email};}}});
@@ -59,7 +60,7 @@ test('private web door exists and empty collection is visible to authorized hand
  const page=await throughWorker(env,'alice@example.test','/caught');
  assert.equal(page.status,200);
  assert.match(page.body,/Caught here/);
- assert.match(page.body,/not independently authenticated/);
+ assert.match(page.body,/Who holds the camera/);
  assert.equal((await throughWorker(env,null,'/api/caught')).status,403);
  assert.equal((await throughWorker(env,'mallory@example.test','/api/caught')).status,403);
  const contents=await throughWorker(env,'bob@example.test','/api/caught');
@@ -69,7 +70,7 @@ test('private web door exists and empty collection is visible to authorized hand
 });
 test('another hand can keep a multiline observation and a pointer; both readers see it',async t=>{
  const {db,env}=setup(t);
- const first=await throughWorker(env,'alice@example.test','/api/caught','POST',example);
+ const first=await throughWorker(env,'bob@example.test','/api/caught','POST',example);
  assert.equal(first.status,201);
  assert.equal(first.body.ok,true);
  assert.equal(first.body.receipt.moment,example.moment);
@@ -80,6 +81,7 @@ test('another hand can keep a multiline observation and a pointer; both readers 
  assert.equal(other.body.items[0].noticed_by,'An observer');
  assert.equal(other.body.items[0].noticed_hand,'Another hand');
  assert.equal(other.body.items[0].source_url,example.source_url);
+ assert.equal(other.body.items[0].identity_kind,'shared-account-assertion');
  assert.equal(JSON.stringify(other.body).includes('actor_hash'),false);
  assert.equal(JSON.stringify(other.body).includes(keyA),false);
  const stored=db.prepare('SELECT actor_hash,request_key,scope,status FROM caught_moments_v1').get();
@@ -90,14 +92,16 @@ test('another hand can keep a multiline observation and a pointer; both readers 
 });
 test('uncertain network retry with same request is idempotent and cannot be hijacked',async t=>{
  const {db,env}=setup(t);
- const alice=await throughWorker(env,'alice@example.test','/api/caught','POST',example);
- assert.equal(alice.status,201);
- const replay=await throughWorker(env,'alice@example.test','/api/caught','POST',example);
+ const bob=await throughWorker(env,'bob@example.test','/api/caught','POST',example);
+ assert.equal(bob.status,201);
+ const replay=await throughWorker(env,'bob@example.test','/api/caught','POST',example);
  assert.equal(replay.status,201);
- assert.equal(replay.body.receipt.id,alice.body.receipt.id);
- const wrongAccount=await throughWorker(env,'bob@example.test','/api/caught','POST',example);
+ assert.equal(replay.body.receipt.id,bob.body.receipt.id);
+ const ten=await throughWorker(env,'alice@example.test','/api/caught/identity','POST',{workshop_name:'Ten'});
+ assert.equal(ten.status,200);
+ const wrongAccount=await throughWorker(env,'alice@example.test','/api/caught','POST',{...example,noticed_by:'Ten'});
  assert.equal(wrongAccount.status,409);
- const different=await throughWorker(env,'alice@example.test','/api/caught','POST',{...example,moment:'different words'});
+ const different=await throughWorker(env,'bob@example.test','/api/caught','POST',{...example,moment:'different words'});
  assert.equal(different.status,409);
  assert.equal(db.prepare('SELECT COUNT(*) as n FROM caught_moments_v1').get().n,1);
 });
