@@ -31,11 +31,25 @@ function validPageSize(n) {
   return n;
 }
 
-function nextBeforeOrdinal(beforeByProposition, propositionKey) {
+// The cursor must preserve EVERY stable sort key, not only proposition_ordinal.
+function nextBeforeCursor(beforeByProposition, propositionKey) {
   const x = beforeByProposition?.[propositionKey];
   if (x === undefined) return null;
-  if (!validOrdinal(x)) throw new RangeError('invalid pagination cursor');
-  return x;
+  if (!x || typeof x !== 'object' || Array.isArray(x) ||
+      !validOrdinal(x.proposition_ordinal) || !validOrdinal(x.event_ordinal) ||
+      !asText(x.event_id)) throw new RangeError('invalid pagination cursor');
+  return { proposition_ordinal: x.proposition_ordinal, event_ordinal: x.event_ordinal, event_id: x.event_id };
+}
+
+// Descending, deterministic order. An event ID disambiguates equal ordinals.
+function readingOrder(a, b) {
+  if (a.proposition_ordinal !== b.proposition_ordinal) return a.proposition_ordinal < b.proposition_ordinal ? 1 : -1;
+  if (a.event_ordinal !== b.event_ordinal) return a.event_ordinal < b.event_ordinal ? 1 : -1;
+  return a.event_id === b.event_id ? 0 : a.event_id < b.event_id ? 1 : -1;
+}
+
+function cursorOf(reading) {
+  return { proposition_ordinal: reading.proposition_ordinal, event_ordinal: reading.event_ordinal, event_id: reading.event_id };
 }
 
 /**
@@ -101,16 +115,20 @@ export function projectForReader(snapshot, policy) {
     });
   }
   const propositions = [...groups.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([key, readings]) => {
-    readings.sort((a, b) => b.proposition_ordinal - a.proposition_ordinal || b.event_ordinal - a.event_ordinal);
-    const cursor = nextBeforeOrdinal(policy.beforeByProposition, key);
-    const reachable = cursor === null ? readings : readings.filter(r => r.proposition_ordinal < cursor);
+    readings.sort(readingOrder);
+    // Duplicate visible tuples cannot be paged losslessly; refuse, never skip.
+    for (let i = 1; i < readings.length; i++) {
+      if (readingOrder(readings[i - 1], readings[i]) === 0) throw new TypeError('duplicate visible pagination key');
+    }
+    const cursor = nextBeforeCursor(policy.beforeByProposition, key);
+    const reachable = cursor === null ? readings : readings.filter(r => readingOrder(r, cursor) > 0);
     const page = reachable.slice(0, pageSize);
     return {
       proposition_key: key,
       latest_accessible: cursor === null ? (readings[0] ?? null) : null,
       // This is a local, access-bounded page, never an overall population count.
       readings: page,
-      older_before_ordinal: reachable.length > pageSize ? page.at(-1).proposition_ordinal : null
+      older_before_cursor: reachable.length > pageSize ? cursorOf(page.at(-1)) : null
     };
   });
   const visible = propositions.filter(p => p.readings.length > 0);
@@ -138,7 +156,7 @@ function safeJacketUrl(raw) {
 export function renderHtml(view) {
   const sections = view.propositions.map(p => {
     const rows = p.readings.map((r, i) => `<article class="reading"><h3>${i === 0 && p.latest_accessible ? 'Latest accessible reading' : 'Earlier accessible reading'} · proposition ${r.proposition_ordinal}</h3><p>${escapeHtml(r.observation)}</p><p class="meta">${escapeHtml(r.maker)} · ${escapeHtml(r.observed_at)} · ${escapeHtml(r.relation_role)} · ${escapeHtml(r.evidence_scope)}</p><p><strong>Evidence road:</strong> ${escapeHtml(r.evidence_road)}</p><p><strong>Authority limit:</strong> ${escapeHtml(r.authority_limit)}</p></article>`).join('');
-    const earlier = p.older_before_ordinal === null ? '' : `<p class="meta">Earlier accessible readings exist. The next cursor for this proposition is ${p.older_before_ordinal}; no claim is made about records outside this access view.</p>`;
+    const earlier = p.older_before_cursor === null ? '' : '<p class="meta">Earlier accessible readings can be requested with this proposition\'s returned cursor. No claim is made about records outside this access view.</p>';
     return `<section><h2>${escapeHtml(p.proposition_key)}</h2>${rows}${earlier}</section>`;
   }).join('');
   const link = view.jacket ? safeJacketUrl(view.jacket.url) : null;
