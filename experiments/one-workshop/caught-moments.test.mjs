@@ -128,3 +128,56 @@ test('no editor, deletion, source copying or publication route is created',async
  assert.equal(normal.body.version,0);
  assert.equal((await throughWorker(env,'alice@example.test','/')).status,200);
 });
+
+
+test('older observations remain reachable after forty, including shared-millisecond ties and concurrent new arrivals',async t=>{
+ const {db,env}=setup(t);
+ const timestamp='2026-10-30T02:34:34.786Z';
+ const id=n=>'10000000-0000-4000-8000-'+String(n).padStart(12,'0');
+ const key=n=>'20000000-0000-4000-8000-'+String(n).padStart(12,'0');
+ function put(n,when){
+  db.prepare('INSERT INTO caught_moments_v1 (id,request_key,noticed_by,noticed_hand,moment,source_label,source_url,actor_hash,created_at) VALUES (?,?,?,?,?,?,?,?,?)')
+    .run(id(n),key(n),'An observer','Another hand','Fictional observation '+n,'Test jacket','https://github.com/example/repository/blob/main/test.md','fictional-actor',when);
+ }
+ for(let n=0;n<93;n++)put(n,timestamp);
+ const first=await throughWorker(env,'alice@example.test','/api/caught');
+ assert.equal(first.status,200);
+ assert.equal(first.body.items.length,40);
+ assert.equal(first.body.items[0].id,id(92));
+ assert.ok(first.body.nextBefore);
+ put(93,'2026-10-30T02:34:34.787Z'); // A new moment must not disrupt a walk into older history.
+ const seen=[...first.body.items.map(x=>x.id)];
+ let cursor=first.body.nextBefore;
+ const sizes=[40];
+ while(cursor){
+  const response=await throughWorker(env,'bob@example.test','/api/caught?before='+encodeURIComponent(cursor));
+  assert.equal(response.status,200);
+  const body=response.body;
+  sizes.push(body.items.length);
+  seen.push(...body.items.map(x=>x.id));
+  cursor=body.nextBefore;
+  assert.ok(sizes.length<=4,'pagination must terminate');
+ }
+ assert.deepEqual(sizes,[40,40,13]);
+ assert.equal(new Set(seen).size,93);
+ assert.deepEqual(seen,Array.from({length:93},(_,n)=>id(92-n)));
+ const fresh=await throughWorker(env,'alice@example.test','/api/caught');
+ assert.equal(fresh.status,200);
+ assert.equal(fresh.body.items[0].id,id(93));
+ assert.equal(db.prepare('SELECT COUNT(*) AS n FROM caught_moments_v1').get().n,94);
+});
+
+test('bad, duplicate or malformed cursors fail closed without changing observation records',async t=>{
+ const {db,env}=setup(t);
+ for(const suffix of [
+  '?before=', '?before=not-a-cursor',
+  '?before=2026-10-30T02:34:34.786Z~not-a-uuid',
+  '?before=2026-10-30T02:34:34.786Z~10000000-0000-4000-8000-000000000001&before=2026-10-30T02:34:34.786Z~10000000-0000-4000-8000-000000000001',
+  '?before='+encodeURIComponent('2026-10-30T02:34:34.786Z~10000000-0000-4000-8000-000000000001 extra')
+ ]){
+  const response=await throughWorker(env,'alice@example.test','/api/caught'+suffix);
+  assert.equal(response.status,400);
+  assert.equal(response.body.error,'invalid_cursor');
+ }
+ assert.equal(db.prepare('SELECT COUNT(*) AS n FROM caught_moments_v1').get().n,0);
+});
