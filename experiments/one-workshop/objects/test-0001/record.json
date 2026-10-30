@@ -1,0 +1,29 @@
+{
+  "schema": "earthlyhands.one-workshop.specimen.v0",
+  "id": "eh:test:0001",
+  "title": "A sheet on the workbench",
+  "kind": "fictional-test",
+  "canonical_path": "objects/test-0001/document.md",
+  "source": {
+    "description": "Fictional specimen written for architecture testing",
+    "rights": "authored-for-test",
+    "provenance_status": "known-test"
+  },
+  "working": {
+    "visibility": "workshop",
+    "revision": "draft-001",
+    "last_editor": "Small Door",
+    "versioning_requirement": "atomic-compare-and-swap"
+  },
+  "publication": {
+    "status": "not-published",
+    "approved_revision": null,
+    "approved_by": null,
+    "approved_at": null
+  },
+  "export": {
+    "required": true,
+    "hash_algorithm": "sha256",
+    "hashes": "to-be-computed-on-export"
+  }
+}

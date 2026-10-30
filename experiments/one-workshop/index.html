@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One Workshop — first walk</title>
+<style>
+:root{font-family:Georgia,serif;background:#f4f0e7;color:#282b27}body{max-width:800px;margin:auto;padding:2rem 1rem;line-height:1.6}
+nav{font:13px system-ui;color:#60675d;letter-spacing:.08em;text-transform:uppercase}h1{font-size:2.2rem;font-weight:normal}
+section{background:#fffdf8;border:1px solid #d4d0c6;padding:1.4rem;margin:1rem 0;border-radius:8px}
+button{cursor:pointer;padding:.7rem .9rem;margin:.3rem .3rem .3rem 0;border:1px solid #555f50;border-radius:6px;background:white;color:#283529}
+button:focus-visible,textarea:focus-visible{outline:3px solid #9c7347}textarea{width:100%;box-sizing:border-box;min-height:180px;padding:1rem;font:16px/1.6 Georgia}
+small,.muted{color:#5c6259}pre{white-space:pre-wrap;word-break:break-word}#public{border-left:4px solid #577055}
+</style>
+<nav>Earthly Hands / Experimental ground / Old Growth Workbench</nav>
+<h1>One Workshop</h1>
+<p>An invitation to try the smallest working instrument. This is a browser-only demonstration using fictional text. Nothing here is saved to GitHub, Cloudflare or the public site.</p>
+<section><h2>Working sheet</h2><p><small>ID: eh:test:0001 · Workshop draft</small></p>
+<label for="draft">A sheet on the workbench</label>
+<textarea id="draft"></textarea>
+<p><button id="save">Save local revision</button><button id="approve">Approve this revision for public view</button></p>
+<p id="status" role="status"></p>
+</section>
+<section id="public"><h2>Public doorway</h2><p id="release">Not yet published.</p></section>
+<section><h2>History and portability</h2><p>These test revisions live in this browser tab only. Export preserves the document identity, current draft, revision history, and approved public snapshot together.</p>
+<ol id="history"></ol><button id="export">Export JSON</button><label for="import">Import JSON</label> <input id="import" type="file" accept=".json,application/json"><button id="reset">Reset demonstration</button></section>
+<script type="module" src="./browser.mjs"></script></html>
