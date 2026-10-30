@@ -97,3 +97,47 @@ test('a lost save response retries with identical request ID, preserving newer t
   assert.notEqual(attempts[1].requestId, attempts[2].requestId);
   assert.equal(attempts[2].expectedVersion, 1);
 });
+
+test('save before initial read gives a usable retained-draft warning instead of silence', async () => {
+  let releaseFirst;
+  const view = browser(() => new Promise(resolve => { releaseFirst = resolve; }));
+  view.body = 'I started before the first revision reached my phone.';
+  await view.click('save');
+  assert.match(view.status, /Cannot save before the first server revision loads/);
+  assert.match(view.status, /Copy your draft words before clearing the box/);
+  assert.equal(view.body, 'I started before the first revision reached my phone.');
+  releaseFirst(json({ id: 'fictional-door', version: 0, body: 'seed' }));
+  await flush();
+  assert.equal(view.body, 'I started before the first revision reached my phone.');
+  await view.click('refresh');
+  assert.match(view.status, /Refresh refused/);
+  assert.equal(view.body, 'I started before the first revision reached my phone.');
+});
+
+test('a definite invalid_write rejection releases the key for a corrected attempt', async () => {
+  let current = { version: 0, body: 'seed' };
+  const submitted = [];
+  const view = browser(async (url, options = {}) => {
+    if (url === '/api/state' && !options.method) return json(current);
+    if (url !== '/api/state' || options.method !== 'PUT') throw Error('unexpected route');
+    const payload = JSON.parse(options.body);
+    submitted.push(payload);
+    if (new TextEncoder().encode(payload.body).byteLength > 8192) return json({ error: 'invalid_write' }, 400);
+    if (payload.expectedVersion !== current.version) return json({ error: 'stale_or_reused_request', currentVersion: current.version }, 409);
+    current = { version: current.version + 1, body: payload.body };
+    return json({ acceptedVersion: current.version, state: current, replay: false });
+  });
+  await flush();
+  view.body = 'x'.repeat(8193);
+  await view.click('save');
+  assert.match(view.status, /Save was refused: invalid_write/);
+  assert.equal(view.body.length, 8193);
+  assert.equal(current.version, 0);
+  view.body = 'Corrected fictional line.';
+  await view.click('save');
+  assert.equal(submitted.length, 2);
+  assert.notEqual(submitted[0].requestId, submitted[1].requestId);
+  assert.equal(current.version, 1);
+  assert.equal(current.body, 'Corrected fictional line.');
+  assert.match(view.status, /Saved in shared database/);
+});
