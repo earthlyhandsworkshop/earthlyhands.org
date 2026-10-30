@@ -61,7 +61,7 @@ function readCursor(url){
   const values=url.searchParams.getAll('before');
   if(values.length>1)return null;
   if(!values.length)return {createdAt:null,id:null};
-  const match=/^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z)~([0-9a-fA-F-]{36})$/.exec(values[0]);
+  const match=/^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z)~([0-9a-fA-F-]{36})$/.exec(values[0]);
   if(!match||!uuid(match[2]))return null;
   return {createdAt:match[1],id:match[2].toLowerCase()};
 }
