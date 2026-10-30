@@ -46,6 +46,13 @@ test('returns the bounded crossing without changing its states', async () => {
   assert.equal(body.occurrence.id, 'pl111:james:remarks');
   assert.equal(body.readings.history_count, 3);
   assert.equal(body.prose_map.geometry_state, 'none-earned');
+  assert.equal(
+    body.source_roads.prose_map_register.absence_boundary,
+    'dated register observation; not proof of complete-corpus or historical absence'
+  );
+  assert.ok(body.boundaries.includes(
+    'no-entry-observed is a dated register observation, not proof of complete-corpus or historical absence'
+  ));
   assert.equal(body.receipt.source_edit_state, 'no-source-edit');
   assert.equal(body.receipt.deployment_state, 'not-deployed');
   assert.deepEqual(body.prose_map.typed_spans.map(x => x.text), ['Poor land', 'good water']);
@@ -82,5 +89,6 @@ test('keeps missing rows and storage failure distinct', async () => {
   assert.equal((await call('/api/glean/v0/crossings?occurrence_id=pl111%3Ajames%3Aremarks', {}, envWith(null))).status, 404);
   assert.equal((await call('/api/glean/v0/crossings?occurrence_id=pl111%3Ajames%3Aremarks', {}, envWith(null, Error('down')))).status, 503);
 });
+
 
 
