@@ -58,7 +58,10 @@ async function insert(db,record,actor){
   return response({ok:true,receipt:{...publicReceipt,identity_kind:saved.observer_profile_id?'account-linked':'shared-account-assertion'}},201);
 }
 const PAGE_SIZE=40;
-const PAGE_FIELDS="id,noticed_by,noticed_hand,moment,source_label,source_url,created_at,CASE WHEN observer_profile_id IS NOT NULL THEN 'account-linked' ELSE 'shared-account-assertion' END AS identity_kind";
+// Distinguish a directly submitted shared-account label from a separate,
+ // account-administration-mediated receipt. Neither proves a companion sign-in.
+ // The audit table is required by migration 0004; no client name can set this status.
+const PAGE_FIELDS="id,noticed_by,noticed_hand,moment,source_label,source_url,created_at,CASE WHEN observer_profile_id IS NOT NULL THEN 'account-linked' WHEN EXISTS (SELECT 1 FROM camera_admin_mediated_receipts_v0 AS admin WHERE admin.moment_id=caught_moments_v1.id AND admin.submitted_via='connected-cloudflare-account-admin-tool' AND admin.authentication_state='named-unverified') THEN 'admin-mediated-unverified' ELSE 'shared-account-assertion' END AS identity_kind";
 function readCursor(url){
   const values=url.searchParams.getAll('before');
   if(values.length>1)return null;
@@ -125,7 +128,7 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{
 <button id="keep" type="submit">Keep this moment</button>
 <p id="status" role="status" aria-live="polite"></p>
 </form>
-<section aria-label="Moments already noticed"><h2>Little moments</h2><div id="items"></div><button type="button" id="older" hidden>See older moments</button></section>
+<section aria-label="Moments already noticed"><h2>Little moments</h2><p class="small">The shelf distinguishes linked personal sign-ins, typed shared-account names, and account-administration-mediated entries. The last two are not independently authenticated companion identities.</p><div id="items"></div><button type="button" id="older" hidden>See older moments</button></section>
 <script>
 const $=id=>document.getElementById(id);
 let pending=null, beforeCursor=null, generation=0, loadingOlder=false, identityInfo=null;
@@ -177,7 +180,7 @@ loadIdentity().catch(error=>{
 function addText(parent,tag,value){const e=document.createElement(tag);e.textContent=value;parent.appendChild(e);return e}
 function showMoment(holder,item){
  const card=document.createElement('article');addText(card,'strong',item.noticed_hand);
- addText(card,'small',' · noticed by '+item.noticed_by+(item.identity_kind==='account-linked'?' · linked account':' · unverified name')+' · '+item.created_at);
+ addText(card,'small',' · noticed by '+item.noticed_by+(item.identity_kind==='account-linked'?' · linked personal account':item.identity_kind==='admin-mediated-unverified'?' · account-admin mediated · unverified hand':' · shared-account name · unverified')+' · '+item.created_at);
  addText(card,'p',item.moment);
  const a=document.createElement('a');a.href=item.source_url;a.rel='noopener noreferrer';a.target='_blank';a.textContent='Return to '+item.source_label;
  card.appendChild(a);holder.appendChild(card);
