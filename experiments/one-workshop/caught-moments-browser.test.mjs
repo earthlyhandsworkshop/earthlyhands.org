@@ -22,7 +22,7 @@ class Node{
 }
 function browser(fetcher){
  const nodes=new Map();
- for(const id of ['capture','by','hand','moment','road','url','keep','status','items','older'])nodes.set(id,new Node(id));
+ for(const id of ['capture','by','hand','moment','road','url','keep','status','items','older','identityInfo','registerTen'])nodes.set(id,new Node(id));
  nodes.get('older').hidden=true;
  nodes.get('capture').reset=()=>{
   for(const id of ['by','hand','moment','road','url'])nodes.get(id).value='';
@@ -32,7 +32,14 @@ function browser(fetcher){
   createElement:tag=>new Node(tag)
  };
  let key=0;
- runInNewContext(script,{document,fetch:fetcher,crypto:{randomUUID:()=> '10000000-0000-4000-8000-'+String(++key).padStart(12,'0')},encodeURIComponent}, {timeout:2000});
+ const wrappedFetch=(url,options)=>{
+   if(url==='/api/caught/identity'&&!options?.method)return Promise.resolve(json({
+     account:{email:'workshop@example.test',kind:'shared'},profile:null,
+     enrollment_available:false,contribution_mode:'shared-account-assertion'
+   }));
+   return fetcher(url,options);
+ };
+ runInNewContext(script,{document,fetch:wrappedFetch,crypto:{randomUUID:()=> '10000000-0000-4000-8000-'+String(++key).padStart(12,'0')},encodeURIComponent}, {timeout:2000});
  return {
   nodes,
   older:()=>nodes.get('older').events.click(),
