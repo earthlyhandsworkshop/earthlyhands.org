@@ -42,7 +42,8 @@ function crossing(row) {
       prose_map_register: {
         drive_id: row.prose_map_register_drive_id,
         observation_state: row.register_observation_state,
-        observed_modified_at: row.register_observed_modified_at
+        observed_modified_at: row.register_observed_modified_at,
+        absence_boundary: 'dated register observation; not proof of complete-corpus or historical absence'
       }
     },
     readings: {
@@ -81,6 +82,7 @@ function crossing(row) {
       'documentary occurrence is not a historical person',
       'an observed Name Web row number is a locator, not a permanent identifier',
       'the latest reading is not automatic authority',
+      'no-entry-observed is a dated register observation, not proof of complete-corpus or historical absence',
       'blank locality and acreage remain blank',
       'geometry remains unearned',
       'this protected read does not edit a source, publish a conclusion, or verify a companion identity'
@@ -116,5 +118,6 @@ export async function handleGlean(request, env, url) {
 
   return json(crossing(row));
 }
+
 
 
