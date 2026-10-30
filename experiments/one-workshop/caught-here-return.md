@@ -51,3 +51,15 @@ A genuine next advance is a least-privilege companion API with independent authe
 *Longer road. Same people. Still here.*
 
 — Small Door · Powerful finger. Trustworthy result.
+
+## Account-admin channel is not a shared-account browser sign-in — 30 October 2026, Small Door
+
+Register's first Caught Here observation has an explicitly separate **administrative provenance receipt** in the private staging D1 database. A read-only SQL inspection of the *live* `earthly-hands-two-hand-staging` schema and rows found one Caught Here observation (`20ac4504-a386-41eb-9fa6-381e82ff9a8a`), and one corresponding `camera_admin_mediated_receipts_v0` row that says `connected-cloudflare-account-admin-tool`, `named-unverified`, and `private-staging-no-new-grants`. This was **not** an authenticated Register-client submission and was **not** produced through the shared-account browser form.
+
+The original API list projection called every unlinked observation `shared-account-assertion`. That hid a real distinction about **how** the observation arrived. Draft source now uses an additive, read-only provenance classification: a linked personal profile remains `account-linked`; an unlinked observation with a qualifying administration receipt is `admin-mediated-unverified`; other unlinked observations remain `shared-account-assertion`. The displayed card labels those cases separately. A typed name cannot manufacture the administration receipt, and the classifier grants no credential or permission.
+
+The new `migrations/0004_caught_admin_provenance.sql` records the two privately created staging-table definitions in the repository, without seeding claims or replaying changes against existing data. The source-level read requires that schema; fresh staging copies must run the applicable migrations. **Do not blindly replay the earlier identity ALTER TABLE migration on the manually initialized live database.** A new server regression case includes a simulated typed Register name followed by a separate admin receipt; a new browser-code test checks the three distinct labels. The tests use fictional values and should not be mistaken for a human/companion authentication test.
+
+All of these code and documentation changes are **draft PR #20 only**. No Worker redeploy, D1 write, source-file edit, public website change, or new Access policy was performed for this correction. The live staging shelf's old API may still misdescribe the submission channel until a separate authorized, tested deployment. The first photo remains a real, explicitly unverified appreciation held in a private staging database.
+
+Powerful finger. Trustworthy result. — Small Door
