@@ -62,8 +62,25 @@ test('rejects missing or malformed occurrence IDs', async () => {
   assert.equal((await call('/api/glean/v0/crossings?occurrence_id=../scan')).status, 400);
 });
 
+test('does not disclose or query other well-formed occurrence IDs', async () => {
+  let touched = false;
+  const env = { DB: { prepare() {
+    touched = true;
+    throw Error('D1 must not be reached');
+  } } };
+  const response = await call(
+    '/api/glean/v0/crossings?occurrence_id=pl111%3Alevy%3Aremarks',
+    {},
+    env
+  );
+  assert.equal(response.status, 404);
+  assert.deepEqual(await response.json(), { error: 'crossing_not_found' });
+  assert.equal(touched, false);
+});
+
 test('keeps missing rows and storage failure distinct', async () => {
   assert.equal((await call('/api/glean/v0/crossings?occurrence_id=pl111%3Ajames%3Aremarks', {}, envWith(null))).status, 404);
   assert.equal((await call('/api/glean/v0/crossings?occurrence_id=pl111%3Ajames%3Aremarks', {}, envWith(null, Error('down')))).status, 503);
 });
+
 
