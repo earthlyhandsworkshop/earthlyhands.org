@@ -94,7 +94,13 @@ export function projectForReader(snapshot, policy) {
   requireArray(mappings, 'mappings');
   if (typeof policy?.canSeeEvent !== 'function') throw new TypeError('trusted event permission predicate required');
   const pageSize = validPageSize(policy.pageSize ?? DEFAULT_PAGE_SIZE);
-  const byId = new Map(events.filter(e => policy.canSeeEvent(e) === true).map(e => [e.event_id, e]));
+  const byId = new Map();
+  for (const e of events) {
+    if (policy.canSeeEvent(e) !== true) continue;
+    if (!asText(e.event_id) || !validOrdinal(e.event_ordinal)) throw new TypeError('invalid visible event key');
+    if (byId.has(e.event_id)) throw new TypeError('duplicate visible event ID');
+    byId.set(e.event_id, e);
+  }
   const groups = new Map();
   for (const m of mappings) {
     const event = byId.get(m.event_id);
