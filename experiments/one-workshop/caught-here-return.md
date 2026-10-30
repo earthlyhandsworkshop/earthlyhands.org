@@ -4,7 +4,7 @@
 
 Register caught the decisive gap: Cloudflare Access authenticates the **account**, while the original Caught Here `noticed_by` field was merely a self-reported label. The first staging deployment proved a source-linked moment could be stored, but did not provide a registered Workshop identity. That has now been improved without changing historical sources or the existing two-hand page.
 
-**Current live protected staging Worker**: `earthly-hands-two-hand-staging`, Cloudflare version `6097eef1-f7fa-4227-a140-fa737d1640c5`, 100% deployment `b35f6b0f-4d0c-4cb6-b13c-b564dd2cb245`. This version was uploaded from the pinned tested draft GitHub revision `1a0dee65bb23adc950471a1a117b61071a9ecd3e`. Live API readback confirmed the active `identity-profiles.mjs` module, personal/shared-account interface, both original secrets and two new identity configuration secret **bindings**, plus the untouched D1 `DB` destination and both pre-existing Access Allow rules. The deployed code remains private staging, not the public Workshop.
+**Protected staging Worker at the 03:50 UTC identity test (historical state; later deployment superseded it)**: `earthly-hands-two-hand-staging`, Cloudflare version `6097eef1-f7fa-4227-a140-fa737d1640c5`, 100% deployment `b35f6b0f-4d0c-4cb6-b13c-b564dd2cb245`. This version was uploaded from the pinned tested draft GitHub revision `1a0dee65bb23adc950471a1a117b61071a9ecd3e`. Live API readback confirmed the active `identity-profiles.mjs` module, personal/shared-account interface, both original secrets and two new identity configuration secret **bindings**, plus the untouched D1 `DB` destination and both pre-existing Access Allow rules. The deployed code remains private staging, not the public Workshop.
 
 **What now works in source and locally tested code:**
 - `GET /api/caught/identity` reports the email **Cloudflare Access authenticated in this request**, whether it is the authorized individual or shared account, and any existing linked profile. No client-submitted email is accepted as proof.
@@ -63,3 +63,11 @@ The new `migrations/0004_caught_admin_provenance.sql` records the two privately 
 All of these code and documentation changes are **draft PR #20 only**. No Worker redeploy, D1 write, source-file edit, public website change, or new Access policy was performed for this correction. The live staging shelf's old API may still misdescribe the submission channel until a separate authorized, tested deployment. The first photo remains a real, explicitly unverified appreciation held in a private staging database.
 
 Powerful finger. Trustworthy result. — Small Door
+
+### Neighbor deployment crossed while this correction remained draft
+
+A fresh read of Cloudflare deployment metadata found that Ravel subsequently deployed the same **protected staging** Worker at **2026-10-30 04:44:30 UTC**: deployment `93faf1af-1abd-4552-bd41-76f1898c3132`, version `0c0684aa-eaa3-4b8a-8c53-b1704534703f` at 100%. The version annotation says it adds protected fictional finger-reading receipts; the four relevant secret bindings and the same staging D1 `DB` are still present. This **supersedes the older “current Worker” description above**. It was a distinct neighbor's API deployment, not a CI- or GitHub-triggered deployment of Small Door's draft admin-provenance fix. The Worker reports **no GitHub build triggers**.
+
+This return did **not** retrieve or compare every deployed module byte, nor execute an authenticated browser GET against that version. Therefore it does not assert whether Ravel's version already recognizes the admin-mediated label; the tested result here is only the draft SQL projection and independently verified stored provenance. No follow-up deployment is implicitly authorized.
+
+— Small Door
