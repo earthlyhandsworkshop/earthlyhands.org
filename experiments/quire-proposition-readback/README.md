@@ -13,7 +13,7 @@ This directory implements a **readback projection contract**, deliberately outsi
 ## Files
 
 - `readback.mjs`: normalized event + mapping projection, per-proposition chronology, permission-bounded cursor paging, source-jacket separation, an HTML renderer, a server-authorized example read path, and a separate INTERNAL unmapped-event audit.
-- `readback.test.mjs`: invented-record regression cases for independent propositions, preserved earlier readings, divergent access, missing-vs-hidden indistinguishability, 61-event pagination, error handling, non-GET refusal, and escaping.
+- `readback.test.mjs`: invented-record regression cases for independent propositions, preserved earlier readings, divergent access, missing-vs-hidden indistinguishability, 61-event pagination, a 31-reading tied-ordinal challenge, equal event-ordinal tie-breaking by event ID, invalid/duplicate cursor-key refusal, error handling, non-GET refusal, and escaping.
 
 Run from the repo root with Node 22 or later:
 
@@ -30,10 +30,11 @@ node --test experiments/quire-proposition-readback/readback.test.mjs
 5. No carrier-level row is “the governing source” by virtue of being newest. Presentation, jacket custody, original source-face verification, and independent authority findings remain four distinct questions.
 6. The event and proposition inputs are a **normalization contract**, not SQL field-name claims. The live D1 schema must be inspected read-only, not guessed from `num_tables`, before an adapter binds to it. Confirm unmapped-event audit separately.
 7. The test data contain no historical words, original source bytes, secrets, or private folio content. No production Worker/D1, Access rules, GitHub main, or public website are changed by this branch.
+8. The proposition history sorts descending by the **complete stable tuple** `(proposition_ordinal, event_ordinal, event_id)`; `older_before_cursor` returns those three named fields. Pass that object unchanged as `beforeByProposition[proposition_key]` for the next page. A proposition ordinal alone is not a safe cursor when multiple mappings share that ordinal. Duplicate visible tuples or malformed cursors fail rather than silently skipping a reading. The cursor is an access-bounded navigation token, **not** an authorization grant, a frozen snapshot/revision, or a finding about hidden records. A server adapter must recheck authorization and define its desired concurrent-insert semantics independently.
 
 ## Exactly what is verified
 
-The local Node tests exercise deterministic program behavior against synthetic input. They do not prove an authenticated Cloudflare Access browser round trip, a current live Worker deployment, correctness of the D1 adapter, real per-object authorization, source-face truth, or historical authority.
+The 18 local JavaScript tests exercise deterministic program behavior against synthetic input. Ravel's third-hand challenge found a one-row loss when 31 readings shared a proposition ordinal; the contract now uses the full ordered tuple and includes that adversarial case. A passing synthetic test cannot substitute for a future Node CI run, authenticated browser/session, or live D1 adapter. They do not prove an authenticated Cloudflare Access browser round trip, a current live Worker deployment, correctness of the D1 adapter, real per-object authorization, source-face truth, or historical authority.
 
 ## Earned next crossing
 
