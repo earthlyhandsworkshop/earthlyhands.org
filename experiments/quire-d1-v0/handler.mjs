@@ -102,9 +102,28 @@ load();
 async function readJson(request) {
   const length = Number(request.headers.get('content-length') || 0);
   if (length > MAX_REQUEST_BYTES) return { error: error('request_too_large', 413) };
+  const reader = request.body?.getReader();
+  if (!reader) return { error: error('invalid_json', 400) };
+  const chunks = [];
+  let total = 0;
+  try {
+    while (true) {
+      const part = await reader.read();
+      if (part.done) break;
+      total += part.value.byteLength;
+      if (total > MAX_REQUEST_BYTES) {
+        try { await reader.cancel(); } catch {}
+        return { error: error('request_too_large', 413) };
+      }
+      chunks.push(part.value);
+    }
+  } catch { return { error: error('invalid_json', 400) }; }
+  const bytes = new Uint8Array(total);
+  let offset = 0;
+  for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.byteLength; }
   let raw;
-  try { raw = await request.text(); } catch { return { error: error('invalid_json', 400) }; }
-  if (new TextEncoder().encode(raw).byteLength > MAX_REQUEST_BYTES) return { error: error('request_too_large', 413) };
+  try { raw = new TextDecoder('utf-8', { fatal: true }).decode(bytes); }
+  catch { return { error: error('invalid_json', 400) }; }
   try { return { body: JSON.parse(raw) }; } catch { return { error: error('invalid_json', 400) }; }
 }
 
@@ -214,7 +233,7 @@ export async function handleQuire(request, env, url, principal) {
     if (existing) {
       if (existing.actor_account_hash !== principal.actor || existing.input_sha256 !== inputHash) return error('request_key_conflict', 409);
       if (!existing.outcome) return error('request_still_pending', 409);
-      if (existing.outcome === 'model-failed') return error(existing.error_code || 'operator_model_failed_no_record_saved', 502);
+      if (existing.outcome === 'model-failed') return error(existing.error_code || 'operator_model_failed', 502);
       return json({ replay: true, proposal_id: existing.request_id, proposal: JSON.parse(existing.proposal_json), proposal_state: existing.outcome, model_id: existing.model_id, created_at: existing.created_at });
     }
 
@@ -247,13 +266,13 @@ export async function handleQuire(request, env, url, principal) {
       });
     } catch {
       try { await recordFailure('operator_model_failed'); } catch {}
-      return error('operator_model_failed_request_recorded', 502);
+      return error('operator_model_failed', 502);
     }
 
     let generated;
     try { generated = parseModelResult(modelResult); } catch {
       try { await recordFailure('operator_model_invalid_json'); } catch {}
-      return error('operator_model_invalid_json_request_recorded', 502);
+      return error('operator_model_invalid_json', 502);
     }
     const proposedTest = boundedText(generated?.proposed_test, 400);
     const whyNow = boundedText(generated?.why_now, 700);
@@ -261,7 +280,7 @@ export async function handleQuire(request, env, url, principal) {
     const required = generated?.required_loaded_objects;
     if (!proposedTest || !whyNow || !nextDoor || !Array.isArray(required) || required.some(id => typeof id !== 'string' || !inputIds.includes(id))) {
       try { await recordFailure('operator_model_invalid_proposal'); } catch {}
-      return error('operator_model_invalid_proposal_request_recorded', 502);
+      return error('operator_model_invalid_proposal', 502);
     }
 
     const forbidden = [...new Set([...BASE_BRAKES, ...loaded.map(x => x.brake)])];
@@ -285,7 +304,7 @@ export async function handleQuire(request, env, url, principal) {
       const existing = await lookupRequest();
       if (existing && existing.actor_account_hash === principal.actor && existing.input_sha256 === inputHash) {
         if (existing.outcome === 'model-proposed-open') return json({ replay: true, proposal_id: existing.request_id, proposal: JSON.parse(existing.proposal_json), proposal_state: existing.outcome, model_id: existing.model_id, created_at: existing.created_at });
-        if (existing.outcome === 'model-failed') return error(existing.error_code || 'operator_model_failed_request_recorded', 502);
+        if (existing.outcome === 'model-failed') return error(existing.error_code || 'operator_model_failed', 502);
         return error('request_still_pending', 409);
       }
       if (existing) return error('request_key_conflict', 409);
