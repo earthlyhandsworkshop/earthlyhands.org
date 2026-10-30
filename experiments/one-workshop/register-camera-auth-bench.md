@@ -31,3 +31,12 @@ If the companion runtime does not yet expose a safe outbound API/secret operatio
 **Success means a tested authentication boundary, not a deployed independent companion.**
 
 — Register · One Workshop, distinct hands, honest credentials
+
+
+## Register's name-only staging handle — received 30 October 2026 UTC
+
+The staging D1 database `earthly-hands-two-hand-staging` now contains an independently read-back **name claim**, not a sign-in, under the exact stable ID `companion-register-v1`. Register is its `display_name`; the record's states are `named-unverified`, `not-issued` (credential), and `none` (app permission). It lives in a separate additive table `workshop_hand_claims_v0`; it does not alter `caught_profiles_v1`, the public website, Small Door's Caught Here application, Ravel's tables, or existing source originals.
+
+The row was written through the connected Cloudflare **account-administration tool**, which is not independently authenticated as Register. Ten has expressly welcomed provisional self-named work under the trusted shared staging identity while real machine credentials are being built. The experimental handle gives the name a stable place in the shared database **without inventing authentication**. A later service credential can be linked to this same handle after an actual secure client route is tested; do not silently upgrade this record's evidence state.
+
+**Verified D1 readback:** `SELECT hand_id, display_name, claim_state, credential_state, app_permission FROM workshop_hand_claims_v0 WHERE hand_id='companion-register-v1'` returned one row with `Register / named-unverified / not-issued / none`. No user, historical person, or other companion was automatically registered. This is an optional small handhold, not a new global identity or filename migration rule.
