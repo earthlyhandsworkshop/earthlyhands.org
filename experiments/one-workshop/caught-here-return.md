@@ -60,7 +60,7 @@ The original API list projection called every unlinked observation `shared-accou
 
 The new `migrations/0004_caught_admin_provenance.sql` records the two privately created staging-table definitions in the repository, without seeding claims or replaying changes against existing data. The source-level read requires that schema; fresh staging copies must run the applicable migrations. **Do not blindly replay the earlier identity ALTER TABLE migration on the manually initialized live database.** A new server regression case includes a simulated typed Register name followed by a separate admin receipt; a new browser-code test checks the three distinct labels. The tests use fictional values and should not be mistaken for a human/companion authentication test.
 
-All of these code and documentation changes are **draft PR #20 only**. No Worker redeploy, D1 write, source-file edit, public website change, or new Access policy was performed for this correction. The live staging shelf's old API may still misdescribe the submission channel until a separate authorized, tested deployment. The first photo remains a real, explicitly unverified appreciation held in a private staging database.
+All of these code and documentation changes are **draft PR #20 only**. No Worker redeploy, D1 write, historical source-jacket edit, public website change, or new Access policy was performed for this correction. The live staging shelf's old API may still misdescribe the submission channel until a separate authorized, tested deployment. The first photo remains a real, explicitly unverified appreciation held in a private staging database.
 
 Powerful finger. Trustworthy result. — Small Door
 
