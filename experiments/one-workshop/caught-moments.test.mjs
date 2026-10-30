@@ -21,6 +21,7 @@ class D1 {
 const initial=readFileSync(new URL('./two-hand-cloudflare/migrations/0001_fixture.sql',import.meta.url),'utf8');
 const schema=readFileSync(new URL('./two-hand-cloudflare/migrations/0002_caught_moments.sql',import.meta.url),'utf8');
 const profileSchema=readFileSync(new URL('./two-hand-cloudflare/migrations/0003_caught_identity.sql',import.meta.url),'utf8');
+const adminSchema=readFileSync(new URL('./two-hand-cloudflare/migrations/0004_caught_admin_provenance.sql',import.meta.url),'utf8');
 const keyA='3a20e247-cd33-4f08-8180-e6514d10e284';
 const keyB='3a20e247-cd33-4f08-8180-e6514d10e285';
 const example={
@@ -35,7 +36,7 @@ function setup(t){
  const dir=mkdtempSync(join(tmpdir(),'caught-room-'));
  const file=join(dir,'test.sqlite');
  const db=new DatabaseSync(file);
- db.exec(initial);db.exec(schema);db.exec(profileSchema);
+ db.exec(initial);db.exec(schema);db.exec(profileSchema);db.exec(adminSchema);
  t.after(()=>{try{db.close();}catch{} rmSync(dir,{recursive:true,force:true});});
  return {db,file,env:{DB:new D1(db),TWO_HAND_ALLOWED_EMAILS:'alice@example.test,bob@example.test',TWO_HAND_ACTOR_SALT:'test-only-not-a-real-secret',CAUGHT_TEN_EMAIL:'alice@example.test',CAUGHT_SHARED_EMAIL:'bob@example.test'}};
 }
@@ -303,4 +304,43 @@ test('the profile and its account link survive a cold SQLite reopen without chan
    assert.equal(shelf.body.items.length,2);
    assert.deepEqual(new Set(shelf.body.items.map(x=>x.identity_kind)),new Set(['account-linked','shared-account-assertion']));
  }finally{reopened.close();}
+});
+
+test('the shelf distinguishes an account-admin-mediated name claim from both shared sign-in labels and linked human identity',async t=>{
+ const {db,env}=setup(t);
+ const plain=await throughWorker(env,'bob@example.test','/api/caught','POST',example);
+ const later=await throughWorker(env,'bob@example.test','/api/caught','POST',{
+  ...example,request_key:keyB,noticed_by:'Register',noticed_hand:'Small Door'
+ });
+ assert.equal(plain.status,201);
+ assert.equal(later.status,201);
+ assert.equal(later.body.receipt.identity_kind,'shared-account-assertion',
+  'typing Register in the shared form must not mint an admin or companion receipt');
+ const handId='companion-register-v1';
+ db.prepare(`INSERT INTO workshop_hand_claims_v0
+  (hand_id,display_name,kind,claim_state,credential_state,app_permission,created_via,source_road,purpose)
+  VALUES (?,?,?,?,?,?,?,?,?)`).run(
+  handId,'Register','companion','named-unverified','not-issued','none',
+  'fictional-test-admin-connector','https://github.com/example/return','provenance test only'
+ );
+ db.prepare(`INSERT INTO camera_admin_mediated_receipts_v0
+  (moment_id,claimed_hand_id,submitted_via,authentication_state,display_state,permission_state,provenance_note)
+  VALUES (?,?,?,?,?,?,?)`).run(
+  later.body.receipt.id,handId,'connected-cloudflare-account-admin-tool','named-unverified',
+  'unverified-name-with-caption','private-staging-no-new-grants','Test-only administrative provenance'
+ );
+ const shelf=await throughWorker(env,'alice@example.test','/api/caught');
+ assert.equal(shelf.status,200);
+ assert.equal(shelf.body.items.length,2);
+ assert.equal(shelf.body.items.find(x=>x.id===later.body.receipt.id).identity_kind,'admin-mediated-unverified');
+ assert.equal(shelf.body.items.find(x=>x.id===plain.body.receipt.id).identity_kind,'shared-account-assertion');
+ assert.equal(JSON.stringify(shelf.body).includes('fictional-test-admin-connector'),false);
+ assert.equal(JSON.stringify(shelf.body).includes('provenance test only'),false);
+ assert.equal(JSON.stringify(shelf.body).includes('actor_hash'),false);
+ assert.equal(JSON.stringify(shelf.body).includes('request_key'),false);
+ // A receipt names a submission channel but does not change the underlying
+ // person-profile field, grant a new permission, or issue any credential.
+ assert.equal(db.prepare('SELECT observer_profile_id FROM caught_moments_v1 WHERE id=?').get(later.body.receipt.id).observer_profile_id,null);
+ assert.equal(db.prepare('SELECT credential_state,app_permission FROM workshop_hand_claims_v0 WHERE hand_id=?').get(handId).credential_state,'not-issued');
+ assert.equal(db.prepare('SELECT credential_state,app_permission FROM workshop_hand_claims_v0 WHERE hand_id=?').get(handId).app_permission,'none');
 });
