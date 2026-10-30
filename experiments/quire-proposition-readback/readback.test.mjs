@@ -227,3 +227,37 @@ test('source jacket link is an independent permission and unsafe URL is not made
   const noJacket=projectForReader(s,{canSeeEvent:()=>true,canSeeJacket:false});
   assert.equal(noJacket.jacket,null);
 });
+
+test('handler second GET reaches 31st tied-ordinal reading',async()=>{
+ const s={events:[],mappings:[]};
+ for(let i=1;i<=31;i++){s.events.push(event('tie'+i,i,'invented'));s.mappings.push(mapping('tie'+i,'one',1));}
+ const authorize=async()=>({verified:true,canRead:true,allowedEventIds:s.events.map(e=>e.event_id)});
+ const loadSnapshot=async()=>s;const url='https://staging.invalid/quire/real';
+ const first=await handleReadback(new Request(url),{authorize,loadSnapshot});
+ assert.equal(first.status,200);
+ const p1=(await first.json()).propositions[0];
+ assert.equal(p1.readings.length,30);
+ const second=await handleReadback(new Request(url,{headers:{'x-quire-before-cursors':JSON.stringify({one:p1.older_before_cursor})}}),{authorize,loadSnapshot});
+ assert.equal(second.status,200);
+ const p2=(await second.json()).propositions[0];
+ assert.deepEqual(p2.readings.map(r=>r.event_id),['tie1']);
+ assert.equal(p2.older_before_cursor,null);
+ assert.equal(new Set([...p1.readings,...p2.readings].map(r=>r.event_id)).size,31);
+});
+test('malformed header refuses before read but Access refusal remains first',async()=>{
+ let loads=0;const loadSnapshot=async()=>{loads++;return fixture()};
+ const req=new Request('https://staging.invalid/quire/real',{headers:{'x-quire-before-cursors':'{bad'}});
+ const bad=await handleReadback(req,{authorize:async()=>({verified:true,canRead:true,allowedEventIds:['date-face']}),loadSnapshot});
+ assert.equal(bad.status,400);assert.equal(loads,0);
+ const denied=await handleReadback(req,{authorize:async()=>({verified:false,canRead:true,allowedEventIds:[]}),loadSnapshot});
+ assert.equal(denied.status,403);assert.equal(loads,0);
+});
+test('a cursor cannot preserve an older grant',async()=>{
+ const s=fixture();const header=JSON.stringify({'document-date':{proposition_ordinal:2,event_ordinal:2,event_id:'date-face'}});
+ const response=await handleReadback(new Request('https://staging.invalid/quire/real',{headers:{'x-quire-before-cursors':header}}),{
+ authorize:async()=>({verified:true,canRead:true,allowedEventIds:['students']}),loadSnapshot:async()=>s});
+ assert.equal(response.status,200);
+ const v=await response.json();
+ assert.deepEqual(v.propositions.map(p=>p.proposition_key),['student-attendance']);
+ assert.equal(JSON.stringify(v).includes('date-face'),false);
+});
