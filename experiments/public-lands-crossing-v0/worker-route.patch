@@ -1,0 +1,21 @@
+--- worker.mjs (active earthly-hands-two-hand-staging entry module)
++++ worker.mjs (with Glean read route)
+@@
+ import { handleQuire } from './quire-finger.mjs';
++import { handleGlean } from './glean-public-lands.mjs';
+@@
+   if (url.pathname === '/quire' || url.pathname.startsWith('/api/quire/v0/')) {
+     return handleQuire(request, env, url, { actor: await actorId(email, env.TWO_HAND_ACTOR_SALT) });
+   }
++  if (url.pathname === '/api/glean/v0/crossings') {
++    return handleGlean(request, env, url);
++  }
+@@
+   return error('not_found', 404);
+ }
+
+-- Upload `handler.mjs` as `glean-public-lands.mjs` beside the active modules.
+-- Preserve the active main module, compatibility date, Access gate, account
+-- allowlist, DB binding, secrets, observability settings, and every existing
+-- module/binding. This route is GET-only and adds no binding.
+
