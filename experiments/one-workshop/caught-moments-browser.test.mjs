@@ -20,7 +20,7 @@ class Node{
  addEventListener(type,callback){this.events[type]=callback;}
  reset(){}
 }
-function browser(fetcher){
+function browser(fetcher,identityFetcher=null){
  const nodes=new Map();
  for(const id of ['capture','by','hand','moment','road','url','keep','status','items','older','identityInfo','registerTen'])nodes.set(id,new Node(id));
  nodes.get('older').hidden=true;
@@ -33,6 +33,7 @@ function browser(fetcher){
  };
  let key=0;
  const wrappedFetch=(url,options)=>{
+   if(url==='/api/caught/identity'&&identityFetcher)return identityFetcher(url,options);
    if(url==='/api/caught/identity'&&!options?.method)return Promise.resolve(json({
      account:{email:'workshop@example.test',kind:'shared'},profile:null,
      enrollment_available:false,contribution_mode:'shared-account-assertion'
@@ -43,6 +44,7 @@ function browser(fetcher){
  return {
   nodes,
   older:()=>nodes.get('older').events.click(),
+  register:()=>nodes.get('registerTen').events.click(),
   submit:()=>nodes.get('capture').events.submit({preventDefault(){}}),
   set(id,value){nodes.get(id).value=value;},
   get status(){return nodes.get('status').textContent;},
@@ -103,4 +105,61 @@ test('committed note is reported as committed even if refreshing the shelf then 
  assert.match(view.status,/Moment was kept, but the shelf did not refresh/);
  assert.doesNotMatch(view.status,/outcome unknown/i);
  assert.equal(view.nodes.get('moment').value,'');
+});
+
+
+test('a personal sign-in can register Ten once and the form no longer asks for an arbitrary author',async()=>{
+ let linked=false;
+ let saved=null;
+ const view=browser(async (url,options)=>{
+  if(url==='/api/caught'&&options?.method==='POST'){
+   saved=JSON.parse(options.body);
+   return json({ok:true,receipt:{id:'caught-fake'}},201);
+  }
+  if(url==='/api/caught')return json({items:[],nextBefore:null});
+  throw Error('unexpected route '+url);
+ },async(url,options)=>{
+  if(options?.method==='POST'){
+   assert.deepEqual(JSON.parse(options.body),{workshop_name:'Ten'});
+   linked=true;
+   return json({ok:true,profile:{id:'human-ten-v1',name:'Ten',link:'account-backed'}});
+  }
+  return json({
+   account:{email:'alice@example.test',kind:'individual'},
+   profile:linked?{id:'human-ten-v1',name:'Ten',link:'account-backed'}:null,
+   enrollment_available:!linked,
+   contribution_mode:linked?'account-linked':'registration-required'
+  });
+ });
+ await settle();
+ assert.equal(view.nodes.get('keep').disabled,true);
+ assert.equal(view.nodes.get('registerTen').hidden,false);
+ assert.match(view.nodes.get('identityInfo').textContent,/alice@example.test/);
+ await view.register();
+ assert.equal(view.nodes.get('registerTen').hidden,true);
+ assert.equal(view.nodes.get('keep').disabled,false);
+ assert.equal(view.nodes.get('by').value,'Ten');
+ assert.equal(view.nodes.get('by').readOnly,true);
+ view.set('hand','Register');
+ view.set('moment','A useful detail worth catching');
+ view.set('road','Source road');
+ view.set('url','https://github.com/example/repository/blob/main/test.md');
+ await view.submit();
+ assert.equal(saved.noticed_by,'Ten');
+ assert.equal(saved.noticed_hand,'Register');
+ assert.equal(view.nodes.get('by').value,'Ten','profile survives form reset');
+ assert.match(view.status,/Kept with a road back/);
+});
+
+test('the shared account remains a disclosed, unverified label rather than silently becoming Ten',async()=>{
+ const view=browser(async url=>{
+  if(url==='/api/caught')return json({items:[],nextBefore:null});
+  throw Error('unexpected route');
+ });
+ await settle();
+ assert.equal(view.nodes.get('registerTen').hidden,true);
+ assert.equal(view.nodes.get('keep').disabled,false);
+ assert.equal(view.nodes.get('by').readOnly,false);
+ assert.match(view.nodes.get('identityInfo').textContent,/shared Workshop account/);
+ assert.match(view.nodes.get('identityInfo').textContent,/unverified/);
 });
