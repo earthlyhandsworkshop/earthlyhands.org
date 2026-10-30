@@ -1,0 +1,94 @@
+{
+  "specimen_id": "review-adequacy-v1",
+  "version": 1,
+  "title": "What Did Review Require?",
+  "question": "Was the 1902 review adequate to the identity and ancestry question it actually decided?",
+  "standing": "working research-through-design specimen; source descriptions are bounded and do not decide identity, entitlement, or administrative failure",
+  "brakes": [
+    "EXISTED ≠ IN CASE ≠ NAMED IN REVIEW ≠ REQUIRED TO CONSULT ≠ ADEQUATE / INADEQUATE",
+    "Catherine ≠ Catharine until an independently controlled identity bridge is earned",
+    "A bounded absence from the stated review text does not prove no consultation elsewhere",
+    "Potential relevance plus an unnamed carrier does not prove administrative failure",
+    "A visitor-supplied ticket is not a verified source"
+  ],
+  "review": [
+    {
+      "id": "case",
+      "title": "The transmitted MCR 879 case record",
+      "text": "On 19 April 1902 the Commission transmitted the consolidated record and its decision to the Secretary, through Indian Affairs.",
+      "brake": "Transmitted case record ≠ every federal record relevant to the people named in it.",
+      "meta": {"date": "19 Apr 1902", "maker": "Commission", "object": "transmittal + consolidated case record", "state": "transmitted", "verb": "transmits", "source": "OHC_2068–2069; Bell notice OHC_2072–2073"}
+    },
+    {
+      "id": "p57",
+      "title": "Commission McKinney surname-record negative",
+      "text": "The Commission decision carries a bounded negative concerning persons named McKinney in a specified compliance / Ward / later-commission record frame.",
+      "brake": "Surname-wide negative in named record domains ≠ search of every McKinney treaty-land record population.",
+      "meta": {"date": "15 Apr 1902", "maker": "Commission", "object": "decision p.-57", "state": "bounded record negative", "verb": "reports no showing in named frame", "source": "p.-57 governing jacket / OHC decision body"}
+    },
+    {
+      "id": "oia",
+      "title": "Indian Affairs adds its own Robert records",
+      "text": "The 13 May review uses the case record plus Office-held material including Record Book No. 102, a Robert Bell patent record, and an Office-held Mississippi map.",
+      "brake": "Named Office additions establish documentary reach, not an exhaustive inventory of everything available to the Office.",
+      "meta": {"date": "13 May 1902", "maker": "Office of Indian Affairs", "object": "six-page review report", "state": "performed review + record augmentation", "verb": "reviews / compares / recommends", "source": "OHC_2046–2053"}
+    },
+    {
+      "id": "interior",
+      "title": "Interior says it reviewed the whole case",
+      "text": "On 4 June Interior says that after a careful review of the whole case it approves the Commission action and affirms the decision.",
+      "brake": "“Whole case” proves the Department’s characterization of its review object; it does not by itself define every external federal record it was obliged to search.",
+      "meta": {"date": "4 Jun 1902", "maker": "Department of the Interior", "object": "affirmance letter", "state": "departmental review / affirmance", "verb": "reviews / approves / affirms", "source": "OHC_2054–2055"}
+    }
+  ],
+  "other": [
+    {
+      "id": "family",
+      "title": "Family names Catherine McKinney",
+      "text": "Sarah Carroll’s 29 April 1901 examination names Catherine McKinney as her father’s grandmother, then names her father Robert Bell.",
+      "brake": "Family Catherine ≠ Public Lands Catharine until independently bridged.",
+      "meta": {"date": "29 Apr 1901", "maker": "Sarah Carroll examination", "object": "recorded family testimony", "state": "family-side occurrence", "verb": "names / relates", "source": "Sarah Carroll packet page 4"}
+    },
+    {
+      "id": "farm",
+      "title": "1831 Public Lands Catharine McKinney",
+      "text": "The farm-return body carries Catharine McKinney with 40 cultivated acres, family six, a Yazoo Valley locality chain, and 480 total acres.",
+      "brake": "Farm-return occurrence ≠ patent occurrence; spelling remains Catharine.",
+      "meta": {"date": "1831", "maker": "treaty-land administration", "object": "Public Lands No. 3 / OHC_2480", "state": "cultivation / farm return", "verb": "records", "source": "OHC_2480 governing jacket"}
+    },
+    {
+      "id": "class",
+      "title": "Article XIX three-quarter class",
+      "text": "Forty cultivated acres falls in Article XIX’s 30-to-under-50-acre class, nominally three quarter sections / 480 acres.",
+      "brake": "Treaty-class fit ≠ final adjudication or person identity.",
+      "meta": {"date": "1830 treaty + 1831 return", "maker": "Treaty text + return", "object": "Article XIX legal class", "state": "legal compatibility", "verb": "classifies", "source": "Article XIX + OHC_2480"}
+    },
+    {
+      "id": "patent",
+      "title": "Separate Catharine Article XIX patent path",
+      "text": "A later patent face recites three-quarter Article XIX entitlement, Sec. 11 T17N R1E, sale to Linsey C. Hall, presidential approval, and 1850 patent to Hall.",
+      "brake": "Patent recital ≠ underlying deed / approval record; patent-path Catharine ≠ farm-return Catharine without a bridge.",
+      "meta": {"date": "1833 sale / 1850 approval + patent", "maker": "United States patent", "object": "patent representation", "state": "later disposition chain", "verb": "recites / grants", "source": "held Catharine McKinney patent face"}
+    },
+    {
+      "id": "reserveC",
+      "title": "Reserve File C — Article XIX case architecture",
+      "text": "RG 75 preserves a distinct Article XIX case system with index, register, correspondence, reports, legal documents, maps, plats, disposal and inheritance material.",
+      "brake": "Archive-series existence ≠ Catharine case recovered ≠ 1902 consultation.",
+      "meta": {"date": "1831–1889 series; 1909 register copy", "maker": "BIA / NARA archival system", "object": "Reserve File C", "state": "federal Article XIX case population", "verb": "preserves / indexes", "source": "PI 163 entries 522, 526, 527"}
+    },
+    {
+      "id": "sales",
+      "title": "Federal sale-certification branch",
+      "text": "Separate federal records preserve Brown/Kincannon reports concerning certification of Choctaw reserve sales; the controlled printed Brown extract carries a Catharine McKinney sale occurrence.",
+      "brake": "Sales-report occurrence still needs exact cross-carrier identity and MCR 879 carriage testing.",
+      "meta": {"date": "1836–1841 record population", "maker": "sale-certification administration", "object": "reports concerning certification of land sales", "state": "federal sale-review body", "verb": "examines / reports / certifies", "source": "PI 163 entry 263 + controlled printed Brown extract"}
+    }
+  ],
+  "open": [
+    "Catherine and Catharine remain separate until a source-grounded identity bridge is earned.",
+    "Article XIX carriage into the transmitted MCR 879 case remains open.",
+    "The full documentary reach required of the 1902 substantive reviewers remains open.",
+    "PROVED ADMINISTRATIVE FAILURE is not yet earned."
+  ]
+}

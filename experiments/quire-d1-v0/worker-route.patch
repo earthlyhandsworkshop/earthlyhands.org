@@ -1,0 +1,19 @@
+--- worker.mjs (active earthly-hands-two-hand-staging entry module)
++++ worker.mjs (with Quire route)
+@@
+ import { handleFinger } from './ravel-finger.mjs';
++import { handleQuire } from './quire-finger.mjs';
+@@
+   if (url.pathname === '/fingers' || url.pathname === '/api/fingers/v0' || url.pathname === '/api/fingers/v0/readings') {
+     return handleFinger(request, env, url, { actor: await actorId(email, env.TWO_HAND_ACTOR_SALT) });
+   }
++  if (url.pathname === '/quire' || url.pathname.startsWith('/api/quire/v0/')) {
++    return handleQuire(request, env, url, { actor: await actorId(email, env.TWO_HAND_ACTOR_SALT) });
++  }
+@@
+   return error('not_found', 404);
+ }
+
+-- Upload `quire-finger.mjs` as a module and add `{ "type": "ai", "name": "AI" }`.
+-- Preserve the active main module, compatibility date, Access gate, DB binding,
+-- secrets, observability settings, and all existing module files/bindings.
