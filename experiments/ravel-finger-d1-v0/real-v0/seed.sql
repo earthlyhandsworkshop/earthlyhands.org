@@ -13,7 +13,11 @@ VALUES
   'https://da.mdah.ms.gov/series/z2343/detail/177758#dtop',
   'https://drive.google.com/open?id=1ffV476xZ8S7yHQE9ZeFRVIZ7miaixj6J',
   'Choctaw Council reply as carried by the commissioners journal',
-  'We do not wish to make a long talk. Our People are impatient\nto return to their homes. Our words are therefore few. To Please\nOur father the President we Could do many things — have done\nmany things and at Much Sacrifice to our feelings but we\nCannot Consent to Part with our Country',
+  'We do not wish to make a long talk. Our People are impatient
+to return to their homes. Our words are therefore few. To Please
+Our father the President we Could do many things — have done
+many things and at Much Sacrifice to our feelings but we
+Cannot Consent to Part with our Country',
   'Physical manuscript line breaks retained as newlines; manuscript capitalization retained; terminal punctuation after Country is not supplied. Source-controlled continuation dated 27 Oct 2026 records direct face inspection and correction history.'
 ),
 (
@@ -24,7 +28,10 @@ VALUES
   'https://da.mdah.ms.gov/series/z2343/detail/177761#dtop',
   'https://drive.google.com/open?id=1ffV476xZ8S7yHQE9ZeFRVIZ7miaixj6J',
   'United States commissioners in their later written talk as carried by the journal',
-  'You say that to please your father the President you\nhave done many things and could do many things. But you say in\nsubstance that you are determined to do nothing. That it was needless to give\nthe various reasons that determined you to decline his proposals.',
+  'You say that to please your father the President you
+have done many things and could do many things. But you say in
+substance that you are determined to do nothing. That it was needless to give
+the various reasons that determined you to decline his proposals.',
   'Physical manuscript line breaks retained as newlines; manuscript could is kept distinct from Senate-print would. The commissioners’ in substance construction is carried as their paraphrase, not the Council reply’s own wording.'
 );
 
