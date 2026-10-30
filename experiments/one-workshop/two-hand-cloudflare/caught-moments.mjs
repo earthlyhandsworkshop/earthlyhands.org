@@ -55,11 +55,31 @@ async function insert(db,record,actor){
   const {actor_hash,request_key,...publicReceipt}=saved;
   return response({ok:true,receipt:publicReceipt},201);
 }
-async function list(db){
-  const rows=await db.prepare(
-    'SELECT id,noticed_by,noticed_hand,moment,source_label,source_url,created_at FROM caught_moments_v1 ORDER BY created_at DESC,id DESC LIMIT 40'
-  ).all();
-  return response({scope:'private-staging',kind:'caught-moment',source_links_unverified:true,items:rows.results});
+const PAGE_SIZE=40;
+const PAGE_FIELDS='id,noticed_by,noticed_hand,moment,source_label,source_url,created_at';
+function readCursor(url){
+  const values=url.searchParams.getAll('before');
+  if(values.length>1)return null;
+  if(!values.length)return {createdAt:null,id:null};
+  const match=/^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z)~([0-9a-fA-F-]{36})$/.exec(values[0]);
+  if(!match||!uuid(match[2]))return null;
+  return {createdAt:match[1],id:match[2].toLowerCase()};
+}
+async function list(db,url){
+  const before=readCursor(url);
+  if(!before)return reject('invalid_cursor',400);
+  // Keyset pagination keeps earlier observations reachable even when new ones arrive.
+  // Timestamp and ID jointly disambiguate several observations in one millisecond.
+  const statement=before.createdAt
+    ? db.prepare(`SELECT ${PAGE_FIELDS} FROM caught_moments_v1 WHERE created_at<? OR (created_at=? AND id<?) ORDER BY created_at DESC,id DESC LIMIT ?`)
+        .bind(before.createdAt,before.createdAt,before.id,PAGE_SIZE+1)
+    : db.prepare(`SELECT ${PAGE_FIELDS} FROM caught_moments_v1 ORDER BY created_at DESC,id DESC LIMIT ?`)
+        .bind(PAGE_SIZE+1);
+  const rows=(await statement.all()).results;
+  const page=rows.slice(0,PAGE_SIZE);
+  const last=page.at(-1);
+  const nextBefore=rows.length>PAGE_SIZE&&last ? last.created_at+'~'+last.id : null;
+  return response({scope:'private-staging',kind:'caught-moment',source_links_unverified:true,items:page,nextBefore});
 }
 
 const PAGE = `<!doctype html>
@@ -97,23 +117,39 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{
 <button id="keep" type="submit">Keep this moment</button>
 <p id="status" role="status" aria-live="polite"></p>
 </form>
-<section aria-label="Moments already noticed"><h2>Little moments</h2><div id="items"></div></section>
+<section aria-label="Moments already noticed"><h2>Little moments</h2><div id="items"></div><button type="button" id="older" hidden>See older moments</button></section>
 <script>
 const $=id=>document.getElementById(id);
-let pending=null;
+let pending=null, beforeCursor=null, generation=0, loadingOlder=false;
 function addText(parent,tag,value){const e=document.createElement(tag);e.textContent=value;parent.appendChild(e);return e}
-async function load(){
- const r=await fetch('/api/caught');const x=await r.json();if(!r.ok)throw Error(x.error||'Read failed');
- const holder=$('items');holder.replaceChildren();
- if(!x.items.length)addText(holder,'p','Nothing caught here yet. Quiet is welcome.');
- for(const item of x.items){
-  const card=document.createElement('article');addText(card,'strong',item.noticed_hand);
-  addText(card,'small',' · noticed by '+item.noticed_by+' · '+item.created_at);
-  addText(card,'p',item.moment);
-  const a=document.createElement('a');a.href=item.source_url;a.rel='noopener noreferrer';a.target='_blank';a.textContent='Return to '+item.source_label;
-  card.appendChild(a);holder.appendChild(card);
+function showMoment(holder,item){
+ const card=document.createElement('article');addText(card,'strong',item.noticed_hand);
+ addText(card,'small',' · noticed by '+item.noticed_by+' · '+item.created_at);
+ addText(card,'p',item.moment);
+ const a=document.createElement('a');a.href=item.source_url;a.rel='noopener noreferrer';a.target='_blank';a.textContent='Return to '+item.source_label;
+ card.appendChild(a);holder.appendChild(card);
+}
+async function load(reset=true){
+ const myGeneration=reset?++generation:generation;
+ const cursor=reset?null:beforeCursor;
+ if(!reset&&(!cursor||loadingOlder))return;
+ if(!reset)loadingOlder=true;
+ $('older').disabled=true;
+ try{
+  const r=await fetch('/api/caught'+(cursor?'?before='+encodeURIComponent(cursor):''));
+  const x=await r.json();if(!r.ok)throw Error(x.error||'Read failed');
+  if(myGeneration!==generation)return;
+  const holder=$('items');if(reset)holder.replaceChildren();
+  if(reset&&!x.items.length)addText(holder,'p','Nothing caught here yet. Quiet is welcome.');
+  for(const item of x.items)showMoment(holder,item);
+  beforeCursor=x.nextBefore||null;
+  $('older').hidden=!beforeCursor;
+ }finally{
+  if(!reset)loadingOlder=false;
+  if(myGeneration===generation)$('older').disabled=false;
  }
 }
+$('older').addEventListener('click',()=>load(false).catch(error=>$('status').textContent='Older moments unavailable: '+error.message));
 $('capture').addEventListener('submit',async event=>{
  event.preventDefault();$('keep').disabled=true;
  if(!pending)pending={
@@ -125,7 +161,8 @@ $('capture').addEventListener('submit',async event=>{
   const x=await r.json();
   if(!r.ok){$('status').textContent='Not kept: '+(x.error||r.status)+'. Your words are still in the form.';if(r.status===400||r.status===409)pending=null;return;}
   pending=null;$('status').textContent='Kept with a road back. No original work was moved.';
-  $('capture').reset();await load();
+  $('capture').reset();
+  try{await load();}catch(error){$('status').textContent='Moment was kept, but the shelf did not refresh: '+error.message;}
  }catch(error){
   $('status').textContent='Outcome unknown. Your words remain. Press Keep again to check the same request.';
  }finally{$('keep').disabled=false;}
@@ -143,7 +180,7 @@ export async function handleCaught(request,env,url,actor){
   }});
  }
  if(request.method==='GET'&&url.pathname==='/api/caught'){
-  try{return await list(env.DB);}catch{return reject('collection_unavailable',503);}
+  try{return await list(env.DB,url);}catch{return reject('collection_unavailable',503);}
  }
  if(request.method==='POST'&&url.pathname==='/api/caught'){
   const origin=request.headers.get('origin');
