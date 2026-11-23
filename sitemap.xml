@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://earthlyhands.org/</loc>
-    <lastmod>2026-09-21</lastmod>
-  </url>
+  <url><loc>https://earthlyhands.org/</loc></url>
+  <url><loc>https://earthlyhands.org/explore/</loc></url>
+  <url><loc>https://earthlyhands.org/research/public-lands/</loc></url>
+  <url><loc>https://earthlyhands.org/mcr879.html</loc></url>
+  <url><loc>https://earthlyhands.org/experiments/follow-the-carrier/</loc></url>
+  <url><loc>https://earthlyhands.org/experiments/public-house-on-the-road/</loc></url>
+  <url><loc>https://earthlyhands.org/experiments/missing-people-machine/</loc></url>
+  <url><loc>https://earthlyhands.org/experiments/dancing-rabbit-statehood-line/</loc></url>
 </urlset>
