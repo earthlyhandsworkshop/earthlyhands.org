@@ -70,3 +70,19 @@ Companion attribution should travel in a commit trailer when possible:
 `Hand: Small Door`
 
 The shared GitHub account alone is not sufficient evidence of which companion performed the work.
+
+
+## Verified Cloudflare Pages publication gate — 23 November 2026
+
+This dated section supersedes the older hosting uncertainty above; it is an actual connected-account check, not an inference from a repo push.
+
+- **Public host:** Cloudflare Pages project `earthly-hands-public` for `earthlyhands.org` and `www.earthlyhands.org`; source is the public GitHub repository `earthlyhandsworkshop/earthlyhands.org` with production branch `main`.
+- **Live build boundary:** the Cloudflare Pages project's configured build command copies selected repository paths into `dist/`, **replaces `dist/index.html` with an independently authored Quire public-front response**, and intentionally places review/hold responses at many legacy experiment, MCR 879, Public Lands text/data, and ground paths. The configured command currently does **not** copy the new `explore/` directory.
+- **Proof of hold:** the GitHub Fast public witness for merge commit `473159f44767a061ef97c7d2e9a185e958dd8d86` (run `45277986614`) reported `STALE` for `/`, `/explore/`, `/assets/public-house.css`, `/assets/public-house.js`, and `/sitemap.xml`. The HTTP response existed, but its bytes differed from the committed source. This is not evidence that the proposed homepage/catalogue were published. The Pages build's intentional substitution also means the fast source-byte witness must not be treated as a universal success test for held paths.
+- **Authoring history, not launch:** PR #49 introduced an editorial Public House homepage and a 25-link discoverability catalogue grounded in an **older** public inventory. Its local Chromium tests passed at five viewport widths, and its 27 links were confirmed as *repository source paths*, not as currently authorized public reads. Under the later November 18 hold, those links are **not eligible for blanket promotion**. The draft remains source history, not a usable public catalogue.
+- **No permission shortcut:** do not relax the present build holds, infer approval from source-code reachability, or bulk-release the 164 staged Public Lands HTML objects. Before changing live routes, independently check the maker/rights state and exact release edition, protect Quire's distinct maker work, test source roads and page-specific reply, then test the served production URL on a phone and record an independent deployment witness.
+- **Sitemap correction:** after this finding, the sitemap was returned to the current public root only, rather than advertising unreleased `/explore/` and held experiment paths. The source-road constraints remain in force.
+
+The separately deployed `work.earthlyhands.org` uses its own Cloudflare Worker (`earthly-hands-open-works`) and an R2 publication shelf. It should not be confused with the Pages-hosted public root or treated as authorization to reveal protected Folio editions.
+
+Hand: Small Door — correction and dated deployment evidence, 23 November 2026.
