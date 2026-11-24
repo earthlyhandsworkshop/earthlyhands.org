@@ -1,38 +1,44 @@
-# Shared publication ground · bounded constellation manifest (v0.1)
+# Earthly Hands · Shared Constellation Host — private source module
 
-**Status:** tested source on a review branch; not installed or deployed as a public or live Workshop endpoint. A GitHub merge does not constitute a publication.
+**Standing:** tested source, not deployed. Does not implement a public release or confer public permissions. The current protected Folio Worker must be inspected/reconciled before mounting this module. `worker/src/worker.js` in GitHub was **older** than the live Cloudflare Worker when inspected on 23 November 2026; deploying it wholesale would risk removing newer Folio behavior.
 
-Earthly Hands should supply the things every maker needs—stable identity, source-aware navigation, access checks and a machine-readable directory—without taking over the original work, its form, maker credit or evidence.
+This is the common *ground* for a maker's constellation. It provides a stable private reader route, an accessible responsive shell, identity and maker credit, ordered source-backed member roads, a bounded JSON manifest for future reading/search services, and a contextual email draft. It deliberately does **not** own the member works, impose their page design, interpret their history, or register a new public artwork.
 
-This is a **small first shared service**, not a new constellation. A curator's existing D1 view remains the source of selection. The host returns a JSON manifest. A reading or exhibition interface can consume it while leaving every original at its own address. A work may belong to many constellations without being copied.
+## Interface
 
-## Contract
+A trusted publication hand supplies a **private, code-reviewed registry** of constellation definitions to `servePrivateConstellation(request, env, ctx, { registry })`. The public repository contains an empty registry by default. This is intentional: protected view/table names, members, editions and routes must not be embedded in publicly accessible source control merely to enable a demonstration.
 
-The server-only function serveConstellationManifest(request, env, ctx, {registry}) handles only:
+The handler has two protected, read-only responses for every registered slug:
 
-GET /folio/workshop/constellations/[trusted-slug]/manifest.json
+- `GET /folio/workshop/constellations/<slug>/` — lightweight HTML visitor footing, links to independently authorized native works, maker credit, and ordinary browser Back; does not copy works.
+- `GET /folio/workshop/constellations/<slug>/manifest.json` — an explicitly private, no-store manifest with curator, question, member titles, roles, editions, and current protected links. No R2 keys or hidden source objects in JSON.
 
-on the protected Listening Ground Worker origin. It returns null for other paths and origins. The response contains a constellation identity, question, curator, explicit private status, and bounded references to works: slug, title, credited maker, edition, curatorial role and protected reader URL. It never returns R2 object keys, raw D1 source bodies, identity joins or publication approvals.
+Use a trusted source adapter that performs a **bounded read-only SELECT** on an existing credited curatorial view and joins its members to `eh_native_experiences_v1` and, where present, `eh_work_visibility_controls_v1`. The required result fields are `ordinal`, `curatorial_role`, `slug`, `title`, `maker`, `version_label`, `protected_reader_road`, `sha256`, `state`, `audience`, `effective_visibility` (nullable), and `edition_sha256` (nullable). See synthetic tests for shape. Member reader URLs must be their *exact* current protected native Folio addresses. The first pilot can use an existing maker-curated private seven-work view without copying its rows or changing its maker, but this adapter remains in private custody until reviewed.
 
-**The public repository contains no private registered constellation.** The maker-specific registry must be injected by a trusted deployment hand and kept in authorized Workshop custody. Do not place private view/table names, manuscripts, personal details or private source roads in public GitHub. The registryWith() helper allows many independently curated constellations without altering the common renderer. Source SQL is trusted, reviewed code, never a request parameter or visitor-supplied query.
+### Integration boundary
 
-An adapter reads a curator's approved D1 view and joins each member to the current eh_native_experiences_v1 edition and, where present, eh_work_visibility_controls_v1. Required fields: ordinal, curatorial_role, slug, title, maker, version_label, protected_reader_road, sha256, state, audience, effective_visibility (nullable), edition_sha256 (nullable). Return at most 49 rows to detect and refuse an oversized set rather than quietly discarding part of a constellation.
+1. Obtain the **actual deployed** Listening Ground Worker source and reconcile it with GitHub. Do not overwrite a newer worker version, existing response routes, or schedules.
+2. Bind this module through a narrow route handler before the generic 404. The site must use the live `RECEIVING_DB`, `FOLIO_ALLOWED_EMAILS`, and `FOLIO_RELATIONSHIPS_JSON`, plus the existing authenticated Cloudflare Access `ctx.access` identity. No anonymous fallback.
+3. Register a maker's approved **private** adapter through a trusted configuration read by the Worker, not via an HTTP query, user-supplied SQL or a public registry. The `registryWith()` helper validates basic identity and prevents duplicates; the caller still must review SQL and privileges.
+4. Run `npm test` under Node 22. Then test the real protected reader from an authorized account and an unauthorized account. Repeat with a revoked Folio membership. Confirm no private manifest leaves over shared caches or any CORS route.
+5. Follow one member work, return with browser Back, and inspect page position on a real iPhone. The host itself is static; true cross-device return and new contribution acceptance are **not** implemented by this module.
+6. Publication to `earthlyhands.org` is an **independent future crossing**. Reserve the final stable canonical address only after the public host router, maker signoff, image/source rights, exact-edition gate, contextual receiving, and public browser witness agree. This private prototype path is not a promise of a live public URL.
 
-## Rights and security
+### Fail-closed decisions
 
-The module requires Cloudflare Access identity, Folio email allowlist, explicit email-to-relationship mapping, and a **preexisting active** folio_memberships row in D1. It never creates or reactivates a membership. Current member records must remain private-approved at the exact current edition, with existing audience restrictions. Any conflicting visibility, missing maker or edition, changed hash, duplicate membership or untrusted URL fails the whole result. No user-supplied table name reaches SQL. Responses are private, no-store and noindex.
+- Before any work query: require Cloudflare Access identity, allowlisted email, explicit mapped Folio relationship, and **already-active** matching `folio_memberships` record. This service does **not** reactivate or create a membership when someone visits.
+- Unknown slugs, unexpected methods, querystring changes, or domains outside the protected Worker do not return work data.
+- Missing, duplicate, held, changed, public-drift, unsafe or invalid member records fail the entire reader, rather than silently skipping an important work. A private member's effective visibility row may be absent; if present it must say `private` and match the same edition hash.
+- At most 48 members are accepted; adapters must fetch `LIMIT 49` so over-limit results are detected, not silently truncated. Large constellations will need pagination in a separately reviewed v2.
+- Trusted adapter SQL is conservatively restricted to one short SELECT statement; this is not a replacement for review of the named D1 view.
+- Work titles, role labels, edition labels and maker credit must be present and bounded; changed or malformed text refuses the complete constellation.
+- Data-derived HTML strings are escaped; keyboard readers can skip directly to the member works. All returned protected links must point exactly to their slug on the existing Folio origin. Responses are no-store and noindex; CSP refuses scripts and network calls.
+- An email draft is not a submitted/received archival contribution. Source permissions, historical certainty, visitor state persistence, upload/reply receipt, editable relationships, live public rights and public access are **separate features**.
 
-This is not public access control for an entire future publishing house. It provides one *private* tested boundary. A public release needs its own exact-edition permission and served-browser acceptance.
+## What this does *not* solve
 
-## Integration without destroying newer work
+This module does not create a new D1 schema, publish private material, merge Quire's seven works, answer a contested Robert Bell identity, provide global person/place search, or replace Glean's reader or Quire's curation. Its major infrastructural value is a common **trusted host contract**: the next constellation can inherit the same access, metadata, reader footing and safety checks while preserving its own style and maker.
 
-1. Inspect and reconcile the actual **deployed** earthly-hands-listening-ground Worker. At inspection, the deployed worker had newer Folio functionality than GitHub worker/src/worker.js. Never deploy the old repository source wholesale.
-2. Mount this module on the narrow authenticated route in the reconciled Worker. Reuse RECEIVING_DB, Cloudflare Access ctx.access, FOLIO_ALLOWED_EMAILS and FOLIO_RELATIONSHIPS_JSON. Confirm the Folio membership is already active.
-3. Privately configure an approved curatorial source view. The host does not copy its member works or decide their historical meaning. Re-run the edition and reader-link tests if membership changes.
-4. Run the Node 22 tests: cd publishing/host && npm test. Then test a real permitted identity, a revoked identity and an anonymous browser; do not substitute synthetic access for actual signed-in iPhone acceptance.
-5. Measure D1 rows read. A high-traffic indexed membership table may become appropriate, but do not duplicate current maker selections merely for appearance.
-6. Public stable-address hosting on earthlyhands.org is a separate future crossing requiring resolved Pages/Workers routing, rights, publication permission, working original-source roads, contextual receiving and a deployment witness.
+An existing seven-work private source view is a useful pilot but currently has a relatively expensive inherited discovery-view join. Measure D1 rows read before high-traffic use; a future indexed, first-class constellation membership table with maker-controlled revisions can improve scale without freezing curatorial decisions. Do not introduce that schema solely to make the first private test appear grander.
 
-**Not provided yet:** original-document reader, global discovery and research query service, durable visitor return, successful contextual contribution receipt, rights review, archival participation, and public release. None should be claimed from this module.
-
-**Attribution:** Small Door authored the shared host code; original works and their curatorial selection remain with their makers. The GitHub principal is technical custody, not an authenticated independent companion identity.
+**Authorship:** shared host module — Small Door; independent curatorial selection and member works remain credited to their actual makers. This commit is through the shared GitHub technical principal, not an independent authenticated Small Door login.
