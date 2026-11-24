@@ -1,139 +1,180 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { serveConstellationManifest, verifiedWorks } from './constellation-host.mjs';
+import { servePrivateConstellation, validateMembers, boundedReadOnlySql } from './constellation-host.mjs';
 import { registryWith } from './registry.mjs';
 
 const BASE = 'https://earthly-hands-listening-ground.workshop-1a6.workers.dev';
-const URL = BASE + '/folio/workshop/constellations/sample-seven/manifest.json';
-const EMAIL = 'visitor@example.test';
-const USER = 'private-subject-123';
-const REL = 'private:sample';
-const REGISTRY = registryWith({
-  slug: 'sample-seven', title: 'A Question With Several Roads',
-  curator: 'Independent Curator', question: 'Which evidence can distinguish the appearances?',
-  description: 'A changing collection of independent works.',
-  audience: 'existing_folio_members', source_view: 'test_curatorial_view',
-  members_sql: 'SELECT approved_fields FROM test_curatorial_view LIMIT 49',
+const slug = 'example-seven';
+const page = BASE + '/folio/workshop/constellations/' + slug + '/';
+const email = 'member@example.test';
+const uuid = 'identity-123';
+const role = 'private:member';
+const REGISTRY = registryWith({ slug, title: 'An Open Identity Question', question: 'What would distinguish two appearances?', description: 'Seven independently made readings.', curator: 'First Curator · independent selection', source_view: 'sample_curated_view_v1', audience: 'existing_folio_members', members_sql: 'SELECT safe_fields FROM sample_curated_view_v1 LIMIT 49' });
+const good = (id = 'work-abc') => ({
+  ordinal: 1, curatorial_role: 'source question', slug: id,
+  title: 'A question about the records', maker: 'First Maker and collaborators',
+  version_label: 'private v1',
+  protected_reader_road: BASE + '/folio/workshop/native/' + id,
+  sha256: 'a'.repeat(64), state: 'private_approved', audience: 'existing_folio_members',
+  effective_visibility: null, edition_sha256: null,
 });
-const work = (slug = 'sample-one',ordinal = 1) => ({
-  ordinal, curatorial_role: 'source reading', slug,
-  title: 'One independently made reading', maker: 'Independent Maker',
-  version_label: 'private edition 1',
-  protected_reader_road: BASE + '/folio/workshop/native/' + slug,
-  sha256: 'a'.repeat(64), audience: 'existing_folio_members',
-  state: 'private_approved', effective_visibility: null, edition_sha256: null,
-});
-async function digest(s) {
-  const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
-  return Array.from(new Uint8Array(bytes), x => x.toString(16).padStart(2,'0')).join('');
-}
-class DB {
-  constructor(works = [work()], active = 1, broken = false) {
-    this.works = works; this.active = active; this.broken = broken; this.sql = [];
+const membershipHash = async (value) => Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value)))).map(x=>x.toString(16).padStart(2,'0')).join('');
+class MockDB {
+  constructor({ works = [good()], active = 1, error = false } = {}) {
+    this.works = works; this.active = active; this.error = error; this.queries = [];
   }
   prepare(sql) {
-    this.sql.push(sql);
+    this.queries.push(sql);
     const db = this;
     return {
-      bind(...args) { this.args = args; return this; },
+      bind(...params) { this.args = params; return this; },
       async first() {
-        if (db.broken) throw new Error('private DB exception');
-        assert.match(sql,/SELECT active FROM folio_memberships/);
-        return this.args[0] === REL && this.args[1] === await digest(USER) && db.active != null
-          ? { active: db.active } : null;
+        if (db.error) throw Error('db error');
+        if (!sql.includes('folio_memberships')) throw Error('unexpected private lookup');
+        const [rel,hash] = this.args || [];
+        return rel === role && hash === await membershipHash(uuid) && db.active != null ? {active:db.active} : null;
       },
       async all() {
-        if (db.broken) throw new Error('private DB exception');
-        assert.match(sql,/test_curatorial_view/);
-        return { results: db.works };
+        if (db.error) throw Error('db error');
+        if (!sql.includes('sample_curated_view_v1')) throw Error('query must use maker view');
+        return {results:db.works};
       },
     };
   }
 }
-const environment = (db=new DB()) => ({
-  RECEIVING_DB: db, FOLIO_ALLOWED_EMAILS: EMAIL,
-  FOLIO_RELATIONSHIPS_JSON: JSON.stringify({[EMAIL]:{id:REL,name:'Folio member'}}),
-});
-const context = (identity={email:EMAIL,user_uuid:USER}) => ({
-  access: { async getIdentity() { return identity; } },
-});
-const get = (url=URL, env=environment(), ctx=context(), method='GET') =>
-  serveConstellationManifest(new Request(url,{method}),env,ctx,{registry:REGISTRY});
+const env = (db = new MockDB()) => ({RECEIVING_DB:db,FOLIO_ALLOWED_EMAILS:email,FOLIO_RELATIONSHIPS_JSON:JSON.stringify({[email]:{id:role,name:'Holder'}})});
+const ctx = (identity={email,user_uuid:uuid}) => ({access:{getIdentity:async()=>identity}});
+const run = (url=page, options={}) => servePrivateConstellation(new Request(url,{method:options.method||'GET'}), options.env||env(), options.ctx===undefined?ctx():options.ctx, { registry: REGISTRY });
+const body = async response => response.headers.get('content-type')?.includes('application/json') ? response.json() : response.text();
 
-test('unrelated public/old paths do not take over the Worker',async()=>{
-  assert.equal(await get(BASE+'/folio/'), null);
-  assert.equal(await get('https://earthlyhands.org/folio/workshop/constellations/sample-seven/manifest.json'), null);
+test('unrelated route does not take over existing worker', async () => {
+  assert.equal(await run(BASE+'/folio/'), null);
+  assert.equal(await run('https://example.test/folio/workshop/constellations/example-seven/'), null);
 });
-test('unknown slug and visitor table arguments never become SQL',async()=>{
-  const db = new DB();
-  assert.equal((await get(BASE+'/folio/workshop/constellations/unknown/manifest.json',environment(db))).status,404);
-  assert.equal((await get(URL+'?table=secrets',environment(db))).status,404);
-  assert.equal(db.sql.length,0);
+test('unknown host never triggers a D1 query', async () => {
+  const db = new MockDB(); const r = await run(BASE+'/folio/workshop/constellations/missing/manifest.json',{env:env(db)});
+  assert.equal(r.status,404);assert.equal(db.queries.length,0);
 });
-test('no Access, allowlist, mapped relationship or valid identity fails before work query',async()=>{
-  for(const [env,ctx] of [
-    [environment(),null],
-    [{...environment(),FOLIO_ALLOWED_EMAILS:''},context()],
-    [{...environment(),FOLIO_RELATIONSHIPS_JSON:'garbled'},context()],
-    [environment(),context({email:'outside@example.test',user_uuid:USER})],
-  ]) {
-    assert.equal((await get(URL,env,ctx)).status,403);
+test('no Access identity fails closed before reading work', async () => {
+  const db = new MockDB();const r = await run(page,{ctx:null,env:env(db)});
+  assert.equal(r.status,403);assert.equal(db.queries.length,0);
+});
+test('missing allowlist and missing mapped relationship refuse', async () => {
+  for(const change of [{FOLIO_ALLOWED_EMAILS:''},{FOLIO_RELATIONSHIPS_JSON:'bad-json'},{FOLIO_RELATIONSHIPS_JSON:'{}'}]){
+    const r = await run(page,{env:{...env(),...change}});assert.equal(r.status,403);
   }
 });
-test('revoked or absent membership is never reactivated',async()=>{
-  for(const active of [0,null]){
-    const db=new DB([work()],active);
-    assert.equal((await get(URL,environment(db))).status,403);
-    assert.equal(db.sql.length,1);
-    assert.equal(db.active,active);
-  }
+test('unapproved, mismatched and inaccessible identity refuse',async()=>{
+  const r1=await run(page,{ctx:ctx({email:'other@example.test',user_uuid:uuid})});assert.equal(r1.status,403);
+  const r2=await run(page,{ctx:ctx({email,user_uuid:'wrong'})});assert.equal(r2.status,403);
+  const r3=await run(page,{ctx:{access:{async getIdentity(){throw Error('Access error')}}}});assert.equal(r3.status,403);
 });
-test('readable manifest preserves maker, edition, role and exact native road',async()=>{
-  const r=await get(); const data=await r.json();
-  assert.equal(r.status,200);
-  assert.equal(data.kind,'constellation');
-  assert.equal(data.works.length,1);
-  assert.equal(data.works[0].maker,'Independent Maker');
-  assert.equal(data.works[0].read_url,work().protected_reader_road);
-  assert.equal(data.no_historical_identity_join_implied,true);
-  assert.equal(data.state,'private_provisional_not_public');
+test('revoked membership is never reactivated', async () => {
+  const db = new MockDB({active:0});const r = await run(page,{env:env(db)});
+  assert.equal(r.status,403);assert.equal(db.active,0);assert.equal(db.queries.length,1);
+});
+test('missing membership denies rather than creating a new one',async()=>{
+  const db=new MockDB({active:null});const r=await run(page,{env:env(db)});
+  assert.equal(r.status,403);assert.equal(db.queries.length,1);
+});
+test('private manifest preserves author, edition and bounded original link',async()=>{
+  const r=await run(page+'manifest.json'); const j=await r.json();
+  assert.equal(r.status,200);assert.equal(j.kind,'constellation');assert.equal(j.slug,'example-seven');
+  assert.equal(j.curator,'First Curator · independent selection');
+  assert.equal(j.works[0].maker,good().maker);assert.equal(j.works[0].read_url,good().protected_reader_road);
+  assert.equal(j.state,'private_provisional_not_public');assert.equal(j.no_identity_join_implied,true);
   assert.equal(r.headers.get('cache-control'),'private, no-store');
+  assert.match(r.headers.get('content-security-policy'),/default-src 'none'/);
+});
+test('private HTML is a usable reader with maker credit and no external script',async()=>{
+  const r=await run();const s=await r.text();
+  assert.equal(r.status,200);assert.match(s,/An Open Identity Question/);assert.match(s,/First Curator/);
+  assert.match(s,/Maker: First Maker and collaborators/);assert.match(s,/<ol class="works">/);
+  assert.match(s,/Compose a message about this question/i);assert.doesNotMatch(s,/<script/);
   assert.match(r.headers.get('x-robots-tag'),/noindex/);
 });
-test('held, changed, drifted or unverified members fail the whole result',async()=>{
-  for(const diff of [
+test('HTML encodes untrusted titles and maker strings',async()=>{
+  const work={...good(),title:'<script>alert("x")</script>',maker:'A & B <img>'};
+  const r=await run(page,{env:env(new MockDB({works:[work]}))});const s=await r.text();
+  assert.doesNotMatch(s,/<script>/);assert.doesNotMatch(s,/<img>/);
+  assert.match(s,/&lt;script&gt;/);assert.match(s,/A &amp; B &lt;img&gt;/);
+});
+test('identity changes, withdrawn editions and public drift refuse the whole constellation',async()=>{
+  for(const changes of [
     {state:'held'}, {audience:'anyone'}, {effective_visibility:'public'},
-    {edition_sha256:'b'.repeat(64)}, {sha256:'bad'}, {maker:''},
-    {version_label:''}, {protected_reader_road:'https://evil.example/private'},
-  ]) {
-    const r=await get(URL,environment(new DB([{...work(),...diff}])));
-    assert.equal(r.status,503,JSON.stringify(diff));
+    {edition_sha256:'b'.repeat(64)}, {sha256:'not-a-hash'},
+    {maker:''},{curatorial_role:''}, {version_label:''},
+  ]){
+    const r=await run(page,{env:env(new MockDB({works:[{...good(),...changes}]}))});
+    assert.equal(r.status,503,JSON.stringify(changes));
     assert.equal((await r.json()).code,'constellation_not_verified');
   }
 });
-test('duplicate identities, ordinal gaps and oversized sets fail',()=>{
-  assert.equal(verifiedWorks([work(),work('sample-one',2)]),null);
-  assert.equal(verifiedWorks([work('sample-two',2)]),null);
-  assert.equal(verifiedWorks(Array.from({length:49},(_,i)=>work('work-'+i,i+1))),null);
+test('outbound links must point to exact existing protected native slug',async()=>{
+  for(const url of [
+    'https://evil.example/folio/workshop/native/work-abc',
+    BASE+'/folio/workshop/native/another-person',
+    BASE+'/folio/workshop/native/work-abc?reveal=true',
+    BASE+'/folio/workshop/native/work-abc#privates',
+    'javascript:alert(1)',
+  ]) {
+    assert.equal(validateMembers([{...good(), protected_reader_road:url}]),null,url);
+  }
 });
-test('unknown methods and DB failure never expose member rows',async()=>{
-  assert.equal((await get(URL,environment(),context(),'POST')).status,405);
-  const r=await get(URL,environment(new DB([work()],1,true)));
+test('duplicate member, ordinal gaps and too many works fail instead of truncating',async()=>{
+  assert.equal(validateMembers([good(),{...good(),ordinal:2}]),null);
+  assert.equal(validateMembers([{...good(),ordinal:2}]),null);
+  assert.equal(validateMembers(Array.from({length:49},(_,i)=>({...good('member-'+i),ordinal:i+1}))),null);
+});
+test('no public or unregistered route is silently exposed',async()=>{
+  const r=await run('https://earthlyhands.org/constellations/example-seven/');assert.equal(r,null);
+  const r2=await run(page+'../../anything');assert.equal(r2,null);
+  const r3=await run(page+'?format=public');assert.equal(r3.status,404);
+});
+test('POST refused; private source query failure does not leak details',async()=>{
+  const p=await run(page,{method:'POST'});assert.equal(p.status,405);
+  const db=new MockDB({error:true}),r=await run(page,{env:env(db)});
+  assert.equal(r.status,503);assert.doesNotMatch(JSON.stringify(await body(r)),/db error/i);
+});
+test('trusted registry can add distinct maker without changing host code',async()=>{
+  const registry=registryWith({slug:'different-maker',title:'Other inquiry',question:'A source question',description:'Different form',curator:'Other Maker',source_view:'approved_static_view',audience:'existing_folio_members',members_sql:'SELECT approved fields FROM private_maker_view LIMIT 49'});
+  assert.ok(registry['different-maker']);
+  assert.throws(()=>registryWith({slug:'different-maker',audience:'existing_folio_members',title:'Duplicate',curator:'Other',source_view:'x',members_sql:'SELECT 1'}, {slug:'different-maker',audience:'existing_folio_members',title:'Duplicate again',curator:'Other',source_view:'x',members_sql:'SELECT 2'}));
+});
+
+
+test('bounded source adapter is SELECT only and refuses query stacking', async()=>{
+  const accepted='SELECT ordinal,title,maker FROM private_approved_view LIMIT 49';
+  assert.equal(boundedReadOnlySql(accepted),true);
+  for(const sql of [
+    'UPDATE folio_memberships SET active=1',
+    'DELETE FROM folio_leaves',
+    'SELECT * FROM private_approved_view; DELETE FROM folio_memberships',
+    'SELECT * FROM private_approved_view -- ignore the rest',
+    'WITH x AS (UPDATE hidden SET active=1) SELECT * FROM x',
+    'SELECT * FROM private_approved_view /* leaked */',
+    'SELECT * FROM private_approved_view ' + ' '.repeat(2500),
+    '',null,
+  ]) assert.equal(boundedReadOnlySql(sql),false,String(sql).slice(0,50));
+  const unsafe=registryWith({slug:'unsafe-statement', title:'Unsafe', question:'?', curator:'Someone', description:'Test',source_view:'unsafe_view',audience:'existing_folio_members',members_sql:'UPDATE folio_memberships SET active=1'});
+  const db=new MockDB();
+  const r=await servePrivateConstellation(new Request(BASE+'/folio/workshop/constellations/unsafe-statement/'),env(db),ctx(),{registry:unsafe});
   assert.equal(r.status,503);
-  assert.doesNotMatch(await r.text(),/private DB exception/);
+  assert.equal(db.queries.length,1,'only membership lookup performed; no write attempt');
 });
-test('curator view changes flow to the same address without copying originals',async()=>{
-  const db=new DB([work()]);
-  const first=await (await get(URL,environment(db))).json();
-  db.works=[work(),work('independent-two',2)];
-  const second=await (await get(URL,environment(db))).json();
-  assert.equal(first.works.length,1);
-  assert.equal(second.works.length,2);
-  assert.equal(second.works[1].maker,'Independent Maker');
+
+test('member metadata has safe output bounds; no unbounded visitor response',()=>{
+  assert.equal(validateMembers([{...good(),title:'x'.repeat(221)}]),null);
+  assert.equal(validateMembers([{...good(),maker:'x'.repeat(361)}]),null);
+  assert.equal(validateMembers([{...good(),version_label:'x'.repeat(181)}]),null);
+  assert.equal(validateMembers([{...good(),curatorial_role:'x'.repeat(111)}]),null);
+  assert.equal(validateMembers([{...good(),title:'one\u0000two'}]),null);
+  assert.ok(validateMembers([good()]));
 });
-test('no writes or identity merges are required to answer the host contract',async()=>{
-  const db=new DB();
-  await get(URL,environment(db));
-  assert.equal(db.sql.length,2);
-  assert.ok(db.sql.every(s=>/^\s*SELECT\b/i.test(s)));
+
+test('reader is keyboard-skippable into independently made works',async()=>{
+  const r=await run();const s=await r.text();
+  assert.match(s,/href="#member-works"/);
+  assert.match(s,/id="member-works" tabindex="-1"/);
+  assert.match(s,/\.skip:focus\{/);
 });
