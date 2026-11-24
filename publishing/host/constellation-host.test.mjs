@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { servePrivateConstellation, validateMembers, boundedReadOnlySql } from './constellation-host.mjs';
-import { registryWith } from './registry.mjs';
+import { registryWith, curatedViewMembersSql } from './registry.mjs';
 
 const BASE = 'https://earthly-hands-listening-ground.workshop-1a6.workers.dev';
 const slug = 'example-seven';
@@ -82,6 +82,7 @@ test('private manifest preserves author, edition and bounded original link',asyn
   assert.equal(r.status,200);assert.equal(j.kind,'constellation');assert.equal(j.slug,'example-seven');
   assert.equal(j.curator,'First Curator · independent selection');
   assert.equal(j.works[0].maker,good().maker);assert.equal(j.works[0].read_url,good().protected_reader_road);
+  assert.equal(j.works[0].edition_sha256,good().sha256);
   assert.equal(j.state,'private_provisional_not_public');assert.equal(j.no_identity_join_implied,true);
   assert.equal(r.headers.get('cache-control'),'private, no-store');
   assert.match(r.headers.get('content-security-policy'),/default-src 'none'/);
@@ -177,4 +178,36 @@ test('reader is keyboard-skippable into independently made works',async()=>{
   assert.match(s,/href="#member-works"/);
   assert.match(s,/id="member-works" tabindex="-1"/);
   assert.match(s,/\.skip:focus\{/);
+});
+
+
+test('curator source adapter composes one bounded D1 read without copying works', () => {
+  const sql = curatedViewMembersSql('reviewed_private_curation_v1');
+  assert.equal(boundedReadOnlySql(sql), true);
+  assert.match(sql, /FROM "reviewed_private_curation_v1" AS c/);
+  assert.match(sql, /JOIN eh_native_experiences_v1 AS n ON n.slug=c.slug/);
+  assert.match(sql, /LEFT JOIN eh_work_visibility_controls_v1 AS v/);
+  assert.match(sql, /v\.edition_sha256/);
+  assert.match(sql, /LIMIT 49$/);
+  assert.doesNotMatch(sql, /INSERT|UPDATE|DELETE|DROP|;|--/i);
+});
+
+test('curator view identifier cannot become visitor SQL or another database object', () => {
+  for (const bad of ['', null, 4, 'SELECT * FROM archive', 'private;DROP TABLE work',
+    'main.sqlite_master', 'sqlite_schema', 'pragma_table_info',
+    'curator-view', 'curator.view', 'curator\nview', 'x'.repeat(140)]) {
+    assert.throws(() => curatedViewMembersSql(bad), undefined, JSON.stringify(bad));
+  }
+});
+
+test('two separately selected works retain independent edition hashes in a manifest', async () => {
+  const a=good('first-work');
+  const b={...good('second-work'),ordinal:2,sha256:'b'.repeat(64),maker:'Second independent maker'};
+  const db=new MockDB({works:[a,b]});
+  const r=await run(page+'manifest.json',{env:env(db)});
+  const j=await r.json();
+  assert.equal(r.status,200);
+  assert.deepEqual(j.works.map(w=>w.edition_sha256),['a'.repeat(64),'b'.repeat(64)]);
+  assert.equal(j.works[1].maker,'Second independent maker');
+  assert.equal(j.works[0].read_url,BASE+'/folio/workshop/native/first-work');
 });
