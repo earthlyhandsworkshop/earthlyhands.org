@@ -115,6 +115,9 @@ export function validateMembers(rows) {
       ordinal, role: String(r.curatorial_role), slug: r.slug,
       title: String(r.title), maker: String(r.maker),
       edition: String(r.version_label),
+      // A stable, exact-edition comparator for authorized returners and readers.
+      // A title or an ordinal is not a version identifier.
+      edition_sha256: String(r.sha256),
       read_url: r.protected_reader_road,
     });
   }
