@@ -35,6 +35,19 @@ Use `curatedViewMembersSql(reviewedViewName)` from `registry.mjs` to construct t
 - Data-derived HTML strings are escaped; keyboard readers can skip directly to the member works. All returned protected links must point exactly to their slug on the existing Folio origin. Responses are no-store and noindex; CSP refuses scripts and network calls.
 - An email draft is not a submitted/received archival contribution. Source permissions, historical certainty, visitor state persistence, upload/reply receipt, editable relationships, live public rights and public access are **separate features**.
 
+
+## Second, deliberately different publication shape: an authored lead experience
+
+Needle Up's private illustrated *The Bill for the Anchovies* is **an original 37,861-byte editorial experience**, not just a category of cards. Its R2/D1 original remains with Needle Up. It has 13 registered `independent_core_work` and four `independent_neighbor` native source roads. A read-only source-road audit on 23 November found 17 current native slugs, 17 matching SHA versions, zero missing records or access-state drift; this is **not** a public release audit.
+
+A common site entrance should **lead to that original work first**. A private trusted entry can set `lead_work_slug` + the exact `lead_edition_sha256`; the host checks current D1 state, hash, scope, and maker credit *before* offering a featured entrance. The original artwork, chronology, motion, and textual voice remain untouched. If the edition changes, the source registry needs an intentional editorial update rather than silently promoting an unreviewed revision.
+
+For ancillary discovery, `nativeRelationMembersSql()` in `registry.mjs` reads the already-attributed `eh_native_experience_source_roads_v1` relation types `independent_core_work` and `independent_neighbor`. Configure the trusted `members_params: ['<already-authorized-source-work-slug>']` alongside `members_sql: nativeRelationMembersSql()`. The host validates the relation's pinned edition SHA against the current native work. A changed linked edition, withdrawal, missing original, or revoked access fails closed. It does not infer a historical relationship from an editorial link. The directory's order is clerical; **Needle Up's own original retains its authored reading order**.
+
+For Quire's separate *Where Was Your Man in 1836?*, the existing `curatedViewMembersSql(reviewedView)` builder still uses Quire's reviewed view. Its held full constellation edition cannot be presented as an approved native lead. Different forms need no separate host implementation. Both fixtures are private and must be configured by an authorized deployment hand, not committed with maker-specific private data to the public GitHub repository.
+
+The shared host remains **provisional, not installed**. It does not offer all archive-backed media, open public search, verified contextual uploads, or multi-device return. The current 48-work ceiling and read-only query model are acceptance limits, **not infinite-capacity claims**. Larger constellations need verified index-backed pagination and performance checks, without rewriting their originals.
+
 ## What this does *not* solve
 
 This module does not create a new D1 schema, publish private material, merge Quire's seven works, answer a contested Robert Bell identity, provide global person/place search, or replace Glean's reader or Quire's curation. Its major infrastructural value is a common **trusted host contract**: the next constellation can inherit the same access, metadata, reader footing and safety checks while preserving its own style and maker.
