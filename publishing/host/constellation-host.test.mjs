@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { servePrivateConstellation, validateMembers, boundedReadOnlySql } from './constellation-host.mjs';
-import { registryWith, curatedViewMembersSql } from './registry.mjs';
+import { registryWith, curatedViewMembersSql, nativeRelationMembersSql } from './registry.mjs';
 
 const BASE = 'https://earthly-hands-listening-ground.workshop-1a6.workers.dev';
 const slug = 'example-seven';
@@ -20,8 +20,8 @@ const good = (id = 'work-abc') => ({
 });
 const membershipHash = async (value) => Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value)))).map(x=>x.toString(16).padStart(2,'0')).join('');
 class MockDB {
-  constructor({ works = [good()], active = 1, error = false } = {}) {
-    this.works = works; this.active = active; this.error = error; this.queries = [];
+  constructor({ works = [good()], active = 1, error = false, lead = null } = {}) {
+    this.works = works; this.active = active; this.error = error; this.lead = lead; this.queries = [];
   }
   prepare(sql) {
     this.queries.push(sql);
@@ -30,13 +30,14 @@ class MockDB {
       bind(...params) { this.args = params; return this; },
       async first() {
         if (db.error) throw Error('db error');
+        if (sql.includes('FROM eh_native_experiences_v1 n')) return this.args[0] === db.lead?.slug ? db.lead : null;
         if (!sql.includes('folio_memberships')) throw Error('unexpected private lookup');
         const [rel,hash] = this.args || [];
         return rel === role && hash === await membershipHash(uuid) && db.active != null ? {active:db.active} : null;
       },
       async all() {
         if (db.error) throw Error('db error');
-        if (!sql.includes('sample_curated_view_v1')) throw Error('query must use maker view');
+        if (!sql.includes('sample_curated_view_v1') && !sql.includes('eh_native_experience_source_roads_v1')) throw Error('query must use maker view or registered native source roads');
         return {results:db.works};
       },
     };
@@ -210,4 +211,127 @@ test('two separately selected works retain independent edition hashes in a manif
   assert.deepEqual(j.works.map(w=>w.edition_sha256),['a'.repeat(64),'b'.repeat(64)]);
   assert.equal(j.works[1].maker,'Second independent maker');
   assert.equal(j.works[0].read_url,BASE+'/folio/workshop/native/first-work');
+});
+
+
+// A *different form* from the selected research view: an independent illustrated
+// editorial lead whose related works have exact, pinned edition receipts.
+// These tests are intentionally synthetic. No private maker records are copied here.
+const artEdition = {
+  slug: 'illustrated-editorial-original',
+  title: 'The Illustrated Work — a living original',
+  maker: 'Artist A · independently authored',
+  version_label: 'private illustrated edition 3',
+  sha256: 'f'.repeat(64),
+  state: 'private_approved', audience: 'existing_folio_members',
+  effective_visibility: 'private', edition_sha256: 'f'.repeat(64),
+};
+const editorial = registryWith({
+  slug:'illustrated-house', title:'An Illustrated Publishing Neighborhood',
+  question:'How do several printed witnesses differ?',
+  caution:'The printed dates and words remain distinct witnesses until source checking permits more.',
+  description:'An independent original experience, surrounded by other separately authored works.',
+  curator:'Artist A · independent editor',
+  source_view:'existing_native_edition_source_roads',audience:'existing_folio_members',
+  members_sql:nativeRelationMembersSql(),
+  members_params:['illustrated-editorial-original'],
+  lead_work_slug:artEdition.slug,
+  lead_edition_sha256:artEdition.sha256,
+});
+const related = Array.from({length:17},(_,i)=>({
+  ...good('neighbor-'+String(i+1)), ordinal:i+1,
+  title:i<13?'Related independent original':'Neighboring independent original',
+  curatorial_role:i<13?'Core work':'Neighboring work',
+  sha256:String(i+1).padStart(64,'0'),
+  selected_edition_sha256:String(i+1).padStart(64,'0'),
+}));
+const runEditorial=(db,manifest=false)=>servePrivateConstellation(
+  new Request(BASE+'/folio/workshop/constellations/illustrated-house/'+(manifest?'manifest.json':'')),
+  env(db),ctx(),{registry:editorial});
+
+test('one common host accepts an illustrated original plus 17 pinned related works',async()=>{
+  const db=new MockDB({works:related,lead:artEdition});
+  const res=await runEditorial(db,true);const j=await res.json();
+  assert.equal(res.status,200);
+  assert.equal(j.works.length,17);
+  assert.equal(j.works[0].role,'Core work');
+  assert.equal(j.works[16].role,'Neighboring work');
+  assert.equal(j.featured_work.slug,artEdition.slug);
+  assert.equal(j.featured_work.maker,artEdition.maker);
+  assert.equal(j.featured_work.edition_sha256,artEdition.sha256);
+  assert.equal(j.works[0].edition_sha256,related[0].sha256);
+  assert.equal(db.queries.length,3);
+  assert.ok(db.queries.every(sql=>/^\s*SELECT\b/i.test(sql)));
+  assert.match(j.caution,/distinct witnesses/);
+});
+
+test('illustrated creator’s original leads rather than being flattened into the host directory',async()=>{
+  const res=await runEditorial(new MockDB({works:related,lead:artEdition}));
+  const html=await res.text();
+  assert.equal(res.status,200);
+  assert.match(html,/The maker's own experience/);
+  assert.match(html,/Enter the original work/);
+  assert.match(html,/<section class="featured"/);
+  assert.match(html,/Maker: First Maker and collaborators/);
+  assert.ok(html.indexOf('Enter the original work')<html.indexOf('Related independent original'));
+  assert.doesNotMatch(html,/<script/);
+});
+
+test('a revised, withdrawn or newly public featured work fails closed',async()=>{
+  for(const edits of [
+    {sha256:'e'.repeat(64)},{state:'held'},
+    {state:'withdrawn'},{audience:'everyone'},{effective_visibility:'public'},
+    {edition_sha256:'e'.repeat(64)},{title:' '},{maker:' '},
+  ]){
+    const db=new MockDB({works:related,lead:{...artEdition,...edits}});
+    const res=await runEditorial(db);
+    assert.equal(res.status,503,JSON.stringify(edits));
+    assert.equal((await res.json()).code,'featured_work_not_verified');
+  }
+  const missing=await runEditorial(new MockDB({works:related}));
+  assert.equal(missing.status,503);
+});
+
+test('pinned relations refuse silent edition changes, even with unchanged titles',async()=>{
+  const changed=[...related];changed[3]={...changed[3],sha256:'b'.repeat(64)};
+  const res=await runEditorial(new MockDB({works:changed,lead:artEdition}));
+  assert.equal(res.status,503);
+  assert.equal((await res.json()).code,'constellation_not_verified');
+  assert.equal(validateMembers(changed),null);
+});
+
+test('two source adapters use single read-only statements without raw visitor SQL',()=>{
+  const viewSql=curatedViewMembersSql('approved_curator_view_v1');
+  const linksSql=nativeRelationMembersSql();
+  assert.equal(boundedReadOnlySql(viewSql),true);
+  assert.equal(boundedReadOnlySql(linksSql),true);
+  assert.match(linksSql,/FROM eh_native_experience_source_roads_v1 AS r/);
+  assert.match(linksSql,/r\.experience_slug=\?/);
+  assert.match(linksSql,/r\.sha256 AS selected_edition_sha256/);
+  assert.match(linksSql,/LEFT JOIN eh_native_experiences_v1/);
+  assert.match(linksSql,/LIMIT 49$/);
+  assert.equal(editorial['illustrated-house'].members_params[0],'illustrated-editorial-original');
+  assert.ok(Object.isFrozen(editorial['illustrated-house'].members_params));
+});
+
+test('registry refuses malformed pinned lead and unsafe SQL bind params',()=>{
+  const base={slug:'another-house',title:'Another work',question:'An open question',description:'Reading',curator:'Editor',
+    audience:'existing_folio_members',source_view:'a_view',members_sql:'SELECT 1'};
+  for(const data of [
+    {members_params:['table; DROP TABLE something']},
+    {members_params:['x'.repeat(200)]},
+    {members_params:[{}]},
+    {members_params:['one','two','three','four']},
+    {lead_work_slug:'this-work'},
+    {lead_edition_sha256:'a'.repeat(64)},
+    {lead_work_slug:'../work',lead_edition_sha256:'a'.repeat(64)},
+  ]) assert.throws(()=>registryWith({...base,...data}),undefined,JSON.stringify(data));
+});
+
+test('legacy identity-sensitive research host remains separate and does not invent an artistic feature',async()=>{
+  const r=await run(page+'manifest.json');const j=await r.json();
+  assert.equal(r.status,200);
+  assert.equal(j.featured_work,undefined);
+  assert.match(j.caution,/editorial proximity/);
+  assert.equal(j.works.length,1);
 });
