@@ -1,0 +1,23 @@
+name: Constellation host boundary tests
+on:
+  pull_request:
+    paths:
+      - 'publishing/host/**'
+      - '.github/workflows/constellation-host-boundary.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'publishing/host/**'
+      - '.github/workflows/constellation-host-boundary.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm test
+        working-directory: publishing/host
